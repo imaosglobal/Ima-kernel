@@ -13,6 +13,8 @@ app.post("/ask", (req, res) => {
   res.json({ reply });
 });
 
+app.get("/health", (req,res)=>{res.json({status:"alive",time:Date.now()});});
+
 app.listen(3000, () => {
   console.log("🧠 IMA KERNEL RUNNING");
 });
