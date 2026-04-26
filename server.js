@@ -1,3 +1,6 @@
+const { analyze } = require('./kernel/brain');
+const { updatePersonality } = require('./kernel/personality_engine');
+const { loadMemory, saveMemory, remember } = require('./kernel/memory_engine');
 const express = require("express");
 const cors = require("cors");
 const kernel = require("./kernel/runtime");
