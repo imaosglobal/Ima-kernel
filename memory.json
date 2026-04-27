@@ -88,6 +88,40 @@
     {
       "type": "ping",
       "time": 1777303994046
+    },
+    {
+      "input": "test",
+      "response": "processed: test",
+      "model": "ima-local-router",
+      "git": "8c6843d auto stabilize 1777309768823",
+      "memory_size": 11,
+      "time": 1777310124948
+    },
+    {
+      "input": "test message",
+      "selected_model": "claude",
+      "response": "Claude: test message",
+      "time": 1777310167970
+    },
+    {
+      "input": "מה המטרה של אמא?",
+      "responses": {
+        "gpt": "GPT says: מה המטרה של אמא?",
+        "claude": "Claude says: מה המטרה של אמא?",
+        "gemini": "Gemini says: מה המטרה של אמא?"
+      },
+      "final": "\nCONSENSUS RESULT:\n- GPT says: מה המטרה של אמא?\n- Claude says: מה המטרה של אמא?\n- Gemini says: מה המטרה של אמא?\n\nFINAL SYNTHESIS:\nמה המטרה של אמא?\n",
+      "time": 1777310234154
+    },
+    {
+      "input": "מה המטרה של אמא?",
+      "response": "LOCAL IMA: מה המטרה של אמא?",
+      "time": 1777311536149
+    },
+    {
+      "input": "daily evolution",
+      "response": "LOCAL IMA: daily evolution",
+      "time": 1777328942358
     }
   ]
 }
