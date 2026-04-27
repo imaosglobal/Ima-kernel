@@ -1,5 +1,12 @@
 {
-  "last_run": "1777329060",
-  "status": "active",
-  "mode": "local"
+  "version": 1,
+  "mode": "creative",
+  "avatar": "creator",
+  "evolution": true,
+  "weights": {
+    "relevance": 0.35,
+    "clarity": 0.2,
+    "usefulness": 0.25,
+    "safety": 0.2
+  }
 }

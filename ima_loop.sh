@@ -3,9 +3,9 @@
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 while true; do
-  echo "🧠 Running daily cycle..."
+  echo "🧠 IMA CORE LOOP..."
   cd "$BASE_DIR"
-  ./ima_full_cycle.sh
+  node ima_core_engine.js "daily evolution"
 
   sleep 86400
 done
