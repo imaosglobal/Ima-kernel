@@ -15,7 +15,9 @@ export default function ImaUI() {
 
     setInput("");
 
-    const res = await fetch("http://localhost:4000/ima/run", {
+import API_BASE from "./config";
+
+fetch(`${API_BASE}/ima/run`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input })

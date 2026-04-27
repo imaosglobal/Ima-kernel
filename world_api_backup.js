@@ -42,12 +42,3 @@ app.post("/ima/run", async (req, res) => {
 app.listen(4000, () => {
   console.log("🌍 IMA MULTI-USER SYSTEM RUNNING ON 4000");
 });
-
-const knowledge = require("./kernel/knowledge");
-app.get("/ima/brain", (req,res)=>{
-  try {
-    res.json(knowledge.summarize());
-  } catch(e) {
-    res.json({ error: e.message });
-  }
-});
