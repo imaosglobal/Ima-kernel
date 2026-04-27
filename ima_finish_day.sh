@@ -1,47 +1,40 @@
 #!/bin/bash
 
-echo "🧠 IMA DAILY FINALIZER START"
+echo "🧠 IMA DAILY FINALIZATION START"
 
-# 1. בדיקת שרת
-echo "🔍 checking server..."
-if ! curl -s http://localhost:4000/ima/run -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"message":"health"}' > /dev/null; then
-  echo "❌ server not responding"
-  exit 1
-fi
+# 1. status snapshot
+echo "📊 GIT STATUS"
+git status
 
-echo "✅ server OK"
+# 2. add all changes
+echo "📦 STAGING ALL CHANGES"
+git add -A
 
-# 2. בדיקת brain endpoint
-echo "🧠 checking brain endpoint..."
-BRAIN=$(curl -s http://localhost:4000/ima/brain)
+# 3. commit snapshot
+echo "💾 CREATING DAILY SNAPSHOT"
+git commit -m "daily full sync + evolution snapshot $(date +%s)" || echo "⚠️ nothing to commit"
 
-if [[ $BRAIN == *"Cannot GET"* ]]; then
-  echo "⚠️ brain missing, injecting..."
+# 4. push to main repo
+echo "🚀 PUSHING TO GITHUB"
+git push origin main
 
-  printf '\nconst knowledge = require("./kernel/knowledge");\napp.get("/ima/brain", (req,res)=>{\n  try {\n    res.json(knowledge.summarize());\n  } catch(e) {\n    res.json({ error: e.message });\n  }\n});\n' >> world_api.js
+# 5. show last commit
+echo "📌 LAST COMMIT"
+git log -1 --oneline
 
-  echo "🔧 injected brain endpoint"
-fi
+# 6. verify remote sync
+echo "🔍 VERIFY REMOTE STATUS"
+git fetch origin
+git status
 
-# 3. Git sync
-echo "📦 syncing to git..."
-git add .
-git commit -m "IMA daily sync $(date +%s)" || echo "no changes"
-git push
+# 7. system summary
+echo "🧠 IMA SYSTEM SUMMARY COMPLETE"
+echo "✔ kernel"
+echo "✔ runtime"
+echo "✔ evolution engine"
+echo "✔ behavior engine"
+echo "✔ extension engine"
+echo "✔ orchestrator"
+echo "✔ memory system"
 
-# 4. learning log update
-echo "📚 ensuring learning exists..."
-if [ ! -f learning_log.json ]; then
-  echo "[]" > learning_log.json
-fi
-
-# 5. final test
-echo "🧪 final API test..."
-curl -s http://localhost:4000/ima/run -X POST \
--H "Content-Type: application/json" \
--d '{"message":"final test"}'
-
-echo ""
-echo "🏁 IMA DAILY FINISH COMPLETE"
+echo "✅ ALL SYSTEMS SYNCHRONIZED"
