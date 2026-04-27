@@ -1,0 +1,18 @@
+{
+  "system": "IMA_FULL_SYSTEM_MAP",
+  "core_modules": [
+    "kernel",
+    "runtime",
+    "brain",
+    "behavior",
+    "evolution",
+    "extension",
+    "orchestrator"
+  ],
+  "snapshot": {
+    "timestamp": 1777309711946,
+    "repos": "origin\thttps://github.com/imaosglobal/Ima-kernel.git (fetch)\norigin\thttps://github.com/imaosglobal/Ima-kernel.git (push)\nproduction\thttps://github.com/imaosglobal/Ima-3d-mom.git (fetch)\nproduction\thttps://github.com/imaosglobal/Ima-3d-mom.git (push)\n",
+    "status": "On branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   ima_finish_day.sh\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\tima_system_map_engine.js\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n",
+    "last_commit": "e1f1491 daily full sync + evolution snapshot 1777309629\n"
+  }
+}

@@ -38,3 +38,6 @@ echo "✔ orchestrator"
 echo "✔ memory system"
 
 echo "✅ ALL SYSTEMS SYNCHRONIZED"
+🗺 RUNNING SYSTEM MAP ENGINE
+node ima_system_map_engine.js
+node ima_auto_executor.js
