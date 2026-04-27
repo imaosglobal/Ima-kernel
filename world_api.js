@@ -51,3 +51,12 @@ app.get("/ima/brain", (req,res)=>{
     res.json({ error: e.message });
   }
 });
+
+const knowledge = require("./kernel/knowledge");
+app.get("/ima/brain", (req,res)=>{
+  try {
+    res.json(knowledge.summarize());
+  } catch(e) {
+    res.json({ error: e.message });
+  }
+});
