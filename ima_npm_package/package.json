@@ -1,0 +1,21 @@
+{
+  "name": "ima_core",
+  "version": "1.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.15.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "ima_core": "^1.0.0",
+    "openai": "^6.34.0"
+  }
+}

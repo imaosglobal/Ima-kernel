@@ -1,3 +1,5 @@
+if (global.__IMA_RUNNING__) process.exit(0); global.__IMA_RUNNING__ = true;
+global.__IMA_BOOTED__=global.__IMA_BOOTED__||false;if(global.__IMA_BOOTED__)process.exit(0);global.__IMA_BOOTED__=true;
 const { execSync } = require("child_process");
 const fs = require("fs");
 
