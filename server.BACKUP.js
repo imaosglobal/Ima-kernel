@@ -40,8 +40,7 @@ light.position.set(2,3,2);
 scene.add(light);
 
 /* SAFE BODY */
-const injectHuman = require("./patch_body");
-const body = injectHuman(scene, THREE);
+const body = new THREE.Group();
 
 const head = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 32, 32),

@@ -1,4 +1,3 @@
-const IMA_GUARD = process.env.IMA_GUARD === "true";
 const fs = require("fs");
 
 const state = {
@@ -18,7 +17,7 @@ function syncAll() {
   state.sync.status = "syncing";
 
   // כאן בעתיד נחבר git submodules / hooks
-  if (process.env.DEBUG_SYNC) console.log("SYNC START");
+  console.log("SYNC START");
   console.log("repos:", state.repos);
 
   state.sync.lastSync = Date.now();
@@ -33,4 +32,3 @@ function syncAll() {
 }
 
 module.exports = { state, syncAll };
-if (!IMA_GUARD) { console.log("IMA DISABLED"); process.exit(0); }
