@@ -1,7 +1,15 @@
-console.log("🚀 IMA BOOTSTRAP START");
+const IMAKernel = require("./kernel");
 
-const Kernel = require("./kernel");
+const kernel = new IMAKernel();
 
-const ima = new Kernel();
+kernel.register("learning", (k) => {
+  k.on("boot", () => {
+    console.log("📚 learning module booted");
+  });
 
-ima.start(process.argv.slice(2));
+  k.on("tick", (state) => {
+    console.log("tick:", state.cycle);
+  });
+});
+
+kernel.start(process.argv.slice(2));

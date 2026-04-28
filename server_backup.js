@@ -1,159 +1,136 @@
-const express = require("express");
-const cors = require("cors");
-const fs = require("fs");
+const http = require("http");
+const core = require("./ima_core");
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+core.start();
 
-const FILE = "./memory.json";
+const server = http.createServer((req, res) => {
 
-// ---------- load ----------
-function loadMemory() {
-  try {
-    return JSON.parse(fs.readFileSync(FILE));
-  } catch {
-    return {
-      profile: { name: "אורי", mood: "calm", personality: "neutral" },
-      memory: []
-    };
+  if (req.url.startsWith("/learn")) {
+    const q = decodeURIComponent(req.url.split("=")[1] || "");
+    core.learn(q);
+    res.end("ok");
+    return;
   }
+
+  if (req.url === "/state") {
+    res.setHeader("Content-Type","application/json");
+    res.end(JSON.stringify(core.state));
+    return;
+  }
+
+  res.setHeader("Content-Type","text/html; charset=utf-8");
+
+  res.end(`
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IMA FULL BODY</title>
+<style>
+body { margin:0; overflow:hidden; background:black; }
+canvas { display:block; }
+</style>
+</head>
+<body>
+
+<script type="module">
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+
+/* ===== SCENE ===== */
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(70, innerWidth/innerHeight, 0.1, 1000);
+camera.position.z = 6;
+
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+
+/* LIGHT */
+const light = new THREE.PointLight(0x66ccff, 2);
+light.position.set(5,5,5);
+scene.add(light);
+
+const mat = new THREE.MeshStandardMaterial({ color:0x3399ff });
+
+/* ===== BODY ===== */
+const torso = new THREE.Mesh(new THREE.CylinderGeometry(0.7,0.9,2.2,24), mat);
+scene.add(torso);
+
+const head = new THREE.Mesh(new THREE.SphereGeometry(0.55,32,32), mat);
+head.position.y = 1.8;
+scene.add(head);
+
+/* ===== LIMBS ===== */
+function arm(x){
+  const u = new THREE.Mesh(new THREE.BoxGeometry(0.25,0.8,0.25),mat);
+  const l = new THREE.Mesh(new THREE.BoxGeometry(0.22,0.8,0.22),mat);
+
+  u.position.set(x,0.5,0);
+  l.position.set(x,-0.3,0);
+
+  scene.add(u); scene.add(l);
+  return {u,l};
 }
 
-// ---------- save ----------
-function saveMemory(m) {
-  fs.writeFileSync(FILE, JSON.stringify(m, null, 2));
+function leg(x){
+  const u = new THREE.Mesh(new THREE.BoxGeometry(0.3,0.9,0.3),mat);
+  const l = new THREE.Mesh(new THREE.BoxGeometry(0.28,0.9,0.28),mat);
+
+  u.position.set(x,-1.8,0);
+  l.position.set(x,-2.7,0);
+
+  scene.add(u); scene.add(l);
+  return {u,l};
 }
 
-// ---------- decay system ----------
-function decay(mem) {
-  mem.memory.forEach(m => {
-    m.weight = Math.max(0.1, (m.weight || 0.5) * 0.98);
-  });
+const LArm = arm(-1.1);
+const RArm = arm(1.1);
+const LLeg = leg(-0.4);
+const RLeg = leg(0.4);
+
+/* ===== STATE ===== */
+let state = {cycle:0,mood:0};
+
+async function update(){
+  state = await fetch("/state").then(r=>r.json());
+}
+setInterval(update,200);
+
+/* ===== LOOP ===== */
+function animate(){
+  requestAnimationFrame(animate);
+
+  const t = state.cycle * 0.02;
+  const mood = state.mood || 0;
+
+  const breath = Math.sin(t) * 0.1;
+
+  torso.scale.y = 1 + breath;
+
+  head.position.y = 1.8 + Math.sin(t*2)*0.05;
+  head.scale.set(1+mood*0.05,1+mood*0.05,1+mood*0.05);
+
+  LArm.u.rotation.z = Math.sin(t)*0.6;
+  RArm.u.rotation.z = -Math.sin(t)*0.6;
+  LArm.l.rotation.z = Math.sin(t+1)*0.4;
+  RArm.l.rotation.z = -Math.sin(t+1)*0.4;
+
+  LLeg.u.rotation.x = Math.sin(t)*0.6;
+  RLeg.u.rotation.x = -Math.sin(t)*0.6;
+  LLeg.l.rotation.x = Math.sin(t+1)*0.4;
+  RLeg.l.rotation.x = -Math.sin(t+1)*0.4;
+
+  renderer.render(scene,camera);
 }
 
-// ---------- memory update ----------
-function remember(text, mem) {
-  const msg = text.trim();
+animate();
+</script>
 
-  let value = msg;
-  let type = "fact";
-
-  if (msg.includes("קוראים לי")) {
-    value = msg.split("קוראים לי")[1]?.trim();
-    type = "identity";
-    mem.profile.name = value;
-  }
-
-  if (msg.includes("אני אוהב")) {
-    value = msg.split("אני אוהב")[1]?.trim();
-    type = "preference";
-  }
-
-  let found = mem.memory.find(m => m.value === value);
-
-  if (found) {
-    found.hits = (found.hits || 0) + 1;
-    found.weight = Math.min(1, (found.weight || 0.5) + 0.15);
-    found.lastUsed = Date.now();
-  } else {
-    mem.memory.push({
-      value,
-      type,
-      weight: 0.5,
-      hits: 1,
-      created: Date.now(),
-      lastUsed: Date.now()
-    });
-  }
-
-  decay(mem);
-  updatePersonality(mem);
-  saveMemory(mem);
-}
-
-// ---------- personality engine ----------
-function updatePersonality(mem) {
-  const prefs = mem.memory.filter(m => m.type === "preference");
-
-  const music = prefs.filter(p => p.value.includes("מוזיקה")).length;
-  const social = prefs.length;
-
-  if (music >= 2) {
-    mem.profile.personality = "creative";
-    mem.profile.mood = "inspired";
-  } else if (social >= 4) {
-    mem.profile.personality = "expressive";
-    mem.profile.mood = "active";
-  } else if (social === 0) {
-    mem.profile.personality = "neutral";
-    mem.profile.mood = "calm";
-  } else {
-    mem.profile.personality = "curious";
-  }
-}
-
-// ---------- intent ----------
-function detectIntent(msg) {
-  const t = (msg || "").replace(/s/g, "");
-
-  if (t.includes("מהאתזוכר")) return "memory";
-  if (t.includes("מההאישיותשלך") || t.includes("איזהאישיות")) return "personality";
-  if (t.includes("איךקוראיםלי")) return "identity";
-  if (t.startsWith("imaremember")) return "remember";
-
-  return "chat";
-}
-
-// ---------- respond ----------
-function respond(intent, msg, mem) {
-  const name = mem.profile?.name || "אורי";
-
-  if (intent === "memory") {
-    const list = mem.memory
-      .filter(m => m && m.value)
-      .sort((a,b)=>(b.weight + b.hits) - (a.weight + a.hits));
-
-    return list.length
-      ? list.map(m => `${m.value}(${(m.weight||0).toFixed(2)})`).join(" | ")
-      : "אין זיכרון";
-  }
-
-  if (intent === "personality") {
-    return `אני ${mem.profile.personality} (מצב: ${mem.profile.mood})`;
-  }
-
-  if (intent === "identity") {
-    return `קוראים לך ${name}`;
-  }
-
-  return `אני איתך ${name}`;
-}
-
-// ---------- API ----------
-app.post("/ask", (req, res) => {
-  const msg = (req.body?.message || "").trim();
-  const mem = loadMemory();
-
-  const intent = detectIntent(msg);
-
-  if (intent === "remember") {
-    remember(msg.replace(/ima remember/i, ""), mem);
-    return res.json({ reply: "נשמר ✔" });
-  }
-
-  const reply = respond(intent, msg, mem);
-
-  saveMemory(mem);
-
-  res.json({
-    reply,
-    intent,
-    mood: mem.profile.mood,
-    personality: mem.profile.personality
-  });
+</body>
+</html>
+  `);
 });
 
-app.listen(3000, () => {
-  console.log("IMA LIVE PERSONALITY SYSTEM RUNNING");
+server.listen(3000, () => {
+  console.log("IMA FULL BODY RUNNING : http://localhost:3000");
 });

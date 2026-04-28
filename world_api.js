@@ -1,80 +1,11 @@
-const express = require("express");
-const { loadUsers, getUser, createUser, saveUsers } = require("./kernel/user_engine");
-const { decide } = require("./kernel/brain_core");
-const { dispatch } = require("./kernel/action_dispatcher");
+const kernel = require("./kernel");
 
-const app = express();
-app.use(express.json());
+module.exports = (app) => {
 
-app.post("/ima/run", async (req, res) => {
-  const { message, userId } = req.body;
-
-  const users = loadUsers();
-
-  let user = getUser(users, userId);
-
-  if (!user) {
-    user = createUser(users, userId);
-  }
-
-  const decision = decide(message, user);
-
-  let actionResult = null;
-
-  if (decision.actions.length > 0) {
-    actionResult = await dispatch(decision.actions[0], { message });
-  }
-
-  user.memory.push({
-    message,
-    time: Date.now()
+  app.get("/", (req, res) => {
+    res.json({
+      status: "IMA WORLD API RUNNING"
+    });
   });
 
-  saveUsers(users);
-
-  res.json({
-    result: actionResult?.result || "IMA response",
-    user,
-    debug: decision
-  });
-});
-
-app.listen(4000, () => {
-  console.log("🌍 IMA MULTI-USER SYSTEM RUNNING ON 4000");
-});
-
-const knowledge = require("./kernel/knowledge");
-app.get("/ima/brain", (req,res)=>{
-  try {
-    res.json(knowledge.summarize());
-  } catch(e) {
-    res.json({ error: e.message });
-  }
-});
-
-const knowledge = require("./kernel/knowledge");
-app.get("/ima/brain", (req,res)=>{
-  try {
-    res.json(knowledge.summarize());
-  } catch(e) {
-    res.json({ error: e.message });
-  }
-});
-
-const knowledge = require("./kernel/knowledge");
-app.get("/ima/brain", (req,res)=>{
-  try {
-    res.json(knowledge.summarize());
-  } catch(e) {
-    res.json({ error: e.message });
-  }
-});
-
-const knowledge = require("./kernel/knowledge");
-app.get("/ima/brain", (req,res)=>{
-  try {
-    res.json(knowledge.summarize());
-  } catch(e) {
-    res.json({ error: e.message });
-  }
-});
+};
