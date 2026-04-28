@@ -1,47 +1,89 @@
-const fs = require("fs");
 const { execSync } = require("child_process");
+const fs = require("fs");
 
-function load(file) {
+/* ================= UTIL ================= */
+function run(cmd){
   try {
-    return JSON.parse(fs.readFileSync(file));
-  } catch {
-    return null;
+    return execSync(cmd, { encoding: "utf8" });
+  } catch (e) {
+    return e.message;
   }
 }
 
-function score() {
-  try {
-    const out = execSync(
-      "curl -s http://localhost:4000/ima/run -X POST -H 'Content-Type: application/json' -d '{\"message\":\"orchestrate\"}'"
-    ).toString();
-    const parsed = JSON.parse(out);
-    return parsed.debug?.score || 50;
-  } catch {
-    return 50;
-  }
+/* ================= STEP 1: CHECK SYSTEM ================= */
+function step1_check(){
+  console.log("🧠 STEP 1: SYSTEM CHECK");
+
+  const gitStatus = run("git status");
+  console.log(gitStatus);
+
+  return gitStatus.includes("working tree clean") || gitStatus.includes("nothing to commit");
 }
 
-function decide() {
-  const state = load("./ima_evolution_state.json");
-  const behavior = load("./ima_behavior_profile.json");
+/* ================= STEP 2: BUILD CORE ================= */
+function step2_build(){
+  console.log("⚙️ STEP 2: BUILD CORE");
 
-  const s = score();
+  fs.writeFileSync("ima_runtime_state.json", JSON.stringify({
+    boot: true,
+    timestamp: Date.now()
+  }, null, 2));
 
-  console.log("🧠 ORCHESTRATOR SCORE:", s);
+  return true;
+}
 
-  if (s > 55) {
-    behavior.creativity = Math.min(1, behavior.creativity + 0.1);
-    behavior.tone = "expansive";
-  } else if (s < 45) {
-    behavior.creativity = Math.max(0.1, behavior.creativity - 0.1);
-    behavior.tone = "minimal";
+/* ================= STEP 3: GIT SYNC ================= */
+function step3_git(){
+  console.log("🌍 STEP 3: GIT SYNC");
+
+  run("git add .");
+
+  const commit = run('git commit -m "IMA auto orchestrator sync"');
+
+  console.log(commit);
+
+  const push = run("git push origin main");
+
+  console.log(push);
+
+  return true;
+}
+
+/* ================= STEP 4: VERIFY ================= */
+function step4_verify(){
+  console.log("🔍 STEP 4: VERIFY");
+
+  const log = run("git log --oneline -3");
+  console.log(log);
+
+  return log.includes("IMA");
+}
+
+/* ================= RUN PIPELINE ================= */
+function runPipeline(){
+
+  console.log("\n🚀 IMA ORCHESTRATOR START\n");
+
+  const s1 = step1_check();
+  const s2 = step2_build();
+  const s3 = step3_git();
+  const s4 = step4_verify();
+
+  const status = {
+    system_check: s1,
+    build: s2,
+    git_sync: s3,
+    verify: s4
+  };
+
+  console.log("\n📊 FINAL STATUS:");
+  console.log(status);
+
+  if(s1 && s2 && s3 && s4){
+    console.log("\n✅ IMA PIPELINE COMPLETE");
   } else {
-    behavior.tone = "stable";
+    console.log("\n⚠️ PIPELINE PARTIAL / NEEDS REVIEW");
   }
-
-  fs.writeFileSync("./ima_behavior_profile.json", JSON.stringify(behavior, null, 2));
-
-  console.log("🧠 UPDATED GLOBAL BEHAVIOR:", behavior);
 }
 
-decide();
+runPipeline();
