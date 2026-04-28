@@ -5,50 +5,24 @@ LOG="$BASE/cron_brain.log"
 
 echo "===== CRON BRAIN START $(date) =====" >> $LOG
 
-cd $BASE || exit 1
-
-# =========================
 # 1. HEALTH CHECK
-# =========================
 echo "[1] health check..." >> $LOG
-node ima_boot.js --check >> $LOG 2>&1
+node $BASE/ima_boot.js 2>&1 | tee -a $LOG || echo "health check failed" >> $LOG
 
-if [ $? -ne 0 ]; then
-  echo "⚠ kernel unhealthy -> restart attempt" >> $LOG
-  node ima_boot.js >> $LOG 2>&1 &
-fi
-
-# =========================
 # 2. SERVER CHECK
-# =========================
 echo "[2] server check..." >> $LOG
-curl -s http://localhost:3000/state > /dev/null
+curl -s http://localhost:3000/state >> $LOG || echo "server offline" >> $LOG
 
-if [ $? -ne 0 ]; then
-  echo "⚠ server down -> restarting" >> $LOG
-  node server.js >> $LOG 2>&1 &
-fi
-
-# =========================
-# 3. GIT SYNC (safe push only)
-# =========================
+# 3. GIT SYNC
 echo "[3] git sync..." >> $LOG
+bash $BASE/git_auto_sync.sh >> $LOG 2>&1
 
-./git_auto_sync.sh >> $LOG 2>&1
-
-# =========================
-# 4. CLEANUP
-# =========================
+# 4. CLEANUP SAFE
 echo "[4] cleanup..." >> $LOG
+rm -f $BASE/tmp_* 2>/dev/null
 
-find . -name "*.log" -mtime +7 -delete >> $LOG 2>&1
-
-# =========================
-# 5. SNAPSHOT STATE
-# =========================
+# 5. SNAPSHOT SAFE
 echo "[5] snapshot..." >> $LOG
+node $BASE/ima_kernel.js snapshot >> $LOG 2>&1 || echo "snapshot failed" >> $LOG
 
-node ima_kernel.js snapshot > $BASE/state_snapshot.json 2>/dev/null
-
-echo "===== CRON BRAIN END =====" >> $LOG
-echo "" >> $LOG
+echo "===== CRON BRAIN END $(date) =====" >> $LOG
