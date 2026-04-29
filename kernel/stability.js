@@ -1,4 +1,5 @@
-const { loadMemory, saveMemory } = require("./memory_engine");
+const { load, save } = require("./kernel/memory_engine");
+const { decayMemory, deduplicate } = require("./kernel/memory_engine");
 const { execSync } = require("child_process");
 
 let lastHealth = Date.now();
@@ -19,15 +20,19 @@ function cleanMemory(mem) {
 
 function healthCheck() {
   try {
-    const mem = loadMemory();
-    const cleaned = cleanMemory(mem);
-    saveMemory(cleaned);
+    let mem = load();
+
+    mem = cleanMemory(mem);
+    mem = decayMemory(mem);
+    mem = deduplicate(mem);
+
+    save(mem);
 
     lastHealth = Date.now();
 
     return {
       status: "ok",
-      memorySize: cleaned.memory.length,
+      memorySize: mem.memory.length,
       heartbeat: lastHealth
     };
   } catch (e) {
@@ -39,16 +44,10 @@ function healthCheck() {
   }
 }
 
-// זיהוי תקיעות אמיתי
 function detectStall() {
-  const now = Date.now();
-  const diff = now - lastHealth;
-
-  // אם לא הייתה פעילות 60 שניות → חשוד
-  return diff > 60000;
+  return (Date.now() - lastHealth) > 60000;
 }
 
-// restart חכם (רק אם צריך)
 function smartRecover() {
   if (!detectStall()) return { skipped: true };
 
@@ -64,5 +63,7 @@ module.exports = {
   healthCheck,
   smartRecover,
   cleanMemory,
+  decayMemory,
+  deduplicate,
   detectStall
 };
