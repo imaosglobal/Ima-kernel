@@ -39,7 +39,8 @@ app.listen(PORT, () => {
 });
 
 const Stripe = require("stripe");
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
+if(!process.env.STRIPE_SECRET_KEY){ throw new Error("Missing Stripe Key"); }
 
 /* =========================
    STRIPE PAY ENDPOINT
