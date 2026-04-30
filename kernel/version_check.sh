@@ -1,19 +1,27 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd ~/ima_core/kernel
+echo "=== IMA DAILY SYSTEM CHECK ==="
 
-CURRENT=$(cat VERSION)
-NPM_VER=$(node -p "require('./package.json').version")
+BASE="http://localhost:4000"
 
-echo "LOCAL VERSION FILE: $CURRENT"
-echo "NPM VERSION: $NPM_VER"
+# 1. check server
+HEALTH=$(curl -s $BASE/run \
+  -H "x-api-key: test" \
+  -H "Content-Type: application/json" \
+  --data-raw '{"task":"health"}')
 
-if [ "$CURRENT" != "$NPM_VER" ]; then
-  echo "⚠ VERSION MISMATCH → syncing npm to file"
-  sed -i "s/\"version\": \".*\"/\"version\": \"$CURRENT\"/" package.json
-  git add package.json VERSION
-  git commit -m "sync version $CURRENT"
-  git push origin main
+echo "[1] health check:"
+echo "$HEALTH"
+
+# 2. detect failure
+if echo "$HEALTH" | grep -q "error"; then
+  echo "[!] system degraded → running auto_pipeline"
+  bash ~/ima_core/kernel/auto_pipeline.sh
 else
-  echo "✔ VERSION OK"
+  echo "[✓] system OK"
 fi
+
+# 3. log snapshot
+echo "$(date) - $HEALTH" >> ~/ima_core/kernel/daily.log
+
+echo "=== DONE ==="
