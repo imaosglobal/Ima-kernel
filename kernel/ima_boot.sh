@@ -2,20 +2,17 @@
 
 cd ~/ima_core/kernel
 
-echo "[IMA BOOT] syncing with git..."
+echo "[IMA BOOT SYNC] pulling latest..."
 git pull origin main || true
 
-echo "[IMA BOOT] installing dependencies..."
+echo "[IMA BOOT SYNC] installing..."
 npm install || true
 
-echo "[IMA BOOT] stopping old processes..."
-pkill -f prod_server.js || true
-pkill -f watchdog.sh || true
+echo "[IMA BOOT SYNC] starting server..."
 
-echo "[IMA BOOT] starting server..."
+pkill -f prod_server.js || true
+sleep 2
+
 nohup node prod_server.js > server.log 2>&1 &
 
-echo "[IMA BOOT] starting watchdog (stable)..."
-nohup bash ~/ima_core/kernel/watchdog.sh > watchdog.log 2>&1 &
-
-echo "[IMA BOOT] system ready"
+echo "[IMA BOOT SYNC] done"
