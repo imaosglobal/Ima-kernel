@@ -1,8 +1,139 @@
 [DAEMON] starting kernel...
+=== KERNEL FIREWALL ACTIVE ===
 ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
 STALE LOCK REMOVED
-LOCK ACQUIRED: 32206
-=== KERNEL FIREWALL ACTIVE ===
+LOCK ACQUIRED: 16579
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+[FIREWALL KILL] 5952 node /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/home/ima_core/ima_bundle/unified_ima/ima_unified_system/server.js
+[FIREWALL KILL] 16578 node /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/home/ima_core/kernel/kernel_firewall.js
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16651
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16727
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16753
 ◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
-[FIREWALL KILL] 32205 node /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/home/ima_core/kernel/kernel_firewall.js
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16813
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16831
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16841
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16849
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16860
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16870
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 16990
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17025
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17071
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17125
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17215
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17287
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17326
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17392
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17415
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17424
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17434
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17492
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17529
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17598
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17622
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17644
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+KERNEL SAAS RUNNING ON PORT 4000
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+LOCK ACQUIRED: 17659
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
 KERNEL SAAS RUNNING ON PORT 4000

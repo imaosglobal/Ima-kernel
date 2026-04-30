@@ -1,13 +1,10 @@
 {
-  "name": "kernel",
+  "name": "ima-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "boot_safe_guard.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "ima": "ima_cli.sh"
   },
-  "keywords": [],
+  "scripts": {},
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "MIT"
 }
