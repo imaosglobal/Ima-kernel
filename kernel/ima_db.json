@@ -1,0 +1,36 @@
+{
+  "users": {
+    "INSERT INTO users (apiKey, count, paid) VALUES (?, 0, 0)": {
+      "count": 0,
+      "paid": 0
+    },
+    "9d6bc2fe99cd934874dbffff45edba8e": {
+      "count": 1,
+      "paid": 0
+    },
+    "828e367f9d977ac667db2e338dccd67b": {
+      "count": 0,
+      "paid": 0
+    },
+    "0bb10d6118799682ac74094a5c83e0b8": {
+      "count": 2,
+      "paid": 0
+    },
+    "913fe0ba82b3cbee24f116d1f701d8bb": {
+      "count": 0,
+      "paid": 0
+    },
+    "f7a6e1ee7ff53b76299923c638469a05": {
+      "count": 0,
+      "paid": 0
+    },
+    "67fa173d983b6aecc8494ce102278ca7": {
+      "count": 0,
+      "paid": 0
+    },
+    "2b6881bd4d8f270894d28f2c4b41e336": {
+      "count": 1,
+      "paid": 0
+    }
+  }
+}

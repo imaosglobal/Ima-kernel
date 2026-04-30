@@ -1,9 +1,14 @@
+require("./env_boot");
+const { acquireLock } = require("./kernel_lock"); acquireLock();
 require('dotenv').config();
 
 const express = require("express");
 const app = express();
 
 app.use(express.json());
+const Stripe = require("stripe");
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
 
 /**
  * =========================
@@ -23,8 +28,6 @@ if (!STRIPE_KEY) {
  * STRIPE INIT (SINGLE SOURCE)
  * =========================
  */
-const Stripe = require("stripe");
-const stripe = new Stripe(STRIPE_KEY);
 
 /**
  * =========================
@@ -116,3 +119,27 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log("KERNEL SAAS RUNNING ON PORT", PORT);
 });
+
+app.post("/pay", async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: [{
+        price_data: {
+          currency: "usd",
+          product_data: { name: "IMA PRO" },
+          unit_amount: 500
+        },
+        quantity: 1
+      }],
+      success_url: "http://localhost:4000/success",
+      cancel_url: "http://localhost:4000/cancel"
+    });
+
+    res.json({ url: session.url });
+  } catch (e) {
+    res.json({ error: e.message });
+  }
+});
+
