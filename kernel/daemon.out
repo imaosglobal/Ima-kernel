@@ -1,0 +1,8 @@
+[DAEMON] starting kernel...
+ENV LOADED FROM: /data/data/com.termux/files/home/.ima_env
+STALE LOCK REMOVED
+LOCK ACQUIRED: 32206
+=== KERNEL FIREWALL ACTIVE ===
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+[FIREWALL KILL] 32205 node /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/home/ima_core/kernel/kernel_firewall.js
+KERNEL SAAS RUNNING ON PORT 4000
