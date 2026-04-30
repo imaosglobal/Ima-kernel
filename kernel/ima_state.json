@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "status": "running",
-  "last_check": "Thu Apr 30 16:13:49 IDT 2026",
-  "health": down,
-  "fail_count": 1
+  "last_check": "Thu Apr 30 16:16:30 IDT 2026",
+  "health": {"ok":true,"status":"alive","uptime":155.12192168,"memory":{"rss":51703808,"heapTotal":10358784,"heapUsed":8639616,"external":2357388,"arrayBuffers":22987}},
+  "fail_count": 0
 }
