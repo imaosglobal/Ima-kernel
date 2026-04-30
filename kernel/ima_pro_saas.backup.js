@@ -51,3 +51,6 @@ app.post("/pay", (req, res) => {
 app.listen(4000, () => {
   console.log("KERNEL SAAS RUNNING ON PORT 4000");
 });
+require("./signup_fix")(app);
+const { ensureUser } = require("./db_extend");
+require("./run_patch")(app, require("./db_fix"));

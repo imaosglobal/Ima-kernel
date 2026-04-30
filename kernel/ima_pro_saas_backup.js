@@ -55,4 +55,3 @@ require("./signup_fix")(app);
 const { ensureUser } = require("./db_extend");
 require("./run_patch")(app, require("./db_fix"));
 require("./plugin_loader")(app, require("./db_fix"));
-require("./plugins/default_processor")(app, require("./db_fix"));
