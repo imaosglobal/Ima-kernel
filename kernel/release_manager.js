@@ -6,19 +6,19 @@ function run() {
 
   if (d.shouldRestart) {
     console.log("[AUTO] restart");
-    execSync("ima restart", { stdio: "inherit" });
+    safeExec("ima restart", { stdio: "inherit" });
   }
 
   if (d.shouldPush) {
     console.log("[AUTO] git push");
-    execSync("git add . && git commit -m 'auto sync' && git push", {
+    safeExec("git add . && git commit -m 'auto sync' && git push", {
       stdio: "inherit"
     });
   }
 
   if (d.shouldRelease) {
     console.log("[AUTO] version bump");
-    execSync("npm version patch --no-git-tag-version", { stdio: "inherit" });
+    safeExec("npm version patch --no-git-tag-version", { stdio: "inherit" });
   }
 
   return d;
@@ -52,3 +52,53 @@ function executionLayer() {
 }
 
 module.exports.executionLayer = executionLayer;
+
+const { generateCodeFromPlan } = require("./code_writer");
+
+function codeLayer() {
+  const files = generateCodeFromPlan();
+
+  if (files.length > 0) {
+    console.log("[CODE WRITER]");
+    files.forEach(f => console.log("generated:", f));
+  }
+}
+
+module.exports.codeLayer = codeLayer;
+
+const { safetyCheck } = require("./safety_brain");
+
+function safetyLayer() {
+  const results = safetyCheck();
+
+  const failed = results.filter(r => !r.ok);
+
+  if (failed.length > 0) {
+    console.log("[SAFETY] issues detected:", failed.length);
+    console.log("[SAFETY] blocking auto release");
+    return { blocked: true };
+  }
+
+  console.log("[SAFETY] all checks passed");
+  return { blocked: false };
+}
+
+module.exports.safetyLayer = safetyLayer;
+
+// FIX: safer shell execution for Termux
+const { execSync } = require("child_process");
+
+function safeExec(cmd) {
+  try {
+    return safeExec(cmd, {
+      shell: "/data/data/com.termux/files/usr/bin/bash",
+      encoding: "utf-8",
+      stdio: "pipe"
+    });
+  } catch (e) {
+    console.log("[SAFE EXEC ERROR]", e.message);
+    return null;
+  }
+}
+
+module.exports.safeExec = safeExec;
