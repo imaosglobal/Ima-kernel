@@ -32,5 +32,75 @@
       "reason": "ok"
     },
     "ts": 1777618711223
+  },
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 89.927802266
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok"
+    },
+    "ts": 1777619632430
+  },
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 155.125337657
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok"
+    },
+    "ts": 1777619697613
+  },
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 124.664187148
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok",
+      "risk": 0
+    },
+    "ts": 1777619824504
+  },
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 307.307019219
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok",
+      "risk": 0
+    },
+    "ts": 1777620251966
   }
 ]

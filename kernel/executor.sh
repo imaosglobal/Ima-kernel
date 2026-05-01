@@ -2,21 +2,13 @@
 
 LOG=/data/data/com.termux/files/home/ima_core/kernel/server.log
 
-ACTION="$1"
+echo "[EXEC] stopping server..."
+pkill -f prod_server.js || true
+sleep 2
 
-case "$ACTION" in
+echo "[EXEC] starting server..."
+cd /data/data/com.termux/files/home/ima_core/kernel
 
-  restart)
-    echo "[EXEC] restart started" | tee -a $LOG
+nohup node prod_server.js >> $LOG 2>&1 &
 
-    # מניעת כפילות
-    pkill -f prod_server.js || true
-    sleep 2
-
-    cd /data/data/com.termux/files/home/ima_core/kernel
-    nohup node prod_server.js >> $LOG 2>&1 &
-
-    echo "[EXEC] restart done" | tee -a $LOG
-  ;;
-
-esac
+echo "[EXEC] restart done"
