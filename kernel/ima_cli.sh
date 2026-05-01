@@ -1,20 +1,26 @@
+
 #!/data/data/com.termux/files/usr/bin/bash
 
-BASE="http://localhost:4000"
-KEY=$(cat ~/.ima_key 2>/dev/null)
+CMD="$1"
 
-if [ -z "$KEY" ]; then
-  echo "No API key found. Creating one..."
-  RESP=$(curl -s -X POST $BASE/signup)
-  KEY=$(echo $RESP | sed -E 's/.*"apiKey":"([^"]+)".*/\1/')
-  echo $KEY > ~/.ima_key
-  echo "Saved API key."
-fi
+case "$CMD" in
+  restart)
+    bash ~/ima_core/kernel/ima_gate.sh restart
+    ;;
+  update)
+    bash ~/ima_core/kernel/ima_update.sh
+    ;;
+  brain)
+    node ~/ima_core/kernel/decision_engine.js brain
+    ;;
+  health)
+    ima health
+    ;;
+  queue)
+    ima queue
+    ;;
+  *)
+    echo "[CLI] UNKNOWN COMMAND: $CMD"
+    ;;
+esac
 
-TASK="$1"
-
-curl -s -X POST $BASE/run \
-  -H "x-api-key: $KEY" \
-  -H "Content-Type: application/json" \
-  --data-raw "{\"task\":\"$TASK\"}"
-echo ""
