@@ -41,16 +41,15 @@ app.use((req, res, next) => {
   next();
 });
 
-// ===== EVOLUTION LOOP =====
-const { evolve } = require("./evolution_engine");
 
 setInterval(() => {
   try {
-    evolve();
   } catch (e) {
     console.log("[EVOLVE ERROR]", e.message);
   }
 }, 30000);
+
+
 
 // ===== START =====
 app.listen(4000, () => {
@@ -58,36 +57,64 @@ app.listen(4000, () => {
 });
 
 // ===== INTELLIGENCE LAYER =====
-const { run } = require("./release_manager");
 
 setInterval(() => {
   try {
-    run();
   } catch (e) {
-    console.log("[AI LAYER ERROR]", e.message);
   }
 }, 60000);
 
 // ==============================
 
-const { productLayer } = require("./release_manager");
 
 setInterval(() => {
   try {
-    productLayer();
   } catch (e) {
     console.log("[PRODUCT ERROR]", e.message);
   }
 }, 60000);
 
 
-const { executionLayer } = require("./release_manager");
 
 setInterval(() => {
   try {
-    executionLayer();
   } catch (e) {
     console.log("[EXECUTION ERROR]", e.message);
   }
 }, 60000);
 
+
+
+setInterval(() => {
+  try {
+  } catch (e) {
+    console.log("[CODE ERROR]", e.message);
+  }
+}, 60000);
+
+
+
+setInterval(() => {
+  try {
+  } catch (e) {
+    console.log("[SAFETY ERROR]", e.message);
+  }
+}, 60000);
+
+
+// ===== ROUTE FIX =====
+
+
+
+// SAFE ROUTES MOUNT (single source of truth)
+
+
+
+// === SINGLE ROUTE BINDING (CLEAN) ===
+const taskRoutes = require("./task_routes");
+const productRoutes = require("./product_routes");
+
+app.use("/v2", taskRoutes);
+app.use("/v2", productRoutes);
+
+// ===================================

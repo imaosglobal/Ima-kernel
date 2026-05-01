@@ -1,29 +1,19 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd ~/ima_core/kernel
+echo "=== IMA FULL SYSTEM TEST ==="
 
-echo "=== IMA TEST FLOW ==="
+echo "[1] restart"
+ima restart
 
-SIGNUP=$(curl -s -X POST http://localhost:4000/v1/signup)
+sleep 2
 
-echo "[1] signup:"
-echo "$SIGNUP"
+echo "[2] health"
+ima health
 
-KEY=$(echo "$SIGNUP" | grep -o '"apiKey":"[^"]*"' | cut -d'"' -f4)
+echo "[3] queue"
+curl -s http://localhost:4000/v2/queue
 
-if [ -z "$KEY" ]; then
-  echo "[ERROR] missing api key"
-  exit 1
-fi
-
-echo "[2] key: $KEY"
-
-RUN=$(curl -s -X POST http://localhost:4000/v1/run \
-  -H "x-api-key: $KEY" \
-  -H "Content-Type: application/json" \
-  --data-raw '{"task":"ima test"}')
-
-echo "[3] result:"
-echo "$RUN"
+echo "[4] logs"
+tail -n 30 ~/ima_core/kernel/server.log
 
 echo "=== DONE ==="

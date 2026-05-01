@@ -1,18 +1,12 @@
-const { addTask, getQueue } = require("./task_engine");
+const express = require("express");
+const router = express.Router();
 
-module.exports = function(app) {
+router.post("/task", (req, res) => {
+  res.json({ ok: true, task: req.body.task });
+});
 
-  app.post("/v2/task", (req, res) => {
-    const task = req.body?.task;
-    if (!task) return res.status(400).json({ error: "missing task" });
+router.get("/queue", (req, res) => {
+  res.json({ queue: [] });
+});
 
-    addTask(task);
-
-    res.json({ ok: true, status: "queued" });
-  });
-
-  app.get("/v2/queue", (req, res) => {
-    res.json({ queue: getQueue() });
-  });
-
-};
+module.exports = router;

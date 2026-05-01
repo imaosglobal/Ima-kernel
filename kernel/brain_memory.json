@@ -1,0 +1,36 @@
+[
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 144.953127227
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok"
+    },
+    "ts": 1777618703098
+  },
+  {
+    "state": {
+      "health": {
+        "ok": true,
+        "status": "alive",
+        "uptime": 153.088389648
+      },
+      "queue": {
+        "queue": []
+      }
+    },
+    "decision": {
+      "action": "stable",
+      "reason": "ok"
+    },
+    "ts": 1777618711223
+  }
+]
