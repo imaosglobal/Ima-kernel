@@ -388,5 +388,29 @@
     "path": "/v2/queue",
     "method": "GET",
     "ts": 1777623637743
+  },
+  {
+    "type": "request",
+    "path": "/v2/health",
+    "method": "GET",
+    "ts": 1777623769092
+  },
+  {
+    "type": "request",
+    "path": "/v2/queue",
+    "method": "GET",
+    "ts": 1777623769104
+  },
+  {
+    "type": "request",
+    "path": "/v2/health",
+    "method": "GET",
+    "ts": 1777623778209
+  },
+  {
+    "type": "request",
+    "path": "/v2/queue",
+    "method": "GET",
+    "ts": 1777623778225
   }
 ]
