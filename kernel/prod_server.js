@@ -56,3 +56,16 @@ setInterval(() => {
 app.listen(4000, () => {
   console.log("IMA RUNNING ON 4000");
 });
+
+// ===== INTELLIGENCE LAYER =====
+const { run } = require("./release_manager");
+
+setInterval(() => {
+  try {
+    run();
+  } catch (e) {
+    console.log("[AI LAYER ERROR]", e.message);
+  }
+}, 60000);
+
+// ==============================
