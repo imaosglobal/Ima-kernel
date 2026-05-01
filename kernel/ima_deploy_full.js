@@ -1,4 +1,29 @@
-const { execSync } = require('child_process');
+const { execSync } = require("child_process");
+
+// ===== VERSION RESOLVER (TOP LEVEL SAFE) =====
+
+
+function getPublishedVersions(){
+  try {
+    const out = execSync('npm view ima-core-saas versions --json', {encoding:'utf8'});
+    return JSON.parse(out || '[]');
+  } catch {
+    return [];
+  }
+}
+
+function nextVersion(base, used){
+  let [a,b,c] = base.split('.').map(Number);
+  while (used.includes(`${a}.${b}.${c}`)) c++;
+  return `${a}.${b}.${c}`;
+}
+
+function resolveVersion(current){
+  return nextVersion(current, getPublishedVersions());
+}
+// =========================================
+
+
 const fs = require('fs');
 
 function sh(cmd){
