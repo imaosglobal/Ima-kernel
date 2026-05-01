@@ -1,19 +1,16 @@
-
 #!/data/data/com.termux/files/usr/bin/bash
 
-ACTION=$1
+CMD=$1
 
-RESULT=$(node ~/ima_core/kernel/decision_engine.js "$ACTION")
+DECISION=$(node ~/ima_core/kernel/decision_engine.js "$CMD")
 
-echo "$RESULT"
+ALLOW=$(echo "$DECISION" | grep -o '"decision": *"ALLOW"')
 
-DECISION=$(echo "$RESULT" | jq -r '.decision')
+echo "$DECISION"
 
-if [ "$DECISION" = "ALLOW" ]; then
-  echo "[GATE] EXECUTING ACTION: $ACTION"
-elif [ "$DECISION" = "DEFER" ]; then
-  echo "[GATE] DEFERRED: $ACTION"
+if [[ -n "$ALLOW" ]]; then
+    echo "[GATE] EXECUTING: $CMD"
+    bash ~/ima_core/kernel/ima_cli.sh "$CMD"
 else
-  echo "[GATE] BLOCKED: $ACTION"
+    echo "[GATE] BLOCKED OR DEFERRED: $CMD"
 fi
-
