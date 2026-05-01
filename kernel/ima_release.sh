@@ -1,30 +1,24 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-echo "[IMA RELEASE]"
+source ./ima_mode_guard.sh release
 
-echo "[1] backup safety"
-TS=$(date +%s)
-mkdir -p backups
-tar -czf backups/pre_release_$TS.tgz .
+set -e
+
+echo "[IMA RELEASE] FULL DEPLOY"
+
+echo "[1] backup"
+bash ima_backup.sh 2>/dev/null || true
 
 echo "[2] git commit + push"
 git add .
-git commit -m "release $(date +%s)" || true
+git commit -m "release $(date +%s)"
 git push
 
 echo "[3] version bump"
-node -e "
-const fs=require('fs');
-const p=require('./package.json');
-let [a,b,c]=(p.version||'2.0.0').split('.');
-p.version=\`\${a}.\${parseInt(b)+1}.0\`;
-fs.writeFileSync('package.json',JSON.stringify(p,null,2));
-console.log('[VERSION]',p.version);
-"
+npm version patch -m "release %s"
 
 echo "[4] npm publish"
 npm publish
 
-echo "[5] sync hooks (future: site/app)"
-echo "[OK] release complete"
+echo "[5] future sync hooks"
+echo "[OK] site/app/device sync placeholder"
