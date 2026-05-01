@@ -1,24 +1,30 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-cd ~/ima_core/kernel
+echo "[IMA RELEASE]"
 
-echo "[IMA RELEASE] syncing git..."
+echo "[1] backup safety"
+TS=$(date +%s)
+mkdir -p backups
+tar -czf backups/pre_release_$TS.tgz .
 
+echo "[2] git commit + push"
 git add .
-git commit -m "auto release $(date)" || true
-git push origin main || true
+git commit -m "release $(date +%s)" || true
+git push
 
-echo "[IMA RELEASE] version bump..."
-npm version patch --no-git-tag-version || true
+echo "[3] version bump"
+node -e "
+const fs=require('fs');
+const p=require('./package.json');
+let [a,b,c]=(p.version||'2.0.0').split('.');
+p.version=\`\${a}.\${parseInt(b)+1}.0\`;
+fs.writeFileSync('package.json',JSON.stringify(p,null,2));
+console.log('[VERSION]',p.version);
+"
 
-echo "[IMA RELEASE] updating dependencies..."
-npm install
+echo "[4] npm publish"
+npm publish
 
-echo "[IMA RELEASE] restarting runtime..."
-pkill -f prod_server.js || true
-nohup node prod_server.js > server.log 2>&1 &
-
-echo "[IMA RELEASE] syncing termux boot..."
-cp ~/.bashrc ~/.bashrc.backup || true
-
-echo "[IMA RELEASE] done"
+echo "[5] sync hooks (future: site/app)"
+echo "[OK] release complete"

@@ -1,37 +1,16 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-cd ~/ima_core/kernel
+echo "[IMA UPDATE]"
 
-echo "[IMA UPDATE SYNC]"
+echo "[1] git pull"
+git pull
 
-# ===== PULL =====
-echo "[SYNC] pulling from git..."
-git pull origin main || true
+echo "[2] clean install"
+rm -rf node_modules package-lock.json
+npm install --no-audit --no-fund
 
-# ===== INSTALL =====
-echo "[SYNC] installing deps..."
-npm install || true
+echo "[3] run pipeline tests (NO publish)"
+bash ima_pipeline_final.sh
 
-# ===== ADD ONLY SAFE FILES =====
-echo "[SYNC] staging changes..."
-
-git add *.js 2>/dev/null
-git add *.sh 2>/dev/null
-git add package.json 2>/dev/null
-
-# ===== COMMIT IF CHANGES =====
-if ! git diff --cached --quiet; then
-  echo "[SYNC] committing..."
-  git commit -m "auto sync $(date)"
-  
-  echo "[SYNC] pushing..."
-  git push origin main
-else
-  echo "[SYNC] no code changes to push"
-fi
-
-# ===== RESTART =====
-echo "[SYNC] restarting..."
-bash ~/ima_core/kernel/ima_restart.sh
-
-echo "[IMA UPDATE SYNC DONE]"
+echo "[OK] update complete"
