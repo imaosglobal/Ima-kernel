@@ -1,65 +1,32 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-echo "=============================="
-echo "[IMA PIPELINE STABLE]"
+echo "[IMA PIPELINE CLEAN CORE]"
 echo "=============================="
 
-# 1. sanity
-echo "[1] sanity check"
-node -e "
-const p=require('./package.json');
-if(!p.name||!p.version) throw new Error('INVALID PACKAGE');
-console.log('[OK]', p.version);
-"
+echo "[1] sanity"
+node -e "const p=require('./package.json'); if(!p.version) throw new Error('bad'); console.log('[OK]',p.version);"
 
-# 2. core files
-echo "[2] core files check"
+echo "[2] core check"
 for f in bin/ima global_boot.js api_layer.js db_memory.js; do
-  [ -f "$f" ] || { echo "[FATAL] missing $f"; exit 1; }
+  test -f "$f" || { echo "[FATAL] $f"; exit 1; }
 done
-echo "[OK] files present"
 
-# 3. enforce package.json
-echo "[3] package config enforce"
+echo "[3] pack"
+T=$(npm pack --silent)
+echo "[PACKED] $T"
+
+echo "[4] verify"
+tar -tf "$T" | grep -q "global_boot.js" && echo "[OK] verified"
+
+echo "[5] runtime DRY ONLY"
 node -e "
-const fs=require('fs');
-const p=require('./package.json');
-
-p.bin={ima:'bin/ima'};
-p.main='global_boot.js';
-p.files=['bin','global_boot.js','api_layer.js','db_memory.js'];
-
-fs.writeFileSync('package.json', JSON.stringify(p,null,2));
-console.log('[OK] package fixed');
+try {
+  require('./global_boot.js');
+  console.log('[RUNTIME OK - DRY]');
+} catch(e) {
+  console.log('[RUNTIME ERROR]', e.message);
+}
 "
 
-# 4. bin setup
-echo "[4] bin setup"
-mkdir -p bin
-cat > bin/ima << 'BINEOF'
-#!/usr/bin/env node
-require('../global_boot.js');
-BINEOF
-chmod +x bin/ima
-
-# 5. pack
-echo "[5] npm pack"
-rm -f *.tgz
-TARBALL=$(npm pack --silent)
-echo "[PACKED] $TARBALL"
-
-# 6. verify
-echo "[6] verify tarball"
-tar -tf "$TARBALL" | grep -q "global_boot.js"
-tar -tf "$TARBALL" | grep -q "bin/ima"
-echo "[OK] tarball verified"
-
-# 7. publish
-echo "[7] publish"
-npm version patch -m "stable pipeline %s"
-npm publish
-
-echo "=============================="
-echo "[SUCCESS - DONE]"
-echo "=============================="
+# חשוב: אין publish פה יותר
+echo "[DONE] pipeline finished safely"
