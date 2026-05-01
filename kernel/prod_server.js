@@ -69,3 +69,14 @@ setInterval(() => {
 }, 60000);
 
 // ==============================
+
+const { productLayer } = require("./release_manager");
+
+setInterval(() => {
+  try {
+    productLayer();
+  } catch (e) {
+    console.log("[PRODUCT ERROR]", e.message);
+  }
+}, 60000);
+
