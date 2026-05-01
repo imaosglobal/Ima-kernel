@@ -80,3 +80,14 @@ setInterval(() => {
   }
 }, 60000);
 
+
+const { executionLayer } = require("./release_manager");
+
+setInterval(() => {
+  try {
+    executionLayer();
+  } catch (e) {
+    console.log("[EXECUTION ERROR]", e.message);
+  }
+}, 60000);
+
