@@ -6,45 +6,58 @@ function state() {
   try {
     const health = JSON.parse(execSync("curl -s http://localhost:4000/health"));
     const queue = JSON.parse(execSync("curl -s http://localhost:4000/v2/queue"));
-
     return { health, queue };
   } catch (e) {
     return { error: e.message };
   }
 }
 
+function risk(history) {
+
+  const restarts = history.filter(x => x.decision?.action === "restart").length;
+
+  const failures = history.filter(x => x.state?.error).length;
+
+  return restarts * 2 + failures * 3;
+}
+
 function decide(s, history) {
 
-  // כלל למידה פשוט: אם היו הרבה restartים לאחרונה → להימנע
-  const recentRestarts = history
-    .slice(-10)
-    .filter(x => x.decision?.action === "restart").length;
+  const r = risk(history);
 
-  if (recentRestarts > 3) {
-    return { action: "stable", reason: "learning: too many restarts" };
+  // 🧠 אם יש יותר מדי restartים → נעילה זמנית
+  if (r > 6) {
+    return {
+      action: "stable",
+      reason: "risk_lock: too many failures",
+      risk: r
+    };
   }
 
-  if (s.error) return { action: "restart", reason: "system down" };
-  if (!s.health?.ok) return { action: "restart", reason: "unhealthy" };
+  if (s.error) {
+    return { action: "restart", reason: "system error", risk: r };
+  }
 
-  return { action: "stable", reason: "ok" };
+  if (!s.health?.ok) {
+    return { action: "restart", reason: "unhealthy", risk: r };
+  }
+
+  return { action: "stable", reason: "ok", risk: r };
 }
 
 (function main() {
 
-  const history = memory.getAll();
+  const history = memory.last(30);
   const s = state();
   const d = decide(s, history);
 
-  memory.save({
-    state: s,
-    decision: d
-  });
+  memory.save({ state: s, decision: d });
 
   console.log(JSON.stringify({
     state: s,
     decision: d,
-    memory_size: history.length
+    risk: d.risk,
+    history_size: history.length
   }, null, 2));
 
 })();
