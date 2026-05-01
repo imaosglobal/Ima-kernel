@@ -39,6 +39,8 @@ app.post("/run", (req, res) => {
   });
 });
 
+require("./run_bridge")(app);
+require("./run_bridge")(app);
 app.listen(4000, () => {
   console.log("SAAS RUNNING ON 4000");
 });

@@ -1,43 +1,38 @@
-const fs = require("fs");
 
-function read(path, fallback) {
-  try {
-    return JSON.parse(fs.readFileSync(path, "utf-8"));
-  } catch {
-    return fallback;
-  }
+const stateProvider = require("./state_provider");
+
+function score(state) {
+  let s = 100;
+
+  if (!state.health?.ok) s -= 40;
+  if ((state.queue?.queue || []).length > 10) s -= 20;
+
+  return Math.max(0, s);
 }
 
-function analyzeChanges() {
-  const memory = read("ima_memory.json", []);
-
-  const errorCount = memory.filter(e => e.type === "error").length;
-  const reqCount = memory.filter(e => e.type === "request").length;
-
-  const errorRate = reqCount ? errorCount / reqCount : 0;
-
-  let decision = {
-    shouldRelease: false,
-    shouldPush: true,
-    shouldRestart: false,
-    reason: "ok"
+async function decide(action) {
+  const state = {
+    health: await stateProvider.health(),
+    queue: await stateProvider.queue()
   };
 
-  if (errorRate > 0.1) {
-    decision.shouldRestart = true;
-    decision.reason = "instability detected";
-  }
+  const s = score(state);
 
-  if (errorRate < 0.01 && reqCount > 10) {
-    decision.shouldRelease = true;
-    decision.reason = "stable enough for release";
-  }
+  let decision = "ALLOW";
 
-  const state = read("ima_state.json", {});
-  state.last_decision = decision;
-  fs.writeFileSync("ima_state.json", JSON.stringify(state, null, 2));
+  if (s < 40) decision = "BLOCK";
+  else if (s < 70) decision = "DEFER";
 
-  return decision;
+  return {
+    state,
+    score: s,
+    action,
+    decision
+  };
 }
 
-module.exports = { analyzeChanges };
+(async () => {
+  const action = process.argv[2] || "unknown";
+  console.log(JSON.stringify(await decide(action), null, 2));
+})();
+

@@ -1,39 +1,32 @@
+
 #!/data/data/com.termux/files/usr/bin/bash
 
-ROOT=/data/data/com.termux/files/home/ima_core/kernel
-LOG=$ROOT/server.log
+SNAPSHOT_DIR=~/ima_core/kernel/snapshots
+mkdir -p $SNAPSHOT_DIR
 
 echo "[UPDATE] START"
 
-cd $ROOT
+# snapshot bashrc
+cp ~/.bashrc $SNAPSHOT_DIR/bashrc_$(date +%s)
 
 echo "[UPDATE] pulling..."
-PULL_RESULT=$(git pull origin main 2>&1)
-echo "$PULL_RESULT"
-echo "$PULL_RESULT" >> $LOG
+git -C ~/ima_core/kernel pull
 
-echo "[UPDATE] checking local changes..."
-STATUS=$(git status --porcelain)
-
-if [ -n "$STATUS" ]; then
-  echo "[UPDATE] committing local changes..."
-
-  git add .
-  COMMIT_RESULT=$(git commit -m "auto sync $(date)" 2>&1)
-  echo "$COMMIT_RESULT"
-  echo "$COMMIT_RESULT" >> $LOG
-
-  PUSH_RESULT=$(git push origin main 2>&1)
-  echo "$PUSH_RESULT"
-  echo "$PUSH_RESULT" >> $LOG
+if [ $? -ne 0 ]; then
+  echo "[UPDATE] FAILED → rollback"
+  exit 1
 fi
 
+echo "[UPDATE] committing local changes..."
+git -C ~/ima_core/kernel add .
+git -C ~/ima_core/kernel commit -m "auto sync"
+git -C ~/ima_core/kernel push
+
 echo "[UPDATE] installing deps..."
-NPM_RESULT=$(npm install 2>&1)
-echo "$NPM_RESULT" | tail -n 5
-echo "$NPM_RESULT" >> $LOG
+npm install --prefix ~/ima_core/kernel
 
 echo "[UPDATE] restarting system..."
-bash $ROOT/executor.sh restart
+bash ~/ima_core/kernel/start_daemon.sh
 
 echo "[UPDATE] DONE"
+
