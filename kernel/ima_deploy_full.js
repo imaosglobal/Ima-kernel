@@ -34,7 +34,8 @@ const oldVersion = pkg.version;
 // 3. bump version (patch)
 const parts = oldVersion.split('.').map(Number);
 parts[2]++;
-const newVersion = parts.join('.');
+const base = parts.join('.');
+const newVersion = resolveVersion(base);
 
 pkg.version = newVersion;
 fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
@@ -78,4 +79,10 @@ function canPublish(version){
   } catch(e){
     return true; // אם אין גישה → נניח שמותר
   }
+}
+
+
+function resolveVersion(current){
+  const used = getPublishedVersions();
+  return nextVersion(current, used);
 }
