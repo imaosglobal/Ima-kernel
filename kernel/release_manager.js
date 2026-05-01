@@ -39,3 +39,16 @@ function productLayer() {
 }
 
 module.exports.productLayer = productLayer;
+
+const { planExecution } = require("./execution_brain");
+
+function executionLayer() {
+  const plan = planExecution();
+
+  if (plan.length > 0) {
+    console.log("[EXECUTION PLAN]");
+    plan.forEach(p => console.log("-", p.action, "→", p.target));
+  }
+}
+
+module.exports.executionLayer = executionLayer;
