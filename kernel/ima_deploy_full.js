@@ -41,6 +41,11 @@ fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 
 console.log('[VERSION]', oldVersion, '→', newVersion);
 
+if (!canPublish(newVersion)) {
+  console.log('[BLOCKED] version already exists on npm');
+  process.exit(0);
+}
+
 // 4. git commit
 sh('git add .');
 sh(`git commit -m "auto deploy v${newVersion}"`);
@@ -61,3 +66,16 @@ sh('git push origin main');
 console.log('======================');
 console.log('[DEPLOY COMPLETE]');
 console.log('======================');
+
+
+// NPM_VERSION_CHECK
+function canPublish(version){
+  try {
+    const res = require('child_process')
+      .execSync('npm view ima-core-saas versions --json', {encoding:'utf8'});
+    const versions = JSON.parse(res || '[]');
+    return !versions.includes(version);
+  } catch(e){
+    return true; // אם אין גישה → נניח שמותר
+  }
+}
