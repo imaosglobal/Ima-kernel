@@ -1,6 +1,6 @@
 {
   "name": "ima-core-saas",
-  "version": "2.2.16",
+  "version": "2.7.0",
   "main": "global_boot.js",
   "bin": {
     "ima": "bin/ima"
@@ -10,5 +10,8 @@
     "global_boot.js",
     "api_layer.js",
     "db_memory.js"
-  ]
+  ],
+  "dependencies": {
+    "ima-core-saas": "file:ima-core-saas-2.2.16.tgz"
+  }
 }
