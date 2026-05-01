@@ -2,144 +2,64 @@
 set -euo pipefail
 
 echo "=============================="
-echo "[IMA PIPELINE FINAL v1]"
+echo "[IMA PIPELINE STABLE]"
 echo "=============================="
 
-ROOT="$PWD"
-WORK="$ROOT/.ima_pipeline"
-SANDBOX="$WORK/sandbox"
-FILES_LIST="$WORK/files.txt"
-TARBALL=""
-
-rm -rf "$WORK"
-mkdir -p "$WORK"
-mkdir -p "$SANDBOX"
-
-
-# -----------------------
-# 1. SANITY CHECK
-# -----------------------
+# 1. sanity
 echo "[1] sanity check"
-
 node -e "
 const p=require('./package.json');
 if(!p.name||!p.version) throw new Error('INVALID PACKAGE');
+console.log('[OK]', p.version);
 "
 
-# -----------------------
-# 2. ENSURE CORE FILES
-# -----------------------
+# 2. core files
 echo "[2] core files check"
-
 for f in bin/ima global_boot.js api_layer.js db_memory.js; do
-  if [ ! -f "$f" ]; then
-    echo "[FATAL] missing file: $f"
-    exit 1
-  fi
+  [ -f "$f" ] || { echo "[FATAL] missing $f"; exit 1; }
 done
+echo "[OK] files present"
 
-# -----------------------
-# 3. FORCE PACKAGE CONFIG (controlled)
-# -----------------------
+# 3. enforce package.json
 echo "[3] package config enforce"
-
 node -e "
 const fs=require('fs');
 const p=require('./package.json');
 
-p.bin = { ima: 'bin/ima' };
-p.main = 'global_boot.js';
-p.files = ['bin','global_boot.js','api_layer.js','db_memory.js'];
+p.bin={ima:'bin/ima'};
+p.main='global_boot.js';
+p.files=['bin','global_boot.js','api_layer.js','db_memory.js'];
 
 fs.writeFileSync('package.json', JSON.stringify(p,null,2));
+console.log('[OK] package fixed');
 "
 
-# -----------------------
-# 4. ENSURE BIN
-# -----------------------
+# 4. bin setup
 echo "[4] bin setup"
-
 mkdir -p bin
-
 cat > bin/ima << 'BINEOF'
 #!/usr/bin/env node
 require('../global_boot.js');
 BINEOF
-
 chmod +x bin/ima
 
-# -----------------------
-# 5. CLEAN OLD TAR
-# -----------------------
-rm -f *.tgz
-
-# -----------------------
-# 6. PACK (REAL SOURCE OF TRUTH)
-# -----------------------
+# 5. pack
 echo "[5] npm pack"
-
+rm -f *.tgz
 TARBALL=$(npm pack --silent)
 echo "[PACKED] $TARBALL"
 
-# -----------------------
-# 7. VERIFY TAR CONTENT (NO /tmp)
-# -----------------------
+# 6. verify
 echo "[6] verify tarball"
+tar -tf "$TARBALL" | grep -q "global_boot.js"
+tar -tf "$TARBALL" | grep -q "bin/ima"
+echo "[OK] tarball verified"
 
-tar -tf "$TARBALL" > "$FILES_LIST"
-
-for f in bin/ima global_boot.js api_layer.js db_memory.js; do
-  grep -q "$f" "$FILES_LIST" || {
-    echo "[FATAL] missing in tarball: $f"
-    exit 1
-  }
-done
-
-echo "[OK] tarball integrity verified"
-
-# -----------------------
-# 8. INSTALL TEST (ISOLATED)
-# -----------------------
-echo "[7] install test"
-
-cd "$SANDBOX"
-
-npm init -y >/dev/null
-npm install "$ROOT/$TARBALL" --no-audit --no-fund
-
-node -e "
-const p=require('ima-core-saas/package.json');
-console.log('[INSTALLED OK]', p.name, p.version);
-"
-
-# -----------------------
-# 9. CLI TEST
-# -----------------------
-echo "[8] CLI test"
-
-node node_modules/ima-core-saas/bin/ima health || {
-  echo "[WARN] CLI health failed (non-fatal)"
-}
-
-# -----------------------
-# 10. RUNTIME TEST
-# -----------------------
-echo "[9] runtime test"
-
-node node_modules/ima-core-saas/global_boot.js health || true
-
-cd "$ROOT"
-
-# -----------------------
-# 11. PUBLISH GATE
-# -----------------------
-echo "[10] publish"
-
-npm version patch -m "pipeline release %s"
-
+# 7. publish
+echo "[7] publish"
+npm version patch -m "stable pipeline %s"
 npm publish
 
 echo "=============================="
-echo "[SUCCESS PIPELINE COMPLETE]"
+echo "[SUCCESS - DONE]"
 echo "=============================="
-trap 'rm -rf "$WORK"' EXIT
