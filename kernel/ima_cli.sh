@@ -1,26 +1,24 @@
-
 #!/data/data/com.termux/files/usr/bin/bash
 
-CMD="$1"
-
-case "$CMD" in
-  restart)
-    bash ~/ima_core/kernel/ima_gate.sh restart
+case "$1" in
+    restart)
+        echo "[CLI] RESTART APPROVED"
+        bash ~/ima_core/kernel/executor.sh restart
+        echo "[CLI] RESTART EXECUTED"
     ;;
-  update)
-    bash ~/ima_core/kernel/ima_update.sh
+    update)
+        bash ~/ima_core/kernel/update_engine.sh
     ;;
-  brain)
-    node ~/ima_core/kernel/decision_engine.js brain
+    brain)
+        node ~/ima_core/kernel/control_brain.js
     ;;
-  health)
-    ima health
+    health)
+        curl -s http://localhost:4000/health
     ;;
-  queue)
-    ima queue
+    queue)
+        curl -s http://localhost:4000/v2/queue
     ;;
-  *)
-    echo "[CLI] UNKNOWN COMMAND: $CMD"
+    -h|--help|help|*)
+        echo "ima: restart | update | brain | health | queue"
     ;;
 esac
-

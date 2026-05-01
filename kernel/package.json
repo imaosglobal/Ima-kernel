@@ -1,12 +1,14 @@
 {
-  "name": "mama-core-api",
-  "version": "1.0.4",
+  "name": "ima-core-saas",
+  "version": "2.2.16",
   "main": "global_boot.js",
-  "exports": {
-    ".": "./global_boot.js",
-    "./client": "./mama_client.js"
+  "bin": {
+    "ima": "bin/ima"
   },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "files": [
+    "bin",
+    "global_boot.js",
+    "api_layer.js",
+    "db_memory.js"
+  ]
 }

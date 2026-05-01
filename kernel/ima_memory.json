@@ -418,5 +418,35 @@
     "path": "/v2/queue",
     "method": "GET",
     "ts": 1777624277816
+  },
+  {
+    "type": "request",
+    "path": "/v2/queue",
+    "method": "GET",
+    "ts": 1777625484760
+  },
+  {
+    "type": "request",
+    "path": "/v2/health",
+    "method": "GET",
+    "ts": 1777625570606
+  },
+  {
+    "type": "request",
+    "path": "/v2/queue",
+    "method": "GET",
+    "ts": 1777625570621
+  },
+  {
+    "type": "request",
+    "path": "/v2/health",
+    "method": "GET",
+    "ts": 1777625586879
+  },
+  {
+    "type": "request",
+    "path": "/v2/queue",
+    "method": "GET",
+    "ts": 1777625586895
   }
 ]
