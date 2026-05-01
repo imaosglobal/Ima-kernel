@@ -25,3 +25,17 @@ function run() {
 }
 
 module.exports = { run };
+
+const { decideProductDirection } = require("./product_brain");
+
+function productLayer() {
+  const d = decideProductDirection();
+
+  console.log("[PRODUCT BRAIN]", d);
+
+  if (d.recommendation === "build_feature") {
+    console.log("[PRODUCT] HIGH PRIORITY FEATURE DETECTED");
+  }
+}
+
+module.exports.productLayer = productLayer;
