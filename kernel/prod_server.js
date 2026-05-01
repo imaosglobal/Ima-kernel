@@ -52,6 +52,7 @@ setInterval(() => {
 
 
 // ===== START =====
+require("./run_bridge")(app);
 app.listen(4000, () => {
   console.log("IMA RUNNING ON 4000");
 });
@@ -118,3 +119,12 @@ app.use("/v2", taskRoutes);
 app.use("/v2", productRoutes);
 
 // ===================================
+
+app.get("/v2/health", (req, res) => {
+  res.json({
+    ok: true,
+    status: "alive",
+    uptime: process.uptime()
+  });
+});
+
