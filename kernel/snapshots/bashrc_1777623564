@@ -26,7 +26,6 @@ ima() {
     ;;
 
     *)
-      echo "ima: restart | update | brain | health | queue"
     ;;
 
   esac
