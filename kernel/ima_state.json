@@ -1,7 +1,11 @@
 {
-  "version": "1.0.0",
-  "status": "running",
-  "last_check": "Thu Apr 30 16:19:31 IDT 2026",
-  "health": {"ok":true,"status":"alive","uptime":64.046404961,"memory":{"rss":51474432,"heapTotal":14290944,"heapUsed":8459336,"external":2357388,"arrayBuffers":22987}},
-  "fail_count": 0
+  "last_score": 1,
+  "last_action": "STABLE",
+  "last_evolution": "Fri May 01 2026 08:53:21 GMT+0300 (Israel Daylight Time)",
+  "last_decision": {
+    "shouldRelease": false,
+    "shouldPush": true,
+    "shouldRestart": false,
+    "reason": "ok"
+  }
 }
