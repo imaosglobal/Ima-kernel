@@ -3,30 +3,37 @@
 ROOT=/data/data/com.termux/files/home/ima_core/kernel
 LOG=$ROOT/server.log
 
-echo "[UPDATE] START" | tee -a $LOG
+echo "[UPDATE] START"
 
 cd $ROOT
 
-# 1. FETCH + PULL
-echo "[UPDATE] pulling..." | tee -a $LOG
-git fetch origin main >> $LOG 2>&1
-git pull origin main >> $LOG 2>&1
+echo "[UPDATE] pulling..."
+PULL_RESULT=$(git pull origin main 2>&1)
+echo "$PULL_RESULT"
+echo "$PULL_RESULT" >> $LOG
 
-# 2. LOCAL CHANGES
-if [ -n "$(git status --porcelain)" ]; then
-  echo "[UPDATE] committing local changes..." | tee -a $LOG
+echo "[UPDATE] checking local changes..."
+STATUS=$(git status --porcelain)
+
+if [ -n "$STATUS" ]; then
+  echo "[UPDATE] committing local changes..."
 
   git add .
-  git commit -m "auto sync $(date)" >> $LOG 2>&1
-  git push origin main >> $LOG 2>&1
+  COMMIT_RESULT=$(git commit -m "auto sync $(date)" 2>&1)
+  echo "$COMMIT_RESULT"
+  echo "$COMMIT_RESULT" >> $LOG
+
+  PUSH_RESULT=$(git push origin main 2>&1)
+  echo "$PUSH_RESULT"
+  echo "$PUSH_RESULT" >> $LOG
 fi
 
-# 3. INSTALL
-echo "[UPDATE] installing deps..." | tee -a $LOG
-npm install >> $LOG 2>&1
+echo "[UPDATE] installing deps..."
+NPM_RESULT=$(npm install 2>&1)
+echo "$NPM_RESULT" | tail -n 5
+echo "$NPM_RESULT" >> $LOG
 
-# 4. SINGLE RESTART (FIXED DUPLICATION BUG)
-echo "[UPDATE] restarting system..." | tee -a $LOG
-bash $ROOT/executor.sh restart >> $LOG 2>&1
+echo "[UPDATE] restarting system..."
+bash $ROOT/executor.sh restart
 
-echo "[UPDATE] DONE" | tee -a $LOG
+echo "[UPDATE] DONE"
