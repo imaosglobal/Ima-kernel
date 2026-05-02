@@ -33,7 +33,12 @@ function savePkg(pkg) {
   fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 2));
 }
 
-function deploy({ publish=true } = {}) {
+
+const { sync } = require('./ima_git_sync');
+const { npmPublish } = require('./ima_npm_publish');
+
+function deploy
+    ({ publish=true } = {}) {
 
   console.log('======================');
   console.log('[IMA CI v1 DEPLOY]');
