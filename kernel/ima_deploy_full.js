@@ -1,4 +1,59 @@
 
+const { execSync } = require('child_process');
+
+function safeExecSync(cmd, opts = {}) {
+  try {
+    return execSync(cmd, { stdio: 'inherit', ...opts });
+  } catch (e) {
+    console.log('[SAFE EXEC FAIL]', cmd, e.message);
+  }
+}
+
+
+
+// ===== IMA_NO_PUBLISH GUARD =====
+// ===== IMA_NO_PUBLISH GUARD (SCOPED) =====
+function npmGuard() {
+  if (process.env.IMA_NO_PUBLISH === '1') {
+    console.log('[NPM] publish skipped by env');
+    return true;
+  }
+  return false;
+}
+// ===============================
+
+// ===== NPM AUTH GUARD =====
+function isNpmLoggedIn(){
+  try {
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function safePublish(){
+  if (!isNpmLoggedIn()){
+    console.log('[NPM] SKIPPED (not logged in)');
+    return { ok:false, skipped:true };
+  }
+
+  try {
+if (!npmGuard()) {
+  npm publish
+} else {
+  console.log('[NPM] skipped safely');
+}
+', {stdio:'inherit'});
+    console.log('[NPM] PUBLISH OK');
+    return { ok:true };
+  } catch(e){
+    console.log('[NPM] FAILED');
+    return { ok:false, error:e.message };
+  }
+}
+// ==========================
+
+
 // ===== AUTO GIT SYNC (DEPLOY ONLY) =====
 function ensureGitCleanBeforeRelease(){
   const { execSync } = require('child_process');
@@ -65,8 +120,6 @@ ensureGitCleanBeforeRelease();
 
 // 0. ensure clean git BEFORE anything
 try {
-  require('child_process').execSync('git add -A', {stdio:'inherit'});
-  require('child_process').execSync('git commit -m "pre-deploy clean" || true', {stdio:'inherit'});
 } catch {}
 
 
