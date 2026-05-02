@@ -1,3 +1,26 @@
+
+// ===== AUTO GIT SYNC (DEPLOY ONLY) =====
+function ensureGitCleanBeforeRelease(){
+  const { execSync } = require('child_process');
+
+  try {
+    const status = execSync('git status --porcelain', { encoding: 'utf8' });
+
+    if (status.trim()) {
+      console.log('[GIT] auto-committing changes...');
+      execSync('git add -A', { stdio: 'inherit' });
+      execSync('git commit -m "auto: pre-deploy sync"', { stdio: 'inherit' });
+      execSync('git push origin main', { stdio: 'inherit' });
+    } else {
+      console.log('[GIT] clean');
+    }
+
+  } catch(e){
+    console.log('[GIT] sync failed', e.message);
+  }
+}
+// ======================================
+
 const { execSync } = require("child_process");
 
 // ===== VERSION RESOLVER (TOP LEVEL SAFE) =====
@@ -38,6 +61,7 @@ function sh(cmd){
 
 console.log('======================');
 console.log('[IMA FULL DEPLOY]');
+ensureGitCleanBeforeRelease();
 
 // 0. ensure clean git BEFORE anything
 try {
