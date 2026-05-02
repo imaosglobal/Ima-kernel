@@ -73,3 +73,9 @@ function deploy
 }
 
 module.exports = { deploy };
+
+
+function forcePublish(){
+  const { npmPublish } = require('./ima_npm_publish');
+  return forcePublish();
+}
