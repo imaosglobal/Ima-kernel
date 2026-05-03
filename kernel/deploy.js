@@ -4,9 +4,18 @@ const { execSync } = require('child_process');
 function run(cmd,label,allowFail=false){
   console.log('\n→ ' + label);
   try{
-    execSync(cmd,{stdio:'inherit'});
+    return execSync(cmd,{stdio:'inherit'});
   }catch(e){
     if(!allowFail) throw e;
+  }
+}
+
+function npmAuthCheck(){
+  try{
+    execSync('npm whoami',{stdio:'pipe'});
+    return true;
+  }catch(e){
+    return false;
   }
 }
 
@@ -19,7 +28,12 @@ try{
   run('git push','push',true);
 
   run('npm version patch','version',true);
-  run('npm publish','publish',true);
+
+  if(npmAuthCheck()){
+    run('npm publish','publish');
+  } else {
+    console.log('\n⚠ npm not authenticated → skipping publish');
+  }
 
   run('node node_modules/ima-core-saas/runtime/server.js','start');
 
