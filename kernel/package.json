@@ -11,5 +11,7 @@
     "api_layer.js",
     "db_memory.js"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "ima-core-saas": "^2.8.12"
+  }
 }
