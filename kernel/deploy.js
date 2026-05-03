@@ -1,45 +1,33 @@
-#!/usr/bin/env node
 const { execSync } = require('child_process');
 
-function run(cmd,label,allowFail=false){
+function run(cmd,label,soft=false){
   console.log('\n→ ' + label);
-  try{
-    execSync(cmd,{stdio:'inherit'});
-  }catch(e){
-    if(!allowFail) throw e;
-  }
+  try { execSync(cmd,{stdio:'inherit'}); return true; }
+  catch(e){ if(!soft) throw e; return false; }
 }
 
-function isNpmLoggedIn(){
-  try{
-    execSync('npm whoami',{stdio:'pipe'});
+function npmPublish(){
+  console.log('\n→ npm publish');
+  try {
+    execSync('npm publish',{stdio:'inherit'});
     return true;
-  }catch(e){
+  } catch(e){
+    console.log('⚠ npm publish failed');
     return false;
   }
 }
 
-try{
-  run('pkill -f "ima-core-saas/runtime/server.js"','stop server',true);
+module.exports = function deploy(){
 
-  run('git status','check git');
+  run('pkill -f "ima-core-saas/runtime/server.js" || true','stop server',true);
+
   run('git add .','stage');
   run('git commit -m "auto deploy" || true','commit',true);
   run('git push','push',true);
 
-  if(!isNpmLoggedIn()){
-    console.log('\n✖ npm not authenticated');
-    console.log('Run: npm login');
-    process.exit(1);
-  }
-
   run('npm version patch','version');
-  run('npm publish','publish');
 
-  run('node node_modules/ima-core-saas/runtime/server.js','start');
+  const published = npmPublish();
 
-  console.log('\n✔ DEPLOY COMPLETE');
-}catch(e){
-  console.log('\n✖ FAILED');
-  console.error(e.message);
+  return { ok: true, published };
 }
