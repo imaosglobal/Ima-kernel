@@ -1,3 +1,33 @@
+
+function gitSyncSafe(){
+  const { execSync } = require('child_process');
+  try {
+    console.log('[GIT] stash');
+    execSync('git stash --include-untracked || true', {stdio:'inherit'});
+
+    console.log('[GIT] pull');
+    execSync('undefined
+
+    console.log('[GIT] restore');
+    execSync('git stash pop || true', {stdio:'inherit'});
+  } catch(e){
+    console.log('[GIT] sync warning:', e.message);
+  }
+}
+
+
+function npmPreflight(){
+  const { execSync } = require('child_process');
+  try {
+    execSync('npm whoami', {stdio:'ignore'});
+    console.log('[NPM] authenticated');
+    return true;
+  } catch(e){
+    console.log('[NPM] not logged in → skipping publish');
+    return false;
+  }
+}
+
 const { execSync } = require('child_process');
 
 function sh(cmd){
@@ -71,8 +101,7 @@ function npmPublish(){
   }
 
   try {
-    sh('npm publish');
-    console.log('[NPM] published');
+    sh('    console.log('[NPM] published');
   } catch (e) {
     console.log('[NPM] publish failed');
   }
@@ -81,7 +110,7 @@ function npmPublish(){
 /* =========================
    DEPLOY PIPELINE
 ========================= */
-function deploy(){
+function deploy(){ gitSyncSafe(); const npmOk = npmPreflight(); this._npmOk = npmOk;{
   console.log('======================');
   console.log('[IMA CI CLEAN DEPLOY]');
   console.log('======================');
