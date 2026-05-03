@@ -4,13 +4,13 @@ const { execSync } = require('child_process');
 function run(cmd,label,allowFail=false){
   console.log('\n→ ' + label);
   try{
-    return execSync(cmd,{stdio:'inherit'});
+    execSync(cmd,{stdio:'inherit'});
   }catch(e){
     if(!allowFail) throw e;
   }
 }
 
-function npmAuthCheck(){
+function isNpmLoggedIn(){
   try{
     execSync('npm whoami',{stdio:'pipe'});
     return true;
@@ -27,13 +27,14 @@ try{
   run('git commit -m "auto deploy" || true','commit',true);
   run('git push','push',true);
 
-  run('npm version patch','version',true);
-
-  if(npmAuthCheck()){
-    run('npm publish','publish');
-  } else {
-    console.log('\n⚠ npm not authenticated → skipping publish');
+  if(!isNpmLoggedIn()){
+    console.log('\n✖ npm not authenticated');
+    console.log('Run: npm login');
+    process.exit(1);
   }
+
+  run('npm version patch','version');
+  run('npm publish','publish');
 
   run('node node_modules/ima-core-saas/runtime/server.js','start');
 
