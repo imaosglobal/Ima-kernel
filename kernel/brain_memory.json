@@ -174,5 +174,16 @@
       "risk": 0
     },
     "ts": 1777625484773
+  },
+  {
+    "state": {
+      "error": "Command failed: curl -s http://localhost:4000/health"
+    },
+    "decision": {
+      "action": "restart",
+      "reason": "system error",
+      "risk": 0
+    },
+    "ts": 1777992006455
   }
 ]
