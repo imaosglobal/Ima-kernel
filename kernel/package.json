@@ -1,8 +1,16 @@
 {
-  "name": "ima-core",
-  "version": "1.0.1778014834994",
+  "name": "@mom-os1/ima-core",
+  "version": "1.0.1778016879892",
   "main": "server.js",
+  "files": [
+    "server.js",
+    "ima_kernel.js",
+    "ima_runtime.js",
+    "ima_policy.js",
+    "ima_memory_long.js",
+    "cli.js"
+  ],
   "bin": {
-    "ima": "./cli.js"
+    "ima": "cli.js"
   }
 }
