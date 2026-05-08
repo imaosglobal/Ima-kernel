@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>IMA</title>
+<style>
+
+body{
+background:#111;
+color:white;
+font-family:sans-serif;
+text-align:center;
+padding-top:60px;
+}
+
+button{
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#chat{
+width:80%;
+height:120px;
+margin-top:20px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>IMA</h1>
+
+<p>Autonomous Intelligence System</p>
+
+<button onclick="status()">STATUS</button>
+
+<br/>
+
+<textarea id="chat" placeholder="Talk to IMA"></textarea>
+
+<script>
+
+function status(){
+
+fetch('/status')
+.then(r=>r.text())
+.then(alert);
+
+}
+
+</script>
+
+</body>
+</html>
