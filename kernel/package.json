@@ -1,6 +1,6 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "1.0.1778200899320",
+  "version": "1.0.1778201359986",
   "main": "server.js",
   "license": "MIT",
   "publishConfig": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "release": "node system/full_autonomous_pipeline.js"
+    "release": "node system/final_autonomous_pipeline.js"
   },
   "files": [
     "server.js",
@@ -20,7 +20,8 @@
     "runtime",
     "plugins",
     "ui",
-    "system"
+    "system",
+    "logs"
   ],
   "bin": {
     "ima": "cli.js"
