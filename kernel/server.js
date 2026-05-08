@@ -1,22 +1,31 @@
 
-const http = require('http');
-const runtime = require('./ima_runtime.js');
-const heal = require('./ima_self_heal.js');
+const http=require('http');
+const fs=require('fs');
 
-heal.heal();
+http.createServer((req,res)=>{
 
-const server = http.createServer((req,res)=>{
-  const cmd = req.url.replace('/','') || 'run';
+if(req.url==='/'){
 
-  if(cmd === 'health'){
-    return res.end(JSON.stringify({ok:true}));
-  }
-
-  const result = runtime.loopOnce(cmd);
-
-  res.end(JSON.stringify(result));
+res.writeHead(200,{
+'content-type':'text/html'
 });
 
-server.listen(4000,'0.0.0.0',()=>{
-  console.log('[SERVER STABLE 4000]');
+return res.end(
+fs.readFileSync('./ui/index.html')
+);
+
+}
+
+if(req.url==='/status'){
+
+return res.end('IMA ONLINE');
+
+}
+
+res.end('OK');
+
+}).listen(4000,()=>{
+
+console.log('IMA RUNNING ON 4000');
+
 });

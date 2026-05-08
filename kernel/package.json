@@ -1,14 +1,26 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "1.0.1778016879892",
+  "version": "1.0.1778200899320",
   "main": "server.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "release": "node system/full_autonomous_pipeline.js"
+  },
   "files": [
     "server.js",
-    "ima_kernel.js",
-    "ima_runtime.js",
-    "ima_policy.js",
-    "ima_memory_long.js",
-    "cli.js"
+    "cli.js",
+    "core",
+    "api",
+    "memory",
+    "policies",
+    "runtime",
+    "plugins",
+    "ui",
+    "system"
   ],
   "bin": {
     "ima": "cli.js"
