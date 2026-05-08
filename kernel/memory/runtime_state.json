@@ -1,10 +1,14 @@
 {
-  "cycles": 1,
-  "failures": 1,
+  "cycles": 2,
+  "failures": 2,
   "lastGood": null,
   "logs": [
     {
       "t": 1778202229482,
+      "msg": "HEALTH FAIL → RECOVERY"
+    },
+    {
+      "t": 1778202267105,
       "msg": "HEALTH FAIL → RECOVERY"
     }
   ]
