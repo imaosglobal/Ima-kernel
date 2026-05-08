@@ -1,13 +1,16 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "1.0.1778203405909",
+  "version": "1.0.1778203734247",
   "main": "server.js",
   "files": [
-    "modules",
-    "memory",
+    "server.js",
+    "cli.js",
     "core",
     "ui",
-    "server.js",
-    "cli.js"
+    "memory",
+    "policies",
+    "runtime",
+    "plugins",
+    "system"
   ]
 }
