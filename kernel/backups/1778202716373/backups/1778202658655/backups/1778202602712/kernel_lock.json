@@ -1,0 +1,10 @@
+{
+  "active_kernel": "ima_saas_full.js",
+  "allowed_kernels": [
+    "ima_saas_full.js"
+  ],
+  "mode": "STRICT",
+  "env_source": "HOME/.env",
+  "git_policy": "main-only",
+  "auto_repair": true
+}
