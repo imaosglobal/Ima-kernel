@@ -6,11 +6,22 @@
         "ok": false,
         "failures": 0
       }
+    },
+    {
+      "t": 1778202447995,
+      "state": {
+        "ok": false,
+        "failures": 1
+      }
     }
   ],
   "knowledge": [
     {
       "t": 1778202435743,
+      "text": "system instability detected"
+    },
+    {
+      "t": 1778202456569,
       "text": "system instability detected"
     }
   ],
@@ -19,5 +30,5 @@
     "improve",
     "learn"
   ],
-  "failures": 1
+  "failures": 2
 }
