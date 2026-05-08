@@ -27,6 +27,13 @@
         "ok": false,
         "failures": 3
       }
+    },
+    {
+      "t": 1778202508868,
+      "state": {
+        "ok": false,
+        "failures": 4
+      }
     }
   ],
   "knowledge": [
@@ -45,6 +52,10 @@
     {
       "t": 1778202496576,
       "text": "system instability detected"
+    },
+    {
+      "t": 1778202526752,
+      "text": "system instability detected"
     }
   ],
   "goals": [
@@ -52,5 +63,5 @@
     "improve",
     "learn"
   ],
-  "failures": 4
+  "failures": 5
 }
