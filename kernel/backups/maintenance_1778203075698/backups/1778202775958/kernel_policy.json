@@ -1,0 +1,11 @@
+{
+  "allowed_processes": [
+    "ima_saas_full.js",
+    "ima_daemon.js"
+  ],
+  "forbidden_patterns": [
+    "server.js",
+    "ima_unified_system",
+    "node .*server"
+  ]
+}
