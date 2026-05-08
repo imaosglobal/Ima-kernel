@@ -1,0 +1,17 @@
+{
+  "mode": "locked",
+  "core": [
+    "ima_unified_runtime",
+    "ima_unified_sync",
+    "ima_network_layer",
+    "ima_events",
+    "ima_reactive",
+    "ima_platform_bridge",
+    "ima_dependency_guard",
+    "ima_update_guard",
+    "ima_release_guard",
+    "ima_system_gate"
+  ],
+  "rule": "no-core-modification-without-guard",
+  "plugins_allowed": true
+}
