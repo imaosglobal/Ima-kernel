@@ -1,6 +1,6 @@
 {
   "state": "HEAL",
-  "cycles": 2,
+  "cycles": 3,
   "failures": 0,
   "score": 5,
   "history": [
@@ -11,6 +11,11 @@
     },
     {
       "t": 1778202909462,
+      "decision": "HEAL",
+      "score": 5
+    },
+    {
+      "t": 1778202933505,
       "decision": "HEAL",
       "score": 5
     }
