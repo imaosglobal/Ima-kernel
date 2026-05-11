@@ -1,9 +1,15 @@
 {
-  "version": "1.0.1778503633574",
-  "files": 2951,
-  "duplicates": 147,
-  "daemon": "runtime/server.js",
-  "daemonStarted": true,
-  "npmReady": false,
-  "published": false
+  "version": "2.0.1778503890279",
+  "files": 2955,
+  "duplicatesBefore": 147,
+  "archived": 2595,
+  "registry": {
+    "runtime": "ima_unified_runtime.js",
+    "daemon": "control_daemon.js",
+    "ui": "ima_ui_core.js",
+    "memory": "memory_engine.js",
+    "brain": "ima_agi_core.js"
+  },
+  "npmUser": "mom-os1",
+  "published": true
 }
