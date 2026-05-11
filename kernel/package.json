@@ -1,21 +1,25 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "1.0.1778503633574",
+  "version": "2.0.1778503890279",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "daemon": "node runtime/server.js"
+    "daemon": "node control_daemon.js"
   },
   "files": [
     "server.js",
-    "runtime",
     "core",
+    "runtime",
     "memory",
     "plugins",
-    "policies",
     "ui",
-    "logs"
+    "policies",
+    "logs",
+    "core_registry.json"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "ima": "cli.js"
   }
