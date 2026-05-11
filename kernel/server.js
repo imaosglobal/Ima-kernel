@@ -4,23 +4,29 @@ const fs=require('fs');
 
 http.createServer((req,res)=>{
 
-if(req.url==='/status'){
+if(req.url==='/'){
 
-return res.end('IMA ONLINE');
+res.writeHead(200,{
+'content-type':'text/html'
+});
+
+return res.end(
+fs.readFileSync('./ui/index.html')
+);
 
 }
 
-if(req.url==='/heartbeat'){
-
-try{
+if(req.url==='/status'){
 
 return res.end(
-fs.readFileSync(
-'logs/heartbeat.json'
-)
-);
+JSON.stringify({
 
-}catch{}
+status:'online',
+time:Date.now()
+
+})
+
+);
 
 }
 
@@ -28,6 +34,6 @@ res.end('IMA');
 
 }).listen(4000,()=>{
 
-console.log('IMA SERVER ONLINE');
+console.log('IMA ONLINE 4000');
 
 });

@@ -1,21 +1,42 @@
 
 const fs=require('fs');
+const cp=require('child_process');
+
+function exec(cmd){
+
+try{
+
+return cp.execSync(
+cmd,
+{
+shell:true,
+encoding:'utf8'
+}
+).toString();
+
+}catch{
+
+return null;
+
+}
+
+}
+
+console.log('AUTONOMOUS RUNTIME ONLINE');
 
 setInterval(()=>{
 
-const state={
+console.log('HEARTBEAT',Date.now());
 
-time:Date.now(),
-status:'alive',
-memory:process.memoryUsage()
+exec('node runtime/npm_analytics.js');
 
-};
+exec('git add .');
 
-fs.writeFileSync(
-'logs/heartbeat.json',
-JSON.stringify(state,null,2)
+exec(
+'git commit -m "AUTO HEARTBEAT" || true'
 );
 
-console.log('IMA HEARTBEAT');
+exec('git push || true');
 
-},30000);
+},1000*60*60);
+

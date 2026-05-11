@@ -5,44 +5,60 @@
 <meta charset="utf-8"/>
 <title>IMA</title>
 <style>
+
 body{
-background:#111;
+background:#0b0b0b;
 color:white;
 font-family:sans-serif;
 text-align:center;
 padding-top:50px;
 }
-textarea{
+
+.card{
 width:80%;
-height:120px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+background:#151515;
 }
+
 button{
 padding:15px;
 font-size:18px;
+border-radius:10px;
 }
+
 </style>
 </head>
 <body>
 
+<div class="card">
+
 <h1>IMA</h1>
 
-<p>Autonomous Intelligence</p>
+<p>Autonomous Intelligence System</p>
 
 <button onclick="status()">
 STATUS
 </button>
 
-<br/><br/>
+<pre id="out"></pre>
 
-<textarea placeholder="Talk to IMA"></textarea>
+</div>
 
 <script>
 
-function status(){
+async function status(){
 
-fetch('/status')
-.then(r=>r.text())
-.then(alert);
+const r=
+await fetch('/status');
+
+const t=
+await r.text();
+
+document.getElementById(
+'out'
+).innerText=t;
 
 }
 
