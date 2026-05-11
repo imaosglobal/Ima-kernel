@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('IMA ONLINE');
+
+console.log('IMA CLI ONLINE');
+

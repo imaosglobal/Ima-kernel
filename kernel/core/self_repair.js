@@ -3,19 +3,20 @@ const fs=require('fs');
 
 module.exports=function(){
 
-const critical=[
+const required=[
 
 'package.json',
 'server.js',
-'cli.js'
+'cli.js',
+'core/runtime_registry.json'
 
 ];
 
-for(const f of critical){
+for(const r of required){
 
-if(!fs.existsSync(f)){
+if(!fs.existsSync(r)){
 
-console.log('REPAIR REQUIRED:',f);
+console.log('MISSING',r);
 
 }
 

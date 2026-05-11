@@ -1,24 +1,25 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "3.0.1778504127251",
+  "version": "4.0.1778504598427",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "runtime": "node runtime/engine_v6.js",
-    "autonomous": "node runtime/autonomous_runtime.js"
+    "runtime": "node runtime/autonomous_runtime.js",
+    "analytics": "node runtime/npm_analytics.js"
+  },
+  "bin": {
+    "ima": "cli.js"
   },
   "files": [
     "server.js",
     "runtime",
     "core",
+    "logs",
+    "ui",
     "memory",
     "plugins",
-    "policies",
-    "ui"
+    "policies"
   ],
-  "bin": {
-    "ima": "cli.js"
-  },
   "publishConfig": {
     "access": "public"
   }
