@@ -1,15 +1,9 @@
 {
-  "version": "2.0.1778503890279",
-  "files": 2955,
-  "duplicatesBefore": 147,
-  "archived": 2595,
-  "registry": {
-    "runtime": "ima_unified_runtime.js",
-    "daemon": "control_daemon.js",
-    "ui": "ima_ui_core.js",
-    "memory": "memory_engine.js",
-    "brain": "ima_agi_core.js"
-  },
-  "npmUser": "mom-os1",
-  "published": true
+  "version": "4.0.1778504598427",
+  "files": 358,
+  "duplicates": 66,
+  "archived": 70,
+  "canonical": "runtime/engine_v6.js",
+  "published": false,
+  "verify": "IMA ONLINE"
 }

@@ -1,25 +1,15 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "4.0.1778504598427",
+  "version": "5.0.1778504751053",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "runtime": "node runtime/autonomous_runtime.js",
-    "analytics": "node runtime/npm_analytics.js"
+    "brain": "node ima_system_brain.js"
   },
   "bin": {
     "ima": "cli.js"
   },
-  "files": [
-    "server.js",
-    "runtime",
-    "core",
-    "logs",
-    "ui",
-    "memory",
-    "plugins",
-    "policies"
-  ],
   "publishConfig": {
     "access": "public"
   }
