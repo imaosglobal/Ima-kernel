@@ -1,1 +1,5 @@
-module.exports = require("../core/self_heal_runtime.js");
+const { start } = require("../core/self_heal_runtime");
+
+module.exports = {
+  start
+};
