@@ -11,12 +11,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "dependencies": {
+    "acorn": "^8.16.0",
+    "escodegen": "^2.1.0",
     "ima-core-saas": "^2.8.12"
   },
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
