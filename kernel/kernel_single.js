@@ -1,74 +1,52 @@
 'use strict';
 
-const POOL = require('./KERNEL_EXECUTION_POOL_V1');
-const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+const POOL = require('./runtime/KERNEL_EXECUTION_POOL_V1.js');
+const CLUSTER = require('./runtime/KERNEL_CLUSTER_MASTER_V8.js');
 
-const STATE = {
-  booted: false,
-  clusterLocked: false,
-  snapshot: null
-};
+let booted = false;
+let locked = false;
+let snapshot = null;
 
-function captureClusterState() {
+function capture() {
   const m = CLUSTER.metrics?.() || {};
-  return {
-    workers: m.workers || 0,
-    sessions: m.sessions || 0,
-    ts: Date.now()
-  };
+  return { workers: m.workers || 0, sessions: m.sessions || 0, ts: Date.now() };
 }
 
-let clusterStarted = false;
-let lockApplied = false;
-
-function startClusterSafe() {
-  if (clusterStarted) return { status: 'already_started' };
-  clusterStarted = true;
-  return CLUSTER.start();
-}
-
-function lockCluster() {
-  if (lockApplied) return;
-
+function lock() {
+  if (locked) return;
   const original = CLUSTER.start;
 
   CLUSTER.start = function () {
-    if (STATE.booted) {
-      return { status: 'cluster_locked' };
-    }
+    if (booted) return { status: 'locked' };
     return original.apply(this, arguments);
   };
 
-  lockApplied = true;
+  locked = true;
 }
 
 function start() {
-  if (STATE.booted) return { status: 'already_booted' };
+  if (booted) return { status: 'already_booted' };
 
   POOL.start();
-  const cluster = startClusterSafe();
+  const c = CLUSTER.start();
 
-  lockCluster();
+  lock();
 
-  STATE.snapshot = captureClusterState();
-  STATE.booted = true;
+  snapshot = capture();
+  booted = true;
 
-  return {
-    status: 'booted',
-    pool: POOL.metrics?.(),
-    cluster: STATE.snapshot
-  };
+  return { status: 'booted', pool: POOL.metrics?.(), cluster: snapshot };
 }
 
 function health() {
   const pool = POOL.metrics?.() || {};
-  const cluster = CLUSTER.metrics?.() || STATE.snapshot || { workers: 0, sessions: 0 };
+  const cluster = snapshot || capture();
 
   return {
-    booted: STATE.booted,
+    booted,
     pool,
     cluster,
-    ok: STATE.booted && pool.workers > 0 && cluster.workers > 0
+    ok: booted && pool.workers > 0 && cluster.workers > 0
   };
 }
 
@@ -83,12 +61,4 @@ function verify() {
   return { ok: issues.length === 0, issues, health: h };
 }
 
-function request(cmd) {
-  if (!STATE.booted) throw new Error('NOT_BOOTED');
-
-  return CLUSTER.request
-    ? CLUSTER.request(cmd)
-    : POOL.request(cmd);
-}
-
-module.exports = { start, health, verify, request };
+module.exports = { start, health, verify };
