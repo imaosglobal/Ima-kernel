@@ -103,7 +103,7 @@ const agents=[
   }),
 
   new Agent("health", async (ctx)=>{
-    ctx.health = run("node server.js --check") !== null;
+    ctx.health = run("node runtime/autonomous_runtime.js --check") !== null;
   }),
 
   new Agent("repair", async (ctx,bus)=>{

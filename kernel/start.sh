@@ -1,8 +1,9 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash
 
-pkill -f "runtime/server.js" 2>/dev/null || true
-pkill -f "runtime/autonomous_runtime.js" 2>/dev/null || true
+pkill -f "runtime/ENTRYPOINT.js" 2>/dev/null || true
+sleep 1
 
-sleep 2
+nohup node runtime/ENTRYPOINT.js > logs/runtime.log 2>&1 &
 
-nohup node runtime/autonomous_runtime.js > logs/runtime.log 2>&1 &
+sleep 1
+pgrep -af ENTRYPOINT

@@ -53,7 +53,7 @@ function runPipeline(){
 }
 
 function healthCheck(){
-  const r = run('node server.js --check');
+  const r = run('node runtime/autonomous_runtime.js --check');
   return r !== null;
 }
 
