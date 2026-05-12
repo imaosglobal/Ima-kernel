@@ -1,16 +1,21 @@
-const state = {
-  runtime: "unknown",
+let state = {
+  runtime: "booting",
   lastHeartbeat: 0,
   status: "booting"
 };
 
 function updateHeartbeat() {
-  state.lastHeartbeat = Date.now();
   state.runtime = "alive";
+  state.lastHeartbeat = Date.now();
   state.status = "healthy";
+}
+
+function getState() {
+  return state;
 }
 
 module.exports = {
   state,
-  updateHeartbeat
+  updateHeartbeat,
+  getState
 };

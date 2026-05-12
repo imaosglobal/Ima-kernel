@@ -1,7 +1,10 @@
-const runtime = require("./autonomous_runtime");
+const runtime = require("./autonomous_runtime.js");
+const kernelState = require("./KERNEL_STATE");
 
-console.log("SUPERVISOR ONLINE");
+console.log("KERNEL ONLINE - STABLE MODE");
 
-if (runtime && runtime.start) {
+kernelState.updateHeartbeat();
+
+if (runtime && typeof runtime.start === "function") {
   runtime.start();
 }
