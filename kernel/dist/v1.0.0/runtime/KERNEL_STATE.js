@@ -11,10 +11,11 @@ function updateHeartbeat() {
 }
 
 function getState() {
-  return { ...state }; // חשוב: snapshot חדש בכל קריאה
+  return state;
 }
 
 module.exports = {
+  state,
   updateHeartbeat,
   getState
 };
