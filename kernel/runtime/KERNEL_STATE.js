@@ -1,35 +1,37 @@
 const fs = require("fs");
+const path = require("path");
 
-const STATE_FILE = "./logs/kernel_state.json";
+const STATE_FILE = path.join(__dirname, "kernel_state.json");
 
 function load() {
   try {
     return JSON.parse(fs.readFileSync(STATE_FILE));
   } catch {
-    return { runtime: "booting", lastHeartbeat: 0, status: "booting" };
+    return {
+      runtime: "booting",
+      lastHeartbeat: 0,
+      status: "booting"
+    };
   }
 }
 
-let state = load();
-
-function persist() {
-  fs.mkdirSync("./logs", { recursive: true });
+function save(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
 function updateHeartbeat() {
+  const state = load();
   state.runtime = "alive";
   state.lastHeartbeat = Date.now();
   state.status = "healthy";
-  persist();
+  save(state);
 }
 
 function getState() {
-  return load(); // תמיד אמת מהדיסק
+  return load();
 }
 
 module.exports = {
-  state,
   updateHeartbeat,
   getState
 };
