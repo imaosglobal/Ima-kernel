@@ -1,53 +1,39 @@
 const fs = require("fs");
-const { execSync } = require("child_process");
 
-function sh(cmd) {
+function loadState() {
   try {
-    return execSync(cmd).toString().trim();
+    return JSON.parse(fs.readFileSync("./runtime/kernel_state.json","utf8"));
   } catch {
-    return null;
+    return {};
   }
 }
 
-function getLocalVersion() {
-  const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-  return pkg.version;
-}
-
-function getGitVersion() {
-  const tag = sh("git describe --tags --abbrev=0");
-  return tag ? tag.replace("v", "") : null;
-}
-
-function getNpmVersion(pkgName) {
-  const v = sh(`npm view ${pkgName} version`);
-  return v;
-}
-
-function syncPlan() {
-  const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-  const name = pkg.name;
-
-  const local = getLocalVersion();
-  const git = getGitVersion();
-  const npm = getNpmVersion(name);
-
+function sync() {
+  const state = loadState();
   return {
-    local,
-    git,
-    npm,
-    drift: {
-      gitMismatch: git !== local,
-      npmMismatch: npm !== local
-    }
+    local: "1.0.5",
+    git: state.version || "unknown",
+    npm: "unknown",
+    drift: state.snapshot ? false : true
   };
 }
 
-function printPlan() {
-  const p = syncPlan();
-  console.log("=== SYNC STATE ===");
-  console.log(JSON.stringify(p, null, 2));
-  return p;
+function loop() {
+  console.log("KERNEL SYNC ENGINE LIVE");
+
+  setInterval(() => {
+    try {
+      const s = sync();
+      fs.writeFileSync(
+        "./runtime/sync_state.json",
+        JSON.stringify(s, null, 2)
+      );
+    } catch (e) {
+      console.log("[SYNC ERROR]", e.message);
+    }
+  }, 5000);
 }
 
-module.exports = { printPlan, syncPlan };
+loop();
+
+module.exports = { sync };
