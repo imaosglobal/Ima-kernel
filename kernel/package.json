@@ -1,11 +1,9 @@
 {
   "name": "@mom-os1/ima-core",
-  "version": "5.0.1778504751053",
-  "main": "server.js",
+  "version": "6.0-runtime-stable",
+  "main": "runtime/server.js",
   "scripts": {
-    "start": "node server.js",
-    "runtime": "node runtime/autonomous_runtime.js",
-    "brain": "node ima_system_brain.js"
+    "start": "node runtime/autonomous_runtime.js"
   },
   "bin": {
     "ima": "cli.js"
