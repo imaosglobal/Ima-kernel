@@ -89,7 +89,7 @@ class Orchestrator{
       }),
 
       new Agent("health", async (ctx)=>{
-        const ok = run('node server.js --check') !== null;
+        const ok = run('node runtime/autonomous_runtime.js --check') !== null;
         ctx.health=ok;
       }),
 

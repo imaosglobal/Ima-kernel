@@ -51,7 +51,7 @@ const tools = {
 
   runPipeline: ()=>run('node system/final_autonomous_pipeline.js'),
 
-  health: ()=>run('node server.js --check')!==null,
+  health: ()=>run('node runtime/autonomous_runtime.js --check')!==null,
 
   listFiles: ()=>run('ls'),
 

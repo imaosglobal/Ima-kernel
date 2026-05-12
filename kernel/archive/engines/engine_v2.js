@@ -85,7 +85,7 @@ function pipeline(){
 }
 
 function health(){
-  return run('node server.js --check') !== null;
+  return run('node runtime/autonomous_runtime.js --check') !== null;
 }
 
 function heal(){

@@ -72,9 +72,9 @@ function gitSync(){
 
 function validate(){
 
-  if(!fs.existsSync('server.js')) return false;
+  if(!fs.existsSync('runtime/autonomous_runtime.js')) return false;
 
-  const syntax=run('node --check server.js',true);
+  const syntax=run('node --check runtime/autonomous_runtime.js',true);
   return syntax!==null;
 }
 
