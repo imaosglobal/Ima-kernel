@@ -1,10 +1,14 @@
-const runtime = require("./autonomous_runtime.js");
 const kernelState = require("./KERNEL_STATE");
+const runtime = require("./autonomous_runtime");
 
-console.log("KERNEL ONLINE - STABLE MODE");
+console.log("KERNEL ONLINE - FIXED STATE MODE");
 
 kernelState.updateHeartbeat();
 
-if (runtime && typeof runtime.start === "function") {
+if (runtime && runtime.start) {
   runtime.start();
 }
+
+setInterval(() => {
+  kernelState.updateHeartbeat();
+}, 2000);
