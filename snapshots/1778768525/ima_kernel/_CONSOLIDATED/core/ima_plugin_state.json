@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "finance": "finance.js"
+  },
+  "logs": [
+    {
+      "input": "איך לנהל כסף טוב יותר?",
+      "result": [
+        {
+          "plugin": "finance",
+          "output": "Finance analysis: איך לנהל כסף טוב יותר?"
+        }
+      ],
+      "time": 1777331079582
+    }
+  ]
+}

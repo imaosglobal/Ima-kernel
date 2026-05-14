@@ -1,0 +1,7 @@
+{
+  "runtime": "ima_unified_runtime.js",
+  "daemon": "control_daemon.js",
+  "ui": "ima_ui_core.js",
+  "memory": "memory_engine.js",
+  "brain": "ima_agi_core.js"
+}

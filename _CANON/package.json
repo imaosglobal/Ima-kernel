@@ -1,0 +1,19 @@
+{
+  "name": "ima-kernel",
+  "version": "1.0.0",
+  "description": "IMA Stable Kernel",
+  "main": "ima.js",
+  "scripts": {
+    "start": "node ima.js"
+  },
+  "keywords": [
+    "ima",
+    "ai",
+    "kernel"
+  ],
+  "author": "Ori Cohen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
