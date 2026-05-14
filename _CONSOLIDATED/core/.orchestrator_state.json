@@ -1,0 +1,4356 @@
+{
+  "graph": {
+    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/orch_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "deps": [],
+      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+      "status": "done"
+    },
+    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/orch_b.js",
+        "content": "console.log(\"B\")"
+      },
+      "deps": [
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+      ],
+      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+      "status": "done"
+    },
+    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v2_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "deps": [],
+      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+      "status": "pending"
+    },
+    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/a.js",
+        "content": "console.log(\"A\")"
+      },
+      "deps": [],
+      "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+      "status": "done"
+    },
+    "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/broken.js",
+        "content": "function (("
+      },
+      "deps": [
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+      ],
+      "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+      "status": "done"
+    },
+    "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/mesh_test.js",
+        "content": "console.log(\"MESH OK\")"
+      },
+      "deps": [],
+      "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+      "status": "done"
+    },
+    "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/mesh_v2_test.js",
+        "content": "console.log(\"MESH V2 OK\")"
+      },
+      "deps": [],
+      "id": "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9",
+      "status": "done"
+    },
+    "020cbea3326bcebafa50e25612707802889b8a2d7c01c6c7a448d6629f326f24": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v3_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "deps": [],
+      "id": "020cbea3326bcebafa50e25612707802889b8a2d7c01c6c7a448d6629f326f24",
+      "status": "pending"
+    },
+    "b175479221f41d464c1def15cfafb3d637e9d53ffd08a9399b47a8ebdae81c37": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v3_broken.js",
+        "content": "function (("
+      },
+      "deps": [],
+      "id": "b175479221f41d464c1def15cfafb3d637e9d53ffd08a9399b47a8ebdae81c37",
+      "status": "pending"
+    },
+    "7b8814a32886340f2fae1da83864e90fc808821c4ab725ceb4cf1afa10cab865": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v4_a.js",
+        "content": "console.log(\"V4 A\")"
+      },
+      "deps": [],
+      "id": "7b8814a32886340f2fae1da83864e90fc808821c4ab725ceb4cf1afa10cab865",
+      "status": "pending"
+    },
+    "ff430dc55b361726315274e3093f854578327782fa83672a87e072df8cb8766a": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v4_bad.js",
+        "content": "function (("
+      },
+      "deps": [],
+      "id": "ff430dc55b361726315274e3093f854578327782fa83672a87e072df8cb8766a",
+      "status": "pending"
+    },
+    "e58024e296814139adf6028a20e161e37ea1d00865e82e6d436553c05005367f": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v4_sync_a.js",
+        "content": "console.log(\"SYNC A\")"
+      },
+      "deps": [],
+      "id": "e58024e296814139adf6028a20e161e37ea1d00865e82e6d436553c05005367f",
+      "status": "pending"
+    },
+    "79bb8e793000968d9052c11042b13af7502fd80490785e17ec0bb9c584ba3750": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v4_sync_broken.js",
+        "content": "function (("
+      },
+      "deps": [],
+      "id": "79bb8e793000968d9052c11042b13af7502fd80490785e17ec0bb9c584ba3750",
+      "status": "pending"
+    },
+    "78ccb0e4946166dcd016c238ec0089dd9798f94e13c207a9225ed974579b2e13": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v5_a.js",
+        "content": "console.log(\"V5 A\")"
+      },
+      "deps": [],
+      "id": "78ccb0e4946166dcd016c238ec0089dd9798f94e13c207a9225ed974579b2e13",
+      "status": "pending"
+    },
+    "bb125cd4789b5d3c89c429ecb6e1c3a05cef759a5c5e0a7368525328ce2d9f83": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v5_b.js",
+        "content": "console.log(\"V5 B\")"
+      },
+      "deps": [],
+      "id": "bb125cd4789b5d3c89c429ecb6e1c3a05cef759a5c5e0a7368525328ce2d9f83",
+      "status": "pending"
+    },
+    "00d65dcb2c383669da9205ecbc17bd7ff03e0a6e8bf99d0d09e3670191208731": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v6_fixed_a.js",
+        "content": "console.log(\"FIXED A\")"
+      },
+      "deps": [],
+      "id": "00d65dcb2c383669da9205ecbc17bd7ff03e0a6e8bf99d0d09e3670191208731",
+      "status": "pending"
+    },
+    "efe9e6b58cb2bd0c1efa741fe2684c0cd3afdc48ec5e97414bd20bbbdc218825": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/v6_fixed_b.js",
+        "content": "console.log(\"FIXED B\")"
+      },
+      "deps": [],
+      "id": "efe9e6b58cb2bd0c1efa741fe2684c0cd3afdc48ec5e97414bd20bbbdc218825",
+      "status": "pending"
+    },
+    "ac69ecbe8a4917791d1a0ce361489cc89efbb18aaed04e373af2606e779eb49c": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_v2_a.js",
+        "content": "console.log(\"TX2 A\")"
+      },
+      "deps": [],
+      "id": "ac69ecbe8a4917791d1a0ce361489cc89efbb18aaed04e373af2606e779eb49c",
+      "status": "pending"
+    },
+    "e39b72c4d61b1ebf220f243e402be46ddf8aab424a4c98d8876eece5424a24f9": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_v2_b.js",
+        "content": "console.log(\"TX2 B\")"
+      },
+      "deps": [],
+      "id": "e39b72c4d61b1ebf220f243e402be46ddf8aab424a4c98d8876eece5424a24f9",
+      "status": "pending"
+    }
+  },
+  "history": [
+    {
+      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+      "res": {
+        "status": "written",
+        "file": "./runtime/orch_a.js"
+      }
+    },
+    {
+      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+      "res": {
+        "status": "written",
+        "file": "./runtime/orch_b.js"
+      }
+    },
+    {
+      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+      "res": {
+        "status": "written",
+        "file": "./runtime/v2_a.js"
+      }
+    },
+    {
+      "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+      "res": {
+        "status": "written",
+        "file": "./runtime/a.js"
+      }
+    },
+    {
+      "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+      "res": {
+        "status": "rejected",
+        "reason": "syntax_error"
+      }
+    },
+    {
+      "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+      "res": {
+        "status": "written",
+        "file": "./runtime/mesh_test.js"
+      }
+    },
+    {
+      "id": "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9",
+      "res": {
+        "status": "written",
+        "file": "./runtime/mesh_v2_test.js"
+      }
+    }
+  ],
+  "snapshots": {
+    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+        "cmd": {
+          "type": "WRITE_FILE",
+          "file": "./runtime/orch_a.js",
+          "content": "console.log(\"A\")"
+        },
+        "deps": [],
+        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+        "status": "done"
+      },
+      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+        "cmd": {
+          "type": "WRITE_FILE",
+          "file": "./runtime/orch_b.js",
+          "content": "console.log(\"B\")"
+        },
+        "deps": [
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+        ],
+        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+        "status": "pending"
+      }
+    },
+    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+        "cmd": {
+          "type": "WRITE_FILE",
+          "file": "./runtime/orch_a.js",
+          "content": "console.log(\"A\")"
+        },
+        "deps": [],
+        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+        "status": "done"
+      },
+      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+        "cmd": {
+          "type": "WRITE_FILE",
+          "file": "./runtime/orch_b.js",
+          "content": "console.log(\"B\")"
+        },
+        "deps": [
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+        ],
+        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+        "status": "done"
+      }
+    },
+    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+      "graph": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "status": "done"
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_b.js",
+            "content": "console.log(\"B\")"
+          },
+          "deps": [
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+          ],
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "status": "done"
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/v2_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "status": "done"
+        }
+      },
+      "history": [
+        {
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_a.js"
+          }
+        },
+        {
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_b.js"
+          }
+        },
+        {
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "res": {
+            "status": "written",
+            "file": "./runtime/v2_a.js"
+          }
+        }
+      ],
+      "snapshots": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "pending"
+          }
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "done"
+          }
+        }
+      },
+      "executed": {
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+      }
+    },
+    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+      "graph": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "status": "done"
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_b.js",
+            "content": "console.log(\"B\")"
+          },
+          "deps": [
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+          ],
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "status": "done"
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/v2_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "status": "pending"
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "status": "done"
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/broken.js",
+            "content": "function (("
+          },
+          "deps": [
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+          ],
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "status": "pending"
+        }
+      },
+      "history": [
+        {
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_a.js"
+          }
+        },
+        {
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_b.js"
+          }
+        },
+        {
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "res": {
+            "status": "written",
+            "file": "./runtime/v2_a.js"
+          }
+        },
+        {
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "res": {
+            "status": "written",
+            "file": "./runtime/a.js"
+          }
+        }
+      ],
+      "snapshots": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "pending"
+          }
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "done"
+          }
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+          }
+        }
+      },
+      "executed": {
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+      }
+    },
+    "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+      "graph": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "status": "done"
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_b.js",
+            "content": "console.log(\"B\")"
+          },
+          "deps": [
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+          ],
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "status": "done"
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/v2_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "status": "pending"
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "status": "done"
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/broken.js",
+            "content": "function (("
+          },
+          "deps": [
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+          ],
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "status": "done"
+        }
+      },
+      "history": [
+        {
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_a.js"
+          }
+        },
+        {
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_b.js"
+          }
+        },
+        {
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "res": {
+            "status": "written",
+            "file": "./runtime/v2_a.js"
+          }
+        },
+        {
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "res": {
+            "status": "written",
+            "file": "./runtime/a.js"
+          }
+        },
+        {
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "res": {
+            "status": "rejected",
+            "reason": "syntax_error"
+          }
+        }
+      ],
+      "snapshots": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "pending"
+          }
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "done"
+          }
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+          }
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+          }
+        }
+      },
+      "executed": {
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true
+      }
+    },
+    "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+      "graph": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "status": "done"
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_b.js",
+            "content": "console.log(\"B\")"
+          },
+          "deps": [
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+          ],
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "status": "done"
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/v2_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "status": "pending"
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "status": "done"
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/broken.js",
+            "content": "function (("
+          },
+          "deps": [
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+          ],
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "status": "done"
+        },
+        "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/mesh_test.js",
+            "content": "console.log(\"MESH OK\")"
+          },
+          "deps": [],
+          "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+          "status": "done"
+        }
+      },
+      "history": [
+        {
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_a.js"
+          }
+        },
+        {
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_b.js"
+          }
+        },
+        {
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "res": {
+            "status": "written",
+            "file": "./runtime/v2_a.js"
+          }
+        },
+        {
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "res": {
+            "status": "written",
+            "file": "./runtime/a.js"
+          }
+        },
+        {
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "res": {
+            "status": "rejected",
+            "reason": "syntax_error"
+          }
+        },
+        {
+          "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+          "res": {
+            "status": "written",
+            "file": "./runtime/mesh_test.js"
+          }
+        }
+      ],
+      "snapshots": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "pending"
+          }
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "done"
+          }
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+          }
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+          }
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            },
+            {
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "res": {
+                "status": "rejected",
+                "reason": "syntax_error"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "pending"
+                },
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "status": "done"
+                },
+                "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/broken.js",
+                    "content": "function (("
+                  },
+                  "deps": [
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+                  ],
+                  "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                  "status": "pending"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                },
+                {
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "graph": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "status": "done"
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_b.js",
+                        "content": "console.log(\"B\")"
+                      },
+                      "deps": [
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                      ],
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "status": "done"
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/v2_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "status": "done"
+                    }
+                  },
+                  "history": [
+                    {
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_a.js"
+                      }
+                    },
+                    {
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_b.js"
+                      }
+                    },
+                    {
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/v2_a.js"
+                      }
+                    }
+                  ],
+                  "snapshots": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "pending"
+                      }
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "done"
+                      }
+                    }
+                  },
+                  "executed": {
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true
+          }
+        }
+      },
+      "executed": {
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true,
+        "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": true
+      }
+    },
+    "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9": {
+      "graph": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "status": "done"
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/orch_b.js",
+            "content": "console.log(\"B\")"
+          },
+          "deps": [
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+          ],
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "status": "done"
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/v2_a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "status": "pending"
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/a.js",
+            "content": "console.log(\"A\")"
+          },
+          "deps": [],
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "status": "done"
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/broken.js",
+            "content": "function (("
+          },
+          "deps": [
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+          ],
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "status": "done"
+        },
+        "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/mesh_test.js",
+            "content": "console.log(\"MESH OK\")"
+          },
+          "deps": [],
+          "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+          "status": "done"
+        },
+        "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9": {
+          "cmd": {
+            "type": "WRITE_FILE",
+            "file": "./runtime/mesh_v2_test.js",
+            "content": "console.log(\"MESH V2 OK\")"
+          },
+          "deps": [],
+          "id": "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9",
+          "status": "done"
+        }
+      },
+      "history": [
+        {
+          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_a.js"
+          }
+        },
+        {
+          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+          "res": {
+            "status": "written",
+            "file": "./runtime/orch_b.js"
+          }
+        },
+        {
+          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+          "res": {
+            "status": "written",
+            "file": "./runtime/v2_a.js"
+          }
+        },
+        {
+          "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+          "res": {
+            "status": "written",
+            "file": "./runtime/a.js"
+          }
+        },
+        {
+          "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+          "res": {
+            "status": "rejected",
+            "reason": "syntax_error"
+          }
+        },
+        {
+          "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+          "res": {
+            "status": "written",
+            "file": "./runtime/mesh_test.js"
+          }
+        },
+        {
+          "id": "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9",
+          "res": {
+            "status": "written",
+            "file": "./runtime/mesh_v2_test.js"
+          }
+        }
+      ],
+      "snapshots": {
+        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "pending"
+          }
+        },
+        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_a.js",
+              "content": "console.log(\"A\")"
+            },
+            "deps": [],
+            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+            "status": "done"
+          },
+          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+            "cmd": {
+              "type": "WRITE_FILE",
+              "file": "./runtime/orch_b.js",
+              "content": "console.log(\"B\")"
+            },
+            "deps": [
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+            ],
+            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+            "status": "done"
+          }
+        },
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+          }
+        },
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "pending"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+          }
+        },
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            },
+            {
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "res": {
+                "status": "rejected",
+                "reason": "syntax_error"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "pending"
+                },
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "status": "done"
+                },
+                "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/broken.js",
+                    "content": "function (("
+                  },
+                  "deps": [
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+                  ],
+                  "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                  "status": "pending"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                },
+                {
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "graph": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "status": "done"
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_b.js",
+                        "content": "console.log(\"B\")"
+                      },
+                      "deps": [
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                      ],
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "status": "done"
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/v2_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "status": "done"
+                    }
+                  },
+                  "history": [
+                    {
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_a.js"
+                      }
+                    },
+                    {
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_b.js"
+                      }
+                    },
+                    {
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/v2_a.js"
+                      }
+                    }
+                  ],
+                  "snapshots": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "pending"
+                      }
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "done"
+                      }
+                    }
+                  },
+                  "executed": {
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true
+          }
+        },
+        "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+          "graph": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "status": "done"
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/orch_b.js",
+                "content": "console.log(\"B\")"
+              },
+              "deps": [
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+              ],
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "status": "done"
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/v2_a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "status": "pending"
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/a.js",
+                "content": "console.log(\"A\")"
+              },
+              "deps": [],
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "status": "done"
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/broken.js",
+                "content": "function (("
+              },
+              "deps": [
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+              ],
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "status": "done"
+            },
+            "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": {
+              "cmd": {
+                "type": "WRITE_FILE",
+                "file": "./runtime/mesh_test.js",
+                "content": "console.log(\"MESH OK\")"
+              },
+              "deps": [],
+              "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+              "status": "done"
+            }
+          },
+          "history": [
+            {
+              "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_a.js"
+              }
+            },
+            {
+              "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+              "res": {
+                "status": "written",
+                "file": "./runtime/orch_b.js"
+              }
+            },
+            {
+              "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+              "res": {
+                "status": "written",
+                "file": "./runtime/v2_a.js"
+              }
+            },
+            {
+              "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+              "res": {
+                "status": "written",
+                "file": "./runtime/a.js"
+              }
+            },
+            {
+              "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+              "res": {
+                "status": "rejected",
+                "reason": "syntax_error"
+              }
+            },
+            {
+              "id": "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0",
+              "res": {
+                "status": "written",
+                "file": "./runtime/mesh_test.js"
+              }
+            }
+          ],
+          "snapshots": {
+            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "pending"
+              }
+            },
+            "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_a.js",
+                  "content": "console.log(\"A\")"
+                },
+                "deps": [],
+                "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                "status": "done"
+              },
+              "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                "cmd": {
+                  "type": "WRITE_FILE",
+                  "file": "./runtime/orch_b.js",
+                  "content": "console.log(\"B\")"
+                },
+                "deps": [
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                ],
+                "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                "status": "done"
+              }
+            },
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+              }
+            },
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "pending"
+                },
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "status": "done"
+                },
+                "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/broken.js",
+                    "content": "function (("
+                  },
+                  "deps": [
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+                  ],
+                  "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                  "status": "pending"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                },
+                {
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/a.js"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "graph": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "status": "done"
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_b.js",
+                        "content": "console.log(\"B\")"
+                      },
+                      "deps": [
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                      ],
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "status": "done"
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/v2_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "status": "done"
+                    }
+                  },
+                  "history": [
+                    {
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_a.js"
+                      }
+                    },
+                    {
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_b.js"
+                      }
+                    },
+                    {
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/v2_a.js"
+                      }
+                    }
+                  ],
+                  "snapshots": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "pending"
+                      }
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "done"
+                      }
+                    }
+                  },
+                  "executed": {
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+              }
+            },
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+              "graph": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "status": "done"
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/orch_b.js",
+                    "content": "console.log(\"B\")"
+                  },
+                  "deps": [
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                  ],
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "status": "done"
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/v2_a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "status": "pending"
+                },
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/a.js",
+                    "content": "console.log(\"A\")"
+                  },
+                  "deps": [],
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "status": "done"
+                },
+                "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+                  "cmd": {
+                    "type": "WRITE_FILE",
+                    "file": "./runtime/broken.js",
+                    "content": "function (("
+                  },
+                  "deps": [
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+                  ],
+                  "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                  "status": "done"
+                }
+              },
+              "history": [
+                {
+                  "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_a.js"
+                  }
+                },
+                {
+                  "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/orch_b.js"
+                  }
+                },
+                {
+                  "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/v2_a.js"
+                  }
+                },
+                {
+                  "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                  "res": {
+                    "status": "written",
+                    "file": "./runtime/a.js"
+                  }
+                },
+                {
+                  "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                  "res": {
+                    "status": "rejected",
+                    "reason": "syntax_error"
+                  }
+                }
+              ],
+              "snapshots": {
+                "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "pending"
+                  }
+                },
+                "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                  "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_a.js",
+                      "content": "console.log(\"A\")"
+                    },
+                    "deps": [],
+                    "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                    "status": "done"
+                  },
+                  "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                    "cmd": {
+                      "type": "WRITE_FILE",
+                      "file": "./runtime/orch_b.js",
+                      "content": "console.log(\"B\")"
+                    },
+                    "deps": [
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                    ],
+                    "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                    "status": "done"
+                  }
+                },
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                  "graph": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "status": "done"
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_b.js",
+                        "content": "console.log(\"B\")"
+                      },
+                      "deps": [
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                      ],
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "status": "done"
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/v2_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "status": "done"
+                    }
+                  },
+                  "history": [
+                    {
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_a.js"
+                      }
+                    },
+                    {
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_b.js"
+                      }
+                    },
+                    {
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/v2_a.js"
+                      }
+                    }
+                  ],
+                  "snapshots": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "pending"
+                      }
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "done"
+                      }
+                    }
+                  },
+                  "executed": {
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+                  }
+                },
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                  "graph": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "status": "done"
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/orch_b.js",
+                        "content": "console.log(\"B\")"
+                      },
+                      "deps": [
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                      ],
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "status": "done"
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/v2_a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "status": "pending"
+                    },
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/a.js",
+                        "content": "console.log(\"A\")"
+                      },
+                      "deps": [],
+                      "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                      "status": "done"
+                    },
+                    "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": {
+                      "cmd": {
+                        "type": "WRITE_FILE",
+                        "file": "./runtime/broken.js",
+                        "content": "function (("
+                      },
+                      "deps": [
+                        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69"
+                      ],
+                      "id": "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc",
+                      "status": "pending"
+                    }
+                  },
+                  "history": [
+                    {
+                      "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_a.js"
+                      }
+                    },
+                    {
+                      "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/orch_b.js"
+                      }
+                    },
+                    {
+                      "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/v2_a.js"
+                      }
+                    },
+                    {
+                      "id": "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69",
+                      "res": {
+                        "status": "written",
+                        "file": "./runtime/a.js"
+                      }
+                    }
+                  ],
+                  "snapshots": {
+                    "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "pending"
+                      }
+                    },
+                    "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                      "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_a.js",
+                          "content": "console.log(\"A\")"
+                        },
+                        "deps": [],
+                        "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                        "status": "done"
+                      },
+                      "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                        "cmd": {
+                          "type": "WRITE_FILE",
+                          "file": "./runtime/orch_b.js",
+                          "content": "console.log(\"B\")"
+                        },
+                        "deps": [
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                        ],
+                        "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                        "status": "done"
+                      }
+                    },
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                      "graph": {
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                          "cmd": {
+                            "type": "WRITE_FILE",
+                            "file": "./runtime/orch_a.js",
+                            "content": "console.log(\"A\")"
+                          },
+                          "deps": [],
+                          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                          "status": "done"
+                        },
+                        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                          "cmd": {
+                            "type": "WRITE_FILE",
+                            "file": "./runtime/orch_b.js",
+                            "content": "console.log(\"B\")"
+                          },
+                          "deps": [
+                            "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                          ],
+                          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                          "status": "done"
+                        },
+                        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": {
+                          "cmd": {
+                            "type": "WRITE_FILE",
+                            "file": "./runtime/v2_a.js",
+                            "content": "console.log(\"A\")"
+                          },
+                          "deps": [],
+                          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                          "status": "done"
+                        }
+                      },
+                      "history": [
+                        {
+                          "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                          "res": {
+                            "status": "written",
+                            "file": "./runtime/orch_a.js"
+                          }
+                        },
+                        {
+                          "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                          "res": {
+                            "status": "written",
+                            "file": "./runtime/orch_b.js"
+                          }
+                        },
+                        {
+                          "id": "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f",
+                          "res": {
+                            "status": "written",
+                            "file": "./runtime/v2_a.js"
+                          }
+                        }
+                      ],
+                      "snapshots": {
+                        "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                            "cmd": {
+                              "type": "WRITE_FILE",
+                              "file": "./runtime/orch_a.js",
+                              "content": "console.log(\"A\")"
+                            },
+                            "deps": [],
+                            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                            "status": "done"
+                          },
+                          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                            "cmd": {
+                              "type": "WRITE_FILE",
+                              "file": "./runtime/orch_b.js",
+                              "content": "console.log(\"B\")"
+                            },
+                            "deps": [
+                              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                            ],
+                            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                            "status": "pending"
+                          }
+                        },
+                        "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                          "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3": {
+                            "cmd": {
+                              "type": "WRITE_FILE",
+                              "file": "./runtime/orch_a.js",
+                              "content": "console.log(\"A\")"
+                            },
+                            "deps": [],
+                            "id": "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3",
+                            "status": "done"
+                          },
+                          "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b": {
+                            "cmd": {
+                              "type": "WRITE_FILE",
+                              "file": "./runtime/orch_b.js",
+                              "content": "console.log(\"B\")"
+                            },
+                            "deps": [
+                              "ea7a9cd9f03191f83342207229304393c99f0c9b8d5a7d0a5f869dbce9508cb3"
+                            ],
+                            "id": "734656cf238444ead9d848786706a81c47bcefb6ca47ee4c551d0a62cafc6d0b",
+                            "status": "done"
+                          }
+                        }
+                      },
+                      "executed": {
+                        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true
+                      }
+                    }
+                  },
+                  "executed": {
+                    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+                    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true
+                  }
+                }
+              },
+              "executed": {
+                "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+                "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+                "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true
+              }
+            }
+          },
+          "executed": {
+            "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+            "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+            "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true,
+            "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": true
+          }
+        }
+      },
+      "executed": {
+        "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+        "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+        "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true,
+        "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": true,
+        "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9": true
+      }
+    }
+  },
+  "executed": {
+    "1c98e95b489d1189bd9b7eb6d252575701f4788c19fc833305b20237c2fb839f": true,
+    "55ea98df9376fa3d5144b695662fc7c5e3a47d30755320e80e1c443c6aa4ac69": true,
+    "c58600723fda813fa2887366a1921112163b01982e4ebbeaa7bc8b24acad60dc": true,
+    "82c7a5686825769292b056c93a0ca943c479a68bd88dba6583f53aeddb75b7e0": true,
+    "f46d9f9bec6ea9fba1cd33d95fd6a2c3985a5dfb6370fce4a5faaaac7b56f2c9": true
+  }
+}

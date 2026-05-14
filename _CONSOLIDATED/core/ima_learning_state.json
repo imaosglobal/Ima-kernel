@@ -1,0 +1,1063 @@
+{
+  "data": [
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330729569
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.9618737130899668,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 0.9618737130899668,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.05,
+        "stable": 1
+      },
+      "time": 1777330729570
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330731573
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.9746079063097677,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 0.9746079063097677,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.1,
+        "stable": 1
+      },
+      "time": 1777330731573
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330733576
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.9164871735726015,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 0.9164871735726015,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.1500000000000001,
+        "stable": 1
+      },
+      "time": 1777330733577
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330735579
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.7991362741006761,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 0.9,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.1500000000000001,
+        "stable": 1.05
+      },
+      "time": 1777330735580
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330737583
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.0462943769584,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9450000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.0462943769584,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.2000000000000002,
+        "stable": 1.05
+      },
+      "time": 1777330737583
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330739587
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.8416305385908712,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9450000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 0.9450000000000001,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.2000000000000002,
+        "stable": 1.1
+      },
+      "time": 1777330739588
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330741591
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.1165297318822571,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9900000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.1165297318822571,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.2500000000000002,
+        "stable": 1.1
+      },
+      "time": 1777330741591
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330743595
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.2437595984478056,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9900000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.2437595984478056,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.3000000000000003,
+        "stable": 1.1
+      },
+      "time": 1777330743595
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330745599
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.9305199392498265,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 0.9900000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 0.9900000000000001,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.3000000000000003,
+        "stable": 1.1500000000000001
+      },
+      "time": 1777330745600
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330747600
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.8861748105543642,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.0350000000000001,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.0350000000000001,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.3000000000000003,
+        "stable": 1.2000000000000002
+      },
+      "time": 1777330747600
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330749601
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.1562237125692982,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.0800000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.1562237125692982,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.3500000000000003,
+        "stable": 1.2000000000000002
+      },
+      "time": 1777330749601
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330751604
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.1596853072475044,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.0800000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.1596853072475044,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.4000000000000004,
+        "stable": 1.2000000000000002
+      },
+      "time": 1777330751605
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330753606
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.8429707032318676,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.0800000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.0800000000000003,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.4000000000000004,
+        "stable": 1.2500000000000002
+      },
+      "time": 1777330753606
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330755607
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.0288402999806787,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.1250000000000002,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.1250000000000002,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.4000000000000004,
+        "stable": 1.3000000000000003
+      },
+      "time": 1777330755608
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330757611
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.3917432468516804,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.1700000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.3917432468516804,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.4500000000000004,
+        "stable": 1.3000000000000003
+      },
+      "time": 1777330757611
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330759615
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.2785545335385424,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.1700000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.2785545335385424,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.5000000000000004,
+        "stable": 1.3000000000000003
+      },
+      "time": 1777330759615
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330761617
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.1817047731091341,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.1700000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.1817047731091341,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.5500000000000005,
+        "stable": 1.3000000000000003
+      },
+      "time": 1777330761617
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330763620
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.930367316569445,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.1700000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.1700000000000004,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.5500000000000005,
+        "stable": 1.3500000000000003
+      },
+      "time": 1777330763620
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330765623
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.3719501185340417,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2150000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.3719501185340417,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.6000000000000005,
+        "stable": 1.3500000000000003
+      },
+      "time": 1777330765623
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330767626
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.459323535533331,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2150000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.459323535533331,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.6500000000000006,
+        "stable": 1.3500000000000003
+      },
+      "time": 1777330767626
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330769628
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 0.9973215862162658,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2150000000000003,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.2150000000000003,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.6500000000000006,
+        "stable": 1.4000000000000004
+      },
+      "time": 1777330769628
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330771633
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.3709697655940825,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2600000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.3709697655940825,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.7000000000000006,
+        "stable": 1.4000000000000004
+      },
+      "time": 1777330771633
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330773637
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.585093863618865,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2600000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.585093863618865,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.7500000000000007,
+        "stable": 1.4000000000000004
+      },
+      "time": 1777330773637
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330775639
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.2514413643524411,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.2600000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.2600000000000005,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.7500000000000007,
+        "stable": 1.4500000000000004
+      },
+      "time": 1777330775639
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330777641
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.5920987188525202,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3050000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.5920987188525202,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.8000000000000007,
+        "stable": 1.4500000000000004
+      },
+      "time": 1777330777641
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330779644
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.1388981862335639,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3050000000000004,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "stable:tick",
+        "score": 1.3050000000000004,
+        "name": "stable"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.8000000000000007,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330779644
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330781648
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.6670119578477514,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3500000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.6670119578477514,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.8500000000000008,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330781648
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330783652
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.528022001419229,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3500000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.528022001419229,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.9000000000000008,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330783652
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330785654
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.7199865091185433,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3500000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.7199865091185433,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 1.9500000000000008,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330785654
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330787654
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.9283619310194353,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3500000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.9283619310194353,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 2,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330787654
+    },
+    {
+      "event": {
+        "type": "tick",
+        "time": 1777330789657
+      },
+      "results": [
+        {
+          "answer": "logic:tick",
+          "score": 0.7,
+          "name": "logic"
+        },
+        {
+          "answer": "creative:tick",
+          "score": 1.7534577886159959,
+          "name": "creative"
+        },
+        {
+          "answer": "stable:tick",
+          "score": 1.3500000000000005,
+          "name": "stable"
+        }
+      ],
+      "winner": {
+        "answer": "creative:tick",
+        "score": 1.7534577886159959,
+        "name": "creative"
+      },
+      "weights": {
+        "logic": 1,
+        "creative": 2,
+        "stable": 1.5000000000000004
+      },
+      "time": 1777330789657
+    }
+  ],
+  "weights": {
+    "logic": 1,
+    "creative": 2,
+    "stable": 1.5000000000000004
+  }
+}

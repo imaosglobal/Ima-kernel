@@ -1,0 +1,212 @@
+[
+  {
+    "id": "f6feb22f-3dd9-4688-a0c5-5c83a8bf3b3d",
+    "type": "REQUEST",
+    "payload": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/event_a.js",
+      "content": "console.log(\"EVENT A\")"
+    },
+    "ts": 1778594698757
+  },
+  {
+    "id": "e44a661a-16b4-469a-a54f-61051ee2f4b7",
+    "type": "COMMIT",
+    "payload": {
+      "tx": "b055b7b5-27c0-4119-a6c0-1363a85f0cde",
+      "res": {
+        "session": "1778594698758",
+        "node": "d3e83c8ee82cc1e77c6c1b203bbda7811e794e49137884c3aedfd8e948a70f46"
+      }
+    },
+    "ts": 1778594698760
+  },
+  {
+    "id": "002a52c0-3b0d-4106-99da-ef4ba46f45ee",
+    "type": "REQUEST",
+    "payload": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/event_b.js",
+      "content": "console.log(\"EVENT B\")"
+    },
+    "ts": 1778594698760
+  },
+  {
+    "id": "7c915b21-c57a-487e-a6af-dd8469d85b36",
+    "type": "COMMIT",
+    "payload": {
+      "tx": "f415a3fb-3cac-4d80-850c-40d5d5d07f18",
+      "res": {
+        "session": "1778594698761",
+        "node": "84e65b651b24be551ac037e30a89032175b2b38e9782bca872667de50bad0451"
+      }
+    },
+    "ts": 1778594698761
+  },
+  {
+    "id": "d5c60fb458be684e18ecfa75ae7d0517899b6c79825a0be7ffe64717a873f291",
+    "type": "executed",
+    "payload": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/unified_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "res": {
+        "status": "executed",
+        "result": {
+          "session": "1778595266541",
+          "node": "840232f3f49134ad47b69a9a42e81b0a1fb32f4f9df7b4bdc703c4bfaac42b16"
+        }
+      }
+    },
+    "ts": 1778595266544
+  },
+  {
+    "id": "f7ac791243eba2de6d15c7f878337371cde532a36bad6691ab931e18fd6a1bcf",
+    "type": "executed",
+    "payload": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/unified_b.js",
+        "content": "console.log(\"B\")"
+      },
+      "res": {
+        "status": "executed",
+        "result": {
+          "session": "1778595266545",
+          "node": "9e18a77ad8cccb048ed6aa5e189a66e8d8bbd002e23fa28b6051f6012e87f2c8"
+        }
+      }
+    },
+    "ts": 1778595266545
+  },
+  {
+    "id": "10113dfec2c7364c99550c030e777c50c9369ce3e478284d5310a02cc62168ca",
+    "type": "executed",
+    "payload": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_test.js",
+        "content": "console.log(\"BOOTSTRAP OK\")"
+      },
+      "res": {
+        "status": "executed",
+        "result": {
+          "session": "1778595333864",
+          "node": "2877f6843656405fbd6da7b2c13fd988af0688726934d2ac3b0529bc11ff8e1e"
+        }
+      }
+    },
+    "ts": 1778595333866
+  },
+  {
+    "id": "b66af75e10be46aa4c5e6b6373bc678f9b6e129fd7693f57182e7af144161a28",
+    "type": "tick",
+    "payload": {
+      "tick": 1
+    },
+    "ts": 1778595334061
+  },
+  {
+    "id": "79a2de006eeafa60642833c03a87290fc183fd5fce555244341004cd90a82ab4",
+    "type": "tick",
+    "payload": {
+      "tick": 2
+    },
+    "ts": 1778595334560
+  },
+  {
+    "id": "8111c884f26abddc891d186cacec8a7ea01d94297308dfd4ceadfb523ef028a0",
+    "type": "tick",
+    "payload": {
+      "tick": 3
+    },
+    "ts": 1778595335061
+  },
+  {
+    "id": "e0cbc5e78596b44642686077fd4344a7edfa3a9faa0f2c5a034394d48be84eaa",
+    "type": "executed",
+    "payload": {
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/heal_test.js",
+        "content": "console.log(\"HEALED\")"
+      },
+      "res": {
+        "status": "executed",
+        "result": {
+          "session": "1778595400693",
+          "node": "5e3c2ad9433cfa48ad2dbaef9bdda8a85e209f16fd6cc268bde889978e1480d7"
+        }
+      }
+    },
+    "ts": 1778595400700
+  },
+  {
+    "id": "d3dfcf71-40cf-4aea-b7c9-22e87e4d6497",
+    "type": "REQUEST",
+    "payload": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/bootstrap_full_test.js",
+      "content": "console.log(\"BOOT FULL OK\")"
+    },
+    "ts": 1778604602727
+  },
+  {
+    "id": "f9a21a47-8395-40ee-8a81-6b0ef3e79343",
+    "type": "COMMIT",
+    "payload": {
+      "tx": "d34ad621-5b8a-4688-a3ec-8710b483606d",
+      "res": {
+        "session": "1778604602729",
+        "node": "b899c4324a0d53d0ac93870e960061cb5ac4f20be544de77e07dcdbcfa74b446"
+      }
+    },
+    "ts": 1778604602733
+  },
+  {
+    "id": "2e32c048-3e04-47e0-8532-e3f1e140dc7c",
+    "type": "REQUEST",
+    "payload": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/bootstrap_full_test.js",
+      "content": "console.log(\"BOOT FULL OK\")"
+    },
+    "ts": 1778604602985
+  },
+  {
+    "id": "e2e47296-6f39-42df-ae34-9508d2fd61a3",
+    "type": "COMMIT",
+    "payload": {
+      "tx": "d244d82b-3606-4fb0-88e6-7d4dcf8ee762",
+      "res": {
+        "session": "1778604602988",
+        "node": "ceee166d5f76c661aedbc2256842a2c030d2c12e258a9f894cfc77c63081266c"
+      }
+    },
+    "ts": 1778604602991
+  },
+  {
+    "id": "6669fee2-93db-4cef-9595-7fc57a5c7ef5",
+    "type": "REQUEST",
+    "payload": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/bootstrap_full_test.js",
+      "content": "console.log(\"BOOT FULL OK\")"
+    },
+    "ts": 1778604603043
+  },
+  {
+    "id": "4cdead30-05e6-4250-b9e8-792faee56f9c",
+    "type": "COMMIT",
+    "payload": {
+      "tx": "b3da1d39-cae8-4741-921f-966d1a6643ca",
+      "res": {
+        "session": "1778604603047",
+        "node": "4f40a8471977a08e1c15ca69becf497cefe4ed78aaf7c8b8620f5b99a578823a"
+      }
+    },
+    "ts": 1778604603051
+  }
+]

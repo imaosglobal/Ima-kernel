@@ -1,0 +1,16 @@
+{
+  "active": {
+    "eventBus": "./KERNEL_EVENT_BUS_V1.js",
+    "tx": "./KERNEL_TRANSACTION_ENGINE_V1.js",
+    "orchestrator": "./KERNEL_ORCHESTRATOR_V2.js",
+    "execution": "./KERNEL_EXECUTION_POOL_V1.js",
+    "cluster": "./KERNEL_CLUSTER_MASTER_V8.js"
+  },
+  "disabled": [
+    "./KERNEL_EVENT_BUS_V2.js",
+    "./KERNEL_TRANSACTION_LAYER_V2.js",
+    "./KERNEL_POLICY_ORCHESTRATOR_V3.js",
+    "./KERNEL_EXECUTION_LAYER_V2.js"
+  ],
+  "timestamp": 1778595030560
+}

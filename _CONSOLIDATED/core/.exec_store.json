@@ -1,0 +1,348 @@
+{
+  "commands": {
+    "bb503889a752da6249b9203a21b24c83bedfc6e9871a386577a9bbf019f15e75": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/_v2_test.js",
+      "content": "console.log(\"v2 ok\")"
+    },
+    "1e690452bc219ef7ed4e5f147bc78b6293ebee615f67e6613e41a25e9c04479d": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/orch_a.js",
+      "content": "console.log(\"A\")"
+    },
+    "198e68be795edc1be9f611d7d4929c11d5e73dd95d73009b0659c3e874766ad1": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/orch_b.js",
+      "content": "console.log(\"B\")"
+    },
+    "d40cb559a5be569bce349b9850be2c387708c7f63726fbc1abe9b5a9db7b0c2f": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v2_a.js",
+      "content": "console.log(\"A\")"
+    },
+    "5a6d4c4a32d6988904a997a47513423d10b3ae24dc8ca5f03a94f4d6196a1876": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/a.js",
+      "content": "console.log(\"A\")"
+    },
+    "0fe0b49e7cba0cca5f01931cd8667b93a4f575054ae8d770dd432c5589291fcb": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/broken.js",
+      "content": "function (("
+    },
+    "27a1452a04b509df07eda29e014ecec574240c054a7fa9a8b7a75e05f937cff9": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/tx_test.js",
+      "content": "console.log(\"TX OK\")"
+    },
+    "68dfdf83dc3a3328430cd14abce2c68b4259d8fde99727fb1f8269455c5ced52": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/mesh_test.js",
+      "content": "console.log(\"MESH OK\")"
+    },
+    "f44264fccd25bbbf12de39262a14f60934e9fd9afe247f7fb10dc2412daf1932": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/mesh_v2_test.js",
+      "content": "console.log(\"MESH V2 OK\")"
+    },
+    "91a972618956f5503ac13e10fb15d0f7fe077b7c73ee293d067e30645145c82c": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v3_a.js",
+      "content": "console.log(\"A\")"
+    },
+    "43bb87ce8f4564f1944f06e69f0917c4db171edea387f7d29afdae8c6867cf9b": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v3_broken.js",
+      "content": "function (("
+    },
+    "864626f6bcfd15086f69b321c447d7a36e99e11a8ee0e2ee29df6d991cfa2c15": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v4_a.js",
+      "content": "console.log(\"V4 A\")"
+    },
+    "0ab0d0f5163c86bc8063f5618cda58ad1410f74f246af4252c97516fdcb80bc6": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v4_bad.js",
+      "content": "function (("
+    },
+    "4337ef70a9aa725a5d853f839839c939be886951bf2a653b132a754c716dc4e8": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v4_sync_a.js",
+      "content": "console.log(\"SYNC A\")"
+    },
+    "6948d5f364d0fd1f9a8c826f801738f8bff73df21e69c697d8272f9a51748f4a": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v4_sync_broken.js",
+      "content": "function (("
+    },
+    "b2f9176595442411438ab3947519f6ad830122911a6d5e00490514d15e32ed6f": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v5_a.js",
+      "content": "console.log(\"V5 A\")"
+    },
+    "d1850229ce52037946efb0cd4e46ee022656c4ad9086b3b0a61f34859bcab8a3": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v5_b.js",
+      "content": "console.log(\"V5 B\")"
+    },
+    "cc8e9b9330524e1839f175a27aef3e2ee09aafe2fee504ff9f1ef372325ec8d1": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v6_fixed_a.js",
+      "content": "console.log(\"FIXED A\")"
+    },
+    "e4a84e9190d26d598177dcce5dda051e2c1bf29695b091a40167febcd621b633": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/v6_fixed_b.js",
+      "content": "console.log(\"FIXED B\")"
+    },
+    "28334a3d880ed25919ff00032c3db875372acd5a9f53189b8057609f0df543bc": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/tx_v2_a.js",
+      "content": "console.log(\"TX2 A\")"
+    },
+    "d66a2d6a806d3d03ba8e736ebcd5684ae8d07ee255639a965040127128a53dbe": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/tx_v2_b.js",
+      "content": "console.log(\"TX2 B\")"
+    },
+    "46353cb3ce6e99b5337f8bc6939dd3ed16a885a7ea9d6497f249f93428a4e7a3": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/pool_b.js",
+      "content": "console.log(\"B\")"
+    },
+    "9aea7abf83254478b25165e9ee9ab67a84ad642c969e36ec0d28b6ea8751f885": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/api_b.js",
+      "content": "console.log(\"API B\")"
+    },
+    "b2ab03c2f4d2def689cc4a052343131c90731472501b40f25d24a1043fd0baeb": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/api_a.js",
+      "content": "console.log(\"API A\")"
+    },
+    "ff12bf7a174609483be18b90596abb73798fe8c00d12249b9fc62f2325067041": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/tx_final_b.js",
+      "content": "console.log(\"TX FINAL B\")"
+    },
+    "1426ce36582186808849d32951daf79a28af7e8e79420ddf4e8881e2e95f6e80": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/tx_final_a.js",
+      "content": "console.log(\"TX FINAL A\")"
+    },
+    "16e51a8b66df6304467e5236c334ffaefa2c44662c24253e85e979b525aad5cc": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/pol_a.js",
+      "content": "console.log(\"A\")"
+    },
+    "2ae9e1875e470f54a7bf3237ef45bfca3e947733d1344e301505d780be29f6b7": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/pol_b.js",
+      "content": "console.log(\"B\")"
+    },
+    "568b5ba3ce20c503f33e106134b322cf45c092ea1a67a5620daf1eed51973b47": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/event_a.js",
+      "content": "console.log(\"EVENT A\")"
+    },
+    "e7e5e7fe5f32b27ab601b47fc2c9750d1f0bf868881f4ab24c3a6f1d9089f066": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/event_b.js",
+      "content": "console.log(\"EVENT B\")"
+    },
+    "dbbfdacf94129b8183419ac889cd550fee9d92c107210344ffb2488d5597f155": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/adapter_test.js",
+      "content": "console.log(\"ADAPTER OK\")"
+    },
+    "af2eb9b7286384a7b3c34efae0a384333da3b3c94d7ea2500bb416bfe671812f": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/unified_a.js",
+      "content": "console.log(\"A\")"
+    },
+    "06cbb46335723ce4d4af2a9d6e105043dd18e9ea693d54934fec058ec8e89c94": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/unified_b.js",
+      "content": "console.log(\"B\")"
+    },
+    "1e10d5411b1fe17065298b22576afbb5e077b947cfc8410de7c46f45e1d85056": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/bootstrap_test.js",
+      "content": "console.log(\"BOOTSTRAP OK\")"
+    },
+    "96372e3901054c66760fe69782bae8b0a34931987ea8c11241acabe0c73f7fe3": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/heal_test.js",
+      "content": "console.log(\"HEALED\")"
+    },
+    "9d9d3005d648c39e3398846012cf97a05c6181e83fdd19b9d5b4b66016af0a9f": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/bootstrap_full_test.js",
+      "content": "console.log(\"BOOT FULL OK\")"
+    },
+    "335ca3a7b2d0cae7a6f542eff5bc5582a4fa4092a17b4284784f248ea7e26acb": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/unified_test.js",
+      "content": "console.log(\"UNIFIED OK\")"
+    },
+    "4db4a490bcc22663157241061a98ee379c92ce93396032b10a3dd7f40d78acb1": {
+      "type": "WRITE_FILE",
+      "file": "./runtime/rehydrated_test.js",
+      "content": "console.log(\"REHYDRATED OK\")"
+    }
+  },
+  "results": {
+    "bb503889a752da6249b9203a21b24c83bedfc6e9871a386577a9bbf019f15e75": {
+      "status": "written",
+      "file": "./runtime/_v2_test.js"
+    },
+    "1e690452bc219ef7ed4e5f147bc78b6293ebee615f67e6613e41a25e9c04479d": {
+      "status": "written",
+      "file": "./runtime/orch_a.js"
+    },
+    "198e68be795edc1be9f611d7d4929c11d5e73dd95d73009b0659c3e874766ad1": {
+      "status": "written",
+      "file": "./runtime/orch_b.js"
+    },
+    "d40cb559a5be569bce349b9850be2c387708c7f63726fbc1abe9b5a9db7b0c2f": {
+      "status": "written",
+      "file": "./runtime/v2_a.js"
+    },
+    "5a6d4c4a32d6988904a997a47513423d10b3ae24dc8ca5f03a94f4d6196a1876": {
+      "status": "written",
+      "file": "./runtime/a.js"
+    },
+    "0fe0b49e7cba0cca5f01931cd8667b93a4f575054ae8d770dd432c5589291fcb": {
+      "status": "rejected",
+      "reason": "syntax_error"
+    },
+    "27a1452a04b509df07eda29e014ecec574240c054a7fa9a8b7a75e05f937cff9": {
+      "status": "written",
+      "file": "./runtime/tx_test.js"
+    },
+    "68dfdf83dc3a3328430cd14abce2c68b4259d8fde99727fb1f8269455c5ced52": {
+      "status": "written",
+      "file": "./runtime/mesh_test.js"
+    },
+    "f44264fccd25bbbf12de39262a14f60934e9fd9afe247f7fb10dc2412daf1932": {
+      "status": "written",
+      "file": "./runtime/mesh_v2_test.js"
+    },
+    "91a972618956f5503ac13e10fb15d0f7fe077b7c73ee293d067e30645145c82c": {
+      "status": "written",
+      "file": "./runtime/v3_a.js"
+    },
+    "43bb87ce8f4564f1944f06e69f0917c4db171edea387f7d29afdae8c6867cf9b": {
+      "status": "rejected",
+      "reason": "syntax_error"
+    },
+    "864626f6bcfd15086f69b321c447d7a36e99e11a8ee0e2ee29df6d991cfa2c15": {
+      "status": "written",
+      "file": "./runtime/v4_a.js"
+    },
+    "0ab0d0f5163c86bc8063f5618cda58ad1410f74f246af4252c97516fdcb80bc6": {
+      "status": "rejected",
+      "reason": "syntax_error"
+    },
+    "4337ef70a9aa725a5d853f839839c939be886951bf2a653b132a754c716dc4e8": {
+      "status": "written",
+      "file": "./runtime/v4_sync_a.js"
+    },
+    "6948d5f364d0fd1f9a8c826f801738f8bff73df21e69c697d8272f9a51748f4a": {
+      "status": "rejected",
+      "reason": "syntax_error"
+    },
+    "b2f9176595442411438ab3947519f6ad830122911a6d5e00490514d15e32ed6f": {
+      "status": "written",
+      "file": "./runtime/v5_a.js"
+    },
+    "d1850229ce52037946efb0cd4e46ee022656c4ad9086b3b0a61f34859bcab8a3": {
+      "status": "written",
+      "file": "./runtime/v5_b.js"
+    },
+    "cc8e9b9330524e1839f175a27aef3e2ee09aafe2fee504ff9f1ef372325ec8d1": {
+      "status": "written",
+      "file": "./runtime/v6_fixed_a.js"
+    },
+    "e4a84e9190d26d598177dcce5dda051e2c1bf29695b091a40167febcd621b633": {
+      "status": "written",
+      "file": "./runtime/v6_fixed_b.js"
+    },
+    "28334a3d880ed25919ff00032c3db875372acd5a9f53189b8057609f0df543bc": {
+      "status": "written",
+      "file": "./runtime/tx_v2_a.js"
+    },
+    "d66a2d6a806d3d03ba8e736ebcd5684ae8d07ee255639a965040127128a53dbe": {
+      "status": "written",
+      "file": "./runtime/tx_v2_b.js"
+    },
+    "46353cb3ce6e99b5337f8bc6939dd3ed16a885a7ea9d6497f249f93428a4e7a3": {
+      "status": "written",
+      "file": "./runtime/pool_b.js"
+    },
+    "9aea7abf83254478b25165e9ee9ab67a84ad642c969e36ec0d28b6ea8751f885": {
+      "status": "written",
+      "file": "./runtime/api_b.js"
+    },
+    "b2ab03c2f4d2def689cc4a052343131c90731472501b40f25d24a1043fd0baeb": {
+      "status": "written",
+      "file": "./runtime/api_a.js"
+    },
+    "ff12bf7a174609483be18b90596abb73798fe8c00d12249b9fc62f2325067041": {
+      "status": "written",
+      "file": "./runtime/tx_final_b.js"
+    },
+    "1426ce36582186808849d32951daf79a28af7e8e79420ddf4e8881e2e95f6e80": {
+      "status": "written",
+      "file": "./runtime/tx_final_a.js"
+    },
+    "16e51a8b66df6304467e5236c334ffaefa2c44662c24253e85e979b525aad5cc": {
+      "status": "written",
+      "file": "./runtime/pol_a.js"
+    },
+    "2ae9e1875e470f54a7bf3237ef45bfca3e947733d1344e301505d780be29f6b7": {
+      "status": "written",
+      "file": "./runtime/pol_b.js"
+    },
+    "568b5ba3ce20c503f33e106134b322cf45c092ea1a67a5620daf1eed51973b47": {
+      "status": "written",
+      "file": "./runtime/event_a.js"
+    },
+    "e7e5e7fe5f32b27ab601b47fc2c9750d1f0bf868881f4ab24c3a6f1d9089f066": {
+      "status": "written",
+      "file": "./runtime/event_b.js"
+    },
+    "dbbfdacf94129b8183419ac889cd550fee9d92c107210344ffb2488d5597f155": {
+      "status": "written",
+      "file": "./runtime/adapter_test.js"
+    },
+    "af2eb9b7286384a7b3c34efae0a384333da3b3c94d7ea2500bb416bfe671812f": {
+      "status": "written",
+      "file": "./runtime/unified_a.js"
+    },
+    "06cbb46335723ce4d4af2a9d6e105043dd18e9ea693d54934fec058ec8e89c94": {
+      "status": "written",
+      "file": "./runtime/unified_b.js"
+    },
+    "1e10d5411b1fe17065298b22576afbb5e077b947cfc8410de7c46f45e1d85056": {
+      "status": "written",
+      "file": "./runtime/bootstrap_test.js"
+    },
+    "96372e3901054c66760fe69782bae8b0a34931987ea8c11241acabe0c73f7fe3": {
+      "status": "written",
+      "file": "./runtime/heal_test.js"
+    },
+    "9d9d3005d648c39e3398846012cf97a05c6181e83fdd19b9d5b4b66016af0a9f": {
+      "status": "written",
+      "file": "./runtime/bootstrap_full_test.js"
+    },
+    "335ca3a7b2d0cae7a6f542eff5bc5582a4fa4092a17b4284784f248ea7e26acb": {
+      "status": "written",
+      "file": "./runtime/unified_test.js"
+    },
+    "4db4a490bcc22663157241061a98ee379c92ce93396032b10a3dd7f40d78acb1": {
+      "status": "written",
+      "file": "./runtime/rehydrated_test.js"
+    }
+  }
+}

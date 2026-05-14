@@ -1,0 +1,315 @@
+{
+  "transactions": {
+    "4dd2d146-d1a5-43a6-a9a3-7f8d103fe8a9": {
+      "id": "4dd2d146-d1a5-43a6-a9a3-7f8d103fe8a9",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_final_a.js",
+        "content": "console.log(\"TX FINAL A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594547510,
+      "result": {
+        "session": "1778594547510",
+        "node": "13fbdc223d1d6cc7317abd4b9d1dae18a1f59326663190a913b06d2c51eed09b"
+      }
+    },
+    "6de0b5f4-730b-42b7-b7c9-dda0ec0ac4c1": {
+      "id": "6de0b5f4-730b-42b7-b7c9-dda0ec0ac4c1",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_final_b.js",
+        "content": "console.log(\"TX FINAL B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594547512,
+      "result": {
+        "session": "1778594547512",
+        "node": "cf4b1c74c2523fb940979ca18a781aa802663937f5c545cd4ca5a33bcb783549"
+      }
+    },
+    "ea74104c-83ba-4eb6-9e1a-bb57a3e47a8b": {
+      "id": "ea74104c-83ba-4eb6-9e1a-bb57a3e47a8b",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/pol_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594604679,
+      "result": {
+        "session": "1778594604679",
+        "node": "c61eeee0fb2af9645d05130e2f72b6378d953e41a916f17f12273e0aaa9eb972"
+      }
+    },
+    "679b9577-084e-4f20-acea-6aba655c1254": {
+      "id": "679b9577-084e-4f20-acea-6aba655c1254",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/pol_b.js",
+        "content": "console.log(\"B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594604680,
+      "result": {
+        "session": "1778594604680",
+        "node": "51f4b6b5b2b364017912c8fa99c25b5bbf2b3244ae2dace43496b227be6982e0"
+      }
+    },
+    "b055b7b5-27c0-4119-a6c0-1363a85f0cde": {
+      "id": "b055b7b5-27c0-4119-a6c0-1363a85f0cde",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_a.js",
+        "content": "console.log(\"EVENT A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594698758,
+      "result": {
+        "session": "1778594698758",
+        "node": "d3e83c8ee82cc1e77c6c1b203bbda7811e794e49137884c3aedfd8e948a70f46"
+      }
+    },
+    "f415a3fb-3cac-4d80-850c-40d5d5d07f18": {
+      "id": "f415a3fb-3cac-4d80-850c-40d5d5d07f18",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_b.js",
+        "content": "console.log(\"EVENT B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594698761,
+      "result": {
+        "session": "1778594698761",
+        "node": "84e65b651b24be551ac037e30a89032175b2b38e9782bca872667de50bad0451"
+      }
+    },
+    "5a0c8930-37ab-45b6-a631-e613fa73b496": {
+      "id": "5a0c8930-37ab-45b6-a631-e613fa73b496",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_a.js",
+        "content": "console.log(\"EVENT A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594699775,
+      "result": {
+        "session": "1778594699775",
+        "node": "fa8d9822c6c7e94e5a8266c1e561ee6ff7402d5f55f165a6d0852c07a87b134b"
+      }
+    },
+    "bbc36143-4da0-4193-9893-b1dd792b2a2a": {
+      "id": "bbc36143-4da0-4193-9893-b1dd792b2a2a",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_b.js",
+        "content": "console.log(\"EVENT B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594699776,
+      "result": {
+        "session": "1778594699776",
+        "node": "397fbd6067ea2f02dd8a23986c33670e5d333234c780da52234f8b799ac036a8"
+      }
+    },
+    "d34ad621-5b8a-4688-a3ec-8710b483606d": {
+      "id": "d34ad621-5b8a-4688-a3ec-8710b483606d",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604602729,
+      "result": {
+        "session": "1778604602729",
+        "node": "b899c4324a0d53d0ac93870e960061cb5ac4f20be544de77e07dcdbcfa74b446"
+      }
+    },
+    "d244d82b-3606-4fb0-88e6-7d4dcf8ee762": {
+      "id": "d244d82b-3606-4fb0-88e6-7d4dcf8ee762",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604602988,
+      "result": {
+        "session": "1778604602988",
+        "node": "ceee166d5f76c661aedbc2256842a2c030d2c12e258a9f894cfc77c63081266c"
+      }
+    },
+    "b3da1d39-cae8-4741-921f-966d1a6643ca": {
+      "id": "b3da1d39-cae8-4741-921f-966d1a6643ca",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604603047,
+      "result": {
+        "session": "1778604603047",
+        "node": "4f40a8471977a08e1c15ca69becf497cefe4ed78aaf7c8b8620f5b99a578823a"
+      }
+    }
+  },
+  "committed": [
+    {
+      "id": "4dd2d146-d1a5-43a6-a9a3-7f8d103fe8a9",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_final_a.js",
+        "content": "console.log(\"TX FINAL A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594547510,
+      "result": {
+        "session": "1778594547510",
+        "node": "13fbdc223d1d6cc7317abd4b9d1dae18a1f59326663190a913b06d2c51eed09b"
+      }
+    },
+    {
+      "id": "6de0b5f4-730b-42b7-b7c9-dda0ec0ac4c1",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/tx_final_b.js",
+        "content": "console.log(\"TX FINAL B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594547512,
+      "result": {
+        "session": "1778594547512",
+        "node": "cf4b1c74c2523fb940979ca18a781aa802663937f5c545cd4ca5a33bcb783549"
+      }
+    },
+    {
+      "id": "ea74104c-83ba-4eb6-9e1a-bb57a3e47a8b",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/pol_a.js",
+        "content": "console.log(\"A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594604679,
+      "result": {
+        "session": "1778594604679",
+        "node": "c61eeee0fb2af9645d05130e2f72b6378d953e41a916f17f12273e0aaa9eb972"
+      }
+    },
+    {
+      "id": "679b9577-084e-4f20-acea-6aba655c1254",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/pol_b.js",
+        "content": "console.log(\"B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594604680,
+      "result": {
+        "session": "1778594604680",
+        "node": "51f4b6b5b2b364017912c8fa99c25b5bbf2b3244ae2dace43496b227be6982e0"
+      }
+    },
+    {
+      "id": "b055b7b5-27c0-4119-a6c0-1363a85f0cde",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_a.js",
+        "content": "console.log(\"EVENT A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594698758,
+      "result": {
+        "session": "1778594698758",
+        "node": "d3e83c8ee82cc1e77c6c1b203bbda7811e794e49137884c3aedfd8e948a70f46"
+      }
+    },
+    {
+      "id": "f415a3fb-3cac-4d80-850c-40d5d5d07f18",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_b.js",
+        "content": "console.log(\"EVENT B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594698761,
+      "result": {
+        "session": "1778594698761",
+        "node": "84e65b651b24be551ac037e30a89032175b2b38e9782bca872667de50bad0451"
+      }
+    },
+    {
+      "id": "5a0c8930-37ab-45b6-a631-e613fa73b496",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_a.js",
+        "content": "console.log(\"EVENT A\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594699775,
+      "result": {
+        "session": "1778594699775",
+        "node": "fa8d9822c6c7e94e5a8266c1e561ee6ff7402d5f55f165a6d0852c07a87b134b"
+      }
+    },
+    {
+      "id": "bbc36143-4da0-4193-9893-b1dd792b2a2a",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/event_b.js",
+        "content": "console.log(\"EVENT B\")"
+      },
+      "status": "committed",
+      "createdAt": 1778594699776,
+      "result": {
+        "session": "1778594699776",
+        "node": "397fbd6067ea2f02dd8a23986c33670e5d333234c780da52234f8b799ac036a8"
+      }
+    },
+    {
+      "id": "d34ad621-5b8a-4688-a3ec-8710b483606d",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604602729,
+      "result": {
+        "session": "1778604602729",
+        "node": "b899c4324a0d53d0ac93870e960061cb5ac4f20be544de77e07dcdbcfa74b446"
+      }
+    },
+    {
+      "id": "d244d82b-3606-4fb0-88e6-7d4dcf8ee762",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604602988,
+      "result": {
+        "session": "1778604602988",
+        "node": "ceee166d5f76c661aedbc2256842a2c030d2c12e258a9f894cfc77c63081266c"
+      }
+    },
+    {
+      "id": "b3da1d39-cae8-4741-921f-966d1a6643ca",
+      "cmd": {
+        "type": "WRITE_FILE",
+        "file": "./runtime/bootstrap_full_test.js",
+        "content": "console.log(\"BOOT FULL OK\")"
+      },
+      "status": "committed",
+      "createdAt": 1778604603047,
+      "result": {
+        "session": "1778604603047",
+        "node": "4f40a8471977a08e1c15ca69becf497cefe4ed78aaf7c8b8620f5b99a578823a"
+      }
+    }
+  ],
+  "failed": []
+}
