@@ -1,0 +1,11 @@
+{
+  "name": "ima-kernel",
+  "version": "rebuilt",
+  "main": "ima.js",
+  "scripts": {
+    "start": "node ima.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}
