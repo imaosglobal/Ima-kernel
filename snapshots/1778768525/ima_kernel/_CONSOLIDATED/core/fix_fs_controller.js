@@ -1,1 +1,0 @@
-function updateFile(filePath, content){ return content; }
