@@ -4,8 +4,12 @@ ROOT="$HOME/ima_kernel"
 
 cd "$ROOT"
 
-pkill -f "node ima.js" 2>/dev/null || true
+pkill -f "node" 2>/dev/null || true
+
+sleep 1
 
 nohup node ima.js > "$ROOT/logs/runtime.log" 2>&1 &
 
-echo "IMA STARTED"
+sleep 2
+
+curl -s http://127.0.0.1:7000/health || echo "BOOT FAILED"
