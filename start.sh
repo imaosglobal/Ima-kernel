@@ -4,11 +4,22 @@ ROOT="$HOME/ima_kernel"
 
 cd "$ROOT"
 
-pkill -f "node" 2>/dev/null || true
+LOCK="$ROOT/runtime/kernel.lock"
 
-sleep 1
+if [ -f "$LOCK" ]; then
+  PID=$(cat "$LOCK" 2>/dev/null || true)
 
-nohup node ima.js > "$ROOT/logs/runtime.log" 2>&1 &
+  if ps -p "$PID" > /dev/null 2>&1; then
+    echo "IMA ALREADY RUNNING"
+    exit 0
+  fi
+fi
+
+nohup node ima.js > logs/runtime.log 2>&1 &
+
+PID=$!
+
+echo "$PID" > "$LOCK"
 
 sleep 2
 
