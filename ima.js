@@ -1,13 +1,9 @@
 const app = require("./kernel/app");
-const engine = require("./kernel/runtime/engine");
-const api = require("./kernel/api");
-const { startAutoSync } = require("./kernel/runtime/sync_daemon");
 
-engine.boot();
-api.register(app);
-
-startAutoSync(); // 👈 autonomous layer
+app.get("/health",(req,res)=>{
+  res.json({ ok:true, system:"IMA_CORE_SERVER" });
+});
 
 app.listen(7000, ()=>{
-  console.log("[IMA AUTONOMOUS SYNC ENGINE RUNNING]");
+  console.log("[IMA CORE SERVER RUNNING]");
 });
