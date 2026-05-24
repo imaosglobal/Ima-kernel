@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IMA OS</title>
+
+<style>
+
+body{
+background:#050510;
+color:white;
+font-family:Arial;
+padding:30px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:16px;
+margin-bottom:20px;
+}
+
+.title{
+font-size:28px;
+margin-bottom:10px;
+}
+
+pre{
+white-space:pre-wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="title">IMA OS LIVE</div>
+
+<div class="card">
+<h2>Registry</h2>
+<pre id="registry"></pre>
+</div>
+
+<div class="card">
+<h2>Memory</h2>
+<pre id="memory"></pre>
+</div>
+
+<script>
+
+async function load(){
+
+const res = await fetch("http://localhost:7100/live")
+const data = await res.json()
+
+document.getElementById("registry").innerText =
+JSON.stringify(data.registry,null,2)
+
+document.getElementById("memory").innerText =
+JSON.stringify(data.memory,null,2)
+
+}
+
+setInterval(load,2000)
+
+load()
+
+</script>
+
+</body>
+</html>
