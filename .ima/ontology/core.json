@@ -20,7 +20,11 @@
   ],
   "time_model": {
     "type": "temporal_graph",
-    "fields": ["start", "end", "period"]
+    "fields": [
+      "start",
+      "end",
+      "period"
+    ]
   },
   "philosophical_models": [
     {
@@ -35,5 +39,8 @@
       "name": "Yalom Existential Lens",
       "focus": "death, isolation, meaning"
     }
-  ]
+  ],
+  "event_ingestion": true,
+  "self_healing": true,
+  "graph_mode": "enabled"
 }
