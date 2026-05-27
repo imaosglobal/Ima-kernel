@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
 
-const { load, save, addMemory } = require("./kernel/memory_engine");
-const stability = require("./kernel/stability");
+const { load, save, addMemory } = require("./kernel/core/memory");
 
 app.use(express.json());
 
@@ -27,4 +26,16 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
   console.log("🧠 IMA KERNEL RUNNING");
+});
+
+const knowledge = require("./kernel/knowledge_engine");
+
+app.post("/ask", (req, res) => {
+  try {
+    const input = req.body.input || "";
+    const result = knowledge.handle(input);
+    res.json(result);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
 });
