@@ -1,0 +1,21 @@
+=== CONTROL CENTER RUN ===
+TIME: Thu May 28 18:32:26 IDT 2026
+
+[1] PROCESS CHECK
+server=2 watchdog=1 guardian=1 bridge=1
+
+[2] DISK CHECK
+disk_usage=85%
+
+[3] SNAPSHOT CONTROL
+snapshots=8
+
+[4] BRIDGE CHECK
+bridge_status=OK
+
+[5] SELF HEAL (SAFE MODE)
+
+[6] FINAL VERIFICATION
+server_after=2 bridge_after=1
+
+STATUS: DONE

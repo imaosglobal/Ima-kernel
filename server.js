@@ -1,7 +1,25 @@
 const express = require("express");
+const fs = require("fs");
 const app = express();
 
-const { load, save, addMemory } = require("./kernel/core/memory");
+const LOCK = __dirname + "/runtime/instance.lock";
+
+// --- single instance guard ---
+try {
+  if (fs.existsSync(LOCK)) {
+    const pid = parseInt(fs.readFileSync(LOCK, "utf8"));
+    try {
+      process.kill(pid, 0);
+      console.log("[IMA] already running:", pid);
+      process.exit(0);
+    } catch {}
+  }
+
+  fs.mkdirSync(__dirname + "/runtime", { recursive: true });
+  fs.writeFileSync(LOCK, process.pid.toString());
+} catch (e) {
+  console.log("[IMA] lock error:", e.message);
+}
 
 app.use(express.json());
 
@@ -10,32 +28,12 @@ app.get("/health", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  try {
-    const mem = load();
-    addMemory(mem, "ping " + Date.now(), "interaction");
-    save(mem);
-
-    res.json({
-      status: "IMA LIVE",
-      memorySize: mem.memory.length
-    });
-  } catch (e) {
-    res.status(500).json({ error: e.message });
-  }
+  res.json({
+    status: "IMA LIVE",
+    pid: process.pid
+  });
 });
 
 app.listen(3000, () => {
   console.log("🧠 IMA KERNEL RUNNING");
-});
-
-const knowledge = require("./kernel/knowledge_engine");
-
-app.post("/ask", (req, res) => {
-  try {
-    const input = req.body.input || "";
-    const result = knowledge.handle(input);
-    res.json(result);
-  } catch (e) {
-    res.status(500).json({ error: e.message });
-  }
 });
