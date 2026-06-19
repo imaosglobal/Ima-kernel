@@ -2,7 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ "main", "apk_clean" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -22,22 +22,13 @@ jobs:
       - run: yes | sdkmanager --licenses || true
 
       - run: |
-          sdkmanager "platform-tools" \
-                     "platforms;android-34" \
-                     "build-tools;34.0.0"
+          sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
       - run: chmod +x ./gradlew
-
-      - uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
 
       - run: ./gradlew clean assembleDebug --no-daemon
 
       - uses: actions/upload-artifact@v4
         with:
-          name: apk-debug
+          name: apk
           path: app/build/outputs/apk/debug/*.apk
