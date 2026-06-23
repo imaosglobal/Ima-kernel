@@ -1,515 +1,1140 @@
 {
-"count": 28724,
-"files": [
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PG.js","size":4761},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PH.js","size":4520},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PK.js","size":4837},
-{"path":"/data/data/com.termux/files/home/ima_kernel/analyze_graph.sh","size":979}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PL.js","size":4915},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/runtime.log","size":790}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PM.js","size":3704},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/core.log","size":24}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PN.js","size":3171},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/boot.log","size":620}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PR.js","size":4569},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/orchestrator.log","size":112070}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/state.log","size":0}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PS.js","size":4540},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/watchdog.log","size":752638}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PT.js","size":4822},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/sync.log","size":63720}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PW.js","size":3648},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/hard_governor.log","size":383}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/PY.js","size":4480},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/QA.js","size":4433},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/server.log","size":24}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/bridge.log","size":44}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/RE.js","size":4578},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/runtime_controller.log","size":825}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/RO.js","size":4762},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/stable_controller.log","size":115}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/RS.js","size":4985},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/mother_v2.log","size":105}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/RU.js","size":5239},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/RW.js","size":4750},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/mother_v3.log","size":19}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SA.js","size":4650},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/mother_v4.log","size":184970}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SB.js","size":4218},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/single_core.log","size":19}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SC.js","size":4987},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/guardian.log","size":3675}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SD.js","size":4431},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/event_engine.log","size":45}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SE.js","size":4743},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/guard.log","size":313438}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SG.js","size":5005},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/full_audit_report.txt","size":4239}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SH.js","size":3306},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_recover_check.txt","size":208}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SI.js","size":4589},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_full_boot_report.txt","size":429}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SK.js","size":4583},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_boot_live.log","size":1342}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SL.js","size":4886},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_unified_report.log","size":238}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SM.js","size":3915},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/daemon_stdout.log","size":151}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SN.js","size":4742},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SO.js","size":4491},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_daemon.log","size":129}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SR.js","size":4213},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/v2_stdout.log","size":141}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/ST.js","size":3759},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/ima_v2.log","size":119}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SV.js","size":4437},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/kernel_single.log","size":540}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SY.js","size":4968},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/duplicates.json","size":1720453}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/SZ.js","size":4602},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/daemon_scan.json","size":104913}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TC.js","size":4142},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/kernel_core.log","size":231}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TD.js","size":4327},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/auth.log","size":55}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TG.js","size":4878},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/enforcer.log","size":272}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TH.js","size":4492},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/core_master.log","size":518}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TJ.js","size":4761},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/governor.log","size":46}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TL.js","size":5066},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/hard_source.log","size":71}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TM.js","size":4097},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TR.js","size":4940},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/monarch.log","size":75}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TT.js","size":4367},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/hybrid_core.log","size":115}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/UA.js","size":5227},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/core_single.log","size":865}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/UG.js","size":4991},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/core_api.log","size":55}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/UZ.js","size":4731},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/final_state.json","size":183}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VE.js","size":4697},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/system_audit_20260611_115908.txt","size":86164}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VI.js","size":4017},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/truth.log","size":209}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VN.js","size":5030},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/event_kernel.log","size":184}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VU.js","size":4064},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/verifier.log","size":1350}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/agent.log","size":720}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/WF.js","size":3422},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/logs/os.log","size":940}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/WS.js","size":4105},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/.gitignore","size":58}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/YE.js","size":4289},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/ima.sh","size":383}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/YT.js","size":4102},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/package-lock.json","size":30358}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/ZW.js","size":5101},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/.package-lock.json","size":30151}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TN.js","size":4825},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TO.js","size":3840},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/accepts/HISTORY.md","size":5218}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TV.js","size":3418},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/accepts/LICENSE","size":1167}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TW.js","size":4732},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/accepts/README.md","size":4122}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/TZ.js","size":4981},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/accepts/index.js","size":5253}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/US.js","size":5022},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/accepts/package.json","size":1157}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/UY.js","size":4604},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/LICENSE","size":1172}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VA.js","size":3494},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/README.md","size":19560}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VC.js","size":4021},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/index.js","size":1312}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/read.js","size":5401}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/VG.js","size":4364},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/types/json.js","size":3573}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/ZA.js","size":4766},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/types/raw.js","size":799}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/regions/ZM.js","size":4785},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/types/text.js","size":663}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/agents.js","size":24724},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/types/urlencoded.js","size":3611}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/browsers.js","size":220},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/lib/utils.js","size":2031}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/browserVersions.js","size":2377},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/body-parser/package.json","size":1359}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/data/features.js","size":31084},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/bytes/History.md","size":1775}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/agents.js","size":1439},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/bytes/LICENSE","size":1153}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/browsers.js","size":57},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/bytes/Readme.md","size":4770}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/browserVersions.js","size":71},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/bytes/index.js","size":3613}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/bytes/package.json","size":959}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/feature.js","size":1365},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/.eslintrc","size":232}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/features.js","size":141},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/.github/FUNDING.yml","size":594}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/index.js","size":198},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/.nycrc","size":139}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/unpacker/region.js","size":550},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/CHANGELOG.md","size":1938}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/lib/statuses.js","size":306},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/LICENSE","size":1071}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/dist/lib/supported.js","size":111},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/package.json","size":742},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/README.md","size":2330}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/actualApply.d.ts","size":23}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/caniuse-lite/README.md","size":164},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/actualApply.js","size":280}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/license","size":1109},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/applyBind.d.ts","size":614}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/source/index.js","size":6075},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/applyBind.js","size":264}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/source/templates.js","size":3367},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/functionApply.d.ts","size":34}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/source/util.js","size":1035},
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/package.json","size":1197},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/functionApply.js","size":99}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/readme.md","size":13365},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/functionCall.d.ts","size":33}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/chalk/index.d.ts","size":8899},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/functionCall.js","size":97}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/package.json","size":827},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/index.d.ts","size":2226}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/CHANGELOG.md","size":1417},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/index.js","size":511}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/conversions.js","size":17040},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/package.json","size":2480}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/index.js","size":1708},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/reflectApply.d.ts","size":82}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/LICENSE","size":1087},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/reflectApply.js","size":132}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/README.md","size":2853},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/test/index.js","size":2658}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-convert/route.js","size":2257},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bind-apply-helpers/tsconfig.json","size":115}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-name/package.json","size":607},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/.eslintrc","size":138}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-name/index.js","size":4617},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/.github/FUNDING.yml","size":581}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-name/LICENSE","size":1085},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/.nycrc","size":139}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/color-name/README.md","size":384},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/CHANGELOG.md","size":2880}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/package.json","size":989},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/LICENSE","size":1071}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/LICENSE","size":1073},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/README.md","size":1897}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/index.js","size":345},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/index.d.ts","size":4651}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/.travis.yml","size":43},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/index.js","size":687}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/README.markdown","size":1165},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/package.json","size":2507}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/example/map.js","size":171},
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/test/index.js","size":2418}
-{"path":"/data/data/com.termux/files/home/ima_kernel/ima-ui/node_modules/concat-map/test/map.js","size":1075},
-],"mode":"global_index"}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/call-bound/tsconfig.json","size":137}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-disposition/LICENSE","size":1094}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-disposition/README.md","size":5232}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-disposition/index.js","size":12563}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-disposition/package.json","size":1039}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-type/HISTORY.md","size":523}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-type/LICENSE","size":1089}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-type/README.md","size":2782}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-type/index.js","size":5002}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/content-type/package.json","size":1075}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie-signature/History.md","size":1481}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie-signature/LICENSE","size":1124}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie-signature/Readme.md","size":427}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie-signature/index.js","size":1413}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie-signature/package.json","size":548}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie/LICENSE","size":1175}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie/README.md","size":11769}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie/SECURITY.md","size":1180}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie/index.js","size":8166}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/cookie/package.json","size":1092}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/object-assign/package.json","size":764}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/object-assign/index.js","size":2108}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/object-assign/license","size":1119}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/object-assign/readme.md","size":1502}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/LICENSE","size":1139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/README.md","size":22115}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/package.json","size":1479}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/src/browser.js","size":6103}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/src/common.js","size":6915}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/src/index.js","size":314}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/debug/src/node.js","size":4728}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/History.md","size":2256}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/LICENSE","size":1094}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/Readme.md","size":9988}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/index.js","size":10932}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/lib/browser/index.js","size":1512}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/depd/package.json","size":1335}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/.eslintrc","size":43}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/.github/FUNDING.yml","size":583}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/.nycrc","size":216}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/CHANGELOG.md","size":1547}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/LICENSE","size":1073}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/README.md","size":1907}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/get.d.ts","size":121}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/get.js","size":980}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/package.json","size":2108}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/set.d.ts","size":144}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/set.js","size":1276}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/test/get.js","size":1143}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/test/index.js","size":51}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/test/set.js","size":1695}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/dunder-proto/tsconfig.json","size":116}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ee-first/LICENSE","size":1099}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ee-first/README.md","size":2617}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ee-first/index.js","size":1684}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ee-first/package.json","size":859}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/encodeurl/LICENSE","size":1089}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/encodeurl/README.md","size":3221}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/encodeurl/index.js","size":1578}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/encodeurl/package.json","size":1092}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/.eslintrc","size":144}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/.github/FUNDING.yml","size":564}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/.nycrc","size":139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/CHANGELOG.md","size":2296}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/README.md","size":2056}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/index.d.ts","size":93}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/index.js","size":288}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/package.json","size":2129}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/test/index.js","size":1299}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-define-property/tsconfig.json","size":138}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/.eslintrc","size":43}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/.github/FUNDING.yml","size":555}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/CHANGELOG.md","size":1833}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/README.md","size":2114}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/eval.d.ts","size":68}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/eval.js","size":75}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/index.d.ts","size":56}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/index.js","size":66}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/package.json","size":2174}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/range.d.ts","size":71}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/range.js","size":77}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/ref.d.ts","size":83}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/ref.js","size":79}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/syntax.d.ts","size":74}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/syntax.js","size":79}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/test/index.js","size":356}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/tsconfig.json","size":3170}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/type.d.ts","size":67}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/type.js","size":75}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/uri.d.ts","size":65}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-errors/uri.js","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/.eslintrc","size":229}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/.github/FUNDING.yml","size":555}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/CHANGELOG.md","size":2136}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/README.md","size":2603}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/RequireObjectCoercible.d.ts","size":123}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/RequireObjectCoercible.js","size":313}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/ToObject.d.ts","size":352}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/ToObject.js","size":250}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/index.d.ts","size":59}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/index.js","size":67}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/isObject.d.ts","size":72}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/isObject.js","size":161}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/package.json","size":2273}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/test/index.js","size":1097}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/es-object-atoms/tsconfig.json","size":81}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/escape-html/LICENSE","size":1157}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/escape-html/Readme.md","size":707}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/escape-html/index.js","size":1362}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/escape-html/package.json","size":434}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/etag/HISTORY.md","size":1732}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/etag/LICENSE","size":1094}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/etag/README.md","size":4198}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/etag/index.js","size":2479}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/etag/package.json","size":1306}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/LICENSE","size":1249}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/Readme.md","size":9952}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/index.js","size":224}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/application.js","size":13971}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/express.js","size":1636}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/request.js","size":11688}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/response.js","size":24876}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/utils.js","size":5293}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/lib/view.js","size":3809}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/express/package.json","size":2731}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/finalhandler/HISTORY.md","size":5469}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/finalhandler/LICENSE","size":1119}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/finalhandler/README.md","size":4418}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/finalhandler/index.js","size":5818}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/finalhandler/package.json","size":1287}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/forwarded/HISTORY.md","size":400}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/forwarded/LICENSE","size":1094}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/forwarded/README.md","size":1654}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/forwarded/index.js","size":1578}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/forwarded/package.json","size":1150}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/fresh/HISTORY.md","size":1844}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/fresh/LICENSE","size":1174}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/fresh/README.md","size":3348}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/fresh/index.js","size":2705}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/fresh/package.json","size":1218}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/.eslintrc","size":253}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/.github/FUNDING.yml","size":584}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/.github/SECURITY.md","size":157}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/.nycrc","size":216}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/CHANGELOG.md","size":13812}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/LICENSE","size":1052}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/README.md","size":1755}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/implementation.js","size":2043}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/index.js","size":126}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/package.json","size":2262}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/test/.eslintrc","size":176}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/function-bind/test/index.js","size":8991}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/.eslintrc","size":647}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/.github/FUNDING.yml","size":584}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/.nycrc","size":139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/CHANGELOG.md","size":15537}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/README.md","size":2791}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/index.js","size":14439}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/package.json","size":2576}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-intrinsic/test/GetIntrinsic.js","size":8758}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/.eslintrc","size":104}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/.github/FUNDING.yml","size":580}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/.nycrc","size":139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/CHANGELOG.md","size":1054}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/Object.getPrototypeOf.d.ts","size":125}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/Object.getPrototypeOf.js","size":156}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/README.md","size":1794}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/Reflect.getPrototypeOf.d.ts","size":67}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/Reflect.getPrototypeOf.js","size":150}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/index.d.ts","size":126}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/index.js","size":821}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/package.json","size":2176}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/test/index.js","size":2359}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/get-proto/tsconfig.json","size":118}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/.eslintrc","size":224}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/.github/FUNDING.yml","size":575}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/CHANGELOG.md","size":3077}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/README.md","size":1562}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/gOPD.d.ts","size":42}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/gOPD.js","size":97}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/index.d.ts","size":173}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/index.js","size":206}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/package.json","size":2070}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/test/index.js","size":656}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/gopd/tsconfig.json","size":116}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/.eslintrc","size":164}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/.github/FUNDING.yml","size":582}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/.nycrc","size":139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/CHANGELOG.md","size":9431}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/LICENSE","size":1071}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/README.md","size":2044}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/index.d.ts","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/index.js","size":447}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/package.json","size":2974}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/shams.d.ts","size":69}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/shams.js","size":1922}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/test/index.js","size":654}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/test/shams/core-js.js","size":797}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/test/shams/get-own-property-symbols.js","size":760}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/test/tests.js","size":2139}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/has-symbols/tsconfig.json","size":143}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/.github/FUNDING.yml","size":552}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/.nycrc","size":216}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/CHANGELOG.md","size":3661}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/LICENSE","size":1083}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/README.md","size":1613}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/eslint.config.mjs","size":136}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/index.d.ts","size":198}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/index.js","size":206}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/package.json","size":2283}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/hasown/tsconfig.json","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/http-errors/HISTORY.md","size":4094}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/http-errors/LICENSE","size":1168}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/http-errors/README.md","size":5962}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/http-errors/index.js","size":6430}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/http-errors/package.json","size":1410}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/LICENSE","size":1064}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/README.md","size":6587}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/dbcs-codec.js","size":20464}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/dbcs-data.js","size":8881}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/index.js","size":670}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/internal.js","size":6560}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/sbcs-codec.js","size":2114}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/sbcs-data-generated.js","size":32034}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/sbcs-data.js","size":4527}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/big5-added.json","size":17717}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/cp936.json","size":47320}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/cp949.json","size":38122}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/cp950.json","size":42356}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/eucjp.json","size":41064}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json","size":2216}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/gbk-added.json","size":1247}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/tables/shiftjis.json","size":23782}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/utf16.js","size":5097}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/utf32.js","size":9063}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/encodings/utf7.js","size":8580}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/lib/bom-handling.js","size":1035}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/lib/helpers/merge-exports.js","size":310}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/lib/index.d.ts","size":4763}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/lib/index.js","size":6711}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/lib/streams.js","size":2979}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/package.json","size":2260}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/iconv-lite/types/encodings.d.ts","size":6112}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/inherits/LICENSE","size":749}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/inherits/README.md","size":1625}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/inherits/inherits.js","size":250}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/inherits/inherits_browser.js","size":753}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/inherits/package.json","size":581}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/LICENSE","size":1087}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/README.md","size":8309}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/ipaddr.min.js","size":9738}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/lib/ipaddr.js","size":19333}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/lib/ipaddr.js.d.ts","size":2959}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/ipaddr.js/package.json","size":719}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/LICENSE","size":1058}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/index.d.ts","size":108}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/index.js","size":201}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/index.mjs","size":151}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/package.json","size":576}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/is-promise/readme.md","size":864}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/.eslintrc","size":229}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/.github/FUNDING.yml","size":561}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/CHANGELOG.md","size":1466}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/LICENSE","size":1073}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/README.md","size":1884}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/abs.d.ts","size":18}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/abs.js","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxArrayLength.d.ts","size":71}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxArrayLength.js","size":110}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxSafeInteger.d.ts","size":77}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxSafeInteger.js","size":231}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxValue.d.ts","size":71}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/constants/maxValue.js","size":197}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/floor.d.ts","size":20}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/floor.js","size":77}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isFinite.d.ts","size":80}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isFinite.js","size":262}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isInteger.d.ts","size":87}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isInteger.js","size":410}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isNaN.d.ts","size":22}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isNaN.js","size":121}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isNegativeZero.d.ts","size":79}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/isNegativeZero.js","size":143}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/max.d.ts","size":18}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/max.js","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/min.d.ts","size":18}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/min.js","size":73}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/mod.d.ts","size":76}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/mod.js","size":218}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/package.json","size":2670}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/pow.d.ts","size":18}
-,{"path":"/data/data/com.termux/files/home/ima_kernel/node_modules/math-intrinsics/pow.js","size":73}
-]}
+  "ts": 1782222953.6006937,
+  "count": 162,
+  "files": [
+    {
+      "path": "./.mother_v4.pid",
+      "size": 5,
+      "created": 1781856555.2415147,
+      "modified": 1781856555.2415147,
+      "accessed": 1781856555.2415147
+    },
+    {
+      "path": "./.gitignore",
+      "size": 58,
+      "created": 1779874867.25,
+      "modified": 1779874867.25,
+      "accessed": 1779874867.25
+    },
+    {
+      "path": "./ima_controller.sh",
+      "size": 2023,
+      "created": 1781860656.3007817,
+      "modified": 1781860656.2807817,
+      "accessed": 1781860656.2607818
+    },
+    {
+      "path": "./ima_autofix_build.sh",
+      "size": 1616,
+      "created": 1781861374.0207818,
+      "modified": 1781861374.0047817,
+      "accessed": 1781861373.9727817
+    },
+    {
+      "path": "./project_map.txt",
+      "size": 21282,
+      "created": 1782220314.7588387,
+      "modified": 1782220314.7588387,
+      "accessed": 1782220311.6508386
+    },
+    {
+      "path": "./project_size.txt",
+      "size": 383,
+      "created": 1782220322.6188385,
+      "modified": 1782220322.6188385,
+      "accessed": 1782220322.5028386
+    },
+    {
+      "path": "./ima",
+      "size": 349,
+      "created": 1782222744.1708386,
+      "modified": 1782222744.1708386,
+      "accessed": 1782222744.1668386
+    },
+    {
+      "path": "./ima.py",
+      "size": 866,
+      "created": 1782221287.7388384,
+      "modified": 1782221287.7388384,
+      "accessed": 1782221188.8068385
+    },
+    {
+      "path": "./.squad/orchestration-log/done.md",
+      "size": 0,
+      "created": 1781856555.2415147,
+      "modified": 1781856555.2415147,
+      "accessed": 1781856555.2415147
+    },
+    {
+      "path": "./.squad/orchestration-log/log.md",
+      "size": 0,
+      "created": 1781856555.2415147,
+      "modified": 1781856555.2415147,
+      "accessed": 1781856555.2415147
+    },
+    {
+      "path": "./.squad/orchestration-log/queue.md",
+      "size": 0,
+      "created": 1781856555.2415147,
+      "modified": 1781856555.2415147,
+      "accessed": 1781856555.2415147
+    },
+    {
+      "path": "./android/settings.gradle",
+      "size": 15,
+      "created": 1781857465.7775147,
+      "modified": 1781857465.7775147,
+      "accessed": 1781856985.6255147
+    },
+    {
+      "path": "./android/build.gradle",
+      "size": 245,
+      "created": 1781857472.0615146,
+      "modified": 1781857472.0615146,
+      "accessed": 1781856992.4735146
+    },
+    {
+      "path": "./android/build_all.sh",
+      "size": 521,
+      "created": 1781873727.6181827,
+      "modified": 1781873727.6021826,
+      "accessed": 1781873727.5861826
+    },
+    {
+      "path": "./android/local.properties",
+      "size": 53,
+      "created": 1781861381.8047817,
+      "modified": 1781861381.8047817,
+      "accessed": 1781857154.5375147
+    },
+    {
+      "path": "./android/gradlew",
+      "size": 8654,
+      "created": 1781881772.1390924,
+      "modified": 1781857432.1735146,
+      "accessed": 1781857248.8535147
+    },
+    {
+      "path": "./android/gradlew.bat",
+      "size": 2846,
+      "created": 1781857432.2175148,
+      "modified": 1781857432.2175148,
+      "accessed": 1781857249.9495146
+    },
+    {
+      "path": "./android/.gitignore",
+      "size": 140,
+      "created": 1781857432.0255146,
+      "modified": 1781857432.0255146,
+      "accessed": 1781857432.0215147
+    },
+    {
+      "path": "./android/.gitattributes",
+      "size": 278,
+      "created": 1781857432.0255146,
+      "modified": 1781857432.0255146,
+      "accessed": 1781857432.0255146
+    },
+    {
+      "path": "./android/gradle.properties",
+      "size": 199,
+      "created": 1781861381.7527816,
+      "modified": 1781861381.7527816,
+      "accessed": 1781860752.4487817
+    },
+    {
+      "path": "./android/ima_release.sh",
+      "size": 558,
+      "created": 1781874023.4021826,
+      "modified": 1781874023.3821826,
+      "accessed": 1781874023.3701828
+    },
+    {
+      "path": "./android/ima_bridge_build.sh",
+      "size": 2044,
+      "created": 1781877960.579225,
+      "modified": 1781877960.563225,
+      "accessed": 1781877960.547225
+    },
+    {
+      "path": "./android/ima_full_pipeline.sh",
+      "size": 780,
+      "created": 1781878100.971225,
+      "modified": 1781878100.955225,
+      "accessed": 1781878030.223225
+    },
+    {
+      "path": "./android/ima_guard_pipeline.sh",
+      "size": 1073,
+      "created": 1781878500.783225,
+      "modified": 1781878500.767225,
+      "accessed": 1781878500.7552252
+    },
+    {
+      "path": "./android/ima_bridge_v1.sh",
+      "size": 814,
+      "created": 1781879045.1072252,
+      "modified": 1781879045.087225,
+      "accessed": 1781879045.075225
+    },
+    {
+      "path": "./android/ima_verify.sh",
+      "size": 248,
+      "created": 1781879051.987225,
+      "modified": 1781879051.971225,
+      "accessed": 1781879051.955225
+    },
+    {
+      "path": "./android/ima_final_install.sh",
+      "size": 665,
+      "created": 1781879157.0552251,
+      "modified": 1781879157.0352252,
+      "accessed": 1781879157.0152252
+    },
+    {
+      "path": "./android/ima_safe_install.sh",
+      "size": 595,
+      "created": 1781879233.695225,
+      "modified": 1781879233.675225,
+      "accessed": 1781879233.659225
+    },
+    {
+      "path": "./android/ima_full_auto.sh",
+      "size": 1159,
+      "created": 1781880158.559225,
+      "modified": 1781880158.527225,
+      "accessed": 1781880158.507225
+    },
+    {
+      "path": "./android/ima_termux_open_install.sh",
+      "size": 689,
+      "created": 1781881879.7743654,
+      "modified": 1781881879.7583654,
+      "accessed": 1781881879.7423654
+    },
+    {
+      "path": "./android/app/build.gradle",
+      "size": 357,
+      "created": 1781857478.9855146,
+      "modified": 1781857478.9855146,
+      "accessed": 1781856998.8255146
+    },
+    {
+      "path": "./android/app/src/main/AndroidManifest.xml",
+      "size": 572,
+      "created": 1781879566.359225,
+      "modified": 1781879566.359225,
+      "accessed": 1781877967.191225
+    },
+    {
+      "path": "./android/app/src/main/java/com/ima/core/MainActivity.java",
+      "size": 416,
+      "created": 1781878757.7192252,
+      "modified": 1781878757.7192252,
+      "accessed": 1781878291.287225
+    },
+    {
+      "path": "./android/app/src/test/java/org/example/AppTest.java",
+      "size": 343,
+      "created": 1781857432.1015146,
+      "modified": 1781857432.1015146,
+      "accessed": 1781857432.0975146
+    },
+    {
+      "path": "./android/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json",
+      "size": 2,
+      "created": 1781881903.1423652,
+      "modified": 1781881903.1423652,
+      "accessed": 1781881903.1383653
+    },
+    {
+      "path": "./android/app/build/intermediates/source_set_path_map/debug/file-map.txt",
+      "size": 881,
+      "created": 1781881903.2063653,
+      "modified": 1781881903.2063653,
+      "accessed": 1781881903.1943653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties",
+      "size": 30,
+      "created": 1781881903.3223653,
+      "modified": 1781881903.3223653,
+      "accessed": 1781881903.3223653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml",
+      "size": 1930,
+      "created": 1781881903.4783654,
+      "modified": 1781881903.4783654,
+      "accessed": 1781881903.4783654
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties",
+      "size": 30,
+      "created": 1781881903.5063653,
+      "modified": 1781881903.5063653,
+      "accessed": 1781881903.5063653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml",
+      "size": 1930,
+      "created": 1781881903.5103652,
+      "modified": 1781881903.5103652,
+      "accessed": 1781881903.5063653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/mergeDebugShaders/merger.xml",
+      "size": 500,
+      "created": 1781881904.4503653,
+      "modified": 1781881904.4503653,
+      "accessed": 1781881904.4503653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml",
+      "size": 745,
+      "created": 1781881904.4903653,
+      "modified": 1781881904.4903653,
+      "accessed": 1781881904.4903653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state",
+      "size": 478,
+      "created": 1781881904.7703652,
+      "modified": 1781881904.7703652,
+      "accessed": 1781881904.7583654
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml",
+      "size": 500,
+      "created": 1781881904.6463654,
+      "modified": 1781881904.6463654,
+      "accessed": 1781881904.6463654
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt",
+      "size": 375,
+      "created": 1781881909.7663653,
+      "modified": 1781881909.7663653,
+      "accessed": 1781881909.7663653
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources",
+      "size": 147,
+      "created": 1781881909.8503654,
+      "modified": 1781881909.8503654,
+      "accessed": 1781881909.8503654
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0",
+      "size": 22,
+      "created": 1781881909.8503654,
+      "modified": 1781881909.8503654,
+      "accessed": 1781881909.8503654
+    },
+    {
+      "path": "./android/app/build/intermediates/local_only_symbol_list/debug/R-def.txt",
+      "size": 55,
+      "created": 1781881903.7263653,
+      "modified": 1781881903.7263653,
+      "accessed": 1781881903.7223654
+    },
+    {
+      "path": "./android/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json",
+      "size": 188,
+      "created": 1781881903.6383653,
+      "modified": 1781881903.6383653,
+      "accessed": 1781881903.6383653
+    },
+    {
+      "path": "./android/app/build/intermediates/navigation_json/debug/navigation.json",
+      "size": 2,
+      "created": 1781881903.6503654,
+      "modified": 1781881903.6503654,
+      "accessed": 1781881903.6503654
+    },
+    {
+      "path": "./android/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt",
+      "size": 1946,
+      "created": 1781881903.8583653,
+      "modified": 1781881903.8583653,
+      "accessed": 1781881903.8583653
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml",
+      "size": 809,
+      "created": 1781881903.8583653,
+      "modified": 1781881903.8583653,
+      "accessed": 1781881903.8583653
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml",
+      "size": 809,
+      "created": 1781881904.3463652,
+      "modified": 1781881904.3463652,
+      "accessed": 1781881904.3463652
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_manifests/debug/output-metadata.json",
+      "size": 381,
+      "created": 1781881904.3543653,
+      "modified": 1781881904.3543653,
+      "accessed": 1781881904.3543653
+    },
+    {
+      "path": "./android/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml",
+      "size": 809,
+      "created": 1781881904.5743654,
+      "modified": 1781881904.5743654,
+      "accessed": 1781881904.3903654
+    },
+    {
+      "path": "./android/app/build/intermediates/packaged_manifests/debug/output-metadata.json",
+      "size": 383,
+      "created": 1781881905.0143654,
+      "modified": 1781881905.0143654,
+      "accessed": 1781881905.0143654
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_java_res/debug/base.jar",
+      "size": 22,
+      "created": 1781881904.7383654,
+      "modified": 1781881904.7383654,
+      "accessed": 1781881904.7103653
+    },
+    {
+      "path": "./android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex",
+      "size": 556,
+      "created": 1781881909.2863653,
+      "modified": 1781881909.2863653,
+      "accessed": 1781881909.2863653
+    },
+    {
+      "path": "./android/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex",
+      "size": 1056,
+      "created": 1781881909.2823653,
+      "modified": 1781881909.2823653,
+      "accessed": 1781881909.2823653
+    },
+    {
+      "path": "./android/app/build/intermediates/app_metadata/debug/app-metadata.properties",
+      "size": 56,
+      "created": 1781881904.9743652,
+      "modified": 1781881904.9743652,
+      "accessed": 1781881904.9743652
+    },
+    {
+      "path": "./android/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json",
+      "size": 96,
+      "created": 1781881905.0103652,
+      "modified": 1781881905.0103652,
+      "accessed": 1781881905.0063653
+    },
+    {
+      "path": "./android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar",
+      "size": 267,
+      "created": 1781881905.9743652,
+      "modified": 1781881905.9743652,
+      "accessed": 1781881905.9703653
+    },
+    {
+      "path": "./android/app/build/intermediates/processed_res/debug/out/resources-debug.ap_",
+      "size": 999,
+      "created": 1781881905.9183652,
+      "modified": 1781881905.9183652,
+      "accessed": 1781881905.9023652
+    },
+    {
+      "path": "./android/app/build/intermediates/processed_res/debug/out/output-metadata.json",
+      "size": 378,
+      "created": 1781881905.9743652,
+      "modified": 1781881905.9743652,
+      "accessed": 1781881905.9743652
+    },
+    {
+      "path": "./android/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt",
+      "size": 0,
+      "created": 1781881905.9023652,
+      "modified": 1781881905.9023652,
+      "accessed": 1781881905.9023652
+    },
+    {
+      "path": "./android/app/build/intermediates/runtime_symbol_list/debug/R.txt",
+      "size": 0,
+      "created": 1781881905.9183652,
+      "modified": 1781881905.9183652,
+      "accessed": 1781881905.9183652
+    },
+    {
+      "path": "./android/app/build/intermediates/javac/debug/classes/com/ima/core/MainActivity.class",
+      "size": 770,
+      "created": 1781881906.9903653,
+      "modified": 1781881906.9903653,
+      "accessed": 1781881906.9863653
+    },
+    {
+      "path": "./android/app/build/intermediates/project_dex_archive/debug/out/a18818922e4d7f7d03af47a5ba64f54f27876856970fd1d23f5718098d546815_1.jar",
+      "size": 503,
+      "created": 1781881909.0783653,
+      "modified": 1781881909.0783653,
+      "accessed": 1781881909.0743654
+    },
+    {
+      "path": "./android/app/build/intermediates/project_dex_archive/debug/out/com/ima/core/MainActivity.dex",
+      "size": 1056,
+      "created": 1781881909.0783653,
+      "modified": 1781881909.0783653,
+      "accessed": 1781881909.0783653
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_3/graph.bin",
+      "size": 235,
+      "created": 1781881907.2943654,
+      "modified": 1781881907.2943654,
+      "accessed": 1781881907.2943654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin",
+      "size": 235,
+      "created": 1781881907.2943654,
+      "modified": 1781881907.2943654,
+      "accessed": 1781881907.2943654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin",
+      "size": 235,
+      "created": 1781881907.2943654,
+      "modified": 1781881907.2943654,
+      "accessed": 1781881907.2943654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_2/graph.bin",
+      "size": 235,
+      "created": 1781881907.2983654,
+      "modified": 1781881907.2983654,
+      "accessed": 1781881907.2943654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_0/graph.bin",
+      "size": 235,
+      "created": 1781881907.2983654,
+      "modified": 1781881907.2983654,
+      "accessed": 1781881907.2983654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin",
+      "size": 235,
+      "created": 1781881907.2983654,
+      "modified": 1781881907.2983654,
+      "accessed": 1781881907.2983654
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin",
+      "size": 235,
+      "created": 1781881909.0783653,
+      "modified": 1781881909.0783653,
+      "accessed": 1781881909.0783653
+    },
+    {
+      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_1/graph.bin",
+      "size": 235,
+      "created": 1781881909.0823653,
+      "modified": 1781881909.0823653,
+      "accessed": 1781881909.0823653
+    },
+    {
+      "path": "./android/app/build/intermediates/dex_archive_input_jar_hashes/debug/out",
+      "size": 401,
+      "created": 1781881907.0863652,
+      "modified": 1781881907.0863652,
+      "accessed": 1781881907.0863652
+    },
+    {
+      "path": "./android/app/build/intermediates/dex_number_of_buckets_file/debug/out",
+      "size": 1,
+      "created": 1781881907.0743654,
+      "modified": 1781881907.0743654,
+      "accessed": 1781881907.0703654
+    },
+    {
+      "path": "./android/app/build/intermediates/apk_ide_redirect_file/debug/redirect.txt",
+      "size": 78,
+      "created": 1781881909.8743653,
+      "modified": 1781881909.8743653,
+      "accessed": 1781881909.8743653
+    },
+    {
+      "path": "./android/app/build/outputs/logs/manifest-merger-debug-report.txt",
+      "size": 3373,
+      "created": 1781881903.8583653,
+      "modified": 1781881903.8583653,
+      "accessed": 1781881903.8583653
+    },
+    {
+      "path": "./android/app/build/outputs/apk/debug/app-debug.apk",
+      "size": 6521,
+      "created": 1781881909.8423653,
+      "modified": 1781881909.8423653,
+      "accessed": 1781881909.7663653
+    },
+    {
+      "path": "./android/app/build/outputs/apk/debug/output-metadata.json",
+      "size": 362,
+      "created": 1781881909.8543653,
+      "modified": 1781881909.8543653,
+      "accessed": 1781881909.8543653
+    },
+    {
+      "path": "./android/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin",
+      "size": 225,
+      "created": 1781881907.0503652,
+      "modified": 1781881907.0503652,
+      "accessed": 1781881907.0463653
+    },
+    {
+      "path": "./android/.gradle/8.6/gc.properties",
+      "size": 0,
+      "created": 1781860703.3887815,
+      "modified": 1781860703.3887815,
+      "accessed": 1781860703.3887815
+    },
+    {
+      "path": "./android/.gradle/8.6/fileChanges/last-build.bin",
+      "size": 1,
+      "created": 1781885564.019,
+      "modified": 1781885564.019,
+      "accessed": 1781860703.2887816
+    },
+    {
+      "path": "./android/.gradle/8.6/checksums/checksums.lock",
+      "size": 17,
+      "created": 1781885564.039,
+      "modified": 1781885564.039,
+      "accessed": 1781860670.8847816
+    },
+    {
+      "path": "./android/.gradle/8.6/checksums/sha1-checksums.bin",
+      "size": 83939,
+      "created": 1781861217.2847817,
+      "modified": 1781861217.2847817,
+      "accessed": 1781860676.1247816
+    },
+    {
+      "path": "./android/.gradle/8.6/checksums/md5-checksums.bin",
+      "size": 28297,
+      "created": 1781861216.8687816,
+      "modified": 1781861216.8687816,
+      "accessed": 1781860676.2727816
+    },
+    {
+      "path": "./android/.gradle/8.6/fileHashes/fileHashes.lock",
+      "size": 17,
+      "created": 1781885564.039,
+      "modified": 1781885564.039,
+      "accessed": 1781860670.9287817
+    },
+    {
+      "path": "./android/.gradle/8.6/fileHashes/fileHashes.bin",
+      "size": 21847,
+      "created": 1781881909.8783653,
+      "modified": 1781881909.8783653,
+      "accessed": 1781860673.8807817
+    },
+    {
+      "path": "./android/.gradle/8.6/fileHashes/resourceHashesCache.bin",
+      "size": 18871,
+      "created": 1781878791.955225,
+      "modified": 1781878791.955225,
+      "accessed": 1781860792.6847816
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/gc.properties",
+      "size": 0,
+      "created": 1781860703.3727818,
+      "modified": 1781860703.3727818,
+      "accessed": 1781860703.3727818
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/metadata.bin",
+      "size": 82,
+      "created": 1781860673.9047816,
+      "modified": 1781860673.9047816,
+      "accessed": 1781860673.9047816
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibs.java",
+      "size": 4321,
+      "created": 1781860673.2127817,
+      "modified": 1781860673.2127817,
+      "accessed": 1781860673.2087817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java",
+      "size": 5685,
+      "created": 1781860673.2127817,
+      "modified": 1781860673.2127817,
+      "accessed": 1781860673.2127817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class",
+      "size": 941,
+      "created": 1781860673.8207817,
+      "modified": 1781860673.8207817,
+      "accessed": 1781860673.8167818
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class",
+      "size": 765,
+      "created": 1781860673.8207817,
+      "modified": 1781860673.8207817,
+      "accessed": 1781860673.8207817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class",
+      "size": 597,
+      "created": 1781860673.8247817,
+      "modified": 1781860673.8247817,
+      "accessed": 1781860673.8207817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs.class",
+      "size": 2973,
+      "created": 1781860673.8287816,
+      "modified": 1781860673.8287816,
+      "accessed": 1781860673.8247817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class",
+      "size": 983,
+      "created": 1781860673.8567817,
+      "modified": 1781860673.8567817,
+      "accessed": 1781860673.8567817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class",
+      "size": 891,
+      "created": 1781860673.8567817,
+      "modified": 1781860673.8567817,
+      "accessed": 1781860673.8567817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class",
+      "size": 639,
+      "created": 1781860673.8567817,
+      "modified": 1781860673.8567817,
+      "accessed": 1781860673.8567817
+    },
+    {
+      "path": "./android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class",
+      "size": 4441,
+      "created": 1781860673.8607817,
+      "modified": 1781860673.8607817,
+      "accessed": 1781860673.8607817
+    },
+    {
+      "path": "./android/.gradle/8.6/executionHistory/executionHistory.lock",
+      "size": 17,
+      "created": 1781885564.027,
+      "modified": 1781885564.027,
+      "accessed": 1781860791.6887817
+    },
+    {
+      "path": "./android/.gradle/8.6/executionHistory/executionHistory.bin",
+      "size": 88685,
+      "created": 1781881909.8783653,
+      "modified": 1781881909.8783653,
+      "accessed": 1781860791.9007816
+    },
+    {
+      "path": "./android/.gradle/vcs-1/gc.properties",
+      "size": 0,
+      "created": 1781860703.3687816,
+      "modified": 1781860703.3687816,
+      "accessed": 1781860703.3687816
+    },
+    {
+      "path": "./android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+      "size": 17,
+      "created": 1781885564.023,
+      "modified": 1781885564.023,
+      "accessed": 1781860674.8807817
+    },
+    {
+      "path": "./android/.gradle/buildOutputCleanup/cache.properties",
+      "size": 49,
+      "created": 1781860674.8887815,
+      "modified": 1781860674.8887815,
+      "accessed": 1781860674.8847816
+    },
+    {
+      "path": "./android/.gradle/buildOutputCleanup/outputFiles.bin",
+      "size": 21017,
+      "created": 1781885563.999,
+      "modified": 1781885563.999,
+      "accessed": 1781860791.8847816
+    },
+    {
+      "path": "./android/gradle/libs.versions.toml",
+      "size": 339,
+      "created": 1781857432.1055148,
+      "modified": 1781857432.1055148,
+      "accessed": 1781857432.1055148
+    },
+    {
+      "path": "./android/gradle/wrapper/gradle-wrapper.properties",
+      "size": 279,
+      "created": 1781858620.0455146,
+      "modified": 1781858620.0455146,
+      "accessed": 1781858620.0415146
+    },
+    {
+      "path": "./android/gradle/wrapper/gradle-wrapper.jar",
+      "size": 48462,
+      "created": 1781857432.1095147,
+      "modified": 1781857432.1095147,
+      "accessed": 1781857248.8455148
+    },
+    {
+      "path": "./.ima/all_files.txt",
+      "size": 3948800,
+      "created": 1781856555.1295147,
+      "modified": 1781856555.1295147,
+      "accessed": 1781856555.1135147
+    },
+    {
+      "path": "./.ima/all_files_clean.txt",
+      "size": 3948665,
+      "created": 1781856555.1415148,
+      "modified": 1781856555.1415148,
+      "accessed": 1781856555.1295147
+    },
+    {
+      "path": "./.ima/architecture_map.txt",
+      "size": 4519739,
+      "created": 1781856555.1535146,
+      "modified": 1781856555.1535146,
+      "accessed": 1781856555.1415148
+    },
+    {
+      "path": "./.ima/architecture_report.md",
+      "size": 551,
+      "created": 1781856555.1535146,
+      "modified": 1781856555.1535146,
+      "accessed": 1781856555.1535146
+    },
+    {
+      "path": "./.ima/baseline.json",
+      "size": 134,
+      "created": 1781856555.1535146,
+      "modified": 1781856555.1535146,
+      "accessed": 1781856555.1535146
+    },
+    {
+      "path": "./.ima/broken_files.txt",
+      "size": 63241,
+      "created": 1781856555.1535146,
+      "modified": 1781856555.1535146,
+      "accessed": 1781856555.1535146
+    },
+    {
+      "path": "./.ima/clean_files.txt",
+      "size": 3948161,
+      "created": 1781856555.1655147,
+      "modified": 1781856555.1655147,
+      "accessed": 1781856555.1535146
+    },
+    {
+      "path": "./.ima/dupes.txt",
+      "size": 0,
+      "created": 1781856555.1655147,
+      "modified": 1781856555.1655147,
+      "accessed": 1781856555.1655147
+    },
+    {
+      "path": "./.ima/edges.csv",
+      "size": 5843,
+      "created": 1781856555.1655147,
+      "modified": 1781856555.1655147,
+      "accessed": 1781856555.1655147
+    },
+    {
+      "path": "./.ima/fast_report.md",
+      "size": 1216,
+      "created": 1781856555.1655147,
+      "modified": 1781856555.1655147,
+      "accessed": 1781856555.1655147
+    },
+    {
+      "path": "./.ima/files.txt",
+      "size": 3947325,
+      "created": 1781856555.1775146,
+      "modified": 1781856555.1775146,
+      "accessed": 1781856555.1655147
+    },
+    {
+      "path": "./.ima/files_list.txt",
+      "size": 3947201,
+      "created": 1781856555.1895146,
+      "modified": 1781856555.1895146,
+      "accessed": 1781856555.1775146
+    },
+    {
+      "path": "./.ima/files_raw.txt",
+      "size": 3946999,
+      "created": 1781856555.1975148,
+      "modified": 1781856555.1975148,
+      "accessed": 1781856555.1895146
+    },
+    {
+      "path": "./.ima/files_snapshot.txt",
+      "size": 3948868,
+      "created": 1781856555.2095146,
+      "modified": 1781856555.2095146,
+      "accessed": 1781856555.1975148
+    },
+    {
+      "path": "./.ima/rebuild_index.py",
+      "size": 859,
+      "created": 1782221787.4748385,
+      "modified": 1782221787.4748385,
+      "accessed": 1782221762.5588386
+    },
+    {
+      "path": "./.ima/memory_log.py",
+      "size": 351,
+      "created": 1782221172.9588385,
+      "modified": 1782221172.9588385,
+      "accessed": 1782221128.0748386
+    },
+    {
+      "path": "./.ima/index.json",
+      "size": 21365,
+      "created": 1781856555.2095146,
+      "modified": 1781856555.2095146,
+      "accessed": 1781856555.2095146
+    },
+    {
+      "path": "./.ima/learning_report.md",
+      "size": 15471,
+      "created": 1781856555.2095146,
+      "modified": 1781856555.2095146,
+      "accessed": 1781856555.2095146
+    },
+    {
+      "path": "./.ima/live_index.json",
+      "size": 55941,
+      "created": 1781856555.2135146,
+      "modified": 1781856555.2135146,
+      "accessed": 1781856555.2095146
+    },
+    {
+      "path": "./.ima/nodes.csv",
+      "size": 4616042,
+      "created": 1781856555.2255147,
+      "modified": 1781856555.2255147,
+      "accessed": 1781856555.2135146
+    },
+    {
+      "path": "./.ima/reduction_plan.md",
+      "size": 922,
+      "created": 1781856555.2255147,
+      "modified": 1781856555.2255147,
+      "accessed": 1781856555.2255147
+    },
+    {
+      "path": "./.ima/snapshot.txt",
+      "size": 3949047,
+      "created": 1781856555.2375147,
+      "modified": 1781856555.2375147,
+      "accessed": 1781856555.2255147
+    },
+    {
+      "path": "./.ima/state.json",
+      "size": 24,
+      "created": 1781860703.9007816,
+      "modified": 1781860703.9007816,
+      "accessed": 1781856555.2375147
+    },
+    {
+      "path": "./.ima/build_graph.py",
+      "size": 1355,
+      "created": 1782221445.5988386,
+      "modified": 1782221445.5988386,
+      "accessed": 1782220921.9828386
+    },
+    {
+      "path": "./.ima/global_index.broken.json",
+      "size": 54328,
+      "created": 1782220969.1468384,
+      "modified": 1781856555.2095146,
+      "accessed": 1781856555.2095146
+    },
+    {
+      "path": "./.ima/stable_baseline.json",
+      "size": 107,
+      "created": 1781856555.2375147,
+      "modified": 1781856555.2375147,
+      "accessed": 1781856555.2375147
+    },
+    {
+      "path": "./.ima/tree.txt",
+      "size": 561406,
+      "created": 1781856555.2415147,
+      "modified": 1781856555.2415147,
+      "accessed": 1781856555.2375147
+    },
+    {
+      "path": "./.ima/graph.json",
+      "size": 743900,
+      "created": 1782222822.5628386,
+      "modified": 1782222822.5628386,
+      "accessed": 1781860663.9687817
+    },
+    {
+      "path": "./.ima/global_index.json",
+      "size": 35339,
+      "created": 1782222822.4588385,
+      "modified": 1782222822.4588385,
+      "accessed": 1782220990.1708386
+    },
+    {
+      "path": "./.ima/memory_log.jsonl",
+      "size": 5580,
+      "created": 1782222558.6828384,
+      "modified": 1782222558.6828384,
+      "accessed": 1782221195.7028384
+    },
+    {
+      "path": "./.ima/ima.py",
+      "size": 3070,
+      "created": 1782221662.5788386,
+      "modified": 1782221662.5788386,
+      "accessed": 1782221662.5628386
+    },
+    {
+      "path": "./.ima/__init__.py",
+      "size": 0,
+      "created": 1782222750.2348385,
+      "modified": 1782222750.2348385,
+      "accessed": 1782222750.2348385
+    },
+    {
+      "path": "./.ima/ima.stream.jsonl",
+      "size": 897,
+      "created": 1782222822.6828384,
+      "modified": 1782222822.6828384,
+      "accessed": 1782222636.2268386
+    },
+    {
+      "path": "./.ima/governance/registry.json",
+      "size": 78,
+      "created": 1779873306.274,
+      "modified": 1779873306.274,
+      "accessed": 1779873306.262
+    },
+    {
+      "path": "./.ima/ontology/core.json",
+      "size": 808,
+      "created": 1779873853.17,
+      "modified": 1779873853.15,
+      "accessed": 1779873853.13
+    },
+    {
+      "path": "./.ima/runtime/state.json",
+      "size": 89,
+      "created": 1779873853.122,
+      "modified": 1779873853.122,
+      "accessed": 1779873853.11
+    },
+    {
+      "path": "./.ima/runtime/query_engine.py",
+      "size": 868,
+      "created": 1782222940.8868384,
+      "modified": 1782222940.8868384,
+      "accessed": 1782222734.1668386
+    },
+    {
+      "path": "./.ima/runtime/file_clock.py",
+      "size": 312,
+      "created": 1782221698.4308386,
+      "modified": 1782221698.4308386,
+      "accessed": 1782221698.4108386
+    },
+    {
+      "path": "./.ima/runtime/memory_bus.py",
+      "size": 257,
+      "created": 1782221720.7028384,
+      "modified": 1782221720.7028384,
+      "accessed": 1782221720.6868386
+    },
+    {
+      "path": "./.ima/runtime/query_engine.py.tmp",
+      "size": 43,
+      "created": 1782221921.7548385,
+      "modified": 1782221921.7548385,
+      "accessed": 1782221921.7548385
+    },
+    {
+      "path": "./.ima/runtime/stream.py",
+      "size": 320,
+      "created": 1782222642.1348386,
+      "modified": 1782222642.1348386,
+      "accessed": 1782222463.9388385
+    },
+    {
+      "path": "./.ima/runtime/__init__.py",
+      "size": 0,
+      "created": 1782222750.2188385,
+      "modified": 1782222750.2188385,
+      "accessed": 1782222750.2188385
+    },
+    {
+      "path": "./.ima/runtime/__pycache__/file_clock.cpython-313.pyc",
+      "size": 763,
+      "created": 1782221794.3228385,
+      "modified": 1782221794.3228385,
+      "accessed": 1782221794.3228385
+    },
+    {
+      "path": "./.ima/runtime/__pycache__/query_engine.cpython-313.pyc",
+      "size": 1515,
+      "created": 1782222947.3788385,
+      "modified": 1782222947.3788385,
+      "accessed": 1782222947.3788385
+    },
+    {
+      "path": "./.ima/runtime/__pycache__/stream.cpython-313.pyc",
+      "size": 916,
+      "created": 1782222708.7708385,
+      "modified": 1782222708.7708385,
+      "accessed": 1782222708.7708385
+    },
+    {
+      "path": "./.ima/runtime/__pycache__/__init__.cpython-313.pyc",
+      "size": 165,
+      "created": 1782222822.4108386,
+      "modified": 1782222822.4108386,
+      "accessed": 1782222822.4108386
+    },
+    {
+      "path": "./.legacy_archive/global_index.json.tmp",
+      "size": 344187,
+      "created": 1782220672.2348385,
+      "modified": 1781525300.5439892,
+      "accessed": 1781525163.811989
+    },
+    {
+      "path": "./.legacy_archive/global_index.tmp",
+      "size": 427543,
+      "created": 1782220672.2388384,
+      "modified": 1781524833.659989,
+      "accessed": 1781524722.6719892
+    },
+    {
+      "path": "./__pycache__/ima.cpython-313.pyc",
+      "size": 1886,
+      "created": 1782221820.4068384,
+      "modified": 1782221820.4068384,
+      "accessed": 1782221820.4068384
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+CMD=$1
+shift
+
+case "$CMD" in
+  ask)
+    PYTHONPATH="$ROOT" python3 -m ima.runtime.runtime "$@"
+    ;;
+  stream)
+    tail -n 50 "$ROOT/.ima/ima.stream.jsonl"
+    ;;
+  *)
+    echo "IMA:"
+    echo "  ask \"query\""
+    echo "  stream"
+    ;;
+esac
