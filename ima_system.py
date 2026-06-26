@@ -1,11 +1,11 @@
-import json, time, os, subprocess
+import json, time, os, subprocess, sys
 
 LEDGER = ".ima/ledger.jsonl"
 
 
-# ---------------------------
-# EVENT BUS
-# ---------------------------
+# -------------------
+# EVENT CORE
+# -------------------
 def emit(event_type, **data):
     os.makedirs(".ima", exist_ok=True)
 
@@ -26,35 +26,77 @@ def load_events():
         return [json.loads(l) for l in f if l.strip()]
 
 
-# ---------------------------
-# REDUCER (STATE BUILD)
-# ---------------------------
-def reduce(events):
-    state = {
-        "files": set(),
-        "mode": "INIT"
-    }
+# -------------------
+# REDUCER → GRAPH
+# -------------------
+def build_graph(events):
+    nodes = set()
+    edges = []
+
+    last_q = None
 
     for e in events:
         t = e["type"]
         d = e.get("data", {})
 
-        if t == "FILE_ADD":
-            state["files"].add(d.get("path"))
+        if t == "QUESTION":
+            q = d.get("text")
+            nodes.add(q)
+            last_q = q
 
-        elif t == "FILE_REMOVE":
-            state["files"].discard(d.get("path"))
+        if t == "ANSWER":
+            a = d.get("answer")
+            nodes.add(a)
+            if last_q:
+                edges.append((last_q, a))
 
-        elif t == "KERNEL_RESET":
-            state["mode"] = "RESET"
+    return {
+        "nodes": list(nodes),
+        "edges": edges
+    }
 
-    state["files"] = sorted(list(state["files"]))
-    return state
+
+# -------------------
+# QGE CORE
+# -------------------
+def answer_space(q):
+    return {
+        "hypotheses": [
+            {"answer": "A", "score": 0.5},
+            {"answer": "B", "score": 0.3},
+            {"answer": "UNKNOWN", "score": 0.2}
+        ]
+    }
 
 
-# ---------------------------
-# GIT SNAPSHOT ENGINE
-# ---------------------------
+def ask(question):
+    qid = str(int(time.time()))
+
+    emit("QUESTION", id=qid, text=question)
+
+    expanded = [
+        question,
+        f"{question} (context)",
+        f"{question} (check)",
+        f"{question} (external)"
+    ]
+
+    answers = answer_space(question)
+
+    # emit answers into graph
+    for h in answers["hypotheses"]:
+        emit("ANSWER", id=qid, answer=h["answer"], score=h["score"])
+
+    return {
+        "id": qid,
+        "expanded": expanded,
+        "answers": answers
+    }
+
+
+# -------------------
+# GIT SYNC ENGINE
+# -------------------
 def git_snapshot():
     subprocess.run(["git", "add", "-A"], stdout=subprocess.DEVNULL)
 
@@ -63,47 +105,42 @@ def git_snapshot():
         return "NO_CHANGES"
 
     stamp = str(int(time.time()))
-    subprocess.run(["git", "commit", "-m", f"snapshot {stamp}"])
+    subprocess.run(["git", "commit", "-m", f"auto-sync {stamp}"])
     return stamp
 
 
-# ---------------------------
-# STATE BUILDER
-# ---------------------------
-def build_state():
-    events = load_events()
-    return reduce(events)
-
-
-# ---------------------------
-# SYSTEM STATUS
-# ---------------------------
+# -------------------
+# STATUS
+# -------------------
 def status():
-    state = build_state()
+    events = load_events()
+    graph = build_graph(events)
 
-    print("=== IMA UNIFIED KERNEL ===")
-    print("FILES:", len(state["files"]))
-    print("MODE:", state["mode"])
+    print("=== IMA UNIFIED QGE+EVENT KERNEL ===")
+    print("EVENTS:", len(events))
+    print("NODES:", len(graph["nodes"]))
+    print("EDGES:", len(graph["edges"]))
 
 
-# ---------------------------
-# COMMANDS
-# ---------------------------
-def run():
-    cmd = os.sys.argv[1] if len(os.sys.argv) > 1 else "status"
+# -------------------
+# CLI
+# -------------------
+def main():
+    cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
 
-    if cmd == "emit":
-        emit(os.sys.argv[2], path=os.sys.argv[3])
-        return
-
-    if cmd == "snapshot":
-        print(git_snapshot())
+    if cmd == "ask":
+        print(ask(" ".join(sys.argv[2:])))
+        git_snapshot()
         return
 
     if cmd == "status":
         status()
         return
 
+    if cmd == "sync":
+        print(git_snapshot())
+        return
+
 
 if __name__ == "__main__":
-    run()
+    main()
