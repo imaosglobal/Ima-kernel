@@ -1,38 +1,42 @@
-import time, json, os
-from ima_system import answer, emit, load_events, git_snapshot
+#!/usr/bin/env python3
+import time, json
+from ima_system import load_events, emit, ask, git_snapshot
 
 LEDGER = ".ima/ledger.jsonl"
 
-last_size = 0
-
-
 def run():
-    global last_size
+    last_len = 0
 
-    print("[IMA DAEMON] live brain started")
+    print("[IMA DAEMON] started")
 
     while True:
-        if os.path.exists(LEDGER):
-            size = os.path.getsize(LEDGER)
+        try:
+            events = load_events()
 
-            if size != last_size:
-                last_size = size
+            if len(events) != last_len:
+                last_len = len(events)
 
-                events = load_events()
-                last = events[-1]
+                print("[IMA DAEMON] event update:", last_len)
 
-                if last["type"] == "QUESTION":
-                    q = last["data"]["text"]
+                # find new questions
+                for e in events[-5:]:
+                    if e["type"] == "QUESTION":
+                        q = e["data"]["text"]
+                        qid = e["data"].get("id", str(int(time.time())))
 
-                    response = answer(q, events)
+                        result = ask(q)
 
-                    emit("ANSWER", text=response)
-                    print("[A]", response)
+                        emit("ANSWER",
+                             id=qid,
+                             text=str(result["answers"]))
 
-                    git_snapshot()
+                git_snapshot()
 
-        time.sleep(0.5)
+            time.sleep(0.5)
 
+        except KeyboardInterrupt:
+            print("[IMA DAEMON] stopped")
+            break
 
 if __name__ == "__main__":
     run()
