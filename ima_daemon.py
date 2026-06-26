@@ -1,42 +1,46 @@
-#!/usr/bin/env python3
-import time, json
-from ima_system import load_events, emit, ask, git_snapshot
+import time
+from ima_system import load_events, ask, git_snapshot, emit
 
-LEDGER = ".ima/ledger.jsonl"
+seen = set()
 
 def run():
-    last_len = 0
-
-    print("[IMA DAEMON] started")
+    print("[IMA DAEMON] stable brain started")
 
     while True:
         try:
             events = load_events()
 
-            if len(events) != last_len:
-                last_len = len(events)
+            for e in events:
+                if e["type"] != "QUESTION":
+                    continue
 
-                print("[IMA DAEMON] event update:", last_len)
+                qid = e["data"].get("id")
+                if qid in seen:
+                    continue
 
-                # find new questions
-                for e in events[-5:]:
-                    if e["type"] == "QUESTION":
-                        q = e["data"]["text"]
-                        qid = e["data"].get("id", str(int(time.time())))
+                seen.add(qid)
 
-                        result = ask(q)
+                question = e["data"].get("text", "")
 
-                        emit("ANSWER",
-                             id=qid,
-                             text=str(result["answers"]))
+                result = ask(question)
 
-                git_snapshot()
+                # prevent duplicate ANSWER loops
+                if result:
+                    emit("ANSWER",
+                         id=result["id"],
+                         text=result["text"],
+                         confidence=result["confidence"])
 
+            git_snapshot()
             time.sleep(0.5)
 
         except KeyboardInterrupt:
             print("[IMA DAEMON] stopped")
             break
+        except Exception as e:
+            emit("ERROR", text=str(e))
+            time.sleep(1)
+
 
 if __name__ == "__main__":
     run()
