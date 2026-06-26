@@ -1,171 +1,74 @@
-#!/usr/bin/env python3
-import os, json, time, subprocess, threading
+import time, json, os
 
-# -------------------------
-# PATHS
-# -------------------------
-BASE = ".ima"
-LEDGER = f"{BASE}/ledger.jsonl"
-PID_FILE = f"{BASE}/daemon.pid"
-LOCK_FILE = f"{BASE}/git.lock"
+STATE_DIR = ".ima"
+LEDGER = ".ima/ledger.jsonl"
 
-os.makedirs(BASE, exist_ok=True)
+os.makedirs(STATE_DIR, exist_ok=True)
 
 
-# -------------------------
-# SAFE UTIL
-# -------------------------
-def now():
-    return int(time.time())
-
-
-def write_jsonl(path, obj):
-    with open(path, "a") as f:
-        f.write(json.dumps(obj) + "\n")
-
-
-def read_events():
+def load():
     if not os.path.exists(LEDGER):
         return []
     with open(LEDGER) as f:
-        return [json.loads(l) for l in f if l.strip()]
+        return [json.loads(x) for x in f if x.strip()]
 
 
-# -------------------------
-# EVENT BUS (stable)
-# -------------------------
-def emit(event_type, **data):
-    e = {"ts": now(), "type": event_type, "data": data}
-    write_jsonl(LEDGER, e)
-    return e
+def emit(event):
+    with open(LEDGER, "a") as f:
+        f.write(json.dumps(event) + "\n")
 
 
-# -------------------------
-# CORE ANSWER ENGINE (stable)
-# -------------------------
-def ask(q):
-    qid = str(now())
-
-    emit("QUESTION", id=qid, text=q)
-
-    result = {
-        "id": qid,
-        "text": "תודעה היא מערכת של חוויה, עיבוד מידע וזיכרון מתמשך.",
-        "confidence": 0.9
-    }
-
-    emit("ANSWER", id=qid, text=result["text"])
-    return result
+def dedupe(events, text):
+    return text in [e.get("text") for e in events[-30:] if e.get("type") == "QUESTION"]
 
 
-# -------------------------
-# REDUCER
-# -------------------------
-def reduce(events):
-    return {
-        "questions": sum(1 for e in events if e["type"] == "QUESTION"),
-        "answers": sum(1 for e in events if e["type"] == "ANSWER")
-    }
+def brain(text, events):
+    if dedupe(events, text):
+        return "כבר שאלת את זה. רוצה להמשיך משם?"
+
+    if "היי" in text:
+        return "אני כאן. מה באמת קורה אצלך עכשיו?"
+
+    if "תודעה" in text:
+        return "תודעה היא חוויה מתמשכת של קיום ועיבוד פנימי של המציאות."
+
+    return "אני איתך. תמשיך."
 
 
-# -------------------------
-# GIT CONTROL (FIXED)
-# -------------------------
-_last_git = 0
-GIT_INTERVAL = 10  # seconds throttle
+def ask(text):
+    events = load()
+
+    emit({"ts": time.time(), "type": "QUESTION", "text": text})
+    reply = brain(text, events)
+    emit({"ts": time.time(), "type": "ANSWER", "text": reply})
+
+    return reply
 
 
-def git_snapshot():
-    global _last_git
-
-    if now() - _last_git < GIT_INTERVAL:
-        return "THROTTLED"
-
-    _last_git = now()
-
-    # prevent concurrent git
-    if os.path.exists(LOCK_FILE):
-        return "LOCKED"
-
-    try:
-        open(LOCK_FILE, "w").write("1")
-
-        subprocess.run(["git", "add", "-A"], stdout=subprocess.DEVNULL)
-
-        r = subprocess.run(["git", "diff", "--cached", "--quiet"])
-        if r.returncode == 0:
-            return "NO_CHANGES"
-
-        subprocess.run(
-            ["git", "commit", "-m", f"auto snapshot {now()}"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
-        )
-
-        return "COMMITTED"
-
-    finally:
-        if os.path.exists(LOCK_FILE):
-            os.remove(LOCK_FILE)
+def status():
+    events = load()
+    print("=== IMA STABLE CORE ===")
+    print("EVENTS:", len(events))
 
 
-# -------------------------
-# DAEMON (FIXED: SAFE LOOP)
-# -------------------------
-def daemon(interval=1.5):
+def run_daemon():
+    last = 0
     print("[IMA DAEMON] started")
 
-    last_index = 0
-    queue = []
-
-    events = read_events()
-    last_index = len(events)
-
     while True:
-        try:
-            events = read_events()
-            new_events = events[last_index:]
-            last_index = len(events)
+        events = load()
 
-            # push only new questions
-            for e in new_events:
-                if e["type"] == "QUESTION":
-                    queue.append(e)
+        if len(events) != last:
+            last = len(events)
+            print("[IMA DAEMON] event update:", last)
 
-            # process limited batch (BACKPRESSURE)
-            batch = queue[:3]
-            queue = queue[3:]
+            # מניעת לופי git / snapshot (קריטי!)
+            # אין auto git commit יותר
 
-            for q in batch:
-                res = ask(q["data"]["text"])
-
-            # git is throttled
-            git_snapshot()
-
-            time.sleep(interval)
-
-        except KeyboardInterrupt:
-            print("[IMA DAEMON] stopped")
-            break
+        time.sleep(0.5)
 
 
-# -------------------------
-# STATUS
-# -------------------------
-def status():
-    events = read_events()
-    stats = reduce(events)
-
-    print("=== IMA STABLE KERNEL ===")
-    print("EVENTS:", len(events))
-    print("QUESTIONS:", stats["questions"])
-    print("ANSWERS:", stats["answers"])
-
-
-# -------------------------
-# CLI
-# -------------------------
-def main():
+if __name__ == "__main__":
     import sys
 
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
@@ -173,12 +76,6 @@ def main():
     if cmd == "ask":
         print(ask(" ".join(sys.argv[2:])))
     elif cmd == "daemon":
-        daemon()
-    elif cmd == "status":
-        status()
+        run_daemon()
     else:
         status()
-
-
-if __name__ == "__main__":
-    main()
