@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+CMD=$1
+
+case "$CMD" in
+  status)
+    python3 ima_kernel.py
+    ;;
+  sync)
+    python3 ima_kernel.py >/dev/null 2>&1
+    bash .ima/git_snapshot.sh
+    ;;
+  *)
+    echo "IMA CONTROL"
+    echo "  imactl status"
+    echo "  imactl sync"
+    ;;
+esac
