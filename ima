@@ -1,2 +1,13 @@
 #!/usr/bin/env bash
-python3 ima_system.py "$@"
+
+case "$1" in
+  ask)
+    python3 ima_system.py ask "${@:2}"
+    ;;
+  daemon)
+    python3 ima_daemon.py
+    ;;
+  status)
+    python3 ima_system.py
+    ;;
+esac
