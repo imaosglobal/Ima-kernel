@@ -3,3 +3,37 @@ node_modules/
 *.tmp
 _tmp*
 kernel/projects/ima_core/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# IMA runtime
+.ima/__pycache__/
+.ima/runtime/
+.ima/logs/
+.ima/*.pid
+.ima/*.lock
+.ima/snapshots/
+
+# Runtime files
+*.pid
+*.lock
+nohup.out
+daemon.out
+run.lock
+service.lock
+maintenance.lock
+
+# Build artifacts
+dist/
+build/
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
