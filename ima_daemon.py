@@ -73,6 +73,7 @@ def run():
             break
 
         except Exception as e:
+            emit("KERNEL_ERROR", text=str(e))
             emit("ERROR", text=str(e))
             time.sleep(1)
 
