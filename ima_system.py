@@ -123,3 +123,12 @@ if __name__ == "__main__":
         print(ask(" ".join(sys.argv[2:])))
     else:
         status()
+
+
+def boot_event():
+    emit("KERNEL_BOOT")
+
+
+def ready_event():
+    emit("KERNEL_READY")
+

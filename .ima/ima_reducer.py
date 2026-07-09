@@ -16,6 +16,15 @@ def reduce(events):
         elif t == "FILE_DELETE":
             state["files"].discard(d.get("path"))
 
+        elif t == "KERNEL_BOOT":
+            state["mode"] = "BOOTING"
+
+        elif t == "KERNEL_READY":
+            state["mode"] = "READY"
+
+        elif t == "KERNEL_ERROR":
+            state["mode"] = "ERROR"
+
         elif t == "KERNEL_REBUILD":
             state["mode"] = "REBUILT"
 
