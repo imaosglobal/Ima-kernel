@@ -55,6 +55,44 @@ def load_previous_state():
         return "INIT"
 
 
+def emit_state_change(old, new):
+    if old == new:
+        return
+
+    import time
+
+    event = {
+        "ts": time.time(),
+        "type": "STATE_CHANGE",
+        "data": {
+            "from": old,
+            "to": new
+        }
+    }
+
+    with open(LEDGER, "a") as f:
+        f.write(json.dumps(event) + "\\n")
+
+
+def emit_state_change(old, new):
+    if old == new:
+        return
+
+    import time
+
+    event = {
+        "ts": time.time(),
+        "type": "STATE_CHANGE",
+        "data": {
+            "from": old,
+            "to": new
+        }
+    }
+
+    with open(LEDGER, "a") as f:
+        f.write(json.dumps(event) + "\\n")
+
+
 def build_core():
     events = load_events()
     core = reduce(events)
@@ -65,6 +103,7 @@ def build_core():
 
     if can_transition(old_state, new_state, sm):
         core["state"] = new_state
+        emit_state_change(old_state, new_state)
     else:
         core["state"] = old_state
 
