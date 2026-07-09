@@ -1,0 +1,63 @@
+{
+  "time": 1783626709.3451014,
+  "system": "IMA",
+  "type": "learning_orchestrator_registry",
+  "modules": [
+    {
+      "module": "health_check",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "ima_learning_loop",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "learning_memory_connector",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "knowledge_dedup",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "knowledge_expander",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "improvement_engine",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "evaluation_engine",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "feedback_engine",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "safety_gate",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "system_introspection",
+      "status": "ok",
+      "loaded": true
+    },
+    {
+      "module": "meta_orchestrator",
+      "status": "ok",
+      "loaded": true
+    }
+  ],
+  "active_modules": 11
+}
