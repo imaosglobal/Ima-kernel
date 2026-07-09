@@ -1,9 +1,34 @@
 import time
+import os
+import atexit
+
 from ima_system import load_events, ask, git_snapshot, emit
+
+
+LOCK_FILE = ".ima/daemon.lock"
+
+def acquire_lock():
+    os.makedirs(".ima", exist_ok=True)
+
+    if os.path.exists(LOCK_FILE):
+        print("[IMA DAEMON] already running")
+        raise SystemExit(1)
+
+    with open(LOCK_FILE, "w") as f:
+        f.write(str(os.getpid()))
+
+    atexit.register(release_lock)
+
+
+def release_lock():
+    if os.path.exists(LOCK_FILE):
+        os.remove(LOCK_FILE)
+
 
 seen = set()
 
 def run():
+    acquire_lock()
     print("[IMA DAEMON] stable brain started")
 
     seen_questions = set()
