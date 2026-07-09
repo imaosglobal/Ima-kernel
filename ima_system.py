@@ -70,8 +70,9 @@ def answer(question, events):
 # -------------------------
 # PIPELINE (NO None EVER)
 # -------------------------
-def ask(question):
-    qid = str(int(time.time() * 1000))
+def ask(question, qid=None):
+    if qid is None:
+        qid = str(int(time.time() * 1000))
 
     emit("QUESTION", id=qid, text=question)
 

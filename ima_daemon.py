@@ -6,37 +6,47 @@ seen = set()
 def run():
     print("[IMA DAEMON] stable brain started")
 
+    seen_questions = set()
+    answered = set()
+
     while True:
         try:
             events = load_events()
 
             for e in events:
-                if e["type"] != "QUESTION":
+                if e.get("type") != "QUESTION":
                     continue
 
-                qid = e["data"].get("id")
-                if qid in seen:
+                data = e.get("data", {})
+
+                qid = data.get("id", e.get("ts"))
+
+                if any(
+                    x.get("type") == "ANSWER"
+                    and x.get("data", {}).get("id") == qid
+                    for x in events
+                ):
                     continue
 
-                seen.add(qid)
+                if qid in answered:
+                    continue
 
-                question = e["data"].get("text", "")
+                if qid in seen_questions:
+                    continue
 
-                result = ask(question)
+                seen_questions.add(qid)
 
-                # prevent duplicate ANSWER loops
-                if result:
-                    emit("ANSWER",
-                         id=result["id"],
-                         text=result["text"],
-                         confidence=result["confidence"])
+                question = data.get("text", e.get("text", ""))
 
-            git_snapshot()
+                print("PROCESSING:", qid, question)
+                ask(question, qid=qid)
+
             time.sleep(0.5)
 
         except KeyboardInterrupt:
             print("[IMA DAEMON] stopped")
             break
+
         except Exception as e:
             emit("ERROR", text=str(e))
             time.sleep(1)
