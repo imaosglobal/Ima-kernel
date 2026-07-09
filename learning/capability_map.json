@@ -1,27 +1,74 @@
 {
-  "self_reflection": {
+  "action_engine": {
     "functions": [
-      "load_journal",
-      "save_journal",
-      "record_event",
-      "add_lesson",
-      "suggest_improvement",
-      "reflection_report"
+      "execute_learning_action"
     ]
   },
-  "learning_analyzer": {
+  "adaptive_loop": {
     "functions": [
-      "analyze_learning"
+      "run_adaptive_cycle"
     ]
   },
-  "improvement_engine": {
+  "auto_learning": {
     "functions": [
-      "generate_improvements"
+      "check_learning_trigger"
     ]
   },
-  "self_improvement": {
+  "capability_map": {
     "functions": [
-      "run_self_improvement"
+      "build_capability_map"
+    ]
+  },
+  "decision_engine": {
+    "functions": [
+      "make_learning_decision"
+    ]
+  },
+  "entry_gate": {
+    "functions": [
+      "verify_entry_gate"
+    ]
+  },
+  "evaluation_engine": {
+    "functions": [
+      "evaluate_action",
+      "get_evaluations"
+    ]
+  },
+  "evolution_controller": {
+    "functions": [
+      "snapshot",
+      "compile_check",
+      "evolution_cycle"
+    ]
+  },
+  "feedback_engine": {
+    "functions": [
+      "process_feedback"
+    ]
+  },
+  "feedback_planner": {
+    "functions": [
+      "generate_feedback_improvements"
+    ]
+  },
+  "gap_analyzer": {
+    "functions": [
+      "analyze_gaps"
+    ]
+  },
+  "gate_guard": {
+    "functions": [
+      "sha256",
+      "load_registry",
+      "alert",
+      "verify_gate"
+    ]
+  },
+  "health_check": {
+    "functions": [
+      "check_module",
+      "health_report"
     ]
   },
   "ima_awareness": {
@@ -29,14 +76,40 @@
       "ima_awareness"
     ]
   },
-  "learning_scheduler": {
+  "ima_evolution_cycle": {
     "functions": [
-      "learning_cycle"
+      "run_evolution_cycle"
     ]
   },
-  "auto_learning": {
+  "ima_learning_loop": {
     "functions": [
-      "check_learning_trigger"
+      "run_ima_learning_loop"
+    ]
+  },
+  "improvement_engine": {
+    "functions": [
+      "generate_improvements"
+    ]
+  },
+  "improvement_planner": {
+    "functions": [
+      "classify_risk",
+      "build_improvement_plan"
+    ]
+  },
+  "journal_cleanup": {
+    "functions": [
+      "cleanup_journal"
+    ]
+  },
+  "knowledge_dedup": {
+    "functions": [
+      "remove_duplicates"
+    ]
+  },
+  "knowledge_expander": {
+    "functions": [
+      "expand_knowledge"
     ]
   },
   "knowledge_gaps": {
@@ -47,19 +120,9 @@
       "get_gaps"
     ]
   },
-  "gap_analyzer": {
+  "learning_analyzer": {
     "functions": [
-      "analyze_gaps"
-    ]
-  },
-  "knowledge_expander": {
-    "functions": [
-      "expand_knowledge"
-    ]
-  },
-  "ima_learning_loop": {
-    "functions": [
-      "run_ima_learning_loop"
+      "analyze_learning"
     ]
   },
   "learning_memory": {
@@ -76,62 +139,9 @@
       "update_learning_memory"
     ]
   },
-  "journal_cleanup": {
+  "learning_scheduler": {
     "functions": [
-      "cleanup_journal"
-    ]
-  },
-  "decision_engine": {
-    "functions": [
-      "make_learning_decision"
-    ]
-  },
-  "action_engine": {
-    "functions": [
-      "execute_learning_action"
-    ]
-  },
-  "evaluation_engine": {
-    "functions": [
-      "evaluate_action",
-      "get_evaluations"
-    ]
-  },
-  "feedback_engine": {
-    "functions": [
-      "process_feedback"
-    ]
-  },
-  "adaptive_loop": {
-    "functions": [
-      "run_adaptive_cycle"
-    ]
-  },
-  "self_manager": {
-    "functions": [
-      "manage_learning"
-    ]
-  },
-  "system_introspection": {
-    "functions": [
-      "scan_system",
-      "suggest_improvements"
-    ]
-  },
-  "health_check": {
-    "functions": [
-      "check_module",
-      "health_report"
-    ]
-  },
-  "capability_map": {
-    "functions": [
-      "build_capability_map"
-    ]
-  },
-  "knowledge_dedup": {
-    "functions": [
-      "remove_duplicates"
+      "learning_cycle"
     ]
   },
   "meta_orchestrator": {
@@ -139,10 +149,9 @@
       "run_meta_analysis"
     ]
   },
-  "improvement_planner": {
+  "safe_scheduler": {
     "functions": [
-      "classify_risk",
-      "build_improvement_plan"
+      "run_safe_cycle"
     ]
   },
   "safety_gate": {
@@ -150,14 +159,31 @@
       "check_action"
     ]
   },
-  "feedback_planner": {
+  "self_improvement": {
     "functions": [
-      "generate_feedback_improvements"
+      "run_self_improvement"
     ]
   },
-  "safe_scheduler": {
+  "self_manager": {
     "functions": [
-      "run_safe_cycle"
+      "manage_learning"
+    ]
+  },
+  "self_reflection": {
+    "functions": [
+      "load_journal",
+      "save_journal",
+      "record_event",
+      "add_lesson",
+      "suggest_improvement",
+      "reflection_report"
+    ]
+  },
+  "single_gate": {
+    "functions": [
+      "hash_file",
+      "create_or_update_gate",
+      "verify_gate"
     ]
   },
   "system_improvement_memory": {
@@ -166,36 +192,10 @@
       "summarize_improvements"
     ]
   },
-  "ima_evolution_cycle": {
+  "system_introspection": {
     "functions": [
-      "run_evolution_cycle"
-    ]
-  },
-  "evolution_controller": {
-    "functions": [
-      "snapshot",
-      "compile_check",
-      "evolution_cycle"
-    ]
-  },
-  "entry_gate": {
-    "functions": [
-      "verify_entry_gate"
-    ]
-  },
-  "gate_guard": {
-    "functions": [
-      "sha256",
-      "load_registry",
-      "alert",
-      "verify_gate"
-    ]
-  },
-  "single_gate": {
-    "functions": [
-      "hash_file",
-      "create_or_update_gate",
-      "verify_gate"
+      "scan_system",
+      "suggest_improvements"
     ]
   }
 }
