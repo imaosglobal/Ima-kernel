@@ -22,10 +22,29 @@ def load_state_machine():
         return {"states": {}}
 
 
+def resolve_state(core, sm):
+    states = sm.get("states", {})
+
+    files = core.get("files", [])
+
+    if not files:
+        return "INIT"
+
+    current = "INIT"
+
+    if len(files) >= 2:
+        current = "INDEXED"
+
+    if "graph" in core:
+        current = "AWARE"
+
+    return current
+
+
 def build_core():
     events = load_events()
     core = reduce(events)
-    core["state"] = "INIT"
+    core["state"] = resolve_state(core, load_state_machine())
 
     with open(".ima/core_map.json", "w") as f:
         json.dump(core, f, indent=2)
