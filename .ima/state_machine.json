@@ -1,0 +1,16 @@
+{
+  "states": {
+    "INIT": {
+      "next": ["INDEXED"]
+    },
+    "INDEXED": {
+      "next": ["AWARE"]
+    },
+    "AWARE": {
+      "next": ["ACTIVE"]
+    },
+    "ACTIVE": {
+      "next": []
+    }
+  }
+}
