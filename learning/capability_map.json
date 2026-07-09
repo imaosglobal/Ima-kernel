@@ -170,5 +170,32 @@
     "functions": [
       "run_evolution_cycle"
     ]
+  },
+  "evolution_controller": {
+    "functions": [
+      "snapshot",
+      "compile_check",
+      "evolution_cycle"
+    ]
+  },
+  "entry_gate": {
+    "functions": [
+      "verify_entry_gate"
+    ]
+  },
+  "gate_guard": {
+    "functions": [
+      "sha256",
+      "load_registry",
+      "alert",
+      "verify_gate"
+    ]
+  },
+  "single_gate": {
+    "functions": [
+      "hash_file",
+      "create_or_update_gate",
+      "verify_gate"
+    ]
   }
 }
