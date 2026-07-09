@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>IMA</title>
+<style>
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:sans-serif;
+text-align:center;
+padding-top:50px;
+}
+
+.card{
+width:80%;
+margin:auto;
+padding:30px;
+border-radius:20px;
+background:#151515;
+}
+
+button{
+padding:15px;
+font-size:18px;
+border-radius:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>IMA</h1>
+
+<p>Autonomous Intelligence System</p>
+
+<button onclick="status()">
+STATUS
+</button>
+
+<pre id="out"></pre>
+
+</div>
+
+<script>
+
+async function status(){
+
+const r=
+await fetch('/status');
+
+const t=
+await r.text();
+
+document.getElementById(
+'out'
+).innerText=t;
+
+}
+
+</script>
+
+</body>
+</html>
