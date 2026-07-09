@@ -88,5 +88,4 @@ def verify_gate():
 
 
 if __name__=="__main__":
-    create_or_update_gate()
     print("STATUS:",verify_gate())
