@@ -4,6 +4,8 @@ sys.path.insert(0, '.ima')
 from ima_reducer import reduce
 
 LEDGER = ".ima/ledger.jsonl"
+STATE_MACHINE = ".ima/state_machine.json"
+
 
 def load_events():
     try:
@@ -12,9 +14,18 @@ def load_events():
     except:
         return []
 
+def load_state_machine():
+    try:
+        with open(STATE_MACHINE) as f:
+            return json.load(f)
+    except:
+        return {"states": {}}
+
+
 def build_core():
     events = load_events()
     core = reduce(events)
+    core["state"] = "INIT"
 
     with open(".ima/core_map.json", "w") as f:
         json.dump(core, f, indent=2)
