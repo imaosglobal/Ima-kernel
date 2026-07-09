@@ -39,3 +39,15 @@ build/
 Thumbs.db
 .ima/archive/
 .ima/ledger.jsonl
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Runtime
+*.pid
+*.lock
+.ima/*.pid
+.ima/*.lock
+.ima_git.lock
+.mother_v4.pid
