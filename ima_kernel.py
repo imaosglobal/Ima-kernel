@@ -22,6 +22,12 @@ def load_state_machine():
         return {"states": {}}
 
 
+def can_transition(old, new, sm):
+    states = sm.get("states", {})
+    allowed = states.get(old, {}).get("next", [])
+    return new in allowed
+
+
 def resolve_state(core, sm):
     states = sm.get("states", {})
 
@@ -41,10 +47,26 @@ def resolve_state(core, sm):
     return current
 
 
+def load_previous_state():
+    try:
+        with open(".ima/core_map.json") as f:
+            return json.load(f).get("state", "INIT")
+    except:
+        return "INIT"
+
+
 def build_core():
     events = load_events()
     core = reduce(events)
-    core["state"] = resolve_state(core, load_state_machine())
+
+    sm = load_state_machine()
+    old_state = load_previous_state()
+    new_state = resolve_state(core, sm)
+
+    if can_transition(old_state, new_state, sm):
+        core["state"] = new_state
+    else:
+        core["state"] = old_state
 
     with open(".ima/core_map.json", "w") as f:
         json.dump(core, f, indent=2)
