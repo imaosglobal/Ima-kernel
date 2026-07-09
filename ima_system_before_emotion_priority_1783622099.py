@@ -171,21 +171,6 @@ def _answer(question, events):
             "confidence": 0.85
         }
 
-
-    if any(x in question for x in [
-        "מה השתנה",
-        "איזה שיפורים",
-        "מה שיפרת",
-        "שיפורי מערכת"
-    ]):
-        from learning.system_improvement_memory import summarize_improvements
-
-        return {
-            "text": "אני IMA. אלו השיפורים האחרונים שנרשמו במערכת:\n\n" + summarize_improvements(),
-            "confidence": 0.9
-        }
-
-
     return {
         "text": "אני IMA. אני כאן כדי להקשיב, להבין ולעזור לך דרך השיחה שלנו.",
         "confidence": 0.7
@@ -745,6 +730,8 @@ def weather_engine(city="Netanya"):
 
 def ima_router(question):
 
+    intent = detect_intent(question)
+
     if any(x in question for x in [
         "מי את",
         "מי אתה",
@@ -753,19 +740,16 @@ def ima_router(question):
     ]):
         return "identity"
 
-    # Emotion has priority over information keywords
-    emotion = ima_emotion_layer(question, [])
-
-    if emotion:
-        return "emotion"
-
-    intent = detect_intent(question)
-
     if intent == "technical_request":
         return "technical"
 
     if intent == "information_request":
         return "information"
+
+    emotion = ima_emotion_layer(question, [])
+
+    if emotion:
+        return "emotion"
 
     return "conversation"
 

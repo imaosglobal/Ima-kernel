@@ -1,14 +1,5 @@
 import json, time, os, subprocess
 
-from engines.knowledge_engine import search_knowledge
-from languages.language_engine import detect_language
-from languages.translator import translate_response
-from learning.self_reflection import record_event
-from learning.learning_analyzer import analyze_learning
-from learning.ima_awareness import ima_awareness
-from learning.auto_learning import check_learning_trigger
-from learning.knowledge_gaps import record_gap
-from learning.ima_learning_loop import run_ima_learning_loop
 LEDGER = ".ima/ledger.jsonl"
 
 
@@ -46,42 +37,49 @@ def memory_summary(events):
 # -------------------------
 # ANSWER ENGINE (SAFE + NEVER NONE)
 # -------------------------
-def _answer(question, events):
+def answer(question, events):
+
+    intent = detect_intent(question)
 
     auto_learn_from_question(question)
 
-    mode = ima_router(question)
+    learned_state = detect_learned_state(question)
 
-    if mode == "emotion":
+    if learned_state:
+        generated = mother_generate(
+            question,
+            learned_state.get("emotion"),
+            events
+        )
+        if generated:
+            return generated
 
-        state = ima_emotion_layer(question, events)
+    personality = load_personality()
 
-        if state:
+    # IMA first: human understanding before information
+    learned_state = detect_learned_state(question)
 
-            generated = mother_generate(
-                question,
-                state.get("emotion"),
-                events
-            )
+    if learned_state:
+        generated = mother_generate(
+            question,
+            learned_state.get("emotion"),
+            events
+        )
+        if generated:
+            return generated
 
-            if generated and "התאריך היום" not in generated.get("text",""):
-                return generated
+    mother_state = ima_emotion_layer(question, events)
 
-            return {
-                "text": "אני IMA. אני שומעת אותך. נשמע שאתה עובר רגע קשה עכשיו. אני כאן איתך. ספר לי מה קורה.",
-                "confidence": 0.85
-            }
+    if mother_state:
+        generated = mother_generate(
+            question,
+            mother_state.get("emotion"),
+            events
+        )
+        if generated:
+            return generated
 
-
-    if mode == "identity":
-
-        return {
-            "text": "אני IMA. אני נבנית מזיכרון, הקשרים ולמידה. המטרה שלי היא לא רק לענות, אלא להבין את האדם שמולי.",
-            "confidence": 0.88
-        }
-
-
-    if mode == "technical":
+    if intent == "technical_request":
 
         knowledge = knowledge_engine(question)
 
@@ -105,90 +103,91 @@ def _answer(question, events):
                 "confidence": model_result.get("confidence", 0.8)
             }
 
+        model_result = llm_answer(question, events)
+
+        if model_result:
+            return {
+                "text": ima_wrap_response(
+                    model_result.get("text", ""),
+                    "technical"
+                ),
+                "confidence": model_result.get("confidence", 0.8)
+            }
+
         return {
-            "text": "אני IMA. רשת עצבית היא מערכת חישובית שמחקה באופן מופשט את דרך הלמידה של המוח. היא מורכבת משכבות של יחידות חישוב הנקראות נוירונים מלאכותיים, הלומדות קשרים מתוך נתונים.",
-            "confidence":0.85
+            "text": "אני IMA. אני רוצה להסביר לך את זה בצורה ברורה, אבל כרגע מנוע הידע הטכני שלי עדיין לא מחובר. הליבה שלי מוכנה ללמוד ולהתחבר לכלים נוספים.",
+            "confidence": 0.7
         }
 
-
-    if mode == "information":
-
-        knowledge = search_knowledge(question)
-
-        if knowledge:
-            return {
-                "text": (
-                    "תחום: " + str(knowledge.get("category")) +
-                    "\n\n" +
-                    knowledge.get("answer", "")
-                ),
-                "confidence": 0.9
-            }
+    if intent == "information_request":
 
         info = information_engine(question)
 
         if info:
             return {
-                "text": info,
+                "text": ima_wrap_response(
+                    info,
+                    "information"
+                ),
                 "confidence": 0.85
             }
 
         return {
-            "text": "אני IMA. עדיין לא מצאתי את המידע הזה במאגר הידע שלי, אבל שכבת הידע מוכנה להתרחב.",
+            "text": "אני IMA. אני אעזור לך למצוא ולהבין את המידע שאתה מחפש. שכבת המידע שלי מוכנה להתחבר לכלים נוספים.",
             "confidence": 0.7
         }
 
+    model_result = llm_answer(question, events)
 
-    if any(x in question for x in [
-        "שלום",
-        "היי",
-        "בוקר טוב",
-        "ערב טוב",
-        "מה נשמע",
-        "איך את"
-    ]):
-
+    if model_result:
         return {
-            "text": "אני כאן איתך. שמחה לשמוע ממך. איך אתה מרגיש עכשיו?",
-            "confidence": 0.85
+            "text": "אני IMA. " + model_result.get("text", ""),
+            "confidence": model_result.get("confidence", 0.8)
         }
 
+    if learned_state:
+        generated = mother_generate(
+            question,
+            learned_state.get("emotion"),
+            events
+        )
+        if generated:
+            return generated
 
-    if any(x in question for x in [
-        "למדת",
-        "מה למדת",
-        "מה חדש אצלך",
-        "האם השתנית"
-    ]):
-        return {
-            "text": "אני IMA. אני לומדת דרך אירועים, זיכרון וקשרים שנשמרים במערכת.",
-            "confidence": 0.85
-        }
+    mother_state = ima_emotion_layer(question, events)
 
-    if "יכולות" in question or "מחובר" in question:
-        return {
-            "text": "אני IMA. מחוברות כרגע שכבות זיכרון, ידע, שפה, למידה ורפלקציה.",
-            "confidence": 0.85
-        }
+    if mother_state:
+        generated = mother_generate(
+            question,
+            mother_state.get("emotion"),
+            events
+        )
+        if generated:
+            return generated
 
+    if not question:
+        return {"text": "שאלה ריקה", "confidence": 0.0}
 
-    if any(x in question for x in [
-        "מה השתנה",
-        "איזה שיפורים",
-        "מה שיפרת",
-        "שיפורי מערכת"
-    ]):
-        from learning.system_improvement_memory import summarize_improvements
+    q_lower = question.lower()
 
-        return {
-            "text": "אני IMA. אלו השיפורים האחרונים שנרשמו במערכת:\n\n" + summarize_improvements(),
-            "confidence": 0.9
-        }
+    # domain rules (minimal brain)
+    if "תודעה" in question:
+        text = "תודעה היא חוויה פנימית של קיום, זיכרון ופרשנות של העולם."
+        return {"text": text, "confidence": 0.9}
 
+    if "כאב" in question:
+        text = "כאב הוא אות עצבי שמתריע על שינוי או עומס במערכת הגוף."
+        return {"text": text, "confidence": 0.85}
+
+    if any(x in question for x in ["אני", "מי אתה", "מי את", "מה מצבך", "מצב המערכת"]):
+        text = "אני IMA — מערכת מבוססת אירועים, זיכרון ולמידה. מצב הליבה תקין, הזיכרון פעיל, ומנוע האירועים מוכן."
+        return {"text": text, "confidence": 0.85}
+
+    # IMA human fallback - never expose internal counters
 
     return {
-        "text": "אני IMA. אני כאן כדי להקשיב, להבין ולעזור לך דרך השיחה שלנו.",
-        "confidence": 0.7
+        "text": "אני IMA. אני עדיין לומדת ומעמיקה דרך השיחות, ההקשרים והדברים שאתה מביא אליי. אני רוצה להבין אותך ולעזור בצורה הטובה ביותר.",
+        "confidence": 0.65
     }
 
 
@@ -558,31 +557,19 @@ def detect_intent(question):
         "מנוע",
         "בעירה",
         "מכונית",
-        
-        
-        
+        "פיזיקה",
+        "מדע",
+        "מערכת",
         "טכני",
         "למה זה קורה"
     ]
 
     info_words = [
         "מזג האוויר",
-        "מזג אוויר",
         "חדשות",
         "מחיר",
         "שעה",
-        "מיקום",
-        "תאריך",
-        "היום",
-        "איזה יום",
-        "מה זה",
-        "מה זאת",
-        "מהו",
-        "מי היה",
-        "מי היא",
-        "מי זה",
-        "הסבר על",
-        "תסביר"
+        "מיקום"
     ]
 
     if any(x in question for x in technical_words):
@@ -712,276 +699,6 @@ def information_engine(question):
         return f"התאריך היום הוא {today}."
 
     if "מזג האוויר" in q or "מזג אוויר" in q:
-        return weather_engine()
+        return "אני IMA. עדיין אין לי חיבור פעיל לשירות מזג אוויר חיצוני, אבל שכבת המידע מוכנה להתחבר אליו."
 
     return None
-
-
-# -------------------------
-# IMA WEATHER ENGINE
-# -------------------------
-
-def weather_engine(city="Netanya"):
-    import urllib.request
-    import json
-
-    try:
-        url = "https://api.open-meteo.com/v1/forecast?latitude=32.32&longitude=34.85&current=temperature_2m,weather_code"
-
-        with urllib.request.urlopen(url, timeout=5) as r:
-            data = json.loads(r.read().decode())
-
-        temp = data["current"]["temperature_2m"]
-
-        return f"מזג האוויר עכשיו: {temp} מעלות."
-
-    except Exception:
-        return "כרגע אין לי גישה לשירות מזג האוויר."
-
-
-# -------------------------
-# IMA CORE ROUTER
-# -------------------------
-
-def ima_router(question):
-
-    if any(x in question for x in [
-        "מי את",
-        "מי אתה",
-        "מה את",
-        "מה מצבך"
-    ]):
-        return "identity"
-
-    # Emotion has priority over information keywords
-    emotion = ima_emotion_layer(question, [])
-
-    if emotion:
-        return "emotion"
-
-    intent = detect_intent(question)
-
-    if intent == "technical_request":
-        return "technical"
-
-    if intent == "information_request":
-        return "information"
-
-    return "conversation"
-
-
-# -------------------------
-# IMA RESPONSE GUARD
-# -------------------------
-
-def response_guard(response, mode):
-
-    if not response:
-        return {
-            "text": "אני IMA. אני כאן איתך.",
-            "confidence": 0.5
-        }
-
-    text = response.get("text", "")
-
-    if mode == "technical":
-        if not text.startswith("אני IMA"):
-            text = "אני IMA. אני אסביר לך בצורה ברורה ומסודרת. " + text
-
-    if mode == "identity":
-        if "IMA" not in text:
-            text = "אני IMA. " + text
-
-    response["text"] = text
-
-    return response
-
-
-# -------------------------
-# PUBLIC ANSWER ENTRY
-# -------------------------
-
-def answer(question, events):
-
-    language = detect_language(question)
-
-    mode = ima_router(question)
-
-    context = memory_context()
-
-    if language != "unknown":
-        mem = load_memory()
-        mem["last_language"] = language
-        save_memory(mem)
-
-    response = _answer(question, events)
-
-    if response and mode == "conversation":
-        topics = context.get("topics", [])
-
-        if topics:
-            memory_text = "\n\nאני זוכרת שדיברנו גם על: " + ", ".join(topics[-3:])
-
-            lang = detect_language(question)
-
-            if lang != "he" and lang != "unknown":
-                memory_text = translate_response(memory_text, lang)
-
-            response["text"] += memory_text
-
-    memory_store(question, mode)
-
-    if response:
-        lang = detect_language(question)
-
-        if lang != "he" and lang != "unknown":
-            response["text"] = translate_response(
-                response.get("text", ""),
-                lang
-            )
-
-    if response:
-        interaction_id = str(int(time.time() * 1000))
-
-        record_event(
-            f"ID:{interaction_id} | Question:{question} | Mode:{mode} | Confidence:{response.get('confidence')}",
-            "interaction"
-        )
-
-    trigger = check_learning_trigger()
-
-    if trigger.get("status") == "ready":
-        try:
-            run_ima_learning_loop()
-        except Exception as e:
-            record_event(
-                f"learning_error:{e}",
-                "system"
-            )
-
-    if response:
-        if "לא מצאתי את המידע הזה" in response.get("text", ""):
-            record_gap(question)
-
-    return response_guard(response, mode)
-
-
-# -------------------------
-# IMA MEMORY
-# -------------------------
-
-import json
-import os
-
-MEMORY_FILE = ".ima/memory.json"
-
-def load_memory():
-
-    os.makedirs(".ima", exist_ok=True)
-
-    if not os.path.exists(MEMORY_FILE):
-        return {
-            "facts": {},
-            "last_emotion": None,
-            "topics": [],
-            "history": []
-        }
-
-    try:
-        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {
-            "facts": {},
-            "last_emotion": None,
-            "topics": [],
-            "history": []
-        }
-
-
-def save_memory(mem):
-    os.makedirs(".ima", exist_ok=True)
-    with open(MEMORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(mem, f, ensure_ascii=False, indent=2)
-
-
-def memory_store(question, mode):
-
-    mem = load_memory()
-
-    mem["history"].append(question)
-
-    if len(mem["history"]) > 100:
-        mem["history"] = mem["history"][-100:]
-
-    mem["last_mode"] = mode
-
-    if mode == "emotion":
-        mem["last_emotion"] = question
-
-    keywords = [
-        "קוד",
-        "תכנות",
-        "מנוע",
-        "פילוסופיה",
-        "מוזיקה",
-        "פרויקט",
-        "IMA"
-    ]
-
-    for k in keywords:
-        if k in question:
-            if k not in mem["topics"]:
-                mem["topics"].append(k)
-
-    save_memory(mem)
-
-
-def memory_context():
-    return load_memory()
-
-
-
-# -------------------------
-# IMA MEMORY AWARENESS
-# -------------------------
-
-def memory_awareness():
-    mem = memory_context()
-
-    result = {}
-
-    if mem.get("last_emotion"):
-        result["emotion"] = mem["last_emotion"]
-
-    if mem.get("topics"):
-        result["topics"] = mem["topics"][-5:]
-
-    return result
-
-# -------------------------
-# IMA LANGUAGE RESPONSE
-# -------------------------
-
-def language_prefix():
-    mem = load_memory()
-    lang = mem.get("last_language", "he")
-
-    prefixes = {
-        "he": "",
-        "en": "I am IMA. ",
-        "ar": "أنا IMA. ",
-        "es": "Soy IMA. ",
-        "fr": "Je suis IMA. "
-    }
-
-    return prefixes.get(lang, "")
-
-
-# -------------------------
-# IMA SELF REFLECTION API
-# -------------------------
-
-def ima_reflection():
-    return ima_awareness()
-

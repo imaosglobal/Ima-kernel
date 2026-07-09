@@ -171,21 +171,6 @@ def _answer(question, events):
             "confidence": 0.85
         }
 
-
-    if any(x in question for x in [
-        "מה השתנה",
-        "איזה שיפורים",
-        "מה שיפרת",
-        "שיפורי מערכת"
-    ]):
-        from learning.system_improvement_memory import summarize_improvements
-
-        return {
-            "text": "אני IMA. אלו השיפורים האחרונים שנרשמו במערכת:\n\n" + summarize_improvements(),
-            "confidence": 0.9
-        }
-
-
     return {
         "text": "אני IMA. אני כאן כדי להקשיב, להבין ולעזור לך דרך השיחה שלנו.",
         "confidence": 0.7

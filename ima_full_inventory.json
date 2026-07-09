@@ -1,0 +1,2013 @@
+{
+  "files": [
+    {
+      "path": "nohup.out",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".gitignore",
+      "size": 803,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_autofix_build.sh",
+      "size": 1616,
+      "type": "shell"
+    },
+    {
+      "path": "project_map.txt",
+      "size": 21282,
+      "type": "unknown"
+    },
+    {
+      "path": "project_size.txt",
+      "size": 383,
+      "type": "unknown"
+    },
+    {
+      "path": "ima",
+      "size": 263,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_bootstrap.sh",
+      "size": 2608,
+      "type": "shell"
+    },
+    {
+      "path": ".ima_ledger.jsonl",
+      "size": 1819,
+      "type": "unknown"
+    },
+    {
+      "path": "ima.cli.bak",
+      "size": 303,
+      "type": "unknown"
+    },
+    {
+      "path": "ima.py",
+      "size": 252,
+      "type": "python"
+    },
+    {
+      "path": "ima_controller.sh",
+      "size": 2023,
+      "type": "shell"
+    },
+    {
+      "path": "imactl",
+      "size": 266,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima_mom_memory.json",
+      "size": 288,
+      "type": "json"
+    },
+    {
+      "path": "ima_app.py",
+      "size": 3667,
+      "type": "python"
+    },
+    {
+      "path": "ima_brain.py",
+      "size": 1407,
+      "type": "python"
+    },
+    {
+      "path": "ima_chat.py",
+      "size": 1832,
+      "type": "python"
+    },
+    {
+      "path": "ima_daemon.py",
+      "size": 1752,
+      "type": "python"
+    },
+    {
+      "path": "ima_global.py",
+      "size": 2144,
+      "type": "python"
+    },
+    {
+      "path": "ima_kernel.py",
+      "size": 2357,
+      "type": "python"
+    },
+    {
+      "path": "ima_mom.py",
+      "size": 1519,
+      "type": "python"
+    },
+    {
+      "path": "ima_qge_v1.py",
+      "size": 2662,
+      "type": "python"
+    },
+    {
+      "path": "ima_system.py",
+      "size": 22366,
+      "type": "python"
+    },
+    {
+      "path": "ima_unified_bootstrap.sh",
+      "size": 2499,
+      "type": "shell"
+    },
+    {
+      "path": "fix_daemon.sh",
+      "size": 1571,
+      "type": "shell"
+    },
+    {
+      "path": "check_ima.sh",
+      "size": 510,
+      "type": "shell"
+    },
+    {
+      "path": "add_daemon_lock.sh",
+      "size": 1226,
+      "type": "shell"
+    },
+    {
+      "path": "migrate_question_ids.py",
+      "size": 504,
+      "type": "python"
+    },
+    {
+      "path": "patch_state_machine.sh",
+      "size": 1397,
+      "type": "shell"
+    },
+    {
+      "path": "patch_daemon_lifecycle.sh",
+      "size": 1416,
+      "type": "shell"
+    },
+    {
+      "path": "fix_ima_runtime.sh",
+      "size": 1317,
+      "type": "shell"
+    },
+    {
+      "path": "ima_final_repair.sh",
+      "size": 1082,
+      "type": "shell"
+    },
+    {
+      "path": "ima_diagnostic.sh",
+      "size": 497,
+      "type": "shell"
+    },
+    {
+      "path": "patch_ima_personality.py",
+      "size": 1380,
+      "type": "python"
+    },
+    {
+      "path": "patch_llm_layer.py",
+      "size": 1679,
+      "type": "python"
+    },
+    {
+      "path": "ima_system.stable.py",
+      "size": 5955,
+      "type": "python"
+    },
+    {
+      "path": "patch_mother_layer.py",
+      "size": 1901,
+      "type": "python"
+    },
+    {
+      "path": "ima_system.mother.stable.py",
+      "size": 7238,
+      "type": "python"
+    },
+    {
+      "path": "patch_emotion_state.py",
+      "size": 1315,
+      "type": "python"
+    },
+    {
+      "path": "backup_ima_system_before_cleanup.py",
+      "size": 8563,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_dynamic_mother.py",
+      "size": 7575,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_state_bridge.py",
+      "size": 8787,
+      "type": "python"
+    },
+    {
+      "path": "patch_autolearn.py",
+      "size": 778,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_learning_engine.py",
+      "size": 10019,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_mother_priority.py",
+      "size": 10275,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_intent_layer.py",
+      "size": 10922,
+      "type": "python"
+    },
+    {
+      "path": "patch_intent_layer.py",
+      "size": 857,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_state_priority.py",
+      "size": 13895,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_router.py",
+      "size": 13896,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_mother_wrapper.py",
+      "size": 13896,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_identity_wrapper.py",
+      "size": 14227,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_wrapper_connect.py",
+      "size": 14742,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_wrapper_fix2.py",
+      "size": 14742,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_capability_layer.py",
+      "size": 14756,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_knowledge_connect.py",
+      "size": 16769,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_fallback_cleanup.py",
+      "size": 17035,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_info_style.py",
+      "size": 18133,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_information_engine.py",
+      "size": 17124,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_information_connect.py",
+      "size": 17859,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_router_refactor.py",
+      "size": 18996,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_answer_router.py",
+      "size": 19549,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_final_pipeline.py",
+      "size": 19549,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_pipeline_clean.py",
+      "size": 19549,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_guard.py",
+      "size": 16550,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_memory_layer.py",
+      "size": 17397,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_memory_intelligence.py",
+      "size": 18506,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_memory_recall.py",
+      "size": 18877,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_memory_awareness.py",
+      "size": 19125,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_external_knowledge_connect.py",
+      "size": 19448,
+      "type": "python"
+    },
+    {
+      "path": "backup_knowledge_engine_before_upgrade.py",
+      "size": 903,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_knowledge_router.py",
+      "size": 19501,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_intent_upgrade.py",
+      "size": 19501,
+      "type": "python"
+    },
+    {
+      "path": "backup_knowledge_engine_before_index.py",
+      "size": 702,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_knowledge_context.py",
+      "size": 20036,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_language_connect.py",
+      "size": 20191,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_language_memory.py",
+      "size": 20287,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_language_save_fix.py",
+      "size": 20362,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_language_response.py",
+      "size": 20411,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_language_output_connect.py",
+      "size": 20775,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_translator_connect.py",
+      "size": 20887,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_memory_translate.py",
+      "size": 21062,
+      "type": "python"
+    },
+    {
+      "path": "backup_translator_before_concepts.py",
+      "size": 1411,
+      "type": "python"
+    },
+    {
+      "path": "backup_translator_fix_error.py",
+      "size": 1998,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_self_reflection_connect.py",
+      "size": 21488,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_after_learning.tar.gz",
+      "size": 12173,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_interaction_id.py",
+      "size": 21659,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_remove_duplicate_event.py",
+      "size": 21733,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_reflection_api.py",
+      "size": 21562,
+      "type": "python"
+    },
+    {
+      "path": "backup_self_improvement.py",
+      "size": 334,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_awareness_connect.py",
+      "size": 21756,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_auto_learning_connect.py",
+      "size": 21802,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_knowledge_gaps_connect.py",
+      "size": 21890,
+      "type": "python"
+    },
+    {
+      "path": "backup_learning_scheduler_before_gap.py",
+      "size": 355,
+      "type": "python"
+    },
+    {
+      "path": "backup_ima_learning_loop_before_decision.py",
+      "size": 568,
+      "type": "python"
+    },
+    {
+      "path": "backup_decision_engine_before_action.py",
+      "size": 358,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_action_connect.py",
+      "size": 482,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_adaptive_connect.py",
+      "size": 748,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_autonomous_learning_v1.tar.gz",
+      "size": 19194,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_self_manager.py",
+      "size": 989,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_learning_orchestrator.py",
+      "size": 22069,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_meta_orchestrator_v1.tar.gz",
+      "size": 25648,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_improvement_planner.py",
+      "size": 608,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_improvement_planner_v1.tar.gz",
+      "size": 26642,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_decision_planner_connect.py",
+      "size": 807,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_safety_gate.py",
+      "size": 409,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_action_safety_v1.tar.gz",
+      "size": 27577,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_checkpoint_evaluation_loop_v1.tar.gz",
+      "size": 27701,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_feedback_connect.py",
+      "size": 1009,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_closed_feedback_loop_v1.tar.gz",
+      "size": 28516,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_closed_loop_connect.py",
+      "size": 1100,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_before_feedback_dedup_v1.tar.gz",
+      "size": 28960,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_checkpoint_feedback_dedup_v1.tar.gz",
+      "size": 29202,
+      "type": "unknown"
+    },
+    {
+      "path": "system_tree_analyzer.py",
+      "size": 2063,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_learning_orchestrator_v1.tar.gz",
+      "size": 20531,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_meta_connect.py",
+      "size": 1100,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_meta_learning_loop_v1.tar.gz",
+      "size": 25768,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_checkpoint_decision_engine_v1.tar.gz",
+      "size": 26874,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_action_engine_upgrade.py",
+      "size": 455,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_evaluation_connect.py",
+      "size": 924,
+      "type": "python"
+    },
+    {
+      "path": "backup_before_feedback_planner.py",
+      "size": 583,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_feedback_planner_v1.tar.gz",
+      "size": 28098,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_before_feedback_dedup.py",
+      "size": 605,
+      "type": "python"
+    },
+    {
+      "path": "ima_checkpoint_safe_scheduler_v1.tar.gz",
+      "size": 30465,
+      "type": "unknown"
+    },
+    {
+      "path": "ima_system_map.json",
+      "size": 26154,
+      "type": "json"
+    },
+    {
+      "path": "ima_full_inventory.py",
+      "size": 2190,
+      "type": "python"
+    },
+    {
+      "path": "ima_full_inventory.json",
+      "size": 47988,
+      "type": "json"
+    },
+    {
+      "path": "android/settings.gradle",
+      "size": 15,
+      "type": "android_build"
+    },
+    {
+      "path": "android/build.gradle",
+      "size": 245,
+      "type": "android_build"
+    },
+    {
+      "path": "android/build_all.sh",
+      "size": 521,
+      "type": "shell"
+    },
+    {
+      "path": "android/local.properties",
+      "size": 53,
+      "type": "unknown"
+    },
+    {
+      "path": "android/gradlew",
+      "size": 8654,
+      "type": "unknown"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "size": 2846,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gitignore",
+      "size": 140,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gitattributes",
+      "size": 278,
+      "type": "unknown"
+    },
+    {
+      "path": "android/gradle.properties",
+      "size": 199,
+      "type": "unknown"
+    },
+    {
+      "path": "android/ima_release.sh",
+      "size": 558,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_bridge_build.sh",
+      "size": 2044,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_full_pipeline.sh",
+      "size": 780,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_guard_pipeline.sh",
+      "size": 1073,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_bridge_v1.sh",
+      "size": 814,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_verify.sh",
+      "size": 248,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_final_install.sh",
+      "size": 665,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_safe_install.sh",
+      "size": 595,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_full_auto.sh",
+      "size": 1159,
+      "type": "shell"
+    },
+    {
+      "path": "android/ima_termux_open_install.sh",
+      "size": 689,
+      "type": "shell"
+    },
+    {
+      "path": "archive_logs/nohup.old.out",
+      "size": 8192,
+      "type": "unknown"
+    },
+    {
+      "path": "archive_logs/nohup.backup.1783592182.out",
+      "size": 51,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/git_snapshot.sh",
+      "size": 210,
+      "type": "shell"
+    },
+    {
+      "path": ".ima/daemon.lock",
+      "size": 5,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/state_machine.json",
+      "size": 203,
+      "type": "json"
+    },
+    {
+      "path": ".ima/daemon.log",
+      "size": 29,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/architecture_report.md",
+      "size": 551,
+      "type": "documentation"
+    },
+    {
+      "path": ".ima/baseline.json",
+      "size": 134,
+      "type": "json"
+    },
+    {
+      "path": ".ima/broken_files.txt",
+      "size": 63241,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/clean_files.txt",
+      "size": 3948161,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/dupes.txt",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/edges.csv",
+      "size": 5843,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/fast_report.md",
+      "size": 1216,
+      "type": "documentation"
+    },
+    {
+      "path": ".ima/ollama.log",
+      "size": 15528,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/ledger.backup.jsonl",
+      "size": 6302010,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/personality.json",
+      "size": 449,
+      "type": "json"
+    },
+    {
+      "path": ".ima/voice.json",
+      "size": 306,
+      "type": "json"
+    },
+    {
+      "path": ".ima/rebuild_index.py",
+      "size": 859,
+      "type": "python"
+    },
+    {
+      "path": ".ima/memory_log.py",
+      "size": 351,
+      "type": "python"
+    },
+    {
+      "path": ".ima/index.json",
+      "size": 21365,
+      "type": "json"
+    },
+    {
+      "path": ".ima/learning_report.md",
+      "size": 15471,
+      "type": "documentation"
+    },
+    {
+      "path": ".ima/live_index.json",
+      "size": 55941,
+      "type": "json"
+    },
+    {
+      "path": ".ima/ledger.old.jsonl",
+      "size": 6302010,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/reduction_plan.md",
+      "size": 922,
+      "type": "documentation"
+    },
+    {
+      "path": ".ima/ledger.jsonl",
+      "size": 4025683,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/state.json",
+      "size": 24,
+      "type": "json"
+    },
+    {
+      "path": ".ima/build_graph.py",
+      "size": 1355,
+      "type": "python"
+    },
+    {
+      "path": ".ima/global_index.broken.json",
+      "size": 54328,
+      "type": "json"
+    },
+    {
+      "path": ".ima/stable_baseline.json",
+      "size": 107,
+      "type": "json"
+    },
+    {
+      "path": ".ima/tree.txt",
+      "size": 561406,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/graph.json",
+      "size": 469693,
+      "type": "json"
+    },
+    {
+      "path": ".ima/global_index.json",
+      "size": 32971,
+      "type": "json"
+    },
+    {
+      "path": ".ima/memory_log.jsonl",
+      "size": 5580,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/ima.py",
+      "size": 3070,
+      "type": "python"
+    },
+    {
+      "path": ".ima/__init__.py",
+      "size": 0,
+      "type": "python"
+    },
+    {
+      "path": ".ima/ima.stream.jsonl",
+      "size": 897,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/ima_reducer.py",
+      "size": 686,
+      "type": "python"
+    },
+    {
+      "path": ".ima/memory.json",
+      "size": 1964,
+      "type": "json"
+    },
+    {
+      "path": ".ima/ima_event.py",
+      "size": 250,
+      "type": "python"
+    },
+    {
+      "path": ".ima/daemon.out",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/core_state.json",
+      "size": 242,
+      "type": "json"
+    },
+    {
+      "path": ".ima/core_map.json",
+      "size": 117,
+      "type": "json"
+    },
+    {
+      "path": ".ima/state_memory.json",
+      "size": 368,
+      "type": "json"
+    },
+    {
+      "path": ".ima/capabilities.json",
+      "size": 206,
+      "type": "json"
+    },
+    {
+      "path": ".git/description",
+      "size": 73,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/config",
+      "size": 334,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/HEAD",
+      "size": 38,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/COMMIT_EDITMSG",
+      "size": 46,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/index",
+      "size": 8174,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/FETCH_HEAD",
+      "size": 114,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/ORIG_HEAD",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/packed-refs",
+      "size": 5906,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/0e0a6de239f3076503fc65cd9c9fa41b832cae09",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/ed60763b7ccc29831906ab2b3b4f0f3f4856bd6e",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_logs/nohup.out",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_logs/daemon.log",
+      "size": 29,
+      "type": "unknown"
+    },
+    {
+      "path": "backup_logs/daemon.out",
+      "size": 29,
+      "type": "unknown"
+    },
+    {
+      "path": "knowledge/core.json",
+      "size": 375,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/science.json",
+      "size": 0,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/technology.json",
+      "size": 0,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/philosophy.json",
+      "size": 0,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/world.json",
+      "size": 0,
+      "type": "json"
+    },
+    {
+      "path": "engines/knowledge_engine.py",
+      "size": 1251,
+      "type": "python"
+    },
+    {
+      "path": "languages/language_profiles.json",
+      "size": 510,
+      "type": "json"
+    },
+    {
+      "path": "languages/language_engine.py",
+      "size": 784,
+      "type": "python"
+    },
+    {
+      "path": "languages/translator.py",
+      "size": 2009,
+      "type": "python"
+    },
+    {
+      "path": "learning/ima_journal.json",
+      "size": 7888,
+      "type": "json"
+    },
+    {
+      "path": "learning/self_reflection.py",
+      "size": 1435,
+      "type": "python"
+    },
+    {
+      "path": "learning/learning_analyzer.py",
+      "size": 1031,
+      "type": "python"
+    },
+    {
+      "path": "learning/improvement_engine.py",
+      "size": 831,
+      "type": "python"
+    },
+    {
+      "path": "learning/self_improvement.py",
+      "size": 709,
+      "type": "python"
+    },
+    {
+      "path": "learning/ima_awareness.py",
+      "size": 674,
+      "type": "python"
+    },
+    {
+      "path": "learning/learning_scheduler.py",
+      "size": 461,
+      "type": "python"
+    },
+    {
+      "path": "learning/auto_learning.py",
+      "size": 631,
+      "type": "python"
+    },
+    {
+      "path": "learning/knowledge_gaps.py",
+      "size": 742,
+      "type": "python"
+    },
+    {
+      "path": "learning/knowledge_gaps.json",
+      "size": 118,
+      "type": "json"
+    },
+    {
+      "path": "learning/gap_analyzer.py",
+      "size": 832,
+      "type": "python"
+    },
+    {
+      "path": "learning/knowledge_expander.py",
+      "size": 1020,
+      "type": "python"
+    },
+    {
+      "path": "learning/ima_learning_loop.py",
+      "size": 1266,
+      "type": "python"
+    },
+    {
+      "path": "learning/learning_memory.py",
+      "size": 1134,
+      "type": "python"
+    },
+    {
+      "path": "learning/learning_memory.json",
+      "size": 27981,
+      "type": "json"
+    },
+    {
+      "path": "learning/learning_memory_connector.py",
+      "size": 589,
+      "type": "python"
+    },
+    {
+      "path": "learning/journal_cleanup.py",
+      "size": 438,
+      "type": "python"
+    },
+    {
+      "path": "learning/decision_engine.py",
+      "size": 482,
+      "type": "python"
+    },
+    {
+      "path": "learning/action_engine.py",
+      "size": 1269,
+      "type": "python"
+    },
+    {
+      "path": "learning/evaluation_engine.py",
+      "size": 571,
+      "type": "python"
+    },
+    {
+      "path": "learning/feedback_engine.py",
+      "size": 583,
+      "type": "python"
+    },
+    {
+      "path": "learning/adaptive_loop.py",
+      "size": 362,
+      "type": "python"
+    },
+    {
+      "path": "learning/self_manager.py",
+      "size": 862,
+      "type": "python"
+    },
+    {
+      "path": "learning/system_introspection.py",
+      "size": 2010,
+      "type": "python"
+    },
+    {
+      "path": "learning/health_check.py",
+      "size": 644,
+      "type": "python"
+    },
+    {
+      "path": "learning/capability_map.py",
+      "size": 695,
+      "type": "python"
+    },
+    {
+      "path": "learning/knowledge_dedup.py",
+      "size": 243,
+      "type": "python"
+    },
+    {
+      "path": "learning/meta_orchestrator.py",
+      "size": 1172,
+      "type": "python"
+    },
+    {
+      "path": "learning/capability_map.json",
+      "size": 2679,
+      "type": "json"
+    },
+    {
+      "path": "learning/improvement_planner.py",
+      "size": 864,
+      "type": "python"
+    },
+    {
+      "path": "learning/safety_gate.py",
+      "size": 445,
+      "type": "python"
+    },
+    {
+      "path": "learning/feedback_planner.py",
+      "size": 853,
+      "type": "python"
+    },
+    {
+      "path": "learning/safe_scheduler.py",
+      "size": 464,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/ima_journal.json",
+      "size": 4611,
+      "type": "json"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/self_reflection.py",
+      "size": 1435,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/learning_analyzer.py",
+      "size": 1031,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/improvement_engine.py",
+      "size": 831,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/self_improvement.py",
+      "size": 709,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/ima_awareness.py",
+      "size": 674,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/learning_scheduler.py",
+      "size": 461,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/auto_learning.py",
+      "size": 631,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/knowledge_gaps.py",
+      "size": 742,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/knowledge_gaps.json",
+      "size": 118,
+      "type": "json"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/gap_analyzer.py",
+      "size": 832,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/knowledge_expander.py",
+      "size": 1020,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/ima_learning_loop.py",
+      "size": 989,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/learning_memory.py",
+      "size": 1134,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/learning_memory.json",
+      "size": 4711,
+      "type": "json"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/learning_memory_connector.py",
+      "size": 589,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/journal_cleanup.py",
+      "size": 438,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/decision_engine.py",
+      "size": 482,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/action_engine.py",
+      "size": 409,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/evaluation_engine.py",
+      "size": 571,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/feedback_engine.py",
+      "size": 583,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/adaptive_loop.py",
+      "size": 362,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/self_manager.py",
+      "size": 862,
+      "type": "python"
+    },
+    {
+      "path": "learning_backup_before_meta_orchestrator/system_introspection.py",
+      "size": 2010,
+      "type": "python"
+    },
+    {
+      "path": "languages/concepts/concept_translation.json",
+      "size": 546,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/domains/science.json",
+      "size": 262,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/domains/technology.json",
+      "size": 360,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/domains/human.json",
+      "size": 287,
+      "type": "json"
+    },
+    {
+      "path": "knowledge/index/categories.json",
+      "size": 614,
+      "type": "json"
+    },
+    {
+      "path": ".git/hooks/pre-commit",
+      "size": 570,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/info/exclude",
+      "size": 240,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/info/refs",
+      "size": 5898,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/HEAD",
+      "size": 3890,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/commit-map",
+      "size": 20955,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/ref-map",
+      "size": 8770,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/changed-refs",
+      "size": 2124,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/first-changed-commits",
+      "size": 246,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/suboptimal-issues",
+      "size": 2133,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/filter-repo/already_ran",
+      "size": 136,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/stash",
+      "size": 368,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/heads/main",
+      "size": 1660,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/heads/apk_clean",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/heads/apk_clean_fixed",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/apk_clean",
+      "size": 149,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/main",
+      "size": 894,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/apk_clean_fixed",
+      "size": 149,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/backup/kernel-stable",
+      "size": 149,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/feature/state-machine",
+      "size": 1490,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/heads/backup/kernel-stable",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/logs/refs/heads/feature/state-machine",
+      "size": 2204,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/heads/main",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/tags/ima-index-clean-20260709",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/tags/ima-stable-kernel-20260709",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/tags/ima-event-pipeline-verified-20260709",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/remotes/origin/main",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/remotes/origin/feature/state-machine",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".git/refs/heads/feature/state-machine",
+      "size": 41,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/governance/registry.json",
+      "size": 78,
+      "type": "json"
+    },
+    {
+      "path": ".ima/ontology/core.json",
+      "size": 808,
+      "type": "json"
+    },
+    {
+      "path": ".ima/snapshots/state.json",
+      "size": 44,
+      "type": "json"
+    },
+    {
+      "path": ".ima/runtime/__init__.py",
+      "size": 0,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/memory_bus.py",
+      "size": 257,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/core.py",
+      "size": 684,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/file_clock.py",
+      "size": 312,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/patches.jsonl",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": ".ima/runtime/query_engine.py",
+      "size": 868,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/runtime.py",
+      "size": 497,
+      "type": "python"
+    },
+    {
+      "path": ".ima/runtime/state.json",
+      "size": 89,
+      "type": "json"
+    },
+    {
+      "path": ".ima/runtime/stream.py",
+      "size": 320,
+      "type": "python"
+    },
+    {
+      "path": ".ima/archive/ledger-20260709-025012.jsonl.gz",
+      "size": 37393,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "size": 357,
+      "type": "android_build"
+    },
+    {
+      "path": "android/gradle/libs.versions.toml",
+      "size": 339,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.github/workflows/android-apk.yml",
+      "size": 895,
+      "type": "config"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "size": 279,
+      "type": "unknown"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "size": 48462,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/gc.properties",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/vcs-1/gc.properties",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+      "size": 17,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/buildOutputCleanup/cache.properties",
+      "size": 49,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/buildOutputCleanup/outputFiles.bin",
+      "size": 21017,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/fileChanges/last-build.bin",
+      "size": 1,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/checksums/checksums.lock",
+      "size": 17,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/checksums/sha1-checksums.bin",
+      "size": 83939,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/checksums/md5-checksums.bin",
+      "size": 28297,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/fileHashes/fileHashes.lock",
+      "size": 17,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/fileHashes/fileHashes.bin",
+      "size": 22797,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/fileHashes/resourceHashesCache.bin",
+      "size": 18939,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/gc.properties",
+      "size": 0,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/executionHistory/executionHistory.lock",
+      "size": 17,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/executionHistory/executionHistory.bin",
+      "size": 106789,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/metadata.bin",
+      "size": 82,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class",
+      "size": 941,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class",
+      "size": 765,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class",
+      "size": 597,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs.class",
+      "size": 2973,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class",
+      "size": 983,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class",
+      "size": 891,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class",
+      "size": 639,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class",
+      "size": 4441,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibs.java",
+      "size": 4321,
+      "type": "unknown"
+    },
+    {
+      "path": "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java",
+      "size": 5685,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/navigation_json/debug/navigation.json",
+      "size": 2,
+      "type": "json"
+    },
+    {
+      "path": "android/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json",
+      "size": 188,
+      "type": "json"
+    },
+    {
+      "path": "android/app/build/intermediates/local_only_symbol_list/debug/R-def.txt",
+      "size": 111,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/packaged_res/debug/values/values.xml",
+      "size": 369,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/packaged_res/debug/layout/activity_main.xml",
+      "size": 618,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+      "size": 484,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+      "size": 1256,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties",
+      "size": 204,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml",
+      "size": 2517,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties",
+      "size": 201,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml",
+      "size": 2517,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml",
+      "size": 369,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml",
+      "size": 369,
+      "type": "android"
+    },
+    {
+      "path": "android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json",
+      "size": 950,
+      "type": "json"
+    },
+    {
+      "path": "android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json",
+      "size": 947,
+      "type": "json"
+    },
+    {
+      "path": "android/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json",
+      "size": 167,
+      "type": "json"
+    },
+    {
+      "path": "android/app/build/intermediates/source_set_path_map/debug/file-map.txt",
+      "size": 881,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json",
+      "size": 2,
+      "type": "json"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "size": 572,
+      "type": "android"
+    },
+    {
+      "path": "android/app/src/test/java/org/example/AppTest.java",
+      "size": 343,
+      "type": "unknown"
+    },
+    {
+      "path": "android/app/src/main/java/com/ima/core/MainActivity.java",
+      "size": 416,
+      "type": "unknown"
+    },
+    {
+      "path": ".squad/orchestration-log/done.md",
+      "size": 0,
+      "type": "documentation"
+    },
+    {
+      "path": ".squad/orchestration-log/log.md",
+      "size": 0,
+      "type": "documentation"
+    },
+    {
+      "path": ".squad/orchestration-log/queue.md",
+      "size": 0,
+      "type": "documentation"
+    },
+    {
+      "path": ".github/workflows/android-apk.yml",
+      "size": 985,
+      "type": "config"
+    }
+  ],
+  "folders": [
+    ".github",
+    ".squad",
+    "android",
+    "archive_logs",
+    ".ima",
+    ".git",
+    "ima_product",
+    "backup_logs",
+    "knowledge",
+    "engines",
+    "languages",
+    "learning",
+    "learning_backup_before_meta_orchestrator",
+    ".github/workflows",
+    ".squad/orchestration-log",
+    "android/app",
+    "android/.gradle",
+    "android/gradle",
+    "android/.github",
+    ".ima/governance",
+    ".ima/ontology",
+    ".ima/snapshots",
+    ".ima/runtime",
+    ".ima/archive",
+    ".ima/quarantine",
+    ".git/hooks",
+    ".git/info",
+    ".git/refs",
+    ".git/logs",
+    ".git/modules",
+    ".git/filter-repo",
+    "ima_product/core",
+    "ima_product/api",
+    "knowledge/domains",
+    "knowledge/index",
+    "languages/dictionaries",
+    "languages/translations",
+    "languages/concepts",
+    "ima_product/core/guardian",
+    "ima_product/core/evolution",
+    ".git/refs/heads",
+    ".git/refs/tags",
+    ".git/refs/remotes",
+    ".git/logs/refs",
+    ".git/modules/kernel",
+    ".git/modules/kernel/projects",
+    ".git/logs/refs/heads",
+    ".git/logs/refs/remotes",
+    ".git/logs/refs/heads/backup",
+    ".git/logs/refs/heads/feature",
+    ".git/logs/refs/remotes/origin",
+    ".git/logs/refs/remotes/origin/backup",
+    ".git/logs/refs/remotes/origin/feature",
+    ".git/refs/heads/backup",
+    ".git/refs/heads/feature",
+    ".git/refs/remotes/origin",
+    ".git/refs/remotes/origin/backup",
+    ".git/refs/remotes/origin/feature",
+    "android/app/src",
+    "android/app/build",
+    "android/.gradle/8.6",
+    "android/.gradle/vcs-1",
+    "android/.gradle/buildOutputCleanup",
+    "android/gradle/wrapper",
+    "android/.github/workflows",
+    "android/.gradle/8.6/fileChanges",
+    "android/.gradle/8.6/vcsMetadata",
+    "android/.gradle/8.6/checksums",
+    "android/.gradle/8.6/fileHashes",
+    "android/.gradle/8.6/dependencies-accessors",
+    "android/.gradle/8.6/executionHistory",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors",
+    "android/.gradle/8.6/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm",
+    "android/app/src/main",
+    "android/app/src/test",
+    "android/app/build/intermediates",
+    "android/app/build/generated",
+    "android/app/build/outputs",
+    "android/app/build/intermediates/annotation_processor_list",
+    "android/app/build/intermediates/aar_metadata_check",
+    "android/app/build/intermediates/source_set_path_map",
+    "android/app/build/intermediates/merged_res_blame_folder",
+    "android/app/build/intermediates/data_binding_layout_info_type_merge",
+    "android/app/build/intermediates/incremental",
+    "android/app/build/intermediates/merged_res",
+    "android/app/build/intermediates/data_binding_layout_info_type_package",
+    "android/app/build/intermediates/packaged_res",
+    "android/app/build/intermediates/local_only_symbol_list",
+    "android/app/build/intermediates/compatible_screen_manifest",
+    "android/app/build/intermediates/navigation_json",
+    "android/app/build/intermediates/manifest_merge_blame_file",
+    "android/app/build/intermediates/merged_manifest",
+    "android/app/build/generated/res",
+    "android/app/build/outputs/logs",
+    "android/app/build/generated/res/resValues",
+    "android/app/build/generated/res/pngs",
+    "android/app/build/generated/res/resValues/debug",
+    "android/app/build/generated/res/pngs/debug",
+    "android/app/build/intermediates/annotation_processor_list/debug",
+    "android/app/build/intermediates/aar_metadata_check/debug",
+    "android/app/build/intermediates/source_set_path_map/debug",
+    "android/app/build/intermediates/merged_res_blame_folder/debug",
+    "android/app/build/intermediates/data_binding_layout_info_type_merge/debug",
+    "android/app/build/intermediates/incremental/debug",
+    "android/app/build/intermediates/merged_res/debug",
+    "android/app/build/intermediates/data_binding_layout_info_type_package/debug",
+    "android/app/build/intermediates/packaged_res/debug",
+    "android/app/build/intermediates/local_only_symbol_list/debug",
+    "android/app/build/intermediates/compatible_screen_manifest/debug",
+    "android/app/build/intermediates/navigation_json/debug",
+    "android/app/build/intermediates/manifest_merge_blame_file/debug",
+    "android/app/build/intermediates/merged_manifest/debug",
+    "android/app/build/intermediates/packaged_res/debug/values",
+    "android/app/build/intermediates/packaged_res/debug/layout",
+    "android/app/build/intermediates/data_binding_layout_info_type_package/debug/out",
+    "android/app/build/intermediates/incremental/debug/mergeDebugResources",
+    "android/app/build/intermediates/incremental/debug/packageDebugResources",
+    "android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir",
+    "android/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir",
+    "android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir",
+    "android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir",
+    "android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values",
+    "android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values",
+    "android/app/build/intermediates/data_binding_layout_info_type_merge/debug/out",
+    "android/app/build/intermediates/merged_res_blame_folder/debug/out",
+    "android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2",
+    "android/app/build/intermediates/merged_res_blame_folder/debug/out/single",
+    "android/app/src/main/java",
+    "android/app/src/test/java",
+    "android/app/src/test/java/org",
+    "android/app/src/test/java/org/example",
+    "android/app/src/main/java/com",
+    "android/app/src/main/java/com/ima",
+    "android/app/src/main/java/com/ima/core"
+  ],
+  "technologies": {
+    "shell": 24,
+    "python": 155,
+    "json": 47,
+    "android_build": 3,
+    "documentation": 7,
+    "config": 2,
+    "android": 7
+  },
+  "important_files": [
+    ".gitignore",
+    "backup_before_reflection_api.py",
+    "android/.gitignore",
+    "android/.gitattributes",
+    ".ima/git_snapshot.sh",
+    "android/.github/workflows/android-apk.yml",
+    "android/app/src/main/AndroidManifest.xml",
+    ".github/workflows/android-apk.yml"
+  ]
+}

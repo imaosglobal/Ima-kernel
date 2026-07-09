@@ -6,9 +6,6 @@ from languages.translator import translate_response
 from learning.self_reflection import record_event
 from learning.learning_analyzer import analyze_learning
 from learning.ima_awareness import ima_awareness
-from learning.auto_learning import check_learning_trigger
-from learning.knowledge_gaps import record_gap
-from learning.ima_learning_loop import run_ima_learning_loop
 LEDGER = ".ima/ledger.jsonl"
 
 
@@ -57,20 +54,14 @@ def _answer(question, events):
         state = ima_emotion_layer(question, events)
 
         if state:
-
             generated = mother_generate(
                 question,
                 state.get("emotion"),
                 events
             )
 
-            if generated and "התאריך היום" not in generated.get("text",""):
+            if generated:
                 return generated
-
-            return {
-                "text": "אני IMA. אני שומעת אותך. נשמע שאתה עובר רגע קשה עכשיו. אני כאן איתך. ספר לי מה קורה.",
-                "confidence": 0.85
-            }
 
 
     if mode == "identity":
@@ -104,11 +95,6 @@ def _answer(question, events):
                 ),
                 "confidence": model_result.get("confidence", 0.8)
             }
-
-        return {
-            "text": "אני IMA. רשת עצבית היא מערכת חישובית שמחקה באופן מופשט את דרך הלמידה של המוח. היא מורכבת משכבות של יחידות חישוב הנקראות נוירונים מלאכותיים, הלומדות קשרים מתוך נתונים.",
-            "confidence":0.85
-        }
 
 
     if mode == "information":
@@ -151,38 +137,6 @@ def _answer(question, events):
         return {
             "text": "אני כאן איתך. שמחה לשמוע ממך. איך אתה מרגיש עכשיו?",
             "confidence": 0.85
-        }
-
-
-    if any(x in question for x in [
-        "למדת",
-        "מה למדת",
-        "מה חדש אצלך",
-        "האם השתנית"
-    ]):
-        return {
-            "text": "אני IMA. אני לומדת דרך אירועים, זיכרון וקשרים שנשמרים במערכת.",
-            "confidence": 0.85
-        }
-
-    if "יכולות" in question or "מחובר" in question:
-        return {
-            "text": "אני IMA. מחוברות כרגע שכבות זיכרון, ידע, שפה, למידה ורפלקציה.",
-            "confidence": 0.85
-        }
-
-
-    if any(x in question for x in [
-        "מה השתנה",
-        "איזה שיפורים",
-        "מה שיפרת",
-        "שיפורי מערכת"
-    ]):
-        from learning.system_improvement_memory import summarize_improvements
-
-        return {
-            "text": "אני IMA. אלו השיפורים האחרונים שנרשמו במערכת:\n\n" + summarize_improvements(),
-            "confidence": 0.9
         }
 
 
@@ -745,6 +699,8 @@ def weather_engine(city="Netanya"):
 
 def ima_router(question):
 
+    intent = detect_intent(question)
+
     if any(x in question for x in [
         "מי את",
         "מי אתה",
@@ -753,19 +709,16 @@ def ima_router(question):
     ]):
         return "identity"
 
-    # Emotion has priority over information keywords
-    emotion = ima_emotion_layer(question, [])
-
-    if emotion:
-        return "emotion"
-
-    intent = detect_intent(question)
-
     if intent == "technical_request":
         return "technical"
 
     if intent == "information_request":
         return "information"
+
+    emotion = ima_emotion_layer(question, [])
+
+    if emotion:
+        return "emotion"
 
     return "conversation"
 
@@ -847,21 +800,6 @@ def answer(question, events):
             f"ID:{interaction_id} | Question:{question} | Mode:{mode} | Confidence:{response.get('confidence')}",
             "interaction"
         )
-
-    trigger = check_learning_trigger()
-
-    if trigger.get("status") == "ready":
-        try:
-            run_ima_learning_loop()
-        except Exception as e:
-            record_event(
-                f"learning_error:{e}",
-                "system"
-            )
-
-    if response:
-        if "לא מצאתי את המידע הזה" in response.get("text", ""):
-            record_gap(question)
 
     return response_guard(response, mode)
 
