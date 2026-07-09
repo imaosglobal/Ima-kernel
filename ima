@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
-case "$1" in
-  ask)
-    python3 ima_system.py ask "${@:2}"
-    ;;
-  daemon)
-    python3 ima_daemon.py
-    ;;
+CMD=$1
+
+case "$CMD" in
   status)
-    python3 ima_system.py
+    python3 ima_kernel.py
+    ;;
+  sync)
+    python3 ima_kernel.py >/dev/null 2>&1
+    bash .ima/git_snapshot.sh
+    ;;
+  *)
+    echo "IMA COMMANDS:"
+    echo "  ima status"
+    echo "  ima sync"
     ;;
 esac
