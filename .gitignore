@@ -2,6 +2,7 @@ node_modules/
 *.log
 *.tmp
 _tmp*
+<<<<<<< HEAD
 kernel/projects/ima_core/
 
 # Python cache
@@ -66,3 +67,5 @@ __pycache__/
 
 # IMA generated core state
 .ima/core_map.json
+=======
+>>>>>>> ima_core_backup/main
