@@ -52,3 +52,10 @@ __pycache__/
 .ima_git.lock
 .mother_v4.pid
 .ima/snapshots/
+
+# IMA generated indexes
+.ima/all_files*.txt
+.ima/files*.txt
+.ima/snapshot.txt
+.ima/architecture_map.txt
+.ima/nodes.csv

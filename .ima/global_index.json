@@ -1,6 +1,6 @@
 {
-  "ts": 1782222953.6006937,
-  "count": 162,
+  "ts": 1783588202.5834658,
+  "count": 163,
   "files": [
     {
       "path": "./.mother_v4.pid",
@@ -11,24 +11,24 @@
     },
     {
       "path": "./.gitignore",
-      "size": 58,
-      "created": 1779874867.25,
-      "modified": 1779874867.25,
-      "accessed": 1779874867.25
+      "size": 685,
+      "created": 1783588107.28962,
+      "modified": 1783588107.28962,
+      "accessed": 1783537448.2652586
     },
     {
-      "path": "./ima_controller.sh",
-      "size": 2023,
-      "created": 1781860656.3007817,
-      "modified": 1781860656.2807817,
-      "accessed": 1781860656.2607818
+      "path": "./.ima_git.lock",
+      "size": 0,
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
     },
     {
       "path": "./ima_autofix_build.sh",
       "size": 1616,
-      "created": 1781861374.0207818,
-      "modified": 1781861374.0047817,
-      "accessed": 1781861373.9727817
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
     },
     {
       "path": "./project_map.txt",
@@ -46,17 +46,206 @@
     },
     {
       "path": "./ima",
-      "size": 349,
-      "created": 1782222744.1708386,
-      "modified": 1782222744.1708386,
-      "accessed": 1782222744.1668386
+      "size": 178,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_bootstrap.sh",
+      "size": 2608,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./.ima_ledger.jsonl",
+      "size": 1819,
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
+    },
+    {
+      "path": "./ima.cli.bak",
+      "size": 303,
+      "created": 1782223204.3028386,
+      "modified": 1782223204.3028386,
+      "accessed": 1782223204.3028386
     },
     {
       "path": "./ima.py",
       "size": 866,
-      "created": 1782221287.7388384,
-      "modified": 1782221287.7388384,
-      "accessed": 1782221188.8068385
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_controller.sh",
+      "size": 2023,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./imactl",
+      "size": 266,
+      "created": 1782479444.4186676,
+      "modified": 1782479444.3986676,
+      "accessed": 1782479444.3706677
+    },
+    {
+      "path": "./.ima_mom_memory.json",
+      "size": 288,
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
+    },
+    {
+      "path": "./ima_app.py",
+      "size": 3667,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_brain.py",
+      "size": 1407,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_chat.py",
+      "size": 1832,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_daemon.py",
+      "size": 1086,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_global.py",
+      "size": 2144,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_kernel.py",
+      "size": 1817,
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_mom.py",
+      "size": 1519,
+      "created": 1783537448.2732587,
+      "modified": 1783537448.2732587,
+      "accessed": 1783537448.2692585
+    },
+    {
+      "path": "./ima_qge_v1.py",
+      "size": 2662,
+      "created": 1783537448.2732587,
+      "modified": 1783537448.2732587,
+      "accessed": 1783537448.2732587
+    },
+    {
+      "path": "./ima_system.py",
+      "size": 3340,
+      "created": 1783537448.2732587,
+      "modified": 1783537448.2732587,
+      "accessed": 1783537448.2732587
+    },
+    {
+      "path": "./ima_unified_bootstrap.sh",
+      "size": 2499,
+      "created": 1783537448.2732587,
+      "modified": 1783537448.2732587,
+      "accessed": 1783537448.2732587
+    },
+    {
+      "path": "./nohup.out",
+      "size": 8192,
+      "created": 1783284930.5204656,
+      "modified": 1783284930.5204656,
+      "accessed": 1783168363.2519252
+    },
+    {
+      "path": "./api.pid",
+      "size": 5,
+      "created": 1783421185.347578,
+      "modified": 1783178494.5591516,
+      "accessed": 1783421185.347578
+    },
+    {
+      "path": "./daemon.pid",
+      "size": 4,
+      "created": 1783421185.363578,
+      "modified": 1782487669.3901281,
+      "accessed": 1783421185.363578
+    },
+    {
+      "path": "./run.lock",
+      "size": 5,
+      "created": 1783421185.4155781,
+      "modified": 1783178768.6471517,
+      "accessed": 1783421185.4155781
+    },
+    {
+      "path": "./service.lock",
+      "size": 4,
+      "created": 1783421185.419578,
+      "modified": 1783169130.8559253,
+      "accessed": 1783421185.419578
+    },
+    {
+      "path": "./supervisor.pid",
+      "size": 5,
+      "created": 1783421187.6555781,
+      "modified": 1783177987.3471518,
+      "accessed": 1783421187.6555781
+    },
+    {
+      "path": "./maintenance.lock",
+      "size": 18,
+      "created": 1783421185.4035783,
+      "modified": 1783419825.4875782,
+      "accessed": 1783421185.4035783
+    },
+    {
+      "path": "./serve.pid",
+      "size": 4,
+      "created": 1783421185.419578,
+      "modified": 1783168996.7519252,
+      "accessed": 1783421185.419578
+    },
+    {
+      "path": "./server.pid",
+      "size": 5,
+      "created": 1783421185.419578,
+      "modified": 1783178768.8911517,
+      "accessed": 1783421185.419578
+    },
+    {
+      "path": "./service.pid",
+      "size": 5,
+      "created": 1783421185.419578,
+      "modified": 1783178492.8111517,
+      "accessed": 1783421185.419578
+    },
+    {
+      "path": "./system.pid",
+      "size": 5,
+      "created": 1783421187.6555781,
+      "modified": 1783178114.8511517,
+      "accessed": 1783421187.6555781
     },
     {
       "path": "./.squad/orchestration-log/done.md",
@@ -96,9 +285,9 @@
     {
       "path": "./android/build_all.sh",
       "size": 521,
-      "created": 1781873727.6181827,
-      "modified": 1781873727.6021826,
-      "accessed": 1781873727.5861826
+      "created": 1782477012.6901596,
+      "modified": 1782477012.6901596,
+      "accessed": 1782477012.6901596
     },
     {
       "path": "./android/local.properties",
@@ -145,72 +334,72 @@
     {
       "path": "./android/ima_release.sh",
       "size": 558,
-      "created": 1781874023.4021826,
-      "modified": 1781874023.3821826,
-      "accessed": 1781874023.3701828
+      "created": 1782477012.7141597,
+      "modified": 1782477012.7141597,
+      "accessed": 1782477012.7141597
     },
     {
       "path": "./android/ima_bridge_build.sh",
       "size": 2044,
-      "created": 1781877960.579225,
-      "modified": 1781877960.563225,
-      "accessed": 1781877960.547225
+      "created": 1782477012.7381597,
+      "modified": 1782477012.7381597,
+      "accessed": 1782477012.7341597
     },
     {
       "path": "./android/ima_full_pipeline.sh",
       "size": 780,
-      "created": 1781878100.971225,
-      "modified": 1781878100.955225,
-      "accessed": 1781878030.223225
+      "created": 1782477012.7621596,
+      "modified": 1782477012.7621596,
+      "accessed": 1782477012.7621596
     },
     {
       "path": "./android/ima_guard_pipeline.sh",
       "size": 1073,
-      "created": 1781878500.783225,
-      "modified": 1781878500.767225,
-      "accessed": 1781878500.7552252
+      "created": 1782477012.7901597,
+      "modified": 1782477012.7901597,
+      "accessed": 1782477012.7901597
     },
     {
       "path": "./android/ima_bridge_v1.sh",
       "size": 814,
-      "created": 1781879045.1072252,
-      "modified": 1781879045.087225,
-      "accessed": 1781879045.075225
+      "created": 1782477012.8181596,
+      "modified": 1782477012.8181596,
+      "accessed": 1782477012.8141596
     },
     {
       "path": "./android/ima_verify.sh",
       "size": 248,
-      "created": 1781879051.987225,
-      "modified": 1781879051.971225,
-      "accessed": 1781879051.955225
+      "created": 1782477012.8301597,
+      "modified": 1782477012.8301597,
+      "accessed": 1782477012.8301597
     },
     {
       "path": "./android/ima_final_install.sh",
       "size": 665,
-      "created": 1781879157.0552251,
-      "modified": 1781879157.0352252,
-      "accessed": 1781879157.0152252
+      "created": 1782477012.8581595,
+      "modified": 1782477012.8581595,
+      "accessed": 1782477012.8581595
     },
     {
       "path": "./android/ima_safe_install.sh",
       "size": 595,
-      "created": 1781879233.695225,
-      "modified": 1781879233.675225,
-      "accessed": 1781879233.659225
+      "created": 1782477012.8821597,
+      "modified": 1782477012.8821597,
+      "accessed": 1782477012.8781595
     },
     {
       "path": "./android/ima_full_auto.sh",
       "size": 1159,
-      "created": 1781880158.559225,
-      "modified": 1781880158.527225,
-      "accessed": 1781880158.507225
+      "created": 1782477012.9141595,
+      "modified": 1782477012.9141595,
+      "accessed": 1782477012.9141595
     },
     {
       "path": "./android/ima_termux_open_install.sh",
       "size": 689,
-      "created": 1781881879.7743654,
-      "modified": 1781881879.7583654,
-      "accessed": 1781881879.7423654
+      "created": 1782477012.9541597,
+      "modified": 1782477012.9541597,
+      "accessed": 1782477012.9501595
     },
     {
       "path": "./android/app/build.gradle",
@@ -222,9 +411,9 @@
     {
       "path": "./android/app/src/main/AndroidManifest.xml",
       "size": 572,
-      "created": 1781879566.359225,
-      "modified": 1781879566.359225,
-      "accessed": 1781877967.191225
+      "created": 1783537448.2692585,
+      "modified": 1783537448.2692585,
+      "accessed": 1783537448.2692585
     },
     {
       "path": "./android/app/src/main/java/com/ima/core/MainActivity.java",
@@ -243,372 +432,148 @@
     {
       "path": "./android/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json",
       "size": 2,
-      "created": 1781881903.1423652,
-      "modified": 1781881903.1423652,
-      "accessed": 1781881903.1383653
+      "created": 1782493280.1209712,
+      "modified": 1782493280.1209712,
+      "accessed": 1782493280.116971
     },
     {
       "path": "./android/app/build/intermediates/source_set_path_map/debug/file-map.txt",
       "size": 881,
-      "created": 1781881903.2063653,
-      "modified": 1781881903.2063653,
-      "accessed": 1781881903.1943653
+      "created": 1782493280.188971,
+      "modified": 1782493280.188971,
+      "accessed": 1782493280.1809711
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json",
+      "size": 950,
+      "created": 1782493280.6569712,
+      "modified": 1782493280.6569712,
+      "accessed": 1782493280.652971
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json",
+      "size": 947,
+      "created": 1782493280.6569712,
+      "modified": 1782493280.6569712,
+      "accessed": 1782493280.6569712
+    },
+    {
+      "path": "./android/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json",
+      "size": 167,
+      "created": 1782493280.6569712,
+      "modified": 1782493280.6569712,
+      "accessed": 1782493280.6569712
     },
     {
       "path": "./android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties",
-      "size": 30,
-      "created": 1781881903.3223653,
-      "modified": 1781881903.3223653,
-      "accessed": 1781881903.3223653
+      "size": 204,
+      "created": 1782493280.6569712,
+      "modified": 1782493280.6569712,
+      "accessed": 1782493280.6569712
     },
     {
       "path": "./android/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml",
-      "size": 1930,
-      "created": 1781881903.4783654,
-      "modified": 1781881903.4783654,
-      "accessed": 1781881903.4783654
+      "size": 2517,
+      "created": 1782493280.664971,
+      "modified": 1782493280.664971,
+      "accessed": 1782493280.6609712
+    },
+    {
+      "path": "./android/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml",
+      "size": 369,
+      "created": 1782493280.6409712,
+      "modified": 1782493280.6409712,
+      "accessed": 1782493280.6249712
     },
     {
       "path": "./android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties",
-      "size": 30,
-      "created": 1781881903.5063653,
-      "modified": 1781881903.5063653,
-      "accessed": 1781881903.5063653
+      "size": 201,
+      "created": 1782493280.7729712,
+      "modified": 1782493280.7729712,
+      "accessed": 1782493280.7689712
     },
     {
       "path": "./android/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml",
-      "size": 1930,
-      "created": 1781881903.5103652,
-      "modified": 1781881903.5103652,
-      "accessed": 1781881903.5063653
+      "size": 2517,
+      "created": 1782493280.7729712,
+      "modified": 1782493280.7729712,
+      "accessed": 1782493280.7729712
     },
     {
-      "path": "./android/app/build/intermediates/incremental/mergeDebugShaders/merger.xml",
-      "size": 500,
-      "created": 1781881904.4503653,
-      "modified": 1781881904.4503653,
-      "accessed": 1781881904.4503653
+      "path": "./android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml",
+      "size": 369,
+      "created": 1782493280.764971,
+      "modified": 1782493280.764971,
+      "accessed": 1782493280.764971
     },
     {
-      "path": "./android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml",
-      "size": 745,
-      "created": 1781881904.4903653,
-      "modified": 1781881904.4903653,
-      "accessed": 1781881904.4903653
+      "path": "./android/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+      "size": 484,
+      "created": 1782493281.0129712,
+      "modified": 1782493281.0129712,
+      "accessed": 1782493280.8249712
     },
     {
-      "path": "./android/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state",
-      "size": 478,
-      "created": 1781881904.7703652,
-      "modified": 1781881904.7703652,
-      "accessed": 1781881904.7583654
+      "path": "./android/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+      "size": 1256,
+      "created": 1782493280.9409711,
+      "modified": 1782493280.9409711,
+      "accessed": 1782493280.8489711
     },
     {
-      "path": "./android/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml",
-      "size": 500,
-      "created": 1781881904.6463654,
-      "modified": 1781881904.6463654,
-      "accessed": 1781881904.6463654
+      "path": "./android/app/build/intermediates/packaged_res/debug/values/values.xml",
+      "size": 369,
+      "created": 1782493280.7689712,
+      "modified": 1782493280.764971,
+      "accessed": 1782493280.764971
     },
     {
-      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt",
-      "size": 375,
-      "created": 1781881909.7663653,
-      "modified": 1781881909.7663653,
-      "accessed": 1781881909.7663653
-    },
-    {
-      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources",
-      "size": 147,
-      "created": 1781881909.8503654,
-      "modified": 1781881909.8503654,
-      "accessed": 1781881909.8503654
-    },
-    {
-      "path": "./android/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0",
-      "size": 22,
-      "created": 1781881909.8503654,
-      "modified": 1781881909.8503654,
-      "accessed": 1781881909.8503654
+      "path": "./android/app/build/intermediates/packaged_res/debug/layout/activity_main.xml",
+      "size": 618,
+      "created": 1782493280.7689712,
+      "modified": 1782493263.596971,
+      "accessed": 1782492650.780971
     },
     {
       "path": "./android/app/build/intermediates/local_only_symbol_list/debug/R-def.txt",
-      "size": 55,
-      "created": 1781881903.7263653,
-      "modified": 1781881903.7263653,
-      "accessed": 1781881903.7223654
+      "size": 111,
+      "created": 1782493281.020971,
+      "modified": 1782493281.020971,
+      "accessed": 1782493281.016971
     },
     {
       "path": "./android/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json",
       "size": 188,
-      "created": 1781881903.6383653,
-      "modified": 1781881903.6383653,
-      "accessed": 1781881903.6383653
+      "created": 1782493280.928971,
+      "modified": 1782493280.928971,
+      "accessed": 1782493280.924971
     },
     {
       "path": "./android/app/build/intermediates/navigation_json/debug/navigation.json",
       "size": 2,
-      "created": 1781881903.6503654,
-      "modified": 1781881903.6503654,
-      "accessed": 1781881903.6503654
-    },
-    {
-      "path": "./android/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt",
-      "size": 1946,
-      "created": 1781881903.8583653,
-      "modified": 1781881903.8583653,
-      "accessed": 1781881903.8583653
-    },
-    {
-      "path": "./android/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml",
-      "size": 809,
-      "created": 1781881903.8583653,
-      "modified": 1781881903.8583653,
-      "accessed": 1781881903.8583653
-    },
-    {
-      "path": "./android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml",
-      "size": 809,
-      "created": 1781881904.3463652,
-      "modified": 1781881904.3463652,
-      "accessed": 1781881904.3463652
-    },
-    {
-      "path": "./android/app/build/intermediates/merged_manifests/debug/output-metadata.json",
-      "size": 381,
-      "created": 1781881904.3543653,
-      "modified": 1781881904.3543653,
-      "accessed": 1781881904.3543653
-    },
-    {
-      "path": "./android/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml",
-      "size": 809,
-      "created": 1781881904.5743654,
-      "modified": 1781881904.5743654,
-      "accessed": 1781881904.3903654
-    },
-    {
-      "path": "./android/app/build/intermediates/packaged_manifests/debug/output-metadata.json",
-      "size": 383,
-      "created": 1781881905.0143654,
-      "modified": 1781881905.0143654,
-      "accessed": 1781881905.0143654
-    },
-    {
-      "path": "./android/app/build/intermediates/merged_java_res/debug/base.jar",
-      "size": 22,
-      "created": 1781881904.7383654,
-      "modified": 1781881904.7383654,
-      "accessed": 1781881904.7103653
-    },
-    {
-      "path": "./android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex",
-      "size": 556,
-      "created": 1781881909.2863653,
-      "modified": 1781881909.2863653,
-      "accessed": 1781881909.2863653
-    },
-    {
-      "path": "./android/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex",
-      "size": 1056,
-      "created": 1781881909.2823653,
-      "modified": 1781881909.2823653,
-      "accessed": 1781881909.2823653
-    },
-    {
-      "path": "./android/app/build/intermediates/app_metadata/debug/app-metadata.properties",
-      "size": 56,
-      "created": 1781881904.9743652,
-      "modified": 1781881904.9743652,
-      "accessed": 1781881904.9743652
-    },
-    {
-      "path": "./android/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json",
-      "size": 96,
-      "created": 1781881905.0103652,
-      "modified": 1781881905.0103652,
-      "accessed": 1781881905.0063653
-    },
-    {
-      "path": "./android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar",
-      "size": 267,
-      "created": 1781881905.9743652,
-      "modified": 1781881905.9743652,
-      "accessed": 1781881905.9703653
-    },
-    {
-      "path": "./android/app/build/intermediates/processed_res/debug/out/resources-debug.ap_",
-      "size": 999,
-      "created": 1781881905.9183652,
-      "modified": 1781881905.9183652,
-      "accessed": 1781881905.9023652
-    },
-    {
-      "path": "./android/app/build/intermediates/processed_res/debug/out/output-metadata.json",
-      "size": 378,
-      "created": 1781881905.9743652,
-      "modified": 1781881905.9743652,
-      "accessed": 1781881905.9743652
-    },
-    {
-      "path": "./android/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt",
-      "size": 0,
-      "created": 1781881905.9023652,
-      "modified": 1781881905.9023652,
-      "accessed": 1781881905.9023652
-    },
-    {
-      "path": "./android/app/build/intermediates/runtime_symbol_list/debug/R.txt",
-      "size": 0,
-      "created": 1781881905.9183652,
-      "modified": 1781881905.9183652,
-      "accessed": 1781881905.9183652
-    },
-    {
-      "path": "./android/app/build/intermediates/javac/debug/classes/com/ima/core/MainActivity.class",
-      "size": 770,
-      "created": 1781881906.9903653,
-      "modified": 1781881906.9903653,
-      "accessed": 1781881906.9863653
-    },
-    {
-      "path": "./android/app/build/intermediates/project_dex_archive/debug/out/a18818922e4d7f7d03af47a5ba64f54f27876856970fd1d23f5718098d546815_1.jar",
-      "size": 503,
-      "created": 1781881909.0783653,
-      "modified": 1781881909.0783653,
-      "accessed": 1781881909.0743654
-    },
-    {
-      "path": "./android/app/build/intermediates/project_dex_archive/debug/out/com/ima/core/MainActivity.dex",
-      "size": 1056,
-      "created": 1781881909.0783653,
-      "modified": 1781881909.0783653,
-      "accessed": 1781881909.0783653
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_3/graph.bin",
-      "size": 235,
-      "created": 1781881907.2943654,
-      "modified": 1781881907.2943654,
-      "accessed": 1781881907.2943654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin",
-      "size": 235,
-      "created": 1781881907.2943654,
-      "modified": 1781881907.2943654,
-      "accessed": 1781881907.2943654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin",
-      "size": 235,
-      "created": 1781881907.2943654,
-      "modified": 1781881907.2943654,
-      "accessed": 1781881907.2943654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_2/graph.bin",
-      "size": 235,
-      "created": 1781881907.2983654,
-      "modified": 1781881907.2983654,
-      "accessed": 1781881907.2943654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_0/graph.bin",
-      "size": 235,
-      "created": 1781881907.2983654,
-      "modified": 1781881907.2983654,
-      "accessed": 1781881907.2983654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin",
-      "size": 235,
-      "created": 1781881907.2983654,
-      "modified": 1781881907.2983654,
-      "accessed": 1781881907.2983654
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin",
-      "size": 235,
-      "created": 1781881909.0783653,
-      "modified": 1781881909.0783653,
-      "accessed": 1781881909.0783653
-    },
-    {
-      "path": "./android/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_5505e14fdb581cf6775966ec34a50465757fb1cbd7cfbf333d19634cffeae1d3_bucket_1/graph.bin",
-      "size": 235,
-      "created": 1781881909.0823653,
-      "modified": 1781881909.0823653,
-      "accessed": 1781881909.0823653
-    },
-    {
-      "path": "./android/app/build/intermediates/dex_archive_input_jar_hashes/debug/out",
-      "size": 401,
-      "created": 1781881907.0863652,
-      "modified": 1781881907.0863652,
-      "accessed": 1781881907.0863652
-    },
-    {
-      "path": "./android/app/build/intermediates/dex_number_of_buckets_file/debug/out",
-      "size": 1,
-      "created": 1781881907.0743654,
-      "modified": 1781881907.0743654,
-      "accessed": 1781881907.0703654
-    },
-    {
-      "path": "./android/app/build/intermediates/apk_ide_redirect_file/debug/redirect.txt",
-      "size": 78,
-      "created": 1781881909.8743653,
-      "modified": 1781881909.8743653,
-      "accessed": 1781881909.8743653
-    },
-    {
-      "path": "./android/app/build/outputs/logs/manifest-merger-debug-report.txt",
-      "size": 3373,
-      "created": 1781881903.8583653,
-      "modified": 1781881903.8583653,
-      "accessed": 1781881903.8583653
-    },
-    {
-      "path": "./android/app/build/outputs/apk/debug/app-debug.apk",
-      "size": 6521,
-      "created": 1781881909.8423653,
-      "modified": 1781881909.8423653,
-      "accessed": 1781881909.7663653
-    },
-    {
-      "path": "./android/app/build/outputs/apk/debug/output-metadata.json",
-      "size": 362,
-      "created": 1781881909.8543653,
-      "modified": 1781881909.8543653,
-      "accessed": 1781881909.8543653
-    },
-    {
-      "path": "./android/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin",
-      "size": 225,
-      "created": 1781881907.0503652,
-      "modified": 1781881907.0503652,
-      "accessed": 1781881907.0463653
+      "created": 1782493280.944971,
+      "modified": 1782493280.944971,
+      "accessed": 1782493280.944971
     },
     {
       "path": "./android/.gradle/8.6/gc.properties",
       "size": 0,
-      "created": 1781860703.3887815,
-      "modified": 1781860703.3887815,
+      "created": 1782492065.9049711,
+      "modified": 1782492065.908,
       "accessed": 1781860703.3887815
     },
     {
       "path": "./android/.gradle/8.6/fileChanges/last-build.bin",
       "size": 1,
-      "created": 1781885564.019,
-      "modified": 1781885564.019,
+      "created": 1782493281.112971,
+      "modified": 1782493281.112971,
       "accessed": 1781860703.2887816
     },
     {
       "path": "./android/.gradle/8.6/checksums/checksums.lock",
       "size": 17,
-      "created": 1781885564.039,
-      "modified": 1781885564.039,
+      "created": 1782493281.164971,
+      "modified": 1782493281.164971,
       "accessed": 1781860670.8847816
     },
     {
@@ -628,29 +593,29 @@
     {
       "path": "./android/.gradle/8.6/fileHashes/fileHashes.lock",
       "size": 17,
-      "created": 1781885564.039,
-      "modified": 1781885564.039,
+      "created": 1782493281.164971,
+      "modified": 1782493281.164971,
       "accessed": 1781860670.9287817
     },
     {
       "path": "./android/.gradle/8.6/fileHashes/fileHashes.bin",
-      "size": 21847,
-      "created": 1781881909.8783653,
-      "modified": 1781881909.8783653,
+      "size": 22797,
+      "created": 1782493281.0289712,
+      "modified": 1782493281.0289712,
       "accessed": 1781860673.8807817
     },
     {
       "path": "./android/.gradle/8.6/fileHashes/resourceHashesCache.bin",
-      "size": 18871,
-      "created": 1781878791.955225,
-      "modified": 1781878791.955225,
+      "size": 18939,
+      "created": 1782492682.5529711,
+      "modified": 1782492682.5529711,
       "accessed": 1781860792.6847816
     },
     {
       "path": "./android/.gradle/8.6/dependencies-accessors/gc.properties",
       "size": 0,
-      "created": 1781860703.3727818,
-      "modified": 1781860703.3727818,
+      "created": 1782492065.8849711,
+      "modified": 1782492065.891,
       "accessed": 1781860703.3727818
     },
     {
@@ -733,29 +698,29 @@
     {
       "path": "./android/.gradle/8.6/executionHistory/executionHistory.lock",
       "size": 17,
-      "created": 1781885564.027,
-      "modified": 1781885564.027,
+      "created": 1782493281.116971,
+      "modified": 1782493281.116971,
       "accessed": 1781860791.6887817
     },
     {
       "path": "./android/.gradle/8.6/executionHistory/executionHistory.bin",
-      "size": 88685,
-      "created": 1781881909.8783653,
-      "modified": 1781881909.8783653,
+      "size": 106789,
+      "created": 1782493281.0289712,
+      "modified": 1782493281.0289712,
       "accessed": 1781860791.9007816
     },
     {
       "path": "./android/.gradle/vcs-1/gc.properties",
       "size": 0,
-      "created": 1781860703.3687816,
-      "modified": 1781860703.3687816,
+      "created": 1782492065.876971,
+      "modified": 1782492065.883,
       "accessed": 1781860703.3687816
     },
     {
       "path": "./android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
       "size": 17,
-      "created": 1781885564.023,
-      "modified": 1781885564.023,
+      "created": 1782493281.116971,
+      "modified": 1782493281.116971,
       "accessed": 1781860674.8807817
     },
     {
@@ -768,8 +733,8 @@
     {
       "path": "./android/.gradle/buildOutputCleanup/outputFiles.bin",
       "size": 21017,
-      "created": 1781885563.999,
-      "modified": 1781885563.999,
+      "created": 1782493281.0329711,
+      "modified": 1782493281.0329711,
       "accessed": 1781860791.8847816
     },
     {
@@ -794,25 +759,11 @@
       "accessed": 1781857248.8455148
     },
     {
-      "path": "./.ima/all_files.txt",
-      "size": 3948800,
-      "created": 1781856555.1295147,
-      "modified": 1781856555.1295147,
-      "accessed": 1781856555.1135147
-    },
-    {
-      "path": "./.ima/all_files_clean.txt",
-      "size": 3948665,
-      "created": 1781856555.1415148,
-      "modified": 1781856555.1415148,
-      "accessed": 1781856555.1295147
-    },
-    {
-      "path": "./.ima/architecture_map.txt",
-      "size": 4519739,
-      "created": 1781856555.1535146,
-      "modified": 1781856555.1535146,
-      "accessed": 1781856555.1415148
+      "path": "./.ima/daemon.pid",
+      "size": 4,
+      "created": 1782487669.3901281,
+      "modified": 1782487669.3901281,
+      "accessed": 1782487669.3901281
     },
     {
       "path": "./.ima/architecture_report.md",
@@ -864,34 +815,6 @@
       "accessed": 1781856555.1655147
     },
     {
-      "path": "./.ima/files.txt",
-      "size": 3947325,
-      "created": 1781856555.1775146,
-      "modified": 1781856555.1775146,
-      "accessed": 1781856555.1655147
-    },
-    {
-      "path": "./.ima/files_list.txt",
-      "size": 3947201,
-      "created": 1781856555.1895146,
-      "modified": 1781856555.1895146,
-      "accessed": 1781856555.1775146
-    },
-    {
-      "path": "./.ima/files_raw.txt",
-      "size": 3946999,
-      "created": 1781856555.1975148,
-      "modified": 1781856555.1975148,
-      "accessed": 1781856555.1895146
-    },
-    {
-      "path": "./.ima/files_snapshot.txt",
-      "size": 3948868,
-      "created": 1781856555.2095146,
-      "modified": 1781856555.2095146,
-      "accessed": 1781856555.1975148
-    },
-    {
       "path": "./.ima/rebuild_index.py",
       "size": 859,
       "created": 1782221787.4748385,
@@ -927,13 +850,6 @@
       "accessed": 1781856555.2095146
     },
     {
-      "path": "./.ima/nodes.csv",
-      "size": 4616042,
-      "created": 1781856555.2255147,
-      "modified": 1781856555.2255147,
-      "accessed": 1781856555.2135146
-    },
-    {
       "path": "./.ima/reduction_plan.md",
       "size": 922,
       "created": 1781856555.2255147,
@@ -941,18 +857,11 @@
       "accessed": 1781856555.2255147
     },
     {
-      "path": "./.ima/snapshot.txt",
-      "size": 3949047,
-      "created": 1781856555.2375147,
-      "modified": 1781856555.2375147,
-      "accessed": 1781856555.2255147
-    },
-    {
       "path": "./.ima/state.json",
       "size": 24,
-      "created": 1781860703.9007816,
-      "modified": 1781860703.9007816,
-      "accessed": 1781856555.2375147
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
     },
     {
       "path": "./.ima/build_graph.py",
@@ -985,16 +894,16 @@
     {
       "path": "./.ima/graph.json",
       "size": 743900,
-      "created": 1782222822.5628386,
-      "modified": 1782222822.5628386,
-      "accessed": 1781860663.9687817
+      "created": 1782479150.5546677,
+      "modified": 1782479150.5546677,
+      "accessed": 1782479150.5546677
     },
     {
       "path": "./.ima/global_index.json",
       "size": 35339,
-      "created": 1782222822.4588385,
-      "modified": 1782222822.4588385,
-      "accessed": 1782220990.1708386
+      "created": 1782479150.5546677,
+      "modified": 1782479150.5546677,
+      "accessed": 1782479150.5546677
     },
     {
       "path": "./.ima/memory_log.jsonl",
@@ -1013,9 +922,9 @@
     {
       "path": "./.ima/__init__.py",
       "size": 0,
-      "created": 1782222750.2348385,
-      "modified": 1782222750.2348385,
-      "accessed": 1782222750.2348385
+      "created": 1783164513.1239252,
+      "modified": 1783164513.1239252,
+      "accessed": 1783164513.1239252
     },
     {
       "path": "./.ima/ima.stream.jsonl",
@@ -1023,6 +932,104 @@
       "created": 1782222822.6828384,
       "modified": 1782222822.6828384,
       "accessed": 1782222636.2268386
+    },
+    {
+      "path": "./.ima/ima_reducer.py",
+      "size": 472,
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
+    },
+    {
+      "path": "./.ima/ledger.jsonl",
+      "size": 1837517,
+      "created": 1783588202.10562,
+      "modified": 1783588202.10562,
+      "accessed": 1783554612.3517826
+    },
+    {
+      "path": "./.ima/ima_event.py",
+      "size": 250,
+      "created": 1782479387.3066676,
+      "modified": 1782479387.3066676,
+      "accessed": 1782479387.2986677
+    },
+    {
+      "path": "./.ima/daemon.out",
+      "size": 0,
+      "created": 1783587859.1096199,
+      "modified": 1783587859.1096199,
+      "accessed": 1783537790.2852585
+    },
+    {
+      "path": "./.ima/core_state.json",
+      "size": 242,
+      "created": 1782488311.674128,
+      "modified": 1782488311.674128,
+      "accessed": 1782487669.3901281
+    },
+    {
+      "path": "./.ima/core_map.json",
+      "size": 35,
+      "created": 1782479625.6026676,
+      "modified": 1782479625.6026676,
+      "accessed": 1782479589.9466677
+    },
+    {
+      "path": "./.ima/serve.pid",
+      "size": 4,
+      "created": 1783168996.7519252,
+      "modified": 1783168996.7519252,
+      "accessed": 1783168996.7519252
+    },
+    {
+      "path": "./.ima/service.pid",
+      "size": 5,
+      "created": 1783178492.8111517,
+      "modified": 1783178492.8111517,
+      "accessed": 1783169114.4319253
+    },
+    {
+      "path": "./.ima/service.lock",
+      "size": 4,
+      "created": 1783169130.8559253,
+      "modified": 1783169130.8559253,
+      "accessed": 1783169130.8559253
+    },
+    {
+      "path": "./.ima/supervisor.pid",
+      "size": 5,
+      "created": 1783177987.3471518,
+      "modified": 1783177987.3471518,
+      "accessed": 1783177987.3471518
+    },
+    {
+      "path": "./.ima/system.pid",
+      "size": 5,
+      "created": 1783178114.8511517,
+      "modified": 1783178114.8511517,
+      "accessed": 1783178114.8511517
+    },
+    {
+      "path": "./.ima/api.pid",
+      "size": 5,
+      "created": 1783178494.5591516,
+      "modified": 1783178494.5591516,
+      "accessed": 1783178324.9151516
+    },
+    {
+      "path": "./.ima/run.lock",
+      "size": 5,
+      "created": 1783530097.4998991,
+      "modified": 1783530097.4998991,
+      "accessed": 1783178550.4471517
+    },
+    {
+      "path": "./.ima/server.pid",
+      "size": 5,
+      "created": 1783530098.1278992,
+      "modified": 1783530098.1278992,
+      "accessed": 1783178550.4591517
     },
     {
       "path": "./.ima/governance/registry.json",
@@ -1039,102 +1046,102 @@
       "accessed": 1779873853.13
     },
     {
-      "path": "./.ima/runtime/state.json",
-      "size": 89,
-      "created": 1779873853.122,
-      "modified": 1779873853.122,
-      "accessed": 1779873853.11
-    },
-    {
-      "path": "./.ima/runtime/query_engine.py",
-      "size": 868,
-      "created": 1782222940.8868384,
-      "modified": 1782222940.8868384,
-      "accessed": 1782222734.1668386
-    },
-    {
-      "path": "./.ima/runtime/file_clock.py",
-      "size": 312,
-      "created": 1782221698.4308386,
-      "modified": 1782221698.4308386,
-      "accessed": 1782221698.4108386
-    },
-    {
-      "path": "./.ima/runtime/memory_bus.py",
-      "size": 257,
-      "created": 1782221720.7028384,
-      "modified": 1782221720.7028384,
-      "accessed": 1782221720.6868386
-    },
-    {
-      "path": "./.ima/runtime/query_engine.py.tmp",
-      "size": 43,
-      "created": 1782221921.7548385,
-      "modified": 1782221921.7548385,
-      "accessed": 1782221921.7548385
-    },
-    {
-      "path": "./.ima/runtime/stream.py",
-      "size": 320,
-      "created": 1782222642.1348386,
-      "modified": 1782222642.1348386,
-      "accessed": 1782222463.9388385
+      "path": "./.ima/snapshots/state.json",
+      "size": 44,
+      "created": 1782223981.44649,
+      "modified": 1782223981.44649,
+      "accessed": 1782223981.44649
     },
     {
       "path": "./.ima/runtime/__init__.py",
       "size": 0,
-      "created": 1782222750.2188385,
-      "modified": 1782222750.2188385,
-      "accessed": 1782222750.2188385
+      "created": 1782479150.5546677,
+      "modified": 1782479150.5546677,
+      "accessed": 1782479150.5546677
     },
     {
-      "path": "./.ima/runtime/__pycache__/file_clock.cpython-313.pyc",
-      "size": 763,
-      "created": 1782221794.3228385,
-      "modified": 1782221794.3228385,
-      "accessed": 1782221794.3228385
+      "path": "./.ima/runtime/memory_bus.py",
+      "size": 257,
+      "created": 1783537448.2652586,
+      "modified": 1783537448.2652586,
+      "accessed": 1783537448.2652586
     },
     {
-      "path": "./.ima/runtime/__pycache__/query_engine.cpython-313.pyc",
-      "size": 1515,
-      "created": 1782222947.3788385,
-      "modified": 1782222947.3788385,
-      "accessed": 1782222947.3788385
+      "path": "./.ima/runtime/core.py",
+      "size": 684,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
     },
     {
-      "path": "./.ima/runtime/__pycache__/stream.cpython-313.pyc",
-      "size": 916,
-      "created": 1782222708.7708385,
-      "modified": 1782222708.7708385,
-      "accessed": 1782222708.7708385
+      "path": "./.ima/runtime/file_clock.py",
+      "size": 312,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/patches.jsonl",
+      "size": 0,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/query_engine.py",
+      "size": 868,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/runtime.py",
+      "size": 497,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/state.json",
+      "size": 89,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/stream.py",
+      "size": 320,
+      "created": 1782479150.5626676,
+      "modified": 1782479150.5626676,
+      "accessed": 1782479150.5626676
+    },
+    {
+      "path": "./.ima/runtime/ima.pid",
+      "size": 4,
+      "created": 1783531847.493328,
+      "modified": 1783531847.493328,
+      "accessed": 1783531847.4893281
     },
     {
       "path": "./.ima/runtime/__pycache__/__init__.cpython-313.pyc",
       "size": 165,
-      "created": 1782222822.4108386,
-      "modified": 1782222822.4108386,
-      "accessed": 1782222822.4108386
+      "created": 1783588202.5736198,
+      "modified": 1783588202.5736198,
+      "accessed": 1783588202.5736198
     },
     {
-      "path": "./.legacy_archive/global_index.json.tmp",
-      "size": 344187,
-      "created": 1782220672.2348385,
-      "modified": 1781525300.5439892,
-      "accessed": 1781525163.811989
+      "path": "./.ima/runtime/__pycache__/file_clock.cpython-313.pyc",
+      "size": 763,
+      "created": 1783588202.5776198,
+      "modified": 1783588202.5736198,
+      "accessed": 1783588202.5736198
     },
     {
-      "path": "./.legacy_archive/global_index.tmp",
-      "size": 427543,
-      "created": 1782220672.2388384,
-      "modified": 1781524833.659989,
-      "accessed": 1781524722.6719892
-    },
-    {
-      "path": "./__pycache__/ima.cpython-313.pyc",
-      "size": 1886,
-      "created": 1782221820.4068384,
-      "modified": 1782221820.4068384,
-      "accessed": 1782221820.4068384
+      "path": "./.ima/archive/ledger-20260709-025012.jsonl.gz",
+      "size": 37393,
+      "created": 1783554612.3437824,
+      "modified": 1783554612.3197825,
+      "accessed": 1783554612.3197825
     }
   ]
 }
