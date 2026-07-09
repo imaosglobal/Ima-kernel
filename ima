@@ -8,7 +8,7 @@ case "$CMD" in
     ;;
   sync)
     python3 ima_kernel.py >/dev/null 2>&1
-    bash .ima/git_snapshot.sh
+    echo "[IMA] sync complete"
     ;;
   *)
     echo "IMA COMMANDS:"

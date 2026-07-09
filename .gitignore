@@ -59,3 +59,7 @@ __pycache__/
 .ima/snapshot.txt
 .ima/architecture_map.txt
 .ima/nodes.csv
+
+# IMA generated runtime state
+.ima/core_map.json
+.ima/git_snapshot.sh
