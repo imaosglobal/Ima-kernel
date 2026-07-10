@@ -1,0 +1,42 @@
+{
+  "system":"IMA",
+  "state":"LOCKED",
+
+  "brain":
+  "learning/meta_orchestrator.py",
+
+  "runtime":
+  "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+
+  "event_bus":
+  "kernel/runtime/KERNEL_EVENT_BUS.js",
+
+  "api":
+  "kernel/runtime/KERNEL_API_GATEWAY.js",
+
+  "scheduler":
+  "learning/safe_scheduler.py",
+
+  "device_layer":
+  "kernel/device",
+
+  "plugins":
+  "kernel/plugins",
+
+  "persona":
+  "learning/persona_engine.py",
+
+  "child_safety":
+  "learning/child_safety_engine.py",
+
+  "policy":[
+    "single_brain_only",
+    "single_runtime_only",
+    "single_event_bus_only",
+    "single_api_gateway_only",
+    "block_duplicate_creation",
+    "redirect_to_canonical"
+  ],
+
+  "locked_at":1783652635
+}
