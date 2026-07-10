@@ -1,0 +1,9 @@
+{
+  "canonical": "learning/connect_orchestrator.py",
+  "brain": "learning/meta_orchestrator.py",
+  "blocked_patterns": [
+    "*orchestrator_new*",
+    "*orchestrator_copy*",
+    "*duplicate_orchestrator*"
+  ]
+}
