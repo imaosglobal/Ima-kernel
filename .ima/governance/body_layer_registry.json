@@ -1,0 +1,40 @@
+{
+  "system": "IMA",
+  "state": "BODY_LAYER_DISCOVERY",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/connect_orchestrator.py",
+  "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+  "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
+  "api_gateway": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
+  "service_candidates": [
+    "_tmp_server.js",
+    "server_backup_clean.js",
+    "server.js",
+    "server_backup.js",
+    "server_tmp.js",
+    "kernel/experimental/server.js",
+    "kernel/runtime/KERNEL_API_GATEWAY.js",
+    "kernel/runtime/KERNEL_API_GATEWAY_V1.js",
+    "kernel/runtime/KERNEL_API_GATEWAY_V2.js",
+    "kernel/runtime/KERNEL_API_GATEWAY_V3.js"
+  ],
+  "context_candidates": [
+    "backup_before_knowledge_context.py",
+    "backup_before_state_bridge.py",
+    "backup_before_state_priority.py",
+    "patch_state_machine.sh",
+    "patch_emotion_state.py",
+    "__pycache__/patch_emotion_state.cpython-313.pyc",
+    "__pycache__/backup_before_state_bridge.cpython-313.pyc",
+    "__pycache__/backup_before_state_priority.cpython-313.pyc",
+    "__pycache__/backup_before_knowledge_context.cpython-313.pyc",
+    ".ima/evolution_state.json"
+  ],
+  "device_candidates": [
+    "kernel/ima_devices/index.js",
+    "kernel/_graveyard/_archive/releases__v1778001671191__ima_device_layer.js",
+    "kernel/_graveyard/_archive/releases__v1778001671191__ima_devices.json",
+    ".ima/governance/device_registry.json"
+  ],
+  "time": 1783653514.7711804
+}
