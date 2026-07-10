@@ -1,0 +1,8 @@
+{
+  "canonical": "kernel/runtime/IMA_SERVICE_CORE_V1.js",
+  "blocked_patterns": [
+    "*service_copy*",
+    "*service_new*",
+    "*service_duplicate*"
+  ]
+}
