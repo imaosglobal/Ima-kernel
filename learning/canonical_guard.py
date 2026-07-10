@@ -1,29 +1,27 @@
 from pathlib import Path
 import json
 
-REGISTRY=Path(".ima/governance/canonical_architecture.json")
+CANONICAL=json.loads(
+Path(".ima/governance/CANONICAL_MAP.json").read_text()
+)
 
-def canonical():
-    return json.loads(
-        REGISTRY.read_text()
-    )
+def check(path):
 
-def verify(component,path):
+    forbidden=[
+        "new_brain",
+        "new_orchestrator",
+        "another_kernel"
+    ]
 
-    data=canonical()
+    for x in forbidden:
+        if x in path.lower():
+            raise RuntimeError(
+f"""
+IMA BLOCKED DUPLICATE
 
-    allowed=data.get(component)
-
-    if allowed and str(path)!=allowed:
-
-        raise RuntimeError(
-            "\nIMA BLOCKED DUPLICATE COMPONENT\n"
-            f"Component: {component}\n"
-            f"Use canonical path:\n{allowed}\n"
-        )
+Use existing canonical:
+{CANONICAL}
+"""
+)
 
     return True
-
-
-if __name__=="__main__":
-    print(canonical())

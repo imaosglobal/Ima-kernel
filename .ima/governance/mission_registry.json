@@ -1,0 +1,11 @@
+{
+  "system": "IMA",
+  "mission": [
+    "assist_humans",
+    "child_safe",
+    "universal_device_support",
+    "continuous_learning"
+  ],
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/meta_orchestrator.py"
+}
