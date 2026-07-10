@@ -1,11 +1,36 @@
 {
   "system": "IMA",
-  "mission": [
-    "assist_humans",
-    "child_safe",
-    "universal_device_support",
-    "continuous_learning"
+  "state": "MISSION_LOCKED",
+  "created": 1783655282.319268,
+  "mission": {
+    "primary": "להיות מערכת עוזרת חכמה, בטוחה ואנושית לכל אדם בכל שלב בחיים",
+    "vision": "ללוות ילדים ומבוגרים בלמידה, יצירה, תמיכה וניהול ידע אישי",
+    "scope": [
+      "children",
+      "families",
+      "education",
+      "personal_assistance",
+      "robots",
+      "mobile_devices",
+      "future_interfaces"
+    ]
+  },
+  "principles": [
+    "human_first",
+    "safety_first",
+    "privacy_by_design",
+    "single_brain_architecture",
+    "transparent_learning",
+    "no_duplicate_core_systems"
   ],
-  "brain": "learning/meta_orchestrator.py",
-  "orchestrator": "learning/meta_orchestrator.py"
+  "forbidden_changes": [
+    "replace_canonical_brain",
+    "create_duplicate_orchestrator",
+    "bypass_governance"
+  ],
+  "architecture": {
+    "brain": "learning/meta_orchestrator.py",
+    "orchestrator": "learning/meta_orchestrator.py",
+    "governance": ".ima/governance"
+  }
 }
