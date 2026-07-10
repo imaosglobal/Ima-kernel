@@ -1,0 +1,15 @@
+{
+  "system": "IMA",
+  "status": "E2E_CANONICAL_VERIFIED",
+  "layers": [
+    "brain",
+    "orchestrator",
+    "runtime",
+    "event_bus",
+    "service",
+    "memory",
+    "api",
+    "devices"
+  ],
+  "time": 1783653715.427135
+}
