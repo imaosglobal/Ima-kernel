@@ -1,42 +1,17 @@
 {
-  "system":"IMA",
-  "state":"LOCKED",
-
-  "brain":
-  "learning/meta_orchestrator.py",
-
-  "runtime":
-  "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
-
-  "event_bus":
-  "kernel/runtime/KERNEL_EVENT_BUS.js",
-
-  "api":
-  "kernel/runtime/KERNEL_API_GATEWAY.js",
-
-  "scheduler":
-  "learning/safe_scheduler.py",
-
-  "device_layer":
-  "kernel/device",
-
-  "plugins":
-  "kernel/plugins",
-
-  "persona":
-  "learning/persona_engine.py",
-
-  "child_safety":
-  "learning/child_safety_engine.py",
-
-  "policy":[
+  "system": "IMA",
+  "state": "CANONICAL_LOCKED",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/connect_orchestrator.py",
+  "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+  "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
+  "api_gateway": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
+  "policy": [
     "single_brain_only",
-    "single_runtime_only",
-    "single_event_bus_only",
-    "single_api_gateway_only",
+    "single_orchestrator_only",
+    "reuse_existing_components",
     "block_duplicate_creation",
-    "redirect_to_canonical"
+    "redirect_to_canonical_path"
   ],
-
-  "locked_at":1783652635
+  "updated": 1783653401.533684
 }
