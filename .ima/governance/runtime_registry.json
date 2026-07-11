@@ -1,9 +1,32 @@
 {
+  "time": 1783779836.1386573,
   "system": "IMA",
-  "state": "CANONICAL",
-  "runtime_locked": true,
-  "timestamp": 1783771566.3352864,
-  "files": 1234,
-  "canonical_brain": "learning/meta_orchestrator.py",
-  "canonical_root": "~/ima_kernel"
+  "runtime": "v1",
+  "checks": {
+    "brain": {
+      "module": "learning.meta_orchestrator",
+      "status": "ok"
+    },
+    "learning_orchestrator": {
+      "module": "learning.connect_orchestrator",
+      "status": "ok"
+    },
+    "product_runtime": {
+      "path": "product/product_runtime.py",
+      "exists": true
+    },
+    "device_protocol": {
+      "path": "product/device_bridge/device_protocol.json",
+      "exists": true
+    },
+    "safety": {
+      "path": "product/safety/safety_policy.json",
+      "exists": true
+    },
+    "voice": {
+      "path": "product/voice/voice_pipeline.json",
+      "exists": true
+    }
+  },
+  "active_components": 6
 }
