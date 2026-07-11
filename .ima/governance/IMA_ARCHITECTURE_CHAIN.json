@@ -4,14 +4,14 @@
   "created": 1783772307.7276888,
   "canonical": {
     "brain": "learning/meta_orchestrator.py",
-    "runtime": "kernel/runtime/ENTRYPOINT.js",
+    "runtime": "IMA_START.py",
     "governance": ".ima/governance"
   },
   "selection": {
     "method": "automatic",
     "candidates": [
       {
-        "path": "kernel/runtime/ENTRYPOINT.js",
+        "path": "IMA_START.py",
         "score": 7,
         "exists": true
       },

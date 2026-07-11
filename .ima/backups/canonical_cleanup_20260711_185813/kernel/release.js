@@ -38,7 +38,7 @@ fs.writeFileSync("package.json", JSON.stringify({
   name: NAME,
   version: VERSION,
   main: "server.js",
-  files: ["server.js","runtime/ENTRYPOINT.js","cli.js"],
+  files: ["server.js","ima_kernel.js","ima_runtime.js","ima_policy.js","ima_memory_long.js","cli.js"],
   bin: { ima: "cli.js" }
 }, null, 2));
 
