@@ -1,0 +1,9 @@
+{
+  "canonical_entry": "IMA_START.py",
+  "state": "LOCKED",
+  "rules": [
+    "only_single_entry",
+    "no_duplicate_entrypoints",
+    "redirect_all_launches_to_IMA_START"
+  ]
+}
