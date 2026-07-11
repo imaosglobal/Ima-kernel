@@ -107,7 +107,7 @@ registry={
 "learning/meta_orchestrator.py",
 
 "orchestrator":
-"learning/connect_orchestrator.py",
+"learning/module_registry.py",
 
 "service_core":
 "kernel/runtime/IMA_SERVICE_CORE_V1.js",

@@ -27,7 +27,7 @@ registry = {
         "learning/meta_orchestrator.py",
 
     "orchestrator":
-        "learning/connect_orchestrator.py",
+        "learning/module_registry.py",
 
     "runtime":
         "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",

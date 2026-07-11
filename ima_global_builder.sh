@@ -105,7 +105,7 @@ EOF
 echo "[5] Run verification"
 
 
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 
 python3 ima_full_system_check.py
 

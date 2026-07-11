@@ -460,11 +460,11 @@ learning/system_introspection.py:34:                        "import": node.modul
 learning/system_introspection.py:42:        "imports": imports,
 learning/system_introspection.py:44:        "import_count": len(imports)
 learning/system_introspection.py:63:    if scan["import_count"] > scan["module_count"] * 3:
-learning/connect_orchestrator.py:1:from pathlib import Path
-learning/connect_orchestrator.py:2:import importlib
-learning/connect_orchestrator.py:3:import json
-learning/connect_orchestrator.py:4:import time
-learning/connect_orchestrator.py:34:        importlib.import_module(
+learning/module_registry.py:1:from pathlib import Path
+learning/module_registry.py:2:import importlib
+learning/module_registry.py:3:import json
+learning/module_registry.py:4:import time
+learning/module_registry.py:34:        importlib.import_module(
 learning/brain_guard.py:1:from pathlib import Path
 learning/brain_guard.py:2:import json
 learning/brain_guard.py:3:import time

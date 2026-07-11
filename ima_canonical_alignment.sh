@@ -8,7 +8,7 @@ cd "$ROOT"
 echo "=== IMA CANONICAL ALIGNMENT ==="
 
 BRAIN="learning/meta_orchestrator.py"
-ORCHESTRATOR="learning/connect_orchestrator.py"
+ORCHESTRATOR="learning/module_registry.py"
 RUNTIME="kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js"
 EVENT_BUS="kernel/runtime/KERNEL_EVENT_BUS_V2.js"
 API="kernel/runtime/KERNEL_API_GATEWAY_V3.js"
@@ -59,7 +59,7 @@ data = {
     "system": "IMA",
     "state": "CANONICAL_LOCKED",
     "brain": "learning/meta_orchestrator.py",
-    "orchestrator": "learning/connect_orchestrator.py",
+    "orchestrator": "learning/module_registry.py",
     "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
     "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
     "api_gateway": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
@@ -80,7 +80,7 @@ Path(".ima/governance/canonical_architecture.json").write_text(
 
 Path(".ima/governance/orchestrator_lock.json").write_text(
     json.dumps({
-        "canonical": "learning/connect_orchestrator.py",
+        "canonical": "learning/module_registry.py",
         "brain": "learning/meta_orchestrator.py",
         "blocked_patterns": [
             "*orchestrator_new*",
@@ -110,7 +110,7 @@ PY
 echo
 echo "[5] Orchestrator registry"
 
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 
 
 echo
@@ -125,7 +125,7 @@ echo "[7] Python learning modules"
 python3 - <<'PY'
 mods=[
 "meta_orchestrator",
-"connect_orchestrator",
+"module_registry",
 "ima_learning_loop",
 "learning_memory_connector",
 "health_check",
@@ -148,7 +148,7 @@ cat > .ima/governance/canonical_alignment_report.json <<EOF
  "system":"IMA",
  "status":"CANONICAL_ALIGNMENT_COMPLETE",
  "brain":"learning/meta_orchestrator.py",
- "orchestrator":"learning/connect_orchestrator.py",
+ "orchestrator":"learning/module_registry.py",
  "runtime":"kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
  "time":"$(date)"
 }

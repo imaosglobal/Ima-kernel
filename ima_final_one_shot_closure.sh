@@ -33,9 +33,9 @@ PY
 
 echo "[3] VERIFY ORCHESTRATOR CONNECTOR" | tee -a "$LOG"
 
-if [ ! -f learning/connect_orchestrator.py ]; then
+if [ ! -f learning/module_registry.py ]; then
     echo "creating missing connector"
-    cat > learning/connect_orchestrator.py <<'PY'
+    cat > learning/module_registry.py <<'PY'
 import json,time
 from pathlib import Path
 
@@ -56,7 +56,7 @@ MODULES=[
 def build_registry():
     result={
     "system":"IMA",
-    "type":"learning_orchestrator_registry",
+    "type":"learning_module_registry",
     "time":time.time(),
     "modules":[]
     }
@@ -86,7 +86,7 @@ PY
 fi
 
 
-python3 learning/connect_orchestrator.py >> "$LOG" 2>&1 || true
+python3 learning/module_registry.py >> "$LOG" 2>&1 || true
 
 
 echo "[4] COMPILE CHECK" | tee -a "$LOG"

@@ -8,7 +8,7 @@ learning/self_reflection.py:22:    JOURNAL.write_text(
 learning/single_gate.py:20:    REGISTRY.parent.mkdir(
 learning/single_gate.py:40:    REGISTRY.write_text(
 learning/single_gate.py:67:        ALERTS.parent.mkdir(
-learning/connect_orchestrator.py:77:    ).write_text(
+learning/module_registry.py:77:    ).write_text(
 learning/brain_guard.py:26:    REGISTRY.parent.mkdir(parents=True, exist_ok=True)
 learning/brain_guard.py:28:    REGISTRY.write_text(
 learning/ima_chronicle.py:24:    CHRONICLE.parent.mkdir(parents=True, exist_ok=True)
