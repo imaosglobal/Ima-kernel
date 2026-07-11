@@ -11,5 +11,12 @@
     "single_orchestrator_only",
     "connectors_allowed",
     "block_duplicate_creation"
+  ],
+  "entry_point": "IMA_START.py",
+  "entry_policy": [
+    "single_entry_only",
+    "single_brain_only",
+    "single_orchestrator_only",
+    "block_duplicate_entry_creation"
   ]
 }
