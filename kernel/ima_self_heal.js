@@ -1,16 +1,21 @@
-
 const fs = require('fs');
 
 function heal(){
-  const required = ['ima_kernel.js','ima_runtime.js','ima_policy.js'];
+  const required = [
+    '.ima/runtime/runtime.py',
+    'learning/meta_orchestrator.py',
+    '.ima/governance/canonical_architecture.json'
+  ];
 
   required.forEach(f=>{
     if(!fs.existsSync(f)){
-      console.log('[HEAL] missing',f);
+      console.log('[HEAL] missing canonical', f);
+    } else {
+      console.log('[HEAL] OK', f);
     }
   });
 
-  console.log('[HEAL CHECK DONE]');
+  console.log('[CANONICAL HEAL CHECK DONE]');
 }
 
 module.exports = { heal };

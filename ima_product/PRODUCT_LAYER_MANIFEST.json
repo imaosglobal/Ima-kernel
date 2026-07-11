@@ -1,0 +1,19 @@
+{
+  "runtime": {
+    "entry": "kernel/runtime/CANONICAL/IMA_RUNTIME.js",
+    "state": "kernel/runtime/CANONICAL/IMA_STATE.js",
+    "events": "kernel/runtime/CANONICAL/IMA_EVENTS.js",
+    "heal": "kernel/runtime/CANONICAL/IMA_HEAL.js",
+    "policy": "kernel/runtime/CANONICAL/IMA_POLICY.js"
+  },
+  "product": {
+    "api": true,
+    "auth": true,
+    "database": true,
+    "frontend": true,
+    "deployment": true,
+    "monitoring": true,
+    "core": true
+  },
+  "status": "CANONICAL_LAYER_CREATED"
+}

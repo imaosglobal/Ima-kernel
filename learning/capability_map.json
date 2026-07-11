@@ -198,12 +198,6 @@
       "suggest_improvements"
     ]
   },
-  "module_registry": {
-    "functions": [
-      "check_module",
-      "build_registry"
-    ]
-  },
   "brain_guard": {
     "functions": [
       "create_registry",
@@ -229,6 +223,12 @@
     "functions": [
       "create_chronicle",
       "verify_path"
+    ]
+  },
+  "module_registry": {
+    "functions": [
+      "check_module",
+      "build_registry"
     ]
   }
 }

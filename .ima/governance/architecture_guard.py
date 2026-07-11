@@ -6,7 +6,7 @@ ROOT = Path(".")
 REGISTRY = Path(".ima/governance/IMA_PRODUCT_ARCHITECTURE_LOCK.json")
 
 CANONICAL_BRAIN = Path("learning/meta_orchestrator.py")
-CANONICAL_BODY = Path("kernel/runtime/ENTRYPOINT.js")
+CANONICAL_BODY = Path("IMA_START.py")
 
 
 class ArchitectureViolation(Exception):
