@@ -39,7 +39,7 @@ else:
     report["missing"].append(str(brain))
 
 # Orchestrator
-orch = Path("learning/connect_orchestrator.py")
+orch = Path("learning/module_registry.py")
 if orch.exists():
     report["checks"]["orchestrator_connector"] = "OK"
 else:

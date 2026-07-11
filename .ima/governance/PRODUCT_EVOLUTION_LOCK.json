@@ -2,7 +2,7 @@
   "system": "IMA",
   "state": "PRODUCT_EVOLUTION_LOCKED",
   "brain": "learning/meta_orchestrator.py",
-  "orchestrator": "learning/connect_orchestrator.py",
+  "orchestrator": "learning/module_registry.py",
   "duplicate_creation": "blocked",
   "created": [
     "product/runtime/product_runtime_registry.json",

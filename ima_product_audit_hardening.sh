@@ -36,7 +36,7 @@ else:
 
 
 # Connector
-connector = Path("learning/connect_orchestrator.py")
+connector = Path("learning/module_registry.py")
 
 if connector.exists():
     report["checks"]["orchestrator_connector"] = "OK"
@@ -135,7 +135,7 @@ data={
 "system":"IMA",
 "state":"AUDITED",
 "brain":"learning/meta_orchestrator.py",
-"connector":"learning/connect_orchestrator.py",
+"connector":"learning/module_registry.py",
 "policy":[
 "single_brain_only",
 "single_orchestrator_only",

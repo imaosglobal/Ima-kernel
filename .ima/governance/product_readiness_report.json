@@ -2,7 +2,7 @@
   "system": "IMA",
   "status": "PRODUCT_READINESS_AUDIT_COMPLETE",
   "canonical_brain": "learning/meta_orchestrator.py",
-  "canonical_orchestrator": "learning/connect_orchestrator.py",
+  "canonical_orchestrator": "learning/module_registry.py",
   "checks": {
     "Android": {
       "status": "FOUND",

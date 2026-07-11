@@ -82,7 +82,7 @@ lock={
 "system":"IMA",
 "state":"PRODUCT_EVOLUTION_LOCKED",
 "brain":"learning/meta_orchestrator.py",
-"orchestrator":"learning/connect_orchestrator.py",
+"orchestrator":"learning/module_registry.py",
 "duplicate_creation":"blocked",
 "created":created,
 "time":time.time()
@@ -111,7 +111,7 @@ PY
 
 echo
 echo "=== RUN CONNECTIVITY ==="
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 python3 ima_full_system_check.py
 
 echo
