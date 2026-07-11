@@ -29,7 +29,7 @@ import sys
 ROOT = Path(__file__).resolve().parent
 
 BRAIN = ROOT / "learning" / "meta_orchestrator.py"
-CONNECTOR = ROOT / "learning" / "connect_orchestrator.py"
+CONNECTOR = ROOT / "learning" / "module_registry.py"
 
 GOVERNANCE = ROOT / ".ima" / "governance"
 

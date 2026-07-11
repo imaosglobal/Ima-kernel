@@ -18,7 +18,7 @@ state={
     "state":"CANONICAL_LOCKED",
     "active":{
         "brain":"learning/meta_orchestrator.py",
-        "connector":"learning/connect_orchestrator.py",
+        "connector":"learning/module_registry.py",
         "runtime":"kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
         "event_bus":"kernel/runtime/KERNEL_EVENT_BUS_V2.js",
         "api":"kernel/runtime/KERNEL_API_GATEWAY_V3.js",
@@ -55,7 +55,7 @@ from pathlib import Path
 
 files=[
 "learning/meta_orchestrator.py",
-"learning/connect_orchestrator.py",
+"learning/module_registry.py",
 "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
 "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
 "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
@@ -75,7 +75,7 @@ from pathlib import Path
 
 targets=[
 "meta_orchestrator.py",
-"connect_orchestrator.py",
+"module_registry.py",
 "SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
 "KERNEL_EVENT_BUS_V2.js",
 "KERNEL_API_GATEWAY_V3.js",

@@ -15,7 +15,7 @@ from pathlib import Path
 
 files=[
 "learning/meta_orchestrator.py",
-"learning/connect_orchestrator.py",
+"learning/module_registry.py",
 "learning/ima_learning_loop.py",
 "learning/safety_gate.py",
 "learning/child_safety_engine.py"
@@ -38,7 +38,7 @@ from pathlib import Path
 
 registry={
 "system":"IMA",
-"orchestrator":"learning/connect_orchestrator.py",
+"orchestrator":"learning/module_registry.py",
 "brain":"learning/meta_orchestrator.py",
 "active_orchestrators":[
 "health_check",
@@ -120,7 +120,7 @@ targets=[
 "KERNEL_API_GATEWAY_V3.js",
 "IMA_SERVICE_CORE_V1.js",
 "meta_orchestrator.py",
-"connect_orchestrator.py"
+"module_registry.py"
 ]
 
 for t in targets:
@@ -143,7 +143,7 @@ state={
 "system":"IMA",
 "status":"FINAL_CANONICAL_LOCKED",
 "brain":"learning/meta_orchestrator.py",
-"orchestrator":"learning/connect_orchestrator.py",
+"orchestrator":"learning/module_registry.py",
 "runtime":"kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
 "event_bus":"kernel/runtime/KERNEL_EVENT_BUS_V2.js",
 "api":"kernel/runtime/KERNEL_API_GATEWAY_V3.js",

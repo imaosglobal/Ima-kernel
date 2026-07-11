@@ -95,7 +95,7 @@ cat > .ima/governance/MASTER_GOVERNOR.json <<EOF
   "mode": "CANONICAL_ONLY",
   "brain": "$BRAIN",
   "runtime": "$RUNTIME",
-  "orchestrator": "learning/connect_orchestrator.py",
+  "orchestrator": "learning/module_registry.py",
   "policies": [
     "single_brain_only",
     "single_runtime_only",

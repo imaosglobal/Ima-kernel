@@ -133,7 +133,7 @@ registry={
 "learning/meta_orchestrator.py",
 
 "canonical_orchestrator":
-"learning/connect_orchestrator.py",
+"learning/module_registry.py",
 
 "checks":
 result,

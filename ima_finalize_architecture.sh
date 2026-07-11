@@ -17,7 +17,7 @@ cat > .ima/governance/canonical_map.json <<JSON
   "brain": "learning/meta_orchestrator.py",
   "orchestrator": "learning/meta_orchestrator.py",
   "connectors": [
-    "learning/connect_orchestrator.py"
+    "learning/module_registry.py"
   ],
   "policy": [
     "single_brain_only",
@@ -40,7 +40,7 @@ CANONICAL_BRAIN = Path("learning/meta_orchestrator.py")
 CANONICAL_ORCHESTRATOR = Path("learning/meta_orchestrator.py")
 
 CONNECTORS = [
-    Path("learning/connect_orchestrator.py")
+    Path("learning/module_registry.py")
 ]
 
 REGISTRY = Path(".ima/governance/brain_registry.json")
@@ -110,7 +110,7 @@ python3 - <<'PY'
 from learning.brain_guard import verify_brain
 
 verify_brain("learning/meta_orchestrator.py")
-verify_brain("learning/connect_orchestrator.py")
+verify_brain("learning/module_registry.py")
 
 print("BRAIN ARCHITECTURE OK")
 PY

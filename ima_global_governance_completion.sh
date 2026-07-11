@@ -142,7 +142,7 @@ data={
 "canonical_orchestrator":"learning/meta_orchestrator.py",
 "connected_orchestrators":[
  "learning/meta_orchestrator.py",
- "learning/connect_orchestrator.py",
+ "learning/module_registry.py",
  "kernel/runtime/KERNEL_POLICY_ORCHESTRATOR_V3.js"
 ],
 "policy":[
@@ -183,7 +183,7 @@ EOF
 
 echo "[10] Verification"
 
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 python3 ima_full_system_check.py
 
 

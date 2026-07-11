@@ -23,12 +23,12 @@ fi
 
 echo "[2] Checking orchestrator"
 
-if [ -f "learning/connect_orchestrator.py" ]; then
-    ORCH="learning/connect_orchestrator.py"
+if [ -f "learning/module_registry.py" ]; then
+    ORCH="learning/module_registry.py"
 else
     echo "Creating orchestrator connector"
 
-cat > learning/connect_orchestrator.py <<'PY'
+cat > learning/module_registry.py <<'PY'
 import importlib,json,time
 from pathlib import Path
 
@@ -76,7 +76,7 @@ if __name__=="__main__":
     build_registry()
 PY
 
-    ORCH="learning/connect_orchestrator.py"
+    ORCH="learning/module_registry.py"
 fi
 
 
@@ -175,13 +175,13 @@ echo "[8] Running Python checks"
 
 python3 -m py_compile \
 learning/meta_orchestrator.py \
-learning/connect_orchestrator.py \
+learning/module_registry.py \
 learning/canonical_guard.py
 
 
 echo "[9] Running orchestrator"
 
-python3 learning/connect_orchestrator.py || true
+python3 learning/module_registry.py || true
 
 
 echo "[10] Running system checks"
@@ -193,7 +193,7 @@ fi
 
 echo "[11] Git freeze"
 
-git add .ima/governance learning/canonical_guard.py learning/connect_orchestrator.py
+git add .ima/governance learning/canonical_guard.py learning/module_registry.py
 
 git commit -m "IMA canonical brain runtime e2e lock" || true
 

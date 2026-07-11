@@ -12,7 +12,7 @@ ROOT = Path(".")
 
 required = {
     "brain": "learning/meta_orchestrator.py",
-    "orchestrator_connector": "learning/connect_orchestrator.py",
+    "orchestrator_connector": "learning/module_registry.py",
     "runtime": ".ima/runtime/runtime.py",
     "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
     "api": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
@@ -62,6 +62,6 @@ echo "=== RUNNING HEALTH ==="
 python3 ima_full_system_check.py
 
 echo "=== RUNNING ORCHESTRATOR ==="
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 
 echo "=== COMPLETE ==="
