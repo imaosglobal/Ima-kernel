@@ -1,0 +1,475 @@
+kernel/runtime/.control_snapshots/_exec_test.js.1778593227536.bak:1:console.log("exec ok")
+kernel/runtime/CLUSTER_HARD_FIX_V1.js:1:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/ENTRYPOINT.backup.js:1:const kernelState = require("./KERNEL_STATE");
+kernel/runtime/ENTRYPOINT.js:1:const { updateHeartbeat } = require("./KERNEL_STATE");
+kernel/runtime/ENTRYPOINT.js:2:const { healAll } = require("./KERNEL_SELF_HEAL");
+kernel/runtime/ENTRYPOINT.js:18:    const state = require("./KERNEL_STATE").getState();
+kernel/runtime/FILE_GUARD.js:1:const fs = require("fs");
+kernel/runtime/FILE_GUARD.js:2:const crypto = require("crypto");
+kernel/runtime/FILE_GUARD.js:3:const path = require("path");
+kernel/runtime/FS_CONTROLLER.js:1:const GUARD=require('./KERNEL_WRITE_GUARD');
+kernel/runtime/FS_CONTROLLER.js:2:const VERSION=require('./VERSION_ENGINE');
+kernel/runtime/FS_CONTROLLER.js:3:const fs = require("fs");
+kernel/runtime/FS_CONTROLLER.js:4:const path = require("path");
+kernel/runtime/FS_CONTROLLER.js:5:const crypto = require("crypto");
+kernel/runtime/IMMUTABLE_GATE.js:1:const FS = require("./FS_CONTROLLER");
+kernel/runtime/KERNEL_API_GATEWAY.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_API_GATEWAY.js:3:const CP = require('./KERNEL_CONTROL_PLANE_V2');
+kernel/runtime/KERNEL_API_GATEWAY.js:4:const PIPE = require('./KERNEL_PIPELINE');
+kernel/runtime/KERNEL_API_GATEWAY_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_API_GATEWAY_V2.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_API_GATEWAY_V2.js:2:const TX = require('./KERNEL_TRANSACTION_ENGINE_V1');
+kernel/runtime/KERNEL_API_GATEWAY_V3.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_API_GATEWAY_V3.js:2:const TX = require('./KERNEL_TRANSACTION_ENGINE_V1');
+kernel/runtime/KERNEL_API_GATEWAY_V3.js:3:const BUS = require('./KERNEL_EVENT_BUS_V1');
+kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js:2:const { execSync } = require('child_process');
+kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js:20:    execSync("node runtime/enforce_fs_controller.js", { stdio: "inherit" });
+kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js:50:  execSync("git checkout -- runtime", { stdio: "inherit" });
+kernel/runtime/KERNEL_BACKGROUND_AGENT.js:1:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_BACKGROUND_AGENT.js:2:const fs = require("fs");
+kernel/runtime/KERNEL_BACKGROUND_AGENT.js:3:const SYNC = require("./KERNEL_SYNC_ENGINE");
+kernel/runtime/KERNEL_BACKGROUND_AGENT.js:11:    return execSync(cmd).toString().trim();
+kernel/runtime/KERNEL_BACKGROUND_AGENT_V2.js:1:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_BACKGROUND_AGENT_V2.js:2:const fs = require("fs");
+kernel/runtime/KERNEL_BACKGROUND_AGENT_V2.js:3:const GOV = require("./KERNEL_GOVERNOR");
+kernel/runtime/KERNEL_BACKGROUND_AGENT_V2.js:6:  try { return execSync(cmd).toString(); }
+kernel/runtime/KERNEL_BOOTSTRAP.js:1:const CORE = require('./KERNEL_CORE');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:3:const GATEWAY = require('./KERNEL_API_GATEWAY_V3');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:4:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:5:const TX = require('./KERNEL_TRANSACTION_ENGINE_V1');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:24:  // 2. cluster init (CRITICAL FIX: must pass file if required)
+kernel/runtime/KERNEL_BOOTSTRAP_LOOP_V1.js:1:const UNIFIED = require('./KERNEL_UNIFIED_RUNTIME_V1');
+kernel/runtime/KERNEL_BOOTSTRAP_LOOP_V1.js:2:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_BOOTSTRAP_LOOP_V1.js:3:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/KERNEL_BOOT_GUARD.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:1:const cluster = require('cluster');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:2:const os = require('os');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:3:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:66:      const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:98:      exec: __filename   // 🔥 FIX: חשוב מאוד
+kernel/runtime/KERNEL_CLUSTER_MASTER_V6.js:122:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:1:const cluster = require('cluster');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:2:const os = require('os');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:3:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:15:    executed: {},
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:32:      const res = EXEC.execute(msg.cmd);
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:34:      session.executed[nodeId] = true;
+kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js:68:  const nodeId = require('crypto')
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:1:const cluster = require('cluster');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:2:const path = require('path');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:3:const crypto = require('crypto');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:5:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:18:    executed:{},
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:36:      exec: workerPath
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:55:          const res = EXEC.execute(msg.cmd);
+kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js:61:          session.executed[msg.nodeId]=true;
+kernel/runtime/KERNEL_CONSOLIDATION_ENGINE_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CONSOLIDATION_ENGINE_V1.js:18:  execution: [
+kernel/runtime/KERNEL_CONTRACT_ENFORCER_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CONTRACT_ENFORCER_V1.js:3:const ACTIVE = require('./KERNEL_CONSOLIDATION_ENGINE_V1').inspect();
+kernel/runtime/KERNEL_CONTRACT_ENFORCER_V1.js:6:  try { return require(path); }
+kernel/runtime/KERNEL_CONTRACT_ENFORCER_V1.js:32:    execution: ['execute'],
+kernel/runtime/KERNEL_CONTROL_MESH_V1.js:1:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CONTROL_MESH_V1.js:2:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CONTROL_MESH_V1.js:15:  // 3. execute orchestrator
+kernel/runtime/KERNEL_CONTROL_MESH_V2.js:1:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CONTROL_MESH_V2.js:2:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CONTROL_MESH_V2.js:15:  // attach execution context into session graph
+kernel/runtime/KERNEL_CONTROL_MESH_V2.js:24:  // 4. execute only within session boundary
+kernel/runtime/KERNEL_CONTROL_MESH_V2.js:35:    session.executed[nodeId] = true;
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:1:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:2:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:58:          throw new Error(res?.error || 'execution_failed');
+kernel/runtime/KERNEL_CONTROL_MESH_V4.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CONTROL_MESH_V4.js:2:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CONTROL_MESH_V4.js:3:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CONTROL_MESH_V4.js:97:      throw new Error(res?.error || 'execution_failed');
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:2:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:3:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:46:// execution core
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:49:function execute(job){
+kernel/runtime/KERNEL_CONTROL_MESH_V5.js:93:  execute(job);
+kernel/runtime/KERNEL_CONTROL_PLANE.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_CONTROL_PLANE.js:2:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_CONTROL_PLANE.js:28:  const out = execSync("git status --porcelain", { encoding: "utf8" })
+kernel/runtime/KERNEL_CONTROL_PLANE.js:50:    execSync("node -e \"require('./runtime/FS_CONTROLLER');\"", {
+kernel/runtime/KERNEL_CONTROL_PLANE.js:60:  execSync(`git add . && git commit -m "auto release ${version}"`, {
+kernel/runtime/KERNEL_CONTROL_PLANE.js:66:  execSync(`git tag v${version}`, { stdio: "inherit" });
+kernel/runtime/KERNEL_CONTROL_PLANE.js:70:  execSync("git push && git push --tags", { stdio: "inherit" });
+kernel/runtime/KERNEL_CONTROL_PLANE.js:75:    execSync("npm publish", { stdio: "inherit" });
+kernel/runtime/KERNEL_CONTROL_PLANE_V2.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CONTROL_PLANE_V2.js:2:const path = require('path');
+kernel/runtime/KERNEL_CONTROL_PLANE_V2.js:3:const crypto = require('crypto');
+kernel/runtime/KERNEL_CORE.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CPLANE_AND_CONNECTORS.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_CPLANE_AND_CONNECTORS.js:2:const { execSync } = require('child_process');
+kernel/runtime/KERNEL_CPLANE_AND_CONNECTORS.js:56:      return execSync('git status --porcelain').toString().trim();
+kernel/runtime/KERNEL_CPLANE_AND_CONNECTORS.js:60:      execSync(`git add . && git commit -m "${msg}"`);
+kernel/runtime/KERNEL_CPLANE_AND_CONNECTORS.js:65:      execSync('git push');
+kernel/runtime/KERNEL_E2E_LOCK.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_E2E_LOCK.js:2:const path = require('path');
+kernel/runtime/KERNEL_E2E_LOCK.js:4:const BUS = require('./KERNEL_EVENT_BUS');
+kernel/runtime/KERNEL_E2E_LOCK.js:5:const HEAL = require('./SELF_HEALING_COMPILER_V2');
+kernel/runtime/KERNEL_E2E_LOCK.js:6:const CONTROL = require('./KERNEL_CONTROL_PLANE_V2');
+kernel/runtime/KERNEL_ENFORCER_DAEMON.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_EVENT_BUS.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_EVENT_BUS.js:2:const path = require('path');
+kernel/runtime/KERNEL_EVENT_BUS.js:4:const CONTROL = require('./KERNEL_CONTROL_PLANE_V2');
+kernel/runtime/KERNEL_EVENT_BUS.js:52:function execute(event){
+kernel/runtime/KERNEL_EVENT_BUS.js:95:    result = execute(event);
+kernel/runtime/KERNEL_EVENT_BUS_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_EVENT_BUS_V1.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_EVENT_BUS_V2.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_EVENT_BUS_V2.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_EXECUTION_ADAPTER_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_EXECUTION_ADAPTER_V1.js:3:function execute(cmd){
+kernel/runtime/KERNEL_EXECUTION_ADAPTER_V1.js:12:    status: 'executed',
+kernel/runtime/KERNEL_EXECUTION_ADAPTER_V1.js:32:  execute,
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:3:const G = require('./KERNEL_API_GATEWAY');
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:5:const LOG_PATH = './runtime/.execution_log.json';
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:27:function execute(cmd){
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:84:  execute,
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:3:const G = require('./KERNEL_API_GATEWAY');
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:5:const PATH = './runtime/.exec_store.json';
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:31:function execute(cmd){
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:90:  execute,
+kernel/runtime/KERNEL_EXECUTION_POOL_V1.js:1:const { Worker } = require('worker_threads');
+kernel/runtime/KERNEL_EXECUTION_POOL_V1.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_EXECUTION_POOL_V1.js:3:const path = require('path');
+kernel/runtime/KERNEL_EXECUTION_POOL_V1.js:16:    executed: {},
+kernel/runtime/KERNEL_EXECUTION_POOL_V1.js:41:        s.executed[msg.nodeId] = true;
+kernel/runtime/KERNEL_FINAL_CONTROL_LAYER.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_FS_GATE.js:1:const FS = require("./FS_CONTROLLER");
+kernel/runtime/KERNEL_FS_HOOK.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_FS_HOOK.js:2:const GUARD = require('./KERNEL_WRITE_GUARD');
+kernel/runtime/KERNEL_GATE.js:1:const IMM = require("./IMMUTABLE_GATE");
+kernel/runtime/KERNEL_GATE.js:2:const POLICY = require("./POLICY_ENGINE");
+kernel/runtime/KERNEL_GOVERNOR.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_GOVERNOR.js:2:const crypto = require("crypto");
+kernel/runtime/KERNEL_MASTER_DAEMON.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_MASTER_DAEMON.js:2:const path = require('path');
+kernel/runtime/KERNEL_MASTER_DAEMON.js:4:const BUS = require('./KERNEL_EVENT_BUS');
+kernel/runtime/KERNEL_MASTER_DAEMON.js:5:const HEAL = require('./SELF_HEALING_COMPILER_V2');
+kernel/runtime/KERNEL_MASTER_DAEMON.js:6:const E2E = require('./KERNEL_E2E_LOCK');
+kernel/runtime/KERNEL_ORCHESTRATOR_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_ORCHESTRATOR_V1.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_ORCHESTRATOR_V1.js:4:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_ORCHESTRATOR_V1.js:98:        const res = EXEC.execute(node.cmd);
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:3:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:12:    executed:{}
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:21:  s.executed ||= {};
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:62:  if(state.executed[node.id]) return false;
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:100:        const res = EXEC.execute(node.cmd);
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:105:        state.executed[id] = true;
+kernel/runtime/KERNEL_ORCHESTRATOR_V2.js:136:    executed:Object.keys(s.executed).length,
+kernel/runtime/KERNEL_PIPELINE.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_POLICY_ORCHESTRATOR_V3.js:1:const crypto = require('crypto');
+kernel/runtime/KERNEL_POLICY_ORCHESTRATOR_V3.js:2:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_POLICY_ORCHESTRATOR_V3.js:3:const TX = require('./KERNEL_TRANSACTION_ENGINE_V1');
+kernel/runtime/KERNEL_STATE.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_STATE.js:2:const path = require("path");
+kernel/runtime/KERNEL_RECONCILIATION_ENGINE_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_RECONCILIATION_ENGINE_V1.js:3:const ORCH = require('./KERNEL_ORCHESTRATOR_V2');
+kernel/runtime/KERNEL_RECONCILIATION_ENGINE_V1.js:4:const TX = require('./KERNEL_TRANSACTION_LAYER_V2');
+kernel/runtime/KERNEL_RECONCILIATION_ENGINE_V1.js:5:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/KERNEL_RECOVERY_DAEMON_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_RECOVERY_DAEMON_V1.js:2:const UNIFIED = require('./KERNEL_UNIFIED_RUNTIME_V1');
+kernel/runtime/KERNEL_RECOVERY_DAEMON_V1.js:3:const SELF_HEAL = require('./KERNEL_SELF_HEAL_RUNTIME_V1');
+kernel/runtime/KERNEL_RELEASE_CONTROLLER.js:1:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_RELEASE_CONTROLLER.js:2:const fs = require("fs");
+kernel/runtime/KERNEL_RELEASE_CONTROLLER.js:6:    return execSync(cmd, { stdio: "inherit" });
+kernel/runtime/KERNEL_RELEASE_CONTROLLER.js:14:  const k = require("./KERNEL_STATE");
+kernel/runtime/KERNEL_RELEASE_GATE.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_RELEASE_GATE.js:2:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_RELEASE_GATE.js:40:  const out = execSync("git status --porcelain").toString().trim();
+kernel/runtime/KERNEL_REPLAY_ENGINE_V1.js:1:const BUS = require('./KERNEL_EVENT_BUS_V1');
+kernel/runtime/KERNEL_REPLAY_ENGINE_V1.js:2:const G = require('./KERNEL_API_GATEWAY_V2');
+kernel/runtime/KERNEL_REPLAY_ENGINE_V1.js:11:      // רק events של execution עוברים דרך gateway
+kernel/runtime/KERNEL_REPLAY_ENGINE_V2.js:1:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_SELF_HEAL.js:1:const { execSync } = require("child_process");
+kernel/runtime/KERNEL_SELF_HEAL.js:2:const fs = require("fs");
+kernel/runtime/KERNEL_SELF_HEAL.js:6:    return execSync(cmd, { stdio: "pipe" }).toString();
+kernel/runtime/KERNEL_SELF_HEAL.js:18:  const k = require("./KERNEL_STATE");
+kernel/runtime/KERNEL_SELF_HEAL_RUNTIME_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_SELF_HEAL_RUNTIME_V1.js:2:const UNIFIED = require('./KERNEL_UNIFIED_RUNTIME_V1');
+kernel/runtime/KERNEL_SNAPSHOT_ENGINE_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_STABILITY_GATE.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_SUPERVISOR.js:1:const { spawn } = require("child_process");
+kernel/runtime/KERNEL_SUPERVISOR.js:17:  const p = spawn("sh", ["-c", svc.cmd], {
+kernel/runtime/KERNEL_SUPERVISOR_V2.js:1:const { spawn } = require("child_process");
+kernel/runtime/KERNEL_SUPERVISOR_V2.js:11:  const p = spawn("sh", ["-c", svc.cmd], {
+kernel/runtime/KERNEL_SUPERVISOR_V3.js:1:const { spawn } = require("child_process");
+kernel/runtime/KERNEL_SUPERVISOR_V3.js:7:    const p = spawn("sh", ["-c", cmd], {
+kernel/runtime/KERNEL_SUPERVISOR_V4.js:1:const { spawn } = require("child_process");
+kernel/runtime/KERNEL_SUPERVISOR_V4.js:7:    const p = spawn("sh", ["-c", cmd], {
+kernel/runtime/KERNEL_SYNC_ENGINE.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_TIME_TRAVEL_DEBUGGER_V1.js:1:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_TIME_TRAVEL_DEBUGGER_V1.js:2:const SNAP = require('./KERNEL_SNAPSHOT_ENGINE_V1');
+kernel/runtime/KERNEL_TRANSACTION_ENGINE_V1.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_TRANSACTION_ENGINE_V1.js:2:const crypto = require('crypto');
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:2:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:19:    executed:{},
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:27:  if(session.executed[node.id]) return {skipped:true};
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:30:    const res = EXEC.execute(node.cmd);
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:31:    session.executed[node.id] = true;
+kernel/runtime/KERNEL_TRANSACTION_LAYER.js:42:  session.executed = {};
+kernel/runtime/KERNEL_TRANSACTION_LAYER_V2.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_TRANSACTION_LAYER_V2.js:59:    executed:{},
+kernel/runtime/KERNEL_TRANSACTION_LAYER_V2.js:68:  if(session.executed[node.id]){
+kernel/runtime/KERNEL_TRANSACTION_LAYER_V2.js:74:    const fs = require('fs');
+kernel/runtime/KERNEL_TRANSACTION_LAYER_V2.js:80:    session.executed[node.id] = true;
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:1:const ADAPTER = require('./KERNEL_EXECUTION_ADAPTER_V1');
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:2:const TX = require('./KERNEL_TRANSACTION_LAYER');
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:3:const POLICY = require('./KERNEL_POLICY_ORCHESTRATOR_V3');
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:4:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:27:    // 3. execution
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:28:    const res = ADAPTER.execute(cmd);
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:38:      BUS.emit('executed', { cmd, res });
+kernel/runtime/KERNEL_VERSION_LOCK.js:1:const fs = require("fs");
+kernel/runtime/KERNEL_VERSION_LOCK.js:2:const path = require("path");
+kernel/runtime/KERNEL_WORKER_V1.js:1:const { parentPort } = require('worker_threads');
+kernel/runtime/KERNEL_WORKER_V1.js:2:const EXEC = require('./KERNEL_EXECUTION_LAYER_V2');
+kernel/runtime/KERNEL_WORKER_V1.js:6:    const res = EXEC.execute(msg.cmd);
+kernel/runtime/KERNEL_WRITE_GUARD.js:1:const fs = require('fs');
+kernel/runtime/KERNEL_WRITE_GUARD.js:26:  const crypto = require('crypto');
+kernel/runtime/SELF_HEALING_COMPILER.js:1:const fs = require('fs');
+kernel/runtime/SELF_HEALING_COMPILER.js:2:const path = require('path');
+kernel/runtime/SELF_HEALING_COMPILER.js:3:const crypto = require('crypto');
+kernel/runtime/SELF_HEALING_COMPILER_V2.js:1:const fs = require('fs');
+kernel/runtime/SELF_HEALING_COMPILER_V2.js:2:const acorn = require('acorn');
+kernel/runtime/SELF_HEALING_COMPILER_V2.js:3:const escodegen = require('escodegen');
+kernel/runtime/SELF_HEALING_COMPILER_V2.js:5:const CONTROL = require('./KERNEL_CONTROL_PLANE_V2');
+kernel/runtime/SELF_HEALING_COMPILER_V2.js:109:    const p = require('path').join(dir,f);
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:1:const fs = require('fs');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:2:const path = require('path');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:3:const cluster = require('cluster');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:5:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:6:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:34:    exec: workerPath
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:140:if (require.main === module) {
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V1.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V1.js:3:const LOG = require('./SYSTEM_EVENT_LOG_RUNTIME_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V1.js:104:if (require.main === module) {
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:3:const LOG = require('./SYSTEM_EVENT_LOG_RUNTIME_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:4:const NORM = require('./SYSTEM_EVENT_SCHEMA_NORMALIZER_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:5:const SYNC = require('./SYSTEM_CLUSTER_STATE_SYNC_V1');
+kernel/runtime/SYSTEM_CLUSTER_REHYDRATION_BRIDGE_V2.js:88:if (require.main === module) {
+kernel/runtime/SYSTEM_CLUSTER_STATE_SYNC_V1.js:1:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:1:const fs = require('fs');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:2:const path = require('path');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:4:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:5:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:6:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_EVENT_LOG_RUNTIME_V1.js:1:const fs = require('fs');
+kernel/runtime/SYSTEM_EVENT_LOG_RUNTIME_V1.js:2:const path = require('path');
+kernel/runtime/SYSTEM_EVENT_LOG_RUNTIME_V1.js:54:    executed: 0,
+kernel/runtime/SYSTEM_EVENT_LOG_RUNTIME_V1.js:65:        state.executed++;
+kernel/runtime/SYSTEM_EVENT_SCHEMA_NORMALIZER_V1.js:19:  return require('crypto')
+kernel/runtime/SYSTEM_KERNEL_FINAL_GUARD_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_KERNEL_FINAL_GUARD_V1.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:16:    STATE.sessions.set(id, { executed: 0, failed: 0 });
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:26:  if (ok) s.executed++;
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:1:const fs = require('fs');
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:2:const path = require('path');
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:4:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:5:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:6:const LOG = require('./SYSTEM_EVENT_LOG_RUNTIME_V1');
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:30:    executed: replay.executed,
+kernel/runtime/SYSTEM_KERNEL_REHYDRATION_ENGINE_V1.js:111:if (require.main === module) {
+kernel/runtime/SYSTEM_KERNEL_STABLE_SINGLESHOT_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_KERNEL_STABLE_SINGLESHOT_V1.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_KERNEL_STABLE_SINGLESHOT_V1.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:1:const POOL = require('./KERNEL_EXECUTION_POOL_V1');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:2:const CLUSTER = require('./KERNEL_CLUSTER_MASTER_V8');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:4:const LOG = require('./SYSTEM_EVENT_LOG_RUNTIME_V1');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:88:if (require.main === module) {
+kernel/runtime/VERSION_ENGINE.js:1:const fs = require("fs");
+kernel/runtime/VERSION_ENGINE.js:2:const path = require("path");
+kernel/runtime/VERSION_ENGINE.js:3:const crypto = require("crypto");
+kernel/runtime/_GUARD_DISABLED.js:1:const { execSync } = require("child_process");
+kernel/runtime/_GUARD_DISABLED.js:4:  const out = execSync("pgrep -af autonomous_runtime.js").toString();
+kernel/runtime/_GUARD_DISABLED.js:9:    execSync("pkill -f autonomous_runtime.js");
+kernel/runtime/_bootstrap_DISABLED.js:1:require("./SINGLETON_GUARD");
+kernel/runtime/_bootstrap_DISABLED.js:2:require("./autonomous_runtime");
+kernel/runtime/_exec_test.js:1:console.log("exec ok")
+kernel/runtime/_install_pipeline.js:1:const fs = require('fs');
+kernel/runtime/_install_pipeline.js:4:"const fs=require('fs');",
+kernel/runtime/_patch_fs.js:1:const fs = require('fs');
+kernel/runtime/_patch_fs.js:5:// ensure VERSION import
+kernel/runtime/_patch_fs.js:7:  fc = "const VERSION=require('./VERSION_ENGINE');\n" + fc;
+kernel/runtime/autonomous_sync.js:1:const { execSync } = require("child_process");
+kernel/runtime/autonomous_sync.js:2:const fs = require("fs");
+kernel/runtime/autonomous_sync.js:3:const { saveSnapshot } = require("./snapshot");
+kernel/runtime/autonomous_sync.js:7:    return execSync(cmd).toString().trim();
+kernel/runtime/reset_fs_controller.js:1:const fs = require('fs');
+kernel/runtime/reset_fs_controller.js:5:// ensure import exists
+kernel/runtime/reset_fs_controller.js:6:if (!fc.includes("VERSION=require")) {
+kernel/runtime/reset_fs_controller.js:7:  fc = "const VERSION=require('./VERSION_ENGINE');\n" + fc;
+kernel/runtime/safe_sync.js:1:const { execSync } = require("child_process");
+kernel/runtime/safe_sync.js:2:const fs = require("fs");
+kernel/runtime/safe_sync.js:6:    return execSync("git status --porcelain").toString().trim();
+kernel/runtime/safe_sync.js:20:  execSync("git add .");
+kernel/runtime/safe_sync.js:21:  execSync(`git commit -m "${message}" || true`);
+kernel/runtime/safe_sync.js:27:    execSync("git push origin main || true");
+kernel/runtime/safe_sync.js:36:    const out = execSync("npm outdated || true").toString();
+kernel/runtime/snapshot.js:1:const fs = require("fs");
+kernel/runtime/sync_daemon.js:1:const sync = require("./autonomous_sync");
+kernel/runtime/sync_worker.js:1:const { execSync } = require("child_process");
+kernel/runtime/sync_worker.js:4:  try { return execSync(cmd).toString().trim(); }
+kernel/runtime/IMA_SERVICE_CORE_V1.js:1:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/auto_git_daemon.js:1:const { execSync } = require("child_process");
+kernel/runtime/auto_git_daemon.js:2:const fs = require("fs");
+kernel/runtime/auto_git_daemon.js:8:    return execSync("git status --porcelain").toString();
+kernel/runtime/auto_git_daemon.js:16:    execSync("git add -A");
+kernel/runtime/auto_git_daemon.js:19:    execSync(`git commit -m "${msg}" || true`);
+kernel/runtime/autonomous_sync_engine.js:1:const { execSync } = require("child_process");
+kernel/runtime/autonomous_sync_engine.js:2:const fs = require("fs");
+kernel/runtime/autonomous_sync_engine.js:6:    return execSync(cmd, { stdio: "pipe" }).toString().trim();
+kernel/runtime/enforce_fs_controller.js:1:const fs = require('fs');
+kernel/runtime/enforce_fs_controller.js:6:// ensure guard import
+kernel/runtime/enforce_fs_controller.js:8:  fc = "const GUARD=require('./KERNEL_WRITE_GUARD');\n" + fc;
+kernel/runtime/engine.js:1:const fs = require("fs");
+learning/action_engine.py:1:from learning.learning_memory import store_pattern
+learning/action_engine.py:2:from learning.safety_gate import check_action
+learning/action_engine.py:3:from learning.evaluation_engine import evaluate_action
+learning/action_engine.py:6:def execute_learning_action(decision, reason):
+learning/action_engine.py:31:            "status": "executed",
+learning/action_engine.py:50:            "status": "executed",
+learning/adaptive_loop.py:1:from learning.feedback_engine import process_feedback
+learning/adaptive_loop.py:2:from learning.learning_memory import store_pattern
+learning/auto_learning.py:1:from learning.learning_scheduler import learning_cycle
+learning/auto_learning.py:2:from learning.self_reflection import load_journal, save_journal
+learning/capability_map.json:4:      "execute_learning_action"
+learning/capability_map.py:1:from pathlib import Path
+learning/capability_map.py:2:import ast
+learning/capability_map.py:3:import json
+learning/decision_engine.py:1:from learning.learning_memory import load_memory, save_memory
+learning/decision_engine.py:2:from learning.action_engine import execute_learning_action
+learning/decision_engine.py:3:from datetime import datetime
+learning/decision_engine.py:19:    execute_learning_action(
+learning/entry_gate.py:1:from pathlib import Path
+learning/entry_gate.py:2:import hashlib
+learning/entry_gate.py:3:import json
+learning/evaluation_engine.py:1:from learning.learning_memory import load_memory, save_memory
+learning/evaluation_engine.py:2:from datetime import datetime
+learning/evolution_controller.py:1:from pathlib import Path
+learning/evolution_controller.py:2:import json
+learning/evolution_controller.py:3:from learning.single_gate import verify_gate
+learning/evolution_controller.py:5:from learning.single_gate import verify_gate
+learning/evolution_controller.py:6:import time
+learning/evolution_controller.py:7:import py_compile
+learning/evolution_controller.py:8:import shutil
+learning/evolution_controller.py:10:from learning.health_check import health_report
+learning/evolution_controller.py:11:from learning.meta_orchestrator import run_meta_analysis
+learning/feedback_engine.py:1:from learning.evaluation_engine import get_evaluations
+learning/feedback_engine.py:2:from learning.self_reflection import suggest_improvement
+learning/feedback_planner.py:1:from learning.feedback_engine import process_feedback
+learning/feedback_planner.py:2:from learning.improvement_planner import build_improvement_plan
+learning/feedback_planner.py:3:from learning.knowledge_dedup import remove_duplicates
+learning/gap_analyzer.py:1:from learning.knowledge_gaps import get_gaps
+learning/gap_analyzer.py:2:from learning.self_reflection import suggest_improvement
+learning/gate_guard.py:1:from pathlib import Path
+learning/gate_guard.py:2:import hashlib
+learning/gate_guard.py:3:import json
+learning/gate_guard.py:4:import time
+learning/health_check.py:1:from pathlib import Path
+learning/health_check.py:2:import importlib
+learning/health_check.py:10:        "importable": True,
+learning/health_check.py:16:        importlib.import_module(name)
+learning/health_check.py:19:        result["importable"] = False
+learning/ima_awareness.py:1:from learning.learning_analyzer import analyze_learning
+learning/ima_awareness.py:2:from learning.self_reflection import load_journal
+learning/ima_evolution_cycle.py:1:from learning.meta_orchestrator import run_meta_analysis
+learning/ima_evolution_cycle.py:2:from learning.health_check import health_report
+learning/ima_evolution_cycle.py:3:from learning.system_improvement_memory import summarize_improvements
+learning/ima_learning_loop.py:1:from learning.learning_scheduler import learning_cycle
+learning/ima_learning_loop.py:2:from learning.knowledge_expander import expand_knowledge
+learning/ima_learning_loop.py:3:from learning.self_reflection import add_lesson
+learning/ima_learning_loop.py:4:from learning.decision_engine import make_learning_decision
+learning/ima_learning_loop.py:5:from learning.adaptive_loop import run_adaptive_cycle
+learning/ima_learning_loop.py:6:from learning.self_manager import manage_learning
+learning/ima_learning_loop.py:7:from learning.feedback_planner import generate_feedback_improvements
+learning/ima_learning_loop.py:8:from learning.meta_orchestrator import run_meta_analysis
+learning/ima_learning_loop.py:9:from datetime import datetime
+learning/improvement_engine.py:1:from learning.learning_analyzer import analyze_learning
+learning/improvement_planner.py:1:from datetime import datetime
+learning/journal_cleanup.py:1:from learning.self_reflection import load_journal, save_journal
+learning/knowledge_expander.py:1:from learning.knowledge_gaps import get_gaps
+learning/knowledge_expander.py:2:from learning.self_reflection import add_lesson
+learning/knowledge_gaps.py:1:from pathlib import Path
+learning/knowledge_gaps.py:2:import json
+learning/knowledge_gaps.py:3:from datetime import datetime
+learning/learning_analyzer.py:1:from learning.self_reflection import load_journal
+learning/learning_memory.py:1:from pathlib import Path
+learning/learning_memory.py:2:import json
+learning/learning_memory.py:3:from datetime import datetime
+learning/learning_memory_connector.py:1:from learning.learning_memory import store_pattern, store_evaluation
+learning/learning_memory_connector.py:2:from learning.ima_awareness import ima_awareness
+learning/learning_scheduler.py:1:from learning.self_improvement import run_self_improvement
+learning/learning_scheduler.py:2:from learning.ima_awareness import ima_awareness
+learning/learning_scheduler.py:3:from learning.gap_analyzer import analyze_gaps
+learning/meta_orchestrator.py:1:from learning.system_introspection import suggest_improvements
+learning/meta_orchestrator.py:2:from learning.capability_map import build_capability_map
+learning/meta_orchestrator.py:3:from learning.health_check import health_report
+learning/meta_orchestrator.py:4:from learning.improvement_planner import build_improvement_plan
+learning/meta_orchestrator.py:5:from learning.decision_engine import make_learning_decision
+learning/meta_orchestrator.py:6:from learning.feedback_planner import generate_feedback_improvements
+learning/safe_scheduler.py:1:from learning.meta_orchestrator import run_meta_analysis
+learning/safe_scheduler.py:2:from learning.ima_learning_loop import run_ima_learning_loop
+learning/self_improvement.py:1:from learning.improvement_engine import generate_improvements
+learning/self_improvement.py:2:from learning.self_reflection import load_journal, save_journal
+learning/self_improvement.py:3:from datetime import datetime
+learning/self_manager.py:1:from learning.self_reflection import load_journal, save_journal
+learning/self_manager.py:2:from collections import Counter
+learning/self_reflection.py:1:from pathlib import Path
+learning/self_reflection.py:2:import json
+learning/self_reflection.py:3:from datetime import datetime
+learning/single_gate.py:1:from pathlib import Path
+learning/single_gate.py:2:import hashlib
+learning/single_gate.py:3:import json
+learning/single_gate.py:4:import time
+learning/single_gate.py:33:            "compile_check_required",
+learning/single_gate.py:34:            "health_check_required",
+learning/single_gate.py:35:            "hash_verification_required"
+learning/system_improvement_memory.py:1:import json
+learning/system_improvement_memory.py:2:from pathlib import Path
+learning/system_introspection.py:1:from pathlib import Path
+learning/system_introspection.py:2:import ast
+learning/system_introspection.py:9:    imports = []
+learning/system_introspection.py:26:                        imports.append({
+learning/system_introspection.py:28:                            "import": item.name
+learning/system_introspection.py:32:                    imports.append({
+learning/system_introspection.py:34:                        "import": node.module
+learning/system_introspection.py:42:        "imports": imports,
+learning/system_introspection.py:44:        "import_count": len(imports)
+learning/system_introspection.py:63:    if scan["import_count"] > scan["module_count"] * 3:
+learning/connect_orchestrator.py:1:from pathlib import Path
+learning/connect_orchestrator.py:2:import importlib
+learning/connect_orchestrator.py:3:import json
+learning/connect_orchestrator.py:4:import time
+learning/connect_orchestrator.py:34:        importlib.import_module(
+learning/brain_guard.py:1:from pathlib import Path
+learning/brain_guard.py:2:import json
+learning/brain_guard.py:3:import time
+learning/canonical_guard.py:1:from pathlib import Path
+learning/canonical_guard.py:2:import json
+learning/ima_chronicle.py:1:from pathlib import Path
+learning/ima_chronicle.py:2:import json
+learning/ima_chronicle.py:3:import time

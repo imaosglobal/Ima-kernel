@@ -1,0 +1,82 @@
+learning/capability_map.py:31:    OUTPUT.write_text(
+learning/evolution_controller.py:15:SNAPSHOT.mkdir(parents=True, exist_ok=True)
+learning/evolution_controller.py:128:    Path(".ima/evolution_state.json").write_text(
+learning/gate_guard.py:25:    ALERT.parent.mkdir(parents=True, exist_ok=True)
+learning/knowledge_gaps.py:18:    FILE.write_text(
+learning/learning_memory.py:21:    FILE.write_text(
+learning/self_reflection.py:22:    JOURNAL.write_text(
+learning/single_gate.py:20:    REGISTRY.parent.mkdir(
+learning/single_gate.py:40:    REGISTRY.write_text(
+learning/single_gate.py:67:        ALERTS.parent.mkdir(
+learning/connect_orchestrator.py:77:    ).write_text(
+learning/brain_guard.py:26:    REGISTRY.parent.mkdir(parents=True, exist_ok=True)
+learning/brain_guard.py:28:    REGISTRY.write_text(
+learning/ima_chronicle.py:24:    CHRONICLE.parent.mkdir(parents=True, exist_ok=True)
+learning/ima_chronicle.py:34:    CHRONICLE.write_text(
+kernel/_disabled/fix_pipeline_install.sh:10:mkdir -p "$SANDBOX"
+kernel/_disabled/fix_pipeline_install_v2.sh:10:mkdir -p "$SANDBOX"
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__health_cron.sh:17:mkdir -p ~/ima_core/kernel/backups
+kernel/_graveyard/_archive/releases__v1778001671191__release_safe.js:13:  fs.mkdirSync('./releases');
+kernel/_graveyard/_archive/releases__v1778001671191__release_safe.js:19:fs.mkdirSync(snapshotPath);
+kernel/_graveyard/_legacy/start_daemon.sh:7:mkdir -p ~/ima_core/kernel/runtime
+kernel/archive/engines/engine.js:41:  fs.mkdirSync(path.dirname(MEM_FILE),{recursive:true});
+kernel/archive/engines/engine_v2.js:31:  fs.mkdirSync(path.dirname(f),{recursive:true});
+kernel/archive/engines/engine_v3.js:31:  fs.mkdirSync(path.dirname(f),{recursive:true});
+kernel/archive/engines/engine_v4.js:54:  fs.mkdirSync(dir,{recursive:true});
+kernel/archive/engines/engine_v5.js:48:  fs.mkdirSync(path.dirname(STATE_FILE),{recursive:true});
+kernel/archive/engines/engine_v6.js:68:  fs.mkdirSync(path.dirname(MEM_FILE),{recursive:true});
+kernel/ima_autonomous_release_engine.js:27:  fs.mkdirSync(path.dirname(full),{recursive:true});
+kernel/ima_consolidation_engine.js:49:  fs.mkdirSync(
+kernel/ima_consolidation_engine.js:185:fs.mkdirSync('_archive',{
+kernel/ima_consolidation_engine.js:216:        fs.mkdirSync(
+kernel/ima_full_engine.js:28:  fs.mkdirSync(path.dirname(full),{recursive:true});
+kernel/ima_lifecycle_final.sh:10:mkdir -p "$WORK"
+kernel/ima_lifecycle_final.sh:18:mkdir -p bin
+kernel/ima_lifecycle_final.sh:40:mkdir -p "$TEST"
+kernel/ima_lifecycle_final_v2.sh:10:mkdir -p "$WORK"
+kernel/ima_lifecycle_final_v2.sh:18:mkdir -p bin
+kernel/ima_lifecycle_final_v2.sh:40:mkdir -p "$TEST"
+kernel/ima_lifecycle_stable.sh:11:mkdir -p "$WORK"
+kernel/ima_lifecycle_stable.sh:20:mkdir -p bin
+kernel/ima_lifecycle_stable.sh:44:mkdir -p "$TEST"
+kernel/ima_lifecycle_strict.sh:42:mkdir -p bin
+kernel/ima_lifecycle_strict.sh:85:mkdir -p "$TEST_DIR"
+kernel/ima_lock_v1.sh:16:mkdir -p ~/ima_core/kernel/runtime
+kernel/ima_meta_engine.js:31:  fs.mkdirSync(path.dirname(full),{recursive:true});
+kernel/ima_release_v3.sh:10:mkdir -p backups
+kernel/ima_release_v4.sh:8:mkdir -p backups
+kernel/ima_run.sh:38:        mkdir -p bin
+kernel/ima_run.sh:93:mkdir -p "$TEST"
+kernel/ima_run_backup.sh:38:        mkdir -p bin
+kernel/ima_run_backup.sh:90:mkdir -p "$TEST"
+kernel/ima_supreme_kernel.js:33:  fs.mkdirSync(path.dirname(full),{
+kernel/ima_supreme_kernel.js:372:  fs.mkdirSync(bootDir,{
+kernel/ima_system_brain.js:39:fs.mkdirSync(
+kernel/ima_ultimate_orchestrator.js:40:  fs.mkdirSync(
+kernel/ima_ultimate_orchestrator.js:238:      fs.mkdirSync(
+kernel/ima_ultimate_orchestrator.js:707:exec('mkdir -p ~/.termux/boot');
+kernel/ima_unified_autonomous_engine.js:39:  fs.mkdirSync(
+kernel/ima_verify_and_lock.sh:64:mkdir -p backups
+kernel/kernel_manager.sh:10:mkdir -p kernel_state backups logs releases
+kernel/release_freeze/runtime/engine.js:41:  fs.mkdirSync(path.dirname(MEM_FILE),{recursive:true});
+kernel/release_freeze/runtime/engine_v2.js:31:  fs.mkdirSync(path.dirname(f),{recursive:true});
+kernel/release_freeze/runtime/engine_v3.js:31:  fs.mkdirSync(path.dirname(f),{recursive:true});
+kernel/release_freeze/runtime/engine_v4.js:54:  fs.mkdirSync(dir,{recursive:true});
+kernel/release_freeze/runtime/engine_v5.js:48:  fs.mkdirSync(path.dirname(STATE_FILE),{recursive:true});
+kernel/release_freeze/runtime/engine_v6.js:68:  fs.mkdirSync(path.dirname(MEM_FILE),{recursive:true});
+kernel/releases/snapshots/1778586693/runtime/KERNEL_STATE.js:16:  fs.mkdirSync("./logs", { recursive: true });
+kernel/reload.js:19:  fs.mkdirSync("logs", { recursive: true });
+kernel/runtime/KERNEL_CONTROL_PLANE_V2.js:8:fs.mkdirSync(SNAP_DIR, { recursive: true });
+kernel/runtime/SELF_HEALING_COMPILER.js:8:fs.mkdirSync(SNAP_DIR, { recursive: true });
+kernel/runtime/SELF_HEALING_COMPILER.js:9:fs.mkdirSync(QUAR_DIR, { recursive: true });
+kernel/runtime/VERSION_ENGINE.js:16:  fs.mkdirSync(snapDir, { recursive: true });
+kernel/scripts/release_engine.sh:56:mkdir -p dist
+kernel/scripts/releases/release_v2.sh:9:mkdir -p "$SNAP"
+kernel/system/bootstrap.js:30:  fs.mkdirSync(path.dirname(full),{recursive:true});
+kernel/system/final_autonomous_pipeline.js:34:  fs.mkdirSync(path.dirname(full),{
+kernel/system/full_autonomous_pipeline.js:33:  fs.mkdirSync(path.dirname(full),{
+kernel/system/full_autonomous_pipeline.js:83:fs.mkdirSync(BACKUP,{
+kernel/system/maintenance_engine.js:91:  fs.mkdirSync(outDir,{recursive:true});
+kernel/system/maintenance_engine.js:98:    fs.mkdirSync(path.dirname(dst),{recursive:true});
+kernel/system/maintenance_engine.js:111:fs.mkdirSync(backupDir,{recursive:true});
+kernel/update_engine.sh:5:mkdir -p $SNAPSHOT_DIR

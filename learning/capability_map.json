@@ -224,5 +224,11 @@
     "functions": [
       "check"
     ]
+  },
+  "ima_chronicle": {
+    "functions": [
+      "create_chronicle",
+      "verify_path"
+    ]
   }
 }
