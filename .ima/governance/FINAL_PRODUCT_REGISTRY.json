@@ -1,0 +1,8 @@
+{
+  "system": "IMA",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/connect_orchestrator.py",
+  "runtime_policy": "single_runtime_only",
+  "duplicate_creation": "blocked",
+  "product_ready_layer": true
+}
