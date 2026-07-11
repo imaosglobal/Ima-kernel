@@ -197,5 +197,32 @@
       "scan_system",
       "suggest_improvements"
     ]
+  },
+  "connect_orchestrator": {
+    "functions": [
+      "check_module",
+      "build_registry"
+    ]
+  },
+  "brain_guard": {
+    "functions": [
+      "create_registry",
+      "verify_brain"
+    ]
+  },
+  "child_safety_engine": {
+    "functions": [
+      "check"
+    ]
+  },
+  "persona_engine": {
+    "functions": [
+      "select"
+    ]
+  },
+  "canonical_guard": {
+    "functions": [
+      "check"
+    ]
   }
 }
