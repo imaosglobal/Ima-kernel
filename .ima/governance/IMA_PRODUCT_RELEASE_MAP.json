@@ -1,0 +1,28 @@
+{
+  "system": "IMA",
+  "release": "PRODUCT_V1",
+  "status": "LOCKED",
+  "entry_point": "IMA_START.py",
+  "brain": "learning/meta_orchestrator.py",
+  "runtime": "kernel/runtime/CANONICAL",
+  "modules": {
+    "companion": "companion/ima_companion_core.py",
+    "childcare": "product/childcare",
+    "adult_assistant": "product/adult_assistant",
+    "voice": "product/voice",
+    "device_bridge": "product/device_bridge",
+    "identity": "product/identity",
+    "safety": "product/safety",
+    "runtime": "product/runtime"
+  },
+  "platform": {
+    "api": true,
+    "auth": true,
+    "database": true,
+    "frontend": true,
+    "deployment": true,
+    "monitoring": true
+  },
+  "git_commit": "de5f33d073b7290fb37b62d184934fc0359c0a80",
+  "locked_at": "2026-07-11T19:20:00.051479"
+}
