@@ -1,13 +1,9 @@
 {
   "system": "IMA",
-  "state": "LOCKED",
-  "runtime_policy": [
-    "single_runtime_only",
-    "no_duplicate_runtime",
-    "canonical_runtime_required"
-  ],
-  "canonical_candidates": [
-    "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
-    ".ima/runtime/runtime.py"
-  ]
+  "state": "CANONICAL",
+  "runtime_locked": true,
+  "timestamp": 1783771566.3352864,
+  "files": 1234,
+  "canonical_brain": "learning/meta_orchestrator.py",
+  "canonical_root": "~/ima_kernel"
 }
