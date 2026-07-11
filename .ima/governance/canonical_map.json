@@ -1,6 +1,6 @@
 {
   "system": "IMA",
-  "state": "LOCKED",
+  "state": "FROZEN",
   "brain": "learning/meta_orchestrator.py",
   "orchestrator": "learning/meta_orchestrator.py",
   "connectors": [
@@ -10,6 +10,7 @@
     "single_brain_only",
     "single_orchestrator_only",
     "connectors_allowed",
-    "block_duplicate_creation"
+    "block_duplicate_brain_creation",
+    "redirect_to_canonical_path"
   ]
 }
