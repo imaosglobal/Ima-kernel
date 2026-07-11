@@ -1,6 +1,6 @@
 {
   "system": "IMA",
-  "orchestrator": "learning/connect_orchestrator.py",
+  "orchestrator": "learning/module_registry.py",
   "brain": "learning/meta_orchestrator.py",
   "active_orchestrators": [
     "health_check",

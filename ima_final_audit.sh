@@ -30,7 +30,7 @@ checks = {
     "development_policy": Path(".ima/governance/development_policy.json").exists(),
     "orchestrator_registry": Path(".ima/governance/orchestrator_registry.json").exists(),
     "brain": Path("learning/meta_orchestrator.py").exists(),
-    "connector": Path("learning/connect_orchestrator.py").exists()
+    "connector": Path("learning/module_registry.py").exists()
 }
 
 for k,v in checks.items():

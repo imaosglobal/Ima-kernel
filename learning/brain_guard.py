@@ -5,7 +5,7 @@ CANONICAL_BRAIN = Path("learning/meta_orchestrator.py")
 CANONICAL_ORCHESTRATOR = Path("learning/meta_orchestrator.py")
 
 CONNECTORS = [
-    Path("learning/connect_orchestrator.py")
+    Path("learning/module_registry.py")
 ]
 
 REGISTRY = Path(".ima/governance/brain_registry.json")

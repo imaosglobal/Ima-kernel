@@ -4,7 +4,7 @@
   "brain": "learning/meta_orchestrator.py",
   "orchestrator": "learning/meta_orchestrator.py",
   "connectors": [
-    "learning/connect_orchestrator.py"
+    "learning/module_registry.py"
   ],
   "policy": [
     "single_brain_only",

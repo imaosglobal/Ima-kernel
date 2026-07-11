@@ -26,7 +26,7 @@ learning/evolution_controller.py:11:from learning.meta_orchestrator import run_m
 learning/ima_evolution_cycle.py:1:from learning.meta_orchestrator import run_meta_analysis
 learning/ima_learning_loop.py:8:from learning.meta_orchestrator import run_meta_analysis
 learning/safe_scheduler.py:1:from learning.meta_orchestrator import run_meta_analysis
-learning/connect_orchestrator.py:18:    "meta_orchestrator",
+learning/module_registry.py:18:    "meta_orchestrator",
 learning/brain_guard.py:6:CANONICAL = ROOT / "meta_orchestrator.py"
 
 === EVENT BUS CONNECTION ===

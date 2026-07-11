@@ -36,7 +36,7 @@ else:
 
 
 # orchestrator
-orch=Path("learning/connect_orchestrator.py")
+orch=Path("learning/module_registry.py")
 if orch.exists():
     report["checks"]["orchestrator"]="OK"
 else:
@@ -131,7 +131,7 @@ for f,data in files.items():
 registry={
 "system":"IMA",
 "brain":"learning/meta_orchestrator.py",
-"orchestrator":"learning/connect_orchestrator.py",
+"orchestrator":"learning/module_registry.py",
 "runtime_policy":"single_runtime_only",
 "duplicate_creation":"blocked",
 "product_ready_layer":True
@@ -157,7 +157,7 @@ PY
 echo
 echo "=== FULL CHECK ==="
 
-python3 learning/connect_orchestrator.py
+python3 learning/module_registry.py
 python3 ima_full_system_check.py
 
 echo

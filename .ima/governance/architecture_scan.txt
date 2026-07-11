@@ -1,5 +1,5 @@
 learning/capability_map.json:  "meta_orchestrator": {
-learning/capability_map.json:  "connect_orchestrator": {
+learning/capability_map.json:  "module_registry": {
 learning/capability_map.json:  "brain_guard": {
 learning/capability_map.json:      "verify_brain"
 learning/evolution_controller.py:from learning.meta_orchestrator import run_meta_analysis
@@ -72,9 +72,9 @@ learning/learning_memory.json:      "result": "תוכנית שיפור מערכ�
 learning/learning_memory.json:      "result": "תוכנית שיפור מערכת: לחבר את כל מנועי learning דרך נקודת orchestrator אחת",
 learning/safe_scheduler.py:from learning.meta_orchestrator import run_meta_analysis
 learning/system_introspection.py:            "לחבר את כל מנועי learning דרך נקודת orchestrator אחת"
-learning/connect_orchestrator.py:    "meta_orchestrator",
-learning/connect_orchestrator.py:        "type": "learning_orchestrator_registry",
-learning/connect_orchestrator.py:        ".ima/governance/orchestrator_registry.json"
+learning/module_registry.py:    "meta_orchestrator",
+learning/module_registry.py:        "type": "learning_orchestrator_registry",
+learning/module_registry.py:        ".ima/governance/orchestrator_registry.json"
 learning/brain_guard.py:CANONICAL = ROOT / "meta_orchestrator.py"
 learning/brain_guard.py:REGISTRY = Path(".ima/governance/brain_registry.json")
 learning/brain_guard.py:        "brain": str(CANONICAL),

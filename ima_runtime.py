@@ -52,7 +52,7 @@ def runtime_check():
     )
 
     state["checks"]["learning_orchestrator"] = check_module(
-        "learning.connect_orchestrator"
+        "learning.module_registry"
     )
 
     state["checks"]["product_runtime"] = check_file(

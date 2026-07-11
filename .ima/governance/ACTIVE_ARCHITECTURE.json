@@ -3,7 +3,7 @@
   "state": "CANONICAL_LOCKED",
   "active": {
     "brain": "learning/meta_orchestrator.py",
-    "connector": "learning/connect_orchestrator.py",
+    "connector": "learning/module_registry.py",
     "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
     "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
     "api": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
