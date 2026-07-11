@@ -1,11 +1,22 @@
-from learning.meta_orchestrator import *
+#!/usr/bin/env python3
+"""
+IMA ENTRYPOINT REDIRECT
 
-def boot():
-    return {
-        "system": "IMA",
-        "brain": "Python",
-        "status": "online"
-    }
+Canonical entry:
+IMA_START.py
+
+No independent boot logic allowed.
+"""
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+sys.path.insert(0, str(ROOT))
+
+from IMA_START import run
+
 
 if __name__ == "__main__":
-    print(boot())
+    sys.exit(run())
