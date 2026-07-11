@@ -4,119 +4,167 @@ set -e
 ROOT="$HOME/ima_kernel"
 cd "$ROOT"
 
-echo "=== IMA FINAL ARCHITECTURE SETUP ==="
+echo "=== IMA FINAL ARCHITECTURE FREEZE ==="
 
 mkdir -p .ima/governance
-mkdir -p kernel/device
-mkdir -p learning
 
-# Runtime governance
-cat > .ima/governance/runtime_registry.json <<EOF
+echo "[1] Creating canonical architecture map"
+
+cat > .ima/governance/canonical_map.json <<JSON
 {
   "system": "IMA",
-  "state": "LOCKED",
-  "runtime_policy": [
-    "single_runtime_only",
-    "no_duplicate_runtime",
-    "canonical_runtime_required"
+  "state": "FROZEN",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/meta_orchestrator.py",
+  "connectors": [
+    "learning/connect_orchestrator.py"
   ],
-  "canonical_candidates": [
-    "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
-    ".ima/runtime/runtime.py"
+  "policy": [
+    "single_brain_only",
+    "single_orchestrator_only",
+    "connectors_allowed",
+    "block_duplicate_brain_creation",
+    "redirect_to_canonical_path"
   ]
 }
-EOF
+JSON
 
-# Device registry
-cat > .ima/governance/device_registry.json <<EOF
-{
-  "system": "IMA",
-  "devices": [
-    "mobile",
-    "robot",
-    "iot",
-    "vr",
-    "ar",
-    "vehicle",
-    "spacecraft"
-  ],
-  "state": "BASE_LAYER"
-}
-EOF
 
-# Mission registry
-cat > .ima/governance/mission_registry.json <<EOF
-{
-  "system": "IMA",
-  "mission": [
-    "assist_humans",
-    "child_safe",
-    "universal_device_support",
-    "continuous_learning"
-  ],
-  "brain": "learning/meta_orchestrator.py",
-  "orchestrator": "learning/meta_orchestrator.py"
-}
-EOF
+echo "[2] Updating brain guard"
 
-# Child safety base
-if [ ! -f learning/child_safety_engine.py ]; then
-cat > learning/child_safety_engine.py <<'EOF'
-class ChildSafetyEngine:
-
-    def check(self, context):
-        return {
-            "safe": True,
-            "context_checked": True
-        }
-
-engine = ChildSafetyEngine()
-EOF
-fi
-
-# Persona base
-if [ ! -f learning/persona_engine.py ]; then
-cat > learning/persona_engine.py <<'EOF'
-class PersonaEngine:
-
-    def select(self, user_type):
-        return {
-            "mode": user_type,
-            "system": "IMA"
-        }
-
-engine = PersonaEngine()
-EOF
-fi
-
-# Verify imports
-python3 -m py_compile \
- learning/child_safety_engine.py \
- learning/persona_engine.py \
- learning/meta_orchestrator.py
-
-# Architecture report
-python3 - <<'PY'
+cat > learning/brain_guard.py <<'PY'
 from pathlib import Path
-import json,time
+import json
 
-report={
-"time":time.time(),
-"system":"IMA",
-"brain":"learning/meta_orchestrator.py",
-"orchestrator":"learning/meta_orchestrator.py",
-"runtime_registry":Path(".ima/governance/runtime_registry.json").exists(),
-"device_registry":Path(".ima/governance/device_registry.json").exists(),
-"mission_registry":Path(".ima/governance/mission_registry.json").exists(),
-"status":"ARCHITECTURE_BASE_READY"
-}
+CANONICAL_BRAIN = Path("learning/meta_orchestrator.py")
+CANONICAL_ORCHESTRATOR = Path("learning/meta_orchestrator.py")
 
-Path(".ima/governance/architecture_status.json").write_text(
-json.dumps(report,indent=2,ensure_ascii=False),
-encoding="utf-8"
-)
+CONNECTORS = [
+    Path("learning/connect_orchestrator.py")
+]
 
-print(json.dumps(report,indent=2,ensure_ascii=False))
+REGISTRY = Path(".ima/governance/brain_registry.json")
+
+
+def create_registry():
+
+    data = {
+        "system": "IMA",
+        "state": "LOCKED",
+        "brain": str(CANONICAL_BRAIN),
+        "orchestrator": str(CANONICAL_ORCHESTRATOR),
+        "connectors": [str(x) for x in CONNECTORS],
+        "policy": [
+            "single_brain_only",
+            "single_orchestrator_only",
+            "connectors_allowed",
+            "block_duplicate_creation"
+        ]
+    }
+
+    REGISTRY.parent.mkdir(parents=True, exist_ok=True)
+
+    REGISTRY.write_text(
+        json.dumps(
+            data,
+            indent=2,
+            ensure_ascii=False
+        ),
+        encoding="utf-8"
+    )
+
+
+def verify_brain(path):
+
+    p = Path(path)
+
+    if p == CANONICAL_BRAIN:
+        return True
+
+    if p in CONNECTORS:
+        return True
+
+    if "orchestrator" in p.name.lower():
+        raise RuntimeError(
+            "IMA BLOCKED duplicate orchestrator. USE: learning/meta_orchestrator.py"
+        )
+
+    return True
+
+
+if __name__ == "__main__":
+    create_registry()
+    print("IMA CANONICAL BRAIN LOCKED")
+    print(CANONICAL_BRAIN)
 PY
 
-echo "=== DONE ==="
+
+echo "[3] Rebuilding governance registry"
+
+python3 learning/brain_guard.py
+
+
+echo "[4] Testing brain"
+
+python3 - <<'PY'
+from learning.brain_guard import verify_brain
+
+verify_brain("learning/meta_orchestrator.py")
+verify_brain("learning/connect_orchestrator.py")
+
+print("BRAIN ARCHITECTURE OK")
+PY
+
+
+echo "[5] Testing learning modules"
+
+python3 - <<'PY'
+from pathlib import Path
+import importlib
+
+ok=0
+fail=0
+
+for f in Path("learning").glob("*.py"):
+    if f.name.startswith("_"):
+        continue
+
+    try:
+        importlib.import_module("learning."+f.stem)
+        ok+=1
+    except Exception as e:
+        print("FAIL",f.name,e)
+        fail+=1
+
+print("LOADED:",ok)
+print("FAILED:",fail)
+
+if fail:
+    raise SystemExit(1)
+PY
+
+
+echo "[6] Full system check"
+
+python3 ima_full_system_check.py
+
+
+echo "[7] Git freeze"
+
+git add \
+.ima/governance/canonical_map.json \
+.ima/governance/brain_registry.json \
+learning/brain_guard.py
+
+git commit -m "IMA canonical architecture freeze" || true
+
+git tag -a IMA_PRODUCT_BASELINE_v1 \
+-m "IMA product baseline architecture frozen" || true
+
+
+echo "[8] Final status"
+
+git status
+
+echo
+echo "=== IMA FINAL ARCHITECTURE COMPLETE ==="
