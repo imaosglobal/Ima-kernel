@@ -1,0 +1,3 @@
+# IMA Auth
+
+Authentication layer.

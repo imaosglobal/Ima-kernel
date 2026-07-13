@@ -1,0 +1,12 @@
+{
+ "product_layer":"IMA",
+ "status":"INITIALIZED",
+ "core_locked":true,
+ "created":"20260713_165823",
+ "protected_core":[
+  "conversation_layer.py",
+  "IMA_START.py",
+  "kernel/runtime/CANONICAL/python_bridge.py",
+  "ima_master_runtime.py"
+ ]
+}
