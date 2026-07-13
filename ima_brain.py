@@ -1,4 +1,5 @@
 import json, os
+from learning.learning_memory import store_pattern
 
 LEDGER = ".ima/ledger.jsonl"
 
@@ -83,6 +84,9 @@ def answer(question, events):
 
     if "למדת ממני" in q or "לומדת ממני" in q:
         patterns = extract_patterns(events)
+
+        for pattern in patterns:
+            store_pattern(pattern)
 
         return (
             "מהזיכרון שנבנה איתך אני מזהה דפוסים חוזרים:\n"
