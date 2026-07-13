@@ -1,0 +1,22 @@
+CURRENT_STABLE:
+IMA_STABLE_CANONICAL_RUNTIME_v1_20260713
+
+COMMIT:
+50ceb25
+
+VERIFIED:
+- canonical boot
+- runtime bridge
+- API 8080
+- memory persistence
+- restart survival
+- identity connection
+- integration audit
+
+DO NOT MODIFY:
+- conversation_layer.py
+- canonical runtime
+- boot chain
+
+NEXT DEVELOPMENT:
+product layer only
