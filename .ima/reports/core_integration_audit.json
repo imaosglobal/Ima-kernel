@@ -103,16 +103,16 @@
   },
   "conversation_layer.py": {
     "status": "exists",
-    "size": 1034,
+    "size": 1948,
     "imports": [
-      "from pathlib import Path",
       "import json",
-      "import identity_context",
-      "import time"
+      "from pathlib import Path",
+      "import time",
+      "import importlib.util"
     ],
     "core_connection": {
       "uses_runtime": false,
-      "uses_identity": true,
+      "uses_identity": false,
       "uses_memory": true
     }
   },
