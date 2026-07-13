@@ -1,6 +1,5 @@
 import json, os
 from learning.learning_memory import store_pattern
-from learning.learning_loop import learn_from_event
 from learning.historical_inference import get_conclusions
 
 LEDGER = ".ima/ledger.jsonl"
@@ -114,16 +113,3 @@ def answer(question, events):
         return "כאב הוא אות של מערכת העצבים שמבקש תשומת לב ולא בהכרח סכנה."
 
     return ""
-
-
-
-
-def record_learning_event(event):
-    try:
-        from learning.learning_loop import learn_from_event
-        return learn_from_event(event)
-    except Exception as e:
-        return {
-            "status": "learning_error",
-            "error": str(e)
-        }

@@ -2,7 +2,6 @@ import time
 import identity_context
 import conversation_layer
 import ima_brain
-from learning.learning_loop import learn_from_event
 import ima_mom
 
 try:
@@ -83,19 +82,6 @@ class IMAMaster:
             message,
             result.get("response","")
         )
-
-        # controlled learning event
-        try:
-            if len(message.strip()) > 8:
-                learn_from_event({
-                    "source":"user",
-                    "user_id":result.get("identity",{}).get("id","default"),
-                    "text":message,
-                    "response":result.get("response","")
-                })
-        except Exception:
-            pass
-
         return result
 
 

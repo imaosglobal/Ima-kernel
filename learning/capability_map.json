@@ -249,5 +249,11 @@
     "functions": [
       "suggest_improvements"
     ]
+  },
+  "historical_inference": {
+    "functions": [
+      "analyze_history",
+      "get_conclusions"
+    ]
   }
 }
