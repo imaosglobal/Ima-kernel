@@ -113,6 +113,17 @@ class Handler(BaseHTTPRequestHandler):
                 "health":"ok",
                 "brain":True
             })
+
+        elif self.path=="/ready":
+            self.send_json({
+                "ready":True,
+                "runtime":True,
+                "memory":True,
+                "conversation":True,
+                "gateway":True,
+                "brain":True
+            })
+
         else:
             self.send_json({
                 "product":"IMA",
