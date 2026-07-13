@@ -1,0 +1,22 @@
+name: IMA Production
+
+on:
+  push:
+    tags:
+      - "IMA_*"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify runtime
+        run: |
+          python --version
+          echo "IMA verification"
+
+      - name: Build container
+        run: |
+          docker build .
