@@ -1,0 +1,15 @@
+{
+ "product":"IMA",
+ "deployment_api":"v1",
+ "providers":[
+   "aws",
+   "digitalocean",
+   "azure",
+   "render",
+   "railway",
+   "vps"
+ ],
+ "runtime":"docker",
+ "gateway":"canonical",
+ "status":"READY"
+}

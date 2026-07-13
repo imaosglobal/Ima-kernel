@@ -1,0 +1,16 @@
+{
+ "product":"IMA",
+ "release":"1.0",
+ "status":"DEPLOYMENT_ADAPTER_READY",
+ "providers":[
+ "AWS",
+ "DigitalOcean",
+ "Azure",
+ "Render",
+ "Railway",
+ "VPS"
+ ],
+ "docker":"READY",
+ "runtime":"CANONICAL",
+ "created":"20260713_175248"
+}
