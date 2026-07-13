@@ -1,0 +1,25 @@
+
+import json
+from pathlib import Path
+
+FILE=Path("learning/user_memory.json")
+
+def load():
+    if FILE.exists():
+        return json.loads(FILE.read_text())
+
+    return {"users":{}}
+
+def learn(user_id, data):
+    memory=load()
+
+    if user_id not in memory["users"]:
+        memory["users"][user_id]=[]
+
+    memory["users"][user_id].append(data)
+
+    FILE.write_text(
+        json.dumps(memory,ensure_ascii=False,indent=2)
+    )
+
+    return memory["users"][user_id]
