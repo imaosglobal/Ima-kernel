@@ -1,11 +1,11 @@
+#!/usr/bin/env python3
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-print('PYTHON ROOT:', ROOT, flush=True)
+print("PYTHON ROOT:", ROOT, flush=True)
 
-#!/usr/bin/env python3
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json,time
