@@ -1,0 +1,16 @@
+{
+  "product": "IMA",
+  "version": "1.0",
+  "runtime": true,
+  "gateway": true,
+  "launcher": true,
+  "health": true,
+  "clients": {
+    "web": true,
+    "android": true,
+    "mobile": true
+  },
+  "device": true,
+  "update": true,
+  "created": 1783952083.070402
+}
