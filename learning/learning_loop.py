@@ -1,40 +1,57 @@
 
-from learning.learning_memory import store_pattern
+from learning.learning_router import route_learning
+from learning.self_learning import learn_self
+from learning.user_memory import learn
+from learning.world_memory import store
 import time
+from learning.learning_gate import should_learn
+
+
+def process_event(event):
+
+    if not should_learn(event):
+        return {
+            "status":"ignored",
+            "reason":"learning_gate"
+        }
+
+    route = route_learning(event)
+
+    if route["route"] == "user_memory":
+        return learn(
+            event.get("user_id","default"),
+            event
+        )
+
+    if route["route"] == "self_learning":
+        return learn_self(
+            event.get("text","")
+        )
+
+    return store(
+        event.get("topic","general"),
+        event
+    )
 
 
 def learn_from_event(event):
 
-    text = ""
+    if not should_learn(event):
+        return {
+            "time":time.time(),
+            "route":"blocked",
+            "result":{
+                "status":"ignored",
+                "reason":"learning_gate"
+            },
+            "status":"ignored"
+        }
 
-    if isinstance(event, dict):
-        data = event.get("data", {})
-
-        if isinstance(data, dict):
-            text = (
-                str(data.get("text","")) +
-                " " +
-                str(data.get("question",""))
-            )
-
-    patterns=[]
-
-    rules={
-        "טכנולוגיה ומערכות":["מערכת","קוד","תכנות","AI","טכנולוגיה"],
-        "פילוסופיה ותודעה":["תודעה","אמת","משמעות","נפש"],
-        "יצירה והתפתחות":["יצירה","שיר","ללמוד","להתפתח"],
-        "ריפוי והתבוננות":["כאב","ריפוי","רגש"]
-    }
-
-    for name,keys in rules.items():
-        if any(k.lower() in text.lower() for k in keys):
-            patterns.append(name)
-
-    for p in patterns:
-        store_pattern(p)
+    result = process_event(event)
 
     return {
         "time":time.time(),
-        "patterns":patterns,
-        "status":"learned"
+        "route":route_learning(event),
+        "result":result,
+        "status":"processed"
     }
