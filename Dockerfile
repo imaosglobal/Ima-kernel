@@ -4,7 +4,7 @@ WORKDIR /ima
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt || true
+RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; else echo 'No requirements.txt found - skipping'; fi
 
 EXPOSE 8080
 
