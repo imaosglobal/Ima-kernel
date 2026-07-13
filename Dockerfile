@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt || true
 
 EXPOSE 8080
 
-CMD ["python","IMA_START.py"]
+CMD ["python3","production_server.py"]
