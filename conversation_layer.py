@@ -11,6 +11,7 @@ except Exception:
     memory_bus=None
 
 MEMORY_FILE=Path(".ima/conversation_memory.json")
+INTENT_FILE=Path(".ima/learned_intents.json")
 
 def _load():
     if not MEMORY_FILE.exists():
@@ -27,7 +28,33 @@ def _save(data):
         encoding="utf-8"
     )
 
+
+
+def _learn_memory_intent(question):
+    from pathlib import Path
+    import json
+
+    intent_file = Path(".ima/learned_intents.json")
+    intent_file.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        data=json.loads(intent_file.read_text(encoding="utf-8"))
+    except Exception:
+        data={}
+
+    q=question.strip()
+
+    data[q]=data.get(q,0)+1
+
+    intent_file.write_text(
+        json.dumps(data,ensure_ascii=False,indent=2),
+        encoding="utf-8"
+    )
+
+    print("[LEARNING]", q)
+
 def update(question,response=""):
+    _learn_memory_intent(question)
     data=_load()
     data.append({
         "time":time.time(),
