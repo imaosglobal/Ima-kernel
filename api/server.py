@@ -6,6 +6,12 @@ print('BOOT: before ima_master_runtime', flush=True)
 import ima_master_runtime
 print('BOOT: after ima_master_runtime', flush=True)
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+print("PYTHON ROOT:", ROOT, flush=True)
 import os
 sys.path.append('..')
 import identity_context
