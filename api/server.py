@@ -159,4 +159,6 @@ class Handler(BaseHTTPRequestHandler):
 
 print(f"IMA API ONLINE :{PORT}", flush=True)
 PORT=int(os.environ.get("PORT",8080))
+PORT=int(os.environ.get("PORT",8080))
+print(f"IMA API ONLINE :{PORT}", flush=True)
 HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()
