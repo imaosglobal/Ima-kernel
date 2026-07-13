@@ -98,18 +98,38 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
 
-        if self.path=="/ask":
-            size=int(self.headers.get("Content-Length",0))
-            data=json.loads(self.rfile.read(size))
+        try:
+            if self.path == "/ask":
 
-            question=data.get("message","")
-            answer=ima_master_runtime.ask(question)
-            conversation_layer.update(question)
+                size = int(self.headers.get("Content-Length",0))
+                raw = self.rfile.read(size)
+
+                data = json.loads(raw)
+
+                question = data.get("message") or data.get("question","")
+
+                answer = ima_master_runtime.ask(question)
+
+                conversation_layer.update(question)
+
+                self.send_json({
+                    "input": question,
+                    "answer": answer,
+                    "time": int(time.time()),
+                    "status": "OK"
+                })
+
+            else:
+                self.send_json({
+                    "error": "unknown endpoint",
+                    "path": self.path
+                })
+
+        except Exception as e:
 
             self.send_json({
-                "input":question,
-                "answer":answer,
-                "time":int(time.time())
+                "status": "ERROR",
+                "error": str(e)
             })
 
 
