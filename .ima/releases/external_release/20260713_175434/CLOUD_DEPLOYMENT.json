@@ -1,0 +1,15 @@
+{
+ "product":"IMA",
+ "runtime":"CANONICAL",
+ "deployment":"READY",
+ "providers":[
+   "AWS",
+   "DigitalOcean",
+   "Azure",
+   "Render",
+   "Railway",
+   "VPS"
+ ],
+ "rollback":true,
+ "created":"20260713_175434"
+}

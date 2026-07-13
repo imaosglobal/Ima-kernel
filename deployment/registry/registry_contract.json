@@ -1,0 +1,11 @@
+{
+ "product":"IMA",
+ "registries":[
+   "dockerhub",
+   "github_container_registry",
+   "aws_ecr"
+ ],
+ "image":"ima-runtime",
+ "tag":"1.0",
+ "status":"READY"
+}
