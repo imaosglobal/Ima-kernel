@@ -1,0 +1,15 @@
+{
+  "name": "IMA Product SDK",
+  "version": "1.0",
+  "transport": "HTTP",
+  "core": "canonical-runtime",
+  "clients": [
+    "web",
+    "mobile",
+    "android"
+  ],
+  "endpoints": [
+    "/health",
+    "/ask"
+  ]
+}
