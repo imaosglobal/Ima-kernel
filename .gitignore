@@ -70,3 +70,7 @@ __pycache__/
 =======
 >>>>>>> ima_core_backup/main
 .ima/learned_intents.json
+
+# Runtime memory state
+.ima/conversation_memory.json
+.ima/memory_log.jsonl
