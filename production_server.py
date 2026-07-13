@@ -1,23 +1,19 @@
 #!/usr/bin/env python3
 import os
-import subprocess
 import sys
-import time
 
-PORT = int(os.environ.get("PORT", "8080"))
+print("=== IMA PRODUCTION ENTRYPOINT ===", flush=True)
+print("PORT=", os.environ.get("PORT"), flush=True)
 
-print("=== IMA PRODUCTION SERVER ===")
-print("PORT:", PORT)
-
-server = "api/server.py"
+server="api/server.py"
 
 if not os.path.exists(server):
-    print("[FAIL] API missing")
+    print("[FAIL] api/server.py missing", flush=True)
     sys.exit(1)
 
-print("[OK] Starting API")
+print("[OK] launching API", flush=True)
 
 os.execvp(
     "python3",
-    ["python3", server]
+    ["python3", "-u", server]
 )
