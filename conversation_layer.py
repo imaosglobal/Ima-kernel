@@ -56,11 +56,14 @@ def _learn_memory_intent(question):
 def update(question,response=""):
     _learn_memory_intent(question)
     data=_load()
-    data.append({
-        "time":time.time(),
-        "question":question,
-        "response":response
-    })
+    if data and data[-1].get("question")==question:
+        data[-1]["response"]=response
+    else:
+        data.append({
+            "time":time.time(),
+            "question":question,
+            "response":response
+        })
     _save(data)
 
     if memory_bus:
