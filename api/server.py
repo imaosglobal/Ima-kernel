@@ -2,13 +2,19 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json,time
+print('BOOT: before ima_master_runtime', flush=True)
 import ima_master_runtime
+print('BOOT: after ima_master_runtime', flush=True)
 import sys
 import os
 sys.path.append('..')
 import identity_context
+print('BOOT: before conversation_layer', flush=True)
 import conversation_layer
+print('BOOT: after conversation_layer', flush=True)
+print('BOOT: before product_gateway', flush=True)
 from product.gateway import product_gateway
+print('BOOT: after product_gateway', flush=True)
 
 MEMORY_FILE=Path("ima_memory.json")
 
