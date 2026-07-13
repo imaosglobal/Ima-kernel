@@ -1,0 +1,12 @@
+{
+  "learning_sources": [
+    "verified_user_interaction",
+    "validated_system_events"
+  ],
+  "blocked_learning": [
+    "internal_noise",
+    "temporary_logs",
+    "generated_plans"
+  ],
+  "requires_validation": true
+}
