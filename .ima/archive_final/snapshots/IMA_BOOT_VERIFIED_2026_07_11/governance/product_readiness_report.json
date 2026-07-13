@@ -1,0 +1,98 @@
+{
+  "system": "IMA",
+  "status": "PRODUCT_READINESS_AUDIT_COMPLETE",
+  "canonical_brain": "learning/meta_orchestrator.py",
+  "canonical_orchestrator": "learning/module_registry.py",
+  "checks": {
+    "Android": {
+      "status": "FOUND",
+      "count": 68,
+      "examples": [
+        "android/settings.gradle",
+        "android/build.gradle",
+        "android/build_all.sh",
+        "android/local.properties",
+        "android/gradlew"
+      ]
+    },
+    "UI": {
+      "status": "FOUND",
+      "count": 75,
+      "examples": [
+        "ima_app.py",
+        "backup_before_identity_wrapper.py",
+        "backup_before_mother_wrapper.py",
+        "backup_before_wrapper_connect.py",
+        "backup_before_wrapper_fix2.py"
+      ]
+    },
+    "API": {
+      "status": "FOUND",
+      "count": 22,
+      "examples": [
+        "_tmp_server.js",
+        "backup_before_reflection_api.py",
+        "server_backup_clean.js",
+        "server.js",
+        "server_backup.js"
+      ]
+    },
+    "Identity": {
+      "status": "FOUND",
+      "count": 7,
+      "examples": [
+        "languages/language_profiles.json",
+        "kernel/_graveyard/_archive/backups__1778202602712__user_store.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__auth_layer.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__boot_user.json",
+        "kernel/_graveyard/_archive/duplicates/test_user.js"
+      ]
+    },
+    "Security": {
+      "status": "FOUND",
+      "count": 15,
+      "examples": [
+        "backup_before_safety_gate.py",
+        "ima_checkpoint_action_safety_v1.tar.gz",
+        "__pycache__/backup_before_safety_gate.cpython-313.pyc",
+        "learning/safety_gate.py",
+        "learning/child_safety_engine.py"
+      ]
+    },
+    "Voice": {
+      "status": "FOUND",
+      "count": 1,
+      "examples": [
+        ".ima/voice.json"
+      ]
+    },
+    "Child": {
+      "status": "FOUND",
+      "count": 2,
+      "examples": [
+        "learning/child_safety_engine.py",
+        "learning/__pycache__/child_safety_engine.cpython-313.pyc"
+      ]
+    },
+    "Device": {
+      "status": "FOUND",
+      "count": 4,
+      "examples": [
+        "kernel/ima_devices/index.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__ima_device_layer.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__ima_devices.json",
+        ".ima/governance/device_registry.json"
+      ]
+    },
+    "Deployment": {
+      "status": "FOUND",
+      "count": 3,
+      "examples": [
+        "kernel/_graveyard/_archive/releases__v1778001671191__deploy.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_engine_v3.js",
+        "kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js"
+      ]
+    }
+  },
+  "time": 1783653825.4743736
+}

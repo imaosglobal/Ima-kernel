@@ -1,0 +1,13 @@
+{
+  "allowed_supervisor":
+    "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+
+  "forbidden_patterns":[
+    "supervisor.py",
+    "SUPERVISOR.js",
+    "daemon_supervisor",
+    "master_supervisor"
+  ],
+
+  "mode":"LOCKED"
+}

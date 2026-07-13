@@ -1,0 +1,13 @@
+{
+  "system": "IMA",
+  "state": "PRODUCT_EVOLUTION_LOCKED",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/module_registry.py",
+  "duplicate_creation": "blocked",
+  "created": [
+    "product/runtime/product_runtime_registry.json",
+    "product/identity/identity_registry.json",
+    "product/safety/safety_runtime_registry.json"
+  ],
+  "time": 1783779539.0009928
+}

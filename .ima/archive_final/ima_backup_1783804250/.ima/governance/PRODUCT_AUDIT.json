@@ -1,0 +1,37 @@
+{
+  "time": 1783789411,
+  "product_state": {
+    "canonical_runtime": {
+      "exists": true,
+      "path": "kernel/runtime/CANONICAL"
+    },
+    "cli": {
+      "exists": true,
+      "path": "ima"
+    },
+    "governance": {
+      "exists": true,
+      "path": ".ima/governance"
+    },
+    "memory": {
+      "exists": true,
+      "path": ".ima/memory.json"
+    },
+    "release_lock": {
+      "exists": true,
+      "path": ".ima/governance/RELEASE_LOCK.json"
+    },
+    "api": {
+      "exists": true,
+      "path": "api"
+    },
+    "frontend": {
+      "exists": true,
+      "path": "frontend"
+    },
+    "android": {
+      "exists": true,
+      "path": "android"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "system": "IMA",
+  "type": "canonical_chronicle",
+  "locked_at": 1783771825.2869747,
+  "canonical": {
+    "brain": "learning/meta_orchestrator.py",
+    "orchestrator": "learning/meta_orchestrator.py",
+    "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+    "registry": ".ima/governance/brain_registry.json"
+  },
+  "policy": {
+    "state": "LOCKED",
+    "single_brain": true,
+    "single_orchestrator": true,
+    "block_duplicate_creation": true,
+    "redirect_unknown_paths": true
+  }
+}

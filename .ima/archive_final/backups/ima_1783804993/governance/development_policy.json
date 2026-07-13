@@ -1,0 +1,19 @@
+{
+  "system": "IMA",
+  "development_mode": "GATED",
+  "canonical_entry": "IMA_START.py",
+  "rules": [
+    "all_changes_require_validation",
+    "single_brain_only",
+    "single_orchestrator_only",
+    "no_duplicate_core_files",
+    "no_new_runtime_without_gate"
+  ],
+  "approval_flow": [
+    "IMA_START.py",
+    "health_check",
+    "brain_guard",
+    "orchestrator_registry",
+    "commit"
+  ]
+}

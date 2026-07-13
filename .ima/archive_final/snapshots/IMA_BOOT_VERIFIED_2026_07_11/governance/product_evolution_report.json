@@ -1,0 +1,44 @@
+{
+  "system": "IMA",
+  "checks": {
+    "product_runtime": {
+      "exists": true,
+      "found": [
+        "product/runtime",
+        "kernel/runtime"
+      ]
+    },
+    "identity": {
+      "exists": false,
+      "found": []
+    },
+    "safety": {
+      "exists": true,
+      "found": [
+        "product/safety",
+        ".ima/governance/safety_product_registry.json"
+      ]
+    },
+    "device_bridge": {
+      "exists": true,
+      "found": [
+        "product/device_bridge",
+        "devices",
+        "device"
+      ]
+    },
+    "gateway": {
+      "exists": true,
+      "found": [
+        "kernel/runtime/KERNEL_API_GATEWAY.js"
+      ]
+    }
+  },
+  "created": [
+    "product/runtime/product_runtime_registry.json",
+    "product/identity/identity_registry.json",
+    "product/safety/safety_runtime_registry.json"
+  ],
+  "lock": "PRODUCT_EVOLUTION_LOCK.json",
+  "status": "completed"
+}

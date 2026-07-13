@@ -1,0 +1,18 @@
+{
+  "state": "IMA_BOOT_VERIFIED_FINAL_LOCK",
+  "entry": "IMA_START.py",
+  "boot": "PASSED",
+  "components": [
+    "IMA_START.py",
+    ".ima/runtime/runtime.py",
+    "learning/meta_orchestrator.py",
+    "learning/module_registry.py",
+    ".ima/governance/brain_registry.json",
+    ".ima/memory.json",
+    ".ima/ledger.jsonl",
+    ".ima/personality.json",
+    ".ima/voice.json"
+  ],
+  "sha256": "349e67d8a56321f2834a648b873a63d72df7671f33081e6265f32f04f862804f",
+  "time": "2026-07-11T19:06:41.195894"
+}

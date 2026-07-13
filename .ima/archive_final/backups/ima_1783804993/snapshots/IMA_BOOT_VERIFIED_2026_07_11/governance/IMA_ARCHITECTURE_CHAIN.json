@@ -1,0 +1,54 @@
+{
+  "system": "IMA",
+  "type": "architecture_chain",
+  "created": 1783772307.7276888,
+  "canonical": {
+    "brain": "learning/meta_orchestrator.py",
+    "runtime": "IMA_START.py",
+    "governance": ".ima/governance"
+  },
+  "selection": {
+    "method": "automatic",
+    "candidates": [
+      {
+        "path": "IMA_START.py",
+        "score": 7,
+        "exists": true
+      },
+      {
+        "path": "kernel/kernel_single.js",
+        "score": 6,
+        "exists": true
+      },
+      {
+        "path": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+        "score": 6,
+        "exists": true
+      },
+      {
+        "path": "kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js",
+        "score": 6,
+        "exists": true
+      },
+      {
+        "path": "kernel/ima_runtime.js",
+        "score": 5,
+        "exists": true
+      },
+      {
+        "path": "kernel/ima_supreme_kernel.js",
+        "score": 2,
+        "exists": true
+      }
+    ]
+  },
+  "policy": {
+    "single_chain": true,
+    "no_duplicate_active_components": true,
+    "future_components_require_registration": true,
+    "lock_after_verified_connection": true,
+    "protect_existing_working_components": true,
+    "graveyard_usage": "only_when_required_and_verified"
+  },
+  "status": "FROZEN_AND_LOCKED"
+}

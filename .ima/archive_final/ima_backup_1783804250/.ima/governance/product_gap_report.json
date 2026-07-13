@@ -1,0 +1,11 @@
+{
+  "product_stage": "core_ready",
+  "brain": "learning/meta_orchestrator.py",
+  "orchestrator": "learning/meta_orchestrator.py",
+  "runtime": "needs_canonical_selection",
+  "frontend": "exists_android_and_web",
+  "devices": "exists_partial",
+  "voice": "exists_partial",
+  "safety": "needs_product_layer",
+  "status": "prepare_product_architecture"
+}

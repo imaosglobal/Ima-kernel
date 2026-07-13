@@ -1,0 +1,13 @@
+{
+  "time": 1783789628,
+  "product": "IMA",
+  "status": "architecture_audit",
+  "layers": {
+    "runtime": "OK",
+    "api": true,
+    "frontend": true,
+    "android": true,
+    "memory": true,
+    "governance": true
+  }
+}

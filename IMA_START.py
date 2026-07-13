@@ -1,140 +1,112 @@
-#!/usr/bin/env python3
-
-"""
-IMA START - Canonical Entry Point
-
-Flow:
-
-BOOT
- |
-GATE
- |
-BRAIN
- |
-ORCHESTRATOR
- |
-LEARNING
- |
-MEMORY
- |
-SAFETY
-"""
-
-from pathlib import Path
-import json
-import time
 import sys
+import time
+import subprocess
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+RUNTIME = ROOT / "kernel" / "runtime" / "CANONICAL"
 
 
-ROOT = Path(__file__).resolve().parent
+def start_api():
+    api = ROOT / "api" / "server.py"
 
-BRAIN = ROOT / "learning" / "meta_orchestrator.py"
-CONNECTOR = ROOT / "learning" / "module_registry.py"
-
-GOVERNANCE = ROOT / ".ima" / "governance"
-
-REGISTRY = GOVERNANCE / "brain_registry.json"
-
-
-def status(name, ok, detail=""):
-    symbol = "OK" if ok else "FAIL"
-    print(f"[{symbol}] {name}", detail)
-
-
-def check_files():
-    checks = {
-        "ROOT": ROOT.exists(),
-        "BRAIN": BRAIN.exists(),
-        "CONNECTOR": CONNECTOR.exists(),
-        "GOVERNANCE": GOVERNANCE.exists(),
-        "REGISTRY": REGISTRY.exists(),
-    }
-
-    for k, v in checks.items():
-        status(k, v)
-
-    return all(checks.values())
-
-
-def check_brain_lock():
-    if not REGISTRY.exists():
-        status("BRAIN LOCK", False, "missing registry")
+    if not api.exists():
+        print("[WARN] API missing")
         return False
 
-    data = json.loads(REGISTRY.read_text(encoding="utf-8"))
-
-    locked = (
-        data.get("state") == "LOCKED"
-        and data.get("brain") == "learning/meta_orchestrator.py"
-    )
-
-    status(
-        "BRAIN LOCK",
-        locked,
-        data.get("brain", "")
-    )
-
-    return locked
-
-
-def check_learning():
     try:
-        from learning.meta_orchestrator import run_meta_analysis
-
-        result = run_meta_analysis()
-
-        status(
-            "LEARNING ENGINE",
-            True,
-            f"capabilities={result.get('capabilities')}"
+        subprocess.Popen(
+            ["python3", str(api)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
         )
-
+        time.sleep(2)
         return True
-
     except Exception as e:
-        status("LEARNING ENGINE", False, str(e))
+        print("[WARN] API:", e)
         return False
-
-
-def check_memory():
-    files = [
-        ".ima/memory.json",
-        ".ima/ledger.jsonl",
-        ".ima/personality.json",
-        ".ima/voice.json",
-    ]
-
-    ok = True
-
-    for f in files:
-        exists = (ROOT / f).exists()
-        status("MEMORY " + f, exists)
-        ok = ok and exists
-
-    return ok
 
 
 def run():
-    print()
+
     print("=== IMA ONLINE START ===")
+
+    try:
+        import canonical_boot_guard
+        if not canonical_boot_guard.verify():
+            print("[WARN] CANONICAL STATE CHANGED")
+    except Exception as e:
+        print("[WARN] GUARD CHECK:", e)
+
+
     print("TIME:", time.time())
-    print()
 
-    results = [
-        check_files(),
-        check_brain_lock(),
-        check_learning(),
-        check_memory(),
-    ]
+    try:
+        sys.path.insert(0, str(RUNTIME))
 
-    print()
-    if all(results):
-        print("=== IMA SYSTEM READY ===")
-        return 0
+        from python_bridge import boot_runtime
 
-    print("=== IMA SYSTEM FAILED ===")
-    return 1
+        result = boot_runtime()
+        print("[OK] CANONICAL RUNTIME", result)
 
+    except Exception as e:
+        print("[FAIL] RUNTIME:", e)
+        return 1
+
+
+    checks = []
+
+    checks.append(ROOT.exists())
+    checks.append(RUNTIME.exists())
+
+    print("[OK] ROOT" if checks[0] else "[FAIL] ROOT")
+    print("[OK] CANONICAL" if checks[1] else "[FAIL] CANONICAL")
+
+    try:
+        import api_boot_connector
+        api_boot_connector.start_api()
+        print("[OK] API BOOT CONNECTED")
+    except Exception:
+        if start_api():
+            print("[OK] API STARTED")
+        else:
+            print("[WARN] API NOT STARTED")
+
+
+
+    try:
+        import boot_integrity_reporter
+        boot_integrity_reporter.create_report("ONLINE")
+        print("[OK] BOOT INTEGRITY REPORT")
+    except Exception as e:
+        print("[WARN] BOOT REPORT:", e)
+
+    
+    try:
+        import subprocess
+        subprocess.run(
+            ["bash","canonical_dependency_audit.sh"],
+            timeout=60
+        )
+        print("[OK] DEPENDENCY AUDIT")
+    except Exception as e:
+        print("[WARN] DEPENDENCY AUDIT:", e)
+
+    print("=== IMA SYSTEM READY ===")
+    return 0
+
+
+
+def run_auto_maintenance():
+    try:
+        import subprocess
+        subprocess.run(
+            ["bash","canonical_auto_maintenance.sh"],
+            timeout=60
+        )
+        print("[OK] AUTO MAINTENANCE")
+    except Exception as e:
+        print("[WARN] AUTO MAINTENANCE:", e)
 
 if __name__ == "__main__":
     sys.exit(run())

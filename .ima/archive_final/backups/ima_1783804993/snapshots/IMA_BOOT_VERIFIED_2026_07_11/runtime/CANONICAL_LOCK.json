@@ -1,0 +1,6 @@
+{
+  "runtime": ".ima/runtime/runtime.py",
+  "core": ".ima/runtime/core.py",
+  "status": "LOCKED",
+  "rule": "all_runtime_calls_must_use_canonical_path"
+}

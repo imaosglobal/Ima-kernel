@@ -1,0 +1,14 @@
+{
+  "status": "CANONICAL_FUSED_FINAL_WITH_AUTO_MAINTENANCE",
+  "timestamp": 1783847475.5239697,
+  "entry": "IMA_START.py",
+  "components": {
+    "IMA_START.py": "16ca0e222af8dd5229de04f4d2380d433f76222d6c535d120b4c8a98c16b4dcd",
+    "kernel/runtime/CANONICAL/python_bridge.py": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+    ".ima/runtime/memory_bus.py": "2d0c9b94888e643d6e87729969f433cdc3ddfdb85e7a3d15ff31122ec83389b9",
+    "ima_master_runtime.py": "eb3ddc69c1896d840de4628513bfa87adc3cc74311a5720bf16031089976d85c",
+    "conversation_layer.py": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+    "identity_context.py": "6f874f45c90cda87ae98e740fd4f46a7e20c61347d3262b0fb0b50a2f9c768e8",
+    "learning/evolution_controller.py": "0d69f017ab29deddd524ad81a75bf45b6904d7ad7b23c56d59082542e5984498"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "system": "IMA",
+  "orchestrator": "learning/module_registry.py",
+  "brain": "learning/meta_orchestrator.py",
+  "active_orchestrators": [
+    "health_check",
+    "ima_learning_loop",
+    "learning_memory_connector",
+    "knowledge_dedup",
+    "knowledge_expander",
+    "improvement_engine",
+    "evaluation_engine",
+    "feedback_engine",
+    "safety_gate",
+    "system_introspection",
+    "meta_orchestrator"
+  ],
+  "policy": "single_orchestrator_only"
+}

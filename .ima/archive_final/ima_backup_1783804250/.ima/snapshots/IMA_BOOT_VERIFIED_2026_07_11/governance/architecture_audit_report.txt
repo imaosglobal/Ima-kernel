@@ -1,0 +1,498 @@
+=== IMA CANONICAL ARCHITECTURE AUDIT ===
+TIME: Fri Jul 10 06:06:59 IDT 2026
+
+=== COMPONENTS ===
+OK   kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
+OK   kernel/runtime/KERNEL_EVENT_BUS.js
+OK   kernel/runtime/KERNEL_API_GATEWAY.js
+OK   learning/safe_scheduler.py
+OK   kernel/device
+OK   kernel/plugins
+OK   learning/meta_orchestrator.py
+OK   learning/persona_engine.py
+OK   learning/child_safety_engine.py
+OK   learning/single_gate.py
+OK   learning/brain_guard.py
+
+=== GOVERNANCE ===
+OK   .ima/governance/brain_registry.json
+OK   .ima/governance/runtime_registry.json
+OK   .ima/governance/device_registry.json
+OK   .ima/governance/architecture_status.json
+
+=== BRAIN CONNECTION ===
+learning/capability_map.json:147:  "meta_orchestrator": {
+learning/evolution_controller.py:11:from learning.meta_orchestrator import run_meta_analysis
+learning/ima_evolution_cycle.py:1:from learning.meta_orchestrator import run_meta_analysis
+learning/ima_learning_loop.py:8:from learning.meta_orchestrator import run_meta_analysis
+learning/safe_scheduler.py:1:from learning.meta_orchestrator import run_meta_analysis
+learning/module_registry.py:18:    "meta_orchestrator",
+learning/brain_guard.py:6:CANONICAL = ROOT / "meta_orchestrator.py"
+
+=== EVENT BUS CONNECTION ===
+kernel/_disabled/auto_pipeline.sh:27:# 4. npm publish
+kernel/_disabled/auto_pipeline.sh:29:npm publish || echo "npm publish skipped (already exists or auth issue)"
+kernel/_disabled/ima_pipeline_final.sh:31:# חשוב: אין publish פה יותר
+kernel/_graveyard/_archive/backups__1778202602712__ima_bootstrap.js:52:ui.subscribe(user, s => console.log('[UI]', s?.device));
+kernel/_graveyard/_archive/backups__1778202602712__ima_ui_core.js:5:function subscribe(user, cb){
+kernel/_graveyard/_archive/backups__1778202602712__ima_ui_core.js:33:module.exports = { subscribe, login, move, snapshot };
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_ci_engine.js:38:const { npmPublish } = require('./ima_npm_publish');
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_ci_engine.js:41:    ({ publish=true } = {}) {
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_ci_engine.js:64:  } else if (publish) {
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_ci_engine.js:65:    run('npm publish', true);
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_ci_engine.js:79:  const { npmPublish } = require('./ima_npm_publish');
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__ima_core_engine.js:83:  if (ui?.subscribe) ui.subscribe(user, s => console.log('[UI]', s?.device));
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__package.json:6:  "publishConfig": {
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh:5:echo "[PIPE] starting safe publish..."
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh:7:bash ~/ima_core/kernel/prepublish_check.sh
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh:12:echo "[PIPE] publishing..."
+kernel/_graveyard/_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh:13:npm publish
+kernel/_graveyard/_archive/duplicates/ima_publish_controlled_fixed.sh:22:# direct publish (no duplicate approval layer)
+kernel/_graveyard/_archive/duplicates/ima_publish_controlled_fixed.sh:23:npm publish
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2579:    "backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2580:    "backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2581:    "backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2582:    "backups/1778202716373/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2583:    "backups/1778202716373/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2584:    "backups/1778202716373/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2585:    "backups/1778202716373/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2586:    "backups/1778202775958/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2587:    "backups/1778202775958/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2588:    "backups/1778202775958/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2589:    "backups/1778202775958/backups/1778202716373/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2590:    "backups/1778202775958/backups/1778202716373/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2591:    "backups/1778202775958/backups/1778202716373/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2592:    "backups/1778202775958/backups/1778202716373/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2593:    "backups/1778202775958/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2594:    "backups/maintenance_1778203075698/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2595:    "backups/maintenance_1778203075698/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2596:    "backups/maintenance_1778203075698/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2597:    "backups/maintenance_1778203075698/backups/1778202716373/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2598:    "backups/maintenance_1778203075698/backups/1778202716373/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2599:    "backups/maintenance_1778203075698/backups/1778202716373/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2600:    "backups/maintenance_1778203075698/backups/1778202716373/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2601:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2602:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2603:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2604:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202716373/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2605:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202716373/backups/1778202658655/backups/1778202602712/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2606:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202716373/backups/1778202658655/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2607:    "backups/maintenance_1778203075698/backups/1778202775958/backups/1778202716373/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2608:    "backups/maintenance_1778203075698/backups/1778202775958/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2609:    "backups/maintenance_1778203075698/publish_safe.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2610:    "publish_safe.sh"
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2846:    "fix_npm_publish.js",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2847:    "releases/v1778001671191/fix_npm_publish.js"
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2940:    "ima_npm_publish.js",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2941:    "releases/v1778001671191/ima_npm_publish.js"
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2953:    "ima_publish_controlled.sh",
+kernel/_graveyard/_archive/duplicates/logs__duplicates_before_cleanup.json:2954:    "ima_publish_controlled_fixed.sh"
+kernel/_graveyard/_archive/releases__v1778001671191__deploy.js:10:  console.log('\n→ npm publish');
+kernel/_graveyard/_archive/releases__v1778001671191__deploy.js:12:    execSync('npm publish',{stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__deploy.js:15:    console.log('⚠ npm publish failed');
+kernel/_graveyard/_archive/releases__v1778001671191__deploy.js:30:  const published = npmPublish();
+kernel/_graveyard/_archive/releases__v1778001671191__deploy.js:32:  return { ok: true, published };
+kernel/_graveyard/_archive/releases__v1778001671191__fix_npm.js:13:    execSync('npm publish', {stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__fix_npm.js:14:    console.log('[NPM] published');
+kernel/_graveyard/_archive/releases__v1778001671191__fix_npm_publish.js:28:    execSync('npm publish',{stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__fix_npm_publish.js:30:    console.log('[NPM] published', next);
+kernel/_graveyard/_archive/releases__v1778001671191__fix_npm_publish.js:33:    console.log('[NPM] publish failed:', e.message);
+kernel/_graveyard/_archive/releases__v1778001671191__ima_ci_engine_clean.js:26:    console.log('[NPM] not logged in → skipping publish');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_ci_engine_clean.js:104:    sh('    console.log('[NPM] published');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_ci_engine_clean.js:106:    console.log('[NPM] publish failed');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_engine_v3.js:28:function publishGuard() {
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_engine_v3.js:30:    console.log('[NPM] publish blocked by env');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_engine_v3.js:53:  if (publishGuard()) {
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_engine_v3.js:54:    safe('npm publish');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js:18:    console.log('[NPM] publish skipped by env');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js:42:  npm publish
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js:156:// 5. npm publish (safe)
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js:157:const publishOk = sh('npm publish');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_deploy_full.js:160:if (!publishOk) {
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:93:    execSync('npm publish', {stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:94:    console.log('[NPM] published');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:106:    execSync('npm publish', {stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:107:    console.log('[NPM] published');
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:134:    execSync('npm publish',{stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:136:    console.log('[NPM] published', next);
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:139:    console.log('[NPM] publish failed:', e.message);
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:147:    console.log('[NPM] publishing', v);
+kernel/_graveyard/_archive/releases__v1778001671191__ima_engine_final.BROKEN_BACKUP.js:148:    execSync('npm publish',{stdio:'inherit'});
+kernel/_graveyard/_archive/releases__v1778001671191__ima_npm_publish.js:13:    execSync('npm publish', { stdio: 'inherit' });
+kernel/archive/engines/engine_v4.js:83:function publish(version){
+kernel/archive/engines/engine_v4.js:92:    const ok=run(`npm publish --access public`,true);
+kernel/archive/engines/engine_v4.js:139:    const published=publish(version);
+kernel/archive/engines/engine_v4.js:150:      published,
+kernel/archive/engines/engine_v4.js:155:    if(!published || !verified || !integrityOK){
+kernel/backups/maintenance_1778203075698/package.json:6:  "publishConfig": {
+kernel/core/system_registry.json:632:    "_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:695:    "_archive/backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:766:    "_archive/backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:837:    "_archive/backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:901:    "_archive/backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:965:    "_archive/backups__1778202716373__publish_safe.sh",
+kernel/core/system_registry.json:1036:    "_archive/backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1107:    "_archive/backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1171:    "_archive/backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:1242:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1313:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1377:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:1441:    "_archive/backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/core/system_registry.json:1505:    "_archive/backups__1778202775958__publish_safe.sh",
+kernel/core/system_registry.json:1584:    "_archive/backups__maintenance_1778203075698__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1655:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1719:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:1790:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1861:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:1925:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:1989:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__publish_safe.sh",
+kernel/core/system_registry.json:2060:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:2131:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:2195:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:2266:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:2337:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/core/system_registry.json:2401:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/core/system_registry.json:2465:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/core/system_registry.json:2529:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__publish_safe.sh",
+kernel/core/system_registry.json:2592:    "_archive/backups__maintenance_1778203075698__publish_safe.sh",
+kernel/core/system_registry.json:2629:    "_archive/duplicates/ima_publish_controlled_fixed.sh",
+kernel/core/system_registry.json:2642:    "_archive/duplicates/publish_safe.sh",
+kernel/core/system_registry.json:2687:    "_archive/releases__v1778001671191__fix_npm_publish.js",
+kernel/core/system_registry.json:2712:    "_archive/releases__v1778001671191__ima_npm_publish.js",
+kernel/core/system_registry.json:2811:    "backups/1778202602712/publish_safe.sh",
+kernel/core/system_registry.json:2843:    "fix_npm_publish.js",
+kernel/core/system_registry.json:2881:    "ima_npm_publish.js",
+kernel/core/system_registry.json:2886:    "ima_publish_controlled.sh",
+kernel/core/system_registry.json:2936:    "prepublish_check.sh",
+kernel/core/system_registry.json:2941:    "publish_safe_v1.sh",
+kernel/dist/v1.0.0/core/system_registry.json:632:    "_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:695:    "_archive/backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:766:    "_archive/backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:837:    "_archive/backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:901:    "_archive/backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:965:    "_archive/backups__1778202716373__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1036:    "_archive/backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1107:    "_archive/backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1171:    "_archive/backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1242:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1313:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1377:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1441:    "_archive/backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1505:    "_archive/backups__1778202775958__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1584:    "_archive/backups__maintenance_1778203075698__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1655:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1719:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1790:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1861:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1925:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:1989:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2060:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2131:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2195:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2266:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2337:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2401:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2465:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2529:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2592:    "_archive/backups__maintenance_1778203075698__publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2629:    "_archive/duplicates/ima_publish_controlled_fixed.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2642:    "_archive/duplicates/publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2687:    "_archive/releases__v1778001671191__fix_npm_publish.js",
+kernel/dist/v1.0.0/core/system_registry.json:2712:    "_archive/releases__v1778001671191__ima_npm_publish.js",
+kernel/dist/v1.0.0/core/system_registry.json:2811:    "backups/1778202602712/publish_safe.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2843:    "fix_npm_publish.js",
+kernel/dist/v1.0.0/core/system_registry.json:2881:    "ima_npm_publish.js",
+kernel/dist/v1.0.0/core/system_registry.json:2886:    "ima_publish_controlled.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2936:    "prepublish_check.sh",
+kernel/dist/v1.0.0/core/system_registry.json:2941:    "publish_safe_v1.sh",
+kernel/ima_autonomous_release_engine.js:116:function publish(version){
+kernel/ima_autonomous_release_engine.js:126:    const out=exec('npm publish --access public 2>&1');
+kernel/ima_autonomous_release_engine.js:176:// 6. publish
+kernel/ima_autonomous_release_engine.js:177:const result=publish(VERSION);
+kernel/ima_autonomous_release_engine.js:202:  publish:result
+kernel/ima_consolidation_engine.js:346:  publishConfig:{
+kernel/ima_consolidation_engine.js:442:let published=false;
+kernel/ima_consolidation_engine.js:449:    'npm publish --access public',
+kernel/ima_consolidation_engine.js:462:    published=true;
+kernel/ima_consolidation_engine.js:471:if(!published){
+kernel/ima_consolidation_engine.js:539:  published
+kernel/ima_consolidation_engine.js:554:  PUBLISHED:published
+kernel/ima_full_engine.js:97:function publish(){
+kernel/ima_full_engine.js:117:    const ok=exec('npm publish --access public');
+kernel/ima_full_engine.js:157:const published=publish();
+kernel/ima_full_engine.js:165:  published:published,
+kernel/ima_full_engine.js:173:  published
+kernel/ima_lifecycle_final.sh:51:echo "[8] publish"
+kernel/ima_lifecycle_final.sh:53:npm publish
+kernel/ima_lifecycle_final_v2.sh:59:echo "[8] publish"
+kernel/ima_lifecycle_final_v2.sh:61:npm publish
+kernel/ima_lifecycle_stable.sh:61:echo "[10] publish"
+kernel/ima_lifecycle_stable.sh:62:npm publish
+kernel/ima_lifecycle_strict.sh:103:echo "[7] publishing"
+kernel/ima_lifecycle_strict.sh:106:npm publish
+kernel/ima_meta_engine.js:214:  const pub=exec('npm publish --access public');
+kernel/ima_release.sh:20:echo "[4] npm publish"
+kernel/ima_release.sh:21:npm publish
+kernel/ima_release_v3.sh:24:echo "[3] npm publish"
+kernel/ima_release_v3.sh:26:npm publish
+kernel/ima_release_v4.sh:25:# 4. guard against duplicate publish
+kernel/ima_release_v4.sh:31:  echo "[BLOCKED] version already published"
+kernel/ima_release_v4.sh:35:# 5. publish
+kernel/ima_release_v4.sh:36:npm publish
+kernel/ima_run_backup.sh:110:echo "[7] version + publish"
+kernel/ima_run_backup.sh:113:npm publish
+kernel/ima_supreme_kernel.js:302:  publishConfig:{
+kernel/ima_supreme_kernel.js:427:let published=false;
+kernel/ima_supreme_kernel.js:436:      'npm publish --access public'
+kernel/ima_supreme_kernel.js:441:      published=true;
+kernel/ima_supreme_kernel.js:450:console.log('PUBLISHED:',published);
+kernel/ima_supreme_kernel.js:488:  published,
+kernel/ima_supreme_kernel.js:504:  PUBLISHED:published,
+kernel/ima_system_brain.js:352:publishConfig:{
+kernel/ima_system_brain.js:383:let published=false;
+kernel/ima_system_brain.js:393:'npm publish --access public'
+kernel/ima_system_brain.js:398:published=true;
+kernel/ima_system_brain.js:417:'logs/publish_state.json',
+kernel/ima_system_brain.js:419:published,
+kernel/ima_system_brain.js:448:PUBLISHED:published
+kernel/ima_ultimate_orchestrator.js:694:publishConfig:{
+kernel/ima_ultimate_orchestrator.js:761:let published=false;
+kernel/ima_ultimate_orchestrator.js:770:      'npm publish --access public'
+kernel/ima_ultimate_orchestrator.js:775:      published=true;
+kernel/ima_ultimate_orchestrator.js:784:console.log('PUBLISHED:',published);
+kernel/ima_ultimate_orchestrator.js:827:published,
+kernel/ima_ultimate_orchestrator.js:844:PUBLISHED:published,
+kernel/ima_unified_autonomous_engine.js:378:let published=false;
+kernel/ima_unified_autonomous_engine.js:391:      'npm publish --access public'
+kernel/ima_unified_autonomous_engine.js:396:      published=true;
+kernel/ima_unified_autonomous_engine.js:407:  published
+kernel/ima_unified_autonomous_engine.js:449:  published
+kernel/ima_unified_autonomous_engine.js:465:  PUBLISHED:published
+kernel/ima_update.sh:12:echo "[3] running pipeline guard (NO publish)"
+kernel/ima_update.sh:14:bash ima_pipeline_final.sh | grep -v "publish"
+kernel/logs/duplicates.json:175:    "backups/1778202602712/publish_safe.sh",
+kernel/logs/duplicates.json:176:    "publish_safe.sh"
+kernel/logs/duplicates.json:215:    "ima_publish_controlled.sh",
+kernel/logs/duplicates.json:216:    "ima_publish_controlled_fixed.sh"
+kernel/logs/files.json:68:  "backups/1778202602712/publish_safe.sh",
+kernel/logs/files.json:122:  "fix_npm_publish.js",
+kernel/logs/files.json:188:  "ima_npm_publish.js",
+kernel/logs/files.json:193:  "ima_publish_controlled.sh",
+kernel/logs/files.json:194:  "ima_publish_controlled_fixed.sh",
+kernel/logs/files.json:277:  "prepublish_check.sh",
+kernel/logs/files.json:282:  "publish_safe.sh",
+kernel/logs/files.json:283:  "publish_safe_v1.sh",
+kernel/logs/final_state.json:7:  "published": false,
+kernel/logs/last_run.json:5:  "publish": {
+kernel/memory/system_state.json:5:  "published": false,
+kernel/package.json:6:    "prepublishOnly": "node runtime/KERNEL_RELEASE_GATE.js"
+kernel/package.json:11:  "publishConfig": {
+kernel/pipeline/build.sh:7:# רק pack + version + publish
+kernel/prepublish_check.sh:3:echo "[GATE] pre-publish validation..."
+kernel/publish_safe_v1.sh:8:echo "[PIPE] safe publish v1 starting..."
+kernel/publish_safe_v1.sh:46:echo "{\"time\":\"$(date -Iseconds)\",\"status\":\"pre_publish_ok\"}" >> ima_memory.json
+kernel/publish_safe_v1.sh:51:echo "[PUBLISH] publishing..."
+kernel/publish_safe_v1.sh:52:npm publish
+kernel/publish_safe_v1.sh:54:echo "[DONE] published successfully"
+kernel/release.js:69:  run("npm publish --access public");
+kernel/release_freeze/core/system_registry.json:632:    "_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:695:    "_archive/backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:766:    "_archive/backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:837:    "_archive/backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:901:    "_archive/backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:965:    "_archive/backups__1778202716373__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1036:    "_archive/backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1107:    "_archive/backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1171:    "_archive/backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1242:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1313:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1377:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1441:    "_archive/backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1505:    "_archive/backups__1778202775958__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1584:    "_archive/backups__maintenance_1778203075698__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1655:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1719:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1790:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1861:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1925:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:1989:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2060:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2131:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2195:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2266:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2337:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2401:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2465:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2529:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2592:    "_archive/backups__maintenance_1778203075698__publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2629:    "_archive/duplicates/ima_publish_controlled_fixed.sh",
+kernel/release_freeze/core/system_registry.json:2642:    "_archive/duplicates/publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2687:    "_archive/releases__v1778001671191__fix_npm_publish.js",
+kernel/release_freeze/core/system_registry.json:2712:    "_archive/releases__v1778001671191__ima_npm_publish.js",
+kernel/release_freeze/core/system_registry.json:2811:    "backups/1778202602712/publish_safe.sh",
+kernel/release_freeze/core/system_registry.json:2843:    "fix_npm_publish.js",
+kernel/release_freeze/core/system_registry.json:2881:    "ima_npm_publish.js",
+kernel/release_freeze/core/system_registry.json:2886:    "ima_publish_controlled.sh",
+kernel/release_freeze/core/system_registry.json:2936:    "prepublish_check.sh",
+kernel/release_freeze/core/system_registry.json:2941:    "publish_safe_v1.sh",
+kernel/release_freeze/runtime/engine_v4.js:83:function publish(version){
+kernel/release_freeze/runtime/engine_v4.js:92:    const ok=run(`npm publish --access public`,true);
+kernel/release_freeze/runtime/engine_v4.js:139:    const published=publish(version);
+kernel/release_freeze/runtime/engine_v4.js:150:      published,
+kernel/release_freeze/runtime/engine_v4.js:155:    if(!published || !verified || !integrityOK){
+kernel/releases/snapshots/1778586693/core/system_registry.json:632:    "_archive/backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:695:    "_archive/backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:766:    "_archive/backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:837:    "_archive/backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:901:    "_archive/backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:965:    "_archive/backups__1778202716373__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1036:    "_archive/backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1107:    "_archive/backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1171:    "_archive/backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1242:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1313:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1377:    "_archive/backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1441:    "_archive/backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1505:    "_archive/backups__1778202775958__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1584:    "_archive/backups__maintenance_1778203075698__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1655:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1719:    "_archive/backups__maintenance_1778203075698__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1790:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1861:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1925:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:1989:    "_archive/backups__maintenance_1778203075698__backups__1778202716373__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2060:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2131:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2195:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2266:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2337:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__backups__1778202602712__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2401:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__backups__1778202658655__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2465:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__backups__1778202716373__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2529:    "_archive/backups__maintenance_1778203075698__backups__1778202775958__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2592:    "_archive/backups__maintenance_1778203075698__publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2629:    "_archive/duplicates/ima_publish_controlled_fixed.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2642:    "_archive/duplicates/publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2687:    "_archive/releases__v1778001671191__fix_npm_publish.js",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2712:    "_archive/releases__v1778001671191__ima_npm_publish.js",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2811:    "backups/1778202602712/publish_safe.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2843:    "fix_npm_publish.js",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2881:    "ima_npm_publish.js",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2886:    "ima_publish_controlled.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2936:    "prepublish_check.sh",
+kernel/releases/snapshots/1778586693/core/system_registry.json:2941:    "publish_safe_v1.sh",
+kernel/releases/snapshots/1778586693/package.json:10:  "publishConfig": {
+kernel/releases/v1778001671191/manifest.json:68:    "fix_npm_publish.js",
+kernel/releases/v1778001671191/manifest.json:128:    "ima_npm_publish.js",
+kernel/releases/v1778001671191/manifest.json:132:    "ima_publish_controlled.sh",
+kernel/releases/v1778001671191/manifest.json:133:    "ima_publish_controlled_fixed.sh",
+kernel/releases/v1778001671191/manifest.json:190:    "prepublish_check.sh",
+kernel/releases/v1778001671191/manifest.json:195:    "publish_safe.sh",
+kernel/releases/v1778001671191/manifest.json:196:    "publish_safe_v1.sh",
+kernel/runtime/KERNEL_API_GATEWAY_V3.js:3:const BUS = require('./KERNEL_EVENT_BUS_V1');
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:4:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_BOOTSTRAP_LOOP_V1.js:2:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_CONSOLIDATION_ENGINE_V1.js:7:    './KERNEL_EVENT_BUS_V2.js',
+kernel/runtime/KERNEL_CONSOLIDATION_ENGINE_V1.js:8:    './KERNEL_EVENT_BUS_V1.js'
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:6:  subscribers: {},
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:9:    if(!this.subscribers[type]) return;
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:10:    for(const fn of this.subscribers[type]){
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:16:    if(!this.subscribers[type]) this.subscribers[type] = [];
+kernel/runtime/KERNEL_CONTROL_MESH_V3.js:17:    this.subscribers[type].push(fn);
+kernel/runtime/KERNEL_CONTROL_PLANE.js:73:function publish() {
+kernel/runtime/KERNEL_CONTROL_PLANE.js:75:    execSync("npm publish", { stdio: "inherit" });
+kernel/runtime/KERNEL_CONTROL_PLANE.js:77:    console.log("[NPM] publish skipped or failed");
+kernel/runtime/KERNEL_CONTROL_PLANE.js:113:  publish();
+kernel/runtime/KERNEL_E2E_LOCK.js:4:const BUS = require('./KERNEL_EVENT_BUS');
+kernel/runtime/KERNEL_MASTER_DAEMON.js:4:const BUS = require('./KERNEL_EVENT_BUS');
+kernel/runtime/KERNEL_RELEASE_CONTROLLER.js:51:  run("npm publish --access public || true");
+kernel/runtime/KERNEL_REPLAY_ENGINE_V1.js:1:const BUS = require('./KERNEL_EVENT_BUS_V1');
+kernel/runtime/KERNEL_REPLAY_ENGINE_V2.js:1:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_SELF_HEAL.js:45:  run(`npm publish --tag latest --access public || true`);
+kernel/runtime/KERNEL_TIME_TRAVEL_DEBUGGER_V1.js:1:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/KERNEL_UNIFIED_RUNTIME_V1.js:4:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_CLUSTER_FIX_AND_VERIFY_V1.js:6:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_DIAGNOSTIC_FIX_V1.js:6:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_FIX_AND_STABILIZE_ALL_V2.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_STABLE_SINGLESHOT_V1.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js:3:const BUS = require('./KERNEL_EVENT_BUS_V2');
+kernel/runtime/autonomous_sync_engine.js:38:function publishNpm(version) {
+kernel/runtime/autonomous_sync_engine.js:43:  // ensure public publish
+kernel/runtime/autonomous_sync_engine.js:46:  const res = run("npm publish || true");
+kernel/runtime/autonomous_sync_engine.js:56:  const npmResult = publishNpm(version);
+kernel/scripts/release_engine.sh:84:npm publish --access public || {
+kernel/scripts/release_engine.sh:85:  echo "⚠️ npm publish failed (ignored)"
+kernel/scripts/releases/release_v2.sh:51:npm publish --access public || echo "npm skipped"
+kernel/system/bootstrap.js:58:  publishConfig:{
+kernel/system/bootstrap.js:228:ok('npm publish --access public');
+kernel/system/final_autonomous_pipeline.js:168:  publishConfig:{
+kernel/system/final_autonomous_pipeline.js:395:'npm publish --access public',
+kernel/system/full_autonomous_pipeline.js:231:  publishConfig:{
+kernel/system/full_autonomous_pipeline.js:509:'npm publish --access public',
+
+=== API CONNECTION ===
+kernel/runtime/KERNEL_BOOTSTRAP_FULL_V1.js:3:const GATEWAY = require('./KERNEL_API_GATEWAY_V3');
+kernel/runtime/KERNEL_EXECUTION_LAYER.js:3:const G = require('./KERNEL_API_GATEWAY');
+kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js:3:const G = require('./KERNEL_API_GATEWAY');
+kernel/runtime/KERNEL_REPLAY_ENGINE_V1.js:2:const G = require('./KERNEL_API_GATEWAY_V2');
+
+=== SYSTEM TESTS ===
+STATUS: True
+=== IMA EVOLUTION CONTROLLER ===
+SNAPSHOT: 4 items
+COMPILE ERRORS: 0
+HEALTH FAILURES: 0
+EVOLUTION STATE SAVED
+=== IMA FULL SYSTEM CHECK ===
+
+[MEMORY]
+memory.json: True
+topics: ['פרויקט', 'IMA', 'תכנות', 'מנוע']
+history: 90
+
+[LEARNING]
+learning loop import: OK
+function: <function run_ima_learning_loop at 0x6d1afabc40>
+
+[KNOWLEDGE]
+knowledge engine: OK
+sample: {'category': 'knowledge', 'answer': ' מנוע בעירה מנוע בעירה פנימית הופך אנרגיה כימית של דלק לאנרגיה מכנית באמצעות בעירה, לחץ ותנועת בוכנות.'}
+
+[LLM]
+llm layer exists: OK
+
+[FILES]
+.ima/memory.json OK
+.ima/ledger.jsonl OK
+.ima/personality.json OK
+.ima/voice.json OK
+
+=== CHECK COMPLETE ===
+
+=== GIT STATE ===
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .ima/evolution_state.json
+	modified:   learning/capability_map.json
+	modified:   learning/learning_memory.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.ima/governance/architecture_audit_report.txt
+	.ima/governance/architecture_status.json
+	.ima/governance/device_registry.json
+	.ima/governance/mission_registry.json
+	.ima/governance/pre_canonical_status_1783652635.txt
+	.ima/governance/runtime_registry.json
+	finalize_canonical_ima_architecture.sh
+	ima_architecture_audit.sh
+	ima_finalize_architecture.sh
+	learning/child_safety_engine.py
+	learning/persona_engine.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+74faa1b IMA canonical architecture locked
+8ad471d IMA single brain orchestrator lock
+cd52e96 IMA learning memory before orchestrator runtime integration
+

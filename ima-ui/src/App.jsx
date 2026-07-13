@@ -17,7 +17,7 @@ export default function App() {
     setState("thinking");
 
     try {
-      const res = await fetch("http://localhost:3000/ask", {
+      const res = await fetch("http://127.0.0.1:8080/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg }),
@@ -27,7 +27,7 @@ export default function App() {
 
       setChat((prev) => [
         ...prev,
-        { role: "ima", text: data.reply || "אין תשובה" },
+        { role: "ima", text: data.answer?.identity_document || JSON.stringify(data.answer) },
       ]);
     } catch (e) {
       setChat((prev) => [

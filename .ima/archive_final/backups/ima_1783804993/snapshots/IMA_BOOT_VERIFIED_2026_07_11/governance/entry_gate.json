@@ -1,0 +1,11 @@
+{
+  "entry_point": "learning/evolution_controller.py",
+  "status": "protected",
+  "mode": "single_entry",
+  "rules": [
+    "all_changes_require_snapshot",
+    "all_changes_require_compile_check",
+    "all_changes_require_health_check"
+  ],
+  "direct_modification": false
+}
