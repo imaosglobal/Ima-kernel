@@ -1,0 +1,25 @@
+{
+  "system": "IMA",
+  "state": "CANONICAL_LOCKED",
+  "active": {
+    "brain": "learning/meta_orchestrator.py",
+    "connector": "learning/module_registry.py",
+    "runtime": "kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js",
+    "event_bus": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
+    "api": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
+    "service": "kernel/runtime/IMA_SERVICE_CORE_V1.js"
+  },
+  "snapshots": {
+    "allowed": true,
+    "runtime_loading": false,
+    "path": ".ima/snapshots/"
+  },
+  "policies": [
+    "single_brain_only",
+    "single_connector_only",
+    "single_runtime_only",
+    "no_duplicate_active_modules",
+    "snapshots_are_read_only_history"
+  ],
+  "locked_at": 1783654156.886579
+}

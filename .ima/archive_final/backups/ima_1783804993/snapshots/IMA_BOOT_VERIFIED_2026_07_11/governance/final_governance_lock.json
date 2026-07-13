@@ -1,0 +1,12 @@
+{
+ "system":"IMA",
+ "state":"LOCKED",
+ "brain":"learning/meta_orchestrator.py",
+ "orchestrator":"learning/meta_orchestrator.py",
+ "forbidden_duplicates":[
+  "new_brain",
+  "new_orchestrator",
+  "new_kernel"
+ ],
+ "redirect":"learning/meta_orchestrator.py"
+}

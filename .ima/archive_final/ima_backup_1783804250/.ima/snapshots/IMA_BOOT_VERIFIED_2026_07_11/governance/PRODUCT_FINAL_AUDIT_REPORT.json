@@ -1,0 +1,28 @@
+{
+  "time": 1783780442.3782659,
+  "system": "IMA",
+  "checks": {
+    "brain": "OK",
+    "orchestrator_connector": "OK",
+    "orchestrator_files": [
+      "learning/meta_orchestrator.py",
+      "learning/module_registry.py"
+    ],
+    "brain_guard": "OK",
+    "learning_modules_loaded": 11,
+    "kernel/runtime": "EXISTS",
+    "kernel/runtime/KERNEL_API_GATEWAY.js": "EXISTS",
+    "devices": "EXISTS",
+    "product/device_bridge": "EXISTS"
+  },
+  "missing": [
+    "ima_product_runtime.py",
+    "kernel/runtime/IMA_PRODUCT_GATEWAY.js",
+    "device_manager.py"
+  ],
+  "warnings": [],
+  "connections": [
+    "brain -> learning/meta_orchestrator.py"
+  ],
+  "registry": ".ima/governance/PRODUCT_FINAL_AUDIT_REGISTRY.json"
+}

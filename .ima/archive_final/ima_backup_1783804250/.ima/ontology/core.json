@@ -1,0 +1,46 @@
+{
+  "ontology": "IMA_CORE_1",
+  "version": "1.0",
+  "entities": [
+    "person",
+    "idea",
+    "emotion",
+    "event",
+    "system",
+    "crisis",
+    "place"
+  ],
+  "relationships": [
+    "causes",
+    "influences",
+    "contradicts",
+    "evolves_into",
+    "expresses",
+    "associated_with"
+  ],
+  "time_model": {
+    "type": "temporal_graph",
+    "fields": [
+      "start",
+      "end",
+      "period"
+    ]
+  },
+  "philosophical_models": [
+    {
+      "name": "Nietzschean Lens",
+      "focus": "values, power, transformation"
+    },
+    {
+      "name": "Spinozan Lens",
+      "focus": "determinism, causal chains"
+    },
+    {
+      "name": "Yalom Existential Lens",
+      "focus": "death, isolation, meaning"
+    }
+  ],
+  "event_ingestion": true,
+  "self_healing": true,
+  "graph_mode": "enabled"
+}

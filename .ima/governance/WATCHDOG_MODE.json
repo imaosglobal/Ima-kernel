@@ -1,0 +1,11 @@
+{
+  "mode": "development",
+  "auto_sync": true,
+  "protected_layers": [
+    "learning/meta_orchestrator.py",
+    ".ima/governance",
+    "kernel/runtime/CANONICAL",
+    "IMA_IDENTITY.md"
+  ],
+  "description": "Development evolution mode with protected core awareness"
+}

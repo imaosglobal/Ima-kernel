@@ -1,0 +1,16 @@
+{
+  "system": "IMA",
+  "audit_time": 1783776845.0739474,
+  "checks": {
+    "canonical_entry": true,
+    "brain_registry": true,
+    "development_policy": true,
+    "orchestrator_registry": true,
+    "brain": true,
+    "connector": true
+  },
+  "ima_start_exit": 0,
+  "ima_start_output": "\n=== IMA ONLINE START ===\nTIME: 1783776845.1569977\n\n[OK] ROOT \n[OK] BRAIN \n[OK] CONNECTOR \n[OK] GOVERNANCE \n[OK] REGISTRY \n[OK] BRAIN LOCK learning/meta_orchestrator.py\n[OK] LEARNING ENGINE capabilities=41\n[OK] MEMORY .ima/memory.json \n[OK] MEMORY .ima/ledger.jsonl \n[OK] MEMORY .ima/personality.json \n[OK] MEMORY .ima/voice.json \n\n=== IMA SYSTEM READY ===\n",
+  "system_ready": true,
+  "status": "READY"
+}

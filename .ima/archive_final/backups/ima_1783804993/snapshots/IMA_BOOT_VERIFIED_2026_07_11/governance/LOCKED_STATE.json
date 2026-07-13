@@ -1,0 +1,12 @@
+{
+  "state": "LOCKED",
+  "entry_gate": "IMA_SINGLE_ENTRY_GATE",
+  "target": "learning/evolution_controller.py",
+  "policy": [
+    "no_direct_modification",
+    "hash_verification_required",
+    "snapshot_required_before_change",
+    "compile_required",
+    "health_check_required"
+  ]
+}

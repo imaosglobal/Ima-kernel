@@ -1,0 +1,63 @@
+{
+  "system": "IMA",
+  "time": 1783655952.5977027,
+  "components": {
+    "brain": {
+      "path": "learning/meta_orchestrator.py",
+      "status": "OK"
+    },
+    "orchestrator_connector": {
+      "path": "learning/module_registry.py",
+      "status": "OK"
+    },
+    "runtime": {
+      "path": ".ima/runtime/runtime.py",
+      "status": "OK"
+    },
+    "event_bus": {
+      "path": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
+      "status": "OK"
+    },
+    "api": {
+      "path": "kernel/runtime/KERNEL_API_GATEWAY_V3.js",
+      "status": "OK"
+    },
+    "persona": {
+      "path": "learning/persona_engine.py",
+      "status": "OK"
+    },
+    "learning": {
+      "path": "learning/ima_learning_loop.py",
+      "status": "OK"
+    },
+    "memory": {
+      "path": ".ima/memory.json",
+      "status": "OK"
+    },
+    "device": {
+      "path": "kernel/device",
+      "status": "OK"
+    },
+    "plugins": {
+      "path": "kernel/plugins",
+      "status": "OK"
+    },
+    "entry_gate": {
+      "path": ".ima/governance/entry_gate_lock.json",
+      "status": "OK"
+    },
+    "brain_lock": {
+      "path": ".ima/governance/brain_registry.json",
+      "status": "OK"
+    },
+    "architecture": {
+      "path": ".ima/governance/canonical_architecture.json",
+      "status": "OK"
+    },
+    "orchestrator_registry": {
+      "path": ".ima/governance/orchestrator_registry.json",
+      "status": "OK"
+    }
+  },
+  "missing": []
+}
