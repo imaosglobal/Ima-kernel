@@ -1,0 +1,12 @@
+{
+  "name":"IMA Universal Client",
+  "version":"1.0",
+  "gateway":"http://127.0.0.1:8080",
+  "transport":"HTTP",
+  "targets":[
+    "web",
+    "android",
+    "mobile"
+  ],
+  "core":"canonical-runtime"
+}
