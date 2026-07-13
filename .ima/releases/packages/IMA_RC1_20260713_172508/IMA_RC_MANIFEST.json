@@ -1,0 +1,19 @@
+{
+  "product": "IMA",
+  "release": "RC-1.0",
+  "status": "READY",
+  "core": "FROZEN",
+  "runtime": "CANONICAL",
+  "verification": "PASSED",
+  "gateway": true,
+  "launcher": true,
+  "health": true,
+  "deployment": true,
+  "version_manager": true,
+  "clients": [
+    "web",
+    "android",
+    "mobile"
+  ],
+  "created": "20260713_171836"
+}
