@@ -1,15 +1,23 @@
 # IMA Investor Package
 
-IMA is a personal intelligence layer combining:
+IMA is a personal intelligence system.
 
-- Persistent memory
-- Learning systems
-- Pattern extraction
-- Historical understanding
-- Personal interaction intelligence
+## Current Technology
 
-Current status:
-Prototype operational.
+- Runtime
+- Brain
+- Memory Architecture
+- Learning Loop
+- Historical Inference
+- Product Gateway
+- Governance
 
-Next phase:
-Team building, partnerships and commercialization.
+
+## Business Phase
+
+Prototype → Product → Partnerships → Company Building
+
+
+## Core Principle
+
+Technology should enhance human understanding without removing human identity.
