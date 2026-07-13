@@ -253,5 +253,25 @@
     "time": 1783950025.8510132,
     "question": "בדיקת שרידות אחרי restart",
     "response": ""
+  },
+  {
+    "time": 1783950140.9867933,
+    "question": "cold start verification",
+    "response": "זיכרון רלוונטי:\nבדיקת cold start וזיכרון קבוע\nבדיקת שרידות אחרי restart\nבדיקת למידה דרך API אחרי restart\nבדיקת הישרדות Memory Bus v2 לפני restart\nבדיקת לפני restart memory policy full chain"
+  },
+  {
+    "time": 1783950140.9876282,
+    "question": "cold start verification",
+    "response": ""
+  },
+  {
+    "time": 1783950375.438264,
+    "question": "IMA canonical verification test",
+    "response": ""
+  },
+  {
+    "time": 1783950389.1767926,
+    "question": "adapter restoration verification",
+    "response": ""
   }
 ]
