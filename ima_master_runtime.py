@@ -55,7 +55,25 @@ class IMAMaster:
                     [x.get("question","") for x in memory_hits]
                 )
             else:
-                result["response"]="IMA MASTER: "+message
+                try:
+                    events = ima_brain.load_events()
+
+                    brain_answer = ima_brain.answer(
+                        message,
+                        events
+                    )
+
+                    if brain_answer and not brain_answer.startswith("לא נמצא חיפוש אמיתי"):
+                        result["response"] = brain_answer
+                    else:
+                        mom_memory = ima_mom.load()
+                        result["response"] = ima_mom.generate_answer(
+                            message,
+                            mom_memory
+                        )
+
+                except Exception as e:
+                    result["response"] = "IMA MASTER: " + message + " | fallback: " + str(e)
 
         conversation_layer.update(
             message,
