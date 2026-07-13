@@ -48,32 +48,35 @@ class IMAMaster:
             )
 
         else:
-            memory_hits = conversation_layer.recall(message)
+            try:
+                events = ima_brain.load_events()
 
-            if memory_hits:
-                result["response"] = "זיכרון רלוונטי:\n" + "\n".join(
-                    [x.get("question","") for x in memory_hits]
+                brain_answer = ima_brain.answer(
+                    message,
+                    events
                 )
-            else:
-                try:
-                    events = ima_brain.load_events()
 
-                    brain_answer = ima_brain.answer(
-                        message,
-                        events
-                    )
+                if brain_answer:
+                    result["response"] = brain_answer
+                else:
+                    memory_hits = conversation_layer.recall(message)
 
-                    if brain_answer and not brain_answer.startswith("לא נמצא חיפוש אמיתי"):
-                        result["response"] = brain_answer
+                    if memory_hits:
+                        result["response"] = (
+                            "הקשר מזיכרון:\n" +
+                            "\n".join(
+                                [x.get("question","") for x in memory_hits]
+                            )
+                        )
                     else:
-                        mom_memory = ima_mom.load()
+                        mem = ima_mom.load()
                         result["response"] = ima_mom.generate_answer(
                             message,
-                            mom_memory
+                            mem
                         )
 
-                except Exception as e:
-                    result["response"] = "IMA MASTER: " + message + " | fallback: " + str(e)
+            except Exception as e:
+                result["response"] = "IMA MASTER fallback: " + str(e)
 
         conversation_layer.update(
             message,
