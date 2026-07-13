@@ -1,5 +1,6 @@
 import json, os
 from learning.learning_memory import store_pattern
+from learning.historical_inference import get_conclusions
 
 LEDGER = ".ima/ledger.jsonl"
 
@@ -88,11 +89,13 @@ def answer(question, events):
         for pattern in patterns:
             store_pattern(pattern)
 
+        history = get_conclusions()
+
         return (
-            "מהזיכרון שנבנה איתך אני מזהה דפוסים חוזרים:\n"
+            "מהזיכרון ומההיסטוריה אני מזהה:\n\n"
+            + "\n".join("- " + c for c in history.get("conclusions",[]))
+            + "\n\nדפוסים חוזרים:\n"
             + "\n".join("- " + p for p in patterns)
-            + "\n\nהדפוס המרכזי: חיפוש אמת, יצירה, "
-              "מערכות מורכבות והתפתחות."
         )
 
     if "שפר" in q:
