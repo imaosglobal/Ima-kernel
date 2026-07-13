@@ -1,0 +1,10 @@
+{
+  "system": "IMA",
+  "deployment": {
+    "gateway": true,
+    "clients": true,
+    "devices": true,
+    "updates": true
+  },
+  "mode": "product-development"
+}
