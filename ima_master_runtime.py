@@ -6,6 +6,13 @@ from learning.learning_loop import learn_from_event
 import ima_mom
 
 try:
+    from founder.executive_ai.integration.background_bridge import process_background
+    FOUNDER_AI=True
+except Exception:
+    process_background=None
+    FOUNDER_AI=False
+
+try:
     import ima_system
     SYSTEM=True
 except:
@@ -20,12 +27,21 @@ class IMAMaster:
 
         context=identity_context.build_context(message)
 
+        founder_context = None
+
+        if FOUNDER_AI:
+            try:
+                founder_context = process_background(message)
+            except Exception:
+                founder_context = None
+
         result={
             "time":time.time(),
             "identity":context.get("identity",{}),
             "laws":context.get("laws",[]),
             "vision":context.get("vision",{}),
             "message":message,
+            "founder_intelligence": founder_context,
             "connections":{
                 "identity":True,
                 "memory":True,
