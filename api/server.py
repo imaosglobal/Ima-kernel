@@ -7,6 +7,7 @@ import sys
 sys.path.append('..')
 import identity_context
 import conversation_layer
+from product.gateway import product_gateway
 
 MEMORY_FILE=Path("ima_memory.json")
 
@@ -108,7 +109,7 @@ class Handler(BaseHTTPRequestHandler):
 
                 question = data.get("message") or data.get("question","")
 
-                answer = ima_master_runtime.ask(question)
+                answer = product_gateway.ask(question)
 
                 conversation_layer.update(question)
 
