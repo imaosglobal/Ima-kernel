@@ -4,6 +4,7 @@ from pathlib import Path
 import json,time
 import ima_master_runtime
 import sys
+import os
 sys.path.append('..')
 import identity_context
 import conversation_layer
@@ -135,4 +136,5 @@ class Handler(BaseHTTPRequestHandler):
 
 
 print("IMA API ONLINE :8080")
-HTTPServer(("0.0.0.0",8080),Handler).serve_forever()
+PORT=int(os.environ.get("PORT",8080))
+HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()
