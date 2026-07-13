@@ -1,4 +1,6 @@
-from learning.system_introspection import suggest_improvements
+from learning.system_introspection import *
+from learning.learning_evaluator import evaluate_learning
+from learning.suggest_improvements import suggest_improvements
 from learning.capability_map import build_capability_map
 from learning.health_check import health_report
 from learning.improvement_planner import build_improvement_plan
@@ -8,12 +10,21 @@ from learning.feedback_planner import generate_feedback_improvements
 
 def run_meta_analysis():
 
+    learning_state = evaluate_learning()
+
     capabilities = build_capability_map()
     health = health_report()
     suggestions = suggest_improvements()
 
+    suggestion_texts = [
+        x.get("suggestion","")
+        if isinstance(x, dict)
+        else str(x)
+        for x in suggestions.get("suggestions",[])
+    ]
+
     improvement_plan = build_improvement_plan(
-        suggestions["suggestions"]
+        suggestion_texts
     )
 
     feedback_plan = generate_feedback_improvements()
@@ -34,5 +45,6 @@ def run_meta_analysis():
         "suggestions": suggestions["suggestions"],
         "improvement_plan": improvement_plan,
         "feedback_plan": feedback_plan,
+        "learning_state": learning_state,
         "status": "meta_analysis_completed"
     }

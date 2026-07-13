@@ -131,7 +131,11 @@
       "save_memory",
       "store_pattern",
       "store_evaluation",
-      "get_learning_memory"
+      "get_learning_memory",
+      "_load_patterns",
+      "_save_patterns",
+      "store_pattern",
+      "get_patterns"
     ]
   },
   "learning_memory_connector": {
@@ -229,6 +233,21 @@
     "functions": [
       "check_module",
       "build_registry"
+    ]
+  },
+  "learning_loop": {
+    "functions": [
+      "learn_from_event"
+    ]
+  },
+  "learning_evaluator": {
+    "functions": [
+      "evaluate_learning"
+    ]
+  },
+  "suggest_improvements": {
+    "functions": [
+      "suggest_improvements"
     ]
   }
 }
