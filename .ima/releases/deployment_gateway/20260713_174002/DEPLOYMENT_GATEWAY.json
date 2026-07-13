@@ -1,0 +1,17 @@
+{
+ "product":"IMA",
+ "release":"1.0",
+ "status":"DEPLOYMENT_READY",
+ "core":"FROZEN",
+ "runtime":"CANONICAL",
+ "gateway":"VERIFIED",
+ "clients":[
+   "web",
+   "mobile",
+   "android",
+   "ios",
+   "linux"
+ ],
+ "rollback":true,
+ "created":"20260713_174002"
+}
