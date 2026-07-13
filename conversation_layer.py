@@ -10,6 +10,16 @@ try:
 except Exception:
     memory_bus=None
 
+try:
+    spec=importlib.util.spec_from_file_location(
+        'memory_bus_adapter',
+        '.ima/runtime/memory_bus_adapter.py'
+    )
+    memory_bus_adapter=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(memory_bus_adapter)
+except Exception:
+    memory_bus_adapter=None
+
 MEMORY_FILE=Path(".ima/conversation_memory.json")
 INTENT_FILE=Path(".ima/learned_intents.json")
 
@@ -69,6 +79,15 @@ def update(question,response=""):
     if memory_bus:
         try:
             memory_bus.log_event('conversation', {'question': question, 'response': response})
+        except Exception:
+            pass
+
+    if memory_bus_adapter:
+        try:
+            memory_bus_adapter.send(
+                'conversation_v2',
+                {'question': question, 'response': response}
+            )
         except Exception:
             pass
 
