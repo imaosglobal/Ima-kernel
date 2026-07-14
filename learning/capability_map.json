@@ -237,6 +237,7 @@
   },
   "learning_loop": {
     "functions": [
+      "process_event",
       "learn_from_event"
     ]
   },
@@ -254,6 +255,33 @@
     "functions": [
       "analyze_history",
       "get_conclusions"
+    ]
+  },
+  "learning_router": {
+    "functions": [
+      "route_learning"
+    ]
+  },
+  "self_learning": {
+    "functions": [
+      "learn_self"
+    ]
+  },
+  "user_memory": {
+    "functions": [
+      "load",
+      "_event_hash",
+      "learn"
+    ]
+  },
+  "world_memory": {
+    "functions": [
+      "store"
+    ]
+  },
+  "learning_gate": {
+    "functions": [
+      "should_learn"
     ]
   }
 }

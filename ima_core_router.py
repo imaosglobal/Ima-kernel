@@ -25,8 +25,10 @@ class IMARouter:
             core["brain_connected"] = False
 
         try:
+            import ima_mom
             core["mother_connected"] = True
-        except:
+            core["mother_layer"] = ima_mom.__name__
+        except Exception:
             core["mother_connected"] = False
 
         return core
