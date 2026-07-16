@@ -1,0 +1,1572 @@
+{
+  "system": "IMA",
+  "created": "2026-07-09",
+  "events": [
+    {
+      "time": "2026-07-09 20:04:06.527012",
+      "category": "architecture",
+      "event": "נבנתה שכבת ידע רב תחומית"
+    },
+    {
+      "time": "2026-07-09 20:05:10.621622",
+      "category": "interaction",
+      "event": "Question: מה זה פיזיקה? | Mode: information | Confidence: 0.9"
+    },
+    {
+      "time": "2026-07-09 20:06:31.313455",
+      "category": "interaction",
+      "event": "ID:1783616791313 | Question:מה זאת בינה מלאכותית? | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 20:06:31.314111",
+      "category": "interaction",
+      "event": "Question: מה זאת בינה מלאכותית? | Mode: information | Confidence: 0.9"
+    },
+    {
+      "time": "2026-07-09 20:07:50.587294",
+      "category": "interaction",
+      "event": "ID:1783616870587 | Question:מה זה רגש? | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 20:14:32.637527",
+      "category": "interaction",
+      "event": "ID:1783617272637 | Question:מה זה תודעה? | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 20:15:36.180848",
+      "category": "interaction",
+      "event": "ID:1783617336180 | Question:מה זה תודעה? | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 20:36:29.091307",
+      "category": "interaction",
+      "event": "ID:1783618589091 | Question:מה זה תודעה? | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 21:20:15.102428",
+      "category": "interaction",
+      "event": "ID:1783621215101 | Question:שלום אמא | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:21:25.298448",
+      "category": "interaction",
+      "event": "ID:1783621285298 | Question:מי את? | Mode:identity | Confidence:0.88"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 10, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 9}\", 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-09 21:21:37.561449",
+      "category": "interaction",
+      "event": "ID:1783621297561 | Question:אילו יכולות מחוברות כרגע? | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 21:25:17.317442",
+      "category": "interaction",
+      "event": "ID:1783621517317 | Question:הסבר לי על רשתות עצביות | Mode:technical | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 21:25:22.626509",
+      "category": "interaction",
+      "event": "ID:1783621522626 | Question:אני מרגיש קשה היום | Mode:information | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:25:28.072171",
+      "category": "interaction",
+      "event": "ID:1783621528071 | Question:למדת משהו חדש מהשיחה הזאת? | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 21:31:11.349963",
+      "category": "interaction",
+      "event": "ID:1783621871349 | Question:אני מרגיש קשה היום | Mode:information | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:31:11.621344",
+      "category": "interaction",
+      "event": "ID:1783621871621 | Question:הסבר לי על רשתות עצביות | Mode:technical | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-09 21:31:11.878291",
+      "category": "interaction",
+      "event": "ID:1783621871878 | Question:מה למדת? | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:31:12.132946",
+      "category": "interaction",
+      "event": "ID:1783621872132 | Question:אילו יכולות מחוברות כרגע? | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:32:07.600607",
+      "category": "interaction",
+      "event": "ID:1783621927600 | Question:אני מרגיש קשה היום | Mode:information | Confidence:0.85"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 20, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 18, 'learning_cycle': 1}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-09 21:32:07.866620",
+      "category": "interaction",
+      "event": "ID:1783621927866 | Question:הסבר לי על רשתות עצביות | Mode:technical | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:32:08.124947",
+      "category": "interaction",
+      "event": "ID:1783621928124 | Question:מי את? | Mode:identity | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-09 21:32:08.383592",
+      "category": "interaction",
+      "event": "ID:1783621928383 | Question:אילו יכולות מחוברות כרגע? | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:35:14.045529",
+      "category": "interaction",
+      "event": "ID:1783622114045 | Question:אני מרגיש קשה היום | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:36:09.447058",
+      "category": "interaction",
+      "event": "ID:1783622169446 | Question:אני לבד | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-09 21:36:09.704460",
+      "category": "interaction",
+      "event": "ID:1783622169704 | Question:אני כועס | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-09 21:36:09.965804",
+      "category": "interaction",
+      "event": "ID:1783622169965 | Question:מה זה מנוע בעירה? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:36:11.780962",
+      "category": "interaction",
+      "event": "ID:1783622171779 | Question:מה מזג האוויר? | Mode:information | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:36:12.129999",
+      "category": "interaction",
+      "event": "ID:1783622172129 | Question:מה למדת? | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 30, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 27, 'learning_cycle': 2}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-09 21:36:12.422964",
+      "category": "interaction",
+      "event": "ID:1783622172422 | Question:אילו יכולות מחוברות כרגע?~ | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:36:47.839984",
+      "category": "interaction",
+      "event": "ID:1783622207839 | Question:אני מפחד | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-09 21:42:15.116024",
+      "category": "interaction",
+      "event": "ID:1783622535115 | Question:מה זה מנוע בעירה? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:42:15.376314",
+      "category": "interaction",
+      "event": "ID:1783622535376 | Question:הסבר לי על רשתות עצביות | Mode:technical | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-09 21:48:38.068333",
+      "category": "interaction",
+      "event": "ID:1783622918067 | Question:מה זה מנוע בעירה? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:48:38.337058",
+      "category": "interaction",
+      "event": "ID:1783622918336 | Question:מה זאת רשת עצבית? | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:58:48.266846",
+      "category": "interaction",
+      "event": "ID:1783623528266 | Question:מה השתנה? | Mode:conversation | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-09 21:58:48.532610",
+      "category": "interaction",
+      "event": "ID:1783623528532 | Question:איזה שיפורים עשית? | Mode:conversation | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:51:00.688336",
+      "category": "interaction",
+      "event": "ID:1784040660687 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 40, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 36, 'learning_cycle': 3}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-14 17:54:51.821299",
+      "category": "interaction",
+      "event": "ID:1784040891820 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:54:51.983781",
+      "category": "interaction",
+      "event": "ID:1784040891983 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:56:03.894103",
+      "category": "interaction",
+      "event": "ID:1784040963893 | Question:אני מפחד | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-14 17:56:04.053692",
+      "category": "interaction",
+      "event": "ID:1784040964053 | Question:אני מפחד | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-14 17:56:10.266895",
+      "category": "interaction",
+      "event": "ID:1784040970266 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:56:10.427892",
+      "category": "interaction",
+      "event": "ID:1784040970427 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:56:16.962512",
+      "category": "interaction",
+      "event": "ID:1784040976962 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:56:17.117835",
+      "category": "interaction",
+      "event": "ID:1784040977117 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:57:47.041351",
+      "category": "interaction",
+      "event": "ID:1784041067041 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 50, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 45, 'learning_cycle': 4}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-14 17:57:47.217677",
+      "category": "interaction",
+      "event": "ID:1784041067217 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:31.941740",
+      "category": "interaction",
+      "event": "ID:1784041171941 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:32.096700",
+      "category": "interaction",
+      "event": "ID:1784041172096 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:49.468449",
+      "category": "interaction",
+      "event": "ID:1784041189468 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:49.631802",
+      "category": "interaction",
+      "event": "ID:1784041189631 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:55.941777",
+      "category": "interaction",
+      "event": "ID:1784041195941 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 17:59:56.092677",
+      "category": "interaction",
+      "event": "ID:1784041196092 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 18:01:05.550135",
+      "category": "interaction",
+      "event": "ID:1784041265549 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 18:01:05.699840",
+      "category": "interaction",
+      "event": "ID:1784041265699 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 60, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 54, 'learning_cycle': 5}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-14 18:03:05.732152",
+      "category": "interaction",
+      "event": "ID:1784041385731 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 18:03:05.879695",
+      "category": "interaction",
+      "event": "ID:1784041385879 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 18:05:40.151581",
+      "category": "interaction",
+      "event": "ID:1784041540151 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-14 18:05:40.300801",
+      "category": "interaction",
+      "event": "ID:1784041540300 | Question:מה דיברנו קודם? | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 13:23:56.394091",
+      "category": "interaction",
+      "event": "ID:1784111036391 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 13:23:56.556737",
+      "category": "interaction",
+      "event": "ID:1784111036556 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 13:23:56.722381",
+      "category": "interaction",
+      "event": "ID:1784111036722 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 13:23:56.884297",
+      "category": "interaction",
+      "event": "ID:1784111036884 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 13:47:04.799686",
+      "category": "interaction",
+      "event": "ID:1784112424797 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 70, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 63, 'learning_cycle': 6}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 13:47:04.968755",
+      "category": "interaction",
+      "event": "ID:1784112424968 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:14:56.766143",
+      "category": "interaction",
+      "event": "ID:1784114096765 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:14:56.933519",
+      "category": "interaction",
+      "event": "ID:1784114096933 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:14:57.100993",
+      "category": "interaction",
+      "event": "ID:1784114097100 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:17:44.106907",
+      "category": "interaction",
+      "event": "ID:1784114264106 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:17:44.108607",
+      "category": "interaction",
+      "event": "ID:1784114264108 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:17:44.111331",
+      "category": "interaction",
+      "event": "ID:1784114264111 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:20:49.772094",
+      "category": "interaction",
+      "event": "ID:1784114449771 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:20:49.939076",
+      "category": "interaction",
+      "event": "ID:1784114449938 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 80, 'lessons': 18}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 72, 'learning_cycle': 7}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-09 20:55:02.800605', 'lesson': 'מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:03:39.915881', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:03:39.917099', 'lesson': 'מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות'}, {'time': '2026-07-09 21:05:32.707227', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-09 21:05:32.709521', 'lesson': 'מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 14:20:50.109284",
+      "category": "interaction",
+      "event": "ID:1784114450108 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:22:35.167239",
+      "category": "interaction",
+      "event": "ID:1784114555166 | Question:אני עייף | Mode:emotion | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:22:35.332019",
+      "category": "interaction",
+      "event": "ID:1784114555331 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:22:35.497609",
+      "category": "interaction",
+      "event": "ID:1784114555497 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:24:02.544432",
+      "category": "interaction",
+      "event": "ID:1784114642544 | Question:אני לומד על חתולים | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:27:25.761340",
+      "category": "interaction",
+      "event": "ID:1784114845760 | Question:אני לומד על חתולים | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:27:26.696133",
+      "category": "interaction",
+      "event": "ID:1784114846695 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:27:27.655751",
+      "category": "interaction",
+      "event": "ID:1784114847655 | Question:מה זה תודעה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:27.511868",
+      "category": "interaction",
+      "event": "ID:1784115087511 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 90, 'lessons': 30}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 81, 'learning_cycle': 8}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'latest_lessons': [{'time': '2026-07-15 14:27:26.722454', 'lesson': 'מחזור למידה 2026-07-15 14:27:26.722001: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:27:27.261110', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:27:27.662208', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:27:27.685582', 'lesson': 'מחזור למידה 2026-07-15 14:27:27.685061: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:27:28.262612', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 14:31:28.603890",
+      "category": "interaction",
+      "event": "ID:1784115088603 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:29.719299",
+      "category": "interaction",
+      "event": "ID:1784115089718 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:30.815154",
+      "category": "interaction",
+      "event": "ID:1784115090814 | Question:איך אתה לומד | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-15 14:31:31.894459",
+      "category": "interaction",
+      "event": "ID:1784115091894 | Question:תסביר לי מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:32.884959",
+      "category": "interaction",
+      "event": "ID:1784115092884 | Question:ספר לי על טבע | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:33.941253",
+      "category": "interaction",
+      "event": "ID:1784115093940 | Question:מה ההבדל בין זיכרון ללמידה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:35.920221",
+      "category": "interaction",
+      "event": "ID:1784115095919 | Question:תסביר קוד פייתון | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:37.215118",
+      "category": "interaction",
+      "event": "ID:1784115097214 | Question:מה אתה עושה כשאין לך תשובה | Mode:identity | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-15 14:31:46.293636",
+      "category": "interaction",
+      "event": "ID:1784115106293 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 100, 'lessons': 56}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 90, 'learning_cycle': 9}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-15 14:31:35.927415', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:31:35.955860', 'lesson': 'מחזור למידה 2026-07-15 14:31:35.955351: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:31:36.812431', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:31:37.222458', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:31:37.252797', 'lesson': 'מחזור למידה 2026-07-15 14:31:37.252281: נוספו 1 תובנות חדשות'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 14:31:46.978275",
+      "category": "interaction",
+      "event": "ID:1784115106977 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:48.037734",
+      "category": "interaction",
+      "event": "ID:1784115108037 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:49.218024",
+      "category": "interaction",
+      "event": "ID:1784115109217 | Question:איך אתה לומד | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-15 14:31:50.475318",
+      "category": "interaction",
+      "event": "ID:1784115110474 | Question:תסביר לי מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:51.634018",
+      "category": "interaction",
+      "event": "ID:1784115111633 | Question:ספר לי על טבע | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:52.908822",
+      "category": "interaction",
+      "event": "ID:1784115112908 | Question:מה ההבדל בין זיכרון ללמידה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:31:54.297717",
+      "category": "interaction",
+      "event": "ID:1784115114297 | Question:תסביר קוד פייתון | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:31:55.624062",
+      "category": "interaction",
+      "event": "ID:1784115115623 | Question:מה אתה עושה כשאין לך תשובה | Mode:identity | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-15 14:35:01.683524",
+      "category": "interaction",
+      "event": "ID:1784115301682 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 110, 'lessons': 83}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 99, 'learning_cycle': 10}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'latest_lessons': [{'time': '2026-07-15 14:31:54.331472', 'lesson': 'מחזור למידה 2026-07-15 14:31:54.331006: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:31:55.176174', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:31:55.635444', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:31:55.668398', 'lesson': 'מחזור למידה 2026-07-15 14:31:55.667816: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:31:56.529966', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 14:35:03.338738",
+      "category": "interaction",
+      "event": "ID:1784115303326 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:35:05.033565",
+      "category": "interaction",
+      "event": "ID:1784115305031 | Question:תסביר מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:37:41.660136",
+      "category": "interaction",
+      "event": "ID:1784115461658 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:37:43.443776",
+      "category": "interaction",
+      "event": "ID:1784115463443 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:37:45.276837",
+      "category": "interaction",
+      "event": "ID:1784115465276 | Question:תסביר מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:37:47.205669",
+      "category": "interaction",
+      "event": "ID:1784115467204 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:38:25.542152",
+      "category": "interaction",
+      "event": "ID:1784115505541 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:38:27.579853",
+      "category": "interaction",
+      "event": "ID:1784115507579 | Question:תסביר מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:38:29.642101",
+      "category": "interaction",
+      "event": "ID:1784115509641 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 120, 'lessons': 110}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 108, 'learning_cycle': 11}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'latest_lessons': [{'time': '2026-07-15 14:38:25.595692', 'lesson': 'מחזור למידה 2026-07-15 14:38:25.595063: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:38:26.952442', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:38:27.588664', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:38:27.632619', 'lesson': 'מחזור למידה 2026-07-15 14:38:27.631944: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:38:29.017000', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 14:42:31.535908",
+      "category": "interaction",
+      "event": "ID:1784115751535 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:42:33.705350",
+      "category": "interaction",
+      "event": "ID:1784115753704 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:42:35.908827",
+      "category": "interaction",
+      "event": "ID:1784115755908 | Question:תסביר מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:42:38.175479",
+      "category": "interaction",
+      "event": "ID:1784115758174 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:59:33.816655",
+      "category": "interaction",
+      "event": "ID:1784116773815 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:59:36.262718",
+      "category": "interaction",
+      "event": "ID:1784116776262 | Question:מהי תודעה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 14:59:38.735574",
+      "category": "interaction",
+      "event": "ID:1784116778734 | Question:תסביר מתמטיקה | Mode:information | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 14:59:41.282436",
+      "category": "interaction",
+      "event": "ID:1784116781279 | Question:איך עובד מנוע בעירה | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-15 15:03:00.848688",
+      "category": "interaction",
+      "event": "ID:1784116980847 | Question:ביולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 130, 'lessons': 137}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 117, 'learning_cycle': 12}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'latest_lessons': [{'time': '2026-07-15 14:59:38.796242', 'lesson': 'מחזור למידה 2026-07-15 14:59:38.795555: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:59:40.599364', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:59:41.292630', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 14:59:41.344323', 'lesson': 'מחזור למידה 2026-07-15 14:59:41.343624: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 14:59:43.184744', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 15:03:01.020609",
+      "category": "interaction",
+      "event": "ID:1784116981019 | Question:פסיכולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:03.628243",
+      "category": "interaction",
+      "event": "ID:1784116983627 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:06.106343",
+      "category": "interaction",
+      "event": "ID:1784116986105 | Question:מה הקשר בין מוח ובינה מלאכותית | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:08.329909",
+      "category": "interaction",
+      "event": "ID:1784116988329 | Question:מה הקשר בין פיזיקה והנדסה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:44.035482",
+      "category": "interaction",
+      "event": "ID:1784117024034 | Question:ביולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:44.201546",
+      "category": "interaction",
+      "event": "ID:1784117024200 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:47.084361",
+      "category": "interaction",
+      "event": "ID:1784117027083 | Question:פסיכולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:03:50.051979",
+      "category": "interaction",
+      "event": "ID:1784117030051 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:06:41.014535",
+      "category": "interaction",
+      "event": "ID:1784117201013 | Question:ביולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 140, 'lessons': 158}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 126, 'learning_cycle': 13}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'latest_lessons': [{'time': '2026-07-15 15:03:47.153826', 'lesson': 'מחזור למידה 2026-07-15 15:03:47.153026: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 15:03:49.292130', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 15:03:50.062561', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 15:03:50.119892', 'lesson': 'מחזור למידה 2026-07-15 15:03:50.119147: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 15:03:52.318153', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 1}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 15:06:41.187263",
+      "category": "interaction",
+      "event": "ID:1784117201186 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:06:44.250206",
+      "category": "interaction",
+      "event": "ID:1784117204249 | Question:פסיכולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:06:47.448245",
+      "category": "interaction",
+      "event": "ID:1784117207447 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:10:34.785254",
+      "category": "interaction",
+      "event": "ID:1784117434784 | Question:ביולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:15:03.973459",
+      "category": "interaction",
+      "event": "ID:1784117703972 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:15:07.354016",
+      "category": "interaction",
+      "event": "ID:1784117707353 | Question:מהי ביולוגיה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:15:10.708050",
+      "category": "interaction",
+      "event": "ID:1784117710707 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:15:13.628437",
+      "category": "interaction",
+      "event": "ID:1784117713627 | Question:מה זה קוואנטום | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:16:19.537443",
+      "category": "interaction",
+      "event": "ID:1784117779536 | Question:מה זה חתול | Mode:information | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 150, 'lessons': 179}, 'observations': [\"פעילות מרכזית: {'architecture': 1, 'interaction': 135, 'learning_cycle': 14}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להוסיף תמיכה רב לשונית', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות', 'להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (1 שאלות חסרות)', 'להרחיב ניתוח דפוסי שיחה לפי נושאים', 'להרחיב ידע בתחום general (2 שאלות חסרות)'], 'latest_lessons': [{'time': '2026-07-15 15:15:10.771638', 'lesson': 'מחזור למידה 2026-07-15 15:15:10.770945: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 15:15:12.959023', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 15:15:13.639073', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 15:15:13.693052', 'lesson': 'מחזור למידה 2026-07-15 15:15:13.692426: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 15:15:15.835029', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 2}, 'new_improvements': [], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-15 15:16:23.200089",
+      "category": "interaction",
+      "event": "ID:1784117783197 | Question:מה זה קוואנטום | Mode:information | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:16:26.695642",
+      "category": "interaction",
+      "event": "ID:1784117786694 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-15 15:16:29.758530",
+      "category": "interaction",
+      "event": "ID:1784117789757 | Question:מה הקשר בין מוח ובינה מלאכותית | Mode:conversation | Confidence:0.7"
+    }
+  ],
+  "improvements": [
+    {
+      "area": "knowledge_engine",
+      "reason": "להוסיף תמיכה רב לשונית",
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "area": "self_learning",
+      "reason": "לעבד הצעות שיפור קיימות ביומן",
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "area": "self_learning",
+      "reason": "לשפר הבנת הקשר בין שיחות קודמות",
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "area": "knowledge_gap",
+      "reason": "להרחיב ידע בתחום consciousness (1 שאלות חסרות)",
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "area": "knowledge_gap",
+      "reason": "להרחיב ידע בתחום general (1 שאלות חסרות)",
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "time": "2026-07-15 14:26:53.336351",
+      "area": "self_learning",
+      "reason": "להרחיב ניתוח דפוסי שיחה לפי נושאים",
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "area": "knowledge_gap",
+      "reason": "להרחיב ידע בתחום general (2 שאלות חסרות)",
+      "status": "pending",
+      "priority": 2
+    }
+  ],
+  "lessons": [
+    {
+      "time": "2026-07-09 20:04:06.527281",
+      "lesson": "ידע צריך להיות מופרד משכבת השפה"
+    },
+    {
+      "time": "2026-07-09 20:17:38.577067",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:18:18.992642",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:18:18.992890",
+      "lesson": "מחזור למידה 2026-07-09 20:18:18.992778: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 20:21:52.437888",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:21:52.438867",
+      "lesson": "מחזור למידה 2026-07-09 20:21:52.438767: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 20:26:54.514017",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:26:54.514973",
+      "lesson": "מחזור למידה 2026-07-09 20:26:54.514872: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 20:27:30.199730",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:27:30.200655",
+      "lesson": "מחזור למידה 2026-07-09 20:27:30.200527: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 20:36:35.950660",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:36:35.951279",
+      "lesson": "מחזור למידה 2026-07-09 20:36:35.951191: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 20:55:02.798704",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 20:55:02.800605",
+      "lesson": "מחזור למידה 2026-07-09 20:55:02.800438: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 21:03:39.915881",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 21:03:39.917099",
+      "lesson": "מחזור למידה 2026-07-09 21:03:39.917004: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-09 21:05:32.707227",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-09 21:05:32.709521",
+      "lesson": "מחזור למידה 2026-07-09 21:05:32.709364: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:26:53.336900",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:26:53.356321",
+      "lesson": "מחזור למידה 2026-07-15 14:26:53.355926: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:26:53.867007",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:25.768144",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:25.788124",
+      "lesson": "מחזור למידה 2026-07-15 14:27:25.787694: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:27:26.316903",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:26.702566",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:26.722454",
+      "lesson": "מחזור למידה 2026-07-15 14:27:26.722001: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:27:27.261110",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:27.662208",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:27:27.685582",
+      "lesson": "מחזור למידה 2026-07-15 14:27:27.685061: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:27:28.262612",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:27.522642",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:27.545952",
+      "lesson": "מחזור למידה 2026-07-15 14:31:27.545491: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:28.190702",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:28.610733",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:28.634200",
+      "lesson": "מחזור למידה 2026-07-15 14:31:28.633733: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:29.297119",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:29.726253",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:29.750414",
+      "lesson": "מחזור למידה 2026-07-15 14:31:29.749927: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:30.442539",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:30.821634",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:30.842061",
+      "lesson": "מחזור למידה 2026-07-15 14:31:30.841659: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:31.477810",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:31.900246",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:31.920795",
+      "lesson": "מחזור למידה 2026-07-15 14:31:31.920383: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:32.538055",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:32.890624",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:32.910894",
+      "lesson": "מחזור למידה 2026-07-15 14:31:32.910488: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:33.582163",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:33.948670",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:33.972864",
+      "lesson": "מחזור למידה 2026-07-15 14:31:33.972434: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:35.457778",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:35.927415",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:35.955860",
+      "lesson": "מחזור למידה 2026-07-15 14:31:35.955351: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:36.812431",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:37.222458",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:37.252797",
+      "lesson": "מחזור למידה 2026-07-15 14:31:37.252281: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:46.305779",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:46.334239",
+      "lesson": "מחזור למידה 2026-07-15 14:31:46.333690: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:46.650658",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:46.986066",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:47.014647",
+      "lesson": "מחזור למידה 2026-07-15 14:31:47.014107: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:47.571809",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:48.047685",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:48.076776",
+      "lesson": "מחזור למידה 2026-07-15 14:31:48.076244: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:48.773348",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:49.224050",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:49.247984",
+      "lesson": "מחזור למידה 2026-07-15 14:31:49.247540: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:49.992226",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:50.483154",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:50.514274",
+      "lesson": "מחזור למידה 2026-07-15 14:31:50.513696: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:51.207092",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:51.640222",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:51.668812",
+      "lesson": "מחזור למידה 2026-07-15 14:31:51.668350: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:52.461764",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:52.917176",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:52.954207",
+      "lesson": "מחזור למידה 2026-07-15 14:31:52.953711: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:53.850435",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:54.304594",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:54.331472",
+      "lesson": "מחזור למידה 2026-07-15 14:31:54.331006: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:55.176174",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:55.635444",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:31:55.668398",
+      "lesson": "מחזור למידה 2026-07-15 14:31:55.667816: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:31:56.529966",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:01.698073",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:01.735935",
+      "lesson": "מחזור למידה 2026-07-15 14:35:01.735327: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:35:02.777179",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:03.347699",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:03.385434",
+      "lesson": "מחזור למידה 2026-07-15 14:35:03.384771: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:35:04.457324",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:05.042346",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:35:05.080617",
+      "lesson": "מחזור למידה 2026-07-15 14:35:05.080005: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:35:06.201832",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:41.672305",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:41.716304",
+      "lesson": "מחזור למידה 2026-07-15 14:37:41.715678: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:37:42.864805",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:43.452324",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:43.493093",
+      "lesson": "מחזור למידה 2026-07-15 14:37:43.492496: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:37:44.683485",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:45.285716",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:45.329381",
+      "lesson": "מחזור למידה 2026-07-15 14:37:45.328680: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:37:46.606655",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:47.214303",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:37:47.257094",
+      "lesson": "מחזור למידה 2026-07-15 14:37:47.256456: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:37:48.557445",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:25.551682",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:25.595692",
+      "lesson": "מחזור למידה 2026-07-15 14:38:25.595063: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:38:26.952442",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:27.588664",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:27.632619",
+      "lesson": "מחזור למידה 2026-07-15 14:38:27.631944: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:38:29.017000",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:29.656546",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:38:29.701673",
+      "lesson": "מחזור למידה 2026-07-15 14:38:29.700954: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:38:31.152340",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:31.545932",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:31.591513",
+      "lesson": "מחזור למידה 2026-07-15 14:42:31.590831: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:42:33.064994",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:33.714740",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:33.760496",
+      "lesson": "מחזור למידה 2026-07-15 14:42:33.759823: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:42:35.267587",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:35.918312",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:35.964839",
+      "lesson": "מחזור למידה 2026-07-15 14:42:35.964154: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:42:37.530447",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:38.184880",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:42:38.232490",
+      "lesson": "מחזור למידה 2026-07-15 14:42:38.231774: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:42:39.837565",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:33.832885",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:33.887414",
+      "lesson": "מחזור למידה 2026-07-15 14:59:33.886717: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:59:35.586766",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:36.272068",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:36.321661",
+      "lesson": "מחזור למידה 2026-07-15 14:59:36.320915: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:59:38.055725",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:38.745401",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:38.796242",
+      "lesson": "מחזור למידה 2026-07-15 14:59:38.795555: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:59:40.599364",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:41.292630",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 14:59:41.344323",
+      "lesson": "מחזור למידה 2026-07-15 14:59:41.343624: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 14:59:43.184744",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:01.030829",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:01.084306",
+      "lesson": "מחזור למידה 2026-07-15 15:03:01.083595: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:02.934585",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:03.638201",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:03.694028",
+      "lesson": "מחזור למידה 2026-07-15 15:03:03.693321: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:05.488752",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:06.114310",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:06.159252",
+      "lesson": "מחזור למידה 2026-07-15 15:03:06.158671: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:07.741121",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:08.338396",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:08.383266",
+      "lesson": "מחזור למידה 2026-07-15 15:03:08.382639: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:10.078310",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:44.212240",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:44.268633",
+      "lesson": "מחזור למידה 2026-07-15 15:03:44.267915: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:46.336912",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:47.094737",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:47.153826",
+      "lesson": "מחזור למידה 2026-07-15 15:03:47.153026: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:49.292130",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:50.062561",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:03:50.119892",
+      "lesson": "מחזור למידה 2026-07-15 15:03:50.119147: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:03:52.318153",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:41.198479",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:41.257315",
+      "lesson": "מחזור למידה 2026-07-15 15:06:41.256493: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:06:43.478770",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:44.261012",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:44.323327",
+      "lesson": "מחזור למידה 2026-07-15 15:06:44.322558: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:06:46.648478",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:47.458956",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:06:47.521385",
+      "lesson": "מחזור למידה 2026-07-15 15:06:47.520484: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:06:49.926080",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:03.985785",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:04.061787",
+      "lesson": "מחזור למידה 2026-07-15 15:15:04.061002: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:15:06.527772",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:07.365161",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:07.430310",
+      "lesson": "מחזור למידה 2026-07-15 15:15:07.429520: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:15:09.955709",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:10.717109",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:10.771638",
+      "lesson": "מחזור למידה 2026-07-15 15:15:10.770945: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:15:12.959023",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:13.639073",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:15:13.693052",
+      "lesson": "מחזור למידה 2026-07-15 15:15:13.692426: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:15:15.835029",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:19.556629",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:19.624094",
+      "lesson": "מחזור למידה 2026-07-15 15:16:19.623303: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:16:22.341869",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:23.211936",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:23.279602",
+      "lesson": "מחזור למידה 2026-07-15 15:16:23.278694: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:16:25.951552",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:26.705073",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:26.762614",
+      "lesson": "מחזור למידה 2026-07-15 15:16:26.761965: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:16:29.059911",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:29.768086",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    },
+    {
+      "time": "2026-07-15 15:16:29.824349",
+      "lesson": "מחזור למידה 2026-07-15 15:16:29.823703: נוספו 1 תובנות חדשות"
+    },
+    {
+      "time": "2026-07-15 15:16:33.070243",
+      "lesson": "תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית."
+    }
+  ]
+}

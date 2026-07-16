@@ -1,0 +1,34 @@
+{
+  "cat": {
+    "content": "חתול הוא יונק ממשפחת החתוליים",
+    "source": {
+      "name": "Wikipedia",
+      "url": "https://he.wikipedia.org/wiki/חתול"
+    },
+    "validation": {
+      "verified": true,
+      "confidence": 0.9,
+      "checks": [
+        "source_exists",
+        "confidence_score"
+      ]
+    },
+    "stored_at": 1784118593.800041
+  },
+  "מה זה חתול": {
+    "content": "חתול הוא יונק ממשפחת החתוליים.",
+    "source": {
+      "name": "local",
+      "url": ""
+    },
+    "validation": {
+      "verified": true,
+      "confidence": 0.9,
+      "checks": [
+        "source_exists",
+        "confidence_score"
+      ]
+    },
+    "stored_at": 1784118625.188518
+  }
+}

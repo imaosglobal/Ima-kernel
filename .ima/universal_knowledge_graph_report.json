@@ -1,0 +1,50 @@
+{
+  "time": 1784116929.4325836,
+  "tests": {
+    "ביולוגיה": [
+      {
+        "id": "biology",
+        "name": "ביולוגיה",
+        "domain": "science",
+        "relations": [
+          "medicine",
+          "psychology",
+          "ecology"
+        ]
+      }
+    ],
+    "פסיכולוגיה": [
+      {
+        "id": "psychology",
+        "name": "פסיכולוגיה",
+        "domain": "humanity",
+        "relations": [
+          "biology",
+          "philosophy"
+        ]
+      }
+    ],
+    "בינה": [
+      {
+        "id": "ai",
+        "name": "בינה מלאכותית",
+        "domain": "technology",
+        "relations": [
+          "computer_science",
+          "psychology"
+        ]
+      }
+    ],
+    "מתמטיקה": [
+      {
+        "id": "mathematics",
+        "name": "מתמטיקה",
+        "domain": "science",
+        "relations": [
+          "physics",
+          "computer_science"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{"id":"beecomm","domain":"pos","learns":["sales","inventory","restaurant_operations"],"interfaces":["api","webhook"]}
+{"id":"square","domain":"payments_pos","learns":["payments","customers","orders"],"interfaces":["api"]}
+{"id":"odoo","domain":"erp","learns":["business_processes","inventory","crm","accounting"],"interfaces":["api","modules"]}
+{"id":"shopify_pos","domain":"ecommerce","learns":["products","orders","customers"],"interfaces":["api","webhooks"]}

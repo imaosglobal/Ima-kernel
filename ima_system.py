@@ -52,6 +52,13 @@ def _answer(question, events):
 
     mode = ima_router(question)
 
+    if mode == "memory":
+        hits = conversation_layer.recall(question)
+        return {
+            "text": "אני זוכרת את השיחות האחרונות שלנו:\n\n" + str(hits[-3:]),
+            "confidence": 0.85
+        }
+
     if mode == "emotion":
 
         state = ima_emotion_layer(question, events)
@@ -745,6 +752,17 @@ def weather_engine(city="Netanya"):
 
 def ima_router(question):
 
+    # MEMORY HAS ABSOLUTE PRIORITY
+    if any(x in question for x in [
+        "מה דיברנו",
+        "מה דיברנו קודם",
+        "תזכיר לי",
+        "מה אתה זוכר",
+        "מה את זוכרת",
+        "היסטוריה"
+    ]):
+        return "memory"
+
     if any(x in question for x in [
         "מי את",
         "מי אתה",
@@ -753,7 +771,6 @@ def ima_router(question):
     ]):
         return "identity"
 
-    # Emotion has priority over information keywords
     emotion = ima_emotion_layer(question, [])
 
     if emotion:
@@ -840,6 +857,31 @@ def answer(question, events):
                 lang
             )
 
+    # MEMORY BUS V2 UNIFICATION HOOK
+    try:
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location(
+            "memory_bus_v2",
+            ".ima/runtime/memory_bus_v2.py"
+        )
+
+        memory_bus = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(memory_bus)
+
+        memory_bus.remember(
+            "conversation",
+            {
+                "question": question,
+                "mode": mode,
+                "response": response.get("text", ""),
+                "confidence": response.get("confidence", 0)
+            }
+        )
+
+    except Exception:
+        pass
+
     if response:
         interaction_id = str(int(time.time() * 1000))
 
@@ -907,6 +949,31 @@ def save_memory(mem):
 
 def memory_store(question, mode):
 
+    # MEMORY BUS V2 PRIMARY PATH
+    try:
+        from pathlib import Path
+        import importlib.util
+
+        path = Path(".ima/runtime/memory_bus_adapter.py")
+        spec = importlib.util.spec_from_file_location(
+            "memory_bus_adapter",
+            path
+        )
+        adapter = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(adapter)
+
+        adapter.remember(
+            "conversation",
+            {
+                "question": question,
+                "mode": mode
+            }
+        )
+
+    except Exception:
+        pass
+
+    # LEGACY COMPATIBILITY
     mem = load_memory()
 
     mem["history"].append(question)
@@ -916,28 +983,38 @@ def memory_store(question, mode):
 
     mem["last_mode"] = mode
 
-    if mode == "emotion":
-        mem["last_emotion"] = question
-
-    keywords = [
-        "קוד",
-        "תכנות",
-        "מנוע",
-        "פילוסופיה",
-        "מוזיקה",
-        "פרויקט",
-        "IMA"
-    ]
-
-    for k in keywords:
-        if k in question:
-            if k not in mem["topics"]:
-                mem["topics"].append(k)
-
     save_memory(mem)
 
 
 def memory_context():
+    # MEMORY BUS V2 PRIMARY READ
+    try:
+        from pathlib import Path
+        import importlib.util
+
+        path = Path(".ima/runtime/memory_bus_v2.py")
+        spec = importlib.util.spec_from_file_location(
+            "memory_bus_v2",
+            path
+        )
+
+        bus = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(bus)
+
+        records = bus.recall("conversation")
+
+        if records:
+            return {
+                "topics": [
+                    x.get("data", {}).get("question","")
+                    for x in records[-20:]
+                ],
+                "history": records[-100:]
+            }
+
+    except Exception:
+        pass
+
     return load_memory()
 
 

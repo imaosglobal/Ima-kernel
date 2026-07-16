@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "decisions": [
+    {
+      "time": 1784141094.3986592,
+      "action": "analyze before modifying",
+      "status": "created"
+    }
+  ],
+  "rules": [
+    "do not repeat identical proposals",
+    "measure result after every action",
+    "failed proposals become lessons"
+  ],
+  "created": 1784141059.023068
+}

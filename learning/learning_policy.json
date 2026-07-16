@@ -1,0 +1,9 @@
+{
+  "max_background_sources_per_cycle": 3,
+  "max_memory_mb": 200,
+  "keep_raw_html": false,
+  "compression": true,
+  "duplicate_threshold": 0.92,
+  "trust_required": 60,
+  "sleep_between_cycles": 3600
+}

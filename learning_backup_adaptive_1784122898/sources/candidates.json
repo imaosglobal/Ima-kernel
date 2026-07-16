@@ -1,0 +1,78 @@
+[
+  {
+    "name": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov",
+    "category": "medical",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784120881.7430832,
+    "trust_score": 80,
+    "checked_at": 1784122026.8656552,
+    "module": "learning.sources.pubmed"
+  },
+  {
+    "name": "NASA",
+    "url": "https://www.nasa.gov",
+    "category": "science",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784121085.1592722,
+    "trust_score": 80,
+    "checked_at": 1784122027.108881,
+    "module": "learning.sources.nasa"
+  },
+  {
+    "name": "Nature",
+    "url": "https://www.nature.com",
+    "category": "research",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784121085.5786886,
+    "trust_score": 80,
+    "checked_at": 1784122028.942505,
+    "module": "learning.sources.nature"
+  },
+  {
+    "name": "IEEE",
+    "url": "https://www.ieee.org",
+    "category": "technology",
+    "status": "review",
+    "trusted": false,
+    "discovered_at": 1784121087.4699628,
+    "trust_score": 0,
+    "checked_at": 1784122029.1540546
+  },
+  {
+    "name": "Google Scholar",
+    "url": "https://scholar.google.com",
+    "category": "research",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784121362.6673923,
+    "trust_score": 80,
+    "checked_at": 1784122026.5865633,
+    "module": "learning.sources.google_scholar"
+  },
+  {
+    "name": "MIT",
+    "url": "https://www.mit.edu",
+    "category": "education",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784121371.396283,
+    "trust_score": 60,
+    "checked_at": 1784122029.5263288,
+    "module": "learning.sources.mit"
+  },
+  {
+    "name": "NOAA",
+    "url": "https://www.noaa.gov",
+    "category": "science",
+    "status": "approved",
+    "trusted": true,
+    "discovered_at": 1784122081.3453634,
+    "trust_score": 60,
+    "checked_at": 1784122294.1886587,
+    "module": "learning.sources.noaa"
+  }
+]

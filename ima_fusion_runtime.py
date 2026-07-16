@@ -31,7 +31,8 @@ LAYERS = {
     "self_knowledge": safe_import("ima_self_knowledge_bridge"),
     "system": safe_import("ima_system"),
     "learning": safe_import("learning.meta_orchestrator"),
-    "orchestrator": safe_import("learning.meta_orchestrator")
+    "orchestrator": safe_import("learning.meta_orchestrator"),
+    "integration": safe_import("ima_integration_status")
 }
 
 

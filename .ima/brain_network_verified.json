@@ -1,0 +1,14 @@
+{
+  "system": "IMA",
+  "state": "VERIFIED",
+  "time": 1784114889.476181,
+  "checks": {
+    "ima_master_runtime": "OK",
+    "ima_brain": "OK",
+    "brain_sync": "OK",
+    "learning.ima_learning_loop": "OK",
+    "learning.learning_memory_connector": "OK",
+    "learning.knowledge_expander": "OK",
+    "learning.meta_orchestrator": "OK"
+  }
+}

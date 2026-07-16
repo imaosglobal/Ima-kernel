@@ -1,0 +1,78 @@
+{
+  "sales": {
+    "concept": "sales",
+    "confidence": 0.8,
+    "sources": [
+      "beecomm"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.399975"
+  },
+  "inventory": {
+    "concept": "inventory",
+    "confidence": 0.9,
+    "sources": [
+      "beecomm",
+      "odoo",
+      "erp"
+    ],
+    "learned_from": 3,
+    "last_updated": "2026-07-16T05:43:06.399993"
+  },
+  "customers": {
+    "concept": "customers",
+    "confidence": 0.9,
+    "sources": [
+      "beecomm",
+      "shopify",
+      "crm"
+    ],
+    "learned_from": 3,
+    "last_updated": "2026-07-16T05:43:06.399999"
+  },
+  "accounting": {
+    "concept": "accounting",
+    "confidence": 0.8,
+    "sources": [
+      "odoo"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.400003"
+  },
+  "business_processes": {
+    "concept": "business_processes",
+    "confidence": 0.8,
+    "sources": [
+      "odoo"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.400006"
+  },
+  "products": {
+    "concept": "products",
+    "confidence": 0.8,
+    "sources": [
+      "shopify"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.400010"
+  },
+  "orders": {
+    "concept": "orders",
+    "confidence": 0.8,
+    "sources": [
+      "shopify"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.400014"
+  },
+  "payments": {
+    "concept": "payments",
+    "confidence": 0.8,
+    "sources": [
+      "pos"
+    ],
+    "learned_from": 1,
+    "last_updated": "2026-07-16T05:43:06.400017"
+  }
+}

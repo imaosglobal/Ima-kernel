@@ -276,12 +276,198 @@
   },
   "world_memory": {
     "functions": [
-      "store"
+      "remember",
+      "store",
+      "recall"
+    ]
+  },
+  "knowledge_answer_builder": {
+    "functions": [
+      "build_answer"
+    ]
+  },
+  "knowledge_router": {
+    "functions": [
+      "get_knowledge_answer"
+    ]
+  },
+  "source_router": {
+    "functions": [
+      "normalize",
+      "wikidata_search",
+      "get_best_source"
     ]
   },
   "learning_gate": {
     "functions": [
       "should_learn"
+    ]
+  },
+  "knowledge_retrieval": {
+    "functions": [
+      "retrieve"
+    ]
+  },
+  "knowledge_graph_retrieval": {
+    "functions": [
+      "search_concept"
+    ]
+  },
+  "knowledge_expansion_engine": {
+    "functions": [
+      "load_store",
+      "save_store",
+      "expand_knowledge"
+    ]
+  },
+  "world_learning_engine": {
+    "functions": [
+      "load_store",
+      "save_store",
+      "learn_unknown"
+    ]
+  },
+  "knowledge_pipeline": {
+    "functions": [
+      "run_knowledge_pipeline"
+    ]
+  },
+  "external_knowledge_source": {
+    "functions": [
+      "fetch_external"
+    ]
+  },
+  "knowledge_validator": {
+    "functions": [
+      "validate"
+    ]
+  },
+  "world_knowledge_store": {
+    "functions": [
+      "save"
+    ]
+  },
+  "world_graph_updater": {
+    "functions": [
+      "add_node"
+    ]
+  },
+  "world_learning_connector": {
+    "functions": [
+      "learn"
+    ]
+  },
+  "source_manager": {
+    "functions": [
+      "collect",
+      "source_status"
+    ]
+  },
+  "source_validator": {
+    "functions": [
+      "validate"
+    ]
+  },
+  "provenance_store": {
+    "functions": [
+      "save_provenance",
+      "get_provenance"
+    ]
+  },
+  "citation_builder": {
+    "functions": [
+      "build_citation",
+      "should_show_source"
+    ]
+  },
+  "knowledge_provenance_connector": {
+    "functions": [
+      "import_external_knowledge"
+    ]
+  },
+  "web_knowledge_router": {
+    "functions": [
+      "normalize",
+      "wikipedia",
+      "wikidata",
+      "search_web_knowledge"
+    ]
+  },
+  "web_knowledge_collector": {
+    "functions": [
+      "normalize",
+      "local_source",
+      "wikipedia_source",
+      "duckduckgo_source",
+      "collect_sources",
+      "rank",
+      "best_answer"
+    ]
+  },
+  "web_knowledge_collector.backup": {
+    "functions": [
+      "normalize",
+      "local_source",
+      "wikipedia_source",
+      "duckduckgo_source",
+      "collect_sources",
+      "rank_source",
+      "best_answer"
+    ]
+  },
+  "web_knowledge_collector_final_backup_1784119874": {
+    "functions": [
+      "normalize",
+      "local_source",
+      "wikipedia_source",
+      "duckduckgo_source",
+      "collect_sources",
+      "rank",
+      "best_answer"
+    ]
+  },
+  "knowledge_fusion": {
+    "functions": [
+      "weighted_score",
+      "fuse_sources"
+    ]
+  },
+  "source_registry": {
+    "functions": [
+      "__init__",
+      "register",
+      "collect"
+    ]
+  },
+  "knowledge_runtime_bridge": {
+    "functions": [
+      "ask_knowledge"
+    ]
+  },
+  "source_quality_ranker": {
+    "functions": [
+      "rank"
+    ]
+  },
+  "knowledge_compactor": {
+    "functions": [
+      "fingerprint",
+      "compact"
+    ]
+  },
+  "adaptive_learning_daemon": {
+    "functions": [
+      "learning_cycle"
+    ]
+  },
+  "knowledge_runtime_bridge.adaptive_backup_1784122967": {
+    "functions": [
+      "ask_knowledge"
+    ]
+  },
+  "knowledge_fusion.before_ranking_1784124167": {
+    "functions": [
+      "fuse_sources"
     ]
   }
 }

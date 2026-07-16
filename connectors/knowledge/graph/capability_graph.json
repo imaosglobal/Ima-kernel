@@ -1,0 +1,16 @@
+{
+  "nodes": {
+    "customer": ["crm","pos","ecommerce"],
+    "sale": ["pos","payments","accounting"],
+    "inventory": ["erp","pos","ecommerce"],
+    "automation": ["ai","cloud","workflow"],
+    "communication": ["crm","support","marketing"],
+    "business_process": ["erp","crm","accounting"]
+  },
+  "relations": {
+    "pos->accounting":"transaction_flow",
+    "crm->marketing":"customer_engagement",
+    "erp->inventory":"resource_management",
+    "ai->automation":"decision_support"
+  }
+}

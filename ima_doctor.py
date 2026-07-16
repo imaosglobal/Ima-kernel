@@ -11,15 +11,14 @@ ROOT=Path(".")
 HASHFILE=ROOT/".ima/governance/CANONICAL_HASHES.txt"
 
 CANONICAL=[
-"kernel/runtime/CANONICAL/IMA_RUNTIME.js",
-"kernel/runtime/CANONICAL/IMA_STATE.js",
-"kernel/runtime/CANONICAL/IMA_EVENTS.js",
-"kernel/runtime/CANONICAL/IMA_HEAL.js",
-"kernel/runtime/CANONICAL/IMA_POLICY.js",
-"kernel/runtime/CANONICAL/python_bridge.py",
-"kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
-"kernel/runtime/CANONICAL/IMA_WATCHDOG.py",
-"IMA_START.py"
+    "ima_master_runtime.py",
+    "ima_core_runtime.py",
+    "ima_fusion_runtime.py",
+    "ima_integration_status.py",
+    "IMA_START.py",
+    "kernel/runtime/CANONICAL/python_bridge.py",
+    "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+    "kernel/runtime/CANONICAL/IMA_WATCHDOG.py"
 ]
 
 

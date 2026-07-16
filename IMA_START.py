@@ -92,6 +92,11 @@ def run():
     except Exception as e:
         print("[WARN] DEPENDENCY AUDIT:", e)
 
+    try:
+        run_auto_maintenance()
+    except Exception as e:
+        print("[WARN] AUTO MAINTENANCE:", e)
+
     print("=== IMA SYSTEM READY ===")
     return 0
 

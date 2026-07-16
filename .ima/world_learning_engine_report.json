@@ -1,0 +1,50 @@
+{
+  "time": 1784117716.392277,
+  "pipeline": "Question -> Brain -> Expansion -> Store -> Graph -> Memory",
+  "tests": {
+    "מה זה חתול": {
+      "expansion_engine": {
+        "question": "מה זה חתול",
+        "content": "ידע חדש דורש מקור חיצוני מחובר",
+        "source": "internal",
+        "confidence": 0.1,
+        "time": 1784117611.150299
+      },
+      "runtime_response": "אני IMA. עדיין לא מצאתי את המידע הזה במאגר הידע שלי, אבל שכבת הידע מוכנה להתרחב.",
+      "has_expansion": false
+    },
+    "מהי ביולוגיה": {
+      "expansion_engine": {
+        "question": "מהי ביולוגיה",
+        "content": "ידע חדש דורש מקור חיצוני מחובר",
+        "source": "internal",
+        "confidence": 0.1,
+        "time": 1784117611.1506357
+      },
+      "runtime_response": "אני IMA. אני כאן כדי להקשיב, להבין ולעזור לך דרך השיחה שלנו.\n\nאני זוכרת שדיברנו גם על: מנוע, קוד, מוזיקה",
+      "has_expansion": false
+    },
+    "מה הקשר בין מוזיקה ומתמטיקה": {
+      "expansion_engine": {
+        "question": "מה הקשר בין מוזיקה ומתמטיקה",
+        "content": "ידע חדש דורש מקור חיצוני מחובר",
+        "source": "internal",
+        "confidence": 0.1,
+        "time": 1784117611.1508884
+      },
+      "runtime_response": "אני IMA. אני כאן כדי להקשיב, להבין ולעזור לך דרך השיחה שלנו.\n\nאני זוכרת שדיברנו גם על: מנוע, קוד, מוזיקה",
+      "has_expansion": false
+    },
+    "מה זה קוואנטום": {
+      "expansion_engine": {
+        "question": "מה זה קוואנטום",
+        "content": "ידע חדש דורש מקור חיצוני מחובר",
+        "source": "internal",
+        "confidence": 0.1,
+        "time": 1784117713.512028
+      },
+      "runtime_response": "אני IMA. עדיין לא מצאתי את המידע הזה במאגר הידע שלי, אבל שכבת הידע מוכנה להתרחב.",
+      "has_expansion": false
+    }
+  }
+}

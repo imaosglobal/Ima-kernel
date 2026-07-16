@@ -1,0 +1,94 @@
+{
+  "time": 1784140657.6664536,
+  "components": [
+    {
+      "name": "kernel",
+      "paths": [
+        {
+          "path": "kernel",
+          "status": "exists"
+        },
+        {
+          "path": "ima_master_runtime.py",
+          "status": "exists"
+        }
+      ]
+    },
+    {
+      "name": "memory",
+      "paths": [
+        {
+          "path": ".ima/ledger.jsonl",
+          "status": "exists"
+        },
+        {
+          "path": ".ima/system_learning.jsonl",
+          "status": "exists"
+        },
+        {
+          "path": ".ima/conversation_memory.json",
+          "status": "exists"
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "paths": [
+        {
+          "path": "app",
+          "status": "missing"
+        },
+        {
+          "path": "frontend",
+          "status": "exists"
+        },
+        {
+          "path": "src",
+          "status": "missing"
+        },
+        {
+          "path": "product",
+          "status": "exists"
+        }
+      ]
+    },
+    {
+      "name": "founder",
+      "paths": [
+        {
+          "path": ".ima",
+          "status": "exists"
+        },
+        {
+          "path": "founder",
+          "status": "exists"
+        },
+        {
+          "path": "vision",
+          "status": "missing"
+        },
+        {
+          "path": "governance",
+          "status": "exists"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "app",
+    "src",
+    "vision"
+  ],
+  "existing": [
+    "kernel",
+    "ima_master_runtime.py",
+    ".ima/ledger.jsonl",
+    ".ima/system_learning.jsonl",
+    ".ima/conversation_memory.json",
+    "frontend",
+    "product",
+    ".ima",
+    "founder",
+    "governance"
+  ]
+}

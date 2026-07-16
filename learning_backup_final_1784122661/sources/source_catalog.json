@@ -1,0 +1,36 @@
+{
+  "future_sources": [
+    {
+      "name": "PubMed",
+      "module": "learning.sources.pubmed",
+      "function": "search",
+      "priority": 95,
+      "trust": "high",
+      "enabled": false
+    },
+    {
+      "name": "Crossref",
+      "module": "learning.sources.crossref",
+      "function": "search",
+      "priority": 85,
+      "trust": "high",
+      "enabled": false
+    },
+    {
+      "name": "OpenAlex",
+      "module": "learning.sources.openalex",
+      "function": "search",
+      "priority": 85,
+      "trust": "high",
+      "enabled": false
+    },
+    {
+      "name": "SemanticScholar",
+      "module": "learning.sources.semantic_scholar",
+      "function": "search",
+      "priority": 80,
+      "trust": "high",
+      "enabled": false
+    }
+  ]
+}

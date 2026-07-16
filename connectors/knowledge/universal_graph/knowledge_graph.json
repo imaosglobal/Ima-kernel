@@ -1,0 +1,107 @@
+{
+  "domains": {
+    "software": [
+      "inventory"
+    ],
+    "psychology": [
+      "identity"
+    ],
+    "music": [
+      "emotion"
+    ],
+    "science": [
+      "pattern"
+    ],
+    "business": {
+      "detected_from": [
+        "inventory",
+        "customers",
+        "orders",
+        "payments"
+      ],
+      "confidence": 1.0,
+      "updated": "2026-07-16T05:43:06.768533"
+    }
+  },
+  "concepts": {
+    "inventory": {
+      "sources": [
+        "erp"
+      ],
+      "confidence": 0.9,
+      "last_updated": "2026-07-16T05:18:02.754288"
+    },
+    "identity": {
+      "sources": [
+        "therapy"
+      ],
+      "confidence": 0.8,
+      "last_updated": "2026-07-16T05:18:02.754537"
+    },
+    "emotion": {
+      "sources": [
+        "composition"
+      ],
+      "confidence": 0.7,
+      "last_updated": "2026-07-16T05:18:02.754703"
+    },
+    "pattern": {
+      "sources": [
+        "research"
+      ],
+      "confidence": 0.9,
+      "last_updated": "2026-07-16T05:18:02.754860"
+    }
+  },
+  "relations": {
+    "inventory->business": "resource_management",
+    "emotion->music": {
+      "type": "expression",
+      "confidence": 0.8,
+      "updated": "2026-07-16T05:43:06.838331"
+    },
+    "identity->psychology": "self_understanding",
+    "identity->emotion": {
+      "type": "human_interaction",
+      "confidence": 0.8,
+      "updated": "2026-07-16T05:43:06.838289"
+    },
+    "learning->decision": {
+      "type": "adaptation",
+      "confidence": 0.8,
+      "updated": "2026-07-16T05:43:06.838393"
+    }
+  },
+  "patterns": {
+    "human_system": [
+      "identity",
+      "emotion",
+      "decision",
+      "learning"
+    ],
+    "business_system": {
+      "detected": [
+        "inventory",
+        "customers",
+        "orders",
+        "payments"
+      ],
+      "confidence": 0.8,
+      "created": "2026-07-16T05:28:26.046093"
+    }
+  },
+  "principles": {
+    "resource_flow": {
+      "derived_from": "business_system",
+      "statement": "מערכת מנהלת זרימת משאבים בין אנשים, נכסים ותהליכים",
+      "confidence": 0.8,
+      "created": "2026-07-16T05:43:06.546377"
+    },
+    "human_learning": {
+      "derived_from": "human_system",
+      "statement": "מערכת חיה מתפתחת דרך זהות, רגש, החלטה ולמידה",
+      "confidence": 0.8,
+      "created": "2026-07-16T05:43:06.546391"
+    }
+  }
+}

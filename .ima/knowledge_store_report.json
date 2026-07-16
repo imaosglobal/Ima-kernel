@@ -1,0 +1,31 @@
+{
+  "system": "IMA",
+  "component": "Knowledge Store + Retrieval",
+  "time": 1784116853.6585503,
+  "modules": {
+    "learning.knowledge_retrieval": "OK",
+    "learning.knowledge_answer_builder": "OK"
+  },
+  "tests": {
+    "מה זה חתול": {
+      "domain": "biology",
+      "topic": "cat",
+      "content": "חתול הוא יונק ממשפחת החתוליים. הוא בעל חיים מבוית שנפוץ כחיית מחמד. חתולים מתקשרים באמצעות קולות, שפת גוף וריח."
+    },
+    "מהי תודעה": {
+      "domain": "philosophy",
+      "topic": "consciousness",
+      "content": "תודעה היא היכולת לחוות חוויות, להיות מודע לעצמך ולסביבה, וליצור תפיסה פנימית של העולם."
+    },
+    "תסביר מתמטיקה": {
+      "domain": "science",
+      "topic": "mathematics",
+      "content": "מתמטיקה היא תחום העוסק במספרים, מבנים, יחסים ודפוסים. היא משמשת במדע, הנדסה ומחשוב."
+    },
+    "איך עובד מנוע בעירה": {
+      "domain": "engineering",
+      "topic": "combustion_engine",
+      "content": "מנוע בעירה פנימית ממיר אנרגיה כימית לדחף מכני באמצעות שריפת דלק, יצירת לחץ והנעת בוכנות."
+    }
+  }
+}

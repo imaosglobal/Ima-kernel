@@ -1,0 +1,77 @@
+{
+  "nodes": {
+    "biology": {
+      "name": "ביולוגיה",
+      "domain": "science",
+      "relations": [
+        "medicine",
+        "psychology",
+        "ecology"
+      ]
+    },
+    "physics": {
+      "name": "פיזיקה",
+      "domain": "science",
+      "relations": [
+        "engineering",
+        "astronomy"
+      ]
+    },
+    "mathematics": {
+      "name": "מתמטיקה",
+      "domain": "science",
+      "relations": [
+        "physics",
+        "computer_science"
+      ]
+    },
+    "psychology": {
+      "name": "פסיכולוגיה",
+      "domain": "humanity",
+      "relations": [
+        "biology",
+        "philosophy"
+      ]
+    },
+    "philosophy": {
+      "name": "פילוסופיה",
+      "domain": "humanity",
+      "relations": [
+        "psychology",
+        "ethics"
+      ]
+    },
+    "computer_science": {
+      "name": "מדעי המחשב",
+      "domain": "technology",
+      "relations": [
+        "mathematics",
+        "ai"
+      ]
+    },
+    "ai": {
+      "name": "בינה מלאכותית",
+      "domain": "technology",
+      "relations": [
+        "computer_science",
+        "psychology"
+      ]
+    },
+    "engineering": {
+      "name": "הנדסה",
+      "domain": "technology",
+      "relations": [
+        "physics",
+        "mathematics"
+      ]
+    },
+    "music": {
+      "name": "מוזיקה",
+      "domain": "creation",
+      "relations": [
+        "mathematics",
+        "psychology"
+      ]
+    }
+  }
+}
