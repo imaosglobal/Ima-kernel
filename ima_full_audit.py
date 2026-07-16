@@ -1,3 +1,16 @@
+
+EXCLUDED_DIRS = {
+    ".ima/backups",
+    ".ima/archive",
+    "archive",
+    "snapshots",
+    "__pycache__",
+}
+
+def should_skip(path):
+    s = str(path)
+    return any(x in s for x in EXCLUDED_DIRS) or "broken_backup" in s or "learning_backup" in s
+
 from pathlib import Path
 import ast
 import json
@@ -19,7 +32,20 @@ report = {
     "stats": {}
 }
 
-py_files = list(ROOT.rglob("*.py"))
+EXCLUDED = [
+    ".ima/backups",
+    ".ima/archive",
+    "archive",
+    "snapshots",
+    "__pycache__",
+    "learning_backup",
+    "broken_backup",
+]
+
+py_files = [
+    x for x in ROOT.rglob("*.py")
+    if not any(e in str(x) for e in EXCLUDED)
+]
 
 report["stats"]["python_files"] = len(py_files)
 
