@@ -33,8 +33,18 @@ def nightly_audit():
 
 def commit():
     run(["git","add","-A"])
+
+    status = subprocess.run(
+        ["git","diff","--cached","--quiet"]
+    )
+
+    if status.returncode == 0:
+        print("[NO CHANGES] commit skipped")
+        return False
+
     msg=f"IMA automatic guarded commit {datetime.now().isoformat()}"
     run(["git","commit","-m",msg])
+    return True
 
 def final_tag():
     tag=f"ima-release-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
