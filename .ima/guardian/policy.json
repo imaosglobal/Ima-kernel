@@ -14,5 +14,9 @@
   "auto_fix": true,
   "auto_commit": true,
   "rollback_on_failure": true,
-  "max_history_lines": 2000
+  "max_history_lines": 2000,
+  "generated_files": [
+    "IMA_AUDIT_REPORT.json",
+    ".ima/guardian/master.log"
+  ]
 }
