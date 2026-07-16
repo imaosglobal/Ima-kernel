@@ -1,0 +1,80 @@
+{
+  "created": "2026-07-16T06:00:58.135590",
+  "components": [
+    {
+      "name": "connectors",
+      "path": "/data/data/com.termux/files/home/ima_kernel/connectors",
+      "status": "found",
+      "files": 50,
+      "python_files": 18,
+      "json_files": 10,
+      "checked": "2026-07-16T06:02:53.602176"
+    },
+    {
+      "name": "learning",
+      "path": "/data/data/com.termux/files/home/ima_kernel/learning",
+      "status": "found",
+      "files": 229,
+      "python_files": 104,
+      "json_files": 19,
+      "checked": "2026-07-16T06:02:53.604973"
+    },
+    {
+      "name": "memory",
+      "path": "/data/data/com.termux/files/home/ima_kernel/memory",
+      "status": "found",
+      "files": 2,
+      "python_files": 0,
+      "json_files": 1,
+      "checked": "2026-07-16T06:02:53.605224"
+    },
+    {
+      "name": "runtime",
+      "path": "/data/data/com.termux/files/home/ima_kernel/runtime",
+      "status": "found",
+      "files": 1,
+      "python_files": 0,
+      "json_files": 0,
+      "checked": "2026-07-16T06:02:53.605421"
+    },
+    {
+      "name": "product",
+      "path": "/data/data/com.termux/files/home/ima_kernel/product",
+      "status": "found",
+      "files": 114,
+      "python_files": 17,
+      "json_files": 29,
+      "checked": "2026-07-16T06:02:53.608139"
+    },
+    {
+      "name": ".ima",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima",
+      "status": "found",
+      "files": 4599,
+      "python_files": 2121,
+      "json_files": 816,
+      "checked": "2026-07-16T06:02:53.674504"
+    },
+    {
+      "name": "knowledge_graph",
+      "status": "verified",
+      "checked": "2026-07-16T06:11:09.336994"
+    },
+    {
+      "name": "evolution_brain",
+      "status": "verified",
+      "checked": "2026-07-16T06:11:09.337012"
+    },
+    {
+      "name": "daily_plan",
+      "status": "verified",
+      "checked": "2026-07-16T06:11:09.337016"
+    },
+    {
+      "name": "kernel_bridge",
+      "status": "verified",
+      "checked": "2026-07-16T06:11:09.337019"
+    }
+  ],
+  "updated": "2026-07-16T06:02:53.675549"
+}

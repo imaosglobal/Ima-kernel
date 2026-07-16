@@ -12,8 +12,19 @@ LEDGER = ".ima/ledger.jsonl"
 def load_events():
     if not os.path.exists(LEDGER):
         return []
-    with open(LEDGER) as f:
-        return [json.loads(l) for l in f if l.strip()]
+
+    events=[]
+
+    with open(LEDGER, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            try:
+                events.append(json.loads(line))
+            except Exception:
+                continue
+
+    return events
 
 
 def recent_context(events, limit=20):

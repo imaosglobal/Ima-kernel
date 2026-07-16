@@ -1,0 +1,52 @@
+{
+  "created": 1784140560.938066,
+  "mode": "observe_and_learn",
+  "targets": [
+    {
+      "name": "kernel",
+      "paths": [
+        "kernel",
+        "ima_master_runtime.py"
+      ]
+    },
+    {
+      "name": "memory",
+      "paths": [
+        ".ima/ledger.jsonl",
+        ".ima/system_learning.jsonl",
+        ".ima/conversation_memory.json"
+      ]
+    },
+    {
+      "name": "product",
+      "paths": [
+        "app",
+        "frontend",
+        "src",
+        "product"
+      ]
+    },
+    {
+      "name": "founder",
+      "paths": [
+        ".ima",
+        "founder",
+        "vision",
+        "governance"
+      ]
+    }
+  ],
+  "rules": [
+    "scan before change",
+    "backup before modification",
+    "convert failures into lessons",
+    "suggest improvements before applying"
+  ],
+  "pipeline": [
+    "discover",
+    "map",
+    "evaluate",
+    "learn",
+    "propose"
+  ]
+}

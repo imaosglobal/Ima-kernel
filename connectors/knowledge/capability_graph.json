@@ -1,0 +1,36 @@
+{
+  "nodes": {
+    "sales": [
+      "beecomm"
+    ],
+    "inventory": [
+      "beecomm",
+      "odoo",
+      "erp"
+    ],
+    "customers": [
+      "beecomm",
+      "shopify",
+      "crm"
+    ],
+    "accounting": [
+      "odoo"
+    ],
+    "business_processes": [
+      "odoo"
+    ],
+    "products": [
+      "shopify"
+    ],
+    "orders": [
+      "shopify"
+    ],
+    "payments": [
+      "pos"
+    ]
+  },
+  "relations": {
+    "inventory": "shared_capability",
+    "customers": "shared_capability"
+  }
+}

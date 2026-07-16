@@ -50,11 +50,21 @@ def context():
     }
 
 def recall(query):
-    data=_load()
+    data = _load()
 
-    q=query.lower().strip()
+    q = query.lower().strip()
 
-    memory_commands=[
+    # empty query = return recent real conversations
+    if not q:
+        filtered=[]
+        for item in reversed(data):
+            if item.get("response","").strip():
+                filtered.append(item)
+            if len(filtered) >= 10:
+                break
+        return list(reversed(filtered))
+
+    memory_commands = [
         "מה אתה זוכר",
         "מה את זוכרת",
         "זיכרון",
@@ -64,23 +74,51 @@ def recall(query):
     ]
 
     if any(cmd in q for cmd in memory_commands):
-        return data[-10:]
+        filtered = []
 
-    results=[]
-    words=[w for w in q.split() if len(w)>2]
+        for item in reversed(data):
+            response = item.get("response","").strip()
+            question = item.get("question","").strip()
+
+            if not response:
+                continue
+
+            if any(cmd in question for cmd in memory_commands):
+                continue
+
+            if response.startswith("אני כאן, אורי. שמעתי אותך"):
+                continue
+
+            filtered.append(item)
+
+            if len(filtered) >= 10:
+                break
+
+        return list(reversed(filtered))
+
+    results = []
+
+    words = [w for w in q.split() if len(w) > 2]
 
     for item in data:
-        text=(
+        text = (
             item.get("question","")
-            +" "
-            +item.get("response","")
+            + " "
+            + item.get("response","")
         ).lower()
 
-        score=sum(1 for w in words if w in text)
+        score = sum(1 for w in words if w in text)
 
-        if score>0:
-            item["_score"]=score
+        if score > 0:
+            item["_score"] = score
             results.append(item)
+
+    results = [
+        x for x in results
+        if x.get("response","").strip()
+        and not x.get("response","").startswith("אני כאן, אורי. שמעתי אותך")
+        and not x.get("response","").startswith("אני איתך.")
+    ]
 
     results.sort(
         key=lambda x:x.get("_score",0),
@@ -88,3 +126,4 @@ def recall(query):
     )
 
     return results[:5]
+
