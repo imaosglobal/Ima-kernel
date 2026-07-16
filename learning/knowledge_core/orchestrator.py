@@ -3,71 +3,14 @@ from .ranking import rank
 from .truth_gate import validate
 
 
-def detect_type(question):
-    q=question.lower()
+def relevance(question, text):
+    q=set(question.lower().split())
+    t=set(text.lower().split())
 
-    if "who was" in q or "who is" in q:
-        return "person"
+    if not q or not t:
+        return 0
 
-    if "explain" in q:
-        return "explanation"
-
-    if "what is" in q:
-        return "definition"
-
-    return "general"
-
-
-def score_source(question, source, text):
-
-    score = rank(source)
-
-    qtype = detect_type(question)
-    t = text.lower()
-
-    if qtype == "person":
-
-        if source in ["arXiv","Nature","IEEE","PubMed"]:
-            score -= 20
-
-        if any(x in t for x in [
-            "born",
-            "died",
-            "physicist",
-            "biography",
-            "einstein"
-        ]):
-            score += 20
-
-
-    if qtype == "explanation":
-
-        if len(text) > 500:
-            score += 5
-
-        if source in ["arXiv","IEEE"]:
-            if any(x in t for x in [
-                "algorithm",
-                "framework",
-                "dataset",
-                "architecture"
-            ]):
-                score -= 5
-
-
-    if qtype == "definition":
-
-        if any(x in t for x in [
-            "is the",
-            "refers to",
-            "capability",
-            "defined"
-        ]):
-            score += 10
-
-
-    return score
-
+    return len(q.intersection(t)) / len(q)
 
 
 def answer(question, sources):
@@ -81,11 +24,14 @@ def answer(question, sources):
         if not validate(text):
             continue
 
-        score=score_source(
-            question,
-            s.get("source"),
-            text
+        score=rank(
+            s.get("source")
         )
+
+        score += relevance(
+            question,
+            text[:2000]
+        ) * 10
 
         ranked.append({
             "text":text,
@@ -112,4 +58,3 @@ def answer(question, sources):
         "source":ranked[0]["source"],
         "confidence":round(ranked[0]["score"],2)
     }
-
