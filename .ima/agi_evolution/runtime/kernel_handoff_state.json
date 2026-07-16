@@ -1,15 +1,12 @@
 {
-  "time": 1784225908.3059378,
+  "time": 1784225951.051397,
   "status": "ready",
   "selected_kernel": {
-    "file": "kernel_canonical_filter.py",
-    "score": 380,
+    "file": "kernel/runtime/CANONICAL/python_bridge.py",
+    "score": 350,
     "reasons": [
-      "Kernel_class",
-      "mother",
-      "runtime",
-      "boot",
-      "run"
+      "canonical_runtime",
+      "boot"
     ]
   },
   "next": "ima_master_runtime"
