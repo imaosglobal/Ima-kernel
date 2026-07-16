@@ -1,0 +1,12 @@
+{
+  "time": 1784225674.0327487,
+  "entry": "ima_boot_gate.py",
+  "flow": [
+    "boot_gate",
+    "ima_master_runtime",
+    "brain_controller",
+    "decision_engine",
+    "kernel"
+  ],
+  "status": "ready"
+}

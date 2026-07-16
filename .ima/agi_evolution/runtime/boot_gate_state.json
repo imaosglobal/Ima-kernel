@@ -1,0 +1,81 @@
+{
+  "time": 1784225674.107362,
+  "boot": "active",
+  "source": "ima_boot_gate",
+  "runtime": {
+    "time": 1784225571.1475759,
+    "runtime": "active",
+    "brain": {
+      "time": 1784225570.6875503,
+      "steps": [
+        {
+          "job": "continuity_engine.py",
+          "status": "ok",
+          "output": "{\n  \"time\": 1784225570.7401884,\n  \"event\": \"cycle_check\",\n  \"current_state\": \"running\",\n  \"next_state\": \"continue\",\n  \"handoff_ready\": true\n}\n"
+        },
+        {
+          "job": "repair_engine.py",
+          "status": "ok",
+          "output": "{\n  \"time\": 1784225570.8047006,\n  \"missing\": [],\n  \"repair_needed\": false,\n  \"status\": \"clean\"\n}\n"
+        },
+        {
+          "job": "goal_engine.py",
+          "status": "ok",
+          "output": "{\n  \"time\": 1784225570.8712733,\n  \"priority\": \"system_stability\",\n  \"goals\": [\n    \"maintain_runtime\",\n    \"improve_capabilities\",\n    \"validate_modules\",\n    \"expand_product_layer\"\n  ],\n  \"next_action\": \"maintain_runtime\"\n}\n"
+        }
+      ]
+    },
+    "health": {
+      "time": 1784225275.7393332,
+      "healthy": true,
+      "checks": {
+        "system_state.json": true,
+        "module_registry.json": true,
+        "latest_cycle.json": true
+      }
+    },
+    "supervisor": {
+      "time": 1784225275.6837049,
+      "steps": [
+        {
+          "job": "health_monitor.py",
+          "status": "ok",
+          "output": "{\n  \"time\": 1784225275.7393332,\n  \"healthy\": true,\n  \"checks\": {\n    \"system_state.json\": true,\n    \"module_registry.json\": true,\n    \"latest_cycle.json\": true\n  }\n}\n"
+        },
+        {
+          "job": "auto_resume.py",
+          "status": "ok",
+          "output": "{\n  \"time\": 1784225275.8040528,\n  \"last_state\": \"detected\",\n  \"next_action\": \"continue_evolution_cycle\",\n  \"status\": \"ready\"\n}\n"
+        }
+      ]
+    },
+    "decision": "continue"
+  },
+  "brain": {
+    "time": 1784225571.2900012,
+    "steps": [
+      {
+        "job": "continuity_engine.py",
+        "status": "ok",
+        "output": "{\n  \"time\": 1784225571.3456855,\n  \"event\": \"cycle_check\",\n  \"current_state\": \"running\",\n  \"next_state\": \"continue\",\n  \"handoff_ready\": true\n}\n"
+      },
+      {
+        "job": "repair_engine.py",
+        "status": "ok",
+        "output": "{\n  \"time\": 1784225571.411249,\n  \"missing\": [],\n  \"repair_needed\": false,\n  \"status\": \"clean\"\n}\n"
+      },
+      {
+        "job": "goal_engine.py",
+        "status": "ok",
+        "output": "{\n  \"time\": 1784225571.4777505,\n  \"priority\": \"system_stability\",\n  \"goals\": [\n    \"maintain_runtime\",\n    \"improve_capabilities\",\n    \"validate_modules\",\n    \"expand_product_layer\"\n  ],\n  \"next_action\": \"maintain_runtime\"\n}\n"
+      }
+    ]
+  },
+  "decision": {
+    "time": 1784225571.216594,
+    "current": "continue",
+    "next_action": "continue_evolution_cycle",
+    "priority": "stability"
+  },
+  "handoff": "kernel_ready"
+}
