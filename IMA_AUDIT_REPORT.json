@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:32:07.081208",
+  "time": "2026-07-16 18:33:57.417247",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -3211,6 +3211,26 @@
     {
       "file": "upgrade_guardian_intent.py",
       "import": "json"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "datetime"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "sys"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -10195,6 +10215,10 @@
       "size": 1715,
       "sha256": "7a583e0ee6f7cb917c4a40c600c421d3e85056ec20f82039ce68d432006b85db"
     },
+    "ima_guardian_core.py": {
+      "size": 1459,
+      "sha256": "263d4edc6e457aa2c51098fdff69ec6a9434d8b7619df9a9400b65b1773bd780"
+    },
     ".ima/ima_reducer.py": {
       "size": 686,
       "sha256": "a1c310780fb59ce3fdf4cfec35070755d1cae1b041bd3d4efc383f03245364da"
@@ -11689,7 +11713,7 @@
     }
   },
   "stats": {
-    "python_files": 606,
+    "python_files": 607,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
