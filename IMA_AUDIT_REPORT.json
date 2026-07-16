@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 17:59:14.741677",
+  "time": "2026-07-16 18:01:47.541938",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2693,6 +2693,18 @@
       "import": "datetime"
     },
     {
+      "file": "ima_guardian_controller.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_controller.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_controller.py",
+      "import": "datetime"
+    },
+    {
       "file": "optimize_audit.py",
       "import": "pathlib"
     },
@@ -3071,6 +3083,22 @@
     {
       "file": "connect_external_registry.py",
       "import": "py_compile"
+    },
+    {
+      "file": "install_guardian_history.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "install_guardian_history.py",
+      "import": "json"
+    },
+    {
+      "file": "install_guardian_history.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "install_guardian_history.py",
+      "import": "datetime"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -9812,8 +9840,8 @@
       "sha256": "28a4afef3b01d008431016dcbf17e364da972294679c9db427d942d61af28d68"
     },
     "ima_guardian_controller.py": {
-      "size": 1765,
-      "sha256": "ddd1c5712a205737b3206ee4e1609900c91641dd7aaf7b81e4e3f28b7a12b721"
+      "size": 2180,
+      "sha256": "6f880d0844da80c26043f693aebee1ebbf84443de5fd36d670fcd3b2bef4d8d7"
     },
     "optimize_audit.py": {
       "size": 645,
@@ -9950,6 +9978,10 @@
     "connect_external_registry.py": {
       "size": 485,
       "sha256": "934ae5643e90f2ab8ef352f55e6f0ac95908d75006856c5b8eef93d6125813c2"
+    },
+    "install_guardian_history.py": {
+      "size": 1603,
+      "sha256": "d66c41df376ab3684a3061c92b03d973c17559be05142344aa784e1cf0ed665b"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -11437,7 +11469,7 @@
     }
   },
   "stats": {
-    "python_files": 589,
+    "python_files": 590,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
