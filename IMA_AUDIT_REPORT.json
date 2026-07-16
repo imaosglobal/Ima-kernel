@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:17:25.556741",
+  "time": "2026-07-16 18:19:31.718459",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2439,6 +2439,26 @@
     {
       "file": "ima_guardian_policy.py",
       "import": "json"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "datetime"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "sys"
     },
     {
       "file": "repair_validation_final.py",
@@ -9835,6 +9855,10 @@
       "size": 1090,
       "sha256": "63e19d98f2b933a371120a7da3a75a608e5444542519ebe9cf31dc2e69b8f289"
     },
+    "ima_guardian_master.py": {
+      "size": 1877,
+      "sha256": "56c06e072649bf1cf537ca54c99bc4502ad3bcdfa14a4ba88908b15e314dab36"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -11589,7 +11613,7 @@
     }
   },
   "stats": {
-    "python_files": 600,
+    "python_files": 601,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
