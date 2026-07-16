@@ -6,7 +6,8 @@ ROOT=Path(".ima/agi_evolution/runtime")
 JOBS=[
 "ima_master_runtime.py",
 "decision_engine.py",
-"brain_controller.py"
+"brain_controller.py",
+        "cognitive_pipeline.py"
 ]
 
 def run():
