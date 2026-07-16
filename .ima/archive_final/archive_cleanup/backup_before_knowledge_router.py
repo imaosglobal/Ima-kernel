@@ -1,3 +1,4 @@
+import subprocess
 import json, time, os, subprocess
 
 from engines.knowledge_engine import search_knowledge
