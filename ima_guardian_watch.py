@@ -1,6 +1,7 @@
 from pathlib import Path
 import subprocess
 import time
+import sys
 import hashlib
 
 ROOT = Path(".")
@@ -63,3 +64,36 @@ def watch():
 
 if __name__ == "__main__":
     watch()
+
+
+# --- IMA Guardian modes ---
+
+def guardian_status():
+    print("=== IMA GUARDIAN STATUS ===")
+    print("watcher:", Path("ima_guardian_watch.py").exists())
+    print("controller:", Path("ima_guardian_controller.py").exists())
+    print("audit:", Path("IMA_AUDIT_REPORT.json").exists())
+
+
+def run_once():
+    import subprocess
+    subprocess.run(
+        ["python3", "ima_guardian_controller.py"]
+    )
+
+
+_original_watch = watch
+
+def watch_mode():
+    if "--status" in sys.argv:
+        guardian_status()
+        return
+
+    if "--once" in sys.argv:
+        run_once()
+        return
+
+    _original_watch()
+
+
+watch = watch_mode
