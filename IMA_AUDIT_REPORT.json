@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:04:13.225143",
+  "time": "2026-07-16 18:12:39.014502",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2682,35 +2682,11 @@
     },
     {
       "file": "ima_guardian_controller.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_controller.py",
       "import": "subprocess"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "json"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "datetime"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "pathlib"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "json"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "datetime"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "pathlib"
-    },
-    {
-      "file": "ima_guardian_controller.py",
-      "import": "json"
     },
     {
       "file": "ima_guardian_controller.py",
@@ -2743,6 +2719,14 @@
     {
       "file": "ima_guardian_watch.py",
       "import": "subprocess"
+    },
+    {
+      "file": "upgrade_guardian_metrics.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "clean_guardian_history.py",
+      "import": "pathlib"
     },
     {
       "file": "repair_runtime_safe.py",
@@ -2891,6 +2875,22 @@
     {
       "file": "connect_guardian_history_real.py",
       "import": "pathlib"
+    },
+    {
+      "file": "import_guardian_git_history.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "import_guardian_git_history.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "import_guardian_git_history.py",
+      "import": "json"
+    },
+    {
+      "file": "import_guardian_git_history.py",
+      "import": "datetime"
     },
     {
       "file": "repair_source_selection.py",
@@ -3115,6 +3115,14 @@
     {
       "file": "install_guardian_history.py",
       "import": "datetime"
+    },
+    {
+      "file": "repair_guardian_header.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "repair_guardian_imports.py",
+      "import": "pathlib"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -8841,6 +8849,46 @@
       "import": "brain_sync"
     },
     {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "pathlib"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "datetime"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "pathlib"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "datetime"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "pathlib"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "import": "datetime"
+    },
+    {
       "file": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py",
       "import": "subprocess"
     },
@@ -9856,8 +9904,8 @@
       "sha256": "28a4afef3b01d008431016dcbf17e364da972294679c9db427d942d61af28d68"
     },
     "ima_guardian_controller.py": {
-      "size": 2722,
-      "sha256": "51945a5749d4b8fb60fce08dcd0a7d275b6e01a0d5b1b8ff04ebd1cadb453cea"
+      "size": 2227,
+      "sha256": "fa745779ffc7f9a20aaa4eb3b2549c9b41b8122a98ce404d018a759372c9c0fd"
     },
     "optimize_audit.py": {
       "size": 645,
@@ -9866,6 +9914,14 @@
     "ima_guardian_watch.py": {
       "size": 1953,
       "sha256": "6b3c92a767b1e81e511467be24c1c0b6995038e93660e62cc9dee7085dd30b49"
+    },
+    "upgrade_guardian_metrics.py": {
+      "size": 1100,
+      "sha256": "22ce63ce573802bc73bfd67eaa5cd481d52cd5599f9f151987cd163cc5c7de35"
+    },
+    "clean_guardian_history.py": {
+      "size": 818,
+      "sha256": "bdf5aedcf30e528b50c1ba453ce63d72e6e2f7ba6c0a83e102cae997d660d6f0"
     },
     "repair_runtime_safe.py": {
       "size": 856,
@@ -9922,6 +9978,10 @@
     "connect_guardian_history_real.py": {
       "size": 1101,
       "sha256": "ee595a5aa9de26ab81ccdf1635e2d8291ddba961b0ee0077b75c9575dab11ecc"
+    },
+    "import_guardian_git_history.py": {
+      "size": 975,
+      "sha256": "c9270e304600de8f77084e11e42e1bfe391e2d3b08d27e25306d54c4873272f1"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -10002,6 +10062,14 @@
     "install_guardian_history.py": {
       "size": 1603,
       "sha256": "d66c41df376ab3684a3061c92b03d973c17559be05142344aa784e1cf0ed665b"
+    },
+    "repair_guardian_header.py": {
+      "size": 768,
+      "sha256": "c77aa53b3f0bf1737843b1c6b1a2888711e6859133653b6963f96caeb9aa6733"
+    },
+    "repair_guardian_imports.py": {
+      "size": 429,
+      "sha256": "f17fa9edcddd213f63207a95c4a981292df6ef494c338894ace6617ee98253e0"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -11467,6 +11535,10 @@
       "size": 5956,
       "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73"
     },
+    ".ima/guardian/ima_guardian_controller.before_metrics.py": {
+      "size": 2722,
+      "sha256": "51945a5749d4b8fb60fce08dcd0a7d275b6e01a0d5b1b8ff04ebd1cadb453cea"
+    },
     ".ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py": {
       "size": 291,
       "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22"
@@ -11489,7 +11561,7 @@
     }
   },
   "stats": {
-    "python_files": 591,
+    "python_files": 597,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
