@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:01:47.541938",
+  "time": "2026-07-16 18:04:13.225143",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2705,6 +2705,18 @@
       "import": "datetime"
     },
     {
+      "file": "ima_guardian_controller.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_controller.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_controller.py",
+      "import": "datetime"
+    },
+    {
       "file": "optimize_audit.py",
       "import": "pathlib"
     },
@@ -2875,6 +2887,10 @@
     {
       "file": "ima_full_audit.py",
       "import": "datetime"
+    },
+    {
+      "file": "connect_guardian_history_real.py",
+      "import": "pathlib"
     },
     {
       "file": "repair_source_selection.py",
@@ -9840,8 +9856,8 @@
       "sha256": "28a4afef3b01d008431016dcbf17e364da972294679c9db427d942d61af28d68"
     },
     "ima_guardian_controller.py": {
-      "size": 2180,
-      "sha256": "6f880d0844da80c26043f693aebee1ebbf84443de5fd36d670fcd3b2bef4d8d7"
+      "size": 2722,
+      "sha256": "51945a5749d4b8fb60fce08dcd0a7d275b6e01a0d5b1b8ff04ebd1cadb453cea"
     },
     "optimize_audit.py": {
       "size": 645,
@@ -9902,6 +9918,10 @@
     "ima_full_audit.py": {
       "size": 3251,
       "sha256": "11a4e3cfa1921bbd951ce1bcc4c8d6eea71deac3336565575f1d7fc0d1a6a528"
+    },
+    "connect_guardian_history_real.py": {
+      "size": 1101,
+      "sha256": "ee595a5aa9de26ab81ccdf1635e2d8291ddba961b0ee0077b75c9575dab11ecc"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -11469,7 +11489,7 @@
     }
   },
   "stats": {
-    "python_files": 590,
+    "python_files": 591,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
