@@ -42,7 +42,8 @@ def run(cmd):
         cmd,
         shell=True,
         text=True,
-        capture_output=True
+        capture_output=True,
+        timeout=300
     )
 
     if r.returncode:
