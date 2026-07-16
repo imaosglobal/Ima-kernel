@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:39:32.460621",
+  "time": "2026-07-16 18:43:48.051680",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -63,6 +63,14 @@
     {
       "file": "ima_daemon.py",
       "import": "ima_system"
+    },
+    {
+      "file": "ima_app.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_app.py",
+      "import": "subprocess"
     },
     {
       "file": "ima_app.py",
@@ -151,6 +159,10 @@
     {
       "file": "ima_global.py",
       "import": "time"
+    },
+    {
+      "file": "ima_system.py",
+      "import": "subprocess"
     },
     {
       "file": "ima_system.py",
@@ -694,6 +706,10 @@
     },
     {
       "file": "move_knowledge_before_brain_real2.py",
+      "import": "json"
+    },
+    {
+      "file": "move_knowledge_before_brain_real2.py",
       "import": "pathlib"
     },
     {
@@ -710,6 +726,10 @@
     },
     {
       "file": "repair_knowledge_order.py",
+      "import": "json"
+    },
+    {
+      "file": "repair_knowledge_order.py",
       "import": "pathlib"
     },
     {
@@ -723,6 +743,10 @@
     {
       "file": "repair_knowledge_order.py",
       "import": "ima_master_runtime"
+    },
+    {
+      "file": "fix_master_priority_order.py",
+      "import": "json"
     },
     {
       "file": "fix_master_priority_order.py",
@@ -1310,6 +1334,10 @@
     },
     {
       "file": "system_connection_audit.py",
+      "import": "json"
+    },
+    {
+      "file": "system_connection_audit.py",
       "import": "os"
     },
     {
@@ -1698,6 +1726,10 @@
     },
     {
       "file": "move_knowledge_before_brain.py",
+      "import": "json"
+    },
+    {
+      "file": "move_knowledge_before_brain.py",
       "import": "pathlib"
     },
     {
@@ -1711,6 +1743,10 @@
     {
       "file": "move_knowledge_before_brain.py",
       "import": "ima_master_runtime"
+    },
+    {
+      "file": "move_knowledge_before_brain_real.py",
+      "import": "json"
     },
     {
       "file": "move_knowledge_before_brain_real.py",
@@ -1954,6 +1990,10 @@
     },
     {
       "file": "ima_master_runtime.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_master_runtime.py",
       "import": "time"
     },
     {
@@ -2107,6 +2147,10 @@
     {
       "file": "upgrade_real_source_learning.py",
       "import": "pathlib"
+    },
+    {
+      "file": "memory_integration_audit.py",
+      "import": "json"
     },
     {
       "file": "memory_integration_audit.py",
@@ -2458,6 +2502,18 @@
     },
     {
       "file": "ima_guardian_master.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_master.py",
+      "import": "time"
+    },
+    {
+      "file": "ima_guardian_master.py",
       "import": "sys"
     },
     {
@@ -2762,6 +2818,22 @@
     },
     {
       "file": "ima_guardian_watch.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "time"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_watch.py",
       "import": "subprocess"
     },
     {
@@ -2989,6 +3061,30 @@
       "import": "time"
     },
     {
+      "file": "upgrade_guardian_smart_mode.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_smart_mode.py",
+      "import": "json"
+    },
+    {
+      "file": "repair_guardian_watch_status.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "force_fix_guardian_status.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_smart_watch.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_smart_watch.py",
+      "import": "json"
+    },
+    {
       "file": "repair_source_selection.py",
       "import": "pathlib"
     },
@@ -3162,6 +3258,10 @@
     },
     {
       "file": "upgrade_question_engine_v2.py",
+      "import": "json"
+    },
+    {
+      "file": "upgrade_question_engine_v2.py",
       "import": "pathlib"
     },
     {
@@ -3222,6 +3322,10 @@
     },
     {
       "file": "upgrade_guardian_runtime.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "upgrade_guardian_runtime.py",
       "import": "pathlib"
     },
     {
@@ -3247,6 +3351,18 @@
     {
       "file": "ima_guardian_core.py",
       "import": "datetime"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_core.py",
+      "import": "time"
     },
     {
       "file": "ima_guardian_core.py",
@@ -3490,6 +3606,10 @@
     },
     {
       "file": ".ima/backup_before_knowledge_order_repair.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_knowledge_order_repair.py",
       "import": "time"
     },
     {
@@ -3534,6 +3654,10 @@
     },
     {
       "file": ".ima/backup_before_world_learning_connection.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_world_learning_connection.py",
       "import": "time"
     },
     {
@@ -3575,6 +3699,10 @@
     {
       "file": ".ima/backup_before_world_learning_connection.py",
       "import": "brain_sync"
+    },
+    {
+      "file": ".ima/backup_before_world_learning_final.py",
+      "import": "json"
     },
     {
       "file": ".ima/backup_before_world_learning_final.py",
@@ -3626,6 +3754,10 @@
     },
     {
       "file": ".ima/backup_before_world_priority.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_world_priority.py",
       "import": "time"
     },
     {
@@ -3674,6 +3806,10 @@
     },
     {
       "file": ".ima/backup_before_expansion_move.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_expansion_move.py",
       "import": "time"
     },
     {
@@ -3719,6 +3855,10 @@
     {
       "file": ".ima/backup_before_expansion_move.py",
       "import": "brain_sync"
+    },
+    {
+      "file": ".ima/backup_before_expansion_position_fix.py",
+      "import": "json"
     },
     {
       "file": ".ima/backup_before_expansion_position_fix.py",
@@ -3910,6 +4050,10 @@
     },
     {
       "file": ".ima/backup_before_knowledge_priority_fix.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_knowledge_priority_fix.py",
       "import": "time"
     },
     {
@@ -3954,6 +4098,10 @@
     },
     {
       "file": ".ima/backup_before_move_knowledge.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge.py",
       "import": "time"
     },
     {
@@ -3998,6 +4146,10 @@
     },
     {
       "file": ".ima/backup_before_move_knowledge_real.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge_real.py",
       "import": "time"
     },
     {
@@ -4042,6 +4194,10 @@
     },
     {
       "file": ".ima/backup_before_move_knowledge_real2.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge_real2.py",
       "import": "time"
     },
     {
@@ -4086,6 +4242,10 @@
     },
     {
       "file": ".ima/backup_before_master_priority_order.py",
+      "import": "json"
+    },
+    {
+      "file": ".ima/backup_before_master_priority_order.py",
       "import": "time"
     },
     {
@@ -4127,6 +4287,10 @@
     {
       "file": ".ima/backup_before_master_priority_order.py",
       "import": "brain_sync"
+    },
+    {
+      "file": ".ima/backup_before_world_learning_engine.py",
+      "import": "json"
     },
     {
       "file": ".ima/backup_before_world_learning_engine.py",
@@ -7082,6 +7246,10 @@
     },
     {
       "file": ".ima/before_conversation_core/ima_system.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/before_conversation_core/ima_system.py",
       "import": "json"
     },
     {
@@ -7638,6 +7806,10 @@
     },
     {
       "file": ".ima/stable_after_system_priority_20260714_175521/ima_system.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/stable_after_system_priority_20260714_175521/ima_system.py",
       "import": "json"
     },
     {
@@ -7794,6 +7966,10 @@
     },
     {
       "file": ".ima/before_memory_priority_20260714_175701/ima_system.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175701/ima_system.py",
       "import": "json"
     },
     {
@@ -7954,6 +8130,10 @@
     },
     {
       "file": ".ima/before_memory_priority_20260714_175727/ima_system.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175727/ima_system.py",
       "import": "json"
     },
     {
@@ -8114,6 +8294,10 @@
     },
     {
       "file": ".ima/before_memory_router_exact_20260714_175856/ima_system.py",
+      "import": "subprocess"
+    },
+    {
+      "file": ".ima/before_memory_router_exact_20260714_175856/ima_system.py",
       "import": "json"
     },
     {
@@ -8335,6 +8519,10 @@
     {
       "file": ".ima/before_memory_flow_manual_20260714_180340/ima_master_runtime.py",
       "import": "ima_system"
+    },
+    {
+      "file": ".ima/before_memory_router_final_20260714_180417/ima_system.py",
+      "import": "subprocess"
     },
     {
       "file": ".ima/before_memory_router_final_20260714_180417/ima_system.py",
@@ -9183,19 +9371,19 @@
       ".ima/backup_before_learning_bus_upgrade.py",
       ".ima/backup_brain_network_finalize/brain_sync.py"
     ],
-    "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6": [
+    "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3": [
       ".ima/backup_before_knowledge_order_repair.py",
       ".ima/backup_before_knowledge_priority_fix.py",
       ".ima/backup_before_move_knowledge.py",
       ".ima/backup_before_move_knowledge_real.py",
       ".ima/backup_before_move_knowledge_real2.py"
     ],
-    "d9bd06aea0a6ab8f0f99f205011e6d4e09b35ffb2761c96f5c145e8851b3074e": [
+    "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6": [
       ".ima/backup_before_world_learning_connection.py",
       ".ima/backup_before_master_priority_order.py",
       ".ima/backup_before_world_learning_engine.py"
     ],
-    "5356259b2699c4a3d1bc946bae7000a7ca9ca3c347f09761e4051bcba7530ac3": [
+    "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6": [
       ".ima/backup_before_world_learning_final.py",
       ".ima/backup_before_world_priority.py",
       ".ima/backup_before_expansion_move.py",
@@ -9275,7 +9463,7 @@
       ".ima/stable_after_context_connect_20260714_174305/conversation_layer.py",
       ".ima/stable_after_system_priority_20260714_175521/conversation_layer.py"
     ],
-    "b4e596f584bfcb28d4f3b4c6463b386b9276215dad793ebaa9627a2b0fadc20e": [
+    "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67": [
       ".ima/before_conversation_core/ima_system.py",
       ".ima/stable_after_system_priority_20260714_175521/ima_system.py",
       ".ima/before_memory_priority_20260714_175701/ima_system.py",
@@ -9316,8 +9504,8 @@
       "sha256": "1262064c4b88f47c3a8fe5ff6b6cc38604c4244e0140306a6a65e0a6cee25644"
     },
     "ima_app.py": {
-      "size": 3667,
-      "sha256": "0fcf3754e99e47588dfe50089016e1fa37be290a76f4fb87ad3004d830772b4d"
+      "size": 3697,
+      "sha256": "e808ce30f60504943d428eab0fd45fc008ac9e28e181cfac82da3a5052be7878"
     },
     "ima_brain.py": {
       "size": 3867,
@@ -9336,8 +9524,8 @@
       "sha256": "fe68543934a46aba0376d5ca4c3ee6bc49f263006d14077a3f0228b303701f34"
     },
     "ima_system.py": {
-      "size": 26164,
-      "sha256": "d50e50696024fe48f169d2d7aa68853ff8062ef632f3cc7b3ef06883bdd054ae"
+      "size": 26182,
+      "sha256": "b4d1eb33974040db04cca00121382bf13511071e8443c4cffd7221f57bf237c3"
     },
     "ima_mom.py": {
       "size": 1561,
@@ -9448,16 +9636,16 @@
       "sha256": "8fc85c27ee12e4fb1e9abefc209c3baa232d7b89da8be91e0322ad8511d490e7"
     },
     "move_knowledge_before_brain_real2.py": {
-      "size": 1812,
-      "sha256": "6011a0f89e865cd984422bd47a0d81bd5f292a71cd5b637a1228a931dec677aa"
+      "size": 1824,
+      "sha256": "3ae3fe4870c6a78fea3d02a762dd3ab9290c73f6ba6adeb997a25e58cf1072ca"
     },
     "repair_knowledge_order.py": {
-      "size": 1815,
-      "sha256": "7668956c75d68dfe5b097a5229cbb9dd916da6230c988d9f08d5c0cc32d0ca60"
+      "size": 1827,
+      "sha256": "1b61acad55e1f9d518c726f91b6211cd7ece22f93ff854a0a5675749d3b79f74"
     },
     "fix_master_priority_order.py": {
-      "size": 1976,
-      "sha256": "9406d561bf27632d1c04210226cc11feb6a955833435d440a3002a7909dc358f"
+      "size": 1988,
+      "sha256": "b684b4840160d28e3402eb328e2b42148ee5ef89bec539a790591eda9b9f0d97"
     },
     "build_knowledge_expansion_engine.py": {
       "size": 1311,
@@ -9632,8 +9820,8 @@
       "sha256": "4f619f151d8c925444a4af1b96b3e948ef2a50c5d76754f8af228d5eb39e3896"
     },
     "system_connection_audit.py": {
-      "size": 934,
-      "sha256": "79a0390d9d5e01628c8b1522f178c9b45b1382adbcee1cebefbd6f9d5cf6a1ba"
+      "size": 946,
+      "sha256": "c9aeb54fb591910cf4fa849aafed73f6a0c12d83736367473537a8272642ff59"
     },
     "system_connection_upgrade.py": {
       "size": 861,
@@ -9724,12 +9912,12 @@
       "sha256": "b19bfc271c108dd85c5f168be78d32981876742464af2df718c2db6d6b9763aa"
     },
     "move_knowledge_before_brain.py": {
-      "size": 2795,
-      "sha256": "f56c1172ebe7c864b3c527d30e269939c7675d84c07b4b9efdd5ce3e18a44463"
+      "size": 2807,
+      "sha256": "e50829832e1c6a1e712b55c40cacc2b8b3a8e4fed8b74fb6572f669be5c05e01"
     },
     "move_knowledge_before_brain_real.py": {
-      "size": 2115,
-      "sha256": "4d2bfa7711abed74d1f51a8f586caa97e24ea698ddc566c5aaf02b3954c923cc"
+      "size": 2127,
+      "sha256": "51aad008af0c1ab854cfb4533f622add2ff72b7cbe79200828b2d158c0fbfd07"
     },
     "goal_engine.py": {
       "size": 485,
@@ -9812,8 +10000,8 @@
       "sha256": "25841e5431d562f1887dc6c93757401f0d795c71eb1f96d4eaee28b395724c40"
     },
     "ima_master_runtime.py": {
-      "size": 9729,
-      "sha256": "849b36f9f92e0c59fb1b65e97283a02ac881be73fb1768c41f8085abf6758b1e"
+      "size": 9741,
+      "sha256": "64aeed4603ffad0c4b4090657bc6d1f5981fe8f9b4cf21ac800e3449cb6b0ba8"
     },
     "repair_memory_layer.py": {
       "size": 1151,
@@ -9840,8 +10028,8 @@
       "sha256": "5b5584474463e1f381b1a5c22cebad953c4abb6bfc05ebce05fa5030a47eb3d5"
     },
     "memory_integration_audit.py": {
-      "size": 769,
-      "sha256": "e6a3a63b7f427facb01e65755da8587f4365f43b844b3a46ff7b93a40c68e2fd"
+      "size": 781,
+      "sha256": "aa66b675e7cd9eb5ec76dc24014bf264f9fdde215291935327914518fc4e501b"
     },
     "full_system_lock.py": {
       "size": 781,
@@ -9952,8 +10140,8 @@
       "sha256": "63e19d98f2b933a371120a7da3a75a608e5444542519ebe9cf31dc2e69b8f289"
     },
     "ima_guardian_master.py": {
-      "size": 1877,
-      "sha256": "56c06e072649bf1cf537ca54c99bc4502ad3bcdfa14a4ba88908b15e314dab36"
+      "size": 2959,
+      "sha256": "dfe9087d18d5581b20916c3af84617789de1223bbf6e0c7dbfb8fda2c0849a88"
     },
     "ima_guardian_diagnosis.py": {
       "size": 1713,
@@ -10056,8 +10244,8 @@
       "sha256": "e9c416f7a22b3a598f153ff780067c45c3f62dc78d8280d4af2f00afc10b1565"
     },
     "ima_guardian_watch.py": {
-      "size": 1941,
-      "sha256": "2243697d2da7d8ee20d339e8b694ee396ebbdcad30cae1792abffbb4318cb997"
+      "size": 4280,
+      "sha256": "db54e52ea0a57cfbc7b13c9fa32ec929b86a532fbb3b50c98912a02ebefa26ec"
     },
     "upgrade_guardian_metrics.py": {
       "size": 1100,
@@ -10147,6 +10335,22 @@
       "size": 682,
       "sha256": "59ddbbf9fabfdcd6a4ab6ea02d4d32432edeb71572c56c3de51497ca8869e972"
     },
+    "upgrade_guardian_smart_mode.py": {
+      "size": 1572,
+      "sha256": "f839a028aab5610ece70adc488c2a34d53fb0b18c200252f2cc12b9f109f3ea3"
+    },
+    "repair_guardian_watch_status.py": {
+      "size": 904,
+      "sha256": "0669604bacc9cd80d0f152f65e8725883f7f87c87bd9a9b802d0a453ccbb5066"
+    },
+    "force_fix_guardian_status.py": {
+      "size": 1377,
+      "sha256": "aef56925c77fd21c91a7d6df0761314265b7f25bf81b471de1f58f01673fd0e6"
+    },
+    "upgrade_guardian_smart_watch.py": {
+      "size": 1588,
+      "sha256": "719c34f1bafd96fca19c0bb3c62632577316fac6068766398d6841a7b4929465"
+    },
     "repair_source_selection.py": {
       "size": 1143,
       "sha256": "acd4e2878d9d7493d5e0df11b5ab95bb3d88556d5101d6134ab6db222c76e5b4"
@@ -10204,8 +10408,8 @@
       "sha256": "53c6aae68f23b0cb83f4b56170a0e8e048e8420e5333237709203094a455ecc4"
     },
     "upgrade_question_engine_v2.py": {
-      "size": 1348,
-      "sha256": "f13f652bce9b20c97e575fa32a5cea70acbda978b0ec5838f4a6477efc82c4c5"
+      "size": 1360,
+      "sha256": "b66e444e9afa6c8c96e9b6390399c1017d8fe533765ea934aa83375209d424f9"
     },
     "build_knowledge_core.py": {
       "size": 1616,
@@ -10236,16 +10440,16 @@
       "sha256": "f17fa9edcddd213f63207a95c4a981292df6ef494c338894ace6617ee98253e0"
     },
     "upgrade_guardian_runtime.py": {
-      "size": 1063,
-      "sha256": "972c9d6bb7bfdcd6f514342257b2ed7577e7c3204395b79356ff8cbf86b66c1e"
+      "size": 1081,
+      "sha256": "bf2191e7ed24bc7a53f72403efe17c627eb1fffd1a15622205755f7983ab9539"
     },
     "upgrade_guardian_intent.py": {
       "size": 1715,
       "sha256": "7a583e0ee6f7cb917c4a40c600c421d3e85056ec20f82039ce68d432006b85db"
     },
     "ima_guardian_core.py": {
-      "size": 1506,
-      "sha256": "b35014c312445181b788a71ea9c57ca1b3806f7be6e924dca11c3de7b0fbae41"
+      "size": 2588,
+      "sha256": "c0fe5be252aaf81eac7fad2c1420617f1060c27425353269393680482c3c2951"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -10304,28 +10508,28 @@
       "sha256": "414d66a84062658db68766d592ca8d72f615b1cdbd28ce8d61cec4612b8bb8c4"
     },
     ".ima/backup_before_knowledge_order_repair.py": {
-      "size": 6776,
-      "sha256": "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6"
+      "size": 6788,
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3"
     },
     ".ima/backup_before_world_learning_connection.py": {
-      "size": 6714,
-      "sha256": "d9bd06aea0a6ab8f0f99f205011e6d4e09b35ffb2761c96f5c145e8851b3074e"
+      "size": 6726,
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6"
     },
     ".ima/backup_before_world_learning_final.py": {
-      "size": 7044,
-      "sha256": "5356259b2699c4a3d1bc946bae7000a7ca9ca3c347f09761e4051bcba7530ac3"
+      "size": 7056,
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6"
     },
     ".ima/backup_before_world_priority.py": {
-      "size": 7044,
-      "sha256": "5356259b2699c4a3d1bc946bae7000a7ca9ca3c347f09761e4051bcba7530ac3"
+      "size": 7056,
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6"
     },
     ".ima/backup_before_expansion_move.py": {
-      "size": 7044,
-      "sha256": "5356259b2699c4a3d1bc946bae7000a7ca9ca3c347f09761e4051bcba7530ac3"
+      "size": 7056,
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6"
     },
     ".ima/backup_before_expansion_position_fix.py": {
-      "size": 7044,
-      "sha256": "5356259b2699c4a3d1bc946bae7000a7ca9ca3c347f09761e4051bcba7530ac3"
+      "size": 7056,
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6"
     },
     ".ima/autonomy_runner.py": {
       "size": 3429,
@@ -10356,28 +10560,28 @@
       "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73"
     },
     ".ima/backup_before_knowledge_priority_fix.py": {
-      "size": 6776,
-      "sha256": "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6"
+      "size": 6788,
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3"
     },
     ".ima/backup_before_move_knowledge.py": {
-      "size": 6776,
-      "sha256": "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6"
+      "size": 6788,
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3"
     },
     ".ima/backup_before_move_knowledge_real.py": {
-      "size": 6776,
-      "sha256": "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6"
+      "size": 6788,
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3"
     },
     ".ima/backup_before_move_knowledge_real2.py": {
-      "size": 6776,
-      "sha256": "68e0122310f51b56a493c152bef03ce6dbc7d9f89a3c8d3c74951b10450c6ca6"
+      "size": 6788,
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3"
     },
     ".ima/backup_before_master_priority_order.py": {
-      "size": 6714,
-      "sha256": "d9bd06aea0a6ab8f0f99f205011e6d4e09b35ffb2761c96f5c145e8851b3074e"
+      "size": 6726,
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6"
     },
     ".ima/backup_before_world_learning_engine.py": {
-      "size": 6714,
-      "sha256": "d9bd06aea0a6ab8f0f99f205011e6d4e09b35ffb2761c96f5c145e8851b3074e"
+      "size": 6726,
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6"
     },
     ".ima/self_improvement_runtime.py": {
       "size": 1080,
@@ -11516,8 +11720,8 @@
       "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3"
     },
     ".ima/before_conversation_core/ima_system.py": {
-      "size": 24134,
-      "sha256": "b4e596f584bfcb28d4f3b4c6463b386b9276215dad793ebaa9627a2b0fadc20e"
+      "size": 24152,
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67"
     },
     ".ima/stable_working_20260714/ima_master_runtime.py": {
       "size": 3459,
@@ -11584,8 +11788,8 @@
       "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262"
     },
     ".ima/stable_after_system_priority_20260714_175521/ima_system.py": {
-      "size": 24134,
-      "sha256": "b4e596f584bfcb28d4f3b4c6463b386b9276215dad793ebaa9627a2b0fadc20e"
+      "size": 24152,
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67"
     },
     ".ima/stable_after_system_priority_20260714_175521/conversation_layer.py": {
       "size": 1948,
@@ -11596,24 +11800,24 @@
       "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3"
     },
     ".ima/before_memory_priority_20260714_175701/ima_system.py": {
-      "size": 24134,
-      "sha256": "b4e596f584bfcb28d4f3b4c6463b386b9276215dad793ebaa9627a2b0fadc20e"
+      "size": 24152,
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67"
     },
     ".ima/before_memory_priority_20260714_175701/ima_master_runtime.py": {
       "size": 4961,
       "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262"
     },
     ".ima/before_memory_priority_20260714_175727/ima_system.py": {
-      "size": 24134,
-      "sha256": "b4e596f584bfcb28d4f3b4c6463b386b9276215dad793ebaa9627a2b0fadc20e"
+      "size": 24152,
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67"
     },
     ".ima/before_memory_priority_20260714_175727/ima_master_runtime.py": {
       "size": 4961,
       "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262"
     },
     ".ima/before_memory_router_exact_20260714_175856/ima_system.py": {
-      "size": 24376,
-      "sha256": "24af961ca4c9ee27b8a725094106d3c746acff95e592916e497f060f270473ab"
+      "size": 24394,
+      "sha256": "926657226c97737353b63e60718d16f475734f314f91ae0c129500e4c0636419"
     },
     ".ima/before_master_memory_priority_20260714_180052/ima_master_runtime.py": {
       "size": 4961,
@@ -11628,8 +11832,8 @@
       "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb"
     },
     ".ima/before_memory_router_final_20260714_180417/ima_system.py": {
-      "size": 24664,
-      "sha256": "dd9c63b1bf049722e6ed4bd3b89e358fe5eb5c48fe99e09c08993a03a82b0ece"
+      "size": 24682,
+      "sha256": "73eb5cc9dd73d1775eebba8a9e3b20d6f668d46dbe3c5cc518528afec3895c40"
     },
     ".ima/stability_checkpoint/ima_master_runtime.py": {
       "size": 5608,
@@ -11741,7 +11945,7 @@
     }
   },
   "stats": {
-    "python_files": 609,
+    "python_files": 613,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
