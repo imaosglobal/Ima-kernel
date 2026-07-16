@@ -53,6 +53,7 @@ def cycle(goal="maintenance"):
         "python3 ima_guardian_master.py",
 
         "python3 ima_full_audit.py",
+        "python3 ima_guardian_self_repair.py",
 
         "python3 ima_guardian_diagnosis.py"
 
