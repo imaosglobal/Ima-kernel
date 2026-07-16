@@ -150,7 +150,12 @@ def run_cycle():
 
     try:
         if "incremental_cycle" in globals():
-            incremental_cycle()
+            changed = incremental_cycle()
+
+            if changed is False:
+                print("[SMART STOP] no changes detected")
+                return
+
             print("[OK] incremental cycle executed")
     except Exception as e:
         print("[INCREMENTAL ERROR]", e)
