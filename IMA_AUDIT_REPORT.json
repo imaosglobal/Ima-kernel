@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 19:09:13.129326",
+  "time": "2026-07-16 19:25:01.349213",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [],
   "imports": [
@@ -2524,6 +2524,14 @@
       "import": "pathlib"
     },
     {
+      "file": "upgrade_guardian_git_diff.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_self_protection.py",
+      "import": "pathlib"
+    },
+    {
       "file": "repair_validation_final.py",
       "import": "pathlib"
     },
@@ -2789,6 +2797,10 @@
     },
     {
       "file": "ima_guardian_watch.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_watch.py",
       "import": "pathlib"
     },
     {
@@ -2821,11 +2833,39 @@
     },
     {
       "file": "ima_guardian_watch.py",
+      "import": "py_compile"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_watch.py",
       "import": "pathlib"
     },
     {
       "file": "ima_guardian_watch.py",
       "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "py_compile"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "py_compile"
+    },
+    {
+      "file": "ima_guardian_watch.py",
+      "import": "upgrade_guardian_snapshot_restore"
     },
     {
       "file": "ima_guardian_watch.py",
@@ -2897,6 +2937,30 @@
     },
     {
       "file": "upgrade_guardian_block_repair.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_incremental_v2.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_watch_hook.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_smart_gate.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_policy_lock.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_policy_lock.py",
+      "import": "json"
+    },
+    {
+      "file": "upgrade_guardian_policy_gate.py",
       "import": "pathlib"
     },
     {
@@ -3137,6 +3201,38 @@
     },
     {
       "file": "repair_daily_evolution_v2.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "fix_watch_json_import.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_target_audit.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "connect_guardian_target_flow.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "fix_guardian_run_cycle_return.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_snapshot_restore.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_snapshot_restore.py",
+      "import": "shutil"
+    },
+    {
+      "file": "upgrade_guardian_snapshot_restore.py",
+      "import": "py_compile"
+    },
+    {
+      "file": "connect_guardian_restore_flow.py",
       "import": "pathlib"
     },
     {
@@ -3429,6 +3525,18 @@
     },
     {
       "file": "upgrade_guardian_fast_cycle.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "fix_watch_incremental_hook.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_incremental_return.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_no_master_on_success.py",
       "import": "pathlib"
     },
     {
@@ -10218,6 +10326,14 @@
       "size": 1345,
       "sha256": "bbe84e2d86549c9d48d127249749520a204c41be52698634dda088057177d92e"
     },
+    "upgrade_guardian_git_diff.py": {
+      "size": 838,
+      "sha256": "6905aa94589338785668f882d171b8fbd59d9ee5ce9575a80d01ceab691b6f55"
+    },
+    "upgrade_guardian_self_protection.py": {
+      "size": 1001,
+      "sha256": "a5172654d70ed62d6a0dfbf421db4090c8ba4833c812c63fb7c5a86c9c83c5d5"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -10315,8 +10431,8 @@
       "sha256": "e9c416f7a22b3a598f153ff780067c45c3f62dc78d8280d4af2f00afc10b1565"
     },
     "ima_guardian_watch.py": {
-      "size": 5133,
-      "sha256": "8b9ae9f0005296d5bd98d440e701d2a0b6d584f3512808b95573598006337007"
+      "size": 7974,
+      "sha256": "b2249b3a517b7d15fb2b857082d9db107c7e4e875759088711c27ad9023fcb1c"
     },
     "upgrade_guardian_metrics.py": {
       "size": 1100,
@@ -10349,6 +10465,26 @@
     "upgrade_guardian_block_repair.py": {
       "size": 1678,
       "sha256": "165a61526faf8130c5162f5609cfaa9c8b433911db38381da154b470418a4ab7"
+    },
+    "upgrade_guardian_incremental_v2.py": {
+      "size": 1163,
+      "sha256": "6da4c3562da631c6ad526d51a509df8d193fdf197ac27c7c1a34e54781bc7c32"
+    },
+    "upgrade_guardian_watch_hook.py": {
+      "size": 711,
+      "sha256": "9a4e0d66f1a937bc59252c8548399fb89bb801bce2b88d8f5679420ef76f1163"
+    },
+    "upgrade_guardian_smart_gate.py": {
+      "size": 580,
+      "sha256": "646b46663518f5ae891ee6fd458a846378e61c14b688f0d4f94708c85029e1a4"
+    },
+    "upgrade_guardian_policy_lock.py": {
+      "size": 729,
+      "sha256": "6d918e2772eb50c86ebf80136742323a24943a6498aca4803ea6377f8be071d5"
+    },
+    "upgrade_guardian_policy_gate.py": {
+      "size": 947,
+      "sha256": "a70458db657626c857069ab97a6f71aee31606e55260105b3da08d7bfbc0b882"
     },
     "repair_runtime_safe.py": {
       "size": 856,
@@ -10445,6 +10581,30 @@
     "repair_daily_evolution_v2.py": {
       "size": 685,
       "sha256": "373888744022773a8282a70d8203713492caf5166c425e979222de16f1e3c11a"
+    },
+    "fix_watch_json_import.py": {
+      "size": 299,
+      "sha256": "7805f275b3a95c74bd930c520c04ef84c6382ce3037b79c671410d11eb468112"
+    },
+    "upgrade_guardian_target_audit.py": {
+      "size": 716,
+      "sha256": "6680e85d3311f63de938df5b8fc2e874a8759fd9a358c8f880e62c0311e0fbe1"
+    },
+    "connect_guardian_target_flow.py": {
+      "size": 999,
+      "sha256": "312b084695b5fcd332722bb89daa74fc0629bcb45b60aaaafc635abae36223f8"
+    },
+    "fix_guardian_run_cycle_return.py": {
+      "size": 712,
+      "sha256": "1e64f9a055e0f294b656f698224d43ace860dfdd00ae5a849abe9eb9aadc5237"
+    },
+    "upgrade_guardian_snapshot_restore.py": {
+      "size": 860,
+      "sha256": "d903f11bd3646ea34dfa6e3267353be153d377c0fd45a55110306e1aeea8a7e9"
+    },
+    "connect_guardian_restore_flow.py": {
+      "size": 779,
+      "sha256": "0124b8d25a6e49e0e5536471e0bfb3f75e007841fe30674b622c0b7d9e834025"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -10553,6 +10713,18 @@
     "upgrade_guardian_fast_cycle.py": {
       "size": 591,
       "sha256": "00f949ccac7e5f9a4eb105113793e781d657d1286dbe97ab92f14663536e5f07"
+    },
+    "fix_watch_incremental_hook.py": {
+      "size": 651,
+      "sha256": "a887fa82eccaf1b5354870079e255d3aca1b13bb66ccbf4e02e582237a70bd01"
+    },
+    "upgrade_incremental_return.py": {
+      "size": 1043,
+      "sha256": "0c89efafea778d937f871f56216e7ab56ac7719da0fe22cf104b9dcc00022118"
+    },
+    "upgrade_guardian_no_master_on_success.py": {
+      "size": 886,
+      "sha256": "7bdc2d8d1dcb8e2fa3f853d87904fb9ec38b98110a008e52bda2c37049e36875"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -12044,7 +12216,7 @@
     }
   },
   "stats": {
-    "python_files": 622,
+    "python_files": 638,
     "syntax_errors": 0,
     "duplicate_groups": 32
   }
