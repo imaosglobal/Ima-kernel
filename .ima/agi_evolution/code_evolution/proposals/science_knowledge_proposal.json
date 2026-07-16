@@ -1,0 +1,15 @@
+{
+  "capability": "science_knowledge",
+  "goal": [
+    "physics",
+    "biology",
+    "astronomy",
+    "mathematics"
+  ],
+  "created": 1784224897.33978,
+  "status": "proposal",
+  "files_to_create": [
+    "science_knowledge/science_knowledge_engine.py"
+  ],
+  "requires_test": true
+}

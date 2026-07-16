@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "layers": {
+    "world_model": {
+      "status": "missing",
+      "score": 0
+    },
+    "reasoning_engine": {
+      "status": "partial",
+      "score": 20
+    },
+    "autonomy": {
+      "status": "partial",
+      "score": 20
+    },
+    "memory": {
+      "status": "active",
+      "score": 70
+    },
+    "identity": {
+      "status": "active",
+      "score": 60
+    },
+    "connectors": {
+      "status": "partial",
+      "score": 20
+    },
+    "embodiment": {
+      "status": "missing",
+      "score": 0
+    }
+  }
+}

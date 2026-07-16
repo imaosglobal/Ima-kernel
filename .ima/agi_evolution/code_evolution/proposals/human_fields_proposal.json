@@ -1,0 +1,16 @@
+{
+  "capability": "human_fields",
+  "goal": [
+    "arts",
+    "crafts",
+    "medicine",
+    "law",
+    "education"
+  ],
+  "created": 1784224897.34005,
+  "status": "proposal",
+  "files_to_create": [
+    "human_fields/human_fields_engine.py"
+  ],
+  "requires_test": true
+}

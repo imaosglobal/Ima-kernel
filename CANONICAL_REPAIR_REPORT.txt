@@ -1,0 +1,41 @@
+=== IMA CANONICAL REPAIR CHECK ===
+TIME: Thu Jul 16 19:54:16 IDT 2026
+
+--- FILE STRUCTURE ---
+[OK] /data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/IMA_RUNTIME.js
+[OK] /data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/python_bridge.py
+[OK] /data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/IMA_STATE.js
+[OK] /data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/IMA_EVENTS.js
+[OK] /data/data/com.termux/files/home/ima_kernel/IMA_START.py
+
+--- PERMISSIONS FIX ---
+[OK] permissions normalized
+
+--- NODE TEST ---
+[FAIL] NODE EXECUTION
+
+--- PYTHON BRIDGE TEST ---
+[OK] bridge import
+{'status': 'ONLINE', 'heal': {'healthy': True, 'time': 1784220857286}}
+
+--- START ENTRY TEST ---
+=== IMA CANONICAL DEPENDENCY AUDIT ===
+[AUDIT FILES] 5699
+[OK] CANONICAL LOCK EXISTS
+=== DEPENDENCY AUDIT COMPLETE ===
+[AUTO MAINTENANCE OK]
+=== IMA ONLINE START ===
+[FAIL] CANONICAL GUARD
+{'status': 'FAIL', 'changed': ['IMA_START.py', 'ima_master_runtime.py', 'conversation_layer.py'], 'missing': []}
+[WARN] CANONICAL STATE CHANGED
+TIME: 1784220857.4686453
+[OK] CANONICAL RUNTIME {'status': 'ONLINE', 'heal': {'healthy': True, 'time': 1784220857685}}
+[OK] ROOT
+[OK] CANONICAL
+[OK] API BOOT CONNECTED
+[OK] BOOT INTEGRITY REPORT
+[OK] DEPENDENCY AUDIT
+[OK] AUTO MAINTENANCE
+=== IMA SYSTEM READY ===
+
+=== FINISHED ===

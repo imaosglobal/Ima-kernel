@@ -350,6 +350,32 @@ class IMAMaster:
 
 
 
+
+        # === IMA AGI EVOLUTION INTEGRATION ===
+        try:
+            from pathlib import Path
+            import sys
+
+            agi_root=Path(".ima/agi_evolution").resolve()
+            if str(agi_root) not in sys.path:
+                sys.path.insert(0,str(agi_root))
+
+            from runtime.ima_agi_bridge import IMA_AGI
+
+            agi_result=IMA_AGI.process(
+                message,
+                {
+                    "identity":"active",
+                    "memory":"active",
+                    "learning":"active"
+                }
+            )
+
+            result["agi"]=agi_result
+
+        except Exception as e:
+            result["agi_error"]=str(e)
+
         return result
 
 

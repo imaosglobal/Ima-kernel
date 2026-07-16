@@ -1,0 +1,17 @@
+{
+  "current": {
+    "runtime": true,
+    "memory": true,
+    "conversation": true,
+    "learning_loop": true,
+    "decision_engine": true
+  },
+  "needed": {
+    "world_model": false,
+    "general_reasoning": false,
+    "autonomous_agents": false,
+    "universal_connectors": false,
+    "multimodal_embodiment": false,
+    "global_persona_system": false
+  }
+}
