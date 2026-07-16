@@ -4,5 +4,10 @@
   "role": "master_kernel_bridge",
   "handoff": "ima_master_runtime",
   "reason": "validated_boot_and_runtime",
-  "time": 1784226248
+  "time": 1784226248,
+  "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+  "hash_algorithm": "sha256",
+  "enforcement": "strict",
+  "canonical_only": true,
+  "fallback": "disabled"
 }
