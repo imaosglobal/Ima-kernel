@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:12:39.014502",
+  "time": "2026-07-16 18:16:17.583737",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2433,6 +2433,14 @@
       "import": "pathlib"
     },
     {
+      "file": "ima_guardian_policy.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_policy.py",
+      "import": "json"
+    },
+    {
       "file": "repair_validation_final.py",
       "import": "pathlib"
     },
@@ -3122,6 +3130,10 @@
     },
     {
       "file": "repair_guardian_imports.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_runtime.py",
       "import": "pathlib"
     },
     {
@@ -8889,6 +8901,10 @@
       "import": "datetime"
     },
     {
+      "file": ".ima/guardian/history_compactor.py",
+      "import": "pathlib"
+    },
+    {
       "file": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py",
       "import": "subprocess"
     },
@@ -9815,6 +9831,10 @@
       "size": 257,
       "sha256": "4b54d0acb7094a8103cf2b357029ae43d729ae5a8ac22654c78bb5261ceac184"
     },
+    "ima_guardian_policy.py": {
+      "size": 1090,
+      "sha256": "63e19d98f2b933a371120a7da3a75a608e5444542519ebe9cf31dc2e69b8f289"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -9904,8 +9924,8 @@
       "sha256": "28a4afef3b01d008431016dcbf17e364da972294679c9db427d942d61af28d68"
     },
     "ima_guardian_controller.py": {
-      "size": 2227,
-      "sha256": "fa745779ffc7f9a20aaa4eb3b2549c9b41b8122a98ce404d018a759372c9c0fd"
+      "size": 2248,
+      "sha256": "3b90e12658fce6de98149702111c077f86cebd62652c44d9090b89579ce83a03"
     },
     "optimize_audit.py": {
       "size": 645,
@@ -10070,6 +10090,10 @@
     "repair_guardian_imports.py": {
       "size": 429,
       "sha256": "f17fa9edcddd213f63207a95c4a981292df6ef494c338894ace6617ee98253e0"
+    },
+    "upgrade_guardian_runtime.py": {
+      "size": 1063,
+      "sha256": "972c9d6bb7bfdcd6f514342257b2ed7577e7c3204395b79356ff8cbf86b66c1e"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -11539,6 +11563,10 @@
       "size": 2722,
       "sha256": "51945a5749d4b8fb60fce08dcd0a7d275b6e01a0d5b1b8ff04ebd1cadb453cea"
     },
+    ".ima/guardian/history_compactor.py": {
+      "size": 372,
+      "sha256": "b706d337576a6c04e1c7327f65a793ab63bae4af4182631d27ef2e63401e102b"
+    },
     ".ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py": {
       "size": 291,
       "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22"
@@ -11561,7 +11589,7 @@
     }
   },
   "stats": {
-    "python_files": 597,
+    "python_files": 600,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
