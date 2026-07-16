@@ -5,6 +5,44 @@ from datetime import datetime
 
 HOME=Path.home()
 TRUTH=HOME/".ima/truth/truth_database.jsonl"
+
+
+from pathlib import Path
+
+EVOLUTION=Path.home()/".ima/evolution"
+KNOWLEDGE=Path.home()/".ima/memory/universal_knowledge_graph.json"
+
+
+def load_json(path):
+    try:
+        import json
+        if path.exists():
+            return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def collect_ima_context():
+    context=[]
+
+    files=[
+        EVOLUTION/"evolution_brain.json",
+        EVOLUTION/"kernel_knowledge_bridge.json",
+        EVOLUTION/"runtime_knowledge_state.json",
+        EVOLUTION/"daily_plan.json",
+        KNOWLEDGE
+    ]
+
+    for f in files:
+        data=load_json(f)
+        if data:
+            context.append({
+                "source":f.name,
+                "data":data
+            })
+
+    return context
+
 SYSTEM=HOME/".ima/evolution/system_truth.json"
 EVOLUTION=HOME/".ima/evolution"
 
@@ -51,6 +89,14 @@ def answer(question):
     if any(x in q for x in ["היום","נוצר","עשינו","בוצע"]):
 
         print("מצב היום מתוך שכבות IMA:")
+
+        print()
+        print("שכבות ידע מחוברות:")
+
+        for item in collect_ima_context():
+            print("✓", item["source"])
+
+        print("---")
 
         system=load_json(SYSTEM)
 
