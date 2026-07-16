@@ -1,0 +1,28 @@
+{
+  "time": 1784227071.1737223,
+  "mode": "canonical_only",
+  "authority": "CANONICAL_REGISTRY",
+  "entry_point": "IMA_START_SINGLE_ENTRY.py",
+  "kernel": "kernel/runtime/CANONICAL/python_bridge.py",
+  "handoff": "ima_master_runtime",
+  "allowed_components": [
+    {
+      "file": "kernel/runtime/CANONICAL/python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22"
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "sha256": "b0236a0526e118a204effb8f2f6f5615e3b20a10a03ca5cd5cf46da031519d9e"
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+      "sha256": "11880b190b35074059034fa637592b5676b64be638a0fb6a1d79d510f9d51f1d"
+    },
+    {
+      "file": "IMA_START_SINGLE_ENTRY.py",
+      "sha256": "26d2a63bef2c1565e65e07f9c3d0521ee582a92f60064dda1f64ce70908bb21c"
+    }
+  ],
+  "blocked_fallback": true,
+  "duplicate_registration": false
+}
