@@ -72,6 +72,41 @@ def scan_files():
     return result
 
 
+
+
+def get_missing_connections():
+    missing=[]
+
+    runtime_state=Path.home()/".ima/evolution/runtime_knowledge_state.json"
+
+    if not runtime_state.exists():
+        missing.append("runtime consumption of knowledge")
+
+    try:
+        import subprocess
+
+        import datetime
+
+        today=datetime.date.today().isoformat()
+
+        log=Path.home()/".ima/truth/truth_database.jsonl"
+
+        checkpoint=False
+
+        if log.exists():
+            for line in log.read_text(encoding="utf-8").splitlines():
+                if today in line and "git" in line:
+                    checkpoint=True
+                    break
+
+        if not checkpoint:
+            missing.append("automatic daily git checkpoint")
+
+    except Exception:
+        missing.append("automatic daily git checkpoint")
+
+    return missing
+
 def build():
 
     truth={
@@ -121,13 +156,7 @@ def build():
 
         "verified_components":[],
 
-        "missing_connections":[
-
-            "runtime consumption of knowledge",
-
-            "automatic daily git checkpoint"
-
-        ],
+        "missing_connections": get_missing_connections(),
 
 
         "next_actions":[
