@@ -1,4 +1,25 @@
 
+# IMA_COMPACT_HISTORY
+
+def guardian_history(event, data=None):
+    from pathlib import Path
+    import json
+    from datetime import datetime
+
+    path = Path(".ima/guardian/history.jsonl")
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    record = {
+        "time": datetime.now().isoformat(),
+        "event": event,
+        "data": data or {}
+    }
+
+    with path.open("a", encoding="utf8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+
 
 # IMA_HISTORY_LOGGER
 
@@ -101,6 +122,7 @@ def validate():
 
 def cycle():
 
+    guardian_history("cycle_start")
     log("=== IMA GUARDIAN CONTROLLER START ===")
 
     git_checkpoint(
@@ -129,6 +151,7 @@ def cycle():
         "guardian-after-cycle"
     )
 
+    guardian_history("cycle_end")
     log(
         "=== IMA GUARDIAN CONTROLLER END ==="
     )
