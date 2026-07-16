@@ -1,44 +1,48 @@
 from pathlib import Path
-import sys
+import json,time,subprocess,sys
 
-ROOT=Path(".ima/agi_evolution").resolve()
-sys.path.insert(0,str(ROOT))
+ROOT=Path(".ima/agi_evolution/runtime")
 
-import sys
-from pathlib import Path
+def start_agi_layer():
 
-ROOT=Path(__file__).resolve().parent
-sys.path.insert(0,str(ROOT))
+    result={
+        "time":time.time(),
+        "status":"started",
+        "layers":[]
+    }
 
-from agi_orchestrator import AGI
+    jobs=[
+        "ima_master_runtime.py",
+        "decision_engine.py",
+        "brain_controller.py"
+    ]
 
+    for job in jobs:
+        try:
+            out=subprocess.check_output(
+                [sys.executable,str(ROOT/job)],
+                text=True
+            )
 
-class IMAGIBridge:
+            result["layers"].append({
+                "job":job,
+                "status":"ok",
+                "output":out[-200:]
+            })
 
-    def __init__(self):
-        self.agi=AGI
+        except Exception as e:
+            result["layers"].append({
+                "job":job,
+                "status":"failed",
+                "error":str(e)
+            })
 
+    (ROOT/"agi_bridge_state.json").write_text(
+        json.dumps(result,indent=2,ensure_ascii=False)
+    )
 
-    def process(self,message,context=None):
-
-        result=self.agi.process(
-            message,
-            context or {}
-        )
-
-        return {
-            "source":"IMA_AGI_LAYER",
-            "message":message,
-            "capabilities":result
-        }
-
-
-IMA_AGI=IMAGIBridge()
+    return result
 
 
 if __name__=="__main__":
-    print(
-        IMA_AGI.process(
-            "איך אמא יכולה ללמוד להשתפר?"
-        )
-    )
+    print(start_agi_layer())

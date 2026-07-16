@@ -1,0 +1,983 @@
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/rebuild_index.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/memory_log.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/build_graph.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime/memory_unification_layer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/evolution/auto_backup.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/api/server_WORKING_CHAT.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/api/server_broken_backup.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/api_boot_connector.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/boot_integrity_check.py:def run(cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_app.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_daemon.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_daemon.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_doctor.py:def run_cmd(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_doctor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_global.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_global.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_lock.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_qge_v1.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_repair.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_runtime.py:def runtime_check():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_self_test.py:def run(name, cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_self_test.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_snapshot.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_status.py:def run_check(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_status.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/ima_version.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/system_tree_analyzer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/upgrade_ima_evolution.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/upgrade_ima_evolution.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152816/verify_canonical_root.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/api/server_WORKING_CHAT.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/api/server_broken_backup.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/api_boot_connector.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/boot_integrity_check.py:def run(cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_app.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_daemon.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_daemon.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_doctor.py:def run_cmd(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_doctor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_global.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_global.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_lock.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_qge_v1.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_repair.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_runtime.py:def runtime_check():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_self_test.py:def run(name, cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_self_test.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_snapshot.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_status.py:def run_check(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_status.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/ima_version.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/system_tree_analyzer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/upgrade_ima_evolution.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/upgrade_ima_evolution.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152847/verify_canonical_root.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/api/server_WORKING_CHAT.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/api/server_broken_backup.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/api_boot_connector.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/boot_integrity_check.py:def run(cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_app.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_daemon.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_daemon.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_doctor.py:def run_cmd(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_doctor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_global.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_global.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_lock.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_qge_v1.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_repair.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_runtime.py:def runtime_check():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_self_test.py:def run(name, cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_self_test.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_snapshot.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_status.py:def run_check(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_status.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/ima_version.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/system_tree_analyzer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/upgrade_ima_evolution.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/upgrade_ima_evolution.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/20260713_152909/verify_canonical_root.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/IMA_START_before_auto_fix.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/IMA_START_before_auto_fix.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/IMA_START_before_auto_fix.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/ima_doctor_before_canonical_update.py:def run_cmd(name,cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/backups/ima_doctor_before_canonical_update.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/backup_IMA_START_1783787382/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/backup_IMA_START_1783787382/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/repair_backup/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/repair_backup/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/rebuild_index.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/memory_log.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/build_graph.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/before_change/20260709_220256_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/before_change/20260709_220256_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/before_change/20260709_220256_ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/canonical_guard.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_chronicle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/module_registry.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable_1783793418/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable_1783793418/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable_1783793418/server.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable_1783793418/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/snapshots/stable_1783793418/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/backups/ima_1783804993/evolution/auto_backup.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/api/server_WORKING_CHAT.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/api/server_broken_backup.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/rebuild_index.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/memory_log.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/build_graph.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/before_change/20260709_220256_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/before_change/20260709_220256_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/before_change/20260709_220256_ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/canonical_guard.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_chronicle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/module_registry.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable_1783793418/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable_1783793418/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable_1783793418/server.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable_1783793418/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/snapshots/stable_1783793418/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/evolution/auto_backup.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/backup_IMA_START_1783787382/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/ima_backup_1783804250/.ima/backup_IMA_START_1783787382/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_adaptive_connect.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_answer_router.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_answer_router.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_auto_learning_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_auto_learning_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_awareness_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_awareness_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_capability_layer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_capability_layer.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_closed_loop_connect.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_decision_planner_connect.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_dynamic_mother.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_dynamic_mother.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_external_knowledge_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_external_knowledge_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_fallback_cleanup.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_fallback_cleanup.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_feedback_connect.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_final_pipeline.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_final_pipeline.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_guard.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_identity_wrapper.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_identity_wrapper.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_improvement_planner.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_info_style.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_info_style.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_information_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_information_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_information_engine.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_information_engine.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_intent_layer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_intent_layer.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_intent_upgrade.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_intent_upgrade.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_interaction_id.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_interaction_id.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_context.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_context.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_gaps_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_gaps_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_router.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_knowledge_router.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_memory.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_memory.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_output_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_output_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_response.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_response.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_save_fix.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_language_save_fix.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_learning_engine.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_learning_engine.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_learning_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_learning_orchestrator.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_awareness.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_awareness.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_intelligence.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_intelligence.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_layer.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_layer.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_recall.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_recall.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_translate.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_memory_translate.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_meta_connect.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_mother_priority.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_mother_priority.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_mother_wrapper.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_mother_wrapper.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_pipeline_clean.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_pipeline_clean.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_reflection_api.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_reflection_api.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_remove_duplicate_event.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_remove_duplicate_event.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_router.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_router.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_router_refactor.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_router_refactor.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_self_manager.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_self_reflection_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_self_reflection_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_state_bridge.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_state_bridge.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_state_priority.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_state_priority.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_translator_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_translator_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_wrapper_connect.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_wrapper_connect.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_wrapper_fix2.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_before_wrapper_fix2.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_boot_guard:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_boot_guard:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_watchdog_boot:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_watchdog_boot:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_api_boot:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START.py.before_api_boot:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START_broken_backup_1783810407.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START_broken_backup_1783810407.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_ima_learning_loop_before_decision.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_ima_system_before_cleanup.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_ima_system_before_cleanup.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/backup_self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_backup_final_1783621918.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_backup_final_1783621918.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_routing_fix_1783621863.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_routing_fix_1783621863.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.mother.stable.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.mother.stable.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START_before_boot_report_1783810709.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START_before_boot_report_1783810709.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.stable.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.stable.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_emotion_priority_1783622099.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_emotion_priority_1783622099.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_improvement_memory_1783623522.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_improvement_memory_1783623522.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_system_history_20260709.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_system_history_20260709.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/before_change/20260709_220256_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/before_change/20260709_220256_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/before_change/20260709_220256_ima_kernel.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624509_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624598_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783624794_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625033_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625225_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783625863_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626079_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626154_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626373_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783626985_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_ima.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/connect_orchestrator.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/evolution_controller/1783652820_learning/canonical_guard.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/core.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/runtime/runtime.py.bak:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/adaptive_loop.py:def run_adaptive_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/entry_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/gate_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:def run_evolution_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_evolution_cycle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_learning_loop.py:def run_ima_learning_loop():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/meta_orchestrator.py:def run_meta_analysis():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/safe_scheduler.py:def run_safe_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/self_improvement.py:def run_self_improvement():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/single_gate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/brain_guard.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/ima_chronicle.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/module_registry.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/canonical_snapshot_1783789084/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable_1783793418/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable_1783793418/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable_1783793418/server.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable_1783793418/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/snapshots/stable_1783793418/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/python_bridge.py:def boot_runtime():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/python_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_SUPERVISOR.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_SUPERVISOR.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_WATCHDOG.py:def boot():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_WATCHDOG.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/memory_bus_v2_connected_1784135020.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/memory_bus_v2_connected_1784135020.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/before_memory_read_unification_1784135169.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/before_memory_read_unification_1784135169.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_change_20260716_200314/IMA_START.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_change_20260716_200314/IMA_START.py:def run_auto_maintenance():
+/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/pre_change_20260716_200314/IMA_START.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/product/mobile/mobile_layer.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/companion/ima_companion_core.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_WORKING_CHAT.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_broken_backup.py:        def run_meta_analysis(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175701/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175701/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175727/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175727/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_router_exact_20260714_175856/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_router_exact_20260714_175856/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_router_final_20260714_180417/ima_system.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_router_final_20260714_180417/ima_system.py:def boot_event():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/evaluation/evaluate.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/evaluation/evaluate.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/evaluation/capability_scanner.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/self_improvement/upgrade_planner.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/evolution_cycle.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/agi_orchestrator.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_agi_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/evolution_manager.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/self_evolution_loop.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/evolution_agent.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/autonomous_evolution_controller.py:    def run(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/autonomous_evolution_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/evolution_memory.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/integration_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/health_monitor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/auto_resume.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_supervisor.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_supervisor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/continuity_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/repair_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/goal_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/brain_controller.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/brain_controller.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_master_runtime.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_master_runtime.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/decision_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_lifecycle.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_lifecycle.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/builder_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/validator_engine.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/code_generator.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/autobuilder.py:    def run(self):
+/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/autobuilder.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/ima_mom.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/ima_mom.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/autonomy_runner.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/autonomy_runner.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/learning_feedback_bridge.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/self_review.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/boot_health.py:def boot_check():
+/data/data/com.termux/files/home/ima_kernel/.ima/boot_health.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/self_improvement_runtime.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/self_improvement_runtime.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/global_self_improvement_scanner.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/system_analyzer.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/decision_memory.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/system_context.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/self_check.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/system_supervisor.py:def run_check():
+/data/data/com.termux/files/home/ima_kernel/.ima/system_supervisor.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/ima_guardian_controller.before_metrics.py:def run(cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/ima_guardian_controller.before_metrics.py:def run_autofix():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/ima_guardian_controller.before_metrics.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_watch.py:def run_cycle():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_watch.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_watch.py:def run_once():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_self_repair.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_self_repair.py:        if 'if __name__=="__main__":' in line:
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_self_repair.py:def run():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_self_repair.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_self_repair.py:if __name__=="__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_master.py:def run_controller():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_master.py:if __name__ == "__main__":
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_controller.py:def run(cmd):
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_controller.py:def run_autofix():
+/data/data/com.termux/files/home/ima_kernel/.ima/guardian/snapshots/core/ima_guardian_controller.py:if __name__ == "__main__":
