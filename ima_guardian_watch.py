@@ -1,4 +1,13 @@
 
+def guardian_restore_check():
+    try:
+        from upgrade_guardian_snapshot_restore import guardian_restore_core
+        guardian_restore_core()
+        print("[OK] snapshot restore check")
+    except Exception as e:
+        print("[RESTORE CHECK ERROR]", e)
+
+
 
 def guardian_protect_core():
     import py_compile
