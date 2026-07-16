@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:27:28.134423",
+  "time": "2026-07-16 18:32:07.081208",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2461,6 +2461,22 @@
       "import": "sys"
     },
     {
+      "file": "ima_guardian_diagnosis.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_diagnosis.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_diagnosis.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_diagnosis.py",
+      "import": "datetime"
+    },
+    {
       "file": "repair_validation_final.py",
       "import": "pathlib"
     },
@@ -2757,6 +2773,22 @@
       "import": "pathlib"
     },
     {
+      "file": "ima_guardian_intent.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_intent.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_intent.py",
+      "import": "json"
+    },
+    {
+      "file": "ima_guardian_intent.py",
+      "import": "datetime"
+    },
+    {
       "file": "repair_runtime_safe.py",
       "import": "pathlib"
     },
@@ -2923,6 +2955,18 @@
     {
       "file": "upgrade_watcher_to_master.py",
       "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_future.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_future.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_future.py",
+      "import": "time"
     },
     {
       "file": "repair_source_selection.py",
@@ -3159,6 +3203,14 @@
     {
       "file": "upgrade_guardian_runtime.py",
       "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_intent.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_intent.py",
+      "import": "json"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -9863,6 +9915,10 @@
       "size": 1877,
       "sha256": "56c06e072649bf1cf537ca54c99bc4502ad3bcdfa14a4ba88908b15e314dab36"
     },
+    "ima_guardian_diagnosis.py": {
+      "size": 1713,
+      "sha256": "2b52a7b6ca53bef61e0982934767ecd3a8ec3036954b37c34051c3f3073c2a59"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -9971,6 +10027,10 @@
       "size": 818,
       "sha256": "bdf5aedcf30e528b50c1ba453ce63d72e6e2f7ba6c0a83e102cae997d660d6f0"
     },
+    "ima_guardian_intent.py": {
+      "size": 1082,
+      "sha256": "9ab91c683c487bcb43dbc686720ca0260f348b00614190be67423959fd87cb85"
+    },
     "repair_runtime_safe.py": {
       "size": 856,
       "sha256": "1c65923755b1451a8d982756001e574c0b11e7e709a4ce8d8d5ae4b10caaecb6"
@@ -10034,6 +10094,10 @@
     "upgrade_watcher_to_master.py": {
       "size": 385,
       "sha256": "c5ed64d465d217e9a992e291e5525f56a9c6ab7f10f224d2685b07ca780f02ce"
+    },
+    "ima_guardian_future.py": {
+      "size": 682,
+      "sha256": "59ddbbf9fabfdcd6a4ab6ea02d4d32432edeb71572c56c3de51497ca8869e972"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -10126,6 +10190,10 @@
     "upgrade_guardian_runtime.py": {
       "size": 1063,
       "sha256": "972c9d6bb7bfdcd6f514342257b2ed7577e7c3204395b79356ff8cbf86b66c1e"
+    },
+    "upgrade_guardian_intent.py": {
+      "size": 1715,
+      "sha256": "7a583e0ee6f7cb917c4a40c600c421d3e85056ec20f82039ce68d432006b85db"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -11621,7 +11689,7 @@
     }
   },
   "stats": {
-    "python_files": 602,
+    "python_files": 606,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
