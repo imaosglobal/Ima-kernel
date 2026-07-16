@@ -1,0 +1,29 @@
+{
+  "time": 1784223804.7166207,
+  "tests": {
+    "agi_orchestrator": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/agi_orchestrator.py"
+    },
+    "agi_bridge": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_agi_bridge.py"
+    },
+    "reasoning": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/reasoning/reasoning_engine.py"
+    },
+    "autonomy": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/autonomy/autonomy_engine.py"
+    },
+    "persona": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/persona_engine/persona_engine.py"
+    },
+    "self_improvement": {
+      "status": "loaded",
+      "path": "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/self_improvement/self_improvement_engine.py"
+    }
+  }
+}

@@ -390,5 +390,85 @@
       "feedback_count": 1
     },
     "time": 1784027313.9234166
+  },
+  {
+    "question": "founder_cycle",
+    "intents": [],
+    "primary_intent": null,
+    "strategy": {
+      "question": "founder_cycle",
+      "company_context": {
+        "company": "IMA",
+        "stage": "prototype",
+        "goal": "first customers",
+        "constraints": [
+          "small team",
+          "limited budget"
+        ]
+      },
+      "competitive_state": {
+        "competitors_tracked": 2,
+        "market_lessons": [
+          "להשקיע בארגון מידע",
+          "ללמוד פשטות ממשק",
+          "לשפר איכות שיחה"
+        ]
+      },
+      "customer_learning": {
+        "total_interactions": 1,
+        "lessons": {
+          "המסר הטכני עבד טוב": 1
+        }
+      },
+      "past_outcomes": [
+        {
+          "action": "10 שיחות עם פאונדרים",
+          "result": "3 תגובות חיוביות",
+          "lesson": "המסר האישי עובד יותר ממסר כללי",
+          "time": 1783964355.2063892
+        }
+      ],
+      "recommendations": [
+        "לנתח יתרון תחרותי ולא להתחרות רק ביכולות AI כלליות",
+        "להמשיך ניסויי משתמשים ולבנות החלטות מתוך ראיות",
+        "להתמקד בהוכחת ערך לפני הרחבת יכולות"
+      ],
+      "generated_at": 1784220414.2118046
+    },
+    "memory_insights": {
+      "patterns": {
+        "patterns_detected": 1,
+        "insights": [
+          {
+            "pattern": "מה IMA צריכה לעשות עכשיו כדי למצוא לקוחות ומשקיעים?",
+            "strength": 2,
+            "insight": "נושא חוזר שדורש החלטה או פעולה"
+          }
+        ]
+      },
+      "decision_questions": [
+        {
+          "issue": "מה IMA צריכה לעשות עכשיו כדי למצוא לקוחות ומשקיעים?",
+          "priority": 2,
+          "next_question": "איזה ניסוי או פעולה יכולים לתת תשובה?"
+        }
+      ]
+    },
+    "learning": {
+      "recommendations": [
+        "לנתח יתרון תחרותי ולא להתחרות רק ביכולות AI כלליות",
+        "להמשיך ניסויי משתמשים ולבנות החלטות מתוך ראיות",
+        "להתמקד בהוכחת ערך לפני הרחבת יכולות"
+      ],
+      "learned_lessons": [
+        {
+          "from_action": "20 שיחות עם פאונדרים",
+          "lesson": "המסר האישי עובד יותר",
+          "result": "3 משתמשים ניסו את המוצר"
+        }
+      ],
+      "feedback_count": 1
+    },
+    "time": 1784220414.2123234
   }
 ]

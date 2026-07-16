@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "name": "IMA Evolution Capability Graph",
+    "version": "1.0",
+    "purpose": "self evolving capability map"
+  },
+
+  "capabilities": {
+
+    "cognition": {
+      "status": "active",
+      "score": 20,
+      "depends_on": [
+        "reasoning",
+        "memory",
+        "world_model"
+      ],
+      "components": [
+        "ima_master_runtime.py",
+        "ima_brain",
+        "meta_orchestrator"
+      ],
+      "next": [
+        "causal_reasoning",
+        "planning",
+        "simulation"
+      ]
+    },
+
+    "world_model": {
+      "status": "building",
+      "score": 5,
+      "depends_on": [
+        "memory",
+        "knowledge",
+        "connectors"
+      ],
+      "components": [
+        "WORLD_MODEL_SPEC.json",
+        "entity_registry.json",
+        "concept_graph.json"
+      ],
+      "next": [
+        "entity_learning",
+        "concept_expansion",
+        "relationship_engine"
+      ]
+    },
+
+    "reasoning": {
+      "status": "missing",
+      "score": 0,
+      "goal": "understand cause and effect",
+      "next": [
+        "logic_engine",
+        "hypothesis_engine",
+        "planning_engine"
+      ]
+    },
+
+    "autonomy": {
+      "status": "missing",
+      "score": 0,
+      "goal": "act toward goals",
+      "next": [
+        "goal_manager",
+        "task_executor",
+        "feedback_loop"
+      ]
+    },
+
+    "business_intelligence": {
+      "status": "missing",
+      "score": 0,
+      "domains": [
+        "marketing",
+        "sales",
+        "branding",
+        "CRM",
+        "service",
+        "competition"
+      ],
+      "next": [
+        "market_engine",
+        "customer_model",
+        "sales_agent"
+      ]
+    },
+
+    "finance": {
+      "status": "missing",
+      "score": 0,
+      "domains": [
+        "economics",
+        "markets",
+        "accounting",
+        "risk"
+      ]
+    },
+
+    "universal_interface": {
+      "status": "partial",
+      "score": 20,
+      "domains": [
+        "APIs",
+        "devices",
+        "software",
+        "cloud",
+        "IoT"
+      ]
+    },
+
+    "persona": {
+      "status": "partial",
+      "score": 60,
+      "goal": "adaptive human relationship layer",
+      "next": [
+        "culture",
+        "emotion",
+        "communication_style"
+      ]
+    },
+
+    "embodiment": {
+      "status": "missing",
+      "score": 0,
+      "domains": [
+        "voice",
+        "vision",
+        "avatar",
+        "mobile",
+        "robotics"
+      ]
+    },
+
+    "self_improvement": {
+      "status": "partial",
+      "score": 20,
+      "depends_on": [
+        "evaluation",
+        "governance",
+        "learning"
+      ],
+      "next": [
+        "capability_discovery",
+        "architecture_review",
+        "safe_upgrade"
+      ]
+    }
+  }
+}

@@ -1,8 +1,7 @@
 {
- "state":"CANONICAL_LOCKED",
- "runtime":".ima/runtime/runtime.py",
- "brain":"learning/meta_orchestrator.py",
- "architecture":".ima/governance/canonical_architecture.json",
- "legacy_node_runtime":"kernel/_legacy_node_runtime",
- "timestamp":"2026-07-11T18:58:14+03:00"
+  "components": {
+    "IMA_START.py": "59efafc4549285d5a4a2608bfcc069ad9285a90c3cd554687d9e8b751bf19f5e",
+    "ima_master_runtime.py": "64aeed4603ffad0c4b4090657bc6d1f5981fe8f9b4cf21ac800e3449cb6b0ba8",
+    "conversation_layer.py": "f7bc31ccb162943eec18aa5bee5c2e9dcc3ddfbee916ed99027b93b923dab668"
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "capability": "autonomy",
+  "goal": "goal creation task execution feedback",
+  "created": 1784224897.3378766,
+  "status": "proposal",
+  "files_to_create": [
+    "autonomy/autonomy_engine.py"
+  ],
+  "requires_test": true
+}
