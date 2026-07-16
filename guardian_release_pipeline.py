@@ -58,10 +58,19 @@ def final_tag():
 
 def main():
     print("=== IMA GUARDED RELEASE PIPELINE ===")
+
     tag_base()
+
     verify()
-    commit()
+
+    changed = commit()
+
+    if not changed:
+        print("[STOP] no release created")
+        return
+
     final_tag()
+
     print("[DONE]")
 
 if __name__=="__main__":
