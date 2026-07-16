@@ -75,3 +75,7 @@ __pycache__/
 .ima/conversation_memory.json
 .ima/memory_log.jsonl
 *.before_reasoning
+
+.ima/backups/
+.ima/archive_final/
+*.pyc

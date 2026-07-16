@@ -1,19 +1,13 @@
-import time
-from learning.sources.html_extractor import extract_text
+from pathlib import Path
+import py_compile
 
-class SourceRegistry:
-    def __init__(self):
-        self.sources=[]
+p=Path("learning/source_registry.py")
 
-    def register(self, name, handler, priority=0):
-        self.sources.append({
-            "name":name,
-            "handler":handler,
-            "priority":priority,
-            "enabled":True
-        })
+text=p.read_text(encoding="utf8")
 
-    def collect(self, question):
+start=text.index("    def collect(self, question):")
+
+new_method='''    def collect(self, question):
         results=[]
 
         for source in sorted(
@@ -61,3 +55,15 @@ class SourceRegistry:
                 print("[SOURCE ERROR]",source.get("name"),e)
 
         return results
+'''
+
+text=text[:start]+new_method
+
+p.write_text(text,encoding="utf8")
+
+py_compile.compile(
+    "learning/source_registry.py",
+    doraise=True
+)
+
+print("[OK] Knowledge Gate installed")

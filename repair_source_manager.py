@@ -1,8 +1,12 @@
+from pathlib import Path
+import py_compile
 
+p = Path("learning/source_manager.py")
+
+p.write_text("""
 from learning.source_registry import SourceRegistry
 from learning.sources.auto_loader import load_sources
 from learning.knowledge_core.source_router import choose_sources
-from learning.knowledge_core.source_cleaner import clean_source
 from learning.sources.external_registry import register_external
 
 
@@ -32,9 +36,7 @@ def collect(question):
         )
 
         if not allowed or name in allowed:
-            clean = clean_source(item)
-            if clean:
-                results.append(clean)
+            results.append(item)
 
     return results
 
@@ -42,3 +44,12 @@ def collect(question):
 def source_status():
 
     return ACTIVE_SOURCES
+""", encoding="utf8")
+
+
+py_compile.compile(
+    str(p),
+    doraise=True
+)
+
+print("[OK] source_manager rebuilt")

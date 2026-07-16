@@ -10,6 +10,18 @@ try:
 except Exception:
     autonomy_context=None
 from learning.knowledge_answer_builder import build_answer
+
+# IMA cognitive layers
+try:
+    from truth_engine import evaluate_truth
+except Exception:
+    evaluate_truth=None
+
+try:
+    from ima_question_engine import generate_question
+except Exception:
+    generate_question=None
+
 from learning.knowledge_expansion_engine import expand_knowledge
 from learning.knowledge_graph_retrieval import search_concept
 from learning.learning_loop import learn_from_event
@@ -207,7 +219,6 @@ class IMAMaster:
             else:
 
                 brain_answer=None
-
                 try:
                     knowledge_nodes = search_concept(message)
 
@@ -222,6 +233,8 @@ class IMAMaster:
                             },
                             message
                         )
+                    else:
+                        brain_answer=None
 
                 except Exception:
                     brain_answer=None

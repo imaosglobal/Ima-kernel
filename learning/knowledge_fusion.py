@@ -13,57 +13,55 @@ def weighted_score(source):
 
 
 def fuse_sources(question, sources):
-
     if not sources:
         return None
 
     ranked=[]
 
     for s in sources:
-
-        s["weighted_score"]=weighted_score(s)
-
         content=s.get("content","").strip()
 
-        if len(content)<20:
+        if "<html" in content.lower() or "<link" in content.lower() or "<meta" in content.lower():
+            content=extract_text(content)
+
+        bad=[
+            "apple-touch-icon",
+            "viewport",
+            "charset",
+            "stylesheet",
+            "<link"
+        ]
+
+        if any(x in content.lower() for x in bad):
+            continue
+
+        if len(content)<50:
             continue
 
         score=s.get("confidence",0)
 
         source=s.get("source","")
 
-        if source=="Wikipedia":
-            score+=1.0
+        if source in ["Nature","NASA","PubMed","arXiv","MIT"]:
+            score+=2
 
-        elif source=="DuckDuckGo":
-            score+=0.7
-
-        elif source=="IMA Memory":
+        if len(content)>300:
             score+=0.5
 
-        if len(content)>500:
-            score+=0.2
-
-        ranked.append(
-            {
-                "content":content,
-                "source":source,
-                "url":s.get("url",""),
-                "confidence":score,
-                "retrieved_at":time.time()
-            }
-        )
-
+        ranked.append({
+            "content":content,
+            "source":source,
+            "url":s.get("url",""),
+            "confidence":score
+        })
 
     if not ranked:
         return None
-
 
     ranked.sort(
         key=lambda x:x["confidence"],
         reverse=True
     )
-
 
     return {
         "answer":ranked[0]["content"],

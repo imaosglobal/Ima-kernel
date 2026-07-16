@@ -1,0 +1,97 @@
+{
+  "ima_master_runtime.py": [
+    "time",
+    "identity_context",
+    "conversation_layer",
+    "ima_brain",
+    "learning.knowledge_answer_builder",
+    "learning.knowledge_expansion_engine",
+    "learning.knowledge_graph_retrieval",
+    "learning.learning_loop",
+    "ima_mom",
+    "sys",
+    "autonomy_context",
+    "founder.executive_ai.integration.background_bridge",
+    "ima_system",
+    "brain_sync"
+  ],
+  "ima_system.py": [
+    "json",
+    "time",
+    "os",
+    "subprocess",
+    "engines.knowledge_engine",
+    "languages.language_engine",
+    "languages.translator",
+    "learning.self_reflection",
+    "learning.learning_analyzer",
+    "learning.ima_awareness",
+    "learning.auto_learning",
+    "learning.knowledge_gaps",
+    "learning.ima_learning_loop",
+    "json",
+    "os",
+    "sys",
+    "os",
+    "json",
+    "os",
+    "json",
+    "os",
+    "json",
+    "os",
+    "json",
+    "re",
+    "json",
+    "os",
+    "datetime",
+    "urllib.request",
+    "json",
+    "learning.system_improvement_memory",
+    "importlib.util",
+    "pathlib",
+    "importlib.util",
+    "pathlib",
+    "importlib.util",
+    "openai"
+  ],
+  "answer_builder.py": [
+    "json",
+    "reasoning_layer",
+    "meaning_layer",
+    "pathlib",
+    "datetime",
+    "json",
+    "datetime",
+    "json",
+    "sys"
+  ],
+  "truth_engine.py": [
+    "json",
+    "subprocess",
+    "hashlib",
+    "pathlib",
+    "datetime"
+  ],
+  "decision_engine.py": [
+    "json",
+    "pathlib"
+  ],
+  "evolution_brain.py": [
+    "json",
+    "pathlib",
+    "datetime"
+  ],
+  "ima_question_engine.py": [
+    "pathlib",
+    "json",
+    "sys",
+    "datetime",
+    "pathlib",
+    "json"
+  ],
+  "reasoning_layer.py": [
+    "json",
+    "pathlib",
+    "sys"
+  ]
+}
