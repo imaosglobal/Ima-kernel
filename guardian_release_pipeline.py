@@ -47,6 +47,11 @@ def commit():
     return True
 
 def final_tag():
+    status = subprocess.run(
+        ["git","rev-parse","--verify","HEAD"],
+        capture_output=True
+    )
+
     tag=f"ima-release-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
     run(["git","tag",tag])
     print("[FINAL TAG]",tag)
