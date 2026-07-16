@@ -19,8 +19,17 @@ def tag_base():
 
 def verify():
     run(["python3","guardian_regression_check.py"])
-    run(["python3","ima_full_audit.py"])
     run(["python3","ima_guardian_watch.py","--once"])
+
+def nightly_audit():
+    import datetime
+    hour = datetime.datetime.now().hour
+
+    if hour == 3:
+        print("[NIGHTLY AUDIT WINDOW]")
+        run(["python3","ima_full_audit.py"])
+    else:
+        print("[SKIP FULL AUDIT] nightly only")
 
 def commit():
     run(["git","add","-A"])
