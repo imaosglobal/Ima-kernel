@@ -1,0 +1,18 @@
+{
+  "active_paths": [
+    "learning",
+    "ima",
+    "api",
+    "runtime"
+  ],
+  "protected_paths": [
+    ".ima/backups",
+    ".ima/archive",
+    "archive",
+    "snapshots"
+  ],
+  "auto_fix": true,
+  "auto_commit": true,
+  "rollback_on_failure": true,
+  "max_history_lines": 2000
+}
