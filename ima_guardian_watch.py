@@ -63,7 +63,15 @@ def watch():
 
 
 if __name__ == "__main__":
-    watch()
+    if "--status" in sys.argv:
+        guardian_status()
+    elif "--once" in sys.argv:
+        run_cycle()
+    elif "--daemon" in sys.argv:
+        _original_watch()
+    else:
+        print("IMA Guardian Watch")
+        print("use: --once | --daemon | --status")
 
 
 # --- IMA Guardian modes ---
@@ -90,7 +98,7 @@ def watch_mode():
         return
 
     if "--once" in sys.argv:
-        run_once()
+        run_cycle()
         return
 
     _original_watch()
