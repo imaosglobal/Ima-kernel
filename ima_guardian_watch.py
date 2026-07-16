@@ -35,7 +35,7 @@ def run_cycle():
     print("\n=== GUARDIAN AUTO CYCLE ===")
 
     subprocess.run(
-        ["python3", "ima_guardian_controller.py"]
+        ["python3", "ima_guardian_master.py"]
     )
 
 
@@ -79,14 +79,14 @@ if __name__ == "__main__":
 def guardian_status():
     print("=== IMA GUARDIAN STATUS ===")
     print("watcher:", Path("ima_guardian_watch.py").exists())
-    print("controller:", Path("ima_guardian_controller.py").exists())
+    print("controller:", Path("ima_guardian_master.py").exists())
     print("audit:", Path("IMA_AUDIT_REPORT.json").exists())
 
 
 def run_once():
     import subprocess
     subprocess.run(
-        ["python3", "ima_guardian_controller.py"]
+        ["python3", "ima_guardian_master.py"]
     )
 
 
