@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:59:49.780506",
+  "time": "2026-07-16 19:03:27.819326",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2526,6 +2526,10 @@
     },
     {
       "file": "upgrade_guardian_fast_repair.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_string_repair.py",
       "import": "pathlib"
     },
     {
@@ -10195,6 +10199,10 @@
       "size": 845,
       "sha256": "b7f5a0de54311a2011a053848f2caa006caa54e0e60c3c2828dde88a2316db42"
     },
+    "upgrade_guardian_string_repair.py": {
+      "size": 1345,
+      "sha256": "bbe84e2d86549c9d48d127249749520a204c41be52698634dda088057177d92e"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -10308,8 +10316,8 @@
       "sha256": "9ab91c683c487bcb43dbc686720ca0260f348b00614190be67423959fd87cb85"
     },
     "ima_guardian_self_repair.py": {
-      "size": 1868,
-      "sha256": "44d792176b6cd358abff33dd68545e0a5bb3fcd40c898fc5c57cef0b0d0bffa7"
+      "size": 2855,
+      "sha256": "8f8abb710d302d726f0a0ba1853a6d85b76ad839c4265e837f0a5446f341cdb0"
     },
     "upgrade_core_repair.py": {
       "size": 315,
@@ -12017,7 +12025,7 @@
     }
   },
   "stats": {
-    "python_files": 620,
+    "python_files": 621,
     "syntax_errors": 2,
     "duplicate_groups": 32
   }
