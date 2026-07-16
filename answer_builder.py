@@ -81,6 +81,91 @@ def summarize_today():
 
     return final
 
+
+def search_knowledge(topic):
+    import json
+
+    path=HOME/".ima/memory/universal_knowledge_graph.json"
+
+    if not path.exists():
+        return []
+
+    try:
+        data=json.loads(path.read_text(encoding="utf-8"))
+        results=[]
+
+        blob=json.dumps(data,ensure_ascii=False)
+
+        words=[
+            w for w in topic.lower().split()
+            if w not in [
+                "מה","אתה","יודע","על","של","לי","תן","ספר","אודות"
+            ]
+        ]
+
+        if any(w in blob.lower() for w in words):
+            results.append("נמצא ידע בגרף: "+topic)
+
+            for domain in data.get("domains",[]):
+                if any(w in str(domain).lower() for w in words):
+                    results.append("תחום: "+str(domain))
+
+            for concept in data.get("concepts",[]):
+                if any(w in str(concept).lower() for w in words):
+                    results.append("מושג: "+str(concept))
+
+            for principle,info in data.get("principles",{}).items():
+                if any(w in principle.lower() for w in words):
+                    results.append("עיקרון: "+info.get("statement",""))
+
+            # semantic relations
+            for relation,value in data.get("relations",{}).items():
+                relation_text=str(relation).lower()
+
+                if any(w in relation_text for w in words):
+                    if isinstance(value,dict):
+                        meaning=value.get("type","")
+                        confidence=value.get("confidence","")
+                        results.append(
+                            "קשר: "+relation.replace("->"," ↔ ")
+                            +" | משמעות: "+meaning
+                            +" | אמינות: "+str(confidence)
+                        )
+                    else:
+                        results.append(
+                            "קשר: "+relation.replace("->"," ↔ ")
+                            +" | "+str(value)
+                        )
+
+            # expand domain meaning
+            for domain,items in data.get("domains",{}).items():
+                if any(w in domain.lower() for w in words):
+                    results.append("תחום: "+domain)
+
+                    for concept in items:
+                        results.append("מושג קשור: "+concept)
+
+                    for relation,value in data.get("relations",{}).items():
+                        if domain in relation:
+                            if isinstance(value,dict):
+                                results.append(
+                                    "הרחבה: "
+                                    + relation.replace("->"," ↔ ")
+                                    + " | משמעות: "
+                                    + str(value.get("type",""))
+                                )
+                            else:
+                                results.append(
+                                    "הרחבה: "
+                                    + relation.replace("->"," ↔ ")
+                                    + " | "
+                                    + str(value)
+                                )
+
+        return results
+
+    except:
+        return []
 def build_answer(question):
 
     truth=load(HOME/".ima/evolution/system_truth.json")
@@ -135,8 +220,24 @@ def build_answer(question):
             print("-",x.get("goal"))
 
     else:
-        print("נמצאו נתוני מערכת:")
-        print(json.dumps(truth,ensure_ascii=False,indent=2))
+        topic=question.strip()
+
+        knowledge=search_knowledge(topic)
+
+        if knowledge:
+            print("ידע שנמצא:")
+
+            seen=set()
+
+            for k in knowledge:
+                clean=k.replace(" -> ", " → ")
+
+                if clean not in seen:
+                    seen.add(clean)
+                    print("•",clean)
+        else:
+            print("נמצאו נתוני מערכת:")
+            print(json.dumps(truth,ensure_ascii=False,indent=2))
 
 
 if __name__=="__main__":
