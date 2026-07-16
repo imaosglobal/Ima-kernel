@@ -1,2 +1,619 @@
 {"time": "2026-07-16 18:04:12.991425", "event": "cycle_start", "data": {}}
 {"time": "2026-07-16 18:05:10.605964", "event": "cycle_end", "data": {}}
+{"time": "2026-07-16 18:05:32 +0300", "event": "git_history_import", "commit": "7caf9c8c17c8cfd943fab3691a9748711dadd3af", "message": "connect guardian compact history logger"}
+{"time": "2026-07-16 18:05:10 +0300", "event": "git_history_import", "commit": "eb78da0ae3fcc267f63a9c255f9ec0739d90ed5b", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 18:04:13 +0300", "event": "git_history_import", "commit": "6c5181a1df22e776805edbb7bf3109f9e9675d8b", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 18:02:41 +0300", "event": "git_history_import", "commit": "f54362fd282425c6e4ddaeb4f8a15c0c0df7588c", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 18:01:47 +0300", "event": "git_history_import", "commit": "37ff988f8ee123718101af09485ec5d98b7841ad", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 18:00:11 +0300", "event": "git_history_import", "commit": "f11633c3d5315d99f410f8cd56cdd09c54568fb9", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 17:59:14 +0300", "event": "git_history_import", "commit": "e7e5aafd599252f10d7fefe3d1142b7d77b1e98c", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 17:57:02 +0300", "event": "git_history_import", "commit": "482f90714f1dd5e0a972fbced1eafa6cf50279e1", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 17:56:07 +0300", "event": "git_history_import", "commit": "4438877964c939b0eee55236e84bc84c96178ad4", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 17:54:06 +0300", "event": "git_history_import", "commit": "5b4ad7324262c4f677ef129a269ac20cf6df63c0", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 17:53:09 +0300", "event": "git_history_import", "commit": "243ff55e8b8155d74d05f5b43151793e1469504d", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 17:50:58 +0300", "event": "git_history_import", "commit": "a7bfb27488c2fab9804e4da1945915c6b7f35595", "message": "guardian-after-cycle"}
+{"time": "2026-07-16 17:50:00 +0300", "event": "git_history_import", "commit": "c5ede4037dcb7c99ffde101f802539d71706a257", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 17:44:19 +0300", "event": "git_history_import", "commit": "8dda8726eb83812bdcc12a5694e75df2de8a30bc", "message": "guardian-before-cycle"}
+{"time": "2026-07-16 17:42:35 +0300", "event": "git_history_import", "commit": "4365d897e73f104276c944facff9713feb619397", "message": "guardian-after-autofix"}
+{"time": "2026-07-16 17:42:35 +0300", "event": "git_history_import", "commit": "af6ed3d3641d31d1feabb950ab20db8a2d68262d", "message": "guardian-before-autofix"}
+{"time": "2026-07-16 17:41:19 +0300", "event": "git_history_import", "commit": "890daee7c2fa88e675da237f25a52140c8224188", "message": "guardian-before-autofix"}
+{"time": "2026-07-16 17:40:23 +0300", "event": "git_history_import", "commit": "2e9150c5b0b76e66cb5f0063ee60e3b2764dacdf", "message": "IMA guardian initial checkpoint"}
+{"time": "2026-07-16 14:07:29 +0300", "event": "git_history_import", "commit": "fdf604de31e8c44386559d12f1b68de8d822cd71", "message": "Ignore backup files"}
+{"time": "2026-07-16 14:04:57 +0300", "event": "git_history_import", "commit": "840553f04c36677276b9eb14cfb8d79f72e99a81", "message": "add reasoning layer"}
+{"time": "2026-07-16 14:04:34 +0300", "event": "git_history_import", "commit": "6ffd02096db33b58308126eb942f66eabb59f748", "message": "add human meaning interpretation layer"}
+{"time": "2026-07-16 06:55:49 +0300", "event": "git_history_import", "commit": "150a514a1d102c954d1cbaa0fe3e13ed3be6acfc", "message": "improve semantic knowledge graph responses"}
+{"time": "2026-07-16 06:40:50 +0300", "event": "git_history_import", "commit": "79c2762349d7f3056fdde5d7679f51265f03520d", "message": "connect truth layer question engine and runtime verification"}
+{"time": "2026-07-16 06:40:10 +0300", "event": "git_history_import", "commit": "aa8c8536cc84ffbc36e36c11f0828dde9dcd3f3d", "message": "add truth detection upgrade tool"}
+{"time": "2026-07-16 06:39:29 +0300", "event": "git_history_import", "commit": "b30c12cdba74cd3cff4fb261853d0b2510b431fc", "message": "connect dynamic daily summary and semantic dedup"}
+{"time": "2026-07-16 06:21:06 +0300", "event": "git_history_import", "commit": "5546e7844b688925f2b5a48b75899f938a920b0d", "message": "IMA daily checkpoint 2026-07-16T06:21:06.180573"}
+{"time": "2026-07-16 06:11:10 +0300", "event": "git_history_import", "commit": "e7e58322a76a86e78869e168b655b94142bce901", "message": "IMA truth layer and evolution foundation"}
+{"time": "2026-07-14 14:14:58 +0300", "event": "git_history_import", "commit": "11e88927988eb1adf97c33cbe1489b4e97bad334", "message": "Create IMA unified system snapshot after fusion product connection"}
+{"time": "2026-07-14 14:02:30 +0300", "event": "git_history_import", "commit": "52f1596595e31f727f3605830534f286b0e500c8", "message": "Add IMA safe change workflow tool"}
+{"time": "2026-07-14 14:00:50 +0300", "event": "git_history_import", "commit": "d23b3bdb328c3e71c579ba9ec4ab76ee31338157", "message": "Add IMA development policy lock"}
+{"time": "2026-07-14 13:59:29 +0300", "event": "git_history_import", "commit": "d92be43325cdbda440123bb0680f502a92f0a8ce", "message": "Seal IMA learning state after fusion verification"}
+{"time": "2026-07-14 13:59:02 +0300", "event": "git_history_import", "commit": "6c47ae77f13e60a87fdb9f556127f73032bfbf36", "message": "Add final runtime snapshot"}
+{"time": "2026-07-14 13:56:17 +0300", "event": "git_history_import", "commit": "15ca01d3744a22016427d8b893ebf8718922426a", "message": "IMA stable fusion runtime with learning guard"}
+{"time": "2026-07-13 20:47:34 +0300", "event": "git_history_import", "commit": "1daf82daed3c4525624721c9d9b6d72ce6f98330", "message": "Connect IMA master runtime with founder intelligence background layer"}
+{"time": "2026-07-13 20:42:48 +0300", "event": "git_history_import", "commit": "22ce00235541555021717f69b418f273ea298f3e", "message": "Add IMA competitive strategy engine and founder advisor integration"}
+{"time": "2026-07-13 20:20:27 +0300", "event": "git_history_import", "commit": "21bdc73cafd5af654c549ad6dea783048a6774c5", "message": "Add investor package builder"}
+{"time": "2026-07-13 20:19:46 +0300", "event": "git_history_import", "commit": "12c73997ef90acad38f4c36a19756d0600ad761d", "message": "Create IMA investor readiness v2 package"}
+{"time": "2026-07-13 20:18:30 +0300", "event": "git_history_import", "commit": "8eb2854a7bd5e67dd8a37bae967b7e9427cce4d5", "message": "IMA investor readiness checkpoint"}
+{"time": "2026-07-13 20:17:10 +0300", "event": "git_history_import", "commit": "d457ce61320b1f6e74a41dec153157de993843ec", "message": "Upgrade IMA investor package with market strategy and investment thesis"}
+{"time": "2026-07-13 20:16:16 +0300", "event": "git_history_import", "commit": "28156cdf5a2da6ea98adc3cef60b455f95aa2cb2", "message": "Create IMA external investor package foundation"}
+{"time": "2026-07-13 20:15:12 +0300", "event": "git_history_import", "commit": "0f57f6d42e461e0dd987049481133508a40e4662", "message": "Create IMA investor demonstration package"}
+{"time": "2026-07-13 20:11:03 +0300", "event": "git_history_import", "commit": "dc042d8d10def8dd716a8ae92df5c6896552d834", "message": "Add IMA governance ownership and demo framework"}
+{"time": "2026-07-13 20:08:54 +0300", "event": "git_history_import", "commit": "f53b61b6805b5ffbd33802e58e17b77a0eaaa0cd", "message": "IMA product layer verified and investor demo preparation"}
+{"time": "2026-07-13 19:34:24 +0300", "event": "git_history_import", "commit": "00bfa9616aa5eea72d3cf886ee23ef6578b90161", "message": "Add learning gate and prevent self-learning noise"}
+{"time": "2026-07-13 19:31:20 +0300", "event": "git_history_import", "commit": "85e5fab0e790ca48f622872374de69459f4ca2b9", "message": "Add stable user memory deduplication"}
+{"time": "2026-07-13 19:25:13 +0300", "event": "git_history_import", "commit": "bb63a11856fe1a10dc602c886cf43366ba493dae", "message": "Connect historical reasoning layer to IMA brain"}
+{"time": "2026-07-13 19:22:36 +0300", "event": "git_history_import", "commit": "cafbc97dc4d46ddcbbbc63532e069a98f82b2427", "message": "Update learning state and runtime integration"}
+{"time": "2026-07-13 19:21:13 +0300", "event": "git_history_import", "commit": "598ddda27583e9261da41558f338191257ee4948", "message": "Connect learning evaluator to meta improvement planner"}
+{"time": "2026-07-13 19:16:28 +0300", "event": "git_history_import", "commit": "a35a8bad6e4a7fc27129defb378837ee3bd531f1", "message": "Fix persistent pattern memory implementation"}
+{"time": "2026-07-13 19:16:01 +0300", "event": "git_history_import", "commit": "5ea2ea89e68470ec2fa05efb13ba01cbb09999ab", "message": "Add persistent pattern learning memory layer"}
+{"time": "2026-07-13 19:14:26 +0300", "event": "git_history_import", "commit": "e9e7f79a73a369a2171608570d77eeef0033f2d7", "message": "Add IMA pattern extraction layer"}
+{"time": "2026-07-13 19:07:04 +0300", "event": "git_history_import", "commit": "b91bf3659d8eb6910f6c942d67611b821539d05e", "message": "Connect master runtime to brain and mother layers"}
+{"time": "2026-07-13 19:02:00 +0300", "event": "git_history_import", "commit": "d04c05687597544d5b014e0c595e7ab7a25ac24f", "message": "Add IMA production release state and audit tools"}
+{"time": "2026-07-13 18:41:59 +0300", "event": "git_history_import", "commit": "4162ed4482eba91092938957c43e42d43ba2eff0", "message": "Add real ready endpoint"}
+{"time": "2026-07-13 18:38:17 +0300", "event": "git_history_import", "commit": "065537c5dd7ee026bd43edd71052f85a6dfc1554", "message": "Clean duplicate PORT initialization"}
+{"time": "2026-07-13 18:37:46 +0300", "event": "git_history_import", "commit": "77546278992259b51a5ec1c4653e27a6b1b6f2e5", "message": "Fix PORT declaration before startup log"}
+{"time": "2026-07-13 18:33:26 +0300", "event": "git_history_import", "commit": "362574c183cee51fc80aea2b68cd2b020cb9cf35", "message": "Add HEAD health support for Render"}
+{"time": "2026-07-13 18:33:11 +0300", "event": "git_history_import", "commit": "48a957f684b6337904e2b9a8d40dcfba04ccd597", "message": "Fix API port startup log"}
+{"time": "2026-07-13 18:31:32 +0300", "event": "git_history_import", "commit": "63812def53e345ca6de662114765fb619de66947", "message": "Fix import order for Render runtime"}
+{"time": "2026-07-13 18:30:35 +0300", "event": "git_history_import", "commit": "9b3283c11c120e334df57a6ca8e8d06a0987bf6a", "message": "Move Render python root before imports"}
+{"time": "2026-07-13 18:28:42 +0300", "event": "git_history_import", "commit": "c8dea29d56145991497c027ee31b8a99fc99fc88", "message": "Force Render Docker rebuild"}
+{"time": "2026-07-13 18:27:03 +0300", "event": "git_history_import", "commit": "391492ffce060bc5a1c426f4242af3c3236f5dbf", "message": "Fix Render root import path"}
+{"time": "2026-07-13 18:21:12 +0300", "event": "git_history_import", "commit": "df2450086136557aa33f7f480ee6f1c3e9594744", "message": "Add empty python requirements file"}
+{"time": "2026-07-13 18:21:02 +0300", "event": "git_history_import", "commit": "66416b036f3a7c39559995ffa0d423647bcbb32e", "message": "Fix Docker build when requirements.txt missing"}
+{"time": "2026-07-13 18:15:04 +0300", "event": "git_history_import", "commit": "caf9931eb37710974f426820def277c3ce6520ab", "message": "Add Render production entrypoint logs"}
+{"time": "2026-07-13 18:13:00 +0300", "event": "git_history_import", "commit": "0efa42468dc352255864d754eb806fabe6e02c14", "message": "Add boot diagnostics for Render startup"}
+{"time": "2026-07-13 18:09:37 +0300", "event": "git_history_import", "commit": "69956fcefd8622353de996eb2a6a0705f4c53f00", "message": "Render production synchronization fix"}
+{"time": "2026-07-13 18:07:54 +0300", "event": "git_history_import", "commit": "380626384205a27a15e16e02bdf5aa49244f11d6", "message": "Add Render service configuration"}
+{"time": "2026-07-13 18:04:35 +0300", "event": "git_history_import", "commit": "4e0f84cc58976e44c83523effa4854cc6e01d395", "message": "Fix production entrypoint for Render runtime"}
+{"time": "2026-07-13 17:54:48 +0300", "event": "git_history_import", "commit": "7c132ad6e122d8f9676ab4e88d26356a2fd02750", "message": "Create IMA external release deployment pipeline"}
+{"time": "2026-07-13 17:52:58 +0300", "event": "git_history_import", "commit": "ba68737ce93c85df3e9fd6cedb1a20e84a83ae53", "message": "Create IMA multi cloud deployment provider layer"}
+{"time": "2026-07-13 17:51:41 +0300", "event": "git_history_import", "commit": "8c7643227cff44877cf6482dc534738194ae32d0", "message": "Create IMA production infrastructure preparation layer"}
+{"time": "2026-07-13 17:50:16 +0300", "event": "git_history_import", "commit": "880d0d917468b316ef53f515e22ff5f6fe56f748", "message": "Add IMA full release pipeline verification"}
+{"time": "2026-07-13 17:48:34 +0300", "event": "git_history_import", "commit": "61348590e1da1eed1fd44df3541ef88434a80ae5", "message": "Generate IMA service contract artifacts"}
+{"time": "2026-07-13 17:47:56 +0300", "event": "git_history_import", "commit": "5ce6ede09a848fca5216b1cfb90e0d10edfa384a", "message": "Create IMA production service contract layer"}
+{"time": "2026-07-13 17:47:05 +0300", "event": "git_history_import", "commit": "57147a6411c9c3bcf56d88dbf638595f0e82168e", "message": "Create IMA production environment layer"}
+{"time": "2026-07-13 17:45:15 +0300", "event": "git_history_import", "commit": "c572b5bd01294dab9083d3a194d2982d019dc417", "message": "Create IMA production master release manifest"}
+{"time": "2026-07-13 17:44:11 +0300", "event": "git_history_import", "commit": "d23a95fc826ac91ab69ff365fcce25d175c5f91d", "message": "Create IMA production release archive"}
+{"time": "2026-07-13 17:43:15 +0300", "event": "git_history_import", "commit": "c5ff17307e2909d6363d1d66f454c82cc91ff51a", "message": "Create IMA final launch gate approval"}
+{"time": "2026-07-13 17:42:01 +0300", "event": "git_history_import", "commit": "650c0f883430fa0d661cf1f64ba6186f490a8b15", "message": "Create IMA release distribution bundle"}
+{"time": "2026-07-13 17:41:24 +0300", "event": "git_history_import", "commit": "06248e838f3bb2d96257559afe4b4983c497f469", "message": "Create IMA artifact build pipeline"}
+{"time": "2026-07-13 17:40:56 +0300", "event": "git_history_import", "commit": "6a3d4a5aab844f535f977398891640013e2c30cf", "message": "Create IMA distribution targets layer"}
+{"time": "2026-07-13 17:40:10 +0300", "event": "git_history_import", "commit": "5db28d27c1b3ead699ef7618a2df7e46a6178161", "message": "Create IMA production deployment gateway layer"}
+{"time": "2026-07-13 17:39:28 +0300", "event": "git_history_import", "commit": "7eaeea09c94f7737369af7eb127b849a37482794", "message": "Create IMA release snapshot backup seal"}
+{"time": "2026-07-13 17:38:40 +0300", "event": "git_history_import", "commit": "51e431c7f20b671ddbf04125d0cb17e28c296c60", "message": "Add IMA global release audit"}
+{"time": "2026-07-13 17:37:36 +0300", "event": "git_history_import", "commit": "21159258f73785db19e86c23b28e42907fae894d", "message": "Remove duplicate artifact registry and keep canonical artifact"}
+{"time": "2026-07-13 17:37:09 +0300", "event": "git_history_import", "commit": "685ac85253ddfa925e1e43d8caab16dcc1749f59", "message": "Create IMA production artifact registry"}
+{"time": "2026-07-13 17:36:09 +0300", "event": "git_history_import", "commit": "8cc6da088efbef939308a74ae41413cb9390af23", "message": "Create IMA client deployment layer"}
+{"time": "2026-07-13 17:34:58 +0300", "event": "git_history_import", "commit": "6c68fbe3e0ea134aa8891e2efcebb648da5a9b12", "message": "Verify all IMA client platforms through shared gateway"}
+{"time": "2026-07-13 17:34:15 +0300", "event": "git_history_import", "commit": "e9c2b543f789d01878275c11f3b6b48a623013db", "message": "Create IMA Linux client layer"}
+{"time": "2026-07-13 17:33:46 +0300", "event": "git_history_import", "commit": "fd08d4ee8506c3592451be55257c34310921cccd", "message": "Create IMA iOS client layer"}
+{"time": "2026-07-13 17:33:00 +0300", "event": "git_history_import", "commit": "ecd76cf262cc1a8fbdf7acceeb3654cadc935d6b", "message": "Create IMA android client layer"}
+{"time": "2026-07-13 17:32:32 +0300", "event": "git_history_import", "commit": "1007c1056ca379c566bb52e721d1931e6442e055", "message": "Create IMA mobile client layer"}
+{"time": "2026-07-13 17:32:06 +0300", "event": "git_history_import", "commit": "6fd86b4cbf451308b0bef4eb6cfe4d436d475379", "message": "Create IMA web client layer"}
+{"time": "2026-07-13 17:31:24 +0300", "event": "git_history_import", "commit": "4f0adf46027e281a72763d2717d1382b29ccd65f", "message": "Create universal product client SDK layer"}
+{"time": "2026-07-13 17:28:38 +0300", "event": "git_history_import", "commit": "fc8aa0a550279699e49dcb519f5e4212fef0a313", "message": "Create IMA final release baseline"}
+{"time": "2026-07-13 17:27:50 +0300", "event": "git_history_import", "commit": "d156386171e7bb30c89ceeff9edfef0c794109a1", "message": "Verify IMA production readiness"}
+{"time": "2026-07-13 17:26:36 +0300", "event": "git_history_import", "commit": "b8e0a6a9b019b9ab3ce0c394c76a27d9bd67c8be", "message": "Remove duplicate release package and keep canonical RC package"}
+{"time": "2026-07-13 17:25:41 +0300", "event": "git_history_import", "commit": "67301390f38dab575e684c8d6772cce60bbca426", "message": "Create IMA RC-1.0 release package"}
+{"time": "2026-07-13 17:24:20 +0300", "event": "git_history_import", "commit": "ca143745472291eed6dc440ec1e2f6bcb1a176aa", "message": "Complete IMA RC-1.0 release candidate validation"}
+{"time": "2026-07-13 17:23:41 +0300", "event": "git_history_import", "commit": "1a0cf91d2628f9430c9a8965a1804ada559fcc00", "message": "Verify IMA client build layer"}
+{"time": "2026-07-13 17:22:40 +0300", "event": "git_history_import", "commit": "cfdc4d340c4280282d655e877f71e3d4b32410f6", "message": "Create IMA distribution ready layer"}
+{"time": "2026-07-13 17:21:37 +0300", "event": "git_history_import", "commit": "219336be19bba96b0c722de149c1b04dc2246bac", "message": "Create IMA RC-1.0 integrity seal"}
+{"time": "2026-07-13 17:20:11 +0300", "event": "git_history_import", "commit": "08ea2404fed3375bec8b4c335c9280a0800a8c5c", "message": "Verify canonical core and product layer integration"}
+{"time": "2026-07-13 17:18:44 +0300", "event": "git_history_import", "commit": "f031a185bee04752af0afd2a66e8a47a1709f5e3", "message": "Create IMA RC-1.0 release candidate manifest"}
+{"time": "2026-07-13 17:18:12 +0300", "event": "git_history_import", "commit": "ee6297af43724a11415b86049b7d8b23de0a1b8e", "message": "Finalize full IMA product chain verification"}
+{"time": "2026-07-13 17:15:40 +0300", "event": "git_history_import", "commit": "ea8e7d12d34ef5c7eef7b186f16d00c796db766b", "message": "Create IMA version and upgrade management layer"}
+{"time": "2026-07-13 17:14:52 +0300", "event": "git_history_import", "commit": "3505d86c96366c89cfd0c4ef31840c81f23cb4f6", "message": "Create IMA deployment package layer"}
+{"time": "2026-07-13 17:14:06 +0300", "event": "git_history_import", "commit": "b2bd114425a2270d4be12a9cefa2acce9274baaf", "message": "Create unified IMA product launcher"}
+{"time": "2026-07-13 17:13:17 +0300", "event": "git_history_import", "commit": "430baa29ad69fd92e7f2aa2aa186061ded8d9b5d", "message": "Create IMA product health and deployment control layer"}
+{"time": "2026-07-13 17:12:20 +0300", "event": "git_history_import", "commit": "4df84788ba066259c1ebcfa70a5849a0eb7d4c88", "message": "Create universal device and update management layer"}
+{"time": "2026-07-13 17:11:08 +0300", "event": "git_history_import", "commit": "4991ab8694f0f0f6a9759cc3c4df98beaf068846", "message": "Create universal client layer for web android and mobile"}
+{"time": "2026-07-13 17:10:01 +0300", "event": "git_history_import", "commit": "0e0f5bcf079140e5c27bce9b13a1db03b5c5ec39", "message": "Ignore runtime memory files from source control"}
+{"time": "2026-07-13 17:09:13 +0300", "event": "git_history_import", "commit": "f530e9bd4f8f554d3591fd5619d21dc440b18d92", "message": "Archive product gateway integration tools and API snapshot"}
+{"time": "2026-07-13 17:08:35 +0300", "event": "git_history_import", "commit": "6d37b40d1f658ea3ae593bb86f3084b5882195d0", "message": "Connect API through unified product gateway"}
+{"time": "2026-07-13 17:04:13 +0300", "event": "git_history_import", "commit": "cc1cd87640477e661ffbd33a9991216915c2ca8a", "message": "Create unified IMA product gateway and client architecture"}
+{"time": "2026-07-13 17:00:41 +0300", "event": "git_history_import", "commit": "e3a12a51bb9a71bb8389a28d55119c353c28b161", "message": "Organize product audit tools and add product manifest"}
+{"time": "2026-07-13 16:58:24 +0300", "event": "git_history_import", "commit": "1cb6e26749869f069fef4343ccf98b177a628de7", "message": "Initialize IMA product layer structure"}
+{"time": "2026-07-13 16:53:44 +0300", "event": "git_history_import", "commit": "56b2a90c29e2a2d508bca8811599284a9fb21b88", "message": "Mark IMA core frozen and product layer mode"}
+{"time": "2026-07-13 16:53:09 +0300", "event": "git_history_import", "commit": "a6bf29e95cd61fe62c65a8b8a402c7987a47687b", "message": "Add canonical runtime hash lock manifest"}
+{"time": "2026-07-13 16:51:50 +0300", "event": "git_history_import", "commit": "c636a923cf9948db4f684795d8874fc32e734e65", "message": "Lock IMA canonical runtime files and hashes"}
+{"time": "2026-07-13 16:48:27 +0300", "event": "git_history_import", "commit": "4befc53c19e46416efd2387554f6d3036c225905", "message": "IMA canonical runtime verified after cold start and memory persistence tests"}
+{"time": "2026-07-13 16:44:27 +0300", "event": "git_history_import", "commit": "c8e710236b75e64f5793a0fc7366783aba53e39b", "message": "Lock canonical release map"}
+{"time": "2026-07-13 16:41:51 +0300", "event": "git_history_import", "commit": "50ceb25c8744b6c87c192b4ae7de56a1849107e4", "message": "IMA stable canonical runtime with memory and API verification"}
+{"time": "2026-07-13 16:26:55 +0300", "event": "git_history_import", "commit": "48ff2c581f6e93ff145da83963e28a832823585b", "message": "snapshot memory state after policy persistence verification"}
+{"time": "2026-07-13 16:19:43 +0300", "event": "git_history_import", "commit": "41bb7189d3147da2aa0220f30cee0762d66ddc05", "message": "connect conversation layer to Memory Policy primary hook"}
+{"time": "2026-07-13 16:12:31 +0300", "event": "git_history_import", "commit": "2b08784dcd2caff68d79a7448751a6b6484dcb81", "message": "add Memory Policy adapter integration layer"}
+{"time": "2026-07-13 16:10:53 +0300", "event": "git_history_import", "commit": "e2dc707d27a3461f126d9533719f89428dc621ef", "message": "add Memory Policy v1 contract verification test"}
+{"time": "2026-07-13 16:10:01 +0300", "event": "git_history_import", "commit": "63ed60471036d9035d937ffc486b5aadd0e28176", "message": "add Memory Policy layer v1"}
+{"time": "2026-07-13 16:08:10 +0300", "event": "git_history_import", "commit": "be019a0322c904ce51c7e0c17b1cabbb10130fc9", "message": "add Memory Bus v2 contract verification test"}
+{"time": "2026-07-13 16:04:35 +0300", "event": "git_history_import", "commit": "b1d000bd325d6bd04ebcc6c4ffc74a77325808ac", "message": "connect conversation layer to Memory Bus v2 adapter"}
+{"time": "2026-07-13 16:01:40 +0300", "event": "git_history_import", "commit": "3fee4a56e6e145c04e1d9ce9486e3a7fadbcf4b6", "message": "add Memory Bus v2 adapter layer"}
+{"time": "2026-07-13 16:00:07 +0300", "event": "git_history_import", "commit": "1735ee4b8aa39b429282ec6527ef8d7acfd27f44", "message": "add isolated Memory Bus v2 prototype"}
+{"time": "2026-07-13 15:50:24 +0300", "event": "git_history_import", "commit": "eac62a8b779726ae4fdb38810a97af05913eeb41", "message": "IMA universal adaptive memory pipeline verified"}
+{"time": "2026-07-13 15:40:50 +0300", "event": "git_history_import", "commit": "5d66ee6fa012467b2c3c3c728f35922ee9b583fd", "message": "ignore runtime learned memory"}
+{"time": "2026-07-13 15:39:47 +0300", "event": "git_history_import", "commit": "9d5dfd51d5f8323c3f97a976c6be04c640153525", "message": "add persistent adaptive memory learning layer"}
+{"time": "2026-07-13 15:29:36 +0300", "event": "git_history_import", "commit": "8f88b8672d90bf4bf673f017b5f56bca2a692baa", "message": "IMA stable runtime repair 20260713_152936"}
+{"time": "2026-07-13 15:22:52 +0300", "event": "git_history_import", "commit": "45b2af2d8799d840abf04e0172809e8190bf6598", "message": "IMA Canonical Release"}
+{"time": "2026-07-11 19:21:05 +0300", "event": "git_history_import", "commit": "548b3789381162766dbafcc2423a005bbc563bb5", "message": "Add IMA product architecture v1 audit lock"}
+{"time": "2026-07-11 19:20:00 +0300", "event": "git_history_import", "commit": "43b2e3321538d719ce44077104c924d37c87c09d", "message": "Lock IMA product release map canonical v1"}
+{"time": "2026-07-11 19:12:38 +0300", "event": "git_history_import", "commit": "de5f33d073b7290fb37b62d184934fc0359c0a80", "message": "Add IMA Git synchronization lock"}
+{"time": "2026-07-11 19:12:25 +0300", "event": "git_history_import", "commit": "8903f450639ee3eb654e2d710ab60688960e495e", "message": "Sync IMA internal state with Git"}
+{"time": "2026-07-11 19:11:28 +0300", "event": "git_history_import", "commit": "e69792f53b75fa5d47cdfbf17abb8076e821ac2b", "message": "IMA canonical boot verified - FINAL_BOOT_LOCK - single entrypoint"}
+{"time": "2026-07-11 17:42:13 +0300", "event": "git_history_import", "commit": "83fad00e0d9fa9dafb23cce19099aec047485116", "message": "Rename orchestrator connector into canonical module registry"}
+{"time": "2026-07-11 17:40:05 +0300", "event": "git_history_import", "commit": "97bf3f88f96bb21244011a300e6ce9a35f48f981", "message": "Rename connect orchestrator layer to module registry"}
+{"time": "2026-07-11 17:31:39 +0300", "event": "git_history_import", "commit": "b79f3706375830c177f547cecbeed5a087831021", "message": "IMA product layers consolidated into canonical registry"}
+{"time": "2026-07-11 17:30:49 +0300", "event": "git_history_import", "commit": "a7ff0184eaaf6b9b88b4e1dbee79bc0cf13363d2", "message": "IMA companion layers integrated and locked"}
+{"time": "2026-07-11 17:29:46 +0300", "event": "git_history_import", "commit": "4451da79969b475344b3c0a9d283cf466c89f388", "message": "IMA companion layer and master product registry"}
+{"time": "2026-07-11 17:28:18 +0300", "event": "git_history_import", "commit": "fe7e2f5715cdfc3e95d8fc10fdc3899e9830bc88", "message": "IMA canonical architecture locked"}
+{"time": "2026-07-11 17:24:29 +0300", "event": "git_history_import", "commit": "9458f14e6eb19fd449b5dec46e370291eb77263e", "message": "IMA core runtime registry connected"}
+{"time": "2026-07-11 17:11:51 +0300", "event": "git_history_import", "commit": "2201cc43323d58a29a81e00747c19286fd57f9d2", "message": "IMA product architecture gap report"}
+{"time": "2026-07-11 17:07:17 +0300", "event": "git_history_import", "commit": "6f2f63f17fa05f739e2bd1cfe944cd5ed47e0331", "message": "IMA orchestrator runtime registry sync"}
+{"time": "2026-07-11 17:05:09 +0300", "event": "git_history_import", "commit": "d49145e00ec0d7da679903125ea7d5b6c7cb6ca0", "message": "IMA global governance completion and product layer integration"}
+{"time": "2026-07-11 17:03:14 +0300", "event": "git_history_import", "commit": "fc30f732f698a22f4c66f92e9bd51478c7b9f812", "message": "IMA global product architecture sync"}
+{"time": "2026-07-11 17:03:13 +0300", "event": "git_history_import", "commit": "304ae05e3530d4fa0a7e3bcadbb9ff1f49c5d34e", "message": "IMA snapshot before global architecture sync"}
+{"time": "2026-07-11 16:57:03 +0300", "event": "git_history_import", "commit": "1b1b36705e1243ea217e7157b8daa52bb671a117", "message": "IMA plugin registry and loader foundation"}
+{"time": "2026-07-11 16:52:54 +0300", "event": "git_history_import", "commit": "1a7b67a054479981eac22dd05204ef693b931e30", "message": "IMA runtime architecture verification and entry policy"}
+{"time": "2026-07-11 16:51:06 +0300", "event": "git_history_import", "commit": "34f236c0b86d90ff2126cd2a321ace2893df67f3", "message": "IMA architecture governance and development guards"}
+{"time": "2026-07-11 16:49:55 +0300", "event": "git_history_import", "commit": "2325363d0cfb1458949a36888460fbf31e5e7b49", "message": "IMA canonical entry point locked"}
+{"time": "2026-07-11 16:48:34 +0300", "event": "git_history_import", "commit": "bdd23dc5eb96f48ee05c3a1582e6ad9aac70dfc6", "message": "IMA canonical entry redirect verified"}
+{"time": "2026-07-11 16:34:28 +0300", "event": "git_history_import", "commit": "51ae2cb092980ad316d9de39b031871af85de099", "message": "IMA final audit locked platform baseline"}
+{"time": "2026-07-11 16:23:50 +0300", "event": "git_history_import", "commit": "28711fdb1ccb01b6b93d10f4f8c0813ed4bf19bf", "message": "IMA canonical architecture freeze"}
+{"time": "2026-07-11 16:10:58 +0300", "event": "git_history_import", "commit": "29c66d888d8eb170b32cee5bc28fcf18dda07a66", "message": "IMA architecture lock scripts preserved"}
+{"time": "2026-07-11 16:10:13 +0300", "event": "git_history_import", "commit": "696a36507a5022eaa0a435fa49f3ca9c4ab5c163", "message": "IMA canonical architecture runtime brain lock"}
+{"time": "2026-07-11 15:27:38 +0300", "event": "git_history_import", "commit": "bb008a194636e3c4a548630e09e80e33acce2552", "message": "IMA architecture guard locked canonical brain and body"}
+{"time": "2026-07-11 15:26:00 +0300", "event": "git_history_import", "commit": "9364da270d4cf3f1dcf766a17e189dfc1d9a6c7f", "message": "IMA product architecture v1 Python brain JS body locked"}
+{"time": "2026-07-11 15:10:33 +0300", "event": "git_history_import", "commit": "68c6d5053adecb3f8ee7588b45908c9446f204e4", "message": "IMA canonical chronicle single brain enforcement"}
+{"time": "2026-07-11 15:06:06 +0300", "event": "git_history_import", "commit": "fc70c47999dfe0acf126bae62a468e1e497b6155", "message": "IMA canonical architecture finalization"}
+{"time": "2026-07-11 14:49:54 +0300", "event": "git_history_import", "commit": "3da1a64a0a784ac5d8fc171fcfa6c257fb59cb6d", "message": "IMA final product closure verification"}
+{"time": "2026-07-10 07:00:10 +0300", "event": "git_history_import", "commit": "38b5175b1178bbb3201e1ee15409942029eed500", "message": "IMA end to end architecture completion audit"}
+{"time": "2026-07-10 06:49:05 +0300", "event": "git_history_import", "commit": "7e1c013f925493f8ba272fb2954ac4baecd6e12c", "message": "IMA single entry gate locked"}
+{"time": "2026-07-10 06:48:10 +0300", "event": "git_history_import", "commit": "2e139cdc75735a02d340bbbe39296b4e7fb73481", "message": "IMA mission registry locked"}
+{"time": "2026-07-10 06:46:42 +0300", "event": "git_history_import", "commit": "02f1cf943447664ebf4002a052190cf330af7ee5", "message": "IMA architecture guard connected"}
+{"time": "2026-07-10 06:46:13 +0300", "event": "git_history_import", "commit": "5c12e8db0512e7ed43039089c7ea49e1ab64c163", "message": "IMA canonical architecture locked"}
+{"time": "2026-07-10 06:29:17 +0300", "event": "git_history_import", "commit": "9f773bbd57599e4bf2943b209f84fd33b44453fd", "message": "IMA canonical active architecture locked"}
+{"time": "2026-07-10 06:22:18 +0300", "event": "git_history_import", "commit": "8c5cf5b22f1e68435a03c0f2a6a30944774c317f", "message": "IMA end to end canonical verification"}
+{"time": "2026-07-10 06:20:26 +0300", "event": "git_history_import", "commit": "eab9a754d015e0a7626d383ea1820d801b06211d", "message": "IMA service layer canonical connection"}
+{"time": "2026-07-10 06:18:41 +0300", "event": "git_history_import", "commit": "ea15370f2642f678488dafbe5c75d241bd854ce7", "message": "IMA body layer audit and canonical discovery"}
+{"time": "2026-07-10 06:16:48 +0300", "event": "git_history_import", "commit": "e7287939d0581ac46e15a9ce74f99170f3736916", "message": "IMA canonical brain orchestrator alignment"}
+{"time": "2026-07-10 06:09:58 +0300", "event": "git_history_import", "commit": "7c76c9c34424f1a3eace4de7925cd931729ef44f", "message": "IMA canonical brain runtime e2e lock"}
+{"time": "2026-07-10 06:03:55 +0300", "event": "git_history_import", "commit": "74faa1bc487188861bfc67e59da1693b884a0fbb", "message": "IMA canonical architecture locked"}
+{"time": "2026-07-09 22:55:39 +0300", "event": "git_history_import", "commit": "8ad471d632215ade0b4b939f233dc0b827a14159", "message": "IMA single brain orchestrator lock"}
+{"time": "2026-07-09 22:53:50 +0300", "event": "git_history_import", "commit": "cd52e962da2474d1b6c830f3421cb29bc61e63dc", "message": "IMA learning memory before orchestrator runtime integration"}
+{"time": "2026-07-09 22:52:17 +0300", "event": "git_history_import", "commit": "5366511069d7b5f80b31e2371ac7f4a854013eb1", "message": "IMA orchestrator registry connected"}
+{"time": "2026-07-09 22:47:21 +0300", "event": "git_history_import", "commit": "cec785ddfade579c27baf93fbc13e4bd4e5edbd7", "message": "IMA runtime verified state update"}
+{"time": "2026-07-09 22:43:36 +0300", "event": "git_history_import", "commit": "6966ee9c5c5d187f3b17967d388ff068ca1c2daf", "message": "IMA final verified evolution state"}
+{"time": "2026-07-09 22:42:41 +0300", "event": "git_history_import", "commit": "89c4308392368ff518999df58d15441a17d922dc", "message": "IMA single gate verification only mode"}
+{"time": "2026-07-09 22:40:32 +0300", "event": "git_history_import", "commit": "fbf21cbc82da8bb518662367dbf303b584691223", "message": "IMA merged core learning state update"}
+{"time": "2026-07-09 22:37:11 +0300", "event": "git_history_import", "commit": "18ca88a3703a171f24102940e4dab9749e769f52", "message": "Merged ima_core into ima_kernel safely"}
+{"time": "2026-07-09 22:35:21 +0300", "event": "git_history_import", "commit": "59cbbf65fa55ba16f6744dbba8e210349ed9420f", "message": "IMA single gate governance finalized"}
+{"time": "2026-07-09 22:30:04 +0300", "event": "git_history_import", "commit": "40f39bf2d262a3ef97faee33b66c69593e1dffe3", "message": "IMA single entry gate locked state"}
+{"time": "2026-07-09 22:13:39 +0300", "event": "git_history_import", "commit": "526feea76d6351249680de6391c8a4b16ac09912", "message": "IMA evolution cycle stable"}
+{"time": "2026-07-09 13:07:16 +0300", "event": "git_history_import", "commit": "370bf9da8d86b4470874a1b15ca874bc7f3288c7", "message": "IMA: daemon lifecycle boot ready error events"}
+{"time": "2026-07-09 13:05:21 +0300", "event": "git_history_import", "commit": "077708bee7428a0e8be5f7caefef3ef15c4a123b", "message": "IMA: add kernel lifecycle state machine"}
+{"time": "2026-07-09 13:04:24 +0300", "event": "git_history_import", "commit": "eb46cbb94e22f6ec24176c9d738615c33c6a8c33", "message": "IMA: normalize ledger question ids"}
+{"time": "2026-07-09 13:01:38 +0300", "event": "git_history_import", "commit": "29a505dd3d7c336d575aab88772a19ad57b5dc58", "message": "IMA: add daemon lock protection"}
+{"time": "2026-07-09 13:00:40 +0300", "event": "git_history_import", "commit": "d00f8aea102b81c08d44473e88085aa2806311ea", "message": "IMA: fix daemon duplicate processing and preserve question ids"}
+{"time": "2026-07-09 12:32:06 +0300", "event": "git_history_import", "commit": "31527c6b6e05c8d377469cefce32287a8514b76f", "message": "IMA: record kernel state transitions in ledger"}
+{"time": "2026-07-09 12:31:25 +0300", "event": "git_history_import", "commit": "11a405b82ed960c51fa3eb35f741306c8be3cd9f", "message": "IMA: persist kernel state across transitions"}
+{"time": "2026-07-09 12:29:07 +0300", "event": "git_history_import", "commit": "190842e80f6457053983e4cb6c4db7f5f0be1169", "message": "IMA: prepare state resolver for state machine transitions"}
+{"time": "2026-07-09 12:27:29 +0300", "event": "git_history_import", "commit": "870720f5af41e8ad7793310d9e11b9a3b6f24e36", "message": "IMA: ignore generated core state"}
+{"time": "2026-07-09 12:25:50 +0300", "event": "git_history_import", "commit": "c4311889efc2869d9fc6632975bef8db37a67be3", "message": "IMA: connect kernel core to state machine"}
+{"time": "2026-07-09 12:24:18 +0300", "event": "git_history_import", "commit": "1ca77c98708dd023533cc72e2bedd09315bc051b", "message": "IMA: add kernel state machine definition"}
+{"time": "2026-07-09 12:18:59 +0300", "event": "git_history_import", "commit": "3dab2f056d01f1abe29e11934d66a0eb42c2abb3", "message": "IMA: stop tracking removed snapshot helper"}
+{"time": "2026-07-09 12:16:59 +0300", "event": "git_history_import", "commit": "5b89e00de275491465c0f4e9a96c91a0d864c69a", "message": "IMA: disable runtime git snapshots"}
+{"time": "2026-07-09 12:15:45 +0300", "event": "git_history_import", "commit": "c43ef45e39fd53f05f92bb2bfb4849063345d4be", "message": "snapshot: 1783588545"}
+{"time": "2026-07-09 12:15:35 +0300", "event": "git_history_import", "commit": "858e99a3dfc04368c47a4d70cba111d8d2f576b1", "message": "IMA: restore kernel command entrypoint"}
+{"time": "2026-07-09 12:11:15 +0300", "event": "git_history_import", "commit": "22882a71e1ec32978cfea58b8d686e3a5dcfa6e0", "message": "IMA: remove obsolete generated index files"}
+{"time": "2026-07-09 12:10:21 +0300", "event": "git_history_import", "commit": "0e6e59a7449dd2a2ed468530d1f449f6f95781cc", "message": "IMA: rebuild indexes after generated files cleanup"}
+{"time": "2026-07-09 12:04:18 +0300", "event": "git_history_import", "commit": "3f138c2010670daa799d51a0bfdad800551d8c22", "message": "IMA: move large runtime snapshots out of repository"}
+{"time": "2026-07-09 12:01:52 +0300", "event": "git_history_import", "commit": "6e8e9307707439efb04497753c2206eebfda79c4", "message": "IMA: remove tracked Python bytecode caches"}
+{"time": "2026-07-09 12:01:16 +0300", "event": "git_history_import", "commit": "f0a9e25f0fb05c260fcf56c26a1924a0efc9af2a", "message": "IMA: stop tracking runtime artifacts and Python caches"}
+{"time": "2026-07-09 02:52:01 +0300", "event": "git_history_import", "commit": "8853f9b52d8a65ab848e3084c40c3eaf21daac26", "message": "IMA: move live ledger out of git tracking"}
+{"time": "2026-07-09 02:51:03 +0300", "event": "git_history_import", "commit": "665dd625d67102bd261959b53067062f6fb0849c", "message": "IMA ledger post-rotation sync"}
+{"time": "2026-07-09 02:50:12 +0300", "event": "git_history_import", "commit": "3a24e6e322665d615a2da230ad8addd81fdb6094", "message": "IMA: rotate and compact ledger"}
+{"time": "2026-07-08 22:17:50 +0300", "event": "git_history_import", "commit": "b7ad389f37eb8a43ef6783a57c2ad6bfd4650c6e", "message": "IMA ledger frozen checkpoint"}
+{"time": "2026-07-08 22:17:43 +0300", "event": "git_history_import", "commit": "b0095037de3bd64f04a12be9b21058393e314025", "message": "IMA ledger frozen checkpoint"}
+{"time": "2026-07-08 22:16:40 +0300", "event": "git_history_import", "commit": "fa1ec019de232c3e9cdb5b4aa1e0a93fd81dd949", "message": "IMA ledger final synchronization lock"}
+{"time": "2026-07-08 22:15:50 +0300", "event": "git_history_import", "commit": "992df10b66d6b8334206a2a4b83c496c253b33c3", "message": "IMA final stable freeze: ledger checkpoint and repository lock"}
+{"time": "2026-07-08 22:15:08 +0300", "event": "git_history_import", "commit": "c145bd3eb7c267d88d28861545c1c505109b8675", "message": "IMA repository hardening: ignore runtime state and freeze stable core"}
+{"time": "2026-07-08 22:13:47 +0300", "event": "git_history_import", "commit": "5c52eb0191d0cbd5b8f8a4d78bd23efea66dbdc3", "message": "remove runtime artifacts from IMA repository"}
+{"time": "2026-07-08 22:09:50 +0300", "event": "git_history_import", "commit": "7766a322549387b5b3c48bca2aa4ec5a41920a13", "message": "IMA stable checkpoint after git cleanup"}
+{"time": "2026-06-26 19:29:43 +0300", "event": "git_history_import", "commit": "518583fd00fefc4017418a2464fb5ca5161d1e1d", "message": "auto 1782491383"}
+{"time": "2026-06-26 19:28:06 +0300", "event": "git_history_import", "commit": "bbce2944eafc8abcae124616a21b5da77d1ebada", "message": "auto 1782491285"}
+{"time": "2026-06-26 19:28:04 +0300", "event": "git_history_import", "commit": "fffc75de41df92f77e8a9e6b3dea6f83f60d0c1f", "message": "auto 1782491284"}
+{"time": "2026-06-26 19:28:02 +0300", "event": "git_history_import", "commit": "60aa9d24f284b3c3c136aaad6fe5f5543696ea33", "message": "auto 1782491282"}
+{"time": "2026-06-26 19:28:01 +0300", "event": "git_history_import", "commit": "21049d5bc7fc2863d7eb0391e1245cda8c1a02d3", "message": "auto 1782491280"}
+{"time": "2026-06-26 19:27:59 +0300", "event": "git_history_import", "commit": "1096fb2c9e04a7567580472312944a314deaee45", "message": "auto 1782491279"}
+{"time": "2026-06-26 19:27:58 +0300", "event": "git_history_import", "commit": "9f42f95a871719f00a35c43dc69867cca1a1cd6b", "message": "auto 1782491278"}
+{"time": "2026-06-26 18:38:31 +0300", "event": "git_history_import", "commit": "23f919d14394930a110baf91638d6d0d769d4cd3", "message": "auto-daemon-sync 1782488311"}
+{"time": "2026-06-26 18:36:54 +0300", "event": "git_history_import", "commit": "76e44935a5d6b4be1a48736ab8d7623cef9d3f21", "message": "auto-daemon-sync 1782488214"}
+{"time": "2026-06-26 18:36:53 +0300", "event": "git_history_import", "commit": "d2ea71576d5f5a027d09de618e3ebff4475e460d", "message": "auto snapshot 1782488213"}
+{"time": "2026-06-26 18:36:53 +0300", "event": "git_history_import", "commit": "3cbca04efd762849104ccb6813c0480f899aebc8", "message": "auto snapshot 1782488213"}
+{"time": "2026-06-26 18:36:52 +0300", "event": "git_history_import", "commit": "b9596484feb9c2c526aa6cc057040b4dac73bedc", "message": "auto snapshot 1782488212"}
+{"time": "2026-06-26 18:36:51 +0300", "event": "git_history_import", "commit": "6ae328564548c2282be59a3b433309e15347b376", "message": "auto-daemon-sync 1782488211"}
+{"time": "2026-06-26 18:36:51 +0300", "event": "git_history_import", "commit": "0eb709052674822ec1c53b1b8b4834994e403782", "message": "auto snapshot 1782488211"}
+{"time": "2026-06-26 18:36:50 +0300", "event": "git_history_import", "commit": "0b92922deb5cbce5204e7d79e3cd4f1274027aae", "message": "auto snapshot 1782488210"}
+{"time": "2026-06-26 18:36:49 +0300", "event": "git_history_import", "commit": "eca5230ef483a20279734d83d2820aad69019261", "message": "auto snapshot 1782488209"}
+{"time": "2026-06-26 18:36:48 +0300", "event": "git_history_import", "commit": "f23254c8e82f51fdd082eec0e6971bdf9a1f0beb", "message": "auto-daemon-sync 1782488208"}
+{"time": "2026-06-26 18:36:48 +0300", "event": "git_history_import", "commit": "c7fed0b6d5eec2c595612c8af61a09ca86ebf40f", "message": "auto snapshot 1782488208"}
+{"time": "2026-06-26 18:36:47 +0300", "event": "git_history_import", "commit": "05107bbc929c877a8349543196318071333f7b47", "message": "auto-daemon-sync 1782488207"}
+{"time": "2026-06-26 18:36:46 +0300", "event": "git_history_import", "commit": "99049b4788d766ce2ccf0b1a042b8cbf955b0f11", "message": "auto snapshot 1782488206"}
+{"time": "2026-06-26 18:36:46 +0300", "event": "git_history_import", "commit": "21a26eced4c514eb9c0b2373dda9770d68f7c199", "message": "auto snapshot 1782488205"}
+{"time": "2026-06-26 18:36:45 +0300", "event": "git_history_import", "commit": "4a976f8a0e300c7b63097cb8618e044c3d7f46a7", "message": "auto snapshot 1782488205"}
+{"time": "2026-06-26 18:36:44 +0300", "event": "git_history_import", "commit": "f9f7b55d53c5b57bd81352d1b1ceb4c743cdd521", "message": "auto-daemon-sync 1782488204"}
+{"time": "2026-06-26 18:36:44 +0300", "event": "git_history_import", "commit": "f699d59695c131b28e6a3ef6947334d5026a2cad", "message": "auto snapshot 1782488204"}
+{"time": "2026-06-26 18:36:43 +0300", "event": "git_history_import", "commit": "cfaed81be8ed39797ea8da175bd2005c786e40a0", "message": "auto snapshot 1782488203"}
+{"time": "2026-06-26 18:36:42 +0300", "event": "git_history_import", "commit": "6c902cd9cda00af9affa64d1d9bdb62566ee0113", "message": "auto snapshot 1782488202"}
+{"time": "2026-06-26 18:36:42 +0300", "event": "git_history_import", "commit": "acd90b71bd63d0560af91d0dd1f899050d6642e6", "message": "auto-daemon-sync 1782488202"}
+{"time": "2026-06-26 18:36:41 +0300", "event": "git_history_import", "commit": "8e8ede7d6e3b258b583e0ab8929d2dd1530a9f16", "message": "auto snapshot 1782488201"}
+{"time": "2026-06-26 18:36:41 +0300", "event": "git_history_import", "commit": "d4a1388f880aaf268eb3f566adc3967f70308ad3", "message": "auto-daemon-sync 1782488201"}
+{"time": "2026-06-26 18:36:40 +0300", "event": "git_history_import", "commit": "f0fa0be5841d7eadcb51b2801bd1e0d7a1a2ddb7", "message": "auto snapshot 1782488200"}
+{"time": "2026-06-26 18:36:39 +0300", "event": "git_history_import", "commit": "00b7f2694d3688a0c5ba4728ba673a6dbc004cb0", "message": "auto-daemon-sync 1782488199"}
+{"time": "2026-06-26 18:36:39 +0300", "event": "git_history_import", "commit": "10a2dd7926e5b7524f883cf983940aadf505dc36", "message": "auto snapshot 1782488199"}
+{"time": "2026-06-26 18:36:38 +0300", "event": "git_history_import", "commit": "8470668e81c43995dd4bc2d623212f97b3869027", "message": "auto-daemon-sync 1782488198"}
+{"time": "2026-06-26 18:36:37 +0300", "event": "git_history_import", "commit": "b59bcd72691d010a9f1b868094d4798b0ea03195", "message": "auto snapshot 1782488197"}
+{"time": "2026-06-26 18:36:36 +0300", "event": "git_history_import", "commit": "3fdea55e63156c6ec34a4a0b2cd6186474dd7759", "message": "auto snapshot 1782488196"}
+{"time": "2026-06-26 18:36:36 +0300", "event": "git_history_import", "commit": "ad1668a51c9521cbc0d05aa5ab08a6c0dfd39f33", "message": "auto snapshot 1782488196"}
+{"time": "2026-06-26 18:36:35 +0300", "event": "git_history_import", "commit": "d08140ee9287f80177fdd42bc1aaf9fa499fe19d", "message": "auto-daemon-sync 1782488195"}
+{"time": "2026-06-26 18:36:35 +0300", "event": "git_history_import", "commit": "e8040ec4d391e7075e718790d5a2ca7d74fb4474", "message": "auto snapshot 1782488195"}
+{"time": "2026-06-26 18:36:34 +0300", "event": "git_history_import", "commit": "643557ff8fade6a878a907a47a3f6463fd90e231", "message": "auto snapshot 1782488194"}
+{"time": "2026-06-26 18:36:33 +0300", "event": "git_history_import", "commit": "71b0d63202f3a83506bb72afb1ed923a10b063da", "message": "auto snapshot 1782488193"}
+{"time": "2026-06-26 18:36:33 +0300", "event": "git_history_import", "commit": "a81ac9d8db6b271b013a4daef6eba4c0052d0afa", "message": "auto-daemon-sync 1782488193"}
+{"time": "2026-06-26 18:36:32 +0300", "event": "git_history_import", "commit": "e241d7d1975e2ac218f31560ef4cb862a66b8ec5", "message": "auto snapshot 1782488192"}
+{"time": "2026-06-26 18:36:22 +0300", "event": "git_history_import", "commit": "5931f1d70cf067c28e182ac6e3d9f0af03c9fea2", "message": "auto-daemon-sync 1782488182"}
+{"time": "2026-06-26 18:35:29 +0300", "event": "git_history_import", "commit": "210200f32127b39f1858698e23320f1da0188fcc", "message": "auto-daemon-sync 1782488129"}
+{"time": "2026-06-26 18:33:40 +0300", "event": "git_history_import", "commit": "1f7087fbbd1cdb1cabb3c4d4311a9c76e7ba3925", "message": "auto-daemon-sync 1782488020"}
+{"time": "2026-06-26 18:33:39 +0300", "event": "git_history_import", "commit": "425a41774069100835dfd955a9e152e05a4d7c81", "message": "auto 1782488019"}
+{"time": "2026-06-26 18:33:32 +0300", "event": "git_history_import", "commit": "5b427ffec3becc90ab1d44de8c6bc81b05a7121d", "message": "auto 1782488012"}
+{"time": "2026-06-26 18:32:19 +0300", "event": "git_history_import", "commit": "50243e38d55e1cd9ef05bdee2a6c3577e00a79e9", "message": "auto-daemon-sync 1782487939"}
+{"time": "2026-06-26 18:32:18 +0300", "event": "git_history_import", "commit": "2d5ceea502636fd1c0fbf270caa9d6f2a7da44f5", "message": "auto 1782487938"}
+{"time": "2026-06-26 18:28:15 +0300", "event": "git_history_import", "commit": "22256c39e3dc6891abc5ae3c8530802caee4203b", "message": "auto-daemon-sync 1782487695"}
+{"time": "2026-06-26 18:27:49 +0300", "event": "git_history_import", "commit": "0640c75e829097438e0f88d64867bfa24b8990e1", "message": "auto-daemon-sync 1782487669"}
+{"time": "2026-06-26 16:16:50 +0300", "event": "git_history_import", "commit": "8a0a2dc5e407db3c45fac2b5deb13d5f98c7ea81", "message": "snapshot 1782479810"}
+{"time": "2026-06-26 16:16:37 +0300", "event": "git_history_import", "commit": "09b7caa1c7cf1b4e9f4e1e76890220bb2f0a08da", "message": "snapshot 1782479797"}
+{"time": "2026-06-26 16:14:47 +0300", "event": "git_history_import", "commit": "d02ff3578470b779c0a670036bb81c75af25d024", "message": "snapshot 1782479687"}
+{"time": "2026-06-23 17:13:32 +0300", "event": "git_history_import", "commit": "c3c52d6b1a04c36fdb3fa59db67309718893684c", "message": "freeze stable IMA runtime state"}
+{"time": "2026-06-19 11:35:45 +0300", "event": "git_history_import", "commit": "733671a88eb57cfa6d2b4b9a6f77d0c9d01bfa53", "message": "reset stable android apk workflow"}
+{"time": "2026-06-19 11:33:26 +0300", "event": "git_history_import", "commit": "ed60ad90dcd531120744ca37ace59bea2d4e7c5f", "message": "auto apk pipeline"}
+{"time": "2026-06-19 11:29:10 +0300", "event": "git_history_import", "commit": "42876b548b6f25e632c09e3850d0a05ce7560139", "message": "fix android apk workflow"}
+{"time": "2026-06-19 11:12:25 +0300", "event": "git_history_import", "commit": "c66dcd0954499c0db4cbfab6105b22f42456728b", "message": "fix android apk github actions pipeline"}
+{"time": "2026-06-19 11:07:53 +0300", "event": "git_history_import", "commit": "90175b4d8decd0571c424424f51f35bc27bbd5d2", "message": "add github actions apk builder"}
+{"time": "2026-06-18 15:45:53 +0300", "event": "git_history_import", "commit": "44eaa29ad36bdfb5ca6bae027e03d346e031fb8e", "message": "clean apk pipeline base"}
+{"time": "2026-05-28 18:34:54 +0300", "event": "git_history_import", "commit": "9e67cc81286fea68af0295bf026cbc0c654658f3", "message": "kernel sync Thu May 28 18:34:54 IDT 2026"}
+{"time": "2026-05-27 13:41:54 +0300", "event": "git_history_import", "commit": "0e97e00ee33a927d231ecfaed76b672c5b163dff", "message": "IMA SYSTEM NORMALIZATION Wed May 27 13:41:54 IDT 2026"}
+{"time": "2026-05-27 12:30:58 +0300", "event": "git_history_import", "commit": "5a24f65e34ea72fc1ebb4df8a971e2f9d3e0a0f0", "message": "cleanup: remove runtime lock artifact"}
+{"time": "2026-05-27 12:30:16 +0300", "event": "git_history_import", "commit": "7bd54860f4d1a6cac55660a6d2cf717a75b4df36", "message": "attach ima_core as official submodule synced to Ima-kernel"}
+{"time": "2026-05-27 12:29:02 +0300", "event": "git_history_import", "commit": "993cf4ee26737afa7f504a7adb634716a6566936", "message": "cleanup: remove embedded repo from main tracking"}
+{"time": "2026-05-27 12:24:13 +0300", "event": "git_history_import", "commit": "b7ba7bebcbda43de165ef06e876db9a586cca943", "message": "ima step2: safe evolution + runtime layer + ingestion readiness"}
+{"time": "2026-05-27 12:22:17 +0300", "event": "git_history_import", "commit": "70e3205f8be84d8c7b10f564cadcd5aeb7afe684", "message": "init IMA ontology core (entities + relationships + temporal model)"}
+{"time": "2026-05-24 19:17:58 +0300", "event": "git_history_import", "commit": "46e5dba811c56e4532985577fec2f7eb94a9911c", "message": "Sync code"}
+{"time": "2026-05-17 21:08:24 +0300", "event": "git_history_import", "commit": "2006df51f72bb7a8d573eecb48e64607d46527cd", "message": "auto-sync worker commit"}
+{"time": "2026-05-17 21:08:24 +0300", "event": "git_history_import", "commit": "76628ad244f1734050fc91bfd07f8d16961b5ac6", "message": "auto-sync worker commit"}
+{"time": "2026-05-17 21:07:10 +0300", "event": "git_history_import", "commit": "9a5764bed8222e1f5a044195b88daead5581ff8d", "message": "2.2.1"}
+{"time": "2026-05-17 21:07:10 +0300", "event": "git_history_import", "commit": "d0ce993b5641d8228740edb02e3edb3d07a761f8", "message": "2.2.1"}
+{"time": "2026-05-17 21:06:08 +0300", "event": "git_history_import", "commit": "274b8da53e7cdc22964ade6cb5f75286d9dbaa16", "message": "auto-sync worker commit"}
+{"time": "2026-05-17 21:06:08 +0300", "event": "git_history_import", "commit": "1f4ed087742d1e4ba9f55f66d2e28f9ae181b8dd", "message": "auto-sync worker commit"}
+{"time": "2026-05-17 21:05:11 +0300", "event": "git_history_import", "commit": "c20d9cf28c44c9bd62d14298ec5fcf1cf102df0a", "message": "auto-sync: autonomous engine"}
+{"time": "2026-05-17 21:05:11 +0300", "event": "git_history_import", "commit": "4ca6aad56adf6d1d9ee4010ea75789584fb9bbda", "message": "auto-sync: autonomous engine"}
+{"time": "2026-05-12 21:05:48 +0300", "event": "git_history_import", "commit": "ecdf9563545136a676e213c3ff411d3b867f9f59", "message": "governed sync 1778609148070"}
+{"time": "2026-05-12 21:05:48 +0300", "event": "git_history_import", "commit": "539aeeb22489af9b5192dd87aa0025cf1c4807a2", "message": "governed sync 1778609148070"}
+{"time": "2026-05-12 20:21:15 +0300", "event": "git_history_import", "commit": "ced8c4d98d26700a3831270322edb9afdc162ad4", "message": "governed sync 1778606475296"}
+{"time": "2026-05-12 20:21:15 +0300", "event": "git_history_import", "commit": "f6b96bbba2f904a5984cd49a2fd133afe402c73a", "message": "governed sync 1778606475296"}
+{"time": "2026-05-12 19:30:40 +0300", "event": "git_history_import", "commit": "151a5cf05cfb3ca01cda73516245d828d0cb6648", "message": "governed sync 1778603440521"}
+{"time": "2026-05-12 19:30:40 +0300", "event": "git_history_import", "commit": "21eac5a1ca394c010efc4b1a89b03c4be89e6f08", "message": "governed sync 1778603440521"}
+{"time": "2026-05-12 19:26:40 +0300", "event": "git_history_import", "commit": "b4e1117905ae85856f821fbe3624e00bac81f52d", "message": "governed sync 1778603200166"}
+{"time": "2026-05-12 19:26:40 +0300", "event": "git_history_import", "commit": "a0753c0ef2cc484be43cd1bdcc2d8256dc5713e0", "message": "governed sync 1778603200166"}
+{"time": "2026-05-12 19:20:47 +0300", "event": "git_history_import", "commit": "c8b4858d2e25174129d2a9f22404d0f744c98f6f", "message": "governed sync 1778602847298"}
+{"time": "2026-05-12 19:20:47 +0300", "event": "git_history_import", "commit": "ccc36d6f2d948f19814b215c94be1955bc0ad42a", "message": "governed sync 1778602847298"}
+{"time": "2026-05-12 16:55:37 +0300", "event": "git_history_import", "commit": "74c76447db76e9370c268526385e5088c49bafcb", "message": "governed sync 1778594136986"}
+{"time": "2026-05-12 16:55:37 +0300", "event": "git_history_import", "commit": "231c2acd753b58b583803cab50e241db99074488", "message": "governed sync 1778594136986"}
+{"time": "2026-05-12 16:25:26 +0300", "event": "git_history_import", "commit": "0a094fd6605da1ada54a784518fc6fc28f522d25", "message": "auto sync 1.0.8"}
+{"time": "2026-05-12 16:25:26 +0300", "event": "git_history_import", "commit": "d513a1d6d442d211f9ed5a5d144df5087742b616", "message": "auto sync 1.0.8"}
+{"time": "2026-05-12 16:25:19 +0300", "event": "git_history_import", "commit": "37b58ad9425e577bad8eb056e50339301f8be1bb", "message": "chore: stabilize kernel control plane baseline"}
+{"time": "2026-05-12 16:25:19 +0300", "event": "git_history_import", "commit": "716adb2efcfbb01a7bc6009080ca62cf324cea87", "message": "chore: stabilize kernel control plane baseline"}
+{"time": "2026-05-12 15:56:42 +0300", "event": "git_history_import", "commit": "801f216b075fae1f7ce0c907a34a4a8e2da5f4a4", "message": "add kernel control plane"}
+{"time": "2026-05-12 15:56:42 +0300", "event": "git_history_import", "commit": "1faff58c6179b1c56a85075ebcf5195219104f13", "message": "add kernel control plane"}
+{"time": "2026-05-12 15:55:56 +0300", "event": "git_history_import", "commit": "b3bf52ffde2aa2e26d207a74a60360f061ab6261", "message": "fix: isolate runtime state from git tracking"}
+{"time": "2026-05-12 15:55:56 +0300", "event": "git_history_import", "commit": "b47a2e19d453a151b1f472f01651826489b0315d", "message": "fix: isolate runtime state from git tracking"}
+{"time": "2026-05-12 15:51:52 +0300", "event": "git_history_import", "commit": "949300734f14413b7d215ad8bee13160792c5324", "message": "baseline for gated release"}
+{"time": "2026-05-12 15:51:52 +0300", "event": "git_history_import", "commit": "25db8246760f1d0d4ec0732e3b631daf437dc87a", "message": "baseline for gated release"}
+{"time": "2026-05-12 15:39:31 +0300", "event": "git_history_import", "commit": "4d30e5694cddb8d97c117150ebbec8ae0a424ee2", "message": "governed sync 1778589571344"}
+{"time": "2026-05-12 15:39:31 +0300", "event": "git_history_import", "commit": "5720d63377d1ae4ead1c6fedd1826f873442d4e0", "message": "governed sync 1778589571344"}
+{"time": "2026-05-12 15:36:00 +0300", "event": "git_history_import", "commit": "3556dbc805ff16dd53faeb4113b30deedd532a8f", "message": "auto sync 1778589360411"}
+{"time": "2026-05-12 15:36:00 +0300", "event": "git_history_import", "commit": "d8751c7152b5a2d07e540ae9ab8ddb90e0f90c85", "message": "auto sync 1778589360411"}
+{"time": "2026-05-12 15:02:18 +0300", "event": "git_history_import", "commit": "f646609a66fdac663cc76a342e288024a7f3d054", "message": "AUTO FIX version bump"}
+{"time": "2026-05-12 15:02:18 +0300", "event": "git_history_import", "commit": "5ab8fc1ce44e106bbf178b771a8d6dd4f346d477", "message": "AUTO FIX version bump"}
+{"time": "2026-05-12 15:00:51 +0300", "event": "git_history_import", "commit": "bc85c12afe5c48703ee0fc99b2aa5d978ec1f896", "message": "AUTO RELEASE 1778587251195"}
+{"time": "2026-05-12 15:00:51 +0300", "event": "git_history_import", "commit": "c5eb74a06ad09fc88cd7aa90318e3012cc3baea9", "message": "AUTO RELEASE 1778587251195"}
+{"time": "2026-05-12 14:51:33 +0300", "event": "git_history_import", "commit": "4b393541637b5675be42bca1a741f703c7a93a60", "message": "AUTO RELEASE 1778586693"}
+{"time": "2026-05-12 14:51:33 +0300", "event": "git_history_import", "commit": "4b1b1e5e94be49620776be6c000fb350f34cf4c5", "message": "AUTO RELEASE 1778586693"}
+{"time": "2026-05-12 14:47:29 +0300", "event": "git_history_import", "commit": "e9704b20aff5035816079aa3aa758a96d8e0edbe", "message": "RELEASE SAFE v1.0.1: stable kernel runtime with heartbeat verified"}
+{"time": "2026-05-12 14:47:29 +0300", "event": "git_history_import", "commit": "989a0fcaf67c60a2d5f88dbb4e4c7531e0a1c93c", "message": "RELEASE SAFE v1.0.1: stable kernel runtime with heartbeat verified"}
+{"time": "2026-05-12 14:21:38 +0300", "event": "git_history_import", "commit": "df5112a808bfe172bea4707e1542d1b9a86bdb23", "message": "STABLE KERNEL v1.0: working heartbeat runtime + entrypoint integration"}
+{"time": "2026-05-12 14:21:38 +0300", "event": "git_history_import", "commit": "d933f177d68b1a95b8256ab65996331c2a22989a", "message": "STABLE KERNEL v1.0: working heartbeat runtime + entrypoint integration"}
+{"time": "2026-05-12 14:18:16 +0300", "event": "git_history_import", "commit": "45dccbbb51a8164e59789e05bbce95a27dc03ca6", "message": "STABLE KERNEL: heartbeat runtime stabilized + supervisor loop"}
+{"time": "2026-05-12 14:18:16 +0300", "event": "git_history_import", "commit": "0c19657d8bf713f8aef3f160060dac97c22e489b", "message": "STABLE KERNEL: heartbeat runtime stabilized + supervisor loop"}
+{"time": "2026-05-12 13:45:50 +0300", "event": "git_history_import", "commit": "f7b1666e40e0cd40f482d2258d13141ef9f008a8", "message": "stable runtime kernel state"}
+{"time": "2026-05-12 13:45:50 +0300", "event": "git_history_import", "commit": "6e0cff07d067da02bcea8cef6270b25c4570eb8b", "message": "stable runtime kernel state"}
+{"time": "2026-05-12 13:13:54 +0300", "event": "git_history_import", "commit": "75aa7a736942c8b7dff5b1a0a8937c7cf631f70b", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-12 13:13:54 +0300", "event": "git_history_import", "commit": "d57a4d74250135f169b0051108c6c58e34613910", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-12 04:27:12 +0300", "event": "git_history_import", "commit": "c0e668b8c6ac9a42f1157975181d3da14aba917d", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-12 04:27:12 +0300", "event": "git_history_import", "commit": "b39a52808567c944e654d391c0cd407f33fa54d9", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-12 03:06:05 +0300", "event": "git_history_import", "commit": "41ecb1f659436fd662f0234c4102cdf3b734fc05", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-12 03:06:05 +0300", "event": "git_history_import", "commit": "b32f63432b13fb7ae1f2fd841c1190b4f462cb0c", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-11 17:15:20 +0300", "event": "git_history_import", "commit": "ba4c18f477e795ba9cc1dfd97ce0f90c5e44a695", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-11 17:15:20 +0300", "event": "git_history_import", "commit": "1d0c52aa51ca9f41ae101de99ea4fdc93af4fd20", "message": "AUTO HEARTBEAT"}
+{"time": "2026-05-11 16:05:54 +0300", "event": "git_history_import", "commit": "6925e8f780da140ed6a0308a996e02f050991e75", "message": "IMA BRAIN 5.0.1778504751053"}
+{"time": "2026-05-11 16:05:54 +0300", "event": "git_history_import", "commit": "25fea84338733cde26c9c474fe4b66928b35accd", "message": "IMA BRAIN 5.0.1778504751053"}
+{"time": "2026-05-11 16:03:19 +0300", "event": "git_history_import", "commit": "ce9105e4193ddbf5e8eac8521ab160f944636159", "message": "IMA ULTIMATE 4.0.1778504598427"}
+{"time": "2026-05-11 16:03:19 +0300", "event": "git_history_import", "commit": "e31242d2a77869876f91cc89923a203196871c04", "message": "IMA ULTIMATE 4.0.1778504598427"}
+{"time": "2026-05-11 15:55:28 +0300", "event": "git_history_import", "commit": "d99c2453980e03d9bec2f91b6ab325759fdfd078", "message": "IMA SUPREME 3.0.1778504127251"}
+{"time": "2026-05-11 15:55:28 +0300", "event": "git_history_import", "commit": "016c9fcfc976b7f7632a3a455703086c4144061d", "message": "IMA SUPREME 3.0.1778504127251"}
+{"time": "2026-05-11 15:51:47 +0300", "event": "git_history_import", "commit": "5ac11ad9a33d765b9361cd410fb907fd32fd6c04", "message": "IMA CONSOLIDATED 2.0.1778503890279"}
+{"time": "2026-05-11 15:51:47 +0300", "event": "git_history_import", "commit": "b428a5c400584b625cea124a222ced047dc8b32d", "message": "IMA CONSOLIDATED 2.0.1778503890279"}
+{"time": "2026-05-11 15:47:17 +0300", "event": "git_history_import", "commit": "a7b5a4313ce960cb458c4273e154f642a488bb86", "message": "IMA AUTO 1.0.1778503633574"}
+{"time": "2026-05-11 15:47:17 +0300", "event": "git_history_import", "commit": "ba717978bd1bc3bd6eac28fa3253c615c3b98fe2", "message": "IMA AUTO 1.0.1778503633574"}
+{"time": "2026-05-08 04:28:58 +0300", "event": "git_history_import", "commit": "c43007c1c8aba44132ca0f7432c43395b1b44907", "message": "auto release"}
+{"time": "2026-05-08 04:28:58 +0300", "event": "git_history_import", "commit": "d9b4469f29892897dfab97aad28396051307b1d5", "message": "auto release"}
+{"time": "2026-05-08 04:25:55 +0300", "event": "git_history_import", "commit": "6c942e3fd895754021fff7d3ce1449f7765a7969", "message": "auto 1.0.1778203547115"}
+{"time": "2026-05-08 04:25:55 +0300", "event": "git_history_import", "commit": "c26ffe74849beff1be2496e7f4dc25ec1ced0b37", "message": "auto 1.0.1778203547115"}
+{"time": "2026-05-08 04:23:24 +0300", "event": "git_history_import", "commit": "8d622b0efe70d13ec824f42e60f12775e396e348", "message": "meta engine sync"}
+{"time": "2026-05-08 04:23:24 +0300", "event": "git_history_import", "commit": "5ac09614deeae09ba1820004e6330bbc0b4f0310", "message": "meta engine sync"}
+{"time": "2026-05-08 04:15:52 +0300", "event": "git_history_import", "commit": "fabcab1ea36a094a8c2a9862e076cc013336b71a", "message": "IMA FINAL 1.0.1778202950085"}
+{"time": "2026-05-08 04:15:52 +0300", "event": "git_history_import", "commit": "b38e359848be51a3d685efd561838d231d115b6e", "message": "IMA FINAL 1.0.1778202950085"}
+{"time": "2026-05-08 04:15:36 +0300", "event": "git_history_import", "commit": "e439982c5454b3ed5d8ba447f952f3256dce06b0", "message": "IMA FINAL 1.0.1778202933765"}
+{"time": "2026-05-08 04:15:36 +0300", "event": "git_history_import", "commit": "f83afc3d7a7bf9c28556ab45b62baee87a8ec252", "message": "IMA FINAL 1.0.1778202933765"}
+{"time": "2026-05-08 04:15:28 +0300", "event": "git_history_import", "commit": "9d6136ec71d78f23fdbd6ab261c2afed63d5dd01", "message": "IMA FINAL 1.0.1778202926287"}
+{"time": "2026-05-08 04:15:28 +0300", "event": "git_history_import", "commit": "bac3d6c4bb2fec0d0f8f5ad0bf164937ebbde7df", "message": "IMA FINAL 1.0.1778202926287"}
+{"time": "2026-05-08 04:15:12 +0300", "event": "git_history_import", "commit": "fd94db2a8f44c15fedb21828ec96e2303a950b6c", "message": "IMA FINAL 1.0.1778202909687"}
+{"time": "2026-05-08 04:15:12 +0300", "event": "git_history_import", "commit": "f601f0a04b0047c3e0011f5c64d1c5c09ce1bcb6", "message": "IMA FINAL 1.0.1778202909687"}
+{"time": "2026-05-08 04:15:04 +0300", "event": "git_history_import", "commit": "4ad02d5ac2e13cd72c054615c4fc9ec9f1129b96", "message": "IMA FINAL 1.0.1778202901164"}
+{"time": "2026-05-08 04:15:04 +0300", "event": "git_history_import", "commit": "6dd3f007544fe9ad77b0aa723ba1f4db9b37e3d4", "message": "IMA FINAL 1.0.1778202901164"}
+{"time": "2026-05-08 04:14:47 +0300", "event": "git_history_import", "commit": "b7374e0624c336865b0b365c884fa7fd7d78356f", "message": "IMA FINAL 1.0.1778202883578"}
+{"time": "2026-05-08 04:14:47 +0300", "event": "git_history_import", "commit": "8ee69cb662a6e965b21462590ecb4a600df1be24", "message": "IMA FINAL 1.0.1778202883578"}
+{"time": "2026-05-08 04:14:38 +0300", "event": "git_history_import", "commit": "86832e593236690a1c5307634cb5c78b52a019d2", "message": "IMA FINAL 1.0.1778202875923"}
+{"time": "2026-05-08 04:14:38 +0300", "event": "git_history_import", "commit": "56beb0d1499b2f42412d1e6159e39ab1c4f3c214", "message": "IMA FINAL 1.0.1778202875923"}
+{"time": "2026-05-08 04:14:03 +0300", "event": "git_history_import", "commit": "e67e057b76501bbfe77f8334eedefed7d26af03f", "message": "IMA FINAL 1.0.1778202841093"}
+{"time": "2026-05-08 04:14:03 +0300", "event": "git_history_import", "commit": "041bc944d1a48d72d89bd2067f2c66dd8d2af3b4", "message": "IMA FINAL 1.0.1778202841093"}
+{"time": "2026-05-08 04:13:55 +0300", "event": "git_history_import", "commit": "30d3c344046c4624ddc7068d94d179332fce0373", "message": "IMA FINAL 1.0.1778202832423"}
+{"time": "2026-05-08 04:13:55 +0300", "event": "git_history_import", "commit": "559007e47fddb9d90ac774fdb21efc4559b61a0c", "message": "IMA FINAL 1.0.1778202832423"}
+{"time": "2026-05-08 04:13:36 +0300", "event": "git_history_import", "commit": "cb5f3f698cf0615dd1013ed54c3b461077f1aa32", "message": "IMA FINAL 1.0.1778202813237"}
+{"time": "2026-05-08 04:13:36 +0300", "event": "git_history_import", "commit": "6bb76d214b38224d50a54859acf4af327a9af5e1", "message": "IMA FINAL 1.0.1778202813237"}
+{"time": "2026-05-08 04:13:27 +0300", "event": "git_history_import", "commit": "d29bf2298cc085cea58c4632e2ce71b004ed490f", "message": "IMA FINAL 1.0.1778202805030"}
+{"time": "2026-05-08 04:13:27 +0300", "event": "git_history_import", "commit": "6b37ab31ed8d2080009186b26afb3c90b79bbd0f", "message": "IMA FINAL 1.0.1778202805030"}
+{"time": "2026-05-08 04:12:59 +0300", "event": "git_history_import", "commit": "1edf4c81d152419bf1fca2b39f21eb9af5e40d0d", "message": "AUTO RELEASE 1.0.1778202778640-1778201359986"}
+{"time": "2026-05-08 04:12:59 +0300", "event": "git_history_import", "commit": "ba942bf65971ea7d9b35ff7b227c7731571346e4", "message": "AUTO RELEASE 1.0.1778202778640-1778201359986"}
+{"time": "2026-05-08 04:12:00 +0300", "event": "git_history_import", "commit": "8ec269943c02d920ca63516970d9ae4f3b23794f", "message": "AUTO RELEASE 1.0.1778202719084-1778201359986"}
+{"time": "2026-05-08 04:12:00 +0300", "event": "git_history_import", "commit": "1a6b63a2d005c49029d9b9474fc2a408fb338972", "message": "AUTO RELEASE 1.0.1778202719084-1778201359986"}
+{"time": "2026-05-08 04:11:01 +0300", "event": "git_history_import", "commit": "336c6a5ba8c12ba7cae17852ed5bdd28ead509a1", "message": "AUTO RELEASE 1.0.1778202660947-1778201359986"}
+{"time": "2026-05-08 04:11:01 +0300", "event": "git_history_import", "commit": "e30ae8421ed9dd56a7eba81a25cd0baac0ff1b72", "message": "AUTO RELEASE 1.0.1778202660947-1778201359986"}
+{"time": "2026-05-08 04:10:05 +0300", "event": "git_history_import", "commit": "df96e3154eaca2515a49c048f93e0d1fd827fa23", "message": "AUTO RELEASE 1.0.1778202605016-1778201359986"}
+{"time": "2026-05-08 04:10:05 +0300", "event": "git_history_import", "commit": "c49b85e7291cf95af02d6b347224c9da3af6fc3f", "message": "AUTO RELEASE 1.0.1778202605016-1778201359986"}
+{"time": "2026-05-08 04:09:41 +0300", "event": "git_history_import", "commit": "d54c119e49a99276879b90cbde3efbf30c2d9fd2", "message": "IMA FINAL 1.0.1778202578051"}
+{"time": "2026-05-08 04:09:41 +0300", "event": "git_history_import", "commit": "22fe5903d3543f71586364ba61848235d3463933", "message": "IMA FINAL 1.0.1778202578051"}
+{"time": "2026-05-08 04:09:31 +0300", "event": "git_history_import", "commit": "8dac15b86c56e20ad32b3e3c8c794caba5fe5cf0", "message": "IMA FINAL 1.0.1778202568922"}
+{"time": "2026-05-08 04:09:31 +0300", "event": "git_history_import", "commit": "f34c466ccc05a871b357669c986cd5010dd69d9d", "message": "IMA FINAL 1.0.1778202568922"}
+{"time": "2026-05-08 04:09:11 +0300", "event": "git_history_import", "commit": "6412ac5aca3cbf4385cd01bbe89a803406c6d703", "message": "IMA FINAL 1.0.1778202548260"}
+{"time": "2026-05-08 04:09:11 +0300", "event": "git_history_import", "commit": "9846eae3c62d3b68db717e74400eb3659e4813d2", "message": "IMA FINAL 1.0.1778202548260"}
+{"time": "2026-05-08 04:09:02 +0300", "event": "git_history_import", "commit": "5931fc660fa9d6e49ec198aa543ddd51dc9f70f7", "message": "IMA FINAL 1.0.1778202539301"}
+{"time": "2026-05-08 04:09:02 +0300", "event": "git_history_import", "commit": "bd357ff50aee3811225b30a4062442a9ca04f754", "message": "IMA FINAL 1.0.1778202539301"}
+{"time": "2026-05-08 04:08:41 +0300", "event": "git_history_import", "commit": "6b9b9dc0ac223a950332cc16012635c81c9d59ec", "message": "IMA FINAL 1.0.1778202518204"}
+{"time": "2026-05-08 04:08:41 +0300", "event": "git_history_import", "commit": "0e886119038793789135d759d5f0e38f14bdcc5b", "message": "IMA FINAL 1.0.1778202518204"}
+{"time": "2026-05-08 04:08:31 +0300", "event": "git_history_import", "commit": "bc5eae20eb936e66dce3e919afe83b4f58002627", "message": "IMA FINAL 1.0.1778202509118"}
+{"time": "2026-05-08 04:08:31 +0300", "event": "git_history_import", "commit": "99e431dc2d6f23407eb9001924b0c519a5b4626d", "message": "IMA FINAL 1.0.1778202509118"}
+{"time": "2026-05-08 04:08:11 +0300", "event": "git_history_import", "commit": "343876e6013bd304abccd0a48f38ac6a54f15e76", "message": "IMA FINAL 1.0.1778202489158"}
+{"time": "2026-05-08 04:08:11 +0300", "event": "git_history_import", "commit": "b13a6c5a3d1577e178d991b753848dcbacf10fd4", "message": "IMA FINAL 1.0.1778202489158"}
+{"time": "2026-05-08 04:07:51 +0300", "event": "git_history_import", "commit": "ed13dadcf399a08d9ca9629bf9eca4d673ab89de", "message": "IMA FINAL 1.0.1778202468993"}
+{"time": "2026-05-08 04:07:51 +0300", "event": "git_history_import", "commit": "4ff627320b5081ad2cb7a5545ed691b1e2b91bb6", "message": "IMA FINAL 1.0.1778202468993"}
+{"time": "2026-05-08 04:07:31 +0300", "event": "git_history_import", "commit": "4bc686726a0e82fdb1ecd47f408f6a1e9475a5f8", "message": "IMA FINAL 1.0.1778202448208"}
+{"time": "2026-05-08 04:07:31 +0300", "event": "git_history_import", "commit": "1a0331c7576ecdffa4c12841a4ce23cac51e7ac7", "message": "IMA FINAL 1.0.1778202448208"}
+{"time": "2026-05-08 04:07:10 +0300", "event": "git_history_import", "commit": "4fa0dbeb216d607ff57f5140d6fe13ad457b7968", "message": "IMA FINAL 1.0.1778202428151"}
+{"time": "2026-05-08 04:07:10 +0300", "event": "git_history_import", "commit": "6a4440123c73db142e467ecd42abc011a2bab5ab", "message": "IMA FINAL 1.0.1778202428151"}
+{"time": "2026-05-08 04:06:36 +0300", "event": "git_history_import", "commit": "5c03a652c2133d1a7e8f25bb99d6c5d4170d5c2d", "message": "IMA FINAL 1.0.1778202392910"}
+{"time": "2026-05-08 04:06:36 +0300", "event": "git_history_import", "commit": "dd4dce717ceca78b962913461a9e3ccb39b80e78", "message": "IMA FINAL 1.0.1778202392910"}
+{"time": "2026-05-08 04:06:26 +0300", "event": "git_history_import", "commit": "da9c6e5e874a43fa6abadda6e1a12d959249fdfa", "message": "IMA FINAL 1.0.1778202384377"}
+{"time": "2026-05-08 04:06:26 +0300", "event": "git_history_import", "commit": "d8bb92980fab344c1e9f2b414f728b75103779ae", "message": "IMA FINAL 1.0.1778202384377"}
+{"time": "2026-05-08 04:06:03 +0300", "event": "git_history_import", "commit": "b2acd16174921aabf145d75d35a722e21fb3bed9", "message": "IMA FINAL 1.0.1778202360439"}
+{"time": "2026-05-08 04:06:03 +0300", "event": "git_history_import", "commit": "ede2374589a4fca7ff8dc804a0b517eb3f9adadc", "message": "IMA FINAL 1.0.1778202360439"}
+{"time": "2026-05-08 04:05:55 +0300", "event": "git_history_import", "commit": "4b9ccf12c673fdb5bdef80ca5cf10a0ae2ffd4e7", "message": "IMA FINAL 1.0.1778202352101"}
+{"time": "2026-05-08 04:05:55 +0300", "event": "git_history_import", "commit": "651972ad8dc2e4b70ceea31af6844083ce69e96d", "message": "IMA FINAL 1.0.1778202352101"}
+{"time": "2026-05-08 04:05:30 +0300", "event": "git_history_import", "commit": "ef550f9b90e797efc93dfa164cb7ec4dbc138c5d", "message": "IMA FINAL 1.0.1778202326645"}
+{"time": "2026-05-08 04:05:30 +0300", "event": "git_history_import", "commit": "423087d1c08fa7c1ab19c96619e0e1535409bd7c", "message": "IMA FINAL 1.0.1778202326645"}
+{"time": "2026-05-08 04:05:21 +0300", "event": "git_history_import", "commit": "eadf3b102f943a130f7ed650bcafffc88ca68f76", "message": "IMA FINAL 1.0.1778202319221"}
+{"time": "2026-05-08 04:05:21 +0300", "event": "git_history_import", "commit": "c9a716cef27d37f1b988bb3fbea095030a06d7d1", "message": "IMA FINAL 1.0.1778202319221"}
+{"time": "2026-05-08 04:04:30 +0300", "event": "git_history_import", "commit": "3b5718517c113bc66d222ff69c16ddbf82cae8d7", "message": "IMA FINAL 1.0.1778202267311"}
+{"time": "2026-05-08 04:04:30 +0300", "event": "git_history_import", "commit": "abf76594cd0921bc96aebf5916a4c1143c2ca03e", "message": "IMA FINAL 1.0.1778202267311"}
+{"time": "2026-05-08 04:04:21 +0300", "event": "git_history_import", "commit": "fb6c98218ddb288077026ac2fd9484ef32b97ca9", "message": "IMA FINAL 1.0.1778202259004"}
+{"time": "2026-05-08 04:04:21 +0300", "event": "git_history_import", "commit": "758ec06a8c1d6a70b7b6889f86f5583ad1d65210", "message": "IMA FINAL 1.0.1778202259004"}
+{"time": "2026-05-08 04:03:52 +0300", "event": "git_history_import", "commit": "f71aba51cd8dc28e0bc7b45a4a1ddd67e510590d", "message": "IMA FINAL 1.0.1778202229684"}
+{"time": "2026-05-08 04:03:52 +0300", "event": "git_history_import", "commit": "bb5fbc00850d21e0c371e17c58ba930885f9e1c4", "message": "IMA FINAL 1.0.1778202229684"}
+{"time": "2026-05-08 04:03:44 +0300", "event": "git_history_import", "commit": "12722ba2ac393c4ef979c963f55fbe512319a65d", "message": "IMA FINAL 1.0.1778202221395"}
+{"time": "2026-05-08 04:03:44 +0300", "event": "git_history_import", "commit": "74790cfb9e9cc9088905e90fb7f9de820507ce88", "message": "IMA FINAL 1.0.1778202221395"}
+{"time": "2026-05-08 04:03:00 +0300", "event": "git_history_import", "commit": "cc99e47a7faa9ebe3916a73fe22fc92bcda5a7a6", "message": "IMA FINAL 1.0.1778202177184"}
+{"time": "2026-05-08 04:03:00 +0300", "event": "git_history_import", "commit": "15ea082c81a0bef80654cef4d52fa3f211413c6a", "message": "IMA FINAL 1.0.1778202177184"}
+{"time": "2026-05-08 04:02:50 +0300", "event": "git_history_import", "commit": "451aafc30d285adea7a9f1b72a30e5c556e3b3c4", "message": "IMA FINAL 1.0.1778202167556"}
+{"time": "2026-05-08 04:02:50 +0300", "event": "git_history_import", "commit": "aa554f30acb6297b3de5cea6e0ec11d4c2c5dd22", "message": "IMA FINAL 1.0.1778202167556"}
+{"time": "2026-05-08 04:02:11 +0300", "event": "git_history_import", "commit": "35f9a77b8d5cc7715744059c3b1a6466afcae881", "message": "IMA FINAL 1.0.1778202128784"}
+{"time": "2026-05-08 04:02:11 +0300", "event": "git_history_import", "commit": "d67cbb648a5c781f5a938ba9adc48fdf81e088aa", "message": "IMA FINAL 1.0.1778202128784"}
+{"time": "2026-05-08 04:02:02 +0300", "event": "git_history_import", "commit": "a53e4ffdffa20b8d5c91dcc0f534803460e180da", "message": "IMA FINAL 1.0.1778202119421"}
+{"time": "2026-05-08 04:02:02 +0300", "event": "git_history_import", "commit": "a4cbac427ec0b9ec828a6835fef411723ac660e2", "message": "IMA FINAL 1.0.1778202119421"}
+{"time": "2026-05-08 03:49:23 +0300", "event": "git_history_import", "commit": "b86352c084d0b44b3180225a78deda77765db46a", "message": "IMA FINAL 1.0.1778201359986"}
+{"time": "2026-05-08 03:49:23 +0300", "event": "git_history_import", "commit": "2f8354eba37470a3d9e071927607bdc3245d3995", "message": "IMA FINAL 1.0.1778201359986"}
+{"time": "2026-05-08 03:41:39 +0300", "event": "git_history_import", "commit": "8260c6ee6ad6819511cd99f1484e743d6269b6f3", "message": "IMA AUTO 1.0.1778200899320"}
+{"time": "2026-05-08 03:41:39 +0300", "event": "git_history_import", "commit": "bedc9dcbc9d02e092d3d5857f71892a4b3b9e80b", "message": "IMA AUTO 1.0.1778200899320"}
+{"time": "2026-05-06 00:34:41 +0300", "event": "git_history_import", "commit": "7e6de428f8aee794a6c2fec8acf22791008e7446", "message": "release 1.0.1778016879892"}
+{"time": "2026-05-06 00:34:41 +0300", "event": "git_history_import", "commit": "74433c752c7d30306fc03576d561c64cadb36b0d", "message": "release 1.0.1778016879892"}
+{"time": "2026-05-06 00:00:35 +0300", "event": "git_history_import", "commit": "fbf1ed4e361bf5c50e6cdb47ca4dd6d124a1630e", "message": "IMA HARDENED SYSTEM"}
+{"time": "2026-05-06 00:00:35 +0300", "event": "git_history_import", "commit": "a700aa0be900d86fa15e016f39ac3d51b35a1209", "message": "IMA HARDENED SYSTEM"}
+{"time": "2026-05-05 23:58:20 +0300", "event": "git_history_import", "commit": "76dc97090039668bb0c45b499721bf8a26e9da5b", "message": "IMA CORE RUNTIME+POLICY+MEMORY"}
+{"time": "2026-05-05 23:58:20 +0300", "event": "git_history_import", "commit": "78a88122987e8b6dae403e229b4bc722c637a008", "message": "IMA CORE RUNTIME+POLICY+MEMORY"}
+{"time": "2026-05-05 20:24:39 +0300", "event": "git_history_import", "commit": "3c3add5a14be1bf82b17d42a5874dab6dcc7e113", "message": "IMA ORCHESTRATOR SNAPSHOT"}
+{"time": "2026-05-05 20:24:39 +0300", "event": "git_history_import", "commit": "e8976a2e137d96c4c1a97b4a25bb3857b5bb421a", "message": "IMA ORCHESTRATOR SNAPSHOT"}
+{"time": "2026-05-05 20:21:11 +0300", "event": "git_history_import", "commit": "d0ed9368521591f0a075a1c78812e496a8e15c11", "message": "IMA SAFE RELEASE v1778001671191"}
+{"time": "2026-05-05 20:21:11 +0300", "event": "git_history_import", "commit": "3332cdf5b81340b3b1c6351734544fd059b6765d", "message": "IMA SAFE RELEASE v1778001671191"}
+{"time": "2026-05-05 20:11:06 +0300", "event": "git_history_import", "commit": "edcc795d99d7e3ecfb6f78fa3ad2d955764ef2d9", "message": "IMA STABLE SNAPSHOT"}
+{"time": "2026-05-05 20:11:06 +0300", "event": "git_history_import", "commit": "0aa67b66958d1c1fd776e6c1123a15daa5ea4ead", "message": "IMA STABLE SNAPSHOT"}
+{"time": "2026-05-03 17:40:20 +0300", "event": "git_history_import", "commit": "ac1ac0cb4f0931f50fd5a7c696a3fd2c26477533", "message": "auto deploy"}
+{"time": "2026-05-03 17:40:20 +0300", "event": "git_history_import", "commit": "36845afa5148be07a3d7864a3340c59c2fec56ea", "message": "auto deploy"}
+{"time": "2026-05-03 17:34:44 +0300", "event": "git_history_import", "commit": "0efc6b069ddd36c150e881539573b447a93179cc", "message": "auto deploy"}
+{"time": "2026-05-03 17:34:44 +0300", "event": "git_history_import", "commit": "355308b91d7c644efe3da75c142ea4b854a55d2d", "message": "auto deploy"}
+{"time": "2026-05-03 17:32:13 +0300", "event": "git_history_import", "commit": "d84906100229b0046e9bda83f86158683c80022c", "message": "auto sync"}
+{"time": "2026-05-03 17:32:13 +0300", "event": "git_history_import", "commit": "301d9cc525ccfaab6c459f25a0dfb0c694e10f26", "message": "auto sync"}
+{"time": "2026-05-03 17:30:50 +0300", "event": "git_history_import", "commit": "c4484f7ec04ed2fa9fd0496a0a29d144cb905eb2", "message": "auto sync"}
+{"time": "2026-05-03 17:30:50 +0300", "event": "git_history_import", "commit": "6308d327b2bbd56bd2490f39ff67ac36a2a2e63b", "message": "auto sync"}
+{"time": "2026-05-03 13:14:16 +0300", "event": "git_history_import", "commit": "03d07d86289404bd99735565062e62ebe5e6f9c1", "message": "auto deploy"}
+{"time": "2026-05-03 13:14:16 +0300", "event": "git_history_import", "commit": "52be83fd4237b44145383715ca30bfff13625c12", "message": "auto deploy"}
+{"time": "2026-05-03 13:04:56 +0300", "event": "git_history_import", "commit": "33f68b91b83a256830e2d69f15cadd6c16f7f7b1", "message": "auto deploy"}
+{"time": "2026-05-03 13:04:56 +0300", "event": "git_history_import", "commit": "8ca817f7bf5b1bd08fd911901d91ddff6dc47a6d", "message": "auto deploy"}
+{"time": "2026-05-03 13:00:46 +0300", "event": "git_history_import", "commit": "eb6d0aa29ab9624a2d744d8181d1ca2e3cb12ace", "message": "auto deploy"}
+{"time": "2026-05-03 13:00:46 +0300", "event": "git_history_import", "commit": "a305c2b1ec9a6763c1474fa0137a63b093946834", "message": "auto deploy"}
+{"time": "2026-05-03 12:58:53 +0300", "event": "git_history_import", "commit": "5b0d896e6c9257f5155de164a53e088b6b72ee98", "message": "auto deploy"}
+{"time": "2026-05-03 12:58:53 +0300", "event": "git_history_import", "commit": "90a174cd564038930d9cea87bde676860dee3dec", "message": "auto deploy"}
+{"time": "2026-05-02 10:00:49 +0300", "event": "git_history_import", "commit": "5564b5887c0a8c71cc04d5e16b0d4f7ab641d7bb", "message": "auto deploy sync"}
+{"time": "2026-05-02 10:00:49 +0300", "event": "git_history_import", "commit": "2c81bb6aae28ba572d8c81bc68b80a63a4e44397", "message": "auto deploy sync"}
+{"time": "2026-05-02 09:53:18 +0300", "event": "git_history_import", "commit": "cb743bd8009a0b8a12d1c98c5920338f6eda43a6", "message": "ci: deploy 2.8.11"}
+{"time": "2026-05-02 09:53:18 +0300", "event": "git_history_import", "commit": "ffc52aaaa4df78b115a3860c2fc4370e9f153069", "message": "ci: deploy 2.8.11"}
+{"time": "2026-05-02 09:52:26 +0300", "event": "git_history_import", "commit": "dd087fbd27955ff475da41359297b1da9b44c46f", "message": "ci: deploy 2.8.10"}
+{"time": "2026-05-02 09:52:26 +0300", "event": "git_history_import", "commit": "e8c95e7a3f6bedef3e04d9253284a0a8f06a0530", "message": "ci: deploy 2.8.10"}
+{"time": "2026-05-02 09:51:15 +0300", "event": "git_history_import", "commit": "33600190a17477fb3e732dc89054b6ff4a3356c6", "message": "ci: deploy 2.8.9"}
+{"time": "2026-05-02 09:51:15 +0300", "event": "git_history_import", "commit": "59a19623835dc0ef8e0175c11a2cd8a458fb4e3b", "message": "ci: deploy 2.8.9"}
+{"time": "2026-05-02 09:46:27 +0300", "event": "git_history_import", "commit": "a144bb342276e0a2b3a618c4efa67ca7e04c8b9f", "message": "ci: deploy 2.8.8"}
+{"time": "2026-05-02 09:46:27 +0300", "event": "git_history_import", "commit": "65a3d62c6e57e7c9345fbeb285bb16afaf3c2e30", "message": "ci: deploy 2.8.8"}
+{"time": "2026-05-02 09:45:17 +0300", "event": "git_history_import", "commit": "1924f06bad7d7c69d622b48282df41e9fa2648b4", "message": "fix: isolate deploy engine"}
+{"time": "2026-05-02 09:45:17 +0300", "event": "git_history_import", "commit": "0130b37bc63ee123aa2ca4aa7e5646f07c6afd11", "message": "fix: isolate deploy engine"}
+{"time": "2026-05-02 09:43:59 +0300", "event": "git_history_import", "commit": "920f4af5fbf791d2b3a2a398594f46cdd59f31fd", "message": "auto deploy 2.8.8"}
+{"time": "2026-05-02 09:43:59 +0300", "event": "git_history_import", "commit": "c8d81af069f1e9801925d0f4bf6ad8397cc8e36e", "message": "auto deploy 2.8.8"}
+{"time": "2026-05-02 09:30:12 +0300", "event": "git_history_import", "commit": "4981962c6cc390bcb9a7b6811aa8c1ef152bbfbd", "message": "auto deploy v2.8.8"}
+{"time": "2026-05-02 09:30:12 +0300", "event": "git_history_import", "commit": "eae321b4fde6dd14c5e463e10360053ba913af33", "message": "auto deploy v2.8.8"}
+{"time": "2026-05-02 09:30:09 +0300", "event": "git_history_import", "commit": "bd41046d97b6a2dfbca9c11d75f0247a28021249", "message": "auto: pre-deploy sync"}
+{"time": "2026-05-02 09:30:09 +0300", "event": "git_history_import", "commit": "eda92dba7778963a1272de5788480a3a3a42dc0e", "message": "auto: pre-deploy sync"}
+{"time": "2026-05-02 09:26:34 +0300", "event": "git_history_import", "commit": "b0d5e810cb997f6ab0bcbd39e30b1efdf8adb58a", "message": "auto deploy v2.8.8"}
+{"time": "2026-05-02 09:26:34 +0300", "event": "git_history_import", "commit": "0b3088cda4ba90cc23246a9dc8a8340234955461", "message": "auto deploy v2.8.8"}
+{"time": "2026-05-02 09:24:52 +0300", "event": "git_history_import", "commit": "5c88d2141011b3012be77f588eeaa0f521a78839", "message": "fix: ignore dev artifacts"}
+{"time": "2026-05-02 09:24:52 +0300", "event": "git_history_import", "commit": "3094cf621725cf444776dd95aa8efcef0622c9b3", "message": "fix: ignore dev artifacts"}
+{"time": "2026-05-02 02:24:35 +0300", "event": "git_history_import", "commit": "afce820b9cb57ffae90414a1c9ba06beae1a3a58", "message": "auto deploy v2.8.7"}
+{"time": "2026-05-02 02:24:35 +0300", "event": "git_history_import", "commit": "e65641c94899243783299071308067fcfd606f12", "message": "auto deploy v2.8.7"}
+{"time": "2026-05-02 02:20:31 +0300", "event": "git_history_import", "commit": "ca3e41c13743ba47a95f5398531cc5dcceb53808", "message": "auto deploy v2.8.6"}
+{"time": "2026-05-02 02:20:31 +0300", "event": "git_history_import", "commit": "129880b6ea7eb2a75d6919f3195dd720e61db30d", "message": "auto deploy v2.8.6"}
+{"time": "2026-05-02 02:20:28 +0300", "event": "git_history_import", "commit": "7b431c605a80bc16d2759f3bbf4d9b0471d6e95d", "message": "pre-deploy clean"}
+{"time": "2026-05-02 02:20:28 +0300", "event": "git_history_import", "commit": "88df26f73cba9886d81e858420e7df7867659073", "message": "pre-deploy clean"}
+{"time": "2026-05-02 02:15:09 +0300", "event": "git_history_import", "commit": "b1322c071850a94ecd6022c832b5b3944362dbb9", "message": "pre-deploy clean"}
+{"time": "2026-05-02 02:15:09 +0300", "event": "git_history_import", "commit": "86ba52e8a2157d837f379face58d40216f9462e1", "message": "pre-deploy clean"}
+{"time": "2026-05-02 00:10:39 +0300", "event": "git_history_import", "commit": "b8d816642d3c39d73deb4e4cf362630ae5d8920c", "message": "pre-deploy clean"}
+{"time": "2026-05-02 00:10:39 +0300", "event": "git_history_import", "commit": "aa92fd2c8cc9d8a7579d21c2a694ffa5eed84018", "message": "pre-deploy clean"}
+{"time": "2026-05-02 00:08:22 +0300", "event": "git_history_import", "commit": "d6797ef5b22da376c2e6156e2c9c06eae65bf6c7", "message": "auto deploy v2.8.5"}
+{"time": "2026-05-02 00:08:22 +0300", "event": "git_history_import", "commit": "d3e3fa2103cdf6ee6782abb306b8c9c7c6949f1f", "message": "auto deploy v2.8.5"}
+{"time": "2026-05-02 00:08:22 +0300", "event": "git_history_import", "commit": "37a98c91877cb3148f0ad925146b1dcffb9214c3", "message": "pre-deploy clean"}
+{"time": "2026-05-02 00:08:22 +0300", "event": "git_history_import", "commit": "1a9e86d6ca1f6dd80409c7bd7cff70febf3fcaf4", "message": "pre-deploy clean"}
+{"time": "2026-05-02 00:04:29 +0300", "event": "git_history_import", "commit": "e37be287b2b3c7adb4bebc5881364877df50d7ea", "message": "final clean state"}
+{"time": "2026-05-02 00:04:29 +0300", "event": "git_history_import", "commit": "c02c06a54665325efbd930908736c7b0c11bf94d", "message": "final clean state"}
+{"time": "2026-05-01 23:59:51 +0300", "event": "git_history_import", "commit": "e3de2b9a037bead284a8c12ca980be4b86a15b1d", "message": "bootstrap stable state"}
+{"time": "2026-05-01 23:59:51 +0300", "event": "git_history_import", "commit": "535f1943337868345bebfdd608bc820ebb22dd75", "message": "bootstrap stable state"}
+{"time": "2026-05-01 22:35:56 +0300", "event": "git_history_import", "commit": "217dc41b504433590a90b4736870d6b4d15c65a1", "message": "add autopilot pipeline layer"}
+{"time": "2026-05-01 22:35:56 +0300", "event": "git_history_import", "commit": "d89daffb549c28fd4f5c80d8daa5c644c6e17e85", "message": "add autopilot pipeline layer"}
+{"time": "2026-05-01 22:30:58 +0300", "event": "git_history_import", "commit": "b5924c79af744574adbe5963aedf682e77365b99", "message": "pre-gate cleanup"}
+{"time": "2026-05-01 22:30:58 +0300", "event": "git_history_import", "commit": "fe183614e6f5155a7a37ccf024d003075d670ebb", "message": "pre-gate cleanup"}
+{"time": "2026-05-01 21:01:54 +0300", "event": "git_history_import", "commit": "3ddaddd67df2e21ba0f671e249748979ad085b4d", "message": "LOCK VERIFIED 1777658514"}
+{"time": "2026-05-01 21:01:54 +0300", "event": "git_history_import", "commit": "e9be4a8a0fa418815fe22629d523ac9a590aa78f", "message": "LOCK VERIFIED 1777658514"}
+{"time": "2026-05-01 16:35:26 +0300", "event": "git_history_import", "commit": "e9fe0fbe6cef2ac0e8b980d7771639cef041ce09", "message": "release 1777642526"}
+{"time": "2026-05-01 16:35:26 +0300", "event": "git_history_import", "commit": "6bf5a9f8381e17722b651dcbc7b5871b6232c24e", "message": "release 1777642526"}
+{"time": "2026-05-01 16:32:32 +0300", "event": "git_history_import", "commit": "07a04dfddf03fb7d36133aa538a9723d6d55a62d", "message": "release 1777642352"}
+{"time": "2026-05-01 16:32:32 +0300", "event": "git_history_import", "commit": "c8726df63be2ae7f3c22ee1b195c27cd1310246e", "message": "release 1777642352"}
+{"time": "2026-05-01 16:31:23 +0300", "event": "git_history_import", "commit": "fa4db0317b49bbe4bdc9c6826da66dd703d005ed", "message": "release 1777642283"}
+{"time": "2026-05-01 16:31:23 +0300", "event": "git_history_import", "commit": "e68076f8f777bfecf316b47122be8ca5920bf6e2", "message": "release 1777642283"}
+{"time": "2026-05-01 15:36:26 +0300", "event": "git_history_import", "commit": "aee84742f193e166730ea0b2a7d4126eb5e5e773", "message": "release 1777638986"}
+{"time": "2026-05-01 15:36:26 +0300", "event": "git_history_import", "commit": "d11a88fe8b9a61e1e89c25c52de6b64ff49e31d2", "message": "release 1777638986"}
+{"time": "2026-05-01 15:33:00 +0300", "event": "git_history_import", "commit": "240dbc3530a2f7b05b4d15b2149cbea667b55eb2", "message": "release 1777638779"}
+{"time": "2026-05-01 15:33:00 +0300", "event": "git_history_import", "commit": "305c972c832ee500db91e1feed3193a0c485c8a8", "message": "release 1777638779"}
+{"time": "2026-05-01 14:41:05 +0300", "event": "git_history_import", "commit": "278f646c9bab14a7829f6fc48342b72e38010f94", "message": "auto sync"}
+{"time": "2026-05-01 14:41:05 +0300", "event": "git_history_import", "commit": "784cd5b392c1b15b002c98cd626b86d2c929c961", "message": "auto sync"}
+{"time": "2026-05-01 13:53:55 +0300", "event": "git_history_import", "commit": "b0b76f8da1a53a53c4e64df8b932fdec0c48f026", "message": "auto sync"}
+{"time": "2026-05-01 13:53:55 +0300", "event": "git_history_import", "commit": "12d37d8666e2ac3ec607c8605c4c5d97c5319160", "message": "auto sync"}
+{"time": "2026-05-01 11:32:34 +0300", "event": "git_history_import", "commit": "6aed4c86d68084ed53d4654613c9135ee1ae5668", "message": "auto sync"}
+{"time": "2026-05-01 11:32:34 +0300", "event": "git_history_import", "commit": "1bae1a7ed23540b8f0d3d9675b23f4017c925b48", "message": "auto sync"}
+{"time": "2026-05-01 11:31:10 +0300", "event": "git_history_import", "commit": "94ffe4f1f737caa82abf2a1b51cea9b44424acc6", "message": "auto sync"}
+{"time": "2026-05-01 11:31:10 +0300", "event": "git_history_import", "commit": "052ac1bdd4c4ce2c9204ef6c38fe9b71f5d6d017", "message": "auto sync"}
+{"time": "2026-05-01 11:26:16 +0300", "event": "git_history_import", "commit": "0f365108d58c2f50b5adbcbe2fe0a9856f5ffca8", "message": "auto sync"}
+{"time": "2026-05-01 11:26:16 +0300", "event": "git_history_import", "commit": "5eb67f02b2c060c6f9d60c3cc5262d88e3ccc86f", "message": "auto sync"}
+{"time": "2026-05-01 11:23:37 +0300", "event": "git_history_import", "commit": "65de3a49b26593cdeb13477d48f905dc2a89a746", "message": "auto sync"}
+{"time": "2026-05-01 11:23:37 +0300", "event": "git_history_import", "commit": "b0f9a30fb94837802698e8d7f3eaf807911dd010", "message": "auto sync"}
+{"time": "2026-05-01 11:22:52 +0300", "event": "git_history_import", "commit": "8b27adb3c1c61e0b87197b83a25e521ec70287f3", "message": "auto sync Fri May  1 11:22:52 IDT 2026"}
+{"time": "2026-05-01 11:22:52 +0300", "event": "git_history_import", "commit": "ed28b7309b7d08e0787712221ee1948cc956a100", "message": "auto sync Fri May  1 11:22:52 IDT 2026"}
+{"time": "2026-05-01 11:21:30 +0300", "event": "git_history_import", "commit": "9faae573366c03ce77b2d6638572ced559f8180f", "message": "auto sync"}
+{"time": "2026-05-01 11:21:30 +0300", "event": "git_history_import", "commit": "e89744241e5f31fa384221429ea0b7799c7b9ae7", "message": "auto sync"}
+{"time": "2026-05-01 10:31:41 +0300", "event": "git_history_import", "commit": "82ffbec56b817515a202b077f202e6c1c244fe79", "message": "auto sync Fri May  1 10:31:41 IDT 2026"}
+{"time": "2026-05-01 10:31:41 +0300", "event": "git_history_import", "commit": "0240a8904c1028d2511968f095652dbef58f4950", "message": "auto sync Fri May  1 10:31:41 IDT 2026"}
+{"time": "2026-05-01 10:24:13 +0300", "event": "git_history_import", "commit": "eb2f80da30d59720f0265d2a473030021efd28c6", "message": "auto sync Fri May  1 10:24:13 IDT 2026"}
+{"time": "2026-05-01 10:24:13 +0300", "event": "git_history_import", "commit": "156e98ea31f2225dbacfe49fc0bda0bf457c331d", "message": "auto sync Fri May  1 10:24:13 IDT 2026"}
+{"time": "2026-05-01 10:12:17 +0300", "event": "git_history_import", "commit": "242de4b9c5fc43e099b7c3e44ba7202e0e5a6948", "message": "auto sync Fri May  1 10:12:17 IDT 2026"}
+{"time": "2026-05-01 10:12:17 +0300", "event": "git_history_import", "commit": "52f439d536212e2df8ce407a7b264be067be208d", "message": "auto sync Fri May  1 10:12:17 IDT 2026"}
+{"time": "2026-05-01 10:10:37 +0300", "event": "git_history_import", "commit": "99fa301d5afa485a75a52bab799dcdcc455207e1", "message": "auto sync Fri May  1 10:10:37 IDT 2026"}
+{"time": "2026-05-01 10:10:37 +0300", "event": "git_history_import", "commit": "bf768fe4161aa91b745a49bf373934c07319b3bb", "message": "auto sync Fri May  1 10:10:37 IDT 2026"}
+{"time": "2026-05-01 10:06:26 +0300", "event": "git_history_import", "commit": "f9f58f9b3c51f465e782bf2656e1a646855c713c", "message": "auto sync Fri May  1 10:06:26 IDT 2026"}
+{"time": "2026-05-01 10:06:26 +0300", "event": "git_history_import", "commit": "e9a1016cd3821860ed935dfa52602eb388a31192", "message": "auto sync Fri May  1 10:06:26 IDT 2026"}
+{"time": "2026-05-01 08:57:51 +0300", "event": "git_history_import", "commit": "b5527be9f89947aeccf3acd4ac0fe216b1fdbc9d", "message": "auto sync"}
+{"time": "2026-05-01 08:57:51 +0300", "event": "git_history_import", "commit": "9cd645f681a2e3fd8cce28013cc6a61dd91f7477", "message": "auto sync"}
+{"time": "2026-05-01 08:56:47 +0300", "event": "git_history_import", "commit": "36a01d2221554a2c934c994b707f062437c52236", "message": "auto sync Fri May  1 08:56:47 IDT 2026"}
+{"time": "2026-05-01 08:56:47 +0300", "event": "git_history_import", "commit": "a5df8cee52b72b2d7ca4c9552fc6decb795b3a0e", "message": "auto sync Fri May  1 08:56:47 IDT 2026"}
+{"time": "2026-05-01 08:55:48 +0300", "event": "git_history_import", "commit": "b5037189aeb813f42cda14784462c455469dd911", "message": "auto sync"}
+{"time": "2026-05-01 08:55:48 +0300", "event": "git_history_import", "commit": "e06deae8ca51f61d5535e6a446454b05bdb75c79", "message": "auto sync"}
+{"time": "2026-05-01 08:54:44 +0300", "event": "git_history_import", "commit": "cf000ae69351831774cb1e979070a7f039d4804d", "message": "auto sync Fri May  1 08:54:44 IDT 2026"}
+{"time": "2026-05-01 08:54:44 +0300", "event": "git_history_import", "commit": "77a971c19cf94bda5a0e3b4f69e58b9dcf455fa9", "message": "auto sync Fri May  1 08:54:44 IDT 2026"}
+{"time": "2026-05-01 08:53:51 +0300", "event": "git_history_import", "commit": "27fe3363dad68261b7fc54398f0f37164cbf55df", "message": "auto sync"}
+{"time": "2026-05-01 08:53:51 +0300", "event": "git_history_import", "commit": "10c2ba6e60570c8c4c8c41f8b93c3f85f70a7243", "message": "auto sync"}
+{"time": "2026-05-01 08:52:47 +0300", "event": "git_history_import", "commit": "b3ce50cefeb2bfcde1c228dada94bee1bff23816", "message": "auto sync Fri May  1 08:52:47 IDT 2026"}
+{"time": "2026-05-01 08:52:47 +0300", "event": "git_history_import", "commit": "535aa1fe7aaf021aabff2129a751c5dd69c80ad4", "message": "auto sync Fri May  1 08:52:47 IDT 2026"}
+{"time": "2026-05-01 08:45:04 +0300", "event": "git_history_import", "commit": "23b52cd0c88ccf7497610d72d6ce0ba430c4b3a1", "message": "auto sync Fri May  1 08:45:04 IDT 2026"}
+{"time": "2026-05-01 08:45:04 +0300", "event": "git_history_import", "commit": "b34c0567f65f6c3947d044c2f36dd1c07f79c6cc", "message": "auto sync Fri May  1 08:45:04 IDT 2026"}
+{"time": "2026-04-30 16:19:42 +0300", "event": "git_history_import", "commit": "13d34c5afd018e4dfc3148f21c5c9ae7b5f8bfee", "message": "auto release Thu Apr 30 16:19:42 IDT 2026"}
+{"time": "2026-04-30 16:19:42 +0300", "event": "git_history_import", "commit": "b1efc9d479bbe4e3d0336bd0c09fc89ff03075df", "message": "auto release Thu Apr 30 16:19:42 IDT 2026"}
+{"time": "2026-04-30 16:19:32 +0300", "event": "git_history_import", "commit": "200b5c1b16fd8466451245843423e5bb57895de0", "message": "fix: separate runtime state from system scripts"}
+{"time": "2026-04-30 16:19:32 +0300", "event": "git_history_import", "commit": "f0ba03cc3a4c26c8a9f117ec8e8281dac05bb6c7", "message": "fix: separate runtime state from system scripts"}
+{"time": "2026-04-30 16:18:24 +0300", "event": "git_history_import", "commit": "3091bab13c409b31ebdca7738325f682e15d5678", "message": "state sync Thu Apr 30 16:18:24 IDT 2026"}
+{"time": "2026-04-30 16:18:24 +0300", "event": "git_history_import", "commit": "9c637c2d287980b5e06bebe3c710ae70afa77e2b", "message": "state sync Thu Apr 30 16:18:24 IDT 2026"}
+{"time": "2026-04-30 16:16:47 +0300", "event": "git_history_import", "commit": "d191d6dbcc596b853cd26ee4b9b1846304f88505", "message": "auto release Thu Apr 30 16:16:47 IDT 2026"}
+{"time": "2026-04-30 16:16:47 +0300", "event": "git_history_import", "commit": "034725957fafdaf9fc6d08a4099dc289d69e6b20", "message": "auto release Thu Apr 30 16:16:47 IDT 2026"}
+{"time": "2026-04-30 16:13:51 +0300", "event": "git_history_import", "commit": "ffe8d533cc92a6fb693b8881157bf51e455dfac6", "message": "auto release Thu Apr 30 16:13:51 IDT 2026"}
+{"time": "2026-04-30 16:13:51 +0300", "event": "git_history_import", "commit": "0fa06119526e42d3a8b8e2de2c7f6c380a253f77", "message": "auto release Thu Apr 30 16:13:51 IDT 2026"}
+{"time": "2026-04-30 13:37:53 +0300", "event": "git_history_import", "commit": "7687a91395f3ec0d4b80fff4d99dfa64004c44af", "message": "stable saas bootstrap v1"}
+{"time": "2026-04-30 13:37:53 +0300", "event": "git_history_import", "commit": "69eb95c7126ecd7b7852c3e26928c4425c5eb798", "message": "stable saas bootstrap v1"}
+{"time": "2026-04-30 13:07:15 +0300", "event": "git_history_import", "commit": "129eea6097b296b38ad8178dd2592f424c63cf45", "message": "stable cron + self healing system"}
+{"time": "2026-04-30 13:07:15 +0300", "event": "git_history_import", "commit": "b4181950a9e7eca9631a1f851f15f34464daf438", "message": "stable cron + self healing system"}
+{"time": "2026-04-30 13:00:08 +0300", "event": "git_history_import", "commit": "e3b9381920764a9a6a20ebfe71c985aacca1a398", "message": "stable working SaaS full system (auth + run + tunnel + cli)"}
+{"time": "2026-04-30 13:00:08 +0300", "event": "git_history_import", "commit": "17d7f3739ebfe9f540e60aea1385c6a91360ae16", "message": "stable working SaaS full system (auth + run + tunnel + cli)"}
+{"time": "2026-04-30 12:47:21 +0300", "event": "git_history_import", "commit": "e671e124150d7a5b5fc1018768212cd13d1b34f4", "message": "stable working saas core"}
+{"time": "2026-04-30 12:47:21 +0300", "event": "git_history_import", "commit": "b4234719b5f65641aef428d7ac6e00973367ce8f", "message": "stable working saas core"}
+{"time": "2026-04-29 16:17:53 +0300", "event": "git_history_import", "commit": "8cf00db5e163c045261e0a447e41e7a71990f027", "message": "os mode auto sync"}
+{"time": "2026-04-29 16:17:53 +0300", "event": "git_history_import", "commit": "996af0f921a5074c5cfbfff4d720dd47c1cf7c06", "message": "os mode auto sync"}
+{"time": "2026-04-29 14:41:43 +0300", "event": "git_history_import", "commit": "6bf0a25c570c8c6a8651d05b61cf12900daff1fa", "message": "kernel stable baseline (4000 working state)"}
+{"time": "2026-04-29 14:41:43 +0300", "event": "git_history_import", "commit": "84b8756c55c718dff9d4bf7e8940926d0098a8a4", "message": "kernel stable baseline (4000 working state)"}
+{"time": "2026-04-29 14:15:42 +0300", "event": "git_history_import", "commit": "e2e54da06861376e524a2e68dbd3cd5ea1a3ae65", "message": "kernel auto sync"}
+{"time": "2026-04-29 14:15:42 +0300", "event": "git_history_import", "commit": "4655688ebe5dee4281c7954d107088391628cb26", "message": "kernel auto sync"}
+{"time": "2026-04-29 14:02:51 +0300", "event": "git_history_import", "commit": "55cda1bb243c0ab0f31c4082ee972ced3a31fdc7", "message": "kernel auto stable commit 20260429140251"}
+{"time": "2026-04-29 14:02:51 +0300", "event": "git_history_import", "commit": "831cd89a93f9acc7c53e845b6944fdb9963cfd22", "message": "kernel auto stable commit 20260429140251"}
+{"time": "2026-04-29 13:48:32 +0300", "event": "git_history_import", "commit": "0d6b8791c066312122e357452b2d2f6bb098e29b", "message": "2.2.0"}
+{"time": "2026-04-29 13:48:32 +0300", "event": "git_history_import", "commit": "e6aac0d9ef26595cb73a588ffc506391b8c195cc", "message": "2.2.0"}
+{"time": "2026-04-29 13:48:26 +0300", "event": "git_history_import", "commit": "719c795b979823e7e55fcc516cc8bd70bdda6b0e", "message": "ignore non-core files"}
+{"time": "2026-04-29 13:48:26 +0300", "event": "git_history_import", "commit": "701fd7bde5b5e778fa719482eec84a9eb3f6d722", "message": "ignore non-core files"}
+{"time": "2026-04-29 13:47:59 +0300", "event": "git_history_import", "commit": "4adf86277b8174b3f8e619a18f28efa0d8238280", "message": "sync external runtime changes for release"}
+{"time": "2026-04-29 13:47:59 +0300", "event": "git_history_import", "commit": "c75f2792c0e4be335936080f8e201b04dd761455", "message": "sync external runtime changes for release"}
+{"time": "2026-04-29 13:45:17 +0300", "event": "git_history_import", "commit": "d668d7ccebe352d19254f1fd4eda21a672ad99bb", "message": "prepare kernel saas release v2.2.0"}
+{"time": "2026-04-29 13:45:17 +0300", "event": "git_history_import", "commit": "9934913dc2b7ca94299c0e478bef8ecbbc33ab0d", "message": "prepare kernel saas release v2.2.0"}
+{"time": "2026-04-29 13:41:45 +0300", "event": "git_history_import", "commit": "7fc7084beb775a94e5ccc8cb2385240a84ea44fb", "message": "integrate SaaS into kernel core system"}
+{"time": "2026-04-29 13:41:45 +0300", "event": "git_history_import", "commit": "009ff6bb63f48de518b5f4f2e82d573ed5ba3772", "message": "integrate SaaS into kernel core system"}
+{"time": "2026-04-26 19:20:01 +0300", "event": "git_history_import", "commit": "da21c73a0b257f36b963af1c5b5ce19be0b66ecf", "message": "runtime refactor: stability layer + memory engine migration"}
+{"time": "2026-04-26 19:20:01 +0300", "event": "git_history_import", "commit": "01dd13e2d5df1daa2f6685f0f472d614ab971c46", "message": "runtime refactor: stability layer + memory engine migration"}
+{"time": "2026-04-26 18:33:05 +0300", "event": "git_history_import", "commit": "02531176764f0f6d2a04b6d38afd53664cd566d5", "message": "A baseline: kernel modularization + run script stabilized"}
+{"time": "2026-04-26 18:33:05 +0300", "event": "git_history_import", "commit": "2c5ccd97dae2448ecaea0b3f51f969f506aff447", "message": "A baseline: kernel modularization + run script stabilized"}
+{"time": "2026-04-26 12:22:38 +0300", "event": "git_history_import", "commit": "54c7655e5192f3c3360dee34fe8f9bcde9d0c7c5", "message": "IMA kernel stable snapshot + personality engine + memory system"}
+{"time": "2026-04-26 12:22:38 +0300", "event": "git_history_import", "commit": "988bf2c4db3cc2639caaee791687e9776f528cdb", "message": "IMA kernel stable snapshot + personality engine + memory system"}
+{"time": "2026-04-26 12:13:28 +0300", "event": "git_history_import", "commit": "ec19cee5b1db42c14b0ee90f947a302ad46b0a1f", "message": "initial stable kernel sync"}
+{"time": "2026-04-26 12:13:28 +0300", "event": "git_history_import", "commit": "339f756a4d8b97fc7029dd521b1a96ed9017f26a", "message": "initial stable kernel sync"}
+{"time": "2026-04-26 11:56:38 +0300", "event": "git_history_import", "commit": "a6765c358387168a87abedd187beb582872d1d96", "message": "initial IMA kernel modular system"}
+{"time": "2026-04-26 11:56:38 +0300", "event": "git_history_import", "commit": "1606e96db957a080ad984f9a624875e2c8ce447d", "message": "initial IMA kernel modular system"}
+{"time": "2026-04-26 12:01:35 +0300", "event": "git_history_import", "commit": "0bfa36d8b542804f1c392557a4a373d534c0f2e5", "message": "Initial commit"}
+{"time": "2026-04-26 12:01:35 +0300", "event": "git_history_import", "commit": "17bdeba272f900fb6012fc99384791051d212251", "message": "Initial commit"}
