@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 19:25:01.349213",
+  "time": "2026-07-16 19:32:14.538182",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [],
   "imports": [
@@ -3236,6 +3236,14 @@
       "import": "pathlib"
     },
     {
+      "file": "guardian_regression_check.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "guardian_regression_check.py",
+      "import": "subprocess"
+    },
+    {
       "file": "repair_source_selection.py",
       "import": "pathlib"
     },
@@ -3538,6 +3546,18 @@
     {
       "file": "upgrade_guardian_no_master_on_success.py",
       "import": "pathlib"
+    },
+    {
+      "file": "guardian_release_pipeline.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "guardian_release_pipeline.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "guardian_release_pipeline.py",
+      "import": "datetime"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -10606,6 +10626,10 @@
       "size": 779,
       "sha256": "0124b8d25a6e49e0e5536471e0bfb3f75e007841fe30674b622c0b7d9e834025"
     },
+    "guardian_regression_check.py": {
+      "size": 666,
+      "sha256": "1c01e8e8198620d3177b2ba3a9e298f795f402412f88eec726701641bc627542"
+    },
     "repair_source_selection.py": {
       "size": 1143,
       "sha256": "acd4e2878d9d7493d5e0df11b5ab95bb3d88556d5101d6134ab6db222c76e5b4"
@@ -10725,6 +10749,10 @@
     "upgrade_guardian_no_master_on_success.py": {
       "size": 886,
       "sha256": "7bdc2d8d1dcb8e2fa3f853d87904fb9ec38b98110a008e52bda2c37049e36875"
+    },
+    "guardian_release_pipeline.py": {
+      "size": 1083,
+      "sha256": "4eb78d623c3d46ddc1c498ff24249e785d23779c2a2405d27c6fbd74a018c801"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -12216,7 +12244,7 @@
     }
   },
   "stats": {
-    "python_files": 638,
+    "python_files": 640,
     "syntax_errors": 0,
     "duplicate_groups": 32
   }
