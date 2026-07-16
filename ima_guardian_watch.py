@@ -192,6 +192,7 @@ def run_cycle():
                 return
 
             print("[OK] incremental cycle executed")
+            return
     except Exception as e:
         print("[INCREMENTAL ERROR]", e)
 
