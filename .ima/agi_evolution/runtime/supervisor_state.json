@@ -1,0 +1,15 @@
+{
+  "time": 1784225275.6837049,
+  "steps": [
+    {
+      "job": "health_monitor.py",
+      "status": "ok",
+      "output": "{\n  \"time\": 1784225275.7393332,\n  \"healthy\": true,\n  \"checks\": {\n    \"system_state.json\": true,\n    \"module_registry.json\": true,\n    \"latest_cycle.json\": true\n  }\n}\n"
+    },
+    {
+      "job": "auto_resume.py",
+      "status": "ok",
+      "output": "{\n  \"time\": 1784225275.8040528,\n  \"last_state\": \"detected\",\n  \"next_action\": \"continue_evolution_cycle\",\n  \"status\": \"ready\"\n}\n"
+    }
+  ]
+}
