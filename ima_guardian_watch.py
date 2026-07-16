@@ -153,6 +153,32 @@ def incremental_cycle():
 
     return True
 
+
+
+def guardian_target_compile(files):
+
+    import py_compile
+
+    print("=== TARGET COMPILE ===")
+
+    errors=[]
+
+    for f in files:
+        if not f.endswith(".py"):
+            continue
+
+        try:
+            py_compile.compile(f, doraise=True)
+            print("[OK]", f)
+
+        except Exception as e:
+            print("[FAIL]", f)
+            errors.append(f)
+
+    return errors
+
+
+
 def run_cycle():
 
     print("\n=== GUARDIAN AUTO CYCLE ===")
