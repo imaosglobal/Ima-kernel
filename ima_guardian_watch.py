@@ -1,3 +1,23 @@
+
+
+def guardian_policy_check():
+    import json
+
+    p = Path(".ima/guardian/policy.json")
+
+    if not p.exists():
+        print("[POLICY MISSING]")
+        return False
+
+    try:
+        data=json.loads(p.read_text(encoding="utf8"))
+        return data.get("rules",{}).get(
+            "scan_only_changed_files",
+            False
+        )
+    except Exception:
+        return False
+
 import json
 from pathlib import Path
 import subprocess

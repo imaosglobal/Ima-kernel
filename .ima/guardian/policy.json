@@ -1,22 +1,17 @@
 {
-  "active_paths": [
-    "learning",
-    "ima",
-    "api",
-    "runtime"
-  ],
-  "protected_paths": [
-    ".ima/backups",
-    ".ima/archive",
-    "archive",
-    "snapshots"
-  ],
-  "auto_fix": true,
-  "auto_commit": true,
-  "rollback_on_failure": true,
-  "max_history_lines": 2000,
-  "generated_files": [
-    "IMA_AUDIT_REPORT.json",
-    ".ima/guardian/master.log"
+  "mode": "smart_incremental",
+  "rules": {
+    "scan_only_changed_files": true,
+    "skip_master_when_target_ok": true,
+    "repair_before_master": true,
+    "compile_after_repair": true,
+    "protect_guardian_files": true,
+    "auto_commit_verified_changes": true
+  },
+  "protected": [
+    "ima_guardian_watch.py",
+    "ima_guardian_self_repair.py",
+    "ima_guardian_master.py",
+    "ima_guardian_controller.py"
   ]
 }
