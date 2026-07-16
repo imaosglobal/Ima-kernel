@@ -60,7 +60,7 @@ def git_checkpoint(name):
 
 
 def audit():
-    run("python3 ima_full_audit.py")
+    run("python3 ima_guardian_report_scan.py")
 
 
 def load_report():

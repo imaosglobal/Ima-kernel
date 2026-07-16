@@ -1,4 +1,9 @@
+from pathlib import Path
+import json
 
+p = Path("ima_guardian_self_repair.py")
+
+code = r'''
 from pathlib import Path
 import json
 import subprocess
@@ -101,3 +106,8 @@ def run():
 
 if __name__=="__main__":
     run()
+'''
+
+p.write_text(code, encoding="utf8")
+
+print("[OK] report based guardian connected")
