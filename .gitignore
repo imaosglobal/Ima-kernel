@@ -79,3 +79,6 @@ __pycache__/
 .ima/backups/
 .ima/archive_final/
 *.pyc
+IMA_AUDIT_REPORT.json
+.ima/guardian/*.log
+.ima/guardian/history.jsonl
