@@ -10,6 +10,77 @@ def load(path):
     except:
         return {}
 
+
+def get_today_events():
+    import json
+    from datetime import date
+
+    events=[]
+    truth=Path.home()/".ima/truth/truth_database.jsonl"
+
+    if truth.exists():
+        for line in truth.read_text(encoding="utf-8").splitlines():
+            try:
+                item=json.loads(line)
+                if item.get("date")==str(date.today()):
+                    events.append(item)
+            except:
+                pass
+
+    return events
+
+
+def summarize_today():
+    result=[]
+
+    for e in get_today_events():
+
+        if e.get("source")=="git":
+            result.append("Git: "+e.get("event",""))
+
+        elif "evolution" in e.get("source",""):
+            data=e.get("data",{})
+
+            if "current_state" in data:
+                for x in data["current_state"].get("engines_created_today",[]):
+                    result.append("נוצר מנגנון: "+x)
+
+        elif "current_state.json" in e.get("source",""):
+            for x in e.get("data",{}).get("created_today",[]):
+                result.append("נוצר היום: "+x)
+
+    clean=[]
+    seen=set()
+
+    for item in result:
+        key=item.lower().replace("_"," ").replace("מנגנון: ","")
+        if key not in seen:
+            seen.add(key)
+            clean.append(item)
+
+    final=[]
+    normalized=set()
+
+    for item in clean:
+        key=item.lower()
+
+        replacements={
+            "נוצר מנגנון: ":"",
+            "נוצר היום: ":"",
+            "_":" "
+        }
+
+        for a,b in replacements.items():
+            key=key.replace(a,b)
+
+        key=" ".join(key.split())
+
+        if key not in normalized:
+            normalized.add(key)
+            final.append(item)
+
+    return final
+
 def build_answer(question):
 
     truth=load(HOME/".ima/evolution/system_truth.json")
@@ -28,13 +99,7 @@ def build_answer(question):
 
         print("בוצעו היום:")
 
-        actions = [
-            "נבנתה שכבת אמת למערכת IMA",
-            "חובר מנוע שאלות למאגר האמת",
-            "נבדקו רכיבי הזיכרון והאבולוציה",
-            "חובר Knowledge Router לליבה",
-            "נוצר גשר ידע בין הידע למערכת"
-        ]
+        actions=summarize_today()
 
         for a in actions:
             print("✅",a)
