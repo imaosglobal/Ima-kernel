@@ -1,5 +1,5 @@
 {
-  "time": "2026-07-16 18:19:31.718459",
+  "time": "2026-07-16 18:22:07.140167",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
@@ -2919,6 +2919,10 @@
     {
       "file": "import_guardian_git_history.py",
       "import": "datetime"
+    },
+    {
+      "file": "upgrade_watcher_to_master.py",
+      "import": "pathlib"
     },
     {
       "file": "repair_source_selection.py",
@@ -9956,8 +9960,8 @@
       "sha256": "e9c416f7a22b3a598f153ff780067c45c3f62dc78d8280d4af2f00afc10b1565"
     },
     "ima_guardian_watch.py": {
-      "size": 1953,
-      "sha256": "6b3c92a767b1e81e511467be24c1c0b6995038e93660e62cc9dee7085dd30b49"
+      "size": 1941,
+      "sha256": "2243697d2da7d8ee20d339e8b694ee396ebbdcad30cae1792abffbb4318cb997"
     },
     "upgrade_guardian_metrics.py": {
       "size": 1100,
@@ -10026,6 +10030,10 @@
     "import_guardian_git_history.py": {
       "size": 975,
       "sha256": "c9270e304600de8f77084e11e42e1bfe391e2d3b08d27e25306d54c4873272f1"
+    },
+    "upgrade_watcher_to_master.py": {
+      "size": 385,
+      "sha256": "c5ed64d465d217e9a992e291e5525f56a9c6ab7f10f224d2685b07ca780f02ce"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -11613,7 +11621,7 @@
     }
   },
   "stats": {
-    "python_files": 601,
+    "python_files": 602,
     "syntax_errors": 4,
     "duplicate_groups": 32
   }
