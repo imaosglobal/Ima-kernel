@@ -1,3 +1,2 @@
 #!/data/data/com.termux/files/usr/bin/bash
-
 python $HOME/ima_kernel/answer_builder.py "$@"
