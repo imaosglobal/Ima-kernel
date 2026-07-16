@@ -1,0 +1,86 @@
+{
+  "time": 1784225749.0927942,
+  "selected": [
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_WORKING_CHAT.py",
+      "score": 35,
+      "reasons": [
+        "run",
+        "runtime",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_broken_backup.py",
+      "score": 30,
+      "reasons": [
+        "run",
+        "runtime"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/ima_doctor.py",
+      "score": 25,
+      "reasons": [
+        "run",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_routing_fix_1783621863.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.mother.stable.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/IMA_START_before_boot_report_1783810709.py",
+      "score": 25,
+      "reasons": [
+        "run",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system.stable.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_emotion_priority_1783622099.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_improvement_memory_1783623522.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/archive_final/archive_cleanup/ima_system_before_system_history_20260709.py",
+      "score": 25,
+      "reasons": [
+        "boot",
+        "non_backup"
+      ]
+    }
+  ]
+}
