@@ -30,6 +30,24 @@ def fingerprint():
     return h.hexdigest()
 
 
+
+
+def guardian_status():
+    from pathlib import Path
+
+    print("=== IMA GUARDIAN WATCH STATUS ===")
+
+    data = {
+        "controller": Path("ima_guardian_controller.py").exists(),
+        "master": Path("ima_guardian_master.py").exists(),
+        "policy": Path(".ima/guardian/policy.json").exists(),
+        "history": Path(".ima/guardian/history.jsonl").exists(),
+        "smart_state": Path(".ima/guardian/smart_state.json").exists()
+    }
+
+    for key, value in data.items():
+        print(f"{key}: {value}")
+
 def run_cycle():
 
     print("\n=== GUARDIAN AUTO CYCLE ===")
@@ -75,13 +93,6 @@ if __name__ == "__main__":
 
 
 # --- IMA Guardian modes ---
-
-def guardian_status():
-    print("=== IMA GUARDIAN STATUS ===")
-    print("watcher:", Path("ima_guardian_watch.py").exists())
-    print("controller:", Path("ima_guardian_master.py").exists())
-    print("audit:", Path("IMA_AUDIT_REPORT.json").exists())
-
 
 def run_once():
     import subprocess
