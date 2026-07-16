@@ -156,6 +156,7 @@ if __name__=="__main__":
     build_summary()
 
     print(
+    print(
         "IMA DAILY EVOLUTION SAVED"
     )
     import os
