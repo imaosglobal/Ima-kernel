@@ -33,6 +33,11 @@ report = {
 }
 
 EXCLUDED = [
+    ".ima/broken_runtime_backup.py",
+    ".ima/backups",
+    ".ima/archive",
+    "archive",
+    "snapshots",
     ".ima/backups",
     ".ima/archive",
     "archive",
