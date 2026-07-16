@@ -1,12 +1,16 @@
 {
-  "time": 1784225872.2722125,
+  "time": 1784225908.3059378,
   "status": "ready",
   "selected_kernel": {
-    "file": "ima_system.py",
-    "score": 30,
+    "file": "kernel_canonical_filter.py",
+    "score": 380,
     "reasons": [
-      "boot"
+      "Kernel_class",
+      "mother",
+      "runtime",
+      "boot",
+      "run"
     ]
   },
-  "next": "boot_gate"
+  "next": "ima_master_runtime"
 }
