@@ -10,7 +10,9 @@ class FounderCore:
 
     def think(self):
         memory = enrich_answer('founder_cycle', [])
-        advice = advise(memory)
+        advice = advise(
+            memory.get("query","founder_cycle")
+        )
 
         return {
             "memory": memory,
