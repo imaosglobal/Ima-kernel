@@ -100,6 +100,145 @@ def run():
         print("[OK] guardian repair committed")
 
 
+
+def repair_unterminated_string(path):
+    p = Path(path)
+
+    if p.name != "daily_evolution.py":
+        return False
+
+    lines = p.read_text(encoding="utf8").splitlines()
+
+    out = []
+    inside_main = False
+    cleaned = False
+
+    for line in lines:
+
+        if 'if __name__=="__main__":' in line:
+            inside_main = True
+            out.append(line)
+            continue
+
+        if inside_main:
+
+            if "build_summary()" in line:
+                out.append(line)
+                continue
+
+            if "import os" in line:
+                out.extend([
+                    "",
+                    '    print("IMA DAILY EVOLUTION SAVED")',
+                    ""
+                ])
+                inside_main = False
+                out.append(line)
+                cleaned = True
+                continue
+
+            if (
+                line.lstrip().startswith("print(")
+                or "IMA DAILY EVOLUTION SAVED" in line
+                or line.strip() == ")"
+            ):
+                cleaned = True
+                continue
+
+        out.append(line)
+
+    if cleaned:
+        p.write_text(
+            "\n".join(out)+"\n",
+            encoding="utf8"
+        )
+        print("[GUARDIAN BLOCK REPAIR]", p)
+        return True
+
+    return False
+
+
+def run():
+    errors=load_errors()
+
+    print("=== REPORT BASED SELF REPAIR ===")
+    print("[TARGETS]", len(errors))
+
+    fixed=[]
+
+    for e in errors:
+        f=e.get("file")
+        if f and repair_target(f):
+            fixed.append(f)
+
+    remaining=verify()
+
+    print("[FIXED]", fixed)
+    print("[REMAINING]", remaining)
+
+    if not remaining:
+        subprocess.run(
+            ["git","add","-A"]
+        )
+
+        subprocess.run(
+            [
+                "git",
+                "commit",
+                "-m",
+                "guardian report based auto repair"
+            ],
+            capture_output=True,
+            text=True
+        )
+
+        print("[OK] guardian repair committed")
+
+
+def repair_unterminated_string(path):
+    p = Path(path)
+
+    if p.name != "daily_evolution.py":
+        return False
+
+    lines = p.read_text(encoding="utf8").splitlines()
+
+    out = []
+    skip = False
+    changed = False
+
+    for line in lines:
+        if "IMA DAILY EVOLUTION SAVED" in line:
+            out.extend([
+                '    print(',
+                '        "IMA DAILY EVOLUTION SAVED"',
+                '    )'
+            ])
+            skip = True
+            changed = True
+            continue
+
+        if skip:
+            if line.strip().startswith("import ") or line.strip().startswith("os."):
+                skip = False
+                out.append(line)
+            continue
+
+        if line.strip() == ')"':
+            changed = True
+            continue
+
+        out.append(line)
+
+    if changed:
+        p.write_text("\n".join(out)+"\n", encoding="utf8")
+        print("[REPAIRED STRING]", path)
+
+    return changed
+
+if __name__=="__main__":
+    run()
+
 if __name__=="__main__":
     run()
 
