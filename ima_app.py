@@ -1,3 +1,5 @@
+import json
+import subprocess
 #!/usr/bin/env python3
 import time, json, os, subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
