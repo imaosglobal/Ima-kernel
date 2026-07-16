@@ -1,3 +1,25 @@
+
+
+# IMA_HISTORY_LOGGER
+
+def guardian_history(event, data=None):
+
+    from pathlib import Path
+    import json
+    from datetime import datetime
+
+    path = Path(".ima/guardian/history.jsonl")
+
+    record = {
+        "time": str(datetime.now()),
+        "event": event,
+        "data": data or {}
+    }
+
+    with path.open("a", encoding="utf8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
 from pathlib import Path
 import subprocess
 import json
