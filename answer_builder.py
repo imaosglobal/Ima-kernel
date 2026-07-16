@@ -1,4 +1,6 @@
 import json
+from reasoning_layer import interpret
+from meaning_layer import humanize
 from pathlib import Path
 from datetime import datetime
 
@@ -235,6 +237,18 @@ def build_answer(question):
                 if clean not in seen:
                     seen.add(clean)
                     print("•",clean)
+
+            print()
+            print("הבנת מערכת:")
+            reasoning=interpret(topic)
+
+            for r in reasoning:
+                print("•",r)
+
+            print()
+            print("משמעות:")
+            for m in humanize(reasoning):
+                print("•",m)
         else:
             print("נמצאו נתוני מערכת:")
             print(json.dumps(truth,ensure_ascii=False,indent=2))
