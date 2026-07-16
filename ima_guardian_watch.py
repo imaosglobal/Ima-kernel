@@ -1,5 +1,27 @@
 
 
+def guardian_protect_core():
+    import py_compile
+
+    files=[
+        "ima_guardian_watch.py",
+        "ima_guardian_self_repair.py",
+        "ima_guardian_master.py",
+        "ima_guardian_controller.py"
+    ]
+
+    for f in files:
+        try:
+            py_compile.compile(f,doraise=True)
+        except Exception as e:
+            print("[GUARDIAN CORE FAIL]",f)
+            print(e)
+            return False
+
+    return True
+
+
+
 def guardian_policy_check():
     import json
 
