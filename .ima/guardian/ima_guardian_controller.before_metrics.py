@@ -1,12 +1,11 @@
 
 # IMA_COMPACT_HISTORY
 
-from pathlib import Path
-import json
-import subprocess
-from datetime import datetime
-
 def guardian_history(event, data=None):
+    from pathlib import Path
+    import json
+    from datetime import datetime
+
     path = Path(".ima/guardian/history.jsonl")
     path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -19,6 +18,33 @@ def guardian_history(event, data=None):
     with path.open("a", encoding="utf8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
+
+
+
+# IMA_HISTORY_LOGGER
+
+def guardian_history(event, data=None):
+
+    from pathlib import Path
+    import json
+    from datetime import datetime
+
+    path = Path(".ima/guardian/history.jsonl")
+
+    record = {
+        "time": str(datetime.now()),
+        "event": event,
+        "data": data or {}
+    }
+
+    with path.open("a", encoding="utf8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+from pathlib import Path
+import subprocess
+import json
+from datetime import datetime
 
 ROOT = Path(".")
 REPORT = ROOT / "IMA_AUDIT_REPORT.json"
