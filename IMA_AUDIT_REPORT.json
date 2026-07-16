@@ -1,14 +1,14 @@
 {
-  "time": "2026-07-16 18:55:58.330199",
+  "time": "2026-07-16 18:59:49.780506",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
       "file": "daily_evolution.py",
-      "error": "unterminated string literal (detected at line 164) (<unknown>, line 164)"
+      "error": "unterminated string literal (detected at line 165) (<unknown>, line 165)"
     },
     {
       "file": "daily_evolution.py",
-      "compile": "  File \"daily_evolution.py\", line 164\n    )\"\n     ^\nSyntaxError: unterminated string literal (detected at line 164)\n"
+      "compile": "  File \"daily_evolution.py\", line 165\n    )\"\n     ^\nSyntaxError: unterminated string literal (detected at line 165)\n"
     }
   ],
   "imports": [
@@ -2870,15 +2870,19 @@
     },
     {
       "file": "ima_guardian_self_repair.py",
-      "import": "subprocess"
-    },
-    {
-      "file": "ima_guardian_self_repair.py",
       "import": "json"
     },
     {
       "file": "ima_guardian_self_repair.py",
-      "import": "re"
+      "import": "subprocess"
+    },
+    {
+      "file": "ima_guardian_self_repair.py",
+      "import": "py_compile"
+    },
+    {
+      "file": "ima_guardian_self_repair.py",
+      "import": "datetime"
     },
     {
       "file": "upgrade_core_repair.py",
@@ -2887,6 +2891,14 @@
     {
       "file": "upgrade_guardian_incremental.py",
       "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_report_repair.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_report_repair.py",
+      "import": "json"
     },
     {
       "file": "repair_runtime_safe.py",
@@ -3094,6 +3106,18 @@
     },
     {
       "file": "repair_daily_evolution.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_report_scan.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "ima_guardian_report_scan.py",
+      "import": "subprocess"
+    },
+    {
+      "file": "repair_daily_evolution_v2.py",
       "import": "pathlib"
     },
     {
@@ -3382,6 +3406,10 @@
     },
     {
       "file": "fix_daily_evolution_final.py",
+      "import": "pathlib"
+    },
+    {
+      "file": "upgrade_guardian_fast_cycle.py",
       "import": "pathlib"
     },
     {
@@ -10256,8 +10284,8 @@
       "sha256": "28a4afef3b01d008431016dcbf17e364da972294679c9db427d942d61af28d68"
     },
     "ima_guardian_controller.py": {
-      "size": 2248,
-      "sha256": "3b90e12658fce6de98149702111c077f86cebd62652c44d9090b89579ce83a03"
+      "size": 2258,
+      "sha256": "20a687a4c785513a42357da83516023033d09cb3e1f2895b49b995b5f3e0a84c"
     },
     "optimize_audit.py": {
       "size": 645,
@@ -10280,8 +10308,8 @@
       "sha256": "9ab91c683c487bcb43dbc686720ca0260f348b00614190be67423959fd87cb85"
     },
     "ima_guardian_self_repair.py": {
-      "size": 1945,
-      "sha256": "e55031501fc51dd44f04ebff34af8908a9d8ce22328f1f3da45506c52d6ab7d8"
+      "size": 1868,
+      "sha256": "44d792176b6cd358abff33dd68545e0a5bb3fcd40c898fc5c57cef0b0d0bffa7"
     },
     "upgrade_core_repair.py": {
       "size": 315,
@@ -10291,13 +10319,17 @@
       "size": 1182,
       "sha256": "4cf4db8698714fd34709fc8f3eb2872f08365c94553d3020c4c08167c120f015"
     },
+    "upgrade_guardian_report_repair.py": {
+      "size": 2046,
+      "sha256": "9df9f707fdedc1d7687f50a96dd953c0bd7608d41cbe346a151d99abb24e06af"
+    },
     "repair_runtime_safe.py": {
       "size": 856,
       "sha256": "1c65923755b1451a8d982756001e574c0b11e7e709a4ce8d8d5ae4b10caaecb6"
     },
     "daily_evolution.py": {
-      "size": 2828,
-      "sha256": "cf534048e5ce9a52b3869f57f42c1ea45747a068cbd8d0ad85ae791d17d0a031"
+      "size": 2839,
+      "sha256": "cb9db00ceb582b7b78fb7e01aa2fabf36d708a0ce74b11082a4395121f01d50a"
     },
     "decision_engine.py": {
       "size": 453,
@@ -10378,6 +10410,14 @@
     "repair_daily_evolution.py": {
       "size": 1110,
       "sha256": "a4fca4e31c54ba168e574d753ef82a70264f46fabd49ba48ca1a30262a284b44"
+    },
+    "ima_guardian_report_scan.py": {
+      "size": 236,
+      "sha256": "1987fe7f1beb7eb6bf325bcc5063d0c56e75f177c5a1e11871a40407861d7810"
+    },
+    "repair_daily_evolution_v2.py": {
+      "size": 685,
+      "sha256": "373888744022773a8282a70d8203713492caf5166c425e979222de16f1e3c11a"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -10482,6 +10522,10 @@
     "fix_daily_evolution_final.py": {
       "size": 784,
       "sha256": "cfd60a889e9626b293a5ea42fc96c4d28eae6bf18a9af2fba907186a678c1b62"
+    },
+    "upgrade_guardian_fast_cycle.py": {
+      "size": 591,
+      "sha256": "00f949ccac7e5f9a4eb105113793e781d657d1286dbe97ab92f14663536e5f07"
     },
     ".ima/ima_reducer.py": {
       "size": 686,
@@ -11973,7 +12017,7 @@
     }
   },
   "stats": {
-    "python_files": 616,
+    "python_files": 620,
     "syntax_errors": 2,
     "duplicate_groups": 32
   }

@@ -32,6 +32,7 @@ def compile_file(path):
 
 
 def repair_target(path):
+    repair_unterminated_string(path)
     p = Path(path)
 
     if not p.exists():
@@ -101,3 +102,45 @@ def run():
 
 if __name__=="__main__":
     run()
+
+
+def repair_unterminated_string(path):
+    p = Path(path)
+
+    if p.name != "daily_evolution.py":
+        return False
+
+    lines = p.read_text(encoding="utf8").splitlines()
+
+    out = []
+    skip = False
+    changed = False
+
+    for line in lines:
+        if "IMA DAILY EVOLUTION SAVED" in line:
+            out.extend([
+                '    print(',
+                '        "IMA DAILY EVOLUTION SAVED"',
+                '    )'
+            ])
+            skip = True
+            changed = True
+            continue
+
+        if skip:
+            if line.strip().startswith("import ") or line.strip().startswith("os."):
+                skip = False
+                out.append(line)
+            continue
+
+        if line.strip() == ')"':
+            changed = True
+            continue
+
+        out.append(line)
+
+    if changed:
+        p.write_text("\n".join(out)+"\n", encoding="utf8")
+        print("[REPAIRED STRING]", path)
+
+    return changed
