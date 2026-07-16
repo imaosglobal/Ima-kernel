@@ -1,30 +1,3 @@
-
-# CANONICAL REGISTRY BOOT GUARD
-from pathlib import Path
-import json, hashlib
-
-REG=Path(".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json")
-
-if not REG.exists():
-    raise SystemExit("CANONICAL REGISTRY MISSING")
-
-registry=json.loads(REG.read_text())
-
-if registry.get("mode") != "canonical_only":
-    raise SystemExit("INVALID CANONICAL MODE")
-
-for item in registry.get("allowed_components", []):
-    f=Path(item["file"])
-    if not f.exists():
-        raise SystemExit(f"MISSING CANONICAL COMPONENT: {f}")
-
-    h=hashlib.sha256(f.read_bytes()).hexdigest()
-
-    if h != item["sha256"]:
-        raise SystemExit(f"HASH MISMATCH: {f}")
-
-print("[OK] BOOT CANONICAL REGISTRY VERIFIED")
-
 from pathlib import Path
 import json,time,subprocess,sys
 
