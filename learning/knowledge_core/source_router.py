@@ -1,9 +1,4 @@
-from pathlib import Path
-import py_compile
 
-p=Path("learning/knowledge_core/source_router.py")
-
-p.write_text("""
 import re
 
 
@@ -95,12 +90,3 @@ def choose_sources(question):
         )
     }
 
-""",encoding="utf8")
-
-
-py_compile.compile(
-    str(p),
-    doraise=True
-)
-
-print("[OK] source router created")
