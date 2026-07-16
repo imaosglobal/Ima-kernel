@@ -106,12 +106,16 @@ def incremental_cycle():
 
     if not changed:
         print("[OK] nothing changed")
-        return
+        return False
 
     python_changed = [
         x for x in changed
         if x.endswith(".py")
     ]
+
+    if not python_changed:
+        print("[OK] no python changes")
+        return False
 
     if len(python_changed) <= 5:
 
@@ -143,6 +147,7 @@ def incremental_cycle():
 
     update_smart_state()
 
+    return True
 
 def run_cycle():
 
