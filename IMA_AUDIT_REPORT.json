@@ -1,22 +1,14 @@
 {
-  "time": "2026-07-16 18:50:27.948372",
+  "time": "2026-07-16 18:55:58.330199",
   "root": "/data/data/com.termux/files/home/ima_kernel",
   "python_errors": [
     {
       "file": "daily_evolution.py",
-      "error": "unterminated string literal (detected at line 159) (<unknown>, line 159)"
-    },
-    {
-      "file": ".ima/broken_runtime_backup.py",
-      "error": "unexpected indent (<unknown>, line 153)"
+      "error": "unterminated string literal (detected at line 164) (<unknown>, line 164)"
     },
     {
       "file": "daily_evolution.py",
-      "compile": "  File \"daily_evolution.py\", line 159\n    \"IMA DAILY EVOLUTION SAVED\n    ^\nSyntaxError: unterminated string literal (detected at line 159)\n"
-    },
-    {
-      "file": ".ima/broken_runtime_backup.py",
-      "compile": "Sorry: IndentationError: unexpected indent (broken_runtime_backup.py, line 153)"
+      "compile": "  File \"daily_evolution.py\", line 164\n    )\"\n     ^\nSyntaxError: unterminated string literal (detected at line 164)\n"
     }
   ],
   "imports": [
@@ -2533,6 +2525,10 @@
       "import": "datetime"
     },
     {
+      "file": "upgrade_guardian_fast_repair.py",
+      "import": "pathlib"
+    },
+    {
       "file": "repair_validation_final.py",
       "import": "pathlib"
     },
@@ -3097,6 +3093,10 @@
       "import": "json"
     },
     {
+      "file": "repair_daily_evolution.py",
+      "import": "pathlib"
+    },
+    {
       "file": "repair_source_selection.py",
       "import": "pathlib"
     },
@@ -3379,6 +3379,10 @@
     {
       "file": "ima_guardian_core.py",
       "import": "sys"
+    },
+    {
+      "file": "fix_daily_evolution_final.py",
+      "import": "pathlib"
     },
     {
       "file": ".ima/ima_reducer.py",
@@ -10159,6 +10163,10 @@
       "size": 1713,
       "sha256": "2b52a7b6ca53bef61e0982934767ecd3a8ec3036954b37c34051c3f3073c2a59"
     },
+    "upgrade_guardian_fast_repair.py": {
+      "size": 845,
+      "sha256": "b7f5a0de54311a2011a053848f2caa006caa54e0e60c3c2828dde88a2316db42"
+    },
     "repair_validation_final.py": {
       "size": 876,
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76"
@@ -10288,8 +10296,8 @@
       "sha256": "1c65923755b1451a8d982756001e574c0b11e7e709a4ce8d8d5ae4b10caaecb6"
     },
     "daily_evolution.py": {
-      "size": 2822,
-      "sha256": "61a7b88f0f8d9a4b600da0df8e2b0dec8e9ee8e004bc620b4e10bf1125081aa6"
+      "size": 2828,
+      "sha256": "cf534048e5ce9a52b3869f57f42c1ea45747a068cbd8d0ad85ae791d17d0a031"
     },
     "decision_engine.py": {
       "size": 453,
@@ -10332,8 +10340,8 @@
       "sha256": "c5f7d274ba1b175037e3c99455f9d9e8ed6f13c79b53bb761029379e7de51ae7"
     },
     "ima_full_audit.py": {
-      "size": 3251,
-      "sha256": "11a4e3cfa1921bbd951ce1bcc4c8d6eea71deac3336565575f1d7fc0d1a6a528"
+      "size": 3360,
+      "sha256": "957baf68665a78709ea51dd77920570179bbb3a8bdfb0a5e1c248bbc0250afcb"
     },
     "connect_guardian_history_real.py": {
       "size": 1101,
@@ -10366,6 +10374,10 @@
     "upgrade_guardian_smart_watch.py": {
       "size": 1588,
       "sha256": "719c34f1bafd96fca19c0bb3c62632577316fac6068766398d6841a7b4929465"
+    },
+    "repair_daily_evolution.py": {
+      "size": 1110,
+      "sha256": "a4fca4e31c54ba168e574d753ef82a70264f46fabd49ba48ca1a30262a284b44"
     },
     "repair_source_selection.py": {
       "size": 1143,
@@ -10467,6 +10479,10 @@
       "size": 2588,
       "sha256": "c0fe5be252aaf81eac7fad2c1420617f1060c27425353269393680482c3c2951"
     },
+    "fix_daily_evolution_final.py": {
+      "size": 784,
+      "sha256": "cfd60a889e9626b293a5ea42fc96c4d28eae6bf18a9af2fba907186a678c1b62"
+    },
     ".ima/ima_reducer.py": {
       "size": 686,
       "sha256": "a1c310780fb59ce3fdf4cfec35070755d1cae1b041bd3d4efc383f03245364da"
@@ -10518,10 +10534,6 @@
     ".ima/backup_before_learning_bus_upgrade.py": {
       "size": 777,
       "sha256": "bb34698d19d2e44a15038c3a873d9c7e695c49131bee1d8a50b4a5f02f6540a0"
-    },
-    ".ima/broken_runtime_backup.py": {
-      "size": 6580,
-      "sha256": "414d66a84062658db68766d592ca8d72f615b1cdbd28ce8d61cec4612b8bb8c4"
     },
     ".ima/backup_before_knowledge_order_repair.py": {
       "size": 6788,
@@ -11961,8 +11973,8 @@
     }
   },
   "stats": {
-    "python_files": 614,
-    "syntax_errors": 4,
+    "python_files": 616,
+    "syntax_errors": 2,
     "duplicate_groups": 32
   }
 }
