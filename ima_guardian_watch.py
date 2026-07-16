@@ -94,6 +94,55 @@ def update_smart_state():
     )
 
 
+
+
+def incremental_cycle():
+
+    changed = smart_diff()
+
+    print("=== SMART INCREMENTAL CYCLE ===")
+    print("[CHANGED]", len(changed))
+
+    if not changed:
+        print("[OK] nothing changed")
+        return
+
+    python_changed = [
+        x for x in changed
+        if x.endswith(".py")
+    ]
+
+    if len(python_changed) <= 5:
+
+        import subprocess
+
+        for f in python_changed:
+            print("[CHECK]", f)
+
+            subprocess.run(
+                [
+                    "python3",
+                    "-m",
+                    "py_compile",
+                    f
+                ]
+            )
+
+    else:
+        print("[FULL AUDIT REQUIRED]")
+
+        import subprocess
+
+        subprocess.run(
+            [
+                "python3",
+                "ima_guardian_master.py"
+            ]
+        )
+
+    update_smart_state()
+
+
 def run_cycle():
 
     print("\n=== GUARDIAN AUTO CYCLE ===")
