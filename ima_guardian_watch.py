@@ -147,6 +147,13 @@ def run_cycle():
 
     print("\n=== GUARDIAN AUTO CYCLE ===")
 
+    try:
+        if "incremental_cycle" in globals():
+            incremental_cycle()
+            print("[OK] incremental cycle executed")
+    except Exception as e:
+        print("[INCREMENTAL ERROR]", e)
+
     subprocess.run(
         ["python3", "ima_guardian_master.py"]
     )
