@@ -155,14 +155,12 @@ if __name__=="__main__":
 
     build_summary()
 
-    print(
-    print(
-        "IMA DAILY EVOLUTION SAVED"
-    )
+
+    print("IMA DAILY EVOLUTION SAVED")
+
     import os
     os.system(
         "python system_truth_layer.py"
-    )"
     )
 
     import os
