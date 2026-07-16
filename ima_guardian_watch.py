@@ -51,26 +51,30 @@ def guardian_status():
 
 
 
+
 def smart_diff():
 
-    state = Path(".ima/guardian/smart_state.json")
+    import subprocess
 
-    if not state.exists():
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD"],
+            capture_output=True,
+            text=True
+        )
+
+        files = [
+            x.strip()
+            for x in result.stdout.splitlines()
+            if x.strip()
+        ]
+
+        return files
+
+    except Exception as e:
+        print("[GIT DIFF ERROR]", e)
         return []
 
-    old = json.loads(state.read_text(encoding="utf8"))
-    changed = []
-
-    for f, old_time in old.items():
-        p = Path(f)
-        if p.exists():
-            try:
-                if p.stat().st_mtime != old_time:
-                    changed.append(f)
-            except:
-                pass
-
-    return changed
 
 
 def update_smart_state():
