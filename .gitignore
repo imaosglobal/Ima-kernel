@@ -82,3 +82,5 @@ __pycache__/
 IMA_AUDIT_REPORT.json
 .ima/guardian/*.log
 .ima/guardian/history.jsonl
+.ima/agi_evolution/runtime/boot_gate_state.json
+.ima/agi_evolution/runtime/ima_master_state.json
