@@ -1,4 +1,4 @@
-from founder.executive_ai.memory.memory_bridge import build_memory_context
+from founder.executive_ai.memory.memory_bridge import enrich_answer
 from founder.executive_ai.advisor.founder_advisor import advise
 from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
 
@@ -9,7 +9,7 @@ class FounderCore:
         self.name="IMA Founder Core"
 
     def think(self):
-        memory = build_memory_context()
+        memory = enrich_answer('founder_cycle', [])
         advice = advise(memory)
 
         return {
