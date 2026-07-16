@@ -11,13 +11,16 @@ def load(name):
 
 def run():
 
+    handoff=load("kernel_handoff_state.json")
+
     state={
         "time":time.time(),
         "runtime":"active",
         "brain":load("brain_state.json"),
         "health":load("health_state.json"),
         "supervisor":load("supervisor_state.json"),
-        "decision":"continue"
+        "decision":"continue",
+        "kernel":handoff
     }
 
     if state["health"].get("healthy") is False:
