@@ -7,7 +7,8 @@ JOBS=[
 "ima_master_runtime.py",
 "decision_engine.py",
 "brain_controller.py",
-        "cognitive_pipeline.py"
+        "cognitive_pipeline.py",
+        "agi_benchmark_engine.py"
 ]
 
 def run():
