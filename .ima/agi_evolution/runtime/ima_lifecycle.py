@@ -8,7 +8,7 @@ JOBS=[
 "decision_engine.py",
 "brain_controller.py",
         "cognitive_pipeline.py",
-        "agi_benchmark_engine.py"
+        "../evaluation/agi_benchmark_engine.py"
 ]
 
 def run():
