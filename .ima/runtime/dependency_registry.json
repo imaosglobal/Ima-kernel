@@ -1,6 +1,6 @@
 {
   "status": "AUDIT_ACTIVE",
-  "timestamp": 1784410353.7491167,
+  "timestamp": 1784411782.6121953,
   "files": {
     "nohup.out": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -95,8 +95,8 @@
       "size": 2662
     },
     "LICENSE": {
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "size": 11357
+      "sha256": "4ce96699372bff02252b0c0ab36c3f9cf1b827dbc2b9fd14427b38efb8bd0dbc",
+      "size": 896
     },
     "ima_unified_bootstrap.sh": {
       "sha256": "fd6a7b4618c73af641743132d868190e85921def9c570353aa4ad880ae93bfc1",
@@ -770,6 +770,10 @@
       "sha256": "8f41b68318f7527647cb06015fe8a1b45e4b96da7b83d33d657e86d1bee810d6",
       "size": 4228
     },
+    "NOTICE": {
+      "sha256": "f12ee79867a291af2a407500a29ae64f0f6c7ac24c384b36967f5590bfcc0e78",
+      "size": 196
+    },
     "boot_integrity_reporter.py": {
       "sha256": "f611a2f7f301cbff6ff6d2f857c5f111c7cd5f959ca9afc1649f937922a9b38f",
       "size": 1000
@@ -1362,6 +1366,10 @@
       "sha256": "ef16667633e4f282890a0f240de07c33ff7e9898c629a44d7457c3f7d00f0100",
       "size": 5493
     },
+    "SECURITY.md": {
+      "sha256": "b1e649e7856ab4270c9e4792a8890eba766d66036b1fd01367eb1ace6453e6bd",
+      "size": 173
+    },
     "repair_validation_final.py": {
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76",
       "size": 876
@@ -1614,6 +1622,14 @@
       "sha256": "b563694b230adce701f64ba902bedbce12ac82f947faf49c352f4c3c94e07536",
       "size": 17445
     },
+    "CONTRIBUTING.md": {
+      "sha256": "dedbcdc0709f614e8016f3226b23bf09e135995ae40e4d2de4d670fde53a81fd",
+      "size": 380
+    },
+    "finalize_ima_rights_and_publish.sh": {
+      "sha256": "0f8c358d5b79352aee50978ef6283710622965e491312fae75968a04df635c79",
+      "size": 4250
+    },
     "ima_memory_unification_checkpoint_20260715_192617.tar.gz": {
       "sha256": "f7c65e60b5a4f3d1e547ce5163bfd9ae23a91429f87497c06b706bb1860880e5",
       "size": 52536
@@ -1814,6 +1830,10 @@
       "sha256": "cd5a6e4bfbfe58545c3897beedc42dbb72c0a5cbd11970bbcd3f2d7bfd1e3a75",
       "size": 92
     },
+    "establish_ima_global_rights.sh": {
+      "sha256": "e1afcf353364861d8f09cab46968e856f5dfc837c98dcdb815fa34881f69c5ef",
+      "size": 4007
+    },
     "repair_source_selection.py": {
       "sha256": "acd4e2878d9d7493d5e0df11b5ab95bb3d88556d5101d6134ab6db222c76e5b4",
       "size": 1143
@@ -2005,6 +2025,22 @@
     "verify_ima_readonly_v2.sh": {
       "sha256": "271753be5343634a45df3f4b57d86aaa72ae0ac5dc027d26aba6985308f1350a",
       "size": 4724
+    },
+    "COPYRIGHT.md": {
+      "sha256": "8bcd68816845705394ff3a94f35de37d6787991f650cca8ee5a66dfecfe3a419",
+      "size": 541
+    },
+    "LICENSE.md": {
+      "sha256": "a3603a60f723dc90ba6d53a36ad838d2281d1e710564a6ae43f44b3445398fd0",
+      "size": 475
+    },
+    "RIGHTS_AND_SUCCESSION.md": {
+      "sha256": "f7b8f3e37f27972b5bb5f34616bdecf90bb87db5765aaf440661dcc3c1c31cea",
+      "size": 921
+    },
+    ".github/SECURITY_CHECK.sh": {
+      "sha256": "4b4d7c7001e36a68e3ec835c34bb940aa318da85306802670a04266f5e05e619",
+      "size": 402
     },
     "android/settings.gradle": {
       "sha256": "4b919cfffaed71637d1ee9c89f21f4247273e14eb8433afdcd0672eba906b41f",
@@ -2837,6 +2873,10 @@
     ".ima/canonical_chain_audit.json": {
       "sha256": "3a372dc6b8d4f6dbe07c7fa0cc3a95375affc889942ee667b47be306d69b09ca",
       "size": 6053
+    },
+    ".ima/RIGHTS_PROVENANCE.json": {
+      "sha256": "84bd3834412d10b09ba9c90b289bd29d3bff985654c5e2df73637fa55daedb83",
+      "size": 448
     },
     "ima_product/PRODUCT_LAYER_MANIFEST.json": {
       "sha256": "005a5f791b595966079441d6ed84817a67a1b25a0c84010426b84bfd7caab4f3",
@@ -11143,8 +11183,8 @@
       "size": 90
     },
     ".ima/runtime/boot_integrity_report.json": {
-      "sha256": "fa1cbbc5be4376d19e136ca626d77330815b2ddc0bf9c31dbc06f433f85da779",
-      "size": 1107
+      "sha256": "9ea1bdfe94477012da8e09e596008cdc34ccc716c8262a68eff017094a793326",
+      "size": 1106
     },
     ".ima/runtime/canonical_runtime_state.json": {
       "sha256": "af40a3ca8a6afa9537506c693532d3661e819c847b4c383ede87f3e1193183da",
@@ -11171,7 +11211,7 @@
       "size": 1206
     },
     ".ima/runtime/dependency_registry.json": {
-      "sha256": "962ebc9f7733f57d291dd1a1774174cdec5d1e0896d494f5efa8f36504bcfcb3",
+      "sha256": "114c5fa9902d3257d0f3be1152fdf7c0a399622c782fc66f9d6129e0dd2bbf54",
       "size": 1171690
     },
     ".ima/runtime/maintenance_report.json": {
@@ -11179,8 +11219,8 @@
       "size": 66
     },
     ".ima/runtime/maintenance_state.json": {
-      "sha256": "0b9ab5673ea587792e47c09ff94abc385e17946d88c50347da1e09b41e8d5850",
-      "size": 79
+      "sha256": "16cc6194048f9a6645877feafea1d26b0df10e642bffddb6e440935229eca4f9",
+      "size": 78
     },
     ".ima/runtime/baseline_lock.json": {
       "sha256": "d1f8fffb18ba13bd1fa983bf0178570107223e5f404e5b13efabc8617c56fdae",
@@ -24937,7 +24977,11 @@
     ".github/workflows/ima-production.yml": {
       "sha256": "1a0b0a676d7039bb8e0e9efc19120a8e5c7b3d9dcbe6786125aa429b6c376f29",
       "size": 327
+    },
+    ".github/workflows/integrity.yml": {
+      "sha256": "8a79385b698fdb1112da04439f781b0110980696909bb21fa5e33e68aa0157af",
+      "size": 401
     }
   },
-  "count": 6234
+  "count": 6245
 }
