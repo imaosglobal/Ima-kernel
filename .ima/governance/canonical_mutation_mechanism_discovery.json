@@ -1,0 +1,2010 @@
+{
+  "target": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+  "mutation_performed": false,
+  "candidates": [
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+      "score": 130,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "register"
+      ],
+      "size": 2672
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256",
+        "chain verification"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256"
+      ],
+      "size": 6327
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384204.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384287.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384323.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384429.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384483.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384694.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384948.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385012.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385318.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385621.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385927.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386237.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386538.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386839.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387157.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387860.json",
+      "score": 120,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 704
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "score": 100,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1392
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 6179
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "full_system_lock",
+        "sha256",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 1741960
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "register"
+      ],
+      "size": 3020
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2127
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 10399
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 7550
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/final_change_gate_audit_1784384855.json",
+      "score": 80,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 1216
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_IDENTITY.json",
+      "score": 80,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 504
+    },
+    {
+      "path": "create_canonical_registry.sh",
+      "score": 50,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1260
+    },
+    {
+      "path": "enforce_registry_guard.sh",
+      "score": 50,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1467
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+      "score": 50,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256"
+      ],
+      "size": 1269
+    },
+    {
+      "path": ".ima/ima_self_knowledge_registry.json",
+      "score": 50,
+      "patterns": [
+        "full_system_lock",
+        "sha256"
+      ],
+      "size": 1502002
+    },
+    {
+      "path": ".ima/runtime/dependency_registry.json",
+      "score": 50,
+      "patterns": [
+        "full_system_lock",
+        "sha256"
+      ],
+      "size": 1087504
+    },
+    {
+      "path": "IMA_START_SINGLE_ENTRY.py.registry_backup.py",
+      "score": 50,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1445
+    },
+    {
+      "path": "connect_external_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 485
+    },
+    {
+      "path": "learning/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 1572
+    },
+    {
+      "path": "learning/sources/external_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 1521
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "learning_backup_final_1784122661/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "learning_backup_repair_1784122578/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "learning_backup_repair_1784122602/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/source_registry.py",
+      "score": 50,
+      "patterns": [
+        "register"
+      ],
+      "size": 925
+    },
+    {
+      "path": "tools/product_audit/create_artifact_registry.sh",
+      "score": 50,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 969
+    },
+    {
+      "path": ".ima/canonical_chain_audit.json",
+      "score": 40,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256"
+      ],
+      "size": 6053
+    },
+    {
+      "path": "IMA_CHAIN_FREEZE.sh",
+      "score": 40,
+      "patterns": [
+        "register",
+        "chain verification"
+      ],
+      "size": 3270
+    },
+    {
+      "path": "verify_canonical_root.py",
+      "score": 40,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 969
+    },
+    {
+      "path": "ima_one_shot_verify_fix.sh",
+      "score": 40,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1791
+    },
+    {
+      "path": ".ima/governance/partnership_first_implementation_audit.json",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "full_system_lock",
+        "sha256",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 584002
+    },
+    {
+      "path": "canonical_admission_guard.py",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256",
+        "register"
+      ],
+      "size": 952
+    },
+    {
+      "path": "install_admission_guard.sh",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256",
+        "register"
+      ],
+      "size": 1261
+    },
+    {
+      "path": "install_global_canonical_guard.sh",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 1305
+    },
+    {
+      "path": ".ima/governance/partnership_first_reversible_patch_plan.json",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 3428
+    },
+    {
+      "path": "IMA_START_SINGLE_ENTRY.py",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2127
+    },
+    {
+      "path": "canonical_guard.py",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 817
+    },
+    {
+      "path": "ima_directory_map_before_canonical_move.json",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "full_system_lock",
+        "sha256"
+      ],
+      "size": 816015
+    },
+    {
+      "path": ".ima/governance/canonical_runtime_decision_path.json",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry",
+        "GLOBAL_CANONICAL"
+      ],
+      "size": 5871
+    },
+    {
+      "path": "full_system_guard.py",
+      "score": 0,
+      "patterns": [
+        "full_system_lock",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 734
+    },
+    {
+      "path": "full_system_lock.py",
+      "score": 0,
+      "patterns": [
+        "full_system_lock",
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 781
+    },
+    {
+      "path": "ima_lock.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256",
+        "register"
+      ],
+      "size": 1460
+    },
+    {
+      "path": ".ima/governance/architecture_lock_report.json",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 1261
+    },
+    {
+      "path": ".ima/governance/partnership_first_behavioral_runtime_analysis.json",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 13701
+    },
+    {
+      "path": ".ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2134
+    },
+    {
+      "path": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2134
+    },
+    {
+      "path": ".ima/ima_sync_tree.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock",
+        "sha256"
+      ],
+      "size": 740996
+    },
+    {
+      "path": ".ima/runtime/integration_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 674
+    },
+    {
+      "path": ".ima/runtime/memory_unification_layer.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1458
+    },
+    {
+      "path": "FINAL_CANONICAL_RESYNC.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1907
+    },
+    {
+      "path": "FINAL_SYNC_LOCK.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1531
+    },
+    {
+      "path": "IMA_AUDIT_REPORT.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock",
+        "sha256"
+      ],
+      "size": 340080
+    },
+    {
+      "path": "boot_integrity_reporter.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1000
+    },
+    {
+      "path": "build_memory_unification_layer.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2399
+    },
+    {
+      "path": "canonical_boot_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 983
+    },
+    {
+      "path": "canonical_cleanup_fusion.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1954
+    },
+    {
+      "path": "canonical_dependency_audit.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1131
+    },
+    {
+      "path": "canonical_guard.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1656
+    },
+    {
+      "path": "canonical_maintenance.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1936
+    },
+    {
+      "path": "create_canonical_watchdog.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2278
+    },
+    {
+      "path": "final_canonical_freeze.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1594
+    },
+    {
+      "path": "finalize_ima_architecture_lock.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2174
+    },
+    {
+      "path": "ima_doctor.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2568
+    },
+    {
+      "path": "ima_evolution_check.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1953
+    },
+    {
+      "path": "ima_final_architecture_lock.py",
+      "score": 0,
+      "patterns": [
+        "CANONICAL_REGISTRY",
+        "canonical_registry"
+      ],
+      "size": 1801
+    },
+    {
+      "path": "ima_full_audit.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 3360
+    },
+    {
+      "path": "ima_guardian_watch.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 7974
+    },
+    {
+      "path": "ima_repair.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1953
+    },
+    {
+      "path": "ima_snapshot.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1643
+    },
+    {
+      "path": "ima_sync_map.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1995
+    },
+    {
+      "path": "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 839
+    },
+    {
+      "path": "kernel/runtime/CANONICAL/IMA_WATCHDOG.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2779
+    },
+    {
+      "path": "learning/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "register"
+      ],
+      "size": 7916
+    },
+    {
+      "path": "learning/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning/knowledge_compactor.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 242
+    },
+    {
+      "path": "learning/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_final_1784122661/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_final_1784122661/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_final_1784122661/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_final_1784122661/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_repair_1784122578/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_repair_1784122578/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_repair_1784122578/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_repair_1784122578/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_repair_1784122602/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_repair_1784122602/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_repair_1784122602/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_repair_1784122602/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/entry_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 819
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/gate_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1115
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/single_gate.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1763
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/user_memory.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "learning_guard.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1217
+    },
+    {
+      "path": "lock_canonical_root.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2268
+    },
+    {
+      "path": "lock_canonical_supervisor.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1896
+    },
+    {
+      "path": "memory_integration_audit.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 781
+    },
+    {
+      "path": "repair_canonical_watchdog_state.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 1178
+    },
+    {
+      "path": "tools/product_audit/activate_render_production.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "register"
+      ],
+      "size": 2129
+    },
+    {
+      "path": "tools/product_audit/create_distribution_targets_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "register"
+      ],
+      "size": 1193
+    },
+    {
+      "path": "truth_engine.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2912
+    },
+    {
+      "path": "upgrade_learning_intelligence.py",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 2491
+    },
+    {
+      "path": "upgrade_truth_engine_v2.sh",
+      "score": 0,
+      "patterns": [
+        "sha256",
+        "hashlib.sha256"
+      ],
+      "size": 4408
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/CANONICAL_KERNEL_LOCK.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 399
+    },
+    {
+      "path": ".ima/backup_before_learning_bus_upgrade.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 777
+    },
+    {
+      "path": ".ima/backup_brain_network_finalize/brain_sync.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 777
+    },
+    {
+      "path": ".ima/governance/FINAL_BOOT_LOCK.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 501
+    },
+    {
+      "path": ".ima/governance/FINAL_CANONICAL_STATE.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 348
+    },
+    {
+      "path": ".ima/governance/partnership_first_concrete_patch_dry_run.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2284
+    },
+    {
+      "path": ".ima/governance/partnership_first_structural_gap_analysis.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 7132
+    },
+    {
+      "path": ".ima/governance/partnership_first_structural_insertion_plan.json",
+      "score": 0,
+      "patterns": [
+        "chain verification"
+      ],
+      "size": 5874
+    },
+    {
+      "path": ".ima/ima_dependency_map.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock"
+      ],
+      "size": 576185
+    },
+    {
+      "path": ".ima/ima_evolution_report.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1331
+    },
+    {
+      "path": ".ima/master_integrity.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1017
+    },
+    {
+      "path": ".ima/runtime/boot_integrity_report.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1107
+    },
+    {
+      "path": ".ima/runtime/full_system_lock.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock"
+      ],
+      "size": 93835
+    },
+    {
+      "path": ".ima/runtime_snapshots/product_before_finalize_20260713_165823/device/device_manager.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 197
+    },
+    {
+      "path": ".ima_scan_simple.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock"
+      ],
+      "size": 224728
+    },
+    {
+      "path": "IMA_BEHAVIOR_SCAN.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 6030
+    },
+    {
+      "path": "IMA_KNOWLEDGE_SCAN.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 354277
+    },
+    {
+      "path": "add_daemon_lock.sh",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1226
+    },
+    {
+      "path": "add_external_sources.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1300
+    },
+    {
+      "path": "boot_integrity_check.py",
+      "score": 0,
+      "patterns": [
+        "full_system_lock"
+      ],
+      "size": 1039
+    },
+    {
+      "path": "connect_brain_network.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 2472
+    },
+    {
+      "path": "device/device_manager.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 197
+    },
+    {
+      "path": "finalize_ima_product_architecture.sh",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 2556
+    },
+    {
+      "path": "harden_canonical_runtime.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1095
+    },
+    {
+      "path": "ima_daemon.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1752
+    },
+    {
+      "path": "ima_final_unification_and_deployment_lock.sh",
+      "score": 0,
+      "patterns": [
+        "chain verification"
+      ],
+      "size": 3302
+    },
+    {
+      "path": "kernel/_graveyard/_archive/releases__v1778001671191__cli_guard.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 565
+    },
+    {
+      "path": "kernel/_graveyard/_archive/releases__v1778001671191__ima_network_layer.js",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 699
+    },
+    {
+      "path": "kernel/_graveyard/_archive/releases__v1778001671191__ima_unified_runtime.js",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1093
+    },
+    {
+      "path": "kernel/api.js",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 476
+    },
+    {
+      "path": "kernel/archive/engines/engine_v4.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3350
+    },
+    {
+      "path": "kernel/archive/engines/engine_v5.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3055
+    },
+    {
+      "path": "kernel/cli_lock.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 428
+    },
+    {
+      "path": "kernel/ima_autonomous_release_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3932
+    },
+    {
+      "path": "kernel/ima_consolidation_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 8265
+    },
+    {
+      "path": "kernel/ima_devices/index.js",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 233
+    },
+    {
+      "path": "kernel/ima_full_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3088
+    },
+    {
+      "path": "kernel/ima_meta_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3994
+    },
+    {
+      "path": "kernel/ima_supreme_kernel.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 7089
+    },
+    {
+      "path": "kernel/ima_system_brain.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 6068
+    },
+    {
+      "path": "kernel/ima_ultimate_orchestrator.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 10910
+    },
+    {
+      "path": "kernel/ima_unified_autonomous_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 6765
+    },
+    {
+      "path": "kernel/release_freeze/runtime/engine_v4.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3350
+    },
+    {
+      "path": "kernel/release_freeze/runtime/engine_v5.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3055
+    },
+    {
+      "path": "kernel/runtime/FILE_GUARD.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 929
+    },
+    {
+      "path": "kernel/runtime/FS_CONTROLLER.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1833
+    },
+    {
+      "path": "kernel/runtime/KERNEL_CLUSTER_MASTER_V7.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2058
+    },
+    {
+      "path": "kernel/runtime/KERNEL_CLUSTER_MASTER_V8.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2174
+    },
+    {
+      "path": "kernel/runtime/KERNEL_CONTROL_PLANE_V2.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2496
+    },
+    {
+      "path": "kernel/runtime/KERNEL_EVENT_BUS_V2.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 715
+    },
+    {
+      "path": "kernel/runtime/KERNEL_EXECUTION_LAYER_V2.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1575
+    },
+    {
+      "path": "kernel/runtime/KERNEL_EXECUTION_POOL_V1.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1621
+    },
+    {
+      "path": "kernel/runtime/KERNEL_GOVERNOR.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1225
+    },
+    {
+      "path": "kernel/runtime/KERNEL_ORCHESTRATOR_V1.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2648
+    },
+    {
+      "path": "kernel/runtime/KERNEL_ORCHESTRATOR_V2.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2475
+    },
+    {
+      "path": "kernel/runtime/KERNEL_WRITE_GUARD.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1052
+    },
+    {
+      "path": "kernel/runtime/SELF_HEALING_COMPILER.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2478
+    },
+    {
+      "path": "kernel/runtime/VERSION_ENGINE.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 691
+    },
+    {
+      "path": "kernel/system/final_autonomous_pipeline.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 6928
+    },
+    {
+      "path": "kernel/system/full_autonomous_pipeline.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 7525
+    },
+    {
+      "path": "kernel/system/maintenance_engine.js",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2905
+    },
+    {
+      "path": "kernel/ui/three.min.js",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 603445
+    },
+    {
+      "path": "learning/source_manager.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 919
+    },
+    {
+      "path": "learning/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_final_1784122661/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_final_1784122661/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_repair_1784122578/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_repair_1784122578/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_repair_1784122602/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_repair_1784122602/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/capability_map.json",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 5249
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/sources/auto_loader.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 914
+    },
+    {
+      "path": "repair_source_manager.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1002
+    },
+    {
+      "path": "tools/product_audit/create_artifact_build_pipeline.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 998
+    },
+    {
+      "path": "tools/product_audit/create_client_deployment_layer.sh",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 857
+    },
+    {
+      "path": "tools/product_audit/create_deployment_provider_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2060
+    },
+    {
+      "path": "tools/product_audit/create_distribution_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1350
+    },
+    {
+      "path": "tools/product_audit/create_final_release.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1087
+    },
+    {
+      "path": "tools/product_audit/create_integrity_seal.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1265
+    },
+    {
+      "path": "tools/product_audit/create_production_deployment_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1524
+    },
+    {
+      "path": "tools/product_audit/create_production_environment_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1592
+    },
+    {
+      "path": "tools/product_audit/create_production_infrastructure_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2906
+    },
+    {
+      "path": "tools/product_audit/create_production_release_archive.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1299
+    },
+    {
+      "path": "tools/product_audit/create_release_candidate.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 841
+    },
+    {
+      "path": "tools/product_audit/create_release_distribution_bundle.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1418
+    },
+    {
+      "path": "tools/product_audit/create_release_package.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1558
+    },
+    {
+      "path": "tools/product_audit/create_release_snapshot.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 864
+    },
+    {
+      "path": "tools/product_audit/create_service_contract_layer.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1546
+    },
+    {
+      "path": "tools/product_audit/product_layer_audit_1783950919.json",
+      "score": 0,
+      "patterns": [
+        "full_system_lock"
+      ],
+      "size": 7609
+    },
+    {
+      "path": "tools/product_audit/run_external_release_pipeline.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 3098
+    },
+    {
+      "path": "tools/product_audit/run_full_release_pipeline.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2497
+    },
+    {
+      "path": "tools/product_audit/run_global_release_audit.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 1761
+    },
+    {
+      "path": "tools/product_audit/run_production_final_audit.sh",
+      "score": 0,
+      "patterns": [
+        "sha256"
+      ],
+      "size": 2156
+    },
+    {
+      "path": "upgrade_external_sources.py",
+      "score": 0,
+      "patterns": [
+        "register"
+      ],
+      "size": 1749
+    }
+  ],
+  "next_step": "Select the existing canonical registration mechanism before modifying any protected canonical component."
+}

@@ -1,0 +1,823 @@
+{
+  "type": "CANONICAL_VERIFICATION_PATH_TRACE",
+  "mutation_performed": false,
+  "registry_modified": false,
+  "manifest_modified": false,
+  "hashes_modified": false,
+  "orchestrator_started": false,
+  "cron_changed": false,
+  "target": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+  "target_authority": {
+    "registry": true,
+    "manifest_direct": false
+  },
+  "files": [
+    {
+      "path": "verify_global_canonical_chain.sh",
+      "exists": true,
+      "calls_or_references": [],
+      "relevant_lines": [
+        {
+          "line": 4,
+          "text": "echo \"=== GLOBAL CANONICAL VERIFICATION ===\""
+        },
+        {
+          "line": 6,
+          "text": "python3 canonical_admission_guard.py kernel/runtime/CANONICAL/python_bridge.py"
+        },
+        {
+          "line": 8,
+          "text": "python3 canonical_admission_guard.py .ima/agi_evolution/runtime/ima_boot_gate.py"
+        },
+        {
+          "line": 10,
+          "text": "python3 canonical_admission_guard.py .ima/agi_evolution/runtime/ima_master_runtime.py"
+        },
+        {
+          "line": 12,
+          "text": "python3 canonical_admission_guard.py IMA_START_SINGLE_ENTRY.py"
+        },
+        {
+          "line": 14,
+          "text": "./ima_canonical_run.sh python3 IMA_START_SINGLE_ENTRY.py > logs/global_chain_test.log 2>&1"
+        },
+        {
+          "line": 16,
+          "text": "grep -E \"GLOBAL|POLICY|HASH|FALLBACK|REGISTRY|KERNEL|COMPLETE\" logs/global_chain_test.log"
+        },
+        {
+          "line": 18,
+          "text": "echo \"=== GLOBAL CANONICAL CHAIN VERIFIED ===\""
+        }
+      ]
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "exists": true,
+      "calls_or_references": [
+        {
+          "line": 20,
+          "text": "    / \"IMA_REPAIR_ENGINE.py\""
+        }
+      ],
+      "relevant_lines": [
+        {
+          "line": 2,
+          "text": "import hashlib"
+        },
+        {
+          "line": 10,
+          "text": "ROOT = PROJECT / \".ima\" / \"CANONICAL_AUTHORITY\""
+        },
+        {
+          "line": 12,
+          "text": "REGISTRY = ROOT / \"governance\" / \"CANONICAL_REGISTRY.json\""
+        },
+        {
+          "line": 13,
+          "text": "MANIFEST = ROOT / \"CANONICAL_AUTHORITY_MANIFEST.json\""
+        },
+        {
+          "line": 15,
+          "text": "REPAIR_ENGINE = ("
+        },
+        {
+          "line": 19,
+          "text": "    / \"REPAIR_ENGINE\""
+        },
+        {
+          "line": 20,
+          "text": "    / \"IMA_REPAIR_ENGINE.py\""
+        },
+        {
+          "line": 31,
+          "text": "AUDIT_DIR = ROOT / \"evolution\" / \"SELF_EVOLUTION\" / \"CANONICAL_CHAIN_ORCHESTRATOR\""
+        },
+        {
+          "line": 45,
+          "text": "def sha256(path):"
+        },
+        {
+          "line": 46,
+          "text": "    h = hashlib.sha256()"
+        },
+        {
+          "line": 73,
+          "text": "    print(\"IMA — CANONICAL CHAIN ORCHESTRATOR\")"
+        },
+        {
+          "line": 76,
+          "text": "    for path in [REGISTRY, MANIFEST, REPAIR_ENGINE, GLOBAL_AWARENESS]:"
+        },
+        {
+          "line": 80,
+          "text": "    print(\"[OK] Required canonical files exist\")"
+        },
+        {
+          "line": 86,
+          "text": "    registry_backup = backup(REGISTRY)"
+        },
+        {
+          "line": 87,
+          "text": "    manifest_backup = backup(MANIFEST)"
+        },
+        {
+          "line": 89,
+          "text": "    print(\"[OK] Registry backup created\")"
+        },
+        {
+          "line": 90,
+          "text": "    print(\"[OK] Manifest backup created\")"
+        },
+        {
+          "line": 96,
+          "text": "    registry = load_json(REGISTRY)"
+        },
+        {
+          "line": 97,
+          "text": "    manifest = load_json(MANIFEST)"
+        },
+        {
+          "line": 99,
+          "text": "    allowed = registry.setdefault(\"allowed_components\", [])"
+        },
+        {
+          "line": 100,
+          "text": "    files = manifest.setdefault(\"files\", {})"
+        },
+        {
+          "line": 103,
+          "text": "    # 3. SYNCHRONIZE EVERY EXISTING CANONICAL COMPONENT"
+        },
+        {
+          "line": 106,
+          "text": "    canonical_results = []"
+        },
+        {
+          "line": 107,
+          "text": "    registry_changes = 0"
+        },
+        {
+          "line": 108,
+          "text": "    manifest_changes = 0"
+        },
+        {
+          "line": 125,
+          "text": "            canonical_results.append({"
+        },
+        {
+          "line": 132,
+          "text": "        digest = sha256(path)"
+        },
+        {
+          "line": 135,
+          "text": "        if item.get(\"sha256\") != digest:"
+        },
+        {
+          "line": 136,
+          "text": "            item[\"sha256\"] = digest"
+        },
+        {
+          "line": 137,
+          "text": "            registry_changes += 1"
+        },
+        {
+          "line": 141,
+          "text": "        canonical_results.append({"
+        },
+        {
+          "line": 144,
+          "text": "            \"sha256\": digest,"
+        },
+        {
+          "line": 145,
+          "text": "            \"status\": \"SYNCHRONIZED\","
+        },
+        {
+          "line": 148,
+          "text": "        for key, manifest_item in files.items():"
+        },
+        {
+          "line": 150,
+          "text": "            canonical_path = manifest_item.get(\"canonical_path\")"
+        },
+        {
+          "line": 152,
+          "text": "            if not canonical_path:"
+        },
+        {
+          "line": 156,
+          "text": "                same = Path(canonical_path).resolve() == path"
+        },
+        {
+          "line": 162,
+          "text": "                if manifest_item.get(\"sha256\") != digest:"
+        },
+        {
+          "line": 163,
+          "text": "                    manifest_item[\"sha256\"] = digest"
+        },
+        {
+          "line": 164,
+          "text": "                    manifest_changes += 1"
+        },
+        {
+          "line": 166,
+          "text": "                manifest_item[\"size\"] = size"
+        },
+        {
+          "line": 168,
+          "text": "    print(f\"[OK] Canonical Registry synchronized: {registry_changes} changes\")"
+        },
+        {
+          "line": 169,
+          "text": "    print(f\"[OK] Canonical Manifest synchronized: {manifest_changes} changes\")"
+        },
+        {
+          "line": 172,
+          "text": "    # 4. WRITE REGISTRY FIRST"
+        },
+        {
+          "line": 175,
+          "text": "    save_json(REGISTRY, registry)"
+        },
+        {
+          "line": 178,
+          "text": "    # 5. SYNCHRONIZE REGISTRY HASH INTO MANIFEST"
+        },
+        {
+          "line": 181,
+          "text": "    registry_hash = sha256(REGISTRY)"
+        },
+        {
+          "line": 183,
+          "text": "    registry_manifest_entry = files.setdefault("
+        },
+        {
+          "line": 184,
+          "text": "        \"governance/CANONICAL_REGISTRY.json\","
+        },
+        {
+          "line": 188,
+          "text": "    registry_manifest_entry[\"canonical_path\"] = str(REGISTRY.resolve())"
+        },
+        {
+          "line": 189,
+          "text": "    registry_manifest_entry[\"sha256\"] = registry_hash"
+        },
+        {
+          "line": 190,
+          "text": "    registry_manifest_entry[\"size\"] = REGISTRY.stat().st_size"
+        },
+        {
+          "line": 192,
+          "text": "    save_json(MANIFEST, manifest)"
+        },
+        {
+          "line": 194,
+          "text": "    print(\"[OK] Registry written\")"
+        },
+        {
+          "line": 195,
+          "text": "    print(\"[OK] Registry SHA256 synchronized into Manifest\")"
+        },
+        {
+          "line": 198,
+          "text": "    # 6. COMPILE EVERYTHING IN THE CANONICAL CHAIN"
+        },
+        {
+          "line": 202,
+          "text": "        REPAIR_ENGINE,"
+        },
+        {
+          "line": 218,
+          "text": "    print(\"[OK] Canonical engines compiled\")"
+        },
+        {
+          "line": 221,
+          "text": "    # 7. FINAL DIRECT CANONICAL VERIFICATION"
+        },
+        {
+          "line": 224,
+          "text": "    registry = load_json(REGISTRY)"
+        },
+        {
+          "line": 225,
+          "text": "    manifest = load_json(MANIFEST)"
+        },
+        {
+          "line": 227,
+          "text": "    manifest_files = manifest.get(\"files\", {})"
+        },
+        {
+          "line": 232,
+          "text": "    for item in registry.get(\"allowed_components\", []):"
+        },
+        {
+          "line": 250,
+          "text": "        actual = sha256(path)"
+        },
+        {
+          "line": 251,
+          "text": "        expected = item.get(\"sha256\")"
+        },
+        {
+          "line": 258,
+          "text": "                \"source\": \"registry\","
+        },
+        {
+          "line": 261,
+          "text": "        for key, manifest_item in manifest_files.items():"
+        },
+        {
+          "line": 263,
+          "text": "            canonical_path = manifest_item.get(\"canonical_path\")"
+        },
+        {
+          "line": 265,
+          "text": "            if not canonical_path:"
+        },
+        {
+          "line": 269,
+          "text": "                same = Path(canonical_path).resolve() == path"
+        },
+        {
+          "line": 275,
+          "text": "                manifest_expected = manifest_item.get(\"sha256\")"
+        },
+        {
+          "line": 277,
+          "text": "                if actual != manifest_expected:"
+        },
+        {
+          "line": 281,
+          "text": "                        \"expected\": manifest_expected,"
+        },
+        {
+          "line": 282,
+          "text": "                        \"source\": \"manifest\","
+        },
+        {
+          "line": 287,
+          "text": "            \"Canonical files missing:\\n\""
+        },
+        {
+          "line": 295,
+          "text": "        print(\"CANONICAL MISMATCHES\")"
+        },
+        {
+          "line": 301,
+          "text": "        fail(\"Canonical chain verification failed\")"
+        },
+        {
+          "line": 303,
+          "text": "    print(\"[OK] Every Registry hash matches\")"
+        },
+        {
+          "line": 304,
+          "text": "    print(\"[OK] Every Manifest hash matches\")"
+        },
+        {
+          "line": 305,
+          "text": "    print(\"[OK] No canonical mismatches\")"
+        },
+        {
+          "line": 308,
+          "text": "    # 8. FULL NON-CANONICAL AWARENESS"
+        },
+        {
+          "line": 311,
+          "text": "    canonical_paths = set()"
+        },
+        {
+          "line": 313,
+          "text": "    for item in registry.get(\"allowed_components\", []):"
+        },
+        {
+          "line": 323,
+          "text": "            canonical_paths.add(str(path.resolve()))"
+        },
+        {
+          "line": 325,
+          "text": "    for item in manifest_files.values():"
+        },
+        {
+          "line": 327,
+          "text": "        file_path = item.get(\"canonical_path\")"
+        },
+        {
+          "line": 330,
+          "text": "            canonical_paths.add("
+        },
+        {
+          "line": 349,
+          "text": "    non_canonical = ["
+        },
+        {
+          "line": 352,
+          "text": "        if str(path.resolve()) not in canonical_paths"
+        },
+        {
+          "line": 371,
+          "text": "    for path in non_canonical:"
+        },
+        {
+          "line": 397,
+          "text": "        \"type\": \"CANONICAL_CHAIN_ORCHESTRATOR_AUDIT\","
+        },
+        {
+          "line": 399,
+          "text": "        \"canonical\": {"
+        },
+        {
+          "line": 400,
+          "text": "            \"total\": len(canonical_paths),"
+        },
+        {
+          "line": 404,
+          "text": "        \"non_canonical\": {"
+        },
+        {
+          "line": 405,
+          "text": "            \"total\": len(non_canonical),"
+        },
+        {
+          "line": 407,
+          "text": "                1 for p in non_canonical"
+        },
+        {
+          "line": 411,
+          "text": "                1 for p in non_canonical"
+        },
+        {
+          "line": 417,
+          "text": "        \"registry_backup\": str(registry_backup),"
+        },
+        {
+          "line": 418,
+          "text": "        \"manifest_backup\": str(manifest_backup),"
+        },
+        {
+          "line": 426,
+          "text": "        / f\"canonical_chain_audit_{int(time.time())}.json\""
+        },
+        {
+          "line": 440,
+          "text": "        / \"canonical_chain_chronological.jsonl\""
+        },
+        {
+          "line": 452,
+          "text": "    print(\"IMA — CANONICAL CHAIN VERIFIED\")"
+        },
+        {
+          "line": 454,
+          "text": "    print(\"[OK] Registry synchronized\")"
+        },
+        {
+          "line": 455,
+          "text": "    print(\"[OK] Manifest synchronized\")"
+        },
+        {
+          "line": 456,
+          "text": "    print(\"[OK] All canonical hashes verified\")"
+        },
+        {
+          "line": 457,
+          "text": "    print(\"[OK] All canonical files exist\")"
+        },
+        {
+          "line": 458,
+          "text": "    print(\"[OK] All canonical engines compiled\")"
+        },
+        {
+          "line": 459,
+          "text": "    print(\"[OK] Non-canonical files scanned\")"
+        },
+        {
+          "line": 461,
+          "text": "    print(\"[OK] No non-canonical files modified\")"
+        },
+        {
+          "line": 465,
+          "text": "    print(\"CANONICAL:\", len(canonical_paths))"
+        },
+        {
+          "line": 466,
+          "text": "    print(\"NON-CANONICAL:\", len(non_canonical))"
+        }
+      ]
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "exists": true,
+      "calls_or_references": [
+        {
+          "line": 193,
+          "text": "def verify_global_canonical_chain():"
+        }
+      ],
+      "relevant_lines": [
+        {
+          "line": 2,
+          "text": "import hashlib"
+        },
+        {
+          "line": 17,
+          "text": "def sha256(path):"
+        },
+        {
+          "line": 19,
+          "text": "    h = hashlib.sha256()"
+        },
+        {
+          "line": 193,
+          "text": "def verify_global_canonical_chain():"
+        },
+        {
+          "line": 200,
+          "text": "        / \"CANONICAL_AUTHORITY\""
+        },
+        {
+          "line": 203,
+          "text": "    registry = ("
+        },
+        {
+          "line": 206,
+          "text": "        / \"CANONICAL_REGISTRY.json\""
+        },
+        {
+          "line": 209,
+          "text": "    manifest = ("
+        },
+        {
+          "line": 211,
+          "text": "        / \"CANONICAL_AUTHORITY_MANIFEST.json\""
+        },
+        {
+          "line": 229,
+          "text": "    if not registry.is_file():"
+        },
+        {
+          "line": 231,
+          "text": "            \"Canonical Registry missing\""
+        },
+        {
+          "line": 234,
+          "text": "    if not manifest.is_file():"
+        },
+        {
+          "line": 236,
+          "text": "            \"Canonical Manifest missing\""
+        },
+        {
+          "line": 249,
+          "text": "    registry_hash = sha256(registry)"
+        },
+        {
+          "line": 252,
+          "text": "        manifest.read_text("
+        },
+        {
+          "line": 261,
+          "text": "            \"governance/CANONICAL_REGISTRY.json\","
+        },
+        {
+          "line": 266,
+          "text": "    entry[\"canonical_path\"] = str("
+        },
+        {
+          "line": 267,
+          "text": "        registry.resolve()"
+        },
+        {
+          "line": 270,
+          "text": "    entry[\"sha256\"] = registry_hash"
+        },
+        {
+          "line": 271,
+          "text": "    entry[\"size\"] = registry.stat().st_size"
+        },
+        {
+          "line": 273,
+          "text": "    manifest.write_text("
+        },
+        {
+          "line": 285,
+          "text": "        \"IMA REPAIR ENGINE — GLOBAL CANONICAL VERIFICATION GATE\""
+        },
+        {
+          "line": 291,
+          "text": "        \"[OK] Registry SHA256 calculated\""
+        },
+        {
+          "line": 295,
+          "text": "        \"[OK] Manifest synchronized to Registry\""
+        },
+        {
+          "line": 308,
+          "text": "            \"Canonical integrity verification failed\""
+        },
+        {
+          "line": 326,
+          "text": "        \"[OK] Canonical integrity verified\""
+        },
+        {
+          "line": 330,
+          "text": "        \"[OK] Canonical components scanned\""
+        },
+        {
+          "line": 334,
+          "text": "        \"[OK] Non-canonical files scanned\""
+        },
+        {
+          "line": 352,
+          "text": "        \"registry_synchronized\": True,"
+        },
+        {
+          "line": 353,
+          "text": "        \"manifest_synchronized\": True,"
+        },
+        {
+          "line": 354,
+          "text": "        \"canonical_integrity_verified\": True,"
+        },
+        {
+          "line": 355,
+          "text": "        \"canonical_scanned\": True,"
+        },
+        {
+          "line": 356,
+          "text": "        \"non_canonical_scanned\": True,"
+        },
+        {
+          "line": 368,
+          "text": "        \"IMA REPAIR ENGINE — CANONICAL ORCHESTRATOR\""
+        },
+        {
+          "line": 378,
+          "text": "    print(\"[OK] Canonical directory verified\")"
+        }
+      ]
+    },
+    {
+      "path": "create_canonical_registry.sh",
+      "exists": true,
+      "calls_or_references": [
+        {
+          "line": 46,
+          "text": "git add .ima/agi_evolution/runtime/CANONICAL_REGISTRY.json create_canonical_registry.sh"
+        }
+      ],
+      "relevant_lines": [
+        {
+          "line": 5,
+          "text": "REG=\"$R/CANONICAL_REGISTRY.json\""
+        },
+        {
+          "line": 8,
+          "text": "import json, hashlib, pathlib, time"
+        },
+        {
+          "line": 10,
+          "text": "kernel=\"kernel/runtime/CANONICAL/python_bridge.py\""
+        },
+        {
+          "line": 18,
+          "text": "registry={"
+        },
+        {
+          "line": 20,
+          "text": "    \"mode\":\"canonical_only\","
+        },
+        {
+          "line": 21,
+          "text": "    \"authority\":\"CANONICAL_REGISTRY\","
+        },
+        {
+          "line": 33,
+          "text": "        registry[\"allowed_components\"].append({"
+        },
+        {
+          "line": 35,
+          "text": "            \"sha256\":hashlib.sha256(p.read_bytes()).hexdigest()"
+        },
+        {
+          "line": 38,
+          "text": "pathlib.Path(\".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json\").write_text("
+        },
+        {
+          "line": 39,
+          "text": "    json.dumps(registry,indent=2),"
+        },
+        {
+          "line": 43,
+          "text": "print(json.dumps(registry,indent=2))"
+        },
+        {
+          "line": 46,
+          "text": "git add .ima/agi_evolution/runtime/CANONICAL_REGISTRY.json create_canonical_registry.sh"
+        },
+        {
+          "line": 47,
+          "text": "git commit -m \"Create canonical component registry\""
+        },
+        {
+          "line": 50,
+          "text": "echo \"=== CANONICAL REGISTRY CREATED ===\""
+        }
+      ]
+    },
+    {
+      "path": "enforce_registry_guard.sh",
+      "exists": true,
+      "calls_or_references": [],
+      "relevant_lines": [
+        {
+          "line": 5,
+          "text": "BACKUP=\"${FILE}.registry_backup.py\""
+        },
+        {
+          "line": 17,
+          "text": "# CANONICAL REGISTRY ENFORCEMENT"
+        },
+        {
+          "line": 19,
+          "text": "import hashlib, json"
+        },
+        {
+          "line": 21,
+          "text": "REG=Path(\".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json\")"
+        },
+        {
+          "line": 24,
+          "text": "    raise SystemExit(\"CANONICAL REGISTRY MISSING\")"
+        },
+        {
+          "line": 26,
+          "text": "registry=json.loads(REG.read_text())"
+        },
+        {
+          "line": 28,
+          "text": "if registry.get(\"mode\") != \"canonical_only\":"
+        },
+        {
+          "line": 29,
+          "text": "    raise SystemExit(\"INVALID CANONICAL MODE\")"
+        },
+        {
+          "line": 31,
+          "text": "for item in registry.get(\"allowed_components\", []):"
+        },
+        {
+          "line": 34,
+          "text": "        raise SystemExit(f\"MISSING CANONICAL COMPONENT: {f}\")"
+        },
+        {
+          "line": 36,
+          "text": "    h=hashlib.sha256(f.read_bytes()).hexdigest()"
+        },
+        {
+          "line": 37,
+          "text": "    if h != item[\"sha256\"]:"
+        },
+        {
+          "line": 38,
+          "text": "        raise SystemExit(f\"HASH MISMATCH: {f}\")"
+        },
+        {
+          "line": 40,
+          "text": "print(\"[OK] CANONICAL REGISTRY VERIFIED\")"
+        },
+        {
+          "line": 45,
+          "text": "if \"CANONICAL REGISTRY VERIFIED\" not in text:"
+        },
+        {
+          "line": 49,
+          "text": "print(\"[OK] Registry guard injected\")"
+        },
+        {
+          "line": 52,
+          "text": "python3 IMA_START_SINGLE_ENTRY.py > logs/registry_guard_test.log 2>&1"
+        },
+        {
+          "line": 54,
+          "text": "grep -E \"REGISTRY|POLICY|HASH|COMPLETE|KERNEL\" logs/registry_guard_test.log"
+        },
+        {
+          "line": 56,
+          "text": "git add IMA_START_SINGLE_ENTRY.py IMA_START_SINGLE_ENTRY.registry_backup.py"
+        },
+        {
+          "line": 57,
+          "text": "git commit -m \"Enforce canonical registry at boot\""
+        },
+        {
+          "line": 60,
+          "text": "echo \"=== REGISTRY ENFORCEMENT COMPLETE ===\""
+        }
+      ]
+    }
+  ],
+  "next_decision": "Determine the existing canonical hash-registration/update path before any protected runtime mutation."
+}

@@ -1,0 +1,268 @@
+{
+  "timestamp": "2026-07-18 21:52:58.893101",
+  "scan": {
+    "files": 22604,
+    "directories": 2736,
+    "python_modules": 3492
+  },
+  "gaps": [
+    {
+      "type": "syntax_error",
+      "file": ".ima/broken_runtime_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/source_manager_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/source_router.before_compile_fix.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_compile_fix.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_compile_fix.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_compile_fix.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/source_router.before_import_cleanup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_import_cleanup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_import_cleanup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_import_cleanup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_compile_fix.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_import_cleanup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/archive_final/archive_cleanup/IMA_START_broken_backup_1783810407.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/archive_final/archive_cleanup/backup_translator_fix_error.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/archive_final/ima_backup_1783804250/api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/backups/20260713_152909/api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/backups/20260713_152847/api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    },
+    {
+      "type": "syntax_error",
+      "file": ".ima/backups/20260713_152816/api/server_broken_backup.py",
+      "reason": "Python syntax validation failed"
+    }
+  ],
+  "plan": {
+    "steps": [
+      {
+        "step": 1,
+        "file": ".ima/broken_runtime_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 2,
+        "file": ".ima/source_manager_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 3,
+        "file": "api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 4,
+        "file": "learning_backup_final_clean_1784122759/source_router.before_compile_fix.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 5,
+        "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_compile_fix.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 6,
+        "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_compile_fix.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 7,
+        "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_compile_fix.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 8,
+        "file": "learning_backup_final_clean_1784122759/source_router.before_import_cleanup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 9,
+        "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_import_cleanup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 10,
+        "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_import_cleanup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 11,
+        "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_import_cleanup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 12,
+        "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_compile_fix.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 13,
+        "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_import_cleanup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 14,
+        "file": ".ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 15,
+        "file": ".ima/archive_final/archive_cleanup/IMA_START_broken_backup_1783810407.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 16,
+        "file": ".ima/archive_final/archive_cleanup/backup_translator_fix_error.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 17,
+        "file": ".ima/archive_final/ima_backup_1783804250/api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 18,
+        "file": ".ima/backups/20260713_152909/api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 19,
+        "file": ".ima/backups/20260713_152847/api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      },
+      {
+        "step": 20,
+        "file": ".ima/backups/20260713_152816/api/server_broken_backup.py",
+        "action": "review",
+        "reason": "Python syntax validation failed",
+        "status": "planned"
+      }
+    ],
+    "status": "planned",
+    "execution": "disabled"
+  },
+  "evaluation": {
+    "valid_steps": 20,
+    "allowlist_pass": false,
+    "execution_disabled": true,
+    "score": 0.0,
+    "status": "plan_evaluated"
+  },
+  "proposals": [],
+  "applied": [],
+  "execution": "disabled",
+  "self_modification": "disabled",
+  "status": "self_improvement_cycle_completed"
+}

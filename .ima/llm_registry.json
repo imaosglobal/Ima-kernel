@@ -1,0 +1,19 @@
+{
+  "time": 1784391463.1070943,
+  "local_models": [],
+  "local_services": [],
+  "cloud": [
+    {
+      "provider": "openai",
+      "configured": false
+    },
+    {
+      "provider": "anthropic",
+      "configured": false
+    },
+    {
+      "provider": "gemini",
+      "configured": false
+    }
+  ]
+}

@@ -31,8 +31,8 @@ def run():
         state["decision"]="error:"+str(e)
 
     try:
-        from self_evolution_loop import SelfEvolutionLoop
-        state["evolution"]="available"
+        from self_evolution_loop import IMA_SELF_EVOLUTION
+        state["evolution"] = IMA_SELF_EVOLUTION.create_plan()
     except Exception as e:
         state["evolution"]="error:"+str(e)
 

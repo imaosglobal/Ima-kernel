@@ -1,0 +1,50 @@
+from pathlib import Path
+import json,time,subprocess,sys
+
+ROOT=Path(".ima/agi_evolution/runtime")
+
+def load(name):
+    p=ROOT/name
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
+
+def run():
+
+    handoff=load("kernel_handoff_state.json")
+
+    state={
+        "time":time.time(),
+        "runtime":"active",
+        "brain":load("brain_state.json"),
+        "health":load("health_state.json"),
+        "supervisor":load("supervisor_state.json"),
+        "decision":"continue",
+        "kernel":handoff,
+        "IMA_PARTNERSHIP_FIRST_CYCLE":{
+            "context":True,
+            "history":True,
+            "intent":True,
+            "autonomous_analysis":True,
+            "fact_inference_uncertainty_separation":True,
+            "risk_and_contradiction_check":True,
+            "shared_plan":True,
+            "minimal_necessary_delegation":True,
+            "action":True,
+            "verification":True,
+            "learning":True
+        }
+    }
+
+    if state["health"].get("healthy") is False:
+        state["decision"]="repair"
+
+    (ROOT/"ima_master_state.json").write_text(
+        json.dumps(state,indent=2,ensure_ascii=False)
+    )
+
+    return state
+
+
+if __name__=="__main__":
+    print(json.dumps(run(),indent=2,ensure_ascii=False))

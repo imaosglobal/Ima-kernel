@@ -1,0 +1,9 @@
+{
+  "name": "IMA Termux Bridge",
+  "version": "1.0.0",
+  "transport": "mcp",
+  "local_only": true,
+  "ollama": false,
+  "runtime": "/data/data/com.termux/files/home/ima_kernel/ima_master_runtime.py",
+  "api": "/data/data/com.termux/files/home/ima_kernel/api/server.py"
+}

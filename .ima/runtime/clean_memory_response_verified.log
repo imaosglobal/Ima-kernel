@@ -1,0 +1,133 @@
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before ima_master_runtime
+BOOT: after ima_master_runtime
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before conversation_layer
+BOOT: after conversation_layer
+BOOT: before product_gateway
+BOOT: after product_gateway
+IMA API ONLINE :8080
+127.0.0.1 - - [18/Jul/2026 14:21:06] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:21:06] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:25:24] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:25:24] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:27:59] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:32:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:34:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:34:27] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:34:28] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:36:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:36:08] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:36:08] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:37:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:38:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:40:36] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:40:36] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 19:03:05] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 19:03:05] "GET /ready HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 19:03:51] "POST /ask HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 19:03:51] "POST /ask HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49886)
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 162, in do_POST
+    self.send_json({
+    ~~~~~~~~~~~~~~^^
+        "input": question,
+        ^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        "status": "OK"
+        ^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 102, in send_json
+    self.wfile.write(body)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 176, in do_POST
+    self.send_json({
+    ~~~~~~~~~~~~~~^^
+        "status":"ERROR",
+        ^^^^^^^^^^^^^^^^^
+        "error":str(e)
+        ^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 101, in send_json
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+127.0.0.1 - - [18/Jul/2026 19:03:51] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 36876)
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 129, in do_GET
+    self.send_json({
+    ~~~~~~~~~~~~~~^^
+        "product":"IMA",
+        ^^^^^^^^^^^^^^^^
+        "status":"ONLINE"
+        ^^^^^^^^^^^^^^^^^
+    })
+    ^^
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 102, in send_json
+    self.wfile.write(body)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------

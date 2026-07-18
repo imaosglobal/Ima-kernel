@@ -58,6 +58,148 @@
       "time": "2026-07-16 15:32:15.110840",
       "category": "interaction",
       "event": "ID:1784205135109 | Question:מה הקשר בין מוזיקה ומתמטיקה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 11:50:57.104921",
+      "category": "interaction",
+      "event": "ID:1784278257104 | Question:שלום IMA | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-17 11:52:53.328301",
+      "category": "interaction",
+      "event": "ID:1784278373328 | Question:שלום IMA | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-17 11:53:34.673139",
+      "category": "interaction",
+      "event": "ID:1784278414672 | Question:שלום IMA | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-17 11:53:57.694253",
+      "category": "interaction",
+      "event": "ID:1784278437693 | Question:שלום IMA | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-17 11:54:31.239051",
+      "category": "interaction",
+      "event": "ID:1784278471238 | Question:בדיקת זהות | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 11:54:31.859571",
+      "category": "interaction",
+      "event": "ID:1784278471859 | Question:בדיקת זיכרון | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 11:54:32.475283",
+      "category": "interaction",
+      "event": "ID:1784278472475 | Question:בדיקת החלטה | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 11:55:05.662418",
+      "category": "interaction",
+      "event": "ID:1784278505662 | Question:kernel stability checkpoint | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 20, 'lessons': 9}, 'observations': [\"פעילות מרכזית: {'interaction': 19, 'learning_cycle': 1}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (2 שאלות חסרות)', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות'], 'latest_lessons': [{'time': '2026-07-15 21:11:29.054449', 'lesson': 'מחזור למידה 2026-07-15 21:11:29.054181: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:11:32.108595', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.607280', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.685306', 'lesson': 'מחזור למידה 2026-07-15 21:19:14.685030: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:19:17.906198', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 2}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-17 12:03:40.963133",
+      "category": "interaction",
+      "event": "ID:1784279020962 | Question:בדיקת בחירת מנוע | Mode:technical | Confidence:0.85"
+    },
+    {
+      "time": "2026-07-17 12:04:09.187282",
+      "category": "interaction",
+      "event": "ID:1784279049187 | Question:בדיקת גילוי מודל | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:13:46.808670",
+      "category": "interaction",
+      "event": "ID:1784279626808 | Question:אני רוצה ללמוד לבנות עסק | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:14:21.018168",
+      "category": "interaction",
+      "event": "ID:1784279661017 | Question:אני רוצה ללמוד פייתון | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:14:21.790869",
+      "category": "interaction",
+      "event": "ID:1784279661790 | Question:תעזרי לי לכתוב שיר | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:14:22.533180",
+      "category": "interaction",
+      "event": "ID:1784279662532 | Question:אני רוצה לבנות עסק | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:15:16.919592",
+      "category": "interaction",
+      "event": "ID:1784279716919 | Question:אני בונה עסק חדש | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:16:42.841733",
+      "category": "interaction",
+      "event": "ID:1784279802841 | Question:אני בונה עסק חדש | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:17:54.106063",
+      "category": "interaction",
+      "event": "ID:1784279874105 | Question:אני בונה עסק חדש | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 30, 'lessons': 9}, 'observations': [\"פעילות מרכזית: {'interaction': 28, 'learning_cycle': 2}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (2 שאלות חסרות)', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות'], 'latest_lessons': [{'time': '2026-07-15 21:11:29.054449', 'lesson': 'מחזור למידה 2026-07-15 21:11:29.054181: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:11:32.108595', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.607280', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.685306', 'lesson': 'מחזור למידה 2026-07-15 21:19:14.685030: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:19:17.906198', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 2}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
+    },
+    {
+      "time": "2026-07-17 12:18:25.433475",
+      "category": "interaction",
+      "event": "ID:1784279905433 | Question:למד אותי איך לפתוח עסק | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:18:26.228558",
+      "category": "interaction",
+      "event": "ID:1784279906228 | Question:כתוב לי רעיון למוצר | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:18:26.963505",
+      "category": "interaction",
+      "event": "ID:1784279906963 | Question:תבנה לי תוכנית עבודה לחודש הקרוב | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-17 12:20:08.302212",
+      "category": "interaction",
+      "event": "ID:1784280008296 | Question:תן לי תוכנית לפתיחת עסק קטן | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-18 13:56:57.873925",
+      "category": "interaction",
+      "event": "ID:1784372217871 | Question:זכור את קוד הבדיקה: ORION-7429 | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-18 13:58:30.984020",
+      "category": "interaction",
+      "event": "ID:1784372310983 | Question:זכור את קוד הבדיקה: ORION-7429 | Mode:technical | Confidence:0.9"
+    },
+    {
+      "time": "2026-07-18 19:03:49.267383",
+      "category": "interaction",
+      "event": "ID:1784390629264 | Question:בדיקת חיבור בלבד. אל תשני קבצים ואל תבצעי פעולה. | Mode:emotion | Confidence:0.88"
+    },
+    {
+      "time": "2026-07-18 19:15:24.809947",
+      "category": "interaction",
+      "event": "ID:1784391324807 | Question:IMA_DIRECT_BRIDGE_TEST | Mode:conversation | Confidence:0.7"
+    },
+    {
+      "time": "2026-07-18 19:17:43.289564",
+      "category": "interaction",
+      "event": "ID:1784391463289 | Question:האם IMA מחוברת ישירות ל-Termux? | Mode:conversation | Confidence:0.85"
+    },
+    {
+      "category": "learning_cycle",
+      "event": "{'awareness': {'system_state': {'events': 40, 'lessons': 9}, 'observations': [\"פעילות מרכזית: {'interaction': 37, 'learning_cycle': 3}\", 'נאסף מספיק ניסיון כדי להתחיל לזהות דפוסים.', 'קיימות הצעות שיפור הממתינות לעיבוד.'], 'pending_improvements': ['להרחיב ידע בתחום consciousness (1 שאלות חסרות)', 'להרחיב ידע בתחום general (2 שאלות חסרות)', 'לעבד הצעות שיפור קיימות ביומן', 'לשפר הבנת הקשר בין שיחות קודמות'], 'latest_lessons': [{'time': '2026-07-15 21:11:29.054449', 'lesson': 'מחזור למידה 2026-07-15 21:11:29.054181: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:11:32.108595', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.607280', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}, {'time': '2026-07-15 21:19:14.685306', 'lesson': 'מחזור למידה 2026-07-15 21:19:14.685030: נוספו 1 תובנות חדשות'}, {'time': '2026-07-15 21:19:17.906198', 'lesson': 'תודעה היא תחום מרכזי הדורש שילוב בין פילוסופיה, מדעי המוח, פסיכולוגיה ובינה מלאכותית.'}]}, 'knowledge_gaps': {'consciousness': 1, 'general': 2}, 'new_improvements': ['להרחיב ניתוח דפוסי שיחה לפי נושאים'], 'status': 'learning_cycle_completed'}"
     }
   ],
   "improvements": [

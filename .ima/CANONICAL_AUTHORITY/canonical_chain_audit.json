@@ -1,0 +1,195 @@
+{
+  "type": "IMA_CANONICAL_CHAIN_AUDIT",
+  "status": "READ_ONLY",
+  "canonical_authority_directory": ".ima/CANONICAL_AUTHORITY",
+  "authority_policy": {
+    "future_scans_must_read_from": ".ima/CANONICAL_AUTHORITY",
+    "source_files_modified": false,
+    "canonical_files_deleted": false,
+    "legacy_authority_files_modified": false
+  },
+  "entry": {
+    "label": "ENTRY",
+    "path": "IMA_START_SINGLE_ENTRY.py",
+    "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799",
+    "imports": [
+      "hashlib",
+      "json",
+      "pathlib",
+      "subprocess",
+      "time"
+    ],
+    "path_references": [
+      {
+        "reference": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+        "exists": true,
+        "resolved_path": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+        "sha256": "a75615b125590ade18770de23853e1d4534ffe9f5930ab28c5928531346ecb1a"
+      },
+      {
+        "reference": "CANONICAL_KERNEL_LOCK.json",
+        "exists": false
+      },
+      {
+        "reference": "CANONICAL_RUNTIME_POLICY.json",
+        "exists": false
+      },
+      {
+        "reference": "IMA_START_SINGLE_ENTRY.py",
+        "exists": true,
+        "resolved_path": "IMA_START_SINGLE_ENTRY.py",
+        "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799"
+      },
+      {
+        "reference": "ima_boot_gate.py",
+        "exists": false
+      },
+      {
+        "reference": "ima_master_runtime.py",
+        "exists": true,
+        "resolved_path": "ima_master_runtime.py",
+        "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae"
+      }
+    ]
+  },
+  "kernel": {
+    "label": "KERNEL",
+    "path": "kernel/runtime/CANONICAL/python_bridge.py",
+    "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+    "imports": [
+      "json",
+      "pathlib",
+      "subprocess"
+    ],
+    "path_references": [
+      {
+        "reference": "IMA_RUNTIME.js",
+        "exists": false
+      }
+    ]
+  },
+  "chain_candidates": [
+    {
+      "label": "CHAIN_CANDIDATE",
+      "path": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+      "sha256": "a75615b125590ade18770de23853e1d4534ffe9f5930ab28c5928531346ecb1a",
+      "imports": [],
+      "path_references": [
+        {
+          "reference": ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
+          "exists": true,
+          "resolved_path": ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
+          "sha256": "59368fdaf489947d2edc86d7e106eb4f9527180b0ffbbb9569ce4a32057633d2"
+        },
+        {
+          "reference": ".ima/agi_evolution/runtime/cognitive_pipeline.py",
+          "exists": true,
+          "resolved_path": ".ima/agi_evolution/runtime/cognitive_pipeline.py",
+          "sha256": "453255126f7ae2782ab34e3fbedfc9a5ffa604f0eb9eb32de686b288c4b44565"
+        },
+        {
+          "reference": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+          "exists": true,
+          "resolved_path": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+          "sha256": "a2c45e002e9224408f9680d3dbd57c3ac34c94d6f9a3c245b0ba6718c1c0748a"
+        },
+        {
+          "reference": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+          "exists": true,
+          "resolved_path": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+          "sha256": "11880b190b35074059034fa637592b5676b64be638a0fb6a1d79d510f9d51f1d"
+        },
+        {
+          "reference": "IMA_START_SINGLE_ENTRY.py",
+          "exists": true,
+          "resolved_path": "IMA_START_SINGLE_ENTRY.py",
+          "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799"
+        },
+        {
+          "reference": "kernel/runtime/CANONICAL/python_bridge.py",
+          "exists": true,
+          "resolved_path": "kernel/runtime/CANONICAL/python_bridge.py",
+          "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22"
+        }
+      ]
+    },
+    {
+      "label": "CHAIN_CANDIDATE",
+      "path": "IMA_START_SINGLE_ENTRY.py",
+      "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799",
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "time"
+      ],
+      "path_references": [
+        {
+          "reference": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+          "exists": true,
+          "resolved_path": ".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json",
+          "sha256": "a75615b125590ade18770de23853e1d4534ffe9f5930ab28c5928531346ecb1a"
+        },
+        {
+          "reference": "CANONICAL_KERNEL_LOCK.json",
+          "exists": false
+        },
+        {
+          "reference": "CANONICAL_RUNTIME_POLICY.json",
+          "exists": false
+        },
+        {
+          "reference": "IMA_START_SINGLE_ENTRY.py",
+          "exists": true,
+          "resolved_path": "IMA_START_SINGLE_ENTRY.py",
+          "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799"
+        },
+        {
+          "reference": "ima_boot_gate.py",
+          "exists": false
+        },
+        {
+          "reference": "ima_master_runtime.py",
+          "exists": true,
+          "resolved_path": "ima_master_runtime.py",
+          "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae"
+        }
+      ]
+    },
+    {
+      "label": "CHAIN_CANDIDATE",
+      "path": "ima_master_runtime.py",
+      "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae",
+      "imports": [
+        "autonomy_context",
+        "brain_sync",
+        "connectors.llm.auto_runtime",
+        "connectors.llm.ima_pipeline",
+        "connectors.llm.router",
+        "conversation_layer",
+        "founder.executive_ai.integration.background_bridge",
+        "identity_context",
+        "ima_brain",
+        "ima_mom",
+        "ima_question_engine",
+        "ima_system",
+        "json",
+        "learning.knowledge_answer_builder",
+        "learning.knowledge_expansion_engine",
+        "learning.knowledge_graph_retrieval",
+        "learning.learning_loop",
+        "memory.context",
+        "pathlib",
+        "re",
+        "runtime.ima_agi_bridge",
+        "skills.intent",
+        "skills.router",
+        "sys",
+        "time",
+        "truth_engine"
+      ],
+      "path_references": []
+    }
+  ]
+}

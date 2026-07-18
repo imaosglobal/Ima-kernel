@@ -1,6 +1,7 @@
 {
   "action_engine": {
     "functions": [
+      "plan_learning_action",
       "execute_learning_action"
     ]
   },
@@ -310,6 +311,8 @@
   },
   "knowledge_graph_retrieval": {
     "functions": [
+      "load_graph",
+      "extract_concepts",
       "search_concept"
     ]
   },
@@ -468,6 +471,27 @@
   "knowledge_fusion.before_ranking_1784124167": {
     "functions": [
       "fuse_sources"
+    ]
+  },
+  "reasoning_engine": {
+    "functions": [
+      "reason",
+      "evaluate_reasoning"
+    ]
+  },
+  "planning_engine": {
+    "functions": [
+      "build_plan"
+    ]
+  },
+  "autonomy_engine": {
+    "functions": [
+      "run_autonomy"
+    ]
+  },
+  "_backup_action_engine_20260718_210956": {
+    "functions": [
+      "execute_learning_action"
     ]
   }
 }

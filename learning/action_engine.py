@@ -1,59 +1,29 @@
-from learning.learning_memory import store_pattern
-from learning.safety_gate import check_action
-from learning.evaluation_engine import evaluate_action
+from datetime import datetime
+
+
+def plan_learning_action(decision, reason):
+    """
+    Planning-only action layer.
+
+    This function creates an explicit plan.
+    It does not execute system changes.
+    """
+
+    return {
+        "decision": decision,
+        "reason": reason,
+        "status": "planned",
+        "execution": "disabled",
+        "timestamp": str(datetime.now()),
+    }
 
 
 def execute_learning_action(decision, reason):
+    """
+    Compatibility wrapper.
 
-    safety = check_action(decision, reason)
+    Execution is intentionally disabled.
+    Existing callers receive a plan instead of performing side effects.
+    """
 
-    if not safety["approved"]:
-        return {
-            "action": decision,
-            "status": "blocked",
-            "reason": safety["reason"]
-        }
-
-    if decision == "knowledge_expansion":
-
-        action = f"נוצרה משימת הרחבת ידע: {reason}"
-
-        store_pattern(action)
-
-        evaluation = evaluate_action(
-            decision,
-            action,
-            1.0
-        )
-
-        return {
-            "action": action,
-            "status": "executed",
-            "evaluation": evaluation
-        }
-
-
-    if decision == "system_improvement":
-
-        action = f"תוכנית שיפור מערכת: {reason}"
-
-        store_pattern(action)
-
-        evaluation = evaluate_action(
-            decision,
-            action,
-            1.0
-        )
-
-        return {
-            "action": action,
-            "status": "executed",
-            "evaluation": evaluation
-        }
-
-
-    return {
-        "action": decision,
-        "status": "planned",
-        "reason": reason
-    }
+    return plan_learning_action(decision, reason)

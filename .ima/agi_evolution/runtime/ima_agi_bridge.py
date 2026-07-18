@@ -44,5 +44,22 @@ def start_agi_layer():
     return result
 
 
+
+class IMA_AGI:
+    def __init__(self):
+        self.name="IMA_AGI_BRIDGE"
+
+    def start(self):
+        return start_agi_layer()
+
+    def run(self):
+        return start_agi_layer()
+
+    def process(self, message=None):
+        result=start_agi_layer()
+        result["message"]=message
+        return result
+
+
 if __name__=="__main__":
     print(start_agi_layer())

@@ -1,0 +1,600 @@
+{
+  "target": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+  "mutation_performed": false,
+  "files_modified": [],
+  "candidates": [
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "exists": true,
+      "size": 11840,
+      "functions": [
+        {
+          "name": "sha256",
+          "line": 45,
+          "end_line": 50,
+          "relevant": true
+        },
+        {
+          "name": "load_json",
+          "line": 52,
+          "end_line": 53,
+          "relevant": false
+        },
+        {
+          "name": "save_json",
+          "line": 55,
+          "end_line": 59,
+          "relevant": false
+        },
+        {
+          "name": "backup",
+          "line": 61,
+          "end_line": 65,
+          "relevant": true
+        },
+        {
+          "name": "fail",
+          "line": 67,
+          "end_line": 68,
+          "relevant": false
+        },
+        {
+          "name": "main",
+          "line": 70,
+          "end_line": 470,
+          "relevant": true
+        }
+      ],
+      "calls": [
+        {
+          "name": "hashlib.sha256",
+          "line": 46
+        },
+        {
+          "name": "BACKUP_DIR.mkdir",
+          "line": 62
+        },
+        {
+          "name": "backup",
+          "line": 86
+        },
+        {
+          "name": "backup",
+          "line": 87
+        },
+        {
+          "name": "registry.setdefault",
+          "line": 99
+        },
+        {
+          "name": "sha256",
+          "line": 181
+        },
+        {
+          "name": "registry.get",
+          "line": 232
+        },
+        {
+          "name": "registry.get",
+          "line": 313
+        },
+        {
+          "name": "sha256",
+          "line": 132
+        },
+        {
+          "name": "canonical_results.append",
+          "line": 141
+        },
+        {
+          "name": "REGISTRY.resolve",
+          "line": 188
+        },
+        {
+          "name": "REGISTRY.stat",
+          "line": 190
+        },
+        {
+          "name": "sha256",
+          "line": 250
+        },
+        {
+          "name": "h.update",
+          "line": 49
+        },
+        {
+          "name": "canonical_results.append",
+          "line": 125
+        },
+        {
+          "name": "canonical_paths.add",
+          "line": 323
+        },
+        {
+          "name": "canonical_paths.add",
+          "line": 330
+        }
+      ],
+      "keyword_hits": {
+        "registry": [
+          12,
+          76,
+          86,
+          89,
+          96,
+          99,
+          107,
+          137,
+          168,
+          172,
+          175,
+          178,
+          181,
+          183,
+          184,
+          188,
+          189,
+          190,
+          194,
+          195,
+          224,
+          232,
+          258,
+          303,
+          313,
+          417,
+          454
+        ],
+        "hash": [
+          2,
+          46,
+          178,
+          181,
+          189,
+          303,
+          304,
+          456
+        ],
+        "sha256": [
+          45,
+          46,
+          132,
+          135,
+          136,
+          144,
+          162,
+          163,
+          181,
+          189,
+          195,
+          250,
+          251,
+          275
+        ],
+        "canonical": [
+          10,
+          12,
+          13,
+          31,
+          73,
+          80,
+          103,
+          106,
+          125,
+          141,
+          150,
+          152,
+          156,
+          168,
+          169,
+          184,
+          188,
+          198,
+          218,
+          221,
+          263,
+          265,
+          269,
+          287,
+          295,
+          301,
+          305,
+          308,
+          311,
+          323,
+          327,
+          330,
+          349,
+          352,
+          371,
+          397,
+          399,
+          400,
+          404,
+          405,
+          407,
+          411,
+          426,
+          440,
+          452,
+          456,
+          457,
+          458,
+          459,
+          461,
+          465,
+          466
+        ],
+        "change": [
+          107,
+          108,
+          137,
+          164,
+          168,
+          169
+        ],
+        "mutation": [
+          416
+        ],
+        "update": [
+          49
+        ],
+        "chain": [
+          31,
+          73,
+          198,
+          301,
+          397,
+          426,
+          440,
+          452
+        ],
+        "backup": [
+          32,
+          61,
+          62,
+          63,
+          83,
+          86,
+          87,
+          89,
+          90,
+          417,
+          418
+        ],
+        "repair": [
+          15,
+          19,
+          20,
+          76,
+          202,
+          364
+        ]
+      }
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "exists": true,
+      "size": 6175,
+      "functions": [
+        {
+          "name": "sha256",
+          "line": 17,
+          "end_line": 30,
+          "relevant": true
+        },
+        {
+          "name": "create_plan",
+          "line": 33,
+          "end_line": 87,
+          "relevant": true
+        },
+        {
+          "name": "backup_file",
+          "line": 90,
+          "end_line": 106,
+          "relevant": true
+        },
+        {
+          "name": "execute_plan",
+          "line": 109,
+          "end_line": 189,
+          "relevant": true
+        },
+        {
+          "name": "verify_global_canonical_chain",
+          "line": 193,
+          "end_line": 360,
+          "relevant": true
+        }
+      ],
+      "calls": [
+        {
+          "name": "hashlib.sha256",
+          "line": 19
+        },
+        {
+          "name": "sha256",
+          "line": 249
+        },
+        {
+          "name": "registry.is_file",
+          "line": 229
+        },
+        {
+          "name": "registry.resolve",
+          "line": 267
+        },
+        {
+          "name": "registry.stat",
+          "line": 271
+        },
+        {
+          "name": "h.update",
+          "line": 28
+        }
+      ],
+      "keyword_hits": {
+        "registry": [
+          203,
+          206,
+          229,
+          231,
+          249,
+          261,
+          267,
+          270,
+          271,
+          291,
+          295,
+          352
+        ],
+        "hash": [
+          2,
+          19,
+          249,
+          270
+        ],
+        "sha256": [
+          17,
+          19,
+          249,
+          270,
+          291
+        ],
+        "canonical": [
+          193,
+          200,
+          206,
+          211,
+          231,
+          236,
+          261,
+          266,
+          285,
+          308,
+          326,
+          330,
+          334,
+          354,
+          355,
+          356,
+          368,
+          378
+        ],
+        "mutation": [
+          147,
+          346,
+          359
+        ],
+        "update": [
+          28
+        ],
+        "verify": [
+          193
+        ],
+        "chain": [
+          193
+        ],
+        "backup": [
+          14,
+          51,
+          90,
+          96,
+          98,
+          104,
+          106,
+          149,
+          384
+        ],
+        "rollback": [
+          57,
+          155
+        ],
+        "repair": [
+          41,
+          67,
+          141,
+          165,
+          285,
+          368,
+          376,
+          390
+        ]
+      }
+    },
+    {
+      "path": "enforce_registry_guard.sh",
+      "exists": true,
+      "size": 1467,
+      "functions": [],
+      "calls": [],
+      "keyword_hits": {
+        "registry": [
+          5,
+          17,
+          21,
+          24,
+          26,
+          28,
+          31,
+          40,
+          45,
+          49,
+          52,
+          54,
+          56,
+          57,
+          60
+        ],
+        "hash": [
+          19,
+          36,
+          38,
+          54
+        ],
+        "sha256": [
+          36,
+          37
+        ],
+        "canonical": [
+          17,
+          21,
+          24,
+          28,
+          29,
+          34,
+          40,
+          45,
+          57
+        ],
+        "commit": [
+          57
+        ],
+        "backup": [
+          5,
+          7,
+          56
+        ]
+      }
+    },
+    {
+      "path": "create_canonical_registry.sh",
+      "exists": true,
+      "size": 1260,
+      "functions": [],
+      "calls": [],
+      "keyword_hits": {
+        "registry": [
+          5,
+          18,
+          21,
+          33,
+          38,
+          39,
+          43,
+          46,
+          47,
+          50
+        ],
+        "hash": [
+          8,
+          35
+        ],
+        "sha256": [
+          35
+        ],
+        "canonical": [
+          5,
+          10,
+          20,
+          21,
+          38,
+          46,
+          47,
+          50
+        ],
+        "commit": [
+          47
+        ]
+      }
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "exists": true,
+      "size": 2127,
+      "functions": [],
+      "calls": [
+        {
+          "name": "registry.get",
+          "line": 64
+        },
+        {
+          "name": "registry.get",
+          "line": 61
+        },
+        {
+          "name": "hashlib.sha256",
+          "line": 34
+        },
+        {
+          "name": "hashlib.sha256",
+          "line": 69
+        }
+      ],
+      "keyword_hits": {
+        "registry": [
+          50,
+          54,
+          57,
+          59,
+          61,
+          64,
+          73
+        ],
+        "hash": [
+          12,
+          34,
+          38,
+          45,
+          52,
+          69,
+          71
+        ],
+        "sha256": [
+          31,
+          34,
+          69,
+          70
+        ],
+        "canonical": [
+          6,
+          14,
+          17,
+          21,
+          22,
+          29,
+          38,
+          44,
+          50,
+          54,
+          57,
+          61,
+          62,
+          67,
+          73
+        ]
+      }
+    }
+  ],
+  "decision_rule": [
+    "use_existing_canonical_mutation_api",
+    "do_not_modify_registry_directly",
+    "do_not_modify_hash_directly",
+    "do_not_create_competing_registration_mechanism",
+    "backup_before_mutation",
+    "verify_syntax_after_mutation",
+    "verify_global_canonical_chain_after_mutation",
+    "rollback_on_failure"
+  ]
+}

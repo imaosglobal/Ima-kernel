@@ -1,0 +1,185 @@
+{
+  "type": "PARTNERSHIP_FIRST_STRUCTURAL_INSERTION_PLAN",
+  "timestamp": 1784388576.169547,
+  "mutation_performed": false,
+  "orchestrator_started": false,
+  "cron_changed": false,
+  "source_files_modified": [],
+  "decision": {
+    "selected_candidate": {
+      "path": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "score": 105,
+      "reasons": [
+        "has executable entrypoint",
+        "contains callable runtime structure",
+        "already carries analysis/decision signals",
+        "already carries validation/guard signals",
+        "already carries post-action verification",
+        "already carries learning/feedback signals"
+      ],
+      "entrypoints": [
+        58
+      ],
+      "functions": 2,
+      "calls": 29,
+      "reads": 5,
+      "writes": 3,
+      "execution_calls": 0,
+      "behavioral_signals": {
+        "context_or_history_data_flow": false,
+        "intent_or_goal_data_flow": false,
+        "analysis_or_reasoning_data_flow": true,
+        "uncertainty_or_confidence_data_flow": false,
+        "risk_or_contradiction_checks": true,
+        "verification_after_action": true,
+        "learning_or_feedback": true
+      }
+    },
+    "selection_method": [
+      "use existing behavioral analysis",
+      "prefer existing canonical runtime boundary",
+      "prefer smallest reversible insertion",
+      "avoid modifying governance engines unnecessarily",
+      "avoid creating another runtime entrypoint",
+      "avoid asking the human for source contents already available locally"
+    ]
+  },
+  "required_insertion_contract": {
+    "before_action": [
+      "preserve_context",
+      "preserve_history",
+      "identify_intent",
+      "autonomous_analysis",
+      "separate_fact_inference_uncertainty",
+      "risk_contradiction_check",
+      "shared_plan"
+    ],
+    "delegation": [
+      "minimal_necessary_delegation",
+      "human_or_entity_is_partner_not_execution_layer"
+    ],
+    "after_action": [
+      "verify_outcome",
+      "record_failure_or_success",
+      "convert_repeated_failure_to_structural_safeguard"
+    ]
+  },
+  "change_constraints": [
+    "one canonical insertion point only",
+    "no new competing entrypoint",
+    "backup before mutation",
+    "syntax verification after mutation",
+    "canonical chain verification after mutation",
+    "rollback must be possible from generated backup",
+    "no orchestrator or cron modification unless explicitly required by runtime evidence"
+  ],
+  "ranked_candidates": [
+    {
+      "path": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "score": 105,
+      "reasons": [
+        "has executable entrypoint",
+        "contains callable runtime structure",
+        "already carries analysis/decision signals",
+        "already carries validation/guard signals",
+        "already carries post-action verification",
+        "already carries learning/feedback signals"
+      ],
+      "entrypoints": [
+        58
+      ],
+      "functions": 2,
+      "calls": 29,
+      "reads": 5,
+      "writes": 3,
+      "execution_calls": 0,
+      "behavioral_signals": {
+        "context_or_history_data_flow": false,
+        "intent_or_goal_data_flow": false,
+        "analysis_or_reasoning_data_flow": true,
+        "uncertainty_or_confidence_data_flow": false,
+        "risk_or_contradiction_checks": true,
+        "verification_after_action": true,
+        "learning_or_feedback": true
+      }
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+      "score": 75,
+      "reasons": [
+        "has executable entrypoint",
+        "contains callable runtime structure",
+        "already carries analysis/decision signals",
+        "already carries learning/feedback signals"
+      ],
+      "entrypoints": [
+        36
+      ],
+      "functions": 2,
+      "calls": 15,
+      "reads": 2,
+      "writes": 3,
+      "execution_calls": 0,
+      "behavioral_signals": {
+        "context_or_history_data_flow": false,
+        "intent_or_goal_data_flow": false,
+        "analysis_or_reasoning_data_flow": true,
+        "uncertainty_or_confidence_data_flow": false,
+        "risk_or_contradiction_checks": false,
+        "verification_after_action": false,
+        "learning_or_feedback": true
+      }
+    },
+    {
+      "path": "kernel/runtime/CANONICAL/python_bridge.py",
+      "score": 30,
+      "reasons": [
+        "has executable entrypoint",
+        "contains callable runtime structure",
+        "contains execution/delegation boundary"
+      ],
+      "entrypoints": [
+        14
+      ],
+      "functions": 1,
+      "calls": 6,
+      "reads": 1,
+      "writes": 0,
+      "execution_calls": 1,
+      "behavioral_signals": {
+        "context_or_history_data_flow": false,
+        "intent_or_goal_data_flow": false,
+        "analysis_or_reasoning_data_flow": false,
+        "uncertainty_or_confidence_data_flow": false,
+        "risk_or_contradiction_checks": false,
+        "verification_after_action": false,
+        "learning_or_feedback": false
+      }
+    },
+    {
+      "path": "IMA_START_SINGLE_ENTRY.py",
+      "score": 20,
+      "reasons": [
+        "already carries post-action verification",
+        "already carries learning/feedback signals",
+        "contains execution/delegation boundary"
+      ],
+      "entrypoints": [],
+      "functions": 0,
+      "calls": 51,
+      "reads": 7,
+      "writes": 1,
+      "execution_calls": 2,
+      "behavioral_signals": {
+        "context_or_history_data_flow": false,
+        "intent_or_goal_data_flow": false,
+        "analysis_or_reasoning_data_flow": false,
+        "uncertainty_or_confidence_data_flow": false,
+        "risk_or_contradiction_checks": false,
+        "verification_after_action": true,
+        "learning_or_feedback": true
+      }
+    }
+  ],
+  "next_step": "Generate a concrete reversible patch for the selected canonical runtime boundary, then verify the patch before applying it."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "SYSTEM_AUDIT",
+  "connected": {
+    "API": {
+      "path": "api",
+      "exists": true,
+      "files": 13,
+      "python_files": 11
+    },
+    "Android": {
+      "path": "android",
+      "exists": true,
+      "files": 160,
+      "python_files": 0
+    },
+    "Frontend": {
+      "path": "frontend",
+      "exists": true,
+      "files": 1,
+      "python_files": 0
+    },
+    "UI": {
+      "path": "ui",
+      "exists": true,
+      "files": 1,
+      "python_files": 1
+    },
+    "Agents": {
+      "path": "agents",
+      "exists": true,
+      "files": 1,
+      "python_files": 1
+    },
+    "Learning": {
+      "path": "learning",
+      "exists": true,
+      "files": 87,
+      "python_files": 41
+    },
+    "Runtime": {
+      "path": "kernel",
+      "exists": true,
+      "files": 632,
+      "python_files": 5
+    },
+    "Memory": {
+      "path": ".ima/runtime",
+      "exists": true,
+      "files": 22,
+      "python_files": 8
+    }
+  },
+  "missing": {},
+  "memory_entry": ".ima/runtime/memory_bus.py"
+}

@@ -1,0 +1,55 @@
+{
+  "type": "PARTNERSHIP_FIRST_CONCRETE_PATCH_DRY_RUN",
+  "timestamp": 1784388624.5776207,
+  "mutation_performed": false,
+  "orchestrator_started": false,
+  "cron_changed": false,
+  "target": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+  "target_sha256": "a2c45e002e9224408f9680d3dbd57c3ac34c94d6f9a3c245b0ba6718c1c0748a",
+  "syntax_verified": true,
+  "plan_loaded": true,
+  "patch_design": {
+    "type": "PARTNERSHIP_FIRST_PRE_ACTION_GATE",
+    "status": "DRY_RUN_ONLY",
+    "insertion_target": {
+      "type": "existing_main_entrypoint",
+      "line": 58,
+      "reason": "first executable canonical entrypoint"
+    },
+    "architecture": {
+      "new_entrypoint": false,
+      "new_daemon": false,
+      "new_scheduler": false,
+      "new_supervisor": false,
+      "canonical_chain_modified": false
+    },
+    "pre_action_cycle": [
+      "context",
+      "history",
+      "intent",
+      "autonomous_analysis",
+      "fact_inference_uncertainty_separation",
+      "risk_and_contradiction_check",
+      "shared_plan",
+      "minimal_necessary_delegation"
+    ],
+    "post_action_cycle": [
+      "verification",
+      "failure_learning",
+      "structural_safeguard_update"
+    ],
+    "delegation_policy": {
+      "default": "autonomous_analysis_first",
+      "human_role": "partner",
+      "repeated_request_guard": true,
+      "minimal_delegation": true
+    },
+    "verification_policy": {
+      "required_after_action": true,
+      "failure_becomes_structural_learning": true
+    }
+  },
+  "patch_preview": "BEGIN DRY-RUN PATCH\nTARGET: .ima/agi_evolution/runtime/ima_boot_gate.py\nTARGET_SHA256: a2c45e002e9224408f9680d3dbd57c3ac34c94d6f9a3c245b0ba6718c1c0748a\n\nINSERTION:\n{\n  \"type\": \"existing_main_entrypoint\",\n  \"line\": 58,\n  \"reason\": \"first executable canonical entrypoint\"\n}\n\nPRE-ACTION CONTRACT:\n- context\n- history\n- intent\n- autonomous_analysis\n- fact_inference_uncertainty_separation\n- risk_and_contradiction_check\n- shared_plan\n- minimal_necessary_delegation\n\nPOST-ACTION CONTRACT:\n- verification\n- failure_learning\n- structural_safeguard_update\n\nEND DRY-RUN PATCH",
+  "source_files_modified": [],
+  "next_step": "If and only if the insertion target is structurally valid, create a backup and apply one minimal reversible patch."
+}

@@ -1,0 +1,11 @@
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before ima_master_runtime
+BOOT: after ima_master_runtime
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before conversation_layer
+BOOT: after conversation_layer
+BOOT: before product_gateway
+BOOT: after product_gateway
+IMA API ONLINE :8080
+127.0.0.1 - - [18/Jul/2026 14:19:40] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jul/2026 14:19:40] "POST /ask HTTP/1.1" 200 -
