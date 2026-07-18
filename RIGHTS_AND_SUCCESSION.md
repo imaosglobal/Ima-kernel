@@ -1,19 +1,21 @@
-# Rights, Succession, and Stewardship
+# IMA Rights, Provenance, and Succession
 
-The project should maintain a documented chain of authorship, provenance,
-and stewardship.
+Rights holder:
+אורי כהן ת.ז. 300419488 מדינת ישראל 2026
 
-The rights holder may establish separate legally valid instruments for:
-- copyright ownership and licensing;
-- trademark ownership;
-- patent rights where applicable;
-- estate and succession planning;
-- trusts or foundations where legally available;
-- governance and stewardship of the project;
-- rights of heirs and successors.
+This repository documents authorship and provenance of the IMA project.
 
-This document is not itself a will, trust, contract, or legal instrument.
-Local law governs enforceability.
+Copyright ownership is retained by the applicable rights holder. The open
+source license grants permissions to use the software but does not transfer
+copyright ownership.
 
-No software mechanism can guarantee perpetual ownership, universal
-enforceability in every jurisdiction, or rights beyond applicable law.
+Future succession, estate planning, trusts, foundations, trademarks,
+patents, licensing structures, and inheritance arrangements must be created
+through legally valid instruments applicable to the relevant jurisdiction.
+
+This document is not a will, trust, contract, or substitute for legal advice.
+
+No software repository can guarantee perpetual ownership or universal
+enforceability in every jurisdiction. The project should preserve provenance,
+copyright notices, license notices, signed releases, and legally valid
+succession documents where applicable.
