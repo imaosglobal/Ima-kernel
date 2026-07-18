@@ -1,0 +1,22 @@
+name: IMA Integrity
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secret scan
+        run: bash .github/SECURITY_CHECK.sh
+
+      - name: Python syntax check
+        run: |
+          python3 -m py_compile ima_master_runtime.py
+
+      - name: Runtime hash
+        run: |
+          sha256sum ima_master_runtime.py
