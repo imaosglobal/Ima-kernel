@@ -1,12 +1,13 @@
-# Copyright and Authorship
+# IMA Copyright and Authorship
 
-Copyright (c) 2026 YOUR LEGAL NAME.
+Copyright (c) 2026 אורי כהן ת.ז. 300419488 מדינת ישראל 2026.
 
-The IMA project, its original source code, documentation, architecture,
-original designs, naming, and original creative works are protected by
-applicable copyright and other intellectual-property laws.
+The original IMA source code, original architecture, original documentation,
+original designs, original naming, and other original creative works are
+owned by the applicable rights holder, subject to applicable law and
+third-party rights.
 
-No ownership transfer is granted by this repository unless expressly stated
-in a separate written agreement signed by the rights holder.
+Copyright ownership is retained by the rights holder.
+A license to use the software is not a transfer of copyright ownership.
 
-All rights not expressly granted by the applicable license are reserved.
+Third-party components remain subject to their own licenses.
