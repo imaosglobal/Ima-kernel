@@ -1,0 +1,20 @@
+{
+  "status": "CONNECTION_UPGRADE",
+  "created": 1783809615.9125907,
+  "connected": {
+    "UI": {
+      "path": "ui",
+      "exists": true,
+      "memory_link": ".ima/runtime/memory_bus.py"
+    },
+    "Agents": {
+      "path": "agents",
+      "exists": true,
+      "memory_link": ".ima/runtime/memory_bus.py"
+    }
+  },
+  "created_paths": {
+    "UI": "ui",
+    "Agents": "agents"
+  }
+}

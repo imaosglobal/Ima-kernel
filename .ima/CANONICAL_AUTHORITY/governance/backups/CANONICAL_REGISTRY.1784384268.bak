@@ -1,0 +1,67 @@
+{
+  "time": 1784383120.6021895,
+  "mode": "canonical_only",
+  "authority": "CANONICAL_REGISTRY",
+  "entry_point": "IMA_START_SINGLE_ENTRY.py",
+  "kernel": "kernel/runtime/CANONICAL/python_bridge.py",
+  "handoff": "ima_master_runtime",
+  "allowed_components": [
+    {
+      "file": "kernel/runtime/CANONICAL/python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+      "size": 291
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "sha256": "a2c45e002e9224408f9680d3dbd57c3ac34c94d6f9a3c245b0ba6718c1c0748a",
+      "size": 1392
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+      "sha256": "11880b190b35074059034fa637592b5676b64be638a0fb6a1d79d510f9d51f1d",
+      "size": 827
+    },
+    {
+      "file": "IMA_START_SINGLE_ENTRY.py",
+      "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799",
+      "size": 2127
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/cognitive_pipeline.py",
+      "sha256": "453255126f7ae2782ab34e3fbedfc9a5ffa604f0eb9eb32de686b288c4b44565",
+      "size": 1101
+    },
+    {
+      "file": ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
+      "sha256": "59368fdaf489947d2edc86d7e106eb4f9527180b0ffbbb9569ce4a32057633d2",
+      "size": 1223
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "sha256": "f55f2c5c05cf7aae2f430b8d5d5862110d24124f6acf2af6d6a8398903a805d0",
+      "size": 7550
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "sha256": "3fa4d76f4e55b5213838c1222a63f9ebcef2ab609de200963c68643381b9e28a",
+      "size": 6179
+    },
+    {
+      "component": "GLOBAL_SYSTEM_AWARENESS",
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "canonical": true,
+      "sha256": "6f58808c02116cbdccbd93456eb9754ed6b661d3cfcfbcf90365dd4ee23cefd8",
+      "size": 10399,
+      "registered_at": 1784383832.899914
+    }
+  ],
+  "blocked_fallback": true,
+  "duplicate_registration": false,
+  "self_evolution": {
+    "enabled": true,
+    "canonical": true,
+    "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+    "sha256": "d4331201f226ccabe5bcaa605503b849ff6dd211baecc0ecbf20a6095fe3d96f",
+    "runtime": "existing_runtime"
+  }
+}

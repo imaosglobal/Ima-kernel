@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-07-18 21:55:50.032281",
+  "gap_count": 20,
+  "gaps": [
+    {
+      "file": ".ima/broken_runtime_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 153,
+      "error": "unexpected indent (<unknown>, line 153)"
+    },
+    {
+      "file": ".ima/source_manager_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 31,
+      "error": "expected an indented block after 'try' statement on line 29 (<unknown>, line 31)"
+    },
+    {
+      "file": "api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/source_router.before_compile_fix.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_compile_fix.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_compile_fix.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_compile_fix.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/source_router.before_import_cleanup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/world_learning_engine.before_import_cleanup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/world_graph_updater.before_import_cleanup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_import_cleanup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 2,
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_compile_fix.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 1,
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "file": "learning_backup_final_clean_1784122759/sources/source_generator.before_import_cleanup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 1,
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "file": ".ima/runtime_snapshots/product_before_finalize_20260713_165823/api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": ".ima/archive_final/archive_cleanup/IMA_START_broken_backup_1783810407.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 217,
+      "error": "unexpected indent (<unknown>, line 217)"
+    },
+    {
+      "file": ".ima/archive_final/archive_cleanup/backup_translator_fix_error.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 42,
+      "error": "invalid syntax (<unknown>, line 42)"
+    },
+    {
+      "file": ".ima/archive_final/ima_backup_1783804250/api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": ".ima/backups/20260713_152909/api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": ".ima/backups/20260713_152847/api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": ".ima/backups/20260713_152816/api/server_broken_backup.py",
+      "type": "syntax_error",
+      "risk": "high",
+      "recommended_action": "review",
+      "allowed": false,
+      "line": 38,
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    }
+  ],
+  "execution": "disabled",
+  "self_modification": "disabled",
+  "status": "gap_classification_completed"
+}

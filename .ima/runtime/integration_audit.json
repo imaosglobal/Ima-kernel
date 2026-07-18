@@ -1,0 +1,20 @@
+{
+  "status": "AUDIT",
+  "existing": [
+    "ima_master_runtime.py",
+    "conversation_layer.py",
+    "identity_context.py",
+    ".ima/runtime/memory_bus.py",
+    "learning/evolution_controller.py",
+    "kernel/runtime/CANONICAL/python_bridge.py"
+  ],
+  "missing": [],
+  "hashes": {
+    "ima_master_runtime.py": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae",
+    "conversation_layer.py": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+    "identity_context.py": "6f874f45c90cda87ae98e740fd4f46a7e20c61347d3262b0fb0b50a2f9c768e8",
+    ".ima/runtime/memory_bus.py": "2d0c9b94888e643d6e87729969f433cdc3ddfdb85e7a3d15ff31122ec83389b9",
+    "learning/evolution_controller.py": "0d69f017ab29deddd524ad81a75bf45b6904d7ad7b23c56d59082542e5984498",
+    "kernel/runtime/CANONICAL/python_bridge.py": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22"
+  }
+}

@@ -1,0 +1,25 @@
+/data/data/com.termux/files/usr/bin/python3: No module named ima_product.core.evolution.ima_service_manager
+/data/data/com.termux/files/usr/bin/python3: No module named ima_product.core.evolution.ima_service_manager
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before ima_master_runtime
+BOOT: after ima_master_runtime
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before conversation_layer
+BOOT: after conversation_layer
+BOOT: before product_gateway
+BOOT: after product_gateway
+IMA API ONLINE :8080
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 183, in <module>
+    HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 98] Address already in use

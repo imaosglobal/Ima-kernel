@@ -1,104 +1,69 @@
+#!/usr/bin/env python3
+
 from pathlib import Path
 import json
 import time
-import shutil
 
-ROOT=Path(".ima/agi_evolution")
-BACKUP=ROOT/"governance/backups"
+ROOT = Path(__file__).resolve().parent
 
-class EvolutionAgent:
+STATE_FILES = [
+    ROOT / "evolution_plan.json",
+    ROOT / "cognitive_pipeline_state.json",
+    ROOT / "autonomous_state.json",
+    ROOT / "latest_cycle.json",
+]
 
-    def __init__(self):
-        BACKUP.mkdir(parents=True,exist_ok=True)
-
-    def read_plan(self):
-        p=ROOT/"runtime/evolution_plan.json"
-        if p.exists():
-            return json.loads(p.read_text())
+def load_json(path):
+    if not path.is_file():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
         return {}
 
-    def backup(self,path):
-        src=Path(path)
-        if src.exists():
-            dst=BACKUP/(src.name+"."+str(int(time.time())))
-            shutil.copy(src,dst)
+def create_proposals():
+    plan = load_json(ROOT / "evolution_plan.json")
 
-    def create_module(self,capability):
-        folder=ROOT/capability
-        folder.mkdir(parents=True,exist_ok=True)
+    gaps = plan.get("detected_gaps", [])
+    priority = plan.get("priority_order", [])
 
-        file=folder/(capability+"_engine.py")
+    proposals = []
 
-        if file.exists():
-            return {
-                "status":"exists",
-                "file":str(file)
-            }
+    for item in gaps:
+        capability = item.get("capability")
+        goal = item.get("goal")
 
-        content=f'''
-class {capability.title().replace("_","")}Engine:
+        proposals.append({
+            "capability": capability,
+            "goal": goal,
+            "status": "PROPOSAL_ONLY",
+            "mutation_allowed": False,
+            "registration_allowed": False,
+            "promotion_allowed": False,
+        })
 
-    def __init__(self):
-        self.name="{capability}"
+    return {
+        "type": "EVOLUTION_PROPOSAL_SET",
+        "status": "PROPOSAL_ONLY",
+        "priority_order": priority,
+        "proposals": proposals,
+        "mutation_performed": False,
+        "module_created": False,
+        "timestamp": time.time(),
+    }
 
-    def inspect(self):
-        return {{
-            "capability":"{capability}",
-            "status":"prototype"
-        }}
+def main():
+    result = create_proposals()
 
-    def improve(self,data=None):
-        return {{
-            "capability":"{capability}",
-            "action":"improvement planned"
-        }}
-'''
+    output = ROOT / "evolution_proposals.json"
 
-        file.write_text(content)
+    output.write_text(
+        json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
-        return {
-            "status":"created",
-            "file":str(file)
-        }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
 
-
-    def evolve(self):
-
-        plan=self.read_plan()
-        results=[]
-
-        for item in plan.get("detected_gaps",[]):
-
-            cap=item["capability"]
-
-            result=self.create_module(cap)
-
-            results.append({
-                "capability":cap,
-                "result":result,
-                "time":time.time()
-            })
-
-
-        report={
-            "time":time.time(),
-            "created":results,
-            "status":"evolution_cycle_complete"
-        }
-
-        (ROOT/"runtime/evolution_result.json").write_text(
-            json.dumps(report,indent=2,ensure_ascii=False)
-        )
-
-        return report
-
-
-AGENT=EvolutionAgent()
-
-
-if __name__=="__main__":
-    print(json.dumps(
-        AGENT.evolve(),
-        indent=2,
-        ensure_ascii=False
-    ))
+if __name__ == "__main__":
+    raise SystemExit(main())

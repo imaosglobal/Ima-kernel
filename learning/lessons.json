@@ -1,0 +1,104 @@
+{
+  "lessons": [
+    {
+      "timestamp": "2026-07-18 21:13:45.486937",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-18 21:15:42.037069",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-18 21:16:16.246315",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-18 22:09:41.924323",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-18 22:09:42.707072",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    }
+  ]
+}

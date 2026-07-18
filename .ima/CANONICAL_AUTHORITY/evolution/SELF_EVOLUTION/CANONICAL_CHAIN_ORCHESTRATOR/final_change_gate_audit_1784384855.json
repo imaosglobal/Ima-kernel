@@ -1,0 +1,16 @@
+{
+  "type": "IMA_FINAL_CHANGE_GATE_AUDIT",
+  "timestamp": 1784384855.3802304,
+  "status": "VERIFIED",
+  "canonical": 15,
+  "non_canonical": 6017,
+  "runtime_candidates": 1707,
+  "dependency_files_analyzed": 3443,
+  "mutation_performed": true,
+  "rollback_performed": false,
+  "backups": {
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/backups/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py.1784384841094.bak",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/backups/CANONICAL_REGISTRY.json.1784384841095.bak",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/backups/CANONICAL_AUTHORITY_MANIFEST.json.1784384841095.bak"
+  }
+}

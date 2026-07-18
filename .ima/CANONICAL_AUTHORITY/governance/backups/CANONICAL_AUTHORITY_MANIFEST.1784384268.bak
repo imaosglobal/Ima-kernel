@@ -1,0 +1,58 @@
+{
+  "authority_root": "ima_kernel/.ima/CANONICAL_AUTHORITY",
+  "files": {
+    "canonical_chain_audit.json": {
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "sha256": "6faea978b675a78096e94257485b52bcf42a52154a5526ac6663d639dceabbee",
+      "size": 6327
+    },
+    "entry/IMA_START_SINGLE_ENTRY.py": {
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "sha256": "9024a641b591a58b361fa34b2d6262b08fe23dcf2e877505c39f208941e7f799",
+      "size": 2127
+    },
+    "governance/CANONICAL_REGISTRY.json": {
+      "canonical_path": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+      "sha256": "f0bd975c039d9f1fa54433de02f38ab6ff13cb0721da8ed6394e5a89946166af",
+      "size": 2438
+    },
+    "kernel/python_bridge.py": {
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+      "size": 291
+    },
+    "runtime/ima_master_runtime.py": {
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae",
+      "size": 15548
+    },
+    "evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py": {
+      "canonical_path": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "sha256": "f55f2c5c05cf7aae2f430b8d5d5862110d24124f6acf2af6d6a8398903a805d0",
+      "size": 7550
+    },
+    "evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py": {
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "sha256": "3fa4d76f4e55b5213838c1222a63f9ebcef2ab609de200963c68643381b9e28a",
+      "size": 6179
+    },
+    "evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py": {
+      "canonical": true,
+      "canonical_path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "sha256": "6f58808c02116cbdccbd93456eb9754ed6b661d3cfcfbcf90365dd4ee23cefd8",
+      "size": 10399,
+      "registered_at": 1784383832.899603
+    }
+  },
+  "policy": {
+    "future_canonical_changes_must_enter_here": true,
+    "future_scans_must_resolve_here": true,
+    "main_manifest_at_authority_root": true,
+    "no_duplicate_canonical_authority": true,
+    "single_canonical_directory": true,
+    "source_files_are_not_authority": true
+  },
+  "status": "ACTIVE",
+  "type": "IMA_CANONICAL_AUTHORITY_MANIFEST",
+  "version": "3.0.0"
+}

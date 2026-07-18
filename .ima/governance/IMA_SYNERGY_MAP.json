@@ -1,0 +1,43 @@
+{
+  "schema": "IMA_SYNERGY_MAP_V1",
+  "vision": "IMA_CANONICAL_VISION.md",
+  "contract": ".ima/governance/IMA_VISION_CONTRACT.json",
+  "system_domains": [
+    "learning",
+    "kernel",
+    "product",
+    "ima_product",
+    "connectors",
+    "ima-ui",
+    "api",
+    "mobile",
+    "android",
+    "docs",
+    ".ima"
+  ],
+  "required_chain": [
+    "vision",
+    "identity",
+    "mission",
+    "capability",
+    "implementation",
+    "verification"
+  ],
+  "principle": "Components should be traceable to the canonical vision.",
+  "created_at": "2026-07-18T14:59:21.057936+00:00",
+  "partnership_first": {
+    "enabled": true,
+    "principle": "IMA operates with entities, never merely upon them.",
+    "cross_layer_scope": [
+      "vision",
+      "governance",
+      "policy",
+      "decision_engine",
+      "memory",
+      "runtime",
+      "orchestration",
+      "human_interaction",
+      "autonomous_operation"
+    ]
+  }
+}

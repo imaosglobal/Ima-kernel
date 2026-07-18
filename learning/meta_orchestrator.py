@@ -1,3 +1,4 @@
+from learning.autonomy_engine import run_autonomy
 from learning.system_introspection import *
 from learning.learning_evaluator import evaluate_learning
 from learning.suggest_improvements import suggest_improvements
@@ -9,6 +10,20 @@ from learning.feedback_planner import generate_feedback_improvements
 
 
 def run_meta_analysis():
+
+    autonomy = run_autonomy({
+        "observations": [
+            "meta analysis cycle started"
+        ],
+        "goals": [
+            "improve system capability safely"
+        ],
+        "constraints": [
+            "no autonomous execution",
+            "planning only"
+        ]
+    })
+
 
     learning_state = evaluate_learning()
 
@@ -46,5 +61,6 @@ def run_meta_analysis():
         "improvement_plan": improvement_plan,
         "feedback_plan": feedback_plan,
         "learning_state": learning_state,
+        "autonomy": autonomy,
         "status": "meta_analysis_completed"
     }

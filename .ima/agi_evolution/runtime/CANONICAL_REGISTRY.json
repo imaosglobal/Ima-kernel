@@ -16,7 +16,8 @@
     },
     {
       "file": ".ima/agi_evolution/runtime/ima_master_runtime.py",
-      "sha256": "11880b190b35074059034fa637592b5676b64be638a0fb6a1d79d510f9d51f1d"
+      "sha256": "c0401738b6fe2753cce01456457f101a9be09e32bd020828b604e27302980354",
+      "size": 1277
     },
     {
       "file": "IMA_START_SINGLE_ENTRY.py",
@@ -24,7 +25,8 @@
     },
     {
       "file": ".ima/agi_evolution/runtime/cognitive_pipeline.py",
-      "sha256": "453255126f7ae2782ab34e3fbedfc9a5ffa604f0eb9eb32de686b288c4b44565"
+      "sha256": "df9bf4db5ca9d8cdc15787aaa25515087a58b34e30654d3997481945db370af7",
+      "size": 1125
     },
     {
       "file": ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
@@ -32,5 +34,6 @@
     }
   ],
   "blocked_fallback": true,
-  "duplicate_registration": false
+  "duplicate_registration": false,
+  "updated_at": 1784389751.8425884
 }

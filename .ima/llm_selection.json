@@ -1,0 +1,29 @@
+{
+  "time": 1784279289.6473117,
+  "selected": {
+    "model": "phi3:latest",
+    "score": 80,
+    "tested": true,
+    "reason": ""
+  },
+  "ranking": [
+    {
+      "model": "phi3:latest",
+      "score": 80,
+      "tested": true,
+      "reason": ""
+    },
+    {
+      "model": "mistral:latest",
+      "score": 70,
+      "tested": true,
+      "reason": ""
+    },
+    {
+      "model": "tinyllama:latest",
+      "score": 60,
+      "tested": true,
+      "reason": ""
+    }
+  ]
+}
