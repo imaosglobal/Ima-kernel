@@ -169,6 +169,54 @@ def policy_gate():
     return result
 
 
+
+def auto_commit():
+    run(["git", "add", "."])
+
+    staged = run(["git", "diff", "--cached", "--name-only"]).stdout.splitlines()
+
+    ignored_prefixes = (
+        ".ima/runtime/",
+        ".ima/automation/backups/",
+        ".ima/automation/logs/",
+        ".ima/automation/metrics/",
+        ".ima/metrics/",
+    )
+
+    canonical = [
+        path for path in staged
+        if not path.startswith(ignored_prefixes)
+    ]
+
+    if not canonical:
+        run(["git", "reset"])
+        return {
+            "committed": False,
+            "reason": "no_canonical_changes",
+            "files": []
+        }
+
+    check = run(["git", "diff", "--cached", "--check"])
+    if check.returncode != 0:
+        run(["git", "reset"])
+        return {
+            "committed": False,
+            "reason": "staged_diff_check_failed",
+            "files": canonical
+        }
+
+    message = "IMA automatic synchronization: " + ", ".join(canonical[:5])
+    if len(canonical) > 5:
+        message += f" (+{len(canonical) - 5} more)"
+
+    commit = run(["git", "commit", "-m", message])
+
+    return {
+        "committed": commit.returncode == 0,
+        "reason": "commit_created" if commit.returncode == 0 else "commit_failed",
+        "files": canonical
+    }
+
 def main():
     log("CYCLE_START")
 
@@ -188,6 +236,9 @@ def main():
             else "STOP_AND_REPAIR"
         )
     }
+
+    if policy["passed"] and quality["passed"]:
+        result["auto_commit"] = auto_commit()
 
     (AUTO / "metrics" / "cycle_latest.json").write_text(
         json.dumps(result, indent=2)
