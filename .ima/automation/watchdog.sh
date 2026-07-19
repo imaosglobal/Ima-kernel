@@ -32,9 +32,23 @@ trap cleanup INT TERM EXIT
 echo "$(date -Is) WATCHDOG_STARTED PID=$$" >> "$LOG"
 
 while true; do
-    SUP_PID="$(pgrep -f '[/]ima/automation/supervisor.sh' | head -n 1 || true)"
+    SUP_PID=""
 
-    if [ -z "$SUP_PID" ]; then
+    while read -r PID ARGS; do
+        case "$ARGS" in
+            */.ima/automation/supervisor.sh*)
+                SUP_PID="$PID"
+                break
+                ;;
+        esac
+    done < <(ps -eo pid=,args=)
+
+    if [ -n "$SUP_PID" ] && kill -0 "$SUP_PID" 2>/dev/null; then
+        if [ ! -f "$AUTO/supervisor.pid" ] || [ "$(cat "$AUTO/supervisor.pid" 2>/dev/null)" != "$SUP_PID" ]; then
+            echo "$SUP_PID" > "$AUTO/supervisor.pid"
+            echo "$(date -Is) SUPERVISOR_PIDFILE_REPAIRED PID=$SUP_PID" >> "$LOG"
+        fi
+    else
         echo "$(date -Is) SUPERVISOR_NOT_RUNNING_STARTING" >> "$LOG"
 
         nohup "$SUPERVISOR" \
@@ -42,8 +56,17 @@ while true; do
 
         sleep 3
 
-        SUP_PID="$(pgrep -f '[/]ima/automation/supervisor.sh' | head -n 1 || true)"
-        if [ -n "$SUP_PID" ]; then
+        while read -r PID ARGS; do
+            case "$ARGS" in
+                */.ima/automation/supervisor.sh*)
+                    SUP_PID="$PID"
+                    break
+                    ;;
+            esac
+        done < <(ps -eo pid=,args=)
+
+        if [ -n "$SUP_PID" ] && kill -0 "$SUP_PID" 2>/dev/null; then
+            echo "$SUP_PID" > "$AUTO/supervisor.pid"
             echo "$(date -Is) SUPERVISOR_STARTED PID=$SUP_PID" >> "$LOG"
         else
             echo "$(date -Is) SUPERVISOR_START_FAILED" >> "$LOG"
