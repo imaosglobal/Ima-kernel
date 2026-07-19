@@ -5,10 +5,15 @@ ROOT="/data/data/com.termux/files/home/ima_kernel"
 AUTO="$ROOT/.ima/automation"
 LOG="$AUTO/logs/supervisor.log"
 LOCK="$AUTO/.supervisor.lock"
+PIDFILE="$AUTO/supervisor.pid"
 INTERVAL="${IMA_INTERVAL_SECONDS:-300}"
 
-mkdir -p "$AUTO/logs" "$AUTO/metrics" "$AUTO/backups" \
-         "$AUTO/feedback" "$AUTO/proposals"
+mkdir -p \
+  "$AUTO/logs" \
+  "$AUTO/metrics" \
+  "$AUTO/backups" \
+  "$AUTO/feedback" \
+  "$AUTO/proposals"
 
 exec 9>"$LOCK"
 
@@ -18,18 +23,17 @@ if ! flock -n 9; then
 fi
 
 cd "$ROOT" || exit 1
-
-echo $$ > "$AUTO/supervisor.pid"
+echo $$ > "$PIDFILE"
 
 cleanup() {
-    rm -f "$AUTO/supervisor.pid"
-    echo "$(date -Is) STOP signal received" >> "$LOG"
+    rm -f "$PIDFILE"
+    echo "$(date -Is) SUPERVISOR STOPPED PID=$$" >> "$LOG"
     exit 0
 }
 
 trap cleanup INT TERM EXIT
 
-echo "$(date -Is) SUPERVISOR STARTED PID=$$" >> "$LOG"
+echo "$(date -Is) SUPERVISOR STARTED PID=$$ INTERVAL=${INTERVAL}s" >> "$LOG"
 
 while true; do
     START=$(date +%s)
