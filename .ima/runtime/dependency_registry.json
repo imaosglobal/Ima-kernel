@@ -1,14 +1,14 @@
 {
   "status": "AUDIT_ACTIVE",
-  "timestamp": 1784411782.6121953,
+  "timestamp": 1784452339.0243816,
   "files": {
     "nohup.out": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size": 0
     },
     ".gitignore": {
-      "sha256": "28890281c0e5145741093082197f911ff52b21b60476a488c090274f19bce564",
-      "size": 1262
+      "sha256": "efb07a05b58ceb9140adeefa4668725e06fb52e038f2c4b03aa09bd1d2c8f37c",
+      "size": 1435
     },
     "ima.py": {
       "sha256": "6426f3a96426b0ecb7db3a471d651bd28154f472dbb0cbc233c584f1241407e7",
@@ -1369,6 +1369,10 @@
     "SECURITY.md": {
       "sha256": "b1e649e7856ab4270c9e4792a8890eba766d66036b1fd01367eb1ace6453e6bd",
       "size": 173
+    },
+    "README.md": {
+      "sha256": "fc5538346f933c13b035edb117b75dd8c784a51c7279a5cc1934a4ae367e7a0b",
+      "size": 536
     },
     "repair_validation_final.py": {
       "sha256": "f58530cb91176516db0483329f4c24634762df2938998340ac677fbdab7e3e76",
@@ -11183,8 +11187,8 @@
       "size": 90
     },
     ".ima/runtime/boot_integrity_report.json": {
-      "sha256": "9ea1bdfe94477012da8e09e596008cdc34ccc716c8262a68eff017094a793326",
-      "size": 1106
+      "sha256": "5ac15fe16765470f2917fe27997e0b0464db512aead387e60b37d308ef22b997",
+      "size": 1107
     },
     ".ima/runtime/canonical_runtime_state.json": {
       "sha256": "af40a3ca8a6afa9537506c693532d3661e819c847b4c383ede87f3e1193183da",
@@ -11211,16 +11215,16 @@
       "size": 1206
     },
     ".ima/runtime/dependency_registry.json": {
-      "sha256": "114c5fa9902d3257d0f3be1152fdf7c0a399622c782fc66f9d6129e0dd2bbf54",
-      "size": 1171690
+      "sha256": "311d6d76f62036bed11900b626c4063e72e46c2742696a426b392693e6d11a66",
+      "size": 1198696
     },
     ".ima/runtime/maintenance_report.json": {
       "sha256": "88ce3b4664147de8a644dcb1e1673597063c2add0b791002e1ec2c13ca90066f",
       "size": 66
     },
     ".ima/runtime/maintenance_state.json": {
-      "sha256": "16cc6194048f9a6645877feafea1d26b0df10e642bffddb6e440935229eca4f9",
-      "size": 78
+      "sha256": "7bbb2758e9c7b4596e3b6eaa4c8127435198641994ec83cf1599facfed91f8d4",
+      "size": 79
     },
     ".ima/runtime/baseline_lock.json": {
       "sha256": "d1f8fffb18ba13bd1fa983bf0178570107223e5f404e5b13efabc8617c56fdae",
@@ -11734,6 +11738,30 @@
       "sha256": "4a438b79bf41e6ce5bbe6566f2b7523f2761a1ebab9bbc135b4f25284fea8ea4",
       "size": 42152
     },
+    ".ima/automation/continuous_improvement_loop.py": {
+      "sha256": "ecd75b67aeef3d8bf673e5413034e5913857caaa99af23ec12c0f111d92be205",
+      "size": 4470
+    },
+    ".ima/automation/supervisor.sh": {
+      "sha256": "15ebf09052f551655b74b1ee1c340dbe3cc797899b3236684cd974abd96ea021",
+      "size": 1222
+    },
+    ".ima/automation/.supervisor.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    ".ima/automation/continuous_improvement_loop.py.bak.20260719-120656": {
+      "sha256": "df4365d85f58bfe2726d46bdc73043989da2a6fec49c444192041e99db3d8930",
+      "size": 2734
+    },
+    ".ima/vision/universal_human_flourishing_mission.json": {
+      "sha256": "57db7de6eba4993348ef0ff776d558cf36046bf97c25079f9143a20fb7953416",
+      "size": 2178
+    },
+    ".ima/strategy/universal_human_flourishing_integration_audit.json": {
+      "sha256": "1a4e1b28168bc0f20a791cd7eec36124fc44d9dad267c8847116efc50d290d6b",
+      "size": 30145
+    },
     ".ima/daily/2026-07-16.json": {
       "sha256": "3e7a437fc915a6914f1b2004e949a63ceb6aa2a8a81a527f29bb14abff9129e1",
       "size": 895
@@ -11793,6 +11821,18 @@
     ".ima/vision_governance_reports/scheduler_audit_20260718_175920.txt": {
       "sha256": "834c4354bdd23ac321c35164f762599ca8ed953bbe64c17d25b6961efb473834",
       "size": 26934764
+    },
+    ".ima/metrics/policy_gate_latest.json": {
+      "sha256": "4b52826e388168cf6087580096dfcdad5cae76eff50f1967673882a09e54826b",
+      "size": 667
+    },
+    ".ima/policy/universal_human_flourishing_policy.json": {
+      "sha256": "9e8e78f6edc2d2c4f64f56cd67343dbfebc9dcbc06dbd47e9c5ff1f5ac7490b1",
+      "size": 1580
+    },
+    ".ima/policy/integration_contract.json": {
+      "sha256": "ced7154db463de9bd20188a7f05f786c77c5be1ba7e26d79ad410ad45ea449de",
+      "size": 746
     },
     ".ima/vision_governance_backups/20260718_175920/IMA_IDENTITY.md": {
       "sha256": "b496fae6ed05a9345ed97c8edfd93469ab38e1836bb310906c524208036b7a21",
@@ -11881,6 +11921,582 @@
     ".ima/guardian/snapshots/core/CREATED": {
       "sha256": "ba1cbf453388d0ae8a6854bf9ed562cf308d4b13f05e765cfc64c19c0d02148c",
       "size": 29
+    },
+    ".ima/automation/metrics/quality_latest.json": {
+      "sha256": "479d845de54ace737480e685ee848c4d571f2531bc4361e6852bc8f846c71e2c",
+      "size": 154
+    },
+    ".ima/automation/metrics/cycle_latest.json": {
+      "sha256": "c616755839eebab475797ff55b138286bb29dab3b5b55d61b8e9feb767cf2130",
+      "size": 1148
+    },
+    ".ima/automation/metrics/policy_gate_latest.json": {
+      "sha256": "4b52826e388168cf6087580096dfcdad5cae76eff50f1967673882a09e54826b",
+      "size": 667
+    },
+    ".ima/automation/backups/snapshot-1784412994.json": {
+      "sha256": "c0308cb493e663a607b1d3e555575df4ac909db4d2996ce9a08d9fc3d1654a07",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784413070.json": {
+      "sha256": "fc92709b0ce1a95061e0bc22b45971d972bdfadd7fa512cdadd8b6385e7ba221",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784413521.json": {
+      "sha256": "4fc066ae0c5ba89731a80f2a12896660e637162d2c593da900932b719c39b6ec",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784413821.json": {
+      "sha256": "72cdb33abb35f1dfeac81ef0cde99065bb961e4a36a1eba6d40184e645dbc5fa",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784414122.json": {
+      "sha256": "6cf50e0ad8c60109f6d684142f8115ffc129408e49b2ccdc08b361d70c0d4b23",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784414421.json": {
+      "sha256": "8a79f0544d37d14d644b7fbe6905400b9f02cadea18ed1c52d78e578690c0d83",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784414721.json": {
+      "sha256": "a95c2379a4d959fcf785ff53248643f18615135090daa5eaaa14f3dd69a480c0",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784415022.json": {
+      "sha256": "9a2952e81e955cb7b96c3ed51e187f6c57c0c2a76bc6fd7fa87aefee46036525",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784415321.json": {
+      "sha256": "d385fe3c89e3e835e0f2681a061408120b8cdbb27874bfca1c5e008b0f8933c9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784415621.json": {
+      "sha256": "c0807f5cf471f5f191c41f969a7b21294d5df95a82f752367450f3a86b93048c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784415922.json": {
+      "sha256": "ca70f0cabe9aca2c021dc39360a752753ba5f0022fe4de274ae84ccd30669bc7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784416223.json": {
+      "sha256": "8e2ace96ffecfe6c71fe598050f3f83243ab3ddd6aba8895d36908a5733b64ed",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784416522.json": {
+      "sha256": "50facb0ef78b6fcfd82da9ef935617d0c08bdee6562ee108a4e4db49a37a1aba",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784416822.json": {
+      "sha256": "7fd5e952fab6f130aee4788ac4710639d692b0b437fe5b93a5daf2b51d8d08d9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784417123.json": {
+      "sha256": "53d0c58ffac45949c2216d399063dfbd94351638fc5b2eb989e4c360e5ad94df",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784417423.json": {
+      "sha256": "96354114bcc48a39aa3a607d6765286bbc633b8abbe11ed8e4ebfe4873d678bd",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784417723.json": {
+      "sha256": "9984290aaaf0bc376dee203b53c4b80f183af594c855ef7b1179142ff6e00e12",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784418023.json": {
+      "sha256": "5a952058df10f21fb370e873ce2936dd6e7e5ab471232bc4d9d4fc5f411a2d9a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784418323.json": {
+      "sha256": "99080bd350792c97429e54866a71df05dec1efc2c5c47ba037c082594cfea2d9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784418623.json": {
+      "sha256": "8a2b982e4a7ae6485a75923f395d99de96cad1d3273d0b12ceee641476c33725",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784418924.json": {
+      "sha256": "76fcd0cf17c8febea049f6d67ffc074037a9816466d2a154c5849841682dea47",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784419224.json": {
+      "sha256": "48cc10c8bdeafdb267b7e56f6958e777c0ca78f9bf683ced7d43f76bb5c0072a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784419524.json": {
+      "sha256": "e136e19ca536cc56481da34373489daa87c2b9cca1268c71696f7dac23abdb5e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784419825.json": {
+      "sha256": "01719e76b96fccc2664569c38692d8dd926dfcf9cd9346823a01684143771477",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784420125.json": {
+      "sha256": "f319efd59c0ffa7817ef227eedf0e9f3eb8e48613cb9b401a51386b58b571854",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784420425.json": {
+      "sha256": "f696b0f4ff2f20476bc989e08ae7a63eb5258c8fdcea5001bf8042dca16a4c34",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784420725.json": {
+      "sha256": "bc31df9590dbc15781b2b265af990deac0acb3995c092e6e86e63cc0756d0512",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784421026.json": {
+      "sha256": "b0894bc3c2c16c065e57ad9f88a909dd23bf3b363289d2ad763c7f15042688a3",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784421325.json": {
+      "sha256": "e62964611111e858a9b3ef7aa642d24ee25e1c51b09a71c6ad78b2a6caeb0a71",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784421625.json": {
+      "sha256": "c3ec373f3a948d009f974b711a209db6f288bd1016fe85d3529ebc4ebe2ebf0b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784421925.json": {
+      "sha256": "8ea07b7031e6360936811da5a0ba22b8049d3e63eb780d1ce7a19dc2df4a2288",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784422226.json": {
+      "sha256": "9a0affba36715efb8674c311b9b7c91c4bbbf54a80c242571ed3a16a94b3e868",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784422525.json": {
+      "sha256": "82ac4a3b7046ddc27b9d34a94f915b50dfc90f9fed87384a11f8913d5eacc5d8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784422825.json": {
+      "sha256": "672348ddcb8531a26780d4ce941434e65d02314e6f26797777f1b23a3c1fea71",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784423125.json": {
+      "sha256": "9860c1b8334b0841ab4ace4aa1100563b3c9bab07e1dd2249ab65a95978d1129",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784423426.json": {
+      "sha256": "9d29bf491f5849eff1d521a9628310d198c9467d15916a81fbd668fadf06957e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784423726.json": {
+      "sha256": "5ccc9f9359d544438ed25a884ccce93df0db3fb14f69ac60b2d20b7afbb6d413",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784424026.json": {
+      "sha256": "cec59e2453471b42b01bc02c1d5172d13a9f76a06a3f3763c57c97581d557893",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784424326.json": {
+      "sha256": "cbe68b5ceb0a2db206b0be5bdc6dd9bd4852b945bc85e86e416a1cb6eff6260c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784424627.json": {
+      "sha256": "c73fb4bc936c7eb00fed4834c2a5d0eb2f5db9a3344468f45f5302567545dab0",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784424926.json": {
+      "sha256": "149f8840f7df577eb584b0e385a1983124dd195b2afd79dcb60ff4ce3173a283",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784425226.json": {
+      "sha256": "54dfa2909f829b773501be248ec6b8879639a2cfb20792cd046db6ef75922ad5",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784425527.json": {
+      "sha256": "58532e21d9550895932ce50342de4266f5e27cc9fe85a73e32de611f209d9570",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784425828.json": {
+      "sha256": "583d33151b5203331a1459809cbfcf2f4d11dcc5288d2c99fe5ffef1e59746e7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784426127.json": {
+      "sha256": "3347a650d125eee304272393c846c6f345f12848dca055ab0583f28babfe5f74",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784426427.json": {
+      "sha256": "3437e3ff267e5cdb65e71de63c8ecee9442d974375235a92a9b0bc518321cdd6",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784426727.json": {
+      "sha256": "e1acefc910588e4a83d8c06151bf308bb2f33d477da4aff0f6e5016c50bd9f5e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784427027.json": {
+      "sha256": "c24af3ce7a636b9787c34bd1a965ae5ca47cd93aad0db968205e06fb76282edb",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784427328.json": {
+      "sha256": "38d3e2f3a6486c25686e38e1abbfea662f526823aaaccab71dab1ee9d4b4a5c8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784427627.json": {
+      "sha256": "a90afd9224a39dc1c916c85fe451f27da358028bcad02aea76018614b8ebe2f9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784427927.json": {
+      "sha256": "c219b1647a990ce5469b89701a116e8815be25eb07aaf72148c2dd5c0ae3b405",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784428227.json": {
+      "sha256": "d3794da43351bfaea1eb3b33a3e6bc162e7f2bfa9835c3d1ac081ecce8687d7b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784428527.json": {
+      "sha256": "729ed257e6b32d8525b6164637d9d9f26ef4fe98b102de34a6442e1086d8555a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784428827.json": {
+      "sha256": "b93512ef27e78e8dba9d60dee99f53e6b4470a0e05cfd3e54f8940d2b1655aba",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784429127.json": {
+      "sha256": "d8a65f0f74cb38154306b9d97394ec657ddff041739b526c4d4c85cac7f03b3e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784429428.json": {
+      "sha256": "0d82db62075d378fd7dbe372f395693936763f32a37e668837d8f113d050ab33",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784429727.json": {
+      "sha256": "1fcaecd2beb13bb9ebd23caaba7f37414abd591161fd402d206bb930212a7480",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784430027.json": {
+      "sha256": "607d49c5ce89c3b2527f753ecf2cfc8917f674159986df058f75a2755b570795",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784430327.json": {
+      "sha256": "2d077a2a9110c4ad0502929c1afade7a5ebeb475635a78b7d1ce0233b0e5e83c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784430627.json": {
+      "sha256": "470952a77cce9603f7d92e684a8dfd15cd7197689f4aa371398dd6310cce9c94",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784430927.json": {
+      "sha256": "3171b8f192d5fa23781e2f26deee83ea09887580395c564c3e09886b4174075b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784431227.json": {
+      "sha256": "e7d74a3c01ba92e873707defcffb7decb2e7382e80112ee0a6510ab715e36e70",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784431527.json": {
+      "sha256": "48c9cc108666f5fe4cc83cd4bed34629fa66099f721c08cc4e32415c68b7cfb8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784431827.json": {
+      "sha256": "e0b7cf7eb7852f60e271aae988c6be9ed896e5a3c8944169a4e07d489c1c7eeb",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784432127.json": {
+      "sha256": "d401a264511645dc2755455ce2fcecd06bca35d2ace496755531c06e0e3b530e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784432427.json": {
+      "sha256": "0601589efad1821328923a07a07a3c124b65c6117e00f99af0a4ed169414d8e9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784432727.json": {
+      "sha256": "a31b39b9640a3f5c50f0a8b9bef59a3d6e45894474a9df297b2562c52fb17d1b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784433027.json": {
+      "sha256": "836fc156366019822cb489b337eb36f9bfbddef7fea586096acc18b0d7b7c3c7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784433327.json": {
+      "sha256": "9e4bc850a3b28597bcc79dc0b142f993d91ddfa56de6cd4a063ef1dfa0a65900",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784433627.json": {
+      "sha256": "644ef0c09fe85feec9ca6079031c4927e855213f5d4a471281d60d9899d4c738",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784433927.json": {
+      "sha256": "8f78ad0243334de58b6967344d835b2fa6ea4d641af4370293fc3d4a158b7a62",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784434227.json": {
+      "sha256": "4ee7757f65463760c152290f783870f45c9dcaf51d1e48c6e38bd1cb4e86c070",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784434527.json": {
+      "sha256": "d4bd8b94a2ab30d86291f01ef454e30fe27bb7983ce0155bb33b2a009861cfc5",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784434827.json": {
+      "sha256": "50f873f171833587b14ecaab9a6ba8e2e25c8e257e08971528584ec955780ca3",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784435127.json": {
+      "sha256": "932c8e3c257446b056d764e62b507dd98c400156c499cda413e3ea844f019817",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784435427.json": {
+      "sha256": "58da950d8f35b0a02e1aa5d4db340172679df1248f4965779aaf27a3896d8f7d",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784435727.json": {
+      "sha256": "0373b3e68720c5a049bf5c86c1b581a10f63a3e7238cfcf54e34a8cb8e9838df",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784436028.json": {
+      "sha256": "ac586aaa284ba2c09a4e0e1727110f5f82be4539bbb1c6ddfba501d7b487b77c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784436327.json": {
+      "sha256": "ccd18d7608bdc131ffa6618bca2c26a92b8a47cc38a44e3db43552fae860548d",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784436627.json": {
+      "sha256": "084ee59c835e914388df0827fcbdca03f7c7914bd1982898f292e809783735eb",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784436927.json": {
+      "sha256": "e20cfc26a17770af39be9cc0b74ed3299657cc3199e62dab0293451a4b24ee80",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784437228.json": {
+      "sha256": "267b8b3880056576cab1b2633bda20e957940d6098f5bbccd598d647b5087f1f",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784437527.json": {
+      "sha256": "4e4a22e72e55f5fc431d96f9b74ff8b13cd3799f688113752e3f9a58407aad76",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784437827.json": {
+      "sha256": "179bad908694a85b57939461770e981a62fb2a0306b06e5052a338b85137b700",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784438127.json": {
+      "sha256": "1acbe6ee3a4d9dbff3efafd14ad99f31dc4d404bd58712c6160e88c2e9b9de82",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784438427.json": {
+      "sha256": "08328b33c9dc0e071d2f464479eb14eada3a04bbfc140565eb8309fb237f7785",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784438727.json": {
+      "sha256": "2e10db3bed73e91aca1aac3dfdc06558d066248775b8da0e8c83201859ce8b29",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784439027.json": {
+      "sha256": "bafc9ebac6632b5a2b6dc4ed61ca81ef752380c22e2a82eaf13f89520faa8ae7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784439327.json": {
+      "sha256": "3519201cfcf17a4fa7b63d41c4dff210094c3569063ca3555b6a27f9930c4ec7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784439627.json": {
+      "sha256": "745c5bb80289761a45588517536ddbdc964bb398a4e8b6def830c218aee4bb26",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784439928.json": {
+      "sha256": "4faf42c5c4f135254d0588287fd4aba7614045b475099e8f838d746d590b3ce6",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784440227.json": {
+      "sha256": "3ef42fd9c3975b35eeab2a0a2f731c64899dad442c263c1de3f3f02e8038dc74",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784440527.json": {
+      "sha256": "e563c8838a00d33bd2c83095294b944d97af8acb8e4ad9c92639f4ee2ce9fd49",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784440828.json": {
+      "sha256": "bd9b6e66bf2e883076ce90e415e0a31910fbe956287fd1a5314480107072c85c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784441128.json": {
+      "sha256": "49b8bd6f2108ae6be23bd560bec151737ace1ef4790ea553015c97814682a3e3",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784441428.json": {
+      "sha256": "cb0ea18bcba5937fa4d9f42e14c107baae27322460f04e4014cfa1ed99fc52e7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784441728.json": {
+      "sha256": "9b13980e4e79741ee70b49e9d3fb9ca58c3e62ba4871ed649f039ec60ebf105a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784442028.json": {
+      "sha256": "1dd1b4bd9a1d2d17c3518451e63c6892bffe160bf36d20bb422b9df3c8fafc80",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784442329.json": {
+      "sha256": "62934a8795e7e8aff55936ec1003d123bb6443e2038d1fce98c58d3b2588751e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784442629.json": {
+      "sha256": "8e7385ae4f7479c0c3a9f237ead03b40301dd8aba1f331c8cf12132cb9bc513c",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784442929.json": {
+      "sha256": "da321264940f269e97ac578cce67be4465593179b44a935fce6db7efd4d295f9",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784443229.json": {
+      "sha256": "931f4773a9d6c24410099cce97dc157d3ad995beddfdcad390eca48fe15cd8df",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784443529.json": {
+      "sha256": "8b7221e74d28852d44d5d87d71d5b5518216bfd29d5f3941eb819fad6cafd15b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784443830.json": {
+      "sha256": "f610856d0213021ca613d38062902da477994ea8dd38cbb1efcfaa67697e3196",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784444129.json": {
+      "sha256": "fc9ac60f633cae285bef02f25b1e1d8c9ffcfee609b3159c8dccd5f16a13d008",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784444429.json": {
+      "sha256": "8308c51a55f007f50ad8d05e052f14cea0829f2c6248aac94e2ff7fcc8d950cc",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784445929.json": {
+      "sha256": "e9a8ffb12ffca0ead8083ab303e1d5b5a093abbe4f1bbf45d382d6646aa5a92a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784446229.json": {
+      "sha256": "8c84ef0fbd0ff86d27b5db478f062dd6d628958b72b8734e4a2675e9e8085d80",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784446830.json": {
+      "sha256": "3e28c8a502ea64937dfadaa62ceca14b3edc3d3c857a2aaf39d356f78aad9947",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784448030.json": {
+      "sha256": "2decb9fc18241f040302e1f47295ef182a858386337945b097c1b0dbbe91c117",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784448931.json": {
+      "sha256": "7b3e08e0a600cbc3dd59b458c69ba73a760240f0c9f1455298f1d83d36b5889d",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784449531.json": {
+      "sha256": "eb7598ce1957855ada00fa230efa6d97d6024c5759f01defe73fdedf5770ab83",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784450432.json": {
+      "sha256": "a04ee9624216810f88c8a86b2d50eacadce0d20a9493fbf0cc882cf9cb472193",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784451033.json": {
+      "sha256": "0ded579110f6c0c3edc53f906462b4801200f02d09171fb0120b3b338caa4a6d",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784451333.json": {
+      "sha256": "4014cae324fe9c8b104bbb905aa943a15365fb8f8f7c29d2341d8e0658ee80a8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784451633.json": {
+      "sha256": "b47eaa069ec7957fd810c7e84155c2685fed3cbd06b0c2f0ea89b789c1ca4823",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784451933.json": {
+      "sha256": "2a485c2f4dbde0cd27b19c779925616ad24912f90b043ea6528a15c88125ad22",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452092.json": {
+      "sha256": "83995ca407c60aec7775f5f0b9f89db881fe323c1af2bcc54359c092c8f2311b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784444729.json": {
+      "sha256": "6d84766cdffda1064dce4b228cf4dd6276b0491863db9e1c113a75b8eb6d91da",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784445029.json": {
+      "sha256": "aee104aaf2942975c1ec8fc56ba11c3e3e2848ab38310d3a28024fce3ec1519f",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784445330.json": {
+      "sha256": "29e57f01a2ffb8065d3bb04921a481e1197c8ee8b97ac574cb2effbc2d1f2954",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784445629.json": {
+      "sha256": "7ace97d85fe3f602348079fcd19ce2af403b222c51296bbad8f65f1afc1a536a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784446530.json": {
+      "sha256": "9181954d6e759464ecc4b1b7d5db730216788e2da5ced8f3525ae650170fdafd",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784447130.json": {
+      "sha256": "ca504da3f253a24fb8b38e942b73a7075e2925095904b0ec2a7b11970bc8890a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784447431.json": {
+      "sha256": "54968b8d401b910cf88dad0e20048bbf42b3287dca038bde1e467088ae4456b8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784447730.json": {
+      "sha256": "1ba389e8b54d06b7a7cb2dd26d225eac48433cf69a0e2b36496fd5d193c4e94b",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784448330.json": {
+      "sha256": "6fed489092f071e062f620fe3602acfa1f65b9fecde2b86997e9b8f55f6d6189",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784448630.json": {
+      "sha256": "f5f2b798c680a35319cb518292d25c2a35319962b5835b04349321fe1c62c60a",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784449231.json": {
+      "sha256": "d3f3723dc22867e571c4685820257abbc8d07ce2f1bbacb7130dfa8cd2d800b7",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784449831.json": {
+      "sha256": "84da6229901dbc236ee2a253fd5c474c38dda97ce97c1358185c203088daa2a8",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784450131.json": {
+      "sha256": "256fa8856cb86b5bb8bb8f49a22c2744421bb9995c712b99834a37022305bf89",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784450733.json": {
+      "sha256": "da1c2304e16e9e2ee50c17d4ac887b5239f73f1db0a6c7e73c975413d0985f33",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452061.json": {
+      "sha256": "31cff83b81a04f5f555b71bde2e7d1bdb92a16714a21731eb08ed7e3308a430e",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452115.json": {
+      "sha256": "1198558f79a502fd26ed4746c2c78fcca0bd5cbc44d2196bdb4bdff98316fec6",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452198.json": {
+      "sha256": "2477b812978bc63e934e2154378b306c35703bc8a678fea3ee5e583cbfbd05f2",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452233.json": {
+      "sha256": "fc7ffeb6edbb1e1dd7f6a74a36e07193746642ab8445fcc77df80ba3c790d211",
+      "size": 250
+    },
+    ".ima/automation/backups/snapshot-1784452335.json": {
+      "sha256": "ec8491f7d2f3f80a7d029722dfd344cf676bf2e7dd733c162138e9cac6a37e36",
+      "size": 250
+    },
+    ".ima/automation/logs/continuous_improvement.jsonl": {
+      "sha256": "6804930f4f5667db307eb52054c516c0bc5968138c294a58f26e54cd5487807c",
+      "size": 126038
+    },
+    ".ima/automation/logs/nohup-supervisor.log": {
+      "sha256": "6c74f38076ce948b06c6f748db16eaf62fd33a783be29fa1026e4fe0ff84ffdc",
+      "size": 88
+    },
+    ".ima/automation/logs/supervisor.log": {
+      "sha256": "161c869c9e64b88a68a5a8e0484fab93f3ec2e610d5776c8efd84370e4191a8a",
+      "size": 10733
+    },
+    ".ima/automation/logs/continuous_improvement.log": {
+      "sha256": "cf0dd453e9670393dcc4a3e7f95a41ab356d5e58314af4f75b0c4b76f75264c1",
+      "size": 55229
     },
     ".ima/repair_backups/20260718_205817/.ima/index.json": {
       "sha256": "277d76a228e60d0a76d7ab1dc023d89cd7a9e03028c1020d4d5e3eb2c4a61401",
@@ -24983,5 +25599,5 @@
       "size": 401
     }
   },
-  "count": 6245
+  "count": 6399
 }
