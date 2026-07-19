@@ -86,3 +86,11 @@ IMA_AUDIT_REPORT.json
 .ima/agi_evolution/runtime/ima_master_state.json
 .ima/agi_evolution/runtime/*_state.json
 .ima/agi_evolution/runtime/*state*.json
+
+# IMA runtime-generated artifacts
+.ima/automation/backups/
+.ima/automation/logs/
+.ima/automation/metrics/
+.ima/automation/*.pid
+.ima/automation/*.bak.*
+.ima/metrics/*.json

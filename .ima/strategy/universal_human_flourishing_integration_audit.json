@@ -1,0 +1,1254 @@
+{
+  "generated_at": "2026-07-19T09:04:38.280635+00:00",
+  "mission_file": ".ima/vision/universal_human_flourishing_mission.json",
+  "repository_files_scanned": 5815,
+  "large_files_skipped": 7,
+  "candidate_integration_points": [
+    {
+      "path": ".ima/ima_self_knowledge_registry.json",
+      "score": 16405,
+      "keywords": {
+        "vision": 16,
+        "health": 385,
+        "safety": 155,
+        "feedback": 569,
+        "family": 0,
+        "learning": 15280
+      }
+    },
+    {
+      "path": "learning/learning_memory.json",
+      "score": 16051,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1399,
+        "family": 0,
+        "learning": 14405
+      }
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122602/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122578/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": "learning_backup_final_1784122661/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/learning_memory.json",
+      "score": 14576,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 1224,
+        "family": 0,
+        "learning": 13105
+      }
+    },
+    {
+      "path": ".ima/ima_dependency_map.json",
+      "score": 12181,
+      "keywords": {
+        "vision": 4,
+        "health": 309,
+        "safety": 86,
+        "feedback": 460,
+        "family": 0,
+        "learning": 11322
+      }
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "score": 8813,
+      "keywords": {
+        "vision": 17,
+        "health": 113,
+        "safety": 11,
+        "feedback": 74,
+        "family": 0,
+        "learning": 8598
+      }
+    },
+    {
+      "path": "IMA_KNOWLEDGE_SCAN.json",
+      "score": 7574,
+      "keywords": {
+        "vision": 11,
+        "health": 3,
+        "safety": 10,
+        "feedback": 61,
+        "family": 0,
+        "learning": 7489
+      }
+    },
+    {
+      "path": ".ima/backup_memory_knowledge_merge/learning_memory.json",
+      "score": 6527,
+      "keywords": {
+        "vision": 0,
+        "health": 247,
+        "safety": 0,
+        "feedback": 262,
+        "family": 0,
+        "learning": 6018
+      }
+    },
+    {
+      "path": ".ima/runtime/dependency_registry.json",
+      "score": 6308,
+      "keywords": {
+        "vision": 32,
+        "health": 78,
+        "safety": 79,
+        "feedback": 138,
+        "family": 0,
+        "learning": 5981
+      }
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/canonical_kernel_candidates.txt",
+      "score": 4227,
+      "keywords": {
+        "vision": 1,
+        "health": 41,
+        "safety": 45,
+        "feedback": 84,
+        "family": 0,
+        "learning": 4056
+      }
+    },
+    {
+      "path": ".ima/ima_sync_tree.json",
+      "score": 4066,
+      "keywords": {
+        "vision": 11,
+        "health": 66,
+        "safety": 69,
+        "feedback": 104,
+        "family": 0,
+        "learning": 3816
+      }
+    },
+    {
+      "path": "IMA_MISSING_CAPABILITIES_SCAN.json",
+      "score": 4035,
+      "keywords": {
+        "vision": 4,
+        "health": 60,
+        "safety": 2,
+        "feedback": 194,
+        "family": 0,
+        "learning": 3775
+      }
+    },
+    {
+      "path": "ima_directory_map_before_canonical_move.json",
+      "score": 3909,
+      "keywords": {
+        "vision": 10,
+        "health": 57,
+        "safety": 55,
+        "feedback": 91,
+        "family": 0,
+        "learning": 3696
+      }
+    },
+    {
+      "path": ".ima_scan_simple.json",
+      "score": 3586,
+      "keywords": {
+        "vision": 4,
+        "health": 52,
+        "safety": 47,
+        "feedback": 86,
+        "family": 0,
+        "learning": 3397
+      }
+    },
+    {
+      "path": ".ima/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+      "score": 3214,
+      "keywords": {
+        "vision": 4,
+        "health": 27,
+        "safety": 68,
+        "feedback": 71,
+        "family": 0,
+        "learning": 3044
+      }
+    },
+    {
+      "path": ".ima/reports/system_map.json",
+      "score": 3143,
+      "keywords": {
+        "vision": 5,
+        "health": 34,
+        "safety": 52,
+        "feedback": 80,
+        "family": 0,
+        "learning": 2972
+      }
+    },
+    {
+      "path": "IMA_AUDIT_REPORT.json",
+      "score": 2378,
+      "keywords": {
+        "vision": 4,
+        "health": 36,
+        "safety": 5,
+        "feedback": 57,
+        "family": 0,
+        "learning": 2276
+      }
+    },
+    {
+      "path": ".ima/governance/partnership_first_implementation_audit.json",
+      "score": 1598,
+      "keywords": {
+        "vision": 13,
+        "health": 7,
+        "safety": 9,
+        "feedback": 20,
+        "family": 0,
+        "learning": 1549
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/learning_memory.json",
+      "score": 1466,
+      "keywords": {
+        "vision": 0,
+        "health": 112,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 1318
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/learning_memory.json",
+      "score": 1466,
+      "keywords": {
+        "vision": 0,
+        "health": 112,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 1318
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/learning/learning_memory.json",
+      "score": 1466,
+      "keywords": {
+        "vision": 0,
+        "health": 112,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 1318
+      }
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/kernel_functions_scan.txt",
+      "score": 1125,
+      "keywords": {
+        "vision": 0,
+        "health": 11,
+        "safety": 0,
+        "feedback": 4,
+        "family": 0,
+        "learning": 1110
+      }
+    },
+    {
+      "path": ".ima/provenance_audit/IMA_ORIGIN_PROVENANCE_AUDIT_20260718T173558Z.json",
+      "score": 1039,
+      "keywords": {
+        "vision": 53,
+        "health": 22,
+        "safety": 27,
+        "feedback": 28,
+        "family": 0,
+        "learning": 909
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783652820_learning/learning_memory.json",
+      "score": 803,
+      "keywords": {
+        "vision": 0,
+        "health": 61,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 706
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783652820_learning/learning_memory.json",
+      "score": 803,
+      "keywords": {
+        "vision": 0,
+        "health": 61,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 706
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783652820_learning/learning_memory.json",
+      "score": 803,
+      "keywords": {
+        "vision": 0,
+        "health": 61,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 706
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783626985_learning/learning_memory.json",
+      "score": 764,
+      "keywords": {
+        "vision": 0,
+        "health": 58,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 670
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626985_learning/learning_memory.json",
+      "score": 764,
+      "keywords": {
+        "vision": 0,
+        "health": 58,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 670
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626985_learning/learning_memory.json",
+      "score": 764,
+      "keywords": {
+        "vision": 0,
+        "health": 58,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 670
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783626373_learning/learning_memory.json",
+      "score": 686,
+      "keywords": {
+        "vision": 0,
+        "health": 52,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 598
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626373_learning/learning_memory.json",
+      "score": 686,
+      "keywords": {
+        "vision": 0,
+        "health": 52,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 598
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626373_learning/learning_memory.json",
+      "score": 686,
+      "keywords": {
+        "vision": 0,
+        "health": 52,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 598
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783626154_learning/learning_memory.json",
+      "score": 647,
+      "keywords": {
+        "vision": 0,
+        "health": 49,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 562
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626154_learning/learning_memory.json",
+      "score": 647,
+      "keywords": {
+        "vision": 0,
+        "health": 49,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 562
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626154_learning/learning_memory.json",
+      "score": 647,
+      "keywords": {
+        "vision": 0,
+        "health": 49,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 562
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783626079_learning/learning_memory.json",
+      "score": 608,
+      "keywords": {
+        "vision": 0,
+        "health": 46,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 526
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783626079_learning/learning_memory.json",
+      "score": 608,
+      "keywords": {
+        "vision": 0,
+        "health": 46,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 526
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783626079_learning/learning_memory.json",
+      "score": 608,
+      "keywords": {
+        "vision": 0,
+        "health": 46,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 526
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783625863_learning/learning_memory.json",
+      "score": 569,
+      "keywords": {
+        "vision": 0,
+        "health": 43,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 490
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625863_learning/learning_memory.json",
+      "score": 569,
+      "keywords": {
+        "vision": 0,
+        "health": 43,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 490
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625863_learning/learning_memory.json",
+      "score": 569,
+      "keywords": {
+        "vision": 0,
+        "health": 43,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 490
+      }
+    },
+    {
+      "path": ".ima/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/architecture_scan.txt",
+      "score": 534,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 13,
+        "feedback": 0,
+        "family": 0,
+        "learning": 519
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783625225_learning/learning_memory.json",
+      "score": 530,
+      "keywords": {
+        "vision": 0,
+        "health": 40,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 454
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625225_learning/learning_memory.json",
+      "score": 530,
+      "keywords": {
+        "vision": 0,
+        "health": 40,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 454
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625225_learning/learning_memory.json",
+      "score": 530,
+      "keywords": {
+        "vision": 0,
+        "health": 40,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 454
+      }
+    },
+    {
+      "path": "runtime_links.txt",
+      "score": 507,
+      "keywords": {
+        "vision": 0,
+        "health": 12,
+        "safety": 1,
+        "feedback": 13,
+        "family": 0,
+        "learning": 481
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783625033_learning/learning_memory.json",
+      "score": 491,
+      "keywords": {
+        "vision": 0,
+        "health": 37,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 418
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783625033_learning/learning_memory.json",
+      "score": 491,
+      "keywords": {
+        "vision": 0,
+        "health": 37,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 418
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783625033_learning/learning_memory.json",
+      "score": 491,
+      "keywords": {
+        "vision": 0,
+        "health": 37,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 418
+      }
+    },
+    {
+      "path": "ima_system_map.json",
+      "score": 484,
+      "keywords": {
+        "vision": 0,
+        "health": 5,
+        "safety": 5,
+        "feedback": 18,
+        "family": 0,
+        "learning": 456
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783624794_learning/learning_memory.json",
+      "score": 452,
+      "keywords": {
+        "vision": 0,
+        "health": 34,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 382
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624794_learning/learning_memory.json",
+      "score": 452,
+      "keywords": {
+        "vision": 0,
+        "health": 34,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 382
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624794_learning/learning_memory.json",
+      "score": 452,
+      "keywords": {
+        "vision": 0,
+        "health": 34,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 382
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783624598_learning/learning_memory.json",
+      "score": 413,
+      "keywords": {
+        "vision": 0,
+        "health": 31,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 346
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624598_learning/learning_memory.json",
+      "score": 413,
+      "keywords": {
+        "vision": 0,
+        "health": 31,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 346
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624598_learning/learning_memory.json",
+      "score": 413,
+      "keywords": {
+        "vision": 0,
+        "health": 31,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 346
+      }
+    },
+    {
+      "path": ".ima/conversation_memory.json",
+      "score": 398,
+      "keywords": {
+        "vision": 34,
+        "health": 0,
+        "safety": 0,
+        "feedback": 320,
+        "family": 0,
+        "learning": 44
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/evolution_controller/1783624509_learning/learning_memory.json",
+      "score": 374,
+      "keywords": {
+        "vision": 0,
+        "health": 28,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 310
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/evolution_controller/1783624509_learning/learning_memory.json",
+      "score": 374,
+      "keywords": {
+        "vision": 0,
+        "health": 28,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 310
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/evolution_controller/1783624509_learning/learning_memory.json",
+      "score": 374,
+      "keywords": {
+        "vision": 0,
+        "health": 28,
+        "safety": 0,
+        "feedback": 36,
+        "family": 0,
+        "learning": 310
+      }
+    },
+    {
+      "path": ".ima/guardian/smart_state.json",
+      "score": 281,
+      "keywords": {
+        "vision": 0,
+        "health": 2,
+        "safety": 2,
+        "feedback": 4,
+        "family": 0,
+        "learning": 273
+      }
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122602/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122578/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": "learning_backup_final_1784122661/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/ima_journal.json",
+      "score": 263,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 0,
+        "family": 0,
+        "learning": 263
+      }
+    },
+    {
+      "path": ".ima/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/archive_final/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/archive_final/ima_backup_1783804250/.ima/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/archive_final/backups/ima_1783804993/snapshots/IMA_BOOT_VERIFIED_2026_07_11/governance/ima_tree.txt",
+      "score": 242,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 7,
+        "feedback": 15,
+        "family": 0,
+        "learning": 216
+      }
+    },
+    {
+      "path": ".ima/runtime/full_system_lock.json",
+      "score": 233,
+      "keywords": {
+        "vision": 0,
+        "health": 6,
+        "safety": 6,
+        "feedback": 11,
+        "family": 0,
+        "learning": 210
+      }
+    },
+    {
+      "path": "learning/learning_patterns.json",
+      "score": 222,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 214
+      }
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122602/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122578/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "learning_backup_final_1784122661/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "learning_backup_final_clean_1784122759/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "learning_backup_adaptive_1784122898/learning_patterns.json",
+      "score": 214,
+      "keywords": {
+        "vision": 0,
+        "health": 0,
+        "safety": 0,
+        "feedback": 8,
+        "family": 0,
+        "learning": 206
+      }
+    },
+    {
+      "path": "ima_full_file_map.txt",
+      "score": 213,
+      "keywords": {
+        "vision": 2,
+        "health": 2,
+        "safety": 4,
+        "feedback": 11,
+        "family": 0,
+        "learning": 194
+      }
+    },
+    {
+      "path": "ima_full_inventory.json",
+      "score": 193,
+      "keywords": {
+        "vision": 0,
+        "health": 1,
+        "safety": 3,
+        "feedback": 11,
+        "family": 0,
+        "learning": 178
+      }
+    },
+    {
+      "path": "tools/product_audit/product_layer_audit_1783950919.json",
+      "score": 170,
+      "keywords": {
+        "vision": 1,
+        "health": 3,
+        "safety": 4,
+        "feedback": 3,
+        "family": 0,
+        "learning": 159
+      }
+    },
+    {
+      "path": "learning_backup_stable_20260715_1633/user_memory.json",
+      "score": 134,
+      "keywords": {
+        "vision": 7,
+        "health": 0,
+        "safety": 0,
+        "feedback": 120,
+        "family": 2,
+        "learning": 5
+      }
+    },
+    {
+      "path": "learning_backup_repair_1784122602/user_memory.json",
+      "score": 134,
+      "keywords": {
+        "vision": 7,
+        "health": 0,
+        "safety": 0,
+        "feedback": 120,
+        "family": 2,
+        "learning": 5
+      }
+    }
+  ],
+  "recommended_layers": [
+    {
+      "layer": "Vision",
+      "action": "Make universal human flourishing the top-level mission."
+    },
+    {
+      "layer": "Runtime",
+      "action": "Expose the mission as a strategic objective for future capabilities."
+    },
+    {
+      "layer": "Safety",
+      "action": "Add safeguards for health, minors, crisis, end-of-life and bereavement."
+    },
+    {
+      "layer": "Learning",
+      "action": "Learn from feedback and outcomes, not popularity alone."
+    },
+    {
+      "layer": "Evaluation",
+      "action": "Measure usefulness, safety, autonomy, accessibility and real-world benefit."
+    },
+    {
+      "layer": "Human escalation",
+      "action": "Detect when qualified human help is needed."
+    },
+    {
+      "layer": "Family support",
+      "action": "Support caregivers and bereaved families with consent and privacy."
+    }
+  ],
+  "implementation_policy": {
+    "autonomous_changes": [
+      "low-risk",
+      "reversible",
+      "testable",
+      "documented"
+    ],
+    "human_review_required": [
+      "medical decision logic",
+      "crisis behavior",
+      "minor safety",
+      "end-of-life policy",
+      "privacy and identity systems",
+      "high-impact behavioral changes"
+    ]
+  }
+}
