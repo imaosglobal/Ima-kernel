@@ -8,22 +8,15 @@ LOCK="$AUTO/.supervisor.lock"
 PIDFILE="$AUTO/supervisor.pid"
 INTERVAL="${IMA_INTERVAL_SECONDS:-300}"
 
-mkdir -p \
-  "$AUTO/logs" \
-  "$AUTO/metrics" \
-  "$AUTO/backups" \
-  "$AUTO/feedback" \
-  "$AUTO/proposals"
+mkdir -p "$AUTO/logs" "$AUTO/metrics" "$AUTO/backups" "$AUTO/feedback" "$AUTO/proposals"
 
 exec 9>"$LOCK"
-
 if ! flock -n 9; then
-    echo "$(date -Is) supervisor already running" >> "$LOG"
     exit 0
 fi
 
 cd "$ROOT" || exit 1
-echo $$ > "$PIDFILE"
+echo "$$" > "$PIDFILE"
 
 cleanup() {
     if [ -f "$PIDFILE" ] && [ "$(cat "$PIDFILE" 2>/dev/null)" = "$$" ]; then
@@ -41,8 +34,7 @@ while true; do
     START=$(date +%s)
 
     if python3 "$AUTO/continuous_improvement_loop.py" \
-        >> "$AUTO/logs/continuous_improvement.log" 2>&1
-    then
+        >> "$AUTO/logs/continuous_improvement.log" 2>&1; then
         echo "$(date -Is) CYCLE OK" >> "$LOG"
     else
         CODE=$?
@@ -52,7 +44,6 @@ while true; do
     END=$(date +%s)
     ELAPSED=$((END - START))
     SLEEP_FOR=$((INTERVAL - ELAPSED))
-
     [ "$SLEEP_FOR" -lt 10 ] && SLEEP_FOR=10
 
     echo "$(date -Is) NEXT CYCLE IN ${SLEEP_FOR}s" >> "$LOG"
