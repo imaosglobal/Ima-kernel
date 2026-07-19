@@ -94,3 +94,6 @@ IMA_AUDIT_REPORT.json
 .ima/automation/*.pid
 .ima/automation/*.bak.*
 .ima/metrics/*.json
+.ima/runtime/boot_integrity_report.json
+.ima/runtime/dependency_registry.json
+.ima/runtime/maintenance_state.json
