@@ -7,20 +7,17 @@ LOG="$AUTO/logs/watchdog.log"
 LOCK="$AUTO/.watchdog.lock"
 PIDFILE="$AUTO/watchdog.pid"
 SUPERVISOR="$AUTO/supervisor.sh"
-SUP_PIDFILE="$AUTO/supervisor.pid"
 INTERVAL="${IMA_WATCHDOG_INTERVAL_SECONDS:-30}"
 
 mkdir -p "$AUTO/logs"
 
 exec 9>"$LOCK"
-
 if ! flock -n 9; then
-    echo "$(date -Is) WATCHDOG_ALREADY_RUNNING" >> "$LOG"
     exit 0
 fi
 
 cd "$ROOT" || exit 1
-echo $$ > "$PIDFILE"
+echo "$$" > "$PIDFILE"
 
 cleanup() {
     if [ -f "$PIDFILE" ] && [ "$(cat "$PIDFILE" 2>/dev/null)" = "$$" ]; then
@@ -35,23 +32,22 @@ trap cleanup INT TERM EXIT
 echo "$(date -Is) WATCHDOG_STARTED PID=$$" >> "$LOG"
 
 while true; do
-    SUP_RUNNING=0
+    SUP_PID="$(pgrep -f '[/]ima/automation/supervisor.sh' | head -n 1 || true)"
 
-    if [ -f "$SUP_PIDFILE" ]; then
-        SUP_PID="$(cat "$SUP_PIDFILE" 2>/dev/null || true)"
-
-        if [ -n "$SUP_PID" ] && kill -0 "$SUP_PID" 2>/dev/null; then
-            SUP_RUNNING=1
-        fi
-    fi
-
-    if [ "$SUP_RUNNING" -eq 0 ]; then
+    if [ -z "$SUP_PID" ]; then
         echo "$(date -Is) SUPERVISOR_NOT_RUNNING_STARTING" >> "$LOG"
 
         nohup "$SUPERVISOR" \
             >> "$AUTO/logs/nohup-supervisor.log" 2>&1 &
 
         sleep 3
+
+        SUP_PID="$(pgrep -f '[/]ima/automation/supervisor.sh' | head -n 1 || true)"
+        if [ -n "$SUP_PID" ]; then
+            echo "$(date -Is) SUPERVISOR_STARTED PID=$SUP_PID" >> "$LOG"
+        else
+            echo "$(date -Is) SUPERVISOR_START_FAILED" >> "$LOG"
+        fi
     fi
 
     sleep "$INTERVAL"
