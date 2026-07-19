@@ -26,7 +26,9 @@ cd "$ROOT" || exit 1
 echo $$ > "$PIDFILE"
 
 cleanup() {
-    rm -f "$PIDFILE"
+    if [ -f "$PIDFILE" ] && [ "$(cat "$PIDFILE" 2>/dev/null)" = "$$" ]; then
+        rm -f "$PIDFILE"
+    fi
     echo "$(date -Is) SUPERVISOR STOPPED PID=$$" >> "$LOG"
     exit 0
 }
