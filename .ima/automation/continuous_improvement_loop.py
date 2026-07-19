@@ -36,19 +36,46 @@ def log(event, data=None):
 def quality_gate():
     checks = []
 
-    checks.append(("git_clean", not run(
-        ["git", "status", "--porcelain"]
-    ).stdout.strip()))
+    status = run(["git", "status", "--porcelain"]).stdout.splitlines()
 
-    py = run(["python3", "-m", "py_compile", "ima_master_runtime.py"])
+    allowed_runtime_prefixes = (
+        " M .ima/runtime/",
+        "?? .ima/automation/backups/",
+        "?? .ima/automation/logs/",
+        "?? .ima/automation/metrics/",
+        "?? .ima/metrics/",
+    )
+
+    unexpected_changes = [
+        line for line in status
+        if not line.startswith(allowed_runtime_prefixes)
+    ]
+
+    checks.append((
+        "no_unexpected_changes",
+        len(unexpected_changes) == 0
+    ))
+
+    py = run([
+        "python3",
+        "-m",
+        "py_compile",
+        "ima_master_runtime.py"
+    ])
+
     checks.append(("python_syntax", py.returncode == 0))
 
     boot = run(["python3", "IMA_START.py"])
-    checks.append(("boot", "IMA SYSTEM READY" in boot.stdout))
+
+    checks.append((
+        "boot",
+        "IMA SYSTEM READY" in boot.stdout
+    ))
 
     result = {
         "time": now(),
         "checks": dict(checks),
+        "unexpected_changes": unexpected_changes,
         "passed": all(ok for _, ok in checks)
     }
 
@@ -57,6 +84,7 @@ def quality_gate():
 
     log("QUALITY_GATE", result)
     return result
+
 
 def snapshot():
     files = [
