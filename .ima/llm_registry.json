@@ -1,7 +1,13 @@
 {
-  "time": 1784391463.1070943,
+  "time": 1784548108.2863164,
   "local_models": [],
-  "local_services": [],
+  "local_services": [
+    {
+      "provider": "llamacpp",
+      "local": true,
+      "ready": true
+    }
+  ],
   "cloud": [
     {
       "provider": "openai",
