@@ -90,4 +90,6 @@ subprocess.run(
     check=True
 )
 
+import subprocess
+subprocess.run(["python", ".ima/CANONICAL_AUTHORITY/entry/IMA_VALIDATE_ACTIVE.py"], check=True)
 print("=== IMA SINGLE ENTRY COMPLETE ===")

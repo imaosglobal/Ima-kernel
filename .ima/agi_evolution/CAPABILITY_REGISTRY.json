@@ -1,21 +1,58 @@
 {
- "system":"IMA AGI Evolution Layer",
- "version":"1.0",
- "capabilities":{
-  "memory":{"source":"conversation_layer.py","status":"active"},
-  "identity":{"source":"identity_context.py","status":"active"},
-  "runtime":{"source":"ima_master_runtime.py","status":"active"},
-  "learning":{"source":"learning/meta_orchestrator.py","status":"active"},
-  "decision":{"source":"learning/decision_engine.py","status":"active"},
-
-  "world_model":{"status":"building"},
-  "reasoning":{"status":"building"},
-  "autonomy":{"status":"building"},
-  "business_intelligence":{"status":"building"},
-  "finance_intelligence":{"status":"building"},
-  "universal_connectors":{"status":"building"},
-  "embodiment":{"status":"building"},
-  "multilingual":{"status":"building"},
-  "science_engine":{"status":"building"}
- }
+  "system": "IMA AGI Evolution Layer",
+  "version": "1.0",
+  "capabilities": {
+    "memory": {
+      "source": ".ima/agi_evolution/runtime/evolution_memory.py",
+      "status": "active"
+    },
+    "identity": {
+      "source": ".ima/agi_evolution/adaptive_identity/adaptive_identity_engine.py",
+      "status": "active"
+    },
+    "runtime": {
+      "source": ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "status": "active"
+    },
+    "learning": {
+      "status": "building"
+    },
+    "decision": {
+      "source": ".ima/agi_evolution/runtime/decision_engine.py",
+      "status": "active"
+    },
+    "world_model": {
+      "status": "building"
+    },
+    "reasoning": {
+      "status": "building"
+    },
+    "autonomy": {
+      "status": "building"
+    },
+    "business_intelligence": {
+      "status": "building"
+    },
+    "finance_intelligence": {
+      "status": "building"
+    },
+    "universal_connectors": {
+      "status": "building"
+    },
+    "embodiment": {
+      "status": "building"
+    },
+    "multilingual": {
+      "status": "building"
+    },
+    "science_engine": {
+      "status": "building"
+    },
+    "reasoning_engine": {
+      "module": ".ima/agi_evolution/reasoning/reasoning_engine.py",
+      "capability": "structured_reasoning",
+      "status": "validated",
+      "validated": true
+    }
+  }
 }

@@ -1,0 +1,1331 @@
+{
+  "canonical_root": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+  "files": 38,
+  "python_files": 10,
+  "edges": 36,
+  "parse_errors": [],
+  "roles": {
+    "entry": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    ],
+    "kernel": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    ],
+    "runtime": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    ],
+    "map": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py"
+    ],
+    "evolution": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_IDENTITY.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384204.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384287.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384323.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384429.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384483.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384694.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/final_change_gate_audit_1784384855.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384948.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385012.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385318.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385621.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385927.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386237.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386538.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386839.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387157.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387860.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/state/system_state.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_plan_1784383377.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_execution_test_1784383513.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_plan_1784383554.json"
+    ],
+    "repair": [],
+    "awareness": [],
+    "governance": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json"
+    ],
+    "manifests": [
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_live_graph.json",
+      "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_real_graph.json"
+    ]
+  },
+  "canonical_chain_candidates": [
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_IDENTITY.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384204.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384287.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384323.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384429.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384483.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384694.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/final_change_gate_audit_1784384855.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784384948.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385012.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385318.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385621.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784385927.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386237.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386538.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784386839.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387157.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/canonical_chain_audit_1784387860.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/state/system_state.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_plan_1784383377.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_execution_test_1784383513.json",
+    "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_plan_1784383554.json"
+  ],
+  "connections": [
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "via": "ima_master_runtime.py",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel",
+      "via": "kernel",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "via": ".ima",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": ".",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "via": ".ima",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "via": ".ima",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": " ",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "via": "CANONICAL_AUTHORITY_MANIFEST.json",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance",
+      "via": "governance",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "via": "CANONICAL_AUTHORITY_MANIFEST.json",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance",
+      "via": "governance",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "via": "CANONICAL_AUTHORITY_MANIFEST.json",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "via": "IMA_SELF_EVOLUTION.py",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "via": "IMA_REPAIR_ENGINE.py",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "via": ".ima",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance",
+      "via": "governance",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution",
+      "via": "evolution",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_AUTHORITY_MANIFEST.json",
+      "via": "CANONICAL_AUTHORITY_MANIFEST.json",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel",
+      "via": "kernel",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime",
+      "via": "runtime",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution",
+      "via": "evolution",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry",
+      "via": "entry",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "via": ".ima",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance",
+      "via": "governance",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "\n",
+      "kind": "string_reference"
+    },
+    {
+      "from": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "to": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY",
+      "via": "",
+      "kind": "string_reference"
+    }
+  ],
+  "registry_references": [
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/canonical_chain_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "python_bridge",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "build_graph",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+      "reference": "ima_master_runtime",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+      "reference": "IMA_START_SINGLE_ENTRY.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_IDENTITY.json",
+      "reference": "IMA_SELF_EVOLUTION.py",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py"
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/plans/repair_plan_1784383377.json",
+      "reference": "IMA_REPAIR_ENGINE",
+      "target": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py"
+    }
+  ],
+  "centrality": [
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "imports": 8,
+      "imported_by": 0,
+      "total": 8
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "imports": 7,
+      "imported_by": 0,
+      "total": 7
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "imports": 1,
+      "imported_by": 5,
+      "total": 6
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "imports": 3,
+      "imported_by": 1,
+      "total": 4
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "imports": 3,
+      "imported_by": 1,
+      "total": 4
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "imports": 2,
+      "imported_by": 1,
+      "total": 3
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "imports": 2,
+      "imported_by": 0,
+      "total": 2
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "imports": 2,
+      "imported_by": 0,
+      "total": 2
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+      "imports": 1,
+      "imported_by": 0,
+      "total": 1
+    },
+    {
+      "file": "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    }
+  ]
+}

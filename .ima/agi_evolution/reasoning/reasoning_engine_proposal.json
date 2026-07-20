@@ -1,0 +1,20 @@
+{
+  "module": ".ima/agi_evolution/reasoning/reasoning_engine.py",
+  "current_status": "prototype",
+  "current_lines": 13,
+  "proposal": {
+    "goal": "safe recursive improvement",
+    "capabilities": [
+      "problem decomposition",
+      "hypothesis generation",
+      "evidence verification",
+      "uncertainty separation",
+      "final conclusion"
+    ],
+    "preserve": [
+      "analyze(problem)",
+      "dict return type"
+    ],
+    "status_transition": "prototype -> proposed"
+  }
+}
