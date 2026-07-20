@@ -55,6 +55,35 @@ class IMAMaster:
     def __init__(self):
         self.name="IMA MASTER"
 
+        # UNIVERSAL ADAPTER LAYER
+        # Optional, lazy, non-blocking integration.
+        self.adapter_router = None
+
+        try:
+            from governance.UNIVERSAL_ADAPTER_ROUTER import (
+                UniversalAdapterRouter
+            )
+
+            from pathlib import Path
+
+            canonical_root = (
+                Path(__file__).resolve().parents[1]
+            )
+
+            registry_path = (
+                canonical_root
+                / "governance"
+                / "UNIVERSAL_ADAPTER_REGISTRY.json"
+            )
+
+            if registry_path.exists():
+                self.adapter_router = UniversalAdapterRouter(
+                    registry_path
+                )
+
+        except Exception:
+            self.adapter_router = None
+
     def ask(self,message):
 
         # ============================================================

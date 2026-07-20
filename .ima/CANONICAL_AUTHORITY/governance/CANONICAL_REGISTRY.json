@@ -17,9 +17,9 @@
       "size": 1392
     },
     {
-      "file": ".ima/agi_evolution/runtime/ima_master_runtime.py",
-      "sha256": "c0401738b6fe2753cce01456457f101a9be09e32bd020828b604e27302980354",
-      "size": 1277
+      "file": ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "sha256": "0d33db6af194d9f6eb368a053ba1961e07cce6c7f57d388a2c3b071e95b9a526",
+      "size": 16314
     },
     {
       "file": "IMA_START_SINGLE_ENTRY.py",
@@ -58,6 +58,11 @@
       "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
       "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
       "size": 2795
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/maintenance/IMA_AUTOMATED_MAINTENANCE/IMA_AUTOMATED_MAINTENANCE.py",
+      "sha256": "2e7f531960233a7afe201befd7c1c45e4e3abef8e9573005067fc05bf54bb581",
+      "size": 940
     }
   ],
   "blocked_fallback": true,
