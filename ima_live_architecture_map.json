@@ -1,0 +1,235 @@
+{
+  "source_files": 1754,
+  "domains": {
+    "autonomy": {
+      "files": 48,
+      "examples": [
+        "./.ima/agi_evolution/autonomy/__init__.py",
+        "./.ima/agi_evolution/autonomy/autonomy_engine.py",
+        "./.ima/agi_evolution/autonomy/goal_engine.py",
+        "./.ima/agi_evolution/runtime/future_planner.py",
+        "./.ima/agi_evolution/runtime/goal_engine.py",
+        "./.ima/agi_evolution/self_improvement/upgrade_planner.py",
+        "./.ima/autonomy_context.py",
+        "./.ima/autonomy_runner.py",
+        "./canonical_admission_guard.py",
+        "./daily_evolution_scheduler.py",
+        "./founder/executive_ai/action_engine/action_planner.py",
+        "./founder/executive_ai/operating_system/action_planner.py",
+        "./goal_engine.py",
+        "./ima_mission_registry.py",
+        "./kernel/_graveyard/_archive/duplicates/task_engine.js"
+      ]
+    },
+    "learning": {
+      "files": 100,
+      "examples": [
+        "./.ima/agi_evolution/knowledge_engine/__init__.py",
+        "./.ima/agi_evolution/science_knowledge/science_knowledge_engine.py",
+        "./.ima/agi_evolution/world_model/model_engine.py",
+        "./.ima/learning_feedback_bridge.py",
+        "./.ima/orchestrator_backup_1784026278/ima_self_knowledge_bridge.py",
+        "./.ima/source_manager_broken_backup.py",
+        "./activate_sources.py",
+        "./add_external_sources.py",
+        "./add_semantic_source_filter.py",
+        "./build_ima_world_learning_engine.py",
+        "./build_knowledge_core.py",
+        "./build_knowledge_expansion_engine.py",
+        "./build_knowledge_orchestrator.py",
+        "./build_knowledge_provenance_connector.py",
+        "./build_knowledge_store.py"
+      ]
+    },
+    "self_improvement": {
+      "files": 100,
+      "examples": [
+        "./.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+        "./.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+        "./.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+        "./.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+        "./.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+        "./.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+        "./.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+        "./.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/agi_evolution/runtime/evolution_agent.py",
+        "./.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_IMA_SELF_EVOLUTION.py",
+        "./.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+        "./.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_REPAIR_ENGINE.py",
+        "./.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_agi_evolution_runtime_evolution_agent.py",
+        "./.ima/agi_evolution/__init__.py",
+        "./.ima/agi_evolution/adaptive_identity/adaptive_identity_engine.py",
+        "./.ima/agi_evolution/agi_gap_report.py"
+      ]
+    },
+    "product": {
+      "files": 73,
+      "examples": [
+        "./.ima/agi_evolution/product_engine/__init__.py",
+        "./.ima/stability_checkpoint/product_gateway_product_gateway.py",
+        "./build_web_knowledge_collector.py",
+        "./build_web_knowledge_router.py",
+        "./evolution_mapper.py",
+        "./finalize_web_engine_lock.py",
+        "./fix_web_knowledge_router.py",
+        "./fix_web_sources_quality.py",
+        "./founder/executive_ai/knowledge/intent_mapper.py",
+        "./founder/executive_ai/memory/lesson_mapper.py",
+        "./ima_app.py",
+        "./ima_product_audit.py",
+        "./kernel/_graveyard/_archive/releases__v1778001671191__apply_fix.js",
+        "./kernel/_graveyard/_archive/releases__v1778001671191__apply_policy_patch.js",
+        "./kernel/_graveyard/_archive/releases__v1778001671191__product.config.js"
+      ]
+    },
+    "crm_users": {
+      "files": 36,
+      "examples": [
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_EVENTS.js",
+        "./.ima/ima_event.py",
+        "./.ima/runtime_backup_1783787350/IMA_EVENTS.js",
+        "./founder/executive_ai/customer_intelligence/company_profile.py",
+        "./founder/executive_ai/customer_intelligence/evidence_memory.py",
+        "./founder/executive_ai/customer_intelligence/fit_score.py",
+        "./founder/executive_ai/customer_intelligence/lead_ranker.py",
+        "./founder/executive_ai/customer_intelligence/market_learning.py",
+        "./founder/executive_ai/customer_intelligence/outreach_generator.py",
+        "./founder/executive_ai/customer_intelligence/outreach_memory.py",
+        "./founder/executive_ai/customer_intelligence/signal_detector.py",
+        "./kernel/_graveyard/_archive/duplicates/test_user.js",
+        "./kernel/_graveyard/_archive/releases__v1778001671191__analytics.js",
+        "./kernel/_graveyard/_archive/releases__v1778001671191__ima_events.js",
+        "./kernel/experimental/analytics_engine.js"
+      ]
+    },
+    "testing": {
+      "files": 58,
+      "examples": [
+        "./.ima/agi_evolution/evaluation/reality_capability_test.py",
+        "./.ima/agi_evolution/runtime/agi_integration_test.py",
+        "./.ima/agi_evolution/runtime/agi_reality_test.py",
+        "./.ima/agi_evolution/runtime/health_monitor.py",
+        "./.ima/boot_health.py",
+        "./.ima/runtime/memory_bus_v2_contract_test.py",
+        "./.ima/runtime/memory_policy_contract_test.py",
+        "./api/health_test.py",
+        "./audit_ima_architecture.py",
+        "./connectors/llm/capability_test.py",
+        "./fix_audit_scan.py",
+        "./fix_guardian_release_nightly_audit.py",
+        "./founder_core_test.py",
+        "./ima_core_integration_audit.py",
+        "./ima_full_audit.py"
+      ]
+    },
+    "governance": {
+      "files": 71,
+      "examples": [
+        "./.ima/agi_evolution/governance/__init__.py",
+        "./.ima/governance/architecture_guard.py",
+        "./.ima/governance/repair_backup/IMA_START.py",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_EVENTS.js",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_HEAL.js",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_POLICY.js",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_RUNTIME.js",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_STATE.js",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py",
+        "./.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py",
+        "./.ima/runtime/file_clock.py",
+        "./.ima/runtime/memory_policy.py",
+        "./.ima/runtime/memory_policy_adapter.py",
+        "./.ima/runtime/memory_policy_contract_test.py"
+      ]
+    },
+    "runtime": {
+      "files": 100,
+      "examples": [
+        "./.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+        "./.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+        "./.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+        "./.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/agi_evolution/runtime/evolution_agent.py",
+        "./.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_agi_evolution_runtime_evolution_agent.py",
+        "./.ima/agi_evolution/runtime/__init__.py",
+        "./.ima/agi_evolution/runtime/agi_capability_probe.py",
+        "./.ima/agi_evolution/runtime/agi_integration_test.py",
+        "./.ima/agi_evolution/runtime/agi_orchestrator.py",
+        "./.ima/agi_evolution/runtime/agi_reality_test.py",
+        "./.ima/agi_evolution/runtime/auto_resume.py",
+        "./.ima/agi_evolution/runtime/autonomous_evolution_controller.py",
+        "./.ima/agi_evolution/runtime/brain_controller.py",
+        "./.ima/agi_evolution/runtime/cognitive_pipeline.py",
+        "./.ima/agi_evolution/runtime/continuity_engine.py"
+      ]
+    }
+  },
+  "domain_edges": {
+    "runtime": [
+      "autonomy",
+      "learning",
+      "product",
+      "self_improvement",
+      "testing"
+    ],
+    "learning": [
+      "autonomy",
+      "governance",
+      "product",
+      "runtime",
+      "self_improvement",
+      "testing"
+    ],
+    "testing": [
+      "product",
+      "runtime"
+    ],
+    "self_improvement": [
+      "autonomy",
+      "learning",
+      "runtime"
+    ],
+    "governance": [
+      "learning",
+      "runtime"
+    ],
+    "product": [
+      "runtime",
+      "self_improvement",
+      "testing"
+    ],
+    "autonomy": [
+      "governance",
+      "learning",
+      "self_improvement"
+    ]
+  },
+  "entrypoints": [
+    "./production_server.py",
+    "./IMA_START.py",
+    "./ima_master_runtime.py",
+    "./daily_evolution_scheduler.py",
+    "./IMA_START_SINGLE_ENTRY.py",
+    "./.ima/autonomy_runner.py",
+    "./.ima/system_supervisor.py",
+    "./.ima/governance/repair_backup/IMA_START.py",
+    "./.ima/repair_backup/ima_master_runtime.py",
+    "./.ima/before_conversation_core/ima_master_runtime.py",
+    "./.ima/stable_working_20260714/ima_master_runtime.py",
+    "./.ima/stable_after_context_connect_20260714_174305/ima_master_runtime.py",
+    "./.ima/before_intent_emotion_1784040378/ima_master_runtime.py",
+    "./.ima/before_system_bridge_1784040637/ima_master_runtime.py",
+    "./.ima/before_system_bridge_1784040641/ima_master_runtime.py",
+    "./.ima/before_system_priority_20260714_175254/ima_master_runtime.py",
+    "./.ima/before_system_priority_patch_1784040810/ima_master_runtime.py",
+    "./.ima/stable_after_system_priority_20260714_175521/ima_master_runtime.py",
+    "./.ima/before_memory_priority_20260714_175701/ima_master_runtime.py",
+    "./.ima/before_memory_priority_20260714_175727/ima_master_runtime.py",
+    "./.ima/before_master_memory_priority_20260714_180052/ima_master_runtime.py",
+    "./.ima/before_memory_flow_fix_20260714_180246/ima_master_runtime.py",
+    "./.ima/before_memory_flow_manual_20260714_180340/ima_master_runtime.py",
+    "./.ima/agi_evolution/runtime/ima_master_runtime.py",
+    "./.ima/stability_checkpoint/ima_master_runtime.py",
+    "./.ima/pipeline_backup/ima_master_runtime.py",
+    "./.ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+    "./.ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py"
+  ]
+}

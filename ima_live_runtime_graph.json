@@ -1,0 +1,1018 @@
+{
+  "source_files": 1405,
+  "canonical_candidates": [
+    "./production_server.py",
+    "./IMA_START.py",
+    "./ima_master_runtime.py",
+    "./IMA_START_SINGLE_ENTRY.py.registry_backup.py",
+    "./daily_evolution_scheduler.py",
+    "./IMA_START_SINGLE_ENTRY.py",
+    "./.ima/autonomy_runner.py",
+    "./.ima/system_supervisor.py",
+    "./.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py",
+    "./.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py",
+    "./.ima/snapshots/pre_lock_update_20260716_195546/ima_master_runtime.py",
+    "./.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py",
+    "./.ima/snapshots/pre_final_resync_20260716_200130/ima_master_runtime.py",
+    "./.ima/snapshots/pre_change_20260716_200314/IMA_START.py",
+    "./.ima/snapshots/pre_change_20260716_200314/ima_master_runtime.py",
+    "./.ima/agi_evolution/runtime/ima_master_runtime.py",
+    "./.ima/stability_checkpoint/ima_master_runtime.py"
+  ],
+  "runtime_targets": [
+    "./production_server.py",
+    "./IMA_START.py",
+    "./ima_master_runtime.py",
+    "./daily_evolution_scheduler.py",
+    "./IMA_START_SINGLE_ENTRY.py",
+    "./.ima/autonomy_runner.py",
+    "./.ima/system_supervisor.py",
+    "./.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py",
+    "./.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py",
+    "./.ima/snapshots/pre_lock_update_20260716_195546/ima_master_runtime.py",
+    "./.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py",
+    "./.ima/snapshots/pre_final_resync_20260716_200130/ima_master_runtime.py",
+    "./.ima/snapshots/pre_change_20260716_200314/IMA_START.py",
+    "./.ima/snapshots/pre_change_20260716_200314/ima_master_runtime.py",
+    "./.ima/agi_evolution/runtime/ima_master_runtime.py",
+    "./.ima/stability_checkpoint/ima_master_runtime.py"
+  ],
+  "parse_errors": [
+    {
+      "file": "./.ima/broken_runtime_backup.py",
+      "error": "unexpected indent (<unknown>, line 153)"
+    },
+    {
+      "file": "./.ima/source_manager_broken_backup.py",
+      "error": "expected an indented block after 'try' statement on line 29 (<unknown>, line 31)"
+    },
+    {
+      "file": "./api/server_broken_backup.py",
+      "error": "expected an indented block after 'if' statement on line 37 (<unknown>, line 38)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/source_router.before_compile_fix.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/world_learning_engine.before_compile_fix.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/world_graph_updater.before_compile_fix.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_compile_fix.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/source_router.before_import_cleanup.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/world_learning_engine.before_import_cleanup.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/world_graph_updater.before_import_cleanup.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/knowledge_provenance_connector.before_import_cleanup.py",
+      "error": "invalid syntax (<unknown>, line 2)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/sources/source_generator.before_compile_fix.py",
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "file": "./learning_backup_final_clean_1784122759/sources/source_generator.before_import_cleanup.py",
+      "error": "invalid syntax (<unknown>, line 1)"
+    }
+  ],
+  "internal_edges": 1689,
+  "isolated_files_count": 800,
+  "isolated_examples": [
+    "./ima_doctor.py",
+    "./ima_app.py",
+    "./ima_chat.py",
+    "./ima_kernel.py",
+    "./ima_global.py",
+    "./ima_qge_v1.py",
+    "./patch_memory_learning.py",
+    "./production_server.py",
+    "./make_investor_package.py",
+    "./upgrade_investor_package.py",
+    "./build_investor_readiness_v2.py",
+    "./ima_sync_map.py",
+    "./ima_dependency_map.py",
+    "./ima_architecture_report.py",
+    "./ima_control_flow.py",
+    "./ima_runtime_map.py",
+    "./ima_self_knowledge_bridge.py",
+    "./build_ima_fusion_runtime.py",
+    "./connect_ima_orchestrator.py",
+    "./fix_memory_flow.py",
+    "./unify_memory_and_knowledge.py",
+    "./connect_knowledge_final.py",
+    "./patch_knowledge_pipeline_final.py",
+    "./build_knowledge_expansion_engine.py",
+    "./build_real_source_manager.py",
+    "./repair_real_source_manager.py",
+    "./migrate_question_ids.py",
+    "./patch_autolearn.py",
+    "./patch_ima_personality.py",
+    "./patch_intent_layer.py",
+    "./patch_llm_layer.py",
+    "./patch_mother_layer.py",
+    "./repair_ima_final.py",
+    "./repair_ima_routing.py",
+    "./repair_knowledge_engine.py",
+    "./repair_knowledge_engine_final.py",
+    "./upgrade_source_manager.py",
+    "./system_tree_analyzer.py",
+    "./upgrade_ima_evolution.py",
+    "./ima_final_architecture_lock.py",
+    "./rename_registry_layer.py",
+    "./verify_canonical_root.py",
+    "./repair_source_manager_api.py",
+    "./build_ima_provenance_layer.py",
+    "./fix_inspector.py",
+    "./ima_repair.py",
+    "./ima_status.py",
+    "./ima_lock.py",
+    "./ima_version.py",
+    "./ima_self_test.py",
+    "./ima_snapshot.py",
+    "./ima_product_audit.py",
+    "./ima_final_fusion.py",
+    "./build_source_router.py",
+    "./build_web_knowledge_router.py",
+    "./ima_core_integration_audit.py",
+    "./fix_web_knowledge_router.py",
+    "./memory_fusion_connect.py",
+    "./repair_source_validation.py",
+    "./rebuild_source_priority.py",
+    "./system_connection_audit.py",
+    "./system_connection_upgrade.py",
+    "./full_system_guard.py",
+    "./boot_integrity_check.py",
+    "./repair_best_answer_exact.py",
+    "./repair_unified_validation.py",
+    "./add_semantic_source_filter.py",
+    "./rebuild_web_knowledge_engine.py",
+    "./finalize_web_engine_lock.py",
+    "./repair_inspector.py",
+    "./conversation_layer.before_memory_filter_fix.py",
+    "./connect_knowledge_response.py",
+    "./ima_evolution_check.py",
+    "./ima_core_pipeline_repair.py",
+    "./ima_full_inventory.py",
+    "./patch_emotion_state.py",
+    "./rebuild_knowledge_base.py",
+    "./repair_emotion_priority.py",
+    "./repair_knowledge_connect.py",
+    "./repair_knowledge_search_v2.py",
+    "./repair_knowledge_system.py",
+    "./ima_architecture_guard.py",
+    "./ima_mission_registry.py",
+    "./ima_entry_gate_lock.py",
+    "./audit_ima_architecture.py",
+    "./ima_runtime.py",
+    "./ima_chat_WORKING_CHAT.py",
+    "./ima_chat_WORKING_BEFORE_CHAT.py",
+    "./ima_fusion_audit.py",
+    "./ima_deep_integration_scan.py",
+    "./repair_memory_layer.py",
+    "./rebuild_source_manager.py",
+    "./truth_query.py",
+    "./upgrade_real_source_learning.py",
+    "./memory_integration_audit.py",
+    "./full_system_lock.py",
+    "./build_web_knowledge_collector.py",
+    "./build_knowledge_provenance_connector.py",
+    "./upgrade_web_collector_validation.py",
+    "./fix_web_sources_quality.py"
+  ],
+  "central_components": [
+    {
+      "file": "./learning/self_reflection.py",
+      "imports_internal": 0,
+      "imported_by_internal": 84,
+      "total": 84
+    },
+    {
+      "file": "./learning/learning_memory.py",
+      "imports_internal": 0,
+      "imported_by_internal": 79,
+      "total": 79
+    },
+    {
+      "file": "./learning/sources/html_extractor.py",
+      "imports_internal": 0,
+      "imported_by_internal": 67,
+      "total": 67
+    },
+    {
+      "file": "./founder/__init__.py",
+      "imports_internal": 0,
+      "imported_by_internal": 52,
+      "total": 52
+    },
+    {
+      "file": "./founder/executive_ai/__init__.py",
+      "imports_internal": 0,
+      "imported_by_internal": 51,
+      "total": 51
+    },
+    {
+      "file": "./learning/source_manager.py",
+      "imports_internal": 5,
+      "imported_by_internal": 45,
+      "total": 50
+    },
+    {
+      "file": "./ima_master_runtime.py",
+      "imports_internal": 23,
+      "imported_by_internal": 23,
+      "total": 46
+    },
+    {
+      "file": "./ima_system.py",
+      "imports_internal": 10,
+      "imported_by_internal": 31,
+      "total": 41
+    },
+    {
+      "file": "./ima_brain.py",
+      "imports_internal": 3,
+      "imported_by_internal": 35,
+      "total": 38
+    },
+    {
+      "file": "./learning/meta_orchestrator.py",
+      "imports_internal": 9,
+      "imported_by_internal": 29,
+      "total": 38
+    },
+    {
+      "file": "./learning/knowledge_answer_builder.py",
+      "imports_internal": 0,
+      "imported_by_internal": 38,
+      "total": 38
+    },
+    {
+      "file": "./learning/learning_loop.py",
+      "imports_internal": 5,
+      "imported_by_internal": 28,
+      "total": 33
+    },
+    {
+      "file": "./conversation_layer.py",
+      "imports_internal": 0,
+      "imported_by_internal": 32,
+      "total": 32
+    },
+    {
+      "file": "./learning/knowledge_expansion_engine.py",
+      "imports_internal": 1,
+      "imported_by_internal": 31,
+      "total": 32
+    },
+    {
+      "file": "./identity_context.py",
+      "imports_internal": 0,
+      "imported_by_internal": 31,
+      "total": 31
+    },
+    {
+      "file": "./learning/knowledge_graph_retrieval.py",
+      "imports_internal": 0,
+      "imported_by_internal": 31,
+      "total": 31
+    },
+    {
+      "file": "./founder/executive_ai/integration/background_bridge.py",
+      "imports_internal": 4,
+      "imported_by_internal": 25,
+      "total": 29
+    },
+    {
+      "file": "./ima_mom.py",
+      "imports_internal": 0,
+      "imported_by_internal": 27,
+      "total": 27
+    },
+    {
+      "file": "./learning/sources/discovery_engine.py",
+      "imports_internal": 0,
+      "imported_by_internal": 27,
+      "total": 27
+    },
+    {
+      "file": "./brain_sync.py",
+      "imports_internal": 0,
+      "imported_by_internal": 24,
+      "total": 24
+    },
+    {
+      "file": "./learning/health_check.py",
+      "imports_internal": 0,
+      "imported_by_internal": 24,
+      "total": 24
+    },
+    {
+      "file": "./truth_engine.py",
+      "imports_internal": 0,
+      "imported_by_internal": 23,
+      "total": 23
+    },
+    {
+      "file": "./ima_question_engine.py",
+      "imports_internal": 0,
+      "imported_by_internal": 23,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_memory_fastpath_verified_20260718_140154.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_true_memory_fastpath_20260718_140832.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_true_memory_fastpath_verified_20260718_140921.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_memory_fastpath_structural_fix_20260718_141823.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_path_scope_fix_20260718_141859.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_remove_memory_fastpath_v2_20260718_142337.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_memory_fastpath_20260718_135933.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_memory_read_fastpath_20260718_140309.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_memory_read_fastpath_verified_20260718_140322.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_move_memory_fastpath_20260718_140647.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_move_memory_fastpath_verified_20260718_140707.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_memory_fastpath_result_fix_20260718_141319.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_memory_fastpath_undefined_result_fix_20260718_141637.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_memory_fastpath_verified_20260718_141739.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_clean_memory_response_20260718_142100.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/post_clean_memory_response_verified_20260718_142106.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_remove_all_added_memory_fastpaths_20260718_142239.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/pre_restore_path_calls_20260718_142308.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./.ima/agi_evolution/runtime/ima_master_runtime.py",
+      "imports_internal": 23,
+      "imported_by_internal": 0,
+      "total": 23
+    },
+    {
+      "file": "./learning/ima_awareness.py",
+      "imports_internal": 2,
+      "imported_by_internal": 19,
+      "total": 21
+    },
+    {
+      "file": "./learning/sources/source_promoter.py",
+      "imports_internal": 1,
+      "imported_by_internal": 20,
+      "total": 21
+    },
+    {
+      "file": "./connectors/llm/__init__.py",
+      "imports_internal": 0,
+      "imported_by_internal": 21,
+      "total": 21
+    },
+    {
+      "file": "./learning/decision_engine.py",
+      "imports_internal": 2,
+      "imported_by_internal": 18,
+      "total": 20
+    },
+    {
+      "file": "./learning/feedback_planner.py",
+      "imports_internal": 3,
+      "imported_by_internal": 17,
+      "total": 20
+    },
+    {
+      "file": "./learning/learning_analyzer.py",
+      "imports_internal": 1,
+      "imported_by_internal": 19,
+      "total": 20
+    },
+    {
+      "file": "./learning/sources/source_inspector.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./learning/sources/update_candidates.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./connectors/llm/router.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./connectors/llm/auto_runtime.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./connectors/llm/ima_pipeline.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./memory/context.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./skills/router.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./skills/__init__.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./skills/intent.py",
+      "imports_internal": 0,
+      "imported_by_internal": 20,
+      "total": 20
+    },
+    {
+      "file": "./learning/ima_learning_loop.py",
+      "imports_internal": 8,
+      "imported_by_internal": 11,
+      "total": 19
+    },
+    {
+      "file": "./learning/knowledge_gaps.py",
+      "imports_internal": 0,
+      "imported_by_internal": 19,
+      "total": 19
+    },
+    {
+      "file": "./learning/learning_scheduler.py",
+      "imports_internal": 3,
+      "imported_by_internal": 16,
+      "total": 19
+    },
+    {
+      "file": "./learning/evaluation_engine.py",
+      "imports_internal": 1,
+      "imported_by_internal": 17,
+      "total": 18
+    },
+    {
+      "file": "./learning/feedback_engine.py",
+      "imports_internal": 2,
+      "imported_by_internal": 15,
+      "total": 17
+    },
+    {
+      "file": "./learning/improvement_planner.py",
+      "imports_internal": 0,
+      "imported_by_internal": 17,
+      "total": 17
+    },
+    {
+      "file": "./learning/sources/web_discovery_daemon.py",
+      "imports_internal": 4,
+      "imported_by_internal": 13,
+      "total": 17
+    },
+    {
+      "file": "./.ima/snapshots/pre_lock_update_20260716_195546/ima_master_runtime.py",
+      "imports_internal": 15,
+      "imported_by_internal": 0,
+      "total": 15
+    },
+    {
+      "file": "./.ima/snapshots/pre_final_resync_20260716_200130/ima_master_runtime.py",
+      "imports_internal": 15,
+      "imported_by_internal": 0,
+      "total": 15
+    },
+    {
+      "file": "./.ima/snapshots/pre_change_20260716_200314/ima_master_runtime.py",
+      "imports_internal": 15,
+      "imported_by_internal": 0,
+      "total": 15
+    },
+    {
+      "file": "./learning/sources/auto_loader.py",
+      "imports_internal": 1,
+      "imported_by_internal": 14,
+      "total": 15
+    },
+    {
+      "file": "./learning/sources/runtime_refresh.py",
+      "imports_internal": 2,
+      "imported_by_internal": 13,
+      "total": 15
+    },
+    {
+      "file": "./learning/world_memory.py",
+      "imports_internal": 0,
+      "imported_by_internal": 14,
+      "total": 14
+    },
+    {
+      "file": "./founder/executive_ai/advisor/founder_advisor.py",
+      "imports_internal": 9,
+      "imported_by_internal": 3,
+      "total": 12
+    },
+    {
+      "file": "./.ima/runtime_before_knowledge_upgrade_final.py",
+      "imports_internal": 11,
+      "imported_by_internal": 0,
+      "total": 11
+    },
+    {
+      "file": "./founder/executive_ai/action_engine/action_orchestrator.py",
+      "imports_internal": 9,
+      "imported_by_internal": 2,
+      "total": 11
+    },
+    {
+      "file": "./learning/learning_evaluator.py",
+      "imports_internal": 1,
+      "imported_by_internal": 10,
+      "total": 11
+    },
+    {
+      "file": "./learning/suggest_improvements.py",
+      "imports_internal": 1,
+      "imported_by_internal": 10,
+      "total": 11
+    },
+    {
+      "file": "./.ima/snapshots/memory_bus_v2_connected_1784135020.py",
+      "imports_internal": 10,
+      "imported_by_internal": 0,
+      "total": 10
+    },
+    {
+      "file": "./learning/adaptive_loop.py",
+      "imports_internal": 2,
+      "imported_by_internal": 8,
+      "total": 10
+    },
+    {
+      "file": "./learning/capability_map.py",
+      "imports_internal": 0,
+      "imported_by_internal": 10,
+      "total": 10
+    },
+    {
+      "file": "./learning/gap_analyzer.py",
+      "imports_internal": 2,
+      "imported_by_internal": 8,
+      "total": 10
+    },
+    {
+      "file": "./learning/knowledge_expander.py",
+      "imports_internal": 2,
+      "imported_by_internal": 8,
+      "total": 10
+    },
+    {
+      "file": "./learning/self_improvement.py",
+      "imports_internal": 2,
+      "imported_by_internal": 8,
+      "total": 10
+    },
+    {
+      "file": "./learning/system_introspection.py",
+      "imports_internal": 0,
+      "imported_by_internal": 10,
+      "total": 10
+    },
+    {
+      "file": "./.ima/stability_checkpoint/ima_master_runtime.py",
+      "imports_internal": 9,
+      "imported_by_internal": 0,
+      "total": 9
+    },
+    {
+      "file": "./founder/executive_ai/action_engine/action_executor.py",
+      "imports_internal": 8,
+      "imported_by_internal": 1,
+      "total": 9
+    },
+    {
+      "file": "./learning/action_engine.py",
+      "imports_internal": 0,
+      "imported_by_internal": 9,
+      "total": 9
+    },
+    {
+      "file": "./learning/improvement_engine.py",
+      "imports_internal": 1,
+      "imported_by_internal": 8,
+      "total": 9
+    },
+    {
+      "file": "./learning/self_manager.py",
+      "imports_internal": 1,
+      "imported_by_internal": 8,
+      "total": 9
+    },
+    {
+      "file": "./learning/system_improvement_memory.py",
+      "imports_internal": 0,
+      "imported_by_internal": 9,
+      "total": 9
+    },
+    {
+      "file": "./learning/knowledge_fusion.py",
+      "imports_internal": 2,
+      "imported_by_internal": 7,
+      "total": 9
+    },
+    {
+      "file": "./snapshots/ima_system_working_20260709.py",
+      "imports_internal": 9,
+      "imported_by_internal": 0,
+      "total": 9
+    },
+    {
+      "file": "./founder/executive_ai/competitive_intelligence/strategy_engine.py",
+      "imports_internal": 6,
+      "imported_by_internal": 2,
+      "total": 8
+    },
+    {
+      "file": "./learning/learning_router.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/self_learning.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/world_graph_updater.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/provenance_store.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/web_knowledge_collector.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/source_registry.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/sources/source_learning_daemon.py",
+      "imports_internal": 8,
+      "imported_by_internal": 0,
+      "total": 8
+    },
+    {
+      "file": "./learning/sources/source_generator.py",
+      "imports_internal": 1,
+      "imported_by_internal": 7,
+      "total": 8
+    },
+    {
+      "file": "./learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "imports_internal": 8,
+      "imported_by_internal": 0,
+      "total": 8
+    }
+  ],
+  "runtime_connections": {
+    "./production_server.py": {
+      "imports": [],
+      "imported_by": []
+    },
+    "./IMA_START.py": {
+      "imports": [
+        "./api_boot_connector.py",
+        "./boot_integrity_reporter.py",
+        "./canonical_boot_guard.py"
+      ],
+      "imported_by": [
+        "./boot/IMA_ENTRYPOINT.py"
+      ]
+    },
+    "./ima_master_runtime.py": {
+      "imports": [
+        "./brain_sync.py",
+        "./connectors/llm/__init__.py",
+        "./connectors/llm/auto_runtime.py",
+        "./connectors/llm/ima_pipeline.py",
+        "./connectors/llm/router.py",
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_question_engine.py",
+        "./ima_system.py",
+        "./learning/knowledge_answer_builder.py",
+        "./learning/knowledge_expansion_engine.py",
+        "./learning/knowledge_graph_retrieval.py",
+        "./learning/learning_loop.py",
+        "./memory/context.py",
+        "./skills/__init__.py",
+        "./skills/intent.py",
+        "./skills/router.py",
+        "./truth_engine.py"
+      ],
+      "imported_by": [
+        "./.ima/chatgpt_termux_bridge/mcp_server.py",
+        "./.ima/server_WORKING_20260718_135032.py",
+        "./.ima/stability_checkpoint/api_server.py",
+        "./.ima/stability_checkpoint/product_gateway_product_gateway.py",
+        "./api/server.py",
+        "./archive/product_gateway_before_founder_bridge.py",
+        "./build_ima_world_learning_engine.py",
+        "./connect_brain_network.py",
+        "./connect_universal_knowledge_pipeline.py",
+        "./connect_world_learning_engine.py",
+        "./finalize_brain_network.py",
+        "./fix_knowledge_priority.py",
+        "./fix_master_priority_order.py",
+        "./force_world_learning_priority.py",
+        "./ima_final_knowledge_upgrade.py",
+        "./ima_world_learning_final_patch.py",
+        "./move_expansion_before_brain.py",
+        "./move_knowledge_before_brain.py",
+        "./move_knowledge_before_brain_real.py",
+        "./move_knowledge_before_brain_real2.py",
+        "./product/gateway/product_gateway.py",
+        "./repair_expansion_position.py",
+        "./repair_knowledge_order.py"
+      ]
+    },
+    "./daily_evolution_scheduler.py": {
+      "imports": [],
+      "imported_by": []
+    },
+    "./IMA_START_SINGLE_ENTRY.py": {
+      "imports": [],
+      "imported_by": []
+    },
+    "./.ima/autonomy_runner.py": {
+      "imports": [],
+      "imported_by": []
+    },
+    "./.ima/system_supervisor.py": {
+      "imports": [],
+      "imported_by": []
+    },
+    "./.ima/snapshots/canonical_snapshot_1784028464/IMA_START.py": {
+      "imports": [
+        "./api_boot_connector.py",
+        "./boot_integrity_reporter.py",
+        "./canonical_boot_guard.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_lock_update_20260716_195546/IMA_START.py": {
+      "imports": [
+        "./api_boot_connector.py",
+        "./boot_integrity_reporter.py",
+        "./canonical_boot_guard.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_lock_update_20260716_195546/ima_master_runtime.py": {
+      "imports": [
+        "./brain_sync.py",
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_question_engine.py",
+        "./ima_system.py",
+        "./learning/knowledge_answer_builder.py",
+        "./learning/knowledge_expansion_engine.py",
+        "./learning/knowledge_graph_retrieval.py",
+        "./learning/learning_loop.py",
+        "./truth_engine.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_final_resync_20260716_200130/IMA_START.py": {
+      "imports": [
+        "./api_boot_connector.py",
+        "./boot_integrity_reporter.py",
+        "./canonical_boot_guard.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_final_resync_20260716_200130/ima_master_runtime.py": {
+      "imports": [
+        "./brain_sync.py",
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_question_engine.py",
+        "./ima_system.py",
+        "./learning/knowledge_answer_builder.py",
+        "./learning/knowledge_expansion_engine.py",
+        "./learning/knowledge_graph_retrieval.py",
+        "./learning/learning_loop.py",
+        "./truth_engine.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_change_20260716_200314/IMA_START.py": {
+      "imports": [
+        "./api_boot_connector.py",
+        "./boot_integrity_reporter.py",
+        "./canonical_boot_guard.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/snapshots/pre_change_20260716_200314/ima_master_runtime.py": {
+      "imports": [
+        "./brain_sync.py",
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_question_engine.py",
+        "./ima_system.py",
+        "./learning/knowledge_answer_builder.py",
+        "./learning/knowledge_expansion_engine.py",
+        "./learning/knowledge_graph_retrieval.py",
+        "./learning/learning_loop.py",
+        "./truth_engine.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/agi_evolution/runtime/ima_master_runtime.py": {
+      "imports": [
+        "./brain_sync.py",
+        "./connectors/llm/__init__.py",
+        "./connectors/llm/auto_runtime.py",
+        "./connectors/llm/ima_pipeline.py",
+        "./connectors/llm/router.py",
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_question_engine.py",
+        "./ima_system.py",
+        "./learning/knowledge_answer_builder.py",
+        "./learning/knowledge_expansion_engine.py",
+        "./learning/knowledge_graph_retrieval.py",
+        "./learning/learning_loop.py",
+        "./memory/context.py",
+        "./skills/__init__.py",
+        "./skills/intent.py",
+        "./skills/router.py",
+        "./truth_engine.py"
+      ],
+      "imported_by": []
+    },
+    "./.ima/stability_checkpoint/ima_master_runtime.py": {
+      "imports": [
+        "./conversation_layer.py",
+        "./founder/__init__.py",
+        "./founder/executive_ai/__init__.py",
+        "./founder/executive_ai/integration/background_bridge.py",
+        "./identity_context.py",
+        "./ima_brain.py",
+        "./ima_mom.py",
+        "./ima_system.py",
+        "./learning/learning_loop.py"
+      ],
+      "imported_by": []
+    }
+  }
+}
