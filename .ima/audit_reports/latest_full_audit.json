@@ -1,0 +1,310 @@
+{
+  "timestamp": 1784563139.8259656,
+  "canonical_registry": true,
+  "canonical_components": 11,
+  "active_python_files": 266,
+  "syntax_errors": [],
+  "duplicate_group_count": 34,
+  "duplicate_groups": [
+    {
+      "classification": "CANONICAL_RELATED",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/rebuild_index.py"
+      ]
+    },
+    {
+      "classification": "CANONICAL_RELATED",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/build_graph.py"
+      ]
+    },
+    {
+      "classification": "CANONICAL_RELATED",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/ima.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/autonomy/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/business_intelligence/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/code_evolution/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/connector_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/connectors/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/finance/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/governance/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/growth_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/identity_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/knowledge_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/persona_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/product_engine/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/reasoning/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/self_improvement/__init__.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/runtime/__init__.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_return_inject_20260714_181054.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_memory_return_fix_20260714_181022.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_master_memory_indent_fix_20260714_180623.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_master_memory_priority_final_20260714_180531.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_flow_fix_20260714_180246/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_flow_manual_20260714_180340/ima_master_runtime.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_brain_network/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_brain_sync_patch.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_brain_network_finalize/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/ima_master_runtime.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_learning_bus_upgrade.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_brain_network_finalize/brain_sync.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_knowledge_order_repair.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_knowledge_priority_fix.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_move_knowledge.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_move_knowledge_real.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_move_knowledge_real2.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_master_priority_order.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_world_learning_connection.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_world_learning_engine.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_expansion_move.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_expansion_position_fix.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_world_learning_final.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_world_priority.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/server_WORKING_20260718_135032.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/api_server.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_context_connect_20260714_174305/server.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/server.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/server.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_memory_fastpath_verified_20260718_140154.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_read_fastpath_20260718_140309.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_move_memory_fastpath_verified_20260718_140707.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_true_memory_fastpath_20260718_140832.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_true_memory_fastpath_verified_20260718_140921.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_result_fix_20260718_141319.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_memory_fastpath_verified_20260718_141739.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_structural_fix_20260718_141823.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_undefined_result_fix_20260718_141637.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_full_memory_changes_restore_20260718_142141.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_clean_memory_response_verified_20260718_142106.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_remove_all_added_memory_fastpaths_20260718_142239.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_ast_1784374581.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_atomic_20260718_143520.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_atomic_20260718_143526.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_exact_1784374689.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_final_1784374777.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_fix_20260718_143346.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_reorder_20260718_143152.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_except_fix_1784375359.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_cleanup_1784375334.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v2_1784375727.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v3_1784375747.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v4_1784375771.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_knowledge_final/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_universal_pipeline.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_knowledge_pipeline_final/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_knowledge_response/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pipeline_backup/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_before_knowledge_upgrade_final.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/post_memory_read_fastpath_verified_20260718_140322.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/pre_move_memory_fastpath_20260718_140647.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_1784375403.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_ast_1784375434.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_final_gate_1784375947.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_brain_network/memory_bus.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_brain_network_finalize/memory_bus.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/runtime/memory_bus.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_intent_emotion_1784040378/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_context_connect_20260714_174305/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/ima_master_runtime.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_mom.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/ima_mom.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_mom.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/ima_mom.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/ima_mom.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/conversation_layer.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_context_connect_20260714_174305/conversation_layer.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/conversation_layer.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/conversation_layer.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_conversation_core/ima_system.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175701/ima_system.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175727/ima_system.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_system.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_context_connect_20260714_174305/identity_context.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/identity_context.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_system_bridge_1784040641/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_system_priority_20260714_175254/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_system_priority_patch_1784040810/ima_master_runtime.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_master_memory_priority_20260714_180052/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175701/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_priority_20260714_175727/ima_master_runtime.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_system_priority_20260714_175521/ima_master_runtime.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_brain_network/ima_brain.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/backup_brain_network_finalize/ima_brain.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/ima_brain.py"
+      ]
+    },
+    {
+      "classification": "CANONICAL_RELATED",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py"
+      ]
+    },
+    {
+      "classification": "ACTIVE_CODE",
+      "files": [
+        "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py",
+        "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py"
+      ]
+    }
+  ],
+  "boot": true,
+  "boot_output": "   \"file\": \"kernel/runtime/CANONICAL/python_bridge.py\",\n        \"score\": 350,\n        \"reasons\": [\n          \"canonical_runtime\",\n          \"boot\"\n        ]\n      },\n      \"next\": \"ima_master_runtime\"\n    },\n    \"IMA_PARTNERSHIP_FIRST_CYCLE\": {\n      \"context\": true,\n      \"history\": true,\n      \"intent\": true,\n      \"autonomous_analysis\": true,\n      \"fact_inference_uncertainty_separation\": true,\n      \"risk_and_contradiction_check\": true,\n      \"shared_plan\": true,\n      \"minimal_necessary_delegation\": true,\n      \"action\": true,\n      \"verification\": true,\n      \"learning\": true\n    }\n  },\n  \"brain\": {\n    \"time\": 1784548108.770084,\n    \"steps\": [\n      {\n        \"job\": \"continuity_engine.py\",\n        \"status\": \"ok\",\n        \"output\": \"{\\n  \\\"time\\\": 1784548108.8190992,\\n  \\\"event\\\": \\\"cycle_check\\\",\\n  \\\"current_state\\\": \\\"running\\\",\\n  \\\"next_state\\\": \\\"continue\\\",\\n  \\\"handoff_ready\\\": true\\n}\\n\"\n      },\n      {\n        \"job\": \"repair_engine.py\",\n        \"status\": \"ok\",\n        \"output\": \"{\\n  \\\"time\\\": 1784548108.882455,\\n  \\\"missing\\\": [],\\n  \\\"repair_needed\\\": false,\\n  \\\"status\\\": \\\"clean\\\"\\n}\\n\"\n      },\n      {\n        \"job\": \"goal_engine.py\",\n        \"status\": \"ok\",\n        \"output\": \"{\\n  \\\"time\\\": 1784548108.947028,\\n  \\\"priority\\\": \\\"system_stability\\\",\\n  \\\"goals\\\": [\\n    \\\"maintain_runtime\\\",\\n    \\\"improve_capabilities\\\",\\n    \\\"validate_modules\\\",\\n    \\\"expand_product_layer\\\"\\n  ],\\n  \\\"next_action\\\": \\\"maintain_runtime\\\"\\n}\\n\"\n      }\n    ]\n  },\n  \"decision\": {\n    \"time\": 1784562940.9699793,\n    \"current\": \"continue\",\n    \"next_action\": \"maintain_runtime\",\n    \"priority\": \"system_stability\",\n    \"vision_alignment\": \"required\",\n    \"vision_verified\": true\n  },\n  \"handoff\": \"kernel_ready\"\n}\nVALIDATION_OK\n[OK] CANONICAL POLICY VERIFIED\n[OK] HASH VERIFIED\n[OK] FALLBACK DISABLED\n[OK] CANONICAL REGISTRY VERIFIED\n=== IMA SINGLE ENTRY ===\nKERNEL: kernel/runtime/CANONICAL/python_bridge.py\nHANDOFF: ima_master_runtime\n=== IMA SINGLE ENTRY COMPLETE ===\n",
+  "registry_errors": [],
+  "status": "STABLE"
+}
