@@ -1,0 +1,15 @@
+{
+  "status": "READY",
+  "canonical": true,
+  "snapshot": "canonical_ready_1784650292",
+  "snapshot_path": "/data/data/com.termux/files/home/ima_kernel/.ima/canonical_snapshots/canonical_ready_1784650292",
+  "diagnostic_report": "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784649990.json",
+  "git_commit": "7858462b67e470e65a08baa915875aa9fadaaf87",
+  "created_at": 1784650294.5057428,
+  "recovery_policy": {
+    "on_runtime_failure": "restore_canonical_snapshot",
+    "on_boot_failure": "restore_canonical_snapshot",
+    "on_integrity_failure": "restore_canonical_snapshot",
+    "on_failed_validation": "restore_canonical_snapshot"
+  }
+}
