@@ -1,0 +1,10 @@
+{
+  "platform":"mobile",
+  "sdk":"product.apps.shared.gateway_client",
+  "connection":"gateway",
+  "targets":[
+    "android",
+    "ios"
+  ],
+  "status":"development"
+}

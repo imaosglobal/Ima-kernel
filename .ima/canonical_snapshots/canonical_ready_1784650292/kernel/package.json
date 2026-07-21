@@ -1,0 +1,25 @@
+{
+  "name": "@mom-os1/ima-core",
+  "main": "runtime/server.js",
+  "scripts": {
+    "start": "node runtime/autonomous_runtime.js",
+    "prepublishOnly": "node runtime/KERNEL_RELEASE_GATE.js"
+  },
+  "bin": {
+    "ima": "cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.13",
+  "description": "",
+  "dependencies": {
+    "acorn": "^8.16.0",
+    "escodegen": "^2.1.0",
+    "ima-core-saas": "^2.8.12"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

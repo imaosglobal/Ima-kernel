@@ -1,0 +1,23 @@
+{
+  "ima_master_runtime": [
+    "answer_builder",
+    "ima_system"
+  ],
+  "ima_system": [
+    "answer_builder"
+  ],
+  "answer_builder": [
+    "ima_master_runtime"
+  ],
+  "truth_engine": [],
+  "decision_engine": [
+    "evolution_brain"
+  ],
+  "evolution_brain": [
+    "decision_engine"
+  ],
+  "ima_question_engine": [],
+  "reasoning_layer": [
+    "evolution_brain"
+  ]
+}
