@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -e
+
+echo "[GIT] running IMA boot validation..."
+
+python .ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py \
+  > "$HOME/ima_git_boot.log"
+
+tail -n 8 "$HOME/ima_git_boot.log"
+
+echo "[GIT] pre-push OK"

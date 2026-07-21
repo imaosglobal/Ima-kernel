@@ -1,0 +1,621 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import sys
+import time
+import subprocess
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+DIAGNOSTICS_DIR = BASE_DIR / ".ima" / "diagnostics"
+
+MAX_RETRIES = 3
+
+# הדוח שסיפקת
+REPORT_PATH = DIAGNOSTICS_DIR / "product_diagnostic_1784639884.json"
+
+# שמות אפשריים של מנגנוני תיקון
+REPAIR_NAMES = [
+    "repair_engine.py",
+    "auto_repair.py",
+    "repair.py",
+    "self_repair.py",
+    "system_repair.py",
+]
+
+# שמות אפשריים של דיאגנוסטיקה
+DIAGNOSTIC_NAMES = [
+    "product_diagnostic.py",
+    "run_product_diagnostic.py",
+    "diagnostic.py",
+    "diagnostics.py",
+    "product_diagnostics.py",
+]
+
+
+def log(message):
+    print(
+        f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}",
+        flush=True
+    )
+
+
+# ============================================================
+# JSON
+# ============================================================
+
+def load_report():
+    if not REPORT_PATH.exists():
+        log(f"[ERROR] Report not found: {REPORT_PATH}")
+        return None
+
+    try:
+        with REPORT_PATH.open("r", encoding="utf-8") as f:
+            return json.load(f)
+
+    except Exception as e:
+        log(f"[ERROR] Cannot load report: {e}")
+        return None
+
+
+# ============================================================
+# RECURSIVE SEARCH
+# ============================================================
+
+def find_values(obj, key):
+    result = []
+
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == key:
+                result.append(v)
+
+            result.extend(find_values(v, key))
+
+    elif isinstance(obj, list):
+        for item in obj:
+            result.extend(find_values(item, key))
+
+    return result
+
+
+def find_failed_checks(obj):
+    failures = []
+
+    if isinstance(obj, dict):
+
+        name = obj.get("name")
+        ok = obj.get("ok")
+
+        if name is not None and ok is False:
+            failures.append(obj)
+
+        for value in obj.values():
+            failures.extend(find_failed_checks(value))
+
+    elif isinstance(obj, list):
+
+        for item in obj:
+            failures.extend(find_failed_checks(item))
+
+    return failures
+
+
+def find_partial_stages(obj):
+    partials = []
+
+    if isinstance(obj, dict):
+
+        status = obj.get("status")
+
+        if status == "PARTIAL":
+            partials.append(obj)
+
+        for value in obj.values():
+            partials.extend(find_partial_stages(value))
+
+    elif isinstance(obj, list):
+
+        for item in obj:
+            partials.extend(find_partial_stages(item))
+
+    return partials
+
+
+# ============================================================
+# VALIDATION
+# ============================================================
+
+def validate_report(report):
+
+    problems = []
+
+    if not isinstance(report, dict):
+        return ["report is not a JSON object"]
+
+    # ----------------------------
+    # SUMMARY
+    # ----------------------------
+
+    summaries = find_values(report, "summary")
+
+    if summaries:
+
+        summary = summaries[-1]
+
+        if isinstance(summary, dict):
+
+            failed = summary.get("FAILED", 0)
+            missing = summary.get("MISSING", 0)
+
+            if failed > 0:
+                problems.append(f"FAILED={failed}")
+
+            if missing > 0:
+                problems.append(f"MISSING={missing}")
+
+    # ----------------------------
+    # VALIDATION FLAGS
+    # ----------------------------
+
+    validation_ok = find_values(report, "validation_ok")
+
+    for value in validation_ok:
+
+        if value is False:
+            problems.append("validation_ok=false")
+
+    # ----------------------------
+    # FAILED CHECKS
+    # ----------------------------
+
+    failed_checks = find_failed_checks(report)
+
+    for check in failed_checks:
+
+        problems.append(
+            f"failed check: {check.get('name', 'unknown')}"
+        )
+
+    # ----------------------------
+    # PARTIAL STAGES
+    # ----------------------------
+
+    partials = find_partial_stages(report)
+
+    for partial in partials:
+
+        stage = partial.get("stage", "unknown")
+
+        problems.append(
+            f"partial stage: {stage}"
+        )
+
+    # ----------------------------
+    # STRING MARKERS
+    # ----------------------------
+
+    text = json.dumps(
+        report,
+        ensure_ascii=False
+    )
+
+    required_markers = [
+        "VALIDATION_OK",
+        "HASH VERIFIED",
+        "CANONICAL REGISTRY VERIFIED",
+    ]
+
+    for marker in required_markers:
+
+        if marker not in text:
+
+            problems.append(
+                f"{marker} marker missing"
+            )
+
+    return problems
+
+
+# ============================================================
+# AUTOMATIC SCRIPT DISCOVERY
+# ============================================================
+
+def discover_diagnostic_script():
+
+    # קודם חיפוש לפי שמות מוכרים
+    for name in DIAGNOSTIC_NAMES:
+
+        candidates = list(
+            BASE_DIR.rglob(name)
+        )
+
+        for candidate in candidates:
+
+            if candidate.is_file():
+
+                # לא לבחור את הסקריפט הנוכחי
+                if candidate.resolve() == Path(__file__).resolve():
+                    continue
+
+                return candidate
+
+    # אם אין שם מוכר, מחפשים קבצי Python שמכילים
+    # מילות זיהוי של הדיאגנוסטיקה
+    for candidate in BASE_DIR.rglob("*.py"):
+
+        if candidate.resolve() == Path(__file__).resolve():
+            continue
+
+        try:
+
+            text = candidate.read_text(
+                encoding="utf-8",
+                errors="ignore"
+            )
+
+        except Exception:
+            continue
+
+        score = 0
+
+        keywords = [
+            "product_diagnostic",
+            "diagnostic",
+            "CANONICAL REGISTRY VERIFIED",
+            "VALIDATION_OK",
+            "release_sync",
+            "authentication_identity",
+        ]
+
+        for keyword in keywords:
+
+            if keyword in text:
+                score += 1
+
+        if score >= 2:
+
+            return candidate
+
+    return None
+
+
+def discover_repair_engine():
+
+    for name in REPAIR_NAMES:
+
+        candidates = list(
+            BASE_DIR.rglob(name)
+        )
+
+        for candidate in candidates:
+
+            if candidate.is_file():
+
+                return candidate
+
+    return None
+
+
+# ============================================================
+# REPAIR
+# ============================================================
+
+def run_repair():
+
+    repair_engine = discover_repair_engine()
+
+    if repair_engine is None:
+
+        log("[INFO] No repair engine found.")
+
+        marker = (
+            BASE_DIR
+            / ".ima"
+            / "diagnostics"
+            / "repair_requested.json"
+        )
+
+        marker.parent.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        payload = {
+            "time": time.time(),
+            "reason": "diagnostic_validation_failure",
+            "report": str(REPORT_PATH),
+            "status": "repair_requested",
+        }
+
+        marker.write_text(
+            json.dumps(
+                payload,
+                indent=2,
+                ensure_ascii=False
+            ),
+            encoding="utf-8"
+        )
+
+        log(f"[INFO] Repair request written to: {marker}")
+
+        return False
+
+    log(f"[REPAIR] Running: {repair_engine}")
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(repair_engine),
+        ],
+        cwd=str(BASE_DIR),
+        text=True,
+        capture_output=True,
+    )
+
+    if result.stdout:
+        print(result.stdout)
+
+    if result.stderr:
+        print(
+            result.stderr,
+            file=sys.stderr
+        )
+
+    if result.returncode != 0:
+
+        log(
+            f"[ERROR] Repair failed with exit code "
+            f"{result.returncode}"
+        )
+
+        return False
+
+    log("[OK] Repair completed successfully.")
+
+    return True
+
+
+# ============================================================
+# RUN DIAGNOSTIC
+# ============================================================
+
+def run_diagnostic():
+
+    diagnostic = discover_diagnostic_script()
+
+    if diagnostic is None:
+
+        log(
+            "[ERROR] Could not automatically find "
+            "the real diagnostic script."
+        )
+
+        log(
+            "[INFO] Searching project for Python diagnostic files..."
+        )
+
+        for path in BASE_DIR.rglob("*.py"):
+
+            if ".git" not in str(path):
+
+                log(f"        {path}")
+
+        return False
+
+    log(
+        f"[DIAGNOSTIC] Running detected script: {diagnostic}"
+    )
+
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(diagnostic),
+        ],
+        cwd=str(BASE_DIR),
+        text=True,
+        capture_output=True,
+    )
+
+    if result.stdout:
+        print(result.stdout)
+
+    if result.stderr:
+        print(
+            result.stderr,
+            file=sys.stderr
+        )
+
+    if result.returncode != 0:
+
+        log(
+            f"[ERROR] Diagnostic exited with code "
+            f"{result.returncode}"
+        )
+
+        return False
+
+    return True
+
+
+# ============================================================
+# FIND NEWEST REPORT
+# ============================================================
+
+def find_latest_report():
+
+    if not DIAGNOSTICS_DIR.exists():
+
+        return None
+
+    reports = list(
+        DIAGNOSTICS_DIR.glob("*.json")
+    )
+
+    if not reports:
+
+        return None
+
+    return max(
+        reports,
+        key=lambda p: p.stat().st_mtime
+    )
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+
+    global REPORT_PATH
+
+    log("=" * 60)
+    log("IMA DIAGNOSTIC VALIDATOR / AUTO REPAIR")
+    log("=" * 60)
+
+    if not REPORT_PATH.exists():
+
+        latest = find_latest_report()
+
+        if latest:
+
+            REPORT_PATH = latest
+
+            log(
+                f"[INFO] Using newest report: "
+                f"{REPORT_PATH}"
+            )
+
+    for attempt in range(
+        1,
+        MAX_RETRIES + 1
+    ):
+
+        log("")
+        log(
+            f"================ ATTEMPT "
+            f"{attempt}/{MAX_RETRIES} ================"
+        )
+
+        report = load_report()
+
+        if report is None:
+
+            log(
+                "[ACTION] Cannot validate report."
+            )
+
+            run_repair()
+
+            if run_diagnostic():
+
+                newest = find_latest_report()
+
+                if newest:
+                    REPORT_PATH = newest
+
+            continue
+
+        problems = validate_report(report)
+
+        if not problems:
+
+            log("[OK] REPORT VALIDATION PASSED")
+            log("[OK] NO REPAIR REQUIRED")
+            log("[OK] SYSTEM IS READY")
+
+            return 0
+
+        log("[WARN] REPORT HAS PROBLEMS:")
+
+        for problem in problems:
+
+            log(
+                f"       - {problem}"
+            )
+
+        log(
+            "[ACTION] Starting repair procedure..."
+        )
+
+        run_repair()
+
+        log(
+            "[ACTION] Re-running diagnostic..."
+        )
+
+        if not run_diagnostic():
+
+            log(
+                "[ERROR] Diagnostic rerun failed."
+            )
+
+            continue
+
+        newest = find_latest_report()
+
+        if newest:
+
+            REPORT_PATH = newest
+
+            log(
+                f"[INFO] New report detected: "
+                f"{REPORT_PATH}"
+            )
+
+        time.sleep(1)
+
+    # ----------------------------
+    # FINAL VALIDATION
+    # ----------------------------
+
+    log("")
+    log("=" * 60)
+    log("FINAL VALIDATION")
+    log("=" * 60)
+
+    report = load_report()
+
+    if report is None:
+
+        log(
+            "[FAILED] No valid report available."
+        )
+
+        return 1
+
+    problems = validate_report(report)
+
+    if problems:
+
+        log(
+            "[FAILED] REPORT STILL HAS PROBLEMS:"
+        )
+
+        for problem in problems:
+
+            log(
+                f"         - {problem}"
+            )
+
+        return 1
+
+    log(
+        "[OK] FINAL VALIDATION PASSED"
+    )
+
+    log(
+        "[OK] REPORT IS CLEAN"
+    )
+
+    return 0
+
+
+if __name__ == "__main__":
+
+    sys.exit(
+        main()
+    )
+

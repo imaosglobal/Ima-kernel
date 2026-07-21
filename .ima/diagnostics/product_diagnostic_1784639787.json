@@ -1,0 +1,764 @@
+{
+  "timestamp": 1784639787,
+  "system": "IMA",
+  "engine": "IMA_PRODUCT_DIAGNOSTIC_ENGINE",
+  "results": [
+    {
+      "stage": "canonical_runtime",
+      "status": "READY",
+      "summary": "Canonical runtime verified.",
+      "details": {}
+    },
+    {
+      "stage": "compile",
+      "status": "READY",
+      "summary": "Active Python product/runtime paths compile.",
+      "details": {
+        "targets": [
+          "kernel",
+          ".ima/CANONICAL_AUTHORITY",
+          ".ima/agi_evolution",
+          "product",
+          "api",
+          "learning",
+          "companion"
+        ]
+      }
+    },
+    {
+      "stage": "user_entry_points",
+      "status": "READY",
+      "summary": "User entry-point inventory completed.",
+      "details": {
+        "found": {
+          "canonical": [
+            "IMA_START.py",
+            ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py"
+          ],
+          "api": [
+            "api"
+          ],
+          "frontend": [
+            "frontend",
+            "web",
+            "package.json"
+          ],
+          "mobile": [
+            "android",
+            "mobile"
+          ],
+          "voice": [
+            "product/voice"
+          ]
+        }
+      }
+    },
+    {
+      "stage": "authentication_identity",
+      "status": "PARTIAL",
+      "summary": "Authentication and identity implementation detected; live flow still requires validation.",
+      "details": {
+        "paths": [
+          "auth",
+          "product/identity"
+        ],
+        "marker_files": [
+          "/data/data/com.termux/files/home/ima_kernel/ima_daemon.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_lock.py",
+          "/data/data/com.termux/files/home/ima_kernel/truth_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_brain_network.py",
+          "/data/data/com.termux/files/home/ima_kernel/add_external_sources.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_AUDIT_REPORT.json",
+          "/data/data/com.termux/files/home/ima_kernel/daily_evolution.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_external_sources.py",
+          "/data/data/com.termux/files/home/ima_kernel/canonical_admission_guard.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_live_runtime_graph.json",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py",
+          "/data/data/com.termux/files/home/ima_kernel/daily_evolution_scheduler.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_external_registry.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_live_runtime_graph_clean.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/ima_sync_tree.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/ima_self_knowledge_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/backup_before_learning_bus_upgrade.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_true_memory_fastpath_20260718_140832.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/post_true_memory_fastpath_verified_20260718_140921.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_structural_fix_20260718_141823.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_path_scope_fix_20260718_141859.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/before_full_memory_changes_restore_20260718_142141.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_remove_memory_fastpath_v2_20260718_142337.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_dedup_latest_1784375651.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v2_1784375727.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v3_1784375747.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/before_memory_relevance_v4_1784375771.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/post_memory_read_fastpath_verified_20260718_140322.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_move_memory_fastpath_20260718_140647.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/post_move_memory_fastpath_verified_20260718_140707.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_result_fix_20260718_141319.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_memory_fastpath_undefined_result_fix_20260718_141637.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/post_memory_fastpath_verified_20260718_141739.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_clean_memory_response_20260718_142100.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/post_clean_memory_response_verified_20260718_142106.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_remove_all_added_memory_fastpaths_20260718_142239.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/pre_restore_path_calls_20260718_142308.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui.backup_1784029005/eslint.config.js",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui.backup_1784029005/package-lock.json",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui.backup_1784029005/package.json",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui/eslint.config.js",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui/package.json",
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui/package-lock.json",
+          "/data/data/com.termux/files/home/ima_kernel/learning/capability_map.json",
+          "/data/data/com.termux/files/home/ima_kernel/learning/safety_gate.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/source_registry.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/safety_gate.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/source_registry.py"
+        ]
+      }
+    },
+    {
+      "stage": "core_user_experience",
+      "status": "READY",
+      "summary": "Core UX surface inventory completed.",
+      "details": {
+        "files": [
+          "/data/data/com.termux/files/home/ima_kernel/ima-ui/src/components/dashboard/Dashboard.jsx",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/android/app/build/intermediates/navigation_json/debug/navigation.json",
+          "/data/data/com.termux/files/home/ima_kernel/android/app/build/intermediates/navigation_json/debug/navigation.json"
+        ]
+      }
+    },
+    {
+      "stage": "product_capabilities",
+      "status": "READY",
+      "summary": "Product modules and runtime references inventoried.",
+      "details": {
+        "modules": {
+          "PRODUCT_MANIFEST.json": {
+            "exists": true,
+            "type": "file"
+          },
+          "README.md": {
+            "exists": true,
+            "type": "file"
+          },
+          "__pycache__": {
+            "exists": true,
+            "type": "directory"
+          },
+          "adult_assistant": {
+            "exists": true,
+            "type": "directory"
+          },
+          "android": {
+            "exists": true,
+            "type": "directory"
+          },
+          "apps": {
+            "exists": true,
+            "type": "directory"
+          },
+          "childcare": {
+            "exists": true,
+            "type": "directory"
+          },
+          "clients": {
+            "exists": true,
+            "type": "directory"
+          },
+          "deployment": {
+            "exists": true,
+            "type": "directory"
+          },
+          "device": {
+            "exists": true,
+            "type": "directory"
+          },
+          "device_bridge": {
+            "exists": true,
+            "type": "directory"
+          },
+          "gateway": {
+            "exists": true,
+            "type": "directory"
+          },
+          "health": {
+            "exists": true,
+            "type": "directory"
+          },
+          "identity": {
+            "exists": true,
+            "type": "directory"
+          },
+          "launcher": {
+            "exists": true,
+            "type": "directory"
+          },
+          "mobile": {
+            "exists": true,
+            "type": "directory"
+          },
+          "product_runtime.py": {
+            "exists": true,
+            "type": "file"
+          },
+          "runtime": {
+            "exists": true,
+            "type": "directory"
+          },
+          "safety": {
+            "exists": true,
+            "type": "directory"
+          },
+          "sdk": {
+            "exists": true,
+            "type": "directory"
+          },
+          "update": {
+            "exists": true,
+            "type": "directory"
+          },
+          "version": {
+            "exists": true,
+            "type": "directory"
+          },
+          "voice": {
+            "exists": true,
+            "type": "directory"
+          },
+          "web": {
+            "exists": true,
+            "type": "directory"
+          }
+        },
+        "runtime_reference_files": [
+          "/data/data/com.termux/files/home/ima_kernel/ima_integration_status.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/server_WORKING_20260718_135032.py",
+          "/data/data/com.termux/files/home/ima_kernel/api/server.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/health/health_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/health/run_health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/launcher/product_launcher.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/deployment/deployment_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/version/version_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/apps/web/app.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/apps/mobile/app.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/apps/android/app.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/apps/ios/app.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/apps/linux/app.py",
+          "/data/data/com.termux/files/home/ima_kernel/demo/runtime/run_demo.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/repair_backup/server.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/stable_snapshot/server.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/stable_working_20260714/server.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/stable_after_context_connect_20260714_174305/server.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/stability_checkpoint/api_server.py"
+        ]
+      }
+    },
+    {
+      "stage": "backend_production_readiness",
+      "status": "READY",
+      "summary": "Backend, persistence and error handling inventoried.",
+      "details": {
+        "backend": [
+          "api",
+          "database"
+        ],
+        "persistence": [
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_engine_final.py",
+          "/data/data/com.termux/files/home/ima_kernel/truth_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/rebuild_knowledge_base.py",
+          "/data/data/com.termux/files/home/ima_kernel/truth_query.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_question_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/answer_builder.py",
+          "/data/data/com.termux/files/home/ima_kernel/system_truth_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py",
+          "/data/data/com.termux/files/home/ima_kernel/autonomous_core.js"
+        ],
+        "error_handling": [
+          "/data/data/com.termux/files/home/ima_kernel/ima_daemon.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_app.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_brain.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_chat.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_kernel.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_system.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_qge_v1.py",
+          "/data/data/com.termux/files/home/ima_kernel/_tmp_server.js",
+          "/data/data/com.termux/files/home/ima_kernel/ima_core_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/patch_memory_learning.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_sync_map.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_dependency_map.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_self_knowledge_bridge.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_ima_fusion_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_fusion_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_ima_orchestrator.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_guard.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_founder_bridge.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_integration_status.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_system_snapshot.py",
+          "/data/data/com.termux/files/home/ima_kernel/brain_sync.py",
+          "/data/data/com.termux/files/home/ima_kernel/unify_memory_and_knowledge.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_knowledge_final.py",
+          "/data/data/com.termux/files/home/ima_kernel/patch_knowledge_pipeline_final.py",
+          "/data/data/com.termux/files/home/ima_kernel/move_knowledge_before_brain_real2.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_order.py",
+          "/data/data/com.termux/files/home/ima_kernel/fix_master_priority_order.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/force_world_learning_priority.py",
+          "/data/data/com.termux/files/home/ima_kernel/move_expansion_before_brain.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_expansion_position.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_real_source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/patch_llm_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_engine_final.py",
+          "/data/data/com.termux/files/home/ima_kernel/system_tree_analyzer.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_ima_evolution.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_final_architecture_lock.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_START.py",
+          "/data/data/com.termux/files/home/ima_kernel/rename_registry_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_status.py",
+          "/data/data/com.termux/files/home/ima_kernel/truth_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_self_test.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_core_integration_audit.py",
+          "/data/data/com.termux/files/home/ima_kernel/memory_fusion_connect.py",
+          "/data/data/com.termux/files/home/ima_kernel/boot_integrity_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_best_answer_exact.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_unified_validation.py",
+          "/data/data/com.termux/files/home/ima_kernel/rebuild_web_knowledge_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/finalize_web_engine_lock.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_inspector.py",
+          "/data/data/com.termux/files/home/ima_kernel/conversation_layer.before_memory_filter_fix.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_brain_network.py",
+          "/data/data/com.termux/files/home/ima_kernel/finalize_brain_network.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_knowledge_response.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_evolution_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_core_pipeline_repair.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_final_knowledge_upgrade.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_knowledge_store.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_full_system_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_universal_knowledge_pipeline.py",
+          "/data/data/com.termux/files/home/ima_kernel/fix_knowledge_priority.py",
+          "/data/data/com.termux/files/home/ima_kernel/move_knowledge_before_brain.py",
+          "/data/data/com.termux/files/home/ima_kernel/move_knowledge_before_brain_real.py",
+          "/data/data/com.termux/files/home/ima_kernel/kernel.js",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_search_v2.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_knowledge_system.py",
+          "/data/data/com.termux/files/home/ima_kernel/server.js",
+          "/data/data/com.termux/files/home/ima_kernel/server_backup.js",
+          "/data/data/com.termux/files/home/ima_kernel/ima_architecture_guard.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_ima_world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_chat_WORKING_CHAT.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_chat_WORKING_BEFORE_CHAT.py",
+          "/data/data/com.termux/files/home/ima_kernel/conversation_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/identity_context.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_fusion_audit.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_core_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_deep_integration_scan.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_master_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/repair_memory_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_world_learning_final_patch.py",
+          "/data/data/com.termux/files/home/ima_kernel/rebuild_source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/truth_query.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_real_source_learning.py",
+          "/data/data/com.termux/files/home/ima_kernel/full_system_lock.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_state_audit.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_memory_unification_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_question_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/runtime_knowledge_guard.py",
+          "/data/data/com.termux/files/home/ima_kernel/connect_guardian_autofix.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_master.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_diagnosis.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_fast_repair.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_git_diff.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_self_protection.py",
+          "/data/data/com.termux/files/home/ima_kernel/founder_dependency_graph.py",
+          "/data/data/com.termux/files/home/ima_kernel/founder_core_test.py"
+        ]
+      }
+    },
+    {
+      "stage": "safety_privacy",
+      "status": "READY",
+      "summary": "Safety and privacy surfaces inventoried.",
+      "details": {
+        "paths": [
+          "safety",
+          "product/safety",
+          "governance",
+          "child_safety"
+        ]
+      }
+    },
+    {
+      "stage": "deployment",
+      "status": "READY",
+      "summary": "Deployment configuration inventoried.",
+      "details": {
+        "files": [
+          "render.yaml",
+          "Dockerfile",
+          "docker-compose.yml",
+          "requirements.txt",
+          "package.json"
+        ]
+      }
+    },
+    {
+      "stage": "observability",
+      "status": "READY",
+      "summary": "Health, monitoring and recovery surfaces inventoried.",
+      "details": {
+        "files": [
+          "/data/data/com.termux/files/home/ima_kernel/canonical_health_check.sh",
+          "/data/data/com.termux/files/home/ima_kernel/connect_watchdog_boot.sh",
+          "/data/data/com.termux/files/home/ima_kernel/ima_HEALTHY_MEMORY_V2_FINAL.tar.gz",
+          "/data/data/com.termux/files/home/ima_kernel/lock_canonical_supervisor.sh",
+          "/data/data/com.termux/files/home/ima_kernel/create_canonical_watchdog.sh",
+          "/data/data/com.termux/files/home/ima_kernel/repair_canonical_watchdog_state.sh",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_metrics.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_ima_supervisor_layer.sh",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/healthy_master_hashes.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/boot_health.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/system_supervisor.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/system_supervisor_log.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/boot_health.json",
+          "/data/data/com.termux/files/home/ima_kernel/learning/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/api/health_test.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/health/health_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/product/health/run_health_check.py",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/logs/health.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/KERNEL_SUPERVISOR_V2.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/KERNEL_SUPERVISOR_V3.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/KERNEL_SUPERVISOR_V4.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/_quarantine_supervisors/SUPERVISOR.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/_quarantine_supervisors/KERNEL_SUPERVISOR.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/CANONICAL/IMA_WATCHDOG.py",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/_graveyard/_legacy/watchdog.lock",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/_graveyard/_legacy/watchdog.sh",
+          "/data/data/com.termux/files/home/ima_kernel/tools/product_audit/create_product_health_layer.sh",
+          "/data/data/com.termux/files/home/ima_kernel/ima_product/monitoring/MONITORING_PLAN.md",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/SUPERVISOR_STATE.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/SUPERVISOR_POLICY.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/WATCHDOG_MODE.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime/ima_health.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/reports/product_health_report.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/chatgpt_termux_bridge/health_test.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/supervisor.sh",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/watchdog.sh",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/.supervisor.lock",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/.watchdog.lock",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/supervisor.pid",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/guardian/ima_guardian_controller.before_metrics.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/logs/nohup-supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/logs/nohup-watchdog.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/automation/logs/watchdog.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/health_monitor.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/ima_supervisor.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/health_state.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/supervisor_state.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/agi_evolution/runtime/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/api/health_test.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_SUPERVISOR.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/canonical_snapshot_1784028464/IMA_WATCHDOG.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/agi_evolution/runtime/health_monitor.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/agi_evolution/runtime/ima_supervisor.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/agi_evolution/runtime/health_state.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/agi_evolution/runtime/supervisor_state.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/agi_evolution/runtime/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/logs/health.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/KERNEL_SUPERVISOR_V2.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/KERNEL_SUPERVISOR_V3.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/KERNEL_SUPERVISOR_V4.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/_quarantine_supervisors/SUPERVISOR.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/_quarantine_supervisors/KERNEL_SUPERVISOR.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/CANONICAL/IMA_WATCHDOG.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/_graveyard/_legacy/watchdog.lock",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/_graveyard/_legacy/watchdog.sh",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor_stdout.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/CANONICAL_CHAIN_ORCHESTRATOR/logs/supervisor.log",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/releases/render_sync/20260713_180937/local_health.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/releases/render_sync/20260713_180937/render_health.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/releases/render_activation/20260713_175739/RENDER_HEALTH_CHECK.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/releases/render_activation/fast_diagnostic_20260713_175944/_health.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py"
+        ]
+      }
+    },
+    {
+      "stage": "payments_monetization",
+      "status": "READY",
+      "summary": "Monetization surfaces inventoried.",
+      "details": {
+        "files": [
+          "/data/data/com.termux/files/home/ima_kernel/project_map.txt",
+          "/data/data/com.termux/files/home/ima_kernel/build_investor_readiness_v2.py",
+          "/data/data/com.termux/files/home/ima_kernel/package.json",
+          "/data/data/com.termux/files/home/ima_kernel/ima_full_file_map.txt",
+          "/data/data/com.termux/files/home/ima_kernel/package-lock.json",
+          "/data/data/com.termux/files/home/ima_kernel/runtime_links.txt",
+          "/data/data/com.termux/files/home/ima_kernel/ima_directory_map_before_canonical_move.json",
+          "/data/data/com.termux/files/home/ima_kernel/establish_ima_global_rights.sh",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/broken_files.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/clean_files.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/index.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/learning_report.md",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/tree.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/ima_sync_tree.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/ima_self_knowledge_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/investor_package/PITCH_DECK.md",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/install_ima_software_memory.sh",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/logs/duplicates.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/logs/files.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/plugins/registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/releases/snapshots/1778586693/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/release_freeze/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/_legacy_releases/v1778001671191/manifest.json",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/dist/v1.0.0/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/registry/connectors.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/registry/categories.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/scripts/add_connector.py",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/software_knowledge.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/software_memory.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/capability_graph.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/concepts_memory.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/compressed_memory.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/intelligence/knowledge_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/intelligence/pattern_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/intelligence/self_expansion_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/graph/capability_graph.json",
+          "/data/data/com.termux/files/home/ima_kernel/connectors/knowledge/universal_graph/knowledge_graph.json",
+          "/data/data/com.termux/files/home/ima_kernel/founder/data/market_analysis.json",
+          "/data/data/com.termux/files/home/ima_kernel/founder/executive_ai/strategy/market_analyzer.py",
+          "/data/data/com.termux/files/home/ima_kernel/tools/product_audit/create_production_infrastructure_layer.sh",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/IMA_GLOBAL_PRODUCT_MAP.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/ima_tree.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/governance/IMA_GLOBAL_PRODUCT_MAP.json.backup_before_cleanup",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime/full_system_lock.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime/dependency_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/reports/system_map.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/provenance_audit/IMA_ORIGIN_PROVENANCE_AUDIT_20260718T173558Z.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639091.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639091.md",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639465.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639465.md",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639740.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/diagnostics/product_diagnostic_1784639740.md",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/vision_governance_reports/scheduler_audit_20260718_175920.txt",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383852.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383890.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784384850.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784563607.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784563657.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/runtime_snapshots/product_before_finalize_20260713_165823/android/.github/workflows/android-apk.yml",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383852.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383890.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784384850.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/logs/duplicates.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/logs/files.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/plugins/registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/runtime/KERNEL_AUTONOMOUS_LOOP.js",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/releases/snapshots/1778586693/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/release_freeze/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/_legacy_releases/v1778001671191/manifest.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_173653/kernel/dist/v1.0.0/core/system_registry.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/system_mapping_mechanisms_audit.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383852.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784383890.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/snapshots/global_awareness_1784384850.json",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/snapshots/stable_baseline_20260720_051823/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/logs/global_awareness_chronological.jsonl",
+          "/data/data/com.termux/files/home/ima_kernel/android/.github/workflows/android-apk.yml",
+          "/data/data/com.termux/files/home/ima_kernel/.github/workflows/android-apk.yml",
+          "/data/data/com.termux/files/home/ima_kernel/.github/workflows/ima-production.yml",
+          "/data/data/com.termux/files/home/ima_kernel/.github/workflows/integrity.yml"
+        ]
+      }
+    },
+    {
+      "stage": "performance_reliability",
+      "status": "READY",
+      "summary": "Performance and reliability controls inventoried.",
+      "details": {
+        "files": [
+          "/data/data/com.termux/files/home/ima_kernel/ima_app.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_system.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_sync_map.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_dependency_map.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_runtime_map.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_real_source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_START.py",
+          "/data/data/com.termux/files/home/ima_kernel/rename_registry_layer.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_status.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_self_test.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_final_fusion.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/rebuild_web_knowledge_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_full_inventory.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_ima_world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/rebuild_source_manager.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_real_source_learning.py",
+          "/data/data/com.termux/files/home/ima_kernel/build_web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/fix_audit_scan.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_master.py",
+          "/data/data/com.termux/files/home/ima_kernel/install_ima_guardian.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_controller.py",
+          "/data/data/com.termux/files/home/ima_kernel/optimize_audit.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_watch.py",
+          "/data/data/com.termux/files/home/ima_kernel/install_ima_llm_bridge.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_external_sources.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_full_audit.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_smart_mode.py",
+          "/data/data/com.termux/files/home/ima_kernel/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py",
+          "/data/data/com.termux/files/home/ima_kernel/upgrade_guardian_runtime.py",
+          "/data/data/com.termux/files/home/ima_kernel/ima_guardian_core.py",
+          "/data/data/com.termux/files/home/ima_kernel/guardian_release_pipeline.py",
+          "/data/data/com.termux/files/home/ima_kernel/fix_guardian_release_no_change_commit.py",
+          "/data/data/com.termux/files/home/ima_kernel/.ima/source_manager_broken_backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/self_inspection_cycle.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/_backup_self_improvement_cycle_20260718_211802.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/self_improvement_cycle.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/_backup_status_fix_20260718_215252.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/_backup_allowlist_filter_20260718_220529.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning/_backup_runtime_allowlist_integration_20260718_220711.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_stable_20260715_1633/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122602/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_before_meta_orchestrator/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/ima_ultimate_orchestrator.js",
+          "/data/data/com.termux/files/home/ima_kernel/kernel/reload.js",
+          "/data/data/com.termux/files/home/ima_kernel/snapshots/ima_system_working_20260709.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_repair_1784122578/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_1784122661/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/source_router.before_compile_fix.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/world_learning_engine.before_compile_fix.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/source_router.before_import_cleanup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_final_clean_1784122759/world_learning_engine.before_import_cleanup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/system_introspection.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/source_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/world_learning_engine.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/web_knowledge_router.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/web_knowledge_collector.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/web_knowledge_collector.backup.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/web_knowledge_collector_final_backup_1784119874.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/sources/duckduckgo.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/sources/arxiv.py",
+          "/data/data/com.termux/files/home/ima_kernel/learning_backup_adaptive_1784122898/sources/source_inspector.py"
+        ]
+      }
+    },
+    {
+      "stage": "release_pipeline",
+      "status": "READY",
+      "summary": "Build, test and release surfaces inventoried.",
+      "details": {
+        "paths": [
+          ".github/workflows",
+          "package.json"
+        ]
+      }
+    },
+    {
+      "stage": "real_user_validation",
+      "status": "PARTIAL",
+      "summary": "Static prerequisites exist; public live end-to-end validation remains required.",
+      "details": {
+        "required": [
+          "IMA_START.py",
+          ".ima/governance/IMA_PRODUCT_RELEASE_MAP.json"
+        ]
+      }
+    },
+    {
+      "stage": "release_sync",
+      "status": "REPAIRED",
+      "summary": "Release map synchronized to current HEAD.",
+      "details": {
+        "previous": "1bf8b9cc8c3afd653f76c3f95ba0b7c64a571734",
+        "current": "f81dc7135a75121d2137c9830c4a9111580f1092"
+      }
+    }
+  ],
+  "summary": {
+    "READY": 12,
+    "REPAIRED": 1,
+    "PARTIAL": 2,
+    "MISSING": 0,
+    "FAILED": 0
+  }
+}

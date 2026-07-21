@@ -1,0 +1,26 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -e
+
+echo "[GIT] validating active Python..."
+
+python -m compileall -q kernel .ima/CANONICAL_AUTHORITY .ima/agi_evolution
+
+python - <<'PY'
+import json, hashlib
+from pathlib import Path
+
+p = Path(".ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json")
+d = json.loads(p.read_text())
+
+for x in d["allowed_components"]:
+    f = Path(x["file"])
+    if not f.exists():
+        raise SystemExit(f"MISSING: {f}")
+    h = hashlib.sha256(f.read_bytes()).hexdigest()
+    if h != x["sha256"]:
+        raise SystemExit(f"HASH MISMATCH: {f}")
+
+print("[GIT] canonical registry OK")
+PY
+
+echo "[GIT] pre-commit OK"
