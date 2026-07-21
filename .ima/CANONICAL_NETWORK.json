@@ -1,0 +1,44 @@
+{
+  "system": "IMA",
+  "status": "READY",
+  "created_at": 1784650421.7775247,
+  "authority": {
+    "index": ".ima/CANONICAL_SYSTEM_INDEX.json",
+    "index_sha256": "2712cfdddfa3ea3b699b32d97611f3618041823ccca61961d7bf9c53a7339028"
+  },
+  "nodes": [
+    {
+      "name": "CANONICAL_AUTHORITY",
+      "path": ".ima/CANONICAL_AUTHORITY",
+      "role": "governance_and_integrity"
+    },
+    {
+      "name": "CANONICAL_READY",
+      "path": ".ima/CANONICAL_READY.json",
+      "role": "stable_snapshot_state"
+    },
+    {
+      "name": "RECOVERY",
+      "path": ".ima/recovery/RECOVERY_TARGET.json",
+      "role": "recovery_target"
+    },
+    {
+      "name": "CANONICAL_SYSTEM_INDEX",
+      "path": ".ima/CANONICAL_SYSTEM_INDEX.json",
+      "role": "system_discovery"
+    }
+  ],
+  "canonical_components": [
+    "kernel/runtime/CANONICAL/python_bridge.py",
+    ".ima/agi_evolution/runtime/ima_boot_gate.py",
+    ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+    "IMA_START_SINGLE_ENTRY.py",
+    ".ima/agi_evolution/runtime/cognitive_pipeline.py",
+    ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+    ".ima/CANONICAL_AUTHORITY/maintenance/IMA_AUTOMATED_MAINTENANCE/IMA_AUTOMATED_MAINTENANCE.py"
+  ]
+}
