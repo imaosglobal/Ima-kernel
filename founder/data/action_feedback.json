@@ -29,5 +29,41 @@
     "status": "monitoring",
     "signals": [],
     "lesson": null
+  },
+  {
+    "time": 1784735934.4308276,
+    "action": {
+      "action": "create_personal_outreach",
+      "target": "OpenAI AI startup",
+      "reason": "high opportunity score",
+      "score": 70,
+      "signals": [
+        "strategic entity",
+        "AI alignment",
+        "growth potential",
+        "previous positive signal",
+        "entity positive historical signal"
+      ]
+    },
+    "status": "outreach_ready",
+    "target": "OpenAI AI startup",
+    "score": 70
+  },
+  {
+    "time": 1784735934.4315846,
+    "action": {
+      "action": "create_personal_outreach",
+      "target": "Ministry of Education government AI program",
+      "reason": "high opportunity score",
+      "score": 50,
+      "signals": [
+        "strategic entity",
+        "AI alignment",
+        "learned government impact strategy"
+      ]
+    },
+    "status": "outreach_ready",
+    "target": "Ministry of Education government AI program",
+    "score": 50
   }
 ]

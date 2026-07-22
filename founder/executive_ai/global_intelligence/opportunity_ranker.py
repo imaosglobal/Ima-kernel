@@ -53,9 +53,21 @@ def rank_opportunity(entity):
             reasons.append("previous positive signal")
 
 
-    if "failed" in lessons or "no_response" in lessons:
-        score -= 5
-        reasons.append("negative historical signal")
+    entity_name = entity.get("name","").lower()
+
+    for record in feedback.get("records", []):
+
+        target = str(record.get("target","")).lower()
+
+        if target and target in entity_name:
+
+            if record.get("status") in ["no_response", "failed"]:
+                score -= 5
+                reasons.append("entity negative historical signal")
+
+            if record.get("status") == "outreach_ready":
+                score += 5
+                reasons.append("entity positive historical signal")
 
 
     return {
