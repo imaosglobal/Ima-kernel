@@ -338,13 +338,25 @@ class IMAMaster:
 
                 memory_hits=memory_hits[:5]
 
-                if memory_hits:
-                    result["response"] = "\n".join(
-                        x.get("question", "").strip()
-                        for x in memory_hits
-                        if x.get("question", "").strip()
-                    )
-                else:
+                try:
+                    from api.database.memory_store import load_memory
+                    supabase_memories = load_memory()
+
+                    if supabase_memories:
+                        result["response"] = "\n".join(
+                            x.get("content", "")
+                            for x in supabase_memories[-5:]
+                            if x.get("content", "")
+                        )
+                    elif memory_hits:
+                        result["response"] = "\n".join(
+                            x.get("question", "").strip()
+                            for x in memory_hits
+                            if x.get("question", "").strip()
+                        )
+                    else:
+                        result["response"]="עדיין אין לי מספיק זיכרון שיחה למצוא."
+                except Exception:
                     result["response"]="עדיין אין לי מספיק זיכרון שיחה למצוא."
 
                 return result
