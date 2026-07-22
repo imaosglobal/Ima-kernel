@@ -1,67 +1,36 @@
+
 import json
 from pathlib import Path
-import time
 
-FILE=Path("founder/data/action_feedback.json")
-
-
-def save_feedback(target, action, response, lesson=""):
-
-    data=[]
-
-    if FILE.exists():
-        data=json.loads(FILE.read_text())
-
-    item={
-        "target":target,
-        "action":action,
-        "response":response,
-        "lesson":lesson,
-        "time":time.time()
-    }
-
-    data.append(item)
-
-    FILE.parent.mkdir(
-        parents=True,
-        exist_ok=True
-    )
-
-    FILE.write_text(
-        json.dumps(
-            data,
-            ensure_ascii=False,
-            indent=2
-        )
-    )
-
-    return item
-
-
-def get_feedback():
-
-    if FILE.exists():
-        return json.loads(
-            FILE.read_text()
-        )
-
-    return []
+FILE = Path("founder/data/action_feedback.json")
 
 
 def analyze_feedback():
 
-    feedback=get_feedback()
-
     lessons=[]
+    records=[]
 
-    for item in feedback:
+    if FILE.exists():
+        records=json.loads(FILE.read_text())
+
+    for item in records:
 
         if item.get("lesson"):
+            lessons.append(item["lesson"])
+
+        if item.get("status")=="no_response":
+            target=item.get("target","")
             lessons.append(
-                item["lesson"]
+                f"{target}: outreach failed, improve message"
+            )
+
+        if item.get("status")=="outreach_ready":
+            lessons.append(
+                f"{item.get('target')}: positive outreach signal"
             )
 
     return {
-        "total_feedback":len(feedback),
-        "lessons":lessons
+        "total":len(records),
+        "lessons":lessons,
+        "records":records
     }
