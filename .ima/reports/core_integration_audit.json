@@ -16,9 +16,12 @@
   },
   "ima_brain.py": {
     "status": "exists",
-    "size": 1407,
+    "size": 3867,
     "imports": [
-      "import json, os"
+      "import json, os",
+      "from learning.learning_memory import store_pattern",
+      "from learning.learning_loop import learn_from_event",
+      "from learning.historical_inference import get_conclusions"
     ],
     "core_connection": {
       "uses_runtime": false,
@@ -28,8 +31,9 @@
   },
   "ima_system.py": {
     "status": "exists",
-    "size": 24134,
+    "size": 26182,
     "imports": [
+      "import subprocess",
       "import json, time, os, subprocess",
       "from engines.knowledge_engine import search_knowledge",
       "from languages.language_engine import detect_language",
@@ -51,7 +55,7 @@
   },
   "ima_mom.py": {
     "status": "exists",
-    "size": 1519,
+    "size": 1561,
     "imports": [
       "import json, os, time"
     ],
@@ -103,7 +107,7 @@
   },
   "conversation_layer.py": {
     "status": "exists",
-    "size": 1948,
+    "size": 3067,
     "imports": [
       "import json",
       "from pathlib import Path",
