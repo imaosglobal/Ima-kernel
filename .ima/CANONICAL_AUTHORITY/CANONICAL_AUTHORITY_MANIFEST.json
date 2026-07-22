@@ -59,5 +59,14 @@
   },
   "status": "ACTIVE",
   "type": "IMA_CANONICAL_AUTHORITY_MANIFEST",
-  "version": "3.0.0"
+  "version": "3.0.0",
+  "canonical_discovery": {
+    "status": "READY",
+    "updated_at": 1784707868.4856038,
+    "network": ".ima/CANONICAL_NETWORK.json",
+    "system_index": ".ima/CANONICAL_SYSTEM_INDEX.json",
+    "registry": ".ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json",
+    "ready": ".ima/CANONICAL_READY.json",
+    "recovery": ".ima/recovery/RECOVERY_TARGET.json"
+  }
 }
