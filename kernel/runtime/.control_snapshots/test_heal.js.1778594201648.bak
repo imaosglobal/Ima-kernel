@@ -1,1 +1,0 @@
-console.log("self healing ok")
