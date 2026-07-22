@@ -1,3 +1,5 @@
+import time
+
 
 def rank_opportunity(entity):
     score = 0
