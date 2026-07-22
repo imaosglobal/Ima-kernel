@@ -25,6 +25,9 @@ def apply_feedback_to_strategy(strategy):
             )
 
 
+    adjustments = list(dict.fromkeys(adjustments))
+    lessons = list(dict.fromkeys(lessons))
+
     return {
         "original_strategy":strategy,
         "feedback_lessons":lessons,
