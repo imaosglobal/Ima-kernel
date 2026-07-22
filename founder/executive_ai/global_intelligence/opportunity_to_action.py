@@ -28,7 +28,7 @@ def generate_actions():
 
         for r in records:
 
-            target = r.get("target","").lower()
+            target = str(r.get("target") or "").lower()
 
             target_words = [
                 w for w in target.split()
