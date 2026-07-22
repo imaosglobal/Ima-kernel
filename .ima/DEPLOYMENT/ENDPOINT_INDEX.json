@@ -1,0 +1,9 @@
+{
+  "type": "ENDPOINT_INDEX",
+  "status": "NOT_DEPLOYED",
+  "requirements": [
+    "public_server",
+    "https_endpoint",
+    "domain"
+  ]
+}
