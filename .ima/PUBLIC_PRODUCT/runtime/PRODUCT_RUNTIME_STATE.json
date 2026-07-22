@@ -1,0 +1,17 @@
+{
+  "product": "IMA_PUBLIC_PRODUCT",
+  "runtime": {
+    "status": "READY_LOCAL",
+    "mode": "CONNECTED_PRODUCT_LAYER"
+  },
+  "services": {
+    "frontend": "ready",
+    "backend": "ready_local",
+    "authentication": "partial"
+  },
+  "connects_to": {
+    "canonical_runtime": true,
+    "public_endpoint": false
+  },
+  "updated": 1784712857.5698607
+}

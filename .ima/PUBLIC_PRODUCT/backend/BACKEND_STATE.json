@@ -1,0 +1,16 @@
+{
+  "type": "PRODUCT_BACKEND",
+  "status": "READY_LOCAL",
+  "runtime": "CONNECTED_PRODUCT_LAYER",
+  "api": {
+    "status": "LOCAL_READY",
+    "endpoint": "api/server.py"
+  },
+  "security": {
+    "authentication_required": true
+  },
+  "connects_to": {
+    "canonical_runtime": true
+  },
+  "updated": 1784712857.5709202
+}

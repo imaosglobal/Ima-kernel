@@ -1,0 +1,23 @@
+{
+  "provider": "Supabase",
+  "connection_method": "API_KEYS",
+  "cli": "NOT_SUPPORTED_ANDROID_TERMUX",
+  "required_credentials": {
+    "SUPABASE_URL": "pending",
+    "SUPABASE_ANON_KEY": "pending",
+    "SUPABASE_SERVICE_KEY": "pending",
+    "DATABASE_URL": "pending"
+  },
+  "database": {
+    "engine": "PostgreSQL",
+    "tables_required": [
+      "users",
+      "conversations",
+      "memory",
+      "preferences",
+      "permissions"
+    ]
+  },
+  "status": "WAITING_SUPABASE_CREDENTIALS",
+  "updated": 1784714635.6631954
+}

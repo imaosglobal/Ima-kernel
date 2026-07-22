@@ -1,0 +1,19 @@
+{
+  "product": "IMA",
+  "production_guard": "ACTIVE",
+  "checks": {
+    "database_connection": "REQUIRED",
+    "authentication": "REQUIRED",
+    "ssl": "REQUIRED",
+    "domain": "REQUIRED",
+    "health_endpoint": "REQUIRED",
+    "backup": "REQUIRED",
+    "monitoring": "REQUIRED"
+  },
+  "release_policy": {
+    "allow_public_release": false,
+    "reason": "waiting_external_credentials"
+  },
+  "next_transition": "GLOBAL_PRODUCT_READY",
+  "updated": 1784714149.1194355
+}

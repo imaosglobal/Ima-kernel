@@ -1,0 +1,20 @@
+{
+  "selected_stack": {
+    "frontend": "Render Static",
+    "backend": "Render Web Service",
+    "database": "Supabase PostgreSQL",
+    "authentication": "Supabase Auth",
+    "storage": "Supabase Storage",
+    "monitoring": "Render + Supabase Logs"
+  },
+  "deployment_flow": {
+    "step_1": "create_supabase_project",
+    "step_2": "connect_database",
+    "step_3": "configure_auth",
+    "step_4": "deploy_backend",
+    "step_5": "deploy_frontend",
+    "step_6": "connect_domain_ssl"
+  },
+  "status": "STACK_SELECTED_WAITING_CREDENTIALS",
+  "updated": 1784714436.0066137
+}
