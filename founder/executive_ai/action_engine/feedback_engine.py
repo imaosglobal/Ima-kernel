@@ -25,8 +25,9 @@ def analyze_feedback():
             )
 
         if item.get("status")=="outreach_ready":
+
             lessons.append(
-                f"{item.get('target')}: positive outreach signal"
+                f"{item.get('target')}: outreach prepared, not confirmed success"
             )
 
     return {
