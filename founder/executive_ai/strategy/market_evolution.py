@@ -1,6 +1,7 @@
+
 import json
-from pathlib import Path
 import time
+from pathlib import Path
 
 FILE=Path("founder/data/market_models.json")
 
@@ -11,16 +12,17 @@ def create_market_model(problem,solution):
         "created":time.time(),
         "problem":problem,
         "solution":solution,
-        "customers":{
-            "first":"early adopters עם כאב ברור",
-            "hundred":"קהילות ונישות עם צורך חוזר",
-            "thousand":"עסקים קטנים וארגונים",
-            "million":"פלטפורמה גלובלית"
-        },
-        "expansion_questions":[
-            "מי מרוויח הכי הרבה מהפתרון?",
-            "מי משלם הכי מהר?",
-            "מי מפיץ את המוצר לאחרים?"
+        "growth_path":[
+            "early adopters",
+            "communities",
+            "small businesses",
+            "enterprise",
+            "global platform"
+        ],
+        "questions":[
+            "who pays fastest?",
+            "who has strongest pain?",
+            "who spreads adoption?"
         ]
     }
 
@@ -32,13 +34,18 @@ def create_market_model(problem,solution):
     data.append(model)
 
     FILE.write_text(
-        json.dumps(data,ensure_ascii=False,indent=2)
+        json.dumps(
+            data,
+            ensure_ascii=False,
+            indent=2
+        )
     )
 
     return model
 
 
 def latest():
+
     if FILE.exists():
         return json.loads(FILE.read_text())[-1]
 
