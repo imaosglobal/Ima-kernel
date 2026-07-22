@@ -181,6 +181,12 @@ class Handler(BaseHTTPRequestHandler):
 
                 conversation_layer.update(question)
 
+                try:
+                    from api.database.memory_store import save_memory
+                    save_memory(question)
+                except Exception:
+                    pass
+
                 self.send_json({
                     "input": question,
                     "answer": answer,
