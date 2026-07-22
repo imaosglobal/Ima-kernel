@@ -194,6 +194,26 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     try:
                         answer = ima_master_runtime.ask(question)
+
+                        if isinstance(answer, dict):
+                            response = answer.get("response","")
+
+                            if (
+                                not response
+                                or "אין זיכרון" in response
+                                or "עדיין אין" in response
+                            ):
+                                from api.database.memory_store import load_memory
+
+                                memories = load_memory()
+
+                                if memories:
+                                    answer["response"] = "\n\n".join(
+                                        x.get("content","")
+                                        for x in memories[-10:]
+                                        if x.get("content")
+                                    )
+
                     except Exception:
                         answer = product_gateway.ask(question)
 
