@@ -205,6 +205,24 @@ class Handler(BaseHTTPRequestHandler):
                 except Exception:
                     pass
 
+                try:
+                    if isinstance(answer, dict):
+                        if answer.get("response") in [
+                            "עדיין אין לי מספיק זיכרון שיחה למצוא.",
+                            "אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
+                        ]:
+                            memories = load_memory()
+                            if memories:
+                                answer["response"] = "\n".join(
+                                    x.get("content","")
+                                    for x in memories[-5:]
+                                    if x.get("content","")
+                                )
+                            else:
+                                answer["response"] = "אין זיכרון שמור עדיין."
+                except Exception:
+                    pass
+
                 self.send_json({
                     "input": question,
                     "answer": answer,
