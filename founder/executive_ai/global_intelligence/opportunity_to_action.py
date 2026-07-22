@@ -1,9 +1,15 @@
+from founder.executive_ai.global_intelligence.world_adapters import real_world_scanner
+
 
 from founder.executive_ai.global_intelligence.opportunity_engine import evaluate_world
 from founder.executive_ai.action_engine.feedback_engine import analyze_feedback
 
 
 def generate_actions():
+
+    real_signals = real_world_scanner.scan()
+
+
 
     world = evaluate_world()
 
