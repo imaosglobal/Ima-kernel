@@ -12,7 +12,8 @@
     "IMA_MAINTENANCE.py",
     "MANAGEMENT_VERSION",
     "MANAGEMENT_LOCK",
-    "PUBLIC_ACCESS"
+    "PUBLIC_ACCESS",
+    "DEPLOYMENT"
   ],
   "code_migration": false,
   "status": "CONNECTED",
@@ -21,10 +22,14 @@
     "enabled": true,
     "entry": "IMA_MAINTENANCE.py"
   },
-  "updated": 1784711943.8872464,
+  "updated": 1784712041.029433,
   "version": "1.0.0",
   "lock_status": "LOCKED",
   "public_access": {
+    "enabled": true,
+    "status": "INITIALIZED"
+  },
+  "deployment": {
     "enabled": true,
     "status": "INITIALIZED"
   }
