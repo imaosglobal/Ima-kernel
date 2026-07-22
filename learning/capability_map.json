@@ -33,7 +33,8 @@
   "evaluation_engine": {
     "functions": [
       "evaluate_action",
-      "get_evaluations"
+      "get_evaluations",
+      "evaluate_plan"
     ]
   },
   "evolution_controller": {
@@ -492,6 +493,132 @@
   "_backup_action_engine_20260718_210956": {
     "functions": [
       "execute_learning_action"
+    ]
+  },
+  "_backup_evaluation_engine_20260718_211144": {
+    "functions": [
+      "evaluate_action",
+      "get_evaluations"
+    ]
+  },
+  "plan_feedback": {
+    "functions": [
+      "generate_plan_feedback"
+    ]
+  },
+  "_backup_autonomy_engine_20260718_211301": {
+    "functions": [
+      "run_autonomy"
+    ]
+  },
+  "lesson_memory": {
+    "functions": [
+      "load_lessons",
+      "save_lessons",
+      "record_lesson",
+      "get_lessons"
+    ]
+  },
+  "_backup_autonomy_engine_lesson_20260718_211338": {
+    "functions": [
+      "run_autonomy"
+    ]
+  },
+  "lesson_retrieval": {
+    "functions": [
+      "retrieve_relevant_lessons"
+    ]
+  },
+  "self_inspection_cycle": {
+    "functions": [
+      "scan_repository",
+      "build_observations",
+      "run_self_inspection"
+    ]
+  },
+  "continuous_learning_loop": {
+    "functions": [
+      "load_reports",
+      "save_reports",
+      "run_continuous_learning_cycle",
+      "show_learning_summary"
+    ]
+  },
+  "_backup_self_improvement_cycle_20260718_211802": {
+    "functions": [
+      "scan_repository",
+      "inspect_python_file",
+      "inspect_repository",
+      "find_gaps",
+      "build_improvement_plan",
+      "evaluate_plan",
+      "generate_patch_proposal",
+      "validate_patch",
+      "apply_patch",
+      "run_self_improvement"
+    ]
+  },
+  "_backup_lesson_retrieval_20260718_211437": {
+    "functions": [
+      "retrieve_relevant_lessons"
+    ]
+  },
+  "self_improvement_cycle": {
+    "functions": [
+      "scan_repository",
+      "inspect_python_file",
+      "inspect_repository",
+      "find_gaps",
+      "build_improvement_plan",
+      "evaluate_plan",
+      "generate_patch_proposal",
+      "validate_patch",
+      "apply_patch",
+      "load_active_runtime_allowlist",
+      "filter_gaps_to_active_runtime",
+      "run_self_improvement"
+    ]
+  },
+  "_backup_status_fix_20260718_215252": {
+    "functions": [
+      "scan_repository",
+      "inspect_python_file",
+      "inspect_repository",
+      "find_gaps",
+      "build_improvement_plan",
+      "evaluate_plan",
+      "generate_patch_proposal",
+      "validate_patch",
+      "apply_patch",
+      "run_self_improvement"
+    ]
+  },
+  "_backup_allowlist_filter_20260718_220529": {
+    "functions": [
+      "scan_repository",
+      "inspect_python_file",
+      "inspect_repository",
+      "find_gaps",
+      "build_improvement_plan",
+      "evaluate_plan",
+      "generate_patch_proposal",
+      "validate_patch",
+      "apply_patch",
+      "run_self_improvement"
+    ]
+  },
+  "_backup_runtime_allowlist_integration_20260718_220711": {
+    "functions": [
+      "scan_repository",
+      "inspect_python_file",
+      "inspect_repository",
+      "find_gaps",
+      "build_improvement_plan",
+      "evaluate_plan",
+      "generate_patch_proposal",
+      "validate_patch",
+      "apply_patch",
+      "run_self_improvement"
     ]
   }
 }
