@@ -1,3 +1,5 @@
+from languages.language_engine import detect_language
+from languages.translator import translate_response
 import json
 import re
 import time
@@ -56,6 +58,7 @@ class IMAMaster:
         self.name="IMA MASTER"
 
     def ask(self,message):
+        language = detect_language(message)
 
         # ============================================================
         # CANONICAL MEMORY PRIORITY GATE
@@ -174,9 +177,10 @@ class IMAMaster:
                     )
                 else:
                     result["response"] = (
-                        "עדיין אין לי מספיק זיכרון שיחה למצוא."
+                        "אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
                     )
 
+                result['response'] = translate_response(result.get('response',''), language)
                 return result
 
             except Exception as memory_error:
@@ -338,14 +342,26 @@ class IMAMaster:
 
                 memory_hits=memory_hits[:5]
 
-                if memory_hits:
-                    result["response"] = "\n".join(
-                        x.get("question", "").strip()
-                        for x in memory_hits
-                        if x.get("question", "").strip()
-                    )
-                else:
-                    result["response"]="עדיין אין לי מספיק זיכרון שיחה למצוא."
+                try:
+                    from api.database.memory_store import load_memory
+                    supabase_memories = load_memory()
+
+                    if supabase_memories:
+                        result["response"] = "\n".join(
+                            x.get("content", "")
+                            for x in supabase_memories[-5:]
+                            if x.get("content", "")
+                        )
+                    elif memory_hits:
+                        result["response"] = "\n".join(
+                            x.get("question", "").strip()
+                            for x in memory_hits
+                            if x.get("question", "").strip()
+                        )
+                    else:
+                        result["response"]="אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
+                except Exception:
+                    result["response"]="אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
 
                 return result
             system_answer=None
