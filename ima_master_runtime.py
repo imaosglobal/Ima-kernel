@@ -174,7 +174,7 @@ class IMAMaster:
                     )
                 else:
                     result["response"] = (
-                        "עדיין אין לי מספיק זיכרון שיחה למצוא."
+                        "אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
                     )
 
                 return result
@@ -355,9 +355,9 @@ class IMAMaster:
                             if x.get("question", "").strip()
                         )
                     else:
-                        result["response"]="עדיין אין לי מספיק זיכרון שיחה למצוא."
+                        result["response"]="אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
                 except Exception:
-                    result["response"]="עדיין אין לי מספיק זיכרון שיחה למצוא."
+                    result["response"]="אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
 
                 return result
             system_answer=None
