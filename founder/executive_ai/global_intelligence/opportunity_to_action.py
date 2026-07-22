@@ -27,7 +27,21 @@ def generate_actions():
         previous_failure=False
 
         for r in records:
-            if r.get("target","").lower() in name.lower():
+
+            target = r.get("target","").lower()
+
+            target_words = [
+                w for w in target.split()
+                if len(w) > 3
+            ]
+
+            matches = [
+                w for w in target_words
+                if w in name.lower()
+            ]
+
+            if len(matches) >= 2:
+
                 if r.get("status") in [
                     "no_response",
                     "failed"

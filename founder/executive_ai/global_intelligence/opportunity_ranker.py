@@ -70,6 +70,8 @@ def rank_opportunity(entity):
                 reasons.append("entity positive historical signal")
 
 
+    reasons = list(dict.fromkeys(reasons))
+
     return {
         "entity": entity,
         "opportunity_score": score,
