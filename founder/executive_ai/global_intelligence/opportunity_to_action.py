@@ -1,9 +1,21 @@
 
+from founder.executive_ai.learning_journal.event_bus import emit_event
+
+
+
 from founder.executive_ai.global_intelligence.world_adapters import real_world_scanner
 from founder.executive_ai.global_intelligence.ranking_engine import ranker
 
 
 def generate_actions():
+
+    emit_event(
+        "action_engine",
+        "action_generation_started",
+        {},
+        50
+    )
+
 
     signals = real_world_scanner.scan()
 
