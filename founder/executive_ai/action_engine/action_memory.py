@@ -1,50 +1,23 @@
-import json
-import time
-from pathlib import Path
+
+from founder.executive_ai.memory.memory_store import save_memory, query_memory
 
 
-FILE=Path(
-"founder/data/action_history.json"
-)
-
-
-def save_action(action,result,lesson=""):
-
-    data=[]
-
-    if FILE.exists():
-        data=json.loads(FILE.read_text())
+def save_action(action,result,reason):
 
     item={
         "action":action,
         "result":result,
-        "lesson":lesson,
-        "time":time.time()
+        "reason":reason
     }
 
-    data.append(item)
-
-    FILE.parent.mkdir(
-        parents=True,
-        exist_ok=True
+    return save_memory(
+        "actions",
+        item
     )
-
-    FILE.write_text(
-        json.dumps(
-            data,
-            ensure_ascii=False,
-            indent=2
-        )
-    )
-
-    return item
 
 
 def get_actions():
 
-    if FILE.exists():
-        return json.loads(
-            FILE.read_text()
-        )
-
-    return []
+    return query_memory(
+        "actions"
+    )
