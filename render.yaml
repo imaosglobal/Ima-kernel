@@ -1,7 +1,13 @@
 services:
   - type: web
-    name: ima-915m
-    runtime: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    healthCheckPath: /health
+    name: ima-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python api/server.py
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
