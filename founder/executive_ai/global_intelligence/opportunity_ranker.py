@@ -65,9 +65,13 @@ def rank_opportunity(entity):
                 score -= 5
                 reasons.append("entity negative historical signal")
 
-            if record.get("status") == "outreach_ready":
+            if record.get("status") in [
+                "response_received",
+                "positive_response",
+                "success"
+            ]:
                 score += 5
-                reasons.append("entity positive historical signal")
+                reasons.append("entity confirmed positive signal")
 
 
     reasons = list(dict.fromkeys(reasons))
