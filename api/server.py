@@ -149,6 +149,9 @@ class Handler(BaseHTTPRequestHandler):
                 "brain":True
             })
 
+        elif self.path=="/supabase/status":
+            self.send_json(supabase_status())
+
         else:
             self.send_json({
                 "product":"IMA",
