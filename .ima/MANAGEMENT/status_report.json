@@ -1,0 +1,12 @@
+{
+  "time": 1784711533.696788,
+  "status": "READY",
+  "checks": {
+    "management": true,
+    "canonical_registry": true,
+    "active_manifest": true,
+    "managed_entry": true,
+    "canonical_hashes": true
+  },
+  "failed": []
+}

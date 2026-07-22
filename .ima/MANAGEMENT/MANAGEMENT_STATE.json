@@ -1,0 +1,26 @@
+{
+  "layer": "MANAGEMENT_LAYER_ACTIVE",
+  "created": 1784710923.8025064,
+  "components": [
+    "ACTIVE_CODE",
+    "BACKUP_STORE",
+    "ACTIVE_RUNTIME_INDEX",
+    "BACKUP_INDEX",
+    "ARCHIVE_INDEX",
+    "IMA_MANAGED_START.py",
+    "MAINTENANCE_INDEX",
+    "IMA_MAINTENANCE.py",
+    "MANAGEMENT_VERSION",
+    "MANAGEMENT_LOCK"
+  ],
+  "code_migration": false,
+  "status": "CONNECTED",
+  "entry_point": "IMA_MANAGED_START.py",
+  "maintenance": {
+    "enabled": true,
+    "entry": "IMA_MAINTENANCE.py"
+  },
+  "updated": 1784711533.5567954,
+  "version": "1.0.0",
+  "lock_status": "LOCKED"
+}

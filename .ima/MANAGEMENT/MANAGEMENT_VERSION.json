@@ -1,0 +1,20 @@
+{
+  "layer": "MANAGEMENT_LAYER",
+  "version": "1.0.0",
+  "created": 1784711472.4953418,
+  "history": [
+    {
+      "time": 1784711472.495344,
+      "event": "MANAGEMENT_LAYER_EXPANSION",
+      "components_added": [
+        "ACTIVE_CODE",
+        "BACKUP_STORE",
+        "MAINTENANCE_INDEX",
+        "IMA_MAINTENANCE.py"
+      ],
+      "status": "READY"
+    }
+  ],
+  "updated": 1784711472.4953456,
+  "status": "ACTIVE"
+}

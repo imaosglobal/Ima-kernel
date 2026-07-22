@@ -1,0 +1,1377 @@
+{
+  "created": 1784710481.9216516,
+  "type": "ACTIVE_RUNTIME_ONLY",
+  "count": 274,
+  "files": [
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+      "sha256": "5fec858b8b52e8cdeadb96bd008198d944260458de2f3071e39b7826191923f2",
+      "size": 1355
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "sha256": "d488da84fa206ff31340fd6a59f9818430f800e383928301c16584890eddddf6",
+      "size": 3070
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "sha256": "6cef5368561f031b0f20ce3cf34659a9389336850de933112ada7954945997c6",
+      "size": 859
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/entry/IMA_HTTP_ADAPTER_SELFTEST.py",
+      "sha256": "db034539b2ce8fa2b5696378a519fcec2ce25c47dd3ad66173e0daeec2ae2f2e",
+      "size": 481
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "sha256": "81ebb761f089f8675ceb7e4349909608b045c4c7c65a3cfcce7340270ce82b02",
+      "size": 2250
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/entry/IMA_VALIDATE_ACTIVE.py",
+      "sha256": "1ecea9235e6ee5706f303faef550c60c5d6abf63b892bd55e7860468e3ebaa4f",
+      "size": 944
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/entry/IMA_VALIDATE_ALL.py",
+      "sha256": "0e6952d200196a7c9d4892c8b69aa8e0a2f27853496090ea14cb843b1c92415a",
+      "size": 2027
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/IMA_ONE_PASS_EVOLUTION_ENGINE.py",
+      "sha256": "98d2d13c83d61b2b2abd1a015aace7d4dbf05e23995fc9e7f3c208c215386d6b",
+      "size": 10534
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "sha256": "6f58808c02116cbdccbd93456eb9754ed6b661d3cfcfbcf90365dd4ee23cefd8",
+      "size": 10399
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "sha256": "4671c16d8c3afbe78a0c101a5bcd82415ac2ad0d2405492c7e8cf42da0258d2d",
+      "size": 2883
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "size": 2795
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "sha256": "3d422a78842baf95c6f4cacb669ccdf3e7b4f70ba3cac43a96b6a8ca92342663",
+      "size": 2396
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/governance/UNIVERSAL_ADAPTER_CONTRACT.py",
+      "sha256": "6ea0d339f255af5abb6b165566b7ce3e8641cc1d0e9862da82b1231d8b4c8612",
+      "size": 527
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/governance/UNIVERSAL_ADAPTER_ROUTER.py",
+      "sha256": "b20db322757d6bfacf64b3d55cbf8bc60b74bf7cc837faf2639c3862e94a8a73",
+      "size": 2551
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/governance/UNIVERSAL_ADAPTER_START.py",
+      "sha256": "ae205f46afe3642856a8262650dc217dbebb10f58b270122d6fe93d8fa4eed57",
+      "size": 537
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/governance/adapters/__init__.py",
+      "sha256": "aada9bd893ce348990f906ad6c55385d146bb2cb7c177834a895027a31097904",
+      "size": 58
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/governance/adapters/http_api_adapter.py",
+      "sha256": "68359adc6868de79295e0cda0913e52b5ce7f755c4473d92945ad2b9a1be2b0e",
+      "size": 8106
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+      "size": 291
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/maintenance/IMA_AUTOMATED_MAINTENANCE/IMA_AUTOMATED_MAINTENANCE.py",
+      "sha256": "2e7f531960233a7afe201befd7c1c45e4e3abef8e9573005067fc05bf54bb581",
+      "size": 940
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "sha256": "0d33db6af194d9f6eb368a053ba1961e07cce6c7f57d388a2c3b071e95b9a526",
+      "size": 16314
+    },
+    {
+      "file": ".ima/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/adaptive_identity/adaptive_identity_engine.py",
+      "sha256": "23a67e6d29eb89ad270e4347bf10b63e56833d1b30c7e5d07c2335e30b08a516",
+      "size": 313
+    },
+    {
+      "file": ".ima/agi_evolution/agi_gap_report.py",
+      "sha256": "e5c60e22fc08bd8b5daa3ae880520efc0d503598838605bde304be8db598cc99",
+      "size": 364
+    },
+    {
+      "file": ".ima/agi_evolution/autonomy/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/autonomy/autonomy_engine.py",
+      "sha256": "83181e78ab5f227a559804595da347481b596f2fa4ad9c2eb4e5b5822f018a78",
+      "size": 239
+    },
+    {
+      "file": ".ima/agi_evolution/autonomy/goal_engine.py",
+      "sha256": "0b02081e80e4d4f4ffc4711ef797e39eaf19b120050156b18263e90adc68ca9e",
+      "size": 163
+    },
+    {
+      "file": ".ima/agi_evolution/business/business_intelligence.py",
+      "sha256": "49b066f3ab474e1c850b4c91e33deede1550f14d14449aca7e5e8a3cf904efb4",
+      "size": 130
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/business_engine.py",
+      "sha256": "e873bc660cd56074a47250859df8ef9a6b85c3e231763dbe6bec75dcfb94c6e8",
+      "size": 130
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/business_intelligence_engine.py",
+      "sha256": "e514a0e2d91a250c59af0c4111d66ea6c097e16a241f350fd3665d0abf2dd3ef",
+      "size": 390
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/competition/competitor_engine.py",
+      "sha256": "f3fe8e936af883909b45a94fe9ba35d9234a6b2586a543a701a733cd6f18baf6",
+      "size": 75
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/marketing/marketing_engine.py",
+      "sha256": "2248b95bbe6d6d0c68f8c6fb2ba4471e20a1f593bc986f9b50aa099bcb760e2f",
+      "size": 100
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/sales/sales_engine.py",
+      "sha256": "cf2e9fb26ec80a799d3b52f8e12d1745818f2a1744f5df1b2c6dec4128d7b1ee",
+      "size": 98
+    },
+    {
+      "file": ".ima/agi_evolution/business_intelligence/service/service_engine.py",
+      "sha256": "f2056acef305c4b6df3af65ab6c19823a11b077688b1d3331e075c4c7caa75ff",
+      "size": 94
+    },
+    {
+      "file": ".ima/agi_evolution/code_evolution/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/code_evolution/autobuilder.py",
+      "sha256": "73f32936c467cd4eb651ac6aac4da725778f532fb72342e4fe0f0c7feba59950",
+      "size": 1133
+    },
+    {
+      "file": ".ima/agi_evolution/code_evolution/builder_engine.py",
+      "sha256": "45d195cb4318e95d4d54380df27ffcadd60fe86c175802b095b75c7de2fdb403",
+      "size": 1448
+    },
+    {
+      "file": ".ima/agi_evolution/code_evolution/code_generator.py",
+      "sha256": "f1d2c95ee64a859f1a027c24eb9d1ebfd824030d81822e2b4b9b321af2c24a5b",
+      "size": 995
+    },
+    {
+      "file": ".ima/agi_evolution/code_evolution/validator_engine.py",
+      "sha256": "b777bb437ce7459b6d0d79ed2750b4d7cd6fd96381ea5788190ad8a744554c6f",
+      "size": 1104
+    },
+    {
+      "file": ".ima/agi_evolution/connector_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/connectors/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/embodiment/embodiment_engine.py",
+      "sha256": "37843877fd4b43891b8a2bd471e0c0711c3352eec607392f25bf79f0be119eb9",
+      "size": 347
+    },
+    {
+      "file": ".ima/agi_evolution/evaluation/agi_benchmark_engine.py",
+      "sha256": "59368fdaf489947d2edc86d7e106eb4f9527180b0ffbbb9569ce4a32057633d2",
+      "size": 1223
+    },
+    {
+      "file": ".ima/agi_evolution/evaluation/capability_scanner.py",
+      "sha256": "4c844c73353d3970a88f4f7fdcba8bf631dbb7d05808cadad637ed8465df9989",
+      "size": 1008
+    },
+    {
+      "file": ".ima/agi_evolution/evaluation/evaluate.py",
+      "sha256": "debe6482fa0b38ca71d176b196f997b761715305e2b0c87dc6582c76afaae445",
+      "size": 436
+    },
+    {
+      "file": ".ima/agi_evolution/evaluation/reality_capability_test.py",
+      "sha256": "eac1e5c99598663ee379c8e4dc2e89407bcfc3321c23a2b2a452c9ca9197337c",
+      "size": 1244
+    },
+    {
+      "file": ".ima/agi_evolution/finance/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/finance/finance_engine.py",
+      "sha256": "18c7b86172f01a2579ab129d072a6dec9de366067974b58940a136cc9c3206ce",
+      "size": 113
+    },
+    {
+      "file": ".ima/agi_evolution/finance_intelligence/finance_intelligence_engine.py",
+      "sha256": "9abe25b1f5d7baef87bdb674d4730d9983070827a0032fdb894e329b7d742a32",
+      "size": 386
+    },
+    {
+      "file": ".ima/agi_evolution/governance/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/growth_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/human_fields/human_fields_engine.py",
+      "sha256": "912d5d36626cb770938b3e451af482c4fb2e69a312a67091e29e77a52d2d79dd",
+      "size": 354
+    },
+    {
+      "file": ".ima/agi_evolution/identity_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/knowledge_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/multilingual_global/multilingual_global_engine.py",
+      "sha256": "552df805934c324349f268a38a2718991443574bc0e854d8c90375e04067b01c",
+      "size": 382
+    },
+    {
+      "file": ".ima/agi_evolution/persona_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/persona_engine/persona_engine.py",
+      "sha256": "44252603b124697eb87ad17dad2d350409ceff0691c7324a3a4097c39fcc13ae",
+      "size": 150
+    },
+    {
+      "file": ".ima/agi_evolution/product_engine/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/reasoning/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/reasoning/reasoning_engine.py",
+      "sha256": "a0e467628eea217ec132a2d9876555519c7e59de48285ab30e117cc9d7ae9c0c",
+      "size": 984
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/agi_capability_probe.py",
+      "sha256": "7e85b7220fa55132734cb105bf0e5c07fe11fed41f98c10adf8f4f73c0041865",
+      "size": 786
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/agi_integration_test.py",
+      "sha256": "72f2084e9793301e90e0b08ef11116177dccd36c2f38909c63f1074ccbeba3cd",
+      "size": 605
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "size": 1861
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/agi_reality_test.py",
+      "sha256": "cd4cfb77d6cdc0a9328aa3e2d46fc00e5b0f987e350439ade447e70d288af279",
+      "size": 481
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/auto_resume.py",
+      "sha256": "49ad2981526f8c83e75c2a866b79c1cf2b009da215109a01d53d27bee7a23c19",
+      "size": 432
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/autonomous_evolution_controller.py",
+      "sha256": "b204ac12b28d8d67d98ebab24030f4ec2f59937a44c61e8e6d9df43bc1bf866e",
+      "size": 1807
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/brain_controller.py",
+      "sha256": "80621cf61862c6008074d5ee3b05b429c3929f8d9c216cbbd6f96b37df05cf0a",
+      "size": 937
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/cognitive_pipeline.py",
+      "sha256": "df9bf4db5ca9d8cdc15787aaa25515087a58b34e30654d3997481945db370af7",
+      "size": 1125
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/continuity_engine.py",
+      "sha256": "2a88f8b44f31289fc6aed147d5d2be33268eab6afdfc89cf6c107adeaed8f07a",
+      "size": 485
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/decision_engine.py",
+      "sha256": "b0864e82eb055fa8e2b91387dd075105170a35c3a2c0b1b8e87cbf517b79c030",
+      "size": 864
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/evolution_agent.py",
+      "sha256": "ee6bd98ed58b26df25c4b542ec1d9bb21039b6ac6c20e053ebad0148ae878db5",
+      "size": 1615
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/evolution_cycle.py",
+      "sha256": "f7da0292751e52e74706e2e0917bee6bc4b32ec5f6b0017f21da410f26e2fb07",
+      "size": 473
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/evolution_manager.py",
+      "sha256": "1261d1cea243f11f70f5f08969280d171ec2a796c7247f290a8e9194108dee64",
+      "size": 1295
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/evolution_memory.py",
+      "sha256": "f429aef2fe88b6123f5c489ab2318325d4746091f160cd353b7b40779a84e207",
+      "size": 648
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/future_planner.py",
+      "sha256": "62c91bfd376c1601c07c09441e13037adea1d9bcbd0aac7ea876b57c3773c5d7",
+      "size": 461
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/goal_engine.py",
+      "sha256": "f8dce1e316e43ab5cd8c77f039bcdb6d981e0eca408bb7e1fb5820432518b1d5",
+      "size": 859
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/health_monitor.py",
+      "sha256": "145ea9901668cd5929d9c59b5267e1c58256a79d3cc3842e3b015aac6233ea31",
+      "size": 558
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_agi_bridge.py",
+      "sha256": "f31799e548b684f6504652102be9bac3d0ebea52a725625c3b582ce802f9d56f",
+      "size": 1315
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_boot_gate.backup.py",
+      "sha256": "b0236a0526e118a204effb8f2f6f5615e3b20a10a03ca5cd5cf46da031519d9e",
+      "size": 706
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_boot_gate.py",
+      "sha256": "e70c4e3f6c586b305e6bb5578a52f430aa6d7c5a1cfab7900103242f49765ffc",
+      "size": 1401
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_canonical_evolution_gate.py",
+      "sha256": "cb9dd2d40110f19140b33978e59298ffea0c560aae740d5acdbdc382eeaf9840",
+      "size": 873
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_lifecycle.py",
+      "sha256": "1450f30600bc14f6e11721cf056aa74dbd062b21a0b2cf15d7f046e6b1c8febd",
+      "size": 1018
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_master_runtime.py",
+      "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae",
+      "size": 15548
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "size": 918
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/integration_engine.py",
+      "sha256": "185315d954de03e1df512d4efc2bb473e845d3e99c836fb2a4ec3abb27878885",
+      "size": 1026
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/memory_consolidator.py",
+      "sha256": "8c99a9c75ca1f2dd29b3ad197f8fb71f013a5ee610b782cb3ffb7f8b55e2e492",
+      "size": 463
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/repair_engine.py",
+      "sha256": "bdcebf3b9ea826f5e93cfe4166a95648468fbfd1412282d03382069c76d6ba8c",
+      "size": 641
+    },
+    {
+      "file": ".ima/agi_evolution/runtime/self_evolution_loop.py",
+      "sha256": "bae5b4ebe4b35fac86e22ef47a1d2156a2df79cedfdaff92f2d100082f9e97e2",
+      "size": 1600
+    },
+    {
+      "file": ".ima/agi_evolution/science_knowledge/science_knowledge_engine.py",
+      "sha256": "4a6eeb9c44d56535fde223cbd32fc220d678aaa43fac86a45b9db689faa625de",
+      "size": 374
+    },
+    {
+      "file": ".ima/agi_evolution/self_improvement/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/agi_evolution/self_improvement/self_improvement_engine.py",
+      "sha256": "e4a84cc09e4184874c36b007c290179dec0a2be1295c531956a22dac7896095f",
+      "size": 159
+    },
+    {
+      "file": ".ima/agi_evolution/self_improvement/upgrade_planner.py",
+      "sha256": "40eef94698dc72a4aad224dc7d98db574b9106253be8bf54546fb507dafe24ff",
+      "size": 649
+    },
+    {
+      "file": ".ima/agi_evolution/universal_connectors/universal_connectors_engine.py",
+      "sha256": "c8da381c3e15a6ee70f91376587a19c22e271ffdfb12fae97d10188ee826527f",
+      "size": 386
+    },
+    {
+      "file": ".ima/agi_evolution/world_model/model_engine.py",
+      "sha256": "07926e6fd3d2c9cc5f1222f960bb0c5f0165fae238260062805696dbcd0049ac",
+      "size": 553
+    },
+    {
+      "file": ".ima/automation/continuous_improvement_loop.py",
+      "sha256": "6307608b85d73c1894ab2dcc2035aec2ea20d7ae1d11bc684ea44fba9875f9aa",
+      "size": 6319
+    },
+    {
+      "file": ".ima/autonomy_context.py",
+      "sha256": "c9127f4bdb68c81f09fd3a766495e017e826362a5843371f4d4cb53b949b92a8",
+      "size": 784
+    },
+    {
+      "file": ".ima/autonomy_runner.py",
+      "sha256": "ebea6df53298e90df31b643e59813bf1543279751de1cade0f8caa6e9f46bbb1",
+      "size": 3429
+    },
+    {
+      "file": ".ima/backup_IMA_START_1783787382/IMA_START.py",
+      "sha256": "a14ef72b5d044a0b24bcd9e9daf09cd1fd1dcb25a501521e277b59977cb4ca0d",
+      "size": 2419
+    },
+    {
+      "file": ".ima/backup_before_brain_network/ima_brain.py",
+      "sha256": "cfcaa88479f7ece752a0b0b824c85eb374c20435b604e1e82eaac5ff7a0e58e5",
+      "size": 3650
+    },
+    {
+      "file": ".ima/backup_before_brain_network/ima_master_runtime.py",
+      "sha256": "c633fcd6738c824b52c6db8a6a73202b95f28b58a54b75ccba721908479152aa",
+      "size": 5608
+    },
+    {
+      "file": ".ima/backup_before_brain_network/memory_bus.py",
+      "sha256": "2d0c9b94888e643d6e87729969f433cdc3ddfdb85e7a3d15ff31122ec83389b9",
+      "size": 257
+    },
+    {
+      "file": ".ima/backup_before_brain_sync_patch.py",
+      "sha256": "c633fcd6738c824b52c6db8a6a73202b95f28b58a54b75ccba721908479152aa",
+      "size": 5608
+    },
+    {
+      "file": ".ima/backup_before_expansion_move.py",
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6",
+      "size": 7056
+    },
+    {
+      "file": ".ima/backup_before_expansion_position_fix.py",
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6",
+      "size": 7056
+    },
+    {
+      "file": ".ima/backup_before_knowledge_final/ima_master_runtime.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/backup_before_knowledge_order_repair.py",
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3",
+      "size": 6788
+    },
+    {
+      "file": ".ima/backup_before_knowledge_priority_fix.py",
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3",
+      "size": 6788
+    },
+    {
+      "file": ".ima/backup_before_learning_bus_upgrade.py",
+      "sha256": "bb34698d19d2e44a15038c3a873d9c7e695c49131bee1d8a50b4a5f02f6540a0",
+      "size": 777
+    },
+    {
+      "file": ".ima/backup_before_master_priority_order.py",
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6",
+      "size": 6726
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge.py",
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3",
+      "size": 6788
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge_real.py",
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3",
+      "size": 6788
+    },
+    {
+      "file": ".ima/backup_before_move_knowledge_real2.py",
+      "sha256": "34516038321794323c15b920492337116122f69b852b05834bf83543e17d1be3",
+      "size": 6788
+    },
+    {
+      "file": ".ima/backup_before_return_inject_20260714_181054.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/backup_before_universal_pipeline.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/backup_before_world_learning_connection.py",
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6",
+      "size": 6726
+    },
+    {
+      "file": ".ima/backup_before_world_learning_engine.py",
+      "sha256": "3543f86c41822764cb81b4d303b4593e316837e48ed94b74ac31944bb5a761e6",
+      "size": 6726
+    },
+    {
+      "file": ".ima/backup_before_world_learning_final.py",
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6",
+      "size": 7056
+    },
+    {
+      "file": ".ima/backup_before_world_priority.py",
+      "sha256": "72ea41269d51d1134c09c17fe72c3a69700b70c346549b0ff93b88593d09c4a6",
+      "size": 7056
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/brain_sync.py",
+      "sha256": "bb34698d19d2e44a15038c3a873d9c7e695c49131bee1d8a50b4a5f02f6540a0",
+      "size": 777
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/ima_brain.py",
+      "sha256": "cfcaa88479f7ece752a0b0b824c85eb374c20435b604e1e82eaac5ff7a0e58e5",
+      "size": 3650
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/ima_master_runtime.py",
+      "sha256": "c633fcd6738c824b52c6db8a6a73202b95f28b58a54b75ccba721908479152aa",
+      "size": 5608
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/learning_loop.py",
+      "sha256": "98ff2055abe9600c02edcf743789ccee023270a344a89e22129891171f8b5642",
+      "size": 1231
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/learning_router.py",
+      "sha256": "28ba56aa96f7cbaf9f9a1b8693d634bf2d57d2cddb1931975a4c471c0f01ff28",
+      "size": 449
+    },
+    {
+      "file": ".ima/backup_brain_network_finalize/memory_bus.py",
+      "sha256": "2d0c9b94888e643d6e87729969f433cdc3ddfdb85e7a3d15ff31122ec83389b9",
+      "size": 257
+    },
+    {
+      "file": ".ima/backup_knowledge_pipeline_final/ima_master_runtime.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/backup_knowledge_response/ima_master_runtime.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/backup_memory_knowledge_merge/ima_master_runtime.py",
+      "sha256": "8aa4b1a6344141b41aab77f88ca999722c43506e64661dc0164d67afebff3216",
+      "size": 5897
+    },
+    {
+      "file": ".ima/backup_memory_return_fix_20260714_181022.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/backups_runtime_1784141525.py",
+      "sha256": "1084e3095648c8e6a1797e7da5501c55913ef1ac9dfca2e96b4f4fa95c8f1452",
+      "size": 9441
+    },
+    {
+      "file": ".ima/before_conversation_core/conversation_layer.py",
+      "sha256": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+      "size": 1948
+    },
+    {
+      "file": ".ima/before_conversation_core/ima_master_runtime.py",
+      "sha256": "a550cfe8d7d3ac628ff038a47bfae0abee1667a4acfe3820f070e6028a025170",
+      "size": 3459
+    },
+    {
+      "file": ".ima/before_conversation_core/ima_mom.py",
+      "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3",
+      "size": 1561
+    },
+    {
+      "file": ".ima/before_conversation_core/ima_system.py",
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67",
+      "size": 24152
+    },
+    {
+      "file": ".ima/before_exact_memory_match_1784375579.py",
+      "sha256": "058d34a162a313fefbab4346f3bc529a9d11dee071bab55a95aeb3ac267f02ef",
+      "size": 14513
+    },
+    {
+      "file": ".ima/before_except_fix_1784375359.py",
+      "sha256": "5462f017cf16fb8204400bacf4d218ed15128a370d98a8b0209b64b879276ac8",
+      "size": 14030
+    },
+    {
+      "file": ".ima/before_full_memory_changes_restore_20260718_142141.py",
+      "sha256": "a78bb5dc6dfd62e7ea7f783a35ba3c782bbccaaff6d34dc67409bfea0e667861",
+      "size": 15802
+    },
+    {
+      "file": ".ima/before_intent_emotion_1784040378/ima_master_runtime.py",
+      "sha256": "a550cfe8d7d3ac628ff038a47bfae0abee1667a4acfe3820f070e6028a025170",
+      "size": 3459
+    },
+    {
+      "file": ".ima/before_master_memory_indent_fix_20260714_180623.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/before_master_memory_priority_20260714_180052/ima_master_runtime.py",
+      "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262",
+      "size": 4961
+    },
+    {
+      "file": ".ima/before_master_memory_priority_final_20260714_180531.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/before_memory_clean_output_1784375503.py",
+      "sha256": "99d5b97e16834df30bca3b0328cc195508b19c6f443a00f772e959b75a223e36",
+      "size": 14681
+    },
+    {
+      "file": ".ima/before_memory_cleanup_1784375334.py",
+      "sha256": "5462f017cf16fb8204400bacf4d218ed15128a370d98a8b0209b64b879276ac8",
+      "size": 14030
+    },
+    {
+      "file": ".ima/before_memory_dedup_1784375462.py",
+      "sha256": "863093f47b855fb4483605dd2118c11ee2b65ec798edb86e4f36bb85efc4eb12",
+      "size": 14352
+    },
+    {
+      "file": ".ima/before_memory_dedup_latest_1784375651.py",
+      "sha256": "42dbfd8c8d86c9752fe345120a5645778aef2d0ef7f1ed12436411a9ca511e54",
+      "size": 15241
+    },
+    {
+      "file": ".ima/before_memory_final_gate_1784375947.py",
+      "sha256": "328b3f75bd2c2868b4fc006a88b10bc0987e6fc4bc36e8f4ab23a7226e6c6dae",
+      "size": 15548
+    },
+    {
+      "file": ".ima/before_memory_flow_fix_20260714_180246/ima_master_runtime.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/before_memory_flow_manual_20260714_180340/ima_master_runtime.py",
+      "sha256": "e95d24bb9fac9efa08b0e77a18ecb00334d0d5a1426faca158b0ce0754f936bb",
+      "size": 5723
+    },
+    {
+      "file": ".ima/before_memory_keyword_filter_1784375603.py",
+      "sha256": "785eeefc37e5d37f8439345e63862887b944deda7cfee84113fb3c8c5888f083",
+      "size": 14611
+    },
+    {
+      "file": ".ima/before_memory_no_match_1784375795.py",
+      "sha256": "5921d8beae77710f27b999b515d2b68574e9f97d3ecc007f47fad5e71f487a40",
+      "size": 15563
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175701/ima_master_runtime.py",
+      "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262",
+      "size": 4961
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175701/ima_system.py",
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67",
+      "size": 24152
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175727/ima_master_runtime.py",
+      "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262",
+      "size": 4961
+    },
+    {
+      "file": ".ima/before_memory_priority_20260714_175727/ima_system.py",
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67",
+      "size": 24152
+    },
+    {
+      "file": ".ima/before_memory_priority_ast_1784374581.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_atomic_20260718_143520.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_atomic_20260718_143526.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_exact_1784374689.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_final_1784374777.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_fix_20260718_143346.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_priority_reorder_20260718_143152.py",
+      "sha256": "9548468a375e7451d54e6d04bc95a2c604df274d306543261748a469fb4d234f",
+      "size": 11428
+    },
+    {
+      "file": ".ima/before_memory_relevance_1784375403.py",
+      "sha256": "95d2acca97966e84f613791094ba51573ce457c2c806af211ca3029e236276ed",
+      "size": 14041
+    },
+    {
+      "file": ".ima/before_memory_relevance_ast_1784375434.py",
+      "sha256": "95d2acca97966e84f613791094ba51573ce457c2c806af211ca3029e236276ed",
+      "size": 14041
+    },
+    {
+      "file": ".ima/before_memory_relevance_v2_1784375727.py",
+      "sha256": "75111e5f6918392c1f6738fde42eaffd70569a650f379608f5c3a15f22d6e405",
+      "size": 15221
+    },
+    {
+      "file": ".ima/before_memory_relevance_v3_1784375747.py",
+      "sha256": "75111e5f6918392c1f6738fde42eaffd70569a650f379608f5c3a15f22d6e405",
+      "size": 15221
+    },
+    {
+      "file": ".ima/before_memory_relevance_v4_1784375771.py",
+      "sha256": "75111e5f6918392c1f6738fde42eaffd70569a650f379608f5c3a15f22d6e405",
+      "size": 15221
+    },
+    {
+      "file": ".ima/before_memory_router_exact_20260714_175856/ima_system.py",
+      "sha256": "926657226c97737353b63e60718d16f475734f314f91ae0c129500e4c0636419",
+      "size": 24394
+    },
+    {
+      "file": ".ima/before_memory_router_final_20260714_180417/ima_system.py",
+      "sha256": "73eb5cc9dd73d1775eebba8a9e3b20d6f668d46dbe3c5cc518528afec3895c40",
+      "size": 24682
+    },
+    {
+      "file": ".ima/before_memory_top1_1784375542.py",
+      "sha256": "b4df23da09e38d286a9e2966bfa93584dc0f6e71646fde6ba53e83c97d3daaa1",
+      "size": 14513
+    },
+    {
+      "file": ".ima/before_system_bridge_1784040637/ima_master_runtime.py",
+      "sha256": "82b07e26a5041a1c8703f1b436d17e25235a6490d3f189627195b7da1e660d6f",
+      "size": 3945
+    },
+    {
+      "file": ".ima/before_system_bridge_1784040641/ima_master_runtime.py",
+      "sha256": "9964a0a8550cd6f006ec794b9736efc06a0e9ffe71b3198fe2fa45d9d85067ad",
+      "size": 4349
+    },
+    {
+      "file": ".ima/before_system_priority_20260714_175254/ima_master_runtime.py",
+      "sha256": "9964a0a8550cd6f006ec794b9736efc06a0e9ffe71b3198fe2fa45d9d85067ad",
+      "size": 4349
+    },
+    {
+      "file": ".ima/before_system_priority_patch_1784040810/ima_master_runtime.py",
+      "sha256": "9964a0a8550cd6f006ec794b9736efc06a0e9ffe71b3198fe2fa45d9d85067ad",
+      "size": 4349
+    },
+    {
+      "file": ".ima/boot_health.py",
+      "sha256": "267a4edc7f63fd865758854670dc236d9e21cf091a157d39d551743f246f9758",
+      "size": 714
+    },
+    {
+      "file": ".ima/broken_runtime_backup.py",
+      "sha256": "414d66a84062658db68766d592ca8d72f615b1cdbd28ce8d61cec4612b8bb8c4",
+      "size": 6580
+    },
+    {
+      "file": ".ima/build_graph.py",
+      "sha256": "5fec858b8b52e8cdeadb96bd008198d944260458de2f3071e39b7826191923f2",
+      "size": 1355
+    },
+    {
+      "file": ".ima/chatgpt_termux_bridge/mcp_server.py",
+      "sha256": "ee942ef8de5b542c9bb0fe641203ecf32a4d7528b6a95dd0c9af6afdcc6ee1c8",
+      "size": 3350
+    },
+    {
+      "file": ".ima/decision_memory.py",
+      "sha256": "0b1e387a7921d626c40a1734f774a3cc9ee1dcd08572a5c4ddd702ee2539b9ba",
+      "size": 1023
+    },
+    {
+      "file": ".ima/evolution/auto_backup.py",
+      "sha256": "04c6e434a373cf0b2c389a11d4718b17495000edec5b4942979dafebf80ee51e",
+      "size": 1140
+    },
+    {
+      "file": ".ima/git_verified_autosync.py",
+      "sha256": "279882a850e129ddec9a522eb6f0014d9793bd0669ee4c25897135817f7981a5",
+      "size": 1394
+    },
+    {
+      "file": ".ima/global_self_improvement_scanner.py",
+      "sha256": "95fb83b014e8deefbd71da17b7e960300b357147657943943acc4ab713ecb5c9",
+      "size": 1317
+    },
+    {
+      "file": ".ima/governance/architecture_guard.py",
+      "sha256": "30b7e6545aa9e863a7b0faceb7b6d3f1ebb707bae1d304b1ee78cce3323aee5a",
+      "size": 1655
+    },
+    {
+      "file": ".ima/governance/repair_backup/IMA_START.py",
+      "sha256": "43a86ea12449cdfa6c3eea27f0f466dd8a2d535314004beb4eb99cbe27d995a1",
+      "size": 3747
+    },
+    {
+      "file": ".ima/governance/repair_backup/IMA_WATCHDOG_before_evolution.py",
+      "sha256": "e396f4fa4bb6705a8644447268f2945d2accbc4b90b7e59cbd79db8e9333d6c9",
+      "size": 2134
+    },
+    {
+      "file": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "size": 839
+    },
+    {
+      "file": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_WATCHDOG.py",
+      "sha256": "e396f4fa4bb6705a8644447268f2945d2accbc4b90b7e59cbd79db8e9333d6c9",
+      "size": 2134
+    },
+    {
+      "file": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+      "size": 291
+    },
+    {
+      "file": ".ima/guardian/history_compactor.py",
+      "sha256": "b706d337576a6c04e1c7327f65a793ab63bae4af4182631d27ef2e63401e102b",
+      "size": 372
+    },
+    {
+      "file": ".ima/guardian/ima_guardian_controller.before_metrics.py",
+      "sha256": "51945a5749d4b8fb60fce08dcd0a7d275b6e01a0d5b1b8ff04ebd1cadb453cea",
+      "size": 2722
+    },
+    {
+      "file": ".ima/ima.py",
+      "sha256": "d488da84fa206ff31340fd6a59f9818430f800e383928301c16584890eddddf6",
+      "size": 3070
+    },
+    {
+      "file": ".ima/ima_awareness_bridge.py",
+      "sha256": "e20c60430ae4027cb90de32de7993c352a36f8789e23aa943d46ebd477f71194",
+      "size": 556
+    },
+    {
+      "file": ".ima/ima_event.py",
+      "sha256": "a1ea1e8134a9670dc6eec9a064ce89961380aff172162ccf3891cd6681f86a34",
+      "size": 250
+    },
+    {
+      "file": ".ima/ima_reducer.py",
+      "sha256": "a1c310780fb59ce3fdf4cfec35070755d1cae1b041bd3d4efc383f03245364da",
+      "size": 686
+    },
+    {
+      "file": ".ima/learning_feedback_bridge.py",
+      "sha256": "c07156fd0117f4b23c5899c2a3bc7f59f9b43ca01723ecec6b00df124040d661",
+      "size": 978
+    },
+    {
+      "file": ".ima/memory_log.py",
+      "sha256": "0b572d4b105234e0ed1a1ae3a86d8de8d8f96144de3ca2c0b1a5a42e37826380",
+      "size": 351
+    },
+    {
+      "file": ".ima/orchestrator_backup_1784026278/ima_fusion_runtime.py",
+      "sha256": "395eb51a45bdb98cb0064c08e83cb419c6e57a60bcbd87761c947474328cdf66",
+      "size": 1505
+    },
+    {
+      "file": ".ima/orchestrator_backup_1784026278/ima_self_knowledge_bridge.py",
+      "sha256": "40535e770305332a4158302d97ecf51e983e75e6093d2745bd6102a4197200d8",
+      "size": 3120
+    },
+    {
+      "file": ".ima/pipeline_backup/ima_master_runtime.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/post_clean_memory_response_verified_20260718_142106.py",
+      "sha256": "a78bb5dc6dfd62e7ea7f783a35ba3c782bbccaaff6d34dc67409bfea0e667861",
+      "size": 15802
+    },
+    {
+      "file": ".ima/post_memory_fastpath_verified_20260718_140154.py",
+      "sha256": "95df0e0d71753d0826dad9829d33800f9a3af74ae4d1c57102e8118a1208fcf8",
+      "size": 12616
+    },
+    {
+      "file": ".ima/post_memory_fastpath_verified_20260718_141739.py",
+      "sha256": "ac70e3bda04c9b16f20ac2e21d46cc92d4f2628d23bca0a1dd70356b3d16c1f1",
+      "size": 14751
+    },
+    {
+      "file": ".ima/post_memory_read_fastpath_verified_20260718_140322.py",
+      "sha256": "c8bdfc4af73e0b4085c66bc1e48a957ada7435635148c4242a1ac8cef46e424f",
+      "size": 14424
+    },
+    {
+      "file": ".ima/post_move_memory_fastpath_verified_20260718_140707.py",
+      "sha256": "8302bb0324a43a10464f29cced22ee24a8ed61c8a69089478cb56b809cf9daae",
+      "size": 14426
+    },
+    {
+      "file": ".ima/post_true_memory_fastpath_verified_20260718_140921.py",
+      "sha256": "abce2b61213e646dd5b173c2a890cab22f967e74e569e5ef2229cf55176dbc75",
+      "size": 14428
+    },
+    {
+      "file": ".ima/pre_clean_memory_response_20260718_142100.py",
+      "sha256": "40c6111048b203ea7a760f427795cd440a5d63186c76f7cba80559e692dc8d47",
+      "size": 15044
+    },
+    {
+      "file": ".ima/pre_memory_fastpath_20260718_135933.py",
+      "sha256": "0c73d56e723681cd4bb3ac62f25485e0ae4e95cdeb806311c5c48e191e51d7ef",
+      "size": 11416
+    },
+    {
+      "file": ".ima/pre_memory_fastpath_result_fix_20260718_141319.py",
+      "sha256": "abce2b61213e646dd5b173c2a890cab22f967e74e569e5ef2229cf55176dbc75",
+      "size": 14428
+    },
+    {
+      "file": ".ima/pre_memory_fastpath_structural_fix_20260718_141823.py",
+      "sha256": "ac70e3bda04c9b16f20ac2e21d46cc92d4f2628d23bca0a1dd70356b3d16c1f1",
+      "size": 14751
+    },
+    {
+      "file": ".ima/pre_memory_fastpath_undefined_result_fix_20260718_141637.py",
+      "sha256": "ac70e3bda04c9b16f20ac2e21d46cc92d4f2628d23bca0a1dd70356b3d16c1f1",
+      "size": 14751
+    },
+    {
+      "file": ".ima/pre_memory_read_fastpath_20260718_140309.py",
+      "sha256": "95df0e0d71753d0826dad9829d33800f9a3af74ae4d1c57102e8118a1208fcf8",
+      "size": 12616
+    },
+    {
+      "file": ".ima/pre_move_memory_fastpath_20260718_140647.py",
+      "sha256": "c8bdfc4af73e0b4085c66bc1e48a957ada7435635148c4242a1ac8cef46e424f",
+      "size": 14424
+    },
+    {
+      "file": ".ima/pre_path_scope_fix_20260718_141859.py",
+      "sha256": "d16d5c743a79273199dea7f42c9891537c391d6c52698902b898bec13fe4195d",
+      "size": 15000
+    },
+    {
+      "file": ".ima/pre_remove_all_added_memory_fastpaths_20260718_142239.py",
+      "sha256": "a78bb5dc6dfd62e7ea7f783a35ba3c782bbccaaff6d34dc67409bfea0e667861",
+      "size": 15802
+    },
+    {
+      "file": ".ima/pre_remove_memory_fastpath_v2_20260718_142337.py",
+      "sha256": "83ad9f31e645c8f9f0d25d4de0665fc424be1902592f4c72eadc90631960b158",
+      "size": 14558
+    },
+    {
+      "file": ".ima/pre_restore_path_calls_20260718_142308.py",
+      "sha256": "b88f44bbc34439b6b7df69ca5aa544d62df1c1b87a2ae3895d9fbb2efaef84c0",
+      "size": 14602
+    },
+    {
+      "file": ".ima/pre_true_memory_fastpath_20260718_140832.py",
+      "sha256": "8302bb0324a43a10464f29cced22ee24a8ed61c8a69089478cb56b809cf9daae",
+      "size": 14426
+    },
+    {
+      "file": ".ima/rebuild_index.py",
+      "sha256": "6cef5368561f031b0f20ce3cf34659a9389336850de933112ada7954945997c6",
+      "size": 859
+    },
+    {
+      "file": ".ima/repair_backup/ima_master_runtime.py",
+      "sha256": "78fc0463bf53500c153b72843ebd5576f49d961035ba94c6f56435e6b843c188",
+      "size": 3317
+    },
+    {
+      "file": ".ima/repair_backup/ima_mom.py",
+      "sha256": "8f327e9d97b3ae7700e4314089d6dd1a7684f52b9ccf92d31381dfc9fa0b2e68",
+      "size": 1519
+    },
+    {
+      "file": ".ima/repair_backup/server.py",
+      "sha256": "74fe96dc4963ec435eb1cc08c6737ed0bbb5d4b5224cf6b4e7deba9a08df4fbe",
+      "size": 4709
+    },
+    {
+      "file": ".ima/runtime/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": ".ima/runtime/core.py",
+      "sha256": "55d9cd53fc6db3ab1c1bdb1fab5cab1b4457af7d58e50a05b7a976069117c31e",
+      "size": 684
+    },
+    {
+      "file": ".ima/runtime/file_clock.py",
+      "sha256": "24fc814b61a1d39e4a1a9ab1b24785c488894694537727a1069587a37d6cd05a",
+      "size": 312
+    },
+    {
+      "file": ".ima/runtime/integration_guard.py",
+      "sha256": "663aa25168f3d3028520ffb7e6673781744b7bbae54c0f0ea6d004602380e998",
+      "size": 674
+    },
+    {
+      "file": ".ima/runtime/memory_bus.py",
+      "sha256": "2d0c9b94888e643d6e87729969f433cdc3ddfdb85e7a3d15ff31122ec83389b9",
+      "size": 257
+    },
+    {
+      "file": ".ima/runtime/memory_bus_adapter.py",
+      "sha256": "bd60dc54f2313af1d3672cf0531d37d5b01a55b7e6d2fd75512ee25ef50d31b7",
+      "size": 499
+    },
+    {
+      "file": ".ima/runtime/memory_bus_v2.before_unification_connect.py",
+      "sha256": "218b8b3671f9f52488af97748d958b8c05aa718bc1b2396f70cb4d84855f70fb",
+      "size": 927
+    },
+    {
+      "file": ".ima/runtime/memory_bus_v2.py",
+      "sha256": "a327b5107999ae5ebb3562fa7991768be724014dad9db78088f542acb8572c15",
+      "size": 1381
+    },
+    {
+      "file": ".ima/runtime/memory_bus_v2_contract_test.py",
+      "sha256": "9d330ef91f31e4065476cf53796ba5e7ec465c4cd54ab40c590d4b815cb57b53",
+      "size": 440
+    },
+    {
+      "file": ".ima/runtime/memory_policy.py",
+      "sha256": "cef8bff5df523db0b441b0e89a3d68366374680d268fff68545a1fe469fc9cd2",
+      "size": 938
+    },
+    {
+      "file": ".ima/runtime/memory_policy_adapter.py",
+      "sha256": "ac02e64690dccb9d11871c6c16f63867ea44751876b28963b541636670b1727e",
+      "size": 841
+    },
+    {
+      "file": ".ima/runtime/memory_policy_contract_test.py",
+      "sha256": "3c2bf9e7654f0befbcbf1c5bc7be0e0221c6f2ae05045264f5933c9c3f9f8657",
+      "size": 446
+    },
+    {
+      "file": ".ima/runtime/memory_unification_layer.py",
+      "sha256": "363d196d189712754a877f1b154290416a99095c39bf435af30d6fbc722d1239",
+      "size": 1458
+    },
+    {
+      "file": ".ima/runtime/query_engine.py",
+      "sha256": "68485af6bb241d519d10772364dbe8cfee6955be2a07bf390229183f4bf921dc",
+      "size": 868
+    },
+    {
+      "file": ".ima/runtime/runtime.py",
+      "sha256": "3184c07dcd54de562b8b8b455eb071e3d81d92364161f4dc9187dcfea98716df",
+      "size": 622
+    },
+    {
+      "file": ".ima/runtime/stream.py",
+      "sha256": "3387d8821edbd37c853462031bf9b4a87ebe453551955ff8f2db16bf044e5883",
+      "size": 320
+    },
+    {
+      "file": ".ima/runtime_before_knowledge_upgrade_final.py",
+      "sha256": "a1b0200fe8a2edcb8ad5f143027290240ed55d87c70b4498186f05319b91fc73",
+      "size": 5956
+    },
+    {
+      "file": ".ima/self_check.py",
+      "sha256": "93cb0cf026c4902208fdd9a657f068693c8afe5c8f32f9dfefca25926c2c47a7",
+      "size": 795
+    },
+    {
+      "file": ".ima/self_improvement_runtime.py",
+      "sha256": "314f836ec179313e34b994da6b011df4d245615c3d171d93398d3b2d24150265",
+      "size": 1080
+    },
+    {
+      "file": ".ima/self_review.py",
+      "sha256": "6e2756ab589cd22c9bde75d79b1c9333ca41c46ab86d613419b969bb24266706",
+      "size": 1183
+    },
+    {
+      "file": ".ima/server_WORKING_20260718_135032.py",
+      "sha256": "1860a1522c4ad21cb1fdc0e1529125328e3b097143589bceefea4b7f159dfcb9",
+      "size": 5094
+    },
+    {
+      "file": ".ima/source_manager_broken_backup.py",
+      "sha256": "a3160c7cdf2f3d417ef07839f99c4297640494eb6bd5be32dadb59cd1307d883",
+      "size": 1574
+    },
+    {
+      "file": ".ima/stability_checkpoint/api_server.py",
+      "sha256": "1860a1522c4ad21cb1fdc0e1529125328e3b097143589bceefea4b7f159dfcb9",
+      "size": 5094
+    },
+    {
+      "file": ".ima/stability_checkpoint/conversation_layer.py",
+      "sha256": "7b58377de20ae1f3d5b4ba34c2f7d8b7a943b8e9ab474d2ed7f2be29b310be9e",
+      "size": 2821
+    },
+    {
+      "file": ".ima/stability_checkpoint/ima_brain.py",
+      "sha256": "cfcaa88479f7ece752a0b0b824c85eb374c20435b604e1e82eaac5ff7a0e58e5",
+      "size": 3650
+    },
+    {
+      "file": ".ima/stability_checkpoint/ima_master_runtime.py",
+      "sha256": "c633fcd6738c824b52c6db8a6a73202b95f28b58a54b75ccba721908479152aa",
+      "size": 5608
+    },
+    {
+      "file": ".ima/stability_checkpoint/ima_mom.py",
+      "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3",
+      "size": 1561
+    },
+    {
+      "file": ".ima/stability_checkpoint/product_gateway_product_gateway.py",
+      "sha256": "4aeda8d41ac5b41b1398157224f3d7a62b8177279ea85974851bb1a8e7e32c43",
+      "size": 424
+    },
+    {
+      "file": ".ima/stable_after_context_connect_20260714_174305/conversation_layer.py",
+      "sha256": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+      "size": 1948
+    },
+    {
+      "file": ".ima/stable_after_context_connect_20260714_174305/conversation_router.py",
+      "sha256": "07a6b3b9dde98b82d8aaf50ae088ba83f8e4e8bd052b973a8d601576d847a18b",
+      "size": 756
+    },
+    {
+      "file": ".ima/stable_after_context_connect_20260714_174305/identity_context.py",
+      "sha256": "6f874f45c90cda87ae98e740fd4f46a7e20c61347d3262b0fb0b50a2f9c768e8",
+      "size": 571
+    },
+    {
+      "file": ".ima/stable_after_context_connect_20260714_174305/ima_master_runtime.py",
+      "sha256": "a550cfe8d7d3ac628ff038a47bfae0abee1667a4acfe3820f070e6028a025170",
+      "size": 3459
+    },
+    {
+      "file": ".ima/stable_after_context_connect_20260714_174305/server.py",
+      "sha256": "1860a1522c4ad21cb1fdc0e1529125328e3b097143589bceefea4b7f159dfcb9",
+      "size": 5094
+    },
+    {
+      "file": ".ima/stable_after_system_priority_20260714_175521/conversation_layer.py",
+      "sha256": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+      "size": 1948
+    },
+    {
+      "file": ".ima/stable_after_system_priority_20260714_175521/ima_master_runtime.py",
+      "sha256": "8dafa28968eda857567e1f38ab9f5f872b351700f52ea858f7fe10f845547262",
+      "size": 4961
+    },
+    {
+      "file": ".ima/stable_after_system_priority_20260714_175521/ima_mom.py",
+      "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3",
+      "size": 1561
+    },
+    {
+      "file": ".ima/stable_after_system_priority_20260714_175521/ima_system.py",
+      "sha256": "a8e2717f1a90f3521101cb3f2cd4b290bb1ffb6ad946d86303f57d33c9acdf67",
+      "size": 24152
+    },
+    {
+      "file": ".ima/stable_snapshot/ima_master_runtime.py",
+      "sha256": "a550cfe8d7d3ac628ff038a47bfae0abee1667a4acfe3820f070e6028a025170",
+      "size": 3459
+    },
+    {
+      "file": ".ima/stable_snapshot/ima_mom.py",
+      "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3",
+      "size": 1561
+    },
+    {
+      "file": ".ima/stable_snapshot/server.py",
+      "sha256": "1860a1522c4ad21cb1fdc0e1529125328e3b097143589bceefea4b7f159dfcb9",
+      "size": 5094
+    },
+    {
+      "file": ".ima/stable_working_20260714/conversation_layer.py",
+      "sha256": "f66e8beaac4be9972afe2c26e1afff67d3dcc5c822523afa281173a5453d8968",
+      "size": 1948
+    },
+    {
+      "file": ".ima/stable_working_20260714/identity_context.py",
+      "sha256": "6f874f45c90cda87ae98e740fd4f46a7e20c61347d3262b0fb0b50a2f9c768e8",
+      "size": 571
+    },
+    {
+      "file": ".ima/stable_working_20260714/ima_master_runtime.py",
+      "sha256": "a550cfe8d7d3ac628ff038a47bfae0abee1667a4acfe3820f070e6028a025170",
+      "size": 3459
+    },
+    {
+      "file": ".ima/stable_working_20260714/ima_mom.py",
+      "sha256": "8d37ab75146f3b15ea47b02f2793e4f6bf47b5a22167ec639073670362da99e3",
+      "size": 1561
+    },
+    {
+      "file": ".ima/stable_working_20260714/server.py",
+      "sha256": "1860a1522c4ad21cb1fdc0e1529125328e3b097143589bceefea4b7f159dfcb9",
+      "size": 5094
+    },
+    {
+      "file": ".ima/system_analyzer.py",
+      "sha256": "fde1d2939b76db219546b73c1626017b470fdf22ecd641df7ed4acd5be53a1bc",
+      "size": 1019
+    },
+    {
+      "file": ".ima/system_context.py",
+      "sha256": "56945e0a72d32755826ee61483b2c151de8e303652325d2b47847416aa7cf3d5",
+      "size": 618
+    },
+    {
+      "file": ".ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "size": 781
+    },
+    {
+      "file": "kernel/plugins/plugin_loader.py",
+      "sha256": "eca54083f687ac0254d9fc82b2827b7cb6a1d5cf5bd16af89f8e007875bf7597",
+      "size": 760
+    },
+    {
+      "file": "kernel/runtime/CANONICAL/IMA_IDENTITY.py",
+      "sha256": "4150e247cdd48237492f7a7395ee961e6c0c4df432520daef02e6fa73f0e198b",
+      "size": 889
+    },
+    {
+      "file": "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "size": 839
+    },
+    {
+      "file": "kernel/runtime/CANONICAL/IMA_WATCHDOG.py",
+      "sha256": "b9ec9ba85d14593ead6f128ca2ee9896df904b9739dbc8b0b564e8b6a8e4ee73",
+      "size": 2779
+    },
+    {
+      "file": "kernel/runtime/CANONICAL/python_bridge.py",
+      "sha256": "d932f9af4cdb3da2e7aeea0811a27352a2c4bed939acccc999dd32fdb53d2c22",
+      "size": 291
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "layer": "MANAGEMENT_LAYER",
+  "type": "STRUCTURAL_LOCK",
+  "created": 1784711533.5564063,
+  "status": "LOCKED",
+  "policy": {
+    "allow_runtime_changes": true,
+    "allow_management_structure_changes": false,
+    "require_snapshot_before_change": true,
+    "require_verification_after_change": true
+  },
+  "protected_components": [
+    "ACTIVE_CODE",
+    "BACKUP_STORE",
+    "MAINTENANCE_INDEX",
+    "MANAGEMENT_VERSION",
+    "MANAGEMENT_STATE"
+  ],
+  "file_count": 15,
+  "manifest_hash": "bc745b0c960f7d6f360c5f60ad06bff7747d8e07b5d7262b022f3fb57a39caf5"
+}
