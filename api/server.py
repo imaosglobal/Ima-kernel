@@ -112,8 +112,13 @@ class Brain:
                 )
             }
 
+        memories = context.get("supabase_memory", [])
+
         return {
-            "response":"אני כאן. קיבלתי: "+q
+            "response":
+            "אני כאן. קיבלתי: " + q +
+            "\n\nזיכרון Supabase אחרון:\n" +
+            "\n".join(memories[-5:])
         }
 
 
