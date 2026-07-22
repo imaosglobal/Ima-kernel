@@ -1,3 +1,4 @@
+from founder.executive_ai.memory.memory_store import save_memory
 
 import json
 from pathlib import Path
@@ -55,4 +56,13 @@ def deduplicate_records(records):
             clean.append(r)
 
     return clean
+
+
+
+def save_feedback_memory(record):
+
+    return save_memory(
+        "feedback",
+        record
+    )
 
