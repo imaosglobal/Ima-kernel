@@ -192,7 +192,10 @@ class Handler(BaseHTTPRequestHandler):
                         "status": "OK"
                     }
                 else:
-                    answer = product_gateway.ask(question)
+                    try:
+                        answer = ima_master_runtime.ask(question)
+                    except Exception:
+                        answer = product_gateway.ask(question)
 
                 conversation_layer.update(question)
 
