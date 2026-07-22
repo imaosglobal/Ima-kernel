@@ -1,6 +1,7 @@
 
 from founder.executive_ai.global_intelligence.opportunity_to_action import generate_actions
 from founder.executive_ai.action_engine.action_memory import save_action
+from founder.executive_ai.action_engine.action_feedback_learning import learn_from_action
 
 
 def run_world_actions():
@@ -41,6 +42,8 @@ def run_world_actions():
             result,
             "IMA executed opportunity intelligence cycle"
         )
+
+        learn_from_action({"action": action, "result": result})
 
         results.append({
             "action": action,
