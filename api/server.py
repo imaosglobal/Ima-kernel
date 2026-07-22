@@ -52,19 +52,17 @@ def supabase_status():
         }
 
 
-MEMORY_FILE=Path("ima_memory.json")
+from api.database.memory_store import load_memory, save_memory
 
 class Brain:
 
     def __init__(self):
-        if MEMORY_FILE.exists():
-            try:
-                self.memory=json.loads(
-                    MEMORY_FILE.read_text(encoding="utf-8")
-                )
-            except:
-                self.memory=[]
-        else:
+        try:
+            self.memory = [
+                x.get("content","")
+                for x in load_memory()
+            ]
+        except:
             self.memory=[]
 
 
@@ -86,10 +84,7 @@ class Brain:
 
         if any(x in q for x in ["תשמרי","תזכרי","זכור"]):
             self.memory.append(q)
-            MEMORY_FILE.write_text(
-                json.dumps(self.memory,ensure_ascii=False,indent=2),
-                encoding="utf-8"
-            )
+            save_memory(q)
             return {
                 "response":"שמרתי בזיכרון המקומי: "+q
             }
