@@ -71,6 +71,16 @@ class Brain:
         q=question.strip()
         context = conversation_layer.context()
 
+        try:
+            from api.database.memory_store import load_memory
+            memories = load_memory()
+            context["supabase_memory"] = [
+                x.get("content","")
+                for x in memories[-10:]
+            ]
+        except Exception:
+            context["supabase_memory"] = []
+
         if any(x in q for x in ["שלום","היי","הי","בוקר","ערב"]):
             return {
                 "response":"שלום אורי. אני כאן. איך אפשר לעזור?"
