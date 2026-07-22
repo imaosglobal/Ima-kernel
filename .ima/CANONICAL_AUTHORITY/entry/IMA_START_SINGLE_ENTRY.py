@@ -51,7 +51,7 @@ print("[OK] FALLBACK DISABLED")
 from pathlib import Path
 import hashlib, json
 
-REG=Path(".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json")
+REG=Path(".ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json")
 
 if not REG.exists():
     raise SystemExit("CANONICAL REGISTRY MISSING")
