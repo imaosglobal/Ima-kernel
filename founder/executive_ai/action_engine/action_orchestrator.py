@@ -29,6 +29,10 @@ def run_world_actions():
                 "score": action.get("score")
             }
 
+        elif action["action"] == "prepare_public_impact_message":
+
+            result = prepare_public_impact_message(action)
+
         else:
 
             result = {
