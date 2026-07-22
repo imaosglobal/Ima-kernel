@@ -1,3 +1,5 @@
+from languages.language_engine import detect_language
+from languages.translator import translate_response
 import json
 import re
 import time
@@ -56,6 +58,7 @@ class IMAMaster:
         self.name="IMA MASTER"
 
     def ask(self,message):
+        language = detect_language(message)
 
         # ============================================================
         # CANONICAL MEMORY PRIORITY GATE
@@ -177,6 +180,7 @@ class IMAMaster:
                         "אין זיכרון מתאים נמצא ב-Supabase או בזיכרון המקומי."
                     )
 
+                result['response'] = translate_response(result.get('response',''), language)
                 return result
 
             except Exception as memory_error:
