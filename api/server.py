@@ -210,8 +210,10 @@ class Handler(BaseHTTPRequestHandler):
                                 if memories:
                                     answer["response"] = "\n\n".join(
                                         x.get("content","")
-                                        for x in memories[-10:]
+                                        for x in memories[-20:]
                                         if x.get("content")
+                                        and x.get("content","").strip() != question.strip()
+                                        and len(x.get("content","").strip()) > len(question.strip())
                                     )
 
                     except Exception:
