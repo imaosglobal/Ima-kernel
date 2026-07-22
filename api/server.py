@@ -28,6 +28,30 @@ print('BOOT: before product_gateway', flush=True)
 from product.gateway import product_gateway
 print('BOOT: after product_gateway', flush=True)
 
+
+
+def supabase_status():
+    try:
+        from api.database.supabase_env import load_env
+        load_env()
+
+        from api.database.supabase_rest import supabase_get
+
+        result=supabase_get("users")
+
+        return {
+            "provider":"supabase",
+            "connected": result.get("status")==200
+        }
+
+    except Exception as e:
+        return {
+            "provider":"supabase",
+            "connected":False,
+            "error":str(e)
+        }
+
+
 MEMORY_FILE=Path("ima_memory.json")
 
 class Brain:
