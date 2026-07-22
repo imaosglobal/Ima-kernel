@@ -55,3 +55,13 @@ def run_world_actions():
         "executed": len(results),
         "results": results
     }
+
+
+def prepare_public_impact_message(action):
+
+    return {
+        "status":"message_ready",
+        "target":action.get("target"),
+        "strategy":"public impact focused outreach"
+    }
+

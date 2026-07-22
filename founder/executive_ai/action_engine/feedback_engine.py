@@ -35,3 +35,24 @@ def analyze_feedback():
         "lessons":lessons,
         "records":records
     }
+
+
+def deduplicate_records(records):
+
+    seen=set()
+    clean=[]
+
+    for r in records:
+
+        key=(
+            str(r.get("target")),
+            str(r.get("status")),
+            str(r.get("score"))
+        )
+
+        if key not in seen:
+            seen.add(key)
+            clean.append(r)
+
+    return clean
+
