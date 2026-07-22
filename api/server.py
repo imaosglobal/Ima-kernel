@@ -201,7 +201,10 @@ class Handler(BaseHTTPRequestHandler):
 
                 try:
                     from api.database.memory_store import save_memory
-                    save_memory(question)
+                    save_memory(
+                        question + "\n" +
+                        (answer.get("response","") if isinstance(answer, dict) else str(answer))
+                    )
                 except Exception:
                     pass
 
