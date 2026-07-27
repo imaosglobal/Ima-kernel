@@ -1,0 +1,1042 @@
+{
+  "learning": [
+    {
+      "file": "learning/action_engine.py",
+      "hash": "520da8a9",
+      "size": 646
+    },
+    {
+      "file": "learning/adaptive_loop.py",
+      "hash": "0a94aeef",
+      "size": 362
+    },
+    {
+      "file": "learning/auto_learning.py",
+      "hash": "e0b45993",
+      "size": 631
+    },
+    {
+      "file": "learning/capability_map.py",
+      "hash": "d33b992a",
+      "size": 695
+    },
+    {
+      "file": "learning/decision_engine.py",
+      "hash": "91fc8e0a",
+      "size": 482
+    },
+    {
+      "file": "learning/entry_gate.py",
+      "hash": "e0cc0517",
+      "size": 819
+    },
+    {
+      "file": "learning/evaluation_engine.py",
+      "hash": "9c2118ee",
+      "size": 1482
+    },
+    {
+      "file": "learning/evolution_controller.py",
+      "hash": "4b58d5bb",
+      "size": 2553
+    },
+    {
+      "file": "learning/feedback_engine.py",
+      "hash": "9a58552d",
+      "size": 583
+    },
+    {
+      "file": "learning/feedback_planner.py",
+      "hash": "86f0d4ce",
+      "size": 853
+    },
+    {
+      "file": "learning/gap_analyzer.py",
+      "hash": "a85b5295",
+      "size": 832
+    },
+    {
+      "file": "learning/gate_guard.py",
+      "hash": "73a76e10",
+      "size": 1115
+    },
+    {
+      "file": "learning/health_check.py",
+      "hash": "67017a45",
+      "size": 644
+    },
+    {
+      "file": "learning/ima_awareness.py",
+      "hash": "08e0e654",
+      "size": 674
+    },
+    {
+      "file": "learning/ima_evolution_cycle.py",
+      "hash": "65b3a050",
+      "size": 664
+    },
+    {
+      "file": "learning/ima_learning_loop.py",
+      "hash": "c80436f1",
+      "size": 1266
+    },
+    {
+      "file": "learning/improvement_engine.py",
+      "hash": "1a0abe71",
+      "size": 831
+    },
+    {
+      "file": "learning/improvement_planner.py",
+      "hash": "5a78c659",
+      "size": 864
+    },
+    {
+      "file": "learning/journal_cleanup.py",
+      "hash": "d4934511",
+      "size": 438
+    },
+    {
+      "file": "learning/knowledge_dedup.py",
+      "hash": "7fb00157",
+      "size": 243
+    },
+    {
+      "file": "learning/knowledge_expander.py",
+      "hash": "1e893cbe",
+      "size": 1020
+    },
+    {
+      "file": "learning/knowledge_gaps.py",
+      "hash": "bcfd68fb",
+      "size": 742
+    },
+    {
+      "file": "learning/learning_analyzer.py",
+      "hash": "af7d7dba",
+      "size": 1031
+    },
+    {
+      "file": "learning/learning_memory.py",
+      "hash": "9244f826",
+      "size": 2242
+    },
+    {
+      "file": "learning/learning_memory_connector.py",
+      "hash": "9dd59fe1",
+      "size": 589
+    },
+    {
+      "file": "learning/learning_scheduler.py",
+      "hash": "1e76e81e",
+      "size": 461
+    },
+    {
+      "file": "learning/meta_orchestrator.py",
+      "hash": "a0c41dd4",
+      "size": 1890
+    },
+    {
+      "file": "learning/safe_scheduler.py",
+      "hash": "eb2c6dd8",
+      "size": 464
+    },
+    {
+      "file": "learning/safety_gate.py",
+      "hash": "dac4f85e",
+      "size": 445
+    },
+    {
+      "file": "learning/self_improvement.py",
+      "hash": "33d14c3b",
+      "size": 709
+    },
+    {
+      "file": "learning/self_manager.py",
+      "hash": "fbc49046",
+      "size": 862
+    },
+    {
+      "file": "learning/self_reflection.py",
+      "hash": "fe04891f",
+      "size": 1435
+    },
+    {
+      "file": "learning/single_gate.py",
+      "hash": "b364b886",
+      "size": 1763
+    },
+    {
+      "file": "learning/system_improvement_memory.py",
+      "hash": "263141e0",
+      "size": 785
+    },
+    {
+      "file": "learning/system_introspection.py",
+      "hash": "95f700f9",
+      "size": 2010
+    },
+    {
+      "file": "learning/brain_guard.py",
+      "hash": "2bd85217",
+      "size": 1344
+    },
+    {
+      "file": "learning/child_safety_engine.py",
+      "hash": "83e257cc",
+      "size": 175
+    },
+    {
+      "file": "learning/persona_engine.py",
+      "hash": "90c1af88",
+      "size": 167
+    },
+    {
+      "file": "learning/canonical_guard.py",
+      "hash": "302515ac",
+      "size": 406
+    },
+    {
+      "file": "learning/ima_chronicle.py",
+      "hash": "e98d5d68",
+      "size": 1482
+    },
+    {
+      "file": "learning/module_registry.py",
+      "hash": "efebeb18",
+      "size": 1708
+    },
+    {
+      "file": "learning/learning_loop.py",
+      "hash": "eb4c7810",
+      "size": 1231
+    },
+    {
+      "file": "learning/learning_evaluator.py",
+      "hash": "2a8ddc63",
+      "size": 627
+    },
+    {
+      "file": "learning/suggest_improvements.py",
+      "hash": "d38f6cf6",
+      "size": 719
+    },
+    {
+      "file": "learning/historical_inference.py",
+      "hash": "d37a0da7",
+      "size": 2116
+    },
+    {
+      "file": "learning/learning_router.py",
+      "hash": "185317af",
+      "size": 449
+    },
+    {
+      "file": "learning/self_learning.py",
+      "hash": "023f6981",
+      "size": 274
+    },
+    {
+      "file": "learning/user_memory.py",
+      "hash": "985e2136",
+      "size": 1350
+    },
+    {
+      "file": "learning/world_memory.py",
+      "hash": "58be2d60",
+      "size": 575
+    },
+    {
+      "file": "learning/knowledge_answer_builder.py",
+      "hash": "d224a00e",
+      "size": 624
+    },
+    {
+      "file": "learning/knowledge_router.py",
+      "hash": "0edd84c8",
+      "size": 295
+    },
+    {
+      "file": "learning/source_router.py",
+      "hash": "91815e54",
+      "size": 1842
+    },
+    {
+      "file": "learning/learning_gate.py",
+      "hash": "52299244",
+      "size": 390
+    },
+    {
+      "file": "learning/knowledge_retrieval.py",
+      "hash": "f9537ff7",
+      "size": 355
+    },
+    {
+      "file": "learning/knowledge_graph_retrieval.py",
+      "hash": "35022f23",
+      "size": 1445
+    },
+    {
+      "file": "learning/knowledge_expansion_engine.py",
+      "hash": "4c356857",
+      "size": 909
+    },
+    {
+      "file": "learning/world_learning_engine.py",
+      "hash": "99892bf0",
+      "size": 924
+    },
+    {
+      "file": "learning/knowledge_pipeline.py",
+      "hash": "10e5a47a",
+      "size": 1111
+    },
+    {
+      "file": "learning/external_knowledge_source.py",
+      "hash": "29208eac",
+      "size": 564
+    },
+    {
+      "file": "learning/knowledge_validator.py",
+      "hash": "f55b08a8",
+      "size": 162
+    },
+    {
+      "file": "learning/world_knowledge_store.py",
+      "hash": "848bb78e",
+      "size": 376
+    },
+    {
+      "file": "learning/world_graph_updater.py",
+      "hash": "52523cda",
+      "size": 592
+    },
+    {
+      "file": "learning/world_learning_connector.py",
+      "hash": "4114ab57",
+      "size": 806
+    },
+    {
+      "file": "learning/source_manager.py",
+      "hash": "7ce63f3b",
+      "size": 919
+    },
+    {
+      "file": "learning/source_validator.py",
+      "hash": "dfa8d2ad",
+      "size": 352
+    },
+    {
+      "file": "learning/provenance_store.py",
+      "hash": "5b0b2ef2",
+      "size": 871
+    },
+    {
+      "file": "learning/citation_builder.py",
+      "hash": "3a36ce98",
+      "size": 751
+    },
+    {
+      "file": "learning/knowledge_provenance_connector.py",
+      "hash": "17b561f8",
+      "size": 862
+    },
+    {
+      "file": "learning/web_knowledge_router.py",
+      "hash": "a4185899",
+      "size": 2160
+    },
+    {
+      "file": "learning/web_knowledge_collector.py",
+      "hash": "3d2ebc07",
+      "size": 3919
+    },
+    {
+      "file": "learning/web_knowledge_collector.backup.py",
+      "hash": "27680c58",
+      "size": 3383
+    },
+    {
+      "file": "learning/web_knowledge_collector_final_backup_1784119874.py",
+      "hash": "3d2ebc07",
+      "size": 3919
+    },
+    {
+      "file": "learning/knowledge_fusion.py",
+      "hash": "dad25e07",
+      "size": 1525
+    },
+    {
+      "file": "learning/source_registry.py",
+      "hash": "19f5f154",
+      "size": 1572
+    },
+    {
+      "file": "learning/knowledge_runtime_bridge.py",
+      "hash": "2ff01815",
+      "size": 623
+    },
+    {
+      "file": "learning/source_quality_ranker.py",
+      "hash": "660a14e3",
+      "size": 310
+    },
+    {
+      "file": "learning/knowledge_compactor.py",
+      "hash": "cd874c43",
+      "size": 242
+    },
+    {
+      "file": "learning/adaptive_learning_daemon.py",
+      "hash": "19b9fd29",
+      "size": 592
+    },
+    {
+      "file": "learning/knowledge_runtime_bridge.adaptive_backup_1784122967.py",
+      "hash": "5609569e",
+      "size": 647
+    },
+    {
+      "file": "learning/knowledge_fusion.before_ranking_1784124167.py",
+      "hash": "03c25ea7",
+      "size": 1159
+    },
+    {
+      "file": "learning/reasoning_engine.py",
+      "hash": "b43d9264",
+      "size": 1314
+    },
+    {
+      "file": "learning/planning_engine.py",
+      "hash": "b520255c",
+      "size": 566
+    },
+    {
+      "file": "learning/autonomy_engine.py",
+      "hash": "76df7edf",
+      "size": 1473
+    },
+    {
+      "file": "learning/_backup_action_engine_20260718_210956.py",
+      "hash": "a5b588a7",
+      "size": 1269
+    },
+    {
+      "file": "learning/_backup_evaluation_engine_20260718_211144.py",
+      "hash": "56fd24ef",
+      "size": 571
+    },
+    {
+      "file": "learning/plan_feedback.py",
+      "hash": "c14a5143",
+      "size": 1407
+    },
+    {
+      "file": "learning/_backup_autonomy_engine_20260718_211301.py",
+      "hash": "8fb7dcff",
+      "size": 655
+    },
+    {
+      "file": "learning/lesson_memory.py",
+      "hash": "f3c0128c",
+      "size": 1246
+    },
+    {
+      "file": "learning/_backup_autonomy_engine_lesson_20260718_211338.py",
+      "hash": "9942720c",
+      "size": 1283
+    },
+    {
+      "file": "learning/lesson_retrieval.py",
+      "hash": "f6cedcbd",
+      "size": 1523
+    },
+    {
+      "file": "learning/self_inspection_cycle.py",
+      "hash": "166642e7",
+      "size": 5307
+    },
+    {
+      "file": "learning/continuous_learning_loop.py",
+      "hash": "e249596c",
+      "size": 2994
+    },
+    {
+      "file": "learning/_backup_self_improvement_cycle_20260718_211802.py",
+      "hash": "ec6fab31",
+      "size": 8794
+    },
+    {
+      "file": "learning/_backup_lesson_retrieval_20260718_211437.py",
+      "hash": "f6cedcbd",
+      "size": 1523
+    },
+    {
+      "file": "learning/self_improvement_cycle.py",
+      "hash": "7b1fc4a3",
+      "size": 10026
+    },
+    {
+      "file": "learning/_backup_status_fix_20260718_215252.py",
+      "hash": "98b44a9e",
+      "size": 9210
+    },
+    {
+      "file": "learning/_backup_allowlist_filter_20260718_220529.py",
+      "hash": "9c49ef41",
+      "size": 9226
+    },
+    {
+      "file": "learning/_backup_runtime_allowlist_integration_20260718_220711.py",
+      "hash": "9c49ef41",
+      "size": 9226
+    },
+    {
+      "file": "learning/sources/wikipedia.py",
+      "hash": "90a954fa",
+      "size": 124
+    },
+    {
+      "file": "learning/sources/duckduckgo.py",
+      "hash": "8787bba5",
+      "size": 1199
+    },
+    {
+      "file": "learning/sources/arxiv.py",
+      "hash": "507db488",
+      "size": 1433
+    },
+    {
+      "file": "learning/sources/auto_loader.py",
+      "hash": "58065e45",
+      "size": 914
+    },
+    {
+      "file": "learning/sources/source_validator.py",
+      "hash": "9083caaa",
+      "size": 635
+    },
+    {
+      "file": "learning/sources/source_discovery.py",
+      "hash": "694fd948",
+      "size": 1243
+    },
+    {
+      "file": "learning/sources/future_source_template.py",
+      "hash": "0f06a51a",
+      "size": 205
+    },
+    {
+      "file": "learning/sources/discovery_engine.py",
+      "hash": "648c23f3",
+      "size": 993
+    },
+    {
+      "file": "learning/sources/source_inspector.py",
+      "hash": "16a8495e",
+      "size": 1259
+    },
+    {
+      "file": "learning/sources/source_promoter.py",
+      "hash": "a0c76266",
+      "size": 1548
+    },
+    {
+      "file": "learning/sources/update_candidates.py",
+      "hash": "bfef20f6",
+      "size": 527
+    },
+    {
+      "file": "learning/sources/source_learning_daemon.py",
+      "hash": "2dc1eade",
+      "size": 2296
+    },
+    {
+      "file": "learning/sources/runtime_refresh.py",
+      "hash": "d5008376",
+      "size": 254
+    },
+    {
+      "file": "learning/sources/source_generator.py",
+      "hash": "5ed55f58",
+      "size": 708
+    },
+    {
+      "file": "learning/sources/pubmed.py",
+      "hash": "ea5b898f",
+      "size": 504
+    },
+    {
+      "file": "learning/sources/nasa.py",
+      "hash": "d9b2a264",
+      "size": 480
+    },
+    {
+      "file": "learning/sources/nature.py",
+      "hash": "c7b0ea86",
+      "size": 486
+    },
+    {
+      "file": "learning/sources/web_discovery_daemon.py",
+      "hash": "f1b62ff3",
+      "size": 1305
+    },
+    {
+      "file": "learning/sources/google_scholar.py",
+      "hash": "2c82a383",
+      "size": 502
+    },
+    {
+      "file": "learning/sources/mit.py",
+      "hash": "ec6b80c4",
+      "size": 477
+    },
+    {
+      "file": "learning/sources/candidate_generator.py",
+      "hash": "d67f8e97",
+      "size": 682
+    },
+    {
+      "file": "learning/sources/external_registry.py",
+      "hash": "669aaf23",
+      "size": 1521
+    },
+    {
+      "file": "learning/sources/noaa.py",
+      "hash": "07b62de9",
+      "size": 480
+    },
+    {
+      "file": "learning/sources/html_extractor.py",
+      "hash": "8a3c49c6",
+      "size": 627
+    },
+    {
+      "file": "learning/sources/source_learning_daemon.adaptive_backup_1784122967.py",
+      "hash": "d467a258",
+      "size": 2109
+    },
+    {
+      "file": "learning/knowledge_core/core.py",
+      "hash": "21176e2a",
+      "size": 916
+    },
+    {
+      "file": "learning/knowledge_core/context.py",
+      "hash": "f8e7ea0c",
+      "size": 125
+    },
+    {
+      "file": "learning/knowledge_core/confidence.py",
+      "hash": "59adc101",
+      "size": 201
+    },
+    {
+      "file": "learning/knowledge_core/deduplicator.py",
+      "hash": "a535ad25",
+      "size": 221
+    },
+    {
+      "file": "learning/knowledge_core/response_builder.py",
+      "hash": "f6a54aaf",
+      "size": 57
+    },
+    {
+      "file": "learning/knowledge_core/truth_gate.py",
+      "hash": "324320cc",
+      "size": 197
+    },
+    {
+      "file": "learning/knowledge_core/ranking.py",
+      "hash": "5fdf030e",
+      "size": 172
+    },
+    {
+      "file": "learning/knowledge_core/orchestrator.py",
+      "hash": "cf640c85",
+      "size": 1003
+    },
+    {
+      "file": "learning/knowledge_core/source_router.py",
+      "hash": "43bc5efa",
+      "size": 1228
+    },
+    {
+      "file": "learning/knowledge_core/source_cleaner.py",
+      "hash": "8c958f33",
+      "size": 375
+    },
+    {
+      "file": "learning/knowledge_core/entity_gate.py",
+      "hash": "2f087f73",
+      "size": 252
+    },
+    {
+      "file": "learning/_backup_reasoning_20260718_210634/decision_engine.py",
+      "hash": "91fc8e0a",
+      "size": 482
+    },
+    {
+      "file": "learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "hash": "9bd2bf96",
+      "size": 1513
+    },
+    {
+      "file": "learning/_backup_reasoning_20260718_210634/self_manager.py",
+      "hash": "fbc49046",
+      "size": 862
+    },
+    {
+      "file": "learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "hash": "9bd2bf96",
+      "size": 1513
+    },
+    {
+      "file": "learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "hash": "9bd2bf96",
+      "size": 1513
+    }
+  ],
+  "founder/executive_ai": [
+    {
+      "file": "founder/executive_ai/question_engine.py",
+      "hash": "ee944e4d",
+      "size": 885
+    },
+    {
+      "file": "founder/executive_ai/decision_memory.py",
+      "hash": "dfaec5b9",
+      "size": 460
+    },
+    {
+      "file": "founder/executive_ai/__init__.py",
+      "hash": "d41d8cd9",
+      "size": 0
+    },
+    {
+      "file": "founder/executive_ai/strategy/market_evolution.py",
+      "hash": "28acaddc",
+      "size": 920
+    },
+    {
+      "file": "founder/executive_ai/strategy/market_analyzer.py",
+      "hash": "3966d60d",
+      "size": 807
+    },
+    {
+      "file": "founder/executive_ai/strategy/learning_market_engine.py",
+      "hash": "37db33da",
+      "size": 518
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/company_profile.py",
+      "hash": "6609f9d2",
+      "size": 627
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/fit_score.py",
+      "hash": "9bfbf394",
+      "size": 639
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/outreach_generator.py",
+      "hash": "58602d47",
+      "size": 442
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/evidence_memory.py",
+      "hash": "6381ca7b",
+      "size": 770
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/lead_ranker.py",
+      "hash": "e5503cd5",
+      "size": 551
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/signal_detector.py",
+      "hash": "5037e828",
+      "size": 795
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/outreach_memory.py",
+      "hash": "97df9199",
+      "size": 625
+    },
+    {
+      "file": "founder/executive_ai/customer_intelligence/market_learning.py",
+      "hash": "34b77823",
+      "size": 555
+    },
+    {
+      "file": "founder/executive_ai/advisor/founder_advisor.py",
+      "hash": "9f07a885",
+      "size": 1243
+    },
+    {
+      "file": "founder/executive_ai/operating_system/context.py",
+      "hash": "0bffb9af",
+      "size": 369
+    },
+    {
+      "file": "founder/executive_ai/operating_system/action_planner.py",
+      "hash": "43df2fa1",
+      "size": 735
+    },
+    {
+      "file": "founder/executive_ai/operating_system/outcome_memory.py",
+      "hash": "824de6aa",
+      "size": 603
+    },
+    {
+      "file": "founder/executive_ai/competitive_intelligence/competitor_memory.py",
+      "hash": "51ae58b5",
+      "size": 672
+    },
+    {
+      "file": "founder/executive_ai/competitive_intelligence/competitor_analyzer.py",
+      "hash": "5d0402ee",
+      "size": 380
+    },
+    {
+      "file": "founder/executive_ai/competitive_intelligence/strategy_engine.py",
+      "hash": "e66dbae6",
+      "size": 1534
+    },
+    {
+      "file": "founder/executive_ai/integration/relevance_detector.py",
+      "hash": "9e1b833b",
+      "size": 450
+    },
+    {
+      "file": "founder/executive_ai/integration/background_bridge.py",
+      "hash": "32a99902",
+      "size": 496
+    },
+    {
+      "file": "founder/executive_ai/memory/memory_ranker.py",
+      "hash": "f5864182",
+      "size": 749
+    },
+    {
+      "file": "founder/executive_ai/memory/context_synthesizer.py",
+      "hash": "e1c45cd4",
+      "size": 507
+    },
+    {
+      "file": "founder/executive_ai/memory/founder_timeline.py",
+      "hash": "cb73b2c6",
+      "size": 494
+    },
+    {
+      "file": "founder/executive_ai/memory/memory_bridge.py",
+      "hash": "1bae2412",
+      "size": 518
+    },
+    {
+      "file": "founder/executive_ai/memory/memory_consolidator.py",
+      "hash": "a97a0c62",
+      "size": 657
+    },
+    {
+      "file": "founder/executive_ai/memory/pattern_analyzer.py",
+      "hash": "96607221",
+      "size": 568
+    },
+    {
+      "file": "founder/executive_ai/memory/decision_insight.py",
+      "hash": "f33e2763",
+      "size": 802
+    },
+    {
+      "file": "founder/executive_ai/memory/learning_feedback.py",
+      "hash": "c09ceca0",
+      "size": 692
+    },
+    {
+      "file": "founder/executive_ai/memory/learning_optimizer.py",
+      "hash": "2d0a3101",
+      "size": 538
+    },
+    {
+      "file": "founder/executive_ai/memory/adaptive_strategy.py",
+      "hash": "df5bdabb",
+      "size": 1535
+    },
+    {
+      "file": "founder/executive_ai/memory/lesson_mapper.py",
+      "hash": "cd5105e5",
+      "size": 408
+    },
+    {
+      "file": "founder/executive_ai/knowledge/concept_graph.py",
+      "hash": "a2a48728",
+      "size": 460
+    },
+    {
+      "file": "founder/executive_ai/knowledge/intent_mapper.py",
+      "hash": "b2355f98",
+      "size": 585
+    },
+    {
+      "file": "founder/executive_ai/knowledge/intent_ranker.py",
+      "hash": "44f8b789",
+      "size": 503
+    },
+    {
+      "file": "founder/executive_ai/knowledge/context_priority.py",
+      "hash": "e72b1b87",
+      "size": 822
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_registry.py",
+      "hash": "e7f3f83a",
+      "size": 511
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_planner.py",
+      "hash": "6a8f9024",
+      "size": 537
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_memory.py",
+      "hash": "96e3a211",
+      "size": 363
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_executor.py",
+      "hash": "fda884f6",
+      "size": 726
+    },
+    {
+      "file": "founder/executive_ai/action_engine/__init__.py",
+      "hash": "d41d8cd9",
+      "size": 0
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_orchestrator.py",
+      "hash": "837f3669",
+      "size": 1749
+    },
+    {
+      "file": "founder/executive_ai/action_engine/feedback_engine.py",
+      "hash": "f76b366a",
+      "size": 1267
+    },
+    {
+      "file": "founder/executive_ai/action_engine/action_learning_loop.py",
+      "hash": "42310762",
+      "size": 397
+    },
+    {
+      "file": "founder/executive_ai/action_engine/strategy_feedback_bridge.py",
+      "hash": "0338da76",
+      "size": 842
+    },
+    {
+      "file": "founder/executive_ai/action_engine/autonomous_cycle.py",
+      "hash": "f52dba43",
+      "size": 492
+    },
+    {
+      "file": "founder/executive_ai/action_engine/message_strategy.py",
+      "hash": "febeb7fd",
+      "size": 918
+    },
+    {
+      "file": "founder/executive_ai/action_engine/outreach_personalizer.py",
+      "hash": "8f6bb960",
+      "size": 867
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/entity_types.py",
+      "hash": "e9d12b7a",
+      "size": 756
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/opportunity_memory.py",
+      "hash": "835e501f",
+      "size": 646
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/entity_classifier.py",
+      "hash": "c4f92730",
+      "size": 424
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/opportunity_ranker.py",
+      "hash": "bd21db2b",
+      "size": 2114
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/world_scanner.py",
+      "hash": "a143984d",
+      "size": 1456
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/opportunity_engine.py",
+      "hash": "122659f9",
+      "size": 852
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/opportunity_to_action.py",
+      "hash": "f0cfcc03",
+      "size": 1279
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/human_entity_model.py",
+      "hash": "d066998b",
+      "size": 717
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/world_people_index.py",
+      "hash": "406b23cc",
+      "size": 644
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/human_profile_engine.py",
+      "hash": "d947c040",
+      "size": 929
+    },
+    {
+      "file": "founder/executive_ai/global_intelligence/language_preference.py",
+      "hash": "f3f075be",
+      "size": 670
+    },
+    {
+      "file": "founder/executive_ai/language/language_context_bridge.py",
+      "hash": "17b1de7d",
+      "size": 975
+    },
+    {
+      "file": "founder/executive_ai/device/device_language.py",
+      "hash": "296ca180",
+      "size": 1004
+    },
+    {
+      "file": "founder/executive_ai/action_engine/executors/__init__.py",
+      "hash": "d41d8cd9",
+      "size": 0
+    },
+    {
+      "file": "founder/executive_ai/action_engine/executors/lead_finder.py",
+      "hash": "ac2f86d5",
+      "size": 569
+    },
+    {
+      "file": "founder/executive_ai/action_engine/executors/lead_ranker.py",
+      "hash": "82285b74",
+      "size": 348
+    },
+    {
+      "file": "founder/executive_ai/action_engine/executors/outreach_creator.py",
+      "hash": "ba477858",
+      "size": 305
+    },
+    {
+      "file": "founder/executive_ai/action_engine/executors/feedback_collector.py",
+      "hash": "4bc045d4",
+      "size": 141
+    }
+  ],
+  "gateway": []
+}
