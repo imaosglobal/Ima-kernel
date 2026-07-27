@@ -1,0 +1,16 @@
+{
+  "learning_core": [
+    "learning/learning_memory.py",
+    "learning/learning_memory_connector.py",
+    "learning/feedback_engine.py",
+    "learning/module_registry.py",
+    "learning/canonical_guard.py",
+    "learning/ima_chronicle.py"
+  ],
+  "founder_learning": [
+    "founder/executive_ai/action_engine/action_learning_loop.py",
+    "founder/executive_ai/action_engine/feedback_engine.py",
+    "founder/executive_ai/action_engine/action_orchestrator.py",
+    "founder/executive_ai/global_intelligence/opportunity_ranker.py"
+  ]
+}
