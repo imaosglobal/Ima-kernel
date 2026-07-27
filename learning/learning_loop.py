@@ -1,3 +1,4 @@
+from learning.runtime_bridge import emit_learning_event
 
 from learning.learning_router import route_learning
 from learning.self_learning import learn_self
