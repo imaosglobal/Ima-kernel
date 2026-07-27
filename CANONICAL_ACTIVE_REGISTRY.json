@@ -1,0 +1,25 @@
+{
+  "authority": ".ima/CANONICAL_AUTHORITY/ACTIVE",
+  "components": {
+    "IMA_START.py": {
+      "hash": "9063bf8c",
+      "size": 2582
+    },
+    "ima_system.py": {
+      "hash": "f411a745",
+      "size": 26182
+    },
+    "ima_runtime.py": {
+      "hash": "18b15c15",
+      "size": 2029
+    },
+    "ima_daemon.py": {
+      "hash": "5728fa03",
+      "size": 1752
+    },
+    "ima.py": {
+      "hash": "c0757aca",
+      "size": 3070
+    }
+  }
+}
