@@ -1,0 +1,13 @@
+{
+  "memory_authority": "learning/learning_memory.py",
+  "feedback_authority": "learning/feedback_engine.py",
+  "excluded_duplicates": [
+    "learning/learning_memory.py.bak",
+    "founder/executive_ai/memory/learning_feedback.py"
+  ],
+  "policy": {
+    "single_memory_write_path": true,
+    "single_feedback_processing_path": true,
+    "legacy_modules_read_only": true
+  }
+}
