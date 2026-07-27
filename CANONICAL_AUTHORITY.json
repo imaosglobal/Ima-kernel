@@ -1,0 +1,11 @@
+{
+  "created": "2026-07-27T18:59:12.047335",
+  "authority_root": ".ima/CANONICAL_AUTHORITY/ACTIVE",
+  "lock": "AUTHORITY_LOCK.json",
+  "identity": "LIVE_IDENTITY.json",
+  "policy": {
+    "active_is_authority": true,
+    "snapshots_are_read_only": true,
+    "auto_promote_snapshots": false
+  }
+}
