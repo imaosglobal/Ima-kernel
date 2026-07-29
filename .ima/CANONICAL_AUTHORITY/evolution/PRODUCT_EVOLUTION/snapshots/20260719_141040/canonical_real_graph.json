@@ -1,0 +1,88 @@
+{
+  "canonical_root": ".ima/CANONICAL_AUTHORITY",
+  "files": 11,
+  "edges": 0,
+  "parse_errors": [],
+  "connections": [],
+  "centrality": [
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/backups/IMA_SELF_EVOLUTION_1784383052.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    },
+    {
+      "file": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py",
+      "imports": 0,
+      "imported_by": 0,
+      "total": 0
+    }
+  ],
+  "isolated": [
+    ".ima/CANONICAL_AUTHORITY/entry/IMA_START_SINGLE_ENTRY.py",
+    ".ima/CANONICAL_AUTHORITY/kernel/python_bridge.py",
+    ".ima/CANONICAL_AUTHORITY/runtime/ima_master_runtime.py",
+    ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/rebuild_index.py",
+    ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/build_graph.py",
+    ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/IMA_SELF_EVOLUTION.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/backups/IMA_SELF_EVOLUTION_1784383052.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_REPAIR_ENGINE.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+    ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/GLOBAL_SYSTEM_AWARENESS/IMA_GLOBAL_SYSTEM_AWARENESS.py"
+  ]
+}

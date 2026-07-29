@@ -1,0 +1,87 @@
+{
+  "learning": {
+    "learning/adaptive_loop.py": [
+      "learning_memory",
+      "feedback_engine"
+    ],
+    "learning/decision_engine.py": [
+      "learning_memory"
+    ],
+    "learning/evaluation_engine.py": [
+      "learning_memory"
+    ],
+    "learning/feedback_planner.py": [
+      "feedback_engine"
+    ],
+    "learning/learning_memory.py": [
+      "learning_memory"
+    ],
+    "learning/learning_memory_connector.py": [
+      "import ima",
+      "learning_memory"
+    ],
+    "learning/learning_scheduler.py": [
+      "import ima"
+    ],
+    "learning/canonical_guard.py": [
+      "kernel"
+    ],
+    "learning/ima_chronicle.py": [
+      "kernel",
+      "runtime"
+    ],
+    "learning/module_registry.py": [
+      "learning_memory",
+      "feedback_engine"
+    ],
+    "learning/learning_loop.py": [
+      "learning_router"
+    ],
+    "learning/learning_evaluator.py": [
+      "learning_memory"
+    ],
+    "learning/suggest_improvements.py": [
+      "learning_memory"
+    ],
+    "learning/historical_inference.py": [
+      "from ima",
+      "learning_memory"
+    ],
+    "learning/learning_router.py": [
+      "learning_memory"
+    ],
+    "learning/self_learning.py": [
+      "learning_memory"
+    ],
+    "learning/_backup_action_engine_20260718_210956.py": [
+      "learning_memory"
+    ],
+    "learning/_backup_evaluation_engine_20260718_211144.py": [
+      "learning_memory"
+    ],
+    "learning/self_improvement_cycle.py": [
+      "runtime"
+    ],
+    "learning/sources/source_learning_daemon.py": [
+      "runtime"
+    ],
+    "learning/sources/source_learning_daemon.adaptive_backup_1784122967.py": [
+      "runtime"
+    ],
+    "learning/_backup_reasoning_20260718_210634/decision_engine.py": [
+      "learning_memory"
+    ]
+  },
+  "founder/executive_ai": {
+    "founder/executive_ai/action_engine/action_learning_loop.py": [
+      "feedback_engine"
+    ],
+    "founder/executive_ai/action_engine/strategy_feedback_bridge.py": [
+      "feedback_engine"
+    ],
+    "founder/executive_ai/global_intelligence/opportunity_ranker.py": [
+      "feedback_engine"
+    ]
+  },
+  "gateway": {}
+}

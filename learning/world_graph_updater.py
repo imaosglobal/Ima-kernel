@@ -1,7 +1,10 @@
 
 from learning.sources.html_extractor import extract_text
 from pathlib import Path
-import Path
+import json
+
+FILE=Path("learning/world_graph.json")
+from learning.sources.html_extractor import extract_text
 import json
 
 FILE=Path("learning/world_graph.json")

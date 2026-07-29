@@ -1,7 +1,11 @@
 
 from learning.sources.html_extractor import extract_text
 from pathlib import Path
-import Path
+import json
+import time
+
+STORE = Path("learning/world_knowledge_store.json")
+from learning.sources.html_extractor import extract_text
 import json
 import time
 

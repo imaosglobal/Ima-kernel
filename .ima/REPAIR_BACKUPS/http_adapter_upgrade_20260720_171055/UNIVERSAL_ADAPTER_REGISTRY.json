@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "status": "active",
+  "adapter_policy": "scheme_registry",
+  "schemes": {
+    "http": {
+      "adapter": "network",
+      "enabled": true
+    },
+    "https": {
+      "adapter": "network",
+      "enabled": true
+    },
+    "ws": {
+      "adapter": "network",
+      "enabled": true
+    },
+    "wss": {
+      "adapter": "network",
+      "enabled": true
+    },
+    "file": {
+      "adapter": "filesystem",
+      "enabled": false
+    }
+  },
+  "unknown_scheme_policy": "reject",
+  "future_schemes": "register_before_use"
+}

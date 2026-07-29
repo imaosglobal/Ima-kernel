@@ -1,0 +1,82 @@
+{
+  "learning/learning_router.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from learning.learning_memory import store_pattern"
+    ]
+  },
+  "learning/learning_loop.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from learning.learning_router import route_learning",
+      "from learning.self_learning import learn_self",
+      "from learning.user_memory import learn",
+      "from learning.world_memory import store",
+      "import time",
+      "from learning.learning_gate import should_learn"
+    ]
+  },
+  "learning/ima_learning_loop.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from learning.learning_scheduler import learning_cycle",
+      "from learning.knowledge_expander import expand_knowledge",
+      "from learning.self_reflection import add_lesson",
+      "from learning.decision_engine import make_learning_decision",
+      "from learning.adaptive_loop import run_adaptive_cycle",
+      "from learning.self_manager import manage_learning",
+      "from learning.feedback_planner import generate_feedback_improvements",
+      "from learning.meta_orchestrator import run_meta_analysis",
+      "from datetime import datetime"
+    ]
+  },
+  "learning/learning_memory.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from pathlib import Path",
+      "import json",
+      "from datetime import datetime",
+      "import json",
+      "import time"
+    ]
+  },
+  "learning/feedback_engine.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from learning.evaluation_engine import get_evaluations",
+      "from learning.self_reflection import suggest_improvement"
+    ]
+  },
+  "learning/canonical_guard.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": [
+      "from pathlib import Path",
+      "import json"
+    ]
+  },
+  "founder/core/kernel_bridge.py": {
+    "exists": true,
+    "canonical": false,
+    "runtime": false,
+    "start": false,
+    "imports": []
+  }
+}

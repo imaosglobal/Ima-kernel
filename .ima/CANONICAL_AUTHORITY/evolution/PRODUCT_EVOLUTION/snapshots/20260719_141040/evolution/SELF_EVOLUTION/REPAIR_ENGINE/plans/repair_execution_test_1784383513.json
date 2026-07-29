@@ -1,0 +1,12 @@
+{
+  "type": "REPAIR_EXECUTION_PLAN",
+  "status": "PLANNED",
+  "mode": "CONTROLLED_TEST",
+  "target": "TEST_CANONICAL_COMPONENT",
+  "action": "NO_MUTATION",
+  "requires_backup": true,
+  "requires_compile": true,
+  "requires_integrity_verification": true,
+  "requires_rollback_on_failure": true,
+  "created_at": 1784383513.7601202
+}

@@ -119,6 +119,46 @@
         }
       ],
       "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-28 14:02:56.768938",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
+    },
+    {
+      "timestamp": "2026-07-28 14:17:01.892935",
+      "source": "autonomy_pipeline",
+      "plan_status": "planned",
+      "evaluation_status": "plan_evaluated",
+      "feedback_overall": "successful",
+      "feedback": [
+        {
+          "type": "safety",
+          "status": "pass",
+          "message": "Execution remains disabled."
+        },
+        {
+          "type": "quality",
+          "status": "pass",
+          "message": "Plan contains valid actionable steps."
+        }
+      ],
+      "execution": "disabled"
     }
   ]
 }

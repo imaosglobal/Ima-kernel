@@ -1,0 +1,40 @@
+[
+  {
+    "time": 1785243130.8681686,
+    "event": "system_upgrade",
+    "data": "production layer installed"
+  },
+  {
+    "time": 1785244111.8892567,
+    "event": "community_action",
+    "data": {
+      "member": "creator_002",
+      "platform": "telegram",
+      "action": "validated connector contribution",
+      "trust": 15,
+      "role": "member"
+    }
+  },
+  {
+    "time": 1785244332.661208,
+    "event": "community_action",
+    "data": {
+      "member": "creator_001",
+      "platform": "telegram",
+      "action": "Hello IMA",
+      "trust": 5,
+      "role": "member"
+    }
+  },
+  {
+    "time": 1785244391.4894075,
+    "event": "community_action",
+    "data": {
+      "member": "test_phone",
+      "platform": "whatsapp",
+      "action": "שלום IMA",
+      "trust": 5,
+      "role": "member"
+    }
+  }
+]

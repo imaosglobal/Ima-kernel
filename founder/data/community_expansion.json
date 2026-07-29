@@ -1,0 +1,66 @@
+{
+  "communities": [
+    {
+      "id": "ima_builders",
+      "name": "IMA Builders",
+      "platform": "github",
+      "status": "active",
+      "created": 1785243545.273917
+    },
+    {
+      "id": "ima_global_research",
+      "name": "IMA Global Research",
+      "platform": "future_ieee",
+      "status": "active",
+      "created": 1785243545.2743154
+    },
+    {
+      "id": "ima_builders",
+      "name": "IMA Builders",
+      "platform": "github",
+      "status": "active",
+      "created": 1785243700.4471433
+    },
+    {
+      "id": "ima_global_research",
+      "name": "IMA Global Research",
+      "platform": "future_ieee",
+      "status": "active",
+      "created": 1785243700.447634
+    }
+  ],
+  "connectors": [
+    {
+      "name": "telegram",
+      "category": "messaging",
+      "status": "ready"
+    },
+    {
+      "name": "whatsapp",
+      "category": "messaging",
+      "status": "ready"
+    },
+    {
+      "name": "telegram",
+      "category": "messaging",
+      "status": "ready"
+    },
+    {
+      "name": "whatsapp",
+      "category": "messaging",
+      "status": "ready"
+    }
+  ],
+  "events": [
+    {
+      "source": "community",
+      "event": "expansion_layer_initialized",
+      "time": 1785243545.275203
+    },
+    {
+      "source": "community",
+      "event": "expansion_layer_initialized",
+      "time": 1785243700.448801
+    }
+  ]
+}

@@ -8,5 +8,52 @@
     "content": "קוואנטום הוא תחום בפיזיקה המתאר מערכות ברמה האטומית והתת אטומית.",
     "domain": "physics",
     "confidence": 0.9
+  },
+  "אלברט איינשטיין": {
+    "content": "אלברט איינשטיין היה פיזיקאי יהודי-גרמני-אמריקאי, מגדולי המדענים בכל הזמנים.",
+    "domain": "general",
+    "source": "wikipedia",
+    "provider": "fetch_wikipedia",
+    "confidence": 0.9
+  },
+  "Artificial intelligence": {
+    "content": "Artificial intelligence: a modern approach",
+    "domain": "research",
+    "source": "openalex",
+    "id": "https://openalex.org/W2122410182",
+    "provider": "fetch_openalex",
+    "confidence": 0.9
+  },
+  "machine learning": {
+    "content": "Scikit-learn: Machine Learning in Python",
+    "domain": "research",
+    "source": "openalex",
+    "id": "https://openalex.org/W2101234009",
+    "provider": "fetch_openalex",
+    "confidence": 0.9
+  },
+  "Albert Einstein": {
+    "content": "Albert Einstein: Philosopher-Scientist",
+    "domain": "research",
+    "source": "openalex",
+    "id": "https://openalex.org/W2744930110",
+    "provider": "fetch_openalex",
+    "confidence": 0.9
+  },
+  "quantum physics": {
+    "content": "Meeting the Universe Halfway Quantum Physics and the Entanglement of Matter and Meaning",
+    "domain": "research",
+    "source": "openalex",
+    "id": "https://openalex.org/W2266294403",
+    "provider": "fetch_openalex",
+    "confidence": 0.9
+  },
+  "Python programming": {
+    "content": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+    "domain": "research",
+    "source": "openalex",
+    "id": "https://openalex.org/W3003257820",
+    "provider": "fetch_openalex",
+    "confidence": 0.9
   }
 }

@@ -1,0 +1,16 @@
+{
+  "system": "IMA",
+  "founder": {
+    "id": "creator_001",
+    "name": "Ori Cohen",
+    "role": "origin_creator",
+    "first_user": true,
+    "legacy_source": ".ima/legacy/ori_legacy.json"
+  },
+  "linked_layers": {
+    "crm": "learning/internal_crm.json",
+    "founder_context": "founder/data/founder_context.json",
+    "identity": "LIVE_IDENTITY.json"
+  },
+  "registered_at": 1785239662.3409734
+}

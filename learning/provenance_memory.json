@@ -30,5 +30,14 @@
       ]
     },
     "stored_at": 1784118625.188518
+  },
+  "Albert Einstein": {
+    "content": "Albert Einstein: Philosopher-Scientist",
+    "source": "openalex",
+    "validation": {
+      "confidence": 0.9,
+      "provider": "fetch_openalex"
+    },
+    "stored_at": 1785238572.4117556
   }
 }

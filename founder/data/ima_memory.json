@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": 1785241564.5023212,
+    "datetime": "2026-07-28T15:26:04.502323",
+    "key": "test",
+    "value": "memory",
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1785241564.5025928,
+    "datetime": "2026-07-28T15:26:04.502594",
+    "key": "world_learning",
+    "value": {
+      "source": "world"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1785241738.872401,
+    "datetime": "2026-07-28T15:28:58.872403",
+    "key": "recovery_test",
+    "value": "IMA recovery successful",
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1785241962.4753997,
+    "datetime": "2026-07-28T15:32:42.475403",
+    "key": "evolution_phase",
+    "value": "Preparing safe open source learning architecture",
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1785242144.9327402,
+    "datetime": "2026-07-28T15:35:44.932742",
+    "key": "community_lesson",
+    "value": {
+      "timestamp": 1785242144.9324224,
+      "lesson": "Improve memory indexing algorithm",
+      "source": "community",
+      "validated": true
+    },
+    "category": "validated_learning",
+    "importance": 90
+  },
+  {
+    "timestamp": 1785242491.3777459,
+    "datetime": "2026-07-28T15:41:31.377748",
+    "key": "community_validated_learning",
+    "value": {
+      "id": 1785242491.377405,
+      "source": "github",
+      "content": "Improve memory indexing",
+      "status": "validated"
+    },
+    "category": "community_learning",
+    "importance": 95
+  },
+  {
+    "timestamp": 1785242761.3110418,
+    "datetime": "2026-07-28T15:46:01.311043",
+    "key": "action_feedback",
+    "value": {
+      "action": "crm_bridge_test",
+      "feedback": "compatibility restored",
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  }
+]

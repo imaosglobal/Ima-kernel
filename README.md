@@ -1,19 +1,54 @@
-# IMA Kernel
+# IMA - Intelligent Meta Architecture
 
-IMA is an evolving open-source intelligence and runtime project focused on continuous learning, reasoning, memory, system integration, provenance, and self-improvement under explicit governance.
+## Vision
 
-## Canonical baseline
+IMA is a modular AI architecture designed for collaborative evolution.
 
-Canonical tag: IMA-CANONICAL-2026-07-18
+Community contributions improve the ecosystem through controlled validation.
 
-Canonical commit: 6e00379
+## Architecture
 
-## Quick start
+Public Community Layer
 
-Run: python3 IMA_START.py
+        |
+        v
 
-Successful boot ends with: === IMA SYSTEM READY ===
+Validation Gateway
 
-## Rights
+        |
+        v
 
-Copyright ownership remains with the applicable rights holder. See LICENSE, COPYRIGHT.md, NOTICE, and RIGHTS_AND_SUCCESSION.md.
+Learning Bridge
+
+        |
+        v
+
+Protected Core
+
+
+## Contributing
+
+Developers can contribute:
+
+- connectors
+- tools
+- research
+- improvements
+- integrations
+
+
+## Security Model
+
+Public contributors cannot access:
+
+- private memory
+- identity systems
+- internal reasoning
+- security credentials
+
+
+## Philosophy
+
+Open collaboration.
+Protected intelligence.
+Continuous improvement.

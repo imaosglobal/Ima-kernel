@@ -6,6 +6,7 @@ from learning.adaptive_loop import run_adaptive_cycle
 from learning.self_manager import manage_learning
 from learning.feedback_planner import generate_feedback_improvements
 from learning.meta_orchestrator import run_meta_analysis
+from learning.world_learning_connector import learn as world_learn
 from datetime import datetime
 
 
@@ -14,6 +15,14 @@ def run_ima_learning_loop():
     cycle = learning_cycle()
 
     learned = expand_knowledge()
+
+    for item in learned:
+        try:
+            world_learn(item)
+        except Exception as e:
+            add_lesson(
+                f"world learning bridge error: {e}"
+            )
 
     for item in learned:
         make_learning_decision(

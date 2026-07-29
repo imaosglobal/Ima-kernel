@@ -1,7 +1,6 @@
 from learning.sources.html_extractor import extract_text
 from pathlib import Path
-import Path
-
+from pathlib import Path
 def generate_source(name,url):
     slug=name.lower().replace(" ","_")
 

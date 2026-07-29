@@ -558,6 +558,23 @@
       "run_self_improvement"
     ]
   },
+  "feedback_router": {
+    "functions": [
+      "route_feedback"
+    ]
+  },
+  "_backup_world_learning_engine_before_upgrade": {
+    "functions": [
+      "load_store",
+      "save_store",
+      "learn_unknown"
+    ]
+  },
+  "_backup_ima_learning_loop_before_world_bridge": {
+    "functions": [
+      "run_ima_learning_loop"
+    ]
+  },
   "_backup_lesson_retrieval_20260718_211437": {
     "functions": [
       "retrieve_relevant_lessons"
@@ -577,6 +594,12 @@
       "load_active_runtime_allowlist",
       "filter_gaps_to_active_runtime",
       "run_self_improvement"
+    ]
+  },
+  "runtime_bridge": {
+    "functions": [
+      "authority_status",
+      "emit_learning_event"
     ]
   },
   "_backup_status_fix_20260718_215252": {

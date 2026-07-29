@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "type": "person",
+      "id": "creator_001",
+      "name": "Ori",
+      "trust": 2,
+      "created": 1785243497.5798867
+    }
+  ],
+  "relations": [
+    {
+      "from": "creator_001",
+      "to": "IMA Builders",
+      "type": "member_of"
+    }
+  ]
+}

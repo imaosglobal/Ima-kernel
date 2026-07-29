@@ -2,7 +2,7 @@
   "memory": "active",
   "identity": "active",
   "runtime": "active",
-  "learning": "active",
+  "learning": "building",
   "decision": "active",
   "world_model": "building",
   "reasoning": "building",
@@ -12,5 +12,6 @@
   "universal_connectors": "building",
   "embodiment": "building",
   "multilingual": "building",
-  "science_engine": "building"
+  "science_engine": "building",
+  "reasoning_engine": "validated"
 }
