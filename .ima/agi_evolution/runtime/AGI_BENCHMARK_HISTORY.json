@@ -230,5 +230,34 @@
         "path": ".ima/agi_evolution/autonomy/autonomy_engine.py"
       }
     }
+  },
+  {
+    "time": 1785380401.2464023,
+    "benchmark": {
+      "memory": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/runtime/memory_consolidator.py"
+      },
+      "decision": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/runtime/decision_engine.py"
+      },
+      "planning": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/runtime/future_planner.py"
+      },
+      "evolution": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/runtime/self_evolution_loop.py"
+      },
+      "reasoning": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/reasoning/reasoning_engine.py"
+      },
+      "autonomy": {
+        "status": "loaded",
+        "path": ".ima/agi_evolution/autonomy/autonomy_engine.py"
+      }
+    }
   }
 ]
