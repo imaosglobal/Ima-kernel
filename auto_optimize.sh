@@ -2,7 +2,7 @@
 set -e
 cd ~/ima_kernel
 DATE=$(date +%Y%m%d_%H%M%S)
-ARCHIVE="_archive_$(date +%Y%m%d)"
+ARCHIVE="_archive_20260808"
 mkdir -p "$ARCHIVE"
 
 echo "=== Checkpoint before changes ==="
