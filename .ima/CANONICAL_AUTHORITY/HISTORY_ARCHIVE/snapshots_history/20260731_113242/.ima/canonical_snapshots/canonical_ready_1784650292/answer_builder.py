@@ -1,0 +1,259 @@
+import json
+from reasoning_layer import interpret
+from meaning_layer import humanize
+from pathlib import Path
+from datetime import datetime
+
+HOME=Path.home()
+
+def load(path):
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except:
+        return {}
+
+
+def get_today_events():
+    import json
+    from datetime import date
+
+    events=[]
+    truth=Path.home()/".ima/truth/truth_database.jsonl"
+
+    if truth.exists():
+        for line in truth.read_text(encoding="utf-8").splitlines():
+            try:
+                item=json.loads(line)
+                if item.get("date")==str(date.today()):
+                    events.append(item)
+            except:
+                pass
+
+    return events
+
+
+def summarize_today():
+    result=[]
+
+    for e in get_today_events():
+
+        if e.get("source")=="git":
+            result.append("Git: "+e.get("event",""))
+
+        elif "evolution" in e.get("source",""):
+            data=e.get("data",{})
+
+            if "current_state" in data:
+                for x in data["current_state"].get("engines_created_today",[]):
+                    result.append("נוצר מנגנון: "+x)
+
+        elif "current_state.json" in e.get("source",""):
+            for x in e.get("data",{}).get("created_today",[]):
+                result.append("נוצר היום: "+x)
+
+    clean=[]
+    seen=set()
+
+    for item in result:
+        key=item.lower().replace("_"," ").replace("מנגנון: ","")
+        if key not in seen:
+            seen.add(key)
+            clean.append(item)
+
+    final=[]
+    normalized=set()
+
+    for item in clean:
+        key=item.lower()
+
+        replacements={
+            "נוצר מנגנון: ":"",
+            "נוצר היום: ":"",
+            "_":" "
+        }
+
+        for a,b in replacements.items():
+            key=key.replace(a,b)
+
+        key=" ".join(key.split())
+
+        if key not in normalized:
+            normalized.add(key)
+            final.append(item)
+
+    return final
+
+
+def search_knowledge(topic):
+    import json
+
+    path=HOME/".ima/memory/universal_knowledge_graph.json"
+
+    if not path.exists():
+        return []
+
+    try:
+        data=json.loads(path.read_text(encoding="utf-8"))
+        results=[]
+
+        blob=json.dumps(data,ensure_ascii=False)
+
+        words=[
+            w for w in topic.lower().split()
+            if w not in [
+                "מה","אתה","יודע","על","של","לי","תן","ספר","אודות"
+            ]
+        ]
+
+        if any(w in blob.lower() for w in words):
+            results.append("נמצא ידע בגרף: "+topic)
+
+            for domain in data.get("domains",[]):
+                if any(w in str(domain).lower() for w in words):
+                    results.append("תחום: "+str(domain))
+
+            for concept in data.get("concepts",[]):
+                if any(w in str(concept).lower() for w in words):
+                    results.append("מושג: "+str(concept))
+
+            for principle,info in data.get("principles",{}).items():
+                if any(w in principle.lower() for w in words):
+                    results.append("עיקרון: "+info.get("statement",""))
+
+            # semantic relations
+            for relation,value in data.get("relations",{}).items():
+                relation_text=str(relation).lower()
+
+                if any(w in relation_text for w in words):
+                    if isinstance(value,dict):
+                        meaning=value.get("type","")
+                        confidence=value.get("confidence","")
+                        results.append(
+                            "קשר: "+relation.replace("->"," ↔ ")
+                            +" | משמעות: "+meaning
+                            +" | אמינות: "+str(confidence)
+                        )
+                    else:
+                        results.append(
+                            "קשר: "+relation.replace("->"," ↔ ")
+                            +" | "+str(value)
+                        )
+
+            # expand domain meaning
+            for domain,items in data.get("domains",{}).items():
+                if any(w in domain.lower() for w in words):
+                    results.append("תחום: "+domain)
+
+                    for concept in items:
+                        results.append("מושג קשור: "+concept)
+
+                    for relation,value in data.get("relations",{}).items():
+                        if domain in relation:
+                            if isinstance(value,dict):
+                                results.append(
+                                    "הרחבה: "
+                                    + relation.replace("->"," ↔ ")
+                                    + " | משמעות: "
+                                    + str(value.get("type",""))
+                                )
+                            else:
+                                results.append(
+                                    "הרחבה: "
+                                    + relation.replace("->"," ↔ ")
+                                    + " | "
+                                    + str(value)
+                                )
+
+        return results
+
+    except:
+        return []
+def build_answer(question):
+
+    truth=load(HOME/".ima/evolution/system_truth.json")
+    brain=load(HOME/".ima/evolution/evolution_brain.json")
+    plan=load(HOME/".ima/evolution/daily_plan.json")
+    bridge=load(HOME/".ima/evolution/kernel_knowledge_bridge.json")
+
+    print("IMA")
+    print("================")
+    print("שאלה:",question)
+    print()
+
+    if "היום" in question or "עשינו" in question:
+
+        print("סיכום היום:")
+
+        print("בוצעו היום:")
+
+        actions=summarize_today()
+
+        for a in actions:
+            print("✅",a)
+
+        print()
+        print("רכיבים מאומתים:")
+
+        for c in truth.get("verified_components",[]):
+            print("  •",c["name"])
+
+        print()
+
+        if brain:
+            for x in brain.get("current_state",{}).get("domains",[]):
+                print("תחום:",x)
+
+        print()
+
+        missing=truth.get("missing_connections",[])
+        if missing:
+            print("עדיין חסר:")
+            for m in missing:
+                print("⚠️",m.replace("runtime consumption of knowledge","הליבה עדיין לא צורכת ידע בזמן ריצה").replace("automatic daily git checkpoint","עדיין אין שמירת Git יומית אוטומטית"))
+
+    elif "חסר" in question:
+        print("חוסרים ידועים:")
+        for x in truth.get("missing_connections",[]):
+            print("-",x)
+
+    elif "הבא" in question or "המשך" in question:
+        print("הצעדים הבאים:")
+        for x in plan.get("goals",[]):
+            print("-",x.get("goal"))
+
+    else:
+        topic=question.strip()
+
+        knowledge=search_knowledge(topic)
+
+        if knowledge:
+            print("ידע שנמצא:")
+
+            seen=set()
+
+            for k in knowledge:
+                clean=k.replace(" -> ", " → ")
+
+                if clean not in seen:
+                    seen.add(clean)
+                    print("•",clean)
+
+            print()
+            print("הבנת מערכת:")
+            reasoning=interpret(topic)
+
+            for r in reasoning:
+                print("•",r)
+
+            print()
+            print("משמעות:")
+            for m in humanize(reasoning):
+                print("•",m)
+        else:
+            print("נמצאו נתוני מערכת:")
+            print(json.dumps(truth,ensure_ascii=False,indent=2))
+
+
+if __name__=="__main__":
+    import sys
+    build_answer(" ".join(sys.argv[1:]))

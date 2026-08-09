@@ -1,0 +1,8 @@
+{
+  "compile_policy": {
+    "ignore_historical_backups": true,
+    "ignore_snapshots": true,
+    "ignore_repair_archives": true,
+    "strict_runtime_only": true
+  }
+}

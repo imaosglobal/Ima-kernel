@@ -1,0 +1,26 @@
+{
+  "core": {
+    "path": "ima_master_runtime.py",
+    "type": "brain"
+  },
+  "runtime": {
+    "path": ".ima/runtime/runtime.py",
+    "type": "kernel"
+  },
+  "memory": {
+    "path": ".ima/runtime/memory_bus.py",
+    "type": "memory"
+  },
+  "learning": {
+    "path": "learning",
+    "type": "learning"
+  },
+  "whatsapp": {
+    "path": "connectors/whatsapp/meta_webhook.py",
+    "type": "connector"
+  },
+  "observer": {
+    "path": ".ima/observer/ima_observer.py",
+    "type": "self_awareness"
+  }
+}

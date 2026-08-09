@@ -3,7 +3,7 @@ set -e
 
 echo "[GIT] validating active Python..."
 
-python -m compileall -q kernel .ima/CANONICAL_AUTHORITY .ima/agi_evolution
+python -m compileall -q -x "HISTORY_ARCHIVE|_archive_|\.before_|_broken_backup|_backup\.py" kernel .ima/CANONICAL_AUTHORITY .ima/agi_evolution
 
 python - <<'PY'
 import json, hashlib

@@ -1,0 +1,34 @@
+{
+  ".ima/observer/ima_observer.py": {
+    "exists": true,
+    "run_refs": 1,
+    "bridge_refs": 10,
+    "trigger_refs": 0
+  },
+  ".ima/self_awareness/bridge/auto_report_cycle.py": {
+    "exists": true,
+    "run_refs": 2,
+    "bridge_refs": 3,
+    "trigger_refs": 4
+  },
+  ".ima/self_awareness/bridge/auto_trigger.py": {
+    "exists": true,
+    "run_refs": 0,
+    "bridge_refs": 1,
+    "trigger_refs": 4
+  },
+  ".ima/self_awareness/bridge/sender.py": {
+    "exists": true,
+    "run_refs": 0,
+    "bridge_refs": 1,
+    "trigger_refs": 0
+  },
+  ".ima/self_awareness/report_generator.py": {
+    "exists": true,
+    "run_refs": 0,
+    "bridge_refs": 0,
+    "trigger_refs": 0
+  },
+  "time": "2026-07-31 11:05:42",
+  "decision": "audit_only_safe_mode"
+}

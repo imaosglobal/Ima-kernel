@@ -1,57 +1,13 @@
 {
-  "profile": {
-    "name": "אורי",
-    "mood": "calm",
-    "personality": "neutral"
-  },
-  "memory": [
-    {
-      "value": "מוזיקה",
-      "type": "preference",
-      "weight": 0.458237092824074,
-      "hits": 1,
-      "created": 1777192122401,
-      "lastUsed": 1777192122401
-    },
-    {
-      "value": "GET /",
-      "type": "interaction",
-      "weight": 0.9992078521990742,
-      "hits": 14,
-      "created": 1777221854330,
-      "lastUsed": 1777222412260
-    },
-    {
-      "value": "ping /",
-      "type": "interaction",
-      "weight": 0.9993021782407406,
-      "hits": 7,
-      "created": 1777221944883,
-      "lastUsed": 1777221996814
-    },
-    {
-      "value": "ping 1777222347400",
-      "type": "interaction",
-      "weight": 0.4997214667824073,
-      "hits": 1,
-      "created": 1777222347400,
-      "lastUsed": 1777222347400
-    },
-    {
-      "value": "GET /health",
-      "type": "interaction",
-      "weight": 0.599730495949074,
-      "hits": 2,
-      "created": 1777222356068,
-      "lastUsed": 1777222412306
-    },
-    {
-      "value": "ping 1777222412261",
-      "type": "interaction",
-      "weight": 0.4997890303240741,
-      "hits": 1,
-      "created": 1777222412261,
-      "lastUsed": 1777222412261
-    }
-  ]
+  "creator": "Ori",
+  "chats": [
+    "לאיזה גיט את מצוברת?",
+    "זה לא מה ששלאתי...",
+    "אמא איפה הגיט",
+    "אתה: אמא איפה הגיט",
+    "את מחוברת ויכולה לשנות אותו?",
+    "טסט"
+  ],
+  "version": "v2.3",
+  "git_repo": "https://github.com/imaosglobal/Ima-kernel.git"
 }

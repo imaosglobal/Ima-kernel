@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    "IMA",
+    "OpenAI",
+    "Anthropic",
+    "Google DeepMind"
+  ],
+  "edges": [
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.4
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "OpenAI",
+      "relation": "potential_partnership",
+      "weight": 0.4
+    },
+    {
+      "from": "IMA",
+      "to": "Anthropic",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    },
+    {
+      "from": "IMA",
+      "to": "Google DeepMind",
+      "relation": "potential_partnership",
+      "weight": 0.3
+    }
+  ]
+}

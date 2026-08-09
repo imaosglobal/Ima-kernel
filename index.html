@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>IMA</title></head>
+<body style="font-family:Arial; background:#111; color:#fff; text-align:center;">
+<h1>IMA 💜</h1>
+<input id="msg" placeholder="כתוב לאורי..." style="width:300px; padding:10px;">
+<button onclick="send()">שלח</button>
+<div id="chat"></div>
+<script>
+async function send(){
+  let t = document.getElementById("msg").value;
+  let r = await fetch("http://100.96.234.33:5000/ima",{
+    method:"POST", headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({text:t, sender:"אורי"})
+  });
+  let d = await r.json();
+  document.getElementById("chat").innerHTML += "<p><b>אתה:</b> "+t+"<br><b>IMA:</b> "+d.reply+"</p>";
+}
+</script></body></html>

@@ -1,0 +1,22 @@
+{
+  "core": {
+    "path": "ima_master_runtime.py",
+    "type": "runtime"
+  },
+  "memory": {
+    "path": "memory",
+    "type": "storage"
+  },
+  "learning": {
+    "path": "learning",
+    "type": "engine"
+  },
+  "whatsapp": {
+    "path": "connectors/whatsapp",
+    "type": "connector"
+  },
+  "runtime": {
+    "path": ".ima/runtime",
+    "type": "kernel"
+  }
+}

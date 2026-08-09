@@ -1,0 +1,24 @@
+{
+  "companies": {
+    "Example Quantum Partner": {
+      "name": "Example Quantum Partner",
+      "capabilities": [
+        "quantum_simulation",
+        "optimization"
+      ],
+      "industries": [
+        "energy",
+        "materials"
+      ]
+    }
+  },
+  "capabilities": {
+    "quantum_simulation": [
+      "Example Quantum Partner"
+    ],
+    "optimization": [
+      "Example Quantum Partner"
+    ]
+  },
+  "connections": []
+}

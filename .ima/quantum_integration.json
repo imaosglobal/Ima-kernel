@@ -1,0 +1,10 @@
+{
+  "module": "connectors.intelligence.quantum",
+  "entry": "quantum_orchestrator.py",
+  "purpose": "adaptive problem solving accelerator",
+  "connected_to": [
+    "learning",
+    "knowledge_router",
+    "runtime"
+  ]
+}
