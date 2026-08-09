@@ -1,3 +1,4 @@
+from conversation_layer import recall as conversation_layer_recall
 import subprocess
 import json, time, os, subprocess
 
@@ -54,7 +55,7 @@ def _answer(question, events):
     mode = ima_router(question)
 
     if mode == "memory":
-        hits = conversation_layer.recall(question)
+        hits = conversation_layer_recall(question)
         return {
             "text": "אני זוכרת את השיחות האחרונות שלנו:\n\n" + str(hits[-3:]),
             "confidence": 0.85
