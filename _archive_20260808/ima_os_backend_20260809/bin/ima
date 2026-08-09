@@ -1,0 +1,47 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+BASE=~/ima_os
+
+case "$1" in
+
+start)
+  nohup bash $BASE/kernel/ima_kernel.sh > $BASE/logs/kernel_stdout.log 2>&1 &
+  nohup bash $BASE/services/manager.sh > $BASE/logs/services_stdout.log 2>&1 &
+  echo "[IMA-OS] started"
+  ;;
+
+status)
+  echo "=== IMA-OS STATUS ==="
+  cat $BASE/state/state.json 2>/dev/null
+  echo "--- processes ---"
+  pgrep -af node
+  ;;
+
+log)
+  tail -n 50 $BASE/logs/kernel.log
+  ;;
+
+bridge)
+  cat $BASE/bridge/out.txt
+  ;;
+
+send)
+  echo "$2" > $BASE/bridge/in.txt
+  ;;
+
+stop)
+  pkill -f ima_kernel.sh
+  pkill -f manager.sh
+  echo "[IMA-OS] stopped"
+  ;;
+
+*)
+  echo "Commands:"
+  echo "  ima start"
+  echo "  ima status"
+  echo "  ima send <msg>"
+  echo "  ima bridge"
+  echo "  ima log"
+  echo "  ima stop"
+  ;;
+esac
