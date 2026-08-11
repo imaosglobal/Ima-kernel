@@ -1309,3 +1309,5 @@
 {"type":"whatsapp.message_received","user_id":"test_user","message":"זוכרת איך קוראים לי?"}
 {"type":"whatsapp.message_received","user_id":"test_user","message":"קוראים לי אורי"}
 {"type":"whatsapp.message_received","user_id":"test_user","message":"זוכרת איך קוראים לי?"}
+{"type": "whatsapp.message_received", "ts": 1786373714.979038, "user_id": "test_user", "message": "TEST_REAL_PIPELINE"}
+{"type": "whatsapp.message.received", "ts": 1786373714.980408, "user_id": "test_user", "message": "TEST_REAL_PIPELINE"}

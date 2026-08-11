@@ -39,4 +39,30 @@ def emit(event_type, **data):
 
     update_monitor()
 
+    # Optional real-time IMA -> WhatsApp reporting.
+    # Disabled unless WA_REPORT_TO is explicitly configured.
+    if os.getenv("WA_REPORT_TO") and not event_type.startswith("whatsapp."):
+        try:
+            from pathlib import Path as _Path
+            import sys as _sys
+
+            _wa_dir = _Path(".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/connectors/whatsapp")
+            if str(_wa_dir) not in _sys.path:
+                _sys.path.insert(0, str(_wa_dir))
+
+            from whatsapp_connector import WhatsAppConnector
+
+            report = json.dumps(event, ensure_ascii=False, separators=(",", ":"))
+            WhatsAppConnector().send_message(
+                os.getenv("WA_REPORT_TO"),
+                "IMA LIVE EVENT\n" + report
+            )
+        except Exception as _e:
+            # Reporting must never break IMA's event bus.
+            try:
+                with open(".ima/whatsapp.log", "a", encoding="utf-8") as _f:
+                    _f.write("LIVE_REPORT_ERROR: " + str(_e) + "\\n")
+            except Exception:
+                pass
+
     return event

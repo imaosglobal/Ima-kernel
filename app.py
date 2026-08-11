@@ -54,5 +54,15 @@ def ima():
             reply = "פקודות: חפש [מילה] | תהיי [צורה] | דודל"
     return jsonify({"reply": reply})
 
+
+
+@app.route("/think", methods=["POST"])
+def think():
+    from connectors.llm.gemini import ask as gemini_ask
+    data = request.json
+    prompt = data.get("message", "")
+    reply = gemini_ask(prompt)
+    return jsonify({"reply": reply})
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)
