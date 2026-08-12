@@ -58,11 +58,47 @@ def ima():
 
 @app.route("/think", methods=["POST"])
 def think():
+    import sys
+
+    sys.path.insert(0, ".ima/runtime")
+    from stream import emit
     from connectors.llm.gemini import ask as gemini_ask
-    data = request.json
+
+    data = request.get_json(silent=True) or {}
     prompt = data.get("message", "")
-    reply = gemini_ask(prompt)
-    return jsonify({"reply": reply})
+    user_id = data.get("user_id", "api_user")
+
+    if not prompt:
+        return jsonify({"reply": "לא התקבלה הודעה"}), 400
+
+    emit(
+        "llm.message_received",
+        source="think",
+        user_id=user_id,
+        message=prompt
+    )
+
+    try:
+        reply = gemini_ask(prompt)
+
+        emit(
+            "llm.message_sent",
+            source="think",
+            user_id=user_id,
+            response=reply
+        )
+
+        return jsonify({"reply": reply})
+
+    except Exception as e:
+        emit(
+            "llm.error",
+            source="think",
+            user_id=user_id,
+            error=str(e)
+        )
+        return jsonify({"error": "LLM request failed"}), 502
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+    import os
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))

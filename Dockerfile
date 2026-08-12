@@ -10,4 +10,4 @@ RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.
 
 EXPOSE 8080
 
-CMD ["python3","production_server.py"]
+CMD ["python3","app.py"]
