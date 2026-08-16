@@ -3,7 +3,7 @@ services:
     name: ima-api
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python api/server.py
+    startCommand: python app.py
     envVars:
       - key: DATABASE_URL
         sync: false

@@ -54,31 +54,6 @@ def _last_message(user_id):
 
 
 class WhatsAppConnector:
-    _IMA_RECENT_MESSAGES = {}
-
-    @classmethod
-    def _ima_duplicate(cls, user_id, message):
-        import time
-        key = (str(user_id), str(message))
-        now = time.time()
-        previous = cls._IMA_RECENT_MESSAGES.get(key)
-
-        if previous is not None and now - previous < 5:
-            return True
-
-        cls._IMA_RECENT_MESSAGES[key] = now
-
-        # keep cache bounded
-        if len(cls._IMA_RECENT_MESSAGES) > 1000:
-            cutoff = now - 10
-            cls._IMA_RECENT_MESSAGES = {
-                k: v for k, v in cls._IMA_RECENT_MESSAGES.items()
-                if v >= cutoff
-            }
-
-        return False
-
-
 
     def receive_message(self, user_id, msg):
         msg = str(msg).strip()

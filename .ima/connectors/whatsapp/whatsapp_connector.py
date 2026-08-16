@@ -1,21 +1,21 @@
-from memory.user_memory import remember_user, recall_user
+import sys
+from pathlib import Path
 
-class Whatsapp:
-    def receive_message(self, user_id, msg):
-        mem = recall_user(user_id)
-        history = mem.get("history", [])
-        
-        # בונים תשובה קצרה לפי ההיסטוריה
-        if len(history) > 1:
-            reply = f"כן אני זוכרת. דיברנו כבר {len(history)//2} פעמים. אתה בסדר?"
-        else:
-            reply = "אני איתך. מה עובר עליך עכשיו?"
-            
-        remember_user(user_id, "last_message", msg)
-        remember_user(user_id, "last_response", reply)
-        return reply
-    
-    def send_message(self, user_id, text):
-        print(f"SEND TO {user_id}: {text}")
+ROOT = Path(__file__).resolve().parents[3]
 
-whatsapp = Whatsapp()
+CANONICAL = (
+    ROOT
+    / ".ima"
+    / "CANONICAL_AUTHORITY"
+    / "SINGLE_SNAPSHOT"
+    / "CURRENT"
+    / "connectors"
+    / "whatsapp"
+)
+
+if str(CANONICAL) not in sys.path:
+    sys.path.insert(0, str(CANONICAL))
+
+from whatsapp_connector import WhatsAppConnector, whatsapp
+
+__all__ = ["WhatsAppConnector", "whatsapp"]
