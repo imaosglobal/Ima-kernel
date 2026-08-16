@@ -1,0 +1,1698 @@
+{
+  "schema": "ima.orchestrator.candidates.v1",
+  "generated_at": "2026-08-16T21:02:11.365061",
+  "candidates": [
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": false,
+      "canonical_current": true,
+      "size": 1890,
+      "mtime": 1786292951.192,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": true,
+      "size": 1513,
+      "mtime": 1786292951.188,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": true,
+      "size": 1513,
+      "mtime": 1786292951.188,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": true,
+      "size": 1513,
+      "mtime": 1786292951.188,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": false,
+      "canonical_current": true,
+      "size": 1003,
+      "mtime": 1786292951.188,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": false,
+      "canonical_current": true,
+      "size": 839,
+      "mtime": 1786292951.188,
+      "has_main": true
+    },
+    {
+      "path": ".ima/ORCHESTRATION/ima_orchestrator_entry.py",
+      "sha256": "ed1661f32220ef1d130b7038153cbe51e5af0b961c55bceffce9a1b200e2f368",
+      "historical": false,
+      "canonical_current": false,
+      "size": 3413,
+      "mtime": 1786903266.097,
+      "has_main": true
+    },
+    {
+      "path": ".ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 781,
+      "mtime": 1786292951.744,
+      "has_main": true
+    },
+    {
+      "path": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292951.632,
+      "has_main": true
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292951.528,
+      "has_main": false
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292951.504,
+      "has_main": true
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292951.44,
+      "has_main": false
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": false,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292951.44,
+      "has_main": false
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292951.436,
+      "has_main": false
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292951.436,
+      "has_main": false
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "historical": false,
+      "canonical_current": false,
+      "size": 918,
+      "mtime": 1786292951.408,
+      "has_main": true
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1861,
+      "mtime": 1786292951.404,
+      "has_main": true
+    },
+    {
+      "path": ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": false,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292951.4,
+      "has_main": true
+    },
+    {
+      "path": ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": false,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292951.396,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292951.38,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292951.256,
+      "has_main": true
+    },
+    {
+      "path": "founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "historical": false,
+      "canonical_current": false,
+      "size": 793,
+      "mtime": 1785244628.9300725,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1143,
+      "mtime": 1785244628.8700726,
+      "has_main": false
+    },
+    {
+      "path": "founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "historical": false,
+      "canonical_current": false,
+      "size": 934,
+      "mtime": 1785242887.634651,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2038,
+      "mtime": 1785242887.558651,
+      "has_main": false
+    },
+    {
+      "path": "founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1749,
+      "mtime": 1784736750.277,
+      "has_main": false
+    },
+    {
+      "path": "learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1784398055.063,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1784398055.063,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1784398055.063,
+      "has_main": false
+    },
+    {
+      "path": "learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1784218716.5978599,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1784218716.5978599,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1784218716.5978599,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1784208123.325,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1784208027.637,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": false,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1784207959.377,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1784207683.245,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1784122424.7218454,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": false,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1784026278.03,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "_archive_20260808/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1783959660.3167489,
+      "has_main": false
+    },
+    {
+      "path": "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": false,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1783787465.2587748,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292951.176,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.172,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.168,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.164,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.16,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.152,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1786292951.148,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1786292951.148,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.144,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.144,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.144,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292951.144,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "historical": true,
+      "canonical_current": false,
+      "size": 934,
+      "mtime": 1786292951.136,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "historical": true,
+      "canonical_current": false,
+      "size": 793,
+      "mtime": 1786292951.136,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292951.132,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292951.132,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1749,
+      "mtime": 1786292951.132,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2038,
+      "mtime": 1786292951.124,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1143,
+      "mtime": 1786292951.124,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292951.124,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292951.124,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 781,
+      "mtime": 1786292951.12,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292951.112,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292951.108,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292951.104,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292951.1,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292951.1,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292951.096,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292951.092,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "historical": true,
+      "canonical_current": false,
+      "size": 918,
+      "mtime": 1786292951.076,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1861,
+      "mtime": 1786292951.072,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292951.064,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292951.064,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292951.06,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292951.044,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.036,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292951.032,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.956,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.948,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.94,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1786292950.932,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1786292950.932,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.928,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.928,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.928,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.928,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1749,
+      "mtime": 1786292950.916,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "historical": true,
+      "canonical_current": false,
+      "size": 934,
+      "mtime": 1786292950.916,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "historical": true,
+      "canonical_current": false,
+      "size": 793,
+      "mtime": 1786292950.916,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.912,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.912,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.908,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2038,
+      "mtime": 1786292950.904,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1143,
+      "mtime": 1786292950.904,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.904,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 781,
+      "mtime": 1786292950.9,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.892,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292950.892,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.884,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.88,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.88,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.88,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.876,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1861,
+      "mtime": 1786292950.864,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "historical": true,
+      "canonical_current": false,
+      "size": 918,
+      "mtime": 1786292950.864,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.86,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.86,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292950.856,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292950.852,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.844,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.84,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.836,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.828,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.824,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1786292950.82,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.816,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.816,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.816,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1786292950.816,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.812,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "historical": true,
+      "canonical_current": false,
+      "size": 934,
+      "mtime": 1786292950.804,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "historical": true,
+      "canonical_current": false,
+      "size": 793,
+      "mtime": 1786292950.804,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.8,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.8,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1749,
+      "mtime": 1786292950.8,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.796,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2038,
+      "mtime": 1786292950.792,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1143,
+      "mtime": 1786292950.792,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.792,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 781,
+      "mtime": 1786292950.788,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.78,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292950.776,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.772,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.768,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.768,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.764,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.764,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "historical": true,
+      "canonical_current": false,
+      "size": 918,
+      "mtime": 1786292950.756,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1861,
+      "mtime": 1786292950.752,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.752,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.752,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292950.748,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292950.744,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.736,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.732,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.728,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.724,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.72,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1890,
+      "mtime": 1786292950.712,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1003,
+      "mtime": 1786292950.712,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.708,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.708,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1513,
+      "mtime": 1786292950.708,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.704,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "historical": true,
+      "canonical_current": false,
+      "size": 934,
+      "mtime": 1786292950.684,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "historical": true,
+      "canonical_current": false,
+      "size": 793,
+      "mtime": 1786292950.684,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1749,
+      "mtime": 1786292950.676,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.672,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.672,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.66,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2038,
+      "mtime": 1786292950.652,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1143,
+      "mtime": 1786292950.652,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.652,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 781,
+      "mtime": 1786292950.644,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.612,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2057,
+      "mtime": 1786292950.604,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "historical": true,
+      "canonical_current": false,
+      "size": 839,
+      "mtime": 1786292950.588,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2206,
+      "mtime": 1786292950.576,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "historical": true,
+      "canonical_current": false,
+      "size": 459,
+      "mtime": 1786292950.576,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2619,
+      "mtime": 1786292950.568,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1449,
+      "mtime": 1786292950.56,
+      "has_main": false
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "historical": true,
+      "canonical_current": false,
+      "size": 918,
+      "mtime": 1786292950.512,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "historical": true,
+      "canonical_current": false,
+      "size": 1861,
+      "mtime": 1786292950.508,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.496,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "historical": true,
+      "canonical_current": false,
+      "size": 11844,
+      "mtime": 1786292950.492,
+      "has_main": true
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "historical": true,
+      "canonical_current": false,
+      "size": 2795,
+      "mtime": 1786292950.488,
+      "has_main": true
+    }
+  ]
+}

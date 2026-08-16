@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-08-16T21:02:59.025265",
+  "contract": "ima.orchestration.contract.v1",
+  "inventory_files": 187,
+  "gates": [
+    {
+      "gate": "runtime_entry",
+      "status": "verified",
+      "path": "kernel/runtime/CANONICAL/python_bridge.py"
+    },
+    {
+      "gate": "continuity_promotion",
+      "status": "passed",
+      "output": "=== IMA CONTINUITY PROMOTION ===\n[OK] archive scanned\n[OK] candidate registry generated\n[OK] static validation completed\n[OK] provenance recorded\n[OK] continuity snapshot created\n[OK] historical executable code NOT blindly activated\n[OK] runtime activation remains verification-gated\n[OK] candidates: 7726\n[OK] validated: 7710\n[OK] documentation promoted: 3\n[OK] report: .ima/CONTINUITY/CONTINUITY_REPORT.md\n"
+    }
+  ],
+  "runtime_registry": ".ima/ORCHESTRATION/runtime/runtime_registry.json",
+  "orchestration_hash": "afbf0876611f93c9ce19f06dbabaca9c7f1613682c1be04ec233295b4fbb979b"
+}
