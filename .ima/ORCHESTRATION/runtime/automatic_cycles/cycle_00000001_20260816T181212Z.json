@@ -1,0 +1,12 @@
+{
+  "schema": "ima.automatic.cycle.result.v1",
+  "cycle": 1,
+  "timestamp": "2026-08-16T18:12:12.511836+00:00",
+  "pid": 23977,
+  "source": "automatic_cycle_engine",
+  "entry": ".ima/ORCHESTRATION/ima_orchestrator_entry.py",
+  "returncode": 0,
+  "stdout_tail": "=== IMA SINGLE ORCHESTRATION ENTRY ===\n[OK] orchestration inventory loaded\n[OK] continuity engine evaluated\n[OK] runtime registration written\n[OK] provenance snapshot written\n[OK] all mandatory orchestration gates passed\n",
+  "stderr_tail": "",
+  "status": "passed"
+}
