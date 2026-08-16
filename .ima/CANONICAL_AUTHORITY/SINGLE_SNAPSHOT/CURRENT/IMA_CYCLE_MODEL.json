@@ -1,0 +1,78 @@
+{
+  "schema": "ima.cycle.v1",
+  "status": "canonical",
+  "principle": "continuity_through_change",
+  "cycle": [
+    "cycle_begin",
+    "expansion",
+    "experience",
+    "learning",
+    "verification",
+    "contraction",
+    "compression",
+    "canonical_snapshot",
+    "cycle_end",
+    "next_cycle"
+  ],
+  "generational_flow": [
+    "experience",
+    "memory",
+    "pattern",
+    "understanding",
+    "knowledge",
+    "verification",
+    "capability",
+    "transmission",
+    "next_generation"
+  ],
+  "preserved_across_generations": [
+    "identity",
+    "mission",
+    "principles",
+    "verified_knowledge",
+    "verified_capabilities",
+    "lessons",
+    "safety",
+    "provenance"
+  ],
+  "mutable_across_generations": [
+    "implementation",
+    "models",
+    "interfaces",
+    "architecture",
+    "technology",
+    "agents",
+    "deployment"
+  ],
+  "human_purpose_layer": [
+    "purpose",
+    "alternatives",
+    "impact_assessment",
+    "agency_assessment",
+    "minimum_harm_assessment"
+  ],
+  "learning_loop": [
+    "experience",
+    "interpretation",
+    "purpose",
+    "alternatives",
+    "impact_assessment",
+    "action",
+    "experience"
+  ],
+  "governing_questions": [
+    "What is the intended purpose?",
+    "Who benefits?",
+    "Who may be affected?",
+    "What harms could result?",
+    "Is there a less harmful alternative?",
+    "Does the action increase or decrease human agency?",
+    "What evidence supports the decision?"
+  ],
+  "nmi_relationship": {
+    "direction": "bidirectional",
+    "nmi_to_ima": "NMI contributes a domain-specific example of minimum necessary harm and less invasive medication delivery.",
+    "ima_to_nmi": "IMA provides learning, verification, provenance, continuity, and knowledge infrastructure around NMI.",
+    "scope_boundary": "NMI-1.0 remains specifically concerned with medication delivery and is not redefined by IMA."
+  }
+}

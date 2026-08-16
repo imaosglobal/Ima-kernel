@@ -23,3 +23,19 @@ The integration is intended to:
 ## Author
 
 Ori Cohen
+
+## Relationship with IMA
+
+NMI-1.0 is integrated into IMA as a documented research and knowledge
+domain while retaining its independent scope, authorship, provenance,
+and canonical publication.
+
+The relationship is bidirectional:
+
+- **NMI → IMA:** NMI provides a concrete domain-specific example of
+  minimum necessary invasiveness and minimum unnecessary harm.
+- **IMA → NMI:** IMA provides a broader environment for learning,
+  verification, provenance, continuity, research, and future development.
+
+NMI-1.0 remains specifically concerned with medication delivery.
+Its integration into IMA does not redefine the standard.

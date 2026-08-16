@@ -53,3 +53,43 @@ the minimum invasiveness necessary to achieve the intended therapeutic outcome.
 NMI is integrated into IMA as research and knowledge material. Its inclusion does
 not alter the canonical publication, authorship, or provenance of NMI-1.0.
 
+
+## Human Purpose
+
+IMA's architecture is intended to direct increasing capability toward
+human flourishing rather than capability for its own sake.
+
+The current canonical human-purpose principles include:
+
+- Human flourishing
+- Human agency
+- Minimum necessary harm
+- Purpose before capability
+- Verification before promotion
+- Continuity without determinism
+- Generational responsibility
+
+Canonical principles:
+`.ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/IMA_HUMAN_PURPOSE_PRINCIPLES.md`
+
+IMA does not claim that documented architecture automatically represents
+active runtime capability. Runtime capabilities require independent
+verification.
+
+### IMA ↔ NMI
+
+NMI-1.0 is a domain-specific open standard proposal for minimum necessary
+invasiveness in medication delivery.
+
+The relationship is bidirectional:
+
+**NMI → IMA:** NMI contributes a concrete medical case for evaluating
+whether necessary therapeutic outcomes can be achieved with less
+invasiveness.
+
+**IMA → NMI:** IMA provides a broader architecture for learning,
+verification, provenance, continuity, and future development around such
+knowledge.
+
+NMI remains independently defined and its canonical publication remains
+the source of record.
