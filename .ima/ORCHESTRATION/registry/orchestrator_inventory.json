@@ -1,0 +1,2694 @@
+{
+  "schema": "ima.orchestration.inventory.v1",
+  "generated_at": "2026-08-16T21:01:05.442569",
+  "files": [
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1861
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 918
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 781
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 2038
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 1143
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1749
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate"
+      ],
+      "size": 934
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 793
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1861
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 918
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 781
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 2038
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 1143
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1749
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate"
+      ],
+      "size": 934
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 793
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1861
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 918
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 781
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 2038
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 1143
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1749
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate"
+      ],
+      "size": 934
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 793
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1861
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 918
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 781
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 2038
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 1143
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1749
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate"
+      ],
+      "size": 934
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 793
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "4f561f6299f54024164b73e2f5894d397c28cd999de7284e75f881b755885d85",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2795
+    },
+    {
+      "path": ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      "sha256": "0c322ee0ef4bbf4feefeaa2d3a6182f9928c5ee6c7e2dd7e3bfbfc0d605111ad",
+      "capabilities": [
+        "archive_discovery",
+        "classification",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "provenance",
+        "canonical_snapshot",
+        "runtime_registration",
+        "git_automation"
+      ],
+      "size": 11844
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/agi_orchestrator.py",
+      "sha256": "05407a289fe6e57b482868616806feac433ca3ffed05fc77be4f7554df59127b",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1861
+    },
+    {
+      "path": ".ima/agi_evolution/runtime/ima_supervisor.py",
+      "sha256": "f33f4ae4f2770182bb0f319a30af72a18f963f1d7ed18b316ca85d6c4a1bd012",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 918
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135624/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": ".ima/backups/embodied_language_live_20260815_135632/learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": ".ima/system_supervisor.py",
+      "sha256": "5d87038d16a530f63ae1760d1afae04467137990947a9a9d4157cb0a5993e8bb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "supervision"
+      ],
+      "size": 781
+    },
+    {
+      "path": "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "sha256": "908a7bf23adcdc5d5c8505046d5981440de5b82d69ddb08603794d353f5e9c2e",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 2038
+    },
+    {
+      "path": "_archive_20260808/build_ima_message_orchestrator.py",
+      "sha256": "3201fb14568d31e38e9500b022b9060bb60e932969e30c8b4584d7ad99e8732f",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 1143
+    },
+    {
+      "path": "_archive_20260808/build_knowledge_orchestrator.py",
+      "sha256": "e668e9f9961981fab8a3a97832f4f3f88eb2c767c254f6b4076067754608f88a",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1449
+    },
+    {
+      "path": "_archive_20260808/connect_ima_orchestrator.py",
+      "sha256": "e9a85b316a609b73f56d9fd050ceded261c9c7ef23145b64a5791e8cfce3c75f",
+      "capabilities": [
+        "archive_discovery",
+        "dependency_validation",
+        "static_validation",
+        "runtime_verification",
+        "integration_verification",
+        "promotion_gate",
+        "canonical_snapshot",
+        "runtime_registration"
+      ],
+      "size": 2619
+    },
+    {
+      "path": "_archive_20260808/fix_orchestrator_final.py",
+      "sha256": "c66e762e3dff818b4022f5f504328d2c1852d29c90f011197f6bcae9c7fc419d",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2206
+    },
+    {
+      "path": "_archive_20260808/fix_orchestrator_syntax.py",
+      "sha256": "25877c57088595afb0e4ada9ee4512a129d70d52713478e0ad5198ec5e65ba04",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation"
+      ],
+      "size": 459
+    },
+    {
+      "path": "_archive_20260808/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "_archive_20260808/learning_backup_final_1784122661/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "_archive_20260808/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "_archive_20260808/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "_archive_20260808/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "_archive_20260808/repair_orchestrator_logic.py",
+      "sha256": "88dedcba8a7a0767c35525d14f1286815ebbc2b62af5d6153ed8648c6d5b2936",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 2057
+    },
+    {
+      "path": "founder/executive_ai/action_engine/action_orchestrator.py",
+      "sha256": "0c5412252b4db67e5764d4768caf0f9240f6a1ef0545e61ce8d0c28636ab973f",
+      "capabilities": [
+        "dependency_validation"
+      ],
+      "size": 1749
+    },
+    {
+      "path": "founder/executive_ai/community/expansion_orchestrator.py",
+      "sha256": "702f75c69f17ee69ba8055b0761a3cde8e42cb970958b795d9f3efe6d4e2c487",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "integration_verification",
+        "promotion_gate"
+      ],
+      "size": 934
+    },
+    {
+      "path": "founder/executive_ai/community/ima_message_orchestrator.py",
+      "sha256": "df05d68655027f24c45b5ce6f0eac0727ce9c14fa0d2525c2180e4dee171ebf5",
+      "capabilities": [
+        "dependency_validation",
+        "promotion_gate",
+        "runtime_registration"
+      ],
+      "size": 793
+    },
+    {
+      "path": "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "sha256": "ad5edd2e881b5dffa2436d4a1196563a4ee2b998ea126a75c99279613de2eceb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification",
+        "provenance",
+        "promotion_gate",
+        "canonical_snapshot",
+        "supervision"
+      ],
+      "size": 839
+    },
+    {
+      "path": "learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "sha256": "ae3dd299098243f5b25c308197b6f4ad360510ea4c0cbff8d26f4e451e47d6cb",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1513
+    },
+    {
+      "path": "learning/knowledge_core/orchestrator.py",
+      "sha256": "ebf14c3e8f05a7583f264903640ef634f5426a832aa929c27cdee8e1da2428db",
+      "capabilities": [
+        "dependency_validation",
+        "static_validation",
+        "promotion_gate"
+      ],
+      "size": 1003
+    },
+    {
+      "path": "learning/meta_orchestrator.py",
+      "sha256": "5ad7d5389ceb96d27dee3b80abae4b59385e7d866b2a6398dac64a1aff5a3610",
+      "capabilities": [
+        "dependency_validation",
+        "runtime_verification"
+      ],
+      "size": 1890
+    }
+  ],
+  "coverage": {
+    "archive_discovery": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py"
+    ],
+    "classification": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py"
+    ],
+    "dependency_validation": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/action_engine/action_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/action_engine/action_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/action_engine/action_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/agi_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/action_engine/action_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/agi_evolution/runtime/agi_orchestrator.py",
+      ".ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/knowledge_core/orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/knowledge_core/orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/meta_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/system_supervisor.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/build_ima_message_orchestrator.py",
+      "_archive_20260808/build_knowledge_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "_archive_20260808/fix_orchestrator_final.py",
+      "_archive_20260808/fix_orchestrator_syntax.py",
+      "_archive_20260808/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_final_1784122661/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "_archive_20260808/repair_orchestrator_logic.py",
+      "founder/executive_ai/action_engine/action_orchestrator.py",
+      "founder/executive_ai/community/expansion_orchestrator.py",
+      "founder/executive_ai/community/ima_message_orchestrator.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "learning/knowledge_core/orchestrator.py",
+      "learning/meta_orchestrator.py"
+    ],
+    "static_validation": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_syntax.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/knowledge_core/orchestrator.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/knowledge_core/orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/knowledge_core/orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_syntax.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/build_knowledge_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "_archive_20260808/fix_orchestrator_final.py",
+      "_archive_20260808/fix_orchestrator_syntax.py",
+      "_archive_20260808/repair_orchestrator_logic.py",
+      "founder/executive_ai/community/expansion_orchestrator.py",
+      "learning/knowledge_core/orchestrator.py"
+    ],
+    "runtime_verification": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_final_1784122661/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122578/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_repair_1784122602/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/meta_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/meta_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/system_supervisor.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "_archive_20260808/learning_backup_adaptive_1784122898/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_final_1784122661/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_repair_1784122578/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_repair_1784122602/meta_orchestrator.py",
+      "_archive_20260808/learning_backup_stable_20260715_1633/meta_orchestrator.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py",
+      "learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py",
+      "learning/_backup_reasoning_20260718_210634/meta_orchestrator.py",
+      "learning/meta_orchestrator.py"
+    ],
+    "integration_verification": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "founder/executive_ai/community/expansion_orchestrator.py"
+    ],
+    "provenance": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py"
+    ],
+    "promotion_gate": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_knowledge_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/fix_orchestrator_final.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/repair_orchestrator_logic.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/learning/knowledge_core/orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/backups/embodied_language_live_20260815_135624/learning/knowledge_core/orchestrator.py",
+      ".ima/backups/embodied_language_live_20260815_135632/learning/knowledge_core/orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/build_knowledge_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/fix_orchestrator_final.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/repair_orchestrator_logic.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/build_ima_message_orchestrator.py",
+      "_archive_20260808/build_knowledge_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "_archive_20260808/fix_orchestrator_final.py",
+      "_archive_20260808/repair_orchestrator_logic.py",
+      "founder/executive_ai/community/expansion_orchestrator.py",
+      "founder/executive_ai/community/ima_message_orchestrator.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      "learning/knowledge_core/orchestrator.py"
+    ],
+    "canonical_snapshot": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py"
+    ],
+    "runtime_registration": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_expansion_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/build_ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/connect_ima_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/founder/executive_ai/community/ima_message_orchestrator.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/PRODUCT_EVOLUTION/snapshots/20260719_141040/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/connect_ima_orchestrator.py",
+      "_archive_20260808/build_ima_expansion_orchestrator.py",
+      "_archive_20260808/build_ima_message_orchestrator.py",
+      "_archive_20260808/connect_ima_orchestrator.py",
+      "founder/executive_ai/community/ima_message_orchestrator.py"
+    ],
+    "generation_tracking": [],
+    "git_automation": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/evolution_architecture_20260718_185642/.ima/CANONICAL_AUTHORITY/evolution/SELF_EVOLUTION/REPAIR_ENGINE/IMA_CANONICAL_CHAIN_ORCHESTRATOR.py",
+      ".ima/REPAIR_BACKUPS/final_evolution_repair_20260718_185723/.ima_CANONICAL_AUTHORITY_evolution_SELF_EVOLUTION_REPAIR_ENGINE_IMA_CANONICAL_CHAIN_ORCHESTRATOR.py"
+    ],
+    "supervision": [
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_111836/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_112425/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113242/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/.ima/system_supervisor.py",
+      ".ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/snapshots_history/20260731_113710/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/agi_evolution/runtime/ima_supervisor.py",
+      ".ima/canonical_snapshots/canonical_ready_1784650292/kernel/runtime/CANONICAL/IMA_SUPERVISOR.py",
+      ".ima/governance/repair_backup/kernel_runtime_CANONICAL_IMA_SUPERVISOR.py",
+      ".ima/system_supervisor.py",
+      "kernel/runtime/CANONICAL/IMA_SUPERVISOR.py"
+    ]
+  }
+}

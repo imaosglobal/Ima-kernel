@@ -1,0 +1,49 @@
+{
+  "schema": "ima.orchestration.contract.v1",
+  "authority": "canonical",
+  "pipeline": [
+    "archive_discovery",
+    "classification",
+    "dependency_validation",
+    "static_validation",
+    "runtime_verification",
+    "integration_verification",
+    "provenance",
+    "promotion_gate",
+    "canonical_snapshot",
+    "runtime_registration",
+    "generation_record",
+    "health_check",
+    "git_promotion"
+  ],
+  "rules": {
+    "historical_executable_code": "verification_required",
+    "unverified_code": "inactive",
+    "documentation": "promotable_after_validation",
+    "knowledge": "promotable_after_provenance",
+    "runtime_registration": "verification_required",
+    "canonical_promotion": "gate_required",
+    "git_push": "only_after_all_required_gates"
+  },
+  "continuity": {
+    "preserve": [
+      "identity",
+      "mission",
+      "principles",
+      "verified_knowledge",
+      "verified_capabilities",
+      "lessons",
+      "safety",
+      "provenance"
+    ],
+    "mutable": [
+      "implementation",
+      "models",
+      "interfaces",
+      "architecture",
+      "technology",
+      "agents",
+      "deployment"
+    ]
+  }
+}
