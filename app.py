@@ -1,10 +1,35 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 import json, os
+
+# Load local .env without printing secrets.
+env_file = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(env_file):
+    with open(env_file, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            if key and key not in os.environ:
+                os.environ[key] = value.strip().strip('"').strip("'")
+
 import ima_master_runtime
+from api.auth.google_oauth import google_auth
 
 app = Flask(__name__)
-CORS(app)
+
+app.secret_key = os.environ.get("SECRET_KEY")
+if not app.secret_key:
+    raise RuntimeError("SECRET_KEY is not configured")
+
+CORS(
+    app,
+    supports_credentials=True,
+    origins=os.environ.get("FRONTEND_URL", "*")
+)
+
+app.register_blueprint(google_auth)
 
 MEMORY_FILE = "unified_memory.json"
 
@@ -66,15 +91,38 @@ def think():
 
     data = request.get_json(silent=True) or {}
     prompt = data.get("message", "")
-    user_id = data.get("user_id", "api_user")
 
     if not prompt:
         return jsonify({"reply": "לא התקבלה הודעה"}), 400
 
+    # Authenticated Google identity takes precedence over a client-supplied ID.
+    user_id = session.get("user_id") or data.get("user_id", "api_user")
+
     mem = load_memory()
     if "users" not in mem:
         mem["users"] = {}
-    mem["users"].setdefault(user_id, {}).setdefault("chats", [])
+
+    user = mem["users"].setdefault(user_id, {})
+    chats = user.setdefault("chats", [])
+
+    # Build bounded per-user conversational context.
+    recent = chats[-10:]
+
+    context_lines = []
+    for item in recent:
+        context_lines.append(f"משתמש: {item.get('in', '')}")
+        context_lines.append(f"אמא: {item.get('out', '')}")
+
+    if context_lines:
+        context = (
+            "זהו ההקשר האחרון של השיחה עם המשתמש הזה בלבד. "
+            "השתמש בו כדי לשמור על רציפות, אך אל תמציא מידע שלא מופיע בו.\n\n"
+            + "\n".join(context_lines)
+            + "\n\nהודעה חדשה של המשתמש:\n"
+            + prompt
+        )
+    else:
+        context = prompt
 
     emit(
         "llm.message_received",
@@ -84,7 +132,11 @@ def think():
     )
 
     try:
-        reply = gemini_ask(prompt)
+        reply = gemini_ask(context)
+
+        # Provider/API failures must never become conversational memory.
+        if isinstance(reply, str) and reply.startswith("[gemini error:"):
+            raise RuntimeError(reply)
 
         emit(
             "llm.message_sent",
@@ -93,7 +145,10 @@ def think():
             response=reply
         )
 
-        mem["users"][user_id]["chats"].append({"in": prompt, "out": reply})
+        mem["users"][user_id]["chats"].append({
+            "in": prompt,
+            "out": reply
+        })
         save_memory(mem)
 
         return jsonify({"reply": reply})
