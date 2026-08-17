@@ -71,6 +71,11 @@ def think():
     if not prompt:
         return jsonify({"reply": "לא התקבלה הודעה"}), 400
 
+    mem = load_memory()
+    if "users" not in mem:
+        mem["users"] = {}
+    mem["users"].setdefault(user_id, {}).setdefault("chats", [])
+
     emit(
         "llm.message_received",
         source="think",
@@ -87,6 +92,9 @@ def think():
             user_id=user_id,
             response=reply
         )
+
+        mem["users"][user_id]["chats"].append({"in": prompt, "out": reply})
+        save_memory(mem)
 
         return jsonify({"reply": reply})
 
