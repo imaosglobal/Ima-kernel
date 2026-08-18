@@ -1,0 +1,58 @@
+{
+  "domain": "embodied_language",
+  "module": "learning.domains.embodied_language.domain",
+  "loader": "research_domain",
+  "observation_function": "record_observation",
+  "hypothesis_function": "record_hypothesis",
+  "status": "active",
+  "autonomous_research": true,
+  "feeds": [
+    "learning",
+    "knowledge",
+    "memory",
+    "research"
+  ],
+  "principles": [
+    "similar spelling is not evidence of common etymology",
+    "separate cognitive mapping from historical etymology",
+    "store evidence and uncertainty",
+    "compare unrelated languages",
+    "hypotheses must remain hypotheses until validated",
+    "distinguish universal, cultural, linguistic and individual mappings",
+    "never promote an unverified hypothesis to fact"
+  ],
+  "languages": [
+    "Hebrew",
+    "Arabic",
+    "English",
+    "Spanish",
+    "French",
+    "Greek",
+    "Persian",
+    "Turkish",
+    "Japanese",
+    "Mandarin Chinese",
+    "Vietnamese",
+    "Indonesian",
+    "Hungarian",
+    "Czech",
+    "Marathi",
+    "Wolof",
+    "Khoekhoe"
+  ],
+  "concept_count": 50,
+  "mapping_layers": [
+    "body",
+    "perception",
+    "action",
+    "space",
+    "object",
+    "relation",
+    "emotion",
+    "cognition",
+    "social",
+    "time",
+    "grammar"
+  ],
+  "created_or_updated": 1786791867.1846898
+}

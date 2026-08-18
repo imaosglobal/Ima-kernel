@@ -5,7 +5,29 @@
   ],
   "users": {
     "אורי": {
-      "name": "אורי"
+      "name": "אורי",
+      "chats": [
+        {
+          "in": "שלום",
+          "out": "שלום! מה שלומך?"
+        }
+      ]
+    },
+    "דני": {
+      "chats": [
+        {
+          "in": "מה השם שלי?",
+          "out": "אני לא יודע/ת מה השם שלך.\n\nבתור בינה מלאכותית, אין לי גישה לפרטים האישיים שלך או זיכרון של שיחות קודמות איתך (אלא אם אמרת לי את שמך בשיחה הנוכחית).\n\nאם תרצה/תרצי לשתף אותי, אשמח לדעת!"
+        }
+      ]
+    },
+    "test-user-001": {
+      "chats": [
+        {
+          "in": "זוהי הודעת בדיקה. זכור אותה.",
+          "out": "[gemini error: {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}]"
+        }
+      ]
     }
   }
 }

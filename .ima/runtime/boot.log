@@ -84,3 +84,35 @@ Traceback (most recent call last):
     self.socket.bind(self.server_address)
     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
 OSError: [Errno 98] Address already in use
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before ima_master_runtime
+BOOT: after ima_master_runtime
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before conversation_layer
+BOOT: after conversation_layer
+BOOT: before product_gateway
+BOOT: after product_gateway
+BOOT: before ima_master_runtime
+BOOT: after ima_master_runtime
+PYTHON ROOT: /data/data/com.termux/files/home/ima_kernel
+BOOT: before conversation_layer
+BOOT: after conversation_layer
+BOOT: before product_gateway
+BOOT: after product_gateway
+IMA API ONLINE :8080
+IMA API ONLINE :8080
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/ima_kernel/api/server.py", line 272, in <module>
+    HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 98] Address already in use

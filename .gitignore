@@ -1,99 +1,102 @@
-node_modules/
-*.log
-*.tmp
-_tmp*
-<<<<<<< HEAD
-kernel/projects/ima_core/
-
-# Python cache
-__pycache__/
-*.py[cod]
-
-# Virtual environments
-.venv/
-venv/
-
-# IMA runtime
-.ima/__pycache__/
-.ima/runtime/
-.ima/logs/
-.ima/*.pid
-.ima/*.lock
-.ima/snapshots/
-
-# Runtime files
-*.pid
-*.lock
-nohup.out
-daemon.out
-run.lock
-service.lock
-maintenance.lock
 
 # Build artifacts
-dist/
-build/
-.cache/
-
-# OS files
-.DS_Store
-Thumbs.db
-.ima/archive/
-.ima/ledger.jsonl
-# Python
-__pycache__/
-**/__pycache__/
-*.py[cod]
-
-# Runtime
-*.pid
-*.lock
-.ima/*.pid
-.ima/*.lock
-.ima_git.lock
-.mother_v4.pid
-.ima/snapshots/
-
-# IMA generated indexes
-.ima/all_files*.txt
-.ima/files*.txt
-.ima/snapshot.txt
-.ima/architecture_map.txt
-.ima/nodes.csv
-
-# IMA generated runtime state
-.ima/core_map.json
-.ima/git_snapshot.sh
-
 # IMA generated core state
-.ima/core_map.json
-=======
->>>>>>> ima_core_backup/main
-.ima/learned_intents.json
-
+# IMA generated indexes
+# IMA generated runtime state
+# IMA runtime
+# IMA runtime-generated artifacts
+# OS files
+# Python
+# Python cache
+# Runtime
+# Runtime files
 # Runtime memory state
-.ima/conversation_memory.json
-.ima/memory_log.jsonl
+# Virtual environments
+**/__pycache__/
 *.before_reasoning
-
-.ima/backups/
-.ima/archive_final/
+*.lock
+*.log
+*.pid
+*.py[cod]
 *.pyc
-IMA_AUDIT_REPORT.json
-.ima/guardian/*.log
-.ima/guardian/history.jsonl
-.ima/agi_evolution/runtime/boot_gate_state.json
-.ima/agi_evolution/runtime/ima_master_state.json
+*.tmp
+.DS_Store
+.cache/
+.env
+.env.production
+.ima/*.lock
+.ima/*.pid
+.ima/__pycache__/
 .ima/agi_evolution/runtime/*_state.json
 .ima/agi_evolution/runtime/*state*.json
-
-# IMA runtime-generated artifacts
+.ima/agi_evolution/runtime/boot_gate_state.json
+.ima/agi_evolution/runtime/ima_master_state.json
+.ima/all_files*.txt
+.ima/architecture_map.txt
+.ima/archive/
+.ima/archive_final/
+.ima/automation/*.bak.*
+.ima/automation/*.pid
 .ima/automation/backups/
 .ima/automation/logs/
 .ima/automation/metrics/
-.ima/automation/*.pid
-.ima/automation/*.bak.*
+.ima/backups/
+.ima/conversation_memory.json
+.ima/core_map.json
+.ima/files*.txt
+.ima/git_snapshot.sh
+.ima/guardian/*.log
+.ima/guardian/history.jsonl
+.ima/learned_intents.json
+.ima/ledger.jsonl
+.ima/logs/
+.ima/memory_log.jsonl
 .ima/metrics/*.json
+.ima/nodes.csv
+.ima/runtime/
 .ima/runtime/boot_integrity_report.json
 .ima/runtime/dependency_registry.json
 .ima/runtime/maintenance_state.json
+.ima/snapshot.txt
+.ima/snapshots/
+.ima_git.lock
+.ima_secret.key
+.mother_v4.pid
+.venv/
+<<<<<<< HEAD
+>>>>>>> ima_core_backup/main
+IMA_AUDIT_REPORT.json
+Thumbs.db
+__pycache__/
+_tmp*
+build/
+daemon.out
+dist/
+kernel/projects/ima_core/
+maintenance.lock
+node_modules/
+nohup.out
+run.lock
+service.lock
+venv/
+ima-mobile/
+.render_api_key.enc
+# ============================================================
+# IMA generated/runtime artifacts
+.ima/CONTINUITY/snapshots/
+.ima/ORCHESTRATION/snapshots/
+.ima/ORCHESTRATION/runtime/automatic_cycles/
+.ima/runtime/*.log
+.ima/continuity_backups/
+.ima/duplication_fix_backup/
+.ima/final_canonical_fix_backup/
+.ima/final_connector_cleanup/
+.ima/final_dedupe_backup/
+.ima/CANONICAL_AUTHORITY/HISTORY_ARCHIVE/*.before_*
+# Local backups
+*.before_*
+# Dependencies / build output
+**/node_modules/
+**/*.pyc
+# Local/generated logs
+render_logs.json

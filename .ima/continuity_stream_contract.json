@@ -1,0 +1,21 @@
+{
+  "schema": "ima.stream.continuity.v1",
+  "events": [
+    "cycle.begin",
+    "perception.received",
+    "memory.retrieved",
+    "reasoning.completed",
+    "decision.made",
+    "action.executed",
+    "result.received",
+    "reflection.completed",
+    "learning.recorded",
+    "verification.completed",
+    "memory.updated",
+    "generation.snapshot",
+    "cycle.end"
+  ],
+  "rule": "Every lifecycle cycle may produce an auditable continuity trace.",
+  "legacy_event_compatibility": true,
+  "canonical_generation": 1
+}

@@ -1,4 +1,12 @@
 def ranker(items=None):
+    """
+    Canonical ranking interface.
+
+    Every ranked item receives the same public score field:
+        score
+
+    rank_score is retained as an internal/backward-compatible alias.
+    """
 
     if items is None:
         return []
@@ -6,22 +14,37 @@ def ranker(items=None):
     ranked = []
 
     for item in items:
-        score = 0
+        if not isinstance(item, dict):
+            continue
 
-        if isinstance(item, dict):
-            score += item.get("priority", 0)
-            score += item.get("importance", 0)
-            score += item.get("relevance", 0)
+        score = (
+            item.get("priority", 0)
+            + item.get("importance", 0)
+            + item.get("relevance", 0)
+        )
 
-            ranked.append({
-                **item,
-                "rank_score": score
-            })
+        # Preserve an explicitly supplied score when no component
+        # fields were supplied.
+        if score == 0 and "score" in item:
+            score = item.get("score", 0)
+
+        try:
+            score = float(score)
+        except (TypeError, ValueError):
+            score = 0
+
+        normalized = {
+            **item,
+            "score": score,
+            "rank_score": score,
+        }
+
+        ranked.append(normalized)
 
     return sorted(
         ranked,
-        key=lambda x: x.get("rank_score", 0),
-        reverse=True
+        key=lambda x: x.get("score", 0),
+        reverse=True,
     )
 
 

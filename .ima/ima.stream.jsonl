@@ -1322,3 +1322,16 @@
 {"type": "whatsapp.message_received", "ts": 1786537480.8282127, "user_id": "canonical_test_user", "message": "IMA_CANONICAL_DEDUPE_TEST_001"}
 {"type": "whatsapp.message_received", "ts": 1786537480.8285058, "user_id": "canonical_test_user", "message": "IMA_CANONICAL_DEDUPE_TEST_001"}
 {"type": "whatsapp.message_received", "ts": 1786538013.368417, "user_id": "canonical_test_user", "message": "__IMA_CANONICAL_DEDUPE_TEST_2026__"}
+{"type": "llm.message_received", "ts": 1786968119.5145538, "source": "think", "user_id": "אורי", "message": "תזכור שקוראים לי אורי"}
+{"type": "llm.message_sent", "ts": 1786968120.7986507, "source": "think", "user_id": "אורי", "response": "בסדר גמור, אורי. תזכור שקוראים לך אורי."}
+{"type": "llm.error", "ts": 1786968120.8003106, "source": "think", "user_id": "אורי", "error": "'chats'"}
+{"type": "llm.message_received", "ts": 1786968120.8395193, "source": "think", "user_id": "דני", "message": "מה השם שלי?"}
+{"type": "llm.message_sent", "ts": 1786968128.2726889, "source": "think", "user_id": "דני", "response": "אני לא יודע/ת מה השם שלך.\n\nבתור בינה מלאכותית, אין לי גישה לפרטים האישיים שלך או זיכרון של שיחות קודמות איתך (אלא אם אמרת לי את שמך בשיחה הנוכחית).\n\nאם תרצה/תרצי לשתף אותי, אשמח לדעת!"}
+{"type": "llm.message_received", "ts": 1786968195.1699023, "source": "think", "user_id": "אורי", "message": "שלום"}
+{"type": "llm.message_sent", "ts": 1786968196.6903274, "source": "think", "user_id": "אורי", "response": "שלום! מה שלומך?"}
+{"type": "llm.message_received", "ts": 1786969552.4180145, "source": "think", "user_id": "test-user-001", "message": "זוהי הודעת בדיקה. זכור אותה."}
+{"type": "llm.message_sent", "ts": 1786969553.0890477, "source": "think", "user_id": "test-user-001", "response": "[gemini error: {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}]"}
+{"type": "llm.message_received", "ts": 1786969683.344211, "source": "think", "user_id": "test-error-user", "message": "בדיקת שגיאת Gemini"}
+{"type": "llm.error", "ts": 1786969683.7464216, "source": "think", "user_id": "test-error-user", "error": "[gemini error: {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}]"}
+{"type": "llm.message_received", "ts": 1786969748.8128474, "source": "think", "user_id": "google:real-session-user", "message": "identity isolation test"}
+{"type": "llm.error", "ts": 1786969749.3934042, "source": "think", "user_id": "google:real-session-user", "error": "[gemini error: {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}]"}

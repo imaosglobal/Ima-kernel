@@ -1,0 +1,29 @@
+#!/data/data/com.termux/files/usr/bin/bash
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+set -e
+
+echo "=== IMA CONTINUITY STATUS ==="
+
+python .ima/CONTINUITY/promote_verified.py
+
+echo
+echo "=== MANIFEST ==="
+python -m json.tool .ima/CONTINUITY/CONTINUITY_MANIFEST.json >/dev/null
+echo "[OK] manifest JSON"
+
+echo
+echo "=== GIT CHECK ==="
+git diff --check
+
+echo
+echo "=== FILES ==="
+git status --short -- \
+  .ima/CONTINUITY \
+  .ima/CANONICAL_AUTHORITY/SINGLE_SNAPSHOT/CURRENT \
+  IMA_CONTEXT.md \
+  IMA_PUBLIC_README.md \
+  docs/nmi
+
+echo
+echo "=== CONTINUITY READY ==="
