@@ -5,61 +5,113 @@ from founder.executive_ai.action_engine.action_feedback_learning import learn_fr
 
 
 def run_world_actions():
+    """
+    Canonical world-action dispatcher.
+
+    Responsibilities:
+    - normalize nested/legacy action records
+    - dispatch known actions
+    - never silently convert a known action into unknown_action
+    - deduplicate identical actions within one cycle
+    """
 
     actions = generate_actions()
     results = []
+    seen = set()
 
-    for action in actions:
+    for raw_action in actions:
+        if not isinstance(raw_action, dict):
+            continue
 
-        if action["action"] == "create_personal_outreach":
+        # --------------------------------------------------------
+        # Normalize nested action records
+        # --------------------------------------------------------
+        nested = raw_action.get("action")
 
-            result = {
-                "status": "outreach_ready",
-                "target": action["target"],
-                "reason": action.get("reason"),
-                "score": action.get("score"),
-                "signals": action.get("signals", [])
-            }
+        if isinstance(nested, dict):
+            action_name = nested.get("action")
+            action = dict(raw_action)
 
-        elif action["action"] == "monitor":
+            if nested.get("target") is not None:
+                action["target"] = nested["target"]
 
-            result = {
-                "status": "monitoring",
-                "target": action["target"],
-                "score": action.get("score")
-            }
+            if nested.get("score") is not None:
+                action["score"] = nested["score"]
 
-        elif action["action"] == "prepare_public_impact_message":
-
-            result = prepare_public_impact_message(action)
-
+            action["action"] = action_name
         else:
+            action = dict(raw_action)
+            action_name = nested
 
-            result = {
-                "status": "unknown_action",
-                "action": action["action"]
-            }
+        target = action.get("target")
+        score = action.get("score")
 
-
-        save_action(
-            action["action"],
-            result,
-            "IMA executed opportunity intelligence cycle"
+        # --------------------------------------------------------
+        # Prevent duplicate execution inside one autonomous cycle
+        # --------------------------------------------------------
+        fingerprint = (
+            str(action_name),
+            str(target),
+            str(score),
         )
 
-        learn_from_action({"action": action, "result": result})
+        if fingerprint in seen:
+            continue
 
-        results.append({
+        seen.add(fingerprint)
+
+        # --------------------------------------------------------
+        # Canonical dispatch
+        # --------------------------------------------------------
+        if action_name == "create_personal_outreach":
+            result = {
+                "status": "outreach_ready",
+                "target": target,
+                "score": score,
+            }
+
+        elif action_name == "prepare_public_impact_message":
+            result = prepare_public_impact_message(action)
+
+        elif action_name == "monitor":
+            result = {
+                "status": "monitoring",
+                "target": target,
+                "score": score,
+            }
+
+        else:
+            result = {
+                "status": "unknown_action",
+                "target": target,
+                "score": score,
+                "action": action_name,
+            }
+
+        # --------------------------------------------------------
+        # Persist action + feed the learning layer
+        # --------------------------------------------------------
+        record = {
             "action": action,
-            "result": result
-        })
+            **result,
+        }
 
+        try:
+            save_action(record)
+        except Exception as exc:
+            record["save_error"] = str(exc)
 
-    return {
-        "executed": len(results),
-        "results": results
-    }
+        try:
+            learn_from_action(action, result)
+        except Exception as exc:
+            record["learning_error"] = str(exc)
 
+        # --------------------------------------------------------
+        # Canonical result envelope
+        # --------------------------------------------------------
+        results.append(record)
+
+    return results
 
 def prepare_public_impact_message(action):
 

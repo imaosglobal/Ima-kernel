@@ -3,11 +3,19 @@ from founder.executive_ai.learning_journal.event_bus import emit_event
 
 
 
-from founder.executive_ai.global_intelligence.world_adapters import real_world_scanner
+from founder.executive_ai.global_intelligence.world_scanner import world_scanner
 from founder.executive_ai.global_intelligence.ranking_engine import ranker
+from founder.executive_ai.action_engine.action_memory import get_actions
 
 
 def generate_actions():
+    """
+    Generate canonical world actions.
+
+    The generator is memory-aware:
+    an identical action/target/score already recorded in action memory
+    is not generated again.
+    """
 
     emit_event(
         "action_engine",
@@ -16,67 +24,91 @@ def generate_actions():
         50
     )
 
+    signals = world_scanner.scan_sources()
+    ranked = ranker(signals)
 
-    signals = real_world_scanner.scan()
+    # --------------------------------------------------------
+    # Load historical actions
+    # --------------------------------------------------------
+    try:
+        history = get_actions()
+    except Exception:
+        history = []
 
-    ranked = ranker.rank(
-        signals
-    )
+    if not isinstance(history, list):
+        history = []
 
-    actions=[]
+    seen = set()
 
+    for record in history:
+        if not isinstance(record, dict):
+            continue
+
+        # memory_store wraps the actual action under "value".
+        # Support both wrapped and legacy records.
+        payload = record.get("value", record)
+
+        if not isinstance(payload, dict):
+            continue
+
+        action = payload.get("action")
+        result = payload.get("result", {})
+
+        if isinstance(action, dict):
+            action_name = action.get("action")
+            target = action.get("target")
+            score = action.get("score")
+        else:
+            action_name = action
+            target = payload.get("target")
+            score = payload.get("score")
+
+        if isinstance(result, dict):
+            target = result.get("target", target)
+            score = result.get("score", score)
+
+        # Historical action identity is action + target.
+        # Score may legitimately change between cycles.
+        seen.add((
+            str(action_name),
+            str(target)
+        ))
+
+    actions = []
 
     for item in ranked:
-
-        score = item["score"]
-
+        score = item["rank_score"]
+        target = item["title"]
 
         if score >= 90:
-
-            actions.append({
-
-                "action":"create_personal_outreach",
-
-                "target":item["title"],
-
-                "reason":"high ranked opportunity",
-
-                "score":score
-
-            })
-
+            action_name = "create_personal_outreach"
+            reason = "high ranked opportunity"
 
         elif score >= 75:
-
-            actions.append({
-
-                "action":"prepare_public_impact_message",
-
-                "target":item["title"],
-
-                "reason":"strategic opportunity",
-
-                "score":score
-
-            })
-
+            action_name = "prepare_public_impact_message"
+            reason = "strategic opportunity"
 
         else:
+            action_name = "monitor"
+            reason = "low priority"
 
-            actions.append({
+        fingerprint = (
+            str(action_name),
+            str(target)
+        )
 
-                "action":"monitor",
+        # Do not regenerate an already recorded action.
+        if fingerprint in seen:
+            continue
 
-                "target":item["title"],
+        actions.append({
+            "action": action_name,
+            "target": target,
+            "reason": reason,
+            "score": score
+        })
 
-                "reason":"low priority",
-
-                "score":score
-
-            })
-
+        seen.add(fingerprint)
 
     return actions
-
-
 
