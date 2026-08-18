@@ -1,0 +1,118 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+set -u
+
+cd "$HOME/ima_kernel"
+
+echo "============================================================"
+echo "IMA — CANONICAL WRITER GRAPH AUDIT"
+echo "============================================================"
+
+CANONICAL_FILES="
+founder/data/ima_learning_journal.json
+founder/data/ima_memory.json
+founder/data/policy_memory.json
+startup/ima_memory.json
+"
+
+echo
+echo "=== 1. CANONICAL FILE REFERENCES ==="
+
+grep -RInE \
+'founder/data/ima_learning_journal\.json|founder/data/ima_memory\.json|founder/data/policy_memory\.json|startup/ima_memory\.json' \
+founder startup learning ima_one_brain.py \
+--exclude-dir=.git \
+--exclude-dir=node_modules \
+--exclude-dir=.ima \
+--exclude='*.pyc' \
+2>/dev/null || true
+
+echo
+echo "=== 2. DIRECT WRITE PRIMITIVES ==="
+
+grep -RInE \
+'write_text|write_bytes|json\.dump|open\(.*["'\''](w|a|w\+|a\+)["'\'']|\.write\(|rename\(|replace\(' \
+founder startup learning ima_one_brain.py \
+--exclude-dir=.git \
+--exclude-dir=node_modules \
+--exclude-dir=.ima \
+--exclude='*.pyc' \
+2>/dev/null || true
+
+echo
+echo "=== 3. LEARNING ENTRY POINTS ==="
+
+grep -RInE \
+'learn_from_event|process_event|route_learning|user_memory|self_learning|world_memory|store_pattern|store_memory|save_memory' \
+founder startup learning ima_one_brain.py \
+--exclude-dir=.git \
+--exclude-dir=node_modules \
+--exclude-dir=.ima \
+--exclude='*.pyc' \
+2>/dev/null || true
+
+echo
+echo "=== 4. SELF-MODIFICATION ENTRY POINTS ==="
+
+grep -RInE \
+'apply_patch|path\.write_text|shutil\.copy2|--apply|self_modification|ALLOWLIST' \
+learning founder startup \
+--exclude-dir=.git \
+--exclude-dir=node_modules \
+--exclude-dir=.ima \
+--exclude='*.pyc' \
+2>/dev/null || true
+
+echo
+echo "=== 5. CANONICAL PERMISSIONS ==="
+
+for F in $CANONICAL_FILES; do
+    if [ -f "$F" ]; then
+        stat -c '%a %n' "$F"
+    else
+        echo "MISSING: $F"
+    fi
+done
+
+echo
+echo "=== 6. SERVICE ==="
+
+sv status "$PREFIX/var/service/ima_learning" 2>&1 || true
+
+echo
+echo "=== 7. ACTIVE WRITERS ==="
+
+FOUND=0
+
+for D in /proc/[0-9]*; do
+    P="${D##*/}"
+    [ -r "$D/cmdline" ] || continue
+
+    CMD="$(tr '\0' ' ' < "$D/cmdline" 2>/dev/null)"
+
+    case "$CMD" in
+        *"ima_one_brain.py"*|\
+        *"ima_bridge.py"*|\
+        *"mother_server"*|\
+        *"continuity_runtime.py"*|\
+        *"ima_master_runtime.py"*)
+            echo "WRITER-CANDIDATE: PID=$P CMD=$CMD"
+            FOUND=1
+            ;;
+    esac
+done
+
+if [ "$FOUND" -eq 0 ]; then
+    echo "NO ACTIVE WRITER CANDIDATES"
+fi
+
+echo
+echo "=== 8. GIT ==="
+
+git status --short
+
+echo
+echo "============================================================"
+echo "WRITER GRAPH AUDIT COMPLETE"
+echo "NO APPLICATION FILES MODIFIED"
+echo "============================================================"

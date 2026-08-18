@@ -1,0 +1,121 @@
+#!/data/data/com.termux/files/usr/bin/python
+
+from pathlib import Path
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import sys
+import time
+
+ROOT = Path.home() / "ima_kernel"
+STAGE = ROOT / ".ima" / "canonical_staging"
+GUARD = ROOT / ".ima" / "canonical_state_guard"
+
+FILES = [
+    "founder/data/ima_learning_journal.json",
+    "founder/data/ima_memory.json",
+    "founder/data/policy_memory.json",
+    "startup/ima_memory.json",
+]
+
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def fail(msg):
+    print("BLOCKED:", msg)
+    sys.exit(1)
+
+def main():
+
+    print("=== IMA CANONICAL PROMOTION ===")
+
+    if subprocess.run(
+        [str(ROOT / "bin" / "ima-git-preflight")]
+    ).returncode != 0:
+        fail("preflight failed")
+
+    staged = []
+
+    for name in FILES:
+        p = STAGE / name
+
+        if p.exists():
+            staged.append((name, p))
+
+    if not staged:
+        fail("no staged canonical candidates")
+
+    print()
+    print("CANDIDATES:")
+
+    for name, p in staged:
+        print(name)
+        print("  SHA256:", sha256(p))
+        print("  BYTES:", p.stat().st_size)
+
+    print()
+    print("Promotion requires explicit confirmation.")
+    answer = input("PROMOTE THESE CANDIDATES? type PROMOTE: ")
+
+    if answer != "PROMOTE":
+        fail("promotion cancelled")
+
+    for name, source in staged:
+
+        target = ROOT / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+
+        old_mode = target.stat().st_mode if target.exists() else 0o444
+
+        if target.exists():
+            target.chmod(0o600)
+
+        tmp = target.with_suffix(target.suffix + ".promotion_tmp")
+
+        shutil.copy2(source, tmp)
+        os.replace(tmp, target)
+
+        target.chmod(0o444)
+
+        print("PROMOTED:", name)
+        print("SHA256:", sha256(target))
+
+    manifest = {
+        "type": "IMA_CANONICAL_MEMORY_STATE",
+        "version": "2.0",
+        "created_at": time.time(),
+        "files": {}
+    }
+
+    for name in FILES:
+        p = ROOT / name
+
+        manifest["files"][name] = {
+            "sha256": sha256(p),
+            "bytes": p.stat().st_size
+        }
+
+    manifest_path = GUARD / "memory.manifest.json"
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    subprocess.run(
+        ["sha256sum"] + FILES,
+        cwd=ROOT,
+        check=True,
+        stdout=(GUARD / "memory.freeze.sha256").open("w")
+    )
+
+    print()
+    print("CANONICAL PROMOTION: COMPLETE")
+    print()
+    print("Next:")
+    print("  ima-git-preflight")
+    print("  git status --short")
+
+if __name__ == "__main__":
+    main()

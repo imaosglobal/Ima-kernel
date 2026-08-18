@@ -1,0 +1,20 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+set -e
+
+cd "$HOME/ima_kernel"
+
+echo "=== IMA CLEAN CHECK ==="
+
+ima-canonical-check
+ima-git-preflight
+
+if [ -n "$(git status --porcelain)" ]; then
+    echo
+    echo "WORKTREE: DIRTY"
+    git status --short
+    exit 1
+fi
+
+echo
+echo "WORKTREE: CLEAN"

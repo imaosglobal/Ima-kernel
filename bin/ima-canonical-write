@@ -1,0 +1,67 @@
+#!/data/data/com.termux/files/usr/bin/python
+
+from pathlib import Path
+import json
+import hashlib
+import os
+import sys
+import time
+
+ROOT = Path.home() / "ima_kernel"
+
+CANONICAL = {
+    "founder/data/ima_learning_journal.json",
+    "founder/data/ima_memory.json",
+    "founder/data/policy_memory.json",
+    "startup/ima_memory.json",
+}
+
+STAGE = ROOT / ".ima" / "canonical_staging"
+
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def stage_json(relative_name, data):
+    if relative_name not in CANONICAL:
+        raise SystemExit(
+            "BLOCKED: target is not an approved canonical memory file"
+        )
+
+    target = STAGE / relative_name
+    target.parent.mkdir(parents=True, exist_ok=True)
+
+    tmp = target.with_suffix(target.suffix + ".tmp")
+
+    tmp.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    os.replace(tmp, target)
+
+    print("STAGED:", relative_name)
+    print("SHA256:", sha256(target))
+    print("PATH:", target)
+
+    return str(target)
+
+def main():
+    if len(sys.argv) != 3:
+        print(
+            "usage: ima-canonical-write "
+            "<canonical-relative-path> <json-file>"
+        )
+        sys.exit(2)
+
+    name = sys.argv[1]
+    source = Path(sys.argv[2]).expanduser()
+
+    if not source.exists():
+        raise SystemExit("BLOCKED: source does not exist")
+
+    data = json.loads(source.read_text(encoding="utf-8"))
+
+    stage_json(name, data)
+
+if __name__ == "__main__":
+    main()
