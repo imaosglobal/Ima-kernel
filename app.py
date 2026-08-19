@@ -162,6 +162,22 @@ def think():
         )
         return jsonify({"error": "LLM request failed"}), 502
 
+@app.route("/knowledge/<domain>", methods=["GET"])
+def knowledge(domain):
+    from connectors.llm.gemini import ask as gemini_ask
+    mem = load_memory()
+    if "knowledge" not in mem:
+        mem["knowledge"] = {}
+    if domain in mem["knowledge"]:
+        return jsonify({"domain": domain, "cached": True, "content": mem["knowledge"][domain]})
+
+    prompt = f"תן סקירה מסודרת של תחום '{domain}': מה נצבר בו, מי האישים הבולטים (כולל רב-תחומיים שקישרו בינו לתחומים אחרים), ומה ההתפתחויות המשמעותיות ביותר."
+    content_result = gemini_ask(prompt)
+    mem["knowledge"][domain] = content_result
+    save_memory(mem)
+    return jsonify({"domain": domain, "cached": False, "content": content_result})
+
+
 if __name__ == "__main__":
     import os
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
