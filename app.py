@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, session
-from api.auth.google_oauth import google_auth
 from flask_cors import CORS
 import json, os
 
@@ -19,7 +18,6 @@ import ima_master_runtime
 from api.auth.google_oauth import google_auth
 
 app = Flask(__name__)
-app.register_blueprint(google_auth)
 
 app.secret_key = os.environ.get("SECRET_KEY")
 if not app.secret_key:
