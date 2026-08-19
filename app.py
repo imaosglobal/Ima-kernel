@@ -88,6 +88,7 @@ def think():
     sys.path.insert(0, ".ima/runtime")
     from stream import emit
     from connectors.llm.gemini import ask as gemini_ask
+    from connectors.llm.groq import ask as groq_ask
 
     data = request.get_json(silent=True) or {}
     prompt = data.get("message", "")
@@ -133,6 +134,8 @@ def think():
 
     try:
         reply = gemini_ask(context)
+        if reply.startswith("[gemini error"):
+            reply = groq_ask(context)
 
         # Provider/API failures must never become conversational memory.
         if isinstance(reply, str) and reply.startswith("[gemini error:"):
