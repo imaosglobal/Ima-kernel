@@ -173,8 +173,9 @@ def knowledge(domain):
 
     prompt = f"תן סקירה מסודרת של תחום '{domain}': מה נצבר בו, מי האישים הבולטים (כולל רב-תחומיים שקישרו בינו לתחומים אחרים), ומה ההתפתחויות המשמעותיות ביותר."
     content_result = gemini_ask(prompt)
-    mem["knowledge"][domain] = content_result
-    save_memory(mem)
+    if not content_result.startswith("[gemini error"):
+        mem["knowledge"][domain] = content_result
+        save_memory(mem)
     return jsonify({"domain": domain, "cached": False, "content": content_result})
 
 
