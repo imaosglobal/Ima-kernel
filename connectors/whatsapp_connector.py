@@ -1,7 +1,14 @@
 from memory.user_memory import remember_user, recall_user
+from founder.executive_ai.memory.autobiography_universal import capture_user_message
 
 class Whatsapp:
     def receive_message(self, user_id, msg):
+
+        capture_user_message(
+            user_id=user_id,
+            source="whatsapp",
+            text=msg,
+        )
         mem = recall_user(user_id)
         name = mem.get("name", "")
         last_msg = mem.get("last_message", "")

@@ -3,6 +3,7 @@ from founder.executive_ai.community.trust_v2 import calculate
 from founder.executive_ai.community.role_engine import role_from_trust
 from founder.executive_ai.community.permission_engine import permissions
 from founder.executive_ai.community.production.audit_log import record
+from founder.executive_ai.memory.autobiography_bus import user_message, ima_event
 
 
 def process_community_action(
@@ -11,6 +12,27 @@ def process_community_action(
     platform,
     action
 ):
+
+    # CANONICAL AUTOBIOGRAPHY CAPTURE
+    user_message(
+        user_id=member_id,
+        source=platform,
+        text=action,
+        metadata={
+            "entrypoint": "community_operating_system",
+            "name": name,
+        },
+    )
+
+    ima_event(
+        "community_action",
+        {
+            "member": member_id,
+            "platform": platform,
+            "action": action,
+        },
+        source="community_operating_system",
+    )
 
     profile = create_profile(
         member_id,
