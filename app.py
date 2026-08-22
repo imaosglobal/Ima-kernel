@@ -41,7 +41,8 @@ def load_memory():
     return {"chats": [], "users": {}}
 
 def save_memory(mem):
-    json.dump(mem, open(MEMORY_FILE, "w"), ensure_ascii=False, indent=2)
+    from ima_canonical_memory_adapter import save_memory as _save
+    return _save(mem)
 
 @app.route("/")
 def home():

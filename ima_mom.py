@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json, os, time
 
-MEM_FILE = ".ima_mom_memory.json"
+MEM_FILE = "founder/data/ima_memory.json"
 
 def load():
     if os.path.exists(MEM_FILE):
@@ -10,8 +10,8 @@ def load():
     return {"qa": []}
 
 def save(mem):
-    with open(MEM_FILE, "w") as f:
-        json.dump(mem, f, ensure_ascii=False, indent=2)
+    from ima_canonical_memory_adapter import save_memory
+    save_memory(mem)
 
 def generate_answer(q, mem):
     ql = q.lower()

@@ -1,6 +1,6 @@
 import json, time, datetime, os
 
-MEMORY_FILE = "ima_memory_store.json"
+MEMORY_FILE = "founder/data/ima_memory.json"
 DODLE_CALENDAR = {"default": {"form": "mother", "reason": "יום רגיל"}}
 
 TRENDS_2026 = {"style": "glassmorphism + neon + ai-gradient", "font": "Rubik", "ui": "voice-first + 3d-avatars", "vibe": "חם, רך, עתידני"}
@@ -20,7 +20,8 @@ class IMA_UserProfile:
         self.save_memory()
 
     def save_memory(self):
-        with open(MEMORY_FILE, "w") as f: json.dump(self.memory, f, indent=2)
+        from ima_canonical_memory_adapter import save_memory
+        save_memory(self.memory)
 
     def get_current_trend(self):
         year = datetime.datetime.now().year

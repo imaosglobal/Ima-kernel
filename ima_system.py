@@ -917,7 +917,7 @@ def answer(question, events):
 import json
 import os
 
-MEMORY_FILE = ".ima/memory.json"
+MEMORY_FILE = "founder/data/ima_memory.json"
 
 def load_memory():
 
@@ -945,8 +945,9 @@ def load_memory():
 
 def save_memory(mem):
     os.makedirs(".ima", exist_ok=True)
-    with open(MEMORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(mem, f, ensure_ascii=False, indent=2)
+    from .ima_canonical_memory_adapter import save_memory
+
+    save_memory(mem)
 
 
 def memory_store(question, mode):

@@ -23,6 +23,24 @@ sys.path.append('..')
 import identity_context
 print('BOOT: before conversation_layer', flush=True)
 import conversation_layer
+
+# Co-Cognition: shared human/IMA reasoning layer.
+try:
+    from .ima_co_cognition_import import load_co_cognition
+except Exception:
+    load_co_cognition = None
+
+try:
+    from importlib.util import spec_from_file_location, module_from_spec
+    _cc_spec = spec_from_file_location(
+        "ima_co_cognition",
+        str(ROOT / ".ima" / "co_cognition" / "engine.py")
+    )
+    _cc_module = module_from_spec(_cc_spec)
+    _cc_spec.loader.exec_module(_cc_module)
+    co_cognition = _cc_module
+except Exception:
+    co_cognition = None
 print('BOOT: after conversation_layer', flush=True)
 print('BOOT: before product_gateway', flush=True)
 from product.gateway import product_gateway
@@ -219,7 +237,32 @@ class Handler(BaseHTTPRequestHandler):
                     except Exception:
                         answer = product_gateway.ask(question)
 
-                conversation_layer.update(question)
+                # Co-Cognition happens after the response exists:
+                # human contribution + IMA contribution -> shared insight.
+                try:
+                    if co_cognition is not None:
+                        cc_context = conversation_layer.context()
+                        cc_result = co_cognition.analyze(
+                            question,
+                            context=cc_context,
+                            ima_response=(
+                                answer.get("response", "")
+                                if isinstance(answer, dict)
+                                else str(answer)
+                            ),
+                        )
+                        co_cognition.record(cc_result)
+                except Exception as e:
+                    print("CO-COGNITION:", e, flush=True)
+
+                conversation_layer.update(
+                    question,
+                    (
+                        answer.get("response", "")
+                        if isinstance(answer, dict)
+                        else str(answer)
+                    )
+                )
 
                 try:
                     from api.database.memory_store import save_memory
