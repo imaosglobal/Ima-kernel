@@ -284,6 +284,17 @@ def ready_event():
 # -------------------------
 # LLM CONNECTOR
 # -------------------------
+def answer(question, events):
+    mem = unified_memory_context(question)
+    name = mem.get("user_name","")
+    if name and ("שם" in question or "קוראים" in question):
+        return {"text": f"ברור שאני זוכרת אותך אורי ❤️ קוראים לך {name}", "confidence": 0.95}
+    res = llm_answer(question, mem)
+    mem_v2 = load_memory()
+    mem_v2.setdefault("users",{})["אורי"]={"name":"אורי","last_seen":str(datetime.now())}
+    save_memory(mem_v2)
+    return res
+
 def llm_answer(question, events):
     """
     Placeholder for real language model.
@@ -833,106 +844,6 @@ def response_guard(response, mode):
 # PUBLIC ANSWER ENTRY
 # -------------------------
 
-def answer(question, events):
-
-    language = detect_language(question)
-
-    mode = ima_router(question)
-
-    context = memory_context()
-
-    if language != "unknown":
-        mem = _fix_mem(load_memory())
-        mem["last_language"] = language
-        save_memory(mem)
-
-    response = _answer(question, events)
-
-    if response and mode == "conversation":
-        topics = (context if isinstance(context, dict) else {}).get("topics", [])
-
-        if topics:
-            memory_text = "\n\nאני זוכרת שדיברנו גם על: " + ", ".join(topics[-3:])
-
-            lang = detect_language(question)
-
-            if lang != "he" and lang != "unknown":
-                memory_text = translate_response(memory_text, lang)
-
-            response["text"] += memory_text
-
-    memory_store(question, mode)
-
-    if response:
-        lang = detect_language(question)
-
-        if lang != "he" and lang != "unknown":
-            response["text"] = translate_response(
-                response.get("text", ""),
-                lang
-            )
-
-    # MEMORY BUS V2 UNIFICATION HOOK
-    try:
-        import importlib.util
-
-        spec = importlib.util.spec_from_file_location(
-            "memory_bus_v2",
-            ".ima/runtime/memory_bus_v2.py"
-        )
-
-        memory_bus = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(memory_bus)
-
-        memory_bus.remember(
-            "conversation",
-            {
-                "question": question,
-                "mode": mode,
-                "response": response.get("text", ""),
-                "confidence": response.get("confidence", 0)
-            }
-        )
-
-    except Exception:
-        pass
-
-    if response:
-        interaction_id = str(int(time.time() * 1000))
-
-        record_event(
-            f"ID:{interaction_id} | Question:{question} | Mode:{mode} | Confidence:{response.get('confidence')}",
-            "interaction"
-        )
-
-    trigger = check_learning_trigger()
-
-    if trigger.get("status") == "ready":
-        try:
-            run_ima_learning_loop()
-        except Exception as e:
-            record_event(
-                f"learning_error:{e}",
-                "system"
-            )
-
-    if response:
-        if "לא מצאתי את המידע הזה" in response.get("text", ""):
-            record_gap(question)
-
-    return response_guard(response, mode)
-
-
-# -------------------------
-# IMA MEMORY
-# -------------------------
-
-import json
-import os
-
-MEMORY_FILE = "founder/data/ima_memory.json"
-
-
 def memory_store(question, mode):
     pass
 
@@ -956,3 +867,49 @@ def save_memory(mem):
 def memory_context():
     mem = load_memory()
     return mem
+
+from datetime import datetime
+
+def unified_memory_context(question):
+    """מאחד את כל הזכרונות ומחליט מה רלוונטי עכשיו"""
+    context = {"user_name": "", "last_topics": [], "facts": []}
+    
+    # 1. זיכרון חדש memory_v2
+    try:
+        mem_v2 = load_memory()
+        context["user_name"] = mem_v2.get("users", {}).get("אורי", {}).get("name", "")
+        context["facts"].extend(mem_v2.get("facts", []))
+    except: pass
+    
+    # 2. זיכרון ישן state_memory
+    try:
+        state = load_state_memory()
+        context["last_topics"] = list(state.get("states", {}).keys())[-5:] # רק 5 האחרונים
+    except: pass
+    
+    # 3. סינון: אם השאלה היא "איך קוראים לי" - עדיפות לשם
+    if "שם" in question or "קוראים" in question:
+        context["priority"] = "user_name"
+    
+    return context
+
+from datetime import datetime
+
+def unified_memory_context(question):
+    """מאחד את כל הזכרונות ומחליט מה רלוונטי עכשיו"""
+    context = {"user_name": "", "last_topics": [], "facts": []}
+    
+    try:
+        mem_v2 = load_memory()
+        context["user_name"] = mem_v2.get("users", {}).get("אורי", {}).get("name", "")
+    except: pass
+    
+    try:
+        state = load_state_memory()
+        context["last_topics"] = list(state.get("states", {}).keys())[-5:]
+    except: pass
+    
+    if "שם" in question or "קוראים" in question:
+        context["priority"] = "user_name"
+    
+    return context
