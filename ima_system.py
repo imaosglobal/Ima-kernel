@@ -955,7 +955,7 @@ def load_memory():
         }
 
 
-def ima_canonical_memory_adapter.save_memory(mem):
+def save_memory(mem):
     os.makedirs(".ima", exist_ok=True)
     import ima_canonical_memory_adapter
 
