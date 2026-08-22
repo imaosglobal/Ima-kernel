@@ -20,6 +20,8 @@ from api.auth.google_oauth import google_auth
 app = Flask(__name__)
 
 app.secret_key = os.environ.get("SECRET_KEY")
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config["SESSION_COOKIE_SECURE"] = True
 if not app.secret_key:
     raise RuntimeError("SECRET_KEY is not configured")
 
