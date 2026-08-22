@@ -914,3 +914,15 @@ def answer(question, events):
     mem_v2.setdefault("users",{})["אורי"]={"name":"אורי","last_seen":str(datetime.now())}
     save_memory(mem_v2)
     return res
+
+def answer(question, events):
+    try:
+        mem = unified_memory_context(question)
+        name = mem.get("user_name","")
+        if name and ("שם" in question or "קוראים" in question):
+            return {"text": f"ברור שאני זוכרת אותך אורי ❤️ קוראים לך {name}", "confidence": 0.95}
+    except Exception as e:
+        print("ERROR in unified:", e)
+    
+    # אם הכל נפל - תחזרי לתשובה גנרית אבל לא לקרוס
+    return {"text": "אני כאן איתך אורי. תזכיר לי את השם שלך שוב ואני אזכור ❤️", "confidence": 0.5}
