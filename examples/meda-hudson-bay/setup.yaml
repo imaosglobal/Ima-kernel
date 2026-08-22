@@ -1,0 +1,45 @@
+mode: data_anchored
+weighting_strategy: equi_weighted
+
+variables:
+  - name: H
+    description: snowshoe hare population
+  - name: L
+    description: lynx population
+
+data_file: hudson.csv
+time_column: Year
+
+normalization: abs_max
+
+poly_max_degree: 3
+exclude_terms: ["1"]
+
+population_size: 100
+generations: 100
+mutation_rate: 0.05
+crossover_rate: 0.6
+
+weight_constraints: 0.4
+weight_data: 0.5
+weight_regularization: 0.1
+
+weight_data_r2: 0.5
+weight_data_rmse: 0.5
+
+hard_constraint_min_score: 0.8
+conservation_min_score: 0.95
+regularization_min_constraint_score: 0.5
+candidate_soft_floor: 0.5
+constraint_improvement_to_drop_core: 0.05
+
+regularization:
+  kind: l0
+  scale: 3.0
+  couple_to_data: true
+  data_floor: 0.3
+
+checkpoint_file: checkpoint.json
+checkpoint_every: 20
+n_workers: 1
+royalty_fraction: 0.05

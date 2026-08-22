@@ -1,0 +1,9 @@
+{
+  "weighting_strategy": "equi_weighted",
+  "ode_variables": ["H", "L"],
+  "constraints": [
+    {"id": "H_POSITIVE", "subject": "value", "relation": "gt", "variable": "H", "target": 0, "hardness": "hard"},
+    {"id": "L_POSITIVE", "subject": "value", "relation": "gt", "variable": "L", "target": 0, "hardness": "hard"}
+  ],
+  "seeds": [{"dH/dt": ["H", "H^2", "H*L"], "dL/dt": ["L", "L^2", "H*L"]}]
+}
