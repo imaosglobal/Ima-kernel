@@ -933,21 +933,6 @@ import os
 MEMORY_FILE = "founder/data/ima_memory.json"
 
 def load_memory():
-    path = ".ima/memory_v2.json"
-    if not os.path.exists(path):
-        return {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-    with open(path, "r", encoding="utf-8") as f:
-        mem = json.load(f)
-    if not isinstance(mem, dict):
-        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-    return mem
-def 
-    os.makedirs(".ima", exist_ok=True)
-    import ima_canonical_memory_adapter
-
-    ima_canonical_memory_adapter.save_memory(mem)
-
-
 def memory_store(question, mode):
 
     # MEMORY BUS V2 PRIMARY PATH
@@ -1072,3 +1057,14 @@ def answer(q, history):
     mem = load_memory()
 if not isinstance(mem, dict): mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
     return _old_answer(q, history)
+
+def load_memory():
+    import os, json
+    path = ".ima/memory_v2.json"
+    if not os.path.exists(path):
+        return {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    with open(path, "r", encoding="utf-8") as f:
+        mem = json.load(f)
+    if not isinstance(mem, dict):
+        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    return mem
