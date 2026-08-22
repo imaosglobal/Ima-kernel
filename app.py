@@ -88,6 +88,7 @@ def think():
     sys.path.insert(0, ".ima/runtime")
     from stream import emit
     from connectors.llm.gemini import ask as gemini_ask
+    from connectors.llm.groq import ask as groq_ask
 
     data = request.get_json(silent=True) or {}
     prompt = data.get("message", "")
@@ -133,6 +134,8 @@ def think():
 
     try:
         reply = gemini_ask(context)
+        if reply.startswith("[gemini error"):
+            reply = groq_ask(context)
 
         # Provider/API failures must never become conversational memory.
         if isinstance(reply, str) and reply.startswith("[gemini error:"):
@@ -161,6 +164,23 @@ def think():
             error=str(e)
         )
         return jsonify({"error": "LLM request failed"}), 502
+
+@app.route("/knowledge/<domain>", methods=["GET"])
+def knowledge(domain):
+    from connectors.llm.gemini import ask as gemini_ask
+    mem = load_memory()
+    if "knowledge" not in mem:
+        mem["knowledge"] = {}
+    if domain in mem["knowledge"]:
+        return jsonify({"domain": domain, "cached": True, "content": mem["knowledge"][domain]})
+
+    prompt = f"תן סקירה מסודרת של תחום '{domain}': מה נצבר בו, מי האישים הבולטים (כולל רב-תחומיים שקישרו בינו לתחומים אחרים), ומה ההתפתחויות המשמעותיות ביותר."
+    content_result = gemini_ask(prompt)
+    if not content_result.startswith("[gemini error"):
+        mem["knowledge"][domain] = content_result
+        save_memory(mem)
+    return jsonify({"domain": domain, "cached": False, "content": content_result})
+
 
 if __name__ == "__main__":
     import os

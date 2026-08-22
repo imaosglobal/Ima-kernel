@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 import time
+from founder.executive_ai.memory.autobiography_bus import ima_event
 
 FILE = Path("founder/data/ima_memory.json")
 
@@ -43,6 +44,23 @@ def save_memory(
         ),
         encoding="utf8"
     )
+
+    # CANONICAL IMA AUTOBIOGRAPHY
+    # Record provenance only after the operational memory
+    # persistence has completed successfully.
+    try:
+        ima_event(
+            "memory_change",
+            {
+                "key": key,
+                "value": value,
+                "category": category,
+                "importance": importance,
+            },
+            source="memory_store",
+        )
+    except Exception:
+        pass
 
     return entry
 
