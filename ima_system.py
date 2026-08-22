@@ -849,7 +849,7 @@ def answer(question, events):
     response = _answer(question, events)
 
     if response and mode == "conversation":
-        topics = context.get("topics", [])
+        topics = (context if isinstance(context, dict) else {}).get("topics", [])
 
         if topics:
             memory_text = "\n\nאני זוכרת שדיברנו גם על: " + ", ".join(topics[-3:])
@@ -1085,6 +1085,7 @@ from pathlib import Path
 _old_answer = answer
 def answer(q, history):
     mem = load_memory()
+if not isinstance(mem, dict): mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
     if not isinstance(mem, dict):
         mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
         Path(".ima/memory_v2.json").write_text(json.dumps(mem))
