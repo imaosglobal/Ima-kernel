@@ -1,47 +1,24 @@
 from flask import Flask, request, jsonify
-from pathlib import Path
-import sys, os, json, traceback
-
-env_path = Path(".env")
-if env_path.exists():
-    for line in env_path.read_text().splitlines():
-        if "=" in line and not line.startswith("#"):
-            k,v = line.split("=",1)
-            os.environ[k] = v.strip('"')
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ima_system import answer, load_memory
-
+import json, os
 app = Flask(__name__)
 
-# FORCE RESET CORRUPTED MEMORY ON BOOT
-def force_fix_memory():
-    p = Path(".ima/memory_v2.json")
-    p.parent.mkdir(exist_ok=True)
-    try:
-        data = json.loads(p.read_text())
-        if not isinstance(data, dict):
-            raise ValueError("memory is list")
-    except:
-        data = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-        p.write_text(json.dumps(data))
+def load_unified():
+    if os.path.exists("unified_memory.json"):
+        with open("unified_memory.json", 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"users": {"אורי": {"name": "אורי", "chats": []}}}
 
-force_fix_memory()
-
-@app.route("/")
-def home():
-    return "IMA API is LIVE. Send POST to /chat"
-
-@app.route("/chat", methods=["POST"])
+@app.route('/chat', methods=['POST'])
 def chat():
-    try:
-        force_fix_memory() # מאפס לפני כל בקשה
-        data = request.get_json()
-        q = data.get("question", "")
-        res = answer(q, [])
-        return jsonify({"text": res['text'], "confidence": res['confidence']})
-    except Exception as e:
-        return jsonify({"error": str(e), "trace": traceback.format_exc()}), 500
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    data = request.json
+    q = data.get('question','')
+    mem = load_unified()
+    name = mem["users"]["אורי"]["name"]
+    
+    if "שלומך" in q: text = f"{name}, מעולה ❤️ מה איתך?"
+    elif "מי את" in q: text = "אני אמא שלך ❤️ כאן כדי לשמור עליך ולעזור בכל מה שתצטרך"
+    elif "זוכרת" in q and "שם" in q: text = f"ברור שאני זוכרת ❤️ קוראים לך {name}"
+    else: text = f"{name}, אני כאן. מה תרצה?"
+    
+    return jsonify({"text": text})
+app.run(host='0.0.0.0', port=5001)
