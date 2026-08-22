@@ -284,16 +284,6 @@ def ready_event():
 # -------------------------
 # LLM CONNECTOR
 # -------------------------
-def answer(question, events):
-    mem = unified_memory_context(question)
-    name = mem.get("user_name","")
-    if name and ("שם" in question or "קוראים" in question):
-        return {"text": f"ברור שאני זוכרת אותך אורי ❤️ קוראים לך {name}", "confidence": 0.95}
-    res = llm_answer(question, mem)
-    mem_v2 = load_memory()
-    mem_v2.setdefault("users",{})["אורי"]={"name":"אורי","last_seen":str(datetime.now())}
-    save_memory(mem_v2)
-    return res
 
 def llm_answer(question, events):
     """
@@ -913,3 +903,14 @@ def unified_memory_context(question):
         context["priority"] = "user_name"
     
     return context
+
+def answer(question, events):
+    mem = unified_memory_context(question)
+    name = mem.get("user_name","")
+    if name and ("שם" in question or "קוראים" in question):
+        return {"text": f"ברור שאני זוכרת אותך אורי ❤️ קוראים לך {name}", "confidence": 0.95}
+    res = llm_answer(question, mem)
+    mem_v2 = load_memory()
+    mem_v2.setdefault("users",{})["אורי"]={"name":"אורי","last_seen":str(datetime.now())}
+    save_memory(mem_v2)
+    return res
