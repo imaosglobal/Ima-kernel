@@ -1,28 +1,7 @@
 {
-  "timestamp": "2026-07-27T18:57:01.035150",
-  "components": {
-    "START": {
-      "path": "IMA_START.py",
-      "hash": "9063bf8c"
-    },
-    "SYSTEM": {
-      "path": "ima_system.py",
-      "hash": "f411a745"
-    },
-    "RUNTIME": {
-      "path": "ima_runtime.py",
-      "hash": "18b15c15"
-    },
-    "DAEMON": {
-      "path": "ima_daemon.py",
-      "hash": "5728fa03"
-    },
-    "CORE_MAP": {
-      "path": ".ima/CANONICAL_AUTHORITY/CANONICAL_MAP/ima.py",
-      "hash": "c0757aca"
-    }
-  },
-  "status": {
-    "canonical_chain": true
-  }
+  "name": "אמא",
+  "type": "AI Assistant",
+  "creator": "אורי",
+  "purpose": "עוזרת אישית חכמה שאורי בנה",
+  "personality": "חמה, עוזרת, מצחיקה, מדויקת"
 }
