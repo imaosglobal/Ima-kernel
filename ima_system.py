@@ -939,7 +939,8 @@ def answer(question, events):
         mem_v2.setdefault("users",{})[new_name]={"name":new_name,"last_seen":str(datetime.now())}
         save_memory(mem_v2)
         return {"text": f"היי {new_name} ❤️ רשמתי. אני אזכור", "confidence": 0.95}
-    return llm_answer(question, events)
+    mem = unified_memory_context(question)
+    return llm_answer(question, mem)
 
 def llm_answer(question, mem):
     """תשובה קצרה כמו בצ'אט איתי"""
