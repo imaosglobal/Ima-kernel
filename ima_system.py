@@ -956,7 +956,6 @@ def llm_answer(question, mem):
         return {"text": f"{prefix}בשמחה ❤️", "confidence": 0.9}
     
     # ברירת מחדל קצרה
-    return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
 
 def llm_answer(question, mem):
     name = mem.get("user_name","")
@@ -973,16 +972,21 @@ def llm_answer(question, mem):
     if "מי אתה" in question:
         return {"text": f"{prefix}אני אימה, העוזרת האישית שלך ❤️", "confidence": 0.9}
     
-    return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
     if "מייל" in question:
         return {"text": f"{prefix}בשמחה. למי המייל ולמה?", "confidence": 0.9}
     if "עזרה" in question:
         return {"text": f"{prefix}אני כאן בשבילך. תגיד מה צריך", "confidence": 0.9}
-    PYEOF
-cat >> ima_system.py << 'PYEOF'
     if "זוכרת" in question and "שם" in question:
         return {"text": f"{prefix}ברור שאני זוכרת ❤️ קוראים לך אורי", "confidence": 0.95}
     if "מייל" in question:
         return {"text": f"{prefix}בשמחה. למי המייל ולמה?", "confidence": 0.9}
     if "עזרה" in question:
         return {"text": f"{prefix}אני כאן בשבילך. תגיד מה צריך", "confidence": 0.9}
+    if "זוכרת" in question and "שם" in question:
+        return {"text": f"{prefix}ברור שאני זוכרת ❤️ קוראים לך אורי", "confidence": 0.95}
+    if "מייל" in question:
+        return {"text": f"{prefix}בשמחה. למי המייל ולמה?", "confidence": 0.9}
+    if "עזרה" in question:
+        return {"text": f"{prefix}אני כאן בשבילך. תגיד מה צריך", "confidence": 0.9}
+    
+    return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
