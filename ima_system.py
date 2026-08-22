@@ -1,4 +1,4 @@
-import ima_canonical_memory_adapter
+
 import json, os
 from pathlib import Path
 
@@ -844,7 +844,7 @@ def answer(question, events):
     if language != "unknown":
         mem = _fix_mem(load_memory())
         mem["last_language"] = language
-        ima_canonical_memory_adapter.save_memory(mem)
+        save_memory(mem)
 
     response = _answer(question, events)
 
@@ -969,7 +969,7 @@ def memory_store(question, mode):
 
     mem["last_mode"] = mode
 
-    ima_canonical_memory_adapter.save_memory(mem)
+    save_memory(mem)
 
 
 def memory_context():
@@ -1068,3 +1068,20 @@ def load_memory():
     if not isinstance(mem, dict):
         mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
     return mem
+
+def load_memory():
+    import os, json
+    path = ".ima/memory_v2.json"
+    if not os.path.exists(path):
+        return {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    with open(path, "r", encoding="utf-8") as f:
+        mem = json.load(f)
+    if not isinstance(mem, dict):
+        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    return mem
+
+def save_memory(mem):
+    import json
+    path = ".ima/memory_v2.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(mem, f, ensure_ascii=False, indent=2)
