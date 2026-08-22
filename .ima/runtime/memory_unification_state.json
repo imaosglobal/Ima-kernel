@@ -1,13 +1,13 @@
 {
-  "updated": 1786102841.0255475,
+  "updated": 1787403813.270289,
   "sources": {
     ".ima/memory.json": {
       "exists": true,
-      "hash": "c11f491026bcc97b39ca8438f883bf7027b8d07beb75b00a2a6afbf8a5b8dece"
+      "hash": "8ef223a3db01df461084cf0fd7aedd478bcdef371129743a1529730a539007bf"
     },
     ".ima/conversation_memory.json": {
-      "exists": true,
-      "hash": "f5d19d7e907a70a1ee89167075d0f46d42a8fc40d9750a03fcf52506768c235d"
+      "exists": false,
+      "hash": null
     },
     ".ima/state_memory.json": {
       "exists": true,
@@ -26,5 +26,5 @@
       "hash": "fd98ec497f7f4309db2ca7fe2fee2755fa35f52fabe62e12260bcfad32a28eab"
     }
   },
-  "count": 6
+  "count": 5
 }

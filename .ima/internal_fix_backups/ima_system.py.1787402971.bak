@@ -47,9 +47,11 @@ def memory_summary(events):
 # -------------------------
 # ANSWER ENGINE (SAFE + NEVER NONE)
 # -------------------------
-def _answer(question, events, mode=None):
-    if mode is None:
-        mode = ima_router(question)
+def _answer(question, events):
+
+    auto_learn_from_question(question)
+
+    mode = ima_router(question)
 
     if mode == "memory":
         hits = conversation_layer.recall(question)
@@ -830,7 +832,7 @@ def answer(question, events):
         mem["last_language"] = language
         save_memory(mem)
 
-    response = _answer(question, events, mode)
+    response = _answer(question, events)
 
     if response and mode == "conversation":
         topics = context.get("topics", [])
@@ -1061,14 +1063,3 @@ def language_prefix():
 def ima_reflection():
     return ima_awareness()
 
-# === IMA INTERNAL LAYER INVENTORY ===
-IMA_INTERNAL_LAYERS = {
-    "router": "ima_router",
-    "emotion": "ima_emotion_layer",
-    "knowledge": "knowledge_engine",
-    "information": "information_engine",
-    "mother": "mother_generate",
-    "llm": "llm_answer",
-    "learning": "auto_learn_from_question",
-    "response_wrapper": "ima_wrap_response",
-}
