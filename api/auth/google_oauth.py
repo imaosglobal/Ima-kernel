@@ -51,7 +51,7 @@ def google_login():
         "scope": " ".join(SCOPES),
         "state": state,
         "access_type": "offline",
-        "prompt": "select_account",
+        
     }
 
     return redirect(
