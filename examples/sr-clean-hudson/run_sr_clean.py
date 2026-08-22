@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('hudson.csv')
+df = # pd.read_csv('hudson.csv')
 
 # נבנה פיצ'רים ידנית: Year, L, L^2, 1
 X = np.column_stack([

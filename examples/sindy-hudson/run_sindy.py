@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('hudson.csv')
+df = # pd.read_csv('hudson.csv')
 
 dt = 1
 dH = np.gradient(df['Hare'].values, dt)
