@@ -56,4 +56,3 @@ if old in s:
     s=s.replace(old,new)
 
 p.write_text(s)
-print("IMA mother layer added")

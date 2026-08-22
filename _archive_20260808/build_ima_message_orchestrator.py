@@ -80,4 +80,3 @@ for p,c in files.items():
     )
 
 
-print("IMA MESSAGE ORCHESTRATOR CREATED")

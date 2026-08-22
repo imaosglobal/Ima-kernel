@@ -58,5 +58,3 @@ STATE.write_text(
     json.dumps(memory, indent=2, ensure_ascii=False)
 )
 
-print(json.dumps(memory, indent=2, ensure_ascii=False))
-print("[MEMORY FUSION ONLINE]")

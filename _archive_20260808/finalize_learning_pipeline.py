@@ -5,7 +5,6 @@ import os
 import subprocess
 import time
 
-print("=== IMA FINAL LEARNING PIPELINE ===")
 
 ROOT = Path("learning")
 
@@ -14,11 +13,9 @@ backup = Path(f"learning_backup_final_{int(time.time())}")
 
 if ROOT.exists():
     shutil.copytree(ROOT, backup)
-    print("[BACKUP]", backup)
 
 
 # 2. permissions
-print("[FIX PERMISSIONS]")
 
 for p in ROOT.rglob("*"):
     try:
@@ -60,7 +57,6 @@ if registry.exists():
         encoding="utf8"
     )
 
-    print("[REGISTRY]",len(clean))
 
 
 # 4. extractor
@@ -108,12 +104,10 @@ def extract_text(html):
     encoding="utf8"
     )
 
-    print("[EXTRACTOR CREATED]")
 
 
 # 5. patch collectors automatically
 
-print("[PATCH COLLECTORS]")
 
 for p in ROOT.rglob("*.py"):
 
@@ -144,12 +138,10 @@ for p in ROOT.rglob("*.py"):
                 encoding="utf8"
             )
 
-            print("[PATCHED]",p)
 
 
 # 6. compile
 
-print("[COMPILE]")
 
 failed=[]
 
@@ -171,28 +163,21 @@ for p in ROOT.rglob("*.py"):
 
 if failed:
 
-    print("[FAILED]")
     for f in failed:
-        print(f)
 
 else:
-    print("[ALL PYTHON OK]")
 
 
 # 7. source status test
 
-print("[SOURCE TEST]")
 
 try:
 
     from learning.source_manager import source_status
 
     for s in source_status():
-        print("-",s)
 
 except Exception as e:
 
-    print("[STATUS ERROR]",e)
 
 
-print("=== PIPELINE COMPLETE ===")

@@ -97,7 +97,4 @@ for q in [
 "מה הקשר בין מוזיקה ומתמטיקה"
 ]:
     r=m.ask(q)
-    print("\nQ:",q)
-    print(r.get("response","")[:500])
 
-print("\nKNOWLEDGE ROUTED BEFORE BRAIN")

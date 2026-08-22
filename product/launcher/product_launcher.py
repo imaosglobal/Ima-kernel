@@ -38,7 +38,6 @@ def launch_status():
     }
 
 if __name__ == "__main__":
-    print(json.dumps(
         launch_status(),
         indent=2
     ))

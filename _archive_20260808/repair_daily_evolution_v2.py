@@ -11,7 +11,6 @@ for line in lines:
     if 'IMA DAILY EVOLUTION SAVED' in line:
         skip = True
         out.extend([
-            '    print(',
             '        "IMA DAILY EVOLUTION SAVED"',
             '    )'
         ])
@@ -31,4 +30,3 @@ p.write_text(
     encoding="utf8"
 )
 
-print("[OK] daily evolution string block repaired")

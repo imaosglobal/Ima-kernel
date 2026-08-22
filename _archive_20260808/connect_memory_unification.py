@@ -7,7 +7,6 @@ backup = Path(".ima/runtime/memory_bus_v2.before_unification_connect.py")
 
 if not backup.exists():
     backup.write_text(target.read_text(encoding="utf-8"), encoding="utf-8")
-    print("[BACKUP]", backup)
 
 text = target.read_text(encoding="utf-8")
 
@@ -24,11 +23,8 @@ if "memory_unification_layer" not in text:
     )
 
     target.write_text(text, encoding="utf-8")
-    print("[CONNECTED]")
 else:
-    print("[ALREADY CONNECTED]")
 
-print("[COMPILE]")
 
 r = subprocess.run(
     ["python3","-m","py_compile",str(target)],
@@ -37,9 +33,5 @@ r = subprocess.run(
 )
 
 if r.returncode:
-    print("[FAILED]")
-    print(r.stderr)
 else:
-    print("[COMPILE OK]")
 
-print("=== MEMORY BUS CONNECTION COMPLETE ===")

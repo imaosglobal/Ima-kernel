@@ -18,14 +18,11 @@ canonical=[
 ".ima/governance/CANONICAL_LOCK_FINAL.json"
 ]
 
-print("[VERIFY CANONICAL]")
 
 for p in canonical:
     if not Path(p).exists():
         raise SystemExit(f"MISSING {p}")
-    print("[OK]",p)
 
-print("[VERIFY OLD NODE REFERENCES]")
 
 bad=[]
 
@@ -48,15 +45,11 @@ for p in Path(".").rglob("*"):
             bad.append(str(p))
 
 if bad:
-    print("OLD REFERENCES:")
     for b in bad:
-        print(b)
     raise SystemExit(1)
 
-print("[OK] NO ACTIVE OLD NODE REFERENCES")
 
 
-print("[CREATE HASH]")
 
 h=hashlib.sha256()
 
@@ -75,8 +68,6 @@ Path(".ima/governance/FINAL_CANONICAL_STATE.json").write_text(
 json.dumps(state,indent=2)
 )
 
-print("[LOCK CREATED]")
-print(state["sha256"])
 PY
 
 echo "=== FINAL CANONICAL FREEZE COMPLETE ==="

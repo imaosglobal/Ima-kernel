@@ -30,7 +30,6 @@ ROOT=Path(".ima/agi_evolution").resolve()
 
 sys.path.insert(0,str(ROOT))
 
-print("=== IMA AGI INTEGRATION TEST ===")
 
 tests=[
 ("reasoning.reasoning_engine","ReasoningEngine"),
@@ -43,11 +42,8 @@ for module,cls in tests:
     try:
         mod=__import__(module,fromlist=[cls])
         obj=getattr(mod,cls)()
-        print("[ACTIVE]",module,cls)
     except Exception as e:
-        print("[FAIL]",module,e)
 
-print("=== END ===")
 PY
 
 

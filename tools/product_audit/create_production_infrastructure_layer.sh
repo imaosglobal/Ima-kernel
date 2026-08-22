@@ -188,8 +188,6 @@ assert d["docker"]=="READY"
 assert d["ci_cd"]=="READY"
 assert d["android"]=="BUILD_READY"
 
-print("[OK] Infrastructure manifest")
-print("[OK] Production chain prepared")
 PY
 
 

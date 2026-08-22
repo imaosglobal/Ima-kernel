@@ -16,4 +16,3 @@ text=text.replace(
 
 p.write_text(text,encoding="utf8")
 
-print("SOURCE API PATCHED")

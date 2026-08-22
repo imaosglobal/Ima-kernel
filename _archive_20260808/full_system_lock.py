@@ -38,5 +38,3 @@ Path(".ima/runtime/full_system_lock.json").write_text(
     json.dumps(lock,indent=2,ensure_ascii=False)
 )
 
-print("LOCKED FILES:",len(lock["files"]))
-print("STATUS:",lock["status"])

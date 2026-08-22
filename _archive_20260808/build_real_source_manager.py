@@ -86,4 +86,3 @@ json.dumps({
 encoding="utf8"
 )
 
-print("REAL SOURCE MANAGER CREATED")

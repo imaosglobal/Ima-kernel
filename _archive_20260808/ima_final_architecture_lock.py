@@ -64,14 +64,10 @@ report = {
     encoding="utf-8"
 )
 
-print("=== IMA ARCHITECTURE LOCK ===")
-print("REGISTRY:", registry)
 
 for k,v in checks.items():
-    print(
         k,
         "OK" if v["exists"] else "MISSING",
         v["path"]
     )
 
-print("ARCHITECTURE LOCK CREATED")

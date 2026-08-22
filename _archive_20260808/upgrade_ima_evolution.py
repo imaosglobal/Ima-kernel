@@ -4,7 +4,6 @@ import time
 import py_compile
 import subprocess
 
-print("=== IMA EVOLUTION UPGRADE ===")
 
 backup = Path(".ima/snapshots/before_evolution_upgrade")
 backup.mkdir(parents=True, exist_ok=True)
@@ -20,7 +19,6 @@ for file in [
     if src.exists():
         dst = backup / f"{timestamp}_{src.name}"
         shutil.copy(src, dst)
-        print("BACKUP:", dst)
 
 
 # duplicate protection
@@ -66,9 +64,7 @@ new = """def store_pattern(pattern):
 
 if old in text:
     memory.write_text(text.replace(old,new), encoding="utf-8")
-    print("UPDATED: duplicate protection")
 else:
-    print("duplicate block already updated or not found")
 
 
 # evolution cycle
@@ -82,7 +78,6 @@ from learning.system_improvement_memory import summarize_improvements
 
 def run_evolution_cycle():
 
-    print("=== IMA EVOLUTION CYCLE ===")
 
     health = health_report()
 
@@ -91,16 +86,10 @@ def run_evolution_cycle():
         if x["status"] != "ok"
     ]
 
-    print("HEALTH FAILED:", len(failed))
 
     meta = run_meta_analysis()
 
-    print("CAPABILITIES:", meta["capabilities"])
-    print("SUGGESTIONS:", len(meta["suggestions"]))
 
-    print()
-    print("SYSTEM HISTORY:")
-    print(summarize_improvements())
 
 
 if __name__ == "__main__":
@@ -109,11 +98,8 @@ if __name__ == "__main__":
 encoding="utf-8"
 )
 
-print("CREATED: learning/ima_evolution_cycle.py")
 
 
-print()
-print("=== COMPILE CHECK ===")
 
 for file in [
     "learning/learning_memory.py",
@@ -121,13 +107,9 @@ for file in [
 ]:
     try:
         py_compile.compile(file, doraise=True)
-        print("OK:", file)
     except Exception as e:
-        print("ERROR:", file, e)
 
 
-print()
-print("=== EVOLUTION TEST ===")
 
 result = subprocess.run(
     ["python3", "learning/ima_evolution_cycle.py"],
@@ -135,10 +117,6 @@ result = subprocess.run(
     text=True
 )
 
-print(result.stdout)
 
 if result.stderr:
-    print("STDERR:")
-    print(result.stderr)
 
-print("=== COMPLETE ===")

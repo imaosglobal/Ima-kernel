@@ -104,7 +104,6 @@ out={
 json.dumps(out,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(out,indent=2,ensure_ascii=False))
 
 
 if results:
@@ -119,8 +118,6 @@ if results:
         json.dumps(handoff,indent=2,ensure_ascii=False)
     )
 
-    print("\nHANDOFF UPDATED")
-    print(json.dumps(handoff,indent=2,ensure_ascii=False))
 
 PY
 

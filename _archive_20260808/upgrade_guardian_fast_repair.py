@@ -37,4 +37,3 @@ text = text.replace(old,new)
 p.write_text(text,encoding="utf8")
 
 
-print("[OK] guardian fast repair applied")

@@ -54,7 +54,6 @@ py_files = [
 
 report["stats"]["python_files"] = len(py_files)
 
-print("[1] scanning python files:", len(py_files))
 
 for p in py_files:
     try:
@@ -81,7 +80,6 @@ for p in py_files:
         })
 
 
-print("[2] checking duplicate files")
 
 hash_map = {}
 
@@ -93,7 +91,6 @@ for h, files in hash_map.items():
         report["duplicates"][h] = files
 
 
-print("[3] checking imports")
 
 for p in py_files:
     try:
@@ -117,7 +114,6 @@ for p in py_files:
         pass
 
 
-print("[4] compiling check")
 
 for p in py_files:
     try:
@@ -145,9 +141,3 @@ REPORT.write_text(
     encoding="utf8"
 )
 
-print()
-print("=== IMA AUDIT COMPLETE ===")
-print("Python files:", report["stats"]["python_files"])
-print("Syntax errors:", report["stats"]["syntax_errors"])
-print("Duplicate groups:", report["stats"]["duplicate_groups"])
-print("Report:", REPORT)

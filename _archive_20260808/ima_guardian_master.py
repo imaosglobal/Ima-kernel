@@ -11,7 +11,6 @@ CONTROLLER = "ima_guardian_controller.py"
 
 
 def log(msg):
-    print(msg)
     with LOG.open("a", encoding="utf8") as f:
         f.write(
             f"{datetime.now().isoformat()} {msg}\n"
@@ -65,10 +64,6 @@ def compact_history():
 def status():
     policy = Path(".ima/guardian/policy.json")
 
-    print("=== IMA GUARDIAN MASTER ===")
-    print("Controller:", Path(CONTROLLER).exists())
-    print("Policy:", policy.exists())
-    print("Log:", LOG.exists())
 
 
 def cycle():

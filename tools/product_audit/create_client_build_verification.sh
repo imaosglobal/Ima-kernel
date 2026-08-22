@@ -55,7 +55,6 @@ for f in files:
     data=json.loads(Path(f).read_text())
     assert data.get("connection") in ["product_gateway","gateway"] or f.endswith("client_contract.json")
 
-print("[OK] All clients use gateway contract")
 PY
 
 

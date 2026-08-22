@@ -49,14 +49,6 @@ def main():
         json.dumps(lock,indent=2)
     )
 
-    print("==============================")
-    print(" IMA RELEASE LOCK")
-    print("==============================")
-    print("[OK] FILES REGISTERED")
-    print("[OK] RELEASE HASH")
-    print("[OK] CANONICAL LOCK ACTIVE")
-    print("")
-    print(release_hash)
 
 if __name__=="__main__":
     main()

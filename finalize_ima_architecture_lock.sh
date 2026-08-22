@@ -55,8 +55,6 @@ Path(".ima/governance/architecture_lock.json").write_text(
     encoding="utf-8"
 )
 
-print("LOCK CREATED")
-print(json.dumps(registry,indent=2,ensure_ascii=False))
 PY
 
 

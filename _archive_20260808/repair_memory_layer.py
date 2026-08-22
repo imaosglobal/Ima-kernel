@@ -54,4 +54,3 @@ def recall(query):
 
 p.write_text(code.strip(),encoding="utf-8")
 
-print("[OK] MEMORY LAYER REPAIRED")

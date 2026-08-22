@@ -93,11 +93,6 @@ def run_cmd(name,cmd):
 
 def main():
 
-    print("================================")
-    print("        IMA DOCTOR REPORT")
-    print("================================")
-    print("TIME:",int(time.time()))
-    print("")
 
     check_files()
     check_hashes()
@@ -112,13 +107,10 @@ def main():
         "RUNTIME",
         ["python3",
         "-c",
-        "import sys;sys.path.insert(0,'kernel/runtime/CANONICAL');import python_bridge;print(python_bridge.boot_runtime())"]
     )
 
-    print("")
 
     for r in REPORT:
-        print(
             "[{}] {} {}".format(
                 r["status"],
                 r["check"],
@@ -126,17 +118,14 @@ def main():
             )
         )
 
-    print("")
     failed=[
         x for x in REPORT
         if x["status"]=="FAIL"
     ]
 
     if failed:
-        print("=== RESULT: NEEDS REPAIR ===")
         return 1
 
-    print("=== RESULT: IMA HEALTHY ===")
     return 0
 
 

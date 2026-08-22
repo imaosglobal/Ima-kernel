@@ -83,7 +83,6 @@ def start_agi_layer():
 
 
 if __name__=="__main__":
-    print(start_agi_layer())
 PY
 
 

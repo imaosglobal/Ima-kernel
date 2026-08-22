@@ -36,13 +36,10 @@ import json
 
 policy=json.loads(Path(".ima/governance/creation_policy.json").read_text())
 
-print("BRAIN:", policy["brain"])
-print("ORCHESTRATOR:", policy["orchestrator"])
 
 assert Path(policy["brain"]).exists()
 assert Path(policy["orchestrator"]).exists()
 
-print("CANONICAL LOCK OK")
 PY
 
 python3 - <<'PY'
@@ -50,7 +47,6 @@ from learning.brain_guard import verify_brain
 
 verify_brain("learning/meta_orchestrator.py")
 
-print("BRAIN GUARD OK")
 PY
 
 python3 ima_full_system_check.py

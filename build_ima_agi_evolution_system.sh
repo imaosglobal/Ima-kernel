@@ -149,7 +149,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(run())
 PY
 
 
@@ -177,7 +176,6 @@ def cycle():
 
 
 if __name__=="__main__":
-    print(cycle())
 PY
 
 

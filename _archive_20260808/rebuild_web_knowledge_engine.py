@@ -263,6 +263,4 @@ path.write_text(
     encoding="utf8"
 )
 
-print("WEB KNOWLEDGE ENGINE REBUILT")
-print("BACKUP:",backup)
 

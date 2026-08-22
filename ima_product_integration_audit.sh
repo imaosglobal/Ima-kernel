@@ -127,7 +127,6 @@ Path(".ima/governance/product_integration_final_report.json").write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(report,indent=2,ensure_ascii=False))
 PY
 
 echo

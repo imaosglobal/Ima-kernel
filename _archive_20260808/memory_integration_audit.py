@@ -32,4 +32,3 @@ Path(".ima/runtime/integration_audit.json").write_text(
     json.dumps(REPORT,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(REPORT,indent=2,ensure_ascii=False))

@@ -59,4 +59,3 @@ Path(".ima/knowledge_response.lock").write_text(
     encoding="utf8"
 )
 
-print("KNOWLEDGE RESPONSE CONNECTED")

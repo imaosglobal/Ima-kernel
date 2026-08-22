@@ -28,12 +28,9 @@ json.dumps({
 },indent=2)
 )
 
-print("=== IMA PRODUCT AUDIT ===")
 for k,v in report.items():
-    print(
         "[OK]" if v["exists"] else "[MISSING]",
         k,
         v["path"]
     )
 
-print(".ima/governance/PRODUCT_AUDIT.json created")

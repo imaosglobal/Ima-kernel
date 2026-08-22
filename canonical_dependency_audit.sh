@@ -53,7 +53,6 @@ Path(".ima/runtime/dependency_registry.json").write_text(
     json.dumps(data,indent=2,ensure_ascii=False)
 )
 
-print("[AUDIT FILES]",len(files))
 PY
 
 

@@ -40,4 +40,3 @@ with history.open("a", encoding="utf8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
         added += 1
 
-print("[OK] imported commits:", added)

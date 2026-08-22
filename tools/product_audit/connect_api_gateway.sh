@@ -27,12 +27,10 @@ if "product_gateway" not in s:
 
     p.write_text(s)
 
-print("[OK] API gateway adapter applied")
 PY
 
 python3 - <<'PY'
 import api.server
-print("[OK] api import")
 PY
 
 echo "=== API GATEWAY CONNECTED ==="

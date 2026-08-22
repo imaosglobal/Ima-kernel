@@ -14,7 +14,6 @@ REPORT = Path("IMA_AUDIT_REPORT.json")
 
 
 def log(x):
-    print(x)
 
 
 def load_errors():
@@ -70,8 +69,6 @@ def verify():
 def run():
     errors=load_errors()
 
-    print("=== REPORT BASED SELF REPAIR ===")
-    print("[TARGETS]", len(errors))
 
     fixed=[]
 
@@ -82,8 +79,6 @@ def run():
 
     remaining=verify()
 
-    print("[FIXED]", fixed)
-    print("[REMAINING]", remaining)
 
     if not remaining:
         subprocess.run(
@@ -101,7 +96,6 @@ def run():
             text=True
         )
 
-        print("[OK] guardian repair committed")
 
 
 if __name__=="__main__":
@@ -110,4 +104,3 @@ if __name__=="__main__":
 
 p.write_text(code, encoding="utf8")
 
-print("[OK] report based guardian connected")

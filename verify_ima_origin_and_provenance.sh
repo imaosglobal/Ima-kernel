@@ -552,22 +552,10 @@ lines.append(
 
 REPORT.write_text("\n".join(lines), encoding="utf-8")
 
-print("=== IMA ORIGIN / PROVENANCE AUDIT COMPLETE ===")
-print(f"REPORT: {REPORT}")
-print(f"JSON:   {JSON_OUT}")
-print("")
-print(f"VERDICT: {data['verdict']['interpretation']}")
-print(
     f"SCORE:   {data['verdict']['score']}/"
     f"{data['verdict']['total']} "
     f"({data['verdict']['percentage']}%)"
 )
-print("")
-print("=== REPORT SHA256 ===")
-print(sha256(REPORT))
-print("")
-print("=== JSON SHA256 ===")
-print(sha256(JSON_OUT))
 PY
 
 echo

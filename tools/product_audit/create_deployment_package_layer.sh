@@ -74,7 +74,6 @@ def save_release():
 
 
 if __name__ == "__main__":
-    print(json.dumps(
         save_release(),
         indent=2
     ))

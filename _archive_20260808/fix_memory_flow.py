@@ -8,7 +8,6 @@ def backup(path):
     if path.exists():
         b = path.with_suffix(path.suffix + f".backup_{int(time.time())}")
         shutil.copy2(path, b)
-        print("[BACKUP]", b)
 
 # -------------------------
 # Fix conversation_layer.py
@@ -47,9 +46,7 @@ if p.exists():
     if old in text:
         text = text.replace(old, new)
         p.write_text(text, encoding="utf-8")
-        print("[OK] conversation_layer recall fixed")
     else:
-        print("[SKIP] recall block not found")
 
 
 # -------------------------
@@ -77,13 +74,9 @@ if p.exists():
     if old in text:
         text = text.replace(old, new)
         p.write_text(text, encoding="utf-8")
-        print("[OK] IMAMaster memory output fixed")
     else:
-        print("[SKIP] master memory block not found")
 
 
-print()
-print("=== VERIFY ===")
 
 import subprocess
 import sys
@@ -100,9 +93,5 @@ for f in [
         )
 
         if r.returncode == 0:
-            print("[PASS]", f)
         else:
-            print("[FAIL]", f)
-            print(r.stderr)
 
-print("DONE")

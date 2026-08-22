@@ -99,5 +99,4 @@ class Handler(BaseHTTPRequestHandler):
             })
 
 
-print("IMA API ONLINE :8080")
 HTTPServer(("0.0.0.0",8080),Handler).serve_forever()

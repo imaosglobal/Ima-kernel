@@ -126,4 +126,3 @@ for p,c in files.items():
     )
 
 
-print("IMA INTEGRATION CONSOLIDATION CREATED")

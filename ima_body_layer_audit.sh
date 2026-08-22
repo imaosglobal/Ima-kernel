@@ -138,7 +138,6 @@ encoding="utf-8"
 )
 
 
-print("BODY REGISTRY SAVED")
 
 PY
 

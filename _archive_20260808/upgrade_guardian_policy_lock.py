@@ -27,4 +27,3 @@ policy.write_text(
     encoding="utf8"
 )
 
-print("[OK] guardian policy lock created")

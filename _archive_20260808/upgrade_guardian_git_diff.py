@@ -30,7 +30,6 @@ def smart_diff():
         return files
 
     except Exception as e:
-        print("[GIT DIFF ERROR]", e)
         return []
 
 
@@ -41,4 +40,3 @@ text = text[:start] + new + text[end:]
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] guardian git diff engine installed")

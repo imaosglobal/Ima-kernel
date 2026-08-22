@@ -214,4 +214,3 @@ for path,content in files.items():
     )
 
 
-print("IMA PUBLIC PRESENCE PACKAGE CREATED")

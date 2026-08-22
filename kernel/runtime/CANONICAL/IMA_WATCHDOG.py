@@ -135,12 +135,8 @@ def boot():
     b=scan_duplicates()
 
     if a and b:
-        print("[OK] WATCHDOG ONLINE")
-        print("[OK] HASH INTEGRITY")
-        print("[OK] DUPLICATE SCAN")
         return 0
 
-    print("[FAIL] WATCHDOG BLOCK")
     return 1
 
 

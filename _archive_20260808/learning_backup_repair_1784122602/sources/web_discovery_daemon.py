@@ -21,13 +21,11 @@ SEARCH_TARGETS = [
 
 def discover_cycle():
 
-    print("=== WEB DISCOVERY CYCLE ===")
 
     approved=[]
 
     for name,url,category in SEARCH_TARGETS:
 
-        print("[CHECK]",name)
 
         candidate=discover_url(
             name,
@@ -39,7 +37,6 @@ def discover_cycle():
 
         update_candidate(checked)
 
-        print(
             checked["status"],
             checked.get("trust_score")
         )
@@ -50,8 +47,6 @@ def discover_cycle():
 
     added=promote()
 
-    print("APPROVED:",approved)
-    print("PROMOTED:",added)
 
     return added
 

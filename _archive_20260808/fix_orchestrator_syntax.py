@@ -22,4 +22,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] orchestrator syntax fixed")

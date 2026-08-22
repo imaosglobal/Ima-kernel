@@ -16,4 +16,3 @@ path.write_text(
     encoding="utf8"
 )
 
-print("UNIFIED CRM TIME IMPORT FIXED")

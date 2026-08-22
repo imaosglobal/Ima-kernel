@@ -26,7 +26,6 @@ x["fallback"]="disabled"
 with open(p,"w") as f:
     json.dump(x,f,indent=2)
 
-print(json.dumps(x,indent=2))
 PY
 
 cat > "$R/CANONICAL_RUNTIME_POLICY.json" <<EOF

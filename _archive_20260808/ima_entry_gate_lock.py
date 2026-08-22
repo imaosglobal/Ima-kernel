@@ -31,6 +31,3 @@ path.write_text(
     encoding="utf-8"
 )
 
-print("=== IMA ENTRY GATE ===")
-print("LOCKED:", path)
-print("STATE: ENTRY_GATE_LOCKED")

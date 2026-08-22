@@ -225,7 +225,6 @@ AGENT = EvolutionAgent()
 
 
 if __name__ == "__main__":
-    print(
         json.dumps(
             AGENT.propose(),
             ensure_ascii=False,
@@ -411,7 +410,6 @@ def inspect():
 
 
 if __name__ == "__main__":
-    print(
         json.dumps(
             inspect(),
             ensure_ascii=False,
@@ -447,10 +445,8 @@ new = """    # Manifest synchronization is intentionally disabled
 if old in text:
     text = text.replace(old, new, 1)
 
-old_print = """    print("[OK] Manifest synchronized")
 """
 
-new_print = """    print("[OK] Manifest synchronization skipped in VERIFY mode")
 """
 
 if old_print in text:
@@ -586,9 +582,6 @@ def load_json(path):
 
 
 def verify():
-    print("=" * 80)
-    print("IMA — CANONICAL CHAIN VERIFY MODE")
-    print("=" * 80)
 
     required = [
         REGISTRY,
@@ -720,16 +713,6 @@ def verify():
                 result.stderr
             )
 
-    print("[OK] Registry hashes verified")
-    print("[OK] Manifest hashes verified")
-    print("[OK] All canonical files exist")
-    print("[OK] Canonical engines compile")
-    print("[OK] VERIFY mode performed")
-    print("[OK] Registry not modified")
-    print("[OK] Manifest not modified")
-    print("[OK] No source mutation performed")
-    print("[OK] No synchronization performed")
-    print("=" * 80)
 
     return 0
 

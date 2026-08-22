@@ -25,5 +25,3 @@ p.write_text(
     encoding="utf8"
 )
 
-print("REMOVED DUPLICATES")
-print("TOTAL SOURCES:",len(clean))

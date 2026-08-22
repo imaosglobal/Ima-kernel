@@ -28,7 +28,6 @@ LOG.parent.mkdir(parents=True, exist_ok=True)
 
 
 def log(msg):
-    print(msg)
     with LOG.open("a", encoding="utf8") as f:
         f.write(
             f"{datetime.now().isoformat()} {msg}\n"

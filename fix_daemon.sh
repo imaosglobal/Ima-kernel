@@ -19,10 +19,7 @@ s = s.replace("\\n", "\n")
 
 # normalize duplicate processing print
 s = s.replace(
-'''print("PROCESSING:", qid, question)
-                print("PROCESSING:", qid, question)
                 ask(question, qid=qid)''',
-'''print("PROCESSING:", qid, question)
                 ask(question, qid=qid)'''
 )
 

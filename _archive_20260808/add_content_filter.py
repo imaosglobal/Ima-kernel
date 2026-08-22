@@ -59,4 +59,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] content filter added")

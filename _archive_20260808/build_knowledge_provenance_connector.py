@@ -72,4 +72,3 @@ encoding="utf8"
 )
 
 
-print("KNOWLEDGE PROVENANCE CONNECTOR VERIFIED")

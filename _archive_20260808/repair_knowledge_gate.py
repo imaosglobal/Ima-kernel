@@ -52,7 +52,6 @@ new_method='''    def collect(self, question):
                 results.append(result)
 
             except Exception as e:
-                print("[SOURCE ERROR]",source.get("name"),e)
 
         return results
 '''
@@ -66,4 +65,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] Knowledge Gate installed")

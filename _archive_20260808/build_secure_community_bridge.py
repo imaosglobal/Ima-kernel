@@ -118,4 +118,3 @@ for p,c in files.items():
         path.write_text(c.strip()+"\n",encoding="utf8")
 
 
-print("SECURE COMMUNITY BRIDGE CREATED")

@@ -139,4 +139,3 @@ for path,content in files.items():
         )
 
 
-print("IMA COMMUNITY ECOSYSTEM CREATED")

@@ -94,7 +94,6 @@ def verify(component,path):
 
 
 if __name__=="__main__":
-    print(canonical())
 PY
 
 
@@ -113,7 +112,6 @@ for name,path in data.items():
         path.endswith(".py") or
         path.endswith(".js")
     ):
-        print(
             name,
             "OK" if Path(path).exists()
             else "MISSING",
@@ -140,7 +138,6 @@ json.dumps(r,indent=2),
 encoding="utf-8"
 )
 
-print(json.dumps(r,indent=2))
 PY
 
 

@@ -22,13 +22,10 @@ def verify_watchdog():
         text=True
     )
 
-    print(r.stdout)
 
     if r.returncode != 0:
-        print("[FAIL] WATCHDOG BLOCKED BOOT")
         sys.exit(1)
 
-    print("[OK] WATCHDOG PASSED")
 
 '''
 
@@ -37,7 +34,6 @@ if "def verify_watchdog" not in s:
     s=s.replace(marker, block+"\n"+marker, 1)
 
 if "verify_watchdog()" not in s:
-    marker='print("=== IMA ONLINE START ===")'
     s=s.replace(
         marker,
         "verify_watchdog()\n\n"+marker,
@@ -46,7 +42,6 @@ if "verify_watchdog()" not in s:
 
 p.write_text(s)
 
-print("[OK] watchdog connected to IMA_START")
 PY
 
 

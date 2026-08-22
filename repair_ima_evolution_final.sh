@@ -153,7 +153,6 @@ def main():
         encoding="utf-8",
     )
 
-    print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
 
 if __name__ == "__main__":
@@ -197,7 +196,6 @@ def main():
         "timestamp": time.time(),
     }
 
-    print(json.dumps(audit, ensure_ascii=False, indent=2))
     return 0
 
 if __name__ == "__main__":
@@ -309,14 +307,6 @@ def verify():
             json.dumps(mismatches, ensure_ascii=False, indent=2)
         )
 
-    print("[OK] Registry hashes verified")
-    print("[OK] Manifest hashes verified")
-    print("[OK] All canonical files exist")
-    print("[OK] Verification-only mode")
-    print("[OK] Registry not modified")
-    print("[OK] Manifest not modified")
-    print("[OK] No source mutation performed")
-    print("[OK] No synchronization performed")
 
     return 0
 
@@ -422,9 +412,6 @@ def verify():
     return True
 
 def main():
-    print("[OK] Repair Engine loaded")
-    print("[OK] VERIFY mode available")
-    print("[OK] No automatic mutation")
     return 0
 
 if __name__ == "__main__":
@@ -477,9 +464,6 @@ def sha256(path):
     return h.hexdigest()
 
 def verify():
-    print("=" * 80)
-    print("IMA — CANONICAL CHAIN VERIFY MODE")
-    print("=" * 80)
 
     registry = json.loads(
         REGISTRY.read_text(encoding="utf-8")
@@ -546,14 +530,6 @@ def verify():
             json.dumps(mismatches, ensure_ascii=False, indent=2)
         )
 
-    print("[OK] Registry hashes verified")
-    print("[OK] Manifest hashes verified")
-    print("[OK] All canonical files exist")
-    print("[OK] No registry synchronization")
-    print("[OK] No manifest synchronization")
-    print("[OK] No source mutation")
-    print("[OK] VERIFY passed")
-    print("=" * 80)
 
     return 0
 
@@ -703,10 +679,6 @@ entry["size"] = registry_path.stat().st_size
 
 atomic_write(manifest_path, manifest)
 
-print(f"[OK] Registry promoted: {changed_registry} component hash updates")
-print(f"[OK] Manifest promoted: {changed_manifest} component hash updates")
-print("[OK] Registry hash synchronized into Manifest")
-print("[OK] Atomic canonical promotion complete")
 PY
 
 echo

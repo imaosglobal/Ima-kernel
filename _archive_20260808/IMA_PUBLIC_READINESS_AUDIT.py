@@ -94,11 +94,8 @@ checks["management"] = (IMA / "MANAGEMENT").exists()
 checks["git"] = (ROOT / ".git").exists()
 
 
-print("=== IMA PUBLIC READINESS AUDIT ===")
-print()
 
 for k,v in checks.items():
-    print(("[OK] " if v else "[MISSING] "), k)
 
 missing = [
     k for k,v in checks.items()
@@ -114,7 +111,4 @@ report = {
 out = IMA / "MANAGEMENT/public_readiness_audit.json"
 out.write_text(json.dumps(report, indent=2))
 
-print()
-print("STATUS:", report["status"])
-print("REPORT:", out)
 

@@ -37,9 +37,7 @@ registry=Path(".ima/governance/brain_registry.json")
 
 if registry.exists():
     data=json.loads(registry.read_text())
-    print("BRAIN:",data.get("brain"))
 else:
-    print("brain registry missing")
 PY
 
 
@@ -75,7 +73,6 @@ Path(".ima/governance/runtime_registry.json").write_text(
     encoding="utf-8"
 )
 
-print("runtime registry updated")
 PY
 
 

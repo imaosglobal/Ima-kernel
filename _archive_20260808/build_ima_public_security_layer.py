@@ -193,4 +193,3 @@ for p,c in files.items():
         )
 
 
-print("IMA PUBLIC SECURITY + GOVERNANCE PACKAGE CREATED")

@@ -63,9 +63,6 @@ new = '''def ima_router(question):
 '''
 
 if old not in text:
-    print("ROUTER BLOCK NOT FOUND")
 else:
     text = text.replace(old,new)
     path.write_text(text,encoding="utf-8")
-    print("BACKUP:", backup)
-    print("EMOTION PRIORITY FIX COMPLETE")

@@ -33,7 +33,6 @@ insert = '''
 def guardian_status():
     from pathlib import Path
 
-    print("=== IMA GUARDIAN WATCH STATUS ===")
 
     data = {
         "controller": Path("ima_guardian_controller.py").exists(),
@@ -44,7 +43,6 @@ def guardian_status():
     }
 
     for key, value in data.items():
-        print(f"{key}: {value}")
 
 '''
 
@@ -57,4 +55,3 @@ else:
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] guardian_status forced repair")

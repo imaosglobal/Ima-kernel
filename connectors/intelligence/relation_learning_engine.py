@@ -106,4 +106,3 @@ def learn_relations():
 
 if __name__=="__main__":
     learn_relations()
-    print("RELATIONS LEARNED")

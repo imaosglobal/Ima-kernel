@@ -43,4 +43,3 @@ for name in default:
         })
 
 reg.write_text(json.dumps(data,indent=2))
-print("Connectors:",len(data["connectors"]))

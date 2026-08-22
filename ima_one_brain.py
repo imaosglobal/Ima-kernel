@@ -114,34 +114,23 @@ def write_status(payload):
         )
 
     except Exception as exc:
-        print("STATUS WRITE ERROR:", repr(exc))
 
 
 def run():
     """
     Execute one complete IMA ONE BRAIN cycle.
     """
-    print("=" * 80)
-    print("IMA ONE BRAIN")
-    print("=" * 80)
-    print("ROOT:", ROOT)
-    print("TIME:", datetime.now().isoformat())
 
     brain = None
     autonomous = None
 
     try:
         brain = _run_master_cycle()
-        print("MASTER CYCLE: OK")
-        print(json.dumps(brain, ensure_ascii=False, indent=2, default=str))
     except Exception as exc:
-        print("MASTER CYCLE ERROR:", repr(exc))
         traceback.print_exc()
 
     try:
         autonomous = _run_autonomous_cycle()
-        print("AUTONOMOUS CYCLE RESULT:")
-        print(
             json.dumps(
                 autonomous,
                 ensure_ascii=False,
@@ -154,7 +143,6 @@ def run():
             "status": "error",
             "error": repr(exc),
         }
-        print("AUTONOMOUS CYCLE ERROR:", repr(exc))
 
     payload = _status_payload(
         brain=brain,
@@ -163,9 +151,6 @@ def run():
 
     write_status(payload)
 
-    print("=" * 80)
-    print("IMA ONE BRAIN CYCLE COMPLETE")
-    print("=" * 80)
 
     return payload
 

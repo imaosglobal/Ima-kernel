@@ -26,7 +26,6 @@ Path("docs/system_inventory.json").write_text(
     json.dumps(data,indent=2,ensure_ascii=False)
 )
 
-print(data)
 PY
 
 
@@ -137,7 +136,6 @@ status=subprocess.getoutput("git status --short")
 
 Path("docs/git_status_report.txt").write_text(status)
 
-print(status)
 PY
 
 
@@ -155,9 +153,7 @@ mods=[
 for m in mods:
     try:
         __import__(m)
-        print("OK",m)
     except Exception as e:
-        print("FAIL",m,e)
 PY
 
 

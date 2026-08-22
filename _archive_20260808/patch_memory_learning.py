@@ -49,4 +49,3 @@ def _learn_memory_intent(question):
     )
 
 p.write_text(s,encoding="utf-8")
-print("learning layer added")

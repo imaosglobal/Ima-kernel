@@ -40,7 +40,6 @@ pathlib.Path(".ima/agi_evolution/runtime/CANONICAL_REGISTRY.json").write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(registry,indent=2))
 PY
 
 git add .ima/agi_evolution/runtime/CANONICAL_REGISTRY.json create_canonical_registry.sh

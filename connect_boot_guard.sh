@@ -24,12 +24,8 @@ def verify_canonical_boot():
     )
 
     if result.returncode != 0:
-        print("[FAIL] CANONICAL ROOT BLOCKED")
-        print(result.stdout)
-        print(result.stderr)
         sys.exit(1)
 
-    print("[OK] CANONICAL ROOT PASSED")
 
 '''
 
@@ -38,12 +34,10 @@ if "def verify_canonical_boot" not in s:
     s=s.replace(marker,guard+"\n"+marker,1)
 
 if "verify_canonical_boot()" not in s:
-    marker="print(\"=== IMA ONLINE START ===\")"
     s=s.replace(marker,"verify_canonical_boot()\n\n"+marker,1)
 
 p.write_text(s)
 
-print("[OK] IMA_START patched")
 PY
 
 

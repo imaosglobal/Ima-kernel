@@ -16,7 +16,5 @@ class WhatsAppSender:
 sender = WhatsAppSender(os.getenv("WA_TOKEN"), os.getenv("WA_PHONE_ID"))
 report_to = os.getenv("WA_REPORT_TO")
 
-print(f"אמא עלתה. שולחת בדיקה ל-{report_to}")
 sender.send_message(report_to, "אמא מחוברת ✅ הכספת מלאה")
 
-print("כדי שאמא תענה אוטומטית צריך Webhook. בינתיים נבדוק ידנית")

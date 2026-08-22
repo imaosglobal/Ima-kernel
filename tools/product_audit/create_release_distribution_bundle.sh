@@ -61,9 +61,6 @@ assert d["status"]=="DISTRIBUTION_READY"
 assert d["core"]=="FROZEN"
 assert d["artifacts"]=="READY"
 
-print("[OK] Distribution bundle")
-print("[OK] Core protected")
-print("[OK] Release package ready")
 PY
 
 echo "=== RELEASE DISTRIBUTION BUNDLE READY ==="

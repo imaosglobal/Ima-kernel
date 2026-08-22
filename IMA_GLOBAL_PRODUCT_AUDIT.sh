@@ -86,8 +86,6 @@ with open("$LOCK","w") as f:
         ".ima/governance/IMA_GLOBAL_PRODUCT_MAP.json\n"
     )
 
-print("AUDIT CREATED")
-print("$MAP")
 PY
 
 chmod 444 "$LOCK"

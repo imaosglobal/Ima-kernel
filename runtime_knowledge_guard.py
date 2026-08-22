@@ -24,4 +24,3 @@ out.write_text(
     json.dumps(state,ensure_ascii=False,indent=2)
 )
 
-print("RUNTIME KNOWLEDGE CONNECTED")

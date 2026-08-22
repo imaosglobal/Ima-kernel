@@ -53,6 +53,3 @@ path.write_text(
     encoding="utf-8"
 )
 
-print("=== IMA MISSION REGISTRY ===")
-print("CREATED:", path)
-print("STATE: MISSION_LOCKED")

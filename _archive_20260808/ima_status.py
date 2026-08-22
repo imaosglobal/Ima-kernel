@@ -52,11 +52,6 @@ def run_check(name,cmd):
 
 def main():
 
-    print("================================")
-    print("          IMA STATUS")
-    print("================================")
-    print("TIME:",int(time.time()))
-    print("")
 
     exists_check(
         "CANONICAL RUNTIME",
@@ -109,7 +104,6 @@ def main():
         [
             "python3",
             "-c",
-            "import sys;sys.path.insert(0,'kernel/runtime/CANONICAL');import python_bridge;print(python_bridge.boot_runtime())"
         ]
     )
 
@@ -124,7 +118,6 @@ def main():
 
 
     for s in STATUS:
-        print(
             "[{}] {:18} {}".format(
                 s["state"],
                 s["name"],
@@ -132,17 +125,14 @@ def main():
             )
         )
 
-    print("")
     fails=[
         x for x in STATUS
         if x["state"]=="FAIL" or x["state"]=="MISSING"
     ]
 
     if fails:
-        print("=== STATUS: DEGRADED ===")
         return 1
 
-    print("=== STATUS: ONLINE ===")
     return 0
 
 

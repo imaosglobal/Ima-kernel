@@ -13,9 +13,7 @@ REPORT.mkdir(parents=True, exist_ok=True)
 stamp = str(int(time.time()))
 backup = ROOT / f"ima_backup_{stamp}"
 
-print("=== IMA FINAL FUSION ===")
 
-print("[1] BACKUP")
 backup.mkdir()
 for name in [
     "api",
@@ -33,9 +31,7 @@ for name in [
         else:
             shutil.copy2(p, target)
 
-print("[OK] BACKUP:", backup)
 
-print("[2] SCAN")
 
 files=[]
 
@@ -81,7 +77,6 @@ for f in files:
                 "file":f["path"]
             })
 
-print("[3] CONNECTION CHECK")
 
 checks={
     "server":"api/server.py",
@@ -108,7 +103,6 @@ out.write_text(
     encoding="utf-8"
 )
 
-print("[4] VERIFY")
 
 required=[
     ".ima/legacy/ori_legacy.json",
@@ -121,9 +115,7 @@ ok=True
 
 for r in required:
     if Path(r).exists():
-        print("[OK]",r)
     else:
-        print("[MISSING]",r)
         ok=False
 
 lock={
@@ -138,12 +130,7 @@ lock={
     encoding="utf-8"
 )
 
-print()
-print("=== RESULT ===")
 
 if ok:
-    print("IMA FUSION READY")
 else:
-    print("IMA NEEDS REPAIR")
 
-print("REPORT:",out)

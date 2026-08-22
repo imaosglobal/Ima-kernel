@@ -48,7 +48,6 @@ Path(".ima/governance/CANONICAL_HASHES.txt").write_text(
     "\n".join(out)+"\n"
 )
 
-print("[OK] hashes rebuilt")
 PY
 
 

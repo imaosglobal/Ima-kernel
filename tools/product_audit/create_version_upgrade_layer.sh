@@ -64,7 +64,6 @@ def upgrade(new_version):
 
 
 if __name__ == "__main__":
-    print(json.dumps(current(), indent=2))
 PY
 
 
@@ -82,8 +81,6 @@ JSON
 
 python3 - <<'PY'
 from product.version.version_manager import current
-print(current())
-print("[OK] Version manager")
 PY
 
 

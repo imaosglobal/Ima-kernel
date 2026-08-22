@@ -48,9 +48,7 @@ failed=[]
 for name,path in checks.items():
 
     if Path(path).exists():
-        print("OK",name,path)
     else:
-        print("MISSING",name,path)
         failed.append(path)
 
 
@@ -59,7 +57,6 @@ if failed:
         "Missing canonical components"
     )
 
-print("CANONICAL PATHS VERIFIED")
 
 PY
 
@@ -76,7 +73,6 @@ verify_brain(
 "learning/meta_orchestrator.py"
 )
 
-print("BRAIN LOCK OK")
 
 PY
 
@@ -98,7 +94,6 @@ data=json.loads(
 p.read_text()
 )
 
-print(
 "ACTIVE MODULES:",
 data.get("active_modules")
 )
@@ -108,7 +103,6 @@ if data.get("active_modules",0) < 1:
     "No orchestrator modules"
     )
 
-print("ORCHESTRATOR OK")
 
 PY
 
@@ -162,13 +156,11 @@ for f in files:
         Path(f).read_text()
     )
 
-    print(
         "OK",
         f
     )
 
 
-print(
 "GOVERNANCE INTEGRITY OK"
 )
 
@@ -222,7 +214,6 @@ ensure_ascii=False
 )
 
 
-print(
 "E2E STATE SAVED"
 )
 

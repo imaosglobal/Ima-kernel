@@ -15,4 +15,3 @@ url="https://he.wikipedia.org/api/rest_v1/page/summary/"+term.replace(" ","_")
 
 p.write_text(text,encoding="utf8")
 
-print("SOURCE MANAGER UPGRADED")

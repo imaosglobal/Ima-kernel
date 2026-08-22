@@ -33,4 +33,3 @@ truth["missing_connections"]=missing'''
 
 p.write_text(text,encoding="utf-8")
 
-print("TRUTH DETECTION V2 INSTALLED")

@@ -23,16 +23,13 @@ def verify_component(path):
     f=str(Path(path))
 
     if f not in allowed:
-        print("[BLOCK] COMPONENT NOT REGISTERED:", f)
         return False
 
     current=hashlib.sha256(Path(f).read_bytes()).hexdigest()
 
     if current != allowed[f]:
-        print("[BLOCK] HASH MISMATCH:", f)
         return False
 
-    print("[OK] CANONICAL COMPONENT VERIFIED:", f)
     return True
 
 if __name__=="__main__":

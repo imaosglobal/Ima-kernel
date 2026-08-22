@@ -48,14 +48,10 @@ Path(".ima/governance/final_completion_report.json").write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
 
 if report["missing"]:
-    print("\nMISSING COMPONENTS:")
     for x in report["missing"]:
-        print("-",x)
 else:
-    print("\nIMA CORE ARCHITECTURE COMPLETE")
 PY
 
 echo "=== RUNNING HEALTH ==="

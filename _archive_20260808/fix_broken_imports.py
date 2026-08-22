@@ -10,7 +10,6 @@ files=[
 "learning/sources/source_generator.py"
 ]
 
-print("=== FIX BROKEN IMPORTS ===")
 
 for f in files:
 
@@ -21,7 +20,6 @@ for f in files:
 
     backup=p.with_suffix(".before_import_cleanup.py")
     shutil.copy2(p,backup)
-    print("[BACKUP]",backup)
 
     lines=p.read_text(
         encoding="utf8"
@@ -65,7 +63,6 @@ for f in files:
         encoding="utf8"
     )
 
-print("[COMPILE]")
 
 failed=[]
 
@@ -87,11 +84,6 @@ for f in files:
         failed.append((f,r.stderr))
 
 if failed:
-    print("[FAILED]")
     for f,e in failed:
-        print("\n",f)
-        print(e)
 else:
-    print("[ALL IMPORTS FIXED]")
 
-print("=== COMPLETE ===")

@@ -29,7 +29,6 @@ out.write_text(
     json.dumps(state,ensure_ascii=False,indent=2)
 )
 
-print("RUNTIME KNOWLEDGE CONNECTED")
 PY
 
 
@@ -62,10 +61,8 @@ if status.strip():
         cwd=repo
     )
 
-    print("DAILY CHECKPOINT CREATED")
 
 else:
-    print("NO CHANGES")
 PY
 
 

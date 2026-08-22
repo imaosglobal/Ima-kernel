@@ -24,12 +24,10 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def fail(msg):
-    print("BLOCKED:", msg)
     sys.exit(1)
 
 def main():
 
-    print("=== IMA CANONICAL PROMOTION ===")
 
     if subprocess.run(
         [str(ROOT / "bin" / "ima-git-preflight")]
@@ -47,16 +45,9 @@ def main():
     if not staged:
         fail("no staged canonical candidates")
 
-    print()
-    print("CANDIDATES:")
 
     for name, p in staged:
-        print(name)
-        print("  SHA256:", sha256(p))
-        print("  BYTES:", p.stat().st_size)
 
-    print()
-    print("Promotion requires explicit confirmation.")
     answer = input("PROMOTE THESE CANDIDATES? type PROMOTE: ")
 
     if answer != "PROMOTE":
@@ -79,8 +70,6 @@ def main():
 
         target.chmod(0o444)
 
-        print("PROMOTED:", name)
-        print("SHA256:", sha256(target))
 
     manifest = {
         "type": "IMA_CANONICAL_MEMORY_STATE",
@@ -110,12 +99,6 @@ def main():
         stdout=(GUARD / "memory.freeze.sha256").open("w")
     )
 
-    print()
-    print("CANONICAL PROMOTION: COMPLETE")
-    print()
-    print("Next:")
-    print("  ima-git-preflight")
-    print("  git status --short")
 
 if __name__ == "__main__":
     main()

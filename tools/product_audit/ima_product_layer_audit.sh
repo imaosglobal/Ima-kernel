@@ -73,8 +73,6 @@ file.write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(result,indent=2,ensure_ascii=False))
-print("\nREPORT:",file)
 PY
 
 echo "=== PRODUCT AUDIT COMPLETE ==="

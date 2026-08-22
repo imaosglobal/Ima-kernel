@@ -35,9 +35,6 @@ out.write_text(
 )
 
 
-print("=== IMA CONTROL FLOW ===")
 
 for item in top[:30]:
-    print(item)
 
-print("Saved:",out)

@@ -51,12 +51,10 @@ new_text, count = re.subn(
 )
 
 if count == 0:
-    print("[FAIL] collect function not found")
 else:
     p.write_text(new_text, encoding="utf8")
     py_compile.compile(
         str(p),
         doraise=True
     )
-    print("[OK] collect replaced")
 

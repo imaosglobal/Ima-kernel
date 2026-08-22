@@ -86,9 +86,6 @@ def build_core():
 def status():
     core = build_core()
 
-    print("=== IMA EVENT KERNEL ===")
-    print("FILES:", len(core.get("files", [])))
-    print("MODE:", core.get("mode"))
 
 if __name__ == "__main__":
     status()

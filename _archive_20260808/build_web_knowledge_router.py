@@ -131,4 +131,3 @@ encoding="utf8"
 )
 
 
-print("WEB KNOWLEDGE ROUTER CREATED")

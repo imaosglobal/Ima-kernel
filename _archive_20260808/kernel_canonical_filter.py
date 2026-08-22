@@ -77,5 +77,4 @@ out={
 json.dumps(out,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(out,indent=2,ensure_ascii=False))
 

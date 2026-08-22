@@ -7,7 +7,6 @@ import json
 ROOT = Path(__file__).parent
 os.chdir(ROOT) if False else None
 
-print("=== IMA MANAGED START ===")
 
 steps = [
     (
@@ -29,8 +28,6 @@ steps = [
 failed = []
 
 for name, command in steps:
-    print()
-    print(">>>", name)
 
     result = subprocess.run(
         command,
@@ -39,10 +36,8 @@ for name, command in steps:
         capture_output=True
     )
 
-    print(result.stdout)
 
     if result.stderr:
-        print(result.stderr)
 
     if result.returncode != 0:
         failed.append(name)
@@ -58,10 +53,6 @@ report = {
 out = ROOT / ".ima/MANAGEMENT/managed_start_report.json"
 out.write_text(json.dumps(report, indent=2))
 
-print()
-print("=== MANAGED START RESULT ===")
-print(report["status"])
-print("REPORT:", out)
 
 if failed:
     sys.exit(1)

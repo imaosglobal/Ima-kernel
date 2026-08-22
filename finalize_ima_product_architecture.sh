@@ -86,7 +86,6 @@ def boot():
     }
 
 if __name__ == "__main__":
-    print(boot())
 PY
 
 
@@ -112,7 +111,6 @@ files=[
 for f in files:
     json.load(open(f))
 
-print("ARCHITECTURE LOCK VERIFIED")
 PY
 
 

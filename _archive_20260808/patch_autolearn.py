@@ -38,7 +38,5 @@ def auto_learn_from_question(question):
 '''
 
     p.write_text(s)
-    print("auto learning added")
 
 else:
-    print("already exists")

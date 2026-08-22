@@ -17,5 +17,3 @@ r=requests.get(
     headers=headers
 )
 
-print("STATUS:", r.status_code)
-print(r.text[:300])

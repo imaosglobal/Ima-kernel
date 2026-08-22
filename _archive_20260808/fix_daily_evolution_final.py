@@ -9,11 +9,9 @@ i = 0
 while i < len(lines):
     line = lines[i]
 
-    if 'print(' in line and i > 140:
         # מדלגים על בלוק print שבור עד סגירת הקטע לפני import os
         if i+1 < len(lines) and 'IMA DAILY EVOLUTION SAVED' in lines[i+1]:
             out.extend([
-                '    print(',
                 '        "IMA DAILY EVOLUTION SAVED"',
                 '    )'
             ])
@@ -29,4 +27,3 @@ while i < len(lines):
 
 p.write_text("\n".join(out)+"\n", encoding="utf8")
 
-print("[OK] final daily evolution repair")

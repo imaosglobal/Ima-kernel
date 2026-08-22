@@ -21,8 +21,6 @@ def guardian_protect_core():
         try:
             py_compile.compile(f,doraise=True)
         except Exception as e:
-            print("[GUARDIAN CORE FAIL]",f)
-            print(e)
             return False
 
     return True
@@ -32,14 +30,11 @@ def guardian_protect_core():
 
 
 old='''def run_cycle():
-    print("\\n=== GUARDIAN AUTO CYCLE ===")
 '''
 
 new='''def run_cycle():
-    print("\\n=== GUARDIAN AUTO CYCLE ===")
 
     if not guardian_protect_core():
-        print("[CORE PROTECTION STOP]")
         return
 '''
 
@@ -48,4 +43,3 @@ if old in text:
 
 p.write_text(text,encoding="utf8")
 
-print("[OK] guardian self protection added")

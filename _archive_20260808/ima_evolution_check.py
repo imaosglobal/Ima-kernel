@@ -81,5 +81,3 @@ REPORT.write_text(
     encoding="utf8"
 )
 
-print("IMA EVOLUTION CHECK COMPLETE")
-print(json.dumps(report,ensure_ascii=False,indent=2))

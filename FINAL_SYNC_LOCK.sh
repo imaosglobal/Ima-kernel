@@ -51,7 +51,6 @@ manifest.write_text(
     "\n".join(f"{k}:{v}" for k,v in old.items())
 )
 
-print("[OK] HASHES SYNCHRONIZED")
 PY
 
 

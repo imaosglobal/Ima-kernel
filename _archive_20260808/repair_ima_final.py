@@ -85,5 +85,3 @@ text=text.replace(old2,new2)
 
 path.write_text(text,encoding="utf-8")
 
-print("BACKUP:",backup)
-print("FINAL ROUTING PATCH DONE")

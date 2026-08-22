@@ -1,8 +1,6 @@
 import json
 import urllib.request
 
-print("=== IMA CHAT ===")
-print("כתוב exit ליציאה")
 
 while True:
     msg = input("\nאתה: ")
@@ -26,16 +24,11 @@ while True:
 
         answer = result.get("answer", {})
 
-        print("\nIMA:")
 
         if "response" in answer:
-            print(answer["response"])
 
         elif "identity_document" in answer:
-            print(answer["identity_document"])
 
         else:
-            print(json.dumps(answer, ensure_ascii=False, indent=2))
 
     except Exception as e:
-        print("שגיאת חיבור:", e)

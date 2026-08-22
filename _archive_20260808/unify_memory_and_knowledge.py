@@ -18,7 +18,6 @@ for f in [MEM, PAT, ROOT/"ima_master_runtime.py"]:
             BACKUP / f.name
         )
 
-print("BACKUP OK")
 
 
 # merge memories
@@ -60,7 +59,6 @@ MEM.write_text(
     encoding="utf8"
 )
 
-print("MEMORY MERGED")
 
 
 # knowledge answer builder
@@ -103,7 +101,6 @@ builder.write_text(
 encoding="utf8"
 )
 
-print("KNOWLEDGE BUILDER CREATED")
 
 
 # patch runtime
@@ -147,7 +144,6 @@ runtime.write_text(
     encoding="utf8"
 )
 
-print("RUNTIME PATCHED")
 
 
 # verify
@@ -166,7 +162,5 @@ for f in files:
         f,
         doraise=True
     )
-    print("OK",f)
 
 
-print("DONE")

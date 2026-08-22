@@ -11,9 +11,7 @@ echo "[EVENT COUNT]"
 python3 - <<'PY'
 from ima_system import load_events
 events = load_events()
-print("EVENTS:", len(events))
 for e in events[-10:]:
-    print(e)
 PY
 
 echo

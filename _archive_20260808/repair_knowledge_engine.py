@@ -9,11 +9,9 @@ shutil.copy(path, backup)
 
 text = path.read_text(encoding="utf-8")
 
-print("BACKUP:", backup)
 
 # בדיקה אם יש טעינת knowledge
 if "knowledge" not in text:
-    print("WARNING: no knowledge path found")
 
 # החלפה מלאה של המנוע
 new = r'''
@@ -107,4 +105,3 @@ def search_knowledge(question):
 
 path.write_text(new, encoding="utf-8")
 
-print("KNOWLEDGE ENGINE REPLACED")

@@ -78,9 +78,6 @@ Path(".ima/governance/final_audit_lock.json").write_text(
     encoding="utf-8"
 )
 
-print("STATUS:", result["status"])
-print("AUDIT SAVED:", report)
-print("LOCK CREATED")
 PY
 
 chmod +x ima_final_audit.sh

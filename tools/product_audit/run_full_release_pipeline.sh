@@ -58,8 +58,6 @@ assert health()["status"]=="READY"
 for c in clients:
     assert c["sdk"]["status"]=="READY"
 
-print("[OK] All clients connected")
-print("[OK] Gateway chain verified")
 PY
 
 
@@ -73,9 +71,6 @@ from product.version.version_manager import current
 assert product_gateway.health()["runtime_connected"]
 assert product_launcher.launch_status()["status"]=="READY"
 
-print("[OK] Runtime")
-print("[OK] Launcher")
-print("[OK] Version")
 PY
 
 

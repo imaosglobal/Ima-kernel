@@ -3,9 +3,7 @@ def guardian_restore_check():
     try:
         from upgrade_guardian_snapshot_restore import guardian_restore_core
         guardian_restore_core()
-        print("[OK] snapshot restore check")
     except Exception as e:
-        print("[RESTORE CHECK ERROR]", e)
 
 
 
@@ -23,8 +21,6 @@ def guardian_protect_core():
         try:
             py_compile.compile(f,doraise=True)
         except Exception as e:
-            print("[GUARDIAN CORE FAIL]",f)
-            print(e)
             return False
 
     return True
@@ -37,7 +33,6 @@ def guardian_policy_check():
     p = Path(".ima/guardian/policy.json")
 
     if not p.exists():
-        print("[POLICY MISSING]")
         return False
 
     try:
@@ -62,7 +57,6 @@ STATE = Path(".ima/guardian/watch_state")
 STATE.parent.mkdir(parents=True, exist_ok=True)
 
 
-def fingerprint():
     h = hashlib.sha256()
 
     for p in sorted(ROOT.rglob("*.py")):
@@ -87,7 +81,6 @@ def fingerprint():
 def guardian_status():
     from pathlib import Path
 
-    print("=== IMA GUARDIAN WATCH STATUS ===")
 
     data = {
         "controller": Path("ima_guardian_controller.py").exists(),
@@ -98,7 +91,6 @@ def guardian_status():
     }
 
     for key, value in data.items():
-        print(f"{key}: {value}")
 
 
 
@@ -123,7 +115,6 @@ def smart_diff():
         return files
 
     except Exception as e:
-        print("[GIT DIFF ERROR]", e)
         return []
 
 
@@ -156,11 +147,8 @@ def incremental_cycle():
 
     changed = smart_diff()
 
-    print("=== SMART INCREMENTAL CYCLE ===")
-    print("[CHANGED]", len(changed))
 
     if not changed:
-        print("[OK] nothing changed")
         return False
 
     python_changed = [
@@ -169,7 +157,6 @@ def incremental_cycle():
     ]
 
     if not python_changed:
-        print("[OK] no python changes")
         return False
 
     if len(python_changed) <= 5:
@@ -177,7 +164,6 @@ def incremental_cycle():
         import subprocess
 
         for f in python_changed:
-            print("[CHECK]", f)
 
             subprocess.run(
                 [
@@ -189,7 +175,6 @@ def incremental_cycle():
             )
 
     else:
-        print("[FULL AUDIT REQUIRED]")
 
         import subprocess
 
@@ -210,7 +195,6 @@ def guardian_target_compile(files):
 
     import py_compile
 
-    print("=== TARGET COMPILE ===")
 
     errors=[]
 
@@ -220,10 +204,8 @@ def guardian_target_compile(files):
 
         try:
             py_compile.compile(f, doraise=True)
-            print("[OK]", f)
 
         except Exception as e:
-            print("[FAIL]", f)
             errors.append(f)
 
     return errors
@@ -232,20 +214,16 @@ def guardian_target_compile(files):
 
 def run_cycle():
 
-    print("\n=== GUARDIAN AUTO CYCLE ===")
 
     try:
         if "incremental_cycle" in globals():
             changed = incremental_cycle()
 
             if changed is False:
-                print("[SMART STOP] no changes detected")
                 return
 
-            print("[OK] incremental cycle executed")
             return
     except Exception as e:
-        print("[INCREMENTAL ERROR]", e)
 
     subprocess.run(
         ["python3", "ima_guardian_master.py"]
@@ -261,11 +239,9 @@ def watch():
 
     while True:
 
-        current = fingerprint()
 
         if current != old:
 
-            print("[CHANGE DETECTED]")
 
             run_cycle()
 
@@ -283,8 +259,6 @@ if __name__ == "__main__":
     elif "--daemon" in sys.argv:
         _original_watch()
     else:
-        print("IMA Guardian Watch")
-        print("use: --once | --daemon | --status")
 
 
 # --- IMA Guardian modes ---
@@ -392,7 +366,6 @@ def guardian_incremental_check():
     import subprocess
     import py_compile
 
-    print("=== GUARDIAN INCREMENTAL CHECK ===")
 
     result = subprocess.run(
         ["git", "diff", "--name-only", "HEAD"],
@@ -406,7 +379,6 @@ def guardian_incremental_check():
         if x.endswith(".py")
     ]
 
-    print("[CHANGED PYTHON]", len(files))
 
     errors=[]
 
@@ -416,16 +388,12 @@ def guardian_incremental_check():
                 f,
                 doraise=True
             )
-            print("[OK]", f)
 
         except Exception as e:
-            print("[FAIL]", f)
             errors.append(f)
 
     if errors:
-        print("[REPAIR TARGETS]")
         for e in errors:
-            print(e)
 
         subprocess.run(
             ["python3","ima_guardian_self_repair.py"]

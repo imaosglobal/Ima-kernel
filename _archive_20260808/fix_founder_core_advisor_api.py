@@ -12,8 +12,6 @@ new='''        advice = advise(
 if old in text:
     text=text.replace(old,new,1)
 else:
-    print("[WARN] advisor call not found")
 
 p.write_text(text)
 
-print("[OK] FounderCore advisor API fixed")

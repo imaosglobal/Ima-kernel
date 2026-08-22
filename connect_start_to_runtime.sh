@@ -65,10 +65,8 @@ def run():
 
     p.write_text(s)
 
-    print("[OK] IMA_START patched")
 
 else:
-    print("[SKIP] already connected")
 
 PY
 

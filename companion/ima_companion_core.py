@@ -33,6 +33,5 @@ def create_companion():
 
 
 if __name__=="__main__":
-    print(json.dumps(create_companion(),
     ensure_ascii=False,
     indent=2))

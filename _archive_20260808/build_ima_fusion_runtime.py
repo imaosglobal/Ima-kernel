@@ -6,7 +6,6 @@ ROOT = Path(".")
 REPORT = ROOT / ".ima" / "reports"
 REPORT.mkdir(parents=True, exist_ok=True)
 
-print("=== IMA FUSION RUNTIME BUILDER ===")
 
 # 1. יצירת שכבת Fusion
 fusion = ROOT / "ima_fusion_runtime.py"
@@ -89,7 +88,6 @@ def process(message):
 encoding="utf-8"
 )
 
-print("[OK] ima_fusion_runtime.py created")
 
 
 # 2. תיקון ima_core_router.py
@@ -114,10 +112,8 @@ if router.exists():
     if old in text:
         text = text.replace(old,new)
         router.write_text(text,encoding="utf-8")
-        print("[OK] mother connection check repaired")
 
     else:
-        print("[INFO] mother check already changed or not found")
 
 
 # 3. בדיקת מצב
@@ -144,12 +140,9 @@ status_file.write_text(
 )
 
 
-print("=== FUSION STATUS ===")
 
 for layer,data in status.get("layers",{}).items():
-    print(
         layer,
         "OK" if data.get("connected") else "FAILED"
     )
 
-print("Saved:",status_file)

@@ -75,11 +75,7 @@ from product.gateway import product_gateway
 from product.launcher import product_launcher
 from product.version.version_manager import current
 
-print("[GATEWAY]", product_gateway.health())
-print("[LAUNCHER]", product_launcher.launch_status())
-print("[VERSION]", current())
 
-print("[OK] Runtime chain")
 PY
 
 

@@ -4,7 +4,6 @@ from founder.executive_ai.action_engine.action_learning_loop import learning_cyc
 
 def run_cycle():
 
-    print("=== IMA AUTONOMOUS CYCLE START ===")
 
     actions = run_world_actions()
 
@@ -21,4 +20,3 @@ if __name__ == "__main__":
 
     result = run_cycle()
 
-    print(result)

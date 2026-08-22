@@ -12,7 +12,6 @@ def guardian_incremental_check():
     import subprocess
     import py_compile
 
-    print("=== GUARDIAN INCREMENTAL CHECK ===")
 
     result = subprocess.run(
         ["git", "diff", "--name-only", "HEAD"],
@@ -26,7 +25,6 @@ def guardian_incremental_check():
         if x.endswith(".py")
     ]
 
-    print("[CHANGED PYTHON]", len(files))
 
     errors=[]
 
@@ -36,16 +34,12 @@ def guardian_incremental_check():
                 f,
                 doraise=True
             )
-            print("[OK]", f)
 
         except Exception as e:
-            print("[FAIL]", f)
             errors.append(f)
 
     if errors:
-        print("[REPAIR TARGETS]")
         for e in errors:
-            print(e)
 
         subprocess.run(
             ["python3","ima_guardian_self_repair.py"]
@@ -59,4 +53,3 @@ def guardian_incremental_check():
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] incremental guardian v2 added")

@@ -17,7 +17,6 @@ shutil.copy2(
 text = runtime.read_text(encoding="utf8")
 
 if "knowledge_answer = build_answer" in text:
-    print("Knowledge pipeline already exists")
 else:
     marker = 'if brain_answer:'
 
@@ -70,4 +69,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("IMA CORE PIPELINE REPAIR COMPLETE")

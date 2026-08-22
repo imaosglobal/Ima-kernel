@@ -30,9 +30,6 @@ v = current()
 assert g["runtime_connected"] is True
 assert l["status"] == "READY"
 
-print("[OK] Gateway")
-print("[OK] Launcher")
-print("[OK] Version")
 PY
 
 echo "[3] Create environment manifest"
@@ -68,9 +65,6 @@ d=json.loads(p.read_text())
 assert d["status"]=="ENVIRONMENT_READY"
 assert d["core"]=="FROZEN"
 
-print("[OK] Environment manifest")
-print("[OK] Core preserved")
-print("[OK] Deployment layer ready")
 PY
 
 echo

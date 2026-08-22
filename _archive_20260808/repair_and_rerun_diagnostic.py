@@ -26,7 +26,6 @@ REPORT_PATH = None
 
 def log(message):
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{timestamp}] {message}", flush=True)
 
 
 # ============================================================
@@ -364,14 +363,12 @@ def run_repair():
 
     if result.stdout:
 
-        print(
             result.stdout
         )
 
 
     if result.stderr:
 
-        print(
             result.stderr,
             file=sys.stderr
         )
@@ -440,14 +437,12 @@ def run_diagnostic():
 
     if result.stdout:
 
-        print(
             result.stdout
         )
 
 
     if result.stderr:
 
-        print(
             result.stderr,
             file=sys.stderr
         )

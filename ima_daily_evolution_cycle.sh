@@ -35,7 +35,6 @@ Path(".ima/agi_evolution/runtime/system_state.json").write_text(
 json.dumps(state,indent=2)
 )
 
-print(state)
 PY
 
 
@@ -83,7 +82,6 @@ for k,v in plans.items():
         json.dumps(v,indent=2,ensure_ascii=False)
     )
 
-print("plans created")
 PY
 
 
@@ -141,7 +139,6 @@ p.write_text(
 json.dumps(data,indent=2)
 )
 
-print("memory saved")
 PY
 
 

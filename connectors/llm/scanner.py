@@ -29,4 +29,3 @@ def scan():
 
 
 if __name__=="__main__":
-    print(json.dumps(scan(),indent=2,ensure_ascii=False))

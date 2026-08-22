@@ -57,9 +57,6 @@ v = current()
 assert g["runtime_connected"] is True
 assert l["status"] == "READY"
 
-print("[OK] Gateway")
-print("[OK] Launcher")
-print("[OK] Version")
 PY
 
 DATE=$(date +%Y%m%d_%H%M%S)

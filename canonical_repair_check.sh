@@ -60,10 +60,7 @@ sys.path.insert(0,"kernel/runtime/CANONICAL")
 
 try:
     import python_bridge
-    print("[OK] bridge import")
-    print(python_bridge.boot_runtime())
 except Exception as e:
-    print("[FAIL]",repr(e))
 PY
 
 echo "" | tee -a "$REPORT"

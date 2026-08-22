@@ -70,9 +70,6 @@ def status():
     events = load()
     state = reduce(events)
 
-    print("=== IMA UNIFIED KERNEL ===")
-    print("FILES:", len(state["files"]))
-    print("MODE:", state["mode"])
 
 if __name__ == "__main__":
     status()

@@ -18,4 +18,3 @@ def start_api():
     return True
 
 if __name__ == "__main__":
-    print("[API BOOT]", start_api())

@@ -50,13 +50,10 @@ from product.launcher import product_launcher
 g = product_gateway.health()
 l = product_launcher.launch_status()
 
-print("[GATEWAY]", g)
-print("[LAUNCHER]", l)
 
 assert g["product_gateway"] is True
 assert l["status"] == "READY"
 
-print("[OK] Runtime chain")
 PY
 
 

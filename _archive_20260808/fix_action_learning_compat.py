@@ -46,4 +46,3 @@ path.write_text(
     encoding="utf8"
 )
 
-print("ACTION LEARNING COMPATIBILITY RESTORED")

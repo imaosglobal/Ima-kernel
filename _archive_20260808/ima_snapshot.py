@@ -55,12 +55,6 @@ def main():
         json.dumps(snapshot,indent=2)
     )
 
-    print("==============================")
-    print(" IMA CANONICAL SNAPSHOT")
-    print("==============================")
-    print("[OK] SNAPSHOT CREATED")
-    print("[OK] FILES:",len(manifest))
-    print("[OK] PATH:",target)
 
 if __name__=="__main__":
     main()

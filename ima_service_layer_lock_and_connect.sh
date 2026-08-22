@@ -88,7 +88,6 @@ Path(
 )
 
 
-print("SERVICE GOVERNANCE CREATED")
 
 PY
 
@@ -167,7 +166,6 @@ verify_brain(
 "learning/meta_orchestrator.py"
 )
 
-print(
 "BRAIN CONNECTION OK"
 )
 
@@ -185,9 +183,7 @@ from pathlib import Path
 p=Path(".ima/runtime/memory_bus.py")
 
 if p.exists():
-    print("MEMORY BUS OK")
 else:
-    print("MEMORY BUS MISSING")
 
 PY
 

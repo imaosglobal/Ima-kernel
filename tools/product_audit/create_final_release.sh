@@ -63,9 +63,6 @@ data=json.loads(p.read_text())
 assert data["status"]=="FINAL"
 assert data["core"]=="FROZEN"
 
-print("[OK] Final manifest")
-print("[OK] Core frozen")
-print("[OK] Release verified")
 PY
 
 

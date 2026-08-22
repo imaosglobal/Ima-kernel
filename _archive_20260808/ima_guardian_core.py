@@ -19,7 +19,6 @@ def record(event, data=None):
 
 
 def run(cmd):
-    print("[RUN]", cmd)
 
     r = subprocess.run(
         cmd,
@@ -29,19 +28,15 @@ def run(cmd):
     )
 
     if r.returncode:
-        print("[FAIL]")
-        print(r.stderr[-500:])
         record("failure", {"cmd":cmd})
         return False
 
-    print("[OK]")
     record("success", {"cmd":cmd})
     return True
 
 
 def cycle(goal="maintenance"):
 
-    print("=== IMA GUARDIAN CORE ===")
 
     record(
         "intent_start",

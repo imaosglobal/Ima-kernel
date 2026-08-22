@@ -149,4 +149,3 @@ if __name__=="__main__":
     )
 
 
-    print("UNIVERSAL LEARNING ENGINE UPDATED")

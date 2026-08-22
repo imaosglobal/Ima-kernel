@@ -62,4 +62,3 @@ indent=2
 encoding="utf8"
 )
 
-print("KNOWLEDGE EXPANSION ENGINE CREATED")

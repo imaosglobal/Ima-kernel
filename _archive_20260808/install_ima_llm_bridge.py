@@ -77,4 +77,3 @@ def evaluate(results):
 for name,data in files.items():
     (base/name).write_text(data,encoding="utf-8")
 
-print("LLM bridge created")

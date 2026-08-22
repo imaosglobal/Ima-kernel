@@ -135,9 +135,3 @@ def research_domain():
 if __name__ == "__main__":
     d = load_domain()
 
-    print("IMA Embodied Language Domain")
-    print("Languages:", len(d["languages"]))
-    print("Concepts:", len(d["concepts"]))
-    print("Layers:", len(d["mapping_layers"]))
-    print("Rules:", len(d["rules"]))
-    print("Status: READY")

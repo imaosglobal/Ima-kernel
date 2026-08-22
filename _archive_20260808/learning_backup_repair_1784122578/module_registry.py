@@ -46,7 +46,6 @@ def check_module(name):
 
 def build_registry():
 
-    print("=== IMA ORCHESTRATOR CONNECT ===")
 
     registry = {
         "time": time.time(),
@@ -59,7 +58,6 @@ def build_registry():
         check = check_module(module)
         registry["modules"].append(check)
 
-        print(
             module,
             ":", 
             check["status"]
@@ -83,12 +81,10 @@ def build_registry():
         encoding="utf-8"
     )
 
-    print(
         "ACTIVE:",
         registry["active_modules"]
     )
 
-    print(
         "ORCHESTRATOR REGISTRY SAVED"
     )
 

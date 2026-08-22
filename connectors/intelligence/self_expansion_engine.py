@@ -103,4 +103,3 @@ def expand():
 
 if __name__=="__main__":
     expand()
-    print("SELF EXPANSION UPDATED")

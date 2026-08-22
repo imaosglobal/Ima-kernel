@@ -50,7 +50,6 @@ def run_snapshot():
 
 
 if __name__ == "__main__":
-    print(json.dumps(
         run_snapshot(),
         ensure_ascii=False,
         indent=2,

@@ -44,7 +44,6 @@ Path(".ima/governance/ACTIVE_ARCHITECTURE.json").write_text(
     encoding="utf-8"
 )
 
-print("ACTIVE ARCHITECTURE SAVED")
 PY
 
 
@@ -64,7 +63,6 @@ files=[
 
 for f in files:
     p=Path(f)
-    print(f, "OK" if p.exists() else "MISSING")
 PY
 
 
@@ -87,9 +85,7 @@ for t in targets:
         x for x in Path(".").rglob(t)
         if ".ima/snapshots" not in str(x)
     ]
-    print(t, "ACTIVE COPIES:", len(active))
     for x in active:
-        print(" ",x)
 PY
 
 
@@ -103,7 +99,6 @@ echo "[5] Brain verification"
 python3 - <<'PY'
 from learning.brain_guard import verify_brain
 verify_brain("learning/meta_orchestrator.py")
-print("BRAIN LOCK OK")
 PY
 
 

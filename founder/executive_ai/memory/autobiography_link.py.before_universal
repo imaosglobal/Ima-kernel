@@ -1,0 +1,198 @@
+import json
+import time
+import uuid
+from pathlib import Path
+
+from founder.executive_ai.memory.autobiography import record, recall
+
+ROOT = Path.home() / ".ima" / "autobiography"
+IMA_FILE = ROOT / "ima_autobiography.jsonl"
+LINK_FILE = ROOT / "bidirectional_links.jsonl"
+
+ROOT.mkdir(parents=True, exist_ok=True)
+
+
+def _append(path, item):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    return item
+
+
+def record_ima(event_type, event, source="ima", metadata=None):
+    item = {
+        "event_id": str(uuid.uuid4()),
+        "owner": "ima",
+        "timestamp": time.time(),
+        "recorded_at": time.strftime(
+            "%Y-%m-%dT%H:%M:%SZ", time.gmtime()
+        ),
+        "type": event_type,
+        "source": source,
+        "event": event,
+        "metadata": metadata or {},
+    }
+    return _append(IMA_FILE, item)
+
+
+def recall_ima(limit=None):
+    if not IMA_FILE.exists():
+        return []
+
+    items = []
+    for line in IMA_FILE.read_text(encoding="utf-8").splitlines():
+        try:
+            items.append(json.loads(line))
+        except Exception:
+            continue
+
+    items.sort(key=lambda x: x.get("timestamp", 0))
+
+    return items if limit is None else items[-limit:]
+
+
+def link_user_to_ima(
+    user_id,
+    user_event,
+    ima_event=None,
+    source="bridge",
+    metadata=None,
+):
+    link_id = str(uuid.uuid4())
+
+    user_record = record(
+        source=source,
+        event=user_event,
+        user_id=user_id,
+        metadata={
+            **(metadata or {}),
+            "link_id": link_id,
+            "linked_to": "ima",
+        },
+    )
+
+    ima_record = None
+    if ima_event is not None:
+        ima_record = record_ima(
+            event_type="linked_user_event",
+            event=ima_event,
+            source=source,
+            metadata={
+                **(metadata or {}),
+                "link_id": link_id,
+                "user_id": user_id,
+            },
+        )
+
+    link = {
+        "link_id": link_id,
+        "timestamp": time.time(),
+        "user_id": user_id,
+        "source": source,
+        "user_event_id": user_record.get("event_id"),
+        "ima_event_id": (
+            ima_record.get("event_id")
+            if ima_record else None
+        ),
+        "direction": "user_to_ima",
+    }
+
+    return _append(LINK_FILE, link)
+
+
+def link_ima_to_user(
+    user_id,
+    ima_event,
+    user_event=None,
+    source="ima",
+    metadata=None,
+):
+    link_id = str(uuid.uuid4())
+
+    ima_record = record_ima(
+        event_type="ima_to_user",
+        event=ima_event,
+        source=source,
+        metadata={
+            **(metadata or {}),
+            "link_id": link_id,
+            "user_id": user_id,
+        },
+    )
+
+    user_record = None
+    if user_event is not None:
+        user_record = record(
+            source=source,
+            event=user_event,
+            user_id=user_id,
+            metadata={
+                **(metadata or {}),
+                "link_id": link_id,
+                "from_ima": True,
+            },
+        )
+
+    link = {
+        "link_id": link_id,
+        "timestamp": time.time(),
+        "user_id": user_id,
+        "source": source,
+        "user_event_id": (
+            user_record.get("event_id")
+            if user_record else None
+        ),
+        "ima_event_id": ima_record.get("event_id"),
+        "direction": "ima_to_user",
+    }
+
+    return _append(LINK_FILE, link)
+
+
+def links(limit=None):
+    if not LINK_FILE.exists():
+        return []
+
+    items = []
+    for line in LINK_FILE.read_text(encoding="utf-8").splitlines():
+        try:
+            items.append(json.loads(line))
+        except Exception:
+            continue
+
+    items.sort(key=lambda x: x.get("timestamp", 0))
+
+    return items if limit is None else items[-limit:]
+
+
+def user_history_with_ima(user_id, limit=None):
+    user_events = recall(user_id)
+    ima_events = [
+        x for x in recall_ima()
+        if x.get("metadata", {}).get("user_id") == user_id
+    ]
+
+    combined = user_events + ima_events
+
+    def _sort_time(x):
+        value = x.get("timestamp")
+
+        if isinstance(value, (int, float)):
+            return float(value)
+
+        value = x.get("recorded_at")
+
+        if isinstance(value, str):
+            try:
+                from datetime import datetime, timezone
+                return datetime.fromisoformat(
+                    value.replace("Z", "+00:00")
+                ).timestamp()
+            except Exception:
+                pass
+
+        return 0.0
+
+    combined.sort(key=_sort_time)
+
+    return combined if limit is None else combined[-limit:]

@@ -7,16 +7,13 @@ import subprocess
 
 ROOT = Path("learning")
 
-print("=== IMA LEARNING STACK REPAIR ===")
 
 # 1. backup
 backup = Path(f"learning_backup_repair_{int(time.time())}")
 if ROOT.exists():
     shutil.copytree(ROOT, backup)
-    print("[BACKUP]", backup)
 
 # 2. permissions
-print("[PERMISSIONS]")
 for p in ROOT.rglob("*"):
     try:
         if p.is_file():
@@ -51,7 +48,6 @@ if registry.exists():
         encoding="utf8"
     )
 
-    print("[REGISTRY CLEAN]",len(clean))
 
 
 # 4. create extractor
@@ -97,11 +93,9 @@ def extract_text(html):
         encoding="utf8"
     )
 
-    print("[EXTRACTOR CREATED]")
 
 
 # 5. compile
-print("[COMPILE TEST]")
 
 failed=[]
 
@@ -122,11 +116,7 @@ for p in ROOT.rglob("*.py"):
 
 
 if failed:
-    print("[FAILED]")
     for f in failed:
-        print("-",f)
 else:
-    print("[ALL PYTHON OK]")
 
 
-print("=== REPAIR COMPLETE ===")

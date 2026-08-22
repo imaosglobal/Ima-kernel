@@ -71,7 +71,6 @@ class Handler(BaseHTTPRequestHandler):
 # SERVER
 # -------------------------
 def run():
-    print("IMA GLOBAL CORE running on http://0.0.0.0:8000")
     server = HTTPServer(("0.0.0.0", 8000), Handler)
     server.serve_forever()
 

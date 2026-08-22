@@ -38,7 +38,6 @@ def check_module(module):
 
 
 def runtime_check():
-    print("=== IMA CORE RUNTIME ===")
 
     state = {
         "time": time.time(),
@@ -74,7 +73,6 @@ def runtime_check():
     active = 0
 
     for name, result in state["checks"].items():
-        print(name, ":", result)
 
         if result.get("status") == "ok" or result.get("exists"):
             active += 1
@@ -92,9 +90,6 @@ def runtime_check():
         encoding="utf-8"
     )
 
-    print()
-    print("ACTIVE COMPONENTS:", active)
-    print("RUNTIME REGISTRY SAVED")
 
     return state
 

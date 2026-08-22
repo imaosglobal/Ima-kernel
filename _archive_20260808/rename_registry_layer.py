@@ -14,9 +14,7 @@ for p in Path(".").rglob("*"):
         except:
             pass
 
-print("FILES TO UPDATE:")
 for f in files:
-    print("-", f)
 
 for f in files:
     text = f.read_text(encoding="utf-8")
@@ -41,6 +39,4 @@ new_file = Path("learning/module_registry.py")
 if old_file.exists():
     old_file.rename(new_file)
 
-print("RENAMED:")
-print(new_file)
 

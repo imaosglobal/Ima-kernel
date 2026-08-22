@@ -20,15 +20,11 @@ for f in root.rglob("*.py"):
         pass
 
 
-print("=== FOUNDER DEPENDENCY GRAPH ===")
 
 for src,targets in graph.items():
-    print("\n",src)
     for t in targets:
-        print("  ->",t)
 
 
-print("\n=== MOST CONNECTED MODULES ===")
 
 count=defaultdict(int)
 
@@ -37,4 +33,3 @@ for src,targets in graph.items():
         count[t]+=1
 
 for k,v in sorted(count.items(),key=lambda x:x[1],reverse=True)[:20]:
-    print(v,k)

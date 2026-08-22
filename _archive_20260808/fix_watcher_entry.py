@@ -15,13 +15,9 @@ new = '''if __name__ == "__main__":
     elif "--daemon" in sys.argv:
         _original_watch()
     else:
-        print("IMA Guardian Watch")
-        print("use: --once | --daemon | --status")
 '''
 
 if old not in text:
-    print("[FAIL] entry point not found")
 else:
     text = text.replace(old, new)
     p.write_text(text, encoding="utf8")
-    print("[OK] watcher entry fixed")

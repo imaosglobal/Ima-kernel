@@ -5,7 +5,6 @@ from urllib.parse import urlencode
 import requests
 from flask import Blueprint, redirect, request, session, jsonify
 
-google_auth = Blueprint("google_auth", __name__)
 
 GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
 GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
@@ -61,8 +60,6 @@ def google_login():
 
 @google_auth.get("/auth/google/callback")
 def google_callback():
-    print("DEBUG cookies received:", dict(request.cookies))
-    print("DEBUG session at start:", dict(session))
     expected_state = session.pop("google_oauth_state", None)
     received_state = request.args.get("state")
 

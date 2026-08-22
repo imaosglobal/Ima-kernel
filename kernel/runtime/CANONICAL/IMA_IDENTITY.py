@@ -32,4 +32,3 @@ def load_identity():
 
 
 if __name__ == "__main__":
-    print(json.dumps(load_identity(), indent=2, ensure_ascii=False))

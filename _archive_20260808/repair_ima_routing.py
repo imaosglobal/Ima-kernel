@@ -67,5 +67,3 @@ if "מחוברות כרגע שכבות זיכרון" not in text:
 
 path.write_text(text, encoding="utf-8")
 
-print("BACKUP:", backup)
-print("PATCH COMPLETE")

@@ -115,4 +115,3 @@ for p,c in files.items():
         )
 
 
-print("IMA GLOBAL CONNECTOR ENGINE CREATED")

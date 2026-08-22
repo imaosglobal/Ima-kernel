@@ -7,7 +7,6 @@ LOCK = Path(".ima/runtime/canonical_system_lock.json")
 
 def verify():
     if not LOCK.exists():
-        print("[FAIL] CANONICAL LOCK MISSING")
         return False
 
     lock=json.loads(LOCK.read_text())
@@ -37,9 +36,6 @@ def verify():
     )
 
     if report["status"]=="PASS":
-        print("[OK] CANONICAL GUARD")
         return True
 
-    print("[FAIL] CANONICAL GUARD")
-    print(report)
     return False

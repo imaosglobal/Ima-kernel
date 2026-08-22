@@ -56,15 +56,8 @@ out.write_text(
 )
 
 
-print("=== IMA RUNTIME MAP ===")
-print("Active modules:",len(modules))
 
-print("\nMOST CONNECTED:")
 for x in incoming.most_common(20):
-    print(x)
 
-print("\nMOST ACTIVE:")
 for x in outgoing.most_common(20):
-    print(x)
 
-print("\nSaved:",out)

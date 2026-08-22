@@ -5,7 +5,6 @@ from learning.system_improvement_memory import summarize_improvements
 
 def run_evolution_cycle():
 
-    print("=== IMA EVOLUTION CYCLE ===")
 
     health = health_report()
 
@@ -14,16 +13,10 @@ def run_evolution_cycle():
         if x["status"] != "ok"
     ]
 
-    print("HEALTH FAILED:", len(failed))
 
     meta = run_meta_analysis()
 
-    print("CAPABILITIES:", meta["capabilities"])
-    print("SUGGESTIONS:", len(meta["suggestions"]))
 
-    print()
-    print("SYSTEM HISTORY:")
-    print(summarize_improvements())
 
 
 if __name__ == "__main__":

@@ -84,8 +84,6 @@ def scan():
         json.dumps(truth,indent=2,ensure_ascii=False)
     )
 
-    print("IMA TRUTH DATABASE UPDATED")
-    print(json.dumps(truth,indent=2))
 
 
 if __name__=="__main__":
@@ -114,14 +112,10 @@ if DB.exists():
             pass
 
 
-print("IMA TRUTH ANSWER")
-print("================")
 
 if not found:
-    print("אין מידע מתועד במקורות המחוברים")
 else:
     for item in found[-10:]:
-        print(json.dumps(item,indent=2,ensure_ascii=False))
 PY
 
 

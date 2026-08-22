@@ -59,5 +59,3 @@ def verify_brain(path):
 
 if __name__ == "__main__":
     create_registry()
-    print("IMA CANONICAL BRAIN LOCKED")
-    print(CANONICAL_BRAIN)

@@ -21,9 +21,7 @@ text = text.replace(
 )
 
 if "timeout=300" in text:
-    print("[OK] subprocess timeout added")
 else:
-    print("[WARN] timeout not inserted")
 
 p.write_text(text, encoding="utf8")
 
@@ -46,9 +44,6 @@ if p.exists():
             "\\n".join(lines[-MAX:]) + "\\n",
             encoding="utf8"
         )
-        print("[OK] history compacted")
     else:
-        print("[OK] history size healthy")
 """, encoding="utf8")
 
-print("[OK] guardian runtime upgrade created")

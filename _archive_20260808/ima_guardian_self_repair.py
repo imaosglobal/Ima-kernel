@@ -9,7 +9,6 @@ REPORT = Path("IMA_AUDIT_REPORT.json")
 
 
 def log(x):
-    print(x)
 
 
 def load_errors():
@@ -66,8 +65,6 @@ def verify():
 def run():
     errors=load_errors()
 
-    print("=== REPORT BASED SELF REPAIR ===")
-    print("[TARGETS]", len(errors))
 
     fixed=[]
 
@@ -78,8 +75,6 @@ def run():
 
     remaining=verify()
 
-    print("[FIXED]", fixed)
-    print("[REMAINING]", remaining)
 
     if not remaining:
         subprocess.run(
@@ -97,7 +92,6 @@ def run():
             text=True
         )
 
-        print("[OK] guardian repair committed")
 
 
 
@@ -129,7 +123,6 @@ def repair_unterminated_string(path):
             if "import os" in line:
                 out.extend([
                     "",
-                    '    print("IMA DAILY EVOLUTION SAVED")',
                     ""
                 ])
                 inside_main = False
@@ -138,7 +131,6 @@ def repair_unterminated_string(path):
                 continue
 
             if (
-                line.lstrip().startswith("print(")
                 or "IMA DAILY EVOLUTION SAVED" in line
                 or line.strip() == ")"
             ):
@@ -152,7 +144,6 @@ def repair_unterminated_string(path):
             "\n".join(out)+"\n",
             encoding="utf8"
         )
-        print("[GUARDIAN BLOCK REPAIR]", p)
         return True
 
     return False
@@ -161,8 +152,6 @@ def repair_unterminated_string(path):
 def run():
     errors=load_errors()
 
-    print("=== REPORT BASED SELF REPAIR ===")
-    print("[TARGETS]", len(errors))
 
     fixed=[]
 
@@ -173,8 +162,6 @@ def run():
 
     remaining=verify()
 
-    print("[FIXED]", fixed)
-    print("[REMAINING]", remaining)
 
     if not remaining:
         subprocess.run(
@@ -192,7 +179,6 @@ def run():
             text=True
         )
 
-        print("[OK] guardian repair committed")
 
 
 def repair_unterminated_string(path):
@@ -210,7 +196,6 @@ def repair_unterminated_string(path):
     for line in lines:
         if "IMA DAILY EVOLUTION SAVED" in line:
             out.extend([
-                '    print(',
                 '        "IMA DAILY EVOLUTION SAVED"',
                 '    )'
             ])
@@ -232,7 +217,6 @@ def repair_unterminated_string(path):
 
     if changed:
         p.write_text("\n".join(out)+"\n", encoding="utf8")
-        print("[REPAIRED STRING]", path)
 
     return changed
 
@@ -258,7 +242,6 @@ def repair_unterminated_string(path):
     for line in lines:
         if "IMA DAILY EVOLUTION SAVED" in line:
             out.extend([
-                '    print(',
                 '        "IMA DAILY EVOLUTION SAVED"',
                 '    )'
             ])
@@ -280,6 +263,5 @@ def repair_unterminated_string(path):
 
     if changed:
         p.write_text("\n".join(out)+"\n", encoding="utf8")
-        print("[REPAIRED STRING]", path)
 
     return changed

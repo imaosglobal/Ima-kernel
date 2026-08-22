@@ -34,7 +34,6 @@ def load_all_knowledge():
             })
 
         except Exception as e:
-            print("KNOWLEDGE LOAD ERROR:", file, e)
 
     return database
 
@@ -117,5 +116,3 @@ def search_knowledge(question):
 
 path.write_text(new_code, encoding="utf-8")
 
-print("BACKUP:", backup)
-print("KNOWLEDGE ENGINE FINAL REPLACED")

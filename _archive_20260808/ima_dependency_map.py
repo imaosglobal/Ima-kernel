@@ -69,6 +69,3 @@ OUT.write_text(
 )
 
 
-print("=== IMA DEPENDENCY MAP ===")
-print("Python modules:",len(modules))
-print("Saved:",OUT)

@@ -87,7 +87,6 @@ out={
 json.dumps(out,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(out,indent=2,ensure_ascii=False))
 PY
 
 
@@ -121,7 +120,6 @@ handoff={
 json.dumps(handoff,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(handoff,indent=2,ensure_ascii=False))
 PY
 
 

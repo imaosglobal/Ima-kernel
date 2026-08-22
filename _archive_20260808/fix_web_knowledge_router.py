@@ -50,4 +50,3 @@ Path(".ima/web_source_router_fix.lock").write_text(
     encoding="utf8"
 )
 
-print("WEB SOURCE ROUTER FIXED")

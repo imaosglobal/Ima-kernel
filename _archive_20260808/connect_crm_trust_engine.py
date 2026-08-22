@@ -42,4 +42,3 @@ for p,c in files.items():
     )
 
 
-print("CRM TRUST BRIDGE CREATED")

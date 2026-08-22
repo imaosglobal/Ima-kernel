@@ -43,7 +43,6 @@ def run(cmd: list[str], timeout: int = 300) -> tuple[int, str, str]:
 
 def record(stage: str, status: str, summary: str, **details):
     results.append(Result(stage, status, summary, details))
-    print(f"[{status}] {stage}: {summary}")
 
 def exists_any(paths: list[str]) -> list[str]:
     return [p for p in paths if (ROOT / p).exists()]
@@ -671,7 +670,6 @@ def write_reports():
     return payload
 
 def main():
-    print("=== IMA PRODUCT DIAGNOSTIC ENGINE ===")
 
     stages = [
         stage_canonical_runtime,
@@ -705,22 +703,15 @@ def main():
     payload = write_reports()
     summary = payload["summary"]
 
-    print("\n=== FINAL PRODUCT STATUS ===")
     for k, v in summary.items():
-        print(f"{k}: {v}")
 
-    print(f"REPORT_JSON: {REPORT_JSON}")
-    print(f"REPORT_MD: {REPORT_MD}")
 
     if summary["FAILED"] or summary["MISSING"]:
-        print("FINAL_STATUS: NOT_READY")
         return 2
 
     if summary["PARTIAL"]:
-        print("FINAL_STATUS: PARTIAL")
         return 1
 
-    print("FINAL_STATUS: READY")
     return 0
 
 if __name__ == "__main__":

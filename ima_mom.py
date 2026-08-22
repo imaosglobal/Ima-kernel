@@ -38,7 +38,6 @@ def generate_answer(q, mem):
 
 def run():
     mem = load()
-    print("IMA MOM READY (exit לסיום)")
 
     while True:
         q = input("> ").strip()
@@ -46,7 +45,6 @@ def run():
             break
 
         a = generate_answer(q, mem)
-        print(a)
 
         save(mem)
 

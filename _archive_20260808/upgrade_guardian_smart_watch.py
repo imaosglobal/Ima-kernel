@@ -60,12 +60,9 @@ def update_smart_state():
 
 
 text = text.replace(
-'''print("[CHANGE DETECTED]")
 cycle()''',
-'''print("[CHANGE DETECTED]")
 
 changed = smart_diff()
-print("[SMART FILES]", len(changed))
 
 cycle()
 
@@ -77,4 +74,3 @@ if "import json" not in text:
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] smart watcher upgraded")

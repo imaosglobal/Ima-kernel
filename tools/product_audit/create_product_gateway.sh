@@ -95,8 +95,6 @@ echo "[CHECK] Import gateway"
 python3 - <<'PY'
 from product.gateway import product_gateway
 
-print(product_gateway.health())
-print("[OK] gateway import")
 PY
 
 

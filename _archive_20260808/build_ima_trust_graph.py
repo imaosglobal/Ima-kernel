@@ -89,4 +89,3 @@ for p,c in files.items():
     )
 
 
-print("IMA TRUST GRAPH CREATED")

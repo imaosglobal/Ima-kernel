@@ -38,7 +38,6 @@ def repair_unterminated_string(path):
             if "import os" in line:
                 out.extend([
                     "",
-                    '    print("IMA DAILY EVOLUTION SAVED")',
                     ""
                 ])
                 inside_main = False
@@ -47,7 +46,6 @@ def repair_unterminated_string(path):
                 continue
 
             if (
-                line.lstrip().startswith("print(")
                 or "IMA DAILY EVOLUTION SAVED" in line
                 or line.strip() == ")"
             ):
@@ -61,7 +59,6 @@ def repair_unterminated_string(path):
             "\n".join(out)+"\n",
             encoding="utf8"
         )
-        print("[GUARDIAN BLOCK REPAIR]", p)
         return True
 
     return False
@@ -71,4 +68,3 @@ text = text[:start] + new + "\n\n" + text[end:]
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] guardian block repair upgraded")

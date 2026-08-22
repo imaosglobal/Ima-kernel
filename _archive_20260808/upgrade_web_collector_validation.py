@@ -63,4 +63,3 @@ def best_answer(question):
 
 p.write_text(text,encoding="utf8")
 
-print("WEB VALIDATION UPGRADED")

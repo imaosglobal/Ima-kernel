@@ -43,5 +43,3 @@ Path(".ima/reports/core_integration_audit.json").write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
-print("[OK] CORE INTEGRATION AUDIT COMPLETE")

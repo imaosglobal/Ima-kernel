@@ -44,4 +44,3 @@ def verify_entry_gate():
 
 
 if __name__=="__main__":
-    print("ENTRY GATE:", verify_entry_gate())

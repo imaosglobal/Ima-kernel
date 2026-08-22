@@ -82,9 +82,6 @@ data=json.loads(p.read_text())
 assert data["package"]=="READY"
 assert data["core"]=="FROZEN"
 
-print("[OK] Release package")
-print("[OK] Core protected")
-print("[OK] Package verified")
 PY
 
 

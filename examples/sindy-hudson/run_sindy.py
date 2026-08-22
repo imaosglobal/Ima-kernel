@@ -17,14 +17,10 @@ coef_H = lstsq(Theta, dH, rcond=None)[0]
 coef_L = lstsq(Theta, dL, rcond=None)[0]
 
 terms = ['1', 'H', 'L', 'H^2', 'L^2', 'H*L', 'Year']
-print('=== SINDy Equation for dH/dt ===')
 eqH = ''
 for c, t in zip(coef_H, terms):
     if abs(c) > 0.01: eqH += f' {c:.4f}*{t} +'
-print(eqH[:-1])
 
-print('\n=== SINDy Equation for dL/dt ===')
 eqL = ''
 for c, t in zip(coef_L, terms):
     if abs(c) > 0.01: eqL += f' {c:.4f}*{t} +'
-print(eqL[:-1])

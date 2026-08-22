@@ -183,4 +183,3 @@ encoding="utf8"
 )
 
 
-print("IMA PROVENANCE LAYER VERIFIED")

@@ -13,7 +13,6 @@ def guardian_policy_check():
     p = Path(".ima/guardian/policy.json")
 
     if not p.exists():
-        print("[POLICY MISSING]")
         return False
 
     try:
@@ -30,14 +29,11 @@ def guardian_policy_check():
 
 
 old = '''def run_cycle():
-    print("\\n=== GUARDIAN AUTO CYCLE ===")
 '''
 
 new = '''def run_cycle():
-    print("\\n=== GUARDIAN AUTO CYCLE ===")
 
     if not guardian_policy_check():
-        print("[POLICY BLOCK]")
         return
 '''
 
@@ -46,4 +42,3 @@ if old in text:
 
 p.write_text(text,encoding="utf8")
 
-print("[OK] guardian policy gate connected")

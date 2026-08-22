@@ -44,9 +44,6 @@ from product.version.version_manager import current
 assert product_gateway.health()["runtime_connected"] is True
 assert product_launcher.launch_status()["status"]=="READY"
 
-print("[OK] Gateway")
-print("[OK] Launcher")
-print("[OK] Version")
 PY
 
 DATE=$(date +%Y%m%d_%H%M%S)

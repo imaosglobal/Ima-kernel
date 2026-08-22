@@ -103,4 +103,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] source router created")

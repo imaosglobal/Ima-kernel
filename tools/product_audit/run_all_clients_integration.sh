@@ -16,7 +16,6 @@ r=status()
 assert r["sdk"]["client"] is True
 assert r["sdk"]["status"]=="READY"
 
-print("[OK] $1")
 PY
 }
 
@@ -29,8 +28,6 @@ check_client product.apps.linux
 python - <<'PY'
 from product.apps.shared.gateway_client import health
 
-print("[SDK]", health())
-print("[OK] Shared gateway verified")
 PY
 
 echo "=== ALL CLIENTS CONNECTED ==="

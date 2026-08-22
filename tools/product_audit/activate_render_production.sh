@@ -45,9 +45,6 @@ l = product_launcher.launch_status()
 assert g["runtime_connected"] is True
 assert l["status"] == "READY"
 
-print("[OK] Gateway")
-print("[OK] Launcher")
-print("[OK] Runtime")
 PY
 
 
@@ -75,7 +72,6 @@ except Exception as e:
 with open("$OUT/RENDER_HEALTH_CHECK.json","w") as f:
     json.dump(result,f,indent=2)
 
-print(result)
 PY
 
 
@@ -90,12 +86,9 @@ b=json.loads(Path("$OUT/RENDER_HEALTH_CHECK.json").read_text())
 
 assert a["provider"]=="Render"
 
-print("[OK] Deployment manifest")
 
 if b.get("reachable"):
-    print("[OK] External Render endpoint reachable")
 else:
-    print("[WARN] Endpoint not reachable from current environment")
 PY
 
 

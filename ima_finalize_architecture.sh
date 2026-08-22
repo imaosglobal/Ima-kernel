@@ -94,8 +94,6 @@ def verify_brain(path):
 
 if __name__ == "__main__":
     create_registry()
-    print("IMA CANONICAL BRAIN LOCKED")
-    print(CANONICAL_BRAIN)
 PY
 
 
@@ -112,7 +110,6 @@ from learning.brain_guard import verify_brain
 verify_brain("learning/meta_orchestrator.py")
 verify_brain("learning/module_registry.py")
 
-print("BRAIN ARCHITECTURE OK")
 PY
 
 
@@ -133,11 +130,8 @@ for f in Path("learning").glob("*.py"):
         importlib.import_module("learning."+f.stem)
         ok+=1
     except Exception as e:
-        print("FAIL",f.name,e)
         fail+=1
 
-print("LOADED:",ok)
-print("FAILED:",fail)
 
 if fail:
     raise SystemExit(1)

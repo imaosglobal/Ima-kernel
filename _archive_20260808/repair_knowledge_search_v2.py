@@ -104,5 +104,3 @@ def search_knowledge(question):
 
 src.write_text(code,encoding="utf-8")
 
-print("BACKUP:",backup)
-print("SEARCH ENGINE V2 READY")

@@ -3,7 +3,6 @@ import json
 import shutil
 import time
 
-print("=== IMA KNOWLEDGE REPAIR ===")
 
 # backup
 src = Path("engines/knowledge_engine.py")
@@ -16,14 +15,12 @@ for f in Path("knowledge").rglob("*.json"):
         txt = f.read_text(encoding="utf-8").strip()
 
         if not txt:
-            print("EMPTY:", f)
             f.write_text("{}\n", encoding="utf-8")
             continue
 
         json.loads(txt)
 
     except Exception as e:
-        print("BROKEN:", f, e)
         f.write_text("{}\n", encoding="utf-8")
 
 
@@ -117,5 +114,3 @@ def search_knowledge(question):
 
 src.write_text(code,encoding="utf-8")
 
-print("BACKUP:",backup)
-print("KNOWLEDGE REPAIR COMPLETE")

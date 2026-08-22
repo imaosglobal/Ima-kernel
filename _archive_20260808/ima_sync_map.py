@@ -119,11 +119,6 @@ OUTPUT.write_text(
 )
 
 
-print("=== IMA SYNC MAP CREATED ===")
 
 for k,v in report["components"].items():
-    print(k, v)
 
-print()
-print("Saved:")
-print(OUTPUT)

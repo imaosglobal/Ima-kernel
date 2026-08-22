@@ -37,16 +37,13 @@ for item in registry.get("allowed_components", []):
     if h != item["sha256"]:
         raise SystemExit(f"HASH MISMATCH: {f}")
 
-print("[OK] CANONICAL REGISTRY VERIFIED")
 '''
 
-marker='print("=== IMA SINGLE ENTRY ===")'
 
 if "CANONICAL REGISTRY VERIFIED" not in text:
     text=text.replace(marker,guard+"\n"+marker)
 
 p.write_text(text)
-print("[OK] Registry guard injected")
 PY
 
 python3 IMA_START_SINGLE_ENTRY.py > logs/registry_guard_test.log 2>&1

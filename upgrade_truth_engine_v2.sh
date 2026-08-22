@@ -35,7 +35,6 @@ def normalize(text):
     )
 
 
-def fingerprint(text):
     return hashlib.sha256(
         normalize(text).encode()
     ).hexdigest()
@@ -66,7 +65,6 @@ def git_events():
             if len(p)!=3:
                 continue
 
-            key=fingerprint(
                 p[1]+p[2]
             )
 
@@ -167,8 +165,6 @@ def build():
     )
 
 
-    print("TRUTH ENGINE V2 UPDATED")
-    print(json.dumps(summary,indent=2))
 
 
 if __name__=="__main__":
@@ -225,14 +221,10 @@ for e in events:
         matches.append(e)
 
 
-print("IMA TRUTH V2")
-print("================")
 
 if not matches:
-    print("אין מידע מתועד")
 else:
 
-    print(
         "נמצאו",
         len(matches),
         "אירועים"
@@ -241,12 +233,10 @@ else:
     for e in matches[-15:]:
 
         if "event" in e:
-            print(
                 f"[{e.get('date',e.get('time'))}] {e['event']}"
             )
 
         else:
-            print(
                 json.dumps(
                     e,
                     ensure_ascii=False

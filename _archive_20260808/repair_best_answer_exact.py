@@ -67,4 +67,3 @@ text=text[:start]+new+"\n"
 
 p.write_text(text,encoding="utf8")
 
-print("BEST ANSWER EXACTLY REPLACED")

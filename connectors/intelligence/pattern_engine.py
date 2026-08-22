@@ -64,4 +64,3 @@ def learn_patterns():
 
 if __name__=="__main__":
     learn_patterns()
-    print("PATTERNS LEARNED")

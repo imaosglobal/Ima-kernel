@@ -70,9 +70,6 @@ l = product_launcher.launch_status()
 assert g["runtime_connected"] is True
 assert l["status"]=="READY"
 
-print("[OK] Gateway")
-print("[OK] Launcher")
-print("[OK] Runtime")
 PY
 
 
@@ -191,8 +188,6 @@ d=json.loads(p.read_text())
 assert d["status"]=="EXTERNAL_RELEASE_READY"
 assert d["runtime"]=="CANONICAL"
 
-print("[OK] External release manifest")
-print("[OK] Pipeline verified")
 PY
 
 

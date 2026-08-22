@@ -182,16 +182,12 @@ tests=[
 ]
 
 
-print("=== IMA AGI REALITY TEST ===")
 
 for t in tests:
     p=ROOT/t
     if p.exists():
-        print("[OK]",t)
     else:
-        print("[MISS]",t)
 
-print("=== END ===")
 PY
 
 

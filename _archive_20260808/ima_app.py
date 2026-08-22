@@ -79,7 +79,6 @@ def git_snapshot():
 # DAEMON (FIXED - NO FLOOD)
 # -------------------------
 def daemon():
-    print("[IMA] daemon started")
 
     processed = set()
 
@@ -108,7 +107,6 @@ def daemon():
             time.sleep(1)
 
         except KeyboardInterrupt:
-            print("[IMA] stopped")
             break
 
 # -------------------------
@@ -127,7 +125,6 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(json.dumps(res).encode())
 
 def server():
-    print("[IMA] API running on :8000")
     HTTPServer(("0.0.0.0", 8000), Handler).serve_forever()
 
 # -------------------------
@@ -139,13 +136,11 @@ def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "help"
 
     if cmd == "ask":
-        print(ask(" ".join(sys.argv[2:])))
     elif cmd == "daemon":
         daemon()
     elif cmd == "server":
         server()
     else:
-        print("usage: ask | daemon | server")
 
 if __name__ == "__main__":
     main()

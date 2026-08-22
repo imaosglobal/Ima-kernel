@@ -39,7 +39,6 @@ def boot():
 
 
 if __name__=="__main__":
-    print(json.dumps(boot(),indent=2,ensure_ascii=False))
 PY
 
 

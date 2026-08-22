@@ -8,7 +8,6 @@ files = [
     "ima_guardian_controller.py",
 ]
 
-print("=== GUARDIAN REGRESSION CHECK ===")
 
 failed = []
 
@@ -25,12 +24,8 @@ for f in files:
 
     if r.returncode != 0:
         failed.append(f)
-        print("[FAIL]", f)
     else:
-        print("[OK]", f)
 
 if failed:
-    print("[BROKEN]", failed)
     raise SystemExit(1)
 
-print("[GUARDIAN REGRESSION OK]")

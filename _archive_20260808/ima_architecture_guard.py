@@ -38,7 +38,6 @@ def scan():
     return result
 
 if __name__ == "__main__":
-    print("=== IMA ARCHITECTURE GUARD ===")
 
     result = scan()
 
@@ -46,7 +45,6 @@ if __name__ == "__main__":
 
     for item in result["checks"]:
         status = "OK" if item["exists"] else "MISSING"
-        print(
             item["component"],
             status,
             item["path"]
@@ -56,8 +54,5 @@ if __name__ == "__main__":
             missing.append(item["component"])
 
     if missing:
-        print("WARNING:", missing)
     else:
-        print("ALL CANONICAL COMPONENTS VERIFIED")
 
-    print("GUARD REPORT:", REPORT)

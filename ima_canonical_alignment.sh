@@ -91,7 +91,6 @@ Path(".ima/governance/orchestrator_lock.json").write_text(
     encoding="utf-8"
 )
 
-print("GOVERNANCE UPDATED")
 PY
 
 
@@ -103,7 +102,6 @@ from learning.brain_guard import verify_brain
 
 verify_brain("learning/meta_orchestrator.py")
 
-print("BRAIN OK")
 PY
 
 
@@ -136,7 +134,6 @@ import importlib
 
 for m in mods:
     importlib.import_module("learning."+m)
-    print("OK",m)
 PY
 
 

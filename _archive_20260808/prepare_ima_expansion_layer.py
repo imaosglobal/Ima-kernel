@@ -131,4 +131,3 @@ for p,c in files.items():
     )
 
 
-print("IMA EXPANSION PREPARATION LAYER CREATED")

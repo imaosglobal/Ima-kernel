@@ -158,4 +158,3 @@ for p,c in files.items():
     )
 
 
-print("IMA CONVERSATION GATEWAY + IDENTITY LAYER CREATED")

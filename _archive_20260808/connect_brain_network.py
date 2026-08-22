@@ -117,15 +117,12 @@ def verify():
         "brain_sync"
     ]
 
-    print("=== VERIFY ===")
 
     for m in modules:
         try:
             importlib.import_module(m)
-            print("[OK]",m)
 
         except Exception as e:
-            print("[FAIL]",m,e)
 
 
     import ima_master_runtime
@@ -139,8 +136,6 @@ def verify():
     ]:
         r=master.ask(q)
 
-        print("\nQ:",q)
-        print(
             "A:",
             r.get("response","")[:120]
         )
@@ -151,4 +146,3 @@ create_sync()
 verify()
 create_lock()
 
-print("\nBRAIN NETWORK LOCKED")

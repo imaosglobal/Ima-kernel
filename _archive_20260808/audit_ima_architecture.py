@@ -30,4 +30,3 @@ for f in Path(".").rglob("*"):
     if "governance" in s:
         checks["governance"].append(str(f))
 
-print(json.dumps(checks,indent=2,ensure_ascii=False))

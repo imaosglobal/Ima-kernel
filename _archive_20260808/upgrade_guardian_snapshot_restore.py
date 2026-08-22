@@ -21,14 +21,11 @@ def guardian_restore_core():
             backup = snap / f
 
             if backup.exists():
-                print("[RESTORE]", f)
                 shutil.copy2(backup, target)
 
                 try:
                     py_compile.compile(str(target), doraise=True)
-                    print("[RESTORED OK]", f)
                 except Exception:
-                    print("[RESTORE FAILED]", f)
 
 if __name__ == "__main__":
     guardian_restore_core()

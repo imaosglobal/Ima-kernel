@@ -134,7 +134,6 @@ def analyze():
 
 if __name__=="__main__":
     analyze()
-    print("EVOLUTION BRAIN UPDATED")
 PY
 
 
@@ -174,7 +173,6 @@ p.write_text(
 )
 
 
-print("GOALS GENERATED")
 PY
 
 
@@ -213,7 +211,6 @@ p.write_text(
 )
 
 
-print("DECISIONS GENERATED")
 PY
 
 

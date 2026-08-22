@@ -254,7 +254,6 @@ data = {
 }
 
 p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-print("[OK] Created", p)
 PY
 
 test -s .ima/governance/IMA_VISION_CONTRACT.json \
@@ -310,7 +309,6 @@ data = {
 
 p = Path(".ima/governance/IMA_SYNERGY_MAP.json")
 p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-print("[OK] Created", p)
 PY
 
 test -s .ima/governance/IMA_SYNERGY_MAP.json \

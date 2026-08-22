@@ -60,7 +60,3 @@ subprocess.run([
 "IMA guardian initial checkpoint"
 ])
 
-print("[OK] IMA Guardian installed")
-print("Git protection enabled")
-print("Backups excluded")
-print("Checkpoint created")

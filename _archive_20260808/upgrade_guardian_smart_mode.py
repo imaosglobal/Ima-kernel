@@ -103,6 +103,4 @@ def smart_changed():
         encoding="utf8"
     )
 
-    print("[OK]", name)
 
-print("[OK] smart mode installed")

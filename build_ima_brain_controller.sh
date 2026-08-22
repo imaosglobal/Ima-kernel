@@ -31,7 +31,6 @@ def update(event="cycle_check"):
 
 
 if __name__=="__main__":
-    print(json.dumps(update(),indent=2))
 PY
 
 
@@ -72,7 +71,6 @@ def scan():
 
 
 if __name__=="__main__":
-    print(json.dumps(scan(),indent=2))
 PY
 
 
@@ -108,7 +106,6 @@ def create_goal():
 
 
 if __name__=="__main__":
-    print(json.dumps(create_goal(),indent=2))
 PY
 
 
@@ -161,7 +158,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(json.dumps(run(),indent=2))
 PY
 
 

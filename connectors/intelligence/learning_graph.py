@@ -19,7 +19,6 @@ def understand():
     }
 
 if __name__ == "__main__":
-    print(json.dumps(
         understand(),
         indent=2,
         ensure_ascii=False

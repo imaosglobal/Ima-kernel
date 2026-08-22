@@ -11,11 +11,8 @@ def incremental_cycle():
 
     changed = smart_diff()
 
-    print("=== SMART INCREMENTAL CYCLE ===")
-    print("[CHANGED]", len(changed))
 
     if not changed:
-        print("[OK] nothing changed")
         return
 
     python_changed = [
@@ -28,7 +25,6 @@ def incremental_cycle():
         import subprocess
 
         for f in python_changed:
-            print("[CHECK]", f)
 
             subprocess.run(
                 [
@@ -40,7 +36,6 @@ def incremental_cycle():
             )
 
     else:
-        print("[FULL AUDIT REQUIRED]")
 
         import subprocess
 
@@ -62,4 +57,3 @@ def incremental_cycle():
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] incremental guardian added")

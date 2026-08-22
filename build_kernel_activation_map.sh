@@ -59,7 +59,6 @@ for f in files:
 json.dumps(report,indent=2)
 )
 
-print(json.dumps(report,indent=2))
 PY
 
 

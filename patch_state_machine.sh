@@ -64,7 +64,6 @@ from ima_system import emit
 
 emit("KERNEL_BOOT")
 emit("KERNEL_READY")
-print("events injected")
 PY
 
 
@@ -76,7 +75,6 @@ from ima_reducer import reduce
 
 state = reduce(load_events())
 
-print(state)
 PY
 
 git add .ima/ima_reducer.py ima_system.py

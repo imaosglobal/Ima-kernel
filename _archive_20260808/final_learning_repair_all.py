@@ -6,12 +6,10 @@ import time
 
 ROOT = Path("learning")
 
-print("=== IMA FINAL LEARNING REPAIR ===")
 
 # 1. backup
 backup = Path(f"learning_backup_final_clean_{int(time.time())}")
 shutil.copytree(ROOT, backup)
-print("[BACKUP]", backup)
 
 
 # 2. remove broken backup python files
@@ -27,7 +25,6 @@ for p in ROOT.rglob("*.py"):
         p.unlink()
         removed += 1
 
-print("[REMOVED BACKUPS]", removed)
 
 
 # 3. fix malformed imports in active files
@@ -55,13 +52,10 @@ for p in ROOT.rglob("*.py"):
     if text != old:
         p.write_text(text,encoding="utf8")
         fixed += 1
-        print("[FIXED]",p)
 
-print("[IMPORT FIXES]",fixed)
 
 
 # 4. compile active python only
-print("[COMPILE]")
 
 failed=[]
 
@@ -84,25 +78,17 @@ for p in ROOT.rglob("*.py"):
 
 
 if failed:
-    print("[FAILED]")
     for p,e in failed:
-        print("\n",p)
-        print(e)
 else:
-    print("[ALL PYTHON OK]")
 
 
 # 5. source test
-print("[SOURCE STATUS]")
 
 try:
     from learning.source_manager import source_status
 
     for s in source_status():
-        print("-",s)
 
 except Exception as e:
-    print("[STATUS ERROR]",e)
 
 
-print("=== FINAL REPAIR COMPLETE ===")

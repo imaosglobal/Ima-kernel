@@ -28,7 +28,5 @@ new = '''def answer(question, events):
 '''
 
 if old not in s:
-    print("לא נמצא מקום להחלפה")
 else:
     p.write_text(s.replace(old, new))
-    print("IMA emotional layer installed")

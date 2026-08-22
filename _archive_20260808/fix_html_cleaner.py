@@ -49,4 +49,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] html extractor rebuilt")

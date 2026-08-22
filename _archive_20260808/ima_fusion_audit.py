@@ -41,5 +41,3 @@ Path(".ima/reports/fusion_audit.json").write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
-print("[OK] FUSION AUDIT COMPLETE")

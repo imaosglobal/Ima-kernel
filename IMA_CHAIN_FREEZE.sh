@@ -134,8 +134,6 @@ with open("$POLICY","w") as f:
     json.dump(policy,f,indent=2)
 
 
-print("SELECTED RUNTIME:")
-print(active)
 
 PY
 
@@ -151,7 +149,6 @@ with open("$CHAIN") as f:
 assert c["canonical"]["brain"]=="learning/meta_orchestrator.py"
 assert c["policy"]["single_chain"] is True
 
-print("CHAIN VERIFICATION PASS")
 
 PY
 

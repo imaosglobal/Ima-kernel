@@ -103,5 +103,3 @@ Path(".ima/universal_pipeline_report.json").write_text(
 )
 
 
-print(json.dumps(results,ensure_ascii=False,indent=2))
-print("UNIVERSAL KNOWLEDGE PIPELINE CONNECTED")

@@ -33,4 +33,3 @@ p.write_text(
 )
 
 
-print("GOALS GENERATED")

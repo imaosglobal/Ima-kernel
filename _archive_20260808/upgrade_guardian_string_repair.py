@@ -20,7 +20,6 @@ def repair_unterminated_string(path):
     for line in lines:
         if "IMA DAILY EVOLUTION SAVED" in line:
             out.extend([
-                '    print(',
                 '        "IMA DAILY EVOLUTION SAVED"',
                 '    )'
             ])
@@ -42,7 +41,6 @@ def repair_unterminated_string(path):
 
     if changed:
         p.write_text("\n".join(out)+"\n", encoding="utf8")
-        print("[REPAIRED STRING]", path)
 
     return changed
 '''
@@ -57,4 +55,3 @@ text = text.replace(
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] guardian string repair added")

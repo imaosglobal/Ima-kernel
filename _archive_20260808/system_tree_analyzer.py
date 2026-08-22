@@ -89,8 +89,6 @@ def main():
         encoding="utf-8"
     )
 
-    print("=== IMA SYSTEM TREE ANALYSIS ===")
-    print("PYTHON FILES:", len(files))
 
     imports = sum(
         len(x["imports"])
@@ -102,10 +100,6 @@ def main():
         for x in report
     )
 
-    print("IMPORT LINKS:", imports)
-    print("FUNCTIONS:", functions)
-    print()
-    print("CREATED: ima_system_map.json")
 
 
 if __name__ == "__main__":

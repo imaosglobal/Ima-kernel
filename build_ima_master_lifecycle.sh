@@ -40,7 +40,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(json.dumps(run(),indent=2,ensure_ascii=False))
 PY
 
 
@@ -73,7 +72,6 @@ def decide():
 
 
 if __name__=="__main__":
-    print(json.dumps(decide(),indent=2))
 PY
 
 
@@ -127,7 +125,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(json.dumps(run(),indent=2))
 PY
 
 
@@ -162,7 +159,6 @@ plan={
 json.dumps(plan,indent=2,ensure_ascii=False)
 )
 
-print(plan)
 PY
 
 
@@ -195,7 +191,6 @@ for f in files:
 json.dumps(memory,indent=2,ensure_ascii=False)
 )
 
-print("memory consolidated")
 PY
 
 

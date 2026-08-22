@@ -102,16 +102,8 @@ Path("ima_full_inventory.json").write_text(
 )
 
 
-print("=== IMA FULL INVENTORY ===")
-print("FILES:", len(data["files"]))
-print("FOLDERS:", len(data["folders"]))
 
-print("\nTECHNOLOGIES:")
 for k,v in data["technologies"].items():
-    print(k, ":", v)
 
-print("\nIMPORTANT FILES:")
 for x in data["important_files"][:100]:
-    print("-", x)
 
-print("\nCREATED ima_full_inventory.json")

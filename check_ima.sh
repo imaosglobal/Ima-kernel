@@ -17,9 +17,7 @@ python3 - <<'PY'
 from ima_kernel import load_events
 try:
     from ima_reducer import reduce
-    print(reduce(load_events()))
 except Exception as e:
-    print("ERROR:",e)
 PY
 
 echo

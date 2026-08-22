@@ -10,7 +10,6 @@ backup=p.with_suffix(
 
 shutil.copy2(p,backup)
 
-print("[BACKUP]",backup)
 
 text=p.read_text(
     encoding="utf8"
@@ -52,7 +51,6 @@ p.write_text(
     encoding="utf8"
 )
 
-print("[COMPILE]")
 
 import subprocess
 
@@ -68,7 +66,5 @@ text=True
 )
 
 if r.returncode:
-    print(r.stderr)
 else:
-    print("[FUSION RANKING ENABLED]")
 

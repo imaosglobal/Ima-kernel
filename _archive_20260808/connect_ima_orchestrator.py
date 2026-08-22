@@ -6,7 +6,6 @@ import shutil
 ROOT = Path(".")
 stamp = str(int(time.time()))
 
-print("=== IMA ORCHESTRATOR CONNECTOR ===")
 
 # backup
 backup = ROOT / f".ima/orchestrator_backup_{stamp}"
@@ -20,7 +19,6 @@ for f in [
     if p.exists():
         shutil.copy2(p, backup / f)
 
-print("[OK] backup:", backup)
 
 # update fusion runtime
 fusion = ROOT / "ima_fusion_runtime.py"
@@ -52,7 +50,6 @@ if fusion.exists():
         )
 
     fusion.write_text(text, encoding="utf-8")
-    print("[OK] fusion updated")
 
 # update self knowledge registry
 registry = ROOT / ".ima/ima_self_knowledge_registry.json"
@@ -91,10 +88,8 @@ registry.write_text(
     encoding="utf-8"
 )
 
-print("[OK] self knowledge updated")
 
 # verification
-print("\n=== VERIFY ===")
 
 checks = [
     "ima_fusion_runtime.py",
@@ -103,9 +98,7 @@ checks = [
 ]
 
 for c in checks:
-    print(
         c,
         "OK" if (ROOT / c).exists() else "MISSING"
     )
 
-print("\n=== DONE ===")

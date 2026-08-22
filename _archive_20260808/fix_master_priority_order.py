@@ -81,7 +81,4 @@ for q in [
     "מוזיקה"
 ]:
     r=m.ask(q)
-    print("\nQ:",q)
-    print(r.get("response","")[:500])
 
-print("MASTER PRIORITY ORDER FIXED")

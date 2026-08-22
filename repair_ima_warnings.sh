@@ -45,7 +45,6 @@ try:
         json.dumps(obj, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8"
     )
-    print(f"REPAIRED  {path}  [already structurally valid after normalization]")
     raise SystemExit(0)
 except Exception:
     pass
@@ -63,7 +62,6 @@ try:
             json.dumps(obj, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8"
         )
-        print(f"REPAIRED  {path}  [removed trailing non-JSON text]")
         raise SystemExit(0)
 except Exception:
     pass
@@ -83,7 +81,6 @@ try:
         json.dumps(obj, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8"
     )
-    print(f"REPAIRED  {path}  [removed trailing commas]")
     raise SystemExit(0)
 except Exception:
     pass
@@ -119,12 +116,10 @@ for cut in range(0, min(20, len(lines)) + 1):
             json.dumps(obj, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8"
         )
-        print(f"REPAIRED  {path}  [recovered truncated JSON]")
         raise SystemExit(0)
     except Exception:
         continue
 
-print(f"FAILED    {path}  [no safe automatic repair found]")
 raise SystemExit(1)
 PY
 }

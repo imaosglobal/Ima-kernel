@@ -9,7 +9,6 @@ echo "[SYSTEM HEALTH]"
 
 python3 - <<'PY'
 from product.health.health_manager import health_report
-print(health_report())
 PY
 
 echo ""
@@ -19,7 +18,6 @@ python3 - <<'PY'
 from product.gateway.product_gateway import ask
 
 r = ask("מה למדת ממני?")
-print(r["response"])
 PY
 
 echo ""

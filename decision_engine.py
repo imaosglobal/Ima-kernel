@@ -32,4 +32,3 @@ p.write_text(
 )
 
 
-print("DECISIONS GENERATED")

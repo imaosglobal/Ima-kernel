@@ -28,21 +28,13 @@ from product.version.version_manager import current
 import conversation_layer
 import ima_master_runtime
 
-print("[OK] Core imports")
-print("[CORE] runtime connected")
-print("[GATEWAY]", product_gateway.health())
-print("[LAUNCHER]", product_launcher.launch_status())
-print("[VERSION]", current())
 
 result = product_gateway.ask("IMA core product integration test")
 
-print("[RESPONSE STATUS]", result.get("status", "connected"))
-print("[MEMORY]", result.get("connections", {}))
 
 if not result:
     raise SystemExit(1)
 
-print("[OK] Core -> Gateway -> Product chain")
 PY
 
 echo

@@ -27,7 +27,6 @@ python3 - <<PY
 from learning.brain_guard import verify_brain
 
 verify_brain("$BRAIN")
-print("BRAIN OK")
 PY
 
 echo
@@ -80,9 +79,6 @@ python3 - <<'PY'
 from learning.meta_orchestrator import run_meta_analysis
 r = run_meta_analysis()
 
-print("Capabilities:", r.get("capabilities"))
-print("Health modules:", r.get("health_modules"))
-print("Status:", r.get("status"))
 PY
 
 

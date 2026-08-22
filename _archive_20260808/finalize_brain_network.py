@@ -137,19 +137,15 @@ def lock():
 
 backup()
 
-print("BACKUP OK")
 
-print(
     "RUNTIME:",
     patch_runtime()
 )
 
-print(
     "COMPILE:",
     verify_compile()
 )
 
-print(
     "TEST:",
     json.dumps(
         verify_runtime(),
@@ -160,4 +156,3 @@ print(
 
 lock()
 
-print("FINAL LOCK CREATED")

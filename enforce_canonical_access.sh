@@ -14,14 +14,12 @@ fi
 KERNEL=$(python3 - <<'PY'
 import json
 p=".ima/agi_evolution/runtime/CANONICAL_KERNEL_LOCK.json"
-print(json.load(open(p))["kernel"])
 PY
 )
 
 HANDOFF=$(python3 - <<'PY'
 import json
 p=".ima/agi_evolution/runtime/CANONICAL_KERNEL_LOCK.json"
-print(json.load(open(p))["handoff"])
 PY
 )
 

@@ -77,9 +77,6 @@ assert d["status"]=="SERVICE_CONTRACT_READY"
 assert d["core"]=="FROZEN"
 assert len(d["clients"])==5
 
-print("[OK] Service contract")
-print("[OK] Core protected")
-print("[OK] Client compatibility verified")
 PY
 
 echo "[4] Hash"

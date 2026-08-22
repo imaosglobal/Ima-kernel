@@ -27,7 +27,6 @@ fi
 python3 - <<PY >> "$LOG" 2>&1
 from learning.brain_guard import verify_brain
 verify_brain("$BRAIN")
-print("BRAIN LOCK OK")
 PY
 
 
@@ -81,7 +80,6 @@ def build_registry():
     return result
 
 if __name__=="__main__":
-    print(build_registry())
 PY
 fi
 
@@ -104,7 +102,6 @@ echo "[6] META ANALYSIS" | tee -a "$LOG"
 python3 - <<'PY' >> "$LOG" 2>&1
 from learning.meta_orchestrator import run_meta_analysis
 import json
-print(json.dumps(
 run_meta_analysis(),
 ensure_ascii=False,
 indent=2))

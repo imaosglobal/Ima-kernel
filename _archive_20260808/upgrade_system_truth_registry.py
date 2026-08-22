@@ -135,4 +135,3 @@ save(
 )
 
 
-print("SYSTEM TRUTH REGISTRY UPGRADED")

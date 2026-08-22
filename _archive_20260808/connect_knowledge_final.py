@@ -73,4 +73,3 @@ Path(".ima/knowledge_connection.lock").write_text(
     encoding="utf8"
 )
 
-print("KNOWLEDGE FINAL CONNECTION CREATED")

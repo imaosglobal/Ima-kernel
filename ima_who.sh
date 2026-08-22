@@ -13,9 +13,7 @@ import json
 
 p=Path(".ima/runtime/canonical_boot_guard.json")
 if p.exists():
- print(json.loads(p.read_text()))
 else:
- print("no guard report")
 PY
 
 echo ""

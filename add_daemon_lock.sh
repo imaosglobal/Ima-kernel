@@ -26,7 +26,6 @@ def acquire_lock():
     os.makedirs(".ima", exist_ok=True)
 
     if os.path.exists(LOCK_FILE):
-        print("[IMA DAEMON] already running")
         raise SystemExit(1)
 
     with open(LOCK_FILE, "w") as f:
@@ -46,8 +45,6 @@ if "def acquire_lock" not in s:
 
 # להפעיל lock בתחילת run
 s = s.replace(
-    'def run():\n    print("[IMA DAEMON] stable brain started")',
-    'def run():\n    acquire_lock()\n    print("[IMA DAEMON] stable brain started")'
 )
 
 p.write_text(s)

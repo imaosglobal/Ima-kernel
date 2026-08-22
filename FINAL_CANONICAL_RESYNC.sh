@@ -62,7 +62,6 @@ data["files"]=hashes
 
 lock.write_text(json.dumps(data,indent=2)+"\n")
 
-print("[OK] HASHES UPDATED")
 PY
 
 

@@ -31,8 +31,6 @@ l=product_launcher.launch_status()
 assert g["runtime_connected"] is True
 assert l["status"]=="READY"
 
-print("[OK] Runtime available")
-print("[OK] Gateway available")
 PY
 
 echo "[3] Deployment manifest"
@@ -75,9 +73,6 @@ data=json.loads(p.read_text())
 assert data["status"]=="DEPLOYMENT_READY"
 assert data["core"]=="FROZEN"
 
-print("[OK] Deployment manifest")
-print("[OK] Core protected")
-print("[OK] Deployment gateway ready")
 PY
 
 echo "=== DEPLOYMENT GATEWAY READY ==="

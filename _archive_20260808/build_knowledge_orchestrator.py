@@ -69,6 +69,4 @@ for name,data in files.items():
     p=base/name
     p.write_text(data,encoding="utf8")
     py_compile.compile(str(p),doraise=True)
-    print("[OK]",p)
 
-print("=== KNOWLEDGE ORCHESTRATOR READY ===")

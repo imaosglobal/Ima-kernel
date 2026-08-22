@@ -34,5 +34,3 @@ text="\n".join(new)+"\n"
 
 p.write_text(text,encoding="utf8")
 
-print("PIPELINE FIXED")
-print("BACKUP:",backup)

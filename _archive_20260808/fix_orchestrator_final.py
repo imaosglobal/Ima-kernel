@@ -126,4 +126,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] clean orchestrator installed")

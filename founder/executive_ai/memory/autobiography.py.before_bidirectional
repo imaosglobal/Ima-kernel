@@ -1,0 +1,208 @@
+import json
+import time
+import uuid
+from pathlib import Path
+from datetime import datetime, timezone
+
+ROOT = Path.home() / ".ima" / "autobiography"
+EVENTS_FILE = ROOT / "events.jsonl"
+PROFILES_FILE = ROOT / "profiles.json"
+SHARING_FILE = ROOT / "sharing.json"
+
+ROOT.mkdir(parents=True, exist_ok=True)
+
+
+def _now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def _write_json(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+    tmp.replace(path)
+
+
+def _append_event(event):
+    with EVENTS_FILE.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(event, ensure_ascii=False) + "\n")
+
+
+def create_user(user_id, name=None):
+    profiles = {}
+
+    if PROFILES_FILE.exists():
+        try:
+            profiles = json.loads(
+                PROFILES_FILE.read_text(encoding="utf-8")
+            )
+        except Exception:
+            profiles = {}
+
+    if user_id not in profiles:
+        profiles[user_id] = {
+            "user_id": user_id,
+            "name": name,
+            "created_at": _now()
+        }
+        _write_json(PROFILES_FILE, profiles)
+
+    return profiles[user_id]
+
+
+def record(
+    user_id,
+    event,
+    event_type="life_event",
+    source="ima",
+    timestamp=None,
+    metadata=None,
+    artifacts=None,
+    relationships=None,
+):
+    create_user(user_id)
+
+    entry = {
+        "event_id": str(uuid.uuid4()),
+        "user_id": user_id,
+        "timestamp": timestamp or _now(),
+        "recorded_at": _now(),
+        "type": event_type,
+        "source": source,
+        "event": event,
+        "metadata": metadata or {},
+        "artifacts": artifacts or [],
+        "relationships": relationships or [],
+    }
+
+    _append_event(entry)
+    return entry
+
+
+def recall(user_id, limit=None):
+    if not EVENTS_FILE.exists():
+        return []
+
+    events = []
+
+    with EVENTS_FILE.open("r", encoding="utf-8") as f:
+        for line in f:
+            try:
+                item = json.loads(line)
+            except Exception:
+                continue
+
+            if item.get("user_id") == user_id:
+                events.append(item)
+
+    events.sort(key=lambda x: x.get("timestamp", ""))
+
+    if limit is not None:
+        return events[-limit:]
+
+    return events
+
+
+def timeline(user_id):
+    return recall(user_id)
+
+
+def add_artifact(
+    user_id,
+    event_id,
+    artifact_type,
+    path=None,
+    uri=None,
+    metadata=None,
+):
+    events = recall(user_id)
+
+    for event in events:
+        if event.get("event_id") == event_id:
+            artifact = {
+                "artifact_id": str(uuid.uuid4()),
+                "type": artifact_type,
+                "path": path,
+                "uri": uri,
+                "metadata": metadata or {},
+                "added_at": _now(),
+            }
+
+            event.setdefault("artifacts", []).append(artifact)
+            _rewrite_user_events(user_id, events)
+
+            return artifact
+
+    return None
+
+
+def _rewrite_user_events(user_id, user_events):
+    if not EVENTS_FILE.exists():
+        return
+
+    all_events = []
+
+    with EVENTS_FILE.open("r", encoding="utf-8") as f:
+        for line in f:
+            try:
+                item = json.loads(line)
+            except Exception:
+                continue
+
+            if item.get("user_id") != user_id:
+                all_events.append(item)
+
+    all_events.extend(user_events)
+    all_events.sort(key=lambda x: x.get("timestamp", ""))
+
+    tmp = EVENTS_FILE.with_suffix(".tmp")
+
+    with tmp.open("w", encoding="utf-8") as f:
+        for item in all_events:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+
+    tmp.replace(EVENTS_FILE)
+
+
+def set_sharing(user_id, subject, policy):
+    sharing = {}
+
+    if SHARING_FILE.exists():
+        try:
+            sharing = json.loads(
+                SHARING_FILE.read_text(encoding="utf-8")
+            )
+        except Exception:
+            sharing = {}
+
+    sharing.setdefault(user_id, {})
+    sharing[user_id][subject] = policy
+
+    _write_json(SHARING_FILE, sharing)
+
+    return sharing[user_id][subject]
+
+
+def get_sharing(user_id):
+    if not SHARING_FILE.exists():
+        return {}
+
+    try:
+        sharing = json.loads(
+            SHARING_FILE.read_text(encoding="utf-8")
+        )
+    except Exception:
+        return {}
+
+    return sharing.get(user_id, {})
+
+
+def sources(user_id):
+    return sorted(set(
+        x.get("source")
+        for x in recall(user_id)
+        if x.get("source")
+    ))

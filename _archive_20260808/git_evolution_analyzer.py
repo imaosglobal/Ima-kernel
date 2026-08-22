@@ -29,7 +29,6 @@ def analyze():
     )
 
     if not logs:
-        print("NO GIT HISTORY FOUND")
         return
 
 
@@ -125,7 +124,6 @@ def analyze():
             )
 
 
-    print(
         "GIT HISTORY COMPRESSED"
     )
 

@@ -46,13 +46,7 @@ tests=[
 
 for t in tests:
     r=ima.ask(t)
-    print("\n---")
-    print(t)
-    print(r.get("response"))
-    print("brain:",r.get("brain_connected"))
-    print("mother:",r.get("mother_connected"))
 
-print("\n[OK] CORE RESPONSE TEST")
 PY
 
 

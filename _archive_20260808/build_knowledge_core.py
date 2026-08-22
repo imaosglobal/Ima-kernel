@@ -84,4 +84,3 @@ def build_response(data):
 for name,content in files.items():
     (base/name).write_text(content,encoding="utf8")
 
-print("[OK] Knowledge Core created")

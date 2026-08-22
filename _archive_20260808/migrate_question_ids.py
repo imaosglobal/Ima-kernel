@@ -19,5 +19,4 @@ with src.open() as f, out.open("w") as w:
 
         w.write(json.dumps(e, ensure_ascii=False) + "\n")
 
-print("MIGRATED:", count)
 

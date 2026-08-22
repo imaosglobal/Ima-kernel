@@ -24,7 +24,6 @@ echo "[1] Verify canonical brain"
 python3 - <<'PY'
 from learning.brain_guard import verify_brain
 verify_brain("learning/meta_orchestrator.py")
-print("CANONICAL BRAIN OK")
 PY
 
 
@@ -159,7 +158,6 @@ json.dumps(data,ensure_ascii=False,indent=2),
 encoding="utf-8"
 )
 
-print("ORCHESTRATOR MASTER REGISTRY CREATED")
 PY
 
 

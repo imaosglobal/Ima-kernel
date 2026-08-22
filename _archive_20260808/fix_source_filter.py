@@ -33,4 +33,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] source filter fixed")

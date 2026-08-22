@@ -52,9 +52,7 @@ sys.path.insert(0,'.ima')
 try:
     from ima_reducer import reduce
     state = reduce(load_events())
-    print("STATE:", state)
 except Exception as e:
-    print("STATE CHECK ERROR:", e)
 PY
 
 echo "[10] Git status:"

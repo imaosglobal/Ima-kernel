@@ -112,10 +112,6 @@ def status():
     events = load_events()
     graph = build_graph(events)
 
-    print("=== IMA QGE v1 ===")
-    print("EVENTS:", len(events))
-    print("NODES:", len(graph["nodes"]))
-    print("EDGES:", len(graph["edges"]))
 
 
 if __name__ == "__main__":
@@ -124,6 +120,5 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         status()
     elif sys.argv[1] == "ask":
-        print(ask(" ".join(sys.argv[2:])))
     else:
         status()

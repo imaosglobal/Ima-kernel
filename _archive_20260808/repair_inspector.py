@@ -22,10 +22,8 @@ text=text.replace(
 
 text=text.replace(
 '''result["trust_score"]=score''',
-'''print("[INSPECT SCORE]", candidate.get("name"), score)
     result["trust_score"]=score'''
 )
 
 p.write_text(text,encoding="utf8")
 
-print("INSPECTOR REPAIRED")

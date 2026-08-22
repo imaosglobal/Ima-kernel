@@ -27,7 +27,6 @@ fi
 python3 - <<'PY'
 from learning.brain_guard import verify_brain
 verify_brain("learning/meta_orchestrator.py")
-print("BRAIN LOCK OK")
 PY
 
 

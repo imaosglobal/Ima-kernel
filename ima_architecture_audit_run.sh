@@ -53,14 +53,9 @@ for m in mods:
     except Exception as e:
         bad.append((m,str(e)))
 
-print("OK:",len(ok))
 for x in ok:
-    print(" ",x)
 
-print()
-print("FAILED:",len(bad))
 for x,e in bad:
-    print(" ",x,e)
 PY
 
 echo
@@ -79,7 +74,6 @@ from learning.brain_guard import verify_brain
 
 verify_brain("learning/meta_orchestrator.py")
 
-print("CANONICAL BRAIN OK")
 PY
 
 echo

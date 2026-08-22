@@ -35,12 +35,8 @@ for f,h in lock["components"].items():
         changed.append(f)
 
 if changed or missing:
-    print("[FAIL]")
-    print("changed:",changed)
-    print("missing:",missing)
     sys.exit(1)
 
-print("[OK] HASH INTEGRITY")
 PY
 
 
@@ -63,10 +59,8 @@ for x in checks:
         bad.append(x)
 
 if bad:
-    print("[FAIL] MEMORY",bad)
     raise SystemExit(1)
 
-print("[OK] MEMORY")
 PY
 
 

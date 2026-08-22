@@ -93,4 +93,3 @@ save(
 )
 
 
-print("KNOWLEDGE ROUTER CONNECTED")

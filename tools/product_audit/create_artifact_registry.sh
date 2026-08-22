@@ -43,9 +43,6 @@ data=json.loads(p.read_text())
 assert data["status"]=="READY"
 assert data["runtime"]=="CANONICAL"
 
-print("[OK] Artifact registry")
-print("[OK] Runtime locked")
-print("[OK] Distribution artifact ready")
 PY
 
 echo "=== ARTIFACT REGISTRY READY ==="

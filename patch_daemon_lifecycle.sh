@@ -12,10 +12,8 @@ s = p.read_text()
 
 s = s.replace(
 '''def run():
-    print("[IMA DAEMON] stable brain started")
 ''',
 '''def run():
-    print("[IMA DAEMON] stable brain started")
 
     try:
         emit("KERNEL_BOOT")
@@ -74,7 +72,6 @@ import sys
 sys.path.insert(0,'.ima')
 from ima_reducer import reduce
 
-print(reduce(load_events()))
 PY
 
 

@@ -45,7 +45,6 @@ s=s.replace(
 
 p.write_text(s)
 
-print("[OK] api/server.py updated")
 PY
 
 

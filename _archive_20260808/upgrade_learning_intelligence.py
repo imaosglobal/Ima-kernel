@@ -3,7 +3,6 @@ import json
 import shutil
 import time
 
-print("=== IMA ADAPTIVE LEARNING UPGRADE ===")
 
 backup=Path(
     f"learning_backup_adaptive_{int(time.time())}"
@@ -14,7 +13,6 @@ shutil.copytree(
     backup
 )
 
-print("[BACKUP]",backup)
 
 
 # policy
@@ -79,7 +77,6 @@ Path(
 '''
 import hashlib
 
-def fingerprint(text):
 
     return hashlib.sha256(
         text.encode("utf8")
@@ -120,17 +117,14 @@ Path(
 
 def learning_cycle():
 
-    print(
     "[ADAPTIVE LEARNING]"
     )
 
-    print(
     "Resource limit:",
     POLICY["max_memory_mb"],
     "MB"
     )
 
-    print(
     "Sources per cycle:",
     POLICY["max_background_sources_per_cycle"]
     )
@@ -156,7 +150,6 @@ encoding="utf8"
 )
 
 
-print("[FILES CREATED]")
 
 
 # compile
@@ -182,11 +175,7 @@ for p in Path("learning").rglob("*.py"):
 
 
 if failed:
-    print("[FAILED]")
     for f in failed:
-        print(f)
 else:
-    print("[ALL PYTHON OK]")
 
 
-print("=== UPGRADE COMPLETE ===")

@@ -41,13 +41,7 @@ if expected and actual != expected:
 if lock.get("fallback")!="disabled":
     raise SystemExit("FALLBACK ENABLED - BLOCKED")
 
-print("[OK] CANONICAL POLICY VERIFIED")
-print("[OK] HASH VERIFIED")
-print("[OK] FALLBACK DISABLED")
 
-print("=== IMA SINGLE ENTRY ===")
-print("KERNEL:",lock["kernel"])
-print("HANDOFF:",lock["handoff"])
 
 boot=R/"ima_boot_gate.py"
 
@@ -63,4 +57,3 @@ subprocess.run(
     check=True
 )
 
-print("=== IMA SINGLE ENTRY COMPLETE ===")

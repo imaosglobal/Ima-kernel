@@ -26,7 +26,6 @@ echo "[5] Check imports"
 python3 - <<'PY'
 import ima_system
 import ima_daemon
-print("IMPORT OK")
 PY
 
 echo "[6] Start clean daemon"
@@ -41,7 +40,6 @@ echo "[8] State"
 python3 - <<'PY'
 from ima_kernel import load_events
 from ima_reducer import reduce
-print(reduce(load_events()))
 PY
 
 echo "[9] Test query"

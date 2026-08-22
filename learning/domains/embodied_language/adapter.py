@@ -120,8 +120,3 @@ def domain_capabilities():
 
 if __name__ == "__main__":
     c = domain_capabilities()
-    print("IMA Embodied Language Adapter")
-    print("Languages:", len(c["languages"]))
-    print("Concepts:", len(c["concepts"]))
-    print("Capabilities:", len(c["capabilities"]))
-    print("Status: READY")

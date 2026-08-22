@@ -21,8 +21,6 @@ py_files = [
 ]'''
 
 if old not in text:
-    print("[FAIL] scan line not found")
 else:
     text = text.replace(old, new)
     p.write_text(text, encoding="utf8")
-    print("[OK] audit scan fixed")

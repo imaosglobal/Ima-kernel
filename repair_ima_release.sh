@@ -26,12 +26,10 @@ files=[
 ]
 
 for f in files:
-    print("checking",f)
     if not f.exists():
         raise SystemExit("missing "+str(f))
     ast.parse(f.read_text(encoding="utf-8"))
 
-print("ACTIVE CODE SYNTAX OK")
 PY
 
 
@@ -46,10 +44,8 @@ for m in [
     "identity_context",
     "conversation_layer"
 ]:
-    print("importing",m)
     __import__(m)
 
-print("CORE IMPORT OK")
 PY
 
 
@@ -58,7 +54,6 @@ echo "[4/10] Server check"
 python3 - <<'PY'
 import ast
 ast.parse(open("api/server.py").read())
-print("SERVER OK")
 PY
 
 

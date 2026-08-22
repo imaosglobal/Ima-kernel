@@ -101,5 +101,4 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({"error":"not_found"})
 
 
-print("IMA API ONLINE :8080")
 HTTPServer(("0.0.0.0",8080),Handler).serve_forever()

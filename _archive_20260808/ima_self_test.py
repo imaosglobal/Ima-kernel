@@ -18,11 +18,6 @@ def run(name, cmd):
         add(name, False, str(e))
 
 def main():
-    print("==============================")
-    print("        IMA SELF TEST")
-    print("==============================")
-    print("TIME:", int(time.time()))
-    print("")
 
     files=[
         "kernel/runtime/CANONICAL/IMA_RUNTIME.js",
@@ -50,7 +45,6 @@ def main():
         [
             "python3",
             "-c",
-            "import sys;sys.path.insert(0,'kernel/runtime/CANONICAL');import python_bridge;print(python_bridge.boot_runtime())"
         ]
     )
 
@@ -60,9 +54,7 @@ def main():
     add("MEMORY", mem.exists(), str(mem))
     add("LEDGER", ledger.exists(), str(ledger))
 
-    print("")
     for name,ok,info in REPORT:
-        print("[{}] {:18} {}".format(
             "OK" if ok else "FAIL",
             name,
             info
@@ -70,12 +62,9 @@ def main():
 
     failed=[x for x in REPORT if not x[1]]
 
-    print("")
     if failed:
-        print("=== SELF TEST FAILED ===")
         return 1
 
-    print("=== SELF TEST PASSED ===")
     return 0
 
 if __name__=="__main__":

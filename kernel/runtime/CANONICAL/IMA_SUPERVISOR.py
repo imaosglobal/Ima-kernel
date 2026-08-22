@@ -37,12 +37,8 @@ def verify():
 def boot():
 
     if not verify():
-        print("[FAIL] SUPERVISOR INTEGRITY")
         return 1
 
-    print("[OK] CANONICAL SUPERVISOR")
-    print("[OK] HASH VERIFIED")
-    print("[OK] LOCKED")
 
     return 0
 

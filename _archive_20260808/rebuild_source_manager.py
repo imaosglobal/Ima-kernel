@@ -105,4 +105,3 @@ def get_real_source(question):
 encoding="utf8"
 )
 
-print("SOURCE MANAGER REBUILT")

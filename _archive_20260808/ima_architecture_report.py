@@ -39,10 +39,6 @@ out.write_text(
 )
 
 
-print("=== IMA ARCHITECTURE REPORT ===")
-print("Candidates:")
 
 for item in top[:20]:
-    print(item)
     
-print("Saved:",out)

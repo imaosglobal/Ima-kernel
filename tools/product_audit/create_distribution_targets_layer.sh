@@ -62,9 +62,6 @@ data=json.loads(p.read_text())
 assert len(data["targets"])==5
 assert data["gateway"]=="VERIFIED"
 
-print("[OK] Target registry")
-print("[OK] Five platforms registered")
-print("[OK] Distribution targets ready")
 PY
 
 echo "=== DISTRIBUTION TARGETS READY ==="

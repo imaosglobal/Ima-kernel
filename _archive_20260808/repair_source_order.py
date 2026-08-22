@@ -59,4 +59,3 @@ text=text[:pos]+insert+"\n"+text[pos:]
 
 p.write_text(text,encoding="utf8")
 
-print("SOURCE ORDER FIXED")

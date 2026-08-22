@@ -70,4 +70,3 @@ if old in s and "model_result = llm_answer" not in s:
     s=s.replace(old,new)
 
 p.write_text(s)
-print("LLM layer added")

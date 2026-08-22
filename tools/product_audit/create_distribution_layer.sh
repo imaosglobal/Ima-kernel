@@ -60,9 +60,6 @@ data=json.loads(
 assert data["distribution"]=="READY"
 assert data["core"]=="FROZEN"
 
-print("[OK] Distribution manifest")
-print("[OK] Core preserved")
-print("[OK] Product package ready")
 PY
 
 

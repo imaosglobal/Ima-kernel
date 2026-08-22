@@ -6,7 +6,6 @@ s = p.read_text()
 start = s.find("def ima_emotion_layer(question, events):")
 
 if start == -1:
-    print("ima_emotion_layer not found")
     raise SystemExit
 
 end = len(s)
@@ -46,4 +45,3 @@ def ima_emotion_layer(question, events):
 
 p.write_text(s[:start] + new)
 
-print("IMA emotion state layer updated")

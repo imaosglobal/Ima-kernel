@@ -12,7 +12,6 @@ python3 - <<'PY'
 import sys
 sys.path.insert(0,"kernel/runtime/CANONICAL")
 from python_bridge import boot_runtime
-print(boot_runtime())
 PY
 
 echo ""
@@ -28,9 +27,7 @@ for f in [
     p=Path(f)
     if p.exists():
         data=json.loads(p.read_text())
-        print(f, "OK")
         if "state" in data:
-            print(" ",data["state"])
 PY
 
 echo ""

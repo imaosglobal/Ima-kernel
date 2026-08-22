@@ -42,6 +42,4 @@ def detect_intent(question):
 '''
 
     p.write_text(s)
-    print("intent layer added")
 else:
-    print("exists")

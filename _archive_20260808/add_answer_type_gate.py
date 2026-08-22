@@ -57,4 +57,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] answer type gate added")

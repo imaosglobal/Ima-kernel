@@ -120,5 +120,3 @@ Path(".ima/universal_knowledge_graph_report.json").write_text(
     encoding="utf8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
-print("UNIVERSAL KNOWLEDGE GRAPH VERIFIED")

@@ -41,9 +41,6 @@ for c in clients:
     assert d["status"]=="BUILD_READY"
     assert d["gateway"]=="VERIFIED"
 
-print("[OK] All client builds")
-print("[OK] Gateway preserved")
-print("[OK] Artifact pipeline ready")
 PY
 
 echo "=== ARTIFACT BUILD PIPELINE READY ==="

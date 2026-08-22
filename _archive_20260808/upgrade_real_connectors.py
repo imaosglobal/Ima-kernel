@@ -167,4 +167,3 @@ for p,c in files.items():
         )
 
 
-print("REAL CONNECTOR SECURITY LAYER CREATED")

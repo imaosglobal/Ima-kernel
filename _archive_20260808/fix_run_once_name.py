@@ -10,4 +10,3 @@ text = text.replace(
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] run_once redirected to run_cycle")

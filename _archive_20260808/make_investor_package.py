@@ -80,4 +80,3 @@ for name, lines in files.items():
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text("\n".join(lines)+"\n", encoding="utf-8")
 
-print("DONE")

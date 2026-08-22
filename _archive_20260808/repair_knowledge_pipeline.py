@@ -45,4 +45,3 @@ def entity_bonus(question,text):
 py_compile.compile(str(p),doraise=True)
 
 
-print("[OK] knowledge pipeline repaired")

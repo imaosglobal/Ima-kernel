@@ -43,4 +43,3 @@ Path(".ima/runtime/system_connection_upgrade.json").write_text(
     json.dumps(report,indent=2,ensure_ascii=False)
 )
 
-print(json.dumps(report,indent=2,ensure_ascii=False))

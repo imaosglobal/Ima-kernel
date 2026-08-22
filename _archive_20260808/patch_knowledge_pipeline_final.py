@@ -75,4 +75,3 @@ Path(".ima/knowledge_pipeline_final.lock").write_text(
     encoding="utf8"
 )
 
-print("KNOWLEDGE PIPELINE CONNECTED")

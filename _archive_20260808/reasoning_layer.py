@@ -46,4 +46,3 @@ def interpret(topic):
 if __name__=="__main__":
     import sys
     for x in interpret(" ".join(sys.argv[1:])):
-        print(x)

@@ -39,9 +39,6 @@ data=json.loads(p.read_text())
 assert data["status"]=="READY"
 assert len(data["clients"])==5
 
-print("[OK] Deployment manifest")
-print("[OK] All clients registered")
-print("[OK] Gateway preserved")
 PY
 
 echo "=== CLIENT DEPLOYMENT READY ==="

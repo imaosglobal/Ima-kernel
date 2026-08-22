@@ -12,4 +12,3 @@ def boot_runtime():
     return json.loads(result)
 
 if __name__=="__main__":
-    print(boot_runtime())

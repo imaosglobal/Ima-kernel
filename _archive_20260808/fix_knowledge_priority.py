@@ -93,8 +93,6 @@ tests=[
 
 for q in tests:
     r=m.ask(q)
-    print("\nQ:",q)
-    print(r.get("response","")[:500])
 
 
 Path(".ima/knowledge_priority_fix.lock").write_text(
@@ -111,4 +109,3 @@ Path(".ima/knowledge_priority_fix.lock").write_text(
     encoding="utf8"
 )
 
-print("\nKNOWLEDGE PRIORITY FIX COMPLETE")

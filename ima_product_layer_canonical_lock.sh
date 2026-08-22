@@ -159,7 +159,6 @@ encoding="utf-8"
 
 
 for k,v in canonical.items():
-    print(
         k,
         "=>",
         v["status"],
@@ -167,8 +166,6 @@ for k,v in canonical.items():
     )
 
 
-print()
-print(
 "PRODUCT LAYER GOVERNANCE SAVED"
 )
 
@@ -187,7 +184,6 @@ verify_brain(
 "learning/meta_orchestrator.py"
 )
 
-print(
 "BRAIN OK"
 )
 

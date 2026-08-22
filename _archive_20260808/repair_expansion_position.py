@@ -63,9 +63,6 @@ for q in [
 "מה הקשר בין מוזיקה ומתמטיקה"
 ]:
     r=m.ask(q)
-    print("\nQ:",q)
-    print(r.get("response","")[:300])
-    print("EXPANSION:",r.get("knowledge_expansion"))
 
 Path(".ima/expansion_position_verified.lock").write_text(
 json.dumps(
@@ -80,4 +77,3 @@ indent=2
 encoding="utf8"
 )
 
-print("\nEXPANSION POSITION VERIFIED")

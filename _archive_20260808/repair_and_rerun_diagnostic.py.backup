@@ -35,7 +35,6 @@ DIAGNOSTIC_NAMES = [
 
 
 def log(message):
-    print(
         f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}",
         flush=True
     )
@@ -355,10 +354,8 @@ def run_repair():
     )
 
     if result.stdout:
-        print(result.stdout)
 
     if result.stderr:
-        print(
             result.stderr,
             file=sys.stderr
         )
@@ -419,10 +416,8 @@ def run_diagnostic():
     )
 
     if result.stdout:
-        print(result.stdout)
 
     if result.stderr:
-        print(
             result.stderr,
             file=sys.stderr
         )

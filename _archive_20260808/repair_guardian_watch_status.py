@@ -11,7 +11,6 @@ def guardian_status():
 
     from pathlib import Path
 
-    print("=== IMA GUARDIAN WATCH STATUS ===")
 
     checks = {
         "controller": Path("ima_guardian_controller.py").exists(),
@@ -22,7 +21,6 @@ def guardian_status():
     }
 
     for k,v in checks.items():
-        print(k + ":", v)
 
 '''
 
@@ -33,7 +31,5 @@ def guardian_status():
 
     p.write_text(text, encoding="utf8")
 
-    print("[OK] guardian_status restored")
 
 else:
-    print("[OK] guardian_status already exists")

@@ -47,13 +47,11 @@ def locate_autofix():
     return None
 
 
-print("=== CONNECT GUARDIAN AUTOFIX ===")
 
 git_checkpoint("guardian-before-autofix")
 
 audit = load_audit()
 
-print(
     "Syntax errors:",
     audit.get("stats",{}).get("syntax_errors",0)
 )
@@ -61,10 +59,7 @@ print(
 autofix = locate_autofix()
 
 if not autofix:
-    print("[WARN] autofix module not found")
-    print("[OK] Guardian ready for attachment")
 else:
-    print("[FOUND]", autofix)
 
     spec = importlib.util.spec_from_file_location(
         "autofix",
@@ -77,9 +72,7 @@ else:
     if hasattr(mod,"run"):
         mod.run()
 
-    print("[OK] autofix executed")
 
 
 git_checkpoint("guardian-after-autofix")
 
-print("[OK] Guardian + Autofix connected")

@@ -46,4 +46,3 @@ text=text[:start]+new+text[end:]
 
 p.write_text(text,encoding="utf8")
 
-print("VALIDATION FINAL FIXED")

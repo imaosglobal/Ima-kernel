@@ -28,7 +28,6 @@ for name, meta in manifest["files"].items():
     p = Path(name)
 
     if not p.exists():
-        print("MISSING:", name)
         failed = True
         continue
 
@@ -36,16 +35,10 @@ for name, meta in manifest["files"].items():
     expected = meta["sha256"]
 
     if actual != expected:
-        print("CHANGED:", name)
-        print(" expected:", expected)
-        print(" actual:  ", actual)
         failed = True
     else:
-        print("OK:", name)
 
 if failed:
-    print("CANONICAL STATE: DIRTY")
     sys.exit(1)
 
-print("CANONICAL STATE: CLEAN")
 PY

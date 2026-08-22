@@ -143,7 +143,6 @@ def read_file(path):
 
 
 def main():
-    print(
         json.dumps(
             {
                 "name": "IMA Termux Bridge",
@@ -165,7 +164,6 @@ def main():
         try:
             request = json.loads(line)
         except Exception as e:
-            print(
                 json.dumps(
                     {
                         "status": "error",
@@ -199,7 +197,6 @@ def main():
                 "error": f"unknown method: {method}"
             }
 
-        print(
             json.dumps(
                 response,
                 ensure_ascii=False
@@ -256,7 +253,6 @@ p.write_text(
     encoding="utf-8"
 )
 
-print(json.dumps(data, indent=2, ensure_ascii=False))
 PY
 
 echo

@@ -22,7 +22,6 @@ def snapshot():
 
 
 def cycle():
-    print("=== FUTURE GUARDIAN CYCLE ===")
 
     subprocess.run(
         ["python3","ima_guardian_master.py"],
@@ -38,6 +37,5 @@ while True:
     new=snapshot()
 
     if new != old:
-        print("[CHANGE DETECTED]")
         cycle()
         old=new

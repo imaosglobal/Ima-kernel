@@ -22,47 +22,29 @@ def build_answer(question):
     plan=load(HOME/".ima/evolution/daily_plan.json")
     bridge=load(HOME/".ima/evolution/kernel_knowledge_bridge.json")
 
-    print("IMA")
-    print("================")
-    print("שאלה:",question)
-    print()
 
     if "היום" in question or "עשינו" in question:
 
-        print("סיכום היום:")
 
-        print("בוצעו בדיקות וחיבורים למערכת:")
 
         for c in truth.get("verified_components",[]):
-            print("✅",c["name"])
 
-        print()
 
         if brain:
             for x in brain.get("current_state",{}).get("domains",[]):
-                print("תחום:",x)
 
-        print()
 
         missing=truth.get("missing_connections",[])
         if missing:
-            print("עדיין חסר:")
             for m in missing:
-                print("⚠️",m)
 
     elif "חסר" in question:
-        print("חוסרים ידועים:")
         for x in truth.get("missing_connections",[]):
-            print("-",x)
 
     elif "הבא" in question or "המשך" in question:
-        print("הצעדים הבאים:")
         for x in plan.get("goals",[]):
-            print("-",x.get("goal"))
 
     else:
-        print("נמצאו נתוני מערכת:")
-        print(json.dumps(truth,ensure_ascii=False,indent=2))
 
 
 if __name__=="__main__":

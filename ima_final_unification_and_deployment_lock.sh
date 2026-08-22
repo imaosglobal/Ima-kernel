@@ -23,9 +23,7 @@ files=[
 
 for f in files:
     if Path(f).exists():
-        print("OK",f)
     else:
-        print("MISSING",f)
 PY
 
 
@@ -60,7 +58,6 @@ Path(".ima/governance/final_orchestrator_lock.json").write_text(
 json.dumps(registry,indent=2)
 )
 
-print("ORCHESTRATOR LOCKED")
 PY
 
 
@@ -125,10 +122,7 @@ targets=[
 
 for t in targets:
     found=list(Path(".").rglob(t))
-    print("\n",t)
-    print("COUNT:",len(found))
     for x in found[:5]:
-        print(x)
 PY
 
 
@@ -163,7 +157,6 @@ Path(".ima/governance/FINAL_CANONICAL_STATE.json").write_text(
 json.dumps(state,indent=2)
 )
 
-print("FINAL STATE SAVED")
 PY
 
 

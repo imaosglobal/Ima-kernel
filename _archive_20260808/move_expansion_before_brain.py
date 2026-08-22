@@ -71,9 +71,6 @@ for q in [
     "מה הקשר בין מוזיקה ומתמטיקה"
 ]:
     r=m.ask(q)
-    print("\nQ:",q)
-    print(r.get("response","")[:500])
-    print("EXP:",r.get("knowledge_expansion"))
 
 
 Path(".ima/expansion_priority_verified.lock").write_text(
@@ -90,4 +87,3 @@ indent=2
 encoding="utf8"
 )
 
-print("\nEXPANSION PRIORITY VERIFIED")

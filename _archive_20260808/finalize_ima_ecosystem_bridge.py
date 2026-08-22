@@ -66,5 +66,4 @@ for p,c in files.items():
     )
 
 
-print("IMA CONNECTOR BRIDGE CREATED")
 

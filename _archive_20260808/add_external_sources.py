@@ -75,4 +75,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] external registry created")

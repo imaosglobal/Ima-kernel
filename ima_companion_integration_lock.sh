@@ -19,7 +19,6 @@ def connect():
     }
 
 if __name__=="__main__":
-    print(connect())
 PY
 
 cat > .ima/governance/COMPANION_LAYER_REGISTRY.json <<EOF
@@ -54,8 +53,6 @@ assert Path(reg["brain"]).exists()
 for k,v in reg["layers"].items():
     assert Path(v).exists(), f"missing {k}:{v}"
 
-print("COMPANION REGISTRY OK")
-print("LAYERS:",len(reg["layers"]))
 PY
 
 

@@ -109,5 +109,3 @@ json.dumps({
 encoding="utf8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
-print("IMA FINAL KNOWLEDGE UPGRADE VERIFIED")

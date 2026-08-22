@@ -86,15 +86,12 @@ def evolution_cycle():
 
     verify_gate()
     
-    print("=== IMA EVOLUTION CONTROLLER ===")
 
     backup=snapshot()
 
-    print("SNAPSHOT:",len(backup),"items")
 
     compile_errors=compile_check()
 
-    print(
         "COMPILE ERRORS:",
         len(compile_errors)
     )
@@ -106,7 +103,6 @@ def evolution_cycle():
         if x["status"]!="ok"
     ]
 
-    print(
         "HEALTH FAILURES:",
         len(failed)
     )
@@ -135,7 +131,6 @@ def evolution_cycle():
     )
 
 
-    print("EVOLUTION STATE SAVED")
 
     return result
 

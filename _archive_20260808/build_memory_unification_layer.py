@@ -82,14 +82,11 @@ def status():
 
 
 if __name__ == "__main__":
-    print(json.dumps(sync(), ensure_ascii=False, indent=2))
 '''
 
 target.write_text(code, encoding="utf-8")
 
-print("[CREATED]", target)
 
-print("[COMPILE]")
 r = subprocess.run(
     ["python3", "-m", "py_compile", str(target)],
     capture_output=True,
@@ -97,12 +94,8 @@ r = subprocess.run(
 )
 
 if r.returncode:
-    print("[FAILED]")
-    print(r.stderr)
 else:
-    print("[COMPILE OK]")
 
-print("[SYNC TEST]")
 
 from importlib.util import spec_from_file_location, module_from_spec
 
@@ -116,7 +109,4 @@ spec.loader.exec_module(mod)
 
 result = mod.sync()
 
-print("[SOURCES]", result["count"])
-print("[STATE CREATED]", ".ima/runtime/memory_unification_state.json")
 
-print("=== MEMORY UNIFICATION READY ===")

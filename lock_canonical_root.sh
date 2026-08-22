@@ -90,11 +90,9 @@ def verify():
         p=Path(file)
 
         if not p.exists():
-            print("[FAIL] missing",file)
             return False
 
         if sha(p)!=old:
-            print("[FAIL] hash",file)
             return False
 
     return True
@@ -102,10 +100,7 @@ def verify():
 
 if __name__=="__main__":
     if verify():
-        print("[OK] CANONICAL ROOT VERIFIED")
-        print("[OK] IMMUTABLE LOCK ACTIVE")
     else:
-        print("[FAIL] CANONICAL ROOT")
         exit(1)
 PY
 

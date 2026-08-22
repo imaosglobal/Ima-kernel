@@ -62,7 +62,6 @@ for name in [
         json.dumps(data,indent=2,ensure_ascii=False)
     )
 
-print("[LOCKS SYNCED]")
 PY
 
 echo "[6] DEPENDENCY AUDIT"
@@ -87,7 +86,6 @@ json.dumps({
 },indent=2)
 )
 
-print("[REPORT CREATED]")
 PY
 
 echo "=== MAINTENANCE COMPLETE ==="

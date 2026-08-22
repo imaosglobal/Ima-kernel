@@ -173,15 +173,11 @@ OUTPUT.write_text(
 )
 
 
-print("=== IMA SELF KNOWLEDGE CONNECTED ===")
 
 for module in registry["existing_intelligence"]["modules"]:
-    print(
         module["module"],
         "OK" if module["exists"] else "MISSING"
     )
 
 
-print("Saved:")
-print(OUTPUT)
 

@@ -28,4 +28,3 @@ def generate_questions():
     return QUESTIONS
 
 if __name__ == "__main__":
-    print(json.dumps(QUESTIONS, ensure_ascii=False, indent=2))

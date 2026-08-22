@@ -34,10 +34,8 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] runtime bridge connected to Knowledge Orchestrator")
 
 
-print("=== FINAL TEST ===")
 
 from learning.knowledge_runtime_bridge import ask_knowledge
 
@@ -45,9 +43,4 @@ r=ask_knowledge(
     "What is artificial intelligence?"
 )
 
-print("SOURCE:", r.get("source"))
-print("CONF:", r.get("confidence"))
-print("ANSWER:")
-print(str(r.get("answer"))[:500])
 
-print("=== KNOWLEDGE CORE ONLINE ===")

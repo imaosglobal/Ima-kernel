@@ -120,9 +120,6 @@ d=json.loads(p.read_text())
 assert len(d["providers"])==6
 assert d["docker"]=="READY"
 
-print("[OK] Provider abstraction")
-print("[OK] Multi cloud ready")
-print("[OK] Deployment layer ready")
 PY
 
 

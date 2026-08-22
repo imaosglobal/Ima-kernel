@@ -36,13 +36,10 @@ echo "[2] Python import tests"
 
 python3 - <<'PY'
 import conversation_layer
-print("[OK] conversation_layer import")
 
 import ima_master_runtime
-print("[OK] ima_master_runtime import")
 
 import ima_core_runtime
-print("[OK] ima_core_runtime import")
 PY
 
 
@@ -52,13 +49,11 @@ python3 - <<'PY'
 import conversation_layer
 
 c = conversation_layer.context()
-print("[OK] context:", type(c).__name__)
 
 conversation_layer.update("IMA canonical verification test")
 
 r = conversation_layer.recall("IMA canonical verification test")
 
-print("[OK] recall:", r)
 PY
 
 

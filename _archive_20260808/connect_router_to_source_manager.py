@@ -49,7 +49,6 @@ new="""def collect(question):
 if old in text:
     text=text.replace(old,new)
 else:
-    print("[WARN] collect block not found")
 
 
 p.write_text(text,encoding="utf8")
@@ -59,4 +58,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] source manager router connected")

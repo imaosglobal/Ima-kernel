@@ -38,7 +38,6 @@ def check():
 
 
 if __name__=="__main__":
-    print(json.dumps(check(),indent=2))
 PY
 
 
@@ -69,7 +68,6 @@ def resume():
 
 
 if __name__=="__main__":
-    print(json.dumps(resume(),indent=2))
 PY
 
 
@@ -122,7 +120,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(json.dumps(run(),indent=2))
 PY
 
 

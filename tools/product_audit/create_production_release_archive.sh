@@ -54,9 +54,6 @@ assert d["status"]=="PRODUCTION_RELEASE"
 assert d["launch_gate"]=="APPROVED"
 assert d["core"]=="FROZEN"
 
-print("[OK] Production archive")
-print("[OK] Launch approved")
-print("[OK] Rollback point created")
 PY
 
 echo "ARCHIVE:"

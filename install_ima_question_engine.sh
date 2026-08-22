@@ -46,34 +46,23 @@ def answer(question):
 
     words=q.split()
 
-    print()
-    print("IMA ANSWER")
-    print("================")
-    print("שאלה:",question)
-    print()
 
     if any(x in q for x in ["היום","נוצר","עשינו","בוצע"]):
 
-        print("אירועים אחרונים:")
         for e in search_truth(words+["IMA","system","evolution"]):
-            print(json.dumps(e,ensure_ascii=False)[:500])
-            print("---")
 
 
     elif any(x in q for x in ["חסר","בעיה","לא עובד"]):
 
         data=load_json(SYSTEM)
 
-        print("חוסרים ידועים:")
         for x in data.get("missing_connections",[]):
-            print("-",x)
 
 
     elif any(x in q for x in ["מצב","סטטוס","קור","מערכת"]):
 
         data=load_json(SYSTEM)
 
-        print(json.dumps(
             data,
             indent=2,
             ensure_ascii=False
@@ -86,12 +75,10 @@ def answer(question):
 
         if results:
             for r in results:
-                print(json.dumps(
                     r,
                     ensure_ascii=False
                 )[:700])
         else:
-            print("אין מידע מתועד במקורות המחוברים")
 
 
 if __name__=="__main__":

@@ -32,7 +32,6 @@ for s in data["sources"]:
         s["module"]=activate[name]["module"]
         s["function"]=activate[name]["function"]
 
-        print("ACTIVATED:",name)
 
 p.write_text(
     json.dumps(
@@ -43,4 +42,3 @@ p.write_text(
     encoding="utf8"
 )
 
-print("SOURCE ACTIVATION COMPLETE")

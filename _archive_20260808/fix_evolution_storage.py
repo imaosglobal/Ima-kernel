@@ -34,4 +34,3 @@ for file in files:
 
     p.write_text(text)
 
-print("EVOLUTION STORAGE NORMALIZED")

@@ -183,4 +183,3 @@ for p,c in files.items():
     )
 
 
-print("IMA MEMBER MANAGER + API GATEWAY CREATED")

@@ -89,4 +89,3 @@ plan_file.write_text(
 )
 
 
-print("EVOLUTION CONNECTED")

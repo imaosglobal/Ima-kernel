@@ -40,7 +40,6 @@ Path("$OUT/ENDPOINT_MATRIX.json").write_text(
 json.dumps(results,indent=2)
 )
 
-print(json.dumps(results,indent=2))
 PY
 
 echo "=== RENDER DIAGNOSTIC COMPLETE ==="

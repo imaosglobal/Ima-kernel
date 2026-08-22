@@ -82,7 +82,6 @@ Path(".ima/runtime/canonical_fusion_lock.json").write_text(
 json.dumps(data,indent=2,ensure_ascii=False)
 )
 
-print("[LOCK CREATED]",len(data["components"]))
 PY
 
 

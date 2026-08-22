@@ -4,12 +4,10 @@ p = Path("ima_guardian_watch.py")
 text = p.read_text(encoding="utf8")
 
 old = '''    if not changed:
-        print("[OK] nothing changed")
         return
 '''
 
 new = '''    if not changed:
-        print("[OK] nothing changed")
         return False
 '''
 
@@ -28,7 +26,6 @@ new2 = '''    python_changed = [
     ]
 
     if not python_changed:
-        print("[OK] no python changes")
         return False
 '''
 
@@ -48,4 +45,3 @@ if "return True" not in before[-500:]:
 text = before + after
 
 p.write_text(text,encoding="utf8")
-print("[OK] incremental return logic added")

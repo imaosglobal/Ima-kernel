@@ -184,4 +184,3 @@ for p,c in files.items():
     )
 
 
-print("IMA COMMUNITY EXPANSION V2 CREATED")

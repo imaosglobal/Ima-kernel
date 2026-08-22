@@ -19,8 +19,6 @@ def record(goal, result):
 
 def execute(goal):
 
-    print("=== IMA INTENT ENGINE ===")
-    print("[GOAL]", goal)
 
     if "audit" in goal or "stability" in goal:
         cmd = ["python3", "ima_guardian_master.py"]
@@ -37,13 +35,10 @@ def execute(goal):
 
     record(goal, result)
 
-    print("[RESULT]", result)
 
     if r.stdout:
-        print(r.stdout[-1000:])
 
     if r.stderr:
-        print(r.stderr[-500:])
 
 
 if __name__ == "__main__":

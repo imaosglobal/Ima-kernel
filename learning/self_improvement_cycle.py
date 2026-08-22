@@ -289,16 +289,9 @@ def filter_gaps_to_active_runtime(gaps):
     ]
 
 def run_self_improvement(apply=False):
-    print("=" * 100)
-    print("IMA — CONTROLLED SELF-IMPROVEMENT CYCLE")
-    print("=" * 100)
 
     scan = scan_repository()
 
-    print("\n[SCAN]")
-    print("FILES:", scan["files"])
-    print("DIRECTORIES:", scan["directories"])
-    print("PYTHON MODULES:", scan["python_modules"])
 
     inspections = inspect_repository(scan)
     gaps = find_gaps(inspections)
@@ -307,21 +300,12 @@ def run_self_improvement(apply=False):
 
     gaps = filter_gaps_to_active_runtime(gaps)
 
-    print("[RAW GAPS]:", raw_gap_count)
-    print("[ACTIVE RUNTIME GAPS]:", len(gaps))
 
-    print("\n[GAPS]")
-    print("FOUND:", len(gaps))
 
     plan = build_improvement_plan(gaps)
     evaluation = evaluate_plan(plan)
 
-    print("\n[PLAN]")
-    print("STEPS:", len(plan["steps"]))
-    print("STATUS:", plan["status"])
 
-    print("\n[PLAN EVALUATION]")
-    print(
         json.dumps(
             evaluation,
             indent=2,
@@ -355,20 +339,14 @@ def run_self_improvement(apply=False):
     )
 
     if apply and not apply_allowed:
-        print("\n[APPLY BLOCKED]")
-        print("REASON: PLAN EVALUATION FAILED")
-        print("NO FILES MODIFIED")
 
     elif apply_allowed:
-        print("\n[APPLY MODE]")
-        print("PLAN EVALUATION: PASS")
 
         for item in proposals:
             proposal = item["proposal"]
             validation = item["validation"]
 
             if not validation["valid"]:
-                print(
                     "SKIPPED INVALID PATCH:",
                     proposal["file"],
                 )
@@ -379,8 +357,6 @@ def run_self_improvement(apply=False):
             )
 
     else:
-        print("\n[PREVIEW MODE]")
-        print("NO FILES MODIFIED")
 
     report = {
         "timestamp": str(datetime.now()),
@@ -425,20 +401,12 @@ def run_self_improvement(apply=False):
         encoding="utf-8",
     )
 
-    print("\n" + "=" * 100)
-    print("SELF-IMPROVEMENT CYCLE COMPLETED")
-    print("REPORT:", report_path)
-    print("PROPOSALS:", len(proposals))
-    print("APPLIED:", len(applied))
-    print(
         "EXECUTION:",
         "enabled" if apply_allowed else "disabled",
     )
-    print(
         "SELF-MODIFICATION:",
         "enabled" if apply_allowed else "disabled",
     )
-    print("=" * 100)
 
     return report
 

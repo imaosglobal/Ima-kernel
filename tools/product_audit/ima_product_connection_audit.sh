@@ -42,9 +42,7 @@ mods=[
 for m in mods:
     try:
         __import__(m)
-        print("[OK]",m)
     except Exception as e:
-        print("[FAIL]",m,e)
 PY
 
 echo

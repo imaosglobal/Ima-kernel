@@ -36,8 +36,6 @@ def create_chronicle():
         encoding="utf-8"
     )
 
-    print("IMA CHRONICLE LOCKED")
-    print(json.dumps(data, ensure_ascii=False, indent=2))
 
 
 def verify_path(path):

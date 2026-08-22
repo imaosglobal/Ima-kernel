@@ -4,24 +4,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-print("PYTHON ROOT:", ROOT, flush=True)
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json,time
 from core.conversation_router import route
-print('BOOT: before ima_master_runtime', flush=True)
 import ima_master_runtime
-print('BOOT: after ima_master_runtime', flush=True)
 import sys
 from pathlib import Path
 
 
-print("PYTHON ROOT:", ROOT, flush=True)
 import os
 sys.path.append('..')
 import identity_context
-print('BOOT: before conversation_layer', flush=True)
 import conversation_layer
 
 # Co-Cognition: shared human/IMA reasoning layer.
@@ -41,10 +36,7 @@ try:
     co_cognition = _cc_module
 except Exception:
     co_cognition = None
-print('BOOT: after conversation_layer', flush=True)
-print('BOOT: before product_gateway', flush=True)
 from product.gateway import product_gateway
-print('BOOT: after product_gateway', flush=True)
 
 
 
@@ -253,7 +245,6 @@ class Handler(BaseHTTPRequestHandler):
                         )
                         co_cognition.record(cc_result)
                 except Exception as e:
-                    print("CO-COGNITION:", e, flush=True)
 
                 conversation_layer.update(
                     question,
@@ -311,5 +302,4 @@ class Handler(BaseHTTPRequestHandler):
             })
 
 PORT=int(os.environ.get("PORT",8080))
-print(f"IMA API ONLINE :{PORT}", flush=True)
 HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()

@@ -1,0 +1,242 @@
+"""
+IMA Universal Autobiography Gateway
+
+Single canonical entry point for:
+- user autobiography
+- IMA autobiography
+- bidirectional links
+- messages
+- life events
+- media
+- external sources
+- future connectors
+
+The gateway does not replace existing memory systems.
+It provides one stable interface above them.
+"""
+
+from .autobiography import (
+    record,
+    recall,
+    timeline,
+    sources,
+    set_sharing,
+    get_sharing,
+)
+
+from .autobiography_link import (
+    record_ima,
+    recall_ima,
+    link_user_to_ima,
+    link_ima_to_user,
+    links,
+    user_history_with_ima,
+)
+
+
+def user_event(
+    user_id,
+    source,
+    event,
+    metadata=None,
+    link_to_ima=True,
+    ima_event=None,
+):
+    """
+    Record an event in the user's autobiography.
+
+    Optionally mirrors the event into IMA's autobiography
+    and creates a bidirectional relationship.
+    """
+
+    if link_to_ima:
+        return link_user_to_ima(
+            user_id=user_id,
+            user_event=event,
+            ima_event=ima_event or {
+                "type": "received_user_event",
+                "user_id": user_id,
+                "source": source,
+                "event": event,
+            },
+            source=source,
+            metadata=metadata,
+        )
+
+    return record(
+        source=source,
+        event=event,
+        user_id=user_id,
+        metadata=metadata,
+    )
+
+
+def ima_event(
+    event_type,
+    event,
+    source="ima",
+    user_id=None,
+    share_with_user=False,
+    user_event=None,
+    metadata=None,
+):
+    """
+    Record an event in IMA's autobiography.
+
+    Optionally writes the corresponding event into the user's
+    autobiography as well.
+    """
+
+    if share_with_user and user_id is not None:
+        return link_ima_to_user(
+            user_id=user_id,
+            ima_event={
+                "type": event_type,
+                "event": event,
+            },
+            user_event=user_event or {
+                "type": "ima_shared_event",
+                "event": event,
+            },
+            source=source,
+            metadata=metadata,
+        )
+
+    return record_ima(
+        event_type=event_type,
+        event=event,
+        source=source,
+        metadata={
+            **(metadata or {}),
+            **({"user_id": user_id} if user_id is not None else {}),
+        },
+    )
+
+
+def message(
+    user_id,
+    source,
+    text,
+    metadata=None,
+):
+    """
+    Universal message capture.
+
+    Every future connector can call this instead of implementing
+    its own autobiography logic.
+    """
+
+    return user_event(
+        user_id=user_id,
+        source=source,
+        event={
+            "type": "message",
+            "text": text,
+        },
+        metadata=metadata,
+        link_to_ima=True,
+    )
+
+
+def life_event(
+    user_id,
+    source,
+    event,
+    metadata=None,
+):
+    """
+    Record a real-life autobiographical event.
+    """
+
+    return user_event(
+        user_id=user_id,
+        source=source,
+        event={
+            "type": "life_event",
+            "event": event,
+        },
+        metadata=metadata,
+        link_to_ima=True,
+    )
+
+
+def media(
+    user_id,
+    source,
+    media_type,
+    media_ref,
+    metadata=None,
+):
+    """
+    Record a media artifact without forcing the binary itself
+    into the autobiography record.
+
+    media_ref may later point to:
+    - image
+    - video
+    - audio
+    - hologram
+    - document
+    - external storage
+    """
+
+    return user_event(
+        user_id=user_id,
+        source=source,
+        event={
+            "type": "media",
+            "media_type": media_type,
+            "media_ref": media_ref,
+        },
+        metadata=metadata,
+        link_to_ima=True,
+    )
+
+
+def user_timeline(user_id, limit=None):
+    return timeline(user_id)[-limit:] if limit else timeline(user_id)
+
+
+def unified_timeline(user_id, limit=None):
+    return user_history_with_ima(
+        user_id=user_id,
+        limit=limit,
+    )
+
+
+def ima_timeline(limit=None):
+    return recall_ima(limit=limit)
+
+
+def sharing(user_id, subject, policy):
+    return set_sharing(
+        user_id=user_id,
+        subject=subject,
+        policy=policy,
+    )
+
+
+def sharing_policy(user_id):
+    return get_sharing(user_id)
+
+
+def connections(limit=None):
+    return links(limit=limit)
+
+
+__all__ = [
+    "user_event",
+    "ima_event",
+    "message",
+    "life_event",
+    "media",
+    "recall",
+    "record",
+    "timeline",
+    "sources",
+    "ima_timeline",
+    "unified_timeline",
+    "sharing",
+    "sharing_policy",
+    "connections",
+]

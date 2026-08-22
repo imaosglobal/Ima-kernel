@@ -89,7 +89,6 @@ files=[
 
 for f in files:
     json.loads(Path(f).read_text())
-    print("[OK]",f)
 PY
 
 echo "=== UNIVERSAL CLIENT LAYER READY ==="

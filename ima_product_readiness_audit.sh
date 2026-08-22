@@ -157,7 +157,6 @@ encoding="utf-8"
 
 
 for k,v in result.items():
-    print(
         k,
         ":",
         v["status"],
@@ -167,8 +166,6 @@ for k,v in result.items():
     )
 
 
-print()
-print(
 "PRODUCT REPORT SAVED"
 )
 
@@ -186,7 +183,6 @@ verify_brain(
 "learning/meta_orchestrator.py"
 )
 
-print(
 "CANONICAL BRAIN OK"
 )
 

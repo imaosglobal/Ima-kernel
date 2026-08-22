@@ -22,4 +22,3 @@ if p.exists():
 
         p.write_text(text)
 
-print("SYSTEM TRUTH CONNECTED TO DAILY EVOLUTION")

@@ -58,7 +58,6 @@ def inspect_candidate(candidate):
         score += 20
 
 
-    print("[INSPECT SCORE]", candidate.get("name"), score)
     result["trust_score"]=score
     result["checked_at"]=time.time()
 

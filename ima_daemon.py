@@ -11,7 +11,6 @@ def acquire_lock():
     os.makedirs(".ima", exist_ok=True)
 
     if os.path.exists(LOCK_FILE):
-        print("[IMA DAEMON] already running")
         raise SystemExit(1)
 
     with open(LOCK_FILE, "w") as f:
@@ -29,7 +28,6 @@ seen = set()
 
 def run():
     acquire_lock()
-    print("[IMA DAEMON] stable brain started")
 
     seen_questions = set()
     answered = set()
@@ -63,13 +61,11 @@ def run():
 
                 question = data.get("text", e.get("text", ""))
 
-                print("PROCESSING:", qid, question)
                 ask(question, qid=qid)
 
             time.sleep(0.5)
 
         except KeyboardInterrupt:
-            print("[IMA DAEMON] stopped")
             break
 
         except Exception as e:

@@ -8,7 +8,6 @@ BASE = ROOT / ".ima"
 MANAGEMENT = BASE / "MANAGEMENT"
 SNAPSHOTS = BASE / "snapshots"
 
-print("=== IMA MAINTENANCE ===")
 
 required = [
     MANAGEMENT / "MANAGEMENT_STATE.json",
@@ -21,9 +20,7 @@ failed = []
 
 for p in required:
     if p.exists():
-        print("[OK]", p)
     else:
-        print("[MISSING]", p)
         failed.append(str(p))
 
 if failed:
@@ -40,8 +37,6 @@ else:
         if src.exists():
             shutil.copy2(src, snapshot / src.name)
 
-    print("[OK] SNAPSHOT CREATED")
-    print(snapshot)
 
     status = "READY"
 
@@ -55,9 +50,6 @@ report = {
 out = MANAGEMENT / "maintenance_report.json"
 out.write_text(json.dumps(report, indent=2))
 
-print()
-print("STATUS:", status)
-print("REPORT:", out)
 
 if failed:
     raise SystemExit(1)

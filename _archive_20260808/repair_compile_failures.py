@@ -11,7 +11,6 @@ files=[
 "learning/sources/source_generator.py"
 ]
 
-print("=== REPAIR FAILED FILES ===")
 
 for f in files:
     p=Path(f)
@@ -23,7 +22,6 @@ for f in files:
         )
 
         shutil.copy2(p,backup)
-        print("[BACKUP]",backup)
 
         text=p.read_text(
             encoding="utf8"
@@ -50,7 +48,6 @@ for f in files:
         )
 
 
-print("[COMPILE TEST]")
 
 failed=[]
 
@@ -74,13 +71,8 @@ for f in files:
 
 if failed:
 
-    print("[STILL FAILED]")
     for f,e in failed:
-        print("\n",f)
-        print(e)
 
 else:
 
-    print("[ALL FIXED]")
 
-print("=== DONE ===")

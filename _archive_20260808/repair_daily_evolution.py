@@ -3,7 +3,6 @@ from pathlib import Path
 p = Path("daily_evolution.py")
 text = p.read_text(encoding="utf8")
 
-old = '''    print(
         "IMA DAILY EVOLUTION SAVED
 
     import os
@@ -13,7 +12,6 @@ old = '''    print(
     )
 '''
 
-new = '''    print(
         "IMA DAILY EVOLUTION SAVED"
     )
 
@@ -24,7 +22,6 @@ new = '''    print(
 '''
 
 if old not in text:
-    print("[WARN] exact block not found, using line repair")
 
     lines = text.splitlines()
 
@@ -32,7 +29,6 @@ if old not in text:
     end = None
 
     for i,line in enumerate(lines):
-        if 'print(' in line and i > 150:
             start = i
             break
 
@@ -44,7 +40,6 @@ if old not in text:
 
     if start is not None and end is not None:
         lines[start:end] = [
-            '    print(',
             '        "IMA DAILY EVOLUTION SAVED"',
             '    )',
             '',
@@ -54,4 +49,3 @@ if old not in text:
 
 p.write_text(text,encoding="utf8")
 
-print("[OK] daily evolution repaired")

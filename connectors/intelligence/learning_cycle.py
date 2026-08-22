@@ -7,7 +7,6 @@ BASE = Path(__file__).parent.parent
 
 
 def run(step):
-    print("[RUN]", step)
     subprocess.run(step, shell=True)
 
 
@@ -99,4 +98,3 @@ if src.exists():
     dst.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(src, dst)
 
-print("IMA LEARNING CYCLE COMPLETE")

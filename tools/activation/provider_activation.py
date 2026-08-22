@@ -28,8 +28,6 @@ class Handler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"IMA PROVIDER ACTIVATION COMPLETE")
 
-            print("\n[OK] PROVIDER COMPLETED:", provider)
-            print("[OK] STATE UPDATED")
         else:
             self.send_response(200)
             self.end_headers()
@@ -43,7 +41,6 @@ def open_browser(provider):
     else:
         url="https://google.com"
 
-    print("[OPEN]", url)
     subprocess.run(["termux-open-url", url])
 
 if __name__ == "__main__":
@@ -51,10 +48,6 @@ if __name__ == "__main__":
 
     provider = sys.argv[1] if len(sys.argv)>1 else "supabase"
 
-    print("=== IMA PROVIDER ACTIVATION ===")
-    print("Provider:", provider)
-    print("Callback:")
-    print(f"http://127.0.0.1:{PORT}/complete?provider={provider}")
 
     threading.Timer(2, open_browser, args=(provider,)).start()
 

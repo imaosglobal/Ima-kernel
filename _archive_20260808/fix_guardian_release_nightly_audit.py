@@ -18,16 +18,12 @@ def nightly_audit():
     hour = datetime.datetime.now().hour
 
     if hour == 3:
-        print("[NIGHTLY AUDIT WINDOW]")
         run(["python3","ima_full_audit.py"])
     else:
-        print("[SKIP FULL AUDIT] nightly only")
 '''
 
 if old in text:
     text=text.replace(old,new,1)
 else:
-    print("[WARN] verify block not found")
 
 p.write_text(text,encoding="utf8")
-print("[OK] nightly audit separation installed")

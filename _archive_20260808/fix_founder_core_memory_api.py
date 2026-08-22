@@ -15,4 +15,3 @@ text=text.replace(
 
 p.write_text(text)
 
-print("[OK] FounderCore memory API fixed")

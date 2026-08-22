@@ -17,7 +17,6 @@ new = '''def commit():
     )
 
     if status.returncode == 0:
-        print("[NO CHANGES] commit skipped")
         return False
 
     msg=f"IMA automatic guarded commit {datetime.now().isoformat()}"
@@ -28,7 +27,5 @@ new = '''def commit():
 if old in text:
     text=text.replace(old,new,1)
 else:
-    print("[WARN] commit block not found")
 
 p.write_text(text,encoding="utf8")
-print("[OK] no-change commit handling installed")

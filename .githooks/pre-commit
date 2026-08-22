@@ -20,7 +20,6 @@ for x in d["allowed_components"]:
     if h != x["sha256"]:
         raise SystemExit(f"HASH MISMATCH: {f}")
 
-print("[GIT] canonical registry OK")
 PY
 
 echo "[GIT] pre-commit OK"

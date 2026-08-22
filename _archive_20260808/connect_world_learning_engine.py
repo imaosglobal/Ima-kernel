@@ -88,5 +88,3 @@ Path(".ima/world_learning_engine_report.json").write_text(
     encoding="utf8"
 )
 
-print(json.dumps(report,ensure_ascii=False,indent=2))
-print("IMA WORLD LEARNING ENGINE VERIFIED")

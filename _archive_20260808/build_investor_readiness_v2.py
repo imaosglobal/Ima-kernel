@@ -177,4 +177,3 @@ for name, content in files.items():
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(content.strip()+"\n", encoding="utf-8")
 
-print("IMA INVESTOR READINESS V2 CREATED")

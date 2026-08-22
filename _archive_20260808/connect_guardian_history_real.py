@@ -43,4 +43,3 @@ text = text.replace(
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] compact history connected")

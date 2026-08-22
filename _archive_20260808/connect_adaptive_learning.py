@@ -2,7 +2,6 @@ from pathlib import Path
 import shutil
 import time
 
-print("=== CONNECT ADAPTIVE LEARNING ===")
 
 # backup
 targets=[
@@ -16,7 +15,6 @@ for f in targets:
         f".adaptive_backup_{int(time.time())}.py"
     )
     shutil.copy2(p,b)
-    print("[BACKUP]",b)
 
 
 # add adaptive import to runtime bridge
@@ -68,7 +66,6 @@ if "adaptive_learning_daemon" not in text:
         from learning.adaptive_learning_daemon import learning_cycle as adaptive_cycle
         adaptive_cycle()
     except Exception as e:
-        print("[ADAPTIVE SKIPPED]",e)"""
     )
 
     p.write_text(
@@ -77,7 +74,6 @@ if "adaptive_learning_daemon" not in text:
     )
 
 
-print("[COMPILE]")
 
 import subprocess
 
@@ -101,11 +97,7 @@ for f in targets:
 
 
 if failed:
-    print("[FAILED]")
     for f,e in failed:
-        print(f,e)
 else:
-    print("[CONNECTED]")
 
 
-print("=== COMPLETE ===")

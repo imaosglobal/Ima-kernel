@@ -112,7 +112,6 @@ if __name__=="__main__":
     learn("customers","crm",0.9)
     learn("payments","pos",0.8)
     update_graph()
-    print("KNOWLEDGE UPDATED")
 PY
 
 
@@ -169,7 +168,6 @@ for software in SOURCES:
 
 update_graph()
 
-print(
  "SCAN COMPLETE:",
  len(SOURCES),
  "software profiles"
@@ -195,7 +193,6 @@ def query():
 
 
 if __name__=="__main__":
-    print(
         json.dumps(
             query(),
             indent=2,

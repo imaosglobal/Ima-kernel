@@ -56,14 +56,10 @@ from product.gateway import product_gateway
 from product.launcher import product_launcher
 from product.version.version_manager import current
 
-print("[GATEWAY]", product_gateway.health())
-print("[LAUNCHER]", product_launcher.launch_status())
-print("[VERSION]", current())
 
 assert product_gateway.health()["runtime_connected"] is True
 assert product_launcher.launch_status()["status"]=="READY"
 
-print("[OK] Runtime verified")
 PY
 
 

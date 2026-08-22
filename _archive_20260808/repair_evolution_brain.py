@@ -82,4 +82,3 @@ brain.write_text(
     )
 )
 
-print("EVOLUTION BRAIN CREATED")

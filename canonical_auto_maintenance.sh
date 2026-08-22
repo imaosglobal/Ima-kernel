@@ -17,5 +17,4 @@ p.write_text(json.dumps({
 "status":"AUTO_MAINTENANCE_ACTIVE"
 },indent=2))
 
-print("[AUTO MAINTENANCE OK]")
 PY

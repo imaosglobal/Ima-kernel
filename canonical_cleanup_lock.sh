@@ -40,7 +40,6 @@ s=s.replace(
 )
 
 p.write_text(s)
-print("release.js updated")
 PY
 fi
 
@@ -104,15 +103,12 @@ ok=True
 
 for c in checks:
     if c.exists():
-        print("[OK]",c)
     else:
-        print("[MISSING]",c)
         ok=False
 
 if not ok:
     raise SystemExit(1)
 
-print("CANONICAL COMPONENTS VERIFIED")
 PY
 
 

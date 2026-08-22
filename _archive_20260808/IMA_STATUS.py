@@ -6,7 +6,6 @@ import time
 ROOT = Path(__file__).parent
 BASE = ROOT / ".ima"
 
-print("=== IMA SYSTEM STATUS ===")
 
 results = {}
 
@@ -72,8 +71,4 @@ out = BASE / "MANAGEMENT/status_report.json"
 out.write_text(json.dumps(report, indent=2))
 
 for k, v in results.items():
-    print("[OK]" if v else "[FAIL]", k)
 
-print()
-print("STATUS:", report["status"])
-print("REPORT:", out)

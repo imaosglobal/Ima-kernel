@@ -39,8 +39,6 @@ if __name__ == "__main__":
     knowledge = load_brain()
     save_to_ima(knowledge)
 
-    print("IMA MEMORY UPDATED")
-    print(MEMORY_TARGET)
 
 
 # ----------------------------------------------------------------------

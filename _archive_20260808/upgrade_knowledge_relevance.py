@@ -71,4 +71,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] relevance layer installed")

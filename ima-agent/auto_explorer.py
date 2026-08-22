@@ -18,7 +18,6 @@ WATCHLIST = ["facebook/react", "pytorch/pytorch", "imaosglobal/Ima-kernel"]
 
 
 def log(msg):
-    print(msg, flush=True)
     with open(os.path.expanduser("~/ima_agent.log"), "a") as f:
         f.write(f"{datetime.now()} {msg}\n")
 
@@ -68,7 +67,6 @@ def cto_review(path):
     for f in py_files[:10]:
         code = f.read_text(errors="ignore")
         issues = []
-        if "print(" in code:
             issues.append("Consider using logging instead of print")
         if "except:" in code:
             issues.append("Use 'except Exception as e:' instead of bare except")
@@ -89,4 +87,3 @@ if __name__ == "__main__":
     elif cmd == "cto":
         cto_review(sys.argv[2] if len(sys.argv) > 2 else "~/ima_kernel")
     else:
-        print("Usage: python auto_explorer.py [hunt|pr|cto]")

@@ -8,9 +8,6 @@ lock=json.loads((R/"CANONICAL_KERNEL_LOCK.json").read_text())
 if not lock.get("locked"):
     raise SystemExit("KERNEL NOT LOCKED")
 
-print("=== IMA SINGLE ENTRY ===")
-print("KERNEL:",lock["kernel"])
-print("HANDOFF:",lock["handoff"])
 
 boot=R/"ima_boot_gate.py"
 
@@ -26,4 +23,3 @@ subprocess.run(
     check=True
 )
 
-print("=== IMA SINGLE ENTRY COMPLETE ===")

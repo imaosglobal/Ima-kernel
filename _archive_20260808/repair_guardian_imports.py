@@ -11,4 +11,3 @@ if "import subprocess" not in text:
 
 p.write_text(text, encoding="utf8")
 
-print("[OK] guardian imports restored")

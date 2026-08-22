@@ -25,7 +25,6 @@ def check_required_files():
 
     if not Path(REPORT_SCRIPT).exists():
 
-        print(f"[ERROR] לא נמצא קובץ הדוח: {REPORT_SCRIPT}")
         return False
 
     return True
@@ -41,11 +40,8 @@ def ensure_detector():
 
     if detector.exists():
 
-        print("[OK] מנגנון זיהוי כבר קיים")
         return
 
-    print("[INFO] מנגנון זיהוי לא קיים")
-    print("[INFO] יוצר מנגנון זיהוי חדש...")
 
     detector.write_text(
         '''#!/usr/bin/env python3
@@ -78,7 +74,6 @@ def detect_output(output_file):
         encoding="utf-8"
     )
 
-    print("[OK] מנגנון זיהוי נוצר")
 
 
 # =========================
@@ -124,9 +119,6 @@ def validate_output():
 
 def run_report():
 
-    print()
-    print("[INFO] מריץ את הדוח...")
-    print()
 
     result = subprocess.run(
         [sys.executable, REPORT_SCRIPT],
@@ -136,21 +128,15 @@ def run_report():
 
     if result.stdout:
 
-        print("----- OUTPUT -----")
-        print(result.stdout)
 
     if result.stderr:
 
-        print("----- ERRORS -----")
-        print(result.stderr)
 
     if result.returncode != 0:
 
-        print("[ERROR] הדוח הסתיים עם שגיאה")
 
         return False
 
-    print("[OK] הדוח הסתיים")
 
     return True
 
@@ -161,8 +147,6 @@ def run_report():
 
 def repair():
 
-    print()
-    print("[REPAIR] מתחיל תיקון...")
 
     output = Path(OUTPUT_FILE)
 
@@ -172,15 +156,12 @@ def repair():
 
             output.unlink()
 
-            print("[REPAIR] פלט פגום נמחק")
 
         except Exception as e:
 
-            print(f"[WARNING] לא ניתן למחוק את הפלט: {e}")
 
     ensure_detector()
 
-    print("[REPAIR] התיקון הסתיים")
 
 
 # =========================
@@ -189,9 +170,6 @@ def repair():
 
 def main():
 
-    print("=" * 60)
-    print("מערכת אוטומטית לבדיקת פלט והרצה מחדש")
-    print("=" * 60)
 
     if not check_required_files():
 
@@ -201,43 +179,25 @@ def main():
 
     for attempt in range(1, MAX_RETRIES + 1):
 
-        print()
-        print("=" * 60)
-        print(f"ניסיון {attempt} מתוך {MAX_RETRIES}")
-        print("=" * 60)
 
         run_report()
 
         valid, message = validate_output()
 
-        print()
-        print(f"[CHECK] {message}")
 
         if valid:
 
-            print()
-            print("=" * 60)
-            print("[SUCCESS] הפלט התקבל בהצלחה")
-            print("[SUCCESS] הדוח הסתיים בהצלחה")
-            print("=" * 60)
 
             return 0
 
-        print()
-        print("[WARNING] הפלט לא תקין או לא התקבל")
 
         if attempt < MAX_RETRIES:
 
             repair()
 
-            print("[INFO] מריץ את הדוח מחדש...")
 
         else:
 
-            print()
-            print("=" * 60)
-            print("[ERROR] כל ניסיונות התיקון נכשלו")
-            print("=" * 60)
 
             return 1
 

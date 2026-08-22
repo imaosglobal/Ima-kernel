@@ -24,7 +24,6 @@ if not state.exists():
 p = Path("ima_guardian_controller.py")
 
 if not p.exists():
-    print("[FAIL] controller missing")
     raise SystemExit(1)
 
 text = p.read_text(encoding="utf8")
@@ -59,15 +58,10 @@ def guardian_history(event, data=None):
     text = insert + "\n" + text
 
     text = text.replace(
-        'print("=== IMA GUARDIAN CONTROLLER START ===")',
-        'guardian_history("cycle_start")\n\nprint("=== IMA GUARDIAN CONTROLLER START ===")'
     )
 
     text = text.replace(
-        'print("=== IMA GUARDIAN CONTROLLER END ===")',
-        'guardian_history("cycle_end")\n\nprint("=== IMA GUARDIAN CONTROLLER END ===")'
     )
 
     p.write_text(text, encoding="utf8")
 
-print("[OK] guardian history installed")

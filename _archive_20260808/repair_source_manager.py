@@ -52,4 +52,3 @@ py_compile.compile(
     doraise=True
 )
 
-print("[OK] source_manager rebuilt")

@@ -73,10 +73,6 @@ python3 - <<'PY'
 from product.device.device_manager import device_info, capabilities
 from product.update.update_manager import status
 
-print("[DEVICE]", device_info())
-print("[CAPABILITIES]", capabilities())
-print("[UPDATE]", status())
-print("[OK] Device + Update layer")
 PY
 
 echo "=== DEVICE UPDATE LAYER READY ==="
