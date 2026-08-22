@@ -843,7 +843,7 @@ def answer(question, events):
     if language != "unknown":
         mem = _fix_mem(load_memory())
         mem["last_language"] = language
-        save_memory(mem)
+        ima_canonical_memory_adapter.save_memory(mem)
 
     response = _answer(question, events)
 
@@ -955,11 +955,11 @@ def load_memory():
         }
 
 
-def save_memory(mem):
+def ima_canonical_memory_adapter.save_memory(mem):
     os.makedirs(".ima", exist_ok=True)
-    from .ima_canonical_memory_adapter import save_memory
+    import ima_canonical_memory_adapter
 
-    save_memory(mem)
+    ima_canonical_memory_adapter.save_memory(mem)
 
 
 def memory_store(question, mode):
@@ -998,7 +998,7 @@ def memory_store(question, mode):
 
     mem["last_mode"] = mode
 
-    save_memory(mem)
+    ima_canonical_memory_adapter.save_memory(mem)
 
 
 def memory_context():
