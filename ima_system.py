@@ -933,30 +933,15 @@ import os
 MEMORY_FILE = "founder/data/ima_memory.json"
 
 def load_memory():
-
-    os.makedirs(".ima", exist_ok=True)
-
-    if not os.path.exists(MEMORY_FILE):
-        return {
-            "facts": {},
-            "last_emotion": None,
-            "topics": [],
-            "history": []
-        }
-
-    try:
-        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {
-            "facts": {},
-            "last_emotion": None,
-            "topics": [],
-            "history": []
-        }
-
-
-def save_memory(mem):
+    path = ".ima/memory_v2.json"
+    if not os.path.exists(path):
+        return {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    with open(path, "r", encoding="utf-8") as f:
+        mem = json.load(f)
+    if not isinstance(mem, dict):
+        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    return mem
+def 
     os.makedirs(".ima", exist_ok=True)
     import ima_canonical_memory_adapter
 
@@ -1086,7 +1071,4 @@ _old_answer = answer
 def answer(q, history):
     mem = load_memory()
 if not isinstance(mem, dict): mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-    if not isinstance(mem, dict):
-        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-        Path(".ima/memory_v2.json").write_text(json.dumps(mem))
     return _old_answer(q, history)
