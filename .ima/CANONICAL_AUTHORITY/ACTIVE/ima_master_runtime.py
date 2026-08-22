@@ -12,6 +12,3 @@ class IMA_UserProfile:
             data = default
         self.memory = data
         p.write_text(json.dumps(self.memory))
-
-# הוצאנו את השורה הזאת מפה: ima_profile = IMA_UserProfile()
-# עכשיו נטען רק כשצריך בפנים
