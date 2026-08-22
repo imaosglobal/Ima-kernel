@@ -11,14 +11,14 @@ def load_events():
     try:
         with open(LEDGER) as f:
             return [json.loads(l) for l in f if l.strip()]
-    except:
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 def load_state_machine():
     try:
         with open(STATE_MACHINE) as f:
             return json.load(f)
-    except:
+    except (FileNotFoundError, json.JSONDecodeError):
         return {"states": {}}
 
 
@@ -51,7 +51,7 @@ def load_previous_state():
     try:
         with open(".ima/core_map.json") as f:
             return json.load(f).get("state", "INIT")
-    except:
+    except (FileNotFoundError, json.JSONDecodeError):
         return "INIT"
 
 
