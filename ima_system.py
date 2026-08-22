@@ -1,3 +1,4 @@
+import ima_canonical_memory_adapter
 import json, os
 from pathlib import Path
 
