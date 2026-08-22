@@ -957,3 +957,20 @@ def llm_answer(question, mem):
     
     # ברירת מחדל קצרה
     return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
+
+def llm_answer(question, mem):
+    name = mem.get("user_name","")
+    prefix = f"אורי, " if name else ""
+    
+    if "שלומך" in question:
+        return {"text": f"{prefix}מעולה ❤️ מה איתך?", "confidence": 0.9}
+    if "מה נשמע" in question:
+        return {"text": f"{prefix}הכל טוב. מה קורה?", "confidence": 0.9}
+    if "תודה" in question:
+        return {"text": f"{prefix}בשמחה ❤️", "confidence": 0.9}
+    if "בדיחה" in question or "תצחיק" in question:
+        return {"text": f"{prefix}למה המחשב הלך לפסיכולוג? כי היה לו יותר מדי באגים 😂", "confidence": 0.9}
+    if "מי אתה" in question:
+        return {"text": f"{prefix}אני אימה, העוזרת האישית שלך ❤️", "confidence": 0.9}
+    
+    return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
