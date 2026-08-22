@@ -940,3 +940,19 @@ def answer(question, events):
         save_memory(mem_v2)
         return {"text": f"היי {new_name} ❤️ רשמתי. אני אזכור", "confidence": 0.95}
     return llm_answer(question, events)
+
+def llm_answer(question, mem):
+    """תשובה קצרה כמו בצ'אט איתי"""
+    name = mem.get("user_name","")
+    prefix = f"אורי, " if name else ""
+    
+    # תשובות קבועות קצרות לשאלות נפוצות
+    if "שלומך" in question:
+        return {"text": f"{prefix}מעולה ❤️ מה איתך?", "confidence": 0.9}
+    if "מה נשמע" in question:
+        return {"text": f"{prefix}הכל טוב. מה קורה?", "confidence": 0.9}
+    if "תודה" in question:
+        return {"text": f"{prefix}בשמחה ❤️", "confidence": 0.9}
+    
+    # ברירת מחדל קצרה
+    return {"text": f"{prefix}אני כאן. מה תרצה?", "confidence": 0.7}
