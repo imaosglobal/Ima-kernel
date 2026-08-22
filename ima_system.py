@@ -952,3 +952,7 @@ def save_memory(mem):
     path = ".ima/memory_v2.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(mem, f, ensure_ascii=False, indent=2)
+
+def memory_context():
+    mem = load_memory()
+    return mem
