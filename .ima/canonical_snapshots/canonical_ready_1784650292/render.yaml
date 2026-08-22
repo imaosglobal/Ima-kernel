@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: ima-915m
-    runtime: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    healthCheckPath: /health

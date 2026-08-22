@@ -10,23 +10,23 @@ if env_path.exists():
             os.environ[k] = v.strip('"')
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ima_system import answer
+from ima_system import answer, load_memory
 
 app = Flask(__name__)
 
-def load_memory():
-    default = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
-    p = Path(".ima/memory.json")
+# FORCE RESET CORRUPTED MEMORY ON BOOT
+def force_fix_memory():
+    p = Path(".ima/memory_v2.json")
     p.parent.mkdir(exist_ok=True)
     try:
-        if p.exists():
-            data = json.loads(p.read_text())
-            if not isinstance(data, dict):
-                data = default # אם זה רשימה - מאפס
-        else: data = default
-    except: data = default
-    p.write_text(json.dumps(data))
-    return data
+        data = json.loads(p.read_text())
+        if not isinstance(data, dict):
+            raise ValueError("memory is list")
+    except:
+        data = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+        p.write_text(json.dumps(data))
+
+force_fix_memory()
 
 @app.route("/")
 def home():
@@ -35,7 +35,7 @@ def home():
 @app.route("/chat", methods=["POST"])
 def chat():
     try:
-        load_memory() # מוודא שה-memory תקין
+        force_fix_memory() # מאפס לפני כל בקשה
         data = request.get_json()
         q = data.get("question", "")
         res = answer(q, [])

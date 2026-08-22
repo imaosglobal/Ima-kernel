@@ -1,9 +1,0 @@
-{
-  "mode": "canonical_only",
-  "entry_point": "IMA_START_SINGLE_ENTRY.py",
-  "kernel": "kernel/runtime/CANONICAL/python_bridge.py",
-  "handoff": "ima_master_runtime",
-  "allow_direct_runtime_access": false,
-  "allow_kernel_replacement": false,
-  "hash_required": true
-}

@@ -1,7 +1,0 @@
-{"type": "SYSTEM_LEARNING", "time": 1784140109.181518, "lesson": "Memory system repair", "details": {"fixed": "added memory quality ranking", "rule": "prefer meaningful identity/context responses over generic templates"}}
-{"type": "SYSTEM_RULE", "time": 1784140109.18152, "rule": "Before changing core code, inspect existing memory paths and test load/save."}
-{"type": "SYSTEM_RULE", "time": 1784140109.1815205, "rule": "Every failure should become a reusable lesson."}
-{"type": "SYSTEM_LEARNING", "time": 1784140525.7393038, "lesson": "self improvement runtime connected", "details": {"pipeline": ["observe", "analyze", "extract_lesson", "simulate_change", "test", "apply"]}}
-{"type": "AUTO_LESSON", "time": 1784141217.4204435, "lesson": {"action": "memory ranking", "result": "success", "details": "quality filter improved recall"}}
-{"type": "SELF_REVIEW", "time": 1784141466.2982874, "lessons": ["Keep runtime stable before adding features", "Memory storage is available"]}
-{"type": "SELF_REVIEW", "time": 1784141496.5283358, "lessons": ["Keep runtime stable before adding features", "Memory storage is available"]}

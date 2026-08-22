@@ -1,3 +1,15 @@
+import json, os
+from pathlib import Path
+
+def _fix_mem(m):
+    default = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+    if not isinstance(m, dict):
+        p = Path(".ima/memory_v2.json")
+        p.parent.mkdir(exist_ok=True)
+        p.write_text(json.dumps(default))
+        return default
+    return m
+
 from conversation_layer import recall as conversation_layer_recall
 import subprocess
 import json, time, os, subprocess
@@ -829,7 +841,7 @@ def answer(question, events):
     context = memory_context()
 
     if language != "unknown":
-        mem = load_memory()
+        mem = _fix_mem(load_memory())
         mem["last_language"] = language
         save_memory(mem)
 
@@ -977,7 +989,7 @@ def memory_store(question, mode):
         pass
 
     # LEGACY COMPATIBILITY
-    mem = load_memory()
+    mem = _fix_mem(load_memory())
 
     mem["history"].append(question)
 
@@ -1044,7 +1056,7 @@ def memory_awareness():
 # -------------------------
 
 def language_prefix():
-    mem = load_memory()
+    mem = _fix_mem(load_memory())
     lang = mem.get("last_language", "he")
 
     prefixes = {
@@ -1065,3 +1077,14 @@ def language_prefix():
 def ima_reflection():
     return ima_awareness()
 
+
+# HOTFIX FOR RENDER - FORCE MEMORY TO DICT
+import json
+from pathlib import Path
+_old_answer = answer
+def answer(q, history):
+    mem = load_memory()
+    if not isinstance(mem, dict):
+        mem = {"users": {}, "conversations": [], "facts": {}, "last_language": "he"}
+        Path(".ima/memory_v2.json").write_text(json.dumps(mem))
+    return _old_answer(q, history)

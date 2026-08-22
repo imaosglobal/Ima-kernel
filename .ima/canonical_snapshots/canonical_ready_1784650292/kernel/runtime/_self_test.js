@@ -1,1 +1,0 @@
-console.log("SELF TEST OK")
