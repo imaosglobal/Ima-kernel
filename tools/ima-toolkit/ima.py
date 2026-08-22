@@ -30,6 +30,11 @@ class IMAReviewer:
 
     def check_commit_msg(self):
 
+def run_lint():
+    commands = ["black.", "flake8. --ignore=E501", "isort."]
+    for cmd in commands:
+        subprocess.run(cmd, shell=True, capture_output=True)
+
 def generate_commit_msg(diff):
     diff_lower = diff.lower()
     if "fix" in diff_lower or "bug" in diff_lower: return "fix: תיקון באג"
@@ -47,47 +52,32 @@ def generate_explain(diff):
     elif "def " in diff: return "ה-PR הזה מוסיף פונקציות חדשות"
     else: return "ה-PR הזה מבצע עדכון כללי"
 
-def main():
-    IMAReviewer().run()
-
-if __name__ == "__main__":
-    provider = get_provider()
-    if len(sys.argv) > 1 and sys.argv[1] == "commit":
-        diff = provider.get_diff()
-        msg = generate_commit_msg(diff)
-    elif len(sys.argv) > 1 and sys.argv[1] == "fix":
-        diff = provider.get_diff()
-        fixes = generate_fix(diff)
-    elif len(sys.argv) > 1 and sys.argv[1] == "explain":
-        diff = provider.get_diff()
-        exp = generate_explain(diff)
-    else:
-        main()
-
 def ship_code(provider):
+    run_lint()
 
-    # 1. fix
     diff = provider.get_diff()
     fixes = generate_fix(diff)
     for f in fixes:
         subprocess.run(f, shell=True)
 
-    # 2. commit
     msg = generate_commit_msg(diff)
     subprocess.run(["git", "add", "."], capture_output=True)
     subprocess.run(["git", "commit", "-m", msg], capture_output=True)
 
-    # 3. push
     subprocess.run(["git", "push"], capture_output=True)
 
-    # 4. PR
     if provider.get_name() == "github":
     elif provider.get_name() == "gitlab":
 
 
+def main():
+    IMAReviewer().run()
+
 if __name__ == "__main__":
     provider = get_provider()
-    if len(sys.argv) > 1 and sys.argv[1] == "commit":
+    if len(sys.argv) > 1 and sys.argv[1] == "lint":
+        run_lint()
+    elif len(sys.argv) > 1 and sys.argv[1] == "commit":
         diff = provider.get_diff()
         msg = generate_commit_msg(diff)
     elif len(sys.argv) > 1 and sys.argv[1] == "fix":
