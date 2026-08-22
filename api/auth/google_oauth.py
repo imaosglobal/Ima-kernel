@@ -61,6 +61,8 @@ def google_login():
 
 @google_auth.get("/auth/google/callback")
 def google_callback():
+    print("DEBUG cookies received:", dict(request.cookies))
+    print("DEBUG session at start:", dict(session))
     expected_state = session.pop("google_oauth_state", None)
     received_state = request.args.get("state")
 
