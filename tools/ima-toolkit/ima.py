@@ -12,7 +12,7 @@ from providers.git import GitProvider
 from providers.github import GitHubProvider
 from providers.gitlab import GitLabProvider
 
-VERSION = "4.0.0"
+VERSION = "4.0.1"
 NOTE_FILE = os.path.expanduser("~/.ima_notes")
 PLUGIN_DIR = os.path.expanduser("~/.ima_plugins")
 
@@ -54,15 +54,15 @@ def run_lint():
     for cmd in ["black.", "flake8. --ignore=E501", "isort."]:
 
 def run_test():
-    result = subprocess.run("pytest --cov --cov-report=term-missing", shell=True)
+    result = subprocess.run("pytest --cov --cov-report=term-missing 2>/dev/null || echo 'התקן: pip install pytest-cov'", shell=True)
 
 def run_stats():
-    files = len(glob.glob("**/*.*", recursive=True))
-    lines = subprocess.run("wc -l $(find. -type f) 2>/dev/null | tail -1", shell=True, capture_output=True, text=True).stdout
+    files = len([f for f in glob.glob("**/*.*", recursive=True) if ".git" not in f and "node_modules" not in f])
+    lines = subprocess.run("find. -type f -name '*.py' -o -name '*.ts' -o -name '*.js' | xargs wc -l 2>/dev/null | tail -1", shell=True, capture_output=True, text=True).stdout
     commits = subprocess.run("git rev-list --count HEAD 2>/dev/null", shell=True, capture_output=True, text=True).stdout
 
 def run_todo():
-    result = subprocess.run("grep -rn '# TODO'.", shell=True, capture_output=True, text=True)
+    result = subprocess.run("grep -rn '# TODO'. --exclude-dir=.git --exclude-dir=node_modules", shell=True, capture_output=True, text=True)
 
 def run_clean():
     for pattern in ["**/__pycache__", "**/*.pyc", "**/.pytest_cache", "dist", "build", "node_modules"]:
@@ -71,7 +71,7 @@ def run_clean():
 def run_watch():
     last = 0
     while True:
-        current = sum(os.path.getmtime(f) for f in glob.glob("**/*.*", recursive=True))
+        current = sum(os.path.getmtime(f) for f in glob.glob("**/*.*", recursive=True) if ".git" not in f)
         if current!= last:
             run_lint(); run_test(); last = current
         time.sleep(2)
@@ -90,7 +90,7 @@ def run_backup():
     os.makedirs(dest, exist_ok=True)
     folder = os.path.basename(os.getcwd())
     zip_name = f"{dest}/{folder}_{datetime.now().strftime('%Y%m%d_%H%M')}.tar.gz"
-    subprocess.run(f"tar -czf {zip_name}. --exclude=.git --exclude=__pycache__", shell=True)
+    subprocess.run(f"tar -czf {zip_name}. --exclude=.git --exclude=__pycache__ --exclude=node_modules", shell=True)
 
 def run_db():
     action = input("backup/restore: ")
@@ -116,7 +116,7 @@ def run_time(minutes=25):
     for i in range(int(minutes)*60, 0, -1):
 
 def run_search(keyword):
-    subprocess.run(f"grep -rn '{keyword}'.", shell=True)
+    subprocess.run(f"grep -rn '{keyword}'. --exclude-dir=.git --exclude-dir=node_modules", shell=True)
 
 def run_env():
     if not os.path.exists(".env"):
