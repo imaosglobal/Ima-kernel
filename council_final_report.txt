@@ -1,0 +1,218 @@
+=== מועצת IMA - ישיבת חירום 25.08.2026 ===
+נושא: האם ניתן להפעיל עם כסף אמיתי?
+
+--- 1. ג'מיני: בדיקת תשתית ופרודקשן ---
+=== IMA CLEAN v2 ===
+EVENTS: 0
+QUESTIONS: 0
+ANSWERS: 0
+
+--- 2. קלוד: בדיקת ארכיטקטורה ונקודות כשל ---
+=== IMA CANONICAL ARCHITECTURE AUDIT ===
+TIME: Tue Aug 25 17:15:25 IDT 2026
+
+=== COMPONENTS ===
+MISS kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
+MISS kernel/runtime/KERNEL_EVENT_BUS.js
+MISS kernel/runtime/KERNEL_API_GATEWAY.js
+MISS learning/safe_scheduler.py
+MISS kernel/device
+MISS kernel/plugins
+MISS learning/meta_orchestrator.py
+MISS learning/persona_engine.py
+MISS learning/child_safety_engine.py
+MISS learning/single_gate.py
+MISS learning/brain_guard.py
+
+=== GOVERNANCE ===
+MISS .ima/governance/brain_registry.json
+MISS .ima/governance/runtime_registry.json
+MISS .ima/governance/device_registry.json
+MISS .ima/governance/architecture_status.json
+
+=== BRAIN CONNECTION ===
+
+=== EVENT BUS CONNECTION ===
+
+=== API CONNECTION ===
+
+=== SYSTEM TESTS ===
+/data/data/com.termux/files/usr/bin/python3: can't open file '/data/data/com.termux/files/home/ima_kernel/learning/single_gate.py': [Errno 2] No such file or directory
+/data/data/com.termux/files/usr/bin/python3: can't open file '/data/data/com.termux/files/home/ima_kernel/learning/evolution_controller.py': [Errno 2] No such file or directory
+/data/data/com.termux/files/usr/bin/python3: can't open file '/data/data/com.termux/files/home/ima_kernel/ima_full_system_check.py': [Errno 2] No such file or directory
+
+=== GIT STATE ===
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   ../.gitmodules
+	new file:   ../kernel/projects/ima_core
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.android/
+	../.bash_history
+	../.bash_history-20491.tmp
+	../.bash_history-21011.tmp
+	../.bashrc
+	../.bashrc.backup
+	../.bashrc.bak
+	../.cache/
+	../.cargo/
+	../.config/
+	../.env
+	../.git-credentials
+	../.gitconfig
+	../.gitignore_global
+	../.gradle/
+	../.groq_key
+	../.ima.env
+	../.ima/
+	../.ima_autogpt_env
+	../.ima_backups/
+	../.ima_bridge/
+	../.ima_env
+	../.ima_history
+	../.ima_key
+	../.ima_memory
+	../.ima_memory.txt
+	../.lesshst
+	../.local/
+	../.mother_host_config
+	../.ngrok/
+	../.node_repl_history
+	../.npm/
+	../.npmrc
+	../.ollama/
+	../.openrouter_key
+	../.pm2/
+	../.profile
+	../.pyenv/
+	../.python_history
+	../.ssh/
+	../.termux/
+	../.termux_authinfo
+	../.wget-hsts
+	../.zshrc
+	../Android/
+	../AutoGPT/
+	../IMA_App/
+	../IMA_Project/
+	../Ima-3d-mom/
+	../Ima-AutoGPT-3D-AllInOne/
+	../Ima-AutoGPT-Global/
+	../Ima-AutoGPT-Ultimate/
+	../Ima-AutoGPT/
+	../Ima-kernel/
+	../Imamvp/
+	../apk_server/
+	../assets/
+	../backup_full.js
+	../bin/
+	../boot_ima.sh
+	../bridge.py
+	../deploy-ima.sh
+	../downloads/
+	../ima-auto-full.sh
+	../ima-core/
+	../ima-full-deploy.sh
+	../ima-kernel-current-20260719-011551.tar.gz
+	../ima-kernel-full-20260719-011550.bundle
+	../ima-mobile.zip
+	../ima-project/
+	../ima_1785929490.mp3
+	../ima_1785929496.mp3
+	../ima_1785929562.mp3
+	../ima_1785929674.wav
+	../ima_1785929683.wav
+	../ima_1785929723.wav
+	../ima_agent.log
+	../ima_apk/
+	../ima_app.log
+	../ima_archive_hashes.txt
+	../ima_archive_index/
+	../ima_archive_inventory.txt
+	../ima_archive_size_index.txt
+	../ima_archive_snapshots/
+	../ima_audit/
+	../ima_backup_1783804250_recovery.manifest.txt
+	../ima_backup_1783804250_recovery.sha256
+	../ima_backup_1783804250_recovery.tar.gz
+	../ima_before_product_closure_backup.tar.gz
+	../ima_boot.log
+	../ima_core_before_merge_backup.tar.gz
+	../ima_debug.apk
+	../ima_diagnostics.txt
+	../ima_dirty_snapshot_20260820_191728/
+	../ima_e2e.log
+	../ima_full_audit.py
+	../ima_full_diagnostics.txt
+	../ima_git_boot.log
+	./
+	../ima_kernel_android_export.tar.gz
+	../ima_kernel_backup/
+	../ima_kernel_before_merge_backup.tar.gz
+	../ima_kernel_clean/
+	../ima_kernel_final_locked_backup.tar.gz
+	../ima_memory.json
+	../ima_os_kernel.sh
+	../ima_smoke.log
+	../ima_supabase_heartbeat.py
+	../ima_voice.mp3
+	../memory.json
+	../ngrok-stable-linux-arm64.tgz
+	../ngrok-stable-linux-arm64.tgz.1
+	../node_modules/
+	../nohup.out
+	../package-lock.json
+	../package.json
+	../prisma/
+	../public/
+	../pwa/
+	../replit-ima/
+	../run_ima_3d_fullprod_auto.sh
+	../run_ima_3d_fullprod_universal.sh
+	../saas_init.sh
+	../saas_wizard.sh
+	../scripts/
+	../setup-ima-full.sh
+	../setup_ima.sh
+	../setup_saas.sh
+	../squad/
+	../storage/
+	../tmp_cron
+	../tmp_kernel/
+	../users.json
+	"../\327\220\327\236\327\220"
+
+fatal: your current branch 'master' does not have any commits yet
+
+REPORT SAVED:
+.ima/governance/architecture_audit_report.txt
+
+--- 3. מדה: בדיקת אבטחה וGO/NO-GO לכסף אמיתי ---
+=== IMA PRODUCT READINESS AUDIT ===
+Android : MISSING ( 0 )
+UI : MISSING ( 0 )
+API : MISSING ( 0 )
+Identity : MISSING ( 0 )
+Security : MISSING ( 0 )
+Voice : MISSING ( 0 )
+Child : MISSING ( 0 )
+Device : MISSING ( 0 )
+Deployment : MISSING ( 0 )
+
+PRODUCT REPORT SAVED
+
+[1] Canonical system check
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ModuleNotFoundError: No module named 'learning'
+
+--- 4. שאלות ליושב ראש ---
+א. האם אפשר להפעיל עם כסף אמיתי או רק סימולציה?
+ב. מה חסר כדי לעבור לאמיתי?
+ג. 3 צעדים לעשות מיד עכשיו
