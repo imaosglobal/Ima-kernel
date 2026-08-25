@@ -2,14 +2,16 @@
 נושא: האם ניתן להפעיל עם כסף אמיתי?
 
 --- 1. ג'מיני: בדיקת תשתית ופרודקשן ---
-=== IMA CLEAN v2 ===
-EVENTS: 0
-QUESTIONS: 0
-ANSWERS: 0
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/Ima-kernel/ima_system.py", line 26, in <module>
+    from learning.ima_learning_loop import run_ima_learning_loop
+  File "/data/data/com.termux/files/home/Ima-kernel/learning/ima_learning_loop.py", line 8, in <module>
+    from learning.meta_orchestrator import run_meta_analysis
+ImportError: cannot import name 'run_meta_analysis' from 'learning.meta_orchestrator' (/data/data/com.termux/files/home/Ima-kernel/learning/meta_orchestrator.py)
 
 --- 2. קלוד: בדיקת ארכיטקטורה ונקודות כשל ---
 === IMA CANONICAL ARCHITECTURE AUDIT ===
-TIME: Tue Aug 25 17:15:25 IDT 2026
+TIME: Tue Aug 25 17:16:53 IDT 2026
 
 === COMPONENTS ===
 MISS kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
