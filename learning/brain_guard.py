@@ -1,2 +1,2 @@
-def verify_brain(): return "MOCK BRAIN VERIFIED"
+def verify_brain(x=None): return "MOCK BRAIN VERIFIED"
 def guard(): return "MOCK GUARD"
