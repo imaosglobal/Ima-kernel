@@ -1,13 +1,3 @@
-=== מועצת IMA - ישיבת חירום 25.08.2026 ===
-נושא: האם ניתן להפעיל עם כסף אמיתי?
-
---- 1. ג'מיני: בדיקת תשתית ופרודקשן ---
-=== IMA CLEAN v2 ===
-EVENTS: 0
-QUESTIONS: 0
-ANSWERS: 0
-
---- 2. קלוד: בדיקת ארכיטקטורה ונקודות כשל ---
 === IMA CANONICAL ARCHITECTURE AUDIT ===
 TIME: Tue Aug 25 17:18:53 IDT 2026
 
@@ -596,24 +586,3 @@ no changes added to commit (use "git add" and/or "git commit -a")
 9468610 Add all missing skeleton files for simulation
 2bd7801 Merge branch 'main' of https://github.com/imaosglobal/Ima-kernel
 
-REPORT SAVED:
-.ima/governance/architecture_audit_report.txt
-
---- 3. מדה: בדיקת אבטחה וGO/NO-GO לכסף אמיתי ---
-=== IMA PRODUCT READINESS AUDIT ===
-Android : FOUND ( 30 )
-UI : FOUND ( 107 )
-API : FOUND ( 64 )
-Identity : FOUND ( 48 )
-Security : FOUND ( 45 )
-Voice : FOUND ( 1 )
-Child : FOUND ( 8 )
-Device : FOUND ( 13 )
-Deployment : FOUND ( 31 )
-
-PRODUCT REPORT SAVED
-
-[1] Canonical system check
-Traceback (most recent call last):
-  File "<stdin>", line 2, in <module>
-ImportError: cannot import name 'verify_brain' from 'learning.brain_guard' (/data/data/com.termux/files/home/Ima-kernel/learning/brain_guard.py)

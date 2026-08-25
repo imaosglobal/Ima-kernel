@@ -2,7 +2,7 @@
 
 set -e
 
-cd "$HOME/ima_kernel"
+cd "$HOME/Ima-kernel"
 
 echo "=== IMA PRODUCT READINESS AUDIT ==="
 

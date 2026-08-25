@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /data/data/com.termux/files/home/Ima-kernel
 echo "=== מועצת IMA - ישיבת חירום 25.08.2026 ===" > council_final_report.txt
 echo "נושא: האם ניתן להפעיל עם כסף אמיתי?" >> council_final_report.txt
 echo "" >> council_final_report.txt
@@ -13,11 +14,5 @@ echo "" >> council_final_report.txt
 
 echo "--- 3. מדה: בדיקת אבטחה וGO/NO-GO לכסף אמיתי ---" >> council_final_report.txt
 ./ima_product_readiness_audit.sh >> council_final_report.txt 2>&1
-echo "" >> council_final_report.txt
-
-echo "--- 4. שאלות ליושב ראש ---" >> council_final_report.txt
-echo "א. האם אפשר להפעיל עם כסף אמיתי או רק סימולציה?" >> council_final_report.txt
-echo "ב. מה חסר כדי לעבור לאמיתי?" >> council_final_report.txt
-echo "ג. 3 צעדים לעשות מיד עכשיו" >> council_final_report.txt
 
 cat council_final_report.txt

@@ -2,7 +2,7 @@
 
 set -u
 
-ROOT="$HOME/ima_kernel"
+ROOT="$HOME/Ima-kernel"
 cd "$ROOT" || exit 1
 
 REPORT=".ima/governance/architecture_audit_report.txt"

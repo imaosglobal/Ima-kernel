@@ -1,0 +1,104 @@
+{
+  "system": "IMA",
+  "status": "PRODUCT_READINESS_AUDIT_COMPLETE",
+  "canonical_brain": "learning/meta_orchestrator.py",
+  "canonical_orchestrator": "learning/module_registry.py",
+  "checks": {
+    "Android": {
+      "status": "FOUND",
+      "count": 30,
+      "examples": [
+        "android/build.gradle",
+        "android/build_all.sh",
+        "android/gradle.properties",
+        "android/gradlew",
+        "android/gradlew.bat"
+      ]
+    },
+    "UI": {
+      "status": "FOUND",
+      "count": 107,
+      "examples": [
+        "approved_learning_integration.json",
+        "app.py",
+        "ima_api_wrapper.py",
+        "ima_whatsapp.py",
+        "safe_apply.sh"
+      ]
+    },
+    "API": {
+      "status": "FOUND",
+      "count": 64,
+      "examples": [
+        "ima_api_documentation.md",
+        "_tmp_server.js",
+        "api_boot_connector.py",
+        "ima_api_wrapper.py",
+        "server.js"
+      ]
+    },
+    "Identity": {
+      "status": "FOUND",
+      "count": 48,
+      "examples": [
+        "authority_lock.json",
+        "canonical_authority.json",
+        "learning_authority_connection_audit.json",
+        "learning_authority_map.json",
+        "auth/readme.md"
+      ]
+    },
+    "Security": {
+      "status": "FOUND",
+      "count": 45,
+      "examples": [
+        "security.md",
+        ".ima_guardian/policy.json",
+        "_archive_20260808/build_ima_public_security_layer.py",
+        "_archive_20260808/upgrade_guardian_policy_gate.py",
+        "_archive_20260808/ima_guardian_policy.py"
+      ]
+    },
+    "Voice": {
+      "status": "FOUND",
+      "count": 1,
+      "examples": [
+        "product/voice/voice_pipeline.json"
+      ]
+    },
+    "Child": {
+      "status": "FOUND",
+      "count": 8,
+      "examples": [
+        "child_safety/child_safety_core.py",
+        "learning/child_safety_engine.py",
+        "product/childcare/ima_child_companion.json",
+        "_archive_20260808/learning_backup_adaptive_1784122898/child_safety_engine.py",
+        "_archive_20260808/learning_backup_stable_20260715_1633/child_safety_engine.py"
+      ]
+    },
+    "Device": {
+      "status": "FOUND",
+      "count": 13,
+      "examples": [
+        "device/device_manager.py",
+        "devices/readme.md",
+        "devices/device_registry.json",
+        "founder/executive_ai/device/device_language.py",
+        "tools/product_audit/create_device_update_layer.sh"
+      ]
+    },
+    "Deployment": {
+      "status": "FOUND",
+      "count": 31,
+      "examples": [
+        "dockerfile",
+        "ima_deployment_checklist.md",
+        "docker-compose.yml",
+        "ima_final_unification_and_deployment_lock.sh",
+        "deployment/readme.md"
+      ]
+    }
+  },
+  "time": 1787667534.7151046
+}
