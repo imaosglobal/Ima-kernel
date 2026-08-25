@@ -1,5 +1,5 @@
 === IMA CANONICAL ARCHITECTURE AUDIT ===
-TIME: Tue Aug 25 17:22:26 IDT 2026
+TIME: Tue Aug 25 17:23:49 IDT 2026
 
 === COMPONENTS ===
 OK   kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
@@ -550,7 +550,7 @@ history: 0
 
 [LEARNING]
 learning loop import: OK
-function: <function run_ima_learning_loop at 0x735b5f23e0>
+function: <function run_ima_learning_loop at 0x751f6a63e0>
 
 [KNOWLEDGE]
 knowledge engine: OK
@@ -562,8 +562,8 @@ llm layer exists: OK
 [FILES]
 .ima/memory.json OK
 .ima/ledger.jsonl OK
-.ima/personality.json MISSING
-.ima/voice.json MISSING
+.ima/personality.json OK
+.ima/voice.json OK
 
 === CHECK COMPLETE ===
 
@@ -573,14 +573,10 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   .ima/governance/architecture_audit_report.txt
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	COUNCIL_SESSION_V2.sh
-	council_improvements_report.txt
+	modified:   council_improvements_report.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+9ea241d IMA v2.2: Apply 9 council improvements - cleanup, cache, security, identity
+f43ff0a IMA v2.1: Ledger + Money Commands + Council Audit
 441037f Add: ledger.jsonl + money commands for simulation
-c10f856 Fix: verify_brain accepts param
-eb33985 Fix: Add verify_brain function
 

@@ -17,18 +17,18 @@
     },
     "UI": {
       "status": "FOUND",
-      "count": 107,
+      "count": 108,
       "examples": [
         "approved_learning_integration.json",
         "app.py",
         "ima_api_wrapper.py",
         "ima_whatsapp.py",
-        "safe_apply.sh"
+        "apply_council_improvements.sh"
       ]
     },
     "API": {
       "status": "FOUND",
-      "count": 64,
+      "count": 65,
       "examples": [
         "ima_api_documentation.md",
         "_tmp_server.js",
@@ -61,8 +61,9 @@
     },
     "Voice": {
       "status": "FOUND",
-      "count": 1,
+      "count": 2,
       "examples": [
+        ".ima/voice.json",
         "product/voice/voice_pipeline.json"
       ]
     },
@@ -100,5 +101,5 @@
       ]
     }
   },
-  "time": 1787667747.748008
+  "time": 1787667830.5828776
 }

@@ -9,7 +9,7 @@ ANSWERS: 0
 
 --- 2. קלוד: ארכיטקטורה + חובות טכניים ---
 === IMA CANONICAL ARCHITECTURE AUDIT ===
-TIME: Tue Aug 25 17:22:26 IDT 2026
+TIME: Tue Aug 25 17:23:49 IDT 2026
 
 === COMPONENTS ===
 OK   kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
@@ -560,7 +560,7 @@ history: 0
 
 [LEARNING]
 learning loop import: OK
-function: <function run_ima_learning_loop at 0x735b5f23e0>
+function: <function run_ima_learning_loop at 0x751f6a63e0>
 
 [KNOWLEDGE]
 knowledge engine: OK
@@ -572,8 +572,8 @@ llm layer exists: OK
 [FILES]
 .ima/memory.json OK
 .ima/ledger.jsonl OK
-.ima/personality.json MISSING
-.ima/voice.json MISSING
+.ima/personality.json OK
+.ima/voice.json OK
 
 === CHECK COMPLETE ===
 
@@ -583,16 +583,12 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   .ima/governance/architecture_audit_report.txt
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	COUNCIL_SESSION_V2.sh
-	council_improvements_report.txt
+	modified:   council_improvements_report.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+9ea241d IMA v2.2: Apply 9 council improvements - cleanup, cache, security, identity
+f43ff0a IMA v2.1: Ledger + Money Commands + Council Audit
 441037f Add: ledger.jsonl + money commands for simulation
-c10f856 Fix: verify_brain accepts param
-eb33985 Fix: Add verify_brain function
 
 REPORT SAVED:
 .ima/governance/architecture_audit_report.txt
@@ -600,11 +596,11 @@ REPORT SAVED:
 --- 3. מדה: אבטחה + GO/NO-GO לTESTNET ---
 === IMA PRODUCT READINESS AUDIT ===
 Android : FOUND ( 30 )
-UI : FOUND ( 107 )
-API : FOUND ( 64 )
+UI : FOUND ( 108 )
+API : FOUND ( 65 )
 Identity : FOUND ( 48 )
 Security : FOUND ( 45 )
-Voice : FOUND ( 1 )
+Voice : FOUND ( 2 )
 Child : FOUND ( 8 )
 Device : FOUND ( 13 )
 Deployment : FOUND ( 31 )
@@ -639,18 +635,18 @@ CANONICAL BRAIN OK
     },
     "UI": {
       "status": "FOUND",
-      "count": 107,
+      "count": 108,
       "examples": [
         "approved_learning_integration.json",
         "app.py",
         "ima_api_wrapper.py",
         "ima_whatsapp.py",
-        "safe_apply.sh"
+        "apply_council_improvements.sh"
       ]
     },
     "API": {
       "status": "FOUND",
-      "count": 64,
+      "count": 65,
       "examples": [
         "ima_api_documentation.md",
         "_tmp_server.js",
@@ -683,8 +679,9 @@ CANONICAL BRAIN OK
     },
     "Voice": {
       "status": "FOUND",
-      "count": 1,
+      "count": 2,
       "examples": [
+        ".ima/voice.json",
         "product/voice/voice_pipeline.json"
       ]
     },
@@ -722,6 +719,6 @@ CANONICAL BRAIN OK
       ]
     }
   },
-  "time": 1787667747.748008
+  "time": 1787667830.5828776
 }
 === IMA PRODUCT READINESS COMPLETE ===
