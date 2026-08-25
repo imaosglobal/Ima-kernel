@@ -1,3 +1,4 @@
+BALANCE_CACHE = {}
 import json, time, os
 LEDGER_PATH = ".ima/ledger.jsonl"
 def add_tx(user, type, amount, note=""):
