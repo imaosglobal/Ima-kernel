@@ -1,10 +1,8 @@
 from pathlib import Path
 import json
 
-FILE=Path("founder/data/community_secrets.json")
 
 
-def save_secret(service,key):
 
     data={}
 
@@ -23,7 +21,6 @@ def save_secret(service,key):
     )
 
 
-def get_secret(service):
 
     if FILE.exists():
         return json.loads(FILE.read_text()).get(service)
