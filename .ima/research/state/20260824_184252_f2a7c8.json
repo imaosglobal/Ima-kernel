@@ -1,0 +1,432 @@
+{
+  "id": "20260824_184252_f2a7c8",
+  "original_question": "בדיקת אינטגרציה: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+  "architecture": "IMA_RESEARCH_COUNCIL_V4",
+  "status": "RESEARCH_CYCLE_COMPLETE",
+  "agent_results": [
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What observations or measurements can actually bear on the question?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "empirical",
+      "duration": 0.001
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": false,
+      "subquestion_id": "criticism",
+      "duration": 0.003
+    },
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What competing explanations exist?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "alternatives",
+      "duration": 0.004
+    },
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "mechanism",
+      "duration": 0.007
+    },
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What competing explanations exist?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "alternatives",
+      "duration": 0.002
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What remains genuinely unknown?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "unknowns",
+      "duration": 0.005
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "testability",
+      "duration": 0.003
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "PROVIDER_ERROR",
+      "question": "What remains genuinely unknown?",
+      "sources": [],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        },
+        {
+          "provider": "Crossref",
+          "error": "<HTTPError 429: 'Too Many Requests'>"
+        }
+      ],
+      "contract": "Return scientific papers, evidence, contradictions and source metadata.",
+      "subquestion_id": "unknowns",
+      "duration": 1.708
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What observations or measurements can actually bear on the question?",
+      "result_count": 8,
+      "sources": [
+        {
+          "title": "Real Interrogation: What Actually Happens When Cops Question Kids",
+          "year": 2012,
+          "doi": "10.1037/e669802012-348",
+          "authors": [
+            "Barry C. Feld"
+          ],
+          "journal": "PsycEXTRA Dataset",
+          "type": "dataset",
+          "url": "https://doi.org/10.1037/e669802012-348"
+        },
+        {
+          "title": "What You Can Endure",
+          "year": 2010,
+          "doi": "10.1515/9780820378190-013",
+          "authors": [
+            "Melinda Moustakis"
+          ],
+          "journal": "Bear Down, Bear North",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1515/9780820378190-013"
+        },
+        {
+          "title": "Now for the $55 million question: what does Clive Palmer actually want?",
+          "year": null,
+          "doi": "10.64628/aa.xvrnq35qn",
+          "authors": [
+            "John Wanna"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/aa.xvrnq35qn"
+        },
+        {
+          "title": "WHAT BODY CAN BEAR",
+          "year": 2019,
+          "doi": "10.2307/j.ctvb6v55z.22",
+          "authors": [],
+          "journal": "Brother Bullet",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.2307/j.ctvb6v55z.22"
+        },
+        {
+          "title": "What Can ChatGPT Actually Do?",
+          "year": 2026,
+          "doi": "10.1007/978-3-032-27286-7_1",
+          "authors": [
+            "George Grätzer"
+          ],
+          "journal": "ChatGPT for Math",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1007/978-3-032-27286-7_1"
+        },
+        {
+          "title": "What can technology actually do?",
+          "year": 2017,
+          "doi": "10.4324/9781315709505-1",
+          "authors": [
+            "Chris Shelton"
+          ],
+          "journal": "Debates in Computing and ICT Education",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.4324/9781315709505-1"
+        },
+        {
+          "title": "At-home fertility tests: here’s what they can actually tell you",
+          "year": null,
+          "doi": "10.64628/ab.phusxx74f",
+          "authors": [
+            "Adam Watkins"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/ab.phusxx74f"
+        },
+        {
+          "title": "Spain-Portugal blackouts: what actually happened, and what can Iberia and Europe learn from it?",
+          "year": null,
+          "doi": "10.64628/aao.nv6gecexh",
+          "authors": [
+            "J. León"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/aao.nv6gecexh"
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "subquestion_id": "empirical",
+      "duration": 1.776
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "result_count": 8,
+      "sources": [
+        {
+          "title": "Failure to Distinguish Among Competing Hypotheses",
+          "year": 2017,
+          "doi": "10.1542/peds.2017-2655c",
+          "authors": [
+            "Matthew L. Hall",
+            "Krister Schönström",
+            "Arielle Spellun"
+          ],
+          "journal": "Pediatrics",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1542/peds.2017-2655c"
+        },
+        {
+          "title": "What if we could do psychology experiments in virtual reality?",
+          "year": 2021,
+          "doi": "10.33424/futurum160",
+          "authors": [
+            "Markus Bindemann"
+          ],
+          "journal": "Futurum Careers",
+          "type": "journal-article",
+          "url": "https://doi.org/10.33424/futurum160"
+        },
+        {
+          "title": "What MPO and Mio observations could teach us about Mercury's deep Magnetotail",
+          "year": null,
+          "doi": "10.5194/epsc2026-485",
+          "authors": [
+            "Willi Exner"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.5194/epsc2026-485"
+        },
+        {
+          "title": "The Number of Observations Needed to Distinguish Between Two Closely Related Hypotheses",
+          "year": 1967,
+          "doi": "10.1137/1112066",
+          "authors": [
+            "I. N. Volodin"
+          ],
+          "journal": "Theory of Probability &amp; Its Applications",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1137/1112066"
+        },
+        {
+          "title": "Migration and fertility: competing hypotheses re-examined",
+          "year": 2003,
+          "doi": "10.4054/mpidr-wp-2003-035",
+          "authors": [
+            "Hill Kulu"
+          ],
+          "journal": null,
+          "type": "report",
+          "url": "https://doi.org/10.4054/mpidr-wp-2003-035"
+        },
+        {
+          "title": "Cognitive Bias in Intelligence Analysis",
+          "year": 2020,
+          "doi": "10.3366/edinburgh/9781474466349.001.0001",
+          "authors": [
+            "Martha Whitesmith"
+          ],
+          "journal": null,
+          "type": "edited-book",
+          "url": "https://doi.org/10.3366/edinburgh/9781474466349.001.0001"
+        },
+        {
+          "title": "What could possibly go wrong? Predictable Misallocation in Simple Debt Repayment Experiments",
+          "year": null,
+          "doi": "10.1257/rct.6400",
+          "authors": [
+            "Florian Gärtner"
+          ],
+          "journal": "AEA Randomized Controlled Trials",
+          "type": "dataset",
+          "url": "https://doi.org/10.1257/rct.6400"
+        },
+        {
+          "title": "What could possibly go wrong? Predictable Misallocation in Simple Debt Repayment Experiments",
+          "year": null,
+          "doi": "10.1257/rct.6400-1.0",
+          "authors": [
+            "Florian Gärtner"
+          ],
+          "journal": "AEA Randomized Controlled Trials",
+          "type": "dataset",
+          "url": "https://doi.org/10.1257/rct.6400-1.0"
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "subquestion_id": "testability",
+      "duration": 1.931
+    },
+    {
+      "agent": "MEDA",
+      "status": "TIMEOUT",
+      "duration": 30.08,
+      "scientific_failure": false,
+      "meaning": "Execution timeout only. Not a scientific conclusion.",
+      "subquestion_id": "testability"
+    },
+    {
+      "agent": "MEDA",
+      "status": "TIMEOUT",
+      "duration": 30.09,
+      "scientific_failure": false,
+      "meaning": "Execution timeout only. Not a scientific conclusion.",
+      "subquestion_id": "mechanism"
+    }
+  ],
+  "subquestions": [
+    {
+      "id": "empirical",
+      "question": "What observations or measurements can actually bear on the question?",
+      "agents": [
+        "DEEP_RESEARCH",
+        "LITERATURE"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "agents": [
+        "MEDA",
+        "HYPOTHESIS"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "question": "What competing explanations exist?",
+      "agents": [
+        "HYPOTHESIS",
+        "DEEP_RESEARCH"
+      ]
+    },
+    {
+      "id": "criticism",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "agents": [
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "testability",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "agents": [
+        "MEDA",
+        "LITERATURE",
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "unknowns",
+      "question": "What remains genuinely unknown?",
+      "agents": [
+        "CRITIC",
+        "LITERATURE"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "open_questions": [
+    "What remains unresolved after independent research?",
+    "Which claims require external evidence?",
+    "Which claims are philosophical rather than empirically testable?"
+  ],
+  "next_research_questions": [
+    "Which conclusions are independently supported by multiple agents?",
+    "Where do the agents disagree?",
+    "Which hypothesis currently has the strongest evidence?",
+    "Which hypothesis currently has the strongest counterevidence?",
+    "What observation would distinguish the competing hypotheses?",
+    "What important information is still missing?",
+    "What new question should IMA ask next to reduce the greatest uncertainty?"
+  ],
+  "events": [],
+  "evidence_map": {
+    "successful_results": 7,
+    "failed_or_unavailable": 4,
+    "successful_agents": [
+      "CRITIC",
+      "HYPOTHESIS",
+      "HYPOTHESIS",
+      "CRITIC",
+      "CRITIC",
+      "LITERATURE",
+      "LITERATURE"
+    ],
+    "unavailable_agents": [
+      "DEEP_RESEARCH",
+      "DEEP_RESEARCH",
+      "MEDA",
+      "MEDA"
+    ]
+  },
+  "disagreement_policy": {
+    "never_collapse_disagreement": true,
+    "separate_evidence_from_inference": true,
+    "preserve_competing_hypotheses": true
+  },
+  "duration": 30.105,
+  "result_file": "/data/data/com.termux/files/home/ima_kernel/.ima/research/state/20260824_184252_f2a7c8.json",
+  "ima_handoff": {
+    "ready": true,
+    "original_question": "בדיקת אינטגרציה: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+    "research_cycle": "20260824_184252_f2a7c8",
+    "agent_count": 12,
+    "successful_count": 7,
+    "unavailable_count": 4,
+    "next_questions": [
+      "Which conclusions are independently supported by multiple agents?",
+      "Where do the agents disagree?",
+      "Which hypothesis currently has the strongest evidence?",
+      "Which hypothesis currently has the strongest counterevidence?",
+      "What observation would distinguish the competing hypotheses?",
+      "What important information is still missing?",
+      "What new question should IMA ask next to reduce the greatest uncertainty?"
+    ],
+    "instruction": "IMA must synthesize evidence, preserve disagreement, distinguish fact from inference, and generate new questions when uncertainty remains."
+  }
+}

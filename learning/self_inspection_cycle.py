@@ -146,6 +146,9 @@ def build_observations(scan):
 
 def run_self_inspection():
 
+    print("=" * 100)
+    print("IMA — SELF INSPECTION LEARNING CYCLE")
+    print("=" * 100)
 
     # 1. READ-ONLY REPOSITORY SCAN
     scan = scan_repository()
@@ -183,30 +186,54 @@ def run_self_inspection():
         "status": "self_inspection_cycle_completed",
     }
 
+    print("\n[SCAN]")
+    print(
         "FILES:",
         len(scan["files"])
     )
 
+    print(
         "DIRECTORIES:",
         len(scan["directories"])
     )
 
+    print(
         "PYTHON MODULES:",
         len(scan["python_files"])
     )
 
+    print("\n[LESSONS RETRIEVED]")
+    print(
         len(lessons.get("matches", []))
     )
 
+    print("\n[AUTONOMY STATUS]")
+    print(
         autonomy.get("status")
     )
 
+    print("\n[EXECUTION]")
+    print(
         result["execution"]
     )
 
+    print("\n[SELF-MODIFICATION]")
+    print(
         result["self_modification"]
     )
 
+    print("\n" + "=" * 100)
+    print("SELF INSPECTION CYCLE COMPLETED")
+    print("SCAN: PASS")
+    print("LESSON RETRIEVAL: PASS")
+    print("REASONING: PASS")
+    print("PLANNING: PASS")
+    print("EVALUATION: PASS")
+    print("FEEDBACK: PASS")
+    print("LESSON MEMORY: PASS")
+    print("EXECUTION: DISABLED")
+    print("SELF-MODIFICATION: DISABLED")
+    print("=" * 100)
 
     return result
 

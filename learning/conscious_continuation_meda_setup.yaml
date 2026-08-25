@@ -1,0 +1,22 @@
+variables:
+  - name: stimulus
+    type: continuous
+
+  - name: reflection
+    type: continuous
+
+  - name: conscious_continuation
+    type: continuous
+
+  - name: confidence
+    type: continuous
+
+  - name: question_density
+    type: continuous
+
+  - name: word_count
+    type: continuous
+
+data_file: /data/data/com.termux/files/home/ima_kernel/learning/conscious_continuation_meda_numeric.csv
+
+normalization: none

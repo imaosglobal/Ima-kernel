@@ -46,10 +46,14 @@ for e in events:
         matches.append(e)
 
 
+print("IMA TRUTH V2")
+print("================")
 
 if not matches:
+    print("אין מידע מתועד")
 else:
 
+    print(
         "נמצאו",
         len(matches),
         "אירועים"
@@ -58,10 +62,12 @@ else:
     for e in matches[-15:]:
 
         if "event" in e:
+            print(
                 f"[{e.get('date',e.get('time'))}] {e['event']}"
             )
 
         else:
+            print(
                 json.dumps(
                     e,
                     ensure_ascii=False

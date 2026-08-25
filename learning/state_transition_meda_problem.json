@@ -1,0 +1,13 @@
+{
+  "ode_variables": [
+    "previous_inquiry",
+    "current_inquiry",
+    "confidence",
+    "question_density",
+    "word_count"
+  ],
+  "constraints": [],
+  "seeds": [],
+  "model_families": [],
+  "weighting_strategy": "equi_weighted"
+}

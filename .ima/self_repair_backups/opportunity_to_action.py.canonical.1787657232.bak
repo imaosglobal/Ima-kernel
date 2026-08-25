@@ -1,0 +1,170 @@
+
+try:
+    from founder.executive_ai.learning_journal.event_bus import emit_event
+except ImportError:
+    def emit_event(*args, **kwargs):
+        # Optional learning-journal dependency.
+        # Opportunity generation must remain operational if the journal
+        # subsystem is unavailable.
+        return None
+
+
+
+from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+from founder.executive_ai.global_intelligence.ranking_engine import ranker
+from founder.executive_ai.action_engine.action_memory import get_actions
+from founder.executive_ai.economic_intelligence.economic_engine import evaluate_action_economics
+
+
+
+def _ima_collect_opportunities():
+    """Collect existing internal opportunities without external I/O."""
+    found = []
+
+    # Existing opportunity engine
+    try:
+        from founder.executive_ai.global_intelligence import opportunity_engine
+
+        for name in dir(opportunity_engine):
+            obj = getattr(opportunity_engine, name)
+
+            if not callable(obj):
+                continue
+
+            lname = name.lower()
+
+            if not any(
+                x in lname
+                for x in ("opportun", "discover", "signal", "prospect")
+            ):
+                continue
+
+            try:
+                value = obj()
+            except TypeError:
+                continue
+            except Exception:
+                continue
+
+            if isinstance(value, dict):
+                value = [value]
+
+            if isinstance(value, (list, tuple)):
+                found.extend(
+                    x for x in value
+                    if isinstance(x, dict)
+                )
+    except Exception:
+        pass
+
+    # Existing lead finder
+    if not found:
+        try:
+            from founder.executive_ai.action_engine.executors.lead_finder import (
+                find_leads,
+            )
+
+            value = find_leads({})
+
+            if isinstance(value, dict):
+                value = value.get("leads", [])
+
+            if isinstance(value, (list, tuple)):
+                found.extend(
+                    x for x in value
+                    if isinstance(x, dict)
+                )
+        except Exception:
+            pass
+
+    normalized = []
+    seen = set()
+
+    for item in found:
+        target = (
+            item.get("target")
+            or item.get("name")
+            or item.get("customer")
+            or item.get("organization")
+            or item.get("company")
+        )
+
+        if not target:
+            continue
+
+        score = (
+            item.get("score")
+            if item.get("score") is not None
+            else item.get("opportunity_score", 50)
+        )
+
+        try:
+            score = float(score)
+        except Exception:
+            score = 50.0
+
+        key = str(target)
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+
+        normalized.append({
+            **item,
+            "target": str(target),
+            "score": score,
+        })
+
+    return normalized
+
+def generate_actions():
+    """
+    Canonical opportunity -> executable action conversion.
+
+    This creates internal action records only.
+    It never sends external messages.
+    """
+
+    opportunities = _ima_collect_opportunities()
+
+    opportunities.sort(
+        key=lambda x: float(x.get("score", 0)),
+        reverse=True,
+    )
+
+    actions = []
+
+    for item in opportunities:
+        target = item.get("target")
+
+        try:
+            score = float(item.get("score", 50))
+        except Exception:
+            score = 50.0
+
+        action_name = (
+            item.get("action")
+            or item.get("recommended_action")
+        )
+
+        if not action_name:
+            action_name = (
+                "create_personal_outreach"
+                if score >= 60
+                else "monitor"
+            )
+
+        actions.append({
+            "action": action_name,
+            "target": target,
+            "reason": (
+                item.get("reason")
+                or "opportunity intelligence decision"
+            ),
+            "score": score,
+            "signals": item.get("signals", []),
+        })
+
+    return actions
+

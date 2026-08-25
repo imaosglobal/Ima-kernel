@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "supervisor": "IMAResearchSupervisor",
+  "agents": {
+    "MEDA": {
+      "enabled": true,
+      "adapter": ".ima/research/meda_adapter.py",
+      "role": [
+        "constraint reasoning",
+        "dynamical models",
+        "model comparison"
+      ]
+    },
+    "literature": {
+      "enabled": false,
+      "role": [
+        "literature search",
+        "evidence retrieval"
+      ],
+      "status": "ADAPTER_PENDING"
+    },
+    "hypothesis": {
+      "enabled": false,
+      "role": [
+        "hypothesis generation",
+        "hypothesis comparison"
+      ],
+      "status": "ADAPTER_PENDING"
+    },
+    "critic": {
+      "enabled": false,
+      "role": [
+        "counterarguments",
+        "falsification",
+        "independent review"
+      ],
+      "status": "ADAPTER_PENDING"
+    },
+    "evolutionary_search": {
+      "enabled": false,
+      "role": [
+        "algorithmic search",
+        "optimization"
+      ],
+      "status": "ADAPTER_PENDING"
+    }
+  }
+}

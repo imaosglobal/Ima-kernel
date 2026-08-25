@@ -16,3 +16,4 @@ def status():
     }
 
 if __name__=="__main__":
+    print(json.dumps(status(), indent=2))

@@ -254,6 +254,10 @@ def status():
     events = load_events()
     mem = memory_summary(events)
 
+    print("=== IMA CLEAN v2 ===")
+    print("EVENTS:", len(events))
+    print("QUESTIONS:", mem["questions"])
+    print("ANSWERS:", mem["answers"])
 
 
 # -------------------------
@@ -263,6 +267,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) > 1 and sys.argv[1] == "ask":
+        print(ask(" ".join(sys.argv[2:])))
     else:
         status()
 

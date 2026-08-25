@@ -1,0 +1,872 @@
+{
+  "id": "20260824_184938_e48b05",
+  "original_question": "בדיקת אינטגרציה V5.1: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+  "architecture": "IMA_RESEARCH_COUNCIL_V5",
+  "status": "RESEARCH_CYCLE_COMPLETE",
+  "agent_results": [
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What competing explanations exist?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "alternatives",
+      "duration": 0.004
+    },
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What observations or measurements can actually bear on the question?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "empirical",
+      "duration": 0.002
+    },
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "mechanism",
+      "duration": 0.001
+    },
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What competing explanations exist?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "alternatives",
+      "duration": 0.004
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "criticism",
+      "duration": 0.003
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "testability",
+      "duration": 0.005
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What remains genuinely unknown?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "unknowns",
+      "duration": 0.003
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What observations or measurements can actually bear on the question?",
+      "normalized_query": "What observations or measurements can actually bear on the question?",
+      "result_count": 10,
+      "rejected_count": 0,
+      "sources": [
+        {
+          "title": "What Can ChatGPT Actually Do?",
+          "year": 2026,
+          "doi": "10.1007/978-3-032-27286-7_1",
+          "authors": [
+            "George Grätzer"
+          ],
+          "journal": "ChatGPT for Math",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1007/978-3-032-27286-7_1",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "What can technology actually do?",
+          "year": 2017,
+          "doi": "10.4324/9781315709505-1",
+          "authors": [
+            "Chris Shelton"
+          ],
+          "journal": "Debates in Computing and ICT Education",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.4324/9781315709505-1",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "At-home fertility tests: here’s what they can actually tell you",
+          "year": null,
+          "doi": "10.64628/ab.phusxx74f",
+          "authors": [
+            "Adam Watkins"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/ab.phusxx74f",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "Spain-Portugal blackouts: what actually happened, and what can Iberia and Europe learn from it?",
+          "year": null,
+          "doi": "10.64628/aao.nv6gecexh",
+          "authors": [
+            "J. León"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/aao.nv6gecexh",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "What your local council can actually do to tackle the climate crisis",
+          "year": null,
+          "doi": "10.64628/ab.gmtdhrv9j",
+          "authors": [
+            "Rebecca Willis"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/ab.gmtdhrv9j",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "EMG Biofeedback: What Can it Actually Show?",
+          "year": 1996,
+          "doi": "10.1016/s0031-9406(05)66304-3",
+          "authors": [
+            "Lee Herrington"
+          ],
+          "journal": "Physiotherapy",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1016/s0031-9406(05)66304-3",
+          "relevance_score": 0.6967
+        },
+        {
+          "title": "WHAT BODY CAN BEAR",
+          "year": 2019,
+          "doi": "10.2307/j.ctvb6v55z.22",
+          "authors": [],
+          "journal": "Brother Bullet",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.2307/j.ctvb6v55z.22",
+          "relevance_score": 0.6667
+        },
+        {
+          "title": "Real Interrogation: What Actually Happens When Cops Question Kids",
+          "year": 2012,
+          "doi": "10.1037/e669802012-348",
+          "authors": [
+            "Barry C. Feld"
+          ],
+          "journal": "PsycEXTRA Dataset",
+          "type": "dataset",
+          "url": "https://doi.org/10.1037/e669802012-348",
+          "relevance_score": 0.3633
+        },
+        {
+          "title": "Now for the $55 million question: what does Clive Palmer actually want?",
+          "year": null,
+          "doi": "10.64628/aa.xvrnq35qn",
+          "authors": [
+            "John Wanna"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.64628/aa.xvrnq35qn",
+          "relevance_score": 0.3633
+        },
+        {
+          "title": "What You Can Endure",
+          "year": 2010,
+          "doi": "10.1515/9780820378190-013",
+          "authors": [
+            "Melinda Moustakis"
+          ],
+          "journal": "Bear Down, Bear North",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1515/9780820378190-013",
+          "relevance_score": 0.3333
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance scoring is heuristic.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        }
+      ],
+      "subquestion_id": "empirical",
+      "duration": 2.204
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "normalized_query": "What observations or experiments could distinguish the competing hypotheses?",
+      "result_count": 4,
+      "rejected_count": 6,
+      "sources": [
+        {
+          "title": "Failure to Distinguish Among Competing Hypotheses",
+          "year": 2017,
+          "doi": "10.1542/peds.2017-2655c",
+          "authors": [
+            "Matthew L. Hall",
+            "Krister Schönström",
+            "Arielle Spellun"
+          ],
+          "journal": "Pediatrics",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1542/peds.2017-2655c",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "The Number of Observations Needed to Distinguish Between Two Closely Related Hypotheses",
+          "year": 1967,
+          "doi": "10.1137/1112066",
+          "authors": [
+            "I. N. Volodin"
+          ],
+          "journal": "Theory of Probability &amp; Its Applications",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1137/1112066",
+          "relevance_score": 0.7267
+        },
+        {
+          "title": "Migration and fertility: competing hypotheses re-examined",
+          "year": 2003,
+          "doi": "10.4054/mpidr-wp-2003-035",
+          "authors": [
+            "Hill Kulu"
+          ],
+          "journal": null,
+          "type": "report",
+          "url": "https://doi.org/10.4054/mpidr-wp-2003-035",
+          "relevance_score": 0.7267
+        },
+        {
+          "title": "Considering Competing Hypotheses",
+          "year": null,
+          "doi": "10.1017/9781316832110.009",
+          "authors": [],
+          "journal": "Religion, Violence, and Local Power-Sharing in Nigeria",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1017/9781316832110.009",
+          "relevance_score": 0.7267
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance scoring is heuristic.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        }
+      ],
+      "subquestion_id": "testability",
+      "duration": 2.213
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What remains genuinely unknown?",
+      "normalized_query": "What remains genuinely unknown?",
+      "result_count": 10,
+      "rejected_count": 0,
+      "sources": [
+        {
+          "title": "Lupus Arthritis: What We Know and What Remains Unknown?",
+          "year": 2026,
+          "doi": "10.5772/intechopen.1014192",
+          "authors": [
+            "Mete Pekdiker"
+          ],
+          "journal": "Systemic Lupus Erythematosus - A Project in Progress [Working Title]",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.5772/intechopen.1014192",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Almost 200 Years of Anthocyanin Research: What We Know, What We Assume, and What Remains Unknown",
+          "year": null,
+          "doi": "10.20944/preprints202603.2058.v1",
+          "authors": [
+            "Nancy Choudhary",
+            "Najnin Khatun",
+            "Boas Pucker"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.20944/preprints202603.2058.v1",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Endocannabinoid Binding to the Cannabinoid Receptors: What Is Known and What Remains Unknown",
+          "year": 2010,
+          "doi": "10.2174/092986710790980005",
+          "authors": [
+            "Patricia Reggio"
+          ],
+          "journal": "Current Medicinal Chemistry",
+          "type": "journal-article",
+          "url": "https://doi.org/10.2174/092986710790980005",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Asymptomatic cardiac ischemia: What is known and what remains unknown?",
+          "year": 1994,
+          "doi": "10.1002/clc.4960171002",
+          "authors": [
+            "C. Richard Conti"
+          ],
+          "journal": "Clinical Cardiology",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1002/clc.4960171002",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Dscam in arthropod immune priming: What is known and what remains unknown",
+          "year": 2021,
+          "doi": "10.1016/j.dci.2021.104231",
+          "authors": [
+            "Weiwei Li"
+          ],
+          "journal": "Developmental &amp; Comparative Immunology",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1016/j.dci.2021.104231",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Commentary: Clinician Conflicts of Interest at the Cleveland Clinic: The Context and Functions of Disclosure Policy and What Remains Unknown",
+          "year": null,
+          "doi": "10.2139/ssrn.5030552",
+          "authors": [
+            "Marc A. Rodwin"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.2139/ssrn.5030552",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Skull - remains unknown",
+          "year": 2010,
+          "doi": "10.53347/rid-8709",
+          "authors": [
+            "Frank Gaillard"
+          ],
+          "journal": "Radiopaedia.org",
+          "type": "reference-entry",
+          "url": "https://doi.org/10.53347/rid-8709",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Cardiovascular safety of assisted reproductive technologies: what have we learned and what remains unknown?",
+          "year": 2025,
+          "doi": "10.1093/eurheartj/ehaf108",
+          "authors": [
+            "Zhenjiao Liang",
+            "Dongna Wang",
+            "Xiaoping Wang"
+          ],
+          "journal": "European Heart Journal",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf108",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Exploring the Mysteries of the Magellanic Stream: What We’ve Uncovered and What Remains Unknown",
+          "year": 2023,
+          "doi": "10.1017/s1743921323003435",
+          "authors": [
+            "Elena D’Onghia"
+          ],
+          "journal": "Proceedings of the International Astronomical Union",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1017/s1743921323003435",
+          "relevance_score": 1.0
+        },
+        {
+          "title": "Immigration and Crime: What We Know and What Remains Unknown",
+          "year": 2023,
+          "doi": "10.1007/978-3-031-22839-1_4",
+          "authors": [
+            "Charis E. Kubrin",
+            "Graham C. Ousey"
+          ],
+          "journal": "SpringerBriefs in Criminology",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.1007/978-3-031-22839-1_4",
+          "relevance_score": 1.0
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance scoring is heuristic.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        }
+      ],
+      "subquestion_id": "unknowns",
+      "duration": 2.508
+    },
+    {
+      "agent": "MEDA",
+      "status": "ANSWER_READY",
+      "duration": 150.139,
+      "answer": {
+        "mode": "constraint_only",
+        "weighting_strategy": "equi_weighted",
+        "best_equations": {
+          "dcosmic_intelligence/dt": {
+            "cosmic_information": -1.664624,
+            "cosmic_intelligence^2": 0.366946,
+            "cosmic_intelligence*observer_reality": -1.066544,
+            "cosmic_information*emergence_of_intelligence": 0.649659,
+            "emergence_of_intelligence*observer_reality": -1.063128,
+            "cosmic_information^2": -0.982383,
+            "explanatory_intelligence*observer_reality": -0.065565
+          },
+          "demergence_of_intelligence/dt": {
+            "observer_reality": 0.250576,
+            "emergence_of_intelligence*explanatory_intelligence": -1.295194
+          },
+          "dcosmic_information/dt": {
+            "emergence_of_intelligence^2": -1.957191
+          },
+          "dobserver_reality/dt": {
+            "cosmic_intelligence*explanatory_intelligence": -0.787093,
+            "cosmic_purpose*emergence_of_intelligence": 1.928411,
+            "cosmic_information*observer_reality": 0.466725,
+            "existence_itself*observer_reality": 1.547406,
+            "existence_itself*explanatory_intelligence": 1.307051
+          },
+          "dcosmic_purpose/dt": {
+            "existence_itself": 0.738479,
+            "explanatory_intelligence": 0.708532,
+            "cosmic_purpose*emergence_of_intelligence": 1.949246,
+            "cosmic_purpose*explanatory_intelligence": -0.893781
+          },
+          "dexistence_itself/dt": {
+            "observer_reality": 0.215155,
+            "cosmic_intelligence^2": -1.486013,
+            "cosmic_information*existence_itself": 1.642171,
+            "cosmic_purpose*observer_reality": -1.960108,
+            "explanatory_intelligence^2": 0.9436
+          },
+          "dexplanatory_intelligence/dt": {
+            "1": 0.890194,
+            "cosmic_information": 0.117544,
+            "observer_reality": -1.270071,
+            "cosmic_purpose": -0.721867,
+            "existence_itself": -1.602325,
+            "cosmic_information*cosmic_intelligence": 0.615188,
+            "cosmic_information^2": 1.538276,
+            "explanatory_intelligence^2": -1.425447
+          }
+        },
+        "n_nonzero_terms": {
+          "dcosmic_intelligence/dt": 7,
+          "demergence_of_intelligence/dt": 2,
+          "dcosmic_information/dt": 1,
+          "dobserver_reality/dt": 5,
+          "dcosmic_purpose/dt": 4,
+          "dexistence_itself/dt": 5,
+          "dexplanatory_intelligence/dt": 8
+        },
+        "best_fitness": 0.7257,
+        "constraint_score": 1.0,
+        "regularization_reward": 0.0857,
+        "hard_constraint_score": 1.0,
+        "hard_pass": true,
+        "core_penalty": 0.0,
+        "dropped_core_terms": [],
+        "poly_max_degree": 2,
+        "selected_family_id": "all",
+        "selection_reason": "selected family 'all' by priority hard_pass=True, constraint_score=1.0000, regularization_reward=0.0857",
+        "integration_failures": {
+          "diverged": 843,
+          "ok": 19146,
+          "step_limit": 11
+        },
+        "model_families": [
+          {
+            "id": "default",
+            "description": "implicit default family",
+            "seed_indices": []
+          }
+        ],
+        "seed_baseline_scores": [],
+        "seed_feasibility": [
+          {
+            "family_id": "default",
+            "description": "implicit default family",
+            "seed_indices": [],
+            "constraint_ids": [],
+            "hard_pass_count": 0,
+            "seed_scores": []
+          }
+        ],
+        "family_results": {
+          "all": {
+            "family_id": "all",
+            "description": "all seeds, universal constraints",
+            "seed_indices": [],
+            "constraint_ids": [],
+            "best_equations": {
+              "dcosmic_intelligence/dt": {
+                "cosmic_information": -1.664624,
+                "cosmic_intelligence^2": 0.366946,
+                "cosmic_intelligence*observer_reality": -1.066544,
+                "cosmic_information*emergence_of_intelligence": 0.649659,
+                "emergence_of_intelligence*observer_reality": -1.063128,
+                "cosmic_information^2": -0.982383,
+                "explanatory_intelligence*observer_reality": -0.065565
+              },
+              "demergence_of_intelligence/dt": {
+                "observer_reality": 0.250576,
+                "emergence_of_intelligence*explanatory_intelligence": -1.295194
+              },
+              "dcosmic_information/dt": {
+                "emergence_of_intelligence^2": -1.957191
+              },
+              "dobserver_reality/dt": {
+                "cosmic_intelligence*explanatory_intelligence": -0.787093,
+                "cosmic_purpose*emergence_of_intelligence": 1.928411,
+                "cosmic_information*observer_reality": 0.466725,
+                "existence_itself*observer_reality": 1.547406,
+                "existence_itself*explanatory_intelligence": 1.307051
+              },
+              "dcosmic_purpose/dt": {
+                "existence_itself": 0.738479,
+                "explanatory_intelligence": 0.708532,
+                "cosmic_purpose*emergence_of_intelligence": 1.949246,
+                "cosmic_purpose*explanatory_intelligence": -0.893781
+              },
+              "dexistence_itself/dt": {
+                "observer_reality": 0.215155,
+                "cosmic_intelligence^2": -1.486013,
+                "cosmic_information*existence_itself": 1.642171,
+                "cosmic_purpose*observer_reality": -1.960108,
+                "explanatory_intelligence^2": 0.9436
+              },
+              "dexplanatory_intelligence/dt": {
+                "1": 0.890194,
+                "cosmic_information": 0.117544,
+                "observer_reality": -1.270071,
+                "cosmic_purpose": -0.721867,
+                "existence_itself": -1.602325,
+                "cosmic_information*cosmic_intelligence": 0.615188,
+                "cosmic_information^2": 1.538276,
+                "explanatory_intelligence^2": -1.425447
+              }
+            },
+            "best_fitness": 0.7257,
+            "data_score": null,
+            "constraint_score": 1.0,
+            "hard_constraint_score": 1.0,
+            "hard_pass": true,
+            "regularization_reward": 0.0857,
+            "core_penalty": 0.0,
+            "dropped_core_terms": [],
+            "constraint_scores": {},
+            "failed_constraints": [],
+            "hard_failed_constraints": [],
+            "seed_baseline_scores": [],
+            "checkpoint_file": "checkpoint.json"
+          }
+        },
+        "top_candidates": [
+          {
+            "label": "balanced",
+            "equations": {
+              "dcosmic_intelligence/dt": {
+                "cosmic_information": -1.664624,
+                "cosmic_intelligence^2": 0.366946,
+                "cosmic_intelligence*observer_reality": -1.066544,
+                "cosmic_information*emergence_of_intelligence": 0.649659,
+                "emergence_of_intelligence*observer_reality": -1.063128,
+                "cosmic_information^2": -0.982383,
+                "explanatory_intelligence*observer_reality": -0.065565
+              },
+              "demergence_of_intelligence/dt": {
+                "observer_reality": 0.250576,
+                "emergence_of_intelligence*explanatory_intelligence": -1.295194
+              },
+              "dcosmic_information/dt": {
+                "emergence_of_intelligence^2": -1.957191
+              },
+              "dobserver_reality/dt": {
+                "cosmic_intelligence*explanatory_intelligence": -0.787093,
+                "cosmic_purpose*emergence_of_intelligence": 1.928411,
+                "cosmic_information*observer_reality": 0.466725,
+                "existence_itself*observer_reality": 1.547406,
+                "existence_itself*explanatory_intelligence": 1.307051
+              },
+              "dcosmic_purpose/dt": {
+                "existence_itself": 0.738479,
+                "explanatory_intelligence": 0.708532,
+                "cosmic_purpose*emergence_of_intelligence": 1.949246,
+                "cosmic_purpose*explanatory_intelligence": -0.893781
+              },
+              "dexistence_itself/dt": {
+                "observer_reality": 0.215155,
+                "cosmic_intelligence^2": -1.486013,
+                "cosmic_information*existence_itself": 1.642171,
+                "cosmic_purpose*observer_reality": -1.960108,
+                "explanatory_intelligence^2": 0.9436
+              },
+              "dexplanatory_intelligence/dt": {
+                "1": 0.890194,
+                "cosmic_information": 0.117544,
+                "observer_reality": -1.270071,
+                "cosmic_purpose": -0.721867,
+                "existence_itself": -1.602325,
+                "cosmic_information*cosmic_intelligence": 0.615188,
+                "cosmic_information^2": 1.538276,
+                "explanatory_intelligence^2": -1.425447
+              }
+            },
+            "n_nonzero_terms": {
+              "dcosmic_intelligence/dt": 7,
+              "demergence_of_intelligence/dt": 2,
+              "dcosmic_information/dt": 1,
+              "dobserver_reality/dt": 5,
+              "dcosmic_purpose/dt": 4,
+              "dexistence_itself/dt": 5,
+              "dexplanatory_intelligence/dt": 8
+            },
+            "total_terms": 32,
+            "fitness": 0.7257,
+            "constraint_score": 1.0,
+            "regularization_reward": 0.0857,
+            "hard_constraint_score": 1.0,
+            "hard_pass": true,
+            "dropped_core_terms": []
+          },
+          {
+            "label": "sparse",
+            "equations": {
+              "dcosmic_intelligence/dt": {
+                "cosmic_information": -1.664624,
+                "cosmic_intelligence^2": 0.366946,
+                "cosmic_intelligence*observer_reality": -1.066544,
+                "cosmic_information*emergence_of_intelligence": 0.649659,
+                "emergence_of_intelligence*observer_reality": -1.063128,
+                "cosmic_information^2": -0.982383,
+                "explanatory_intelligence*observer_reality": -0.065565
+              },
+              "demergence_of_intelligence/dt": {
+                "observer_reality": 0.250576
+              },
+              "dcosmic_information/dt": {
+                "emergence_of_intelligence^2": -1.957191
+              },
+              "dobserver_reality/dt": {
+                "cosmic_intelligence*explanatory_intelligence": -0.787093,
+                "cosmic_purpose*emergence_of_intelligence": 1.928411,
+                "cosmic_information*observer_reality": 0.466725,
+                "existence_itself*observer_reality": 1.547406,
+                "existence_itself*explanatory_intelligence": 1.307051
+              },
+              "dcosmic_purpose/dt": {
+                "existence_itself": 0.738479,
+                "explanatory_intelligence": 0.708532,
+                "cosmic_purpose*emergence_of_intelligence": 1.949246,
+                "cosmic_purpose*explanatory_intelligence": -0.893781
+              },
+              "dexistence_itself/dt": {
+                "observer_reality": 0.215155,
+                "cosmic_intelligence^2": -1.486013,
+                "cosmic_information*existence_itself": 1.642171,
+                "cosmic_purpose*observer_reality": -1.960108,
+                "explanatory_intelligence^2": 0.9436
+              },
+              "dexplanatory_intelligence/dt": {
+                "1": 0.890194,
+                "cosmic_information": 0.117544,
+                "observer_reality": -1.270071,
+                "cosmic_purpose": -0.721867,
+                "existence_itself": -1.602325,
+                "cosmic_information*cosmic_intelligence": 0.615188,
+                "cosmic_information^2": 1.538276,
+                "explanatory_intelligence^2": -1.425447
+              }
+            },
+            "n_nonzero_terms": {
+              "dcosmic_intelligence/dt": 7,
+              "demergence_of_intelligence/dt": 1,
+              "dcosmic_information/dt": 1,
+              "dobserver_reality/dt": 5,
+              "dcosmic_purpose/dt": 4,
+              "dexistence_itself/dt": 5,
+              "dexplanatory_intelligence/dt": 8
+            },
+            "total_terms": 31,
+            "fitness": 0.7,
+            "constraint_score": 1.0,
+            "regularization_reward": 0.0,
+            "hard_constraint_score": 1.0,
+            "hard_pass": true,
+            "dropped_core_terms": []
+          }
+        ]
+      },
+      "subquestion_id": "testability"
+    },
+    {
+      "agent": "MEDA",
+      "subquestion_id": "mechanism",
+      "timeout_limit": 180,
+      "status": "TIMEOUT",
+      "scientific_failure": false,
+      "duration": 180,
+      "error": "Agent exceeded 180s timeout."
+    }
+  ],
+  "subquestions": [
+    {
+      "id": "empirical",
+      "question": "What observations or measurements can actually bear on the question?",
+      "agents": [
+        "DEEP_RESEARCH",
+        "LITERATURE"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "agents": [
+        "MEDA",
+        "HYPOTHESIS"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "question": "What competing explanations exist?",
+      "agents": [
+        "HYPOTHESIS",
+        "DEEP_RESEARCH"
+      ]
+    },
+    {
+      "id": "criticism",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "agents": [
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "testability",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "agents": [
+        "MEDA",
+        "LITERATURE",
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "unknowns",
+      "question": "What remains genuinely unknown?",
+      "agents": [
+        "CRITIC",
+        "LITERATURE"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "open_questions": [
+    "What remains unresolved after independent research?",
+    "Which claims require external evidence?",
+    "Which claims are philosophical rather than empirically testable?"
+  ],
+  "next_research_questions": [
+    "Which conclusions are independently supported by multiple agents?",
+    "Where do the agents disagree?",
+    "Which hypothesis currently has the strongest evidence?",
+    "Which hypothesis currently has the strongest counterevidence?",
+    "What observation would distinguish the competing hypotheses?",
+    "What important information is still missing?",
+    "What new question should IMA ask next to reduce the greatest uncertainty?"
+  ],
+  "events": [],
+  "evidence_map": {
+    "successful_results": 9,
+    "failed_or_unavailable": 3,
+    "successful_agents": [
+      "HYPOTHESIS",
+      "HYPOTHESIS",
+      "CRITIC",
+      "CRITIC",
+      "CRITIC",
+      "LITERATURE",
+      "LITERATURE",
+      "LITERATURE",
+      "MEDA"
+    ],
+    "unavailable_agents": [
+      "DEEP_RESEARCH",
+      "DEEP_RESEARCH",
+      "MEDA"
+    ]
+  },
+  "disagreement_policy": {
+    "never_collapse_disagreement": true,
+    "separate_evidence_from_inference": true,
+    "preserve_competing_hypotheses": true
+  },
+  "duration": 180.014,
+  "result_file": "/data/data/com.termux/files/home/ima_kernel/.ima/research/state/20260824_184938_e48b05.json",
+  "ima_handoff": {
+    "ready": true,
+    "original_question": "בדיקת אינטגרציה V5.1: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+    "research_cycle": "20260824_184938_e48b05",
+    "agent_count": 12,
+    "successful_count": 9,
+    "unavailable_count": 3,
+    "next_questions": [
+      "Which conclusions are independently supported by multiple agents?",
+      "Where do the agents disagree?",
+      "Which hypothesis currently has the strongest evidence?",
+      "Which hypothesis currently has the strongest counterevidence?",
+      "What observation would distinguish the competing hypotheses?",
+      "What important information is still missing?",
+      "What new question should IMA ask next to reduce the greatest uncertainty?"
+    ],
+    "instruction": "IMA must synthesize evidence, preserve disagreement, distinguish fact from inference, and generate new questions when uncertainty remains."
+  }
+}

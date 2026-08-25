@@ -2,7 +2,12 @@ import json
 from pathlib import Path
 from datetime import datetime
 import time
-from founder.executive_ai.memory.autobiography_bus import ima_event
+try:
+    from founder.executive_ai.memory.autobiography_bus import ima_event
+except ImportError:
+    def ima_event(*args, **kwargs):
+        return None
+
 
 FILE = Path("founder/data/ima_memory.json")
 

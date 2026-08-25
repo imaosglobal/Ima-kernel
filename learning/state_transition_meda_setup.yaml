@@ -1,0 +1,20 @@
+variables:
+  - name: previous_inquiry
+    type: continuous
+  - name: current_inquiry
+    type: continuous
+  - name: confidence
+    type: continuous
+  - name: question_density
+    type: continuous
+  - name: word_count
+    type: continuous
+
+data_file: /data/data/com.termux/files/home/ima_kernel/learning/state_transition_meda_numeric.csv
+
+normalization: none
+
+simulation:
+  t_start: 0
+  t_end: 10
+  n_points: 100

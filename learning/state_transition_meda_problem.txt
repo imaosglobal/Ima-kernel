@@ -1,0 +1,24 @@
+IMA STATE TRANSITION ANALYSIS
+
+Observed variables:
+- previous_state
+- state
+
+Candidate explanatory variables:
+- questioning
+- lexical_exploration
+- context_continuity
+- causal_inquiry
+
+Objective:
+Identify competing structures that could explain transitions between observable states.
+
+Requirements:
+1. Treat previous_state and state as observed variables.
+2. Treat factors as candidate explanatory variables, not established causes.
+3. Compare competing transition structures.
+4. Identify the smallest model consistent with the observations.
+5. Identify which additional observations would distinguish competing hypotheses.
+6. Do not infer causation from correlation alone.
+7. Report uncertainty and sample-size limitations.
+8. Prefer falsifiable hypotheses over descriptive explanations.

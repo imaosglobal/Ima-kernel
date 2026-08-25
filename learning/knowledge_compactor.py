@@ -1,6 +1,7 @@
 
 import hashlib
 
+def fingerprint(text):
 
     return hashlib.sha256(
         text.encode("utf8")

@@ -26,5 +26,7 @@ if status.strip():
         cwd=repo
     )
 
+    print("DAILY CHECKPOINT CREATED")
 
 else:
+    print("NO CHANGES")

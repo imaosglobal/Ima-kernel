@@ -1,0 +1,347 @@
+{
+  "id": "20260824_184728_830438",
+  "original_question": "בדיקת אינטגרציה: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+  "architecture": "IMA_RESEARCH_COUNCIL_V5",
+  "status": "RESEARCH_CYCLE_COMPLETE",
+  "agent_results": [
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What competing explanations exist?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "alternatives",
+      "duration": 0.003
+    },
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What observations or measurements can actually bear on the question?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "empirical",
+      "duration": 0.003
+    },
+    {
+      "agent": "HYPOTHESIS",
+      "status": "READY",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "instruction": "Generate multiple competing hypotheses without selecting one prematurely.",
+      "subquestion_id": "mechanism",
+      "duration": 0.002
+    },
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What competing explanations exist?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "alternatives",
+      "duration": 0.002
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "criticism",
+      "duration": 0.001
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What remains genuinely unknown?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "unknowns",
+      "duration": 0.002
+    },
+    {
+      "agent": "CRITIC",
+      "status": "READY",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "instruction": "Search for contradictions, hidden assumptions, alternative explanations, and falsification tests.",
+      "evidence_received": true,
+      "subquestion_id": "testability",
+      "duration": 0.001
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "PROVIDER_ERROR",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "sources": [],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        },
+        {
+          "provider": "Crossref",
+          "error": "<HTTPError 429: 'Too Many Requests'>"
+        }
+      ],
+      "contract": "Return scientific papers, evidence, contradictions and source metadata.",
+      "subquestion_id": "testability",
+      "duration": 1.741
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "PROVIDER_ERROR",
+      "question": "What observations or measurements can actually bear on the question?",
+      "sources": [],
+      "errors": [
+        {
+          "provider": "OpenAlex",
+          "error": "<HTTPError 400: 'Bad Request'>"
+        },
+        {
+          "provider": "Crossref",
+          "error": "<HTTPError 429: 'Too Many Requests'>"
+        }
+      ],
+      "contract": "Return scientific papers, evidence, contradictions and source metadata.",
+      "subquestion_id": "empirical",
+      "duration": 1.777
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "ANSWER_READY",
+      "provider": "Crossref",
+      "question": "What remains genuinely unknown?",
+      "result_count": 8,
+      "sources": [
+        {
+          "title": "Lupus Arthritis: What We Know and What Remains Unknown?",
+          "year": 2026,
+          "doi": "10.5772/intechopen.1014192",
+          "authors": [
+            "Mete Pekdiker"
+          ],
+          "journal": "Systemic Lupus Erythematosus - A Project in Progress [Working Title]",
+          "type": "book-chapter",
+          "url": "https://doi.org/10.5772/intechopen.1014192"
+        },
+        {
+          "title": "Almost 200 Years of Anthocyanin Research: What We Know, What We Assume, and What Remains Unknown",
+          "year": null,
+          "doi": "10.20944/preprints202603.2058.v1",
+          "authors": [
+            "Nancy Choudhary",
+            "Najnin Khatun",
+            "Boas Pucker"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.20944/preprints202603.2058.v1"
+        },
+        {
+          "title": "Endocannabinoid Binding to the Cannabinoid Receptors: What Is Known and What Remains Unknown",
+          "year": 2010,
+          "doi": "10.2174/092986710790980005",
+          "authors": [
+            "Patricia Reggio"
+          ],
+          "journal": "Current Medicinal Chemistry",
+          "type": "journal-article",
+          "url": "https://doi.org/10.2174/092986710790980005"
+        },
+        {
+          "title": "Asymptomatic cardiac ischemia: What is known and what remains unknown?",
+          "year": 1994,
+          "doi": "10.1002/clc.4960171002",
+          "authors": [
+            "C. Richard Conti"
+          ],
+          "journal": "Clinical Cardiology",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1002/clc.4960171002"
+        },
+        {
+          "title": "Dscam in arthropod immune priming: What is known and what remains unknown",
+          "year": 2021,
+          "doi": "10.1016/j.dci.2021.104231",
+          "authors": [
+            "Weiwei Li"
+          ],
+          "journal": "Developmental &amp; Comparative Immunology",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1016/j.dci.2021.104231"
+        },
+        {
+          "title": "Commentary: Clinician Conflicts of Interest at the Cleveland Clinic: The Context and Functions of Disclosure Policy and What Remains Unknown",
+          "year": null,
+          "doi": "10.2139/ssrn.5030552",
+          "authors": [
+            "Marc A. Rodwin"
+          ],
+          "journal": null,
+          "type": "posted-content",
+          "url": "https://doi.org/10.2139/ssrn.5030552"
+        },
+        {
+          "title": "Skull - remains unknown",
+          "year": 2010,
+          "doi": "10.53347/rid-8709",
+          "authors": [
+            "Frank Gaillard"
+          ],
+          "journal": "Radiopaedia.org",
+          "type": "reference-entry",
+          "url": "https://doi.org/10.53347/rid-8709"
+        },
+        {
+          "title": "Cardiovascular safety of assisted reproductive technologies: what have we learned and what remains unknown?",
+          "year": 2025,
+          "doi": "10.1093/eurheartj/ehaf108",
+          "authors": [
+            "Zhenjiao Liang",
+            "Dongna Wang",
+            "Xiaoping Wang"
+          ],
+          "journal": "European Heart Journal",
+          "type": "journal-article",
+          "url": "https://doi.org/10.1093/eurheartj/ehaf108"
+        }
+      ],
+      "evidence_type": [
+        "scientific literature",
+        "bibliographic metadata"
+      ],
+      "limitations": [
+        "Crossref metadata does not establish scientific validity.",
+        "Relevance and evidence quality require further evaluation."
+      ],
+      "subquestion_id": "unknowns",
+      "duration": 2.161
+    },
+    {
+      "agent": "MEDA",
+      "status": "TIMEOUT",
+      "duration": 30.713,
+      "scientific_failure": false,
+      "meaning": "Execution timeout only. Not a scientific conclusion.",
+      "subquestion_id": "mechanism"
+    },
+    {
+      "agent": "MEDA",
+      "status": "TIMEOUT",
+      "duration": 30.706,
+      "scientific_failure": false,
+      "meaning": "Execution timeout only. Not a scientific conclusion.",
+      "subquestion_id": "testability"
+    }
+  ],
+  "subquestions": [
+    {
+      "id": "empirical",
+      "question": "What observations or measurements can actually bear on the question?",
+      "agents": [
+        "DEEP_RESEARCH",
+        "LITERATURE"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "agents": [
+        "MEDA",
+        "HYPOTHESIS"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "question": "What competing explanations exist?",
+      "agents": [
+        "HYPOTHESIS",
+        "DEEP_RESEARCH"
+      ]
+    },
+    {
+      "id": "criticism",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "agents": [
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "testability",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "agents": [
+        "MEDA",
+        "LITERATURE",
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "unknowns",
+      "question": "What remains genuinely unknown?",
+      "agents": [
+        "CRITIC",
+        "LITERATURE"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "open_questions": [
+    "What remains unresolved after independent research?",
+    "Which claims require external evidence?",
+    "Which claims are philosophical rather than empirically testable?"
+  ],
+  "next_research_questions": [
+    "Which conclusions are independently supported by multiple agents?",
+    "Where do the agents disagree?",
+    "Which hypothesis currently has the strongest evidence?",
+    "Which hypothesis currently has the strongest counterevidence?",
+    "What observation would distinguish the competing hypotheses?",
+    "What important information is still missing?",
+    "What new question should IMA ask next to reduce the greatest uncertainty?"
+  ],
+  "events": [],
+  "evidence_map": {
+    "successful_results": 6,
+    "failed_or_unavailable": 4,
+    "successful_agents": [
+      "HYPOTHESIS",
+      "HYPOTHESIS",
+      "CRITIC",
+      "CRITIC",
+      "CRITIC",
+      "LITERATURE"
+    ],
+    "unavailable_agents": [
+      "DEEP_RESEARCH",
+      "DEEP_RESEARCH",
+      "MEDA",
+      "MEDA"
+    ]
+  },
+  "disagreement_policy": {
+    "never_collapse_disagreement": true,
+    "separate_evidence_from_inference": true,
+    "preserve_competing_hypotheses": true
+  },
+  "duration": 30.725,
+  "result_file": "/data/data/com.termux/files/home/ima_kernel/.ima/research/state/20260824_184728_830438.json",
+  "ima_handoff": {
+    "ready": true,
+    "original_question": "בדיקת אינטגרציה: האם הופעת אינטליגנציה ביקום מחייבת אינטליגנציה קוסמית?",
+    "research_cycle": "20260824_184728_830438",
+    "agent_count": 12,
+    "successful_count": 6,
+    "unavailable_count": 4,
+    "next_questions": [
+      "Which conclusions are independently supported by multiple agents?",
+      "Where do the agents disagree?",
+      "Which hypothesis currently has the strongest evidence?",
+      "Which hypothesis currently has the strongest counterevidence?",
+      "What observation would distinguish the competing hypotheses?",
+      "What important information is still missing?",
+      "What new question should IMA ask next to reduce the greatest uncertainty?"
+    ],
+    "instruction": "IMA must synthesize evidence, preserve disagreement, distinguish fact from inference, and generate new questions when uncertainty remains."
+  }
+}

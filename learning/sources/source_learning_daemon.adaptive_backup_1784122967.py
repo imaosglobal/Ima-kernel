@@ -35,6 +35,7 @@ DEFAULT_SOURCES = [
 
 def scan_sources():
 
+    print("[DISCOVERY] scanning")
 
     approved=[]
 
@@ -50,6 +51,7 @@ def scan_sources():
 
         update_candidate(checked)
 
+        print(
             checked["name"],
             checked["status"],
             checked.get("trust_score")
@@ -66,6 +68,7 @@ def scan_sources():
 
 def learning_cycle():
 
+    print("\n=== IMA SOURCE LEARNING CYCLE ===")
 
     scan_sources()
 
@@ -73,17 +76,23 @@ def learning_cycle():
 
     added=promote()
 
+    print(
         "PROMOTED:",
         added
     )
 
+    print("REFRESHED:")
     for s in refresh_sources():
+        print("-",s)
 
+    print(
         "ACTIVE SOURCES:"
     )
 
     for s in source_status():
+        print("-",s)
 
+    print(
         "=== COMPLETE ==="
     )
 
@@ -96,6 +105,7 @@ if __name__=="__main__":
             learning_cycle()
 
         except Exception as e:
+            print(
                 "ERROR:",
                 e
             )

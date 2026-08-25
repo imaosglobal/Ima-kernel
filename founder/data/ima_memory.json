@@ -65818,5 +65818,4492 @@
     },
     "category": "general",
     "importance": 0
+  },
+  {
+    "timestamp": 1787655722.388494,
+    "datetime": "2026-08-25T14:02:02.388496",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787655722.3884912
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787655722.4388926,
+    "datetime": "2026-08-25T14:02:02.438896",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787655722.4388866
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787655809.096398,
+    "datetime": "2026-08-25T14:03:29.096400",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787655809.0963955
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787655809.1383767,
+    "datetime": "2026-08-25T14:03:29.138379",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787655809.1383715
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787655809.2115784,
+    "datetime": "2026-08-25T14:03:29.211581",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0,
+        "reason": "commercial opportunity",
+        "economics": {
+          "customer": "AI infrastructure growth signal",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 39.6,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.4,
+          "expected_lifetime_value": 39.6,
+          "gross_profit": 37.6,
+          "contribution_profit": 32.6,
+          "margin": 0.8232323232323232,
+          "roi": 4.6571428571428575,
+          "action": "create_personal_outreach",
+          "target": "AI infrastructure growth signal",
+          "opportunity_score": 80.0
+        },
+        "economic_score": 118.77142857142857
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787655809.2514632,
+    "datetime": "2026-08-25T14:03:29.251465",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "New digital education program",
+        "score": 70.0,
+        "reason": "commercial opportunity",
+        "economics": {
+          "customer": "New digital education program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 34.65,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.35,
+          "expected_lifetime_value": 34.65,
+          "gross_profit": 32.65,
+          "contribution_profit": 27.65,
+          "margin": 0.797979797979798,
+          "roi": 3.9499999999999997,
+          "action": "create_personal_outreach",
+          "target": "New digital education program",
+          "opportunity_score": 70.0
+        },
+        "economic_score": 101.8
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "New digital education program",
+        "score": 70.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656109.3621712,
+    "datetime": "2026-08-25T14:08:29.362172",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Economic Learning Integration Test",
+        "score": 90
+      },
+      "feedback": {
+        "status": "positive_response",
+        "economic_feedback": {
+          "action": {
+            "action": "create_personal_outreach",
+            "target": "Economic Learning Integration Test",
+            "score": 90
+          },
+          "prediction": {
+            "customer": "Economic Learning Integration Test",
+            "offer": "IMA",
+            "price": 99.0,
+            "expected_revenue": 44.550000000000004,
+            "acquisition_cost": 5.0,
+            "operating_cost": 2.0,
+            "expected_conversion": 0.45,
+            "expected_lifetime_value": 44.550000000000004,
+            "gross_profit": 42.550000000000004,
+            "contribution_profit": 37.550000000000004,
+            "margin": 0.8428731762065096,
+            "roi": 5.364285714285715,
+            "action": "create_personal_outreach",
+            "target": "Economic Learning Integration Test",
+            "opportunity_score": 90.0,
+            "calibrated": false,
+            "calibration_samples": 2
+          },
+          "outcome": {
+            "timestamp": 1787656109.3619902,
+            "action": {
+              "action": "create_personal_outreach",
+              "target": "Economic Learning Integration Test",
+              "score": 90
+            },
+            "status": "positive_response",
+            "revenue": 50.0,
+            "acquisition_cost": 5.0,
+            "operating_cost": 2.0,
+            "total_cost": 7.0,
+            "profit": 43.0,
+            "margin": 0.86,
+            "roi": 6.142857142857143,
+            "conversion": 0.5
+          },
+          "comparison": {
+            "revenue_error": 5.449999999999996,
+            "profit_error": 5.449999999999996,
+            "roi_error": 0.7785714285714285,
+            "revenue_accuracy": 1.122334455667789,
+            "profit_accuracy": 1.1451398135818907,
+            "roi_accuracy": 1.1451398135818909
+          },
+          "economic_error": {
+            "revenue": 5.449999999999996,
+            "profit": 5.449999999999996,
+            "roi": 0.7785714285714285
+          }
+        }
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656158.2192159,
+    "datetime": "2026-08-25T14:09:18.219217",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Circular Import Recovery Test",
+        "score": 90
+      },
+      "feedback": {
+        "status": "positive_response",
+        "economic_feedback": {
+          "action": {
+            "action": "create_personal_outreach",
+            "target": "Circular Import Recovery Test",
+            "score": 90
+          },
+          "prediction": {
+            "customer": "Circular Import Recovery Test",
+            "offer": "IMA",
+            "price": 99.0,
+            "expected_revenue": 44.8675,
+            "acquisition_cost": 5.0,
+            "operating_cost": 2.0,
+            "expected_conversion": 0.45,
+            "expected_lifetime_value": 44.550000000000004,
+            "gross_profit": 42.550000000000004,
+            "contribution_profit": 37.86750000000001,
+            "margin": 0.8428731762065096,
+            "roi": 5.409642857142857,
+            "action": "create_personal_outreach",
+            "target": "Circular Import Recovery Test",
+            "opportunity_score": 90.0,
+            "calibrated": true,
+            "calibration_samples": 3
+          },
+          "outcome": {
+            "timestamp": 1787656158.2190402,
+            "action": {
+              "action": "create_personal_outreach",
+              "target": "Circular Import Recovery Test",
+              "score": 90
+            },
+            "status": "positive_response",
+            "revenue": 55.0,
+            "acquisition_cost": 5.0,
+            "operating_cost": 2.0,
+            "total_cost": 7.0,
+            "profit": 48.0,
+            "margin": 0.8727272727272727,
+            "roi": 6.857142857142857,
+            "conversion": 0.55
+          },
+          "comparison": {
+            "revenue_error": 10.1325,
+            "profit_error": 10.132499999999993,
+            "roi_error": 1.4474999999999998,
+            "revenue_accuracy": 1.2258316153117512,
+            "profit_accuracy": 1.2675777381659732,
+            "roi_accuracy": 1.2675777381659734
+          },
+          "economic_error": {
+            "revenue": 10.1325,
+            "profit": 10.132499999999993,
+            "roi": 1.4474999999999998
+          }
+        }
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656228.5017521,
+    "datetime": "2026-08-25T14:10:28.501754",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656228.501749
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656228.543652,
+    "datetime": "2026-08-25T14:10:28.543655",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656228.543646
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656253.1938813,
+    "datetime": "2026-08-25T14:10:53.193884",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656253.1938784
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656253.236025,
+    "datetime": "2026-08-25T14:10:53.236028",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656253.2360187
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656277.7450128,
+    "datetime": "2026-08-25T14:11:17.745015",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656277.7450101
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656277.7884557,
+    "datetime": "2026-08-25T14:11:17.788459",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656277.788449
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656277.8650475,
+    "datetime": "2026-08-25T14:11:17.865049",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "AI infrastructure growth signal",
+        "reason": "high strategic and economic value",
+        "score": 80.0,
+        "economic_score": 125.0457142857143,
+        "final_score": 205.0457142857143,
+        "economics": {
+          "customer": "AI infrastructure growth signal",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 41.43000000000001,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.4,
+          "expected_lifetime_value": 39.6,
+          "gross_profit": 37.6,
+          "contribution_profit": 34.43,
+          "margin": 0.8232323232323232,
+          "roi": 4.918571428571429,
+          "action": "create_personal_outreach",
+          "target": "AI infrastructure growth signal",
+          "opportunity_score": 80.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656277.906893,
+    "datetime": "2026-08-25T14:11:17.906895",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "New digital education program",
+        "reason": "high strategic and economic value",
+        "score": 70.0,
+        "economic_score": 111.46857142857144,
+        "final_score": 181.46857142857144,
+        "economics": {
+          "customer": "New digital education program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 37.47,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.35,
+          "expected_lifetime_value": 34.65,
+          "gross_profit": 32.65,
+          "contribution_profit": 30.47,
+          "margin": 0.797979797979798,
+          "roi": 4.352857142857143,
+          "action": "create_personal_outreach",
+          "target": "New digital education program",
+          "opportunity_score": 70.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "New digital education program",
+        "score": 70.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656789.9151363,
+    "datetime": "2026-08-25T14:19:49.915139",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656789.9151335
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656789.959035,
+    "datetime": "2026-08-25T14:19:49.959038",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656789.9590294
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656790.0358791,
+    "datetime": "2026-08-25T14:19:50.035881",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "AI infrastructure growth signal",
+        "reason": "high strategic and economic value",
+        "score": 80.0,
+        "economic_score": 125.0457142857143,
+        "final_score": 205.0457142857143,
+        "economics": {
+          "customer": "AI infrastructure growth signal",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 41.43000000000001,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.4,
+          "expected_lifetime_value": 39.6,
+          "gross_profit": 37.6,
+          "contribution_profit": 34.43,
+          "margin": 0.8232323232323232,
+          "roi": 4.918571428571429,
+          "action": "create_personal_outreach",
+          "target": "AI infrastructure growth signal",
+          "opportunity_score": 80.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656790.0778604,
+    "datetime": "2026-08-25T14:19:50.077862",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "New digital education program",
+        "reason": "high strategic and economic value",
+        "score": 70.0,
+        "economic_score": 111.46857142857144,
+        "final_score": 181.46857142857144,
+        "economics": {
+          "customer": "New digital education program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 37.47,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.35,
+          "expected_lifetime_value": 34.65,
+          "gross_profit": 32.65,
+          "contribution_profit": 30.47,
+          "margin": 0.797979797979798,
+          "roi": 4.352857142857143,
+          "action": "create_personal_outreach",
+          "target": "New digital education program",
+          "opportunity_score": 70.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "New digital education program",
+        "score": 70.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656871.9658597,
+    "datetime": "2026-08-25T14:21:11.965861",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656871.9658568
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656872.0081646,
+    "datetime": "2026-08-25T14:21:12.008167",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656872.0081587
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656872.0831628,
+    "datetime": "2026-08-25T14:21:12.083164",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "AI infrastructure growth signal",
+        "reason": "high strategic and economic value",
+        "score": 80.0,
+        "economic_score": 125.0457142857143,
+        "final_score": 205.0457142857143,
+        "economics": {
+          "customer": "AI infrastructure growth signal",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 41.43000000000001,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.4,
+          "expected_lifetime_value": 39.6,
+          "gross_profit": 37.6,
+          "contribution_profit": 34.43,
+          "margin": 0.8232323232323232,
+          "roi": 4.918571428571429,
+          "action": "create_personal_outreach",
+          "target": "AI infrastructure growth signal",
+          "opportunity_score": 80.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656872.122744,
+    "datetime": "2026-08-25T14:21:12.122747",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "AI infrastructure growth signal",
+        "reason": "high strategic and economic value",
+        "score": 80.0,
+        "economic_score": 125.0457142857143,
+        "final_score": 205.0457142857143,
+        "economics": {
+          "customer": "AI infrastructure growth signal",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 41.43000000000001,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.4,
+          "expected_lifetime_value": 39.6,
+          "gross_profit": 37.6,
+          "contribution_profit": 34.43,
+          "margin": 0.8232323232323232,
+          "roi": 4.918571428571429,
+          "action": "create_personal_outreach",
+          "target": "AI infrastructure growth signal",
+          "opportunity_score": 80.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "AI infrastructure growth signal",
+        "score": 80.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656872.1633186,
+    "datetime": "2026-08-25T14:21:12.163320",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "New digital education program",
+        "reason": "high strategic and economic value",
+        "score": 70.0,
+        "economic_score": 111.46857142857144,
+        "final_score": 181.46857142857144,
+        "economics": {
+          "customer": "New digital education program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 37.47,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.35,
+          "expected_lifetime_value": 34.65,
+          "gross_profit": 32.65,
+          "contribution_profit": 30.47,
+          "margin": 0.797979797979798,
+          "roi": 4.352857142857143,
+          "action": "create_personal_outreach",
+          "target": "New digital education program",
+          "opportunity_score": 70.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "New digital education program",
+        "score": 70.0
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656872.202501,
+    "datetime": "2026-08-25T14:21:12.202506",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "New digital education program",
+        "reason": "high strategic and economic value",
+        "score": 70.0,
+        "economic_score": 111.46857142857144,
+        "final_score": 181.46857142857144,
+        "economics": {
+          "customer": "New digital education program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 37.47,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.35,
+          "expected_lifetime_value": 34.65,
+          "gross_profit": 32.65,
+          "contribution_profit": 30.47,
+          "margin": 0.797979797979798,
+          "roi": 4.352857142857143,
+          "action": "create_personal_outreach",
+          "target": "New digital education program",
+          "opportunity_score": 70.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "New digital education program",
+        "score": 70.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787656912.2256584,
+    "datetime": "2026-08-25T14:21:52.225659",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656912.2256567
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656912.2687318,
+    "datetime": "2026-08-25T14:21:52.268735",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656912.268725
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656948.6021447,
+    "datetime": "2026-08-25T14:22:28.602146",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656948.602143
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656948.644527,
+    "datetime": "2026-08-25T14:22:28.644530",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656948.6445215
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656948.7484584,
+    "datetime": "2026-08-25T14:22:28.748460",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787656948.7484562
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787656948.7889843,
+    "datetime": "2026-08-25T14:22:28.788987",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787656948.7889805
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.160761,
+    "datetime": "2026-08-25T14:23:54.160763",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787657034.1607578
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.203016,
+    "datetime": "2026-08-25T14:23:54.203018",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787657034.2030098
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.3507552,
+    "datetime": "2026-08-25T14:23:54.350757",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787657034.3507524
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.3909073,
+    "datetime": "2026-08-25T14:23:54.390910",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787657034.3909028
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.460905,
+    "datetime": "2026-08-25T14:23:54.460907",
+    "key": "market_signals",
+    "value": {
+      "source": "ai_news",
+      "title": "AI infrastructure growth signal",
+      "category": "AI",
+      "importance": 80,
+      "timestamp": 1787657034.4609032
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657034.5005682,
+    "datetime": "2026-08-25T14:23:54.500571",
+    "key": "market_signals",
+    "value": {
+      "source": "government",
+      "title": "New digital education program",
+      "category": "government",
+      "importance": 70,
+      "timestamp": 1787657034.5005636
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.5905552,
+    "datetime": "2026-08-25T14:25:05.590558",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.6330907,
+    "datetime": "2026-08-25T14:25:05.633095",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657105.6795535,
+    "datetime": "2026-08-25T14:25:05.679555",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.718848,
+    "datetime": "2026-08-25T14:25:05.718852",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657105.7602158,
+    "datetime": "2026-08-25T14:25:05.760217",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.799077,
+    "datetime": "2026-08-25T14:25:05.799080",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657105.8412783,
+    "datetime": "2026-08-25T14:25:05.841280",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.8805556,
+    "datetime": "2026-08-25T14:25:05.880559",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657105.9221392,
+    "datetime": "2026-08-25T14:25:05.922141",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657105.960974,
+    "datetime": "2026-08-25T14:25:05.960978",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657106.0024242,
+    "datetime": "2026-08-25T14:25:06.002426",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657106.041564,
+    "datetime": "2026-08-25T14:25:06.041568",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.1274083,
+    "datetime": "2026-08-25T14:25:43.127411",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.1716907,
+    "datetime": "2026-08-25T14:25:43.171695",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.2161305,
+    "datetime": "2026-08-25T14:25:43.216132",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.2614412,
+    "datetime": "2026-08-25T14:25:43.261445",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.3053305,
+    "datetime": "2026-08-25T14:25:43.305332",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.346313,
+    "datetime": "2026-08-25T14:25:43.346317",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.3913622,
+    "datetime": "2026-08-25T14:25:43.391364",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.432511,
+    "datetime": "2026-08-25T14:25:43.432515",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Example AI",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Example AI",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Example AI",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Example AI",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.4762743,
+    "datetime": "2026-08-25T14:25:43.476276",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.517719,
+    "datetime": "2026-08-25T14:25:43.517723",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Global Education Initiative",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Global Education Initiative",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Global Education Initiative",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Global Education Initiative",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657143.5616565,
+    "datetime": "2026-08-25T14:25:43.561658",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "result": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "reason": "monitoring"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657143.6028028,
+    "datetime": "2026-08-25T14:25:43.602808",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "monitor",
+        "target": "Digital Government Program",
+        "reason": "opportunity intelligence decision",
+        "score": 50.0,
+        "signals": [],
+        "economics": {
+          "customer": "Digital Government Program",
+          "offer": "IMA",
+          "price": 0.0,
+          "expected_revenue": 48.75,
+          "acquisition_cost": 0.0,
+          "operating_cost": 0.5,
+          "expected_conversion": 0.0,
+          "expected_lifetime_value": 0.0,
+          "gross_profit": -0.5,
+          "contribution_profit": 7.949999999999999,
+          "margin": 0.0,
+          "roi": 0.3928571428571428,
+          "action": "monitor",
+          "target": "Digital Government Program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "economic_score": 0
+      },
+      "feedback": {
+        "status": "monitoring",
+        "target": "Digital Government Program",
+        "score": 50.0
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.4961479,
+    "datetime": "2026-08-25T14:27:44.496151",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.5393596,
+    "datetime": "2026-08-25T14:27:44.539364",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.5823958,
+    "datetime": "2026-08-25T14:27:44.582398",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.6268995,
+    "datetime": "2026-08-25T14:27:44.626902",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.669113,
+    "datetime": "2026-08-25T14:27:44.669115",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.709496,
+    "datetime": "2026-08-25T14:27:44.709500",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.7566593,
+    "datetime": "2026-08-25T14:27:44.756661",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.7972443,
+    "datetime": "2026-08-25T14:27:44.797249",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.8395255,
+    "datetime": "2026-08-25T14:27:44.839527",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.8799932,
+    "datetime": "2026-08-25T14:27:44.879996",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657264.922303,
+    "datetime": "2026-08-25T14:27:44.922305",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657264.9625685,
+    "datetime": "2026-08-25T14:27:44.962573",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.425258,
+    "datetime": "2026-08-25T14:29:40.425261",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.4689746,
+    "datetime": "2026-08-25T14:29:40.468979",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.5130265,
+    "datetime": "2026-08-25T14:29:40.513028",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.5579934,
+    "datetime": "2026-08-25T14:29:40.557997",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.6003997,
+    "datetime": "2026-08-25T14:29:40.600402",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.6409607,
+    "datetime": "2026-08-25T14:29:40.640964",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.6888454,
+    "datetime": "2026-08-25T14:29:40.688847",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.7295752,
+    "datetime": "2026-08-25T14:29:40.729579",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.7716932,
+    "datetime": "2026-08-25T14:29:40.771695",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.812032,
+    "datetime": "2026-08-25T14:29:40.812035",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657380.8544357,
+    "datetime": "2026-08-25T14:29:40.854437",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657380.8947363,
+    "datetime": "2026-08-25T14:29:40.894741",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657436.4291682,
+    "datetime": "2026-08-25T14:30:36.429171",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657436.4706867,
+    "datetime": "2026-08-25T14:30:36.470691",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657436.517508,
+    "datetime": "2026-08-25T14:30:36.517510",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657436.5580459,
+    "datetime": "2026-08-25T14:30:36.558050",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657436.6010108,
+    "datetime": "2026-08-25T14:30:36.601013",
+    "key": "actions",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "result": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "reason": "outreach_ready"
+    },
+    "category": "general",
+    "importance": 0
+  },
+  {
+    "timestamp": 1787657436.6419547,
+    "datetime": "2026-08-25T14:30:36.641959",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657547.7946463,
+    "datetime": "2026-08-25T14:32:27.794652",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657547.8718755,
+    "datetime": "2026-08-25T14:32:27.871879",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657547.9443955,
+    "datetime": "2026-08-25T14:32:27.944400",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.489929,
+    "datetime": "2026-08-25T14:32:51.489935",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.5695157,
+    "datetime": "2026-08-25T14:32:51.569519",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.6434634,
+    "datetime": "2026-08-25T14:32:51.643467",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.7241232,
+    "datetime": "2026-08-25T14:32:51.724126",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.7973027,
+    "datetime": "2026-08-25T14:32:51.797307",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657571.8709383,
+    "datetime": "2026-08-25T14:32:51.870942",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657628.0880575,
+    "datetime": "2026-08-25T14:33:48.088063",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657628.16827,
+    "datetime": "2026-08-25T14:33:48.168275",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787657628.2436178,
+    "datetime": "2026-08-25T14:33:48.243621",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "outreach_ready",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787658281.2513604,
+    "datetime": "2026-08-25T14:44:41.251366",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "OpenAI AI startup",
+        "reason": "partnership",
+        "score": 146.10285714285715,
+        "opportunity_score": 55.0,
+        "economic_score": 91.10285714285715,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "growth potential",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "OpenAI AI startup",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 31.53,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.275,
+          "expected_lifetime_value": 27.225,
+          "gross_profit": 25.225,
+          "contribution_profit": 24.53,
+          "margin": 0.7428833792470156,
+          "roi": 3.5042857142857144,
+          "action": "create_personal_outreach",
+          "target": "OpenAI AI startup",
+          "opportunity_score": 55.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "company",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "growth potential",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "partnership"
+        }
+      },
+      "feedback": {
+        "status": "unknown_action",
+        "target": "OpenAI AI startup",
+        "score": 146.10285714285715,
+        "action": "create_personal_outreach"
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787658281.332324,
+    "datetime": "2026-08-25T14:44:41.332328",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Ministry of Education government AI program",
+        "reason": "impact",
+        "score": 134.31428571428572,
+        "opportunity_score": 50.0,
+        "economic_score": 84.31428571428572,
+        "signals": [
+          "strategic entity",
+          "AI alignment",
+          "learned government impact strategy",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Ministry of Education government AI program",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 29.55,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.25,
+          "expected_lifetime_value": 24.75,
+          "gross_profit": 22.75,
+          "contribution_profit": 22.55,
+          "margin": 0.7171717171717171,
+          "roi": 3.2214285714285715,
+          "action": "create_personal_outreach",
+          "target": "Ministry of Education government AI program",
+          "opportunity_score": 50.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "government",
+          "signals": [
+            "strategic entity",
+            "AI alignment",
+            "learned government impact strategy",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "unknown_action",
+        "target": "Ministry of Education government AI program",
+        "score": 134.31428571428572,
+        "action": "create_personal_outreach"
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
+  },
+  {
+    "timestamp": 1787658281.406321,
+    "datetime": "2026-08-25T14:44:41.406325",
+    "key": "action_feedback",
+    "value": {
+      "action": {
+        "action": "create_personal_outreach",
+        "target": "Global Health NGO foundation",
+        "reason": "impact",
+        "score": 63.582857142857144,
+        "opportunity_score": 20.0,
+        "economic_score": 43.582857142857144,
+        "signals": [
+          "strategic entity",
+          "economic intelligence evaluated"
+        ],
+        "economics": {
+          "customer": "Global Health NGO foundation",
+          "offer": "IMA",
+          "price": 99.0,
+          "expected_revenue": 17.67,
+          "acquisition_cost": 5.0,
+          "operating_cost": 2.0,
+          "expected_conversion": 0.1,
+          "expected_lifetime_value": 9.9,
+          "gross_profit": 7.9,
+          "contribution_profit": 10.67,
+          "margin": 0.29292929292929293,
+          "roi": 1.5242857142857142,
+          "action": "create_personal_outreach",
+          "target": "Global Health NGO foundation",
+          "opportunity_score": 20.0,
+          "calibrated": true,
+          "calibration_samples": 4
+        },
+        "reasoning": {
+          "entity_type": "nonprofit",
+          "signals": [
+            "strategic entity",
+            "economic intelligence evaluated"
+          ],
+          "recommended_direction": "impact"
+        }
+      },
+      "feedback": {
+        "status": "unknown_action",
+        "target": "Global Health NGO foundation",
+        "score": 63.582857142857144,
+        "action": "create_personal_outreach"
+      },
+      "status": "processed"
+    },
+    "category": "learning",
+    "importance": 80
   }
 ]

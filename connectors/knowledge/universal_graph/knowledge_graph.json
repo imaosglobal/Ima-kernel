@@ -21,7 +21,17 @@
       ],
       "confidence": 1.0,
       "updated": "2026-07-16T05:43:06.768533"
-    }
+    },
+    "scientific_discovery": [
+      "scientific_discovery",
+      "dynamical_system",
+      "ODE",
+      "meda_mode:data_anchored",
+      "model_family:all",
+      "constraint_validated_model",
+      "equation:dH/dt",
+      "equation:dL/dt"
+    ]
   },
   "concepts": {
     "inventory": {
@@ -51,6 +61,62 @@
       ],
       "confidence": 0.9,
       "last_updated": "2026-07-16T05:18:02.754860"
+    },
+    "scientific_discovery": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.778493"
+    },
+    "dynamical_system": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.778694"
+    },
+    "ODE": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.778879"
+    },
+    "meda_mode:data_anchored": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.779061"
+    },
+    "model_family:all": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.779242"
+    },
+    "constraint_validated_model": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.779425"
+    },
+    "equation:dH/dt": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.779634"
+    },
+    "equation:dL/dt": {
+      "sources": [
+        "MEDA"
+      ],
+      "confidence": 1.0,
+      "last_updated": "2026-08-24T17:48:18.779836"
     }
   },
   "relations": {

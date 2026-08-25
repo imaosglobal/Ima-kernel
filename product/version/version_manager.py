@@ -53,3 +53,4 @@ def upgrade(new_version):
 
 
 if __name__ == "__main__":
+    print(json.dumps(current(), indent=2))

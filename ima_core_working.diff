@@ -1,0 +1,503 @@
+diff --git a/IMA_START.py b/IMA_START.py
+index a8b9603..bec014b 100755
+--- a/IMA_START.py
++++ b/IMA_START.py
+@@ -11,6 +11,7 @@ def start_api():
+     api = ROOT / "api" / "server.py"
+ 
+     if not api.exists():
++        print("[WARN] API missing")
+         return False
+ 
+     try:
+@@ -22,18 +23,23 @@ def start_api():
+         time.sleep(2)
+         return True
+     except Exception as e:
++        print("[WARN] API:", e)
+         return False
+ 
+ 
+ def run():
+ 
++    print("=== IMA ONLINE START ===")
+ 
+     try:
+         import canonical_boot_guard
+         if not canonical_boot_guard.verify():
++            print("[WARN] CANONICAL STATE CHANGED")
+     except Exception as e:
++        print("[WARN] GUARD CHECK:", e)
+ 
+ 
++    print("TIME:", time.time())
+ 
+     try:
+         sys.path.insert(0, str(RUNTIME))
+@@ -41,8 +47,10 @@ def run():
+         from python_bridge import boot_runtime
+ 
+         result = boot_runtime()
++        print("[OK] CANONICAL RUNTIME", result)
+ 
+     except Exception as e:
++        print("[FAIL] RUNTIME:", e)
+         return 1
+ 
+ 
+@@ -51,20 +59,27 @@ def run():
+     checks.append(ROOT.exists())
+     checks.append(RUNTIME.exists())
+ 
++    print("[OK] ROOT" if checks[0] else "[FAIL] ROOT")
++    print("[OK] CANONICAL" if checks[1] else "[FAIL] CANONICAL")
+ 
+     try:
+         import api_boot_connector
+         api_boot_connector.start_api()
++        print("[OK] API BOOT CONNECTED")
+     except Exception:
+         if start_api():
++            print("[OK] API STARTED")
+         else:
++            print("[WARN] API NOT STARTED")
+ 
+ 
+ 
+     try:
+         import boot_integrity_reporter
+         boot_integrity_reporter.create_report("ONLINE")
++        print("[OK] BOOT INTEGRITY REPORT")
+     except Exception as e:
++        print("[WARN] BOOT REPORT:", e)
+ 
+     
+     try:
+@@ -73,12 +88,16 @@ def run():
+             ["bash","canonical_dependency_audit.sh"],
+             timeout=60
+         )
++        print("[OK] DEPENDENCY AUDIT")
+     except Exception as e:
++        print("[WARN] DEPENDENCY AUDIT:", e)
+ 
+     try:
+         run_auto_maintenance()
+     except Exception as e:
++        print("[WARN] AUTO MAINTENANCE:", e)
+ 
++    print("=== IMA SYSTEM READY ===")
+     return 0
+ 
+ 
+@@ -90,7 +109,9 @@ def run_auto_maintenance():
+             ["bash","canonical_auto_maintenance.sh"],
+             timeout=60
+         )
++        print("[OK] AUTO MAINTENANCE")
+     except Exception as e:
++        print("[WARN] AUTO MAINTENANCE:", e)
+ 
+ if __name__ == "__main__":
+     sys.exit(run())
+diff --git a/api/server.py b/api/server.py
+index 183a4f6..9d4275d 100755
+--- a/api/server.py
++++ b/api/server.py
+@@ -4,19 +4,24 @@ from pathlib import Path
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+ sys.path.insert(0, str(ROOT))
++print("PYTHON ROOT:", ROOT, flush=True)
+ 
+ from http.server import BaseHTTPRequestHandler, HTTPServer
+ from pathlib import Path
+ import json,time
+ from core.conversation_router import route
++print('BOOT: before ima_master_runtime', flush=True)
+ import ima_master_runtime
++print('BOOT: after ima_master_runtime', flush=True)
+ import sys
+ from pathlib import Path
+ 
+ 
++print("PYTHON ROOT:", ROOT, flush=True)
+ import os
+ sys.path.append('..')
+ import identity_context
++print('BOOT: before conversation_layer', flush=True)
+ import conversation_layer
+ 
+ # Co-Cognition: shared human/IMA reasoning layer.
+@@ -36,7 +41,10 @@ try:
+     co_cognition = _cc_module
+ except Exception:
+     co_cognition = None
++print('BOOT: after conversation_layer', flush=True)
++print('BOOT: before product_gateway', flush=True)
+ from product.gateway import product_gateway
++print('BOOT: after product_gateway', flush=True)
+ 
+ 
+ 
+@@ -245,6 +253,7 @@ class Handler(BaseHTTPRequestHandler):
+                         )
+                         co_cognition.record(cc_result)
+                 except Exception as e:
++                    print("CO-COGNITION:", e, flush=True)
+ 
+                 conversation_layer.update(
+                     question,
+@@ -302,4 +311,5 @@ class Handler(BaseHTTPRequestHandler):
+             })
+ 
+ PORT=int(os.environ.get("PORT",8080))
++print(f"IMA API ONLINE :{PORT}", flush=True)
+ HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()
+diff --git a/ima_one_brain.py b/ima_one_brain.py
+index b6d4cd0..4a0e566 100644
+--- a/ima_one_brain.py
++++ b/ima_one_brain.py
+@@ -114,23 +114,34 @@ def write_status(payload):
+         )
+ 
+     except Exception as exc:
++        print("STATUS WRITE ERROR:", repr(exc))
+ 
+ 
+ def run():
+     """
+     Execute one complete IMA ONE BRAIN cycle.
+     """
++    print("=" * 80)
++    print("IMA ONE BRAIN")
++    print("=" * 80)
++    print("ROOT:", ROOT)
++    print("TIME:", datetime.now().isoformat())
+ 
+     brain = None
+     autonomous = None
+ 
+     try:
+         brain = _run_master_cycle()
++        print("MASTER CYCLE: OK")
++        print(json.dumps(brain, ensure_ascii=False, indent=2, default=str))
+     except Exception as exc:
++        print("MASTER CYCLE ERROR:", repr(exc))
+         traceback.print_exc()
+ 
+     try:
+         autonomous = _run_autonomous_cycle()
++        print("AUTONOMOUS CYCLE RESULT:")
++        print(
+             json.dumps(
+                 autonomous,
+                 ensure_ascii=False,
+@@ -143,6 +154,7 @@ def run():
+             "status": "error",
+             "error": repr(exc),
+         }
++        print("AUTONOMOUS CYCLE ERROR:", repr(exc))
+ 
+     payload = _status_payload(
+         brain=brain,
+@@ -151,6 +163,9 @@ def run():
+ 
+     write_status(payload)
+ 
++    print("=" * 80)
++    print("IMA ONE BRAIN CYCLE COMPLETE")
++    print("=" * 80)
+ 
+     return payload
+ 
+diff --git a/ima_system.py b/ima_system.py
+index ee8e747..c533ed6 100644
+--- a/ima_system.py
++++ b/ima_system.py
+@@ -254,6 +254,10 @@ def status():
+     events = load_events()
+     mem = memory_summary(events)
+ 
++    print("=== IMA CLEAN v2 ===")
++    print("EVENTS:", len(events))
++    print("QUESTIONS:", mem["questions"])
++    print("ANSWERS:", mem["answers"])
+ 
+ 
+ # -------------------------
+@@ -263,6 +267,7 @@ if __name__ == "__main__":
+     import sys
+ 
+     if len(sys.argv) > 1 and sys.argv[1] == "ask":
++        print(ask(" ".join(sys.argv[2:])))
+     else:
+         status()
+ 
+diff --git a/kernel/runtime/CANONICAL/IMA_IDENTITY.py b/kernel/runtime/CANONICAL/IMA_IDENTITY.py
+index 71e4c83..93921d8 100755
+--- a/kernel/runtime/CANONICAL/IMA_IDENTITY.py
++++ b/kernel/runtime/CANONICAL/IMA_IDENTITY.py
+@@ -32,3 +32,4 @@ def load_identity():
+ 
+ 
+ if __name__ == "__main__":
++    print(json.dumps(load_identity(), indent=2, ensure_ascii=False))
+diff --git a/kernel/runtime/CANONICAL/python_bridge.py b/kernel/runtime/CANONICAL/python_bridge.py
+index aee2ce0..9041c9d 100755
+--- a/kernel/runtime/CANONICAL/python_bridge.py
++++ b/kernel/runtime/CANONICAL/python_bridge.py
+@@ -12,3 +12,4 @@ def boot_runtime():
+     return json.loads(result)
+ 
+ if __name__=="__main__":
++    print(boot_runtime())
+diff --git a/tools/ima-toolkit/ima.py b/tools/ima-toolkit/ima.py
+old mode 100755
+new mode 100644
+index c9f7c7b..7513464
+--- a/tools/ima-toolkit/ima.py
++++ b/tools/ima-toolkit/ima.py
+@@ -1,189 +1,85 @@
+ import subprocess
+ import sys
+-import os
+-import glob
+-import time
+-import shutil
+-import importlib.util
+-from datetime import datetime
++
+ from reasoning_layer import interpret
+ from answer_builder import build_answer
+ from providers.git import GitProvider
+ from providers.github import GitHubProvider
+ from providers.gitlab import GitLabProvider
+ 
+-VERSION = "4.0.1"
+-NOTE_FILE = os.path.expanduser("~/.ima_notes")
+-PLUGIN_DIR = os.path.expanduser("~/.ima_plugins")
++VERSION = "4.1.2"
++
+ 
+ def get_provider():
+     try:
+-        remotes = subprocess.run(["git", "remote", "-v"], capture_output=True, text=True).stdout
+-        if "github" in remotes: return GitHubProvider()
+-        if "gitlab" in remotes: return GitLabProvider()
+-    except: pass
++        remotes = subprocess.run(
++            ["git", "remote", "-v"],
++            capture_output=True,
++            text=True,
++            check=False,
++        ).stdout.lower()
++
++        if "github" in remotes:
++            return GitHubProvider()
++
++        if "gitlab" in remotes:
++            return GitLabProvider()
++
++    except Exception:
++        pass
++
+     return GitProvider()
+ 
++
+ class IMAReviewer:
+     def __init__(self):
+         self.provider = get_provider()
++
+     def run(self):
++        print(
++            "=== IMA PR REVIEWER v"
++            + VERSION
++            + " - "
++            + self.provider.get_name()
++            + " ==="
++        )
++
+         diff = self.provider.get_diff()
+         result = interpret(diff)
+         message, recovery = build_answer(result)
+-        self.print_report(result['score'], message, recovery)
+-        self.check_commit_msg()
+-    def print_report(self, score, message, recovery):
+-        for i, step in enumerate(recovery, 1):
+-    def check_commit_msg(self):
+ 
+-def run_help():
+-    cmds = {
+-        "קוד": ["pr-review", "lint", "test", "ship", "commit", "fix", "explain", "ai-review"],
+-        "מעקב": ["stats", "todo", "watch", "search"],
+-        "ניקוי": ["clean"],
+-        "DevOps": ["docker", "deploy", "backup", "db", "serve"],
+-        "פרודוקטיביות": ["note", "time", "env"],
+-        "מערכת": ["plugin", "help", "version"]
+-    }
+-    for cat, items in cmds.items():
++        print("\n" + str(result["score"]) + "/10 - " + message)
+ 
+-def run_version():
+-
+-def run_lint():
+-    for cmd in ["black.", "flake8. --ignore=E501", "isort."]:
+-
+-def run_test():
+-    result = subprocess.run("pytest --cov --cov-report=term-missing 2>/dev/null || echo 'התקן: pip install pytest-cov'", shell=True)
+-
+-def run_stats():
+-    files = len([f for f in glob.glob("**/*.*", recursive=True) if ".git" not in f and "node_modules" not in f])
+-    lines = subprocess.run("find. -type f -name '*.py' -o -name '*.ts' -o -name '*.js' | xargs wc -l 2>/dev/null | tail -1", shell=True, capture_output=True, text=True).stdout
+-    commits = subprocess.run("git rev-list --count HEAD 2>/dev/null", shell=True, capture_output=True, text=True).stdout
+-
+-def run_todo():
+-    result = subprocess.run("grep -rn '# TODO'. --exclude-dir=.git --exclude-dir=node_modules", shell=True, capture_output=True, text=True)
+-
+-def run_clean():
+-    for pattern in ["**/__pycache__", "**/*.pyc", "**/.pytest_cache", "dist", "build", "node_modules"]:
+-        for p in glob.glob(pattern, recursive=True): subprocess.run(f"rm -rf '{p}'", shell=True)
+-
+-def run_watch():
+-    last = 0
+-    while True:
+-        current = sum(os.path.getmtime(f) for f in glob.glob("**/*.*", recursive=True) if ".git" not in f)
+-        if current!= last:
+-            run_lint(); run_test(); last = current
+-        time.sleep(2)
+-
+-def run_docker():
+-    subprocess.run("docker build -t ima-app.", shell=True)
+-    subprocess.run("docker run -p 8000:8000 ima-app", shell=True)
+-
+-def run_deploy():
+-    user = input("שרת user@host: ")
+-    subprocess.run(f"rsync -av --exclude=.git. {user}:~/app/", shell=True)
+-    subprocess.run(f"ssh {user} 'cd ~/app && docker compose up -d --build'", shell=True)
+-
+-def run_backup():
+-    dest = os.path.expanduser("~/ima_backup")
+-    os.makedirs(dest, exist_ok=True)
+-    folder = os.path.basename(os.getcwd())
+-    zip_name = f"{dest}/{folder}_{datetime.now().strftime('%Y%m%d_%H%M')}.tar.gz"
+-    subprocess.run(f"tar -czf {zip_name}. --exclude=.git --exclude=__pycache__ --exclude=node_modules", shell=True)
+-
+-def run_db():
+-    action = input("backup/restore: ")
+-    db = input("שם DB: ")
+-    if action == "backup":
+-        subprocess.run(f"pg_dump {db} > {db}_{datetime.now().strftime('%Y%m%d')}.sql", shell=True)
+-    elif action == "restore":
+-        file = input("קובץ sql: ")
+-        subprocess.run(f"psql {db} < {file}", shell=True)
+-
+-def run_serve():
+-    if os.path.exists("app.py") or os.path.exists("main.py"):
+-        subprocess.run("uvicorn main:app --reload --port 8000", shell=True)
+-    else:
+-        subprocess.run("python -m http.server 8000", shell=True)
+-
+-def run_note(arg):
+-    if not arg:
+-        return
+-    with open(NOTE_FILE, "a") as f: f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] {arg}\n")
++        for i, step in enumerate(recovery, 1):
++            print(str(i) + ". " + step)
+ 
+-def run_time(minutes=25):
+-    for i in range(int(minutes)*60, 0, -1):
+ 
+-def run_search(keyword):
+-    subprocess.run(f"grep -rn '{keyword}'. --exclude-dir=.git --exclude-dir=node_modules", shell=True)
++def run_fix():
++    print("=== IMA FIX ===")
++    print("Fix mode is disabled because the previous implementation modified Python files destructively.")
++    print("Use targeted fixes instead.")
+ 
+-def run_env():
+-    if not os.path.exists(".env"):
+-    with open(".env") as f:
+-        for line in f:
+-            if line.strip() and not line.startswith("#"):
+-                key = line.split("=")[0]
+ 
+-def run_plugin(arg):
+-    os.makedirs(PLUGIN_DIR, exist_ok=True)
+-    if arg == "list":
+-    else:
++def run_test():
++    return subprocess.run(
++        [
++            "pytest",
++            "--ignore=_archive_20260808",
++            "--ignore=external",
++            "-x",
++        ],
++        check=False,
++    ).returncode
+ 
+-def generate_commit_msg(diff):
+-    d = diff.lower()
+-    if "fix" in d or "bug" in d: return "fix: תיקון באג"
+-    elif "add" in d or "new" in d: return "feat: הוספת פיצ'ר חדש"
+-    elif "refactor" in d: return "refactor: ריפקטור קוד"
+-    else: return "chore: עדכון כללי"
+-
+-def generate_fix(diff):
+-    fixes = []
+-    if "TODO" in diff: fixes.append("echo 'יש TODO לטפל לפני merge'")
+-    if not fixes: fixes.append("echo 'אין תיקונים אוטומטיים'")
+-    return fixes
+-
+-def generate_explain(diff):
+-    d = diff.lower()
+-    if "fork" in d and "opensession" in d: return "מבצע fork ל-session נוכחי ומוסיף sessionTypeSelectionReason"
+-    elif "sessiontypeselectionreason" in d: return "מוסיף מטא-דאטה ל-openSession לצורך מעקב"
+-    elif "def " in d: return "מוסיף פונקציות חדשות"
+-    elif "import " in d: return "מוסיף תלויות חדשות"
+-    else: return "עדכון כללי"
+-
+-def ai_review(provider):
+-
+-def ship_code(provider):
+-    run_lint(); run_test(); ai_review(provider)
+-    diff = provider.get_diff(); fixes = generate_fix(diff)
+-    msg = generate_commit_msg(diff)
+-    subprocess.run(["git", "add", "."], capture_output=True)
+-    subprocess.run(["git", "commit", "-m", msg], capture_output=True)
+-    subprocess.run(["git", "push"], capture_output=True)
+-
+-def load_plugins():
+-    if not os.path.exists(PLUGIN_DIR): return {}
+-    plugins = {}
+-    for f in os.listdir(PLUGIN_DIR):
+-        if f.endswith(".py"):
+-            name = f[:-3]
+-    return plugins
+ 
+ def main():
+     IMAReviewer().run()
+ 
++
+ if __name__ == "__main__":
+-    provider = get_provider()
+-    arg = sys.argv[2] if len(sys.argv) > 2 else ""
+-    plugins = load_plugins()
+-    cmds = {
+-        "help": run_help, "version": run_version, "lint": run_lint, "test": run_test, "stats": run_stats,
+-        "todo": run_todo, "clean": run_clean, "watch": run_watch, "docker": run_docker, "deploy": run_deploy,
+-        "backup": run_backup, "db": run_db, "serve": run_serve, "note": lambda: run_note(arg),
+-        "time": lambda: run_time(arg if arg else 25), "search": lambda: run_search(arg), "env": run_env,
+-        "plugin": lambda: run_plugin(arg), "ai-review": ai_review,
+-        "ship": lambda: ship_code(provider)
+-    }
+-    cmds.update(plugins)
+-    if len(sys.argv) > 1 and sys.argv[1] in cmds: cmds[sys.argv[1]]()
+-    else: main()
++    if len(sys.argv) > 1 and sys.argv[1] == "fix":
++        run_fix()
++    elif len(sys.argv) > 1 and sys.argv[1] == "test":
++        raise SystemExit(run_test())
++    else:
++        main()

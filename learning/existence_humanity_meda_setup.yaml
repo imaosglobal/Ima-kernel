@@ -1,0 +1,11 @@
+variables:
+  - name: existence
+  - name: humanity
+  - name: population
+  - name: observer_present
+  - name: galaxies
+  - name: experimenter_present
+
+ga:
+  population: 100
+  generations: 20

@@ -2,6 +2,7 @@
 import time
 
 from founder.executive_ai.action_engine.feedback_engine import analyze_feedback
+from founder.executive_ai.economic_intelligence.economic_engine import evaluate_action_economics
 
 
 def rank_opportunity(entity):
@@ -76,9 +77,54 @@ def rank_opportunity(entity):
 
     reasons = list(dict.fromkeys(reasons))
 
+    # ------------------------------------------------------------
+    # Economic intelligence
+    # ------------------------------------------------------------
+    economic_action = {
+        "action": "create_personal_outreach",
+        "target": entity.get("name", "unknown"),
+        "score": score,
+    }
+
+    try:
+        economics = evaluate_action_economics(economic_action)
+    except Exception as exc:
+        economics = {
+            "economic_score": 0.0,
+            "error": str(exc),
+        }
+
+    expected_revenue = float(
+        economics.get("expected_revenue", 0.0)
+    )
+
+    contribution_profit = float(
+        economics.get("contribution_profit", 0.0)
+    )
+
+    roi = float(
+        economics.get("roi", 0.0)
+    )
+
+    # Economic score is deliberately bounded.
+    economic_score = (
+        expected_revenue
+        + contribution_profit
+        + (roi * 10.0)
+    )
+
+    final_score = score + economic_score
+
+    reasons.append(
+        "economic intelligence evaluated"
+    )
+
     return {
         "entity": entity,
         "opportunity_score": score,
+        "economic_score": economic_score,
+        "final_score": final_score,
+        "economics": economics,
         "signals": reasons,
-        "timestamp": time.time()
+        "timestamp": time.time(),
     }

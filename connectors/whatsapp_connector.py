@@ -38,5 +38,6 @@ class Whatsapp:
         return reply
 
     def send_message(self, user_id, text):
+        print(f"SEND TO {user_id}: {text}")
 
 whatsapp = Whatsapp()

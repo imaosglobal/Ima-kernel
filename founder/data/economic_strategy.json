@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "purpose": "Convert opportunities and actions into measurable economic hypotheses.",
+  "pipeline": [
+    "opportunity",
+    "customer",
+    "offer",
+    "price",
+    "conversion",
+    "expected_revenue",
+    "acquisition_cost",
+    "operating_cost",
+    "contribution_profit",
+    "margin",
+    "roi",
+    "outcome",
+    "learning"
+  ],
+  "principle": "Predictions are hypotheses until confirmed by observed outcomes."
+}

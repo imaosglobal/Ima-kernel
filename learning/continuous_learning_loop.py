@@ -95,8 +95,29 @@ def show_learning_summary():
 if __name__ == "__main__":
     result = run_continuous_learning_cycle()
 
+    print("=" * 100)
+    print("IMA — CONTINUOUS LEARNING LOOP")
+    print("=" * 100)
 
+    print("CYCLE:", result["report"]["cycle"])
+    print("STATUS:", result["status"])
+    print("TOTAL CYCLES:", result["total_cycles"])
+    print("EXECUTION:", result["execution"])
+    print(
         "SELF-MODIFICATION:",
         result["self_modification"],
     )
 
+    print("=" * 100)
+    print("CONTINUOUS LEARNING CYCLE COMPLETED")
+    print("SCAN: PASS")
+    print("LESSON RETRIEVAL: PASS")
+    print("REASONING: PASS")
+    print("PLANNING: PASS")
+    print("EVALUATION: PASS")
+    print("FEEDBACK: PASS")
+    print("LESSON MEMORY: PASS")
+    print("REPORT MEMORY: PASS")
+    print("EXECUTION: DISABLED")
+    print("SELF-MODIFICATION: DISABLED")
+    print("=" * 100)

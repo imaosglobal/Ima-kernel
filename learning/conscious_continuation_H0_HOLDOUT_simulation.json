@@ -1,0 +1,119 @@
+{
+  "model": "H0",
+  "training_result": "learning/conscious_continuation_H0_HOLDOUT_train_results.json",
+  "holdout_data": "learning/conscious_continuation_HOLDOUT_test.csv",
+  "retrained": false,
+  "variables": [
+    "stimulus",
+    "reflection",
+    "confidence",
+    "question_density",
+    "word_count"
+  ],
+  "integration_status": "ok",
+  "trajectory_shape_raw": [
+    5,
+    6
+  ],
+  "trajectory_shape_normalized": [
+    6,
+    5
+  ],
+  "holdout_rows": 6,
+  "holdout_rmse": 0.6621484306540997,
+  "rmse_per_variable": {
+    "stimulus": 0.7071067811865476,
+    "reflection": 0.5773502691896257,
+    "confidence": 0.10984838035522727,
+    "question_density": 0.11605769149479941,
+    "word_count": 1.1547005383792515
+  },
+  "predicted": [
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ]
+  ],
+  "actual": [
+    [
+      0.0,
+      1.0,
+      0.8,
+      0.0,
+      6.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.69,
+      0.2,
+      5.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.8,
+      0.0,
+      4.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.69,
+      0.1428571428571428,
+      7.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.61,
+      0.0,
+      7.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.69,
+      0.1428571428571428,
+      7.0
+    ]
+  ]
+}

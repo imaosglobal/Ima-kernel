@@ -1,0 +1,272 @@
+{
+  "mode": "data_anchored",
+  "weighting_strategy": "equi_weighted",
+  "best_equations": {
+    "dstimulus/dt": {
+      "stimulus": 1.747143,
+      "stimulus^2": 1.862817,
+      "stimulus*word_count": -1.714829,
+      "confidence*reflection": -1.115965,
+      "question_density*reflection": 0.156199,
+      "conscious_continuation*word_count": 0.833404,
+      "confidence^2": 0.066284,
+      "question_density^2": -1.381783,
+      "question_density": -0.687762
+    },
+    "dreflection/dt": {
+      "confidence*stimulus": -0.545493,
+      "conscious_continuation*reflection": -1.341135,
+      "conscious_continuation*word_count": 0.918103,
+      "confidence^2": -0.731042
+    },
+    "dconscious_continuation/dt": {
+      "reflection^2": 0.373764,
+      "conscious_continuation^2": -0.521751,
+      "stimulus^2": 0.858675
+    },
+    "dconfidence/dt": {
+      "reflection": 1.074213,
+      "question_density": 1.162724,
+      "question_density*reflection": 1.391944,
+      "conscious_continuation*word_count": 1.792277,
+      "confidence*word_count": -1.87299,
+      "question_density^2": -0.49799
+    },
+    "dquestion_density/dt": {
+      "reflection": -1.038076,
+      "reflection*word_count": 0.046371,
+      "question_density*word_count": -0.598304
+    },
+    "dword_count/dt": {
+      "reflection": -0.047401,
+      "confidence": -1.527946,
+      "confidence*stimulus": 1.501385,
+      "confidence*question_density": -1.272772,
+      "confidence*word_count": -0.815757
+    }
+  },
+  "n_nonzero_terms": {
+    "dstimulus/dt": 9,
+    "dreflection/dt": 4,
+    "dconscious_continuation/dt": 3,
+    "dconfidence/dt": 6,
+    "dquestion_density/dt": 3,
+    "dword_count/dt": 5
+  },
+  "best_fitness": 0.8805,
+  "constraint_score": 1.0,
+  "regularization_reward": 0.0909,
+  "hard_constraint_score": 1.0,
+  "hard_pass": true,
+  "core_penalty": 0.0,
+  "dropped_core_terms": [],
+  "poly_max_degree": 2,
+  "selected_family_id": "all",
+  "selection_reason": "selected family 'all' by priority hard_pass=True, data_score=0.3064, constraint_score=1.0000, regularization_reward=0.0909",
+  "data_score": 0.3064,
+  "rmse": 1.269,
+  "integration_failures": {
+    "diverged": 1216,
+    "step_limit": 21,
+    "validation_failed": 2,
+    "ok": 18761
+  },
+  "model_families": [
+    {
+      "id": "default",
+      "description": "implicit default family",
+      "seed_indices": []
+    }
+  ],
+  "seed_baseline_scores": [],
+  "seed_feasibility": [
+    {
+      "family_id": "default",
+      "description": "implicit default family",
+      "seed_indices": [],
+      "constraint_ids": [],
+      "hard_pass_count": 0,
+      "seed_scores": []
+    }
+  ],
+  "family_results": {
+    "all": {
+      "family_id": "all",
+      "description": "all seeds, universal constraints",
+      "seed_indices": [],
+      "constraint_ids": [],
+      "best_equations": {
+        "dstimulus/dt": {
+          "stimulus": 1.747143,
+          "stimulus^2": 1.862817,
+          "stimulus*word_count": -1.714829,
+          "confidence*reflection": -1.115965,
+          "question_density*reflection": 0.156199,
+          "conscious_continuation*word_count": 0.833404,
+          "confidence^2": 0.066284,
+          "question_density^2": -1.381783,
+          "question_density": -0.687762
+        },
+        "dreflection/dt": {
+          "confidence*stimulus": -0.545493,
+          "conscious_continuation*reflection": -1.341135,
+          "conscious_continuation*word_count": 0.918103,
+          "confidence^2": -0.731042
+        },
+        "dconscious_continuation/dt": {
+          "reflection^2": 0.373764,
+          "conscious_continuation^2": -0.521751,
+          "stimulus^2": 0.858675
+        },
+        "dconfidence/dt": {
+          "reflection": 1.074213,
+          "question_density": 1.162724,
+          "question_density*reflection": 1.391944,
+          "conscious_continuation*word_count": 1.792277,
+          "confidence*word_count": -1.87299,
+          "question_density^2": -0.49799
+        },
+        "dquestion_density/dt": {
+          "reflection": -1.038076,
+          "reflection*word_count": 0.046371,
+          "question_density*word_count": -0.598304
+        },
+        "dword_count/dt": {
+          "reflection": -0.047401,
+          "confidence": -1.527946,
+          "confidence*stimulus": 1.501385,
+          "confidence*question_density": -1.272772,
+          "confidence*word_count": -0.815757
+        }
+      },
+      "best_fitness": 0.8805,
+      "data_score": 0.3064,
+      "constraint_score": 1.0,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "regularization_reward": 0.0909,
+      "core_penalty": 0.0,
+      "dropped_core_terms": [],
+      "constraint_scores": {},
+      "failed_constraints": [],
+      "hard_failed_constraints": [],
+      "seed_baseline_scores": [],
+      "checkpoint_file": "checkpoint.json"
+    }
+  },
+  "top_candidates": [
+    {
+      "label": "balanced",
+      "equations": {
+        "dstimulus/dt": {
+          "stimulus": 1.747143,
+          "stimulus^2": 1.862817,
+          "stimulus*word_count": -1.714829,
+          "confidence*reflection": -1.115965,
+          "question_density*reflection": 0.156199,
+          "conscious_continuation*word_count": 0.833404,
+          "confidence^2": 0.066284,
+          "question_density^2": -1.381783,
+          "question_density": -0.687762
+        },
+        "dreflection/dt": {
+          "confidence*stimulus": -0.545493,
+          "conscious_continuation*reflection": -1.341135,
+          "conscious_continuation*word_count": 0.918103,
+          "confidence^2": -0.731042
+        },
+        "dconscious_continuation/dt": {
+          "reflection^2": 0.373764,
+          "conscious_continuation^2": -0.521751,
+          "stimulus^2": 0.858675
+        },
+        "dconfidence/dt": {
+          "reflection": 1.074213,
+          "question_density": 1.162724,
+          "question_density*reflection": 1.391944,
+          "conscious_continuation*word_count": 1.792277,
+          "confidence*word_count": -1.87299,
+          "question_density^2": -0.49799
+        },
+        "dquestion_density/dt": {
+          "reflection": -1.038076,
+          "reflection*word_count": 0.046371,
+          "question_density*word_count": -0.598304
+        },
+        "dword_count/dt": {
+          "reflection": -0.047401,
+          "confidence": -1.527946,
+          "confidence*stimulus": 1.501385,
+          "confidence*question_density": -1.272772,
+          "confidence*word_count": -0.815757
+        }
+      },
+      "n_nonzero_terms": {
+        "dstimulus/dt": 9,
+        "dreflection/dt": 4,
+        "dconscious_continuation/dt": 3,
+        "dconfidence/dt": 6,
+        "dquestion_density/dt": 3,
+        "dword_count/dt": 5
+      },
+      "total_terms": 30,
+      "fitness": 0.8805,
+      "constraint_score": 1.0,
+      "regularization_reward": 0.0909,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "dropped_core_terms": [],
+      "data_score": 0.3064,
+      "rmse": 1.269
+    },
+    {
+      "label": "sparse",
+      "equations": {
+        "dstimulus/dt": {
+          "word_count": -1.911077,
+          "question_density*reflection": -1.102231,
+          "confidence*word_count": 0.753845
+        },
+        "dreflection/dt": {
+          "confidence*stimulus": 0.06862,
+          "stimulus*word_count": -0.987379,
+          "confidence*question_density": 0.679572
+        },
+        "dconscious_continuation/dt": {
+          "word_count": 0.703478,
+          "confidence*question_density": -1.25211,
+          "question_density*reflection": -0.864738
+        },
+        "dconfidence/dt": {
+          "conscious_continuation": -0.415471,
+          "question_density": 0.178828,
+          "stimulus*word_count": -1.542089
+        },
+        "dquestion_density/dt": {
+          "stimulus*word_count": -0.950119
+        },
+        "dword_count/dt": {
+          "confidence^2": -1.855868,
+          "question_density^2": 0.797854
+        }
+      },
+      "n_nonzero_terms": {
+        "dstimulus/dt": 3,
+        "dreflection/dt": 3,
+        "dconscious_continuation/dt": 3,
+        "dconfidence/dt": 3,
+        "dquestion_density/dt": 1,
+        "dword_count/dt": 2
+      },
+      "total_terms": 15,
+      "fitness": 0.7,
+      "constraint_score": 1.0,
+      "regularization_reward": 0.0,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "dropped_core_terms": [],
+      "data_score": 0.0,
+      "rmse": null
+    }
+  ]
+}

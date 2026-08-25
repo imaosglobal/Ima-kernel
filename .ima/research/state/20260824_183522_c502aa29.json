@@ -1,0 +1,85 @@
+{
+  "id": "20260824_183522_c502aa29",
+  "original_question": "בדיקת מערכת: כיצד ניתן להבדיל בין טענה מדעית לבין השערה פילוסופית?",
+  "architecture": "IMA_RESEARCH_COUNCIL_V3",
+  "status": "RESEARCH_IN_PROGRESS",
+  "agent_results": [
+    {
+      "agent": "DEEP_RESEARCH",
+      "status": "CAPABILITY_PENDING",
+      "question": "What observations or measurements can actually bear on the question?",
+      "requires": [
+        "connected deep-research provider"
+      ],
+      "contract": "Return sourced research, competing evidence, uncertainty and citations.",
+      "subquestion_id": "empirical",
+      "duration": 0.004
+    },
+    {
+      "agent": "LITERATURE",
+      "status": "CAPABILITY_PENDING",
+      "question": "What observations or measurements can actually bear on the question?",
+      "requires": [
+        "literature/search provider"
+      ],
+      "contract": "Return scientific papers, evidence, contradictions and source metadata.",
+      "subquestion_id": "empirical",
+      "duration": 0.001
+    }
+  ],
+  "subquestions": [
+    {
+      "id": "empirical",
+      "question": "What observations or measurements can actually bear on the question?",
+      "agents": [
+        "DEEP_RESEARCH",
+        "LITERATURE"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "What mechanisms could explain the observed phenomenon without assuming the conclusion?",
+      "agents": [
+        "MEDA",
+        "HYPOTHESIS"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "question": "What competing explanations exist?",
+      "agents": [
+        "HYPOTHESIS",
+        "DEEP_RESEARCH"
+      ]
+    },
+    {
+      "id": "criticism",
+      "question": "What are the strongest arguments against each proposed explanation?",
+      "agents": [
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "testability",
+      "question": "What observations or experiments could distinguish the competing hypotheses?",
+      "agents": [
+        "MEDA",
+        "LITERATURE",
+        "CRITIC"
+      ]
+    },
+    {
+      "id": "unknowns",
+      "question": "What remains genuinely unknown?",
+      "agents": [
+        "CRITIC",
+        "LITERATURE"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "open_questions": [],
+  "next_research_questions": [],
+  "events": [],
+  "result_file": "/data/data/com.termux/files/home/ima_kernel/.ima/research/state/20260824_183522_c502aa29.json"
+}

@@ -3,6 +3,7 @@ import sys
 
 import json
 import subprocess
+import yaml
 from datetime import datetime
 from pathlib import Path
 
@@ -136,34 +137,67 @@ def run_meda(
     setup: str,
     problem: str,
     output: str,
+    data: str | None = None,
 ) -> subprocess.CompletedProcess:
-    """
-    Run MEDA only when its isolated environment already exists.
-
-    IMPORTANT:
-    This function deliberately does NOT call `uv run`.
-    That prevents IMA from unexpectedly rebuilding MEDA's
-    scientific dependency stack on the Android device.
-    """
-
+    """Run the isolated MEDA discovery engine without implicit dependency installation."""
     if not meda_environment_ready():
         raise RuntimeError(
             "MEDA environment is not ready. "
-            "The MEDA .venv exists only partially or is not installed."
+            "Required scientific dependencies are missing."
         )
 
-    python = MEDA / ".venv" / "bin" / "python"
+    venv_python = MEDA / ".venv" / "bin" / "python"
+    python = venv_python if venv_python.is_file() else Path(sys.executable)
+
+    # MEDA defaults to constraint_only unless --mode is explicitly supplied.
+    # Read the durable mode from setup.yaml so data_anchored sessions actually
+    # reach the data-fitting path and --data is not silently ignored.
+    setup_path = Path(setup)
+    if not setup_path.is_absolute():
+        setup_path = BASE / setup_path
+
+    try:
+        setup_cfg = yaml.safe_load(setup_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        raise RuntimeError(f"Cannot read MEDA setup.yaml: {setup_path}: {exc}") from exc
+
+    mode = str(setup_cfg.get("mode", "constraint_only"))
+    if mode not in {"data_anchored", "constraint_only"}:
+        raise ValueError(
+            f"Invalid MEDA mode in setup.yaml: {mode!r}. "
+            "Expected 'data_anchored' or 'constraint_only'."
+        )
+
+    # main.py runs with cwd=MEDA, so all IMA paths must be absolute.
+    setup_path = Path(setup)
+    if not setup_path.is_absolute():
+        setup_path = BASE / setup_path
+
+    problem_path = Path(problem)
+    if not problem_path.is_absolute():
+        problem_path = BASE / problem_path
+
+    output_path = Path(output)
+    if not output_path.is_absolute():
+        output_path = BASE / output_path
+
+    data_path = None
+    if data:
+        data_path = Path(data)
+        if not data_path.is_absolute():
+            data_path = BASE / data_path
 
     command = [
         str(python),
         "skills/meda/scripts/main.py",
-        "--setup",
-        setup,
-        "--problem",
-        problem,
-        "--output",
-        output,
+        "--mode", mode,
+        "--setup", str(setup_path.resolve()),
+        "--problem", str(problem_path.resolve()),
+        "--output", str(output_path.resolve()),
     ]
+
+    if data_path is not None:
+        command += ["--data", str(data_path.resolve())]
 
     return subprocess.run(
         command,
@@ -171,6 +205,7 @@ def run_meda(
         text=True,
         capture_output=True,
     )
+
 
 def read_json(path: str | Path) -> dict:
     path = Path(path)
@@ -202,10 +237,25 @@ def investigate(question: str, context: dict | None = None) -> dict:
     """
     IMA -> MEDA research boundary.
 
-    Creates a MEDA research session without importing MEDA's
-    heavy scientific dependencies into the IMA runtime.
+    Creates a session and executes MEDA when concrete setup/problem/data
+    inputs are supplied.
     """
     session = create_session(question)
+    context = dict(context or {})
+
+    (session / "research_request.json").write_text(
+        json.dumps(
+            {
+                "source": "IMA",
+                "question": question,
+                "context": context,
+                "created_at": datetime.now().isoformat(),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
 
     payload = {
         "ok": True,
@@ -213,9 +263,83 @@ def investigate(question: str, context: dict | None = None) -> dict:
         "session": str(session),
         "environment_ready": meda_environment_ready(),
         "status": status(),
+        "executed": False,
+        "context": context,
     }
 
-    if context:
-        payload["context"] = context
+    if not meda_environment_ready():
+        payload["ok"] = False
+        payload["error"] = "MEDA core environment is not ready"
+        return payload
+
+    setup = context.get("setup")
+    problem = context.get("problem")
+    data = context.get("data")
+
+    if not setup or not problem:
+        payload["ok"] = False
+        payload["error"] = "MEDA requires setup and problem inputs"
+        return payload
+
+    setup_path = Path(setup)
+    problem_path = Path(problem)
+
+    if not setup_path.is_absolute():
+        setup_path = BASE / setup_path
+    if not problem_path.is_absolute():
+        problem_path = BASE / problem_path
+
+    if not setup_path.is_file():
+        payload["ok"] = False
+        payload["error"] = f"setup file not found: {setup_path}"
+        return payload
+
+    if not problem_path.is_file():
+        payload["ok"] = False
+        payload["error"] = f"problem file not found: {problem_path}"
+        return payload
+
+    data_path = None
+    if data:
+        data_path = Path(data)
+        if not data_path.is_absolute():
+            data_path = BASE / data_path
+
+        if not data_path.is_file():
+            payload["ok"] = False
+            payload["error"] = f"data file not found: {data_path}"
+            return payload
+
+    output_value = context.get("output", "results.json")
+    output_path = Path(output_value)
+
+    if not output_path.is_absolute():
+        output_path = session / output_path
+
+    try:
+        result = run_meda(
+            setup=str(setup_path),
+            problem=str(problem_path),
+            output=str(output_path),
+            data=str(data_path) if data_path else None,
+        )
+    except Exception as exc:
+        payload["ok"] = False
+        payload["error"] = "meda_execution_error"
+        payload["exception"] = type(exc).__name__
+        payload["message"] = str(exc)
+        return payload
+
+    payload["executed"] = True
+    payload["returncode"] = result.returncode
+    payload["stdout"] = result.stdout
+    payload["stderr"] = result.stderr
+    payload["output"] = str(output_path)
+
+    if result.returncode == 0 and output_path.exists():
+        payload["result"] = read_json(output_path)
+    elif result.returncode != 0:
+        payload["ok"] = False
+        payload["error"] = "meda_process_failed"
 
     return payload

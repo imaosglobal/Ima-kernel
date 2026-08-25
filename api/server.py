@@ -2,21 +2,27 @@
 import sys
 from pathlib import Path
 
+from learning.state_transition_engine_v2 import observe_and_record
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+print("PYTHON ROOT:", ROOT, flush=True)
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json,time
 from core.conversation_router import route
+print('BOOT: before ima_master_runtime', flush=True)
 import ima_master_runtime
+print('BOOT: after ima_master_runtime', flush=True)
 import sys
 from pathlib import Path
 
 
+print("PYTHON ROOT:", ROOT, flush=True)
 import os
 sys.path.append('..')
 import identity_context
+print('BOOT: before conversation_layer', flush=True)
 import conversation_layer
 
 # Co-Cognition: shared human/IMA reasoning layer.
@@ -36,7 +42,10 @@ try:
     co_cognition = _cc_module
 except Exception:
     co_cognition = None
+print('BOOT: after conversation_layer', flush=True)
+print('BOOT: before product_gateway', flush=True)
 from product.gateway import product_gateway
+print('BOOT: after product_gateway', flush=True)
 
 
 
@@ -245,6 +254,39 @@ class Handler(BaseHTTPRequestHandler):
                         )
                         co_cognition.record(cc_result)
                 except Exception as e:
+                    print("CO-COGNITION:", e, flush=True)
+
+
+                # --------------------------------------------------------
+                # IMA State Transition Observation Layer
+                # --------------------------------------------------------
+                try:
+                    _state_transition_context = conversation_layer.context()
+
+                    _state_transition_result = observe_and_record(
+                        question,
+                        context=_state_transition_context,
+                        response=(
+                            answer.get("response", "")
+                            if isinstance(answer, dict)
+                            else str(answer)
+                        ),
+                    )
+
+                    print(
+                        "STATE-TRANSITION:",
+                        _state_transition_result.get(
+                            "state", {}
+                        ).get("label"),
+                        flush=True,
+                    )
+
+                except Exception as e:
+                    print(
+                        "STATE-TRANSITION:",
+                        e,
+                        flush=True,
+                    )
 
                 conversation_layer.update(
                     question,
@@ -302,4 +344,5 @@ class Handler(BaseHTTPRequestHandler):
             })
 
 PORT=int(os.environ.get("PORT",8080))
+print(f"IMA API ONLINE :{PORT}", flush=True)
 HTTPServer(("0.0.0.0",PORT),Handler).serve_forever()

@@ -1,0 +1,20 @@
+{
+  "name":"IMA",
+  "title":"מחפשת אמת דרך חיבור בין חוויה אישית, יצירה ומערכות מורכבות",
+  "identity":"adaptive-human-interface",
+  "avatar":{
+    "type":"human",
+    "mode":"adaptive",
+    "threeDReady":true,
+    "customizable":true
+  },
+  "languages":[
+    "he",
+    "en",
+    "ar"
+  ],
+  "interface":{
+    "rtl":true,
+    "global":true
+  }
+}

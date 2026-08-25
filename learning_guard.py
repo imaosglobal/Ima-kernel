@@ -13,6 +13,7 @@ BLOCK_PATTERNS = [
     "meta_analysis_completed"
 ]
 
+def fingerprint(text):
     return hashlib.sha256(
         text.encode("utf-8")
     ).hexdigest()
@@ -33,6 +34,7 @@ def filter_learning(event):
     result = {
         "allowed": should_learn(text),
         "timestamp": time.time(),
+        "hash": fingerprint(text)
     }
 
     save_state(result)
@@ -61,3 +63,4 @@ def save_state(data):
         encoding="utf-8"
     )
 
+print("IMA LEARNING GUARD READY")

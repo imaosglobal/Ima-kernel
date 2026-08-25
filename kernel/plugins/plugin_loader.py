@@ -35,6 +35,7 @@ def scan_plugins():
 
 
 if __name__ == "__main__":
+    print(json.dumps(
         scan_plugins(),
         indent=2,
         ensure_ascii=False

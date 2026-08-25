@@ -1,0 +1,406 @@
+from pathlib import Path
+from datetime import datetime
+import hashlib
+import json
+import math
+import re
+
+EVENTS = Path("learning/state_transition_events.jsonl")
+
+
+STATE_ORDER = [
+    "brief",
+    "inquiry",
+    "discussion",
+    "extended_expression",
+    "reflection",
+    "planning",
+    "action",
+    "evaluation",
+]
+
+
+def _tokens(text):
+    return re.findall(r"\S+", text or "", re.UNICODE)
+
+
+def _features(text):
+    text = text or ""
+    tokens = _tokens(text)
+
+    chars = len(text)
+    words = len(tokens)
+
+    sentences = max(
+        1,
+        len(re.findall(r"[.!?؟]+", text))
+    )
+
+    questions = len(
+        re.findall(r"[?؟]", text)
+    )
+
+    exclamations = len(
+        re.findall(r"!", text)
+    )
+
+    unique = len(set(tokens)) / max(1, words)
+
+    hebrew = len(
+        re.findall(r"[\u0590-\u05FF]", text)
+    )
+
+    latin_upper = len(
+        re.findall(r"[A-Z]", text)
+    )
+
+    return {
+        "char_count": float(chars),
+        "word_count": float(words),
+        "sentence_count": float(sentences),
+        "question_marks": float(questions),
+        "exclamation_marks": float(exclamations),
+        "question_density": questions / max(1, words),
+        "newline_density": text.count("\n") / max(1, chars),
+        "unique_token_ratio": unique,
+        "hebrew_ratio": hebrew / max(1, chars),
+        "uppercase_ratio": latin_upper / max(1, chars),
+    }
+
+
+def _state(features, text):
+    words = features["word_count"]
+    q = features["question_density"]
+    newlines = features["newline_density"]
+
+    if words <= 5:
+        return "brief"
+
+    if q >= 0.08:
+        return "inquiry"
+
+    if words >= 120 or newlines > 0.08:
+        return "extended_expression"
+
+    if words >= 60:
+        return "discussion"
+
+    if any(x in text for x in [
+        "אני חושב",
+        "אני מרגיש",
+        "למה אני",
+        "מה זה אומר עליי",
+        "משמעות",
+        "בעצם",
+    ]):
+        return "reflection"
+
+    if any(x in text for x in [
+        "מה להריץ",
+        "איך לבנות",
+        "בוא נבנה",
+        "צריך ליצור",
+        "תוכנית",
+    ]):
+        return "planning"
+
+    if any(x in text for x in [
+        "הרצתי",
+        "בוצע",
+        "עובד",
+        "הצלחתי",
+        "הפעלתי",
+    ]):
+        return "evaluation"
+
+    return "discussion"
+
+
+def _similarity(a, b):
+    if not a or not b:
+        return 0.0
+
+    keys = set(a) | set(b)
+
+    if not keys:
+        return 0.0
+
+    distance = sum(
+        abs(float(a.get(k, 0)) - float(b.get(k, 0)))
+        for k in keys
+    )
+
+    scale = len(keys)
+
+    return max(
+        0.0,
+        1.0 - min(1.0, distance / scale)
+    )
+
+
+def _extract_factors(text, features, previous):
+    factors = []
+
+    q = features["question_density"]
+
+    if q > 0:
+        factors.append({
+            "name": "questioning",
+            "value": round(min(1.0, q * 4), 4),
+            "source": "text",
+        })
+
+    factors.append({
+        "name": "lexical_exploration",
+        "value": round(
+            features["unique_token_ratio"],
+            4
+        ),
+        "source": "text",
+    })
+
+    if previous:
+        factors.append({
+            "name": "context_continuity",
+            "value": 1.0,
+            "source": "history",
+        })
+
+    if features["word_count"] > 30:
+        factors.append({
+            "name": "expression_expansion",
+            "value": round(
+                min(1.0, features["word_count"] / 150),
+                4
+            ),
+            "source": "text",
+        })
+
+    if any(x in text for x in [
+        "למה",
+        "מה גורם",
+        "איך",
+        "מהו",
+        "מדוע",
+    ]):
+        factors.append({
+            "name": "causal_inquiry",
+            "value": 1.0,
+            "source": "semantic_lexicon",
+        })
+
+    return factors
+
+
+def _transition(previous, current, factors):
+    if not previous:
+        return {
+            "from": None,
+            "to": current,
+            "kind": "initial_state",
+            "confidence": 0.5,
+            "causes": [],
+        }
+
+    if previous == current:
+        return {
+            "from": previous,
+            "to": current,
+            "kind": "state_persistence",
+            "confidence": 0.8,
+            "causes": [
+                x["name"] for x in factors
+            ],
+        }
+
+    causes = [
+        x["name"]
+        for x in factors
+        if x["value"] > 0.2
+    ]
+
+    confidence = min(
+        0.95,
+        0.45 + 0.08 * len(causes)
+    )
+
+    return {
+        "from": previous,
+        "to": current,
+        "kind": "observed_transition",
+        "confidence": round(confidence, 4),
+        "causes": causes,
+    }
+
+
+def _predict(current):
+    idx = (
+        STATE_ORDER.index(current)
+        if current in STATE_ORDER
+        else 0
+    )
+
+    raw_candidates = [
+        (current, 0.42),
+        (
+            STATE_ORDER[
+                min(idx + 1, len(STATE_ORDER) - 1)
+            ],
+            0.30,
+        ),
+        (
+            STATE_ORDER[
+                min(idx + 2, len(STATE_ORDER) - 1)
+            ],
+            0.18,
+        ),
+        (
+            STATE_ORDER[
+                max(idx - 1, 0)
+            ],
+            0.10,
+        ),
+    ]
+
+    merged = {}
+
+    for state, probability in raw_candidates:
+        merged[state] = (
+            merged.get(state, 0.0)
+            + probability
+        )
+
+    total = sum(merged.values())
+
+    candidates = [
+        {
+            "state": state,
+            "probability": round(
+                probability / total,
+                6,
+            ),
+        }
+        for state, probability in merged.items()
+    ]
+
+    candidates.sort(
+        key=lambda x: x["probability"],
+        reverse=True,
+    )
+
+    return {
+        "target": current,
+        "candidates": candidates,
+        "method": "state_transition_v2",
+        "learned": False,
+    }
+
+
+def observe_and_record(
+    text,
+    context=None,
+    response="",
+):
+    context = context or {}
+
+    features = _features(text)
+    current = _state(features, text)
+
+    history = context.get("history", [])
+
+    previous_state = None
+    previous_features = None
+
+    if history:
+        previous = history[-1]
+
+        previous_text = (
+            previous.get("question")
+            or previous.get("message")
+            or ""
+        )
+
+        previous_features = _features(
+            previous_text
+        )
+
+        previous_state = _state(
+            previous_features,
+            previous_text
+        )
+
+    factors = _extract_factors(
+        text,
+        features,
+        previous_state,
+    )
+
+    transition = _transition(
+        previous_state,
+        current,
+        factors,
+    )
+
+    prediction = _predict(current)
+
+    event_id = hashlib.sha256(
+        (
+            datetime.now().isoformat()
+            + text
+        ).encode("utf-8")
+    ).hexdigest()[:16]
+
+    record = {
+        "_id": event_id,
+        "schema": "ima.state_transition.v2",
+        "time": datetime.now().isoformat(),
+
+        "state": {
+            "label": current,
+            "features": features,
+            "observable": True,
+        },
+
+        "previous_state": {
+            "label": previous_state,
+            "features": previous_features,
+        },
+
+        "factors": factors,
+
+        "transition": transition,
+
+        "prediction": prediction,
+
+        "outcome": {
+            "observed": False,
+            "next_state": None,
+            "response_length": len(response or ""),
+        },
+
+        "context": {
+            "history_count": len(history),
+            "has_user": bool(context.get("user")),
+        },
+
+        "status": "observation_only",
+    }
+
+    EVENTS.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    with EVENTS.open(
+        "a",
+        encoding="utf-8",
+    ) as f:
+        f.write(
+            json.dumps(
+                record,
+                ensure_ascii=False,
+            )
+            + "\n"
+        )
+
+    return record

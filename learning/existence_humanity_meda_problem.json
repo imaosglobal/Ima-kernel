@@ -1,0 +1,71 @@
+{
+  "name": "existence_humanity_self_reference",
+  "description": "Constraint-based exploration of existence and humanity without assuming that humanity is necessary for existence.",
+  "ode_variables": [
+    "existence",
+    "humanity",
+    "population",
+    "observer_present",
+    "galaxies",
+    "experimenter_present"
+  ],
+  "constraints": [
+    {
+      "id": "C1",
+      "subject": "term",
+      "relation": "present",
+      "variable": "existence",
+      "term": "existence",
+      "sign": "nonzero",
+      "hardness": "soft"
+    },
+    {
+      "id": "C2",
+      "subject": "term",
+      "relation": "present",
+      "variable": "humanity",
+      "term": "humanity",
+      "sign": "nonzero",
+      "hardness": "soft"
+    },
+    {
+      "id": "C3",
+      "subject": "term",
+      "relation": "present",
+      "variable": "population",
+      "term": "population",
+      "sign": "nonzero",
+      "hardness": "soft"
+    },
+    {
+      "id": "C4",
+      "subject": "term",
+      "relation": "present",
+      "variable": "observer_present",
+      "term": "observer_present",
+      "sign": "nonzero",
+      "hardness": "soft"
+    },
+    {
+      "id": "C5",
+      "subject": "term",
+      "relation": "present",
+      "variable": "galaxies",
+      "term": "galaxies",
+      "sign": "nonzero",
+      "hardness": "soft"
+    },
+    {
+      "id": "C6",
+      "subject": "term",
+      "relation": "present",
+      "variable": "experimenter_present",
+      "term": "experimenter_present",
+      "sign": "nonzero",
+      "hardness": "soft"
+    }
+  ],
+  "seeds": [],
+  "model_families": [],
+  "weighting_strategy": "equi_weighted"
+}

@@ -1,0 +1,285 @@
+{
+  "mode": "constraint_only",
+  "weighting_strategy": "equi_weighted",
+  "best_equations": {
+    "dexistence/dt": {
+      "existence": 0.281031
+    },
+    "dhumanity/dt": {
+      "humanity": -1.93835
+    },
+    "dpopulation/dt": {
+      "population": 0.007215
+    },
+    "dobserver_present/dt": {
+      "observer_present": -0.887275
+    },
+    "dgalaxies/dt": {
+      "galaxies": 0.010052,
+      "existence*experimenter_present": -1.446202,
+      "galaxies*humanity": -0.680436,
+      "experimenter_present*observer_present": -1.163087
+    },
+    "dexperimenter_present/dt": {
+      "experimenter_present": -0.368878
+    }
+  },
+  "n_nonzero_terms": {
+    "dexistence/dt": 1,
+    "dhumanity/dt": 1,
+    "dpopulation/dt": 1,
+    "dobserver_present/dt": 1,
+    "dgalaxies/dt": 4,
+    "dexperimenter_present/dt": 1
+  },
+  "best_fitness": 0.775,
+  "constraint_score": 1.0,
+  "regularization_reward": 0.25,
+  "hard_constraint_score": 1.0,
+  "hard_pass": true,
+  "core_penalty": 0.0,
+  "dropped_core_terms": [],
+  "poly_max_degree": 2,
+  "selected_family_id": "all",
+  "selection_reason": "selected family 'all' by priority hard_pass=True, constraint_score=1.0000, regularization_reward=0.2500",
+  "integration_failures": {
+    "diverged": 695,
+    "step_limit": 41,
+    "ok": 19264
+  },
+  "constraint_scores": {
+    "C1": 1.0,
+    "C2": 1.0,
+    "C3": 1.0,
+    "C4": 1.0,
+    "C5": 1.0,
+    "C6": 1.0
+  },
+  "constraint_weights": {
+    "C1": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    },
+    "C2": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    },
+    "C3": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    },
+    "C4": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    },
+    "C5": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    },
+    "C6": {
+      "weight": 1.0,
+      "tier": null,
+      "hardness": "soft"
+    }
+  },
+  "initial_constraint_weights": {
+    "C1": 1.0,
+    "C2": 1.0,
+    "C3": 1.0,
+    "C4": 1.0,
+    "C5": 1.0,
+    "C6": 1.0
+  },
+  "failed_constraints": [],
+  "hard_failed_constraints": [],
+  "model_families": [
+    {
+      "id": "default",
+      "description": "implicit default family",
+      "seed_indices": []
+    }
+  ],
+  "seed_baseline_scores": [],
+  "seed_feasibility": [
+    {
+      "family_id": "default",
+      "description": "implicit default family",
+      "seed_indices": [],
+      "constraint_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "hard_pass_count": 0,
+      "seed_scores": []
+    }
+  ],
+  "family_results": {
+    "all": {
+      "family_id": "all",
+      "description": "all seeds, universal constraints",
+      "seed_indices": [],
+      "constraint_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "best_equations": {
+        "dexistence/dt": {
+          "existence": 0.281031
+        },
+        "dhumanity/dt": {
+          "humanity": -1.93835
+        },
+        "dpopulation/dt": {
+          "population": 0.007215
+        },
+        "dobserver_present/dt": {
+          "observer_present": -0.887275
+        },
+        "dgalaxies/dt": {
+          "galaxies": 0.010052,
+          "existence*experimenter_present": -1.446202,
+          "galaxies*humanity": -0.680436,
+          "experimenter_present*observer_present": -1.163087
+        },
+        "dexperimenter_present/dt": {
+          "experimenter_present": -0.368878
+        }
+      },
+      "best_fitness": 0.775,
+      "data_score": null,
+      "constraint_score": 1.0,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "regularization_reward": 0.25,
+      "core_penalty": 0.0,
+      "dropped_core_terms": [],
+      "constraint_scores": {
+        "C1": 1.0,
+        "C2": 1.0,
+        "C3": 1.0,
+        "C4": 1.0,
+        "C5": 1.0,
+        "C6": 1.0
+      },
+      "failed_constraints": [],
+      "hard_failed_constraints": [],
+      "seed_baseline_scores": [],
+      "checkpoint_file": "checkpoint.json"
+    }
+  },
+  "top_candidates": [
+    {
+      "label": "balanced",
+      "equations": {
+        "dexistence/dt": {
+          "existence": 0.281031
+        },
+        "dhumanity/dt": {
+          "humanity": -1.93835
+        },
+        "dpopulation/dt": {
+          "population": 0.007215
+        },
+        "dobserver_present/dt": {
+          "observer_present": -0.887275
+        },
+        "dgalaxies/dt": {
+          "galaxies": 0.010052,
+          "existence*experimenter_present": -1.446202,
+          "galaxies*humanity": -0.680436,
+          "experimenter_present*observer_present": -1.163087
+        },
+        "dexperimenter_present/dt": {
+          "experimenter_present": -0.368878
+        }
+      },
+      "n_nonzero_terms": {
+        "dexistence/dt": 1,
+        "dhumanity/dt": 1,
+        "dpopulation/dt": 1,
+        "dobserver_present/dt": 1,
+        "dgalaxies/dt": 4,
+        "dexperimenter_present/dt": 1
+      },
+      "total_terms": 9,
+      "fitness": 0.775,
+      "constraint_score": 1.0,
+      "regularization_reward": 0.25,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "dropped_core_terms": [],
+      "constraint_scores": {
+        "C1": 1.0,
+        "C2": 1.0,
+        "C3": 1.0,
+        "C4": 1.0,
+        "C5": 1.0,
+        "C6": 1.0
+      },
+      "failed_constraints": []
+    },
+    {
+      "label": "sparse",
+      "equations": {
+        "dexistence/dt": {
+          "existence": 0.281031
+        },
+        "dhumanity/dt": {
+          "humanity": -1.93835
+        },
+        "dpopulation/dt": {},
+        "dobserver_present/dt": {
+          "observer_present": -0.887275
+        },
+        "dgalaxies/dt": {
+          "galaxies": 0.010052,
+          "existence*experimenter_present": -1.446202,
+          "galaxies*humanity": -0.680436,
+          "experimenter_present*observer_present": -1.163087
+        },
+        "dexperimenter_present/dt": {
+          "experimenter_present": -0.368878
+        }
+      },
+      "n_nonzero_terms": {
+        "dexistence/dt": 1,
+        "dhumanity/dt": 1,
+        "dpopulation/dt": 0,
+        "dobserver_present/dt": 1,
+        "dgalaxies/dt": 4,
+        "dexperimenter_present/dt": 1
+      },
+      "total_terms": 8,
+      "fitness": 0.5833,
+      "constraint_score": 0.8333,
+      "regularization_reward": 0.0,
+      "hard_constraint_score": 1.0,
+      "hard_pass": true,
+      "dropped_core_terms": [],
+      "constraint_scores": {
+        "C1": 1.0,
+        "C2": 1.0,
+        "C3": 0.0,
+        "C4": 1.0,
+        "C5": 1.0,
+        "C6": 1.0
+      },
+      "failed_constraints": [
+        "C3"
+      ]
+    }
+  ]
+}

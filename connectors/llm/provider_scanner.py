@@ -57,3 +57,4 @@ def scan_all():
 
 
 if __name__=="__main__":
+    print(json.dumps(scan_all(),indent=2,ensure_ascii=False))

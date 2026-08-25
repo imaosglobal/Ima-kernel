@@ -26,6 +26,7 @@ def normalize(text):
     )
 
 
+def fingerprint(text):
     return hashlib.sha256(
         normalize(text).encode()
     ).hexdigest()
@@ -56,6 +57,7 @@ def git_events():
             if len(p)!=3:
                 continue
 
+            key=fingerprint(
                 p[1]+p[2]
             )
 
@@ -156,6 +158,8 @@ def build():
     )
 
 
+    print("TRUTH ENGINE V2 UPDATED")
+    print(json.dumps(summary,indent=2))
 
 
 if __name__=="__main__":

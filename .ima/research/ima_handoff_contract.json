@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "direction": "RESEARCH_COUNCIL -> IMA",
+  "return": [
+    "answer",
+    "evidence",
+    "uncertainty",
+    "disagreements",
+    "open_questions",
+    "next_research_questions"
+  ],
+  "principles": [
+    "Never treat agent timeout as scientific evidence.",
+    "Never collapse disagreement into false consensus.",
+    "Preserve competing hypotheses.",
+    "Separate evidence from inference.",
+    "Generate new questions when evidence is insufficient.",
+    "Allow new research agents to be discovered and registered."
+  ]
+}

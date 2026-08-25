@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "name": "IMA Research Agent Protocol",
+  "purpose": "Common contract between IMA and scientific reasoning systems.",
+  "agent_methods": [
+    "propose",
+    "investigate",
+    "test",
+    "evaluate",
+    "explain",
+    "report"
+  ],
+  "required_result_fields": [
+    "status",
+    "agent",
+    "question",
+    "hypotheses",
+    "evidence",
+    "assumptions",
+    "uncertainties",
+    "conflicts",
+    "next_actions",
+    "answer"
+  ],
+  "status_values": [
+    "ANSWER_READY",
+    "PARTIAL",
+    "TIMEOUT",
+    "FAILED",
+    "BLOCKED",
+    "NOT_APPLICABLE"
+  ],
+  "supervisor_rules": [
+    "Never convert timeout into scientific failure automatically.",
+    "Never convert hypothesis into fact.",
+    "Preserve the original research question.",
+    "Separate empirical, logical and philosophical claims.",
+    "Cross-check important conclusions.",
+    "Record failures as research information.",
+    "Prefer the next experiment or analysis that most reduces uncertainty."
+  ]
+}

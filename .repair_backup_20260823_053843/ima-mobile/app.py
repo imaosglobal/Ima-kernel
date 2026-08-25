@@ -1,0 +1,2 @@
+import {Flask} from 'flask';import json;app=Flask(__name__);@app.route('/save',methods=['POST']) def save():data=request.get_json();with open('memory.json','a',encoding='utf-8')as f:f.write(json.dumps(data,ensure_ascii=False)+'
+');return {'ok':True}

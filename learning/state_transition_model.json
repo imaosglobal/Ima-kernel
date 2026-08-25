@@ -1,0 +1,48 @@
+{
+  "schema": "ima.state_transition_model.v1",
+  "events_used": 8,
+  "transitions": {
+    "brief -> inquiry": {
+      "count": 3,
+      "probability": 0.6
+    },
+    "brief -> brief": {
+      "count": 2,
+      "probability": 0.4
+    }
+  },
+  "causal_candidates": {
+    "brief + lexical_exploration -> inquiry": {
+      "count": 3,
+      "probability": 0.6
+    },
+    "brief + questioning -> inquiry": {
+      "count": 3,
+      "probability": 0.6
+    },
+    "brief + causal_inquiry -> inquiry": {
+      "count": 2,
+      "probability": 0.666667
+    },
+    "brief + context_continuity -> inquiry": {
+      "count": 2,
+      "probability": 0.5
+    },
+    "brief + lexical_exploration -> brief": {
+      "count": 2,
+      "probability": 0.4
+    },
+    "brief + questioning -> brief": {
+      "count": 2,
+      "probability": 0.4
+    },
+    "brief + context_continuity -> brief": {
+      "count": 2,
+      "probability": 0.5
+    },
+    "brief + causal_inquiry -> brief": {
+      "count": 1,
+      "probability": 0.333333
+    }
+  }
+}

@@ -22,8 +22,13 @@ def evaluate_world():
 
         results.append(result)
 
+    # Canonical decision score:
+    # combines strategic opportunity with economic intelligence.
     results.sort(
-        key=lambda x:x["opportunity_score"],
+        key=lambda x: x.get(
+            "final_score",
+            x.get("opportunity_score", 0)
+        ),
         reverse=True
     )
 

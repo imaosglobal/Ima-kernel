@@ -30,3 +30,4 @@ def sync():
 
 
 if __name__=="__main__":
+    print(json.dumps(sync(),indent=2,ensure_ascii=False))

@@ -1,0 +1,99 @@
+{
+  "version": "5.1",
+  "architecture": "IMA_RESEARCH_COUNCIL_V5.1",
+  "auto_discovery": true,
+  "agents": {
+    "MEDA": {
+      "enabled": true,
+      "type": "local",
+      "adapter": "meda_agent.py",
+      "timeout": 180,
+      "roles": [
+        "constraint reasoning",
+        "dynamical models",
+        "model comparison",
+        "scientific formalization"
+      ]
+    },
+    "DEEP_RESEARCH": {
+      "enabled": true,
+      "type": "external_capability",
+      "adapter": "deep_research_agent.py",
+      "timeout": 120,
+      "roles": [
+        "broad research",
+        "source discovery",
+        "evidence synthesis",
+        "current knowledge"
+      ]
+    },
+    "LITERATURE": {
+      "enabled": true,
+      "type": "external_capability",
+      "adapter": "literature_agent.py",
+      "timeout": 120,
+      "roles": [
+        "scientific papers",
+        "evidence retrieval",
+        "contradictory evidence",
+        "citations"
+      ]
+    },
+    "HYPOTHESIS": {
+      "enabled": true,
+      "type": "local_reasoning",
+      "adapter": "hypothesis_agent.py",
+      "timeout": 30,
+      "roles": [
+        "hypothesis generation",
+        "alternative explanations",
+        "hypothesis comparison"
+      ]
+    },
+    "CRITIC": {
+      "enabled": true,
+      "type": "local_reasoning",
+      "adapter": "critic_agent.py",
+      "timeout": 30,
+      "roles": [
+        "counterarguments",
+        "falsification",
+        "logical criticism",
+        "uncertainty"
+      ]
+    },
+    "EVOLUTIONARY_SEARCH": {
+      "enabled": true,
+      "type": "local_reasoning",
+      "adapter": "evolutionary_agent.py",
+      "timeout": 60,
+      "roles": [
+        "algorithmic search",
+        "optimization",
+        "candidate generation"
+      ]
+    },
+    "SEMANTIC_SCHOLAR": {
+      "enabled": true,
+      "type": "external_capability",
+      "adapter": "semantic_scholar_agent.py",
+      "timeout": 30,
+      "roles": [
+        "relevance-ranked literature",
+        "abstract retrieval",
+        "citation metadata",
+        "scientific evidence discovery"
+      ]
+    }
+  },
+  "architecture_features": [
+    "parallel_agent_execution",
+    "independent_timeouts",
+    "evidence_filtering",
+    "evidence_classification",
+    "cross_agent_comparison",
+    "disagreement_preservation",
+    "next_question_generation",
+    "automatic_agent_discovery"
+  ]
+}

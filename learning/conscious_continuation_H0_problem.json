@@ -1,0 +1,13 @@
+{
+  "constraints": [],
+  "seeds": [],
+  "model_families": [],
+  "weighting_strategy": "equi_weighted",
+  "ode_variables": [
+    "stimulus",
+    "reflection",
+    "confidence",
+    "question_density",
+    "word_count"
+  ]
+}

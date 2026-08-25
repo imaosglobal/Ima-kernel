@@ -1,0 +1,147 @@
+Setup:   /data/data/com.termux/files/home/ima_kernel/learning/conscious_continuation_meda_setup.yaml
+Problem: /data/data/com.termux/files/home/ima_kernel/learning/conscious_continuation_meda_problem.json
+Mode:    data_anchored
+  Weighting strategy: equi_weighted
+  Constraints: 0  Seeds: 0  Families: 1
+  ode_variables filter applied: modeling ['stimulus', 'reflection', 'conscious_continuation', 'confidence', 'question_density', 'word_count']
+  28 terms/eq: ['1', 'stimulus', 'reflection', 'conscious_continuation', 'confidence', 'question_density', 'word_count', 'stimulus^2', 'reflection*stimulus', 'conscious_continuation*stimulus', 'confidence*stimulus', 'question_density*stimulus', 'stimulus*word_count', 'reflection^2', 'conscious_continuation*reflection', 'confidence*reflection', 'question_density*reflection', 'reflection*word_count', 'conscious_continuation^2', 'confidence*conscious_continuation', 'conscious_continuation*question_density', 'conscious_continuation*word_count', 'confidence^2', 'confidence*question_density', 'confidence*word_count', 'question_density^2', 'question_density*word_count', 'word_count^2']
+Data:    /data/data/com.termux/files/home/ima_kernel/learning/conscious_continuation_meda_numeric.csv
+  19 points, 6 observed variable(s): ['stimulus', 'reflection', 'conscious_continuation', 'confidence', 'question_density', 'word_count']
+  Normalization (none) scales (observed only): {'stimulus': 1.0, 'reflection': 1.0, 'conscious_continuation': 1.0, 'confidence': 1.0, 'question_density': 1.0, 'word_count': 1.0}
+
+Running single GA: 0 seed(s), 0 constraint(s), 200 population, 100 generations
+Creating initial population...
+
+GA: 100 generations, pop=200, mode=data_anchored
+  Variables: ['stimulus', 'reflection', 'conscious_continuation', 'confidence', 'question_density', 'word_count']
+  Terms/eq:  28
+  Constraints: 0
+  Regularization: kind=l0 scale=3.0
+  Gates: hard_constraint_min_score=0.8 conservation_min_score=0.95 regularization_min_constraint_score=0.8
+  Weights: data=0.5 constr=0.7 reg=0.3
+
+  [------------------------------]   1.0%  gen 1/100  fit=0.7511  data=0.1021  constr=1.0000  rmse=5.7593  reg=0.0000  [15.5s]
+  [------------------------------]   2.0%  gen 2/100  fit=0.7511  data=0.1021  constr=1.0000  rmse=5.7593  reg=0.0000  [26.9s]
+  [------------------------------]   3.0%  gen 3/100  fit=0.7511  data=0.1021  constr=1.0000  rmse=5.7593  reg=0.0000  [43.1s]
+  [=-----------------------------]   4.0%  gen 4/100  fit=0.8069  data=0.2139  constr=1.0000  rmse=1.6920  reg=0.0000  [47.5s]
+  [=-----------------------------]   5.0%  gen 5/100  fit=0.8069  data=0.2139  constr=1.0000  rmse=1.6920  reg=0.0000  [50.6s]
+  [=-----------------------------]   6.0%  gen 6/100  fit=0.8069  data=0.2139  constr=1.0000  rmse=1.6920  reg=0.0000  [54.2s]
+  [==----------------------------]   7.0%  gen 7/100  fit=0.8262  data=0.2524  constr=1.0000  rmse=1.7816  reg=0.0000  [59.7s]
+  [==----------------------------]   8.0%  gen 8/100  fit=0.8304  data=0.2608  constr=1.0000  rmse=1.4591  reg=0.0000  [62.5s]
+  [==----------------------------]   9.0%  gen 9/100  fit=0.8309  data=0.2618  constr=1.0000  rmse=1.4232  reg=0.0000  [65.0s]
+  [===---------------------------]  10.0%  gen 10/100  fit=0.8309  data=0.2618  constr=1.0000  rmse=1.4232  reg=0.0000  [70.7s]
+  [===---------------------------]  11.0%  gen 11/100  fit=0.8309  data=0.2618  constr=1.0000  rmse=1.4232  reg=0.0000  [73.9s]
+  [===---------------------------]  12.0%  gen 12/100  fit=0.8316  data=0.2631  constr=1.0000  rmse=1.4074  reg=0.0000  [78.3s]
+  [===---------------------------]  13.0%  gen 13/100  fit=0.8357  data=0.2714  constr=1.0000  rmse=1.4386  reg=0.0000  [79.0s]
+  [====--------------------------]  14.0%  gen 14/100  fit=0.8357  data=0.2714  constr=1.0000  rmse=1.4386  reg=0.0000  [79.2s]
+  [====--------------------------]  15.0%  gen 15/100  fit=0.8363  data=0.2726  constr=1.0000  rmse=1.3323  reg=0.0000  [79.6s]
+  [====--------------------------]  16.0%  gen 16/100  fit=0.8408  data=0.2816  constr=1.0000  rmse=1.3433  reg=0.0000  [80.8s]
+  [=====-------------------------]  17.0%  gen 17/100  fit=0.8408  data=0.2816  constr=1.0000  rmse=1.3433  reg=0.0000  [81.8s]
+  [=====-------------------------]  18.0%  gen 18/100  fit=0.8423  data=0.2846  constr=1.0000  rmse=1.3318  reg=0.0000  [83.8s]
+  [=====-------------------------]  19.0%  gen 19/100  fit=0.8423  data=0.2846  constr=1.0000  rmse=1.3318  reg=0.0000  [85.0s]
+  [======------------------------]  20.0%  gen 20/100  fit=0.8434  data=0.2869  constr=1.0000  rmse=1.3155  reg=0.0000  [85.5s]
+  [======------------------------]  21.0%  gen 21/100  fit=0.8454  data=0.2909  constr=1.0000  rmse=1.3048  reg=0.0000  [86.1s]
+  [======------------------------]  22.0%  gen 22/100  fit=0.8465  data=0.2930  constr=1.0000  rmse=1.3045  reg=0.0000  [86.7s]
+  [======------------------------]  23.0%  gen 23/100  fit=0.8773  data=0.3018  constr=1.0000  rmse=1.3021  reg=0.0882  [87.2s]
+  [=======-----------------------]  24.0%  gen 24/100  fit=0.8773  data=0.3018  constr=1.0000  rmse=1.3021  reg=0.0882  [87.6s]
+  [=======-----------------------]  25.0%  gen 25/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [88.1s]
+  [=======-----------------------]  26.0%  gen 26/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [88.4s]
+  [========----------------------]  27.0%  gen 27/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [88.7s]
+  [========----------------------]  28.0%  gen 28/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.0s]
+  [========----------------------]  29.0%  gen 29/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.2s]
+  [=========---------------------]  30.0%  gen 30/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.5s]
+  [=========---------------------]  31.0%  gen 31/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.6s]
+  [=========---------------------]  32.0%  gen 32/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.7s]
+  [=========---------------------]  33.0%  gen 33/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [89.9s]
+  [==========--------------------]  34.0%  gen 34/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [90.2s]
+  [==========--------------------]  35.0%  gen 35/100  fit=0.8774  data=0.3020  constr=1.0000  rmse=1.2880  reg=0.0882  [90.4s]
+  [==========--------------------]  36.0%  gen 36/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [90.6s]
+  [===========-------------------]  37.0%  gen 37/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [90.8s]
+  [===========-------------------]  38.0%  gen 38/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [90.9s]
+  [===========-------------------]  39.0%  gen 39/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [91.0s]
+  [============------------------]  40.0%  gen 40/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [91.2s]
+  [============------------------]  41.0%  gen 41/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [91.4s]
+  [============------------------]  42.0%  gen 42/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [91.7s]
+  [============------------------]  43.0%  gen 43/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [92.0s]
+  [=============-----------------]  44.0%  gen 44/100  fit=0.8775  data=0.3020  constr=1.0000  rmse=1.2879  reg=0.0882  [92.2s]
+  [=============-----------------]  45.0%  gen 45/100  fit=0.8776  data=0.3007  constr=1.0000  rmse=1.2909  reg=0.0909  [92.6s]
+  [=============-----------------]  46.0%  gen 46/100  fit=0.8776  data=0.3007  constr=1.0000  rmse=1.2909  reg=0.0909  [92.8s]
+  [==============----------------]  47.0%  gen 47/100  fit=0.8776  data=0.3007  constr=1.0000  rmse=1.2909  reg=0.0909  [93.0s]
+  [==============----------------]  48.0%  gen 48/100  fit=0.8776  data=0.3007  constr=1.0000  rmse=1.2909  reg=0.0909  [93.2s]
+  [==============----------------]  49.0%  gen 49/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [93.4s]
+  [===============---------------]  50.0%  gen 50/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [93.7s]
+  >> Saved checkpoint.json
+  [===============---------------]  51.0%  gen 51/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [93.9s]
+  [===============---------------]  52.0%  gen 52/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [94.0s]
+  [===============---------------]  53.0%  gen 53/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [94.2s]
+  [================--------------]  54.0%  gen 54/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [94.4s]
+  [================--------------]  55.0%  gen 55/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [94.6s]
+  [================--------------]  56.0%  gen 56/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [94.8s]
+  [=================-------------]  57.0%  gen 57/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [95.0s]
+  [=================-------------]  58.0%  gen 58/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [95.2s]
+  [=================-------------]  59.0%  gen 59/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [95.3s]
+  [==================------------]  60.0%  gen 60/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [95.5s]
+  [==================------------]  61.0%  gen 61/100  fit=0.8788  data=0.3031  constr=1.0000  rmse=1.2848  reg=0.0909  [95.7s]
+  [==================------------]  62.0%  gen 62/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [96.0s]
+  [==================------------]  63.0%  gen 63/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [96.2s]
+  [===================-----------]  64.0%  gen 64/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [96.3s]
+  [===================-----------]  65.0%  gen 65/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [96.7s]
+  [===================-----------]  66.0%  gen 66/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [96.8s]
+  [====================----------]  67.0%  gen 67/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [97.1s]
+  [====================----------]  68.0%  gen 68/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [97.3s]
+  [====================----------]  69.0%  gen 69/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [97.5s]
+  [=====================---------]  70.0%  gen 70/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [97.7s]
+  [=====================---------]  71.0%  gen 71/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [97.8s]
+  [=====================---------]  72.0%  gen 72/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [98.0s]
+  [=====================---------]  73.0%  gen 73/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [98.2s]
+  [======================--------]  74.0%  gen 74/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [98.4s]
+  [======================--------]  75.0%  gen 75/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [98.7s]
+  [======================--------]  76.0%  gen 76/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [98.9s]
+  [=======================-------]  77.0%  gen 77/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [99.1s]
+  [=======================-------]  78.0%  gen 78/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [99.5s]
+  [=======================-------]  79.0%  gen 79/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [99.8s]
+  [========================------]  80.0%  gen 80/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [100.3s]
+  [========================------]  81.0%  gen 81/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [100.5s]
+  [========================------]  82.0%  gen 82/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [100.6s]
+  [========================------]  83.0%  gen 83/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [100.8s]
+  [=========================-----]  84.0%  gen 84/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [101.2s]
+  [=========================-----]  85.0%  gen 85/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [101.3s]
+  [=========================-----]  86.0%  gen 86/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [101.6s]
+  [==========================----]  87.0%  gen 87/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [101.7s]
+  [==========================----]  88.0%  gen 88/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [101.9s]
+  [==========================----]  89.0%  gen 89/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [102.0s]
+  [===========================---]  90.0%  gen 90/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [102.3s]
+  [===========================---]  91.0%  gen 91/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [102.6s]
+  [===========================---]  92.0%  gen 92/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [103.0s]
+  [===========================---]  93.0%  gen 93/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [103.3s]
+  [============================--]  94.0%  gen 94/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [103.4s]
+  [============================--]  95.0%  gen 95/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [103.8s]
+  [============================--]  96.0%  gen 96/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [104.1s]
+  [=============================-]  97.0%  gen 97/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [104.3s]
+  [=============================-]  98.0%  gen 98/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [104.6s]
+  [=============================-]  99.0%  gen 99/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [104.8s]
+  [==============================] 100.0%  gen 100/100  fit=0.8805  data=0.3064  constr=1.0000  rmse=1.2690  reg=0.0909  [105.0s]
+  >> Saved checkpoint.json
+
+Top candidates (2 distinct): balanced(30 terms, constr=1.000), sparse(15 terms, constr=1.000)
+
+Selection: selected family 'all' by priority hard_pass=True, data_score=0.3064, constraint_score=1.0000, regularization_reward=0.0909
+
+============================================================
+BEST ODE SYSTEM FOUND  (mode=data_anchored)
+============================================================
+  dstimulus/dt = +1.7471*stimulus +1.8628*stimulus^2 +0.0663*confidence^2 -0.6878*question_density -1.3818*question_density^2 -1.7148*stimulus*word_count -1.1160*confidence*reflection +0.1562*question_density*reflection +0.8334*conscious_continuation*word_count
+  dreflection/dt = -0.7310*confidence^2 -0.5455*confidence*stimulus -1.3411*conscious_continuation*reflection +0.9181*conscious_continuation*word_count
+  dconscious_continuation/dt = +0.8587*stimulus^2 +0.3738*reflection^2 -0.5218*conscious_continuation^2
+  dconfidence/dt = +1.0742*reflection +1.1627*question_density -0.4980*question_density^2 -1.8730*confidence*word_count +1.3919*question_density*reflection +1.7923*conscious_continuation*word_count
+  dquestion_density/dt = -1.0381*reflection +0.0464*reflection*word_count -0.5983*question_density*word_count
+  dword_count/dt = -1.5279*confidence -0.0474*reflection +1.5014*confidence*stimulus -0.8158*confidence*word_count -1.2728*confidence*question_density
+
+  Fitness:               0.8805
+  Constraint score:      1.0000
+  Regularization reward: 0.0909
+  Data fit score:        0.3064
+  RMSE:                  1.2690
+============================================================
+
+Results saved to /data/data/com.termux/files/home/ima_kernel/learning/conscious_continuation_meda_results.json

@@ -46,6 +46,8 @@ def create_or_update_gate():
         encoding="utf-8"
     )
 
+    print("SINGLE GATE CREATED")
+    print(data["hash"])
 
 
 def verify_gate():
@@ -86,3 +88,4 @@ def verify_gate():
 
 
 if __name__=="__main__":
+    print("STATUS:",verify_gate())
