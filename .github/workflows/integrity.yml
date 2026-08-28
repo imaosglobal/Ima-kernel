@@ -15,8 +15,11 @@ jobs:
 
       - name: Python syntax check
         run: |
-          python3 -m py_compile ima_master_runtime.py
+          python3 -m compileall -q founder
 
-      - name: Runtime hash
+      - name: Runtime integrity
         run: |
-          sha256sum ima_master_runtime.py
+          test -f founder/executive_ai/action_engine/action_memory.py
+          test -f founder/executive_ai/global_intelligence/opportunity_to_action.py
+          sha256sum founder/executive_ai/action_engine/action_memory.py
+          sha256sum founder/executive_ai/global_intelligence/opportunity_to_action.py
