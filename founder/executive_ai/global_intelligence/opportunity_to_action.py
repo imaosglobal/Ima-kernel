@@ -104,6 +104,7 @@ def generate_actions():
 
         blocked_statuses = {
             "unknown_action",
+            "execution_failed",
             "EXECUTION_FAILED",
             "CAPABILITY_MISSING",
             "CAPABILITY_NOT_CALLABLE",
