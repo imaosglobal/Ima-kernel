@@ -11,8 +11,21 @@ def rank_opportunity(entity):
 
     entity_text = str(entity).lower()
 
-    # בסיס
-    if entity.get("type") in ["government","company","nonprofit"]:
+    # Canonical world-scanner schema compatibility.
+    # World signals use category/source rather than type.
+    entity_type = entity.get("type")
+
+    if not entity_type:
+        category = str(entity.get("category", "")).lower()
+
+        if category == "government" or entity.get("source") == "government":
+            entity_type = "government"
+        elif category in ["ai", "company", "startup"]:
+            entity_type = "company"
+        elif category in ["nonprofit", "ngo", "foundation"]:
+            entity_type = "nonprofit"
+
+    if entity_type in ["government", "company", "nonprofit"]:
         score += 20
         reasons.append("strategic entity")
 
