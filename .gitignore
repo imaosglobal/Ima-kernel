@@ -100,3 +100,19 @@ ima-mobile/
 **/*.pyc
 # Local/generated logs
 render_logs.json
+
+# IMA security: never commit runtime secrets
+.env
+.env.*
+**/*secret*
+**/*credential*
+**/*password*
+**/*token*
+**/*private_key*
+**/*api_key*
+
+# Legacy launchers containing historical credentials
+run_ima.sh
+run_ima_global.sh
+run_ima_pro.sh
+run_ima_ultimate.sh
