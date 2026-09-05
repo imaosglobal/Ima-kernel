@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useI18n } from "../i18n/I18nProvider";
 import { languages } from "../i18n/translations";
+import IMAAvatar from "./IMAAvatar";
+import AvatarPicker from "./AvatarPicker";
+import GoogleLogin from "./GoogleLogin";
 import "./Onboarding.css";
 
 export default function Onboarding({ onComplete }) {
@@ -9,26 +12,57 @@ export default function Onboarding({ onComplete }) {
   const [name, setName] = useState("");
   const [goals, setGoals] = useState([]);
   const [tone, setTone] = useState("warm");
+  const [avatar, setAvatar] = useState("aura");
+  const [googleData, setGoogleData] = useState(null);
+
+  function handleGoogleLogin(data) {
+    setGoogleData(data);
+    if (data.name) setName(data.name);
+    setStep(1);
+  }
+
+  function handleSkip() {
+    onComplete({
+      name: "",
+      avatar: "aura",
+      goals: [],
+      preferences: { tone: "warm", responseLength: "medium" },
+    });
+  }
+
+  function handleFinish() {
+    onComplete({
+      name: name.trim(),
+      avatar,
+      goals,
+      preferences: { tone, responseLength: "medium" },
+      google: googleData,
+    });
+  }
 
   const steps = [
     // 0: Welcome
-    // 1: Language
-    // 2: Name
-    // 3: Goals
-    // 4: Tone
     () => (
       <div className="onboard-step">
-        <div className="onboard-orb" />
+        <IMAAvatar variant="aura" size="lg" />
         <h1 className="onboard-title">{t("onboarding.welcome")}</h1>
         <p className="onboard-sub">{t("onboarding.welcomeSub")}</p>
         <button className="onboard-cta" onClick={() => setStep(1)}>
           {t("onboarding.next")}
         </button>
+        <div className="onboard-divider">
+          <span /> {t("common.comingSoon") === "בקרוב" ? "או" : "or"} <span />
+        </div>
+        <GoogleLogin
+          onSuccess={handleGoogleLogin}
+          label={t("google.continueWith")}
+        />
         <button className="onboard-skip" onClick={handleSkip}>
           {t("onboarding.skip")}
         </button>
       </div>
     ),
+    // 1: Language
     () => (
       <div className="onboard-step">
         <h2 className="onboard-heading">{t("onboarding.chooseLanguage")}</h2>
@@ -54,6 +88,23 @@ export default function Onboarding({ onComplete }) {
         </div>
       </div>
     ),
+    // 2: Avatar
+    () => (
+      <div className="onboard-step">
+        <IMAAvatar variant={avatar} size="lg" />
+        <h2 className="onboard-heading">{t("avatar.choose")}</h2>
+        <AvatarPicker value={avatar} onChange={setAvatar} />
+        <div className="onboard-nav">
+          <button className="onboard-back" onClick={() => setStep(1)}>
+            {t("onboarding.back")}
+          </button>
+          <button className="onboard-cta" onClick={() => setStep(3)}>
+            {t("onboarding.next")}
+          </button>
+        </div>
+      </div>
+    ),
+    // 3: Name
     () => (
       <div className="onboard-step">
         <h2 className="onboard-heading">{t("onboarding.yourName")}</h2>
@@ -63,15 +114,15 @@ export default function Onboarding({ onComplete }) {
           onChange={(e) => setName(e.target.value)}
           placeholder={t("onboarding.namePlaceholder")}
           autoFocus
-          onKeyDown={(e) => e.key === "Enter" && setStep(3)}
+          onKeyDown={(e) => e.key === "Enter" && setStep(4)}
         />
         <div className="onboard-nav">
-          <button className="onboard-back" onClick={() => setStep(1)}>
+          <button className="onboard-back" onClick={() => setStep(2)}>
             {t("onboarding.back")}
           </button>
           <button
             className="onboard-cta"
-            onClick={() => setStep(3)}
+            onClick={() => setStep(4)}
             disabled={!name.trim()}
           >
             {t("onboarding.next")}
@@ -79,6 +130,7 @@ export default function Onboarding({ onComplete }) {
         </div>
       </div>
     ),
+    // 4: Goals
     () => (
       <div className="onboard-step">
         <h2 className="onboard-heading">{t("onboarding.whatToDo")}</h2>
@@ -98,15 +150,16 @@ export default function Onboarding({ onComplete }) {
           ))}
         </div>
         <div className="onboard-nav">
-          <button className="onboard-back" onClick={() => setStep(2)}>
+          <button className="onboard-back" onClick={() => setStep(3)}>
             {t("onboarding.back")}
           </button>
-          <button className="onboard-cta" onClick={() => setStep(4)}>
+          <button className="onboard-cta" onClick={() => setStep(5)}>
             {t("onboarding.next")}
           </button>
         </div>
       </div>
     ),
+    // 5: Tone
     () => (
       <div className="onboard-step">
         <h2 className="onboard-heading">{t("onboarding.tone")}</h2>
@@ -123,7 +176,7 @@ export default function Onboarding({ onComplete }) {
           ))}
         </div>
         <div className="onboard-nav">
-          <button className="onboard-back" onClick={() => setStep(3)}>
+          <button className="onboard-back" onClick={() => setStep(4)}>
             {t("onboarding.back")}
           </button>
           <button className="onboard-cta" onClick={handleFinish}>
@@ -133,14 +186,6 @@ export default function Onboarding({ onComplete }) {
       </div>
     ),
   ];
-
-  function handleSkip() {
-    onComplete({ name: "", goals: [], preferences: { tone: "warm", responseLength: "medium" } });
-  }
-
-  function handleFinish() {
-    onComplete({ name: name.trim(), goals, preferences: { tone, responseLength: "medium" } });
-  }
 
   return (
     <div className="onboarding">

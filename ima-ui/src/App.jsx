@@ -6,6 +6,8 @@ import Landing from "./components/Landing";
 import ChatView from "./components/ChatView";
 import MemoryView from "./components/MemoryView";
 import SettingsView from "./components/SettingsView";
+import StoreView from "./components/StoreView";
+import IMAAvatar from "./components/IMAAvatar";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import "./App.css";
 
@@ -43,6 +45,7 @@ export default function App() {
 
   const navItems = [
     { id: "home", label: t("nav.home"), icon: "home" },
+    { id: "store", label: t("nav.store"), icon: "store" },
     { id: "memory", label: t("nav.memory"), icon: "memory" },
     { id: "settings", label: t("nav.settings"), icon: "settings" },
   ];
@@ -52,7 +55,7 @@ export default function App() {
       {/* Header */}
       <header className="app-header">
         <button className="app-brand" onClick={goHome}>
-          <span className="app-brand-orb" />
+          <IMAAvatar variant={user.avatar} size="xs" />
           <span className="app-brand-name">{t("brand.name")}</span>
         </button>
         <LanguageSwitcher />
@@ -61,7 +64,7 @@ export default function App() {
       {/* Main content */}
       <main className="app-main">
         {view === "home" && !chatStarted && (
-          <Landing onStartChat={startChat} />
+          <Landing onStartChat={startChat} avatar={user.avatar} />
         )}
         {view === "home" && chatStarted && (
           <ChatView
@@ -70,6 +73,7 @@ export default function App() {
             user={user}
           />
         )}
+        {view === "store" && <StoreView />}
         {view === "memory" && (
           <MemoryView
             user={user}

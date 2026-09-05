@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useI18n } from "../i18n/I18nProvider";
 import { languages } from "../i18n/translations";
+import IMAAvatar from "./IMAAvatar";
+import AvatarPicker from "./AvatarPicker";
 import DeveloperPanel from "./DeveloperPanel";
 import "./SettingsView.css";
 
@@ -11,6 +13,18 @@ export default function SettingsView({ user, updateUser, resetUser }) {
   function renderMain() {
     return (
       <div className="settings-list">
+        {/* Avatar */}
+        <div className="settings-group">
+          <span className="settings-group-label">{t("avatar.choose")}</span>
+          <div className="settings-avatar-display">
+            <IMAAvatar variant={user.avatar} size="md" />
+          </div>
+          <AvatarPicker
+            value={user.avatar}
+            onChange={(v) => updateUser({ avatar: v })}
+          />
+        </div>
+
         {/* Profile */}
         <div className="settings-group">
           <span className="settings-group-label">{t("settings.profile")}</span>

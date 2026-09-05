@@ -1,0 +1,45 @@
+.avatar-picker {
+  width: 100%;
+}
+
+.avatar-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.avatar-picker-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.avatar-picker-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.avatar-picker-selected {
+  border-color: #818cf8;
+  background: rgba(129, 140, 248, 0.08);
+}
+
+.avatar-picker-orb {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.avatar-picker-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+.avatar-picker-selected .avatar-picker-label {
+  color: #fff;
+}

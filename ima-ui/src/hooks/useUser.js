@@ -5,11 +5,13 @@ const STORAGE_KEY = "ima-user";
 const defaultUser = {
   name: "",
   lang: "he",
+  avatar: "aura",
   onboarded: false,
   goals: [],
   preferences: { tone: "warm", responseLength: "medium" },
   conversations: [],
   memory: [],
+  google: null,
 };
 
 export function useUser() {

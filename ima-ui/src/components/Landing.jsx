@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useI18n } from "../i18n/I18nProvider";
+import IMAAvatar from "./IMAAvatar";
 import "./Landing.css";
 
-export default function Landing({ onStartChat }) {
+export default function Landing({ onStartChat, avatar = "aura" }) {
   const { t } = useI18n();
   const [input, setInput] = useState("");
 
@@ -24,7 +25,7 @@ export default function Landing({ onStartChat }) {
   return (
     <div className="landing">
       <div className="landing-hero">
-        <div className="landing-orb" />
+        <IMAAvatar variant={avatar} size="lg" />
         <h1 className="landing-brand">{t("brand.name")}</h1>
         <p className="landing-tagline">{t("brand.tagline")}</p>
         <p className="landing-subtitle">{t("brand.subtitle")}</p>

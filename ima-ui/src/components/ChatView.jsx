@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useI18n } from "../i18n/I18nProvider";
 import { askIMA } from "../api/imaClient";
+import IMAAvatar from "./IMAAvatar";
 import "./ChatView.css";
 
 function formatMessage(text) {
@@ -83,7 +84,7 @@ export default function ChatView({ initialMessage, onClearInitial, user }) {
       <div className="chat-messages" ref={scrollRef}>
         {messages.length === 0 && !loading && (
           <div className="chat-empty">
-            <div className="chat-empty-orb" />
+            <IMAAvatar variant={user?.avatar || "aura"} size="md" />
             <p>{t("chat.emptyState")}</p>
           </div>
         )}

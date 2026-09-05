@@ -18,6 +18,12 @@
   gap: 10px;
 }
 
+.settings-avatar-display {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+}
+
 .settings-group-label {
   font-size: 0.72rem;
   letter-spacing: 0.12em;

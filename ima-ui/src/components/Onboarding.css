@@ -238,6 +238,22 @@
 .onboard-back:hover {
   background: rgba(255, 255, 255, 0.06);
 }
+.onboard-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+.onboard-divider span {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .onboard-skip {
   margin-top: 16px;
   border: none;

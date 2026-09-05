@@ -1,0 +1,42 @@
+.g-login-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.g-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.g-login-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.g-login-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.g-logo {
+  width: 18px;
+  height: 18px;
+  background: conic-gradient(
+    from 0deg,
+    #4285f4 0% 25%,
+    #34a853 25% 50%,
+    #fbbc05 50% 75%,
+    #ea4335 75% 100%
+  );
+  border-radius: 50%;
+  flex-shrink: 0;
+}

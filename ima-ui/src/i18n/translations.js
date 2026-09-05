@@ -6,7 +6,7 @@ const translations = {
       tagline: "הבינה האישית שלך. הזיכרון שלך. העולם שלך.",
       subtitle: "שאל, תכנן, למד וזכור — הכל במקום אחד",
     },
-    nav: { home: "בית", memory: "זיכרון", settings: "הגדרות" },
+    nav: { home: "בית", store: "חנות", memory: "זיכרון", settings: "הגדרות" },
     landing: {
       start: "התחל לדבר עם אמא",
       chatPlaceholder: "כתוב לאמא...",
@@ -95,6 +95,23 @@ const translations = {
       passwordPlaceholder: "סיסמת מפתח",
       wrongPassword: "סיסמה שגויה",
     },
+    avatar: {
+      choose: "בחר/י את אמא שלך",
+    },
+    google: {
+      continueWith: "המשך דרך Google",
+    },
+    store: {
+      title: "החנות של אמא",
+      description: "אמא תעזור לך למצוא, להשוות ולקנות מוצרים מכל העולם — ולהרוויח יחד עם הקהילה.",
+      comingSoon: "בקרוב",
+      cats: {
+        shopping: "קניות מותאמות",
+        deals: "מבצעים חכמים",
+        compare: "השוואת מחירים",
+        community: "הכנסה לקהילה",
+      },
+    },
     common: {
       comingSoon: "בקרוב",
       save: "שמור",
@@ -112,7 +129,7 @@ const translations = {
       tagline: "Your AI. Your memory. Your world.",
       subtitle: "Ask, plan, learn, and remember — all in one place",
     },
-    nav: { home: "Home", memory: "Memory", settings: "Settings" },
+    nav: { home: "Home", store: "Store", memory: "Memory", settings: "Settings" },
     landing: {
       start: "Start chatting with IMA",
       chatPlaceholder: "Message IMA...",
@@ -201,6 +218,23 @@ const translations = {
       passwordPlaceholder: "Developer password",
       wrongPassword: "Wrong password",
     },
+    avatar: {
+      choose: "Choose your IMA",
+    },
+    google: {
+      continueWith: "Continue with Google",
+    },
+    store: {
+      title: "IMA Store",
+      description: "IMA will help you find, compare, and buy products from around the world — and earn together with the community.",
+      comingSoon: "Coming soon",
+      cats: {
+        shopping: "Personalized shopping",
+        deals: "Smart deals",
+        compare: "Price comparison",
+        community: "Community revenue",
+      },
+    },
     common: {
       comingSoon: "Coming soon",
       save: "Save",
@@ -218,7 +252,7 @@ const translations = {
       tagline: "ذكاؤك. ذاكرتك. عالمك.",
       subtitle: "اسأل، خطط، تعلم، وتذكر — في مكان واحد",
     },
-    nav: { home: "الرئيسية", memory: "الذاكرة", settings: "الإعدادات" },
+    nav: { home: "الرئيسية", store: "متجر", memory: "الذاكرة", settings: "الإعدادات" },
     landing: {
       start: "ابدأ المحادثة مع إما",
       chatPlaceholder: "راسل إما...",
@@ -306,6 +340,23 @@ const translations = {
       enter: "دخول منطقة المطور",
       passwordPlaceholder: "كلمة مرور المطور",
       wrongPassword: "كلمة مرور خاطئة",
+    },
+    avatar: {
+      choose: "اختر إما الخاصة بك",
+    },
+    google: {
+      continueWith: "المتابعة عبر Google",
+    },
+    store: {
+      title: "متجر إما",
+      description: "ستساعدك إما في العثور على المنتجات ومقارنتها وشرائها من جميع أنحاء العالم — والربح معا مع المجتمع.",
+      comingSoon: "قريبا",
+      cats: {
+        shopping: "تسوق مخصص",
+        deals: "عروض ذكية",
+        compare: "مقارنة الأسعار",
+        community: "دخل المجتمع",
+      },
     },
     common: {
       comingSoon: "قريبا",
