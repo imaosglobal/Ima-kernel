@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Chat from "./components/Chat";
 import MemoryPanel from "./components/MemoryPanel";
+import BridgePanel from "./components/BridgePanel";
 import IMAAvatar from "./components/avatar/IMAAvatar";
 import { getHealth, getReady } from "./api/imaClient";
 import "./App.css";
@@ -8,6 +9,7 @@ import "./App.css";
 const NAV = [
   { id: "ima", label: "IMA" },
   { id: "memory", label: "זיכרון" },
+  { id: "bridge", label: "Bridge" },
   { id: "system", label: "מערכת" },
 ];
 
@@ -233,6 +235,37 @@ export default function App() {
 
               <div className="content-card">
                 <MemoryPanel />
+              </div>
+            </>
+          )}
+
+          {active === "bridge" && (
+            <>
+              <div className="conversation-header">
+
+                <div>
+                  <span className="eyebrow">
+                    LOCAL BRIDGE
+                  </span>
+
+                  <h1>
+                    IMA Local Bridge
+                  </h1>
+
+                  <p>
+                    חיבור לליבה המקומית וסנכרון נתונים עם Ima-kernel.
+                  </p>
+                </div>
+
+                <div className="header-presence">
+                  <span className="pulse" />
+                  <span>Bridge פעיל</span>
+                </div>
+
+              </div>
+
+              <div className="content-card">
+                <BridgePanel />
               </div>
             </>
           )}

@@ -1,0 +1,154 @@
+.bridge-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bridge-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.bridge-dot-online {
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+.bridge-dot-offline {
+  background: #ef4444;
+}
+
+/* Status card */
+.bridge-status-card {
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+.bridge-status-card.connected {
+  border-color: rgba(74, 222, 128, 0.3);
+  background: rgba(74, 222, 128, 0.06);
+}
+.bridge-status-card.disconnected {
+  border-color: rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.05);
+}
+.bridge-status-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bridge-status-header strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+}
+.bridge-status-header span {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.bridge-error {
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: #fca5a5;
+}
+
+/* Sections */
+.bridge-section {
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+.bridge-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 14px;
+}
+
+/* Sync path */
+.bridge-sync-path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bridge-sync-path code {
+  font-size: 0.9rem;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  word-break: break-all;
+}
+.bridge-sync-note {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.bridge-timestamp {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Capabilities */
+.bridge-caps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.bridge-cap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.bridge-cap-mark {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6366f1;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.bridge-cap strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #fff;
+}
+.bridge-cap span {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: monospace;
+}
+.bridge-empty {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.88rem;
+}
+
+/* Raw manifest */
+.bridge-raw {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 16px;
+}
+.bridge-raw summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.bridge-raw pre {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

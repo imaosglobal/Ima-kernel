@@ -23,6 +23,7 @@ services:
       - "3000:5173"
     environment:
       - API_TARGET=http://api:8080
+      - BRIDGE_URL=https://bedding-compute-denied-method.trycloudflare.com
     depends_on:
       - api
     restart: unless-stopped
