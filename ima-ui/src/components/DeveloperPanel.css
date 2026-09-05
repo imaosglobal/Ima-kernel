@@ -1,0 +1,167 @@
+.dev-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dev-back-btn {
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dev-back-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Gate */
+.dev-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.dev-gate-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 200, 100, 0.3);
+  background: rgba(255, 200, 100, 0.06);
+  position: relative;
+}
+.dev-gate-icon::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 12px;
+  border: 2px solid rgba(255, 200, 100, 0.5);
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+}
+
+.dev-gate-title {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+}
+
+.dev-warning {
+  font-size: 0.82rem;
+  color: rgba(255, 200, 100, 0.6);
+  margin: 0 0 8px;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.dev-password-input {
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+.dev-password-input:focus {
+  border-color: rgba(255, 200, 100, 0.4);
+}
+
+.dev-error {
+  color: #fca5a5;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.dev-enter-btn {
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: none;
+  background: rgba(255, 200, 100, 0.15);
+  color: #fde68a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dev-enter-btn:hover {
+  background: rgba(255, 200, 100, 0.25);
+}
+
+.dev-hint {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 4px 0 0;
+}
+
+/* Sections */
+.dev-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dev-section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 4px;
+}
+
+.dev-health-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.dev-health-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dev-health-name {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: monospace;
+}
+
+.dev-health-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.dev-health-status.ok {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+.dev-health-status.down {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}

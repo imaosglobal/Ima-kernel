@@ -1,0 +1,252 @@
+.onboarding {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 100%);
+}
+
+.onboard-progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 32px;
+}
+.onboard-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s, width 0.3s;
+}
+.onboard-dot-active {
+  background: #818cf8;
+  width: 20px;
+  border-radius: 100px;
+}
+
+.onboard-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  animation: onboardFade 0.4s ease;
+}
+@keyframes onboardFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.onboard-orb {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #a78bfa, #6366f1 50%, #4338ca 100%);
+  box-shadow: 0 0 40px rgba(129, 140, 248, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  margin-bottom: 28px;
+  animation: orbPulse 3s ease-in-out infinite;
+}
+@keyframes orbPulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(129, 140, 248, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1); }
+  50% { box-shadow: 0 0 60px rgba(129, 140, 248, 0.45), inset 0 0 20px rgba(255, 255, 255, 0.15); }
+}
+
+.onboard-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  text-align: center;
+}
+.onboard-sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 32px;
+  text-align: center;
+}
+.onboard-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+/* Language grid */
+.onboard-lang-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.onboard-lang-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.onboard-lang-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.onboard-lang-active {
+  border-color: #818cf8;
+  background: rgba(129, 140, 248, 0.1);
+}
+.onboard-lang-dir {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.05em;
+}
+
+/* Input */
+.onboard-input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.onboard-input:focus {
+  border-color: #818cf8;
+}
+.onboard-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Goal chips */
+.onboard-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.onboard-chip {
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.onboard-chip:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.onboard-chip-active {
+  border-color: #818cf8;
+  background: rgba(129, 140, 248, 0.12);
+  color: #fff;
+}
+
+/* Tone */
+.onboard-tone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.onboard-tone-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.onboard-tone-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.onboard-tone-active {
+  border-color: #818cf8;
+  background: rgba(129, 140, 248, 0.1);
+  color: #fff;
+}
+.onboard-tone-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+.onboard-tone-active .onboard-tone-radio {
+  border-color: #818cf8;
+  background: #818cf8;
+  box-shadow: inset 0 0 0 3px #0a0a0f;
+}
+
+/* Nav buttons */
+.onboard-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+.onboard-cta {
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  flex: 1;
+}
+.onboard-cta:hover {
+  background: #4f46e5;
+}
+.onboard-cta:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.onboard-back {
+  padding: 14px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.onboard-back:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.onboard-skip {
+  margin-top: 16px;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 8px;
+}
+.onboard-skip:hover {
+  color: rgba(255, 255, 255, 0.6);
+}

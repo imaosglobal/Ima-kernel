@@ -1,12 +1,12 @@
 const API="/ima-api";
 
-export async function askIMA(message){
+export async function askIMA(message, lang = "he"){
   const r = await fetch(`${API}/ask`,{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
     },
-    body:JSON.stringify({message})
+    body:JSON.stringify({ message, lang })
   });
 
   return await r.json();

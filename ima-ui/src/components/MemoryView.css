@@ -1,0 +1,110 @@
+.memory-view {
+  padding: 16px 16px 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.memory-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.memory-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.memory-section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.memory-clear-btn {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+.memory-clear-btn:hover {
+  color: #fca5a5;
+}
+
+.memory-empty-text {
+  padding: 24px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.88rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.memory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.memory-item {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.memory-item-q {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 6px;
+}
+.memory-item-a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.memory-fact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.memory-fact-text {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+}
+
+.memory-forget-btn {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.memory-forget-btn:hover {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.06);
+}
