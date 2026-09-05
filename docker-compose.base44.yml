@@ -1,0 +1,28 @@
+services:
+  api:
+    image: python:3.10-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "pip install --no-cache-dir requests && python api/server.py"
+    environment:
+      - PORT=8080
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    expose:
+      - "8080"
+    restart: unless-stopped
+
+  web:
+    image: node:22
+    working_dir: /app/ima-ui
+    volumes:
+      - .:/app
+    command: sh -c "npm install && npx vite --host 0.0.0.0 --port 5173"
+    ports:
+      - "3000:5173"
+    environment:
+      - API_TARGET=http://api:8080
+    depends_on:
+      - api
+    restart: unless-stopped
