@@ -3,14 +3,53 @@
   "founder": {
     "id": "creator_001",
     "name": "Ori Cohen",
-    "role": "origin_creator",
+    "role": "founder_and_creator",
     "first_user": true,
-    "legacy_source": ".ima/legacy/ori_legacy.json"
+    "legacy_source": ".ima/legacy/ori_legacy.json",
+    "roles": [
+      "founder",
+      "creator",
+      "architect",
+      "poet",
+      "songwriter"
+    ],
+    "canonical": true,
+    "same_person_identity": true
   },
   "linked_layers": {
     "crm": "learning/internal_crm.json",
     "founder_context": "founder/data/founder_context.json",
     "identity": "LIVE_IDENTITY.json"
   },
-  "registered_at": 1785239662.3409734
+  "registered_at": 1785239662.3409734,
+  "identity_statement": "Ori Cohen is the Founder, Creator, Architect, Poet and Songwriter of IMA. Founder and Creator refer to the same person.",
+  "identity_relation": {
+    "person_id": "creator_001",
+    "person_name": "Ori Cohen",
+    "founder_of": "IMA",
+    "creator_of": "IMA",
+    "architect_of": "IMA",
+    "same_person": true
+  },
+  "creator_sources": {
+    "facebook": {
+      "url": "https://www.facebook.com/share/1FFdWxZt2a/",
+      "owner_id": "creator_001",
+      "owner": "Ori Cohen",
+      "type": "creator_content_source",
+      "content_types": [
+        "poetry",
+        "songs",
+        "lyrics",
+        "posts",
+        "ideas",
+        "creative_writing",
+        "media"
+      ],
+      "learning_enabled": true,
+      "continuous_scan": true,
+      "canonical_source": true,
+      "read_only": true
+    }
+  }
 }

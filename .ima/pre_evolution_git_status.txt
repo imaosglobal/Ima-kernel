@@ -1,0 +1,145 @@
+ M .githooks/pre-push
+ M .ima/governance/architecture_audit_report.txt
+ M .ima/governance/product_readiness_report.json
+ M IMA_START.py
+ M canonical_auto_maintenance.sh
+ M canonical_dependency_audit.sh
+ M council_final_report.txt
+ M council_improvements_report.txt
+ D council_v4_report.txt
+ M deployed_addresses.txt
+ M founder/data/ima_learning_journal.json
+ M founder/data/ima_memory.json
+ M founder/executive_ai/action_engine/action_executor.py
+ M founder/executive_ai/action_engine/action_orchestrator.py
+ M founder/executive_ai/action_engine/action_planner.py
+ M founder/executive_ai/action_engine/action_registry.py
+ M founder/executive_ai/action_engine/executors/lead_ranker.py
+ M founder/executive_ai/action_engine/executors/outreach_creator.py
+ M founder/executive_ai/global_intelligence/opportunity_ranker.py
+ M founder/executive_ai/global_intelligence/opportunity_to_action.py
+ M kernel/runtime/CANONICAL/IMA_EVENTS.js
+ M kernel/runtime/CANONICAL/IMA_HEAL.js
+ M kernel/runtime/CANONICAL/IMA_POLICY.js
+ M kernel/runtime/CANONICAL/IMA_RUNTIME.js
+ M kernel/runtime/CANONICAL/IMA_STATE.js
+ M package-lock.json
+ M package.json
+?? .branchlet.json
+?? .deepsource.toml
+?? .dockerignore
+?? .gitattributes
+?? .github/CODEOWNERS
+?? .github/PULL_REQUEST_TEMPLATE.md
+?? .github/copilot-instructions.md
+?? .github/dependabot.yml
+?? .github/labeler.yml
+?? .github/workflows/classic-autogpt-ci.yml
+?? .github/workflows/classic-autogpt-docker-cache-clean.yml
+?? .github/workflows/classic-autogpt-docker-ci.yml
+?? .github/workflows/classic-autogpt-docker-release.yml
+?? .github/workflows/classic-autogpts-ci.yml
+?? .github/workflows/classic-benchmark-ci.yml
+?? .github/workflows/classic-benchmark_publish_package.yml
+?? .github/workflows/classic-forge-ci.yml
+?? .github/workflows/classic-frontend-ci.yml
+?? .github/workflows/classic-python-checks.yml
+?? .github/workflows/claude-ci-failure-auto-fix.yml
+?? .github/workflows/claude-dependabot.yml
+?? .github/workflows/claude.yml
+?? .github/workflows/codeql.yml
+?? .github/workflows/copilot-setup-steps.yml
+?? .github/workflows/docs-block-sync.yml
+?? .github/workflows/docs-claude-review.yml
+?? .github/workflows/docs-enhance.yml
+?? .github/workflows/platform-autogpt-deploy-dev.yaml
+?? .github/workflows/platform-autogpt-deploy-prod.yml
+?? .github/workflows/platform-backend-ci.yml
+?? .github/workflows/platform-dev-deploy-event-dispatcher.yml
+?? .github/workflows/platform-frontend-ci.yml
+?? .github/workflows/platform-fullstack-ci.yml
+?? .github/workflows/pr-overlap-check.yml
+?? .github/workflows/repo-close-stale-issues.yml
+?? .github/workflows/repo-pr-enforce-base-branch.yml
+?? .github/workflows/repo-pr-label.yml
+?? .github/workflows/repo-stats.yml
+?? .github/workflows/repo-workflow-checker.yml
+?? .github/workflows/squad-ci.yml
+?? .github/workflows/squad-docs.yml
+?? .github/workflows/squad-heartbeat.yml
+?? .github/workflows/squad-insider-release.yml
+?? .github/workflows/squad-issue-assign.yml
+?? .github/workflows/squad-label-enforce.yml
+?? .github/workflows/squad-preview.yml
+?? .github/workflows/squad-promote.yml
+?? .github/workflows/squad-release.yml
+?? .github/workflows/squad-triage.yml
+?? .github/workflows/sync-squad-labels.yml
+?? .gitignore.backup.1787923359
+?? .gitmodules
+?? .ima/CANONICAL_FORENSIC_MAP.txt
+?? .ima/acting_ai/
+?? .ima/forensic/
+?? .ima/pre_evolution_git_status.txt
+?? .nvmrc
+?? .pr_agent.toml
+?? .pre-commit-config.yaml
+?? .squad/.first-run
+?? .squad/ceremonies.md
+?? .squad/config.json
+?? .squad/decisions.md
+?? .squad/orchestration-log/cycle.id
+?? .squad/orchestration-log/execution.log#
+?? .squad/orchestration-log/queue.json
+?? .squad/routing.md
+?? .squad/state.json
+?? .squad/team.md
+?? AGENTS.md
+?? CITATION.cff
+?? CODE_OF_CONDUCT.md
+?? Lead.md
+?? Main.js
+?? PASS
+?? content_library.json
+?? contracts/
+?? council_memory.txt
+?? deploy.cjs
+?? deploy.js
+?? docs/CLAUDE.md
+?? eslint.config.mjs
+?? founder/executive_ai/memory/autobiography_bus.py
+?? generate-glb-avatars.js
+?? generate-glb.js
+?? hardhat.config.js
+?? i18n.js
+?? ima-agent-log.json
+?? ima-autocheck-agent.js
+?? logo.png
+?? loop.md
+?? next-env.d.ts
+?? next-i18next.config.js
+?? next.config.ts
+?? postcss.config.js
+?? postcss.config.mjs
+?? run-autonomous.sh
+?? run-executor.sh
+?? run-loop.sh
+?? run-super-autonomous.sh
+?? run_ima.py
+?? run_ima.sh
+?? run_ima_3d_allinone.sh
+?? run_ima_global.sh
+?? run_ima_pro.sh
+?? run_ima_ultimate.sh
+?? script/
+?? scripts/
+?? setup-ima-full.sh
+?? setup-ima3d-full.sh
+?? src/
+?? start_ima.py
+?? style.css
+?? tailwind.config.js
+?? team.md
+?? test-task.json
+?? tsconfig.json
+?? {

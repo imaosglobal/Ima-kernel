@@ -58,5 +58,610 @@
     "id": "https://openalex.org/W3003257820",
     "provider": "fetch_openalex",
     "confidence": 0.9
+  },
+  "autonomous_cycle": {
+    "event_type": "autonomous_cycle",
+    "source": "IMA",
+    "text": "IMA autonomous cycle completed: 11 discoveries, 11 opportunities, 9 actions",
+    "topic": "autonomous_cycle",
+    "discoveries": [
+      {
+        "source": "arXiv",
+        "title": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?\n\nArtificial intelligence (AI) models are increasingly finding applications in the field of medicine. Concerns have been raised about the explainability of the decisions that are made by these AI models. In this article, we give a systematic analysis of explainable artificial intelligence (XAI), with a primary focus on models that are currently being used in the field of healthcare. The literature search is conducted following the preferred reporting items for systematic reviews and meta-analyses (PRISMA) standards for relevant work published from 1 January 2012 to 02 February 2022. The review analyzes the prevailing trends in XAI and lays out the major directions in which research is headed. We investigate the why, how, and when of the uses of these XAI models and their implications. We present a comprehensive examination of XAI methodologies as well as an explanation of how a trustworthy AI can be derived from describing AI models for healthcare fields. The discussion of this work will contribute to the formalization of the XAI field.",
+        "url": "http://arxiv.org/abs/2304.04780v1",
+        "timestamp": 1788994372.1745207
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "The Underutilized Ocular Fundus in Emergency Departments: Current Progress and Future Prospect of Imaging and Artificial Intelligence for Patient Care.\n\nThe retina is a unique and accessible window to the central nervous system and its vasculature. Ocular fundus examination is crucial for identifying diagnostic red flags indicative of life- and sight-threatening conditions, such as papilledema and central retinal artery occlusion. In the emergency department (ED), prompt recognition of these conditions is essential to reduce the risk of vision loss and serious complications.\nThis review summarizes advances in ocular fundus examination, imaging, and artificial intelligence (AI) for emergency care.\nThe direct ophthalmoscope, a traditional tool for ocular fundus examination by nonophthalmology providers in the ED, is rarely utilized due to technical limitations and lack of user skill and confidence. Recent advancements in retinal imaging technologies have introduced ocular fundus cameras with OCT as valuable alternatives. The advent of nonmydriatic and portable imaging devices has significantly expanded accessibility, enabling remote image interpretation and facilitating teleophthalmology consultations. Moreover, AI, especially deep-learning technology, has demonstrated considerable potential for automated ocular image interpretation. The latest developments in large language models show promise in providing aids in diagnosis and management.\nFurther research is needed to validate the reliability of AI-powered ocular fundus assessment and to explore how these emerging technologies can be effectively integrated into ED practice to enhance ocular fundus examination and improve patient care.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42676972/",
+        "timestamp": 1788994372.2505014
+      },
+      {
+        "source": "NASA",
+        "title": "NASA: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!doctype html>\n<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">\n<head>\n\t<meta charset=\"UTF-8\">\n<script>\nvar gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>\"function\"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn(\"The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1.\"),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener(\"gform_main_scripts_loaded\",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener(\"gform/theme/scripts_loaded\",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener(\"DOMContentLoaded\",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook(\"action\",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook(\"filter\",o,r,e,t)},doAction:function(o){gform.doHook(\"action\",o,arguments)},applyFilters:function(o){return gform.doHook(\"filter\",o,arguments)},removeAction:function(o,r){gform.removeHook(\"action\",o,r)},removeFilter:function(o,r,e){gform.removeHook(\"filter\",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+\"_\"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){\"function\"!=typeof(t=o.callable)&&(t=window[t]),\"action\"==r?t.ap",
+        "url": "https://www.nasa.gov",
+        "timestamp": 1788994372.3059278
+      },
+      {
+        "source": "Google Scholar",
+        "title": "Google Scholar: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!doctype html><html><head><title>Google Scholar</title><meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"referrer\" content=\"always\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2\"><meta name=\"format-detection\" content=\"telephone=no\"><link rel=\"shortcut icon\" href=\"/favicon.ico\"><meta name=\"google-site-verification\" content=\"Y8J1_s45IeTudoUMT5t7AB5kel7unVEK-WjxXG4nPkQ\"><link rel=\"canonical\" href=\"https://scholar.google.com/?hl=iw\"><meta name=\"description\" content=\"&#1489;&#1488;&#1502;&#1510;&#1506;&#1493;&#1514; Google Scholar, &#1511;&#1500; &#1493;&#1508;&#1513;&#1493;&#1496; &#1500;&#1495;&#1508;&#1513; &#1505;&#1508;&#1512;&#1493;&#1514; &#1488;&#1511;&#1491;&#1502;&#1497;&#1514; &#1489;&#1492;&#1497;&#1511;&#1507; &#1512;&#1495;&#1489;. &#1504;&#1497;&#1514;&#1503; &#1500;&#1495;&#1508;&#1513; &#1495;&#1493;&#1502;&#1512;&#1497;&#1501; &#1489;&#1502;&#1490;&#1493;&#1493;&#1503; &#1512;&#1495;&#1489; &#1513;&#1500; &#1514;&#1495;&#1493;&#1502;&#1497; &#1502;&#1495;&#1511;&#1512; &#1493;&#1502;&#1511;&#1493;&#1512;&#1493;&#1514; &#1502;&#1497;&#1491;&#1506;: &#1502;&#1488;&#1502;&#1512;&#1497;&#1501;, &#1514;&#1494;&#1493;&#1514;, &#1505;&#1508;&#1512;&#1497;&#1501;, &#1514;&#1511;&#1510;&#1497;&#1512;&#1497;&#1501; &#1493;&#1495;&#1493;&#1493;&#1514; &#1491;&#1506;&#1514; &#1502;&#1513;&#1508;&#1496;&#1497;&#1493;&#1514;.\"><style>html,body,form,table,div,h1,h2,h3,h4,h5,h6,img,ol,ul,li,button{margin:0;padding:0;border:0;}table{border-collapse:collapse;border-width:0;empty-cells:show;}html,body{height:100%}#gs_top{position:relative;box-sizing:border-box;min-height:100%;min-width:964px;-webkit-tap-highlight-color:rgba(0,0,0,0);}#gs_top>*:not(#x){-webkit-tap-highlight-color:rgba(204,204,204,.5);}.gs_el_ph #gs_top,.gs_el_ta #gs_top{min-width:320px;}#gs_top.gs_nscl{position:fixed;width:100%;}body,td,input,button,textarea{font-size:1",
+        "url": "https://scholar.google.com",
+        "timestamp": 1788994372.3592987
+      },
+      {
+        "source": "MIT",
+        "title": "MIT: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js \">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"canonical\" href=\"https://tlecms.mit.edu/spotlight/illuminating-heart-disease\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n<meta http-equiv=\"Expires\" content=\"-1\" />\n<meta http-equiv=\"cache-control\" content=\"no-store\" />\n<meta property=\"description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"og:site_name\" content=\"Massachusetts Institute of Technology\" />\n<meta property=\"og:site\" content=\"http://web.mit.edu\" />\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n<meta property=\"og:url\" content=\"http://web.mit.edu\" />\n<meta property=\"og:description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"fb:page_id\" content=\"126533127390327\" />\n<meta property=\"twitter:site:id\" content=\"15460048\" />\n<meta property=\"twitter:card\" content=\"summary\" />\n<meta property=\"twitter:site\" content=\"@mit\" />\n<meta property=\"twitter:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n\n    <title>MIT - Massachusetts Institute of Technology</title>\n    <link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.ico\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.svg\" type=\"image/svg+xml\">\n<link rel=\"apple-touch-icon\" href=\"/themes/mit/assets/favicon/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/themes/mit/assets/favicon/manifest.webmanifest\">    \n<!--[if gt IE 8]><!-->\n<link rel=\"stylesheet\" media=\"all\" href=\"/themes/mit/assets/css/main.css?tf13vj\" />\n<!--<![e",
+        "url": "https://www.mit.edu",
+        "timestamp": 1788994372.4131665
+      },
+      {
+        "source": "arXiv",
+        "title": "Socioeconomic driving forces of scientific research",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "Socioeconomic driving forces of scientific research\n\nWhy do nations produce scientific research? This is a fundamental problem in the field of social studies of science. The paper confronts this question here by showing vital determinants of science to explain the sources of social power and wealth creation by nations. Firstly, this study suggests a new general definition of science and scientific research that synthetizes previous concepts and endeavors to extend them: Science discovers the root causes of phenomena to explain and predict them in a context of adaptation of life to new economic and social bases, whereas scientific research is a systematic process, applying methods of scientific inquiry, to solve consequential problems, to satisfy human wants, to take advantage of important opportunities and/or to cope with environmental threats. In particular, science and scientific research are driven by an organized social effort that inevitably reflect the concerns and interests of nations to achieve advances and discoveries that are spread to the rest of humankind. This study reveals that scientific research is produced for social and economic interests of nations (power, wealth creation, technological superiority, etc.), rather than philosophical inquiries. A main implication of this study is that the immense growth of science in modern society is not only due to activity of scientists but rather to general social efforts of nations to take advantage of important opportunities and/or to cope with environmental threats, such as war. Empirical evidence endeavors to support the sources of scientific research for nations, described here. Finally, relationships between R&D investment and productivity, and research policy implications are discussed.",
+        "url": "http://arxiv.org/abs/1806.05028v1",
+        "timestamp": 1788994379.3866477
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "[Research progress on cell surface RNA].\n\nConventionally, it is believed that the biological functions of RNA are confined to the interior of cells, and the existence of functional RNAs on cell surface as well as their potential mechanisms of action have long remained unclear. In recent years, the discovery and functional research of cell surface RNA have completely revolutionized this traditional perception, confirming its important biological significance as a class of novel surface functional molecules. This review systematically summarizes the latest research advances in the field of cell surface RNA, focusing on four aspects: its classification and characteristics, detection and identification technologies, biogenesis and transport mechanisms, as well as biological functions. It also summarizes the current technical bottlenecks and key scientific challenges in this field, providing a reference for interdisciplinary studies in RNA biology, glycobiology, and immunology.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42677404/",
+        "timestamp": 1788994379.4618611
+      },
+      {
+        "source": "arXiv",
+        "title": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0\n\nApplication of Information Technology (IT) in the domain of Human Resource Management (HRM) systems is a sine qua non for any organization for successfully adopting and implementing Fourth Industrial Revolution (Industry 4.0). However, these systems are required to ensure non-biased, efficient, transparent and secure environment. Blockchain, a technology based on distributed digital ledgers, can help facilitate the process of successfully effectuating these specifications. A detailed literature review has been conducted to identify the current status of usage of Information Technology in the domain of Human Resource Management and how Blockchain can help achieve a smart, cost-effective, efficient, transparent and secure factory management system. A Blockchain based Recruitment Management System (BcRMS) as well as Blockchain based Human Resource Management System (BcHRMS) algorithm have been proposed. From the analysis of the results obtained through the case study, it is evident that the proposed system holds definite advantages compared to the existing recruitment systems. Future research directions have also been identified and advocated.",
+        "url": "http://arxiv.org/abs/1812.03237v1",
+        "timestamp": 1788994387.1343126
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "From Biomass Waste to Multifunctional Biochar: Tailored Preparation and Emerging Applications in Energy, Environment, and Sensing.\n\nBiochar is a porous carbonaceous material synthesized through the pyrolysis of diverse biomass resources, including agricultural and forestry residues as well as livestock manure. It possesses superior characteristics such as a large specific surface area, adjustable pore architecture, abundant surface functional groups, and favorable electrical conductivity. With the increasingly severe global energy shortage and environmental pollution problems in recent years, biochar has emerged as a green, low-cost functional material with distinct application superiority in multiple key research directions, including energy storage and conversion, chemical catalysis, environmental restoration, and signal sensing and detection. This study comprehensively summarizes the latest research advances of biochar in the aforementioned application fields, focusing on innovative achievements in photocatalytic and electrocatalytic hydrogen generation, supercapacitors and electrochemical energy storage systems, persulfate activation technology, carbon dioxide capture, remediation of heavy metal and organic contaminants, volatile organic compound (VOC) adsorption, as well as electrochemical sensing devices. Existing research results demonstrate that modification strategies including metal and non-metal doping, surface oxidation treatment, and compounding with semiconductors or metal oxide materials can effectively improve the catalytic activity and functional performance of biochar. Furthermore, this paper prospects the future interdisciplinary development trends of biochar, analyzes the existing research gaps in mechanism exploration, structural optimization design, and industrial large-scale preparation, and provides theoretical and practical references for the further popularization and application of biochar in sustainable energy development and environmental governance fields.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42653973/",
+        "timestamp": 1788994387.2019575
+      },
+      {
+        "source": "arXiv",
+        "title": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia\n\nDigital government innovation is being recognised as a solution to many problems faced by governments in providing services to their citizens. It is especially important for low-income countries where there are resource constraints. This research was aimed at exploring the moderating effect of gender on the adoption of a digital government innovation in Ethiopia based on the UTAUT model (n=270) and using structural equation modeling (SEM). The results reveal that gender only moderates the relationship between facilitating conditions and usage behavior of government employees to adopt the digital government innovation which is inconsistent with other findings. Another key finding was that even though the innovation was regarded as not being easy to use, women identified that they would still use it because of the social influence from the peers and the bosses. This finding suggests that women government employees who obtain external support are more likely to use digital government innovations compared with men who are unlikely to use it even if they were facilitated. The paper recommends that governments of low-income countries like Ethiopia should design appropriate policies that encourage women in digital government.",
+        "url": "http://arxiv.org/abs/2108.09960v1",
+        "timestamp": 1788994397.0042095
+      },
+      {
+        "source": "Nature",
+        "title": "Nature: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"grade-c\">\n<head>\n    <title>Nature</title>\n    \n<link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://www.nature.com/nature.rss\"/>\n\n\n    \n        <link rel=\"preload\" href=/static/fonts/HardingText-Regular-Web-cecd90984f.woff2 as=\"font\" type=\"font/woff2\" crossorigin>\n    \n\n<link rel=\"preconnect\" href=\"https://cmp.nature.com\" crossorigin>\n\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"applicable-device\" content=\"pc,mobile\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=5,user-scalable=yes\">\n<meta name=\"360-site-verification\" content=\"5a2dc4ab3fcb9b0393241ffbbb490480\" />\n\n<script data-test=\"dataLayer\">\n    window.dataLayer = [{\"content\":{\"category\":{\"contentType\":null,\"legacy\":null},\"article\":null,\"attributes\":{\"cms\":null,\"deliveryPlatform\":null,\"copyright\":null,\"articleInPress\":null},\"contentInfo\":null,\"journal\":{\"pcode\":\"nature\",\"title\":\"Nature\",\"volume\":null,\"issue\":null,\"id\":41586,\"publishingModel\":\"Hybrid Access\"},\"authorization\":{\"status\":true},\"features\":[],\"collection\":null},\"page\":{\"category\":{\"pageType\":\"journal\"},\"attributes\":{\"template\":\"mosaic\",\"featureFlags\":[{\"name\":\"nature-onwards-journey\",\"active\":false},{\"name\":\"ab_subjects_position\",\"active\":false}],\"testGroup\":null},\"search\":null},\"privacy\":{},\"version\":\"1.0.0\",\"product\":null,\"session\":null,\"user\":null,\"backHalfContent\":false,\"country\":\"IL\",\"hasBody\":false,\"uneditedManuscript\":false,\"twitterId\":[\"o3xnx\",\"o43y9\",\"o3ef7\"],\"baiduId\":\"d38bce82bcb44717ccc29a90c4b781ea\",\"japan\":false}];\n    window.dataLayer.push({\n        ga4MeasurementId: 'G-ERRNTNZ807',\n        ga360TrackingId: 'UA-71668177-1',\n        twitterId: ['3xnx', 'o43y9', 'o3ef7'],\n        baiduId: 'd38bce82bcb44717ccc29a90c4b781ea',\n        ga4ServerUrl: 'https://sgtm.nature.com',\n        imprint: 'nature'\n    });\n</script>\n\n\n<script>\n    (function(w, d) {\n        w.config = w.config || {};\n        w.config.mustardcut = false;",
+        "url": "https://www.nature.com",
+        "timestamp": 1788994397.0815167
+      }
+    ],
+    "opportunities": [
+      {
+        "source": "arXiv",
+        "title": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?\n\nArtificial intelligence (AI) models are increasingly finding applications in the field of medicine. Concerns have been raised about the explainability of the decisions that are made by these AI models. In this article, we give a systematic analysis of explainable artificial intelligence (XAI), with a primary focus on models that are currently being used in the field of healthcare. The literature search is conducted following the preferred reporting items for systematic reviews and meta-analyses (PRISMA) standards for relevant work published from 1 January 2012 to 02 February 2022. The review analyzes the prevailing trends in XAI and lays out the major directions in which research is headed. We investigate the why, how, and when of the uses of these XAI models and their implications. We present a comprehensive examination of XAI methodologies as well as an explanation of how a trustworthy AI can be derived from describing AI models for healthcare fields. The discussion of this work will contribute to the formalization of the XAI field.",
+        "url": "http://arxiv.org/abs/2304.04780v1",
+        "timestamp": 1788994372.1745207,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "The Underutilized Ocular Fundus in Emergency Departments: Current Progress and Future Prospect of Imaging and Artificial Intelligence for Patient Care.\n\nThe retina is a unique and accessible window to the central nervous system and its vasculature. Ocular fundus examination is crucial for identifying diagnostic red flags indicative of life- and sight-threatening conditions, such as papilledema and central retinal artery occlusion. In the emergency department (ED), prompt recognition of these conditions is essential to reduce the risk of vision loss and serious complications.\nThis review summarizes advances in ocular fundus examination, imaging, and artificial intelligence (AI) for emergency care.\nThe direct ophthalmoscope, a traditional tool for ocular fundus examination by nonophthalmology providers in the ED, is rarely utilized due to technical limitations and lack of user skill and confidence. Recent advancements in retinal imaging technologies have introduced ocular fundus cameras with OCT as valuable alternatives. The advent of nonmydriatic and portable imaging devices has significantly expanded accessibility, enabling remote image interpretation and facilitating teleophthalmology consultations. Moreover, AI, especially deep-learning technology, has demonstrated considerable potential for automated ocular image interpretation. The latest developments in large language models show promise in providing aids in diagnosis and management.\nFurther research is needed to validate the reliability of AI-powered ocular fundus assessment and to explore how these emerging technologies can be effectively integrated into ED practice to enhance ocular fundus examination and improve patient care.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42676972/",
+        "timestamp": 1788994372.2505014,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "PubMed: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "NASA",
+        "title": "NASA: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!doctype html>\n<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">\n<head>\n\t<meta charset=\"UTF-8\">\n<script>\nvar gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>\"function\"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn(\"The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1.\"),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener(\"gform_main_scripts_loaded\",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener(\"gform/theme/scripts_loaded\",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener(\"DOMContentLoaded\",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook(\"action\",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook(\"filter\",o,r,e,t)},doAction:function(o){gform.doHook(\"action\",o,arguments)},applyFilters:function(o){return gform.doHook(\"filter\",o,arguments)},removeAction:function(o,r){gform.removeHook(\"action\",o,r)},removeFilter:function(o,r,e){gform.removeHook(\"filter\",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+\"_\"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){\"function\"!=typeof(t=o.callable)&&(t=window[t]),\"action\"==r?t.ap",
+        "url": "https://www.nasa.gov",
+        "timestamp": 1788994372.3059278,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "NASA: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "Google Scholar",
+        "title": "Google Scholar: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!doctype html><html><head><title>Google Scholar</title><meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"referrer\" content=\"always\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2\"><meta name=\"format-detection\" content=\"telephone=no\"><link rel=\"shortcut icon\" href=\"/favicon.ico\"><meta name=\"google-site-verification\" content=\"Y8J1_s45IeTudoUMT5t7AB5kel7unVEK-WjxXG4nPkQ\"><link rel=\"canonical\" href=\"https://scholar.google.com/?hl=iw\"><meta name=\"description\" content=\"&#1489;&#1488;&#1502;&#1510;&#1506;&#1493;&#1514; Google Scholar, &#1511;&#1500; &#1493;&#1508;&#1513;&#1493;&#1496; &#1500;&#1495;&#1508;&#1513; &#1505;&#1508;&#1512;&#1493;&#1514; &#1488;&#1511;&#1491;&#1502;&#1497;&#1514; &#1489;&#1492;&#1497;&#1511;&#1507; &#1512;&#1495;&#1489;. &#1504;&#1497;&#1514;&#1503; &#1500;&#1495;&#1508;&#1513; &#1495;&#1493;&#1502;&#1512;&#1497;&#1501; &#1489;&#1502;&#1490;&#1493;&#1493;&#1503; &#1512;&#1495;&#1489; &#1513;&#1500; &#1514;&#1495;&#1493;&#1502;&#1497; &#1502;&#1495;&#1511;&#1512; &#1493;&#1502;&#1511;&#1493;&#1512;&#1493;&#1514; &#1502;&#1497;&#1491;&#1506;: &#1502;&#1488;&#1502;&#1512;&#1497;&#1501;, &#1514;&#1494;&#1493;&#1514;, &#1505;&#1508;&#1512;&#1497;&#1501;, &#1514;&#1511;&#1510;&#1497;&#1512;&#1497;&#1501; &#1493;&#1495;&#1493;&#1493;&#1514; &#1491;&#1506;&#1514; &#1502;&#1513;&#1508;&#1496;&#1497;&#1493;&#1514;.\"><style>html,body,form,table,div,h1,h2,h3,h4,h5,h6,img,ol,ul,li,button{margin:0;padding:0;border:0;}table{border-collapse:collapse;border-width:0;empty-cells:show;}html,body{height:100%}#gs_top{position:relative;box-sizing:border-box;min-height:100%;min-width:964px;-webkit-tap-highlight-color:rgba(0,0,0,0);}#gs_top>*:not(#x){-webkit-tap-highlight-color:rgba(204,204,204,.5);}.gs_el_ph #gs_top,.gs_el_ta #gs_top{min-width:320px;}#gs_top.gs_nscl{position:fixed;width:100%;}body,td,input,button,textarea{font-size:1",
+        "url": "https://scholar.google.com",
+        "timestamp": 1788994372.3592987,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "Google Scholar: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "MIT",
+        "title": "MIT: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js \">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"canonical\" href=\"https://tlecms.mit.edu/spotlight/illuminating-heart-disease\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n<meta http-equiv=\"Expires\" content=\"-1\" />\n<meta http-equiv=\"cache-control\" content=\"no-store\" />\n<meta property=\"description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"og:site_name\" content=\"Massachusetts Institute of Technology\" />\n<meta property=\"og:site\" content=\"http://web.mit.edu\" />\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n<meta property=\"og:url\" content=\"http://web.mit.edu\" />\n<meta property=\"og:description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"fb:page_id\" content=\"126533127390327\" />\n<meta property=\"twitter:site:id\" content=\"15460048\" />\n<meta property=\"twitter:card\" content=\"summary\" />\n<meta property=\"twitter:site\" content=\"@mit\" />\n<meta property=\"twitter:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n\n    <title>MIT - Massachusetts Institute of Technology</title>\n    <link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.ico\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.svg\" type=\"image/svg+xml\">\n<link rel=\"apple-touch-icon\" href=\"/themes/mit/assets/favicon/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/themes/mit/assets/favicon/manifest.webmanifest\">    \n<!--[if gt IE 8]><!-->\n<link rel=\"stylesheet\" media=\"all\" href=\"/themes/mit/assets/css/main.css?tf13vj\" />\n<!--<![e",
+        "url": "https://www.mit.edu",
+        "timestamp": 1788994372.4131665,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "MIT: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "arXiv",
+        "title": "Socioeconomic driving forces of scientific research",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "Socioeconomic driving forces of scientific research\n\nWhy do nations produce scientific research? This is a fundamental problem in the field of social studies of science. The paper confronts this question here by showing vital determinants of science to explain the sources of social power and wealth creation by nations. Firstly, this study suggests a new general definition of science and scientific research that synthetizes previous concepts and endeavors to extend them: Science discovers the root causes of phenomena to explain and predict them in a context of adaptation of life to new economic and social bases, whereas scientific research is a systematic process, applying methods of scientific inquiry, to solve consequential problems, to satisfy human wants, to take advantage of important opportunities and/or to cope with environmental threats. In particular, science and scientific research are driven by an organized social effort that inevitably reflect the concerns and interests of nations to achieve advances and discoveries that are spread to the rest of humankind. This study reveals that scientific research is produced for social and economic interests of nations (power, wealth creation, technological superiority, etc.), rather than philosophical inquiries. A main implication of this study is that the immense growth of science in modern society is not only due to activity of scientists but rather to general social efforts of nations to take advantage of important opportunities and/or to cope with environmental threats, such as war. Empirical evidence endeavors to support the sources of scientific research for nations, described here. Finally, relationships between R&D investment and productivity, and research policy implications are discussed.",
+        "url": "http://arxiv.org/abs/1806.05028v1",
+        "timestamp": 1788994379.3866477,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "Socioeconomic driving forces of scientific research",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "[Research progress on cell surface RNA].\n\nConventionally, it is believed that the biological functions of RNA are confined to the interior of cells, and the existence of functional RNAs on cell surface as well as their potential mechanisms of action have long remained unclear. In recent years, the discovery and functional research of cell surface RNA have completely revolutionized this traditional perception, confirming its important biological significance as a class of novel surface functional molecules. This review systematically summarizes the latest research advances in the field of cell surface RNA, focusing on four aspects: its classification and characteristics, detection and identification technologies, biogenesis and transport mechanisms, as well as biological functions. It also summarizes the current technical bottlenecks and key scientific challenges in this field, providing a reference for interdisciplinary studies in RNA biology, glycobiology, and immunology.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42677404/",
+        "timestamp": 1788994379.4618611,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "PubMed: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "arXiv",
+        "title": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0\n\nApplication of Information Technology (IT) in the domain of Human Resource Management (HRM) systems is a sine qua non for any organization for successfully adopting and implementing Fourth Industrial Revolution (Industry 4.0). However, these systems are required to ensure non-biased, efficient, transparent and secure environment. Blockchain, a technology based on distributed digital ledgers, can help facilitate the process of successfully effectuating these specifications. A detailed literature review has been conducted to identify the current status of usage of Information Technology in the domain of Human Resource Management and how Blockchain can help achieve a smart, cost-effective, efficient, transparent and secure factory management system. A Blockchain based Recruitment Management System (BcRMS) as well as Blockchain based Human Resource Management System (BcHRMS) algorithm have been proposed. From the analysis of the results obtained through the case study, it is evident that the proposed system holds definite advantages compared to the existing recruitment systems. Future research directions have also been identified and advocated.",
+        "url": "http://arxiv.org/abs/1812.03237v1",
+        "timestamp": 1788994387.1343126,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "PubMed",
+        "title": "PubMed: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "From Biomass Waste to Multifunctional Biochar: Tailored Preparation and Emerging Applications in Energy, Environment, and Sensing.\n\nBiochar is a porous carbonaceous material synthesized through the pyrolysis of diverse biomass resources, including agricultural and forestry residues as well as livestock manure. It possesses superior characteristics such as a large specific surface area, adjustable pore architecture, abundant surface functional groups, and favorable electrical conductivity. With the increasingly severe global energy shortage and environmental pollution problems in recent years, biochar has emerged as a green, low-cost functional material with distinct application superiority in multiple key research directions, including energy storage and conversion, chemical catalysis, environmental restoration, and signal sensing and detection. This study comprehensively summarizes the latest research advances of biochar in the aforementioned application fields, focusing on innovative achievements in photocatalytic and electrocatalytic hydrogen generation, supercapacitors and electrochemical energy storage systems, persulfate activation technology, carbon dioxide capture, remediation of heavy metal and organic contaminants, volatile organic compound (VOC) adsorption, as well as electrochemical sensing devices. Existing research results demonstrate that modification strategies including metal and non-metal doping, surface oxidation treatment, and compounding with semiconductors or metal oxide materials can effectively improve the catalytic activity and functional performance of biochar. Furthermore, this paper prospects the future interdisciplinary development trends of biochar, analyzes the existing research gaps in mechanism exploration, structural optimization design, and industrial large-scale preparation, and provides theoretical and practical references for the further popularization and application of biochar in sustainable energy development and environmental governance fields.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42653973/",
+        "timestamp": 1788994387.2019575,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "PubMed: discovery signal",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "arXiv",
+        "title": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia\n\nDigital government innovation is being recognised as a solution to many problems faced by governments in providing services to their citizens. It is especially important for low-income countries where there are resource constraints. This research was aimed at exploring the moderating effect of gender on the adoption of a digital government innovation in Ethiopia based on the UTAUT model (n=270) and using structural equation modeling (SEM). The results reveal that gender only moderates the relationship between facilitating conditions and usage behavior of government employees to adopt the digital government innovation which is inconsistent with other findings. Another key finding was that even though the innovation was regarded as not being easy to use, women identified that they would still use it because of the social influence from the peers and the bosses. This finding suggests that women government employees who obtain external support are more likely to use digital government innovations compared with men who are unlikely to use it even if they were facilitated. The paper recommends that governments of low-income countries like Ethiopia should design appropriate policies that encourage women in digital government.",
+        "url": "http://arxiv.org/abs/2108.09960v1",
+        "timestamp": 1788994397.0042095,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+        "opportunity_score": 50.0
+      },
+      {
+        "source": "Nature",
+        "title": "Nature: discovery signal",
+        "category": "world_discovery",
+        "importance": 50,
+        "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"grade-c\">\n<head>\n    <title>Nature</title>\n    \n<link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://www.nature.com/nature.rss\"/>\n\n\n    \n        <link rel=\"preload\" href=/static/fonts/HardingText-Regular-Web-cecd90984f.woff2 as=\"font\" type=\"font/woff2\" crossorigin>\n    \n\n<link rel=\"preconnect\" href=\"https://cmp.nature.com\" crossorigin>\n\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"applicable-device\" content=\"pc,mobile\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=5,user-scalable=yes\">\n<meta name=\"360-site-verification\" content=\"5a2dc4ab3fcb9b0393241ffbbb490480\" />\n\n<script data-test=\"dataLayer\">\n    window.dataLayer = [{\"content\":{\"category\":{\"contentType\":null,\"legacy\":null},\"article\":null,\"attributes\":{\"cms\":null,\"deliveryPlatform\":null,\"copyright\":null,\"articleInPress\":null},\"contentInfo\":null,\"journal\":{\"pcode\":\"nature\",\"title\":\"Nature\",\"volume\":null,\"issue\":null,\"id\":41586,\"publishingModel\":\"Hybrid Access\"},\"authorization\":{\"status\":true},\"features\":[],\"collection\":null},\"page\":{\"category\":{\"pageType\":\"journal\"},\"attributes\":{\"template\":\"mosaic\",\"featureFlags\":[{\"name\":\"nature-onwards-journey\",\"active\":false},{\"name\":\"ab_subjects_position\",\"active\":false}],\"testGroup\":null},\"search\":null},\"privacy\":{},\"version\":\"1.0.0\",\"product\":null,\"session\":null,\"user\":null,\"backHalfContent\":false,\"country\":\"IL\",\"hasBody\":false,\"uneditedManuscript\":false,\"twitterId\":[\"o3xnx\",\"o43y9\",\"o3ef7\"],\"baiduId\":\"d38bce82bcb44717ccc29a90c4b781ea\",\"japan\":false}];\n    window.dataLayer.push({\n        ga4MeasurementId: 'G-ERRNTNZ807',\n        ga360TrackingId: 'UA-71668177-1',\n        twitterId: ['3xnx', 'o43y9', 'o3ef7'],\n        baiduId: 'd38bce82bcb44717ccc29a90c4b781ea',\n        ga4ServerUrl: 'https://sgtm.nature.com',\n        imprint: 'nature'\n    });\n</script>\n\n\n<script>\n    (function(w, d) {\n        w.config = w.config || {};\n        w.config.mustardcut = false;",
+        "url": "https://www.nature.com",
+        "timestamp": 1788994397.0815167,
+        "decision": true,
+        "decision_area": "world_discovery",
+        "decision_reason": "Nature: discovery signal",
+        "opportunity_score": 50.0
+      }
+    ],
+    "actions": [
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "arXiv",
+          "content": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?\n\nArtificial intelligence (AI) models are increasingly finding applications in the field of medicine. Concerns have been raised about the explainability of the decisions that are made by these AI models. In this article, we give a systematic analysis of explainable artificial intelligence (XAI), with a primary focus on models that are currently being used in the field of healthcare. The literature search is conducted following the preferred reporting items for systematic reviews and meta-analyses (PRISMA) standards for relevant work published from 1 January 2012 to 02 February 2022. The review analyzes the prevailing trends in XAI and lays out the major directions in which research is headed. We investigate the why, how, and when of the uses of these XAI models and their implications. We present a comprehensive examination of XAI methodologies as well as an explanation of how a trustworthy AI can be derived from describing AI models for healthcare fields. The discussion of this work will contribute to the formalization of the XAI field.",
+          "url": "http://arxiv.org/abs/2304.04780v1"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "arXiv",
+              "content": "A Review on Explainable Artificial Intelligence for Healthcare: Why, How, and When?\n\nArtificial intelligence (AI) models are increasingly finding applications in the field of medicine. Concerns have been raised about the explainability of the decisions that are made by these AI models. In this article, we give a systematic analysis of explainable artificial intelligence (XAI), with a primary focus on models that are currently being used in the field of healthcare. The literature search is conducted following the preferred reporting items for systematic reviews and meta-analyses (PRISMA) standards for relevant work published from 1 January 2012 to 02 February 2022. The review analyzes the prevailing trends in XAI and lays out the major directions in which research is headed. We investigate the why, how, and when of the uses of these XAI models and their implications. We present a comprehensive examination of XAI methodologies as well as an explanation of how a trustworthy AI can be derived from describing AI models for healthcare fields. The discussion of this work will contribute to the formalization of the XAI field.",
+              "url": "http://arxiv.org/abs/2304.04780v1"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "PubMed: discovery signal",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "PubMed",
+          "content": "The Underutilized Ocular Fundus in Emergency Departments: Current Progress and Future Prospect of Imaging and Artificial Intelligence for Patient Care.\n\nThe retina is a unique and accessible window to the central nervous system and its vasculature. Ocular fundus examination is crucial for identifying diagnostic red flags indicative of life- and sight-threatening conditions, such as papilledema and central retinal artery occlusion. In the emergency department (ED), prompt recognition of these conditions is essential to reduce the risk of vision loss and serious complications.\nThis review summarizes advances in ocular fundus examination, imaging, and artificial intelligence (AI) for emergency care.\nThe direct ophthalmoscope, a traditional tool for ocular fundus examination by nonophthalmology providers in the ED, is rarely utilized due to technical limitations and lack of user skill and confidence. Recent advancements in retinal imaging technologies have introduced ocular fundus cameras with OCT as valuable alternatives. The advent of nonmydriatic and portable imaging devices has significantly expanded accessibility, enabling remote image interpretation and facilitating teleophthalmology consultations. Moreover, AI, especially deep-learning technology, has demonstrated considerable potential for automated ocular image interpretation. The latest developments in large language models show promise in providing aids in diagnosis and management.\nFurther research is needed to validate the reliability of AI-powered ocular fundus assessment and to explore how these emerging technologies can be effectively integrated into ED practice to enhance ocular fundus examination and improve patient care.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42676972/"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "PubMed: discovery signal",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "PubMed: discovery signal",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "PubMed",
+              "content": "The Underutilized Ocular Fundus in Emergency Departments: Current Progress and Future Prospect of Imaging and Artificial Intelligence for Patient Care.\n\nThe retina is a unique and accessible window to the central nervous system and its vasculature. Ocular fundus examination is crucial for identifying diagnostic red flags indicative of life- and sight-threatening conditions, such as papilledema and central retinal artery occlusion. In the emergency department (ED), prompt recognition of these conditions is essential to reduce the risk of vision loss and serious complications.\nThis review summarizes advances in ocular fundus examination, imaging, and artificial intelligence (AI) for emergency care.\nThe direct ophthalmoscope, a traditional tool for ocular fundus examination by nonophthalmology providers in the ED, is rarely utilized due to technical limitations and lack of user skill and confidence. Recent advancements in retinal imaging technologies have introduced ocular fundus cameras with OCT as valuable alternatives. The advent of nonmydriatic and portable imaging devices has significantly expanded accessibility, enabling remote image interpretation and facilitating teleophthalmology consultations. Moreover, AI, especially deep-learning technology, has demonstrated considerable potential for automated ocular image interpretation. The latest developments in large language models show promise in providing aids in diagnosis and management.\nFurther research is needed to validate the reliability of AI-powered ocular fundus assessment and to explore how these emerging technologies can be effectively integrated into ED practice to enhance ocular fundus examination and improve patient care.",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42676972/"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "NASA: discovery signal",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "NASA",
+          "content": "<!doctype html>\n<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">\n<head>\n\t<meta charset=\"UTF-8\">\n<script>\nvar gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>\"function\"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn(\"The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1.\"),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener(\"gform_main_scripts_loaded\",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener(\"gform/theme/scripts_loaded\",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener(\"DOMContentLoaded\",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook(\"action\",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook(\"filter\",o,r,e,t)},doAction:function(o){gform.doHook(\"action\",o,arguments)},applyFilters:function(o){return gform.doHook(\"filter\",o,arguments)},removeAction:function(o,r){gform.removeHook(\"action\",o,r)},removeFilter:function(o,r,e){gform.removeHook(\"filter\",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+\"_\"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){\"function\"!=typeof(t=o.callable)&&(t=window[t]),\"action\"==r?t.ap",
+          "url": "https://www.nasa.gov"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "NASA: discovery signal",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "NASA: discovery signal",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "NASA",
+              "content": "<!doctype html>\n<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">\n<head>\n\t<meta charset=\"UTF-8\">\n<script>\nvar gform;gform||(document.addEventListener(\"gform_main_scripts_loaded\",function(){gform.scriptsLoaded=!0}),document.addEventListener(\"gform/theme/scripts_loaded\",function(){gform.themeScriptsLoaded=!0}),window.addEventListener(\"DOMContentLoaded\",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>\"function\"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn(\"The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1.\"),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener(\"gform_main_scripts_loaded\",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener(\"gform/theme/scripts_loaded\",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener(\"DOMContentLoaded\",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook(\"action\",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook(\"filter\",o,r,e,t)},doAction:function(o){gform.doHook(\"action\",o,arguments)},applyFilters:function(o){return gform.doHook(\"filter\",o,arguments)},removeAction:function(o,r){gform.removeHook(\"action\",o,r)},removeFilter:function(o,r,e){gform.removeHook(\"filter\",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+\"_\"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){\"function\"!=typeof(t=o.callable)&&(t=window[t]),\"action\"==r?t.ap",
+              "url": "https://www.nasa.gov"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "Google Scholar: discovery signal",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "Google Scholar",
+          "content": "<!doctype html><html><head><title>Google Scholar</title><meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"referrer\" content=\"always\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2\"><meta name=\"format-detection\" content=\"telephone=no\"><link rel=\"shortcut icon\" href=\"/favicon.ico\"><meta name=\"google-site-verification\" content=\"Y8J1_s45IeTudoUMT5t7AB5kel7unVEK-WjxXG4nPkQ\"><link rel=\"canonical\" href=\"https://scholar.google.com/?hl=iw\"><meta name=\"description\" content=\"&#1489;&#1488;&#1502;&#1510;&#1506;&#1493;&#1514; Google Scholar, &#1511;&#1500; &#1493;&#1508;&#1513;&#1493;&#1496; &#1500;&#1495;&#1508;&#1513; &#1505;&#1508;&#1512;&#1493;&#1514; &#1488;&#1511;&#1491;&#1502;&#1497;&#1514; &#1489;&#1492;&#1497;&#1511;&#1507; &#1512;&#1495;&#1489;. &#1504;&#1497;&#1514;&#1503; &#1500;&#1495;&#1508;&#1513; &#1495;&#1493;&#1502;&#1512;&#1497;&#1501; &#1489;&#1502;&#1490;&#1493;&#1493;&#1503; &#1512;&#1495;&#1489; &#1513;&#1500; &#1514;&#1495;&#1493;&#1502;&#1497; &#1502;&#1495;&#1511;&#1512; &#1493;&#1502;&#1511;&#1493;&#1512;&#1493;&#1514; &#1502;&#1497;&#1491;&#1506;: &#1502;&#1488;&#1502;&#1512;&#1497;&#1501;, &#1514;&#1494;&#1493;&#1514;, &#1505;&#1508;&#1512;&#1497;&#1501;, &#1514;&#1511;&#1510;&#1497;&#1512;&#1497;&#1501; &#1493;&#1495;&#1493;&#1493;&#1514; &#1491;&#1506;&#1514; &#1502;&#1513;&#1508;&#1496;&#1497;&#1493;&#1514;.\"><style>html,body,form,table,div,h1,h2,h3,h4,h5,h6,img,ol,ul,li,button{margin:0;padding:0;border:0;}table{border-collapse:collapse;border-width:0;empty-cells:show;}html,body{height:100%}#gs_top{position:relative;box-sizing:border-box;min-height:100%;min-width:964px;-webkit-tap-highlight-color:rgba(0,0,0,0);}#gs_top>*:not(#x){-webkit-tap-highlight-color:rgba(204,204,204,.5);}.gs_el_ph #gs_top,.gs_el_ta #gs_top{min-width:320px;}#gs_top.gs_nscl{position:fixed;width:100%;}body,td,input,button,textarea{font-size:1",
+          "url": "https://scholar.google.com"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "Google Scholar: discovery signal",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "Google Scholar: discovery signal",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "Google Scholar",
+              "content": "<!doctype html><html><head><title>Google Scholar</title><meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"referrer\" content=\"always\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2\"><meta name=\"format-detection\" content=\"telephone=no\"><link rel=\"shortcut icon\" href=\"/favicon.ico\"><meta name=\"google-site-verification\" content=\"Y8J1_s45IeTudoUMT5t7AB5kel7unVEK-WjxXG4nPkQ\"><link rel=\"canonical\" href=\"https://scholar.google.com/?hl=iw\"><meta name=\"description\" content=\"&#1489;&#1488;&#1502;&#1510;&#1506;&#1493;&#1514; Google Scholar, &#1511;&#1500; &#1493;&#1508;&#1513;&#1493;&#1496; &#1500;&#1495;&#1508;&#1513; &#1505;&#1508;&#1512;&#1493;&#1514; &#1488;&#1511;&#1491;&#1502;&#1497;&#1514; &#1489;&#1492;&#1497;&#1511;&#1507; &#1512;&#1495;&#1489;. &#1504;&#1497;&#1514;&#1503; &#1500;&#1495;&#1508;&#1513; &#1495;&#1493;&#1502;&#1512;&#1497;&#1501; &#1489;&#1502;&#1490;&#1493;&#1493;&#1503; &#1512;&#1495;&#1489; &#1513;&#1500; &#1514;&#1495;&#1493;&#1502;&#1497; &#1502;&#1495;&#1511;&#1512; &#1493;&#1502;&#1511;&#1493;&#1512;&#1493;&#1514; &#1502;&#1497;&#1491;&#1506;: &#1502;&#1488;&#1502;&#1512;&#1497;&#1501;, &#1514;&#1494;&#1493;&#1514;, &#1505;&#1508;&#1512;&#1497;&#1501;, &#1514;&#1511;&#1510;&#1497;&#1512;&#1497;&#1501; &#1493;&#1495;&#1493;&#1493;&#1514; &#1491;&#1506;&#1514; &#1502;&#1513;&#1508;&#1496;&#1497;&#1493;&#1514;.\"><style>html,body,form,table,div,h1,h2,h3,h4,h5,h6,img,ol,ul,li,button{margin:0;padding:0;border:0;}table{border-collapse:collapse;border-width:0;empty-cells:show;}html,body{height:100%}#gs_top{position:relative;box-sizing:border-box;min-height:100%;min-width:964px;-webkit-tap-highlight-color:rgba(0,0,0,0);}#gs_top>*:not(#x){-webkit-tap-highlight-color:rgba(204,204,204,.5);}.gs_el_ph #gs_top,.gs_el_ta #gs_top{min-width:320px;}#gs_top.gs_nscl{position:fixed;width:100%;}body,td,input,button,textarea{font-size:1",
+              "url": "https://scholar.google.com"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "MIT: discovery signal",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "MIT",
+          "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js \">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"canonical\" href=\"https://tlecms.mit.edu/spotlight/illuminating-heart-disease\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n<meta http-equiv=\"Expires\" content=\"-1\" />\n<meta http-equiv=\"cache-control\" content=\"no-store\" />\n<meta property=\"description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"og:site_name\" content=\"Massachusetts Institute of Technology\" />\n<meta property=\"og:site\" content=\"http://web.mit.edu\" />\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n<meta property=\"og:url\" content=\"http://web.mit.edu\" />\n<meta property=\"og:description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"fb:page_id\" content=\"126533127390327\" />\n<meta property=\"twitter:site:id\" content=\"15460048\" />\n<meta property=\"twitter:card\" content=\"summary\" />\n<meta property=\"twitter:site\" content=\"@mit\" />\n<meta property=\"twitter:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n\n    <title>MIT - Massachusetts Institute of Technology</title>\n    <link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.ico\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.svg\" type=\"image/svg+xml\">\n<link rel=\"apple-touch-icon\" href=\"/themes/mit/assets/favicon/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/themes/mit/assets/favicon/manifest.webmanifest\">    \n<!--[if gt IE 8]><!-->\n<link rel=\"stylesheet\" media=\"all\" href=\"/themes/mit/assets/css/main.css?tf13vj\" />\n<!--<![e",
+          "url": "https://www.mit.edu"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "MIT: discovery signal",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "MIT: discovery signal",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "MIT",
+              "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js \">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"canonical\" href=\"https://tlecms.mit.edu/spotlight/illuminating-heart-disease\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n<meta http-equiv=\"Expires\" content=\"-1\" />\n<meta http-equiv=\"cache-control\" content=\"no-store\" />\n<meta property=\"description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"og:site_name\" content=\"Massachusetts Institute of Technology\" />\n<meta property=\"og:site\" content=\"http://web.mit.edu\" />\n<meta property=\"og:type\" content=\"website\" />\n<meta property=\"og:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n<meta property=\"og:url\" content=\"http://web.mit.edu\" />\n<meta property=\"og:description\" content=\"The mission of MIT is to advance knowledge and educate students in science, technology and other areas of scholarship that will best serve the nation and the world in the 21st century.\" />\n<meta property=\"fb:page_id\" content=\"126533127390327\" />\n<meta property=\"twitter:site:id\" content=\"15460048\" />\n<meta property=\"twitter:card\" content=\"summary\" />\n<meta property=\"twitter:site\" content=\"@mit\" />\n<meta property=\"twitter:title\" content=\"The Massachusetts Institute of Technology (MIT)\" />\n\n    <title>MIT - Massachusetts Institute of Technology</title>\n    <link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.ico\" sizes=\"32x32\">\n<link rel=\"icon\" href=\"/themes/mit/assets/favicon/favicon.svg\" type=\"image/svg+xml\">\n<link rel=\"apple-touch-icon\" href=\"/themes/mit/assets/favicon/apple-touch-icon.png\">\n<link rel=\"manifest\" href=\"/themes/mit/assets/favicon/manifest.webmanifest\">    \n<!--[if gt IE 8]><!-->\n<link rel=\"stylesheet\" media=\"all\" href=\"/themes/mit/assets/css/main.css?tf13vj\" />\n<!--<![e",
+              "url": "https://www.mit.edu"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "Socioeconomic driving forces of scientific research",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "arXiv",
+          "content": "Socioeconomic driving forces of scientific research\n\nWhy do nations produce scientific research? This is a fundamental problem in the field of social studies of science. The paper confronts this question here by showing vital determinants of science to explain the sources of social power and wealth creation by nations. Firstly, this study suggests a new general definition of science and scientific research that synthetizes previous concepts and endeavors to extend them: Science discovers the root causes of phenomena to explain and predict them in a context of adaptation of life to new economic and social bases, whereas scientific research is a systematic process, applying methods of scientific inquiry, to solve consequential problems, to satisfy human wants, to take advantage of important opportunities and/or to cope with environmental threats. In particular, science and scientific research are driven by an organized social effort that inevitably reflect the concerns and interests of nations to achieve advances and discoveries that are spread to the rest of humankind. This study reveals that scientific research is produced for social and economic interests of nations (power, wealth creation, technological superiority, etc.), rather than philosophical inquiries. A main implication of this study is that the immense growth of science in modern society is not only due to activity of scientists but rather to general social efforts of nations to take advantage of important opportunities and/or to cope with environmental threats, such as war. Empirical evidence endeavors to support the sources of scientific research for nations, described here. Finally, relationships between R&D investment and productivity, and research policy implications are discussed.",
+          "url": "http://arxiv.org/abs/1806.05028v1"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "Socioeconomic driving forces of scientific research",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "Socioeconomic driving forces of scientific research",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "arXiv",
+              "content": "Socioeconomic driving forces of scientific research\n\nWhy do nations produce scientific research? This is a fundamental problem in the field of social studies of science. The paper confronts this question here by showing vital determinants of science to explain the sources of social power and wealth creation by nations. Firstly, this study suggests a new general definition of science and scientific research that synthetizes previous concepts and endeavors to extend them: Science discovers the root causes of phenomena to explain and predict them in a context of adaptation of life to new economic and social bases, whereas scientific research is a systematic process, applying methods of scientific inquiry, to solve consequential problems, to satisfy human wants, to take advantage of important opportunities and/or to cope with environmental threats. In particular, science and scientific research are driven by an organized social effort that inevitably reflect the concerns and interests of nations to achieve advances and discoveries that are spread to the rest of humankind. This study reveals that scientific research is produced for social and economic interests of nations (power, wealth creation, technological superiority, etc.), rather than philosophical inquiries. A main implication of this study is that the immense growth of science in modern society is not only due to activity of scientists but rather to general social efforts of nations to take advantage of important opportunities and/or to cope with environmental threats, such as war. Empirical evidence endeavors to support the sources of scientific research for nations, described here. Finally, relationships between R&D investment and productivity, and research policy implications are discussed.",
+              "url": "http://arxiv.org/abs/1806.05028v1"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "arXiv",
+          "content": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0\n\nApplication of Information Technology (IT) in the domain of Human Resource Management (HRM) systems is a sine qua non for any organization for successfully adopting and implementing Fourth Industrial Revolution (Industry 4.0). However, these systems are required to ensure non-biased, efficient, transparent and secure environment. Blockchain, a technology based on distributed digital ledgers, can help facilitate the process of successfully effectuating these specifications. A detailed literature review has been conducted to identify the current status of usage of Information Technology in the domain of Human Resource Management and how Blockchain can help achieve a smart, cost-effective, efficient, transparent and secure factory management system. A Blockchain based Recruitment Management System (BcRMS) as well as Blockchain based Human Resource Management System (BcHRMS) algorithm have been proposed. From the analysis of the results obtained through the case study, it is evident that the proposed system holds definite advantages compared to the existing recruitment systems. Future research directions have also been identified and advocated.",
+          "url": "http://arxiv.org/abs/1812.03237v1"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "arXiv",
+              "content": "A Recruitment and Human Resource Management Technique Using Blockchain Technology for Industry 4.0\n\nApplication of Information Technology (IT) in the domain of Human Resource Management (HRM) systems is a sine qua non for any organization for successfully adopting and implementing Fourth Industrial Revolution (Industry 4.0). However, these systems are required to ensure non-biased, efficient, transparent and secure environment. Blockchain, a technology based on distributed digital ledgers, can help facilitate the process of successfully effectuating these specifications. A detailed literature review has been conducted to identify the current status of usage of Information Technology in the domain of Human Resource Management and how Blockchain can help achieve a smart, cost-effective, efficient, transparent and secure factory management system. A Blockchain based Recruitment Management System (BcRMS) as well as Blockchain based Human Resource Management System (BcHRMS) algorithm have been proposed. From the analysis of the results obtained through the case study, it is evident that the proposed system holds definite advantages compared to the existing recruitment systems. Future research directions have also been identified and advocated.",
+              "url": "http://arxiv.org/abs/1812.03237v1"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "arXiv",
+          "content": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia\n\nDigital government innovation is being recognised as a solution to many problems faced by governments in providing services to their citizens. It is especially important for low-income countries where there are resource constraints. This research was aimed at exploring the moderating effect of gender on the adoption of a digital government innovation in Ethiopia based on the UTAUT model (n=270) and using structural equation modeling (SEM). The results reveal that gender only moderates the relationship between facilitating conditions and usage behavior of government employees to adopt the digital government innovation which is inconsistent with other findings. Another key finding was that even though the innovation was regarded as not being easy to use, women identified that they would still use it because of the social influence from the peers and the bosses. This finding suggests that women government employees who obtain external support are more likely to use digital government innovations compared with men who are unlikely to use it even if they were facilitated. The paper recommends that governments of low-income countries like Ethiopia should design appropriate policies that encourage women in digital government.",
+          "url": "http://arxiv.org/abs/2108.09960v1"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "arXiv",
+              "content": "The Moderating Effect of Gender on Adopting Digital Government Innovations in Ethiopia\n\nDigital government innovation is being recognised as a solution to many problems faced by governments in providing services to their citizens. It is especially important for low-income countries where there are resource constraints. This research was aimed at exploring the moderating effect of gender on the adoption of a digital government innovation in Ethiopia based on the UTAUT model (n=270) and using structural equation modeling (SEM). The results reveal that gender only moderates the relationship between facilitating conditions and usage behavior of government employees to adopt the digital government innovation which is inconsistent with other findings. Another key finding was that even though the innovation was regarded as not being easy to use, women identified that they would still use it because of the social influence from the peers and the bosses. This finding suggests that women government employees who obtain external support are more likely to use digital government innovations compared with men who are unlikely to use it even if they were facilitated. The paper recommends that governments of low-income countries like Ethiopia should design appropriate policies that encourage women in digital government.",
+              "url": "http://arxiv.org/abs/2108.09960v1"
+            }
+          }
+        }
+      },
+      {
+        "action": {
+          "action": "create_personal_outreach",
+          "target": "Nature: discovery signal",
+          "reason": "high opportunity signal",
+          "score": 50.0,
+          "base_score": 0.0,
+          "opportunity_score": 50.0,
+          "opportunity_signals": [],
+          "source": "Nature",
+          "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"grade-c\">\n<head>\n    <title>Nature</title>\n    \n<link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://www.nature.com/nature.rss\"/>\n\n\n    \n        <link rel=\"preload\" href=/static/fonts/HardingText-Regular-Web-cecd90984f.woff2 as=\"font\" type=\"font/woff2\" crossorigin>\n    \n\n<link rel=\"preconnect\" href=\"https://cmp.nature.com\" crossorigin>\n\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"applicable-device\" content=\"pc,mobile\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=5,user-scalable=yes\">\n<meta name=\"360-site-verification\" content=\"5a2dc4ab3fcb9b0393241ffbbb490480\" />\n\n<script data-test=\"dataLayer\">\n    window.dataLayer = [{\"content\":{\"category\":{\"contentType\":null,\"legacy\":null},\"article\":null,\"attributes\":{\"cms\":null,\"deliveryPlatform\":null,\"copyright\":null,\"articleInPress\":null},\"contentInfo\":null,\"journal\":{\"pcode\":\"nature\",\"title\":\"Nature\",\"volume\":null,\"issue\":null,\"id\":41586,\"publishingModel\":\"Hybrid Access\"},\"authorization\":{\"status\":true},\"features\":[],\"collection\":null},\"page\":{\"category\":{\"pageType\":\"journal\"},\"attributes\":{\"template\":\"mosaic\",\"featureFlags\":[{\"name\":\"nature-onwards-journey\",\"active\":false},{\"name\":\"ab_subjects_position\",\"active\":false}],\"testGroup\":null},\"search\":null},\"privacy\":{},\"version\":\"1.0.0\",\"product\":null,\"session\":null,\"user\":null,\"backHalfContent\":false,\"country\":\"IL\",\"hasBody\":false,\"uneditedManuscript\":false,\"twitterId\":[\"o3xnx\",\"o43y9\",\"o3ef7\"],\"baiduId\":\"d38bce82bcb44717ccc29a90c4b781ea\",\"japan\":false}];\n    window.dataLayer.push({\n        ga4MeasurementId: 'G-ERRNTNZ807',\n        ga360TrackingId: 'UA-71668177-1',\n        twitterId: ['3xnx', 'o43y9', 'o3ef7'],\n        baiduId: 'd38bce82bcb44717ccc29a90c4b781ea',\n        ga4ServerUrl: 'https://sgtm.nature.com',\n        imprint: 'nature'\n    });\n</script>\n\n\n<script>\n    (function(w, d) {\n        w.config = w.config || {};\n        w.config.mustardcut = false;",
+          "url": "https://www.nature.com"
+        },
+        "execution": {
+          "status": "executed",
+          "action": "create_personal_outreach",
+          "result": {
+            "status": "approval_required",
+            "action": "create_personal_outreach",
+            "reason": "external communication requires explicit approval",
+            "target": "Nature: discovery signal",
+            "score": 50.0,
+            "context": {
+              "action": "create_personal_outreach",
+              "target": "Nature: discovery signal",
+              "reason": "high opportunity signal",
+              "score": 50.0,
+              "base_score": 0.0,
+              "opportunity_score": 50.0,
+              "opportunity_signals": [],
+              "source": "Nature",
+              "content": "<!DOCTYPE html>\n<html lang=\"en\" class=\"grade-c\">\n<head>\n    <title>Nature</title>\n    \n<link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://www.nature.com/nature.rss\"/>\n\n\n    \n        <link rel=\"preload\" href=/static/fonts/HardingText-Regular-Web-cecd90984f.woff2 as=\"font\" type=\"font/woff2\" crossorigin>\n    \n\n<link rel=\"preconnect\" href=\"https://cmp.nature.com\" crossorigin>\n\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"applicable-device\" content=\"pc,mobile\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=5,user-scalable=yes\">\n<meta name=\"360-site-verification\" content=\"5a2dc4ab3fcb9b0393241ffbbb490480\" />\n\n<script data-test=\"dataLayer\">\n    window.dataLayer = [{\"content\":{\"category\":{\"contentType\":null,\"legacy\":null},\"article\":null,\"attributes\":{\"cms\":null,\"deliveryPlatform\":null,\"copyright\":null,\"articleInPress\":null},\"contentInfo\":null,\"journal\":{\"pcode\":\"nature\",\"title\":\"Nature\",\"volume\":null,\"issue\":null,\"id\":41586,\"publishingModel\":\"Hybrid Access\"},\"authorization\":{\"status\":true},\"features\":[],\"collection\":null},\"page\":{\"category\":{\"pageType\":\"journal\"},\"attributes\":{\"template\":\"mosaic\",\"featureFlags\":[{\"name\":\"nature-onwards-journey\",\"active\":false},{\"name\":\"ab_subjects_position\",\"active\":false}],\"testGroup\":null},\"search\":null},\"privacy\":{},\"version\":\"1.0.0\",\"product\":null,\"session\":null,\"user\":null,\"backHalfContent\":false,\"country\":\"IL\",\"hasBody\":false,\"uneditedManuscript\":false,\"twitterId\":[\"o3xnx\",\"o43y9\",\"o3ef7\"],\"baiduId\":\"d38bce82bcb44717ccc29a90c4b781ea\",\"japan\":false}];\n    window.dataLayer.push({\n        ga4MeasurementId: 'G-ERRNTNZ807',\n        ga360TrackingId: 'UA-71668177-1',\n        twitterId: ['3xnx', 'o43y9', 'o3ef7'],\n        baiduId: 'd38bce82bcb44717ccc29a90c4b781ea',\n        ga4ServerUrl: 'https://sgtm.nature.com',\n        imprint: 'nature'\n    });\n</script>\n\n\n<script>\n    (function(w, d) {\n        w.config = w.config || {};\n        w.config.mustardcut = false;",
+              "url": "https://www.nature.com"
+            }
+          }
+        }
+      }
+    ],
+    "self_development": {
+      "timestamp": "2026-09-10T01:52:41.619221",
+      "duration": 2.802979,
+      "initial": {
+        "files_checked": 1328,
+        "syntax_failures": [],
+        "status": "healthy"
+      },
+      "repairs": [],
+      "strategy_outcomes": [],
+      "rolled_back_files": [],
+      "final": {
+        "files_checked": 1328,
+        "syntax_failures": [],
+        "status": "healthy"
+      },
+      "status": "healthy"
+    }
   }
 }

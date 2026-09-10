@@ -6,7 +6,7 @@
   "checks": {
     "Android": {
       "status": "FOUND",
-      "count": 30,
+      "count": 53,
       "examples": [
         "android/build.gradle",
         "android/build_all.sh",
@@ -17,7 +17,7 @@
     },
     "UI": {
       "status": "FOUND",
-      "count": 108,
+      "count": 13237,
       "examples": [
         "approved_learning_integration.json",
         "app.py",
@@ -28,7 +28,7 @@
     },
     "API": {
       "status": "FOUND",
-      "count": 65,
+      "count": 1361,
       "examples": [
         "ima_api_documentation.md",
         "_tmp_server.js",
@@ -39,7 +39,7 @@
     },
     "Identity": {
       "status": "FOUND",
-      "count": 48,
+      "count": 1312,
       "examples": [
         "authority_lock.json",
         "canonical_authority.json",
@@ -50,7 +50,7 @@
     },
     "Security": {
       "status": "FOUND",
-      "count": 45,
+      "count": 530,
       "examples": [
         "security.md",
         ".ima_guardian/policy.json",
@@ -61,26 +61,29 @@
     },
     "Voice": {
       "status": "FOUND",
-      "count": 2,
+      "count": 15,
       "examples": [
         ".ima/voice.json",
-        "product/voice/voice_pipeline.json"
+        "product/voice/voice_pipeline.json",
+        "node_modules/three/src/loaders/audioloader.js",
+        "node_modules/three/src/audio/audio.js",
+        "node_modules/three/src/audio/audioanalyser.js"
       ]
     },
     "Child": {
       "status": "FOUND",
-      "count": 8,
+      "count": 157,
       "examples": [
         "child_safety/child_safety_core.py",
         "learning/child_safety_engine.py",
         "product/childcare/ima_child_companion.json",
-        "_archive_20260808/learning_backup_adaptive_1784122898/child_safety_engine.py",
-        "_archive_20260808/learning_backup_stable_20260715_1633/child_safety_engine.py"
+        "node_modules/lodash/_parent.js",
+        "node_modules/chokidar/license"
       ]
     },
     "Device": {
       "status": "FOUND",
-      "count": 13,
+      "count": 32,
       "examples": [
         "device/device_manager.py",
         "devices/readme.md",
@@ -91,15 +94,15 @@
     },
     "Deployment": {
       "status": "FOUND",
-      "count": 31,
+      "count": 596,
       "examples": [
         "dockerfile",
         "ima_deployment_checklist.md",
         "docker-compose.yml",
-        "ima_final_unification_and_deployment_lock.sh",
-        "deployment/readme.md"
+        "deployed_addresses.txt",
+        "deploy.js"
       ]
     }
   },
-  "time": 1787667830.5828776
+  "time": 1787672894.7222557
 }

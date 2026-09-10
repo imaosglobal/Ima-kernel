@@ -71,6 +71,22 @@
       "priority": 80,
       "enabled": true,
       "trust": "high"
+    },
+    {
+      "name": "Britannica",
+      "module": "learning.sources.britannica",
+      "function": "search",
+      "priority": 85,
+      "enabled": true,
+      "trust": "medium"
+    },
+    {
+      "name": "Ori Cohen — Facebook Creator Source",
+      "module": "learning.sources.ori_facebook",
+      "function": "search",
+      "priority": 95,
+      "enabled": true,
+      "trust": "high"
     }
   ]
 }

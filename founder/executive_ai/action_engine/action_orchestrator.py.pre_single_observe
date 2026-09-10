@@ -1,0 +1,111 @@
+from founder.executive_ai.global_intelligence.opportunity_to_action import (
+    generate_actions,
+)
+
+from founder.executive_ai.action_engine.action_executor import (
+    execute_action,
+)
+
+from founder.executive_ai.action_engine.action_memory import (
+    save_action,
+)
+
+from founder.executive_ai.action_engine.action_feedback_learning import (
+    learn_from_action,
+)
+
+
+def run_world_actions():
+
+    actions = generate_actions()
+
+    results = []
+    seen = set()
+
+    for raw_action in actions:
+
+        if not isinstance(raw_action, dict):
+            continue
+
+        nested = raw_action.get("action")
+
+        if isinstance(nested, dict):
+
+            action_name = nested.get("action")
+
+            action = dict(raw_action)
+
+            if nested.get("target") is not None:
+                action["target"] = nested["target"]
+
+            if nested.get("score") is not None:
+                action["score"] = nested["score"]
+
+            action["action"] = action_name
+
+        else:
+
+            action = dict(raw_action)
+            action_name = nested
+
+        target = action.get("target")
+        score = action.get("score")
+
+        fingerprint = (
+            str(action_name),
+            str(target),
+        )
+
+        if fingerprint in seen:
+            continue
+
+        seen.add(fingerprint)
+
+        # ----------------------------------------------------
+        # CANONICAL EXECUTION
+        # ----------------------------------------------------
+
+        result = execute_action(
+            action_name,
+            context=action,
+        )
+
+        # ----------------------------------------------------
+        # PERSIST
+        # ----------------------------------------------------
+
+        record = {
+            "action": action,
+            **result,
+        }
+
+        try:
+
+            save_action(
+                action,
+                result,
+                action.get("reason"),
+            )
+
+        except Exception as exc:
+
+            record["save_error"] = repr(exc)
+
+        # ----------------------------------------------------
+        # LEARNING
+        # ----------------------------------------------------
+
+        try:
+
+            learn_from_action(
+                action,
+                result,
+            )
+
+        except Exception as exc:
+
+            record["learning_error"] = repr(exc)
+
+        results.append(record)
+
+    return results

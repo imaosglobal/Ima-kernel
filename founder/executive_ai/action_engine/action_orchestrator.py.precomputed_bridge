@@ -1,0 +1,114 @@
+from founder.executive_ai.global_intelligence.opportunity_to_action import (
+    generate_actions,
+)
+
+from founder.executive_ai.action_engine.action_executor import (
+    execute_action,
+)
+
+from founder.executive_ai.action_engine.action_memory import (
+    save_action,
+)
+
+from founder.executive_ai.action_engine.action_feedback_learning import (
+    learn_from_action,
+)
+
+
+def run_world_actions():
+    """
+    Canonical world-action execution pipeline.
+
+    Observe once, transform the resulting discoveries into actions,
+    execute through the existing action executor, persist outcomes,
+    and learn from them.
+    """
+    print("=== WORLD ACTION PIPELINE ===")
+
+    try:
+        from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+        from founder.executive_ai.global_intelligence.ranking_engine import ranker
+        from founder.executive_ai.global_intelligence.opportunity_ranker import rank_opportunity
+        from founder.executive_ai.global_intelligence.opportunity_to_action import generate_actions
+
+        discoveries = world_scanner.scan_sources()
+        ranked = ranker(discoveries) if isinstance(discoveries, list) else []
+
+        opportunities = []
+        for item in ranked:
+            if not isinstance(item, dict):
+                continue
+
+            try:
+                opportunity = rank_opportunity(item)
+            except Exception:
+                continue
+
+            if isinstance(opportunity, dict):
+                enriched = dict(item)
+                enriched["opportunity_score"] = opportunity.get(
+                    "opportunity_score",
+                    item.get("rank_score", item.get("score", 0)),
+                )
+                enriched["opportunity_signals"] = opportunity.get(
+                    "signals",
+                    [],
+                )
+                opportunities.append(enriched)
+
+        # The action generator is the canonical policy bridge.
+        # Feed it the already observed opportunities when supported.
+        try:
+            import inspect
+            signature = inspect.signature(generate_actions)
+
+            if "opportunities" in signature.parameters:
+                actions = generate_actions(opportunities=opportunities)
+            else:
+                # Compatibility fallback for the current public API.
+                # This path is temporary and will be removed once the
+                # generator accepts precomputed opportunities.
+                actions = generate_actions()
+        except Exception as exc:
+            print("[WORLD ACTION GENERATION ERROR]", repr(exc))
+            return []
+
+        if not isinstance(actions, list):
+            return []
+
+        results = []
+
+        for action in actions:
+            if not isinstance(action, dict):
+                continue
+
+            try:
+                result = execute_action(action)
+            except Exception as exc:
+                result = {
+                    "status": "execution_failed",
+                    "error": repr(exc),
+                    "action": action,
+                }
+
+            try:
+                save_action(action, result)
+            except Exception:
+                pass
+
+            try:
+                learn_from_action(action, result)
+            except Exception:
+                pass
+
+            results.append({
+                "action": action,
+                "result": result,
+            })
+
+        print("[WORLD ACTIONS]", len(results))
+        return results
+
+    except Exception as exc:
+        print("[WORLD ACTION PIPELINE ERROR]", repr(exc))
+        return []

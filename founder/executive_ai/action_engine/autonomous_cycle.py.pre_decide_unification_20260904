@@ -1,0 +1,75 @@
+from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+from founder.executive_ai.action_engine.action_learning_loop import learning_cycle
+from learning.self_improvement import run_self_improvement
+
+
+def run_cycle():
+    """
+    IMA canonical autonomous cycle.
+
+    Observe -> Diagnose/Self-Improve -> Decide -> Act -> Learn.
+    This function is the single orchestration point for one autonomous cycle.
+    """
+
+    print("=== IMA AUTONOMOUS CYCLE START ===")
+
+    # 1. SELF-DEVELOPMENT
+    print("[SELF-DEVELOPMENT]")
+    from learning.self_improvement import run_self_improvement
+    self_development = run_self_improvement()
+
+    # 2. OBSERVE
+    print("[OBSERVE]")
+    from founder.executive_ai.global_intelligence.world_scanner import scan_sources
+    discoveries = scan_sources()
+
+    if discoveries is None:
+        discoveries = []
+
+    # 3. DECIDE
+    print("[DECIDE]")
+    try:
+        from founder.executive_ai.global_intelligence.opportunity_ranker import rank_opportunities
+    except ImportError:
+        from founder.executive_ai.global_intelligence.opportunity_to_action import rank_opportunities
+
+    opportunities = rank_opportunities(discoveries)
+
+    if opportunities is None:
+        opportunities = []
+
+    # 4. ACT
+    print("[ACT]")
+    from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+    actions = run_world_actions(opportunities=opportunities)
+
+    if actions is None:
+        actions = []
+
+    # 5. LEARN
+    print("[LEARN]")
+    try:
+        from learning.learning_loop import learning_cycle
+        learning = learning_cycle()
+    except Exception as e:
+        learning = {
+            "status": "learning_deferred",
+            "error": repr(e),
+        }
+
+    result = {
+        "self_development": self_development,
+        "discoveries": discoveries,
+        "opportunities": opportunities,
+        "actions": actions,
+        "learning": learning,
+        "status": "cycle_completed",
+    }
+
+    print("=== IMA AUTONOMOUS CYCLE COMPLETE ===")
+    return result
+
+
+if __name__ == "__main__":
+    result = run_cycle()
+    print(result)

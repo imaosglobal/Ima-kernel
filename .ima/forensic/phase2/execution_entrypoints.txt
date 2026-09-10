@@ -1,0 +1,160 @@
+./.ima/acting_ai/acting_ai.py:820:def main():
+./.ima/acting_ai/acting_ai.py:902:if __name__ == "__main__":
+./IMA_START.py:30:def run():
+./IMA_START.py:116:if __name__ == "__main__":
+./_archive_20260808/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py:31:def run(cmd: list[str], timeout: int = 300) -> tuple[int, str, str]:
+./_archive_20260808/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py:673:def main():
+./_archive_20260808/IMA_PRODUCT_DIAGNOSTIC_ENGINE.py:726:if __name__ == "__main__":
+./_archive_20260808/boot_integrity_check.py:7:def run(cmd):
+./_archive_20260808/build_memory_unification_layer.py:84:if __name__ == "__main__":
+./_archive_20260808/connect_guardian_autofix.py:14:def run(cmd):
+./_archive_20260808/ima_app.py:136:def main():
+./_archive_20260808/ima_app.py:150:if __name__ == "__main__":
+./_archive_20260808/ima_architecture_guard.py:40:if __name__ == "__main__":
+./_archive_20260808/ima_doctor.py:94:def main():
+./_archive_20260808/ima_guardian_core.py:21:def run(cmd):
+./_archive_20260808/ima_guardian_core.py:82:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_intent.py:49:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_self_repair.py:66:def run():
+./_archive_20260808/ima_guardian_self_repair.py:161:def run():
+./_archive_20260808/ima_lock.py:27:def main():
+./_archive_20260808/ima_os_backend_20260809/backend/app.py:26:if __name__ == "__main__": app.run(host="0.0.0.0", port=5000)
+./_archive_20260808/ima_qge_v1.py:121:if __name__ == "__main__":
+./_archive_20260808/ima_runtime.py:102:if __name__ == "__main__":
+./_archive_20260808/ima_status.py:53:def main():
+./_archive_20260808/ima_system_snapshot.py:52:if __name__ == "__main__":
+./_archive_20260808/learning_backup_adaptive_1784122898/brain_guard.py:60:if __name__ == "__main__":
+./_archive_20260808/learning_backup_adaptive_1784122898/gate_guard.py:56:if __name__ == "__main__":
+./_archive_20260808/learning_backup_adaptive_1784122898/ima_chronicle.py:65:if __name__ == "__main__":
+./_archive_20260808/learning_backup_adaptive_1784122898/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./_archive_20260808/learning_backup_adaptive_1784122898/module_registry.py:98:if __name__ == "__main__":
+./_archive_20260808/learning_backup_stable_20260715_1633/brain_guard.py:60:if __name__ == "__main__":
+./_archive_20260808/learning_backup_stable_20260715_1633/gate_guard.py:56:if __name__ == "__main__":
+./_archive_20260808/learning_backup_stable_20260715_1633/ima_chronicle.py:65:if __name__ == "__main__":
+./_archive_20260808/learning_backup_stable_20260715_1633/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./_archive_20260808/learning_backup_stable_20260715_1633/module_registry.py:98:if __name__ == "__main__":
+./_archive_20260808/main.py:5:app = FastAPI()
+./_archive_20260808/main.py:81:if __name__ == "__main__": uvicorn.run(app, host="0.0.0.0", port=8000)
+./_archive_20260808/upgrade_guardian_block_repair.py:7:end = text.find("def run()")
+./_archive_20260808/upgrade_guardian_intent.py:78:if __name__ == "__main__":
+./_archive_20260808/upgrade_guardian_report_repair.py:70:def run():
+./_archive_20260808/fix_and_run.py:190:def main():
+./_archive_20260808/fix_and_run.py:245:if __name__ == "__main__":
+./_archive_20260808/fix_guardian_release_real_tag_gate.py:6:old = '''def main():
+./_archive_20260808/fix_guardian_release_real_tag_gate.py:15:new = '''def main():
+./_archive_20260808/fix_watcher_entry.py:6:old = '''if __name__ == "__main__":
+./_archive_20260808/fix_watcher_entry.py:10:new = '''if __name__ == "__main__":
+./_archive_20260808/guardian_release_pipeline.py:5:def run(cmd):
+./_archive_20260808/guardian_release_pipeline.py:59:def main():
+./_archive_20260808/ima_agi.py:15:app = FastAPI()
+./_archive_20260808/ima_agi.py:55:if __name__ == "__main__":
+./_archive_20260808/ima_agi.py:56:    uvicorn.run(app, host="0.0.0.0", port=8000)
+./_archive_20260808/ima_agi.py:103:if __name__ == "__main__":
+./_archive_20260808/ima_agi.py:104:    uvicorn.run(app, host="0.0.0.0", port=8000)
+./_archive_20260808/ima_bridge.py:9:app = FastAPI()
+./_archive_20260808/ima_global.py:73:def run():
+./_archive_20260808/ima_global.py:78:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_autofix.py:59:def run():
+./_archive_20260808/ima_guardian_autofix.py:71:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_controller.py:38:def run(cmd):
+./_archive_20260808/ima_guardian_controller.py:135:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_diagnosis.py:13:def run(cmd):
+./_archive_20260808/ima_guardian_diagnosis.py:82:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_master.py:93:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_policy.py:57:if __name__ == "__main__":
+./_archive_20260808/ima_guardian_watch.py:278:if __name__ == "__main__":
+./_archive_20260808/ima_repair.py:71:def main():
+./_archive_20260808/ima_self_test.py:13:def run(name, cmd):
+./_archive_20260808/ima_self_test.py:20:def main():
+./_archive_20260808/ima_server.py:31:if __name__ == "__main__":
+./_archive_20260808/ima_snapshot.py:14:def main():
+./_archive_20260808/ima_version.py:9:def main():
+./_archive_20260808/learning_backup_final_1784122661/brain_guard.py:60:if __name__ == "__main__":
+./_archive_20260808/learning_backup_final_1784122661/gate_guard.py:56:if __name__ == "__main__":
+./_archive_20260808/learning_backup_final_1784122661/ima_chronicle.py:65:if __name__ == "__main__":
+./_archive_20260808/learning_backup_final_1784122661/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./_archive_20260808/learning_backup_final_1784122661/module_registry.py:98:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122578/brain_guard.py:60:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122578/gate_guard.py:56:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122578/ima_chronicle.py:65:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122578/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122578/module_registry.py:98:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122602/brain_guard.py:60:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122602/gate_guard.py:56:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122602/ima_chronicle.py:65:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122602/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./_archive_20260808/learning_backup_repair_1784122602/module_registry.py:98:if __name__ == "__main__":
+./_archive_20260808/repair_and_rerun_diagnostic.py:500:def main():
+./_archive_20260808/repair_and_rerun_diagnostic.py:760:if __name__ == "__main__":
+./_archive_20260808/system_tree_analyzer.py:66:def main():
+./_archive_20260808/system_tree_analyzer.py:111:if __name__ == "__main__":
+./_archive_20260808/upgrade_guardian_snapshot_restore.py:33:if __name__ == "__main__":
+./_archive_20260808/upgrade_ima_evolution.py:106:if __name__ == "__main__":
+./_tmp_server.js:157:app.listen(3000, () => {
+./api_boot_connector.py:20:if __name__ == "__main__":
+./app.py:27:if __name__ == "__main__":
+./boot/IMA_ENTRYPOINT.py:21:if __name__ == "__main__":
+./connectors/intelligence/ima_bridge.py:38:if __name__ == "__main__":
+./connectors/intelligence/ima_bridge.py:57:app = FastAPI(
+./connectors/intelligence/learning_cycle.py:9:def run(step):
+./connectors/intelligence/learning_graph.py:21:if __name__ == "__main__":
+./connectors/llm/auto_runtime.py:5:def run(message):
+./ima_api_wrapper.py:19:if __name__ == "__main__":
+./ima_kernel.py:122:if __name__ == "__main__":
+./ima_mom.py:39:def run():
+./ima_mom.py:53:if __name__ == "__main__":
+./kernel/_graveyard/_archive/experimental/ima_update_runtime_safe.js:10:    server = app.listen(4000);
+./kernel/_graveyard/_archive/experimental/ima_update_runtime_safe.js:11:  } else if (app && app.listen) {
+./kernel/_graveyard/_archive/experimental/ima_update_runtime_safe.js:12:    server = app.listen(4000);
+./kernel/_graveyard/_archive/saas/ima_mvp_saas.js:72:app.listen(4000, () => {
+./kernel/_graveyard/_archive/saas/ima_pro_saas.backup.js:51:app.listen(4000, () => {
+./kernel/_graveyard/_archive/saas/ima_pro_saas.js:51:app.listen(4000, () => {
+./kernel/_graveyard/_archive/saas/ima_pro_saas_backup.js:51:app.listen(4000, () => {
+./kernel/_graveyard/_archive/saas/ima_saas_full.STABLE_BACKUP.js:116:app.listen(PORT, () => {
+./kernel/_graveyard/_archive/saas/ima_saas_full.js:119:app.listen(PORT, () => {
+./kernel/_graveyard/_archive/releases__v1778001671191__prod_server.js:56:app.listen(4000, () => {
+./kernel/experimental/server.js:12:  app.listen(PORT, () => {
+./kernel/plugins/plugin_loader.py:37:if __name__ == "__main__":
+./kernel/release_freeze/runtime/server.js:12:  app.listen(PORT, () => {
+./kernel/runtime/CANONICAL/IMA_IDENTITY.py:34:if __name__ == "__main__":
+./kernel/ui/server.js:33:app.listen(port, '0.0.0.0', () => {
+./product/apps/shared/gateway_client.py:18:if __name__ == "__main__":
+./product/deployment/deployment_manager.py:65:if __name__ == "__main__":
+./product/launcher/product_launcher.py:40:if __name__ == "__main__":
+./product/version/version_manager.py:55:if __name__ == "__main__":
+./server.js:28:app.listen(3000, () => {
+./server_tmp.js:16:app.listen(3000, () => {
+./tools/activation/provider_activation.py:49:if __name__ == "__main__":
+./tools/ima-toolkit/ima.py:33:if __name__ == "__main__":
+./ima_server.py:7:app = FastAPI()
+./scripts/main.py:19:if __name__ == "__main__":
+./founder/executive_ai/action_engine/autonomous_cycle.py:20:if __name__ == "__main__":
+./founder/executive_ai/question_engine.py:30:if __name__ == "__main__":
+./founder/executive_ai/self_learning_core/continuous_learning_loop.py:11:def run():
+./founder/executive_ai/unified_brain/master_cycle.py:6:def run():
+./ima-agent/auto_explorer.py:26:def run(cmd):
+./ima-agent/auto_explorer.py:83:if __name__ == "__main__":
+./ima.js:7:app.listen(7000, ()=>{
+./ima.py:4:if __name__ == "__main__":
+./ima_daemon.py:30:def run():
+./ima_daemon.py:81:if __name__ == "__main__":
+./ima_one_brain.py:120:def run():
+./ima_one_brain.py:173:def main():
+./ima_one_brain.py:177:if __name__ == "__main__":
+./ima_system.py:266:if __name__ == "__main__":
+./learning/_backup_allowlist_filter_20260718_220529.py:404:if __name__ == "__main__":
+./learning/_backup_runtime_allowlist_integration_20260718_220711.py:404:if __name__ == "__main__":
+./learning/_backup_self_improvement_cycle_20260718_211802.py:391:if __name__ == "__main__":
+./learning/_backup_status_fix_20260718_215252.py:404:if __name__ == "__main__":
+./learning/continuous_learning_loop.py:95:if __name__ == "__main__":
+./learning/domains/embodied_language/adapter.py:121:if __name__ == "__main__":
+./learning/domains/embodied_language/domain.py:135:if __name__ == "__main__":
+./learning/gate_guard.py:56:if __name__ == "__main__":
+./learning/ima_chronicle.py:65:if __name__ == "__main__":
+./learning/ima_evolution_cycle.py:29:if __name__ == "__main__":
+./learning/module_registry.py:98:if __name__ == "__main__":
+./learning/self_improvement_cycle.py:446:if __name__ == "__main__":
+./learning/self_inspection_cycle.py:241:if __name__ == "__main__":
+./server_backup.js:157:app.listen(3000, () => {
+./snapshots/ima_system_working_20260709.py:230:if __name__ == "__main__":
+./startup/command_executor.py:27:    def run(self, command):

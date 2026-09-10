@@ -1,0 +1,158 @@
+./kernel/_runtime_backup/autonomous_runtime.js
+ -> core/self_heal_runtime.js
+./node_modules/@walletconnect/ethereum-provider/node_modules/.bin/pino
+ -> ../pino/bin.js
+./node_modules/@walletconnect/types/node_modules/.bin/pino
+ -> ../pino/bin.js
+./node_modules/@walletconnect/universal-provider/node_modules/.bin/pino
+ -> ../pino/bin.js
+./node_modules/hardhat/node_modules/solc/node_modules/.bin/semver
+ -> ../semver/bin/semver
+./node_modules/hardhat/node_modules/.bin/solcjs
+ -> ../solc/solcjs
+./node_modules/hardhat/node_modules/.bin/semver
+ -> ../semver/bin/semver.js
+./node_modules/hardhat/node_modules/.bin/uuid
+ -> ../uuid/dist/bin/uuid
+./node_modules/ganache/node_modules/@trufflesuite/bigint-buffer/node_modules/.bin/node-gyp-build
+ -> ../node-gyp-build/bin.js
+./node_modules/ganache/node_modules/@trufflesuite/bigint-buffer/node_modules/.bin/node-gyp-build-optional
+ -> ../node-gyp-build/optional.js
+./node_modules/ganache/node_modules/@trufflesuite/bigint-buffer/node_modules/.bin/node-gyp-build-test
+ -> ../node-gyp-build/build-test.js
+./node_modules/ganache/node_modules/.bin/browserslist
+ -> ../browserslist/cli.js
+./node_modules/ganache/node_modules/.bin/api-extractor
+ -> ../@microsoft/api-extractor/bin/api-extractor
+./node_modules/ganache/node_modules/.bin/acorn
+ -> ../acorn/bin/acorn
+./node_modules/ganache/node_modules/.bin/envinfo
+ -> ../envinfo/dist/cli.js
+./node_modules/ganache/node_modules/.bin/flat
+ -> ../flat/cli.js
+./node_modules/ganache/node_modules/.bin/cross-env
+ -> ../cross-env/src/bin/cross-env.js
+./node_modules/ganache/node_modules/.bin/cross-env-shell
+ -> ../cross-env/src/bin/cross-env-shell.js
+./node_modules/ganache/node_modules/.bin/import-local-fixture
+ -> ../import-local/fixtures/cli.js
+./node_modules/ganache/node_modules/.bin/he
+ -> ../he/bin/he
+./node_modules/ganache/node_modules/.bin/js-yaml
+ -> ../js-yaml/bin/js-yaml.js
+./node_modules/ganache/node_modules/.bin/json5
+ -> ../json5/lib/cli.js
+./node_modules/ganache/node_modules/.bin/miller-rabin
+ -> ../miller-rabin/bin/miller-rabin
+./node_modules/ganache/node_modules/.bin/mocha
+ -> ../mocha/bin/mocha
+./node_modules/ganache/node_modules/.bin/_mocha
+ -> ../mocha/bin/_mocha
+./node_modules/ganache/node_modules/.bin/node-gyp-build
+ -> ../node-gyp-build/bin.js
+./node_modules/ganache/node_modules/.bin/node-gyp-build-optional
+ -> ../node-gyp-build/optional.js
+./node_modules/ganache/node_modules/.bin/node-gyp-build-test
+ -> ../node-gyp-build/build-test.js
+./node_modules/ganache/node_modules/.bin/semver
+ -> ../semver/bin/semver.js
+./node_modules/ganache/node_modules/.bin/sha.js
+ -> ../sha.js/bin.js
+./node_modules/ganache/node_modules/.bin/nanoid
+ -> ../nanoid/bin/nanoid.cjs
+./node_modules/ganache/node_modules/.bin/shx
+ -> ../shx/lib/cli.js
+./node_modules/ganache/node_modules/.bin/terser
+ -> ../terser/bin/terser
+./node_modules/ganache/node_modules/.bin/ts-node
+ -> ../ts-node/dist/bin.js
+./node_modules/ganache/node_modules/.bin/shjs
+ -> ../shelljs/bin/shjs
+./node_modules/ganache/node_modules/.bin/ts-node-cwd
+ -> ../ts-node/dist/bin-cwd.js
+./node_modules/ganache/node_modules/.bin/ts-node-script
+ -> ../ts-node/dist/bin-script.js
+./node_modules/ganache/node_modules/.bin/ts-node-esm
+ -> ../ts-node/dist/bin-esm.js
+./node_modules/ganache/node_modules/.bin/ts-node-transpile-only
+ -> ../ts-node/dist/bin-transpile.js
+./node_modules/ganache/node_modules/.bin/ts-script
+ -> ../ts-node/dist/bin-script-deprecated.js
+./node_modules/ganache/node_modules/.bin/webpack
+ -> ../webpack/bin/webpack.js
+./node_modules/ganache/node_modules/.bin/browserslist-lint
+ -> ../update-browserslist-db/cli.js
+./node_modules/ganache/node_modules/.bin/webpack-cli
+ -> ../webpack-cli/bin/cli.js
+./node_modules/ganache/node_modules/.bin/z-schema
+ -> ../z-schema/bin/z-schema
+./node_modules/ganache/node_modules/.bin/node-which
+ -> ../which/bin/node-which
+./node_modules/ganache/node_modules/.bin/tsc
+ -> ../typescript/bin/tsc
+./node_modules/ganache/node_modules/.bin/tsserver
+ -> ../typescript/bin/tsserver
+./node_modules/ganache/node_modules/@microsoft/api-extractor/node_modules/.bin/tsc
+ -> ../typescript/bin/tsc
+./node_modules/ganache/node_modules/@microsoft/api-extractor/node_modules/.bin/tsserver
+ -> ../typescript/bin/tsserver
+./node_modules/babel-plugin-macros/node_modules/.bin/resolve
+ -> ../resolve/bin/resolve
+./node_modules/.bin/parser
+ -> ../@babel/parser/bin/babel-parser.js
+./node_modules/.bin/cid
+ -> ../cid-tool/src/cli/bin.js
+./node_modules/.bin/crc32
+ -> ../crc-32/bin/crc32.njs
+./node_modules/.bin/hardhat
+ -> ../hardhat/internal/cli/bootstrap.js
+./node_modules/.bin/ganache
+ -> ../ganache/dist/node/cli.js
+./node_modules/.bin/he
+ -> ../he/bin/he
+./node_modules/.bin/rlp
+ -> ../@ethereumjs/rlp/bin/rlp
+./node_modules/.bin/js-yaml
+ -> ../js-yaml/bin/js-yaml.js
+./node_modules/.bin/loose-envify
+ -> ../loose-envify/cli.js
+./node_modules/.bin/flat
+ -> ../flat/cli.js
+./node_modules/.bin/jsesc
+ -> ../jsesc/bin/jsesc
+./node_modules/.bin/miller-rabin
+ -> ../miller-rabin/bin/miller-rabin
+./node_modules/.bin/mocha
+ -> ../mocha/bin/mocha.js
+./node_modules/.bin/node-gyp-build
+ -> ../node-gyp-build/bin.js
+./node_modules/.bin/node-gyp-build-test
+ -> ../node-gyp-build/build-test.js
+./node_modules/.bin/pino
+ -> ../pino/bin.js
+./node_modules/.bin/_mocha
+ -> ../mocha/bin/_mocha
+./node_modules/.bin/rimraf
+ -> ../rimraf/bin.js
+./node_modules/.bin/qrcode
+ -> ../qrcode/bin/qrcode
+./node_modules/.bin/thirdweb
+ -> ../thirdweb/dist/esm/cli/bin.js
+./node_modules/.bin/semver
+ -> ../semver/bin/semver.js
+./node_modules/.bin/sha.js
+ -> ../sha.js/bin.js
+./node_modules/.bin/thirdweb-cli
+ -> ../thirdweb/dist/esm/cli/bin.js
+./node_modules/.bin/solcjs
+ -> ../solc/solc.js
+./node_modules/.bin/node-gyp-build-optional
+ -> ../node-gyp-build/optional.js
+./node_modules/.bin/yaml
+ -> ../yaml/bin.mjs
+./node_modules/.bin/uuid
+ -> ../uuid/dist/bin/uuid
+./node_modules/.bin/ganache-cli
+ -> ../ganache/dist/node/cli.js
+./node_modules/solc/node_modules/.bin/semver
+ -> ../semver/bin/semver

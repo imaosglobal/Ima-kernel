@@ -1,0 +1,15 @@
+./api/server_BEFORE_CONTEXT_READ.py:7:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CONVERSATION.py:6:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CONVERSATION_CONNECT.py:6:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CORE_SWITCH.py:8:MEMORY_FILE=Path("ima_memory.json")
+./api/server_WORKING_BEFORE_CHAT.py:6:MEMORY_FILE=Path("ima_memory.json")
+./autonomous_core.js:6:    this.memoryFile = './ima_memory.json';
+./core_engine.js:5:        this.memoryFile = './ima_memory.json';
+./ima_mom.py:4:MEM_FILE = "founder/data/ima_memory.json"
+./kernel/publish_safe_v1.sh:39:  echo "{\"error\":\"cli_health_failed\",\"time\":\"$(date -Iseconds)\"}" >> ima_memory.json
+./kernel/publish_safe_v1.sh:46:echo "{\"time\":\"$(date -Iseconds)\",\"status\":\"pre_publish_ok\"}" >> ima_memory.json
+./founder/executive_ai/learning_journal/journal_store.py:6:FILE = Path("founder/data/ima_learning_journal.json")
+./founder/executive_ai/memory/memory_store.py:7:FILE = Path("founder/data/ima_memory.json")
+./ima_one_brain.py:19:STATUS_FILE = ROOT / "startup" / "ima_memory.json"
+./ima_one_brain.py:88:        # Read existing ima_memory.json when possible.
+./repair_final_today.sh:33:    "ima_memory.json"

@@ -1,6 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd ~/ima_kernel
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT"
 
 find . -type d -name "__pycache__" -prune -exec rm -rf {} +
 find . -name "*.pyc" -delete

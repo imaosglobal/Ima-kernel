@@ -1,0 +1,163 @@
+{
+  "id": "evolution_6e6e0d8dae103497",
+  "time": "2026-09-10T14:56:31Z",
+  "creator": "Ori Cohen",
+  "version": "2.0.0",
+  "trigger": "Restore IMA AGI Evolution and teach IMA from her complete history",
+  "context": {
+    "identity": "active",
+    "memory": "active",
+    "learning": "active",
+    "creator": "Ori Cohen",
+    "archive": "knowledge",
+    "history": "preserved"
+  },
+  "inventory": {
+    "files": 15789,
+    "knowledge_candidates": 11933,
+    "large_files": 44,
+    "largest": [
+      {
+        "path": "startup/ima_memory.json",
+        "size": 43002893
+      },
+      {
+        "path": ".ima/audit_backup_20260908_122009.patch",
+        "size": 24081962
+      },
+      {
+        "path": "ima-ui/node_modules/@rolldown/binding-android-arm64/rolldown-binding.android-arm64.node",
+        "size": 17260488
+      },
+      {
+        "path": "founder/data/ima_learning_journal.json",
+        "size": 9907024
+      },
+      {
+        "path": "ima-ui/node_modules/@mediapipe/tasks-vision/wasm/vision_wasm_internal.wasm",
+        "size": 9514390
+      },
+      {
+        "path": "ima-ui/node_modules/@mediapipe/tasks-vision/wasm/vision_wasm_nosimd_internal.wasm",
+        "size": 9379090
+      },
+      {
+        "path": "ima-ui/node_modules/lightningcss-android-arm64/lightningcss.android-arm64.node",
+        "size": 8888080
+      },
+      {
+        "path": "snapshots/ledger_20260709.jsonl",
+        "size": 4044130
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.js.map",
+        "size": 3103315
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.mjs.map",
+        "size": 2992300
+      },
+      {
+        "path": "founder/data/ima_memory.json",
+        "size": 2882503
+      },
+      {
+        "path": "ima-ui/node_modules/stats-gl/node_modules/three/examples/jsm/libs/rhino3dm/rhino3dm.wasm",
+        "size": 2545991
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.min.js.map",
+        "size": 2388094
+      },
+      {
+        "path": "ima-ui/node_modules/three/build/three.webgpu.js",
+        "size": 2172442
+      },
+      {
+        "path": "ima-ui/node_modules/three/build/three.webgpu.nodes.js",
+        "size": 2164091
+      },
+      {
+        "path": "ima-ui/node_modules/three/build/three.cjs",
+        "size": 2093053
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.light.js.map",
+        "size": 2090528
+      },
+      {
+        "path": "ima-ui/node_modules/@dimforge/rapier3d-compat/rapier.cjs.js",
+        "size": 2052394
+      },
+      {
+        "path": "ima-ui/node_modules/@dimforge/rapier3d-compat/rapier.es.js",
+        "size": 2050249
+      },
+      {
+        "path": "ima-ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.development.js",
+        "size": 2044204
+      },
+      {
+        "path": "ima-ui/node_modules/eslint-plugin-react-hooks/cjs/eslint-plugin-react-hooks.production.js",
+        "size": 2039738
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.light.mjs.map",
+        "size": 2013619
+      },
+      {
+        "path": "ima-ui/node_modules/stats-gl/node_modules/three/build/three.webgpu.js",
+        "size": 1680061
+      },
+      {
+        "path": "learning/ima_journal.json",
+        "size": 1679323
+      },
+      {
+        "path": "ima-ui/node_modules/stats-gl/node_modules/three/build/three.webgpu.nodes.js",
+        "size": 1678710
+      },
+      {
+        "path": "learning/learning_memory.json",
+        "size": 1678446
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls-demo.js.map",
+        "size": 1623046
+      },
+      {
+        "path": "ima-ui/node_modules/hls.js/dist/hls.light.min.js.map",
+        "size": 1622621
+      },
+      {
+        "path": "_archive_20260808/learning_backup_adaptive_1784122898/learning_memory.json",
+        "size": 1504050
+      },
+      {
+        "path": "_archive_20260808/learning_backup_stable_20260715_1633/learning_memory.json",
+        "size": 1504050
+      }
+    ]
+  },
+  "learning_policy": {
+    "archive_is_knowledge": true,
+    "runtime_loads_archive_wholesale": false,
+    "inspect_before_promotion": true,
+    "preserve_provenance": true,
+    "preserve_history": true
+  },
+  "evolution_pipeline": [
+    "inspect",
+    "classify",
+    "deduplicate",
+    "identify_valuable_knowledge",
+    "identify_redundant_material",
+    "propose_compression",
+    "propose_code_improvement",
+    "test",
+    "validate",
+    "promote_only_if_valid"
+  ],
+  "automatic_deletion": false,
+  "status": "PROPOSED"
+}

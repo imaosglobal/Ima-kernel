@@ -1,0 +1,49 @@
+./.ima/acting_ai/acting_ai.py:15:BASE = ROOT / ".ima" / "acting_ai"
+./.ima/acting_ai/acting_ai.py:85:    path = LOGS / "acting_ai.jsonl"
+./answer_builder.py:174:    brain=load(HOME/".ima/evolution/evolution_brain.json")
+./archive/ima_master_runtime_before_founder_bridge.py:4:import ima_brain
+./archive/ima_master_runtime_before_founder_bridge.py:53:                events = ima_brain.load_events()
+./archive/ima_master_runtime_before_founder_bridge.py:55:                brain_answer = ima_brain.answer(
+./build_ima_agi_evolution_system.sh:34:  "decision":{"source":"learning/decision_engine.py","status":"active"},
+./build_ima_boot_gate.sh:61:"decision_engine",
+./build_ima_kernel_bridge.sh:54:        "decision_engine.py",
+./build_ima_kernel_bridge.sh:104:"decision_engine",
+./build_ima_kernel_bridge.sh:127:"$RUNTIME/decision_engine.py" \
+./build_ima_master_lifecycle.sh:49:cat > "$ROOT/decision_engine.py" <<'PY'
+./build_ima_master_lifecycle.sh:90:"decision_engine.py",
+./decision_engine.py:5:p=Path.home()/".ima/evolution/evolution_brain.json"
+./evolution_brain.py:9:OUT=BASE/".ima/evolution/evolution_brain.json"
+./ima_core_runtime.py:8:    import ima_brain
+./ima_core_runtime.py:10:    ima_brain=None
+./ima_one_command_fusion.sh:68: "brain":"ima_brain.py",
+./install_ima_truth_engine.sh:21:    Path.home()/".ima/evolution/evolution_brain.json",
+./install_meta_learning.sh:9:cat > "$BASE/evolution_brain.py" <<'PY'
+./install_meta_learning.sh:18:OUT=BASE/".ima/evolution/evolution_brain.json"
+./install_meta_learning.sh:147:p=Path.home()/"ima_kernel/.ima/evolution/evolution_brain.json"
+./install_meta_learning.sh:182:cat > "$BASE/decision_engine.py" <<'PY'
+./install_meta_learning.sh:187:p=Path.home()/"ima_kernel/.ima/evolution/evolution_brain.json"
+./install_meta_learning.sh:221:python "$BASE/evolution_brain.py"
+./install_meta_learning.sh:223:python "$BASE/decision_engine.py"
+./install_system_truth_layer.sh:114:            "evolution_brain":
+./install_system_truth_layer.sh:115:            (EVO/"evolution_brain.json").exists(),
+grep: ./kernel/_runtime_backup/autonomous_runtime.js: No such file or directory
+./kernel/ima_consolidation_engine.js:279:'decision_engine.js'
+./kernel/ima_decide.sh:6:node ~/ima_core/kernel/decision_engine.js "$ACTION"
+./kernel/ima_gate.sh:5:DECISION=$(node ~/ima_core/kernel/decision_engine.js "$CMD")
+./kernel/ima_governor.sh:7:RESULT=$(node ~/ima_core/kernel/decision_engine.js "$ACTION")
+./goal_engine.py:5:p=Path.home()/".ima/evolution/evolution_brain.json"
+./ima_core_integration_audit.py:6:    "ima_brain.py",
+./ima_one_brain.py:101:        existing["ima_one_brain_status.json"] = json.dumps(
+./ima_question_engine.py:29:        EVOLUTION/"evolution_brain.json",
+./install_ima_answer_layer_v1.sh:21:    brain=load(HOME/".ima/evolution/evolution_brain.json")
+./learning/_backup_ima_learning_loop_before_world_bridge.py:4:from learning.decision_engine import make_learning_decision
+./learning/_backup_meta_orchestrator_20260718_210714/meta_orchestrator.py:7:from learning.decision_engine import make_learning_decision
+./learning/_backup_meta_orchestrator_20260718_210735/meta_orchestrator.py:7:from learning.decision_engine import make_learning_decision
+./learning/_backup_reasoning_20260718_210634/meta_orchestrator.py:7:from learning.decision_engine import make_learning_decision
+./learning/historical_inference.py:15:    from ima_brain import load_events
+./prepare_investor_ready.sh:148:"ima_brain",
+./system_truth_layer.py:138:            "evolution_brain":
+./system_truth_layer.py:139:            (EVO/"evolution_brain.json").exists(),
+./truth_engine.py:16:    Path.home()/".ima/evolution/evolution_brain.json",
+./upgrade_truth_engine_v2.sh:25:    Path.home()/".ima/evolution/evolution_brain.json",
+./verify_ima_master_connection.sh:30:"$RUNTIME/decision_engine.py"

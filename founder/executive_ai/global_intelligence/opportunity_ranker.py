@@ -54,13 +54,13 @@ def rank_opportunity(entity):
     ).lower()
 
 
-    if entity.get("type") == "government":
+    if entity_type == "government":
         if "public impact" in lessons:
             score += 5
             reasons.append("learned government impact strategy")
 
 
-    if "startup" in entity_text or entity.get("type")=="company":
+    if "startup" in entity_text or entity_type=="company":
         if "positive outreach" in lessons:
             score += 10
             reasons.append("previous positive signal")

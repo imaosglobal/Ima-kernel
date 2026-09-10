@@ -60,6 +60,44 @@ def check_local_services():
     return services
 
 
+def check_android_ai_apps():
+    apps = [
+        ("gemini", "com.google.android.apps.bard"),
+        ("chatgpt", "com.openai.chatgpt"),
+        ("claude", "com.anthropic.claude"),
+    ]
+
+    found = []
+
+    try:
+        import subprocess
+
+        for provider, package in apps:
+            try:
+                result = subprocess.run(
+                    ["cmd", "package", "resolve-activity",
+                     "--brief", package],
+                    capture_output=True,
+                    text=True,
+                    timeout=2,
+                )
+
+                if result.returncode == 0 and result.stdout.strip():
+                    found.append({
+                        "provider": provider,
+                        "package": package,
+                        "type": "android_app",
+                        "installed": True,
+                        "ready": True,
+                    })
+            except Exception:
+                pass
+
+    except Exception:
+        pass
+
+    return found
+
 def check_cloud():
     providers=[]
 
@@ -81,6 +119,7 @@ def check_cloud():
 def discover():
     result={
         "time":time.time(),
+        "android_apps":check_android_ai_apps(),
         "local_models":check_ollama(),
         "local_services":check_local_services(),
         "cloud":check_cloud()

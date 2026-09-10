@@ -1,0 +1,92 @@
+from billing.router import available
+
+
+COUNTRY_RULES = {
+    "IL": {
+        "currency": "ILS",
+        "preferred": ["tranzila", "payplus", "cardcom", "pelecard"],
+    },
+    "US": {
+        "currency": "USD",
+        "preferred": ["adyen", "checkout_com", "braintree"],
+    },
+    "GB": {
+        "currency": "GBP",
+        "preferred": ["adyen", "checkout_com"],
+    },
+    "EU": {
+        "currency": "EUR",
+        "preferred": ["adyen", "checkout_com", "mollie"],
+    },
+}
+
+
+def route_payment(platform, country, currency=None, capability="cards"):
+    country = country.upper()
+
+    # Android digital subscriptions use platform billing.
+    if platform == "android" and capability == "subscription":
+        matches = available(
+            platform="android",
+            capability="subscriptions",
+            provider_type="platform",
+        )
+        if matches:
+            return matches[0]
+
+    rule = COUNTRY_RULES.get(country)
+
+    if not rule:
+        rule = {
+            "currency": currency,
+            "preferred": [],
+        }
+
+    if currency is None:
+        currency = rule.get("currency")
+
+    candidates = available(
+        platform=platform,
+        capability="cards",
+        provider_type="psp",
+    )
+
+    # Prefer providers configured for the country.
+    for provider_id in rule.get("preferred", []):
+        for provider in candidates:
+            if provider["id"] == provider_id:
+                return provider
+
+    if candidates:
+        return candidates[0]
+
+    raise RuntimeError(
+        f"No billing provider for "
+        f"platform={platform}, country={country}, "
+        f"currency={currency}, capability={capability}"
+    )
+
+
+if __name__ == "__main__":
+    tests = [
+        ("web", "IL", "ILS", "cards"),
+        ("web", "US", "USD", "cards"),
+        ("web", "GB", "GBP", "cards"),
+        ("android", "IL", "ILS", "subscription"),
+    ]
+
+    for platform, country, currency, capability in tests:
+        provider = route_payment(
+            platform,
+            country,
+            currency,
+            capability,
+        )
+
+        print(
+            f"{platform:8} "
+            f"{country:2} "
+            f"{currency:3} "
+            f"{capability:12} "
+            f"-> {provider['id']}"
+        )

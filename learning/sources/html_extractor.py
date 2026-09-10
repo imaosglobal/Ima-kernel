@@ -37,3 +37,8 @@ def extract_text(html):
     text=" ".join(text.split())
 
     return text[:5000]
+
+
+def clean_html(html):
+    """Canonical HTML cleaning API used by source_cleaner."""
+    return extract_text(html)

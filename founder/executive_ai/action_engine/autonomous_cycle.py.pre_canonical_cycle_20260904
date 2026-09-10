@@ -1,0 +1,87 @@
+from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+from founder.executive_ai.action_engine.action_learning_loop import learning_cycle
+from learning.self_improvement import run_self_improvement
+
+
+def run_cycle():
+    """
+    Canonical autonomous IMA cycle.
+
+    Observe -> Diagnose -> Plan -> Execute -> Verify -> Learn.
+    A single observation is propagated through the action pipeline.
+    """
+    print("=== IMA AUTONOMOUS CYCLE START ===")
+
+    # --------------------------------------------------------
+    # SELF-DEVELOPMENT / DIAGNOSIS
+    # --------------------------------------------------------
+    self_development = run_self_improvement()
+
+    # --------------------------------------------------------
+    # OBSERVE
+    # --------------------------------------------------------
+    from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+    from founder.executive_ai.global_intelligence.ranking_engine import ranker
+    from founder.executive_ai.global_intelligence.opportunity_ranker import rank_opportunity
+
+    discoveries = world_scanner.scan_sources()
+    ranked = ranker(discoveries) if isinstance(discoveries, list) else []
+
+    opportunities = []
+
+    for item in ranked:
+        if not isinstance(item, dict):
+            continue
+
+        try:
+            opportunity = rank_opportunity(item)
+        except Exception:
+            continue
+
+        if not isinstance(opportunity, dict):
+            continue
+
+        enriched = dict(item)
+        enriched["opportunity_score"] = opportunity.get(
+            "opportunity_score",
+            item.get("rank_score", item.get("score", 0)),
+        )
+        enriched["opportunity_signals"] = opportunity.get(
+            "signals",
+            [],
+        )
+
+        opportunities.append(enriched)
+
+    print(
+        "[OBSERVE]",
+        len(discoveries),
+        "signals |",
+        len(opportunities),
+        "opportunities",
+    )
+
+    # --------------------------------------------------------
+    # PLAN -> EXECUTE -> PERSIST -> LEARN
+    # --------------------------------------------------------
+    actions = run_world_actions(
+        opportunities=opportunities,
+    )
+
+    learning = learning_cycle()
+
+    print("[ACTIONS]", len(actions))
+
+    return {
+        "self_development": self_development,
+        "discoveries": len(discoveries),
+        "opportunities": len(opportunities),
+        "actions": actions,
+        "learning": learning,
+        "status": "cycle_completed",
+    }
+
+
+if __name__ == "__main__":
+    result = run_cycle()
+    print(result)

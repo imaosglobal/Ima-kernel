@@ -1,7 +1,9 @@
 from flask import Flask, render_template_string, request
 from ima_ledger import cmd_deposit, cmd_balance
+from billing.api import billing_api
 
 app = Flask(__name__)
+app.register_blueprint(billing_api)
 USER = "test_user"
 
 HTML = """

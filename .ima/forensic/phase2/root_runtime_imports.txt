@@ -1,0 +1,69 @@
+
+----- server.js -----
+1:const express = require("express");
+4:const { load, save, addMemory } = require("./kernel/memory_engine");
+5:const stability = require("./kernel/stability");
+28:app.listen(3000, () => {
+
+----- ima_server.py -----
+1:from fastapi import FastAPI
+2:from pydantic import BaseModel
+3:import os
+4:import requests
+5:from dotenv import load_dotenv
+7:app = FastAPI()
+
+----- ima_brain.py -----
+1:import json, os
+2:from learning.learning_memory import store_pattern
+3:from learning.learning_loop import learn_from_event
+4:from learning.historical_inference import get_conclusions
+
+----- ima_core_runtime.py -----
+1:from pathlib import Path
+2:import json,time
+4:import conversation_layer
+5:import identity_context
+
+----- ima_one_brain.py -----
+12:from datetime import datetime
+13:import json
+14:import traceback
+15:from pathlib import Path
+
+----- decision_engine.py -----
+1:import json
+2:from pathlib import Path
+
+----- evolution_brain.py -----
+1:import json
+2:from pathlib import Path
+3:from datetime import datetime
+
+----- ima_kernel.py -----
+1:import json
+2:import sys
+4:from ima_reducer import reduce
+
+----- start_ima.py -----
+2:import os
+3:import sys
+4:import subprocess
+5:import webbrowser
+6:from flask import Flask, request, jsonify, send_from_directory
+7:from flask_cors import CORS
+15:        subprocess.run([sys.executable, "-m", "pip", "install", pkg])
+73:from flask import Flask, request, jsonify, send_from_directory
+74:from flask_cors import CORS
+75:import os
+77:app=Flask(__name__)
+107:subprocess.run([sys.executable,"run_ima.py"])
+
+----- run_ima.py -----
+2:from flask import Flask, request, jsonify, send_from_directory
+3:from flask_cors import CORS
+4:import subprocess
+6:app = Flask(__name__)
+55:# ===== Flask routes =====
+64:    subprocess.Popen(['am', 'start', '-a', 'android.intent.action.VIEW', '-d', url])
+68:# הפעלת Flask server

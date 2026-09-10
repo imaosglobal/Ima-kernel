@@ -339025,5 +339025,551 @@
     "category": "system_event",
     "importance": 50,
     "metadata": {}
+  },
+  {
+    "timestamp": 1787921576.5732548,
+    "datetime": "2026-08-28T15:52:56.573257",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1787921576.9061668,
+    "datetime": "2026-08-28T15:52:56.906170",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1787921656.1841917,
+    "datetime": "2026-08-28T15:54:16.184193",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1787921697.5250814,
+    "datetime": "2026-08-28T15:54:57.525083",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788515095.572517,
+    "datetime": "2026-09-04T12:44:55.572520",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788529613.7720485,
+    "datetime": "2026-09-04T16:46:53.772053",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788532688.5916662,
+    "datetime": "2026-09-04T17:38:08.591668",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788535379.396081,
+    "datetime": "2026-09-04T18:22:59.396086",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788535912.6591673,
+    "datetime": "2026-09-04T18:31:52.659168",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788537303.3177717,
+    "datetime": "2026-09-04T18:55:03.317773",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788540904.8371582,
+    "datetime": "2026-09-04T19:55:04.837161",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541282.5707433,
+    "datetime": "2026-09-04T20:01:22.570745",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541320.283245,
+    "datetime": "2026-09-04T20:02:00.283247",
+    "event_type": "action_generation_started",
+    "title": "action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541396.7178397,
+    "datetime": "2026-09-04T20:03:16.717842",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541433.865193,
+    "datetime": "2026-09-04T20:03:53.865194",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788541542.862336,
+    "datetime": "2026-09-04T20:05:42.862337",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541543.0916948,
+    "datetime": "2026-09-04T20:05:43.091697",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788541575.886434,
+    "datetime": "2026-09-04T20:06:15.886435",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541576.1247566,
+    "datetime": "2026-09-04T20:06:16.124758",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788541698.279003,
+    "datetime": "2026-09-04T20:08:18.279005",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541698.536583,
+    "datetime": "2026-09-04T20:08:18.536585",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788541796.5753474,
+    "datetime": "2026-09-04T20:09:56.575349",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541796.8185892,
+    "datetime": "2026-09-04T20:09:56.818591",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788541968.7872398,
+    "datetime": "2026-09-04T20:12:48.787243",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788541969.0666847,
+    "datetime": "2026-09-04T20:12:49.066687",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788542842.6204507,
+    "datetime": "2026-09-04T20:27:22.620452",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788542842.879191,
+    "datetime": "2026-09-04T20:27:22.879193",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788542935.4477274,
+    "datetime": "2026-09-04T20:28:55.447730",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788542935.692669,
+    "datetime": "2026-09-04T20:28:55.692671",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788543049.6145513,
+    "datetime": "2026-09-04T20:30:49.614552",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788543049.854216,
+    "datetime": "2026-09-04T20:30:49.854218",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788543135.557178,
+    "datetime": "2026-09-04T20:32:15.557180",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788543135.8087296,
+    "datetime": "2026-09-04T20:32:15.808732",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788543180.271478,
+    "datetime": "2026-09-04T20:33:00.271480",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788543180.5218174,
+    "datetime": "2026-09-04T20:33:00.521820",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788543232.6811857,
+    "datetime": "2026-09-04T20:33:52.681187",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788543232.9386272,
+    "datetime": "2026-09-04T20:33:52.938630",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 0
+    }
+  },
+  {
+    "timestamp": 1788543300.7010646,
+    "datetime": "2026-09-04T20:35:00.701066",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788543300.9442487,
+    "datetime": "2026-09-04T20:35:00.944250",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 8
+    }
+  },
+  {
+    "timestamp": 1788994345.5278428,
+    "datetime": "2026-09-10T01:52:25.527846",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788994345.7850509,
+    "datetime": "2026-09-10T01:52:25.785053",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 9
+    }
+  },
+  {
+    "timestamp": 1788994397.4588056,
+    "datetime": "2026-09-10T01:53:17.458806",
+    "event_type": "opportunity_action_generation_started",
+    "title": "opportunity_action_generation_started",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {}
+  },
+  {
+    "timestamp": 1788994397.6952386,
+    "datetime": "2026-09-10T01:53:17.695241",
+    "event_type": "opportunity_action_generation_completed",
+    "title": "opportunity_action_generation_completed",
+    "problem": null,
+    "solution": null,
+    "source": "action_engine",
+    "category": "system_event",
+    "importance": 50,
+    "metadata": {
+      "actions": 9
+    }
   }
 ]

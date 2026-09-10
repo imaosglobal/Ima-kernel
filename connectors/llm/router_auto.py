@@ -3,36 +3,43 @@ from .capability_test import rank
 
 
 def choose_model():
-    data=discover()
+    data = discover()
 
-    models=data.get("local_models",[])
+    android_apps = data.get("android_apps", [])
 
-    if models:
-        ranked=rank(
-            [m["name"] for m in models]
-        )
-
-        best=ranked[0]
-
+    if android_apps:
+        app = android_apps[0]
         return {
-            "provider":"ollama",
-            "model":best["model"],
-            "score":best["score"],
-            "source":"local"
+            "provider": app["provider"],
+            "package": app["package"],
+            "source": "android_app",
         }
 
-    clouds=[
-        x for x in data.get("cloud",[])
+    models = data.get("local_models", [])
+
+    if models:
+        ranked = rank([m["name"] for m in models])
+        if ranked:
+            best = ranked[0]
+            return {
+                "provider": "ollama",
+                "model": best["model"],
+                "score": best["score"],
+                "source": "local",
+            }
+
+    clouds = [
+        x for x in data.get("cloud", [])
         if x.get("configured")
     ]
 
     if clouds:
         return {
-            "provider":clouds[0]["provider"],
-            "source":"cloud"
+            "provider": clouds[0]["provider"],
+            "source": "cloud",
         }
 
     return {
-        "provider":"none",
-        "source":"none"
+        "provider": "none",
+        "source": "none",
     }

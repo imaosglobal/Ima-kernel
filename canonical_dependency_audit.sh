@@ -2,7 +2,7 @@
 
 set -e
 
-ROOT="$HOME/ima_kernel"
+ROOT="$HOME/Ima-kernel"
 cd "$ROOT"
 
 mkdir -p .ima/runtime

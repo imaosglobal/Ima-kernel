@@ -3,13 +3,13 @@
 
 --- 1. ג'מיני: פרודקשן + ביצועים ---
 === IMA CLEAN v2 ===
-EVENTS: 0
+EVENTS: 11
 QUESTIONS: 0
 ANSWERS: 0
 
 --- 2. קלוד: ארכיטקטורה + חובות טכניים ---
 === IMA CANONICAL ARCHITECTURE AUDIT ===
-TIME: Tue Aug 25 17:23:49 IDT 2026
+TIME: Tue Aug 25 18:42:32 IDT 2026
 
 === COMPONENTS ===
 OK   kernel/runtime/SYSTEM_KERNEL_UNIFIED_RUNTIME_V1.js
@@ -560,7 +560,7 @@ history: 0
 
 [LEARNING]
 learning loop import: OK
-function: <function run_ima_learning_loop at 0x751f6a63e0>
+function: <function run_ima_learning_loop at 0x728a4a23e0>
 
 [KNOWLEDGE]
 knowledge engine: OK
@@ -580,30 +580,262 @@ llm layer exists: OK
 === GIT STATE ===
 On branch master
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   .ima/governance/architecture_audit_report.txt
+	modified:   .ima/governance/product_readiness_report.json
+	modified:   council_final_report.txt
 	modified:   council_improvements_report.txt
+	deleted:    council_v4_report.txt
+	modified:   deployed_addresses.txt
+	modified:   node_modules/.package-lock.json
+	deleted:    node_modules/accepts/HISTORY.md
+	deleted:    node_modules/accepts/LICENSE
+	deleted:    node_modules/accepts/README.md
+	deleted:    node_modules/accepts/index.js
+	deleted:    node_modules/accepts/package.json
+	deleted:    node_modules/body-parser/LICENSE
+	deleted:    node_modules/body-parser/README.md
+	deleted:    node_modules/body-parser/index.js
+	deleted:    node_modules/body-parser/lib/read.js
+	deleted:    node_modules/body-parser/lib/types/json.js
+	deleted:    node_modules/body-parser/lib/types/raw.js
+	deleted:    node_modules/body-parser/lib/types/text.js
+	deleted:    node_modules/body-parser/lib/types/urlencoded.js
+	deleted:    node_modules/body-parser/lib/utils.js
+	deleted:    node_modules/body-parser/package.json
+	deleted:    node_modules/content-disposition/LICENSE
+	deleted:    node_modules/content-disposition/README.md
+	deleted:    node_modules/content-disposition/index.js
+	deleted:    node_modules/content-disposition/package.json
+	deleted:    node_modules/content-type/HISTORY.md
+	deleted:    node_modules/content-type/LICENSE
+	deleted:    node_modules/content-type/README.md
+	deleted:    node_modules/content-type/index.js
+	deleted:    node_modules/content-type/package.json
+	deleted:    node_modules/cookie-signature/History.md
+	deleted:    node_modules/cookie-signature/LICENSE
+	deleted:    node_modules/cookie-signature/Readme.md
+	deleted:    node_modules/cookie-signature/index.js
+	deleted:    node_modules/cookie-signature/package.json
+	modified:   node_modules/cookie/README.md
+	deleted:    node_modules/cookie/SECURITY.md
+	modified:   node_modules/cookie/index.js
+	modified:   node_modules/cookie/package.json
+	deleted:    node_modules/cors/LICENSE
+	deleted:    node_modules/cors/README.md
+	deleted:    node_modules/cors/lib/index.js
+	deleted:    node_modules/cors/package.json
+	deleted:    node_modules/ee-first/LICENSE
+	deleted:    node_modules/ee-first/README.md
+	deleted:    node_modules/ee-first/index.js
+	deleted:    node_modules/ee-first/package.json
+	deleted:    node_modules/encodeurl/LICENSE
+	deleted:    node_modules/encodeurl/README.md
+	deleted:    node_modules/encodeurl/index.js
+	deleted:    node_modules/encodeurl/package.json
+	modified:   node_modules/es-object-atoms/CHANGELOG.md
+	modified:   node_modules/es-object-atoms/isObject.d.ts
+	modified:   node_modules/es-object-atoms/package.json
+	modified:   node_modules/es-object-atoms/tsconfig.json
+	deleted:    node_modules/escape-html/LICENSE
+	deleted:    node_modules/escape-html/Readme.md
+	deleted:    node_modules/escape-html/index.js
+	deleted:    node_modules/escape-html/package.json
+	deleted:    node_modules/etag/HISTORY.md
+	deleted:    node_modules/etag/LICENSE
+	deleted:    node_modules/etag/README.md
+	deleted:    node_modules/etag/index.js
+	deleted:    node_modules/etag/package.json
+	deleted:    node_modules/express/LICENSE
+	deleted:    node_modules/express/Readme.md
+	deleted:    node_modules/express/index.js
+	deleted:    node_modules/express/lib/application.js
+	deleted:    node_modules/express/lib/express.js
+	deleted:    node_modules/express/lib/request.js
+	deleted:    node_modules/express/lib/response.js
+	deleted:    node_modules/express/lib/utils.js
+	deleted:    node_modules/express/lib/view.js
+	deleted:    node_modules/express/package.json
+	deleted:    node_modules/finalhandler/HISTORY.md
+	deleted:    node_modules/finalhandler/LICENSE
+	deleted:    node_modules/finalhandler/README.md
+	deleted:    node_modules/finalhandler/index.js
+	deleted:    node_modules/finalhandler/package.json
+	deleted:    node_modules/forwarded/HISTORY.md
+	deleted:    node_modules/forwarded/LICENSE
+	deleted:    node_modules/forwarded/README.md
+	deleted:    node_modules/forwarded/index.js
+	deleted:    node_modules/forwarded/package.json
+	deleted:    node_modules/fresh/HISTORY.md
+	deleted:    node_modules/fresh/LICENSE
+	deleted:    node_modules/fresh/README.md
+	deleted:    node_modules/fresh/index.js
+	deleted:    node_modules/fresh/package.json
+	modified:   node_modules/hasown/CHANGELOG.md
+	modified:   node_modules/hasown/index.d.ts
+	modified:   node_modules/hasown/package.json
+	modified:   node_modules/iconv-lite/README.md
+	modified:   node_modules/iconv-lite/encodings/dbcs-codec.js
+	modified:   node_modules/iconv-lite/encodings/dbcs-data.js
+	modified:   node_modules/iconv-lite/encodings/index.js
+	modified:   node_modules/iconv-lite/encodings/internal.js
+	modified:   node_modules/iconv-lite/encodings/sbcs-codec.js
+	modified:   node_modules/iconv-lite/encodings/sbcs-data.js
+	modified:   node_modules/iconv-lite/encodings/tables/gbk-added.json
+	modified:   node_modules/iconv-lite/encodings/utf16.js
+	deleted:    node_modules/iconv-lite/encodings/utf32.js
+	modified:   node_modules/iconv-lite/encodings/utf7.js
+	modified:   node_modules/iconv-lite/lib/bom-handling.js
+	deleted:    node_modules/iconv-lite/lib/helpers/merge-exports.js
+	modified:   node_modules/iconv-lite/lib/index.d.ts
+	modified:   node_modules/iconv-lite/lib/index.js
+	modified:   node_modules/iconv-lite/lib/streams.js
+	modified:   node_modules/iconv-lite/package.json
+	deleted:    node_modules/iconv-lite/types/encodings.d.ts
+	deleted:    node_modules/ipaddr.js/LICENSE
+	deleted:    node_modules/ipaddr.js/README.md
+	deleted:    node_modules/ipaddr.js/ipaddr.min.js
+	deleted:    node_modules/ipaddr.js/lib/ipaddr.js
+	deleted:    node_modules/ipaddr.js/lib/ipaddr.js.d.ts
+	deleted:    node_modules/ipaddr.js/package.json
+	deleted:    node_modules/is-promise/LICENSE
+	deleted:    node_modules/is-promise/index.d.ts
+	deleted:    node_modules/is-promise/index.js
+	deleted:    node_modules/is-promise/index.mjs
+	deleted:    node_modules/is-promise/package.json
+	deleted:    node_modules/is-promise/readme.md
+	deleted:    node_modules/media-typer/HISTORY.md
+	deleted:    node_modules/media-typer/LICENSE
+	deleted:    node_modules/media-typer/README.md
+	deleted:    node_modules/media-typer/index.js
+	deleted:    node_modules/media-typer/package.json
+	deleted:    node_modules/merge-descriptors/index.d.ts
+	deleted:    node_modules/merge-descriptors/index.js
+	deleted:    node_modules/merge-descriptors/license
+	deleted:    node_modules/merge-descriptors/package.json
+	deleted:    node_modules/merge-descriptors/readme.md
+	modified:   node_modules/mime-db/HISTORY.md
+	modified:   node_modules/mime-db/README.md
+	modified:   node_modules/mime-db/db.json
+	modified:   node_modules/mime-db/package.json
+	modified:   node_modules/mime-types/HISTORY.md
+	modified:   node_modules/mime-types/README.md
+	modified:   node_modules/mime-types/index.js
+	deleted:    node_modules/mime-types/mimeScore.js
+	modified:   node_modules/mime-types/package.json
+	deleted:    node_modules/negotiator/HISTORY.md
+	deleted:    node_modules/negotiator/LICENSE
+	deleted:    node_modules/negotiator/README.md
+	deleted:    node_modules/negotiator/index.js
+	deleted:    node_modules/negotiator/lib/charset.js
+	deleted:    node_modules/negotiator/lib/encoding.js
+	deleted:    node_modules/negotiator/lib/language.js
+	deleted:    node_modules/negotiator/lib/mediaType.js
+	deleted:    node_modules/negotiator/package.json
+	deleted:    node_modules/object-assign/index.js
+	deleted:    node_modules/object-assign/license
+	deleted:    node_modules/object-assign/package.json
+	deleted:    node_modules/object-assign/readme.md
+	deleted:    node_modules/on-finished/HISTORY.md
+	deleted:    node_modules/on-finished/LICENSE
+	deleted:    node_modules/on-finished/README.md
+	deleted:    node_modules/on-finished/index.js
+	deleted:    node_modules/on-finished/package.json
+	deleted:    node_modules/parseurl/HISTORY.md
+	deleted:    node_modules/parseurl/LICENSE
+	deleted:    node_modules/parseurl/README.md
+	deleted:    node_modules/parseurl/index.js
+	deleted:    node_modules/parseurl/package.json
+	deleted:    node_modules/path-to-regexp/LICENSE
+	deleted:    node_modules/path-to-regexp/Readme.md
+	deleted:    node_modules/path-to-regexp/dist/index.d.ts
+	deleted:    node_modules/path-to-regexp/dist/index.js
+	deleted:    node_modules/path-to-regexp/dist/index.js.map
+	deleted:    node_modules/path-to-regexp/package.json
+	deleted:    node_modules/proxy-addr/HISTORY.md
+	deleted:    node_modules/proxy-addr/LICENSE
+	deleted:    node_modules/proxy-addr/README.md
+	deleted:    node_modules/proxy-addr/index.js
+	deleted:    node_modules/proxy-addr/package.json
+	modified:   node_modules/qs/CHANGELOG.md
+	modified:   node_modules/qs/README.md
+	modified:   node_modules/qs/dist/qs.js
+	modified:   node_modules/qs/eslint.config.mjs
+	modified:   node_modules/qs/lib/parse.js
+	modified:   node_modules/qs/lib/stringify.js
+	modified:   node_modules/qs/lib/utils.js
+	modified:   node_modules/qs/package.json
+	modified:   node_modules/qs/test/parse.js
+	modified:   node_modules/qs/test/stringify.js
+	modified:   node_modules/qs/test/utils.js
+	deleted:    node_modules/range-parser/HISTORY.md
+	deleted:    node_modules/range-parser/LICENSE
+	deleted:    node_modules/range-parser/README.md
+	deleted:    node_modules/range-parser/index.js
+	deleted:    node_modules/range-parser/package.json
+	modified:   node_modules/raw-body/index.d.ts
+	modified:   node_modules/raw-body/package.json
+	deleted:    node_modules/router/HISTORY.md
+	deleted:    node_modules/router/LICENSE
+	deleted:    node_modules/router/README.md
+	deleted:    node_modules/router/index.js
+	deleted:    node_modules/router/lib/layer.js
+	deleted:    node_modules/router/lib/route.js
+	deleted:    node_modules/router/package.json
+	deleted:    node_modules/send/LICENSE
+	deleted:    node_modules/send/README.md
+	deleted:    node_modules/send/index.js
+	deleted:    node_modules/send/package.json
+	deleted:    node_modules/serve-static/LICENSE
+	deleted:    node_modules/serve-static/README.md
+	deleted:    node_modules/serve-static/index.js
+	deleted:    node_modules/serve-static/package.json
+	modified:   node_modules/side-channel/CHANGELOG.md
+	modified:   node_modules/side-channel/README.md
+	modified:   node_modules/side-channel/index.js
+	modified:   node_modules/side-channel/package.json
+	modified:   node_modules/side-channel/test/index.js
+	deleted:    node_modules/type-is/HISTORY.md
+	deleted:    node_modules/type-is/LICENSE
+	deleted:    node_modules/type-is/README.md
+	deleted:    node_modules/type-is/index.js
+	deleted:    node_modules/type-is/package.json
+	deleted:    node_modules/vary/HISTORY.md
+	deleted:    node_modules/vary/LICENSE
+	deleted:    node_modules/vary/README.md
+	deleted:    node_modules/vary/index.js
+	deleted:    node_modules/vary/package.json
+	modified:   package-lock.json
+	modified:   package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	contracts/
+	council_memory.txt
+	deploy.js
+	hardhat.config.js
+	scripts/
 
 no changes added to commit (use "git add" and/or "git commit -a")
-9ea241d IMA v2.2: Apply 9 council improvements - cleanup, cache, security, identity
-f43ff0a IMA v2.1: Ledger + Money Commands + Council Audit
-441037f Add: ledger.jsonl + money commands for simulation
+851ecf5 IMA v2.4.1: Council V4 Full Audit
+c0f559f IMA v2.5.1: Council V4.1 - Removed hardcoded secrets + Fixed canonical paths
+1f3c452 BACKUP before Council V4.1 auto-fix
 
 REPORT SAVED:
 .ima/governance/architecture_audit_report.txt
 
 --- 3. מדה: אבטחה + GO/NO-GO לTESTNET ---
 === IMA PRODUCT READINESS AUDIT ===
-Android : FOUND ( 30 )
-UI : FOUND ( 108 )
-API : FOUND ( 65 )
-Identity : FOUND ( 48 )
-Security : FOUND ( 45 )
-Voice : FOUND ( 2 )
-Child : FOUND ( 8 )
-Device : FOUND ( 13 )
-Deployment : FOUND ( 31 )
+Android : FOUND ( 53 )
+UI : FOUND ( 13237 )
+API : FOUND ( 1361 )
+Identity : FOUND ( 1312 )
+Security : FOUND ( 530 )
+Voice : FOUND ( 15 )
+Child : FOUND ( 157 )
+Device : FOUND ( 32 )
+Deployment : FOUND ( 596 )
 
 PRODUCT REPORT SAVED
 
@@ -624,7 +856,7 @@ CANONICAL BRAIN OK
   "checks": {
     "Android": {
       "status": "FOUND",
-      "count": 30,
+      "count": 53,
       "examples": [
         "android/build.gradle",
         "android/build_all.sh",
@@ -635,7 +867,7 @@ CANONICAL BRAIN OK
     },
     "UI": {
       "status": "FOUND",
-      "count": 108,
+      "count": 13237,
       "examples": [
         "approved_learning_integration.json",
         "app.py",
@@ -646,7 +878,7 @@ CANONICAL BRAIN OK
     },
     "API": {
       "status": "FOUND",
-      "count": 65,
+      "count": 1361,
       "examples": [
         "ima_api_documentation.md",
         "_tmp_server.js",
@@ -657,7 +889,7 @@ CANONICAL BRAIN OK
     },
     "Identity": {
       "status": "FOUND",
-      "count": 48,
+      "count": 1312,
       "examples": [
         "authority_lock.json",
         "canonical_authority.json",
@@ -668,7 +900,7 @@ CANONICAL BRAIN OK
     },
     "Security": {
       "status": "FOUND",
-      "count": 45,
+      "count": 530,
       "examples": [
         "security.md",
         ".ima_guardian/policy.json",
@@ -679,26 +911,29 @@ CANONICAL BRAIN OK
     },
     "Voice": {
       "status": "FOUND",
-      "count": 2,
+      "count": 15,
       "examples": [
         ".ima/voice.json",
-        "product/voice/voice_pipeline.json"
+        "product/voice/voice_pipeline.json",
+        "node_modules/three/src/loaders/audioloader.js",
+        "node_modules/three/src/audio/audio.js",
+        "node_modules/three/src/audio/audioanalyser.js"
       ]
     },
     "Child": {
       "status": "FOUND",
-      "count": 8,
+      "count": 157,
       "examples": [
         "child_safety/child_safety_core.py",
         "learning/child_safety_engine.py",
         "product/childcare/ima_child_companion.json",
-        "_archive_20260808/learning_backup_adaptive_1784122898/child_safety_engine.py",
-        "_archive_20260808/learning_backup_stable_20260715_1633/child_safety_engine.py"
+        "node_modules/lodash/_parent.js",
+        "node_modules/chokidar/license"
       ]
     },
     "Device": {
       "status": "FOUND",
-      "count": 13,
+      "count": 32,
       "examples": [
         "device/device_manager.py",
         "devices/readme.md",
@@ -709,16 +944,16 @@ CANONICAL BRAIN OK
     },
     "Deployment": {
       "status": "FOUND",
-      "count": 31,
+      "count": 596,
       "examples": [
         "dockerfile",
         "ima_deployment_checklist.md",
         "docker-compose.yml",
-        "ima_final_unification_and_deployment_lock.sh",
-        "deployment/readme.md"
+        "deployed_addresses.txt",
+        "deploy.js"
       ]
     }
   },
-  "time": 1787667830.5828776
+  "time": 1787672554.8426251
 }
 === IMA PRODUCT READINESS COMPLETE ===

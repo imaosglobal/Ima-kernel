@@ -40,6 +40,28 @@ SOURCE_MAP = {
 
 
 def detect_topic(question):
+    creator_keywords = [
+        "השירים שלי",
+        "השיר שלי",
+        "השירים",
+        "השיר",
+        "השירה שלי",
+        "השירה",
+        "השירים של אורי",
+        "היצירות שלי",
+        "היצירות",
+        "הכתיבה שלי",
+        "הפייסבוק שלי",
+        "facebook",
+        "ori cohen",
+        "אורי כהן",
+    ]
+
+    q0 = question.lower()
+    if any(k.lower() in q0 for k in creator_keywords):
+        return "creator"
+
+
 
     q=question.lower()
 

@@ -9,167 +9,127 @@ from founder.executive_ai.global_intelligence.ranking_engine import ranker
 from founder.executive_ai.action_engine.action_memory import get_actions
 
 
-def generate_actions():
+def generate_actions(opportunities=None):
     """
-    Generate canonical world actions.
+    Canonical Opportunity -> Action bridge.
 
-    The generator is memory-aware:
-    an identical action/target/score already recorded in action memory
-    is not generated again.
+    If opportunities are supplied, they are reused directly.
+    Otherwise the function performs the legacy observe/rank path.
     """
+    emit_event(
+        "action_engine",
+        "opportunity_action_generation_started",
+        {},
+        50,
+    )
+
+    actions = []
+    seen = set()
+
+    try:
+        # Reuse already-observed opportunities whenever available.
+        if opportunities is None:
+            discoveries = world_scanner.scan_sources()
+            ranked = ranker(discoveries) if isinstance(discoveries, list) else []
+
+            opportunities = []
+
+            for item in ranked:
+                if not isinstance(item, dict):
+                    continue
+
+                try:
+                    opportunity = rank_opportunity(item)
+                except Exception:
+                    continue
+
+                if not isinstance(opportunity, dict):
+                    continue
+
+                enriched = dict(item)
+                enriched["opportunity_score"] = opportunity.get(
+                    "opportunity_score",
+                    item.get("rank_score", item.get("score", 0)),
+                )
+                enriched["opportunity_signals"] = opportunity.get(
+                    "signals",
+                    [],
+                )
+                opportunities.append(enriched)
+
+        if not isinstance(opportunities, list):
+            opportunities = []
+
+        for item in opportunities:
+            if not isinstance(item, dict):
+                continue
+
+            score = float(
+                item.get(
+                    "opportunity_score",
+                    item.get("rank_score", item.get("score", 0)),
+                ) or 0
+            )
+
+            if score < 20:
+                continue
+
+            target = str(
+                item.get("title")
+                or item.get("name")
+                or "world discovery"
+            ).strip()
+
+            if score >= 50:
+                action_name = "create_personal_outreach"
+                reason = "high opportunity signal"
+            elif score >= 25:
+                action_name = "prepare_public_impact_message"
+                reason = "strategic opportunity"
+            else:
+                action_name = "monitor"
+                reason = "relevant world discovery"
+
+            fingerprint = (action_name, target.casefold())
+
+            if fingerprint in seen:
+                continue
+
+            seen.add(fingerprint)
+
+            actions.append({
+                "action": action_name,
+                "target": target,
+                "reason": reason,
+                "score": score,
+                "base_score": float(
+                    item.get("rank_score", item.get("score", 0)) or 0
+                ),
+                "opportunity_score": score,
+                "opportunity_signals": item.get(
+                    "opportunity_signals",
+                    item.get("signals", []),
+                ),
+                "source": item.get("source", ""),
+                "content": str(item.get("content", ""))[:5000],
+                "url": item.get("url", ""),
+            })
+
+    except Exception as exc:
+        emit_event(
+            "action_engine",
+            "opportunity_action_generation_failed",
+            {"error": repr(exc)},
+            100,
+        )
+        return []
 
     emit_event(
         "action_engine",
-        "action_generation_started",
-        {},
-        50
+        "opportunity_action_generation_completed",
+        {"actions": len(actions)},
+        50,
     )
-
-    signals = world_scanner.scan_sources()
-    ranked = ranker(signals)
-
-    # --------------------------------------------------------
-    # Opportunity intelligence layer
-    # Keep the canonical ranking-engine schema intact
-    # while enriching each opportunity with strategic signals.
-    # --------------------------------------------------------
-    enriched = []
-
-    for item in ranked:
-        if not isinstance(item, dict):
-            continue
-
-        opportunity = rank_opportunity(item)
-
-        enriched_item = dict(item)
-        enriched_item["opportunity_score"] = opportunity.get(
-            "opportunity_score",
-            item.get("rank_score", item.get("score", 0)),
-        )
-        enriched_item["opportunity_signals"] = opportunity.get(
-            "signals",
-            [],
-        )
-
-        enriched.append(enriched_item)
-
-    ranked = enriched
-
-    # --------------------------------------------------------
-    # Load historical actions
-    # --------------------------------------------------------
-    try:
-        history = get_actions()
-    except Exception:
-        history = []
-
-    if not isinstance(history, list):
-        history = []
-
-    seen = set()
-
-    for record in history:
-        if not isinstance(record, dict):
-            continue
-
-        # memory_store wraps the actual action under "value".
-        # Support both wrapped and legacy records.
-        payload = record.get("value", record)
-
-        if not isinstance(payload, dict):
-            continue
-
-        action = payload.get("action")
-        result = payload.get("result", {})
-
-        if isinstance(action, dict):
-            action_name = action.get("action")
-            target = action.get("target")
-            score = action.get("score")
-        else:
-            action_name = action
-            target = payload.get("target")
-            score = payload.get("score")
-
-        if isinstance(result, dict):
-            target = result.get("target", target)
-            score = result.get("score", score)
-
-        # Failed or unknown actions must not block future retries.
-        status = (
-            result.get("status")
-            if isinstance(result, dict)
-            else None
-        )
-
-        blocked_statuses = {
-            "unknown_action",
-            "execution_failed",
-            "EXECUTION_FAILED",
-            "CAPABILITY_MISSING",
-            "CAPABILITY_NOT_CALLABLE",
-            "error",
-            "failed",
-        }
-
-        if status not in blocked_statuses:
-            seen.add((
-                str(action_name),
-                str(target)
-            ))
-
-    actions = []
-
-    for item in ranked:
-        base_score = float(
-            item.get("rank_score", item.get("score", 0))
-        )
-
-        opportunity_score = float(
-            item.get("opportunity_score", base_score)
-        )
-
-        target = item["title"]
-
-        # Opportunity intelligence becomes the decision signal,
-        # while retaining the canonical ranking score as fallback.
-        decision_score = opportunity_score
-
-        if decision_score >= 50:
-            action_name = "create_personal_outreach"
-            reason = "high opportunity signal"
-
-        elif decision_score >= 25:
-            action_name = "prepare_public_impact_message"
-            reason = "strategic opportunity"
-
-        else:
-            action_name = "monitor"
-            reason = "low priority"
-
-        fingerprint = (
-            str(action_name),
-            str(target)
-        )
-
-        # Do not regenerate an already recorded action.
-        if fingerprint in seen:
-            continue
-
-        actions.append({
-            "action": action_name,
-            "target": target,
-            "reason": reason,
-            "score": decision_score,
-            "base_score": base_score,
-            "opportunity_score": opportunity_score,
-            "opportunity_signals": item.get(
-                "opportunity_signals",
-                [],
-            ),
-        })
-
-        seen.add(fingerprint)
 
     return actions
 

@@ -1,0 +1,20 @@
+{
+  "time": 1788787873.9306846,
+  "android_apps": [],
+  "local_models": [],
+  "local_services": [],
+  "cloud": [
+    {
+      "provider": "openai",
+      "configured": false
+    },
+    {
+      "provider": "anthropic",
+      "configured": false
+    },
+    {
+      "provider": "gemini",
+      "configured": true
+    }
+  ]
+}

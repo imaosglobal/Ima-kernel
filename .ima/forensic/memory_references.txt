@@ -1,0 +1,83 @@
+./_archive_20260808/build_community_ecosystem.py:9:FILE = Path("founder/data/community_identity.json")
+./_archive_20260808/build_community_ecosystem.py:47:FILE=Path("founder/data/community_crm.json")
+./_archive_20260808/build_ima_community_expansion_v2.py:10:FILE=Path("founder/data/community_v2.json")
+./_archive_20260808/build_ima_community_expansion_v2.py:64:FILE=Path("founder/data/developer_profiles.json")
+./_archive_20260808/build_ima_conversation_gateway.py:9:FILE=Path("founder/data/identity_registry.json")
+./_archive_20260808/build_ima_conversation_gateway.py:64:FILE=Path("founder/data/conversation_memory.json")
+./_archive_20260808/build_ima_expansion_orchestrator.py:53:"founder/data/platform_registry.json"
+./_archive_20260808/build_ima_integration_consolidation.py:9:FILE=Path("founder/data/integration_registry.json")
+./_archive_20260808/build_ima_member_manager_gateway.py:10:FILE = Path("founder/data/community_members.json")
+./_archive_20260808/build_ima_production_readiness.py:10:FILE=Path("founder/data/audit_log.json")
+./_archive_20260808/build_ima_production_readiness.py:62:FILE=Path("founder/data/community_versions.json")
+./_archive_20260808/build_ima_trust_graph.py:10:FILE=Path("founder/data/trust_graph.json")
+./_archive_20260808/build_ima_virtual_whatsapp.py:11:"founder/data/ima_virtual_whatsapp.json"
+./_archive_20260808/build_secure_community_bridge.py:10:FILE=Path("founder/data/community_queue.json")
+./_archive_20260808/build_secure_community_bridge.py:83:FILE=Path("founder/data/community_registry.json")
+./_archive_20260808/connect_unified_crm.py:11:FILE=Path("founder/data/ima_unified_crm.json")
+./_archive_20260808/main.py:9:MEMORY_FILE = "/data/data/com.termux/files/home/ima_memory.json"
+./_archive_20260808/main.py:79:SELF_FILE = __file__; MEMORY_FILE = "ima_memory.json"; WORK_DIR = os.path.dirname(__file__); LOG_FILE = "server.log"
+./_archive_20260808/ima_agi.py:10:MEMORY_FILE = "ima_memory.json"
+./_archive_20260808/ima_agi.py:18:MEMORY_FILE = "/data/data/com.termux/files/home/ima_memory.json"
+./_archive_20260808/ima_agi.py:53:MEMORY_FILE = "ima_memory.json"
+./_archive_20260808/prepare_ima_expansion_layer.py:10:FILE=Path("founder/data/community_expansion.json")
+./_archive_20260808/upgrade_real_connectors.py:9:FILE=Path("founder/data/community_secrets.json")
+./api/server_BEFORE_CONTEXT_READ.py:7:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CONVERSATION.py:6:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CONVERSATION_CONNECT.py:6:MEMORY_FILE=Path("ima_memory.json")
+./api/server_BEFORE_CORE_SWITCH.py:8:MEMORY_FILE=Path("ima_memory.json")
+./api/server_WORKING_BEFORE_CHAT.py:6:MEMORY_FILE=Path("ima_memory.json")
+./autonomous_core.js:6:    this.memoryFile = './ima_memory.json';
+./core_engine.js:5:        this.memoryFile = './ima_memory.json';
+./ima_mom.py:4:MEM_FILE = "founder/data/ima_memory.json"
+./kernel/_graveyard/_archive/releases__v1778001671191__evolution_engine.js:4:const MEMORY = "ima_memory.json";
+./kernel/_graveyard/_archive/releases__v1778001671191__full_bootstrap.js:104:fs.writeFileSync('./ima_memory.json','[]');
+./kernel/_graveyard/_archive/releases__v1778001671191__memory.js:4:const DB_PATH = path.join(__dirname, "ima_memory.json");
+./kernel/_graveyard/_archive/releases__v1778001671191__prod_server.js:23:    const file = "ima_memory.json";
+./kernel/_graveyard/_archive/releases__v1778001671191__product_brain.js:12:  const memory = read("ima_memory.json", []);
+./kernel/_graveyard/_archive/releases__v1778001671191__bootstrap.js:55:fs.writeFileSync('./ima_memory.json','[]');
+./kernel/_graveyard/_archive/releases__v1778001671191__ima_memory.js:8:  fs.writeFileSync('./ima_memory.json', JSON.stringify(logs, null, 2));
+grep: ./kernel/_runtime_backup/autonomous_runtime.js: No such file or directory
+./kernel/publish_safe_v1.sh:39:  echo "{\"error\":\"cli_health_failed\",\"time\":\"$(date -Iseconds)\"}" >> ima_memory.json
+./kernel/publish_safe_v1.sh:46:echo "{\"time\":\"$(date -Iseconds)\",\"status\":\"pre_publish_ok\"}" >> ima_memory.json
+./founder/executive_ai/action_engine/feedback_engine.py:6:FILE = Path("founder/data/action_feedback.json")
+./founder/executive_ai/community/community_crm.py:4:FILE=Path("founder/data/community_crm.json")
+./founder/executive_ai/community/community_expansion_engine.py:5:FILE=Path("founder/data/community_expansion.json")
+./founder/executive_ai/community/community_identity.py:4:FILE = Path("founder/data/community_identity.json")
+./founder/executive_ai/community/community_intake.py:5:FILE = Path("founder/data/community_lessons.json")
+./founder/executive_ai/community/community_manager.py:5:FILE=Path("founder/data/community_v2.json")
+./founder/executive_ai/community/community_registry.py:4:FILE=Path("founder/data/community_registry.json")
+./founder/executive_ai/community/connectors/whatsapp_virtual_connector.py:6:"founder/data/ima_virtual_whatsapp.json"
+./founder/executive_ai/community/contribution_queue.py:5:FILE=Path("founder/data/community_queue.json")
+./founder/executive_ai/community/conversation_memory.py:5:FILE=Path("founder/data/conversation_memory.json")
+./founder/executive_ai/community/developer_profile.py:4:FILE=Path("founder/data/developer_profiles.json")
+./founder/executive_ai/community/identity_verification.py:4:FILE=Path("founder/data/identity_registry.json")
+./founder/executive_ai/community/integration_registry.py:4:FILE=Path("founder/data/integration_registry.json")
+./founder/executive_ai/community/member_manager.py:5:FILE = Path("founder/data/community_members.json")
+./founder/executive_ai/community/platform_registry.py:5:"founder/data/platform_registry.json"
+./founder/executive_ai/community/production/audit_log.py:4:FILE=Path("founder/data/audit_log.json")
+./founder/executive_ai/community/production/version_control.py:4:FILE=Path("founder/data/community_versions.json")
+./founder/executive_ai/community/trust_graph.py:5:FILE=Path("founder/data/trust_graph.json")
+./founder/executive_ai/community/unified_crm.py:5:FILE=Path("founder/data/ima_unified_crm.json")
+./founder/executive_ai/competitive_intelligence/competitor_memory.py:5:FILE=Path("founder/data/competitors.json")
+./founder/executive_ai/customer_intelligence/company_profile.py:5:FILE=Path("founder/data/customers/company_profiles.json")
+./founder/executive_ai/customer_intelligence/evidence_memory.py:5:FILE=Path("founder/data/customers/evidence.json")
+./founder/executive_ai/customer_intelligence/market_learning.py:4:FILE=Path("founder/data/customers/outreach_history.json")
+./founder/executive_ai/customer_intelligence/outreach_memory.py:5:FILE=Path("founder/data/customers/outreach_history.json")
+./founder/executive_ai/decision_memory.py:5:FILE = Path("founder/data/decisions.json")
+./founder/executive_ai/evolution_core/policy_memory.py:4:FILE = Path("founder/data/policy_memory.json")
+./founder/executive_ai/global_intelligence/opportunity_memory.py:8:"founder/data/world_opportunities.json"
+./founder/executive_ai/global_intelligence/world_adapters.py:4:FILE = Path("founder/data/world_opportunities.json")
+./founder/executive_ai/learning_journal/journal_store.py:6:FILE = Path("founder/data/ima_learning_journal.json")
+./founder/executive_ai/memory/founder_timeline.py:6:    Path("founder/data/decisions.json"),
+./founder/executive_ai/memory/founder_timeline.py:7:    Path("founder/data/outcomes.json")
+./founder/executive_ai/memory/learning_feedback.py:5:FILE=Path("founder/data/learning_feedback.json")
+./founder/executive_ai/memory/memory_store.py:7:FILE = Path("founder/data/ima_memory.json")
+./founder/executive_ai/meta_learning/knowledge_graph.py:4:FILE=Path("founder/data/knowledge_graph.json")
+./founder/executive_ai/operating_system/context.py:4:FILE=Path("founder/data/founder_context.json")
+./founder/executive_ai/operating_system/outcome_memory.py:5:FILE=Path("founder/data/outcomes.json")
+./founder/executive_ai/strategy/learning_market_engine.py:5:FILE=Path("founder/data/market_learning.json")
+./founder/executive_ai/strategy/market_analyzer.py:5:FILE=Path("founder/data/market_analysis.json")
+./founder/executive_ai/strategy/market_evolution.py:6:FILE=Path("founder/data/market_models.json")
+./ima_one_brain.py:19:STATUS_FILE = ROOT / "startup" / "ima_memory.json"
+./ima_one_brain.py:88:        # Read existing ima_memory.json when possible.
+./repair_final_today.sh:33:    "ima_memory.json"

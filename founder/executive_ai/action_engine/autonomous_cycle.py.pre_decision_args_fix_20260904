@@ -1,0 +1,70 @@
+from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+from founder.executive_ai.action_engine.action_learning_loop import learning_cycle
+from learning.self_improvement import run_self_improvement
+
+
+def run_cycle():
+    """
+    IMA canonical autonomous cycle.
+
+    Observe -> Diagnose -> Decide -> Act -> Learn.
+    """
+
+    print("=== IMA AUTONOMOUS CYCLE START ===")
+
+    # 1. DIAGNOSE / SELF-DEVELOP
+    print("[DIAGNOSE]")
+    from learning.self_improvement import run_self_improvement
+    self_development = run_self_improvement()
+
+    # 2. OBSERVE
+    print("[OBSERVE]")
+    from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+    discoveries = world_scanner.scan_sources() or []
+
+    # 3. DECIDE
+    print("[DECIDE]")
+    from learning.decision_engine import make_learning_decision
+
+    opportunities = []
+    for discovery in discoveries:
+        try:
+            decision = make_learning_decision(discovery)
+        except TypeError:
+            decision = make_learning_decision()
+
+        if decision is not None:
+            opportunities.append(decision)
+
+    # 4. ACT
+    print("[ACT]")
+    from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+    actions = run_world_actions(opportunities=opportunities) or []
+
+    # 5. LEARN
+    print("[LEARN]")
+    try:
+        from learning.learning_loop import learning_cycle
+        learning = learning_cycle()
+    except Exception as e:
+        learning = {
+            "status": "learning_deferred",
+            "error": repr(e),
+        }
+
+    result = {
+        "self_development": self_development,
+        "discoveries": discoveries,
+        "opportunities": opportunities,
+        "actions": actions,
+        "learning": learning,
+        "status": "cycle_completed",
+    }
+
+    print("=== IMA AUTONOMOUS CYCLE COMPLETE ===")
+    return result
+
+
+if __name__ == "__main__":
+    result = run_cycle()
+    print(result)

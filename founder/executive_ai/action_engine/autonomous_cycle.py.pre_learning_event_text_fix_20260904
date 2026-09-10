@@ -1,0 +1,85 @@
+from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+from founder.executive_ai.action_engine.action_learning_loop import learning_cycle
+from learning.self_improvement import run_self_improvement
+
+
+def run_cycle():
+    """
+    IMA canonical autonomous cycle.
+
+    Diagnose -> Observe -> Decide -> Act -> Learn.
+    """
+
+    print("=== IMA AUTONOMOUS CYCLE START ===")
+
+    print("[DIAGNOSE]")
+    from learning.self_improvement import run_self_improvement
+    self_development = run_self_improvement()
+
+    print("[OBSERVE]")
+    from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+    discoveries = world_scanner.scan_sources() or []
+
+    print("[DECIDE]")
+    from learning.decision_engine import make_learning_decision
+
+    opportunities = []
+
+    for discovery in discoveries:
+        if not isinstance(discovery, dict):
+            continue
+
+        area = (
+            discovery.get("category")
+            or discovery.get("source")
+            or "world_discovery"
+        )
+
+        reason = (
+            discovery.get("title")
+            or discovery.get("content")
+            or "new discovery"
+        )
+
+        decision = make_learning_decision(
+            area=str(area),
+            reason=str(reason),
+        )
+
+        if decision is not None:
+            opportunities.append(decision)
+
+    print("[ACT]")
+    from founder.executive_ai.action_engine.action_orchestrator import run_world_actions
+    actions = run_world_actions(opportunities=opportunities) or []
+
+    print("[LEARN]")
+    from learning.learning_loop import learn_from_event
+
+    learning_event = {
+        "event_type": "autonomous_cycle",
+        "source": "IMA",
+        "discoveries": discoveries,
+        "opportunities": opportunities,
+        "actions": actions,
+        "self_development": self_development,
+    }
+
+    learning = learn_from_event(learning_event)
+
+    result = {
+        "self_development": self_development,
+        "discoveries": discoveries,
+        "opportunities": opportunities,
+        "actions": actions,
+        "learning": learning,
+        "status": "cycle_completed",
+    }
+
+    print("=== IMA AUTONOMOUS CYCLE COMPLETE ===")
+    return result
+
+
+if __name__ == "__main__":
+    result = run_cycle()
+    print(result)

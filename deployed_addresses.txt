@@ -1,18 +1,19 @@
-node:internal/modules/cjs/loader:1522
-  throw err;
-  ^
+node:internal/modules/package_json_reader:301
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
 
-Error: Cannot find module '/data/data/com.termux/files/home/Ima-kernel/deploy.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)
-    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)
-    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)
-    at Module._load (node:internal/modules/cjs/loader:1296:5)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
-    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
-    at node:internal/main/run_main_module:33:47 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@thirdweb-dev/sdk' imported from /data/data/com.termux/files/home/Ima-kernel/deploy.js
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:859:18)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:724:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:762:56)
+    at #resolve (node:internal/modules/esm/loader:686:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:606:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
 }
 
 Node.js v26.3.1

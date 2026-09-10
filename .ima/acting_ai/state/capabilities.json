@@ -1,0 +1,170 @@
+[
+  {
+    "name": ".ima.acting_ai.acting_ai.ActingAI",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "class",
+    "callable_name": "ActingAI",
+    "confidence": 0.95
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.Action",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "class",
+    "callable_name": "Action",
+    "confidence": 0.95
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.ActionMemory",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "class",
+    "callable_name": "ActionMemory",
+    "confidence": 0.95
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.__init__",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "__init__",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai._execute",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "_execute",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai._target",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "_target",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.act",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "act",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.discover",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "discover",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.identity",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "identity",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.log",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "log",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.main",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "main",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.match",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "match",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.normalize",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "normalize",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.plan",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "plan",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.python_files",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "python_files",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.remember",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "remember",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai.seen",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "function",
+    "callable_name": "seen",
+    "confidence": 0.85
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::action",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::agent",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::automation",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::connector",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::memory",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::planning",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  },
+  {
+    "name": ".ima.acting_ai.acting_ai::research",
+    "module": ".ima.acting_ai.acting_ai",
+    "kind": "module_capability",
+    "callable_name": "",
+    "confidence": 0.7
+  }
+]

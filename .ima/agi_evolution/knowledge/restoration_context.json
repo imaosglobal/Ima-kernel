@@ -1,0 +1,30 @@
+{
+  "creator": "Ori Cohen",
+  "event": "IMA AGI Evolution restoration",
+  "timestamp": "2026-09-10T14:56:19Z",
+  "historical_source": "/data/data/com.termux/files/home/Ima-kernel/_archive_20260808/ima_agi.py",
+  "historical_source_preserved": true,
+  "restored_active_bridge": "/data/data/com.termux/files/home/Ima-kernel/.ima/agi_evolution/runtime/ima_agi_bridge.py",
+  "principles": {
+    "archive_is_knowledge": true,
+    "archive_not_loaded_wholesale": true,
+    "reduce_runtime_weight": true,
+    "inspect_before_change": true,
+    "preserve_history": true,
+    "preserve_creator_provenance": true,
+    "no_automatic_destructive_deletion": true,
+    "self_improvement_requires_validation": true
+  },
+  "known_repository_context": {
+    "canonical_repository": "imaosglobal/Ima-kernel",
+    "canonical_branch": "main",
+    "local_work_branch": "master"
+  },
+  "previous_findings": [
+    "Historical ima_agi.py exists in archive.",
+    "Active .ima/agi_evolution layer was missing.",
+    "Canonical registry uses string component names.",
+    "Previous pre-commit hook expected dictionary entries.",
+    "Large forensic files must remain knowledge but should not be loaded wholesale."
+  ]
+}

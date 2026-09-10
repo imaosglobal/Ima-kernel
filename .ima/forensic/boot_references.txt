@@ -1,0 +1,80 @@
+./IMA_CHAIN_FREEZE.sh:33:"kernel/kernel_single.js",
+./IMA_CHAIN_FREEZE.sh:60:    if "kernel_single" in path:
+./IMA_START_SINGLE_ENTRY.py:79:boot=R/"ima_boot_gate.py"
+./build_ima_boot_gate.sh:10:cat > "$RUNTIME/ima_boot_gate.py" <<'PY'
+./build_ima_boot_gate.sh:27:        "source":"ima_boot_gate",
+./build_ima_boot_gate.sh:56:"entry":"ima_boot_gate.py",
+./build_ima_boot_gate.sh:77:python3 "$RUNTIME/ima_boot_gate.py"
+./build_ima_boot_gate.sh:83:"$RUNTIME/ima_boot_gate.py"
+./build_ima_boot_gate.sh:88:(crontab -l 2>/dev/null | grep -v "ima_boot_gate.py"; \
+./build_ima_boot_gate.sh:89:echo "*/30 * * * * cd $BASE && python3 .ima/agi_evolution/runtime/ima_boot_gate.py >> $RUNTIME/boot_gate.log 2>&1") | crontab -
+./build_ima_brain_controller.sh:176:echo "*/15 * * * * cd $HOME/ima_kernel && python3 .ima/agi_evolution/runtime/brain_controller.py >> $HOME/ima_kernel/.ima/agi_evolution/runtime/brain.log 2>&1") | crontab -
+./build_ima_master_lifecycle.sh:221:echo "0 6 * * * cd $HOME/ima_kernel && python3 .ima/agi_evolution/runtime/ima_lifecycle.py >> $HOME/ima_kernel/.ima/agi_evolution/runtime/master.log 2>&1") | crontab -
+./build_ima_supervisor_layer.sh:139:echo "*/30 * * * * cd $HOME/ima_kernel && python3 .ima/agi_evolution/runtime/ima_supervisor.py >> $HOME/ima_kernel/.ima/agi_evolution/runtime/supervisor.log 2>&1") | crontab -
+./ima_boot.sh:16:cat > ima_server.py << SERVER
+./ima_boot.sh:35:python -m uvicorn ima_server:app --host 127.0.0.1 --port 8000
+./ima_boot_v2.sh:5:pip install fastapi uvicorn supabase python-dotenv cryptography
+./ima_boot_v2.sh:23:echo "[3/4] יוצר ima_server.py..."
+./ima_boot_v2.sh:24:cat > ima_server.py << SERVER
+./ima_boot_v2.sh:56:python -m uvicorn ima_server:app --host 127.0.0.1 --port 8000
+./ima_bootstrap.sh:128:    python3 ima_kernel.py
+./ima_bootstrap.sh:131:    python3 ima_kernel.py >/dev/null 2>&1
+./kernel/_disabled/auto_pipeline.sh:11:node ~/ima_core/kernel/server.js &
+./kernel/_disabled/saas_bootstrap.sh:97:node server.js &
+./kernel/_restart_fix.sh:12:pkill -9 -f prod_server.js 2>/dev/null || true
+./kernel/_restart_safe.sh:5:pkill -f prod_server.js || true
+./kernel/_restart_safe.sh:10:nohup node prod_server.js > server.log 2>&1 &
+grep: ./kernel/_runtime_backup/autonomous_runtime.js: No such file or directory
+./kernel/executor.sh:6:pkill -f prod_server.js || true
+./kernel/executor.sh:12:nohup node prod_server.js >> $LOG 2>&1 &
+./kernel/ima_autonomous_release_engine.js:94:  exec('node server.js & sleep 2');
+./kernel/ima_boot.sh:13:pkill -f prod_server.js || true
+./kernel/ima_boot.sh:16:nohup node prod_server.js > server.log 2>&1 &
+./kernel/ima_consolidation_engine.js:328:    start:'node server.js',
+./kernel/ima_consolidation_engine.js:331:      'node server.js'
+./kernel/ima_doctor.sh:14:grep -n "app.use(\"/v2" ~/ima_core/kernel/prod_server.js
+./kernel/ima_doctor.sh:18:grep -n "taskRoutes\|productRoutes" ~/ima_core/kernel/prod_server.js
+./kernel/ima_full_engine.js:82:  const server=exec('node server.js & sleep 2');
+./kernel/ima_repair.sh:5:pkill -f prod_server.js || true
+./kernel/ima_restart.sh:7:pkill -f prod_server.js || true
+./kernel/ima_restart.sh:10:nohup node ./prod_server.js >> server.log 2>&1 &
+./kernel/ima_supreme_kernel.js:281:    start:'node server.js',
+./kernel/ima_supreme_kernel.js:380:      'ima_boot.sh'
+./kernel/ima_supreme_kernel.js:390:nohup node server.js >/dev/null 2>&1 &
+./kernel/ima_supreme_kernel.js:396:    'chmod +x ~/.termux/boot/ima_boot.sh'
+./kernel/ima_supreme_kernel.js:469:'nohup node server.js >/dev/null 2>&1 &'
+./kernel/ima_system_brain.js:241:exec('node --check server.js');
+./kernel/ima_system_brain.js:342:start:'node server.js',
+./kernel/ima_ultimate_orchestrator.js:671:start:'node server.js',
+./kernel/ima_ultimate_orchestrator.js:712:'/.termux/boot/ima_boot.sh',
+./kernel/ima_ultimate_orchestrator.js:719:nohup node server.js >/dev/null 2>&1 &
+./kernel/ima_ultimate_orchestrator.js:726:'chmod +x ~/.termux/boot/ima_boot.sh'
+./kernel/ima_ultimate_orchestrator.js:803:'nohup node server.js >/dev/null 2>&1 &'
+./kernel/ima_unified_autonomous_engine.js:240:    start:'node server.js',
+./kernel/ima_unified_autonomous_engine.js:243:      'node server.js'
+./kernel/kernel_bootstrap.sh:26:cat > kernel_single.js << JS
+./kernel/kernel_bootstrap.sh:94:node -c kernel_single.js
+./kernel/kernel_bootstrap.sh:98:const K=require('./kernel_single');
+./kernel/reload.js:35:exec(`nohup node ${daemon} > logs/server.log 2>&1 &`);
+./kernel/restart_fix.sh:1:pkill -f prod_server.js || true
+./kernel/restart_fix.sh:3:nohup node ~/ima_core/kernel/prod_server.js > server.log 2>&1 &
+./kernel/system/bootstrap.js:241:console.log('START: node server.js');
+./kernel/system/final_autonomous_pipeline.js:173:    start:'node server.js',
+./kernel/system/final_autonomous_pipeline.js:356:if(exec('node --check server.js')===null){
+./kernel/system/full_autonomous_pipeline.js:236:    start:'node server.js',
+./kernel/system/full_autonomous_pipeline.js:463:if(exec('node --check server.js')===null){
+./kernel/system/ima_daemon.js:31:      const ok = run("node server.js --check") !== null;
+./run.sh:3:  node server.js
+./verify_global_canonical_chain.sh:8:python3 canonical_admission_guard.py .ima/agi_evolution/runtime/ima_boot_gate.py
+./create_canonical_registry.sh:13:    ".ima/agi_evolution/runtime/ima_boot_gate.py",
+./fix_kernel_selector_final.sh:132:.ima/agi_evolution/runtime/ima_boot_gate.py \
+./ima_boot_v3.sh:5:pip install fastapi uvicorn supabase python-dotenv
+./ima_boot_v3.sh:22:echo "[3/4] יוצר ima_server.py..."
+./ima_boot_v3.sh:23:cat > ima_server.py << SERVER
+./ima_boot_v3.sh:54:python -m uvicorn ima_server:app --host 127.0.0.1 --port 8000
+./ima_start.sh:3:pkill -f ima_server.py
+./ima_start.sh:6:    python ima_server.py
+./ima_unified_bootstrap.sh:109:    python3 ima_kernel.py
+./ima_unified_bootstrap.sh:141:python3 ima_kernel.py >/dev/null 2>&1 || exit 1
+./setup_ima.sh:27:nohup python -m uvicorn main:app --host 127.0.0.1 --port 8000 > server.log 2>&1 &
+./verify_canonical_chain.sh:12:python3 $R/ima_boot_gate.py

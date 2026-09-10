@@ -1,7 +1,37 @@
 {
   "type": "module",
+  "name": "ima-kernel",
+  "version": "1.0.0",
+  "description": "IMA is a modular AI architecture designed for collaborative evolution.",
+  "main": "_tmp_server.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "7.0.0",
+    "@thirdweb-dev/sdk": "4.0.99",
+    "ethers": "5.7.2",
+    "ganache": "7.9.2",
+    "hardhat": "2.19.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imaosglobal/Ima-kernel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imaosglobal/Ima-kernel/issues"
+  },
+  "homepage": "https://github.com/imaosglobal/Ima-kernel#readme",
   "dependencies": {
-    "@thirdweb-dev/sdk": "^4.0.99",
-    "ethers": "^5.7.2"
+    "solc": "0.8.19"
   }
 }

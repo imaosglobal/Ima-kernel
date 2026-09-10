@@ -1,35 +1,61 @@
 import os
 import time
 
-def ask_models(message):
+
+PROVIDERS = {
+    "openai": "OPENAI_API_KEY",
+    "anthropic": "ANTHROPIC_API_KEY",
+    "gemini": "GEMINI_API_KEY",
+}
+
+
+def available_providers():
     results = {}
 
-    # Local Ollama - רק אם מופעל
     if os.getenv("IMA_ENABLE_LOCAL_LLM") == "1":
-        try:
-            from .ollama import ask as ollama_ask
-            local = ollama_ask(message)
-            if local.get("status") != "disabled":
-                results["ollama"] = local
-        except Exception as e:
-            results["ollama_error"] = str(e)
+        results["ollama"] = {
+            "provider": "ollama",
+            "status": "ready",
+            "local": True,
+        }
 
-    # External API readiness
-    providers = {
-        "openai": "OPENAI_API_KEY",
-        "anthropic": "ANTHROPIC_API_KEY",
-        "gemini": "GEMINI_API_KEY"
-    }
-
-    for name, env in providers.items():
+    for name, env in PROVIDERS.items():
         if os.getenv(env):
             results[name] = {
+                "provider": name,
                 "status": "ready",
-                "provider": name
+                "credential_env": env,
+                "local": False,
             }
 
+    return results
+
+
+def select_provider(preferred=None):
+    available = available_providers()
+
+    if preferred and preferred in available:
+        return available[preferred]
+
+    order = os.getenv(
+        "IMA_PROVIDER_ORDER",
+        "openai,anthropic,gemini,ollama"
+    ).split(",")
+
+    for name in order:
+        name = name.strip()
+        if name in available:
+            return available[name]
+
+    return {
+        "provider": None,
+        "status": "no_provider",
+    }
+
+
+def ask_models(message):
     return {
         "time": time.time(),
-        "count": len(results),
-        "models": results
+        "count": len(available_providers()),
+        "models": available_providers(),
     }

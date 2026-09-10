@@ -1,0 +1,15 @@
+from billing.adapters.tranzila import TranzilaAdapter
+
+
+ADAPTERS = {
+    "tranzila": TranzilaAdapter,
+}
+
+
+def get_adapter(provider):
+    try:
+        return ADAPTERS[provider]()
+    except KeyError:
+        raise RuntimeError(
+            f"No billing adapter registered for provider: {provider}"
+        )

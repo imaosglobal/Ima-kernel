@@ -1,0 +1,27 @@
+{
+  "version": "2026-09-08",
+  "source": "google-pay-participating-processors",
+  "providers": [
+    {"id":"google_play","type":"platform","platforms":["android"],"capabilities":["subscriptions","digital_goods"]},
+    {"id":"google_pay","type":"wallet","platforms":["web","android"],"capabilities":["checkout"]},
+    {"id":"adyen","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions","google_pay"]},
+    {"id":"airwallex","type":"psp","platforms":["web","android"],"capabilities":["cards","google_pay"]},
+    {"id":"aci","type":"psp","platforms":["web","android"],"capabilities":["cards","google_pay"]},
+    {"id":"checkout_com","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions","google_pay"]},
+    {"id":"paypal","type":"wallet","platforms":["web","android"],"capabilities":["checkout","subscriptions"]},
+    {"id":"braintree","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions","google_pay"]},
+    {"id":"worldline","type":"psp","platforms":["web","android"],"capabilities":["cards","google_pay"]},
+    {"id":"nuvei","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions","google_pay"]},
+    {"id":"mollie","type":"psp","platforms":["web"],"capabilities":["cards","subscriptions"]},
+    {"id":"paddle","type":"merchant_of_record","platforms":["web"],"capabilities":["subscriptions"]},
+    {"id":"payu","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions"]},
+    {"id":"razorpay","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions"]},
+    {"id":"paystack","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions"]},
+    {"id":"flutterwave","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions"]},
+    {"id":"mercadopago","type":"psp","platforms":["web","android"],"capabilities":["cards","subscriptions"]},
+    {"id":"tranzila","type":"psp","platforms":["web"],"capabilities":["cards"]},
+    {"id":"payplus","type":"psp","platforms":["web"],"capabilities":["cards"]},
+    {"id":"cardcom","type":"psp","platforms":["web"],"capabilities":["cards"]},
+    {"id":"pelecard","type":"psp","platforms":["web"],"capabilities":["cards"]}
+  ]
+}

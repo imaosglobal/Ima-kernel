@@ -1,0 +1,24 @@
+{
+  "timestamp": 1788535554.4738345,
+  "duration": 0.769,
+  "python_files_checked": 1300,
+  "syntax_errors": [
+    {
+      "file": "founder/executive_ai/community/security/vault.py",
+      "error": "IndentationError",
+      "message": "unexpected indent (<unknown>, line 7)"
+    },
+    {
+      "file": "examples/sindy-hudson/run_sindy.py",
+      "error": "SyntaxError",
+      "message": "invalid syntax (<unknown>, line 4)"
+    },
+    {
+      "file": "examples/sr-clean-hudson/run_sr_clean.py",
+      "error": "SyntaxError",
+      "message": "invalid syntax (<unknown>, line 4)"
+    }
+  ],
+  "git_changes": 154,
+  "status": "issues_detected"
+}

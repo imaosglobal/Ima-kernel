@@ -1,0 +1,114 @@
+
+from founder.executive_ai.learning_journal.event_bus import emit_event
+from founder.executive_ai.global_intelligence.opportunity_ranker import rank_opportunity
+
+
+
+from founder.executive_ai.global_intelligence.world_scanner import world_scanner
+from founder.executive_ai.global_intelligence.ranking_engine import ranker
+from founder.executive_ai.action_engine.action_memory import get_actions
+
+
+def generate_actions():
+    """
+    Canonical Opportunity -> Action bridge.
+
+    Preserves the existing action-engine contract and converts
+    sufficiently relevant world opportunities into safe actions.
+    """
+    emit_event(
+        "action_engine",
+        "opportunity_action_generation_started",
+        {},
+        50,
+    )
+
+    actions = []
+    seen = set()
+
+    try:
+        discoveries = world_scanner.scan_sources()
+        ranked = ranker(discoveries) if isinstance(discoveries, list) else []
+
+        for item in ranked:
+            if not isinstance(item, dict):
+                continue
+
+            try:
+                opportunity = rank_opportunity(item)
+            except Exception:
+                continue
+
+            if not isinstance(opportunity, dict):
+                continue
+
+            score = float(
+                opportunity.get(
+                    "opportunity_score",
+                    item.get("rank_score", item.get("score", 0)),
+                ) or 0
+            )
+
+            if score < 20:
+                continue
+
+            target = str(
+                item.get("title")
+                or item.get("name")
+                or "world discovery"
+            ).strip()
+
+            action_name = (
+                "create_personal_outreach"
+                if score >= 50
+                else "prepare_public_impact_message"
+                if score >= 25
+                else "monitor"
+            )
+
+            key = (action_name, target.casefold())
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+
+            actions.append({
+                "action": action_name,
+                "target": target,
+                "reason": (
+                    "high opportunity signal"
+                    if score >= 50
+                    else "strategic opportunity"
+                    if score >= 25
+                    else "relevant world discovery"
+                ),
+                "score": score,
+                "base_score": float(
+                    item.get("rank_score", item.get("score", 0)) or 0
+                ),
+                "opportunity_score": score,
+                "opportunity_signals": opportunity.get("signals", []),
+                "source": item.get("source", ""),
+                "content": str(item.get("content", ""))[:5000],
+                "url": item.get("url", ""),
+            })
+
+    except Exception as exc:
+        emit_event(
+            "action_engine",
+            "opportunity_action_generation_failed",
+            {"error": repr(exc)},
+            100,
+        )
+        return []
+
+    emit_event(
+        "action_engine",
+        "opportunity_action_generation_completed",
+        {"actions": len(actions)},
+        50,
+    )
+
+    return actions
+

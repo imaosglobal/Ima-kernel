@@ -2,43 +2,41 @@ from pathlib import Path
 import json
 import time
 
-FILE=Path("founder/data/conversation_memory.json")
+from founder.executive_ai.memory.memory_store import save_memory as _canonical_save_memory
+
+FILE = Path("founder/data/conversation_memory.json")
 
 
-def save_message(user,message):
-
-    data=[]
-
-    if FILE.exists():
-        data=json.loads(FILE.read_text())
-
-    event={
-        "user":user,
-        "message":message,
-        "time":time.time()
+def save_message(user, message):
+    entry = {
+        "user": user,
+        "message": message,
+        "timestamp": time.time(),
     }
 
-    data.append(event)
+    FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    FILE.parent.mkdir(
-        parents=True,
-        exist_ok=True
-    )
-
-    FILE.write_text(
-        json.dumps(
-            data,
-            indent=2,
-            ensure_ascii=False
-        )
-    )
-
-    return event
-
-
-def history():
-
+    data = []
     if FILE.exists():
-        return json.loads(FILE.read_text())
+        try:
+            loaded = json.loads(FILE.read_text(encoding="utf-8"))
+            if isinstance(loaded, list):
+                data = loaded
+        except Exception:
+            data = []
 
-    return []
+    data.append(entry)
+    FILE.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    # Canonical operational memory.
+    _canonical_save_memory(
+        key="conversation",
+        value=entry,
+        category="conversation",
+        importance=70,
+    )
+
+    return entry

@@ -9,5 +9,45 @@
   "founder_id": "creator_001",
   "founder_name": "Ori Cohen",
   "founder_source": ".ima/legacy/ori_legacy.json",
-  "identity_linked": true
+  "identity_linked": true,
+  "canonical_identity": {
+    "id": "creator_001",
+    "name": "Ori Cohen",
+    "system": "IMA",
+    "roles": [
+      "founder",
+      "creator",
+      "architect"
+    ],
+    "canonical": true,
+    "same_person_identity": true,
+    "founder_of": "IMA",
+    "creator_of": "IMA",
+    "architect_of": "IMA"
+  },
+  "founder_is_creator": true,
+  "creator_is_founder": true,
+  "identity_statement": "Ori Cohen is the Founder, Creator, and Architect of IMA. Founder and Creator refer to the same person.",
+  "creator_profile": {
+    "id": "creator_001",
+    "name": "Ori Cohen",
+    "roles": [
+      "founder",
+      "creator",
+      "architect",
+      "poet",
+      "songwriter"
+    ],
+    "system": "IMA",
+    "canonical": true
+  },
+  "creator_sources": {
+    "facebook": {
+      "url": "https://www.facebook.com/share/1FFdWxZt2a/",
+      "enabled": true,
+      "continuous_scan": true,
+      "learning_enabled": true,
+      "read_only": true
+    }
+  }
 }

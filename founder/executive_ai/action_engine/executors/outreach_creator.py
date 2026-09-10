@@ -1,14 +1,17 @@
 def create_messages(context):
 
-    target=context.get(
+    if context is None:
+        context = {}
+
+    target = context.get(
         "target",
-        "organization"
+        "organization",
     )
 
     return {
-        "action":"generate_outreach",
-        "target":target,
-        "messages":[
+        "action": "generate_outreach",
+        "target": target,
+        "messages": [
             f"שלום, IMA מזהה אפשרות לשיתוף פעולה עם {target}"
-        ]
+        ],
     }

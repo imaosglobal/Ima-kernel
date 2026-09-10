@@ -1,36 +1,22 @@
-from pathlib import Path
 import json
 import time
+from pathlib import Path
 
-from .discovery_engine import discover
-from .capability_test import rank
+from .router import select_provider
 
-REGISTRY=Path(".ima/llm_selection.json")
+REGISTRY = Path(".ima/llm_selection.json")
 
 
 def select():
+    provider = select_provider()
 
-    data=discover()
-
-    models=[
-        m["name"]
-        for m in data.get("local_models",[])
-    ]
-
-    if not models:
-        return {
-            "model":"none",
-            "status":"no_models"
-        }
-
-    ranked=rank(models)
-
-    selected={
-        "time":time.time(),
-        "selected":ranked[0],
-        "ranking":ranked
+    selected = {
+        "time": time.time(),
+        "selected": provider,
+        "provider": provider.get("provider"),
     }
 
+    REGISTRY.parent.mkdir(parents=True, exist_ok=True)
     REGISTRY.write_text(
         json.dumps(
             selected,
@@ -44,10 +30,16 @@ def select():
 
 
 def current():
+    try:
+        if REGISTRY.exists():
+            data = json.loads(
+                REGISTRY.read_text(encoding="utf-8")
+            )
 
-    if REGISTRY.exists():
-        return json.loads(
-            REGISTRY.read_text(encoding="utf-8")
-        )
+            provider = data.get("provider")
+            if provider:
+                return data
+    except Exception:
+        pass
 
     return select()

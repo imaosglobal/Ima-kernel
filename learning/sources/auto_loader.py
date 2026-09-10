@@ -1,51 +1,13 @@
-import json
-import importlib
-from pathlib import Path
+"""
+Compatibility entry point for loading canonical learning sources.
 
-from learning.sources.source_validator import validate_source
+The actual registry implementation lives in learning.source_registry.
+This module intentionally contains no independent import/registration logic.
+"""
+
+from learning.source_registry import SourceRegistry, load_sources as _load_sources
 
 
-def load_sources(registry):
-
-    path = Path(
-        "learning/sources/registry.json"
-    )
-
-    data=json.loads(
-        path.read_text(
-            encoding="utf8"
-        )
-    )
-
-    loaded=[]
-
-    for source in data.get("sources",[]):
-
-        if not validate_source(source):
-            continue
-
-        try:
-
-            module=importlib.import_module(
-                source["module"]
-            )
-
-            handler=getattr(
-                module,
-                source["function"]
-            )
-
-            registry.register(
-                source["name"],
-                handler,
-                priority=source["priority"]
-            )
-
-            loaded.append(
-                source["name"]
-            )
-
-        except Exception:
-            pass
-
-    return loaded
+def load_sources(registry: SourceRegistry):
+    """Load validated source definitions into the supplied canonical registry."""
+    return _load_sources(registry)

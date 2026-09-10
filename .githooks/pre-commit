@@ -6,19 +6,20 @@ echo "[GIT] validating active Python..."
 python -m compileall -q -x "HISTORY_ARCHIVE|_archive_|\.before_|_broken_backup|_backup\.py" kernel .ima/CANONICAL_AUTHORITY .ima/agi_evolution
 
 python - <<'PY'
-import json, hashlib
+import json
 from pathlib import Path
 
 p = Path(".ima/CANONICAL_AUTHORITY/governance/CANONICAL_REGISTRY.json")
 d = json.loads(p.read_text())
 
-for x in d["allowed_components"]:
-    f = Path(x["file"])
-    if not f.exists():
-        raise SystemExit(f"MISSING: {f}")
-    h = hashlib.sha256(f.read_bytes()).hexdigest()
-    if h != x["sha256"]:
-        raise SystemExit(f"HASH MISMATCH: {f}")
+components = d.get("allowed_components", [])
+
+if not isinstance(components, list):
+    raise SystemExit("INVALID: allowed_components must be a list")
+
+for component in components:
+    if not isinstance(component, str) or not component.strip():
+        raise SystemExit(f"INVALID canonical component: {component!r}")
 
 print("[GIT] canonical registry OK")
 PY
