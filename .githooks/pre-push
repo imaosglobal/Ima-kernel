@@ -1,18 +1,45 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -e
-
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 
 echo "[IMA] pre-push security guard..."
-
 python3 kernel/runtime/CANONICAL/git_guard.py
 
+# Recursive push guard: the inner push only publishes the auto-commit.
+if [ "${IMA_AUTOPUSH:-0}" = "1" ]; then
+  echo "[IMA] auto-push verification path"
+  exit 0
+fi
+
+BEFORE="$(git status --porcelain --untracked-files=all)"
 echo "[IMA] boot validation..."
-
-python3 IMA_START.py \
-  > "$HOME/ima_git_boot.log"
-
+python3 IMA_START.py > "$HOME/ima_git_boot.log"
 tail -n 8 "$HOME/ima_git_boot.log"
 
-echo "[IMA] pre-push OK"
+# Only runtime learning/state files are eligible for automatic persistence.
+FILES=(
+  founder/data/ima_learning_journal.json
+  founder/data/ima_memory.json
+  learning/learning_memory.json
+  learning/self_improvement_reports/latest_self_development.json
+  learning/world_memory.json
+)
+
+git diff --check -- "${FILES[@]}"
+git add -- "${FILES[@]}"
+
+if git diff --cached --quiet -- "${FILES[@]}"; then
+  echo "[IMA] no runtime state changes"
+  echo "[IMA] pre-push OK"
+  exit 0
+fi
+
+git diff --cached --check -- "${FILES[@]}"
+git commit -m "chore: persist verified IMA runtime state"
+
+echo "[IMA] publishing runtime state..."
+IMA_AUTOPUSH=1 git push origin main
+
+echo "[IMA] runtime state published"
+git status --short --branch
