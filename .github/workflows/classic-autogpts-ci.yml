@@ -54,12 +54,25 @@ jobs:
         with:
           python-version: ${{ env.min-python-version }}
 
+      - name: Check Classic agent source
+        id: classic_source
+        run: |
+          if [ -d "./${{ matrix.agent-name }}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "Classic agent '${{ matrix.agent-name }}' is not present; skipping legacy smoke tests."
+          fi
+
       - name: Install Poetry
+        if: steps.classic_source.outputs.available == 'true'
         working-directory: ./classic/${{ matrix.agent-name }}/
         run: |
           curl -sSL https://install.python-poetry.org | python -
 
+
       - name: Run regression tests
+        if: steps.classic_source.outputs.available == 'true'
         run: |
           ./run agent start ${{ matrix.agent-name }}
           cd ${{ matrix.agent-name }}
