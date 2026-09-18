@@ -81,7 +81,58 @@ function registerCommandModel(config = {}) {
   return config.id;
 }
 
+
+function registerOllamaModel(config = {}) {
+  const id = config.id || "ollama-local";
+  const model = config.model || process.envIMA_OLLAMA_MODEL || "tinyllama:latest";
+  const baseUrl = config.baseUrl || process.env.IMA_OLLAMA_URL || "http://127.0.0.1:11434";
+
+  const provider = {
+    id,
+    capabilities: ["generate"],
+    async generate(request) {
+      const response = await fetch(`${baseUrl}/api/generate`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          model,
+          prompt: [
+            `Goal: ${request.goal || ""}`,
+            `Context: ${JSON.stringify(request.context || {})}`,
+            `Memory: ${JSON.stringify(request.memory || [])}`,
+            `Plan: ${JSON.stringify(request.plan || null)}`
+          ].join("\n"),
+          stream: false
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`OLLAMA_HTTP_${response.status}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        provider: id,
+        mode: "ollama-local",
+        model,
+        output: data.response || "",
+        raw: data
+      };
+    }
+  };
+
+  models.register(provider);
+  return id;
+}
+
 function capabilityReport() {
+  if (!models.list().some(p => p.id === "ollama-local")) {
+    registerOllamaModel();
+  }
+
   return {
     mode: "SELF_HOSTED",
     network_required: false,
@@ -135,10 +186,37 @@ async function run(input = {}) {
       });
     },
 
-    verify: async result => ({
-      verified: Boolean(result),
-      local: true
-    })
+    verify: async (result, contract) => {
+      const output = result?.output;
+
+      const hasOutput =
+        typeof output === "string"
+          ? output.trim().length > 0
+          : output !== undefined && output !== null;
+
+      const expected =
+        contract?.context?.expected_output ??
+        contract?.context?.expected ??
+        null;
+
+      const normalizedOutput =
+        typeof output === "string"
+          ? output.trim()
+          : String(output ?? "");
+
+      const exactMatch =
+        expected !== null
+          ? normalizedOutput === String(expected).trim()
+          : null;
+
+      return {
+        verified: hasOutput && (exactMatch === null || exactMatch),
+        local: true,
+        output_present: hasOutput,
+        exact_match: exactMatch,
+        expected_output_checked: expected !== null
+      };
+    }
   });
 
   memory.append({
@@ -158,6 +236,7 @@ async function run(input = {}) {
 
 module.exports = {
   registerCommandModel,
+  registerOllamaModel,
   capabilityReport,
   run
 };
