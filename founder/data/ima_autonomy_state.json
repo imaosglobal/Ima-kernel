@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "demand_signals": 210,
+  "demand_signals": 216,
   "graph": {
-    "signals": 210,
-    "opportunities": 210,
-    "money_routes": 1880,
+    "signals": 216,
+    "opportunities": 216,
+    "money_routes": 1925,
     "categories": [
       "b2b",
       "equipment",
@@ -29,7 +29,7 @@
     "payout_records": 0
   },
   "company_os": {
-    "timestamp": 1789739630.4127986,
+    "timestamp": 1789755826.6686573,
     "roles": [
       "ceo",
       "product",
@@ -52,8 +52,8 @@
       "proof_gated": true
     },
     "commercial": {
-      "opportunities": 210,
-      "money_routes": 1880,
+      "opportunities": 216,
+      "money_routes": 1925,
       "deals": 127
     },
     "finance": {
@@ -91,6 +91,6 @@
     ]
   },
   "execution_policy": "proof-gated",
-  "started_at": 1789739619.4721699,
-  "finished_at": 1789739630.4181423
+  "started_at": 1789755819.6339834,
+  "finished_at": 1789755826.672045
 }

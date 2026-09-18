@@ -1,0 +1,213 @@
+import base64,json,os,re,subprocess,sys,time,urllib.parse,urllib.request,webbrowser
+from http.server import BaseHTTPRequestHandler,HTTPServer
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[2]
+STATE=ROOT/".ima/gmail_bridge/state.json"
+TOKEN=ROOT/".ima/gmail_bridge/token.json"
+POLL=int(os.getenv("IMA_GMAIL_POLL_SECONDS","60"))
+QUERY=os.getenv("IMA_GMAIL_QUERY",'from:(notifications@github.com) newer_than:7d ("failed" OR "failure")')
+FIX_CMD=os.getenv("IMA_AUTOFIX_COMMAND","").strip()
+REPO=os.getenv("IMA_GITHUB_REPO","imaosglobal/Ima-kernel")
+TARGET_EMAIL="imaosglobal@gmail.com"
+SCOPES="openid email profile https://www.googleapis.com/auth/gmail.readonly"
+CLIENT_CONFIG=ROOT/".ima/gmail_bridge/google_client_secret.json"
+
+def oauth_config():
+    cid=os.getenv("GOOGLE_CLIENT_ID","").strip()
+    secret=os.getenv("GOOGLE_CLIENT_SECRET","").strip()
+    if cid and secret:return cid,secret
+    if CLIENT_CONFIG.exists():
+        try:
+            raw=json.loads(CLIENT_CONFIG.read_text(encoding="utf-8"))
+            block=raw.get("installed") or raw.get("web") or raw
+            cid=str(block.get("client_id","")).strip()
+            secret=str(block.get("client_secret","")).strip()
+            if cid and secret:return cid,secret
+        except Exception:pass
+    return "",""
+
+def save(s):
+    STATE.parent.mkdir(parents=True,exist_ok=True)
+    STATE.write_text(json.dumps(s,ensure_ascii=False,indent=2),encoding="utf-8")
+
+def load():
+    try:return json.loads(STATE.read_text(encoding="utf-8"))
+    except:return {"seen":[]}
+
+def gh(args):
+    p=subprocess.run(["gh",*args],cwd=ROOT,text=True,capture_output=True)
+    if p.returncode:raise RuntimeError(p.stderr.strip() or p.stdout.strip())
+    return p.stdout
+
+def token_data():
+    try:return json.loads(TOKEN.read_text(encoding="utf-8"))
+    except:return {}
+
+def save_token(t):
+    TOKEN.parent.mkdir(parents=True,exist_ok=True)
+    TOKEN.write_text(json.dumps(t,ensure_ascii=False,indent=2),encoding="utf-8")
+    os.chmod(TOKEN,0o600)
+
+def form_post(url,data):
+    body=urllib.parse.urlencode(data).encode()
+    req=urllib.request.Request(url,data=body,headers={"Content-Type":"application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req,timeout=30) as r:return json.loads(r.read().decode())
+
+def google_email(access):
+    req=urllib.request.Request("https://openidconnect.googleapis.com/v1/userinfo",headers={"Authorization":"Bearer "+access})
+    with urllib.request.urlopen(req,timeout=30) as r:
+        return json.loads(r.read().decode()).get("email","").strip().lower()
+
+def refresh(t):
+    cid,secret=oauth_config()
+    if not cid or not secret or not t.get("refresh_token"):return None
+    x=form_post("https://oauth2.googleapis.com/token",{"client_id":cid,"client_secret":secret,"refresh_token":t["refresh_token"],"grant_type":"refresh_token"})
+    x["refresh_token"]=t["refresh_token"]
+    x["created_at"]=time.time()
+    save_token(x)
+    return x
+
+def authorize():
+    cid, secret = oauth_config()
+
+    params = {
+        "client_id": cid,
+        "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
+        "response_type": "code",
+        "scope": SCOPES,
+        "access_type": "offline",
+        "prompt": "consent",
+        "login_hint": TARGET_EMAIL,
+    }
+
+    auth_url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(params)
+
+    print("")
+    print("[IMA] Open this URL in the Android browser:")
+    print(auth_url)
+    print("")
+    print("[IMA] Sign in only as:", TARGET_EMAIL)
+    print("[IMA] After Google authorization, paste the authorization code here.")
+    code = input("[IMA] Authorization code: ").strip()
+
+    if not code:
+        raise RuntimeError("EMPTY_AUTHORIZATION_CODE")
+
+    data = urllib.parse.urlencode({
+        "code": code,
+        "client_id": cid,
+        "client_secret": secret,
+        "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
+        "grant_type": "authorization_code",
+    }).encode()
+
+    req = urllib.request.Request(
+        "https://oauth2.googleapis.com/token",
+        data=data,
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+
+    with urllib.request.urlopen(req, timeout=30) as r:
+        token = json.loads(r.read().decode())
+
+    email = google_email(token["access_token"])
+
+    if email.lower() != TARGET_EMAIL.lower():
+        raise RuntimeError(
+            f"WRONG_GMAIL_ACCOUNT: expected {TARGET_EMAIL}, got {email}"
+        )
+
+    token["bound_email"] = TARGET_EMAIL
+    token["saved_at"] = time.time()
+
+    TOKEN_PATH.parent.mkdir(parents=True, exist_ok=True)
+    TOKEN_PATH.write_text(json.dumps(token, indent=2))
+    os.chmod(TOKEN_PATH, 0o600)
+
+    print("")
+    print("[IMA] GMAIL_API_AUTHORIZED=YES")
+    print("[IMA] GMAIL_ACCOUNT=" + TARGET_EMAIL)
+    print("[IMA] TOKEN_STORED=YES")
+
+def access_token():
+    t=token_data()
+    if t.get("bound_email") and t["bound_email"]!=TARGET_EMAIL:
+        TOKEN.unlink(missing_ok=True);t={}
+    if t.get("access_token"):
+        created=t.get("created_at",0)
+        if created and time.time()-created < int(t.get("expires_in",3600))-120:
+            return t["access_token"]
+    if t.get("refresh_token"):
+        x=refresh(t)
+        if x and x.get("access_token"):
+            if google_email(x["access_token"])!=TARGET_EMAIL:
+                TOKEN.unlink(missing_ok=True)
+            else:return x["access_token"]
+    t=authorize()
+    return t["access_token"]
+
+def gmail_get(path,params=None):
+    tok=access_token()
+    url="https://gmail.googleapis.com/gmail/v1/users/me/"+path
+    if params:url+="?"+urllib.parse.urlencode(params)
+    req=urllib.request.Request(url,headers={"Authorization":"Bearer "+tok})
+    try:
+        with urllib.request.urlopen(req,timeout=30) as r:return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        if e.code==401:
+            TOKEN.unlink(missing_ok=True)
+            tok=access_token()
+            req=urllib.request.Request(url,headers={"Authorization":"Bearer "+tok})
+            with urllib.request.urlopen(req,timeout=30) as r:return json.loads(r.read().decode())
+        raise
+
+def body(payload):
+    data=payload.get("body",{}).get("data")
+    if data:return base64.urlsafe_b64decode(data+"==").decode("utf-8","replace")
+    for part in payload.get("parts",[]) or []:
+        x=body(part)
+        if x:return x
+    return ""
+
+def handle(msg,state):
+    mid=msg["id"]
+    if mid in state["seen"]:return
+    full=gmail_get("messages/"+mid,{"format":"full"})
+    text=body(full.get("payload",{}))
+    headers=full.get("payload",{}).get("headers",[])
+    subject=next((h["value"] for h in headers if h["name"].lower()=="subject"),"")
+    urls=re.findall(r'https?://github.com/[^s<>"]+',text)
+    runs=[u.rstrip(").,") for u in urls if "/actions/runs/" in u]
+    print(json.dumps({"gmail_id":mid,"subject":subject,"run_urls":runs,"seen_at":time.time()},ensure_ascii=False),flush=True)
+    for u in runs:
+        m=re.search(r"/actions/runs/(\d+)",u)
+        if not m:continue
+        run=m.group(1)
+        try:
+            log=gh(["run","view",run,"--repo",REPO,"--log-failed"])
+            out=ROOT/".ima/gmail_bridge/incidents";out.mkdir(parents=True,exist_ok=True)
+            logfile=out/f"{run}.log";logfile.write_text(log,encoding="utf-8")
+            print(f"[IMA] fetched failed log for run {run}",flush=True)
+            if FIX_CMD:
+                env=os.environ.copy();env.update(IMA_FAILURE_LOG=str(logfile),IMA_FAILURE_RUN=run,IMA_FAILURE_SUBJECT=subject)
+                p=subprocess.run(FIX_CMD,shell=True,cwd=ROOT,env=env,text=True,capture_output=True)
+                (out/f"{run}.fix.log").write_text(p.stdout+"\n"+p.stderr,encoding="utf-8")
+                print(f"[IMA] autofix exit={p.returncode} run={run}",flush=True)
+            else:print("[IMA] no IMA_AUTOFIX_COMMAND configured; incident captured only",flush=True)
+        except Exception as e:print(f"[IMA] run handling error: {e}",file=sys.stderr,flush=True)
+    state["seen"]=(state["seen"]+[mid])[-500:];save(state)
+
+def main():
+    state=load()
+    print(f"[IMA] Gmail build watcher active; bound account={TARGET_EMAIL}; repo={REPO}; poll={POLL}s",flush=True)
+    while True:
+        try:
+            data=gmail_get("messages",{"q":QUERY,"maxResults":20})
+            for msg in data.get("messages",[]):handle(msg,state)
+            save(state)
+        except KeyboardInterrupt:return
+        except Exception as e:print(f"[IMA] watcher error: {e}",file=sys.stderr,flush=True)
+        time.sleep(POLL)
+
+if __name__=="__main__":main()

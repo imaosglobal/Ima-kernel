@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
+import android.content.Intent;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import org.json.*;
@@ -18,6 +19,7 @@ public class MainActivity extends Activity {
     private MobileImaRuntime runtime;
     private OtaUpdateManager ota;
     private TermuxCommandBridge termux;
+    private GmailAccountBridge gmail;
 
     public final class Bridge {
         @JavascriptInterface public String discover() {
@@ -35,6 +37,12 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String termux(String action) {
             return termux.dispatch(action).toString();
         }
+        @JavascriptInterface public String gmailStart() {
+            return gmail.start().toString();
+        }
+        @JavascriptInterface public String gmailStatus() {
+            return gmail.status().toString();
+        }
     }
 
     @Override protected void onCreate(Bundle state) {
@@ -42,6 +50,7 @@ public class MainActivity extends Activity {
         broker = new LocalIntelligenceBroker(this);
         runtime = new MobileImaRuntime(this, broker);
         termux = new TermuxCommandBridge(this);
+        gmail = new GmailAccountBridge(this);
         try {
             ota = new OtaUpdateManager(this);
             ota.check();
@@ -96,6 +105,8 @@ public class MainActivity extends Activity {
             "window.__imaRuntime=function(){return new Promise(function(r){" +
             "var id='r'+Date.now()+Math.random();window.__imaRR=window.__imaRR||{};" +
             "window.__imaRR[id]=r;IMA_LOCAL_AI.runtime(id);});};" +
+            "window.__imaGmailStart=function(){try{return JSON.parse(IMA_LOCAL_AI.gmailStart());}catch(e){return {ok:false,error:String(e)};}};" +
+            "window.__imaGmailStatus=function(){try{return JSON.parse(IMA_LOCAL_AI.gmailStatus());}catch(e){return {connected:false,error:String(e)};}};" +
             "window.__imaTermux=function(a){return new Promise(function(r){" +
             "try{r(JSON.parse(IMA_LOCAL_AI.termux(a)));}catch(e){r({ok:false,error:String(e)});}});};" +
             "window.__imaDone=function(id,x){if(window.__imaR&&window.__imaR[id])" +
@@ -158,6 +169,11 @@ public class MainActivity extends Activity {
 
     private static String esc(String s) {
         return s.replace("&", "&amp;").replace("<", "&lt;");
+    }
+
+    @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (gmail != null) gmail.handleResult(requestCode, resultCode, data);
     }
 
     @Override protected void onResume() {
