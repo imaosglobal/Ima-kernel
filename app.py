@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template_string, request
 from ima_ledger import cmd_deposit, cmd_balance
 from billing.api import billing_api
@@ -16,7 +17,11 @@ HTML = """
 <p style=color:green>{{msg}}</p>
 """
 
-@app.route("/", methods=["GET","POST"])
+@app.get("/health")
+def health():
+    return {"status": "ok", "service": "ima-api"}
+
+@app.route("/", methods=["GET", "POST"])
 def home():
     msg = ""
     if request.method == "POST":
@@ -27,5 +32,6 @@ def home():
     return render_template_string(HTML, balance=bal, msg=msg)
 
 if __name__ == "__main__":
-    print("IMA Bank running on http://localhost:8080")
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    port = int(os.environ.get("PORT", "10000"))
+    print(f"IMA API running on 0.0.0.0:{port}")
+    app.run(host="0.0.0.0", port=port, debug=False)

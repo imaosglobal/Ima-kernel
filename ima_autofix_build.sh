@@ -1,84 +1,50 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -e
 
-APP="$HOME/ima_kernel/android"
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+APP="$ROOT/android"
 SDK="$HOME/Android/Sdk"
 
 echo "[IMA] START AUTO BUILD SYSTEM"
 
-# ------------------------
-# Java
-# ------------------------
+if [ ! -d "$APP" ]; then
+  echo "[IMA][ERROR] Android project missing: $APP"
+  exit 1
+fi
+
 if ! command -v java >/dev/null 2>&1; then
   pkg install -y openjdk-17
 fi
 
-# ------------------------
-# SDK
-# ------------------------
 export ANDROID_HOME="$SDK"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 if [ ! -d "$SDK" ]; then
-  pkg install -y android-tools
+  echo "[IMA][ERROR] Android SDK missing: $SDK"
+  exit 1
 fi
 
-# ------------------------
-# AAPT2 FIX (CRITICAL)
-# ------------------------
-if ! command -v aapt2 >/dev/null 2>&1; then
-  pkg install -y aapt2
-fi
-
-AAPT2_BIN="$(which aapt2)"
-echo "android.aapt2FromMavenOverride=$AAPT2_BIN" >> "$APP/gradle.properties" || true
-
-# ------------------------
-# Gradle wrapper
-# ------------------------
 cd "$APP"
 
 if [ ! -f "./gradlew" ]; then
-  gradle wrapper
+  echo "[IMA][ERROR] gradlew missing"
+  exit 1
 fi
 
 chmod +x ./gradlew
 
-# ------------------------
-# local.properties fix
-# ------------------------
-cat > local.properties <<EOF2
+cat > gradle.properties <<'EOF'
+org.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8
+org.gradle.daemon=false
+android.useAndroidX=true
+android.enableJetifier=true
+EOF
+
+cat > local.properties <<EOF
 sdk.dir=$SDK
-EOF2
+EOF
 
-# ------------------------
-# cache cleanup (safe)
-# ------------------------
-rm -rf ~/.gradle/caches/transforms-4 || true
-rm -rf ~/.gradle/caches/*aapt2* || true
+echo "[IMA] BUILD"
+./gradlew clean assembleDebug --no-daemon
 
-# ------------------------
-# build loop
-# ------------------------
-TRIES=0
-MAX=3
-
-while [ $TRIES -lt $MAX ]
-do
-  TRIES=$((TRIES+1))
-
-  echo "[IMA] BUILD TRY $TRIES"
-
-  if ./gradlew clean assembleDebug --no-daemon; then
-    echo "[IMA] SUCCESS"
-    exit 0
-  fi
-
-  echo "[IMA] FAILED -> repairing"
-  rm -rf ~/.gradle/caches/transforms-4 || true
-  rm -rf ~/.gradle/caches/*aapt2* || true
-  sleep 2
-done
-
-echo "[IMA] FINAL FAILURE"
-exit 1
+echo "[IMA] BUILD SUCCESS"
