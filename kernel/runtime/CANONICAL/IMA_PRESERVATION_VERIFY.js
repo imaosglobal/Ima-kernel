@@ -63,3 +63,13 @@ module.exports = {
   verifyArtifact,
   verifyRegistry
 };
+
+
+// Backward-compatible runtime API.
+// IMA_RUNTIME historically calls preservationVerify.verify().
+function verify() {
+  const result = verifyPreservation();
+  return result;
+}
+
+module.exports.verify = verify;
