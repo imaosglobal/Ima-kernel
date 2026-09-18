@@ -118,3 +118,11 @@ run_ima_pro.sh
 run_ima_ultimate.sh
 
 .ima/forensic/phase2/*.txt
+
+# IMA runtime/autonomy-generated state
+founder/data/global_money_routes.json
+founder/data/global_opportunity_graph.json
+founder/data/ima_autonomy_log.jsonl
+founder/data/ima_autonomy_state.json
+founder/data/ima_company_os.json
+founder/data/public_demand_signals.json
