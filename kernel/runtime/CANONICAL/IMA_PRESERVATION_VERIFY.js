@@ -64,12 +64,53 @@ module.exports = {
   verifyRegistry
 };
 
-
 // Backward-compatible runtime API.
-// IMA_RUNTIME historically calls preservationVerify.verify().
+// IMA_RUNTIME calls preservationVerify.verify() during boot.
+//
+// The canonical preservation registry is the source of artifact records.
+// Verification recomputes SHA-256 from the actual content bytes and
+// compares it with each recorded expected hash.
 function verify() {
-  const result = verifyPreservation();
-  return result;
+  const root = path.resolve(__dirname, "../../../..");
+  const registryModule = require("./IMA_PRESERVATION_REGISTRY");
+
+  let registry = [];
+
+  if (typeof registryModule.get === "function") {
+    registry = registryModule.get();
+  } else if (typeof registryModule.list === "function") {
+    registry = registryModule.list();
+  } else if (typeof registryModule.status === "function") {
+    const status = registryModule.status();
+    registry = status?.artifacts || status?.records || [];
+  } else if (Array.isArray(registryModule)) {
+    registry = registryModule;
+  } else if (Array.isArray(registryModule.artifacts)) {
+    registry = registryModule.artifacts;
+  } else if (Array.isArray(registryModule.records)) {
+    registry = registryModule.records;
+  }
+
+  const results = verifyRegistry(registry, root);
+  const verified = results.filter(r => r.status === "VERIFIED").length;
+  const mismatched = results.filter(r => r.status === "MISMATCH").length;
+  const unavailable = results.filter(r => r.status === "UNAVAILABLE").length;
+  const noExpectedHash = results.filter(r => r.status === "NO_EXPECTED_HASH").length;
+
+  return {
+    valid: mismatched === 0 && unavailable === 0 && noExpectedHash === 0,
+    total: results.length,
+    verified,
+    mismatched,
+    unavailable,
+    no_expected_hash: noExpectedHash,
+    results
+  };
 }
 
-module.exports.verify = verify;
+module.exports = {
+  sha256File,
+  verifyArtifact,
+  verifyRegistry,
+  verify
+};

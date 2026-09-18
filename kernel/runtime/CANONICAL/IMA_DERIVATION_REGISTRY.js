@@ -42,7 +42,7 @@ function registerDerivative(input) {
   return { ...record };
 }
 
-function verify(id) {
+function verifyRecord(id) {
   const record = records.get(id);
 
   if (!record) {
@@ -56,6 +56,7 @@ function verify(id) {
 
   return {
     valid: actual === record.content_hash,
+    artifact_id: id,
     expected: record.content_hash,
     actual
   };
@@ -68,10 +69,48 @@ function list() {
   }));
 }
 
+// Runtime-compatible registry verification.
+// Verifies every currently registered derivation record.
+function verifyAll() {
+  const results = [...records.keys()].map(verifyRecord);
+  const invalid = results.filter(result => !result.valid);
+
+  return {
+    valid: invalid.length === 0,
+    total: results.length,
+    verified: results.length - invalid.length,
+    invalid: invalid.length,
+    results
+  };
+}
+
+// Runtime-compatible build operation.
+// Returns a deterministic snapshot of the active registry.
+function build() {
+  return {
+    type: "IMA_DERIVATION_REGISTRY",
+    version: "1.0",
+    total: records.size,
+    records: list()
+  };
+}
+
+// Compatibility API:
+// - verify(id) verifies one record.
+// - verify() verifies the complete registry.
+function verify(id) {
+  if (id !== undefined && id !== null) {
+    return verifyRecord(id);
+  }
+  return verifyAll();
+}
+
 module.exports = {
   hashContent,
   validate,
   registerDerivative,
   verify,
+  verifyAll,
+  build,
   list
 };
