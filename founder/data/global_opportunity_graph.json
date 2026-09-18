@@ -179,7 +179,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9955838
+    "created_at": 1789739630.3336394
   },
   {
     "node_id": "edeca2dfae68f1e01222",
@@ -228,7 +228,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9957314
+    "created_at": 1789739630.3338892
   },
   {
     "node_id": "0ffe08eccebe2a2025e6",
@@ -410,7 +410,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.995807
+    "created_at": 1789739630.334143
   },
   {
     "node_id": "ad741a32ee3cad7a1c8f",
@@ -459,7 +459,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9958963
+    "created_at": 1789739630.3343542
   },
   {
     "node_id": "9f932a324d4545c5edf6",
@@ -529,7 +529,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9959984
+    "created_at": 1789739630.3344994
   },
   {
     "node_id": "1a84d92d134c1b28db91",
@@ -599,7 +599,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9960654
+    "created_at": 1789739630.334641
   },
   {
     "node_id": "46c82862ec83afab87b8",
@@ -669,7 +669,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9961436
+    "created_at": 1789739630.3349657
   },
   {
     "node_id": "114805ac13a82e6e7acc",
@@ -774,147 +774,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9962132
-  },
-  {
-    "node_id": "91a4400313931b3749f1",
-    "signal_id": "6bcfa8ece66eb14c21a0",
-    "category": "b2b",
-    "title": "Dump the RFP to reap better outsourcing results - cio.com",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRDJNcHhveFdjaVk1V0Frckl1cmlEaVE1a2ZVR050SzRKRGVVRnU5OUxVcEZ5QWVrbmFwR29JYTk4VmdVUzZuZ0dXS01CMzFkMUR3Q2ZZLUZKYVhMTjNOTDVGU3Nqb0hpWUR6T084dGxJZEtiU25rMkJydUd4WDAtQ0hLWnlJWmVqVmpvQzhybHRSdw?oc=5",
-    "score": 60,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "PartnerStack",
-        "model": "revshare",
-        "meaning": "recurring_revenue_share",
-        "url": "https://partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "PartnerStack",
-        "model": "cpl",
-        "meaning": "qualified_lead",
-        "url": "https://partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "PartnerStack",
-        "model": "cpa",
-        "meaning": "conversion_action",
-        "url": "https://partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "PartnerStack",
-        "model": "deal_registration",
-        "meaning": "registered_business_deal",
-        "url": "https://partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "impact.com",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://impact.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "impact.com",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://impact.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "impact.com",
-        "model": "cpa",
-        "meaning": "conversion_action",
-        "url": "https://impact.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "impact.com",
-        "model": "revshare",
-        "meaning": "recurring_revenue_share",
-        "url": "https://impact.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Referr",
-        "model": "lead_fee",
-        "meaning": "qualified_lead",
-        "url": "https://www.referr.co.uk/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Referr",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.referr.co.uk/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Public procurement/RFP feeds",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://www.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Public procurement/RFP feeds",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Public procurement/RFP feeds",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.google.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738727.996286
+    "created_at": 1789739630.3350954
   },
   {
     "node_id": "9be7739d85eca9815e0b",
@@ -1054,7 +914,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9963753
+    "created_at": 1789739630.3352337
   },
   {
     "node_id": "2c53841b075737300a62",
@@ -1194,7 +1054,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9965096
+    "created_at": 1789739630.3354683
   },
   {
     "node_id": "b570a53a3541035b0f7c",
@@ -1334,7 +1194,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.996613
+    "created_at": 1789739630.33558
   },
   {
     "node_id": "10b561347ace51f0152c",
@@ -1383,7 +1243,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9966798
+    "created_at": 1789739630.3357763
   },
   {
     "node_id": "323b3cab723c43f5668c",
@@ -1432,7 +1292,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9967616
+    "created_at": 1789739630.3358681
   },
   {
     "node_id": "dab934a3806110b7e5cb",
@@ -1572,7 +1432,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9968286
+    "created_at": 1789739630.335965
   },
   {
     "node_id": "cb68e66393e9593dcb14",
@@ -1621,7 +1481,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9969265
+    "created_at": 1789739630.33609
   },
   {
     "node_id": "c1fa4e88cd697c607475",
@@ -1691,7 +1551,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9969907
+    "created_at": 1789739630.3361807
   },
   {
     "node_id": "51f26c4526a5de4f1042",
@@ -1761,7 +1621,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.997084
+    "created_at": 1789739630.3362737
   },
   {
     "node_id": "45424168b10e346f2840",
@@ -1831,7 +1691,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9971492
+    "created_at": 1789739630.3363647
   },
   {
     "node_id": "5e5978c5495b2c3dc7c8",
@@ -1901,7 +1761,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9972136
+    "created_at": 1789739630.3364902
   },
   {
     "node_id": "3f18b04d2ecc87bf7bb5",
@@ -1971,7 +1831,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9972775
+    "created_at": 1789739630.3369274
   },
   {
     "node_id": "1ee5dd971a2857c5abe5",
@@ -2041,7 +1901,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9973698
+    "created_at": 1789739630.3370337
   },
   {
     "node_id": "40935aff5ca24cde68c3",
@@ -2174,7 +2034,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9974532
+    "created_at": 1789739630.3371663
   },
   {
     "node_id": "97d82e4a6e097dab6069",
@@ -2307,7 +2167,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9975412
+    "created_at": 1789739630.337367
   },
   {
     "node_id": "2d67b0569cbf2a5ca93d",
@@ -2377,7 +2237,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9976103
+    "created_at": 1789739630.337486
   },
   {
     "node_id": "4734a75807aafed074bb",
@@ -2447,7 +2307,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9976914
+    "created_at": 1789739630.3378344
   },
   {
     "node_id": "4418862c74b37a185bde",
@@ -2517,7 +2377,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9977565
+    "created_at": 1789739630.3379443
   },
   {
     "node_id": "bc2f2a41ad51e1c6a27e",
@@ -2587,7 +2447,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9978201
+    "created_at": 1789739630.3381076
   },
   {
     "node_id": "b963db3231a08967be0c",
@@ -2720,7 +2580,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.997922
+    "created_at": 1789739630.3382137
   },
   {
     "node_id": "7b3ceafa4ad358dc18a4",
@@ -2853,7 +2713,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9980052
+    "created_at": 1789739630.3383822
   },
   {
     "node_id": "0d4fed6c439f662824c7",
@@ -2986,7 +2846,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9981043
+    "created_at": 1789739630.3385463
   },
   {
     "node_id": "3fca9121129a0714208c",
@@ -3119,7 +2979,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9981925
+    "created_at": 1789739630.338673
   },
   {
     "node_id": "46ab582a0adae6946e00",
@@ -3252,7 +3112,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.998268
+    "created_at": 1789739630.3389945
   },
   {
     "node_id": "8b523106c355193bda47",
@@ -3301,14 +3161,14 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9983494
+    "created_at": 1789739630.339321
   },
   {
-    "node_id": "0d4dd7cc5a276ac5fa4e",
-    "signal_id": "175f0b868886e23c7d5b",
+    "node_id": "7c7d7ebfffc72e8411aa",
+    "signal_id": "ca6ecf05ee28b1ce4acf",
     "category": "general",
-    "title": "Cookie Jar owners announce plans to retire, look for buyer - SiouxFalls.Business",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVGFFVE9QMTE3bW9mMnVzUXNFaGJNSzVGMlZ6dXZEcTJJZy1CbWJ0d3JHZGk2QTg5NXc2ZDloTkgxejM4SDVUSUpCLWZwUEZhTE1RWlVtaU5naUE0Ri1wQWNBOVhZY2FfbS01NXdMUks1cDN1QmkzOWk5WnZFU19RUGszWVJLdV9WZXZiUWE0VQ?oc=5",
+    "title": "Distressed London chocolate business seeking a buyer - Business Sale Report",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaUNGUU9pdXp0NzlNcmFxT3NLcG1WWTFoLVFvNTVhNGFicXJnR2ZvX0NiU3JPbnY1MUhSUUJnSVAtV1ZURVFCQ0QxUWVUeENSSko5Y0d0T2tsVFd5S1pKdkdoRm9Jakd4NmRQOHQ4c2UzOXBvRHVvUGFNX1JHWXluY2VNM191LXhtMFJFQnJWOGpRSG9FUG1NUF81OGZmVG5McDdnWmNrb21hM3FubXc?oc=5",
     "score": 40,
     "stage": "DISCOVERED",
     "routes": [
@@ -3350,7 +3210,56 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9984124
+    "created_at": 1789739630.3394213
+  },
+  {
+    "node_id": "069fcbac30d85023807f",
+    "signal_id": "fc2c123df897006126db",
+    "category": "general",
+    "title": "Business Watch: Symrise finds buyer for terpene unit, and more - C&EN",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcHdjRFh2WlR0OGNiYTJ4VHdhOGxlWHBvZ0xCdlQwdnZHZU15bVlTWXZDcF91bkJSODU4ZTRlUVFlQUMtM01ibkRQaXNUTjVGdHh6bHN6MDV6endYdmF5dGtxWTBhNUx4ZnBHY3JOX1drb1dET1NSUXNvQlJhUFlaR0hVS1pZdw?oc=5",
+    "score": 40,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3395123
   },
   {
     "node_id": "9348681347f21e2e4bbb",
@@ -3399,7 +3308,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9984736
+    "created_at": 1789739630.3396032
   },
   {
     "node_id": "e9f0aa50d649b27122ad",
@@ -3448,7 +3357,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9985354
+    "created_at": 1789739630.3396938
   },
   {
     "node_id": "aef08833bd4ab6ed4e82",
@@ -3497,7 +3406,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9985974
+    "created_at": 1789739630.3397822
   },
   {
     "node_id": "e688ef42ad7de9a13d9c",
@@ -3546,56 +3455,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9988766
-  },
-  {
-    "node_id": "030e7f579cc4e7c6db62",
-    "signal_id": "4defc2b76da39d6fd61a",
-    "category": "general",
-    "title": "Businesses for Sale: Will 2025 Be a Buyer’s Market? - Small Business & Entrepreneurship Council",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMGNlMkRNRmhtamF5OVpQNGItRm9qRXEwS2J6X2tiOWM2RThidVFTZmxpekJObEFjYkJQaHgtVzEyeHVpNTBnRWllSHprb210a1d0TVFHdXk4bGlaN29LV0lQQ3ptUmRPbjJpUzFjbXJ4aWNlUllOc3cwWnNlVXdTN2ljSjFwOWJaMnJB?oc=5",
-    "score": 40,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738727.999038
+    "created_at": 1789739630.339871
   },
   {
     "node_id": "0605e5b2fbdd76307f5f",
@@ -3644,7 +3504,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.999189
+    "created_at": 1789739630.3400111
   },
   {
     "node_id": "dacdb2d13b1f544df47d",
@@ -3693,7 +3553,56 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.999407
+    "created_at": 1789739630.340101
+  },
+  {
+    "node_id": "030e7f579cc4e7c6db62",
+    "signal_id": "4defc2b76da39d6fd61a",
+    "category": "general",
+    "title": "Businesses for Sale: Will 2025 Be a Buyer’s Market? - Small Business & Entrepreneurship Council",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMGNlMkRNRmhtamF5OVpQNGItRm9qRXEwS2J6X2tiOWM2RThidVFTZmxpekJObEFjYkJQaHgtVzEyeHVpNTBnRWllSHprb210a1d0TVFHdXk4bGlaN29LV0lQQ3ptUmRPbjJpUzFjbXJ4aWNlUllOc3cwWnNlVXdTN2ljSjFwOWJaMnJB?oc=5",
+    "score": 40,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3402185
   },
   {
     "node_id": "d78e9fc0ba4961cc8043",
@@ -3742,7 +3651,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9996328
+    "created_at": 1789739630.3403108
   },
   {
     "node_id": "85336fdec2e7b4dcac9b",
@@ -3791,7 +3700,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738727.9998705
+    "created_at": 1789739630.3404043
   },
   {
     "node_id": "5dab5aab88dd5d8d30c4",
@@ -3840,7 +3749,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0000284
+    "created_at": 1789739630.3404932
   },
   {
     "node_id": "a1d2ed5634159e8afdf8",
@@ -3889,7 +3798,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0001805
+    "created_at": 1789739630.3406055
   },
   {
     "node_id": "cf32de76dc341781175a",
@@ -3938,7 +3847,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0003653
+    "created_at": 1789739630.3406966
   },
   {
     "node_id": "d70d9fd24bccef67ec9f",
@@ -3987,7 +3896,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0005436
+    "created_at": 1789739630.340832
   },
   {
     "node_id": "9d86c299c08d3e4faa76",
@@ -4036,13 +3945,13 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0006988
+    "created_at": 1789739630.3409426
   },
   {
-    "node_id": "ef6f1e6467b2c2284323",
-    "signal_id": "5fa28732ebaef3045bda",
+    "node_id": "fb26f911923ea4d45839",
+    "signal_id": "e7fb261c106e0fa53713",
     "category": "vehicles",
-    "title": "The 5 most wanted features for new car buyers - USA Today",
+    "title": "The 5 most wanted features for new car buyers - usatoday.com",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdkR1QVpINl9fX0RKUDdHSjAteFpkVGV4N2dJMjdmb01ZcFFUMDhBOExocGlVUVAyb1VLcTZfZXpfeFJERGUxdDdSNEpzVF9aVVA3UTRYbkNXaHhlLWV4cklKNmk3OURhZ1RRZi1WWTVnOFVQZmVFbm9DdldZcFF0azhrOGsyY0tiQllWeWJQeDRlWmFWV2VyZ0g3dnFDWG5I?oc=5",
     "score": 60,
     "stage": "DISCOVERED",
@@ -4085,7 +3994,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0008466
+    "created_at": 1789739630.341073
   },
   {
     "node_id": "fcbfd7113fffdcedf886",
@@ -4134,7 +4043,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.001022
+    "created_at": 1789739630.3411622
   },
   {
     "node_id": "22ef820a8584d3b0f96a",
@@ -4183,7 +4092,56 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0011733
+    "created_at": 1789739630.3412516
+  },
+  {
+    "node_id": "f5094f0f6e0d800d5a97",
+    "signal_id": "4137eea97431770c4d8b",
+    "category": "general",
+    "title": "Curb Appeal Redefined in 2026: What Will Really Attract Buyers Next Year - Realtor.com",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMzZybDNUTDEtTERsb0QwY3Fyb21MMGVOSDJCVGthblIwSTVwUjNQN05TRkRqOU92UXh4T2NIWExURlI3REVpRDRwTlZMeGg0N21ZcE8zU1E1cnc1VXlUV1VvNEdzdGM2Tk1SVm5IMlp4WVhvS2MtZGZaTDFsUld0N0NmZjNCLXc?oc=5",
+    "score": 40,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3413396
   },
   {
     "node_id": "df6d7597a12ebbce1c77",
@@ -4232,7 +4190,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0013227
+    "created_at": 1789739630.3414474
   },
   {
     "node_id": "ce9a2a7c92e3189923bb",
@@ -4281,7 +4239,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0015209
+    "created_at": 1789739630.3415341
   },
   {
     "node_id": "45ee315e1feb9b59d347",
@@ -4330,14 +4288,14 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0016956
+    "created_at": 1789739630.3416462
   },
   {
-    "node_id": "4a7fb74eaf001e1c429b",
-    "signal_id": "5aaaedbb51d73efa3a3a",
+    "node_id": "3a57cea538624a2906b2",
+    "signal_id": "e15d24079d32383843b2",
     "category": "real_estate",
-    "title": "What to Look for When Buying a House: A Buyer’s Guide - NerdWallet",
-    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQndWck5GZnhoek9Edll3QWtRMmZKdEFsNy1TQ0lIVjRzYXJ4eTY1QlIyZXE1SUxsMS1GMHVoUTBQdDVrUGNDcWJLem1kY1Vqd0x6OU9tYlA2SXBHbE1BVnJsZUFNdnBuTU0wcllmVGxCR2N6SFlIV2YyQ0pLeEFLXzJzd0tvQQ?oc=5",
+    "title": "News | Owners of 220 townhouses near Chicago look for single buyer to turn property into rentals - CoStar",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdlI1TzN1VDlxeGJULVhINm0wRnF4VFdJbGQ3d2duaVM5X2h6VG5kM2M3TnZFZ2s1SVhSN3dRYWJXN0xVbkVONGZONENlY1Ixb0hFWlM0WjBtcU5xdFFJVEpiTFlQSG9pRFZCbnY3VTZkdldxQWlENm9keHFCbnVFaGRvUUlVR3czZ2NmR1BnV1NnNFNiVlk3bEdfODJtYXBwdHhwX3d6V2VtSUVEQ0N2cHVfR3VDakExZVREclFvNzZwWmhjek9yc09JSQ?oc=5",
     "score": 60,
     "stage": "DISCOVERED",
     "routes": [
@@ -4379,7 +4337,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0018437
+    "created_at": 1789739630.3417835
   },
   {
     "node_id": "0941a75a06182724c0a9",
@@ -4428,7 +4386,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0019894
+    "created_at": 1789739630.3418963
   },
   {
     "node_id": "72ff495b561a0b8c2253",
@@ -4477,56 +4435,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0021336
-  },
-  {
-    "node_id": "618c36e20bf9e35b476c",
-    "signal_id": "561f904b330947d038ef",
-    "category": "real_estate",
-    "title": "Looking for a new home? Beware of ‘housefishing,’ Lehigh Valley Realtor warns - The Morning Call",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQTdVU2VGT0FWbzJkVXlHVVBBNUdCOXVsdXllbFdsTVFUd05sYkNDOFpaQ3FxZlpBd2l6VUExLXpYZXdqUmtHWlk2Y1pkNFpoZlFrM3VFbWc1aEt3ZEFJR0VnWGNMZk5PNlVCZHFMYUl0RVVxLXROdXpQcTBpY2ZUdEIwcXd2djR0ZXA4bUJwNnhpX0RjVFpqU3lVdnBGZjBFMkk2VlI4c2dHTjQ?oc=5",
-    "score": 60,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.0023112
+    "created_at": 1789739630.3419864
   },
   {
     "node_id": "5169aff4a0f7434c5c04",
@@ -4575,7 +4484,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0024567
+    "created_at": 1789739630.3421125
   },
   {
     "node_id": "6775a8d98d4d9327ca40",
@@ -4624,7 +4533,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0026016
+    "created_at": 1789739630.342237
   },
   {
     "node_id": "663436b5226e8875e2f2",
@@ -4673,7 +4582,56 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0028782
+    "created_at": 1789739630.342327
+  },
+  {
+    "node_id": "4a7fb74eaf001e1c429b",
+    "signal_id": "5aaaedbb51d73efa3a3a",
+    "category": "real_estate",
+    "title": "What to Look for When Buying a House: A Buyer’s Guide - NerdWallet",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQndWck5GZnhoek9Edll3QWtRMmZKdEFsNy1TQ0lIVjRzYXJ4eTY1QlIyZXE1SUxsMS1GMHVoUTBQdDVrUGNDcWJLem1kY1Vqd0x6OU9tYlA2SXBHbE1BVnJsZUFNdnBuTU0wcllmVGxCR2N6SFlIV2YyQ0pLeEFLXzJzd0tvQQ?oc=5",
+    "score": 60,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3424146
   },
   {
     "node_id": "de14e0472a1bdb9a5e42",
@@ -4722,56 +4680,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0030658
-  },
-  {
-    "node_id": "6908475576f5735afe97",
-    "signal_id": "478b70bb35a8a057c2f1",
-    "category": "general",
-    "title": "A buyer's market? Yes. For those who can afford it. - marketplace.org",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZ3RIdU1QWWJMMkVncjB2RTZDRVhsd0NQb2xTbV90SEJrUXMtc2JWYlYxTS1WM1prQnBuWl9xNWxJSW5XU1hrQ3VLVW0xMDZoMVg3c0RLMjlZaG5VSzFFYmMtdmczYXBGU01LOTJOZ01MMGdCLVRONEpwS2dESUNxWVRUX0JtSWw4T1NWMmtNa09hZVVOYmNZ?oc=5",
-    "score": 40,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.003182
+    "created_at": 1789739630.3425043
   },
   {
     "node_id": "2cdd9bf633621ed04173",
@@ -4904,7 +4813,56 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.003275
+    "created_at": 1789739630.3426175
+  },
+  {
+    "node_id": "ac0433d0e27699b9e78f",
+    "signal_id": "849279c5287bff45092c",
+    "category": "real_estate",
+    "title": "Buyer’s agents in Portugal: why buyer-only property representation is emerging - Idealista",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNS211dzdYcHg1Y1M0bThvWlNFRm1naUcyRGx4T0NqLUFuVW1FRHp2bXJLN3ZhWWxGZDFsdEMtWXM2LWdRdFp6MmtSQXByTkZON3lMNjdMYzEzb1VWS2JYcEpjZnZNTWtoYTN1Y3d4S0ZBYWJ4Y2RTUlM4NXppX0NRMS1OdXpnYWdIUUpYVTl3NU52ZDhTN1Y1aHlEdG15dU8zMXZ4V1Zab3hPSW9JWnVUalVPcF82OWtudlBLbkZOT3FYOGh1RTJZLUtlU3AwOXNOdnBxSklEOHBESkJTYmlGZGV30gHnAUFVX3lxTE40d1dyTER0MmxQdm9SeTRxdVJaMDZsWllqQTlTcGxmTTNMeVBSSWF5U2Z5MWp6Y2xlYkJBa1ExX04xNHpNMllEdkFxWjk5OGE4a1pwdlZjZnY2VUxFSEhNbkhQd0hvYldYUjJTOEpMcUR3NTQ5aHBsNlhaMG12UW1NWmpiNmw3R055VWU4eTltTkRRdi0xeFZIT1JjWXptVmZZcDlaa1ZNd2ViemJZQ1NyYXNmNURhSlFESzVjQjNtcG0tT1RZcUVKN0sxV2RSVHp3b0E5UmR4UVExMFV0elhiTFEwUmRwdw?oc=5",
+    "score": 60,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3428843
   },
   {
     "node_id": "a861f31d3f00eb593e6a",
@@ -4953,7 +4911,343 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0033674
+    "created_at": 1789739630.3430262
+  },
+  {
+    "node_id": "91a4400313931b3749f1",
+    "signal_id": "6bcfa8ece66eb14c21a0",
+    "category": "b2b",
+    "title": "Dump the RFP to reap better outsourcing results - cio.com",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRDJNcHhveFdjaVk1V0Frckl1cmlEaVE1a2ZVR050SzRKRGVVRnU5OUxVcEZ5QWVrbmFwR29JYTk4VmdVUzZuZ0dXS01CMzFkMUR3Q2ZZLUZKYVhMTjNOTDVGU3Nqb0hpWUR6T084dGxJZEtiU25rMkJydUd4WDAtQ0hLWnlJWmVqVmpvQzhybHRSdw?oc=5",
+    "score": 60,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "PartnerStack",
+        "model": "revshare",
+        "meaning": "recurring_revenue_share",
+        "url": "https://partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "PartnerStack",
+        "model": "cpl",
+        "meaning": "qualified_lead",
+        "url": "https://partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "PartnerStack",
+        "model": "cpa",
+        "meaning": "conversion_action",
+        "url": "https://partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "PartnerStack",
+        "model": "deal_registration",
+        "meaning": "registered_business_deal",
+        "url": "https://partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "impact.com",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://impact.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "impact.com",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://impact.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "impact.com",
+        "model": "cpa",
+        "meaning": "conversion_action",
+        "url": "https://impact.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "impact.com",
+        "model": "revshare",
+        "meaning": "recurring_revenue_share",
+        "url": "https://impact.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Referr",
+        "model": "lead_fee",
+        "meaning": "qualified_lead",
+        "url": "https://www.referr.co.uk/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Referr",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.referr.co.uk/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Public procurement/RFP feeds",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://www.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Public procurement/RFP feeds",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Public procurement/RFP feeds",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.google.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3431072
+  },
+  {
+    "node_id": "0d4dd7cc5a276ac5fa4e",
+    "signal_id": "175f0b868886e23c7d5b",
+    "category": "general",
+    "title": "Cookie Jar owners announce plans to retire, look for buyer - SiouxFalls.Business",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVGFFVE9QMTE3bW9mMnVzUXNFaGJNSzVGMlZ6dXZEcTJJZy1CbWJ0d3JHZGk2QTg5NXc2ZDloTkgxejM4SDVUSUpCLWZwUEZhTE1RWlVtaU5naUE0Ri1wQWNBOVhZY2FfbS01NXdMUks1cDN1QmkzOWk5WnZFU19RUGszWVJLdV9WZXZiUWE0VQ?oc=5",
+    "score": 40,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3432033
+  },
+  {
+    "node_id": "ef6f1e6467b2c2284323",
+    "signal_id": "5fa28732ebaef3045bda",
+    "category": "vehicles",
+    "title": "The 5 most wanted features for new car buyers - USA Today",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdkR1QVpINl9fX0RKUDdHSjAteFpkVGV4N2dJMjdmb01ZcFFUMDhBOExocGlVUVAyb1VLcTZfZXpfeFJERGUxdDdSNEpzVF9aVVA3UTRYbkNXaHhlLWV4cklKNmk3OURhZ1RRZi1WWTVnOFVQZmVFbm9DdldZcFF0azhrOGsyY0tiQllWeWJQeDRlWmFWV2VyZ0g3dnFDWG5I?oc=5",
+    "score": 60,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3432958
+  },
+  {
+    "node_id": "618c36e20bf9e35b476c",
+    "signal_id": "561f904b330947d038ef",
+    "category": "real_estate",
+    "title": "Looking for a new home? Beware of ‘housefishing,’ Lehigh Valley Realtor warns - The Morning Call",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQTdVU2VGT0FWbzJkVXlHVVBBNUdCOXVsdXllbFdsTVFUd05sYkNDOFpaQ3FxZlpBd2l6VUExLXpYZXdqUmtHWlk2Y1pkNFpoZlFrM3VFbWc1aEt3ZEFJR0VnWGNMZk5PNlVCZHFMYUl0RVVxLXROdXpQcTBpY2ZUdEIwcXd2djR0ZXA4bUJwNnhpX0RjVFpqU3lVdnBGZjBFMkk2VlI4c2dHTjQ?oc=5",
+    "score": 60,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.3433673
+  },
+  {
+    "node_id": "6908475576f5735afe97",
+    "signal_id": "478b70bb35a8a057c2f1",
+    "category": "general",
+    "title": "A buyer's market? Yes. For those who can afford it. - marketplace.org",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZ3RIdU1QWWJMMkVncjB2RTZDRVhsd0NQb2xTbV90SEJrUXMtc2JWYlYxTS1WM1prQnBuWl9xNWxJSW5XU1hrQ3VLVW0xMDZoMVg3c0RLMjlZaG5VSzFFYmMtdmczYXBGU01LOTJOZ01MMGdCLVRONEpwS2dESUNxWVRUX0JtSWw4T1NWMmtNa09hZVVOYmNZ?oc=5",
+    "score": 40,
+    "stage": "DISCOVERED",
+    "routes": [
+      {
+        "source": "Google News RSS",
+        "model": "direct_referral",
+        "meaning": "direct_referral",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Google News RSS",
+        "model": "brokerage",
+        "meaning": "transaction_fee",
+        "url": "https://news.google.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "affiliate",
+        "meaning": "tracked_sale_or_lead",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "referral",
+        "meaning": "qualified_introduction",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      },
+      {
+        "source": "Partner program directories",
+        "model": "reseller",
+        "meaning": "margin_or_revenue_share",
+        "url": "https://www.partnerstack.com/",
+        "access": "public_or_account"
+      }
+    ],
+    "consent_required": true,
+    "external_submission_proof": false,
+    "created_at": 1789739630.343455
   },
   {
     "node_id": "1a0f3d6688fcc296c661",
@@ -5023,7 +5317,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0034401
+    "created_at": 1789739630.3435688
   },
   {
     "node_id": "84b4b8005934b7d92985",
@@ -5093,7 +5387,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0035276
+    "created_at": 1789739630.3436465
   },
   {
     "node_id": "0ccf196da3f24d81cc0f",
@@ -5163,7 +5457,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0036013
+    "created_at": 1789739630.3437865
   },
   {
     "node_id": "69bfe247cd9d3a354142",
@@ -5296,105 +5590,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0036957
-  },
-  {
-    "node_id": "7c7d7ebfffc72e8411aa",
-    "signal_id": "ca6ecf05ee28b1ce4acf",
-    "category": "general",
-    "title": "Distressed London chocolate business seeking a buyer - Business Sale Report",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaUNGUU9pdXp0NzlNcmFxT3NLcG1WWTFoLVFvNTVhNGFicXJnR2ZvX0NiU3JPbnY1MUhSUUJnSVAtV1ZURVFCQ0QxUWVUeENSSko5Y0d0T2tsVFd5S1pKdkdoRm9Jakd4NmRQOHQ4c2UzOXBvRHVvUGFNX1JHWXluY2VNM191LXhtMFJFQnJWOGpRSG9FUG1NUF81OGZmVG5McDdnWmNrb21hM3FubXc?oc=5",
-    "score": 40,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.0037937
-  },
-  {
-    "node_id": "f5094f0f6e0d800d5a97",
-    "signal_id": "4137eea97431770c4d8b",
-    "category": "general",
-    "title": "Curb Appeal Redefined in 2026: What Will Really Attract Buyers Next Year - Realtor.com",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMzZybDNUTDEtTERsb0QwY3Fyb21MMGVOSDJCVGthblIwSTVwUjNQN05TRkRqOU92UXh4T2NIWExURlI3REVpRDRwTlZMeGg0N21ZcE8zU1E1cnc1VXlUV1VvNEdzdGM2Tk1SVm5IMlp4WVhvS2MtZGZaTDFsUld0N0NmZjNCLXc?oc=5",
-    "score": 40,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.0039182
+    "created_at": 1789739630.343868
   },
   {
     "node_id": "2d49810ac488251fafe6",
@@ -5443,56 +5639,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0039918
-  },
-  {
-    "node_id": "3a57cea538624a2906b2",
-    "signal_id": "e15d24079d32383843b2",
-    "category": "real_estate",
-    "title": "News | Owners of 220 townhouses near Chicago look for single buyer to turn property into rentals - CoStar",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdlI1TzN1VDlxeGJULVhINm0wRnF4VFdJbGQ3d2duaVM5X2h6VG5kM2M3TnZFZ2s1SVhSN3dRYWJXN0xVbkVONGZONENlY1Ixb0hFWlM0WjBtcU5xdFFJVEpiTFlQSG9pRFZCbnY3VTZkdldxQWlENm9keHFCbnVFaGRvUUlVR3czZ2NmR1BnV1NnNFNiVlk3bEdfODJtYXBwdHhwX3d6V2VtSUVEQ0N2cHVfR3VDakExZVREclFvNzZwWmhjek9yc09JSQ?oc=5",
-    "score": 60,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.0040777
+    "created_at": 1789739630.343994
   },
   {
     "node_id": "ae1cb8a9361096179887",
@@ -5632,7 +5779,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0041974
+    "created_at": 1789739630.344111
   },
   {
     "node_id": "df064496de971fd446ea",
@@ -5702,7 +5849,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0043023
+    "created_at": 1789739630.3442037
   },
   {
     "node_id": "a4e0ba627553304eea36",
@@ -5751,7 +5898,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.004401
+    "created_at": 1789739630.3443007
   },
   {
     "node_id": "e65512db22f4aee91b5e",
@@ -5800,7 +5947,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.004474
+    "created_at": 1789739630.3443732
   },
   {
     "node_id": "8773004e8a37e14760d7",
@@ -5849,7 +5996,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0045447
+    "created_at": 1789739630.3444736
   },
   {
     "node_id": "547322f17857d823dbeb",
@@ -5898,7 +6045,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.004632
+    "created_at": 1789739630.3445454
   },
   {
     "node_id": "651388fefd108e9b66bb",
@@ -5947,7 +6094,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0047038
+    "created_at": 1789739630.344634
   },
   {
     "node_id": "38d833e1b32088d026fd",
@@ -5996,7 +6143,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0047898
+    "created_at": 1789739630.344705
   },
   {
     "node_id": "83c9651917ab51a08301",
@@ -6129,7 +6276,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.004867
+    "created_at": 1789739630.3448071
   },
   {
     "node_id": "bcefa3e48078d219714c",
@@ -6199,7 +6346,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.004983
+    "created_at": 1789739630.3450866
   },
   {
     "node_id": "6339befd68bca7f98b0c",
@@ -6248,7 +6395,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0050697
+    "created_at": 1789739630.3451612
   },
   {
     "node_id": "f3c664cea3b280d9a780",
@@ -6297,7 +6444,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0051413
+    "created_at": 1789739630.345285
   },
   {
     "node_id": "037e50487d67ae363e86",
@@ -6346,7 +6493,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0052118
+    "created_at": 1789739630.3454275
   },
   {
     "node_id": "df96725d5df90824dbcf",
@@ -6395,7 +6542,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0052834
+    "created_at": 1789739630.345556
   },
   {
     "node_id": "d75b11d1f24d61b34297",
@@ -6444,7 +6591,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0053887
+    "created_at": 1789739630.345631
   },
   {
     "node_id": "0c2387b5c948dfdd1bab",
@@ -6493,7 +6640,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0054636
+    "created_at": 1789739630.3457189
   },
   {
     "node_id": "71d3bbd8bc3e9e012520",
@@ -6626,7 +6773,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0055554
+    "created_at": 1789739630.346177
   },
   {
     "node_id": "910d420032935db920af",
@@ -6759,7 +6906,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0058758
+    "created_at": 1789739630.346285
   },
   {
     "node_id": "db8df27a6a8d1afc29de",
@@ -6892,7 +7039,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0059838
+    "created_at": 1789739630.346394
   },
   {
     "node_id": "cc690e60c5eda701f8e9",
@@ -7025,56 +7172,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0061026
-  },
-  {
-    "node_id": "fb26f911923ea4d45839",
-    "signal_id": "e7fb261c106e0fa53713",
-    "category": "vehicles",
-    "title": "The 5 most wanted features for new car buyers - usatoday.com",
-    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQdkR1QVpINl9fX0RKUDdHSjAteFpkVGV4N2dJMjdmb01ZcFFUMDhBOExocGlVUVAyb1VLcTZfZXpfeFJERGUxdDdSNEpzVF9aVVA3UTRYbkNXaHhlLWV4cklKNmk3OURhZ1RRZi1WWTVnOFVQZmVFbm9DdldZcFF0azhrOGsyY0tiQllWeWJQeDRlWmFWV2VyZ0g3dnFDWG5I?oc=5",
-    "score": 60,
-    "stage": "DISCOVERED",
-    "routes": [
-      {
-        "source": "Google News RSS",
-        "model": "direct_referral",
-        "meaning": "direct_referral",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Google News RSS",
-        "model": "brokerage",
-        "meaning": "transaction_fee",
-        "url": "https://news.google.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "affiliate",
-        "meaning": "tracked_sale_or_lead",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "referral",
-        "meaning": "qualified_introduction",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      },
-      {
-        "source": "Partner program directories",
-        "model": "reseller",
-        "meaning": "margin_or_revenue_share",
-        "url": "https://www.partnerstack.com/",
-        "access": "public_or_account"
-      }
-    ],
-    "consent_required": true,
-    "external_submission_proof": false,
-    "created_at": 1789738728.0061934
+    "created_at": 1789739630.3464901
   },
   {
     "node_id": "d14ef870f30231872e1c",
@@ -7123,7 +7221,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0062642
+    "created_at": 1789739630.346567
   },
   {
     "node_id": "29600ffed12b7cc6524b",
@@ -7172,7 +7270,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.006335
+    "created_at": 1789739630.3466527
   },
   {
     "node_id": "2c88f7851713ac60b59c",
@@ -7277,7 +7375,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.00642
+    "created_at": 1789739630.3468664
   },
   {
     "node_id": "a49c847b4c4b29a6307b",
@@ -7347,7 +7445,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0066838
+    "created_at": 1789739630.3470201
   },
   {
     "node_id": "1177119aa2a5b5ac77e5",
@@ -7396,7 +7494,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.006845
+    "created_at": 1789739630.3470988
   },
   {
     "node_id": "935d2f1c5747d860fa92",
@@ -7445,7 +7543,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0069826
+    "created_at": 1789739630.3471713
   },
   {
     "node_id": "a4888382667de32d428c",
@@ -7494,7 +7592,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0070648
+    "created_at": 1789739630.3472729
   },
   {
     "node_id": "075c5b044e14845683f2",
@@ -7543,7 +7641,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0071325
+    "created_at": 1789739630.3473456
   },
   {
     "node_id": "505d703ebcaa3b6aa894",
@@ -7592,7 +7690,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0072553
+    "created_at": 1789739630.3474154
   },
   {
     "node_id": "e07c95baf89ca36b0818",
@@ -7662,7 +7760,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0073283
+    "created_at": 1789739630.3474865
   },
   {
     "node_id": "16759de98fd232b70afc",
@@ -7711,7 +7809,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.007394
+    "created_at": 1789739630.347573
   },
   {
     "node_id": "021889267fb18f1e956e",
@@ -7760,7 +7858,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0074792
+    "created_at": 1789739630.347646
   },
   {
     "node_id": "e8bbbd3d746a5c85d3ed",
@@ -7809,7 +7907,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.007562
+    "created_at": 1789739630.3477423
   },
   {
     "node_id": "d4b067a2a47d6e216b78",
@@ -7879,7 +7977,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.007642
+    "created_at": 1789739630.347817
   },
   {
     "node_id": "d4d983c2602fa2633465",
@@ -7949,7 +8047,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0077112
+    "created_at": 1789739630.3479037
   },
   {
     "node_id": "b286027ffb1189f3587e",
@@ -7998,7 +8096,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0077908
+    "created_at": 1789739630.3479757
   },
   {
     "node_id": "fd9dcc8f6f154af42ea4",
@@ -8047,7 +8145,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0078547
+    "created_at": 1789739630.3480577
   },
   {
     "node_id": "b5a34767f4c85c929f25",
@@ -8096,7 +8194,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0079336
+    "created_at": 1789739630.3481646
   },
   {
     "node_id": "2f91acbaf26e25f34dc3",
@@ -8166,7 +8264,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0080397
+    "created_at": 1789739630.3482397
   },
   {
     "node_id": "5fef2e6157e84ec069c9",
@@ -8215,7 +8313,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0081072
+    "created_at": 1789739630.3483129
   },
   {
     "node_id": "0b3ac3ea66d488290481",
@@ -8264,7 +8362,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.008172
+    "created_at": 1789739630.3483953
   },
   {
     "node_id": "f29323ad9fd99eedbe0e",
@@ -8334,7 +8432,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0082362
+    "created_at": 1789739630.3484664
   },
   {
     "node_id": "ecd2b90374012dbc162f",
@@ -8404,7 +8502,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0083144
+    "created_at": 1789739630.3485634
   },
   {
     "node_id": "e8af8714cdb0715a3aa6",
@@ -8474,7 +8572,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.008393
+    "created_at": 1789739630.3486557
   },
   {
     "node_id": "f1ef3c9227c5756b8430",
@@ -8523,7 +8621,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.008478
+    "created_at": 1789739630.3487294
   },
   {
     "node_id": "44e4a6b7a171e0c2894d",
@@ -8572,7 +8670,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0085428
+    "created_at": 1789739630.3487995
   },
   {
     "node_id": "bb6fb44e591882b3bb10",
@@ -8621,7 +8719,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0086064
+    "created_at": 1789739630.3488832
   },
   {
     "node_id": "894d58decfde3cfd57d3",
@@ -8670,7 +8768,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0086699
+    "created_at": 1789739630.3489633
   },
   {
     "node_id": "51ca7a2b8cd5c89fd262",
@@ -8719,7 +8817,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0087576
+    "created_at": 1789739630.3490343
   },
   {
     "node_id": "96100ef46150ec4d5de3",
@@ -8901,7 +8999,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0088394
+    "created_at": 1789739630.349112
   },
   {
     "node_id": "045878fa93341a560b67",
@@ -8950,7 +9048,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.008921
+    "created_at": 1789739630.3492658
   },
   {
     "node_id": "50d673b6c5a6040923d6",
@@ -8999,7 +9097,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0090103
+    "created_at": 1789739630.3493378
   },
   {
     "node_id": "b1ae8afca27133813445",
@@ -9048,7 +9146,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.009096
+    "created_at": 1789739630.3494234
   },
   {
     "node_id": "46a7f1683cfdee205ce0",
@@ -9097,7 +9195,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0091603
+    "created_at": 1789739630.3494942
   },
   {
     "node_id": "937bfb7cfb1b48c67388",
@@ -9146,7 +9244,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0092258
+    "created_at": 1789739630.3495777
   },
   {
     "node_id": "514207f4d2c14932826a",
@@ -9216,7 +9314,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0092902
+    "created_at": 1789739630.3496492
   },
   {
     "node_id": "868aaee8e7421116b965",
@@ -9265,7 +9363,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0093675
+    "created_at": 1789739630.3497314
   },
   {
     "node_id": "da6574c65c7aec85048b",
@@ -9314,7 +9412,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.009432
+    "created_at": 1789739630.3498137
   },
   {
     "node_id": "92c51d640c967fcc3c37",
@@ -9363,7 +9461,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0095155
+    "created_at": 1789739630.3498845
   },
   {
     "node_id": "555aa42153e611fdb5ec",
@@ -9412,7 +9510,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.00959
+    "created_at": 1789739630.349954
   },
   {
     "node_id": "3df2040232c101c507f0",
@@ -9461,7 +9559,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0096543
+    "created_at": 1789739630.3500228
   },
   {
     "node_id": "1f86f1d2c146c64c76d1",
@@ -9510,7 +9608,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0097177
+    "created_at": 1789739630.3501048
   },
   {
     "node_id": "5e8f804632896c7157c9",
@@ -9559,7 +9657,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0097806
+    "created_at": 1789739630.3501985
   },
   {
     "node_id": "6109d993138a6712ceee",
@@ -9608,7 +9706,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0098553
+    "created_at": 1789739630.3502703
   },
   {
     "node_id": "8ce8622371998035447c",
@@ -9657,7 +9755,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0099285
+    "created_at": 1789739630.350342
   },
   {
     "node_id": "81e4a191d4e8b938ad97",
@@ -9706,7 +9804,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.009993
+    "created_at": 1789739630.3504243
   },
   {
     "node_id": "c9184d97b4adc57b23ca",
@@ -9755,7 +9853,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0100577
+    "created_at": 1789739630.35066
   },
   {
     "node_id": "33ada6b68fd43006a9cf",
@@ -9804,7 +9902,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0101473
+    "created_at": 1789739630.3508089
   },
   {
     "node_id": "bc6259a4a08ebd011ee9",
@@ -9853,7 +9951,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.010223
+    "created_at": 1789739630.3509004
   },
   {
     "node_id": "d4b0be2206be24a64924",
@@ -9902,7 +10000,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.010287
+    "created_at": 1789739630.3509884
   },
   {
     "node_id": "dff3f3bf0c10ced3dcb9",
@@ -9951,7 +10049,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.010363
+    "created_at": 1789739630.351061
   },
   {
     "node_id": "9f0044eff2e9c661d58e",
@@ -10000,7 +10098,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.010442
+    "created_at": 1789739630.3511314
   },
   {
     "node_id": "bcf16c5bb8f2bc87a288",
@@ -10049,7 +10147,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0105073
+    "created_at": 1789739630.351227
   },
   {
     "node_id": "a06a85486f7393675dca",
@@ -10098,7 +10196,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.010571
+    "created_at": 1789739630.3513014
   },
   {
     "node_id": "b830f12dd09593c6b56a",
@@ -10147,7 +10245,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0106473
+    "created_at": 1789739630.3513718
   },
   {
     "node_id": "7320c099ea77a9b3fa2a",
@@ -10196,7 +10294,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0107625
+    "created_at": 1789739630.3514562
   },
   {
     "node_id": "dfd9bfab883be232bd1c",
@@ -10266,7 +10364,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0108514
+    "created_at": 1789739630.3515396
   },
   {
     "node_id": "01896dcf87ead085d5fd",
@@ -10315,7 +10413,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0109193
+    "created_at": 1789739630.3516114
   },
   {
     "node_id": "8231b3568bcd7b2268bc",
@@ -10364,7 +10462,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.011012
+    "created_at": 1789739630.3516815
   },
   {
     "node_id": "cb2eeeda06a726cb41ea",
@@ -10497,7 +10595,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0110812
+    "created_at": 1789739630.3517678
   },
   {
     "node_id": "da88383b4aa014c6b535",
@@ -10546,7 +10644,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0111706
+    "created_at": 1789739630.3518758
   },
   {
     "node_id": "a4cbc6a93452f9925f66",
@@ -10595,7 +10693,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.011235
+    "created_at": 1789739630.351985
   },
   {
     "node_id": "d92626db04101ac59557",
@@ -10665,7 +10763,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.011325
+    "created_at": 1789739630.3520703
   },
   {
     "node_id": "8c63b075d0afe408c29a",
@@ -10714,7 +10812,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0114057
+    "created_at": 1789739630.3521419
   },
   {
     "node_id": "1da1f9e5d2dd5011f593",
@@ -10784,7 +10882,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0114732
+    "created_at": 1789739630.3522358
   },
   {
     "node_id": "7d26a6c10f7fec6d6803",
@@ -10854,7 +10952,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0115533
+    "created_at": 1789739630.352309
   },
   {
     "node_id": "1b21d9a912142060d4ab",
@@ -10903,7 +11001,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0116339
+    "created_at": 1789739630.3523796
   },
   {
     "node_id": "d7fc1328bb5783c52707",
@@ -10952,7 +11050,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0116987
+    "created_at": 1789739630.3524592
   },
   {
     "node_id": "d3d791aa81f2cec50f76",
@@ -11001,7 +11099,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0117757
+    "created_at": 1789739630.352531
   },
   {
     "node_id": "93a96c0a5a710384199b",
@@ -11071,7 +11169,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0118673
+    "created_at": 1789739630.3526132
   },
   {
     "node_id": "9d815d5666e8b4d553ce",
@@ -11211,7 +11309,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0119565
+    "created_at": 1789739630.3527038
   },
   {
     "node_id": "6d35a8e2c6373a0a5c5a",
@@ -11281,7 +11379,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0120423
+    "created_at": 1789739630.3527908
   },
   {
     "node_id": "1ea4b39bc0c4f6731077",
@@ -11351,7 +11449,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0121083
+    "created_at": 1789739630.3528852
   },
   {
     "node_id": "687452d9704715a84e25",
@@ -11400,7 +11498,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.012212
+    "created_at": 1789739630.3530023
   },
   {
     "node_id": "0e3a6f7f06deab6b198f",
@@ -11470,7 +11568,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0122907
+    "created_at": 1789739630.3530874
   },
   {
     "node_id": "aa7300ae6e481290c772",
@@ -11519,7 +11617,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0123572
+    "created_at": 1789739630.3531594
   },
   {
     "node_id": "394423936fed5ec628e2",
@@ -11568,7 +11666,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.012435
+    "created_at": 1789739630.3532295
   },
   {
     "node_id": "2ee87b987c8f554786d8",
@@ -11750,7 +11848,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0125196
+    "created_at": 1789739630.353322
   },
   {
     "node_id": "5f65e379c7591d9392e1",
@@ -11883,7 +11981,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0126257
+    "created_at": 1789739630.3534362
   },
   {
     "node_id": "3b30b0facc8141c9994c",
@@ -11932,7 +12030,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0127056
+    "created_at": 1789739630.3535233
   },
   {
     "node_id": "12ffa6b086efbe9b559d",
@@ -12002,7 +12100,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.012771
+    "created_at": 1789739630.3535948
   },
   {
     "node_id": "fb54e6ccde3ef06b52e3",
@@ -12051,7 +12149,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.012851
+    "created_at": 1789739630.3536654
   },
   {
     "node_id": "130be0a1af6e2f2f3570",
@@ -12121,7 +12219,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.012917
+    "created_at": 1789739630.3537633
   },
   {
     "node_id": "0b773c95bbd2e7ef92fb",
@@ -12261,7 +12359,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.013004
+    "created_at": 1789739630.3538554
   },
   {
     "node_id": "a57497f4523cbc5458df",
@@ -12310,7 +12408,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.013243
+    "created_at": 1789739630.3539903
   },
   {
     "node_id": "e7d68659978d2f4ddde7",
@@ -12450,7 +12548,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.013339
+    "created_at": 1789739630.3540864
   },
   {
     "node_id": "4b08863f4ea3f1ef4545",
@@ -12590,7 +12688,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0134172
+    "created_at": 1789739630.354181
   },
   {
     "node_id": "c58f33e5b69d99c22340",
@@ -12730,7 +12828,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.013515
+    "created_at": 1789739630.3544633
   },
   {
     "node_id": "b847a27993de22d0b47b",
@@ -12870,7 +12968,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0136113
+    "created_at": 1789739630.354586
   },
   {
     "node_id": "536b29310fc86eb20d08",
@@ -13010,7 +13108,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.013708
+    "created_at": 1789739630.3546891
   },
   {
     "node_id": "ebccad8e429390ebe571",
@@ -13150,7 +13248,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0138073
+    "created_at": 1789739630.3548746
   },
   {
     "node_id": "1af7c836380bed373ef8",
@@ -13290,7 +13388,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0139058
+    "created_at": 1789739630.355007
   },
   {
     "node_id": "f2b81cc7270d0029334f",
@@ -13430,7 +13528,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0140033
+    "created_at": 1789739630.355284
   },
   {
     "node_id": "5c7edb7be3898f24850b",
@@ -13570,7 +13668,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0140903
+    "created_at": 1789739630.3553765
   },
   {
     "node_id": "f890a82ae594c6bb23d5",
@@ -13710,7 +13808,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0141852
+    "created_at": 1789739630.355492
   },
   {
     "node_id": "2c18214381def6ec26fb",
@@ -13850,7 +13948,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.014272
+    "created_at": 1789739630.3557706
   },
   {
     "node_id": "3fd763a754182eff08e5",
@@ -13990,7 +14088,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.014418
+    "created_at": 1789739630.3558705
   },
   {
     "node_id": "24480315ad5324c3ed8f",
@@ -14130,7 +14228,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0145657
+    "created_at": 1789739630.3560328
   },
   {
     "node_id": "ff83e32e2a984aaaf290",
@@ -14270,7 +14368,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0146868
+    "created_at": 1789739630.3561277
   },
   {
     "node_id": "738dd2a2e4528fb96e50",
@@ -14410,7 +14508,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0148568
+    "created_at": 1789739630.3563192
   },
   {
     "node_id": "d0d45ec01eeeed21ba1a",
@@ -14550,7 +14648,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0150006
+    "created_at": 1789739630.3564265
   },
   {
     "node_id": "56cdffd18b7a56c47ec4",
@@ -14690,7 +14788,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0151143
+    "created_at": 1789739630.3565319
   },
   {
     "node_id": "4758ed8469dd28260184",
@@ -14830,7 +14928,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0152113
+    "created_at": 1789739630.3566422
   },
   {
     "node_id": "f380d4c1615bcc3f2a98",
@@ -14970,7 +15068,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0153384
+    "created_at": 1789739630.3567772
   },
   {
     "node_id": "65639baa23e69c9d62a0",
@@ -15110,7 +15208,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0154262
+    "created_at": 1789739630.3568904
   },
   {
     "node_id": "d35ea28b7ee22a1670dc",
@@ -15250,7 +15348,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0155368
+    "created_at": 1789739630.3569853
   },
   {
     "node_id": "cba4052f21342861d1a0",
@@ -15390,7 +15488,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0156257
+    "created_at": 1789739630.3570895
   },
   {
     "node_id": "9d7eb77747e20ad81dbd",
@@ -15530,7 +15628,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0157347
+    "created_at": 1789739630.3571715
   },
   {
     "node_id": "82ed8feec114ed0197d1",
@@ -15670,7 +15768,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0158315
+    "created_at": 1789739630.3572748
   },
   {
     "node_id": "2a37346bc352ef16bbd5",
@@ -15810,7 +15908,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0159895
+    "created_at": 1789739630.3573844
   },
   {
     "node_id": "f627e878a6d8e75d27cb",
@@ -15859,7 +15957,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0160732
+    "created_at": 1789739630.3575084
   },
   {
     "node_id": "6ba7f260e3cb52a3fa20",
@@ -15929,7 +16027,7 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0162537
+    "created_at": 1789739630.3575814
   },
   {
     "node_id": "e6e8aa349dbb14dab851",
@@ -15999,6 +16097,6 @@
     ],
     "consent_required": true,
     "external_submission_proof": false,
-    "created_at": 1789738728.0163252
+    "created_at": 1789739630.3576818
   }
 ]
