@@ -29,18 +29,20 @@ jobs:
             "platforms;android-34" \
             "build-tools;34.0.0"
 
-      - run: chmod +x ./gradlew
+      - name: Build Android APK
+        working-directory: android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew clean assembleDebug --no-daemon
 
       - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-
-      - run: ./gradlew clean assembleDebug --no-daemon
+          key: gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle*', 'android/**/gradle-wrapper.properties') }}
 
       - uses: actions/upload-artifact@v4
         with:
           name: apk-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: android/app/build/outputs/apk/debug/*.apk
