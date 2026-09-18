@@ -64,3 +64,7 @@ IMA is open to independent contributors worldwide.
 See [COMMUNITY_ROADMAP.md](COMMUNITY_ROADMAP.md) for areas where work can begin and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution process.
 
 You can contribute code, research, tests, documentation, languages, accessibility, 3D, memory, preservation, security, integrations and experiments.
+
+## Discover IMA
+
+New contributors can start here: [DISCOVER_IMA.md](DISCOVER_IMA.md)
