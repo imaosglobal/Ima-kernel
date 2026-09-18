@@ -52,3 +52,7 @@ Public contributors cannot access:
 Open collaboration.
 Protected intelligence.
 Continuous improvement.
+
+## Contributing
+
+IMA is open to contributors worldwide. See [IMA Community](IMA_COMMUNITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md) to start contributing.

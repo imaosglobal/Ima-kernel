@@ -1,0 +1,53 @@
+name: IMA Community Contribution Gate
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  contribution-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Repository sanity
+        shell: bash
+        run: |
+          set -e
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -f SECURITY.md
+          test -f .github/PULL_REQUEST_TEMPLATE.md
+          test -d .github/ISSUE_TEMPLATE
+          echo "COMMUNITY_STRUCTURE_OK"
+
+      - name: Secret-pattern guard
+        shell: bash
+        run: |
+          set -e
+          if git grep -n -I -E \
+            '(BEGIN (RSA|OPENSSH|EC|DSA) PRIVATE KEY|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AIza[0-9A-Za-z_-]{20,})' \
+            -- . ':!*.lock'; then
+            echo "Potential secret pattern detected."
+            exit 1
+          fi
+          echo "SECRET_PATTERN_GUARD_OK"
+
+      - name: Preservation guard
+        shell: bash
+        run: |
+          set -e
+          if git diff --name-status "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" 2>/dev/null \
+            | awk '$1 ~ /D/ {print}' \
+            | grep -E 'IMA_CANONICAL_VISION|IMA_CONTINUITY|PRESERVATION|ARTIFACT_VAULT|CONTENT_ADDRESS|PORTABLE_IDENTITY'; then
+            echo "Protected preservation files cannot be deleted through an ordinary community PR."
+            exit 1
+          fi
+          echo "PRESERVATION_GUARD_OK"

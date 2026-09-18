@@ -1,0 +1,21 @@
+name: Feature proposal
+description: Propose a concrete capability for IMA
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: capability
+    attributes:
+      label: What should IMA be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why is this useful?
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Possible implementation

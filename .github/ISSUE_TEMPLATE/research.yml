@@ -1,0 +1,19 @@
+name: Research / experiment
+description: Propose or document research relevant to IMA
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or sources
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Proposed experiment
