@@ -20,7 +20,8 @@
     "test": "node tests/ima_core.test.cjs",
     "start": "node server.js",
     "ima:integrity": "node kernel/runtime/CANONICAL/IMA_SYSTEM_INTEGRITY.js",
-    "ima:runtime": "node kernel/runtime/CANONICAL/IMA_RUNTIME.js"
+    "ima:runtime": "node kernel/runtime/CANONICAL/IMA_RUNTIME.js",
+    "ima:self-hosted": "node -e \"console.log(JSON.stringify(require('./kernel/runtime/CANONICAL/IMA_SELF_HOSTED').capabilityReport(), null, 2))\""
   },
   "repository": {
     "type": "git",

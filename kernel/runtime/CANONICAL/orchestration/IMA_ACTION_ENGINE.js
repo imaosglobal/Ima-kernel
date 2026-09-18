@@ -29,6 +29,27 @@ async function execute(input = {}) {
 
   let result = null;
 
+  if (contract.policy && typeof contract.policy.allow === "function") {
+    const decision = contract.policy.allow(
+      contract.action,
+      contract.context
+    );
+
+    if (!decision || decision.allowed !== true) {
+      return {
+        contract,
+        result: null,
+        verification: {
+          verified: false,
+          blocked: true,
+          reason: decision?.reason || "POLICY_DENIED",
+          approval_required: decision?.approval_required === true
+        },
+        executed_at: new Date().toISOString()
+      };
+    }
+  }
+
   if (typeof input.execute === "function") {
     result = await input.execute(contract);
   }

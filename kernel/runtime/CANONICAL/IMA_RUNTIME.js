@@ -10,6 +10,7 @@ const vaultManifest = require("./IMA_VAULT_MANIFEST");
 const contentAddress = require("./IMA_CONTENT_ADDRESS");
 const portableIdentity = require("./IMA_PORTABLE_IDENTITY");
 const derivationRegistry = require("./IMA_DERIVATION_REGISTRY");
+const selfHosted = require("./IMA_SELF_HOSTED");
 
 const runtime = {
     boot() {
@@ -70,7 +71,8 @@ const runtime = {
       derivation_registry: {
         build: derivationRegistryBuild,
         integrity: derivationRegistryIntegrity
-      }
+      },
+      self_hosted: selfHosted.capabilityReport()
         };
     },
 

@@ -34,8 +34,8 @@ REQUIRED=(
   "kernel/runtime/CANONICAL/gateway/IMA_MODEL_GATEWAY.js"
   "kernel/runtime/CANONICAL/gateway/IMA_TOOL_GATEWAY.js"
   "kernel/runtime/CANONICAL/gateway/IMA_AGENT_GATEWAY.js"
-  "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js
-  kernel/runtime/CANONICAL/IMA_SELF_HOSTED.js"
+  "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js"
+  "kernel/runtime/CANONICAL/IMA_SELF_HOSTED.js"
 )
 
 for f in "${REQUIRED[@]}"; do
@@ -64,8 +64,8 @@ files = [
     "kernel/runtime/CANONICAL/gateway/IMA_MODEL_GATEWAY.js",
     "kernel/runtime/CANONICAL/gateway/IMA_TOOL_GATEWAY.js",
     "kernel/runtime/CANONICAL/gateway/IMA_AGENT_GATEWAY.js",
-    "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js
-  kernel/runtime/CANONICAL/IMA_SELF_HOSTED.js",
+    "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js",
+    "kernel/runtime/CANONICAL/IMA_SELF_HOSTED.js",
 ]
 
 for name in files:

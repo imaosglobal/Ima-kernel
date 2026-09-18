@@ -23,6 +23,9 @@ const derivation =
 const action =
   require("../kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE");
 
+const selfHosted =
+  require("../kernel/runtime/CANONICAL/IMA_SELF_HOSTED");
+
 (async () => {
   const contract = core.createContract({
     goal: "test"
@@ -107,6 +110,39 @@ const action =
   });
 
   assert.equal(execution.verification.verified, true);
+
+  const selfHostedReport = selfHosted.capabilityReport();
+
+  assert.equal(selfHostedReport.mode, "SELF_HOSTED");
+  assert.equal(selfHostedReport.network_required, false);
+  assert.equal(selfHostedReport.credentials_required, false);
+
+  selfHosted.registerCommandModel({
+    id: "local-test-model",
+    command: process.execPath,
+    args: [
+      "-e",
+      "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>process.stdout.write(JSON.stringify({ok:true,received:JSON.parse(s)})))"
+    ]
+  });
+
+  const localExecution = await selfHosted.run({
+    goal: "local-independence-test",
+    provider_id: "local-test-model",
+    action: "monitor"
+  });
+
+  assert.equal(localExecution.verification.verified, true);
+  assert.equal(localExecution.result.output.ok, true);
+
+  const deniedExecution = await selfHosted.run({
+    goal: "policy-test",
+    provider_id: "local-test-model",
+    action: "unknown-action"
+  });
+
+  assert.equal(deniedExecution.verification.blocked, true);
+  assert.equal(deniedExecution.verification.verified, false);
 
   console.log("IMA_CORE_TEST=PASS");
 })().catch(error => {
