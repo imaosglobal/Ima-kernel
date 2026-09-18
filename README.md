@@ -56,3 +56,11 @@ Continuous improvement.
 ## Contributing
 
 IMA is open to contributors worldwide. See [IMA Community](IMA_COMMUNITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md) to start contributing.
+
+## Build IMA with us
+
+IMA is open to independent contributors worldwide.
+
+See [COMMUNITY_ROADMAP.md](COMMUNITY_ROADMAP.md) for areas where work can begin and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution process.
+
+You can contribute code, research, tests, documentation, languages, accessibility, 3D, memory, preservation, security, integrations and experiments.
