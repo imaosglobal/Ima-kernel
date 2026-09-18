@@ -1,10 +1,11 @@
 {
-  "time": 1788786979.9593918,
+  "time": 1789580486.4407277,
   "selected": {
     "provider": "gemini",
     "status": "ready",
     "credential_env": "GEMINI_API_KEY",
     "local": false
   },
-  "provider": "gemini"
+  "provider": "gemini",
+  "model": "gemini-3.8-flash"
 }

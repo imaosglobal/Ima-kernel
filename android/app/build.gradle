@@ -5,15 +5,13 @@ plugins {
 android {
     namespace "com.ima.core"
     compileSdk 34
-
     defaultConfig {
         applicationId "com.ima.core"
         minSdk 26
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.1.0"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -21,9 +19,17 @@ android {
     }
 }
 
-dependencies {
-    implementation 'com.android.billingclient:billing:9.1.0'
+def syncImaUi = tasks.register("syncImaUi", Copy) {
+    from("../../ima-ui/dist")
+    into("$projectDir/src/main/assets/ima-ui")
+}
 
+tasks.named("preBuild").configure {
+    dependsOn(syncImaUi)
+}
+
+dependencies {
+    implementation 'com.google.android.play:app-update:2.1.0'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
 }

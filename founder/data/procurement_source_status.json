@@ -1,0 +1,15 @@
+{
+  "timestamp": 1789654620.3975258,
+  "sources": {
+    "TED Open Data": {
+      "status": "ok",
+      "count": 25,
+      "url": "https://api.ted.europa.eu/v3/notices/search"
+    },
+    "SAM.gov Contract Opportunities": {
+      "status": "auth_required",
+      "reason": "SAM_PUBLIC_API_KEY not configured",
+      "url": "https://sam.gov/opportunities"
+    }
+  }
+}

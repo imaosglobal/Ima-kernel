@@ -2,7 +2,7 @@ import time
 
 
 def wrap_response(model_result, identity="IMA"):
-    return {
+    result = {
         "time": time.time(),
         "identity": identity,
         "provider": model_result.get("provider"),
@@ -14,3 +14,9 @@ def wrap_response(model_result, identity="IMA"):
         "latency": model_result.get("latency"),
         "processed_by": "IMA_identity_layer",
     }
+    for key in ("attempted", "attempted_providers", "time", "latency"):
+        if key in model_result and key not in result:
+            result[key] = model_result[key]
+    if "attempted" in model_result:
+        result["attempted"] = model_result["attempted"]
+    return result

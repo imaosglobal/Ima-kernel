@@ -2,170 +2,171 @@ package com.ima.core;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.content.pm.PackageManager;
-import android.content.pm.ApplicationInfo;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import android.webkit.CookieManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import org.json.*;
 
 public class MainActivity extends Activity {
-
-    private JSONArray discoverInstalledAIApps() {
-        JSONArray result = new JSONArray();
-
-        String[][] apps = {
-            {"gemini", "com.google.android.apps.bard"},
-            {"chatgpt", "com.openai.chatgpt"},
-            {"claude", "com.anthropic.claude"}
-        };
-
-        PackageManager pm = getPackageManager();
-
-        for (String[] app : apps) {
-            try {
-                ApplicationInfo info =
-                    pm.getApplicationInfo(app[1], PackageManager.MATCH_ALL);
-
-                JSONObject item = new JSONObject();
-                item.put("provider", app[0]);
-                item.put("package", app[1]);
-                item.put("type", "android_app");
-                item.put("installed", true);
-                item.put("ready", true);
-
-                result.put(item);
-            } catch (PackageManager.NameNotFoundException ignored) {
-            } catch (Exception ignored) {
-            }
-        }
-
-        return result;
-    }
-
-
-
-    private static final String FACEBOOK_URL =
-            "https://www.facebook.com/share/1FFdWxZt2a/";
-
     private WebView webView;
+    private LocalIntelligenceBroker broker;
+    private MobileImaRuntime runtime;
+    private OtaUpdateManager ota;
+    private TermuxCommandBridge termux;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public final class Bridge {
+        @JavascriptInterface public String discover() {
+            return broker.discover().toString();
+        }
+        @JavascriptInterface public boolean open(String provider) {
+            return broker.openProvider(provider);
+        }
+        @JavascriptInterface public void ask(String message, String id) {
+            new Thread(() -> runKernel(message, id)).start();
+        }
+        @JavascriptInterface public void runtime(String id) {
+            new Thread(() -> runRuntime(id)).start();
+        }
+        @JavascriptInterface public String termux(String action) {
+            return termux.dispatch(action).toString();
+        }
+    }
 
-        JSONArray installedAIApps = discoverInstalledAIApps();
-        android.util.Log.i("IMA_AI_DISCOVERY",
-                installedAIApps.toString());
-
+    @Override protected void onCreate(Bundle state) {
+        super.onCreate(state);
+        broker = new LocalIntelligenceBroker(this);
+        runtime = new MobileImaRuntime(this, broker);
+        termux = new TermuxCommandBridge(this);
+        try {
+            ota = new OtaUpdateManager(this);
+            ota.check();
+        } catch (Exception ignored) {
+            ota = null;
+        }
         webView = new WebView(this);
-
-        WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(true);
-        settings.setDatabaseEnabled(true);
-        settings.setLoadWithOverviewMode(true);
-        settings.setUseWideViewPort(true);
-        settings.setUserAgentString(
-                "Mozilla/5.0 (Linux; Android 16) " +
-                "AppleWebKit/537.36 (KHTML, like Gecko) " +
-                "Chrome/140 Mobile Safari/537.36"
-        );
-
-        CookieManager.getInstance().setAcceptCookie(true);
-        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
-
+        WebSettings s = webView.getSettings();
+        s.setJavaScriptEnabled(true);
+        s.setDomStorageEnabled(true);
+        s.setAllowFileAccess(true);
+        s.setAllowContentAccess(true);
+        webView.addJavascriptInterface(new Bridge(), "IMA_LOCAL_AI");
         webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-
-                Toast.makeText(
-                        MainActivity.this,
-                        "IMA: Facebook נטען — מתחילה קריאה",
-                        Toast.LENGTH_SHORT
-                ).show();
-
-                startIngestion();
+            @Override public void onPageFinished(WebView v, String url) {
+                super.onPageFinished(v, url);
+                installNativeApi();
+            }
+            @Override public WebResourceResponse shouldInterceptRequest(WebView v, WebResourceRequest r) {
+                String p = r.getUrl().getPath();
+                if (p == null || !p.startsWith("/Ima-kernel/")) return super.shouldInterceptRequest(v, r);
+                String asset = "ima-ui/" + p.substring("/Ima-kernel/".length());
+                try {
+                    String type = asset.endsWith(".js") ? "application/javascript" :
+                            asset.endsWith(".glb") ? "model/gltf-binary" : "application/octet-stream";
+                    return new WebResourceResponse(type, "UTF-8", getAssets().open(asset));
+                } catch (Exception e) { return super.shouldInterceptRequest(v, r); }
             }
         });
-
         setContentView(webView);
-        webView.loadUrl(FACEBOOK_URL);
+        loadBundledIma();
     }
 
-    private void startIngestion() {
-
-        final String javascript =
-                "(async function() {" +
-
-                "const seen = new Set();" +
-                "let stable = 0;" +
-
-                "function collect() {" +
-                "  const nodes = document.querySelectorAll('div[role=\"article\"], article');" +
-                "  let out = [];" +
-
-                "  for (const n of nodes) {" +
-                "    const text = (n.innerText || '').trim();" +
-                "    if (text.length < 30) continue;" +
-                "    if (seen.has(text)) continue;" +
-                "    seen.add(text);" +
-                "    out.push(text);" +
-                "  }" +
-
-                "  return out;" +
-                "}" +
-
-                "async function send(items) {" +
-                "  for (const text of items) {" +
-                "    try {" +
-                "      await fetch('http://127.0.0.1:8765/ingest', {" +
-                "        method: 'POST'," +
-                "        headers: {'Content-Type':'text/plain;charset=utf-8'}," +
-                "        body: text" +
-                "      });" +
-                "    } catch(e) {}" +
-                "  }" +
-                "}" +
-
-                "for (let i = 0; i < 60; i++) {" +
-                "  const before = seen.size;" +
-                "  const items = collect();" +
-                "  await send(items);" +
-
-                "  window.scrollBy(0, Math.floor(window.innerHeight * 0.85));" +
-                "  await new Promise(r => setTimeout(r, 2500));" +
-
-                "  if (seen.size === before) stable++;" +
-                "  else stable = 0;" +
-
-                "  if (stable >= 5) break;" +
-                "}" +
-
-                "const finalItems = collect();" +
-                "await send(finalItems);" +
-
-                "return 'IMA_INGEST_COMPLETE:' + seen.size;" +
-                "})()";
-
-        webView.evaluateJavascript(javascript, value -> {
-            Toast.makeText(
-                    MainActivity.this,
-                    "IMA: " + value,
-                    Toast.LENGTH_LONG
-            ).show();
-        });
-    }
-
-    @Override
-    protected void onDestroy() {
-        if (webView != null) {
-            webView.destroy();
+    private void loadBundledIma() {
+        try {
+            InputStream in = getAssets().open("ima-ui/index.html");
+            byte[] data = readAll(in);
+            String html = new String(data, StandardCharsets.UTF_8)
+                    .replace("/Ima-kernel/", "./");
+            webView.loadDataWithBaseURL("file:///android_asset/ima-ui/",
+                    html, "text/html", "UTF-8", null);
+        } catch (Exception e) {
+            webView.loadData("<h1>IMA</h1><p>UI load failed: " +
+                    esc(e.toString()) + "</p>", "text/html", "UTF-8");
         }
+    }
+    private void installNativeApi() {
+        String js = "" +
+            "window.__imaAsk=function(m){return new Promise(function(r){" +
+            "var id='a'+Date.now()+Math.random();window.__imaR=window.__imaR||{};" +
+            "window.__imaR[id]=r;IMA_LOCAL_AI.ask(m,id);});};" +
+            "window.__imaRuntime=function(){return new Promise(function(r){" +
+            "var id='r'+Date.now()+Math.random();window.__imaRR=window.__imaRR||{};" +
+            "window.__imaRR[id]=r;IMA_LOCAL_AI.runtime(id);});};" +
+            "window.__imaTermux=function(a){return new Promise(function(r){" +
+            "try{r(JSON.parse(IMA_LOCAL_AI.termux(a)));}catch(e){r({ok:false,error:String(e)});}});};" +
+            "window.__imaDone=function(id,x){if(window.__imaR&&window.__imaR[id])" +
+            "{window.__imaR[id](x);delete window.__imaR[id];}};" +
+            "window.__imaRuntimeDone=function(id,x){if(window.__imaRR&&window.__imaRR[id])" +
+            "{window.__imaRR[id](x);delete window.__imaRR[id];}};" +
+            "(function(){const old=window.fetch;window.fetch=function(u,o){" +
+            "if(String(u).includes('/ima-api/chat'))return window.__imaAsk((o&&o.body?" +
+            "JSON.parse(o.body).message:'')).then(x=>new Response(JSON.stringify(x)," +
+            "{status:200,headers:{'Content-Type':'application/json'}}));" +
+            "if(String(u).includes('/ima-api/runtime'))return window.__imaRuntime()" +
+            ".then(x=>new Response(JSON.stringify(x),{status:200,headers:{'Content-Type':'application/json'}}));" +
+            "return old.apply(this,arguments);};})();";
+        webView.evaluateJavascript(js, null);
+    }
+
+    private void runKernel(String message, String id) {
+        JSONObject result = runtime.ask(message);
+        String response = result.optString("response", "אני כאן.");
+        finishAsk(id, response, result.optString("provider", "IMA Mobile Runtime"));
+    }
+
+    private void runRuntime(String id) {
+        finishRuntime(id, runtime.runtimeState().toString());
+    }
+
+    private void finishAsk(String id, String text, String provider) {
+        try {
+            JSONObject o = new JSONObject();
+            o.put("response", text);
+            o.put("provider", provider);
+            String js = "window.__imaDone(" + JSONObject.quote(id) + "," + o + ")";
+            runOnUiThread(() -> webView.evaluateJavascript(js, null));
+        } catch (Exception ignored) {}
+    }
+
+    private void finishRuntime(String id, String json) {
+        String js = "window.__imaRuntimeDone(" + JSONObject.quote(id) + "," + json + ")";
+        runOnUiThread(() -> webView.evaluateJavascript(js, null));
+    }
+
+    private String firstInstalledProvider() {
+        JSONArray a = broker.discover();
+        return a.length() > 0 ? a.optJSONObject(0).optString("provider", null) : null;
+    }
+
+    private String providerLabel(String p) {
+        if ("gemini".equals(p)) return "Gemini";
+        if ("chatgpt".equals(p)) return "ChatGPT";
+        if ("claude".equals(p)) return "Claude";
+        return "אמא";
+    }
+
+    private static byte[] readAll(InputStream in) throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        byte[] b = new byte[8192]; int n;
+        while ((n = in.read(b)) != -1) out.write(b, 0, n);
+        return out.toByteArray();
+    }
+
+    private static String esc(String s) {
+        return s.replace("&", "&amp;").replace("<", "&lt;");
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        if (ota != null) ota.resume();
+    }
+
+    @Override protected void onDestroy() {
+        if (webView != null) webView.destroy();
         super.onDestroy();
     }
 }

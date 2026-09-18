@@ -1,0 +1,62 @@
+{
+  "timestamp": 1789738728.0585694,
+  "roles": [
+    "ceo",
+    "product",
+    "engineering",
+    "qa",
+    "design",
+    "marketing",
+    "sales",
+    "customer_success",
+    "recruiting",
+    "finance",
+    "legal_ops",
+    "security",
+    "growth"
+  ],
+  "engineering": {
+    "autonomy_cycle_ok": true
+  },
+  "qa": {
+    "proof_gated": true
+  },
+  "commercial": {
+    "opportunities": 208,
+    "money_routes": 1870,
+    "deals": 127
+  },
+  "finance": {
+    "pipeline_records": 0
+  },
+  "crm": {
+    "approved_marketing_contacts": 0
+  },
+  "priorities": [
+    {
+      "priority": "P1",
+      "owner": "finance",
+      "task": "connect verified monetization routes"
+    },
+    {
+      "priority": "P1",
+      "owner": "sales",
+      "task": "acquire explicit opt-in contacts through portal"
+    },
+    {
+      "priority": "P2",
+      "owner": "product",
+      "task": "improve end-to-end user journey"
+    },
+    {
+      "priority": "P2",
+      "owner": "security",
+      "task": "audit credentials and external action boundaries"
+    },
+    {
+      "priority": "P2",
+      "owner": "design",
+      "task": "keep product experience coherent and accessible"
+    }
+  ]
+}

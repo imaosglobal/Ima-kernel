@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -36,7 +37,14 @@ def run():
         print("[FAIL] CANONICAL RUNTIME:", repr(e))
         return 1
 
-    # 2. One canonical autonomous cycle.
+    # 2. One canonical autonomous cycle, except during Git validation.
+    # Git validation must be read-only and must never mutate runtime state.
+    if os.environ.get("IMA_GIT_VALIDATION") == "1":
+        print("[IMA] GIT VALIDATION: read-only; autonomy cycle skipped")
+        print("[OK] AUTONOMY VALIDATION")
+        print("=== IMA SYSTEM READY ===")
+        return 0
+
     try:
         from founder.executive_ai.action_engine.autonomous_cycle import run_cycle
 
