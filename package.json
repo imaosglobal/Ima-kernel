@@ -17,8 +17,10 @@
     "hardhat": "2.19.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "node tests/ima_core.test.cjs",
+    "start": "node server.js",
+    "ima:integrity": "node kernel/runtime/CANONICAL/IMA_SYSTEM_INTEGRITY.js",
+    "ima:runtime": "node kernel/runtime/CANONICAL/IMA_RUNTIME.js"
   },
   "repository": {
     "type": "git",

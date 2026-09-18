@@ -1,110 +1,65 @@
+"use strict";
+
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const ROOT = path.resolve(__dirname, "../../..");
-const REGISTRY = path.join(
-  ROOT,
-  ".ima/runtime/continuity/preservation_registry.json"
-);
-const SEEDS = path.join(
-  ROOT,
-  ".ima/runtime/continuity/knowledge_seeds.jsonl"
-);
-
-function hash(value) {
+function sha256File(file) {
   return crypto
     .createHash("sha256")
-    .update(String(value), "utf8")
+    .update(fs.readFileSync(file))
     .digest("hex");
 }
 
-function verify() {
-  if (!fs.existsSync(REGISTRY)) {
+function verifyArtifact(record, root) {
+  if (!record || !record.content_file) {
     return {
       status: "UNAVAILABLE",
-      reason: "REGISTRY_NOT_FOUND"
+      reason: "content_file_missing"
     };
   }
 
-  const registry = JSON.parse(
-    fs.readFileSync(REGISTRY, "utf8")
-  );
+  const file = path.resolve(root, record.content_file);
 
-  const seeds = new Map();
-
-  if (fs.existsSync(SEEDS)) {
-    for (const line of fs.readFileSync(SEEDS, "utf8").split("\n")) {
-      if (!line.trim()) continue;
-
-      try {
-        const record = JSON.parse(line);
-        if (record.artifact_id) {
-          seeds.set(String(record.artifact_id), record);
-        }
-      } catch (_) {}
-    }
+  if (!fs.existsSync(file)) {
+    return {
+      status: "UNAVAILABLE",
+      reason: "content_not_found",
+      file
+    };
   }
 
-  const results = [];
-  let verified = 0;
-  let unavailable = 0;
-  let mismatched = 0;
+  const actual = sha256File(file);
+  const expected = record.sha256 || record.hash || null;
 
-  for (const record of registry.records || []) {
-    const seed = seeds.get(String(record.artifact_id));
-
-    if (!seed) {
-      unavailable++;
-      results.push({
-        artifact_id: record.artifact_id,
-        status: "CONTENT_UNAVAILABLE"
-      });
-      continue;
-    }
-
-    /*
-     * The seed registry stores the hash but deliberately does not
-     * duplicate all source content. Therefore we can confirm that
-     * the registered hash exists, but cannot recompute it unless
-     * the original content is available.
-     */
-    if (!record.sha256) {
-      mismatched++;
-      results.push({
-        artifact_id: record.artifact_id,
-        status: "HASH_MISSING"
-      });
-      continue;
-    }
-
-    if (record.sha256 === seed.sha256) {
-      verified++;
-      results.push({
-        artifact_id: record.artifact_id,
-        status: "HASH_RECORD_MATCH"
-      });
-    } else {
-      mismatched++;
-      results.push({
-        artifact_id: record.artifact_id,
-        status: "HASH_RECORD_MISMATCH"
-      });
-    }
+  if (!expected) {
+    return {
+      status: "NO_EXPECTED_HASH",
+      actual
+    };
   }
 
   return {
-    status: mismatched > 0 ? "INTEGRITY_ERROR" : "INTEGRITY_OK",
-    total: (registry.records || []).length,
-    verified,
-    unavailable,
-    mismatched,
-    results
+    status: actual === expected ? "VERIFIED" : "MISMATCH",
+    expected,
+    actual,
+    file
   };
 }
 
-if (require.main === module) {
-  console.log(JSON.stringify(verify(), null, 2));
+function verifyRegistry(registry, root) {
+  const records = Array.isArray(registry)
+    ? registry
+    : registry?.artifacts || [];
+
+  return records.map(record => ({
+    artifact_id: record.artifact_id || record.id || null,
+    ...verifyArtifact(record, root)
+  }));
 }
 
-module.exports = { verify };
+module.exports = {
+  sha256File,
+  verifyArtifact,
+  verifyRegistry
+};

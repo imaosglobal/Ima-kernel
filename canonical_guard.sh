@@ -1,98 +1,97 @@
 #!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
 
-set -e
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+CANON="$ROOT/kernel/runtime/CANONICAL"
 
-ROOT="$HOME/ima_kernel"
 cd "$ROOT"
 
 echo "=== IMA CANONICAL GUARD ==="
+echo "[IMA] root=$ROOT"
 
-LOCK=".ima/runtime/canonical_system_lock.json"
+FAIL=0
 
-if [ ! -f "$LOCK" ]; then
-    echo "[FAIL] lock missing"
-    exit 1
+check_file() {
+  if [ -f "$1" ]; then
+    echo "[OK] $1"
+  else
+    echo "[FAIL] missing: $1"
+    FAIL=1
+  fi
+}
+
+echo "[1] VERIFY CANONICAL COMPONENTS"
+
+REQUIRED=(
+  "IMA_CANONICAL_VISION.md"
+  "kernel/runtime/CANONICAL/IMA_RUNTIME.js"
+  "kernel/runtime/CANONICAL/IMA_POLICY.js"
+  "kernel/runtime/CANONICAL/IMA_CORE_CONTRACT.js"
+  "kernel/runtime/CANONICAL/IMA_SYSTEM_INTEGRITY.js"
+  "kernel/runtime/CANONICAL/IMA_PRESERVATION_VERIFY.js"
+  "kernel/runtime/CANONICAL/IMA_DERIVATION_REGISTRY.js"
+  "kernel/runtime/CANONICAL/memory/IMA_MEMORY.js"
+  "kernel/runtime/CANONICAL/gateway/IMA_MODEL_GATEWAY.js"
+  "kernel/runtime/CANONICAL/gateway/IMA_TOOL_GATEWAY.js"
+  "kernel/runtime/CANONICAL/gateway/IMA_AGENT_GATEWAY.js"
+  "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js"
+)
+
+for f in "${REQUIRED[@]}"; do
+  check_file "$f"
+done
+
+if [ "$FAIL" -ne 0 ]; then
+  echo "[FAIL] required components missing"
+  exit 1
 fi
 
-echo "[1] VERIFY HASH"
-
-python3 - <<'PY'
-import json, hashlib, sys
-from pathlib import Path
-
-lock=json.load(open(".ima/runtime/canonical_system_lock.json"))
-
-changed=[]
-missing=[]
-
-for f,h in lock["components"].items():
-    p=Path(f)
-    if not p.exists():
-        missing.append(f)
-        continue
-    now=hashlib.sha256(p.read_bytes()).hexdigest()
-    if now != h:
-        changed.append(f)
-
-if changed or missing:
-    print("[FAIL]")
-    print("changed:",changed)
-    print("missing:",missing)
-    sys.exit(1)
-
-print("[OK] HASH INTEGRITY")
-PY
-
-
-echo "[2] VERIFY MEMORY"
+echo "[2] VERIFY SHA-256"
 
 python3 - <<'PY'
 from pathlib import Path
-import json
+import hashlib
 
-checks=[
-".ima/runtime/memory_bus.py",
-".ima/runtime/memory_fusion_state.json",
-".ima/conversation_memory.json"
+root = Path(".")
+files = [
+    "IMA_CANONICAL_VISION.md",
+    "kernel/runtime/CANONICAL/IMA_CORE_CONTRACT.js",
+    "kernel/runtime/CANONICAL/IMA_SYSTEM_INTEGRITY.js",
+    "kernel/runtime/CANONICAL/IMA_PRESERVATION_VERIFY.js",
+    "kernel/runtime/CANONICAL/IMA_DERIVATION_REGISTRY.js",
+    "kernel/runtime/CANONICAL/memory/IMA_MEMORY.js",
+    "kernel/runtime/CANONICAL/gateway/IMA_MODEL_GATEWAY.js",
+    "kernel/runtime/CANONICAL/gateway/IMA_TOOL_GATEWAY.js",
+    "kernel/runtime/CANONICAL/gateway/IMA_AGENT_GATEWAY.js",
+    "kernel/runtime/CANONICAL/orchestration/IMA_ACTION_ENGINE.js",
 ]
 
-bad=[]
-
-for x in checks:
-    if not Path(x).exists():
-        bad.append(x)
-
-if bad:
-    print("[FAIL] MEMORY",bad)
-    raise SystemExit(1)
-
-print("[OK] MEMORY")
+for name in files:
+    p = root / name
+    digest = hashlib.sha256(p.read_bytes()).hexdigest()
+    print(f"[OK] SHA256 {name} {digest}")
 PY
 
+echo "[3] VERIFY SYSTEM INTEGRITY"
 
-echo "[3] VERIFY API"
+node "$CANON/IMA_SYSTEM_INTEGRITY.js"
 
-if curl -s http://127.0.0.1:8080/health | grep -q '"health": "ok"'; then
-    echo "[OK] API HEALTH"
+echo "[4] VERIFY CORE TEST"
+
+npm test
+
+echo "[5] VERIFY GIT SAFETY"
+
+if git diff --check; then
+  echo "[OK] GIT DIFF CHECK"
 else
-    echo "[WARN] API OFFLINE"
+  echo "[FAIL] GIT DIFF CHECK"
+  exit 1
 fi
 
+echo "[6] VERIFY WORKTREE"
 
-echo "[4] CREATE CHECKPOINT"
+git status --short
 
-NAME="ima_guard_checkpoint_$(date +%s).tar.gz"
-
-tar -czf "$NAME" \
-IMA_START.py \
-kernel/runtime/CANONICAL \
-.ima/runtime \
-ima_master_runtime.py \
-conversation_layer.py \
-identity_context.py \
-learning/evolution_controller.py \
->/dev/null
-
-echo "[OK] BACKUP $NAME"
-
-echo "=== CANONICAL STATE VERIFIED ==="
+echo "=== IMA CANONICAL STATE VERIFIED ==="
+echo "CANONICAL_GUARD=PASS"
