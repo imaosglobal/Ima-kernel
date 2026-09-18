@@ -1,0 +1,58 @@
+name: Reproducible Community Check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify repository structure
+        run: |
+          set -e
+          test -f README.md
+          test -f CONTRIBUTING.md
+          test -f DISCOVER_IMA.md
+          test -f COMMUNITY_ROADMAP.md
+          test -f GOVERNANCE.md
+          test -f SECURITY.md
+          test -d .github/ISSUE_TEMPLATE
+          echo "COMMUNITY_STRUCTURE=PASS"
+
+      - name: Verify canonical vision
+        run: |
+          set -e
+          test -f IMA_CANONICAL_VISION.md
+          echo "CANONICAL_VISION=PASS"
+
+      - name: Verify no obvious secrets
+        run: |
+          set -e
+          if grep -RInE \
+            --exclude-dir=.git \
+            --exclude='*.lock' \
+            '(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})' \
+            .; then
+            echo "SECRET_SCAN=FAIL"
+            exit 1
+          fi
+          echo "SECRET_SCAN=PASS"
+
+      - name: Verify community documentation
+        run: |
+          set -e
+          grep -q "human agency" CONTRIBUTING.md
+          grep -q "provenance" CONTRIBUTING.md
+          grep -q "Discover IMA" README.md
+          echo "COMMUNITY_DOCS=PASS"
+
+      - name: Final result
+        run: echo "IMA_REPRODUCIBLE_COMMUNITY_CHECK=PASS"

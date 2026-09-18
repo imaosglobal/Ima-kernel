@@ -68,3 +68,11 @@ You can contribute code, research, tests, documentation, languages, accessibilit
 ## Discover IMA
 
 New contributors can start here: [DISCOVER_IMA.md](DISCOVER_IMA.md)
+
+## Community operations
+
+- [Discover IMA](DISCOVER_IMA.md)
+- [Community Roadmap](COMMUNITY_ROADMAP.md)
+- [Governance](GOVERNANCE.md)
+- [Support](SUPPORT.md)
+- [Contributing](CONTRIBUTING.md)
