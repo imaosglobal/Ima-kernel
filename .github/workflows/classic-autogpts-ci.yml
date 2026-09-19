@@ -56,6 +56,7 @@ jobs:
 
       - name: Check Classic agent source
         id: classic_source
+        working-directory: .
         run: |
           if [ -d "./${{ matrix.agent-name }}" ]; then
             echo "available=true" >> "$GITHUB_OUTPUT"
