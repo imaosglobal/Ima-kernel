@@ -1,5 +1,15 @@
 {
-  "status": "foundation",
-  "input": "speech",
-  "output": "voice"
+  "status": "connected_foundation",
+  "input": ["speech", "text"],
+  "output": ["voice", "text"],
+  "browser": {
+    "speech_synthesis": true,
+    "language": "he-IL",
+    "user_selectable": true
+  },
+  "providers": {
+    "external_tts": "pluggable",
+    "realtime_lipsync": "pluggable"
+  },
+  "truth_rule": "Only advertise external voice providers when a real connection is verified."
 }

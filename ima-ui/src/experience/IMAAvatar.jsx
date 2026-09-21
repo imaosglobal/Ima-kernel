@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, Stage, Html } from '@react-three/drei';
 
 function Model() {
-  const { scene } = useGLTF('/mother_character.glb');
+  const { scene } = useGLTF('/Ima-kernel/mother_character.glb');
   return <primitive object={scene} />;
 }
 

@@ -29,6 +29,18 @@ jobs:
             "platforms;android-34" \
             "build-tools;34.0.0"
 
+      - name: Build shared IMA web client
+        working-directory: ima-ui
+        run: |
+          npm ci
+          npm run build
+
+      - name: Synchronize web client into Android
+        run: |
+          rm -rf android/app/src/main/assets/ima-ui
+          mkdir -p android/app/src/main/assets/ima-ui
+          cp -R ima-ui/dist/. android/app/src/main/assets/ima-ui/
+
       - name: Build Android APK
         working-directory: android
         run: |

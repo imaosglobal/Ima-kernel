@@ -1,41 +1,64 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment, Html, useGLTF } from '@react-three/drei';
+import { Environment, Float, Html, OrbitControls } from '@react-three/drei';
 import { useImaRuntime } from './services/imaRuntime';
 import { askIma } from './services/imaChat';
 
-const MODEL = '/Ima-kernel/mother_character.glb';
-
-function Mother() {
-  const { scene } = useGLTF(MODEL);
-  return <primitive object={scene} scale={1.7} position={[0, -1.65, 0]} />;
-}
-
-function Loading() {
-  return <Html center><div style={{ color: 'white', fontWeight: 700 }}>אמא מתעוררת…</div></Html>;
-}
-
-function MotherScene() {
+function MotherPresence() {
   return (
-    <Canvas camera={{ position: [0, 0.2, 4.8], fov: 38 }}>
-      <ambientLight intensity={1.5} />
-      <directionalLight position={[2, 4, 3]} intensity={2} />
-      <Suspense fallback={<Loading />}>
-        <Mother />
+    <Float speed={1.1} rotationIntensity={0.08} floatIntensity={0.18}>
+      <group position={[0, -0.85, 0]}>
+        <mesh position={[0, 0.1, 0]}>
+          <sphereGeometry args={[0.9, 48, 48]} />
+          <meshPhysicalMaterial transmission={0.28} roughness={0.18} metalness={0.12} clearcoat={1} />
+        </mesh>
+        <mesh position={[0, 1.28, 0]}>
+          <sphereGeometry args={[0.46, 48, 48]} />
+          <meshPhysicalMaterial transmission={0.2} roughness={0.2} clearcoat={1} />
+        </mesh>
+        <mesh position={[0, 1.55, -0.04]} scale={[0.58, 0.7, 0.48]}>
+          <sphereGeometry args={[1, 48, 48]} />
+          <meshStandardMaterial transparent opacity={0.42} roughness={0.28} />
+        </mesh>
+      </group>
+    </Float>
+  );
+}function MotherScene() {
+  return (
+    <Canvas camera={{ position: [0, 0.65, 5.2], fov: 36 }} dpr={[1, 2]}>
+      <ambientLight intensity={1.8} />
+      <pointLight position={[2, 3, 4]} intensity={18} distance={9} />
+      <pointLight position={[-3, 1, 2]} intensity={10} distance={8} />
+      <Suspense fallback={<Html center>אמא מתעוררת…</Html>}>
+        <MotherPresence />
         <Environment preset="studio" />
       </Suspense>
-      <OrbitControls enablePan={false} minDistance={3.5} maxDistance={6} />
+      <OrbitControls enablePan={false} minDistance={3.6} maxDistance={6.5} />
     </Canvas>
   );
 }
 
+const features = [
+  ['זיכרון', 'memory'], ['למידה', 'learning'], ['קול', 'voice'],
+  ['יצירה', 'creative'], ['כלים', 'tools'], ['מכשירים', 'devices']
+];
+
 export default function App() {
   const runtime = useImaRuntime();
   const [input, setInput] = useState('');
-  const [busy, setBusy] = useState(false);
-  const [messages, setMessages] = useState([
-    { role: 'ima', text: 'אני כאן. אפשר לדבר איתי. מה תרצה לעשות יחד?' },
+  const [busy, setBusy] = useState(false);  const [messages, setMessages] = useState([
+    { role: 'ima', text: 'אני כאן. זה המרחב החדש של אמא. אפשר להתחיל בכל שאלה, רעיון או משימה.' },
   ]);
+  const [voiceOn, setVoiceOn] = useState(false);
+
+  const speak = (text) => {
+    if (!voiceOn || !('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'he-IL';
+    utterance.rate = 0.96;
+    window.speechSynthesis.speak(utterance);
+  };
 
   const send = async () => {
     const text = input.trim();
@@ -46,33 +69,123 @@ export default function App() {
     try {
       const response = await askIma(text);
       setMessages(m => [...m, { role: 'ima', text: response }]);
+      speak(response);
     } catch (error) {
-      setMessages(m => [...m, { role: 'system', text: `מנוע השיחה לא זמין כרגע: ${error.message}` }]);
-    } finally {
-      setBusy(false);
+      setMessages(m => [...m, { role: 'system', text: 'חיבור אמא נכשל: ' + error.message }]);
+    } finally {      setBusy(false);
     }
   };
 
+  const active = runtime.status === 'active';
+  const statusText = active ? 'מחוברת לליבת IMA' : 'חיבור ליבה לא זמין';
+  const counts = useMemo(() => ({
+    memory: runtime.memory?.records ?? 0,
+    learning: runtime.learning?.records ?? 0
+  }), [runtime]);
+
   return (
-    <main dir="rtl" style={{ minHeight: '100vh', background: 'radial-gradient(circle at 50% 20%, #30303a 0, #111118 45%, #07070b 100%)', color: '#fff', fontFamily: 'system-ui, sans-serif' }}>
-      <header style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div><div style={{ fontSize: 34, fontWeight: 800 }}>אמא</div><div style={{ opacity: .72 }}>האינטליגנציה שמלווה אותך</div></div>
-        <div style={{ padding: '8px 14px', borderRadius: 999, background: runtime.status === 'active' ? '#193d2a' : '#432025', fontSize: 13 }}>● {runtime.status === 'active' ? 'Runtime מחובר' : 'מתחברת…'}</div>
-      </header>
-      <section style={{ maxWidth: 1180, margin: '0 auto', padding: '0 18px 28px', display: 'grid', gridTemplateColumns: 'minmax(0, 1.15fr) minmax(320px, .85fr)', gap: 18 }}>
-        <div style={{ minHeight: 590, borderRadius: 28, overflow: 'hidden', background: 'linear-gradient(145deg,#292934,#121219)', border: '1px solid #ffffff18', boxShadow: '0 20px 70px #0008' }}><MotherScene /></div>
-        <div style={{ minHeight: 590, display: 'flex', flexDirection: 'column', borderRadius: 28, background: '#17171fdd', border: '1px solid #ffffff18', overflow: 'hidden' }}>
-          <div style={{ padding: 20, borderBottom: '1px solid #ffffff14' }}><h2 style={{ margin: 0 }}>לדבר עם אמא</h2><div style={{ opacity: .6, fontSize: 13, marginTop: 5 }}>זיכרון {runtime.memory.records.toLocaleString()} · למידה {runtime.learning.records}</div></div>
-          <div style={{ flex: 1, padding: 18, overflowY: 'auto' }}>{messages.map((m, i) => <div key={i} style={{ display: 'flex', justifyContent: m.role === 'user' ? 'flex-start' : 'flex-end', marginBottom: 12 }}><div style={{ maxWidth: '85%', padding: '12px 15px', borderRadius: 18, background: m.role === 'user' ? '#343440' : m.role === 'system' ? '#48272d' : '#242b38' }}>{m.text}</div></div>)}</div>
-          <div style={{ padding: 14, borderTop: '1px solid #ffffff14', display: 'flex', gap: 8 }}>
-            <input value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder={busy ? 'אמא חושבת…' : 'כתוב לאמא…'} style={{ flex: 1, border: 0, outline: 0, borderRadius: 16, padding: '13px 15px', background: '#292932', color: '#fff', fontSize: 16 }} />
-            <button onClick={send} disabled={busy} style={{ border: 0, borderRadius: 16, padding: '0 20px', background: '#fff', color: '#111', fontWeight: 800, cursor: busy ? 'wait' : 'pointer' }}>{busy ? '…' : 'שליחה'}</button>
+    <main dir="rtl" style={{
+      minHeight: '100vh', color: '#f7f4ef', fontFamily: 'system-ui,sans-serif',
+      background: 'radial-gradient(circle at 72% 18%,#5d466433,transparent 30%),#05060a'
+    }}>
+      <header style={{
+        maxWidth: 1440, margin: 'auto', padding: '22px 28px',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center'
+      }}>
+        <div>
+          <div style={{fontSize:34,fontWeight:800}}>אמא</div>
+          <div style={{opacity:.62}}>אינטליגנציה אנושית־מרכזית, מחוברת לעולם</div>
+        </div>
+        <div style={{padding:'9px 14px',border:'1px solid #ffffff1c',borderRadius:999,fontSize:13}}>
+          ● {statusText}
+        </div>      </header>
+      <section style={{
+        maxWidth:1440, margin:'auto', padding:'10px 28px 36px',
+        display:'grid', gridTemplateColumns:'1.3fr .7fr', gap:20
+      }}>
+        <div style={{
+          minHeight:680, position:'relative', overflow:'hidden', borderRadius:30,
+          border:'1px solid #ffffff14', background:'#ffffff08',
+          boxShadow:'0 30px 100px #0008'
+        }}>
+          <div style={{position:'absolute',inset:0}}><MotherScene /></div>
+          <div style={{position:'absolute',right:28,bottom:26,zIndex:2,maxWidth:500}}>
+            <div style={{fontSize:12,letterSpacing:2,opacity:.5}}>IMA · PRESENT / NEXT</div>
+            <h1 style={{fontSize:'clamp(38px,5vw,72px)',lineHeight:.98,margin:'10px 0'}}>
+              לא עוד חלון צ׳אט.
+            </h1>
+            <p style={{fontSize:17,lineHeight:1.65,opacity:.72}}>
+              מרחב אחד לשיחה, זיכרון, למידה, יצירה, כלים ומכשירים —
+              עם התקדמות מתועדת במקום הבטחות שלא מומשו.
+            </p>
+            <div style={{display:'flex',flexWrap:'wrap',gap:8,marginTop:18}}>
+              {features.map(([label]) => <span key={label} style={{
+                padding:'8px 12px',borderRadius:999,background:'#ffffff0b',
+                border:'1px solid #ffffff12',fontSize:12
+              }}>{label}</span>)}
+            </div>
+          </div>
+        </div>        <div style={{
+          minHeight:680, display:'flex', flexDirection:'column',
+          borderRadius:30, border:'1px solid #ffffff14',
+          background:'#ffffff08', overflow:'hidden'
+        }}>
+          <div style={{padding:22,borderBottom:'1px solid #ffffff10'}}>
+            <h2 style={{margin:'0 0 6px'}}>לדבר עם אמא</h2>
+            <div style={{opacity:.52,fontSize:12}}>
+              זיכרון {counts.memory.toLocaleString()} · למידה {counts.learning.toLocaleString()}
+            </div>
+          </div>
+          <div style={{flex:1,padding:18,overflowY:'auto'}}>
+            {messages.map((m,i)=><div key={i} style={{
+              display:'flex',justifyContent:m.role==='user'?'flex-start':'flex-end',marginBottom:13
+            }}>
+              <div style={{
+                maxWidth:'88%',padding:'13px 15px',borderRadius:19,lineHeight:1.55,
+                background:m.role==='system'?'#542d36':m.role==='user'?'#e9e4db':'#ffffff0b',
+                color:m.role==='user'?'#111':'#fff'
+              }}>{m.text}</div>
+            </div>)}
+          </div>
+          <div style={{padding:14,borderTop:'1px solid #ffffff10',display:'flex',gap:9}}>
+            <button onClick={()=>setVoiceOn(v=>!v)} style={{
+              border:'1px solid #ffffff12',borderRadius:17,padding:'0 12px',
+              background:'#ffffff0b',color:'#fff'
+            }}>{voiceOn?'קול פעיל':'קול'}</button>
+            <input value={input} disabled={busy} onChange={e=>setInput(e.target.value)}
+              onKeyDown={e=>e.key==='Enter'&&send()} placeholder={busy?'אמא עובדת…':'כתוב לאמא…'}
+              style={{minWidth:0,flex:1,border:'1px solid #ffffff12',outline:0,
+              borderRadius:17,padding:'14px 16px',background:'#ffffff09',color:'#fff',fontSize:16}} />
+            <button onClick={send} disabled={busy} style={{
+              border:0,borderRadius:17,padding:'0 17px',fontWeight:750
+            }}>{busy?'…':'שליחה'}</button>
           </div>
         </div>
+      </section>      <section style={{
+        maxWidth:1440, margin:'auto', padding:'0 28px 30px',
+        display:'grid',gridTemplateColumns:'repeat(6,1fr)',gap:10
+      }}>
+        {features.map(([label,key])=><div key={key} style={{
+          padding:15,borderRadius:22,border:'1px solid #ffffff14',
+          background:'#ffffff08'
+        }}>
+          <b>{label}</b>
+          <span style={{display:'block',marginTop:5,opacity:.55,fontSize:12}}>
+            {key==='memory'
+              ? counts.memory.toLocaleString()+' רשומות'
+              : key==='learning'
+                ? counts.learning.toLocaleString()+' אירועים'
+                : runtime.capabilities?.[key] || 'ממשק מוכן; חיבור אמיתי נדרש'}
+          </span>
+        </div>)}
       </section>
-      <footer style={{ maxWidth: 1180, margin: '0 auto', padding: '0 18px 24px', opacity: .55, fontSize: 12 }}>IMA runtime · זיכרון ולמידה נשמרים בצד השרת · ספקי AI חיצוניים יחוברו רק לאחר אימות חיבור אמיתי</footer>
+      <style>{`
+        @media(max-width:900px){
+          header{padding-left:14px!important;padding-right:14px!important}
+          main>section:first-of-type{grid-template-columns:1fr!important;padding-left:14px!important;padding-right:14px!important}
+          main>section:last-of-type{grid-template-columns:repeat(2,1fr)!important;padding-left:14px!important;padding-right:14px!important}
+        }
+      `}</style>
     </main>
   );
 }
-
-useGLTF.preload(MODEL);

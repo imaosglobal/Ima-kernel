@@ -22,6 +22,12 @@ function imaRuntimePlugin() {
           memory: { available: fs.existsSync(path.join(root, 'founder/data/ima_memory.json')), records: readJson('founder/data/ima_memory.json') },
           learning: { available: fs.existsSync(path.join(root, 'learning/learning_memory.json')), records: readJson('learning/learning_memory.json') },
           agents: ['ChatGPT', 'Claude', 'Gemini'],
+          capabilities: {
+            voice: 'דפדפן + תשתית קול',
+            creative: 'ממשק יצירה; ספקי מדיה דורשים חיבור אמיתי',
+            tools: 'ליבת IMA',
+            devices: 'Android / mobile / web',
+          },
         })
         res.statusCode = 200
         res.setHeader('Content-Type', 'application/json')
