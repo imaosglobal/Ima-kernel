@@ -18,11 +18,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check legacy Classic source
+        id: classic-source
+        shell: bash
+        run: |
+          if [[ -d classic && -f classic/Dockerfile.autogpt ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "Legacy Classic Docker source is absent; skipping this legacy cache job safely."
+          fi
+
       - name: Set up Docker Buildx
+        if: steps.classic-source.outputs.present == 'true'
         uses: docker/setup-buildx-action@v3
 
       - id: build
         name: Build image
+        if: steps.classic-source.outputs.present == 'true'
         uses: docker/build-push-action@v6
         with:
           context: classic/
@@ -33,6 +46,7 @@ jobs:
           cache-to: type=gha,scope=autogpt-docker-${{ matrix.build-type }},mode=max
 
       - name: Generate build report
+        if: steps.classic-source.outputs.present == 'true'
         env:
           event_name: ${{ github.event_name }}
           event_ref: ${{ github.event.schedule }}
