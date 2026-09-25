@@ -1,34 +1,93 @@
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Environment, Float, OrbitControls } from '@react-three/drei';
+import { Suspense, useEffect, useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { useImaRuntime } from './services/imaRuntime';
 import { askIma } from './services/imaChat';
 
-function Presence() {
-  return <Float speed={1} rotationIntensity={0.06} floatIntensity={0.12}>
-    <group>
-      <mesh>
-        <icosahedronGeometry args={[1.15, 5]} />
-        <meshPhysicalMaterial transmission={0.72} roughness={0.12} metalness={0.05} clearcoat={1} />
-      </mesh>
-      <mesh scale={0.72}>
-        <icosahedronGeometry args={[1.15, 5]} />
-        <meshBasicMaterial transparent opacity={0.1} wireframe />
-      </mesh>
-      <pointLight intensity={22} distance={7} />
+function Presence({ state = 'idle' }) {
+  const group = useRef(null);
+  const { scene } = useGLTF('/Ima-kernel/mother_character.glb');
+
+  useEffect(() => {
+    scene.traverse(object => {
+      if (object.isMesh) {
+        object.castShadow = true;
+        object.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
+  useFrame(({ clock }, delta) => {
+    if (!group.current) return;
+
+    const t = clock.getElapsedTime();
+
+    const speed =
+      state === 'speaking' ? 1.8 :
+      state === 'thinking' ? 0.65 :
+      state === 'listening' ? 1.25 :
+      1;
+
+    const breath =
+      Math.sin(t * speed * 1.7) *
+      (state === 'idle' ? 0.018 : 0.028);
+
+    const targetRotation = Math.sin(t * 0.65) * 0.025;
+
+    group.current.position.y +=
+      (breath - group.current.position.y) *
+      Math.min(1, delta * 4);
+
+    group.current.rotation.y +=
+      (targetRotation - group.current.rotation.y) *
+      Math.min(1, delta * 3);
+
+    const pulse =
+      state === 'speaking' ? 0.008 :
+      state === 'listening' ? 0.004 :
+      0.002;
+
+    const base =
+      state === 'speaking' ? 1.012 :
+      state === 'listening' ? 1.006 :
+      1;
+
+    const scale =
+      base + Math.sin(t * speed * 2.1) * pulse;
+
+    group.current.scale.setScalar(scale);
+  });
+
+  return (
+    <group ref={group}>
+      <primitive object={scene} />
     </group>
-  </Float>;
+  );
 }
 
-function PresenceScene() {
-  return <Canvas camera={{ position: [0, 0, 4.6], fov: 38 }} dpr={[1, 1.7]}>
-    <ambientLight intensity={1.4} />
-    <pointLight position={[2, 2, 3]} intensity={16} />
-    <pointLight position={[-2, -1, 2]} intensity={8} />
-    <Suspense fallback={null}><Presence /><Environment preset="studio" /></Suspense>
-    <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.45} />
-  </Canvas>;
+useGLTF.preload('/Ima-kernel/mother_character.glb');
+
+function PresenceScene({ state }) {
+  return (
+    <Canvas
+      camera={{ position: [0, 0.65, 5.2], fov: 36 }}
+      dpr={[1, 2]}
+    >
+      <ambientLight intensity={1.8} />
+      <pointLight position={[2, 3, 4]} intensity={18} distance={9} />
+      <pointLight position={[-3, 1, 2]} intensity={10} distance={8} />
+
+      <Suspense fallback={<Html center>אמא מתעוררת…</Html>}>
+        <Stage intensity={0.7} adjustCamera>
+          <Presence state={state} />
+        </Stage>
+        <Environment preset="studio" />
+      </Suspense>
+    </Canvas>
+  );
 }
+
+
 
 const starters = ['מה אפשר לעשות כאן?', 'בואי נחשוב על רעיון', 'תעזרי לי ליצור משהו', 'מה את יודעת לעשות?'];
 
@@ -37,15 +96,27 @@ export default function App() {
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
   const [voice, setVoice] = useState(false);
+  const [avatarState, setAvatarState] = useState('idle');
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אפשר להתחיל כאן בשיחה, רעיון, יצירה או משימה.' }
   ]);
 
   const speak = text => {
-    if (!voice || !window.speechSynthesis) return;
+    if (!voice || !window.speechSynthesis) {
+      setAvatarState('idle');
+      return;
+    }
+
     window.speechSynthesis.cancel();
+    setAvatarState('speaking');
+
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'he-IL'; u.rate = 0.96;
+    u.lang = 'he-IL';
+    u.rate = 0.96;
+
+    u.onend = () => setAvatarState('idle');
+    u.onerror = () => setAvatarState('idle');
+
     window.speechSynthesis.speak(u);
   };
 
@@ -61,7 +132,7 @@ export default function App() {
     const text = (textValue ?? input).trim();
     if (!text || busy) return;
     setMessages(m => [...m, { role: 'user', text }]);
-    setInput(''); setBusy(true);
+    setInput(''); setBusy(true); setAvatarState('thinking');
     try {
       const response = await askIma(text);
       setMessages(m => [...m, { role: 'ima', text: response }]);
@@ -92,7 +163,7 @@ export default function App() {
         <div className="trust-line"><span>●</span> שקיפות ביכולות · פרטיות · שליטה אנושית</div>
       </div>
       <div className="presence-card" aria-label="נוכחות תלת ממדית">
-        <div className="orb"><PresenceScene /></div>
+        <div className="orb"><PresenceScene state={avatarState} /></div>
         <div className="presence-label"><span>נוכחות</span><b>IMA / NOW</b></div>
       </div>
     </section>
