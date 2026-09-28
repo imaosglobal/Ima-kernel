@@ -91,6 +91,11 @@ function PresenceScene({ state }) {
 
 const starters = ['מה אפשר לעשות כאן?', 'בואי נחשוב על רעיון', 'תעזרי לי ליצור משהו', 'מה את יודעת לעשות?'];
 
+const affiliate = {
+  referralUrl: 'https://affiracle.com/he/aliexpress.html?AFFID=AFF9334',
+  earningsUrl: 'https://affiracle.com/affiliates/aliexpress/earnings',
+};
+
 export default function App() {
   const runtime = useImaRuntime();
   const [input, setInput] = useState('');
@@ -147,7 +152,7 @@ export default function App() {
   return <main className="ima-app" dir="rtl">
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
-      <nav><a href="#space">המרחב</a><a href="#create">יצירה</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
+      <nav><a href="#space">המרחב</a><a href="#create">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
       <span className="live-pill"><i /> {runtime.status === 'active' ? 'מחוברת' : 'ממשק פעיל'}</span>
     </header>
 
@@ -178,6 +183,14 @@ export default function App() {
         </div>
         <div className="starters">{starters.map(s => <button key={s} onClick={() => send(s)}>{s}</button>)}</div>
         <div className="composer"><input value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder="כתוב לאמא..." /><button onClick={() => send()} disabled={busy}>שליחה</button></div>
+      </div>
+    </section>
+
+    <section className="affiliate-section" id="affiliate">
+      <div className="section-heading"><p className="eyebrow">IMA · GLOBAL AFFILIATE HUB</p><h2>הזדמנות פתוחה לעולם.</h2><p>מרחב IMA שמאפשר ליוצרים, מנהלי קהילות ומשווקים להכיר את תוכנית השותפים של AliExpress דרך Affiracle.</p></div>
+      <div className="affiliate-card">
+        <div className="affiliate-copy"><span className="affiliate-badge">5% referral</span><h3>מזמינים שותפים ומקבלים 5% מהעמלה שלהם</h3><p>לפי תנאי Affiracle, שותף שנרשם דרך קישור ההפניה שלך יכול להפוך לשותף משנה, ואתה מקבל 5% מעמלת AliExpress שלו, בלי שהסכום נגרע ממנו.</p><div className="affiliate-actions"><a className="primary" href={affiliate.referralUrl} target="_blank" rel="noreferrer">הצטרפות דרך הקישור שלי <span>↗</span></a><a className="secondary" href={affiliate.earningsUrl} target="_blank" rel="noreferrer">רווחי ההפניות שלי</a></div><small>גילוי נאות: IMA/Ori Cohen עשויים לקבל עמלה מהפניות דרך הקישור הזה. ההכנסה בפועל תלויה בפעילות וברווחים של השותפים ואינה מובטחת.</small></div>
+        <div className="affiliate-flow"><div><b>01</b><span>משתפים את הקישור</span></div><div><b>02</b><span>השותף נרשם דרך הקישור</span></div><div><b>03</b><span>השותף יוצר הכנסות</span></div><div><b>04</b><span>5% מהעמלה שלו מגיעים אליך</span></div></div>
       </div>
     </section>
 
