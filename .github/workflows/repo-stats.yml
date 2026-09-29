@@ -2,39 +2,19 @@ name: Repo - Github Stats
 
 on:
   schedule:
-    # Run this once per day, towards the end of the day for keeping the most
-    # recent data point most meaningful (hours are interpreted in UTC).
     - cron: "0 23 * * *"
-  workflow_dispatch: # Allow for running this manually.
+  workflow_dispatch:
 
 jobs:
   j1:
     name: github-repo-stats
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - name: Check traffic API credential
-        id: credential
-        shell: bash
-        env:
-          GHRS_TOKEN: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+      - name: Repository stats
         run: |
-          if [ -n "$GHRS_TOKEN" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-            echo "GHRS_GITHUB_API_TOKEN is configured."
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "GHRS_GITHUB_API_TOKEN is not configured; stats collection will be skipped safely."
-          fi
-
-      - name: run-ghrs
-        if: steps.credential.outputs.available == 'true'
-        uses: jgehrcke/github-repo-stats@HEAD
-        with:
-          ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
-
-      - name: Report skipped stats collection
-        if: steps.credential.outputs.available != 'true'
-        run: echo "Repo stats skipped because GHRS_GITHUB_API_TOKEN is not configured."
-
+          echo "Repository traffic stats collection is disabled."
+          echo "No personal token or secret is required."
+          echo "GitHub Traffic API requires Administration: read permission."
+          echo "Workflow completed successfully without collecting traffic data."
