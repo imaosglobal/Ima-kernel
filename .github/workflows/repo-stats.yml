@@ -14,9 +14,27 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - name: Check traffic API credential
+        id: credential
+        shell: bash
+        env:
+          GHRS_TOKEN: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+        run: |
+          if [ -n "$GHRS_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "GHRS_GITHUB_API_TOKEN is configured."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "GHRS_GITHUB_API_TOKEN is not configured; stats collection will be skipped safely."
+          fi
+
       - name: run-ghrs
-        # Use latest release.
+        if: steps.credential.outputs.available == 'true'
         uses: jgehrcke/github-repo-stats@HEAD
         with:
-          ghtoken: ${{ secrets.GITHUB_TOKEN }}
+          ghtoken: ${{ secrets.GHRS_GITHUB_API_TOKEN }}
+
+      - name: Report skipped stats collection
+        if: steps.credential.outputs.available != 'true'
+        run: echo "Repo stats skipped because GHRS_GITHUB_API_TOKEN is not configured."
 
