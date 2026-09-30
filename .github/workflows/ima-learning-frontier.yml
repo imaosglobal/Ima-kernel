@@ -25,33 +25,23 @@ jobs:
           from pathlib import Path
           data = json.loads(Path('integrations/IMA_LEARNING_GAPS.json').read_text(encoding='utf-8'))
           out = Path('docs/IMA_LEARNING_FRONTIER.md')
-          lines = [
-              '# IMA Learning Frontier',
-              '',
-              'This is a machine-readable starting map of what IMA must continue to investigate.',
-              '',
-              'The project does not claim that this list is complete. New questions, failures, technologies, evidence and teaching needs are expected to add new gaps.',
-              '',
-              '## Gap classes',
-              ''
-          ]
+          lines = ['# IMA Learning Frontier', '', 'This is a machine-readable starting map of what IMA must continue to investigate.', '', 'The project does not claim that this list is complete. New questions, failures, technologies, evidence and teaching needs are expected to add new gaps.', '', '## Gap classes', '']
           lines += [f'- `{item}`' for item in data.get('gap_types', [])]
-          lines += [
-              '', '## Learning cycle', '',
-              'KNOW -> MAP -> FIND GAPS -> DISCOVER -> LEARN -> CONNECT -> INFER -> TEST -> VERIFY -> APPLY -> TEACH -> OBSERVE -> REVISE -> FIND NEW GAPS',
-              '', '## Current operating rule', '',
-              data.get('truth_rule', 'A learning gap closes only when evidence appropriate to the claim is available.'),
-              '', '## Community input', '',
-              'Use the IMA learning contribution issue template to report an unknown, correction, technology, research result, test, teaching need, or cultural/language contribution.'
-          ]
+          lines += ['', '## Learning cycle', '', 'KNOW -> MAP -> FIND GAPS -> DISCOVER -> LEARN -> CONNECT -> INFER -> TEST -> VERIFY -> APPLY -> TEACH -> OBSERVE -> REVISE -> FIND NEW GAPS', '', '## Current operating rule', '', data.get('truth_rule', 'A learning gap closes only when evidence appropriate to the claim is available.'), '', '## Community input', '', 'Use the IMA learning contribution issue template to report an unknown, correction, technology, research result, test, teaching need, or cultural/language contribution.']
           out.write_text('\n'.join(lines) + '\n', encoding='utf-8')
           PY
 
-      - name: Commit frontier snapshot when changed
+      - name: Capture minimal metadata for a learning issue
+        if: github.event_name == 'issues'
+        env:
+          IMA_ISSUE_EVENT: ${{ github.event_path }}
+        run: python learning/community_intake.py
+
+      - name: Commit generated learning state
         run: |
           git config user.name "IMA Learning Frontier"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/IMA_LEARNING_FRONTIER.md
+          git add docs/IMA_LEARNING_FRONTIER.md integrations/IMA_COMMUNITY_LEARNING_QUEUE.jsonl
           git diff --cached --quiet && exit 0
-          git commit -m "docs: refresh learning frontier"
+          git commit -m "chore: record IMA learning intake"
           git push
