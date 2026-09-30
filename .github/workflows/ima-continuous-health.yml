@@ -8,7 +8,7 @@ on:
     - cron: "17 */6 * * *"
 
 permissions:
-  contents: read
+  contents: write
   actions: read
   issues: write
 
@@ -60,6 +60,32 @@ jobs:
         run: |
           chmod +x ./gradlew
           ./gradlew assembleDebug --no-daemon
+
+      - name: Autonomous maintenance scan
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          gaps = json.loads(Path("integrations/IMA_LEARNING_GAPS.json").read_text(encoding="utf-8"))
+          state = {
+              "schema": "IMA-AUTONOMOUS-MAINTENANCE-1.0",
+              "gap_types": gaps.get("gap_types", []),
+              "next_cycle": ["OBSERVE", "IDENTIFY_GAPS", "PRIORITIZE", "RESEARCH", "TEST", "VERIFY", "TEACH"],
+              "truth_rule": gaps.get("truth_rule")
+          }
+          Path("docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json").write_text(
+              json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+          )
+          PY
+
+      - name: Record maintenance state
+        run: |
+          git config user.name "IMA Autonomous Steward"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: refresh autonomous maintenance state"
+          git push
 
       - name: Report failure
         if: failure()
