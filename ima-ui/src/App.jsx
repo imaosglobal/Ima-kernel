@@ -168,7 +168,7 @@ export default function App() {
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#create">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <span className={'live-pill ' + apiState}><i /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
+      <span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero" id="home">
@@ -193,13 +193,13 @@ export default function App() {
     <section className="chat-section" id="space">
       <div className="section-heading"><p className="eyebrow">THE SPACE</p><h2>פשוט לדבר.</h2><p>לא צריך לדעת איזה כלי נמצא מאחורי הקלעים. פשוט אומרים מה רוצים.</p></div>
       <div className="chat-shell" id="chat">
-        <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button></div>
-        <div className="messages">
+        <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button aria-label={voice ? 'כיבוי קול' : 'הפעלת קול'} className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button></div>
+        <div className="messages" aria-live="polite" aria-label="שיחת אמא">
           {messages.map((m, i) => <div key={i} className={'message-row ' + m.role}><div className="message">{m.text}{m.fallback && <small> · מצב מקומי</small>}</div></div>)}
           {busy && <div className="message-row ima"><div className="message typing"><i /><i /><i /></div></div>}
         </div>
         <div className="starters">{starters.map(s => <button key={s} onClick={() => send(s)}>{s}</button>)}</div>
-        <div className="composer"><input aria-label="כתוב לאמא" value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder="כתוב לאמא..." /><button onClick={() => send()} disabled={busy}>שליחה</button></div>
+        <div className="composer"><input aria-label="כתוב לאמא" value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder="כתוב לאמא..." /><button aria-label="שליחת הודעה לאמא" onClick={() => send()} disabled={busy}>שליחה</button></div>
       </div>
     </section>
 
