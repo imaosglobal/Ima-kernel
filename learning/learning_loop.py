@@ -6,6 +6,8 @@ from learning.world_memory import store
 from learning.learning_gate import should_learn
 from learning.skill_compiler import compile_and_record
 from learning.learning_gap_detector import record as record_learning_gap
+from learning.conclusion_engine import conclude
+from learning.teaching_artifact import create_teaching_artifact
 import time
 
 
@@ -37,6 +39,8 @@ def learn_from_event(event):
 
     skill = None
     gap = None
+    conclusion = None
+    teaching = None
     try:
         skill = compile_and_record(event)
     except Exception as exc:
@@ -47,11 +51,24 @@ def learn_from_event(event):
     except Exception as exc:
         gap = {"status":"error","error":str(exc)}
 
+    try:
+        conclusion = conclude(event, evidence_state=event.get("evidence_state", "UNVERIFIED"))
+    except Exception as exc:
+        conclusion = {"status":"error","error":str(exc)}
+
+    try:
+        if event.get("teach") or event.get("teaching_content"):
+            teaching = create_teaching_artifact({**event, "content": event.get("teaching_content", event.get("text", ""))})
+    except Exception as exc:
+        teaching = {"status":"error","error":str(exc)}
+
     return {
         "time": time.time(),
         "route": route_learning(event),
         "result": result,
         "applied_skill": skill,
         "learning_gap": gap,
+        "conclusion": conclusion,
+        "teaching_artifact": teaching,
         "status": "processed"
     }
