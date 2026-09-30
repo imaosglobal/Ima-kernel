@@ -199,7 +199,7 @@ export default function App() {
           {busy && <div className="message-row ima"><div className="message typing"><i /><i /><i /></div></div>}
         </div>
         <div className="starters">{starters.map(s => <button key={s} onClick={() => send(s)}>{s}</button>)}</div>
-        <div className="composer"><input value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder="כתוב לאמא..." /><button onClick={() => send()} disabled={busy}>שליחה</button></div>
+        <div className="composer"><input aria-label="כתוב לאמא" value={input} disabled={busy} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && send()} placeholder="כתוב לאמא..." /><button onClick={() => send()} disabled={busy}>שליחה</button></div>
       </div>
     </section>
 
