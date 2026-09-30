@@ -232,3 +232,22 @@ This principle is expanded in:
 `docs/IMA_GLOBAL_COMPASSIONATE_INTELLIGENCE_VISION.md`
 
 — Ori Cohen
+
+
+## TIME & SPACE INTELLIGENCE
+
+IMA treats time and space as first-class information dimensions across memory, scientific reasoning, opportunity discovery, verification, orchestration, sensing, and future physical-world systems.
+
+The layer connects:
+
+TIME × SPACE × CAPABILITY × CONSTRAINT × PROVENANCE
+
+to IMA's opportunity-discovery architecture.
+
+It may support scientific measurement, resource modeling, geospatial reasoning, temporal opportunity detection, and future physical-world systems. It does not authorize autonomous financial trading, unauthorized surveillance, or coercive action.
+
+Time-space observations must preserve provenance, uncertainty, privacy, consent, verification, and human agency.
+
+The detailed architectural extension is defined in:
+
+`docs/IMA_TIME_SPACE_INTELLIGENCE.md`
