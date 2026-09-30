@@ -1,0 +1,16 @@
+{
+  "schema": "IMA-STORE-CATALOG-1.0",
+  "status": "CATALOG_ONLY",
+  "payment_enabled": false,
+  "products": [
+    {"id":"creator-kit","category":"creator","status":"PROPOSED","access":"open"},
+    {"id":"learning-kit","category":"education","status":"PROPOSED","access":"open"},
+    {"id":"connection-kits","category":"integration","status":"PROPOSED","access":"open"}
+  ],
+  "rules": {
+    "explicit_purchase_consent": true,
+    "no_automatic_purchase": true,
+    "provenance_required": true,
+    "creator_rights_required": true
+  }
+}
