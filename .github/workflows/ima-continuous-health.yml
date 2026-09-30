@@ -36,12 +36,7 @@ jobs:
         run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py
 
       - name: Core and contract tests
-        run: |
-          npm test
-          npm run ima:integrity
-          npm run ima:runtime
-          python -m unittest tests/public_runtime.test.py
-          node tests/test_harness.test.cjs
+        run: npm run ima:verify
 
       - name: Frontend quality
         working-directory: ima-ui
