@@ -235,6 +235,15 @@ export default function App() {
         }}>לשתף את השער</button>
       </div>
       <div className="mother-promise"><b>עברית</b><span>·</span><b>English</b><span>·</span><b>כל שפה</b><span>·</span><b>כל דור</b><span>·</span><b>כל תחום</b></div>
+      <div className="global-language-links" aria-label="IMA language entry points">
+        <a href="#home" lang="en">English</a>
+        <a href="#home" lang="ar">العربية</a>
+        <a href="#home" lang="es">Español</a>
+        <a href="#home" lang="fr">Français</a>
+        <a href="#home" lang="ru">Русский</a>
+        <a href="#home" lang="zh">中文</a>
+        <a href="#home">כל שפה</a>
+      </div>
     </section>
 
     <section className="affiliate-section" id="affiliate">
