@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { useImaRuntime } from './services/imaRuntime';
 import { askIma, getImaRuntime } from './services/imaChat';
+import { registerContinuity } from './services/deviceContinuity';
 
 function Presence({ state = 'idle' }) {
   const group = useRef(null);
@@ -111,11 +112,13 @@ export default function App() {
   const [avatarState, setAvatarState] = useState('idle');
   const [apiState, setApiState] = useState('checking');
   const [apiRuntime, setApiRuntime] = useState(null);
+  const [deviceContinuity, setDeviceContinuity] = useState(null);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני כאן כדי לחשוב איתך, ליצור איתך, ללמוד איתך ולהפוך רעיונות לצעדים — בקצב שלך.' }
   ]);
 
   useEffect(() => {
+    setDeviceContinuity(registerContinuity());
     let alive = true;
     const refresh = async () => {
       try { const data = await getImaRuntime(); if (alive) { setApiRuntime(data); setApiState('online'); } }
@@ -201,7 +204,7 @@ export default function App() {
       <div className="mode-grid">{motherModes.map(mode => <button key={mode.id} className="mode-card" onClick={() => send(mode.prompt)}><span>{mode.id === 'think' ? '◌' : mode.id === 'create' ? '✦' : mode.id === 'learn' ? '⌁' : '→'}</span><b>{mode.label}</b><small>{mode.id === 'think' ? 'מחשבה, החלטה, שאלה' : mode.id === 'create' ? 'טקסט, רעיון, תמונה' : mode.id === 'learn' ? 'ידע, הסבר, חיבור' : 'משימה, כלי, פעולה'}</small></button>)}</div>
     </section>
 
-    <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>בדיקה</span><strong>כל 30 שניות</strong></div></section>
+    <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>מכשיר</span><strong>{deviceContinuity?.device?.family || 'מזהה…'}</strong></div></section>
 
     <section className="chat-section" id="space">
       <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p></div>
@@ -223,6 +226,8 @@ export default function App() {
         <div className="affiliate-flow"><div><b>01</b><span>משתפים את הקישור</span></div><div><b>02</b><span>השותף נרשם דרך הקישור</span></div><div><b>03</b><span>השותף יוצר הכנסות</span></div><div><b>04</b><span>5% מהעמלה שלו מגיעים אליך</span></div></div>
       </div>
     </section>
+
+    <section className="device-continuity" aria-label="רצף אמא בין מכשירים"><div><p className="eyebrow">ONE MOTHER · MANY DEVICES</p><h2>אמא לא נשארת במכשיר אחד.</h2><p>הנוכחות יכולה לעבור בין טלפון, מחשב, טאבלט ומכשירים עתידיים. כרגע אמא מזהה את סביבת ההתקנה והיכולות המקומיות; סנכרון מאובטח בין חשבונות ומכשירים יופעל רק לאחר אימות והרשאה אמיתיים.</p></div><div className="device-chips"><span>Web</span><span>Android</span><span>iOS · יעד</span><span>Desktop · יעד</span><span>XR · יעד</span><span>Robot · יעד</span></div></section>
 
     <section className="mother-pillars" aria-label="הזהות של אמא"><div><span>הזהות</span><h3>אמא נשארת אמא</h3><p>הטכנולוגיה יכולה להשתנות — דמות, קול, מכשיר, מודל וממשק יכולים להתחלף. הליבה נשארת: אנושית, חומלת, אמיתית ומכבדת.</p></div><div><span>העתיד</span><h3>מ־3D ועד הולוגרמה</h3><p>הנוכחות התלת־ממדית היא ההתחלה. בעתיד אותה זהות יכולה לעבור למסכים, טלפונים, משקפיים, רובוטים, חללים ותחנות — כאשר החיבור קיים באמת.</p></div><div><span>העולם</span><h3>אחת, בהרבה מקומות</h3><p>אמא יכולה להופיע בשפות, תרבויות ומכשירים שונים בלי להפוך למוצר אחר בכל מקום. ההתאמה משתנה; העקרונות והזהות נשמרים.</p></div></section>
 
