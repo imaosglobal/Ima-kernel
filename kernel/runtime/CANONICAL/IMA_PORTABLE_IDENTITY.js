@@ -15,7 +15,40 @@ function stableId(value) {
     .digest("hex");
 }
 
+function ensureContinuityDirectory() {
+  fs.mkdirSync(CONTINUITY, { recursive: true });
+}
+
+function writeEmptyContinuityState() {
+  ensureContinuityDirectory();
+
+  if (!fs.existsSync(SEEDS)) {
+    fs.writeFileSync(SEEDS, "", "utf8");
+  }
+
+  if (!fs.existsSync(CONTENT_INDEX)) {
+    fs.writeFileSync(
+      CONTENT_INDEX,
+      JSON.stringify({
+        schema: "IMA-CONTENT-ADDRESS-INDEX-1.0",
+        algorithm: "SHA-256",
+        records: []
+      }, null, 2),
+      "utf8"
+    );
+  }
+}
+
 function build() {
+  ensureContinuityDirectory();
+
+  // CI, fresh clones and new installations legitimately start without
+  // mutable continuity state. Bootstrap an empty, truthful state instead
+  // of treating missing runtime state as a code failure.
+  if (!fs.existsSync(SEEDS) && !fs.existsSync(CONTENT_INDEX)) {
+    writeEmptyContinuityState();
+  }
+
   if (!fs.existsSync(SEEDS)) {
     throw new Error("CONTINUITY_SEEDS_NOT_FOUND");
   }
@@ -26,6 +59,7 @@ function build() {
 
   const seedLines = fs.readFileSync(SEEDS, "utf8")
     .split("\n")
+    .map(line => line.trim())
     .filter(Boolean)
     .map(line => JSON.parse(line));
 
@@ -33,8 +67,12 @@ function build() {
     fs.readFileSync(CONTENT_INDEX, "utf8")
   );
 
+  const recordsIndex = Array.isArray(contentIndex.records)
+    ? contentIndex.records
+    : [];
+
   const byHash = new Map(
-    contentIndex.records.map(record => [record.sha256, record])
+    recordsIndex.map(record => [record.sha256, record])
   );
 
   const records = seedLines.map(seed => {
@@ -94,6 +132,7 @@ function build() {
   return {
     status: "PORTABLE_IDENTITY_BUILT",
     records: records.length,
+    bootstrapped: seedLines.length === 0,
     path: PORTABLE_INDEX
   };
 }
