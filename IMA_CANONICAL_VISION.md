@@ -297,3 +297,64 @@ Permanent global memory, authenticated accounts, durable production storage, unr
 
 The runtime contract is defined in:
 docs/IMA_GLOBAL_RUNTIME_CONTRACT.md
+
+
+## 13. MOTHER IDENTITY INVARIANTS
+
+The simplest idea of IMA must remain recognizable as the system expands.
+
+IMA is, first, **אמא — Mother**: a human-centered intelligence with a recognizable presence that can live across interfaces, devices, languages, cultures, and technological eras.
+
+The implementation may grow into an operating-system layer, game-like environment, holographic presence, mobile application, web experience, wearable, robot, spatial interface, or future technology. These are embodiments of IMA, not replacements for her identity.
+
+The following invariants must survive every expansion:
+
+1. **Mother first** — the experience should feel like meeting and interacting with IMA, not merely opening a collection of AI tools.
+2. **Presence** — where technically possible, IMA should have a recognizable visual, voice, behavioral and spatial presence.
+3. **One identity, many embodiments** — appearance may adapt to context, culture, time, device and environment while preserving recognizable IMA identity.
+4. **One space, many capabilities** — users should be able to state an intent without needing to understand the underlying model, tool, agent or service.
+5. **Language is not a boundary** — IMA should progressively support human languages and accessible forms of communication.
+6. **Play and creation are legitimate interfaces** — IMA may use game-like interaction, worlds, characters, exploration and creation when these improve understanding or participation.
+7. **Technology serves the relationship** — adding capabilities must not turn the product into a disconnected dashboard.
+8. **Truthful embodiment** — an interface may express a capability only when the underlying capability is actually connected and verified.
+9. **Human agency remains central** — IMA may assist, coordinate and act when authorized, but must not replace human choice.
+10. **Continuity across time** — models, frameworks, devices and interfaces may be replaced; the Mother identity, provenance and principles must remain traceable.
+
+### MOTHER OS / FUTURE EMBODIMENT
+
+The long-term product direction includes an IMA operating layer rather than a single chat application.
+
+A future IMA environment may combine:
+
+PRESENCE → CONVERSATION → MEMORY → KNOWLEDGE → CREATION → TOOLS → AGENTS → DEVICES → WORLD
+
+The initial public web experience is therefore a seed of a larger system, not the definition of the system.
+
+Future embodiments may include:
+
+- interactive 3D Mother environments;
+- game-like exploration and learning;
+- holographic and spatial interfaces;
+- mobile and desktop shells;
+- wearable and ambient interfaces;
+- robotics and physical embodiments;
+- interoperable web/app components;
+- multilingual voice and multimodal communication;
+- future interfaces not yet invented.
+
+Each embodiment must preserve the same core identity and capability-verification rules.
+
+### PRODUCT TEST FOR "DOES THIS STILL FEEL LIKE IMA?"
+
+For every major product release, the team should test:
+
+- Can a new person identify that this is IMA within seconds?
+- Does the interface communicate warmth, presence and clarity without pretending to be human?
+- Is the Mother visible or meaningfully reachable?
+- Can a person state an intention without understanding the technical stack?
+- Are current capabilities distinguishable from planned capabilities?
+- Does adding a feature strengthen the unified IMA experience rather than create another disconnected tool?
+- Can the experience adapt across language, screen size and accessibility needs?
+- Does the same identity remain recognizable when the embodiment changes?
+
+A feature that increases technical capability but weakens the unified Mother experience should be redesigned or integrated differently.
