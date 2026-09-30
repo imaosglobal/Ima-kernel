@@ -246,6 +246,19 @@ export default function App() {
       </div>
     </section>
 
+    <section className="ima-store" id="store">
+      <div className="section-heading">
+        <p className="eyebrow">IMA · STORE</p>
+        <h2>החנות של אמא.</h2>
+        <p>מרחב למוצרים, יצירות, כלים וערכות שנבנים סביב אמא. בשלב הראשון זהו קטלוג פתוח ללא חיוב או רכישה אוטומטית.</p>
+      </div>
+      <div className="feature-grid">
+        <article className="feature-card"><h3>ערכת יוצרים</h3><p>תבניות, הנחיות וכלים לבניית חוויות חדשות עם IMA.</p><a href="https://github.com/imaosglobal/Ima-kernel/tree/main/docs">לפתוח את הידע ↗</a></article>
+        <article className="feature-card"><h3>ערכת למידה</h3><p>חומרי הוראה ותרגול שנבנים מתוך ידע שעבר אימות.</p><a href="https://github.com/imaosglobal/Ima-kernel/issues/100">להציע חומר ↗</a></article>
+        <article className="feature-card"><h3>ערכות חיבור</h3><p>מפרטים ומתאמים לחיבור IMA למערכות, מכשירים ועולמות חדשים.</p><a href="https://github.com/imaosglobal/Ima-kernel/tree/main/integrations">לבנות חיבור ↗</a></article>
+      </div>
+    </section>
+
     <section className="affiliate-section" id="affiliate">
       <div className="section-heading"><p className="eyebrow">IMA · GLOBAL AFFILIATE HUB</p><h2>הזדמנות פתוחה לעולם.</h2><p>מרחב IMA שמאפשר ליוצרים, מנהלי קהילות ומשווקים להכיר את תוכנית השותפים של AliExpress דרך Affiracle.</p></div>
       <div className="affiliate-card">
