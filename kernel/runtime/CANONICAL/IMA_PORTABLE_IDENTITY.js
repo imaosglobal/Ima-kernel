@@ -42,11 +42,38 @@ function writeEmptyContinuityState() {
 function build() {
   ensureContinuityDirectory();
 
-  // CI, fresh clones and new installations legitimately start without
-  // mutable continuity state. Bootstrap an empty, truthful state instead
-  // of treating missing runtime state as a code failure.
-  if (!fs.existsSync(SEEDS) && !fs.existsSync(CONTENT_INDEX)) {
+  // CI, fresh clones and new installations may have only part of the
+  // mutable continuity state. Repair only a genuinely empty/missing state;
+  // never synthesize missing historical records.
+  ensureContinuityDirectory();
+
+  const seedsExists = fs.existsSync(SEEDS);
+  const indexExists = fs.existsSync(CONTENT_INDEX);
+
+  if (!seedsExists && !indexExists) {
     writeEmptyContinuityState();
+  } else if (!seedsExists && indexExists) {
+    const index = JSON.parse(fs.readFileSync(CONTENT_INDEX, "utf8"));
+    if (!Array.isArray(index.records) || index.records.length === 0) {
+      fs.writeFileSync(SEEDS, "", "utf8");
+    } else {
+      throw new Error("CONTINUITY_SEEDS_MISSING_FOR_EXISTING_RECORDS");
+    }
+  } else if (seedsExists && !indexExists) {
+    const seedText = fs.readFileSync(SEEDS, "utf8").trim();
+    if (!seedText) {
+      fs.writeFileSync(
+        CONTENT_INDEX,
+        JSON.stringify({
+          schema: "IMA-CONTENT-ADDRESS-INDEX-1.0",
+          algorithm: "SHA-256",
+          records: []
+        }, null, 2),
+        "utf8"
+      );
+    } else {
+      throw new Error("CONTENT_ADDRESS_INDEX_MISSING_FOR_EXISTING_SEEDS");
+    }
   }
 
   if (!fs.existsSync(SEEDS)) {
