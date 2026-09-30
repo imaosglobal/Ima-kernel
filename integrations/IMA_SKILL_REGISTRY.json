@@ -1,0 +1,36 @@
+{
+  "schema": "IMA-APPLIED-SKILL-REGISTRY-1.0",
+  "purpose": "Every meaningful learned concept receives an application path and verification plan.",
+  "lifecycle": [
+    "DISCOVERED",
+    "SPECIFIED",
+    "IMPLEMENTED",
+    "TESTED",
+    "VERIFIED",
+    "LIVE",
+    "UPGRADED",
+    "DEPRECATED"
+  ],
+  "promotion_rule": "Knowledge never becomes a claimed capability without reproducible verification evidence.",
+  "application_contract": [
+    "goal",
+    "required_knowledge",
+    "required_tools",
+    "interfaces",
+    "permissions",
+    "implementation",
+    "tests",
+    "verification",
+    "provenance",
+    "limits",
+    "rollback",
+    "upgrade_path"
+  ],
+  "safety": {
+    "learning_never_executes_external_actions": true,
+    "consequential_actions_require_explicit_authorization": true,
+    "private_memory_isolated": true,
+    "no_secrets": true,
+    "no_unsolicited_outreach": true
+  }
+}
