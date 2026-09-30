@@ -1,7 +1,7 @@
 {
   "name": "אמא — IMA",
   "short_name": "אמא",
-  "description": "אמא — human-centered intelligence across devices and interfaces.",
+  "description": "IMA — human-centered intelligence across languages, generations, devices and interfaces. Use it, question it, teach it and build it.",
   "lang": "he",
   "dir": "rtl",
   "start_url": "/Ima-kernel/",
@@ -14,9 +14,10 @@
     { "src": "/Ima-kernel/icons/ima-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable" },
     { "src": "/Ima-kernel/icons/ima-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
   ],
-  "categories": ["lifestyle", "education", "productivity"],
+  "categories": ["education", "productivity", "social", "utilities"],
   "shortcuts": [
     { "name": "לדבר עם אמא", "url": "/Ima-kernel/#chat", "icons": [{ "src": "/Ima-kernel/icons/ima-192.svg", "sizes": "192x192" }] },
-    { "name": "להכיר את אמא", "url": "/Ima-kernel/#about", "icons": [{ "src": "/Ima-kernel/icons/ima-192.svg", "sizes": "192x192" }] }
+    { "name": "ללמד את אמא", "url": "/Ima-kernel/#global", "icons": [{ "src": "/Ima-kernel/icons/ima-192.svg", "sizes": "192x192" }] },
+    { "name": "לבנות את אמא", "url": "/Ima-kernel/#about", "icons": [{ "src": "/Ima-kernel/icons/ima-192.svg", "sizes": "192x192" }] }
   ]
 }
