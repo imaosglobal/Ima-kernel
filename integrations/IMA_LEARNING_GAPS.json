@@ -1,0 +1,28 @@
+{
+  "schema": "IMA-LEARNING-GAPS-1.0",
+  "purpose": "Maintain explicit unknowns and learning opportunities instead of treating knowledge as complete.",
+  "gap_types": [
+    "unknown",
+    "uncertain",
+    "conflicting_evidence",
+    "missing_prerequisite",
+    "missing_tool",
+    "missing_interface",
+    "missing_test",
+    "missing_provenance",
+    "failure_mode",
+    "cross_domain_connection",
+    "technology_upgrade",
+    "teaching_opportunity"
+  ],
+  "lifecycle": [
+    "DISCOVERED",
+    "PRIORITIZED",
+    "RESEARCHING",
+    "TESTING",
+    "VERIFIED",
+    "TAUGHT",
+    "REOPENED"
+  ],
+  "truth_rule": "A gap is closed only by evidence appropriate to the claim."
+}
