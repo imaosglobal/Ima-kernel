@@ -17,6 +17,9 @@ concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  VITE_IMA_API_BASE: https://ima-915m.onrender.com
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -121,4 +121,36 @@ footer { max-width:1280px; margin:auto; padding:25px 30px 40px; border-top:1px s
   .starters button { white-space:nowrap; }
   .composer { padding:12px; }
   .composer button { padding:0 14px; }
-}
+}/* IMA PRESENT / NEXT visual layer */
+:root{color:#f6eee8;background:#08090d}
+body{background:#08090d}
+.ima-app{background:
+radial-gradient(circle at 78% 8%,rgba(236,181,125,.18),transparent 28rem),
+radial-gradient(circle at 12% 32%,rgba(132,105,198,.15),transparent 32rem),
+radial-gradient(circle at 50% 100%,rgba(75,150,158,.12),transparent 34rem),#08090d}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(8,9,13,.72);backdrop-filter:blur(22px);border-bottom-color:rgba(255,255,255,.08)}
+.brand-mark{background:linear-gradient(145deg,#f0c49d,#8d5c45);color:#180f0c;box-shadow:0 0 30px rgba(225,167,111,.24)}
+.hero{max-width:1440px;min-height:760px}
+.hero h1{font-weight:820}
+.hero h1 em{background:linear-gradient(90deg,#f0c49d,#bd8bd6,#86c9cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-text,.section-heading p:last-child{color:#aaa3a0}
+.presence-card{background:radial-gradient(circle at 50% 42%,rgba(236,196,157,.23),transparent 30%),linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.025));border-color:rgba(255,255,255,.1);box-shadow:0 40px 120px rgba(0,0,0,.45)}
+.presence-card:before{content:"";position:absolute;inset:12%;border:1px solid rgba(230,189,149,.13);border-radius:50%;box-shadow:0 0 90px rgba(224,170,119,.08)}
+.chat-shell,.affiliate-card,.principles>div{background:rgba(20,21,27,.78);border-color:rgba(255,255,255,.09);box-shadow:0 30px 100px rgba(0,0,0,.32);backdrop-filter:blur(18px)}
+.chat-head{border-bottom-color:rgba(255,255,255,.07)}
+.messages{background:linear-gradient(rgba(255,255,255,.018),rgba(255,255,255,.004))}
+.message-row.ima .message{background:rgba(255,255,255,.07);color:#eee5df}
+.message-row.user .message{background:linear-gradient(135deg,#f0c49d,#9d6d55);color:#170f0c}
+.composer input{background:#111218;border-color:rgba(255,255,255,.1);color:#f5eee8}
+.composer button,.primary{background:linear-gradient(135deg,#f0c49d,#a87558);color:#170f0c}
+.starters button,.secondary,.voice{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1);color:#aaa2a0}
+.live-pill.online{color:#9bd4a6}.live-pill.online i{background:#83c58f}
+footer{border-top-color:rgba(255,255,255,.08);color:#716b6b}
+.live-strip{max-width:1280px;margin:-35px auto 0;padding:0 30px 80px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.live-strip>div{padding:18px 20px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:rgba(255,255,255,.035);backdrop-filter:blur(14px)}
+.live-strip span{display:block;color:#777171;font-size:10px;letter-spacing:.12em;margin-bottom:8px}
+.live-strip strong{font-size:13px;color:#e9e1db}
+.live-pill.online{color:#9bd4a6}.live-pill.online i{background:#83c58f}
+.live-pill.checking{color:#e2c58f}.live-pill.checking i{background:#d9b870}
+.live-pill.offline{color:#e19a98}.live-pill.offline i{background:#d77c7c}
+@media(max-width:900px){.live-strip{grid-template-columns:repeat(2,1fr);padding:0 14px 60px}}

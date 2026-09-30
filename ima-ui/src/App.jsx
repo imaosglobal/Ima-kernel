@@ -2,7 +2,7 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { useImaRuntime } from './services/imaRuntime';
-import { askIma } from './services/imaChat';
+import { askIma, getImaRuntime } from './services/imaChat';
 
 function Presence({ state = 'idle' }) {
   const group = useRef(null);
@@ -102,9 +102,22 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [voice, setVoice] = useState(false);
   const [avatarState, setAvatarState] = useState('idle');
+  const [apiState, setApiState] = useState('checking');
+  const [apiRuntime, setApiRuntime] = useState(null);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אפשר להתחיל כאן בשיחה, רעיון, יצירה או משימה.' }
   ]);
+
+  useEffect(() => {
+    let alive = true;
+    const refresh = async () => {
+      try { const data = await getImaRuntime(); if (alive) { setApiRuntime(data); setApiState('online'); } }
+      catch { if (alive) setApiState('offline'); }
+    };
+    refresh();
+    const timer = setInterval(refresh, 30000);
+    return () => { alive = false; clearInterval(timer); };
+  }, []);
 
   const speak = text => {
     if (!voice || !window.speechSynthesis) {
@@ -141,9 +154,11 @@ export default function App() {
     try {
       const response = await askIma(text);
       setMessages(m => [...m, { role: 'ima', text: response }]);
+      setApiState('online');
       speak(response);
-    } catch {
-      const response = fallback(text);
+    } catch (error) {
+      const response = 'החיבור למנוע של אמא אינו זמין כרגע. ' + (error?.message || 'לא ידוע');
+      setApiState('offline');
       setMessages(m => [...m, { role: 'ima', text: response, fallback: true }]);
       speak(response);
     } finally { setBusy(false); }
@@ -153,7 +168,7 @@ export default function App() {
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#create">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <span className="live-pill"><i /> {runtime.status === 'active' ? 'מחוברת' : 'ממשק פעיל'}</span>
+      <span className={'live-pill ' + apiState}><i /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero" id="home">
@@ -172,6 +187,8 @@ export default function App() {
         <div className="presence-label"><span>נוכחות</span><b>IMA / NOW</b></div>
       </div>
     </section>
+
+    <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>בדיקה</span><strong>כל 30 שניות</strong></div></section>
 
     <section className="chat-section" id="space">
       <div className="section-heading"><p className="eyebrow">THE SPACE</p><h2>פשוט לדבר.</h2><p>לא צריך לדעת איזה כלי נמצא מאחורי הקלעים. פשוט אומרים מה רוצים.</p></div>

@@ -251,3 +251,49 @@ Time-space observations must preserve provenance, uncertainty, privacy, consent,
 The detailed architectural extension is defined in:
 
 `docs/IMA_TIME_SPACE_INTELLIGENCE.md`
+
+## GLOBAL EMBODIMENT AND INTEROPERABILITY
+
+IMA is intended to be discoverable and usable globally without requiring every person to know the underlying implementation.
+
+The public IMA identity is shared across interfaces, while private identity and memory remain scoped to the individual user.
+
+The Mother embodiment is a living presentation layer: 3D presence, voice, visual language and interaction can evolve with technology, culture, time and environment without changing the core identity and principles.
+
+IMA should be capable of connecting, where technically and legally permitted, to:
+- AI models and agents
+- websites and applications
+- tools and APIs
+- mobile and desktop devices
+- physical and future devices
+- scientific and knowledge systems
+
+Connection means an explicit, testable integration. IMA must not claim a connection merely because a connector is planned.
+
+## CONTINUOUS EVOLUTION
+
+IMA should continuously inspect its own implementation, documentation, tests, connected capabilities and operational health.
+
+The intended loop is:
+DISCOVER → SPECIFY → IMPLEMENT → TEST → VERIFY → DEPLOY → OBSERVE → LEARN
+
+Automation may maintain, test, document and deploy bounded improvements. It must not bypass provenance, privacy, authorization, security or verification in order to appear more autonomous.
+
+IMA is not limited to the capabilities of one conversational model. Its effective capability is the verified union of the models, tools, agents, devices and knowledge sources actually connected to its runtime.
+
+## GLOBAL MEMORY PRINCIPLE
+
+IMA may preserve continuity across users only through public/shared knowledge that is explicitly designated as shareable and verified.
+
+Private memories, identities, conversations, credentials and user-specific experiences remain isolated by user scope unless the user explicitly authorizes a permitted transfer.
+
+The public runtime must never expose founder/private legacy data.
+
+## CURRENT IMPLEMENTATION BOUNDARY
+
+The public runtime now has a dedicated API path, per-user anonymous memory scope, public/private identity separation, live capability reporting and a 3D Mother interface.
+
+Permanent global memory, authenticated accounts, durable production storage, unrestricted device/site access and unrestricted autonomous self-modification remain future capabilities rather than claims of current completion.
+
+The runtime contract is defined in:
+docs/IMA_GLOBAL_RUNTIME_CONTRACT.md
