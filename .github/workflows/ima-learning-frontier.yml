@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify learning system
+        run: python -c "from learning.learning_gap_detector import detect; from learning.conclusion_engine import conclude; from learning.teaching_artifact import create_teaching_artifact; print(\"IMA_LEARNING_SYSTEM=PASS\")"
+
       - name: Build learning frontier snapshot
         run: |
           python - <<'PY'
