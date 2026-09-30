@@ -4,7 +4,7 @@ const steps = [
   ["core", ["npm", "test"]],
   ["integrity", ["npm", "run", "ima:integrity"]],
   ["runtime", ["npm", "run", "ima:runtime"]],
-  ["public-runtime", ["python", "-m", "unittest", "tests/public_runtime.test.py"]],
+  ["public-runtime", ["python", "tests/public_runtime.test.py"]],
   ["contract-harness", ["node", "tests/test_harness.test.cjs"]],
   ["accessibility-contract", ["node", "tests/accessibility_contract.test.cjs"]],
   ["preservation-contract", ["node", "tests/preservation_contract.test.cjs"]],
