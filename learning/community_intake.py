@@ -1,4 +1,4 @@
-"""Convert a public learning issue into a bounded, non-private learning queue entry."""
+"""Convert a public learning issue into a bounded, privacy-minimal learning queue entry."""
 from __future__ import annotations
 import json
 import os
@@ -16,7 +16,6 @@ def _clean(value: str, limit: int = 240) -> str:
 def intake(event: dict) -> dict:
     issue = event.get("issue", event)
     title = _clean(issue.get("title"))
-    body = _clean(issue.get("body"), 1200)
     number = issue.get("number")
     url = issue.get("html_url")
     record = {
@@ -25,10 +24,9 @@ def intake(event: dict) -> dict:
         "issue_number": number,
         "issue_url": url,
         "title": title,
-        "summary": body,
         "status": "SUBMITTED",
         "next": ["TRIAGED", "GAP_MATCH", "SOURCE_CHECK", "RESEARCH", "TEST", "VERIFY", "TEACH"],
-        "privacy_rule": "Do not copy secrets or confidential personal information into shared learning."
+        "privacy_rule": "The issue body remains in GitHub. The shared queue stores only minimal routing metadata."
     }
     QUEUE.parent.mkdir(parents=True, exist_ok=True)
     with QUEUE.open("a", encoding="utf-8") as fh:
@@ -36,5 +34,6 @@ def intake(event: dict) -> dict:
     return record
 
 if __name__ == "__main__":
-    payload = json.load(open(os.environ["IMA_ISSUE_EVENT"], encoding="utf-8"))
+    with open(os.environ["IMA_ISSUE_EVENT"], encoding="utf-8") as fh:
+        payload = json.load(fh)
     print(json.dumps(intake(payload), ensure_ascii=False, indent=2))
