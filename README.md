@@ -1,10 +1,34 @@
 # IMA - Intelligent Meta Architecture
 
-## Vision
+## IMA — human-centered intelligence, connected to the world
 
-IMA is a modular AI architecture designed for collaborative evolution.
+IMA is an open human-centered intelligence architecture and product project designed to evolve through validated collaboration.
 
-Community contributions improve the ecosystem through controlled validation.
+**Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.**
+
+The goal is not to declare that IMA already knows everything. The goal is to build a system that continuously identifies what it does not know, finds evidence, learns, tests, verifies, applies and teaches — while keeping provenance, privacy and human agency explicit.
+
+## Start today
+
+- **Use:** open the public IMA experience.
+- **Learn with IMA:** ask questions and report gaps.
+- **Contribute:** submit research, corrections, technology, tests, translations or cultural knowledge.
+- **Build:** add code, adapters, tools, UX, accessibility and device integrations.
+- **Verify:** every promoted capability needs evidence and reproducible checks.
+
+See [docs/IMA_GLOBAL_LAUNCH_PLAN.md](docs/IMA_GLOBAL_LAUNCH_PLAN.md) and [docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md).
+
+### Teach IMA something
+
+Use the GitHub issue template **IMA learning contribution** for a question, correction, research result, technology, test, teaching material, language contribution or real-world observation.
+
+A contribution is not automatically treated as truth. It enters a validation and provenance pipeline.
+
+## The learning loop
+
+DISCOVER -> USE -> QUESTION -> CONTRIBUTE -> VALIDATE -> LEARN -> TEST -> VERIFY -> TEACH -> REPEAT
+
+IMA explicitly tracks unknowns, uncertainty, conflicting evidence, missing prerequisites, missing tools, missing tests, failure modes, cross-domain connections, technology upgrades and teaching opportunities.
 
 ## Architecture
 
@@ -25,49 +49,29 @@ Learning Bridge
 
 Protected Core
 
+## Security and human agency
 
-## Contributing
+Public contributors cannot access private memory, identity systems, internal reasoning or security credentials.
 
-Developers can contribute:
+Private memory remains isolated from shared learning unless explicitly authorized. IMA does not use community learning as authority over people's personal choices.
 
-- connectors
-- tools
-- research
-- improvements
-- integrations
+## Global interoperability
 
+IMA is being developed toward interoperable connections across web, AI systems, software, devices, XR and connected environments. Current standards work includes WebXR, OpenXR and Matter-oriented integration paths; actual integrations are only described as live after verification.
 
-## Security Model
+## What IMA is now vs. what is next
 
-Public contributors cannot access:
+**Implemented foundation:** public runtime, isolated public memory, learning loop, applied-skill compilation, learning-gap detection, web UI, PWA/device continuity work, interoperability specifications and continuous health verification.
 
-- private memory
-- identity systems
-- internal reasoning
-- security credentials
+**Next frontier:** global contribution intake, automated learning-gap triage, evidence-driven research adapters, more verified skills, teaching artifacts, translations, accessibility, device integrations and wider distribution.
 
-
-## Philosophy
-
-Open collaboration.
-Protected intelligence.
-Continuous improvement.
-
-## Contributing
-
-IMA is open to contributors worldwide. See [IMA Community](IMA_COMMUNITY.md) and [CONTRIBUTING.md](CONTRIBUTING.md) to start contributing.
+Documentation is not proof of runtime capability.
 
 ## Build IMA with us
 
 IMA is open to independent contributors worldwide.
 
-See [COMMUNITY_ROADMAP.md](COMMUNITY_ROADMAP.md) for areas where work can begin and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution process.
-
 You can contribute code, research, tests, documentation, languages, accessibility, 3D, memory, preservation, security, integrations and experiments.
-
-## Discover IMA
-
-New contributors can start here: [DISCOVER_IMA.md](DISCOVER_IMA.md)
 
 ## Community operations
 
@@ -76,3 +80,6 @@ New contributors can start here: [DISCOVER_IMA.md](DISCOVER_IMA.md)
 - [Governance](GOVERNANCE.md)
 - [Support](SUPPORT.md)
 - [Contributing](CONTRIBUTING.md)
+- [Global launch plan](docs/IMA_GLOBAL_LAUNCH_PLAN.md)
+- [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
+- [Learning frontier](docs/IMA_LEARNING_FRONTIER.md)
