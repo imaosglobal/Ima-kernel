@@ -5,6 +5,7 @@ from learning.user_memory import learn
 from learning.world_memory import store
 from learning.learning_gate import should_learn
 from learning.skill_compiler import compile_and_record
+from learning.learning_gap_detector import record as record_learning_gap
 import time
 
 
@@ -34,18 +35,23 @@ def learn_from_event(event):
 
     result = process_event(event)
 
-    # Learning now also produces an application/verification plan.
-    # Compilation is specification only; it never performs external actions.
     skill = None
+    gap = None
     try:
         skill = compile_and_record(event)
     except Exception as exc:
         skill = {"status":"error","error":str(exc)}
+
+    try:
+        gap = record_learning_gap(event)
+    except Exception as exc:
+        gap = {"status":"error","error":str(exc)}
 
     return {
         "time": time.time(),
         "route": route_learning(event),
         "result": result,
         "applied_skill": skill,
+        "learning_gap": gap,
         "status": "processed"
     }
