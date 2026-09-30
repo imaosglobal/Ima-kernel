@@ -2,6 +2,7 @@ from __future__ import annotations
 import hashlib, json, time
 from pathlib import Path
 from .global_source_registry import all_sources
+from .time_space import from_opportunity, opportunity_dimensions
 
 ROOT = Path("founder/data")
 SIGNALS = ROOT / "public_demand_signals.json"
@@ -54,7 +55,8 @@ def build():
     for s in signals:
         routes = routes_for(s)
         node_id = hashlib.sha256((s.get("id", "") + "|global").encode()).hexdigest()[:20]
-        graph.append({"node_id": node_id, "signal_id": s.get("id"), "category": s.get("category"), "title": s.get("title"), "url": s.get("url"), "score": score(s), "stage": "DISCOVERED", "routes": routes, "consent_required": True, "external_submission_proof": False, "created_at": time.time()})
+        ts = from_opportunity(source=s.get("source", "unknown"), source_timestamp=s.get("source_timestamp"), title=s.get("title", ""), url=s.get("url"), category=s.get("category", "general"), observed_at=s.get("observed_at"), valid_from=s.get("valid_from"), valid_until=s.get("valid_until"), location=s.get("location"), location_uncertainty=s.get("location_uncertainty"), confidence=s.get("confidence", score(s)), constraints=s.get("constraints"), estimated_cost=s.get("estimated_cost"), estimated_value=s.get("estimated_value"), latency=s.get("latency"), risk=s.get("risk", "unknown"), verification_state=s.get("verification_status", "public-source-unverified"))
+        graph.append({"node_id": node_id, "signal_id": s.get("id"), "category": s.get("category"), "title": s.get("title"), "url": s.get("url"), "score": score(s), "stage": "DISCOVERED", "routes": routes, "consent_required": True, "external_submission_proof": False, "created_at": time.time(), "time_space": ts, "dimensions": opportunity_dimensions(ts)})
         for route in routes:
             route_index.append({"node_id": node_id, **route})
     save(GRAPH, graph); save(ROUTES, route_index)

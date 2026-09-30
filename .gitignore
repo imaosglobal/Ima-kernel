@@ -63,8 +63,6 @@
 .ima_secret.key
 .mother_v4.pid
 .venv/
-<<<<<<< HEAD
->>>>>>> ima_core_backup/main
 IMA_AUDIT_REPORT.json
 Thumbs.db
 __pycache__/
@@ -126,3 +124,11 @@ founder/data/ima_autonomy_log.jsonl
 founder/data/ima_autonomy_state.json
 founder/data/ima_company_os.json
 founder/data/public_demand_signals.json
+
+# IMA local runtime / bridge state (never source-of-truth)
+.ima/ai_leads_for_ima.jsonl
+.ima/all_opportunities.jsonl
+.ima/sold_ids.json
+.ima/muse_bridge/
+.ima/remote/
+founder/executive_ai/global_intelligence/deal_hunter.py.backup_before_title_sanitize

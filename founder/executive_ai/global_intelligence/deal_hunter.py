@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 from founder.executive_ai.global_intelligence.marketplace_adapters import route_for, all_marketplaces
 from founder.executive_ai.global_intelligence.commerce_pipeline import create as create_pipeline
+from founder.executive_ai.global_intelligence.time_space import from_opportunity, opportunity_dimensions
 
 ROOT = Path("founder/data")
 DATA = ROOT / "deal_hunter_opportunities.json"
@@ -58,14 +59,40 @@ def score(text):
     if any(x in low for x in ("free","no cost","no upfront")): points+=10; reasons.append("zero-upfront signal")
     return min(100,points),reasons
 
+def _clean_title(value):
+    """Return a human-readable title and reject JSON-LD/HTML contamination."""
+    import re
+    from html import unescape
+
+    value = unescape(str(value or ""))
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"\\{2,}", " ", value)
+
+    # Strip common JSON-LD fragments that sometimes leak into scraped text.
+    for token in (
+        '"@type"', '"acceptedAnswer"', '"Question"',
+        '"answerCount"', '"mainEntity"', '"@context"',
+    ):
+        if token in value:
+            value = value.split(token, 1)[0]
+
+    value = re.sub(r"\\s+", " ", value).strip(" \\t\\r\\n{}[]\"'")
+    return value[:300]
+
+
 def _deal(source,title,url,text,payout=None,currency=None,payout_model=None):
+    title = _clean_title(title)
+    text = str(text or "")
     value=f"{title} {text}"; confidence,reasons=score(value)
     digest=hashlib.sha256((source+url+title).encode()).hexdigest()[:20]
+    observed_at = time.time()
+    ts = from_opportunity(source=source, title=title, url=url, category=category_for(value), confidence=confidence, estimated_value=payout, verification_state="public-source-unverified")
     return {"id":digest,"source":source,"title":title[:300],"url":url,"category":category_for(value),
             "signal":text[:2000],"confidence":confidence,"evidence":reasons,
             "verification_status":"public-source-unverified","consent_required":True,
-            "discovered_at":time.time(),"payout_amount":payout,"payout_currency":currency,
-            "payout_model":payout_model,"next_action":"verify_terms_then_request_consent_before_contact"}
+            "discovered_at":observed_at,"payout_amount":payout,"payout_currency":currency,
+            "payout_model":payout_model,"next_action":"verify_terms_then_request_consent_before_contact",
+            "time_space":ts,"dimensions":opportunity_dimensions(ts)}
 
 def scan_referr():
     url="https://www.referr.co.uk/"
