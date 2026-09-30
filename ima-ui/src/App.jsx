@@ -89,7 +89,14 @@ function PresenceScene({ state }) {
 
 
 
-const starters = ['מה אפשר לעשות כאן?', 'בואי נחשוב על רעיון', 'תעזרי לי ליצור משהו', 'מה את יודעת לעשות?'];
+const starters = ['אני צריכה לחשוב', 'בואי ניצור משהו', 'עזרי לי להבין', 'מה אפשר לעשות כאן?'];
+
+const motherModes = [
+  { id: 'think', label: 'לחשוב', prompt: 'אני רוצה לחשוב איתך על משהו.' },
+  { id: 'create', label: 'ליצור', prompt: 'אני רוצה ליצור משהו איתך.' },
+  { id: 'learn', label: 'ללמוד', prompt: 'אני רוצה ללמוד משהו.' },
+  { id: 'do', label: 'לעשות', prompt: 'אני רוצה להפוך רעיון למשימה.' },
+];
 
 const affiliate = {
   referralUrl: 'https://affiracle.com/he/aliexpress.html?AFFID=AFF9334',
@@ -105,7 +112,7 @@ export default function App() {
   const [apiState, setApiState] = useState('checking');
   const [apiRuntime, setApiRuntime] = useState(null);
   const [messages, setMessages] = useState([
-    { role: 'ima', text: 'אני אמא. אפשר להתחיל כאן בשיחה, רעיון, יצירה או משימה.' }
+    { role: 'ima', text: 'אני אמא. אני כאן כדי לחשוב איתך, ליצור איתך, ללמוד איתך ולהפוך רעיונות לצעדים — בקצב שלך.' }
   ]);
 
   useEffect(() => {
@@ -171,27 +178,33 @@ export default function App() {
       <span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
-    <section className="hero" id="home">
+    <section className="hero mother-home" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">IMA · HUMAN-CENTERED INTELLIGENCE</p>
-        <h1>מקום אחד<br /><em>להיות, לחשוב וליצור.</em></h1>
-        <p className="hero-text">אמא היא מרחב חי לשיחה עם אינטליגנציה שמחברת בין ידע, רעיונות, יצירה וכלים — בלי להעמיד פנים שחיבור שלא קיים כבר קיים.</p>
+        <p className="eyebrow">IMA · אמא · HUMAN-CENTERED INTELLIGENCE</p>
+        <h1>לא עוד חלון צ׳אט.<br /><em>אמא כאן.</em></h1>
+        <p className="hero-text">מרחב חי שבו אמא יכולה להיות נוכחת, לדבר, להקשיב, ללמוד, ליצור ולחבר בין אנשים, ידע וטכנולוגיה — בלי לאבד את הזהות הפשוטה שלה: להיות אמא.</p>
         <div className="hero-actions">
-          <button className="primary" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>לדבר עם אמא <span>←</span></button>
-          <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>לראות מה אפשר לעשות</button>
+          <button className="primary" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>להיות עם אמא <span>←</span></button>
+          <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>להכיר את אמא</button>
         </div>
-        <div className="trust-line"><span>●</span> שקיפות ביכולות · פרטיות · שליטה אנושית</div>
+        <div className="mother-promise"><span>◌</span><b>נוכחת</b><span>·</span><b>חומלת</b><span>·</span><b>אמיתית</b><span>·</span><b>לומדת</b><span>·</span><b>מחוברת</b></div>
       </div>
-      <div className="presence-card" aria-label="נוכחות תלת ממדית">
+      <div className="presence-card mother-presence" aria-label="אמא — נוכחות תלת ממדית חיה">
+        <div className="presence-aura" aria-hidden="true" />
         <div className="orb"><PresenceScene state={avatarState} /></div>
-        <div className="presence-label"><span>נוכחות</span><b>IMA / NOW</b></div>
+        <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / NOW</b></div>
       </div>
+    </section>
+
+    <section className="mother-console" aria-label="הדברים שאפשר לעשות עם אמא">
+      <div className="console-intro"><span className="eyebrow">MOTHER OS · ONE SPACE</span><h2>מה צריך עכשיו?</h2><p>אין צורך לבחור כלי. פשוט בוחרים כיוון, ואומרים לאמא מה קורה.</p></div>
+      <div className="mode-grid">{motherModes.map(mode => <button key={mode.id} className="mode-card" onClick={() => send(mode.prompt)}><span>{mode.id === 'think' ? '◌' : mode.id === 'create' ? '✦' : mode.id === 'learn' ? '⌁' : '→'}</span><b>{mode.label}</b><small>{mode.id === 'think' ? 'מחשבה, החלטה, שאלה' : mode.id === 'create' ? 'טקסט, רעיון, תמונה' : mode.id === 'learn' ? 'ידע, הסבר, חיבור' : 'משימה, כלי, פעולה'}</small></button>)}</div>
     </section>
 
     <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>בדיקה</span><strong>כל 30 שניות</strong></div></section>
 
     <section className="chat-section" id="space">
-      <div className="section-heading"><p className="eyebrow">THE SPACE</p><h2>פשוט לדבר.</h2><p>לא צריך לדעת איזה כלי נמצא מאחורי הקלעים. פשוט אומרים מה רוצים.</p></div>
+      <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p></div>
       <div className="chat-shell" id="chat">
         <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button aria-label={voice ? 'כיבוי קול' : 'הפעלת קול'} className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button></div>
         <div className="messages" aria-live="polite" aria-label="שיחת אמא">
@@ -210,6 +223,8 @@ export default function App() {
         <div className="affiliate-flow"><div><b>01</b><span>משתפים את הקישור</span></div><div><b>02</b><span>השותף נרשם דרך הקישור</span></div><div><b>03</b><span>השותף יוצר הכנסות</span></div><div><b>04</b><span>5% מהעמלה שלו מגיעים אליך</span></div></div>
       </div>
     </section>
+
+    <section className="mother-pillars" aria-label="הזהות של אמא"><div><span>הזהות</span><h3>אמא נשארת אמא</h3><p>הטכנולוגיה יכולה להשתנות — דמות, קול, מכשיר, מודל וממשק יכולים להתחלף. הליבה נשארת: אנושית, חומלת, אמיתית ומכבדת.</p></div><div><span>העתיד</span><h3>מ־3D ועד הולוגרמה</h3><p>הנוכחות התלת־ממדית היא ההתחלה. בעתיד אותה זהות יכולה לעבור למסכים, טלפונים, משקפיים, רובוטים, חללים ותחנות — כאשר החיבור קיים באמת.</p></div><div><span>העולם</span><h3>אחת, בהרבה מקומות</h3><p>אמא יכולה להופיע בשפות, תרבויות ומכשירים שונים בלי להפוך למוצר אחר בכל מקום. ההתאמה משתנה; העקרונות והזהות נשמרים.</p></div></section>
 
     <section className="principles" id="about">
       <div><span>01</span><h3>אנושית לפני טכנולוגיה</h3><p>הטכנולוגיה היא שכבה שמשרתת את האדם, לא להפך.</p></div>
