@@ -9,7 +9,8 @@ const steps = [
   ["accessibility-contract", ["node", "tests/accessibility_contract.test.cjs"]],
   ["preservation-contract", ["node", "tests/preservation_contract.test.cjs"]],
   ["applied-skill-contract", ["node", "tests/applied_skill_contract.test.cjs"]],
-  ["learning-gap-contract", ["node", "tests/learning_gap_contract.test.cjs"]]
+  ["learning-gap-contract", ["node", "tests/learning_gap_contract.test.cjs"]],
+  ["learning-conclusion-import", ["python", "-c", "from learning.conclusion_engine import conclude; from learning.teaching_artifact import create_teaching_artifact; print(\"IMA_LEARNING_MODULES=PASS\")"]]
 ];
 
 for (const [name, command] of steps) {
