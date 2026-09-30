@@ -1,0 +1,43 @@
+{
+  "schema": "IMA-UNIVERSAL-ADAPTER-REGISTRY-1.0",
+  "policy": {
+    "live_requires_verified_evidence": true,
+    "consequential_actions_require_authorization": true,
+    "provider_neutral_core": true
+  },
+  "protocol_families": [
+    "https-rest",
+    "websocket",
+    "webhooks",
+    "oauth2-oidc",
+    "webxr",
+    "openxr",
+    "matter",
+    "android-intents",
+    "web-components"
+  ],
+  "domains": [
+    "internet",
+    "software",
+    "operating-systems",
+    "ai-models",
+    "search",
+    "knowledge",
+    "smart-home",
+    "robotics",
+    "vehicles",
+    "delivery",
+    "commerce",
+    "music",
+    "video",
+    "creative",
+    "games",
+    "xr",
+    "healthcare",
+    "education",
+    "government",
+    "nonprofit",
+    "enterprise"
+  ],
+  "integrations": []
+}
