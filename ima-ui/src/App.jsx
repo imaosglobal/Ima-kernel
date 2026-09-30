@@ -219,6 +219,24 @@ export default function App() {
       </div>
     </section>
 
+    <section className="global-gateway" id="global">
+      <div className="section-heading">
+        <p className="eyebrow">IMA · GLOBAL GATEWAY</p>
+        <h2>השער פתוח לעולם.</h2>
+        <p>כל אדם יכול להשתמש באמא, לשאול אותה, ללמד אותה, לבדוק אותה או לבנות איתה. הלמידה המשותפת מתחילה מתרומה אחת אמיתית.</p>
+      </div>
+      <div className="hero-actions">
+        <a className="primary" href="https://github.com/imaosglobal/Ima-kernel/issues/100" target="_blank" rel="noreferrer">ללמד את אמא ↗</a>
+        <a className="secondary" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">לבנות את אמא ↗</a>
+        <button className="secondary" onClick={async () => {
+          const share = { title: 'אמא — IMA', text: 'Use IMA. Question IMA. Teach IMA. Build IMA.', url: window.location.href };
+          if (navigator.share) await navigator.share(share);
+          else if (navigator.clipboard) await navigator.clipboard.writeText(window.location.href);
+        }}>לשתף את השער</button>
+      </div>
+      <div className="mother-promise"><b>עברית</b><span>·</span><b>English</b><span>·</span><b>כל שפה</b><span>·</span><b>כל דור</b><span>·</span><b>כל תחום</b></div>
+    </section>
+
     <section className="affiliate-section" id="affiliate">
       <div className="section-heading"><p className="eyebrow">IMA · GLOBAL AFFILIATE HUB</p><h2>הזדמנות פתוחה לעולם.</h2><p>מרחב IMA שמאפשר ליוצרים, מנהלי קהילות ומשווקים להכיר את תוכנית השותפים של AliExpress דרך Affiracle.</p></div>
       <div className="affiliate-card">
