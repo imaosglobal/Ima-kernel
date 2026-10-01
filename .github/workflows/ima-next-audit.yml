@@ -1,0 +1,46 @@
+name: IMA Next Action Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/IMA_CAPABILITY_REGISTRY.json'
+      - 'scripts/ima-next-action.mjs'
+      - 'tests/capability_registry.test.cjs'
+      - 'package.json'
+      - '.github/workflows/ima-next-audit.yml'
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ima-next-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate capability contract
+        run: npm run test:capabilities
+      - name: Run next-action tool
+        run: npm run ima:next
+      - name: Upload audit report
+        run: npm run ima:next > ima-next-action-report.json
+      - name: Preserve report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ima-next-action-report
+          path: ima-next-action-report.json
+          if-no-files-found: error
+          retention-days: 14
