@@ -7,7 +7,9 @@ on:
       - main
     paths:
       - docs/IMA_CAPABILITY_REGISTRY.json
+      - docs/IMA_PERSISTENT_AGENT_OPERATING_MODEL.md
       - scripts/ima-next-action.mjs
+      - scripts/validate-ima-next-report.mjs
       - tests/capability_registry.test.cjs
       - package.json
       - .github/workflows/ima-next-audit.yml
@@ -35,7 +37,7 @@ jobs:
         run: npm run test:capabilities
 
       - name: Generate next-action report
-        run: npm run ima:next > ima-next-action-report.json
+        run: node scripts/ima-next-action.mjs > ima-next-action-report.json
 
       - name: Validate report
         run: node scripts/validate-ima-next-report.mjs ima-next-action-report.json
