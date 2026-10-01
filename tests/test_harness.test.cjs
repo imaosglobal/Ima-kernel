@@ -5,12 +5,13 @@ const fs = require("fs");
 
 const health = fs.readFileSync(".github/workflows/ima-continuous-health.yml", "utf8");
 const pages = fs.readFileSync(".github/workflows/ima-ui-pages.yml", "utf8");
+const verify = fs.readFileSync("scripts/verify-ima.mjs", "utf8");
 const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
 const selfHealingDoc = fs.readFileSync("docs/IMA_SELF_HEALING_AND_AUTOMATED_REPAIR.md", "utf8");
 
 for (const required of [
-  "npm test",
+  "npm run ima:verify",
   "ima:integrity",
   "ima:runtime",
   "python -m unittest tests/public_runtime.test.py",
@@ -20,6 +21,7 @@ for (const required of [
   assert.ok(health.includes(required), `continuous health missing: ${required}`);
 }
 
+assert.ok(verify.includes('["core", ["npm", "test"]]'), "verification runner must execute npm test");
 assert.ok(health.includes("schedule:"), "continuous health must remain scheduled");
 assert.ok(health.includes("IMA_LIVE_DEPLOYMENT_SMOKE=PASS"), "live deployment smoke test must remain enabled");
 assert.ok(health.includes('cron: "17 */6 * * *"'), "continuous health cadence changed unexpectedly");
