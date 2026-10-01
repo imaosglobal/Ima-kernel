@@ -4,6 +4,9 @@ import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { useImaRuntime } from './services/imaRuntime';
 import { askIma, getImaRuntime } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
+import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
+
+const statusLabel = status => ({ LIVE: 'פעיל ומאומת', VERIFIED: 'מאומת', TESTED: 'נבדק', IMPLEMENTED: 'ממומש — לא אומת בפריסה', PLANNED: 'בתכנון', NOT_VERIFIED: 'טרם אומת', DISABLED: 'כבוי' })[status] || 'לא ידוע';
 
 function Presence({ state = 'idle' }) {
   const group = useRef(null);
@@ -205,6 +208,13 @@ export default function App() {
     </section>
 
     <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>מכשיר</span><strong>{deviceContinuity?.device?.family || 'מזהה…'}</strong></div></section>
+
+    <section className="capability-truth" id="capabilities" aria-labelledby="capability-heading">
+      <div className="section-heading"><p className="eyebrow">IMA · VERIFIED CAPABILITIES</p><h2 id="capability-heading">מה אמא יכולה — ומה עדיין לא אומת.</h2><p>המצב מוצג מתוך מרשם היכולות של הפרויקט. תכנון או מסמך אינם הוכחה ליכולת פעילה.</p></div>
+      <div className="feature-grid">
+        {capabilityRegistry.capabilities.map(item => <article className="feature-card" key={item.id}><h3>{item.label}</h3><p><strong>{statusLabel(item.status)}</strong></p><p>{item.boundary}</p></article>)}
+      </div>
+    </section>
 
     <section className="chat-section" id="space">
       <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p></div>
