@@ -27,4 +27,12 @@ assert.match(ui, /import capabilityRegistry from '\.\.\/\.\.\/docs\/IMA_CAPABILI
 assert.match(ui, /capabilityRegistry\.capabilities\.map/, 'UI must render registry capabilities');
 assert.match(ui, /לא אומת/, 'UI must communicate verification boundaries in Hebrew');
 
-console.log('IMA capability registry contract: PASS (' + registry.capabilities.length + ' capabilities; UI wired)');
+const { spawnSync } = require('node:child_process');
+const audit = spawnSync(process.execPath, [path.join(__dirname, '..', 'scripts', 'ima-next-action.mjs')], { encoding: 'utf8' });
+assert.equal(audit.status, 0, 'IMA Next Action CLI must exit successfully: ' + audit.stderr);
+const report = JSON.parse(audit.stdout);
+assert.equal(report.tool, 'IMA Next Action');
+assert.ok(Array.isArray(report.next_actions));
+assert.equal(report.unresolved_count, report.next_actions.length);
+assert.ok(report.next_actions.every((x, i) => x.priority === i + 1 && x.id && x.next_step && x.boundary));
+console.log('IMA capability registry + Next Action CLI: PASS (' + registry.capabilities.length + ' capabilities; ' + report.unresolved_count + ' queued actions; UI wired)');
