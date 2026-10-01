@@ -2,23 +2,20 @@ name: IMA Next Action Audit
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
-      - 'docs/IMA_CAPABILITY_REGISTRY.json'
-      - 'scripts/ima-next-action.mjs'
-      - 'tests/capability_registry.test.cjs'
-      - 'package.json'
-      - '.github/workflows/ima-next-audit.yml'
+      - docs/IMA_CAPABILITY_REGISTRY.json
+      - scripts/ima-next-action.mjs
+      - tests/capability_registry.test.cjs
+      - package.json
+      - .github/workflows/ima-next-audit.yml
   schedule:
-    - cron: '23 6 * * 1'
+    - cron: "23 6 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: read
-
-concurrency:
-  group: ima-next-audit-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   audit:
@@ -27,18 +24,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Validate capability contract
         run: npm run test:capabilities
-      - name: Run next-action tool
-        run: npm run ima:next
-      - name: Upload audit report
+
+      - name: Generate next-action report
         run: npm run ima:next > ima-next-action-report.json
-      - name: Validate generated report
-        run: node -e "const fs=require('fs'); const r=JSON.parse(fs.readFileSync('ima-next-action-report.json','utf8')); if(r.tool!=='IMA Next Action'||!Array.isArray(r.next_actions)||r.unresolved_count!==r.next_actions.length) process.exit(1); console.log('IMA next-action report: PASS');"
+
+      - name: Validate report
+        run: node scripts/validate-ima-next-report.mjs ima-next-action-report.json
+
       - name: Preserve report
         uses: actions/upload-artifact@v4
         with:
