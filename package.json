@@ -24,7 +24,8 @@
     "ima:self-hosted": "node -e \"console.log(JSON.stringify(require('./kernel/runtime/CANONICAL/IMA_SELF_HOSTED').capabilityReport(), null, 2))\"",
     "ima:verify": "node scripts/verify-ima.mjs",
     "test:capabilities": "node tests/capability_registry.test.cjs",
-    "ima:next": "node scripts/ima-next-action.mjs"
+    "ima:next": "node scripts/ima-next-action.mjs",
+    "ima:next:strict": "node scripts/ima-next-action.mjs --strict"
   },
   "repository": {
     "type": "git",
