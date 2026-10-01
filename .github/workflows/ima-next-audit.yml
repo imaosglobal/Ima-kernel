@@ -1,4 +1,5 @@
 name: IMA Next Action Audit
+# Validator: scripts/validate-ima-next-report.mjs
 
 on:
   push:
