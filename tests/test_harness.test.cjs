@@ -10,18 +10,21 @@ const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
 const selfHealingDoc = fs.readFileSync("docs/IMA_SELF_HEALING_AND_AUTOMATED_REPAIR.md", "utf8");
 
+assert.ok(health.includes("npm run ima:verify"), "continuous health must invoke the canonical verification runner");
 for (const required of [
-  "npm run ima:verify",
-  "ima:integrity",
-  "ima:runtime",
-  "python -m unittest tests/public_runtime.test.py",
-  "npm run lint",
-  "npm run build"
+  '["core", ["npm", "test"]]',
+  '["integrity", ["npm", "run", "ima:integrity"]]',
+  '["runtime", ["npm", "run", "ima:runtime"]]',
+  '["public-runtime", ["python", "-c"',
+  '["contract-harness", ["node", "tests/test_harness.test.cjs"]]'
 ]) {
-  assert.ok(health.includes(required), `continuous health missing: ${required}`);
+  assert.ok(verify.includes(required), `verification runner missing required test: ${required}`);
 }
 
-assert.ok(verify.includes('["core", ["npm", "test"]]'), "verification runner must execute npm test");
+for (const required of ["npm ci", "npm run lint", "npm run build"]) {
+  assert.ok(health.includes(required), `continuous health missing frontend step: ${required}`);
+}
+
 assert.ok(health.includes("schedule:"), "continuous health must remain scheduled");
 assert.ok(health.includes("IMA_LIVE_DEPLOYMENT_SMOKE=PASS"), "live deployment smoke test must remain enabled");
 assert.ok(health.includes('cron: "17 */6 * * *"'), "continuous health cadence changed unexpectedly");
