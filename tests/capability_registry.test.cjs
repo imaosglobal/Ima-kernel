@@ -21,4 +21,10 @@ for (const item of registry.capabilities) {
 }
 assert.equal(registry.capabilities.find(x => x.id === 'store_payments').status, 'DISABLED');
 assert.equal(registry.policy.consequential_actions_require_explicit_user_confirmation, true);
-console.log('IMA capability registry contract: PASS (' + registry.capabilities.length + ' capabilities)');
+
+const ui = fs.readFileSync(path.join(__dirname, '..', 'ima-ui', 'src', 'App.jsx'), 'utf8');
+assert.match(ui, /import capabilityRegistry from '\.\.\/\.\.\/docs\/IMA_CAPABILITY_REGISTRY\.json'/, 'UI must consume the canonical registry');
+assert.match(ui, /capabilityRegistry\.capabilities\.map/, 'UI must render registry capabilities');
+assert.match(ui, /לא אומת/, 'UI must communicate verification boundaries in Hebrew');
+
+console.log('IMA capability registry contract: PASS (' + registry.capabilities.length + ' capabilities; UI wired)');
