@@ -1,5 +1,3 @@
-import persona from "../../identity/persona.json";
-
 export default function IMAAvatar(){
 
 return (
