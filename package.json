@@ -25,7 +25,8 @@
     "ima:verify": "node scripts/verify-ima.mjs",
     "test:capabilities": "node tests/capability_registry.test.cjs",
     "ima:next": "node scripts/ima-next-action.mjs",
-    "ima:next:strict": "node scripts/ima-next-action.mjs --strict"
+    "ima:next:strict": "node scripts/ima-next-action.mjs --strict",
+    "ima:community-check": "npm run ima:verify"
   },
   "repository": {
     "type": "git",
