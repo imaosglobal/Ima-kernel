@@ -23,6 +23,12 @@ DISCOVER -> USE -> QUESTION -> CONTRIBUTE -> VALIDATE -> LEARN -> TEST -> VERIFY
 3. Developer: add code, adapters, tests or UX.
 4. Researcher/organization: contribute evidence, standards, datasets, interoperability work or domain expertise.
 
+## Global platform coverage
+
+IMA should be designed for legitimate integration across the full technology stack: operating systems, browsers, applications, games, vehicles, accessibility devices, smart environments, enterprise systems, robotics, XR and future aerospace/space interfaces. This is an interoperability target, not a claim that every platform is already integrated. Each new integration must be implemented and runtime-verified before being marked supported.
+
+The architecture separates one canonical IMA core from many adapters and one-to-one personal experiences. New hardware, operating systems, model runtimes and standards are treated as opportunities for verified adapters, not separate IMA identities.
+
 ## Distribution channels
 
 ### Web
