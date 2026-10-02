@@ -47,10 +47,27 @@ jobs:
 
       - name: Live deployment smoke test
         run: |
-          set -e
-          curl -fsS --max-time 30 https://ima-915m.onrender.com/health
-          curl -fsS --max-time 30 https://ima-915m.onrender.com/ima-api/runtime
-          curl -fsS --max-time 30 https://imaosglobal.github.io/Ima-kernel/ >/dev/null
+          set -u
+          failures=0
+          check_url() {
+            name="$1"
+            url="$2"
+            code="$(curl -sS -L --max-time 30 -o "/tmp/ima-smoke-${name}.body" -w '%{http_code}' "$url" || true)"
+            echo "IMA_SMOKE_${name}_HTTP=${code}"
+            if [ "$code" != "200" ]; then
+              echo "IMA_SMOKE_${name}_BODY:"
+              head -c 500 "/tmp/ima-smoke-${name}.body" 2>/dev/null || true
+              echo
+              failures=$((failures + 1))
+            fi
+          }
+          check_url render_health https://ima-915m.onrender.com/health
+          check_url render_runtime https://ima-915m.onrender.com/ima-api/runtime
+          check_url github_pages https://imaosglobal.github.io/Ima-kernel/
+          if [ "$failures" -ne 0 ]; then
+            echo "IMA_LIVE_DEPLOYMENT_SMOKE=FAIL count=$failures"
+            exit 1
+          fi
           echo "IMA_LIVE_DEPLOYMENT_SMOKE=PASS"
 
       - name: Check Android build
