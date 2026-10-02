@@ -8,6 +8,11 @@ from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 
 try:
+    from ima_runtime.reflection_runtime import reflect
+except Exception:
+    reflect = None
+
+try:
     from connectors.llm.router import ask_models
 except Exception:
     ask_models = None
@@ -94,6 +99,19 @@ class IMAMaster:
                         result["response"] = ima_mom.generate_answer(message, ima_mom.load())
             except Exception as exc:
                 result["response"] = "IMA runtime fallback: " + str(exc)
+
+        # Every live response passes through the reflection gate. When no genuinely
+        # independent conclusion is available, the runtime records TRUE_UNKNOWN;
+        # it never treats its first answer as independently verified truth.
+        try:
+            if reflect is not None and result.get("response"):
+                result["reflection"] = reflect(
+                    result["response"],
+                    evidence=tuple(result.get("evidence", ())),
+                    context={"scope": "live_response", "uncertainty": "unknown"},
+                )
+        except Exception as exc:
+            result["reflection_error"] = str(exc)
 
         if not public:
             conversation_layer.update(message, result.get("response", ""))
