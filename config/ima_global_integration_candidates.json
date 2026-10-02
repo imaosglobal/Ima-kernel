@@ -1,0 +1,64 @@
+{
+  "schema": "ima.global-integration-candidates.v1",
+  "purpose": "Track additional integration routes for IMA without claiming they are connected until authenticated and health-checked.",
+  "selection_rule": "Prefer official ChatGPT apps, verified providers, or MCP Registry servers with clear provenance, permissions, and reversible actions.",
+  "candidate_groups": {
+    "knowledge_and_search": [
+      {"id":"tavily","route":"chatgpt_app","state":"available_not_connected","capability":"web_search_research_retrieval"},
+      {"id":"ahrefs","route":"chatgpt_app","state":"available_not_connected","capability":"seo_search_visibility_backlinks"},
+      {"id":"acumen_by_talarion","route":"chatgpt_app","state":"available_not_connected","capability":"research_gap_detection"}
+    ],
+    "marketing_and_analytics": [
+      {"id":"supermetrics","route":"chatgpt_app","state":"available_not_connected","capability":"cross_channel_marketing_analytics"},
+      {"id":"hypd_ai","route":"chatgpt_app","state":"available_not_connected","capability":"paid_ads_analytics_read_only"},
+      {"id":"windsor_ai","route":"chatgpt_app","state":"authorization_required","capability":"350_plus_marketing_data_sources"}
+    ],
+    "communication_and_knowledge": [
+      {"id":"fireflies","route":"chatgpt_app","state":"available_not_connected","capability":"meeting_knowledge"},
+      {"id":"otter_ai","route":"chatgpt_app","state":"available_not_connected","capability":"meeting_transcripts"},
+      {"id":"agentmail","route":"chatgpt_app","state":"available_not_connected","capability":"agent_email_inbox"}
+    ],
+    "commerce_and_distribution": [
+      {"id":"shopify","route":"chatgpt_app","state":"authorization_required","capability":"store_catalog_orders_inventory_analytics"},
+      {"id":"vercel","route":"chatgpt_app","state":"available_not_connected","capability":"web_app_deployment"},
+      {"id":"base44","route":"chatgpt_app","state":"installed_verified","capability":"app_building"}
+    ],
+    "creative_and_media": [
+      {"id":"runway","route":"chatgpt_app","state":"installed_verified","capability":"image_video_audio_generation_localization"},
+      {"id":"heygen","route":"chatgpt_app","state":"available_not_connected","capability":"avatars_video_voice_translation"},
+      {"id":"openart","route":"chatgpt_app","state":"available_not_connected","capability":"image_video_generation"}
+    ],
+    "work_and_project_systems": [
+      {"id":"notion","route":"chatgpt_app","state":"authorization_required","capability":"knowledge_planning_documents"},
+      {"id":"linear","route":"chatgpt_app","state":"authorization_required","capability":"issues_projects_initiatives"},
+      {"id":"atlassian","route":"chatgpt_app","state":"authorization_required","capability":"jira_confluence_bitbucket_loom"},
+      {"id":"slack","route":"chatgpt_app","state":"authorization_required","capability":"team_communication"}
+    ]
+  },
+  "mcp_expansion": {
+    "registry": "https://registry.modelcontextprotocol.io/",
+    "policy": "Discover candidates continuously; register only after provenance, permission scope, health, and action policy checks.",
+    "examples": [
+      "agentavow-trust",
+      "repogates",
+      "withruntime",
+      "appstorepack",
+      "nativeport"
+    ]
+  },
+  "action_gates": {
+    "read": "allowed_after_authorization_and_health_check",
+    "write": "proof_gated",
+    "financial": "explicit_authorization_and_provider_confirmation",
+    "outreach": "consent_required",
+    "irreversible": "explicit_authorization"
+  },
+  "next_discovery_cycle": [
+    "search_official_chatgpt_apps",
+    "scan_official_mcp_registry",
+    "deduplicate_by_capability",
+    "record_provenance_and_permissions",
+    "health_check_authorized_connections",
+    "promote_only_verified_routes_to_live"
+  ]
+}
