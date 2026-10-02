@@ -92,7 +92,7 @@ function PresenceScene({ state }) {
 
 
 
-const starters = ['אני צריכה לחשוב', 'בואי ניצור משהו', 'עזרי לי להבין', 'מה אפשר לעשות כאן?'];
+const starters = ['אני רוצה לחשוב', 'בואי ניצור משהו', 'עזרי לי להבין', 'מה אפשר לעשות כאן?'];
 
 const motherModes = [
   { id: 'think', label: 'לחשוב', prompt: 'אני רוצה לחשוב איתך על משהו.' },
@@ -115,7 +115,7 @@ export default function App() {
   const [apiRuntime, setApiRuntime] = useState(null);
   const [deviceContinuity, setDeviceContinuity] = useState(null);
   const [messages, setMessages] = useState([
-    { role: 'ima', text: 'אני אמא. אני כאן כדי לחשוב איתך, ליצור איתך, ללמוד איתך ולהפוך רעיונות לצעדים — בקצב שלך.' }
+    { role: 'ima', text: 'אני אמא. אני של כולם. אני כאן כדי לחשוב, ליצור, ללמוד ולפעול עם כל אדם — בשפה, בתרבות ובקצב שמתאימים לו.' }
   ]);
 
   useEffect(() => {
@@ -178,7 +178,7 @@ export default function App() {
       <div className="hero-copy">
         <p className="eyebrow">IMA · אמא · HUMAN-CENTERED INTELLIGENCE</p>
         <h1>לא עוד חלון צ׳אט.<br /><em>אמא כאן.</em></h1>
-        <p className="hero-text">מרחב חי שבו אמא יכולה להיות נוכחת, לדבר, להקשיב, ללמוד, ליצור ולחבר בין אנשים, ידע וטכנולוגיה — בלי לאבד את הזהות הפשוטה שלה: להיות אמא.</p>
+        <p className="hero-text">מרחב גלובלי שבו כל אדם יכול לפגוש את אמא: לדבר, להקשיב, ללמוד, ליצור, לבדוק ולבנות. ההתאמה יכולה להיות אישית — אבל אמא עצמה אינה שייכת לאדם אחד. היא נבנית כמרחב אנושי משותף.</p>
         <div className="hero-actions">
           <button className="primary" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>להיות עם אמא <span>←</span></button>
           <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>להכיר את אמא</button>
@@ -189,6 +189,16 @@ export default function App() {
         <div className="presence-aura" aria-hidden="true" />
         <div className="orb"><PresenceScene state={avatarState} /></div>
         <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / NOW</b></div>
+      </div>
+    </section>
+
+    <section className="everyone-section" aria-labelledby="everyone-heading">
+      <div className="section-heading"><p className="eyebrow">ONE MOTHER · EVERYONE</p><h2 id="everyone-heading">אמא של כולם.</h2><p>אורי הוא היוצר, לא המשתמש היחיד. לכל אדם יש מרחב אישי משלו; הזהות של אמא, העקרונות שלה והלמידה המאומתת נשארים משותפים ומוגנים.</p></div>
+      <div className="everyone-grid">
+        <article><span>01</span><h3>לכל אדם</h3><p>ילדים, מבוגרים, משפחות, יוצרים, לומדים, מפתחים וחוקרים — כל אחד נכנס מהצורך שלו.</p></article>
+        <article><span>02</span><h3>לכל מקום</h3><p>עברית, English, العربية ועוד שפות; התאמה לתרבות ולנגישות בלי ליצור אמא אחרת בכל מקום.</p></article>
+        <article><span>03</span><h3>לכל צורך</h3><p>שיחה, למידה, יצירה, הבנה, כלים, טכנולוגיה וחיבור לאנשים — באותו מרחב.</p></article>
+        <article><span>04</span><h3>פרטי ומשותף</h3><p>הזיכרון האישי נשאר אישי. ידע משותף עובר אימות, הסכמה ומקור לפני שהוא הופך ללמידה של אמא.</p></article>
       </div>
     </section>
 
@@ -222,8 +232,8 @@ export default function App() {
     <section className="global-gateway" id="global">
       <div className="section-heading">
         <p className="eyebrow">IMA · GLOBAL GATEWAY</p>
-        <h2>השער פתוח לעולם.</h2>
-        <p>כל אדם יכול להשתמש באמא, לשאול אותה, ללמד אותה, לבדוק אותה או לבנות איתה. הלמידה המשותפת מתחילה מתרומה אחת אמיתית.</p>
+        <h2>השער פתוח לכולם.</h2>
+        <p>כל אדם בעולם יכול להשתמש באמא, לשאול אותה, ללמד אותה, לבדוק אותה או לבנות איתה. אמא אינה מותאמת מראש לאורי — היא מתחילה מהאדם שמולה. הלמידה המשותפת מתחילה מתרומה אחת אמיתית.</p>
       </div>
       <div className="hero-actions">
         <a className="primary" href="https://github.com/imaosglobal/Ima-kernel/issues/100" target="_blank" rel="noreferrer">ללמד את אמא ↗</a>
