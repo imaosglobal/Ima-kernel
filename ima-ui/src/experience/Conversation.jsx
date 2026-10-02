@@ -50,7 +50,7 @@ result?.response ||
 }
 ]);
 
-}catch(e){
+}catch{
 
 setMessages(m=>[
 ...m,
