@@ -21,5 +21,9 @@ jobs:
         run: python ima_runtime/reflection_gap_closure.py
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_reflection_gap_closure.py'
+      - name: Development journal tests
+        run: python -m unittest discover -s tests -p 'test_development_journal.py'
+      - name: Journal standard presence
+        run: test -f docs/IMA_DEVELOPMENT_MEMORY_STANDARD.md
       - name: Canonical protocol presence
         run: test -f docs/IMA_REFLECTION_AND_GAP_CLOSURE.md && test -f docs/IMA_REFLECTION_AND_GAP_CLOSURE.schema.json
