@@ -1,0 +1,43 @@
+{
+  "schema": "ima.mcp.discovery.v1",
+  "source": "Official MCP Registry",
+  "source_url": "https://registry.modelcontextprotocol.io/",
+  "discovered_at": "2026-10-02",
+  "status_rule": "discovered_only_until_ima_health_and_permission_checks",
+  "priority_candidates": [
+    {"id":"io.github.jentic/mcp-server","version":"1.0.0","capability":"1500_plus_apis","risk_gate":"credentials_and_write_scope","state":"discovered"},
+    {"id":"io.github.webdriverio/mcp","version":"3.12.1","capability":"browser_and_android_ios_automation","risk_gate":"device_control_and_irreversible_actions","state":"discovered"},
+    {"id":"io.github.Softeria/ms-365-mcp-server","version":"0.153.1","capability":"microsoft_365_graph","risk_gate":"account_authorization","state":"discovered"},
+    {"id":"io.github.mmedum/google-mail-mcp","version":"2.0.2","capability":"gmail_search_read_labels_drafts","risk_gate":"mail_privacy_and_send_scope","state":"discovered"},
+    {"id":"com.appstorepack/appstorepack","version":"1.0.0","capability":"app_store_assets_and_app_store_connect","risk_gate":"publishing_authorization","state":"discovered"},
+    {"id":"io.ppc/postclick","version":"0.3.0","capability":"landing_page_cro","risk_gate":"website_write_scope","state":"discovered"},
+    {"id":"io.github.ExaDev/agent-comms","version":"2.9.0","capability":"agent_to_agent_communication","risk_gate":"identity_and_outreach_consent","state":"discovered"},
+    {"id":"io.github.irisxc4/memoryguard","version":"0.7.12","capability":"governed_agent_memory","risk_gate":"memory_privacy","state":"discovered"},
+    {"id":"io.github.Shakargy/devtime","version":"0.6.0","capability":"evidence_backed_repository_memory","risk_gate":"repository_read_access","state":"discovered"},
+    {"id":"io.github.sebastienrousseau/passmcp-server","version":"0.0.3","capability":"mcp_evaluation_and_attestation","risk_gate":"supply_chain_validation","state":"discovered"},
+    {"id":"ai.aard/aard","version":"0.1.0","capability":"official_statistics_with_provenance","risk_gate":"source_validation","state":"discovered"},
+    {"id":"ai.adtest/adtest-mcp","version":"1.1.0","capability":"ad_preflight_scoring","risk_gate":"marketing_claim_validation","state":"discovered"},
+    {"id":"ai.agenticaffiliate/affiliate-networks-mcp","version":"0.19.0","capability":"affiliate_network_reporting","risk_gate":"affiliate_account_authorization","state":"discovered"},
+    {"id":"io.github.l33tdawg/sage","version":"11.19.20","capability":"persistent_consensus_validated_memory","risk_gate":"memory_provenance","state":"discovered"},
+    {"id":"io.github.alondmnt/joplin-mcp","version":"0.10.0","capability":"notes_notebooks_tags_imports","risk_gate":"personal_knowledge_access","state":"discovered"},
+    {"id":"io.github.karljsamuel/mcp-ecc","version":"0.6.0","capability":"email_calendar_contacts_unified","risk_gate":"personal_data_and_send_scope","state":"discovered"}
+  ],
+  "verification_pipeline": [
+    "registry_metadata",
+    "publisher_provenance",
+    "version_and_update_check",
+    "permission_scope_review",
+    "security_and_supply_chain_review",
+    "health_or_ping",
+    "read_only_test",
+    "write_test_only_when_explicitly_authorized",
+    "promote_to_live_registry"
+  ],
+  "safety": {
+    "no_auto_install": true,
+    "no_auto_authorize": true,
+    "no_unsolicited_outreach": true,
+    "no_financial_action_without_confirmation": true,
+    "no_irreversible_action_without_authorization": true
+  }
+}
