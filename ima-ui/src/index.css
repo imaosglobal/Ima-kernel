@@ -166,3 +166,21 @@ footer{border-top-color:rgba(255,255,255,.08);color:#716b6b}
 .device-chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .device-chips span{padding:18px;border:1px solid #ded5cb;border-radius:18px;background:#fffaf480;color:#514941}
 @media(max-width:800px){.device-continuity{grid-template-columns:1fr;padding:55px 20px}.device-chips{grid-template-columns:1fr 1fr}}
+
+
+/* GLOBAL MOTHER — public identity, not a private persona */
+.everyone-section{max-width:1280px;margin:0 auto;padding:20px 30px 95px}
+.everyone-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.everyone-grid article{min-height:230px;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));box-shadow:0 20px 60px rgba(0,0,0,.16);transition:transform .22s ease,border-color .22s ease,background .22s ease}
+.everyone-grid article:hover{transform:translateY(-5px);border-color:rgba(236,196,157,.3);background:rgba(236,196,157,.055)}
+.everyone-grid span{color:#efbf96;font-size:10px;letter-spacing:.14em}
+.everyone-grid h3{margin:52px 0 9px;font-size:23px;letter-spacing:-.035em;color:#f1e8e2}
+.everyone-grid p{margin:0;color:#9d9692;line-height:1.75;font-size:14px}
+.global-gateway{position:relative;max-width:1280px;margin:0 auto;padding:70px 30px 100px;text-align:center}
+.global-gateway:before{content:"";position:absolute;inset:0 12%;border-radius:50%;background:radial-gradient(circle,rgba(164,117,181,.08),transparent 68%);pointer-events:none}
+.global-gateway>*{position:relative}
+.global-language-links{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:28px}
+.global-language-links a{padding:9px 13px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:rgba(255,255,255,.035);color:#b9b0ac;font-size:12px;transition:.2s}
+.global-language-links a:hover{border-color:rgba(236,196,157,.3);color:#f0c49d}
+@media(max-width:1000px){.everyone-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.everyone-section{padding:0 14px 70px}.everyone-grid{grid-template-columns:1fr}.everyone-grid article{min-height:180px}.everyone-grid h3{margin-top:35px}.global-gateway{padding:45px 14px 75px}}
