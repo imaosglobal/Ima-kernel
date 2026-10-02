@@ -1,0 +1,27 @@
+{
+  "schema": "IMA-AUTONOMOUS-MAINTENANCE-1.0",
+  "gap_types": [
+    "unknown",
+    "uncertain",
+    "conflicting_evidence",
+    "missing_prerequisite",
+    "missing_tool",
+    "missing_interface",
+    "missing_test",
+    "missing_provenance",
+    "failure_mode",
+    "cross_domain_connection",
+    "technology_upgrade",
+    "teaching_opportunity"
+  ],
+  "next_cycle": [
+    "OBSERVE",
+    "IDENTIFY_GAPS",
+    "PRIORITIZE",
+    "RESEARCH",
+    "TEST",
+    "VERIFY",
+    "TEACH"
+  ],
+  "truth_rule": "A gap is closed only by evidence appropriate to the claim."
+}
