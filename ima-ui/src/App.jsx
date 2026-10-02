@@ -1,7 +1,6 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
-import { useImaRuntime } from './services/imaRuntime';
 import { askIma, getImaRuntime } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
@@ -108,7 +107,6 @@ const affiliate = {
 };
 
 export default function App() {
-  const runtime = useImaRuntime();
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
   const [voice, setVoice] = useState(false);
@@ -121,7 +119,7 @@ export default function App() {
   ]);
 
   useEffect(() => {
-    setDeviceContinuity(registerContinuity());
+    Promise.resolve().then(() => { if (alive) setDeviceContinuity(registerContinuity()); });
     let alive = true;
     const refresh = async () => {
       try { const data = await getImaRuntime(); if (alive) { setApiRuntime(data); setApiState('online'); } }
@@ -149,14 +147,6 @@ export default function App() {
     u.onerror = () => setAvatarState('idle');
 
     window.speechSynthesis.speak(u);
-  };
-
-  const fallback = text => {
-    const t = text.toLowerCase();
-    if (t.includes('מה את יודעת')) return 'כרגע המרחב הזה מחבר שיחה למנוע IMA המקומי כשזמין, עם קול בדפדפן. חיבורי יצירה וספקים חיצוניים עדיין מוצגים רק כשהם מחוברים באמת.';
-    if (t.includes('מי את')) return 'אני אמא — שכבת אינטליגנציה אנושית־מרכזית של IMA. המטרה היא לחבר שיחה, ידע, זיכרון, יצירה וכלים במקום אחד.';
-    if (t.includes('רעיון')) return 'בוא נתחיל מרעיון אחד. כתוב לי מה אתה רוצה ליצור, ואני נעצב ממנו את הצעד הבא.';
-    return 'אני כאן. החיבור למנוע השיחה המלא לא זמין כרגע, אבל הממשק פעיל ואפשר להמשיך מכאן.';
   };
 
   const send = async textValue => {
