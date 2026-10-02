@@ -76,10 +76,29 @@ def runtime_status():
             "three_d_presence": True,
             "voice_browser": True,
             "per_user_session_memory": True,
+            "outcome_as_a_service": True,
             "external_models": "configured providers only",
             "autonomous_external_actions": False,
         },
     })
+
+@app.get("/ima-api/outcome")
+def outcome_status():
+    try:
+        from founder.executive_ai.global_intelligence.outcome_engine import run
+        state = run()
+        return jsonify({
+            "status": "ready",
+            "schema": state.get("schema"),
+            "positioning": state.get("positioning"),
+            "stages": state.get("stages", []),
+            "candidate_count": state.get("candidate_count", 0),
+            "commercial_principles": state.get("commercial_principles", {}),
+            "updated_at": state.get("updated_at"),
+        })
+    except Exception as exc:
+        app.logger.exception("IMA outcome engine failure")
+        return jsonify({"status": "error", "error": str(exc)}), 500
 
 @app.post("/ima-api/chat")
 def chat():
