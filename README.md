@@ -8,6 +8,10 @@ IMA is an open human-centered intelligence architecture and product project desi
 
 The goal is not to declare that IMA already knows everything. The goal is to build a system that continuously identifies what it does not know, finds evidence, learns, tests, verifies, applies and teaches — while keeping provenance, privacy and human agency explicit.
 
+**One global IMA identity, many interfaces.** IMA can appear on the public web, mobile/PWA, devices, XR and connected services while preserving one canonical identity and one evidence-based learning loop. Personalization may change language, accessibility, presentation and permitted memory scope, but not the canonical identity.
+
+See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
+
 ## Start today
 
 - **Use:** open the public IMA experience.
@@ -82,5 +86,6 @@ You can contribute code, research, tests, documentation, languages, accessibilit
 - [Contributing](CONTRIBUTING.md)
 - [Global launch plan](docs/IMA_GLOBAL_LAUNCH_PLAN.md)
 - [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
+- [Global identity & shared learning charter](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md)
 - [Learning frontier](docs/IMA_LEARNING_FRONTIER.md)
 - [IMA Next Action Audit](docs/IMA_NEXT_ACTION_AUDIT.md)
