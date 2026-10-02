@@ -1,0 +1,25 @@
+name: IMA Reflection Gap Closure
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Runtime self-test
+        run: python ima_runtime/reflection_gap_closure.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_reflection_gap_closure.py'
+      - name: Canonical protocol presence
+        run: test -f docs/IMA_REFLECTION_AND_GAP_CLOSURE.md && test -f docs/IMA_REFLECTION_AND_GAP_CLOSURE.schema.json
