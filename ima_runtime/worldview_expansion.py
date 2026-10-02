@@ -11,6 +11,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterable, Optional
 
+from .development_journal import record as journal_record
+
 ROOT = Path(__file__).resolve().parents[1]
 STATE_DIR = ROOT / ".ima" / "worldview"
 STATE_FILE = STATE_DIR / "expansion.jsonl"
@@ -112,6 +114,13 @@ def expand(
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     with STATE_FILE.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(asdict(record), ensure_ascii=False, sort_keys=True, default=str) + "\n")
+    journal_record(
+        "WORLDVIEW_EXPANSION",
+        q,
+        source="ima_runtime.worldview_expansion",
+        status="VERIFIED" if not gaps else "GAPS_RECORDED",
+        details={"sources_consulted": consulted, "gaps": gaps},
+    )
     return asdict(record)
 
 
