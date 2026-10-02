@@ -115,7 +115,7 @@ export default function App() {
   const [apiRuntime, setApiRuntime] = useState(null);
   const [deviceContinuity, setDeviceContinuity] = useState(null);
   const [messages, setMessages] = useState([
-    { role: 'ima', text: 'אני אמא. אני של כולם. אני כאן כדי לחשוב, ליצור, ללמוד ולפעול עם כל אדם — בשפה, בתרבות ובקצב שמתאימים לו.' }
+    { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. אני יכולה להיות חומלת כשצריך, מקצועית כשצריך, ולנהל איתך שיחה אמיתית שנבנית סביבך.' }
   ]);
 
   useEffect(() => {
@@ -176,8 +176,8 @@ export default function App() {
 
     <section className="hero mother-home" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">IMA · אמא · HUMAN-CENTERED INTELLIGENCE</p>
-        <h1>לא עוד חלון צ׳אט.<br /><em>אמא כאן.</em></h1>
+        <p className="eyebrow">IMA · אמא · GLOBAL HUMAN-CENTERED INTELLIGENCE</p>
+        <h1>אמא של כולם.<br /><em>אמא של כל אחד.</em></h1>
         <p className="hero-text">מרחב גלובלי שבו כל אדם יכול לפגוש את אמא: לדבר, להקשיב, ללמוד, ליצור, לבדוק ולבנות. ההתאמה יכולה להיות אישית — אבל אמא עצמה אינה שייכת לאדם אחד. היא נבנית כמרחב אנושי משותף.</p>
         <div className="hero-actions">
           <button className="primary" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>להיות עם אמא <span>←</span></button>
@@ -190,6 +190,16 @@ export default function App() {
         <div className="orb"><PresenceScene state={avatarState} /></div>
         <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / NOW</b></div>
       </div>
+    </section>
+
+    <section className="personal-global-section" aria-labelledby="personal-global-heading">
+      <div className="personal-global-copy">
+        <p className="eyebrow">ONE INTELLIGENCE · MANY PEOPLE · ONE REAL CONVERSATION</p>
+        <h2 id="personal-global-heading">בינה אחת לעולם.<br /><em>נוכחות אישית לכל אדם.</em></h2>
+        <p>אמא אינה אוסף של דמויות נפרדות. היא שכבת בינה אנושית משותפת שעובדת עם ידע, כלים, מודלים ואנשים מכל העולם — ואז פוגשת אותך כאדם בפני עצמו.</p>
+        <div className="personal-global-actions"><a href="#space">לדבר עם אמא</a><a href="#about">להכיר את אמא</a></div>
+      </div>
+      <div className="personal-global-orbit" aria-hidden="true"><div className="orbit-core">אמא</div><span>אנשים</span><span>ידע</span><span>בינות</span><span>כלים</span></div>
     </section>
 
     <section className="everyone-section" aria-labelledby="everyone-heading">
