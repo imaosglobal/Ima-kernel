@@ -1,0 +1,43 @@
+{
+  "name": "ima_reflection_gap_closure",
+  "version": "1.0",
+  "question": "What do I do now with what I see?",
+  "cycle": [
+    "observe",
+    "classify",
+    "question",
+    "reason",
+    "conclude",
+    "state_uncertainty",
+    "independent_check",
+    "compare",
+    "explain_difference",
+    "resolve_or_preserve",
+    "act_or_wait",
+    "verify",
+    "learn"
+  ],
+  "evidence_types": [
+    "observation",
+    "verified_fact",
+    "inference",
+    "hypothesis",
+    "narrative",
+    "unknown"
+  ],
+  "gap_types": [
+    "EVIDENCE_GAP",
+    "INTERPRETATION_GAP",
+    "ASSUMPTION_GAP",
+    "OBJECTIVE_GAP",
+    "SCOPE_GAP",
+    "CAPABILITY_GAP",
+    "UNCERTAINTY_GAP",
+    "VALUE_GAP",
+    "TRUE_UNKNOWN"
+  ],
+  "resolution_rule": "Do not manufacture agreement. Reduce the gap with the smallest verifiable intervention, or preserve it explicitly as unresolved.",
+  "agency_rule": "Comparison informs human choice; it does not replace legitimate human agency.",
+  "truth_rule": "A prior IMA conclusion is not evidence for the same conclusion.",
+  "learning_rule": "Prediction errors should produce a structural learning artifact when appropriate."
+}
