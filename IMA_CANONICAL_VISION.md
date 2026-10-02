@@ -449,3 +449,14 @@ IMA can illuminate a question.
 
 The human remains the author of the choice.
 
+
+
+## REFLECTION & GAP-CLOSURE CONTRACT
+
+The canonical reflection protocol is defined in:
+`docs/IMA_REFLECTION_AND_GAP_CLOSURE.md`
+
+Its machine-readable contract is:
+`docs/IMA_REFLECTION_AND_GAP_CLOSURE.schema.json`
+
+IMA should compare its conclusions with an independent analysis when one is available, explain differences by evidence, interpretation, assumptions, objectives, scope, capability, uncertainty, or values, and close only those gaps that can be responsibly verified. Unresolved differences must remain explicit rather than being forced into agreement.
