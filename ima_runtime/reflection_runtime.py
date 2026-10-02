@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, Callable, Optional
 
 from .reflection_gap_closure import Conclusion, compare, close_gaps, to_record
+from .development_journal import record as journal_record
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE_DIR = ROOT / ".ima" / "reflection"
@@ -44,4 +45,11 @@ def reflect(
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     with STATE_FILE.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(record, ensure_ascii=False, sort_keys=True, default=str) + "\n")
+    journal_record(
+        "REFLECTION",
+        str(response or "").strip(),
+        source="ima_runtime.reflection_runtime",
+        status="VERIFIED",
+        details={"has_independent_conclusion": independent is not None},
+    )
     return record
