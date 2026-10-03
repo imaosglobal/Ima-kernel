@@ -47,16 +47,17 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p .ima/journal
-          TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          TAG="${{ steps.version.outputs.tag }}"
-          SHA="${{ steps.version.outputs.sha }}"
-          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          export TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          export TAG="${{ steps.version.outputs.tag }}"
+          export SHA="${{ steps.version.outputs.sha }}"
+          export RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          export GITHUB_REPOSITORY="${{ github.repository }}"
           python3 - <<'PY' >> .ima/journal/development.jsonl
           import json, os
           entry = {
               "timestamp": os.environ["TS"],
               "event": "DAILY_VERSION_RELEASED",
-              "summary": f"Immutable daily version {os.environ["TAG"]} released from main.",
+              "summary": "Immutable daily version %s released from main." % os.environ["TAG"],
               "source": "GitHub Actions / IMA Daily Version",
               "status": "VERIFIED",
               "details": {
@@ -69,14 +70,8 @@ jobs:
                   "limitations": "This record verifies release creation only; it does not certify application behavior beyond checks performed by other workflows."
               }
           }
-          print(json.dumps(entry, ensure_ascii=False, separators=(',', ':')))
+          print(json.dumps(entry, ensure_ascii=False, separators=(",", ":")))
           PY
-        env:
-          TS: "${{ steps.version.outputs.sha }}-${{ github.run_id }}"
-          TAG: "${{ steps.version.outputs.tag }}"
-          SHA: "${{ steps.version.outputs.sha }}"
-          RUN_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          GITHUB_REPOSITORY: "${{ github.repository }}"
 
       - name: Commit development memory
         shell: bash
