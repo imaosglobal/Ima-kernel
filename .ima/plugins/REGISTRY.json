@@ -17,6 +17,19 @@
       "tested",
       "verified",
       "generalized"
+    ],
+    "auto_plugin_creation": "allowed_for_new_first_party_adapters; external_provider_connection_requires_authorization",
+    "commercialization": "revenue_optimization_with_provider_terms_and_user_value_constraints",
+    "capability_gap_lifecycle": [
+      "detected",
+      "specified",
+      "scaffolded",
+      "implemented",
+      "tested",
+      "verified",
+      "published",
+      "monitored",
+      "reassessed"
     ]
   },
   "connected": [
@@ -174,18 +187,18 @@
       ]
     },
     {
-      "id": "openart_candidate",
+      "id": "openart",
       "provider": "OpenArt",
-      "status": "available_not_connected",
+      "status": "connected",
       "capabilities": [
         "image_generation",
         "video_generation"
       ]
     },
     {
-      "id": "heygen_candidate",
+      "id": "heygen",
       "provider": "HeyGen",
-      "status": "available_not_connected",
+      "status": "connected",
       "capabilities": [
         "avatar_video",
         "voice",
@@ -196,7 +209,7 @@
     {
       "id": "descript_candidate",
       "provider": "Descript",
-      "status": "available_not_connected",
+      "status": "candidate",
       "capabilities": [
         "video_editing",
         "transcription",
@@ -207,7 +220,7 @@
     {
       "id": "higgsfield_candidate",
       "provider": "Higgsfield",
-      "status": "available_not_connected",
+      "status": "candidate",
       "capabilities": [
         "image_generation",
         "video_generation",
@@ -218,13 +231,28 @@
     {
       "id": "wix_candidate",
       "provider": "Wix",
-      "status": "available_not_connected",
+      "status": "candidate",
       "capabilities": [
         "website_build",
         "domain",
         "ecommerce",
         "cms",
         "bookings"
+      ]
+    },
+    {
+      "id": "ima_capability_factory",
+      "provider": "IMA",
+      "status": "implemented_not_yet_production_verified",
+      "capabilities": [
+        "gap_detection",
+        "adapter_specification",
+        "adapter_scaffolding",
+        "capability_evidence_tracking",
+        "provider_routing",
+        "commercialization_planning",
+        "revenue_share_modeling",
+        "provider_onboarding"
       ]
     }
   ],
@@ -265,23 +293,23 @@
     "creative_generation": [
       "runway",
       "canva",
-      "openart_candidate",
-      "heygen_candidate",
-      "higgsfield_candidate"
+      "openart",
+      "heygen",
+      "higgsfield"
     ],
     "audio_music": [
       "runway"
     ],
     "avatar_and_voice": [
       "runway",
-      "heygen_candidate"
+      "heygen"
     ],
     "video": [
       "runway",
-      "openart_candidate",
-      "heygen_candidate",
-      "descript_candidate",
-      "higgsfield_candidate"
+      "openart",
+      "heygen",
+      "descript",
+      "higgsfield"
     ],
     "apps_and_websites": [
       "base44",
@@ -293,6 +321,21 @@
       "tinyfish",
       "plugin_management",
       "github"
+    ],
+    "capability_factory": [
+      "ima_capability_factory",
+      "github",
+      "tinyfish",
+      "plugin_management",
+      "runway",
+      "openart",
+      "heygen"
+    ],
+    "commercialization": [
+      "ima_capability_factory",
+      "stripe",
+      "github",
+      "tinyfish"
     ]
   }
 }
