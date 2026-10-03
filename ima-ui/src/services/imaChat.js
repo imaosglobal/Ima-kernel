@@ -1,14 +1,14 @@
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || '').replace(/\/$/, '');
 
-function getUserId() {
-  const key = 'ima-public-user-id';
-  let value = localStorage.getItem(key);
-  if (!value) {
-    value = crypto?.randomUUID?.() ||
-      ('ima-' + Date.now() + '-' + Math.random().toString(36).slice(2));
-    localStorage.setItem(key, value);
-  }
-  return value;
+async function getSessionToken() {
+  const key = 'ima-public-session-token';
+  const cached = localStorage.getItem(key);
+  if (cached) return cached;
+  const response = await fetch((API_BASE || '') + '/ima-api/session', { cache: 'no-store' });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.token) throw new Error('IMA session unavailable');
+  localStorage.setItem(key, data.token);
+  return data.token;
 }
 
 async function request(path, options = {}) {
@@ -17,13 +17,13 @@ async function request(path, options = {}) {
     ...options,
     headers: {
       'Content-Type': 'application/json',
-      'X-IMA-User': getUserId(),
+      'Authorization': `Bearer ${await getSessionToken()}`,
       ...(options.headers || {}),
     },
   });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(data.error || data.detail || `IMA HTTP ${response.status}`);
+    throw new Error(data.error || `IMA HTTP ${response.status}`);
   }
   return data;
 }
