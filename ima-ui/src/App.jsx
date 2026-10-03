@@ -113,7 +113,6 @@ export default function App() {
   const [avatarState, setAvatarState] = useState('idle');
   const [apiState, setApiState] = useState('checking');
   const [apiRuntime, setApiRuntime] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
   const [deviceContinuity, setDeviceContinuity] = useState(null);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. הזיכרון האישי של כל אדם נשמר בנפרד, בעוד שהידע והלמידה הציבוריים של אמא נבנים ממקורות רבים.' }
@@ -127,8 +126,6 @@ export default function App() {
       catch { if (alive) setApiState('offline'); }
     };
     refresh();
-    fetch((import.meta.env.VITE_IMA_API_BASE || '') + '/me', { credentials: 'include' })
-      .then(r => r.ok ? r.json() : null).then(data => { if (alive) setCurrentUser(data); }).catch(() => {});
     const timer = setInterval(refresh, 30000);
     return () => { alive = false; clearInterval(timer); };
   }, []);
