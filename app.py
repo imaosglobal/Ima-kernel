@@ -10,6 +10,11 @@ from billing.api import billing_api
 import public_memory
 import requests
 
+try:
+    from integrations import nylas_email
+except Exception:
+    nylas_email = None
+
 app = Flask(__name__)
 app.register_blueprint(billing_api)
 USER = "test_user"
