@@ -17,6 +17,10 @@ class PublicRuntimeContractTest(unittest.TestCase):
         self.user_a = "test-user-a"
         self.user_b = "test-user-b"
 
+    def _session_headers(self):
+        token = self.client.get("/ima-api/session").get_json()["token"]
+        return {"Authorization": f"Bearer {token}"}
+
     def test_health(self):
         response = self.client.get("/health")
         self.assertEqual(response.status_code, 200)
@@ -47,10 +51,29 @@ class PublicRuntimeContractTest(unittest.TestCase):
         )
         self.assertEqual(response.status_code, 400)
 
-    def test_chat_contract_and_user_scope(self):
+
+    def test_chat_rejects_unsigned_identity_headers(self):
         response = self.client.post(
             "/ima-api/chat",
             headers={"X-IMA-User": self.user_a},
+            json={"message": "What is IMA?"}
+        )
+        self.assertEqual(response.status_code, 401)
+
+    def test_session_tokens_are_signed(self):
+        token = self.client.get("/ima-api/session").get_json()["token"]
+        forged = token.rsplit(".", 1)[0] + ".invalid"
+        response = self.client.post(
+            "/ima-api/chat",
+            headers={"Authorization": f"Bearer {forged}"},
+            json={"message": "What is IMA?"}
+        )
+        self.assertEqual(response.status_code, 401)
+
+    def test_chat_contract_and_user_scope(self):
+        response = self.client.post(
+            "/ima-api/chat",
+            headers=self._session_headers(),
             json={"message": "What is IMA?"}
         )
         self.assertEqual(response.status_code, 200)
