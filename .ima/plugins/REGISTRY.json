@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "name": "IMA Plugin Capability Registry",
   "policy": {
     "discover": "continuously",
@@ -7,34 +7,292 @@
     "never_autoinstall_without_user_authorization": true,
     "require_verified_capability_before_claiming": true,
     "least_privilege": true,
-    "no_secret_persistence": true
+    "no_secret_persistence": true,
+    "continuous_learning": "observe→map→connect→execute→verify→document→reassess",
+    "capability_truth_dimensions": [
+      "discovered",
+      "connected",
+      "authenticated",
+      "executable",
+      "tested",
+      "verified",
+      "generalized"
+    ]
   },
   "connected": [
-    {"id":"automations","provider":"ChatGPT","capabilities":["scheduling","recurring_checks","conditional_tasks"]},
-    {"id":"base44","provider":"Base44","capabilities":["app_build","web_build","backend","deployment"]},
-    {"id":"canva","provider":"Canva","capabilities":["design","presentations","images","documents","brand_review"]},
-    {"id":"clickup","provider":"ClickUp","capabilities":["tasks","docs","chat","project_management"]},
-    {"id":"dropbox","provider":"Dropbox","capabilities":["file_search","file_read","file_requests","file_organization"]},
-    {"id":"github","provider":"GitHub","capabilities":["repository_read_write","issues","pull_requests","ci_workflows"]},
-    {"id":"lovable","provider":"Lovable","capabilities":["full_stack_app_build","web_development","deployment"]},
-    {"id":"mailbox","provider":"Mailbox","capabilities":["email_read","email_search","email_reply"]},
-    {"id":"posthog","provider":"PostHog","capabilities":["analytics","feature_flags","errors","experiments"]},
-    {"id":"remote_desktop","provider":"Remote Desktop Commander","capabilities":["authorized_filesystem","terminal","computer_operations"]},
-    {"id":"render","provider":"Render","capabilities":["deployments","logs","services","environment_variables","postgres"]},
-    {"id":"runway","provider":"Runway","capabilities":["image_generation","video_generation","audio_generation","media_editing"]},
-    {"id":"stripe","provider":"Stripe","capabilities":["payments","products","prices","payment_links","subscriptions"]},
-    {"id":"tinyfish","provider":"TinyFish","capabilities":["web_search","page_reading","browser_workflows","monitors"]},
-    {"id":"plugin_management","provider":"ChatGPT","capabilities":["plugin_discovery","plugin_permission_inspection","plugin_suggestions"]}
+    {
+      "id": "automations",
+      "provider": "ChatGPT",
+      "capabilities": [
+        "scheduling",
+        "recurring_checks",
+        "conditional_tasks"
+      ]
+    },
+    {
+      "id": "base44",
+      "provider": "Base44",
+      "capabilities": [
+        "app_build",
+        "web_build",
+        "backend",
+        "deployment"
+      ]
+    },
+    {
+      "id": "canva",
+      "provider": "Canva",
+      "capabilities": [
+        "design",
+        "presentations",
+        "images",
+        "documents",
+        "brand_review"
+      ]
+    },
+    {
+      "id": "clickup",
+      "provider": "ClickUp",
+      "capabilities": [
+        "tasks",
+        "docs",
+        "chat",
+        "project_management"
+      ]
+    },
+    {
+      "id": "dropbox",
+      "provider": "Dropbox",
+      "capabilities": [
+        "file_search",
+        "file_read",
+        "file_requests",
+        "file_organization"
+      ]
+    },
+    {
+      "id": "github",
+      "provider": "GitHub",
+      "capabilities": [
+        "repository_read_write",
+        "issues",
+        "pull_requests",
+        "ci_workflows"
+      ]
+    },
+    {
+      "id": "lovable",
+      "provider": "Lovable",
+      "capabilities": [
+        "full_stack_app_build",
+        "web_development",
+        "deployment"
+      ]
+    },
+    {
+      "id": "mailbox",
+      "provider": "Mailbox",
+      "capabilities": [
+        "email_read",
+        "email_search",
+        "email_reply"
+      ]
+    },
+    {
+      "id": "posthog",
+      "provider": "PostHog",
+      "capabilities": [
+        "analytics",
+        "feature_flags",
+        "errors",
+        "experiments"
+      ]
+    },
+    {
+      "id": "remote_desktop",
+      "provider": "Remote Desktop Commander",
+      "capabilities": [
+        "authorized_filesystem",
+        "terminal",
+        "computer_operations"
+      ]
+    },
+    {
+      "id": "render",
+      "provider": "Render",
+      "capabilities": [
+        "deployments",
+        "logs",
+        "services",
+        "environment_variables",
+        "postgres"
+      ]
+    },
+    {
+      "id": "runway",
+      "provider": "Runway",
+      "capabilities": [
+        "image_generation",
+        "video_generation",
+        "multishot_video",
+        "music_generation",
+        "sound_effect_generation",
+        "speech_generation",
+        "voice_search",
+        "media_editing",
+        "media_upscale"
+      ]
+    },
+    {
+      "id": "stripe",
+      "provider": "Stripe",
+      "capabilities": [
+        "payments",
+        "products",
+        "prices",
+        "payment_links",
+        "subscriptions"
+      ]
+    },
+    {
+      "id": "tinyfish",
+      "provider": "TinyFish",
+      "capabilities": [
+        "web_search",
+        "page_reading",
+        "browser_workflows",
+        "monitors"
+      ]
+    },
+    {
+      "id": "plugin_management",
+      "provider": "ChatGPT",
+      "capabilities": [
+        "plugin_discovery",
+        "plugin_permission_inspection",
+        "plugin_suggestions"
+      ]
+    },
+    {
+      "id": "openart_candidate",
+      "provider": "OpenArt",
+      "status": "available_not_connected",
+      "capabilities": [
+        "image_generation",
+        "video_generation"
+      ]
+    },
+    {
+      "id": "heygen_candidate",
+      "provider": "HeyGen",
+      "status": "available_not_connected",
+      "capabilities": [
+        "avatar_video",
+        "voice",
+        "translation",
+        "video_generation"
+      ]
+    },
+    {
+      "id": "descript_candidate",
+      "provider": "Descript",
+      "status": "available_not_connected",
+      "capabilities": [
+        "video_editing",
+        "transcription",
+        "audio_cleanup",
+        "clips"
+      ]
+    },
+    {
+      "id": "higgsfield_candidate",
+      "provider": "Higgsfield",
+      "status": "available_not_connected",
+      "capabilities": [
+        "image_generation",
+        "video_generation",
+        "websites",
+        "web_apps"
+      ]
+    },
+    {
+      "id": "wix_candidate",
+      "provider": "Wix",
+      "status": "available_not_connected",
+      "capabilities": [
+        "website_build",
+        "domain",
+        "ecommerce",
+        "cms",
+        "bookings"
+      ]
+    }
   ],
   "routing": {
-    "code_and_deploy": ["github","render","base44","lovable"],
-    "design_and_media": ["canva","runway"],
-    "files_and_knowledge": ["dropbox","github"],
-    "email": ["nylas_ima_runtime","mailbox"],
-    "analytics": ["posthog"],
-    "payments": ["stripe"],
-    "project_management": ["clickup"],
-    "web_research_and_monitoring": ["tinyfish"],
-    "external_plugin_discovery": ["plugin_management"]
+    "code_and_deploy": [
+      "github",
+      "render",
+      "base44",
+      "lovable"
+    ],
+    "design_and_media": [
+      "canva",
+      "runway"
+    ],
+    "files_and_knowledge": [
+      "dropbox",
+      "github"
+    ],
+    "email": [
+      "nylas_ima_runtime",
+      "mailbox"
+    ],
+    "analytics": [
+      "posthog"
+    ],
+    "payments": [
+      "stripe"
+    ],
+    "project_management": [
+      "clickup"
+    ],
+    "web_research_and_monitoring": [
+      "tinyfish"
+    ],
+    "external_plugin_discovery": [
+      "plugin_management"
+    ],
+    "creative_generation": [
+      "runway",
+      "canva",
+      "openart_candidate",
+      "heygen_candidate",
+      "higgsfield_candidate"
+    ],
+    "audio_music": [
+      "runway"
+    ],
+    "avatar_and_voice": [
+      "runway",
+      "heygen_candidate"
+    ],
+    "video": [
+      "runway",
+      "openart_candidate",
+      "heygen_candidate",
+      "descript_candidate",
+      "higgsfield_candidate"
+    ],
+    "apps_and_websites": [
+      "base44",
+      "lovable",
+      "higgsfield_candidate",
+      "wix_candidate"
+    ],
+    "discovery_and_learning": [
+      "tinyfish",
+      "plugin_management",
+      "github"
+    ]
   }
 }
