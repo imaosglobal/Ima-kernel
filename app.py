@@ -98,7 +98,7 @@ def outcome_status():
         })
     except Exception as exc:
         app.logger.exception("IMA outcome engine failure")
-        return jsonify({"status": "error", "error": str(exc)}), 500
+        return jsonify({"status": "error", "error": "IMA outcome engine unavailable"}), 500
 
 @app.post("/ima-api/chat")
 def chat():
@@ -129,7 +129,7 @@ def chat():
         })
     except Exception as exc:
         app.logger.exception("IMA chat failure")
-        return jsonify({"error": "IMA runtime error", "detail": str(exc)}), 500
+        return jsonify({"error": "IMA runtime error"}), 500
 
 @app.route("/", methods=["GET", "POST"])
 def home():
