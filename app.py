@@ -2,6 +2,7 @@ import hashlib
 import hmac
 import json
 import os
+from pathlib import Path
 import secrets
 import time
 from collections import defaultdict, deque
@@ -333,6 +334,31 @@ def chat():
     except Exception as exc:
         app.logger.exception("IMA chat failure")
         return jsonify({"error": "IMA runtime error"}), 500
+
+@app.get("/ima-api/capabilities")
+def capabilities():
+    """Expose the canonical capability map without secrets or private payloads."""
+    try:
+        path = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        return jsonify({
+            "schema_version": registry.get("schema_version"),
+            "policy": registry.get("policy", {}),
+            "routing": registry.get("routing", {}),
+            "providers": [
+                {
+                    "id": item.get("id"),
+                    "provider": item.get("provider"),
+                    "status": item.get("status", "connected"),
+                    "capabilities": item.get("capabilities", []),
+                }
+                for item in registry.get("connected", [])
+            ],
+            "verified_source": ".ima/plugins/REGISTRY.json",
+        })
+    except Exception:
+        app.logger.exception("IMA capability registry failure")
+        return jsonify({"error": "capability registry unavailable"}), 500
 
 @app.route("/", methods=["GET", "POST"])
 def home():
