@@ -1,0 +1,106 @@
+{
+  "schema": "IMA-CAPABILITY-GAPS-1.0",
+  "policy": "Every gap remains open until executable evidence promotes it.",
+  "lifecycle": [
+    "detected",
+    "specified",
+    "scaffolded",
+    "implemented",
+    "tested",
+    "verified",
+    "published",
+    "monitored",
+    "reassessed"
+  ],
+  "gaps": [
+    {
+      "id": "hologram",
+      "capability": "hologram",
+      "state": "detected",
+      "priority": "high",
+      "providers": [],
+      "next": [
+        "research APIs/protocols",
+        "build adapter candidates",
+        "test hardware/software path"
+      ]
+    },
+    {
+      "id": "volumetric",
+      "capability": "volumetric_media",
+      "state": "detected",
+      "priority": "high",
+      "providers": [],
+      "next": [
+        "research capture/render/display APIs",
+        "build provider-neutral adapter"
+      ]
+    },
+    {
+      "id": "xr",
+      "capability": "AR_VR_XR",
+      "state": "detected",
+      "priority": "high",
+      "providers": [],
+      "next": [
+        "map WebXR/OpenXR/device APIs",
+        "build adapter"
+      ]
+    },
+    {
+      "id": "robotics",
+      "capability": "robot_control",
+      "state": "detected",
+      "priority": "high",
+      "providers": [],
+      "next": [
+        "map authorized robot APIs",
+        "build safety-gated adapter"
+      ]
+    },
+    {
+      "id": "plugin_marketplace",
+      "capability": "adapter_marketplace",
+      "state": "specified",
+      "priority": "high",
+      "providers": [
+        "Stripe",
+        "GitHub"
+      ],
+      "next": [
+        "implement catalog",
+        "provider onboarding",
+        "billing",
+        "evidence publishing"
+      ]
+    },
+    {
+      "id": "capability_executor",
+      "capability": "runtime_capability_execution",
+      "state": "implemented",
+      "priority": "critical",
+      "providers": [
+        "IMA"
+      ],
+      "next": [
+        "run CI tests",
+        "integrate into runtime routing",
+        "verify production"
+      ]
+    },
+    {
+      "id": "commercial_optimizer",
+      "capability": "multi-party_revenue_optimization",
+      "state": "specified",
+      "priority": "medium",
+      "providers": [
+        "Stripe"
+      ],
+      "next": [
+        "define metrics",
+        "contract-aware revenue rules",
+        "measure outcomes"
+      ]
+    }
+  ]
+}
