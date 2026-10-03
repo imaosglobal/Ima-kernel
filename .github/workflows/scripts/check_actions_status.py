@@ -15,7 +15,9 @@ while True:
     pending=[r for r in runs if r.get("status")!="completed"]
     bad=[r for r in runs if r.get("status")=="completed" and r.get("conclusion") not in {"success","neutral","skipped"}]
     if bad:
-        print("FAILED CHECKS:"); [print(f"- {r.get("name")}: {r.get("conclusion")}") for r in bad]; raise SystemExit(1)
+        print("FAILED CHECKS:")
+        for r in bad: print(f"- {r.get('name')}: {r.get('conclusion')}")
+        raise SystemExit(1)
     if not pending: print(f"PR checks clean: {len(runs)} completed check(s)"); raise SystemExit(0)
     if time.time()>=deadline: print("Timed out waiting for PR checks"); raise SystemExit(1)
     print(f"Waiting for {len(pending)} check(s)..."); time.sleep(15)
