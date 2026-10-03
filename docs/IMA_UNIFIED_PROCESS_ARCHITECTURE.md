@@ -50,3 +50,7 @@ Use versioned JSON events with `event_id`, `process_id`, `process_version`, `occ
 
 ## Current implementation boundary
 This document defines the target architecture. It does not itself migrate existing workflows, start a daemon, or prove runtime operation. Migration is complete only when inventory, adapters, CI enforcement, and live run evidence are present.
+
+
+## Implemented in this change
+Phase A is now represented by the canonical `.ima/process_registry.json`. Phase E has an initial CI enforcement workflow at `.github/workflows/ima-process-registry.yml`, backed by `scripts/ima_process_registry_validate.py`. These additions validate the registry itself; they do not yet prove that every historical workflow, daemon, API handler, agent, or external integration has been migrated into it.
