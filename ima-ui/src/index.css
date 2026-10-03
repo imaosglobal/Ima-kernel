@@ -203,3 +203,35 @@ footer{border-top-color:rgba(255,255,255,.08);color:#716b6b}
 .personal-global-orbit span{position:absolute;padding:8px 13px;border:1px solid rgba(255,255,255,.08);background:rgba(18,15,20,.62);backdrop-filter:blur(14px);border-radius:999px;color:#aaa09b;font-size:12px}.personal-global-orbit span:nth-of-type(1){top:8%;right:14%}.personal-global-orbit span:nth-of-type(2){bottom:12%;right:4%}.personal-global-orbit span:nth-of-type(3){bottom:12%;left:4%}.personal-global-orbit span:nth-of-type(4){top:8%;left:14%}
 @media(max-width:850px){.personal-global-section{grid-template-columns:1fr;padding:75px 18px}.personal-global-copy{text-align:center;margin:auto}.personal-global-copy>p:not(.eyebrow){margin-left:auto;margin-right:auto}.personal-global-actions{justify-content:center}.personal-global-orbit{width:min(340px,80vw)}}
 @media(prefers-reduced-motion:reduce){.personal-global-actions a{transition:none}}
+
+
+/* IMA editorial palette — warm, calm, readable */
+:root{color:#332b27;background:#f4eee7}
+body{background:#f4eee7;color:#332b27}
+.ima-app{background:
+radial-gradient(circle at 78% 5%,rgba(224,184,143,.22),transparent 28rem),
+radial-gradient(circle at 10% 40%,rgba(205,185,215,.14),transparent 30rem),
+linear-gradient(180deg,#f7f2ec,#eee6de)}
+.topbar{background:rgba(247,242,236,.82);border-bottom:1px solid rgba(77,58,45,.09)}
+.brand-mark{background:linear-gradient(145deg,#9d7258,#6f4c3b);color:#fffaf5;box-shadow:0 8px 24px rgba(105,74,55,.18)}
+nav{color:#74685f}.live-pill{background:rgba(255,252,248,.82);border-color:#d9cec3;color:#6d625a}
+.hero h1,.personal-global-copy h2,.section-heading h2{color:#332b27}
+.hero h1 em,.personal-global-copy h2 em{background:linear-gradient(90deg,#9a6c50,#8d6a9c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-text,.personal-global-copy>p:not(.eyebrow),.section-heading p:last-child{color:#6f655d}
+.presence-card{background:linear-gradient(145deg,#eadfd4,#ddd0d4);border:1px solid rgba(86,62,47,.12);box-shadow:0 30px 80px rgba(80,58,45,.14)}
+.chat-shell,.affiliate-card,.principles>div{background:rgba(255,251,247,.82);border-color:#ded3c8;box-shadow:0 25px 70px rgba(79,59,45,.10)}
+.messages{background:linear-gradient(#fffaf6,#f8f1eb)}
+.message-row.ima .message{background:#eee5dc;color:#382f29}
+.message-row.user .message{background:linear-gradient(135deg,#a8795c,#805740);color:#fffaf6}
+.composer input{background:#fbf7f2;border-color:#d9cec4;color:#332b27}
+.composer button,.primary{background:linear-gradient(135deg,#9d7055,#744d3a);color:#fffaf6}
+.secondary,.voice,.starters button{background:#fffaf6;border-color:#d9cec4;color:#655b53}
+.personal-global-section{color:#332b27}
+.personal-global-orbit{background:radial-gradient(circle at center,rgba(164,122,178,.11),rgba(255,255,255,.35) 38%,transparent 66%);border-color:rgba(95,72,60,.12);box-shadow:inset 0 0 100px rgba(151,119,164,.05),0 30px 80px rgba(79,59,45,.10)}
+.personal-global-orbit .orbit-core{background:rgba(255,251,247,.72);border-color:rgba(95,72,60,.16);color:#4b3b33}
+.personal-global-orbit span{background:rgba(255,251,247,.82);border-color:rgba(95,72,60,.12);color:#6e625a}
+.everyone-grid article,.mother-pillars>div,.live-strip>div{background:rgba(255,251,247,.62);border-color:rgba(95,72,60,.11);box-shadow:0 18px 55px rgba(79,59,45,.07)}
+.everyone-grid h3{color:#3c312a}.everyone-grid p,.mother-pillars p{color:#746a62}
+.global-language-links a{background:rgba(255,251,247,.72);border-color:#d9cec4;color:#6b6058}
+footer{border-top-color:#d9cec4;color:#81766e}
+@media(max-width:900px){.topbar{background:rgba(247,242,236,.9)}}
