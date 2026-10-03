@@ -8,6 +8,7 @@ from flask import Flask, jsonify, request
 from ima_ledger import cmd_deposit, cmd_balance
 from billing.api import billing_api
 import public_memory
+import requests
 
 app = Flask(__name__)
 app.register_blueprint(billing_api)
@@ -117,6 +118,40 @@ def runtime_status():
             "autonomous_external_actions": False,
         },
     })
+
+@app.get("/ima-api/email/status")
+def email_status():
+    if nylas_email is None:
+        return jsonify({"provider": "nylas", "configured": False, "status": "integration_unavailable"}), 503
+    state = nylas_email.status()
+    return jsonify({**state, "status": "ready" if state["configured"] else "awaiting_secret"})
+
+
+@app.get("/ima-api/email/messages")
+def email_messages():
+    if nylas_email is None:
+        return jsonify({"error": "Nylas integration unavailable"}), 503
+    if not _session_user_id():
+        return jsonify({"error": "valid IMA session required"}), 401
+    try:
+        limit = request.args.get("limit", "20")
+        unread = request.args.get("unread")
+        unread_value = None if unread is None else unread.lower() == "true"
+        result = nylas_email.list_messages(limit=limit, unread=unread_value)
+        return jsonify({
+            "provider": "nylas",
+            "mailbox": nylas_email.status()["mailbox"],
+            "data": result.get("data", []),
+            "next_cursor": result.get("next_cursor"),
+            "verified": True,
+        })
+    except requests.HTTPError as exc:
+        app.logger.exception("Nylas message fetch failed")
+        return jsonify({"error": "Nylas mailbox request failed", "status_code": exc.response.status_code}), 502
+    except Exception:
+        app.logger.exception("Nylas message fetch failed")
+        return jsonify({"error": "Nylas mailbox request failed"}), 502
+
 
 @app.get("/ima-api/outcome")
 def outcome_status():
