@@ -336,6 +336,19 @@ def chat():
         return jsonify({"error": "IMA runtime error"}), 500
 
 @app.get("/ima-api/capabilities")
+@app.get("/ima-api/capabilities/gaps")
+def capability_gaps():
+    """Expose the canonical capability-gap queue and next prioritized gap."""
+    try:
+        from .ima.plugins.gap_queue import CapabilityGapQueue
+    except ImportError:
+        from ima.plugins.gap_queue import CapabilityGapQueue
+    try:
+        return jsonify(CapabilityGapQueue().snapshot())
+    except Exception:
+        app.logger.exception("IMA capability gap queue failure")
+        return jsonify({"error": "capability gap queue unavailable"}), 500
+
 def capabilities():
     """Expose the canonical capability map without secrets or private payloads."""
     try:
