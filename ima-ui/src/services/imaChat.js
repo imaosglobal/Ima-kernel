@@ -1,9 +1,10 @@
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || '').replace(/\/$/, '');
 
-async function getSessionToken() {
+async function getSessionToken(forceRefresh = false) {
   const key = 'ima-public-session-token';
   const cached = localStorage.getItem(key);
-  if (cached) return cached;
+  if (cached && !forceRefresh) return cached;
+  if (forceRefresh) localStorage.removeItem(key);
   const response = await fetch((API_BASE || '') + '/ima-api/session', { cache: 'no-store' });
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.token) throw new Error('IMA session unavailable');
@@ -11,17 +12,22 @@ async function getSessionToken() {
   return data.token;
 }
 
-async function request(path, options = {}) {
+async function request(path, options = {}, retry = true) {
   const url = API_BASE ? API_BASE + path : path;
+  const token = await getSessionToken(retry === false);
   const response = await fetch(url, {
     ...options,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${await getSessionToken()}`,
+      'Authorization': `Bearer ${token}`,
       ...(options.headers || {}),
     },
   });
   const data = await response.json().catch(() => ({}));
+  if (response.status === 401 && retry) {
+    localStorage.removeItem('ima-public-session-token');
+    return request(path, options, false);
+  }
   if (!response.ok) {
     throw new Error(data.error || `IMA HTTP ${response.status}`);
   }
