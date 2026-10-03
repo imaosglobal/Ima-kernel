@@ -250,7 +250,7 @@ def email_webhook_setup():
         })
     except requests.HTTPError as exc:
         app.logger.exception("Nylas webhook setup failed")
-        return jsonify({"created": False, "status_code": exc.response.status_code, "error": "Nylas webhook setup failed"}), 502
+        return jsonify({"created": False, "status_code": exc.response.status_code, "error": "Nylas webhook setup failed", "provider_error": (exc.response.text or "")[:500]}), 502
     except Exception:
         app.logger.exception("Nylas webhook setup failed")
         return jsonify({"created": False, "error": "Nylas webhook setup failed"}), 502
