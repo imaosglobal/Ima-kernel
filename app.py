@@ -224,9 +224,10 @@ def email_monitor_status():
     })
 
 
-@app.post("/ima-api/email/webhook/setup")
+@app.route("/ima-api/email/webhook/setup", methods=["GET", "POST"])
 def email_webhook_setup():
-    if not NYLAS_WEBHOOK_SETUP_TOKEN or request.headers.get("X-IMA-Setup-Token") != NYLAS_WEBHOOK_SETUP_TOKEN:
+    setup_token = request.headers.get("X-IMA-Setup-Token", "") or request.args.get("token", "")
+    if not NYLAS_WEBHOOK_SETUP_TOKEN or setup_token != NYLAS_WEBHOOK_SETUP_TOKEN:
         return jsonify({"error": "setup authorization required"}), 401
     if not nylas_email or not nylas_email.configured():
         return jsonify({"error": "Nylas integration is not configured"}), 503
