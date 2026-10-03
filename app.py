@@ -237,7 +237,7 @@ def email_webhook_setup():
             f"{nylas_email.BASE_URL}/webhooks",
             headers={"Authorization": f"Bearer {nylas_email.API_KEY}", "Content-Type": "application/json", "Accept": "application/json"},
             json={"trigger_types": trigger_types, "description": "IMA continuous email monitor", "webhook_url": NYLAS_WEBHOOK_URL, "webhook_secret": NYLAS_WEBHOOK_SECRET},
-            timeout=15,
+            timeout=45,
         )
         response.raise_for_status()
         data = response.json().get("data", {})
