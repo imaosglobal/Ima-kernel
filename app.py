@@ -232,11 +232,11 @@ def email_webhook_setup():
     if not nylas_email or not nylas_email.configured():
         return jsonify({"error": "Nylas integration is not configured"}), 503
     try:
-        trigger_types = ["message.created", "grant.expired"]
+        trigger_types = ["message.created"]
         response = requests.post(
             f"{nylas_email.BASE_URL}/webhooks",
             headers={"Authorization": f"Bearer {nylas_email.API_KEY}", "Content-Type": "application/json", "Accept": "application/json"},
-            json={"trigger_types": trigger_types, "description": "IMA continuous email monitor", "webhook_url": NYLAS_WEBHOOK_URL, "webhook_secret": NYLAS_WEBHOOK_SECRET},
+            json={"trigger_types": trigger_types, "description": "IMA continuous email monitor", "webhook_url": NYLAS_WEBHOOK_URL},
             timeout=45,
         )
         response.raise_for_status()
