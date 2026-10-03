@@ -39,11 +39,14 @@ jobs:
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
       - name: Python syntax check
-        run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py .ima/plugins/capability_factory.py tests/test_capability_factory.py
+        run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py .ima/plugins/capability_factory.py tests/test_capability_factory.py .ima/plugins/gap_queue.py tests/test_gap_queue.py
 
       - name: Core and contract tests
         run: npm run ima:verify
-\n      - name: Capability factory tests\n        run: python -m unittest discover -s tests -p "test_capability_factory.py" -v\n
+
+      - name: Capability factory tests
+        run: python -m unittest discover -s tests -p "test_*queue.py" -v
+
       - name: Frontend quality
         working-directory: ima-ui
         run: |
