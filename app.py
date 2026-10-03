@@ -132,6 +132,34 @@ def email_status():
     return jsonify({**state, "status": "ready" if state["configured"] else "awaiting_secret"})
 
 
+@app.get("/ima-api/email/verify")
+def email_verify():
+    """Verify backend-to-Nylas mailbox access without returning message content."""
+    if nylas_email is None:
+        return jsonify({"provider": "nylas", "verified": False, "status": "integration_unavailable"}), 503
+    if not _rate_ok("email-verify:" + (request.remote_addr or "unknown")):
+        return jsonify({"error": "verification rate limit exceeded; try again shortly"}), 429
+    try:
+        state = nylas_email.status()
+        if not state.get("configured"):
+            return jsonify({"provider": "nylas", "verified": False, "status": "awaiting_secret"}), 503
+        result = nylas_email.list_messages(limit=1, unread=None)
+        data = result.get("data", [])
+        return jsonify({
+            "provider": "nylas",
+            "mailbox": state.get("mailbox"),
+            "verified": True,
+            "message_count_checked": len(data),
+            "status": "ready",
+        })
+    except requests.HTTPError as exc:
+        app.logger.exception("Nylas mailbox verification failed")
+        return jsonify({"provider": "nylas", "verified": False, "status": "mailbox_request_failed", "status_code": exc.response.status_code}), 502
+    except Exception:
+        app.logger.exception("Nylas mailbox verification failed")
+        return jsonify({"provider": "nylas", "verified": False, "status": "mailbox_request_failed"}), 502
+
+
 @app.get("/ima-api/email/messages")
 def email_messages():
     if nylas_email is None:
