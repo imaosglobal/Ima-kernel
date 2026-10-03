@@ -81,6 +81,12 @@ def add_cors(response):
 def chat_options():
     return ("", 204)
 
+@app.route("/ima-api/session", methods=["GET", "OPTIONS"])
+def session():
+    if request.method == "OPTIONS":
+        return ("", 204)
+    return jsonify({"token": _issue_session(), "scope": "public-user"})
+
 @app.get("/health")
 def health():
     return jsonify({
@@ -134,10 +140,13 @@ def outcome_status():
 def chat():
     payload = request.get_json(silent=True) or {}
     message = payload.get("message")
-    user_id = request.headers.get("X-IMA-User") or payload.get("user_id") or "anonymous"
+    user_id = _session_user_id()
 
     if not isinstance(message, str) or not message.strip():
         return jsonify({"error": "message is required"}), 400
+
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
 
     if not _rate_ok(request.remote_addr or "unknown"):
         return jsonify({"error": "rate limit exceeded; try again shortly"}), 429
