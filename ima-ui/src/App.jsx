@@ -159,7 +159,7 @@ export default function App() {
       setMessages(m => [...m, { role: 'ima', text: response }]);
       setApiState('online');
       speak(response);
-    } catch (error) {
+    } catch {
       const response = 'החיבור למנוע של אמא אינו זמין כרגע. אפשר לנסות שוב בעוד רגע.';
       setApiState('offline');
       setMessages(m => [...m, { role: 'ima', text: response, fallback: true }]);
