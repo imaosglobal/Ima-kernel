@@ -1,0 +1,27 @@
+name: IMA Process Registry
+
+on:
+  pull_request:
+    paths:
+      - '.ima/process_registry.json'
+      - 'scripts/ima_process_registry_validate.py'
+      - '.github/workflows/ima-process-registry.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.ima/process_registry.json'
+      - 'scripts/ima_process_registry_validate.py'
+      - '.github/workflows/ima-process-registry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate process registry
+        run: python3 scripts/ima_process_registry_validate.py
