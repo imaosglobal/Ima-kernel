@@ -9,8 +9,22 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from .capability_factory import GAP_STATES
 
+
+_FACTORY_PATH = Path(__file__).resolve().parent / "capability_factory.py"
+if _FACTORY_PATH.exists():
+    import importlib.util
+    _spec = importlib.util.spec_from_file_location("ima_capability_factory", _FACTORY_PATH)
+    if _spec is None or _spec.loader is None:
+        raise RuntimeError("capability factory module spec unavailable")
+    _factory = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_factory)
+    GAP_STATES = _factory.GAP_STATES
+else:
+    GAP_STATES = (
+        "detected", "specified", "scaffolded", "implemented", "tested",
+        "verified", "published", "monitored", "reassessed",
+    )
 
 PRIORITY = {"critical": 0, "high": 1, "medium": 2, "low": 3}
 
