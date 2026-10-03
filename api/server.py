@@ -87,7 +87,7 @@ class Brain:
     def process(self, question):
 
         q=question.strip()
-        context = conversation_layer.context()
+        context = conversation_layer.context(self.user_id())
 
         try:
             from api.database.memory_store import load_memory
@@ -101,7 +101,7 @@ class Brain:
 
         if any(x in q for x in ["שלום","היי","הי","בוקר","ערב"]):
             return {
-                "response":"שלום אורי. אני כאן. איך אפשר לעזור?"
+                "response":"שלום. אני אמא — של כולם. השיחה והזיכרון האישי שלך נשמרים במרחב שלך; הידע הציבורי של אמא נבנה ממקורות רבים." 
             }
 
         if any(x in q for x in ["מי זאת","מי את","מי אתה","מה זה IMA"]):
@@ -144,6 +144,9 @@ BRAIN=Brain()
 
 
 class Handler(BaseHTTPRequestHandler):
+
+    def user_id(self):
+        return self.headers.get('X-IMA-User') or 'anonymous'
 
     def send_json(self,data):
         body=json.dumps(data,ensure_ascii=False).encode()
@@ -262,7 +265,7 @@ class Handler(BaseHTTPRequestHandler):
                         if isinstance(answer, dict)
                         else str(answer)
                     )
-                )
+                , self.user_id())
 
                 try:
                     from api.database.memory_store import save_memory
