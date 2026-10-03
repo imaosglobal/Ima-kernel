@@ -335,20 +335,24 @@ def chat():
         app.logger.exception("IMA chat failure")
         return jsonify({"error": "IMA runtime error"}), 500
 
-@app.get("/ima-api/capabilities")
 @app.get("/ima-api/capabilities/gaps")
 def capability_gaps():
     """Expose the canonical capability-gap queue and next prioritized gap."""
     try:
-        from .ima.plugins.gap_queue import CapabilityGapQueue
-    except ImportError:
-        from ima.plugins.gap_queue import CapabilityGapQueue
-    try:
-        return jsonify(CapabilityGapQueue().snapshot())
+        import importlib.util
+        module_path = Path(__file__).resolve().parent / ".ima" / "plugins" / "gap_queue.py"
+        spec = importlib.util.spec_from_file_location("ima_gap_queue", module_path)
+        if spec is None or spec.loader is None:
+            raise RuntimeError("gap queue module spec unavailable")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return jsonify(module.CapabilityGapQueue().snapshot())
     except Exception:
         app.logger.exception("IMA capability gap queue failure")
         return jsonify({"error": "capability gap queue unavailable"}), 500
 
+
+@app.get("/ima-api/capabilities")
 def capabilities():
     """Expose the canonical capability map without secrets or private payloads."""
     try:
