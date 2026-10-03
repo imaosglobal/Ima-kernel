@@ -1,0 +1,89 @@
+name: IMA Daily Version
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-daily-version
+  cancel-in-progress: false
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Create immutable daily version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATE="$(date -u +%Y.%m.%d)"
+          BASE_TAG="v${DATE}"
+          TAG="$BASE_TAG"
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" >/dev/null 2>&1; then
+            TAG="${BASE_TAG}-r${GITHUB_RUN_NUMBER}"
+          fi
+          SHA="$(git rev-parse HEAD)"
+          git tag -a "$TAG" "$SHA" -m "IMA daily version $TAG"
+          git push origin "$TAG"
+          gh release create "$TAG" --target "$SHA" --title "IMA $TAG" --generate-notes
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Append development memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .ima/journal
+          TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          TAG="${{ steps.version.outputs.tag }}"
+          SHA="${{ steps.version.outputs.sha }}"
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          python3 - <<'PY' >> .ima/journal/development.jsonl
+          import json, os
+          entry = {
+              "timestamp": os.environ["TS"],
+              "event": "DAILY_VERSION_RELEASED",
+              "summary": f"Immutable daily version {os.environ["TAG"]} released from main.",
+              "source": "GitHub Actions / IMA Daily Version",
+              "status": "VERIFIED",
+              "details": {
+                  "repository": os.environ["GITHUB_REPOSITORY"],
+                  "branch": "main",
+                  "commit_sha": os.environ["SHA"],
+                  "workflow_run": os.environ["RUN_URL"],
+                  "release_tag": os.environ["TAG"],
+                  "evidence": "GitHub tag push and GitHub release creation completed successfully in this workflow run.",
+                  "limitations": "This record verifies release creation only; it does not certify application behavior beyond checks performed by other workflows."
+              }
+          }
+          print(json.dumps(entry, ensure_ascii=False, separators=(',', ':')))
+          PY
+        env:
+          TS: "${{ steps.version.outputs.sha }}-${{ github.run_id }}"
+          TAG: "${{ steps.version.outputs.tag }}"
+          SHA: "${{ steps.version.outputs.sha }}"
+          RUN_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+
+      - name: Commit development memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "IMA Daily Steward"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .ima/journal/development.jsonl
+          git commit -m "chore: record daily version ${{ steps.version.outputs.tag }}"
+          git push origin HEAD:main
