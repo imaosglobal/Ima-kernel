@@ -1,4 +1,7 @@
+import hashlib
+import hmac
 import os
+import secrets
 import time
 from collections import defaultdict, deque
 from flask import Flask, jsonify, request
@@ -19,6 +22,33 @@ PUBLIC_ORIGINS = {
 RATE_WINDOW = 60
 RATE_LIMIT = int(os.environ.get("IMA_CHAT_RATE_LIMIT", "30"))
 RATE_EVENTS = defaultdict(deque)
+SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
+
+
+def _issue_session():
+    user_id = secrets.token_urlsafe(24)
+    signature = hmac.new(
+        SESSION_SECRET.encode(), user_id.encode(), hashlib.sha256
+    ).hexdigest()
+    return f"{user_id}.{signature}"
+
+
+def _session_user_id():
+    authorization = request.headers.get("Authorization", "")
+    if not authorization.startswith("Bearer "):
+        return None
+    token = authorization[7:].strip()
+    if "." not in token:
+        return None
+    user_id, signature = token.rsplit(".", 1)
+    if not user_id or not signature:
+        return None
+    expected = hmac.new(
+        SESSION_SECRET.encode(), user_id.encode(), hashlib.sha256
+    ).hexdigest()
+    if not hmac.compare_digest(signature, expected):
+        return None
+    return "public:" + user_id
 
 def _cors():
     origin = request.headers.get("Origin", "")
@@ -26,7 +56,7 @@ def _cors():
         return {
             "Access-Control-Allow-Origin": origin,
             "Vary": "Origin",
-            "Access-Control-Allow-Headers": "Content-Type, X-IMA-User",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
             "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         }
     return {}
