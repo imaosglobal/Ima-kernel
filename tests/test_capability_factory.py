@@ -31,3 +31,13 @@ class CapabilityFactoryTests(unittest.TestCase):
         adapter = CapabilityAdapter("a2", "IMA", ["demo"])
         verify_adapter(adapter, lambda: False, "unit", "2026-10-04T00:00:00Z")
         self.assertFalse(adapter.is_verified())
+    def test_first_party_self_test(self):
+        import importlib.util
+        module_path = Path(__file__).resolve().parents[1] / ".ima" / "plugins" / "factory_self_test.py"
+        spec = importlib.util.spec_from_file_location("ima_factory_self_test", module_path)
+        self.assertIsNotNone(spec)
+        assert spec and spec.loader
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        self.assertTrue(module.run_factory_self_test())
+
