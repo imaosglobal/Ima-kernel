@@ -3,9 +3,15 @@ name: IMA Continuous Health
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json'
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
+
+concurrency:
+  group: ima-continuous-health-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
