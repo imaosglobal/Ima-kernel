@@ -3,7 +3,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from gap_queue import CapabilityGapQueue
+import importlib.util
+
+MODULE_PATH = Path(__file__).resolve().parents[1] / ".ima" / "plugins" / "gap_queue.py"
+spec = importlib.util.spec_from_file_location("ima_gap_queue_test", MODULE_PATH)
+assert spec and spec.loader
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+CapabilityGapQueue = module.CapabilityGapQueue
 
 
 class GapQueueTests(unittest.TestCase):
