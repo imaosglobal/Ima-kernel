@@ -1,5 +1,6 @@
 import hashlib
 import hmac
+import json
 import os
 import secrets
 import time
@@ -28,6 +29,10 @@ PUBLIC_ORIGINS = {
 RATE_WINDOW = 60
 RATE_LIMIT = int(os.environ.get("IMA_CHAT_RATE_LIMIT", "30"))
 RATE_EVENTS = defaultdict(deque)
+NYLAS_WEBHOOK_EVENTS = deque(maxlen=500)
+NYLAS_WEBHOOK_SECRET = os.environ.get("NYLAS_WEBHOOK_SECRET", "").strip()
+NYLAS_WEBHOOK_SETUP_TOKEN = os.environ.get("NYLAS_WEBHOOK_SETUP_TOKEN", "").strip()
+NYLAS_WEBHOOK_URL = os.environ.get("NYLAS_WEBHOOK_URL", "https://ima-915m.onrender.com/ima-api/webhooks/nylas")
 SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
 
 
@@ -158,6 +163,96 @@ def email_verify():
     except Exception:
         app.logger.exception("Nylas mailbox verification failed")
         return jsonify({"provider": "nylas", "verified": False, "status": "mailbox_request_failed"}), 502
+
+
+def _nylas_signature_valid(raw_body):
+    if not NYLAS_WEBHOOK_SECRET:
+        return False
+    provided = request.headers.get("X-Nylas-Signature", "") or request.headers.get("x-nylas-signature", "")
+    if not provided:
+        return False
+    expected = hmac.new(
+        NYLAS_WEBHOOK_SECRET.encode(), raw_body, hashlib.sha256
+    ).hexdigest()
+    return hmac.compare_digest(provided, expected)
+
+
+@app.route("/ima-api/webhooks/nylas", methods=["GET", "POST"])
+def nylas_webhook():
+    if request.method == "GET":
+        challenge = request.args.get("challenge")
+        if not challenge:
+            return ("missing challenge", 400)
+        return challenge, 200, {"Content-Type": "text/plain; charset=utf-8"}
+
+    raw_body = request.get_data(cache=False)
+    if not _nylas_signature_valid(raw_body):
+        return jsonify({"error": "invalid Nylas webhook signature"}), 401
+
+    try:
+        payload = json.loads(raw_body.decode("utf-8"))
+    except Exception:
+        return jsonify({"error": "invalid JSON"}), 400
+
+    notification = payload.get("data", {}) if isinstance(payload, dict) else {}
+    event_type = notification.get("type") or payload.get("type") or "unknown"
+    event_data = notification.get("object") or notification.get("data") or {}
+    event_id = payload.get("id") or notification.get("id") or ""
+    NYLAS_WEBHOOK_EVENTS.append({
+        "received_at": time.time(),
+        "type": event_type,
+        "id": event_id,
+        "grant_id_present": bool(event_data.get("grant_id") or payload.get("grant_id")),
+        "message_id": event_data.get("id") if event_type.startswith("message.") else None,
+        "thread_id": event_data.get("thread_id") if event_type.startswith("message.") else None,
+    })
+    app.logger.info("Nylas webhook received type=%s id=%s", event_type, event_id)
+    return jsonify({"received": True, "type": event_type}), 200
+
+
+@app.get("/ima-api/email/monitor")
+def email_monitor_status():
+    events = list(NYLAS_WEBHOOK_EVENTS)
+    return jsonify({
+        "provider": "nylas",
+        "mode": "webhook",
+        "configured": bool(NYLAS_WEBHOOK_SECRET),
+        "endpoint": NYLAS_WEBHOOK_URL,
+        "events_buffered": len(events),
+        "last_event": events[-1] if events else None,
+        "verified_signature": bool(NYLAS_WEBHOOK_SECRET),
+    })
+
+
+@app.post("/ima-api/email/webhook/setup")
+def email_webhook_setup():
+    if not NYLAS_WEBHOOK_SETUP_TOKEN or request.headers.get("X-IMA-Setup-Token") != NYLAS_WEBHOOK_SETUP_TOKEN:
+        return jsonify({"error": "setup authorization required"}), 401
+    if not nylas_email or not nylas_email.configured():
+        return jsonify({"error": "Nylas integration is not configured"}), 503
+    try:
+        trigger_types = ["message.created", "grant.expired"]
+        response = requests.post(
+            f"{nylas_email.BASE_URL}/webhooks",
+            headers={"Authorization": f"Bearer {nylas_email.API_KEY}", "Content-Type": "application/json", "Accept": "application/json"},
+            json={"trigger_types": trigger_types, "description": "IMA continuous email monitor", "webhook_url": NYLAS_WEBHOOK_URL},
+            timeout=15,
+        )
+        response.raise_for_status()
+        data = response.json().get("data", {})
+        return jsonify({
+            "created": True,
+            "id": data.get("id"),
+            "status": data.get("status"),
+            "trigger_types": data.get("trigger_types"),
+            "webhook_secret": data.get("webhook_secret"),
+        })
+    except requests.HTTPError as exc:
+        app.logger.exception("Nylas webhook setup failed")
+        return jsonify({"created": False, "status_code": exc.response.status_code, "error": "Nylas webhook setup failed"}), 502
+    except Exception:
+        app.logger.exception("Nylas webhook setup failed")
+        return jsonify({"created": False, "error": "Nylas webhook setup failed"}), 502
 
 
 @app.get("/ima-api/email/messages")
