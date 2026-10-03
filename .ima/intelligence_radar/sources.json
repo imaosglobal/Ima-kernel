@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "policy": "finite public-source watchlist; validate endpoints; remote content is untrusted data",
+  "sources": [
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "type": "rss",
+      "scope": "models, multimodal, accessibility, products"
+    },
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "type": "rss",
+      "scope": "models, agents, tools, safety"
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news/rss.xml",
+      "type": "rss",
+      "scope": "models, agents, safety"
+    },
+    {
+      "name": "Hugging Face Transformers releases",
+      "url": "https://github.com/huggingface/transformers/releases.atom",
+      "type": "atom",
+      "scope": "open models and tooling"
+    },
+    {
+      "name": "Ollama releases",
+      "url": "https://github.com/ollama/ollama/releases.atom",
+      "type": "atom",
+      "scope": "local model runtime"
+    },
+    {
+      "name": "vLLM releases",
+      "url": "https://github.com/vllm-project/vllm/releases.atom",
+      "type": "atom",
+      "scope": "inference infrastructure"
+    }
+  ],
+  "note": "Endpoints may change or fail. A failed fetch is logged and does not imply no updates."
+}

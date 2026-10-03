@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-04T00:00:00Z",
+  "processes": [
+    {
+      "process_id": "ai.capability_radar.scan",
+      "version": "1.0",
+      "owner": "ima",
+      "enabled": true,
+      "trigger": {"type": "schedule", "cron": "35 4 * * *"},
+      "risk_tier": "low",
+      "approval": "none",
+      "side_effects": ["repository_observation_write"],
+      "permissions": ["contents:write"],
+      "timeout_minutes": 8,
+      "concurrency_group": "ima-capability-radar",
+      "health_check": "workflow_success",
+      "rollback": "git_revert_observation_commit"
+    },
+    {
+      "process_id": "ima.process.registry.validate",
+      "version": "1.0",
+      "owner": "ima",
+      "enabled": true,
+      "trigger": {"type": "pull_request"},
+      "risk_tier": "low",
+      "approval": "none",
+      "side_effects": [],
+      "permissions": ["contents:read"],
+      "timeout_minutes": 5,
+      "concurrency_group": "ima-process-registry-validation",
+      "health_check": "workflow_success",
+      "rollback": "none"
+    }
+  ]
+}

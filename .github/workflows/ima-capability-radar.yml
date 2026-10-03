@@ -1,0 +1,38 @@
+name: IMA Continuous AI Capability Radar
+
+on:
+  schedule:
+    - cron: "35 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-capability-radar
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Scan configured public feeds
+        run: python3 scripts/ima_capability_radar.py
+      - name: Commit only when scan state changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "IMA Capability Radar"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .ima/intelligence_radar/observations.jsonl .ima/intelligence_radar/latest_scan.json
+          if git diff --cached --quiet; then
+            echo "No new observations or source-status changes."
+            exit 0
+          fi
+          git commit -m "chore: record AI capability radar scan"
+          git push origin HEAD:main
