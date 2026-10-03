@@ -160,7 +160,7 @@ export default function App() {
       setApiState('online');
       speak(response);
     } catch (error) {
-      const response = 'החיבור למנוע של אמא אינו זמין כרגע. ' + (error?.message || 'לא ידוע');
+      const response = 'החיבור למנוע של אמא אינו זמין כרגע. אפשר לנסות שוב בעוד רגע.';
       setApiState('offline');
       setMessages(m => [...m, { role: 'ima', text: response, fallback: true }]);
       speak(response);
