@@ -7,6 +7,7 @@ on:
       - 'docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json'
       - '.ima/web_intelligence/state.json'
       - 'artifacts/web-intelligence/**'
+      - '.ima/web_intelligence/adaptation_state.json'
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
@@ -45,6 +46,12 @@ jobs:
 
       - name: Web intelligence tests
         run: python -m unittest tests/test_web_intelligence.py -v
+
+      - name: Cross-domain adaptation tests
+        run: python -m unittest tests/test_adaptation_evaluator.py -v
+
+      - name: Cross-domain adaptation evaluation
+        run: python .ima/web_intelligence/adaptation_evaluator.py
 
       - name: Core and contract tests
         run: npm run ima:verify
