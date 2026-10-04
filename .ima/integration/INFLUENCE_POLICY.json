@@ -1,0 +1,22 @@
+{
+  "schema": "IMA-INFLUENCE-POLICY-1.0",
+  "purpose": "Allow verified new information to improve IMA incrementally without uncontrolled self-modification.",
+  "default_max_influence": 0.02,
+  "minimum_verification": "verified",
+  "immutable_domains": [
+    "identity",
+    "laws",
+    "creator_rights",
+    "provenance",
+    "privacy_boundary",
+    "permission_policy"
+  ],
+  "rules": {
+    "verified_repeated_evidence": "allow_small_influence",
+    "verified_single_observation": "allow_candidate_influence_only",
+    "unverified": "knowledge_candidate_only",
+    "conflict": "quarantine_and_reassess",
+    "safety_or_privacy_violation": "reject",
+    "provider_specific": "do_not_generalize_without_independent_evidence"
+  }
+}
