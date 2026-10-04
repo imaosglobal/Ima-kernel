@@ -35,6 +35,7 @@ class IMAMaster:
     def ask(self, message, user_id="default", public=False, public_memory=None):
         context = identity_context.build_context(message, public=public)
         capability_runtime = None
+        learning_governance = None
         try:
             import importlib.util
             from pathlib import Path
@@ -47,6 +48,15 @@ class IMAMaster:
         except Exception:
             capability_runtime = None
 
+        try:
+            from pathlib import Path
+            import json
+            policy_path = Path(__file__).resolve().parent / ".ima" / "integration" / "INFLUENCE_POLICY.json"
+            if policy_path.exists():
+                learning_governance = json.loads(policy_path.read_text(encoding="utf-8"))
+        except Exception:
+            learning_governance = None
+
         result = {
             "time": time.time(),
             "identity": context.get("identity", {}),
@@ -57,6 +67,7 @@ class IMAMaster:
                 "identity": True, "memory": True, "brain": True, "mother": True,
                 "capability_registry": capability_runtime is not None,
                 "capability_runtime": capability_runtime,
+                "learning_governance": learning_governance,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
