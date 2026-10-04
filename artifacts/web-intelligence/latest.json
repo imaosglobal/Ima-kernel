@@ -1,0 +1,680 @@
+{
+  "schema": "IMA-WEB-INTELLIGENCE-1.0",
+  "status": "completed",
+  "timestamp": "2026-10-04T18:37:29Z",
+  "sources": 12,
+  "discovered": 80,
+  "changed": 80,
+  "errors": [
+    {
+      "source": "https://www.commoncrawl.org/",
+      "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.python.org/events/python-events/rss/",
+      "error": "HTTPError"
+    }
+  ],
+  "latest_commoncrawl": "CC-MAIN-2026-39",
+  "policy": {
+    "public_sources_only": true,
+    "robots_and_provider_terms_respected": true,
+    "dynamic_authenticated_pages_deferred": true,
+    "learning_rule": "discovery is input; IMA changes only after verification and tests",
+    "commoncrawl_cdx_polite_rate": "single-threaded with delay"
+  },
+  "items": [
+    {
+      "id": "afd517ff06180871c64e",
+      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "a0c03d16e7252acebfcd",
+      "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+      "title": "10 technical talks I’m excited about at GitHub Universe 2026",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "85a2ee1ccabf9baf3167",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "0baeacde9feacfd49dfb",
+      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "b50539d473adb522ecd2",
+      "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
+      "title": "Highlights from Git 2.56",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "a2908e03cf24041e9ff5",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+      "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "c6ab1f25135f39c7dc53",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+      "title": "Improving site performance by shipping more CSS",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "3d14844898469c56a41e",
+      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "title": "When chat is the wrong UI",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "4431c738b4b1e8a1a89c",
+      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "0f1a07da5479caba4ade",
+      "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+      "title": "Rendering huge pull requests in the GitHub Copilot app",
+      "source": "https://github.blog/feed/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:18Z"
+    },
+    {
+      "id": "fba83a4b65f39bda102a",
+      "url": "https://awesomedataviz.com/",
+      "title": "Show HN: Dataviz, ranked daily from GitHub, NPM, PyPI and CRAN",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "6415a84ce720818dbb36",
+      "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
+      "title": "Building a RAG Pipeline for Semantic Code Search",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "78239cd208372aef58bd",
+      "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
+      "title": "Blindsight (Watts Novel)",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "e961c820a54fe772fc45",
+      "url": "https://automatictransmission.khoury.northeastern.edu/",
+      "title": "Car is a smartphone on wheels. Here's who's listening",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "89be4e220d9f6acb170f",
+      "url": "https://github.com/Niko1221/Strata",
+      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "1d9e0fedc80d56047335",
+      "url": "https://github.com/allenv0/SCM",
+      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "777226cc9e710885af09",
+      "url": "https://gamehistory.org/5k-magazines/",
+      "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "8cc3cfdc7e1adde36139",
+      "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
+      "title": "What's the Future for Pure Math Research in the Age of AI?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "72abe30b2005201c6e0c",
+      "url": "https://github.com/PowderworksCode/headstart",
+      "title": "Emitting metadata early makes building/checking Rust up to twice as fast",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "a473e06b4f69feb35db5",
+      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "title": "Why don't more developers “use the platform”?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "b722d5fe788efcd8b4fa",
+      "url": "https://news.ycombinator.com/item?id=49949438",
+      "title": "Tell HN: Bob Cringely has died",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "345f1755705d282a19e9",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "99805f8d7d27e661b7c2",
+      "url": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked/",
+      "title": "Reasons I didn't become an EMT, ranked",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "37a106d7f924ad981fc3",
+      "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
+      "title": "We want you to build the next Git platform on Cloudflare",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "737811d7489dff4e5738",
+      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "9b604f7e8ae2a435307a",
+      "url": "https://notoriousbfg.com/hole-punch/",
+      "title": "Hole Punch: Sling your spaceship around gravitational fields",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "cbf695e19904fa49c8f5",
+      "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
+      "title": "Treachery in the Rodin Museum 3D scan verdict",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "f0287c92448162787e96",
+      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "6923b5b640af2dc78134",
+      "url": "https://liao.gg/blog/agents-dont-need-memory",
+      "title": "Agents don't need memory, they need documentation",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "7072294e1d1c48ece305",
+      "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
+      "title": "I quit OpenAI because its culture is broken",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "0f94c1b2cc9695104e0d",
+      "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/",
+      "title": "Consortium Members elect Board of Directors",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "e74888c663f492eea866",
+      "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/",
+      "title": "W3C Workshop Report: The Future of ODRL",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "7ea510935dfd2aa76b5a",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/",
+      "title": "First Public Working Draft: Bitstring Status List v1.1",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "cb68915a226f5b31c5c4",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/",
+      "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "f1b5f492edd59d79af68",
+      "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/",
+      "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "c8dc3e9414ec28a368ac",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/",
+      "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "6e4168f82218e48b2b73",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/",
+      "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "9b67edb55892cc147b16",
+      "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/",
+      "title": "W3C opens 2026 community survey",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "359b504aecb4a8066979",
+      "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/",
+      "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "0c06abcb0d06332e5331",
+      "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/",
+      "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "e9046d10c5a45a4be7b5",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/",
+      "title": "First Public Working Draft: The Profiles Vocabulary",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "1cb4dab4f76ed824568d",
+      "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/",
+      "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "073f9b4d7b387c99f07e",
+      "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/",
+      "title": "Updated W3C Recommendation: ARIA in HTML",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "e2b8edcef39b94c3378e",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/",
+      "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "53199f615af74997230d",
+      "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/",
+      "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "41a209d76f100b1bd5d4",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/",
+      "title": "W3C Invites Implementations of WebTransport",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "dbdb0820dcbaa5243b7d",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/",
+      "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "1edd9d31a5fe545fe7fb",
+      "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/",
+      "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "1abec9d47a1273181fad",
+      "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/",
+      "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "abbc1e5e92269e8e60be",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-epub-3-4-epub-reading-systems-3-4-and-epub-accessibility-1-2/",
+      "title": "W3C Invites Implementations of EPUB 3.4, EPUB Reading Systems 3.4 and EPUB Accessibility 1.2",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "7f415c17fd35abee711c",
+      "url": "https://www.w3.org/news/2026/proposed-advancement-of-webauthn-3-to-w3c-recommendation/",
+      "title": "Proposed Advancement of Web Authentication: An API for accessing Public Key Credentials Level 3 to W3C Recommendation",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "d27d31968e305dc54ffa",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-character-model-for-the-world-wide-web-string-matching/",
+      "title": "First Public Working Draft: Character Model for the World Wide Web: String Matching",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "77461a41e3a3f88ac7d4",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-strings-on-the-web-language-and-direction-metadata/",
+      "title": "First Public Working Draft: Strings on the Web: Language and Direction Metadata",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "41cb334c331d41f0d32d",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-css-linked-parameters-module-level-1/",
+      "title": "First Public Working Draft: CSS Linked Parameters Module Level 1",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "ba24e82693a968f5a6b1",
+      "url": "https://www.w3.org/news/2026/group-note-draft-linked-web-storage-vocabulary/",
+      "title": "Group Note Draft: Linked Web Storage Vocabulary",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:21Z"
+    },
+    {
+      "id": "24dd95896911d8bd0b6d",
+      "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html",
+      "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "5c7b8bdb9c001de23cea",
+      "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html",
+      "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "8df3484f72ce4634a7e5",
+      "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html",
+      "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "129cee30a618dbacbfe9",
+      "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html",
+      "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "d3499e02aaa3943b73aa",
+      "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html",
+      "title": "Top 10 AI Content Generator & Writer Tools in 2022",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "c9b0ba2832f5c52645f2",
+      "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html",
+      "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "1104ec0ee393a7f4f909",
+      "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html",
+      "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "572a341c954c548987ad",
+      "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html",
+      "title": "Most Frequently Asked Questions About Affiliate Marketing",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "f63aedf5e35cee9cf2ff",
+      "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html",
+      "title": "What is Blockchain: Everything You Need to Know (2022)",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "eb3490aa3ebca0f4ef67",
+      "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html",
+      "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "5aebe77748d66a1bef9a",
+      "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html",
+      "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "469fe5a61b36c036d58c",
+      "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html",
+      "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "65763140459cf23fdedd",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html",
+      "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "f102a512d0bf0eec1887",
+      "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html",
+      "title": "Canva Review 2022: Details, Pricing & Features",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "4ae8efd7a9964cf3d437",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html",
+      "title": "Top 7 Best Wordpress Plugin Of All Time",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "c4ecc08e3dcd225bd13c",
+      "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html",
+      "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "44ca195f5b7c621a996e",
+      "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html",
+      "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "54b9d850727b6cdbe5ce",
+      "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html",
+      "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "fe934b9f69954d98e9d8",
+      "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html",
+      "title": "Most Frequently Asked Questions About Email Marketing",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "6cb428459606b5a9549d",
+      "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html",
+      "title": "7 Free Websites Every Content Creator Needs to Know",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "60e9a0a09a7e88daa6f4",
+      "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html",
+      "title": "Top 9 Free AI Tools That Make Your Life Easier",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "kind": "feed",
+      "observed_at": "2026-10-04T18:37:22Z"
+    },
+    {
+      "id": "b323e64961c2e562997c",
+      "url": "https://commoncrawl.org/",
+      "title": "https://commoncrawl.org/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916150747"
+    },
+    {
+      "id": "809964c177391d331927",
+      "url": "https://www.commoncrawl.org/",
+      "title": "https://www.commoncrawl.org/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910165852"
+    },
+    {
+      "id": "3cf3a4b8e5657774bf6b",
+      "url": "https://www.commoncrawl.org/about",
+      "title": "https://www.commoncrawl.org/about",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910162035"
+    },
+    {
+      "id": "24d2c7a9344d3f2e483c",
+      "url": "https://commoncrawl.org/about",
+      "title": "https://commoncrawl.org/about",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260912081042"
+    }
+  ]
+}
