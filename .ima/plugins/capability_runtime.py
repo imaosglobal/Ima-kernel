@@ -14,6 +14,8 @@ from typing import Any, Dict, Optional
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_PATH = ROOT / ".ima" / "plugins" / "REGISTRY.json"
 GAP_QUEUE_PATH = ROOT / ".ima" / "plugins" / "gap_queue.py"
+FABRIC_PATH = ROOT / ".ima" / "integration" / "UNIVERSAL_INTEGRATION_FABRIC.md"
+INFLUENCE_POLICY_PATH = ROOT / ".ima" / "integration" / "INFLUENCE_POLICY.json"
 
 
 def _load_gap_queue():
@@ -69,7 +71,15 @@ def snapshot() -> Dict[str, Any]:
     registry = load_registry()
     queue = _load_gap_queue()
     return {
-        "schema": "IMA-CAPABILITY-RUNTIME-1.0",
+        "schema": "IMA-CAPABILITY-RUNTIME-1.1",
+        "universal_integration_fabric": {
+            "present": FABRIC_PATH.exists(),
+            "policy": "discover-describe-map-authorize-connect-execute-observe-verify-learn-generalize-document-monitor-reassess",
+        },
+        "learning_governance": {
+            "present": INFLUENCE_POLICY_PATH.exists(),
+            "bounded_verified_learning_only": True,
+        },
         "providers": connected_providers(registry),
         "routes": registry.get("routing", {}),
         "next_gap": queue.next_gap(),
