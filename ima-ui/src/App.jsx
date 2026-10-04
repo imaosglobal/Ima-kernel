@@ -113,12 +113,17 @@ export default function App() {
   const [avatarState, setAvatarState] = useState('idle');
   const [apiState, setApiState] = useState('checking');
   const [apiRuntime, setApiRuntime] = useState(null);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [paletteQuery, setPaletteQuery] = useState('');
+  const [activity, setActivity] = useState('מוכן');
   const [deviceContinuity, setDeviceContinuity] = useState(null);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. הזיכרון האישי של כל אדם נשמר בנפרד, בעוד שהידע והלמידה הציבוריים של אמא נבנים ממקורות רבים.' }
   ]);
 
   useEffect(() => {
+    const onKey = e => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setPaletteOpen(true); } if (e.key === 'Escape') setPaletteOpen(false); };
+    window.addEventListener('keydown', onKey);
     Promise.resolve().then(() => { if (alive) setDeviceContinuity(registerContinuity()); });
     let alive = true;
     const refresh = async () => {
@@ -127,7 +132,7 @@ export default function App() {
     };
     refresh();
     const timer = setInterval(refresh, 30000);
-    return () => { alive = false; clearInterval(timer); };
+    return () => { alive = false; clearInterval(timer); window.removeEventListener('keydown', onKey); };
   }, []);
 
   const speak = text => {
@@ -153,25 +158,35 @@ export default function App() {
     const text = (textValue ?? input).trim();
     if (!text || busy) return;
     setMessages(m => [...m, { role: 'user', text }]);
-    setInput(''); setBusy(true); setAvatarState('thinking');
+    setInput(''); setBusy(true); setActivity('חושבת ובודקת'); setAvatarState('thinking');
     try {
       const response = await askIma(text);
-      setMessages(m => [...m, { role: 'ima', text: response }]);
+      setMessages(m => [...m, { role: 'ima', text: response }]); setActivity('תשובה מוכנה');
       setApiState('online');
       speak(response);
     } catch {
       const response = 'החיבור למנוע של אמא אינו זמין כרגע. אפשר לנסות שוב בעוד רגע.';
       setApiState('offline');
-      setMessages(m => [...m, { role: 'ima', text: response, fallback: true }]);
+      setMessages(m => [...m, { role: 'ima', text: response, fallback: true }]); setActivity('מצב מקומי');
       speak(response);
-    } finally { setBusy(false); }
+    } finally { setBusy(false); setAvatarState('idle'); }
   };
+
+  const commands = [
+    { label: 'לדבר עם אמא', action: () => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' }) },
+    { label: 'לחשוב', action: () => send('אני רוצה לחשוב איתך על משהו.') },
+    { label: 'ליצור', action: () => send('אני רוצה ליצור משהו איתך.') },
+    { label: 'ללמוד', action: () => send('אני רוצה ללמוד משהו.') },
+    { label: 'לבדוק יכולות מאומתות', action: () => document.getElementById('capabilities')?.scrollIntoView({ behavior: 'smooth' }) },
+    { label: 'לפתוח את השער הגלובלי', action: () => document.getElementById('global')?.scrollIntoView({ behavior: 'smooth' }) },
+  ];
+  const visibleCommands = commands.filter(c => c.label.includes(paletteQuery.trim())).slice(0, 8);
 
   return <main className="ima-app" dir="rtl">
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#space">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
+      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero mother-home" id="home">
@@ -217,7 +232,9 @@ export default function App() {
       <div className="mode-grid">{motherModes.map(mode => <button key={mode.id} className="mode-card" onClick={() => send(mode.prompt)}><span>{mode.id === 'think' ? '◌' : mode.id === 'create' ? '✦' : mode.id === 'learn' ? '⌁' : '→'}</span><b>{mode.label}</b><small>{mode.id === 'think' ? 'מחשבה, החלטה, שאלה' : mode.id === 'create' ? 'טקסט, רעיון, תמונה' : mode.id === 'learn' ? 'ידע, הסבר, חיבור' : 'משימה, כלי, פעולה'}</small></button>)}</div>
     </section>
 
-    <section className="live-strip" id="tools"><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>מכשיר</span><strong>{deviceContinuity?.device?.family || 'מזהה…'}</strong></div></section>
+    <section className="live-strip" id="tools"><div><span>פעילות</span><strong>{activity}</strong></div><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>מכשיר</span><strong>{deviceContinuity?.device?.family || 'מזהה…'}</strong></div></section>
+
+    {paletteOpen && <div className="palette-backdrop" role="presentation" onMouseDown={() => setPaletteOpen(false)}><section className="command-palette" role="dialog" aria-modal="true" aria-label="פעולות אמא" onMouseDown={e => e.stopPropagation()}><div className="palette-head"><strong>מה תרצה לעשות?</strong><button onClick={() => setPaletteOpen(false)} aria-label="סגירה">×</button></div><input autoFocus value={paletteQuery} onChange={e => setPaletteQuery(e.target.value)} placeholder="חפש פעולה..." aria-label="חיפוש פעולה" /><div className="palette-results">{visibleCommands.map((command, i) => <button key={command.label} onClick={() => { setPaletteOpen(false); command.action(); }}><span>{i + 1}</span>{command.label}</button>)}{!visibleCommands.length && <p>לא נמצאה פעולה. נסה ניסוח אחר.</p>}</div><small>הפעולות נשארות שקופות: אמא מציגה מה היא עושה ואינה מציגה יכולת שלא אומתה.</small></section></div>}
 
     <section className="capability-truth" id="capabilities" aria-labelledby="capability-heading">
       <div className="section-heading"><p className="eyebrow">IMA · VERIFIED CAPABILITIES</p><h2 id="capability-heading">מה אמא יכולה — ומה עדיין לא אומת.</h2><p>המצב מוצג מתוך מרשם היכולות של הפרויקט. תכנון או מסמך אינם הוכחה ליכולת פעילה.</p></div>
