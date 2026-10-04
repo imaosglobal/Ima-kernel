@@ -1,5 +1,4 @@
 import importlib.util
-import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -18,7 +17,10 @@ def test_concrete_lessons_are_derived_from_evidence():
     events = [{
         "summary": "Fixed a real defect",
         "status": "VERIFIED",
-        "details": {"observations": ["Observed a failing contract"], "next": ["Run smoke test"]},
+        "details": {
+            "observations": ["Observed a failing contract"],
+            "next": ["Run smoke test"],
+        },
     }]
     lessons = module.concrete_lessons(events)
     assert "Fixed a real defect [VERIFIED]" in lessons
@@ -26,5 +28,7 @@ def test_concrete_lessons_are_derived_from_evidence():
     assert "Run smoke test" in lessons
 
 
-def test_summary_schema_is_not_static_dimensions_only():
-    assert "question" in module.run.__doc__ if module.run.__doc__ else True
+def test_daily_question_is_present_in_source():
+    source = TARGET.read_text(encoding="utf-8")
+    assert "מה עוד ניתן לשפר באמא היום?" in source
+    assert "improvements_executed" in source
