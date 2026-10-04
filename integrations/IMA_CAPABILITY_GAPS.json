@@ -101,6 +101,82 @@
         "contract-aware revenue rules",
         "measure outcomes"
       ]
+    },
+    {
+      "id": "universal_integration_fabric",
+      "capability": "universal_integration_fabric",
+      "state": "scaffolded",
+      "priority": "critical",
+      "providers": [
+        "IMA"
+      ],
+      "next": [
+        "connect canonical adapters",
+        "publish evidence model",
+        "run provider/device discovery tests",
+        "verify production routing"
+      ]
+    },
+    {
+      "id": "global_change_observatory",
+      "capability": "global_change_observatory",
+      "state": "specified",
+      "priority": "high",
+      "providers": [
+        "TinyFish",
+        "GitHub",
+        "IMA"
+      ],
+      "next": [
+        "monitor official change sources",
+        "convert changes to evidence records",
+        "create regression tests",
+        "reassess affected adapters"
+      ]
+    },
+    {
+      "id": "cross_domain_learning",
+      "capability": "cross_domain_learning",
+      "state": "specified",
+      "priority": "high",
+      "providers": [
+        "IMA"
+      ],
+      "next": [
+        "evidence-gated learning records",
+        "independent corroboration",
+        "small bounded updates",
+        "regression verification"
+      ]
+    },
+    {
+      "id": "device_and_game_ecosystem",
+      "capability": "device_game_ecosystem_integration",
+      "state": "detected",
+      "priority": "high",
+      "providers": [],
+      "next": [
+        "map console and device APIs",
+        "map OS integration paths",
+        "map game platform interfaces",
+        "build authorized adapters"
+      ]
+    },
+    {
+      "id": "world_knowledge_ingestion",
+      "capability": "world_knowledge_ingestion",
+      "state": "specified",
+      "priority": "high",
+      "providers": [
+        "TinyFish",
+        "GitHub"
+      ],
+      "next": [
+        "source classification",
+        "provenance capture",
+        "verification",
+        "knowledge graph updates"
+      ]
     }
   ]
 }
