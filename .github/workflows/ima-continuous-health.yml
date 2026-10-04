@@ -45,7 +45,9 @@ jobs:
         run: npm run ima:verify
 
       - name: Capability factory tests
-        run: python -m unittest discover -s tests -p "test_*queue.py" -v
+        run: |
+          python -m unittest discover -s tests -p "test_*factory.py" -v
+          python -m unittest discover -s tests -p "test_*queue.py" -v
 
       - name: Frontend quality
         working-directory: ima-ui
