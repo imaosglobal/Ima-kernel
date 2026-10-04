@@ -30,7 +30,8 @@
       "published",
       "monitored",
       "reassessed"
-    ]
+    ],
+    "learning_influence": "verified_evidence_only; bounded_small_changes; immutable_identity_laws_provenance_permissions"
   },
   "connected": [
     {
@@ -252,7 +253,12 @@
         "provider_routing",
         "commercialization_planning",
         "revenue_share_modeling",
-        "provider_onboarding"
+        "provider_onboarding",
+        "universal_integration_fabric",
+        "global_change_observatory",
+        "cross_domain_learning",
+        "world_knowledge_ingestion",
+        "device_game_ecosystem_integration"
       ]
     }
   ],
@@ -336,6 +342,34 @@
       "stripe",
       "github",
       "tinyfish"
+    ],
+    "universal_integration": [
+      "ima_capability_factory",
+      "github",
+      "tinyfish",
+      "remote_desktop",
+      "plugin_management"
+    ],
+    "global_change_observatory": [
+      "tinyfish",
+      "github",
+      "plugin_management"
+    ],
+    "cross_domain_learning": [
+      "ima_capability_factory",
+      "github",
+      "tinyfish"
+    ],
+    "devices_and_games": [
+      "remote_desktop",
+      "tinyfish",
+      "github",
+      "ima_capability_factory"
+    ],
+    "world_knowledge": [
+      "tinyfish",
+      "github",
+      "dropbox"
     ]
   }
 }
