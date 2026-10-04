@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths-ignore:
       - 'docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json'
+      - '.ima/web_intelligence/state.json'
+      - 'artifacts/web-intelligence/**'
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
@@ -40,6 +42,9 @@ jobs:
 
       - name: Python syntax check
         run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py .ima/plugins/capability_factory.py tests/test_capability_factory.py .ima/plugins/gap_queue.py tests/test_gap_queue.py .ima/plugins/factory_self_test.py .ima/plugins/capability_runtime.py tests/test_capability_runtime.py
+
+      - name: Web intelligence tests
+        run: python -m unittest tests/test_web_intelligence.py -v
 
       - name: Core and contract tests
         run: npm run ima:verify
