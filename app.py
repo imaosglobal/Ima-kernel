@@ -354,10 +354,18 @@ def capability_gaps():
 
 @app.get("/ima-api/capabilities")
 def capabilities():
-    """Expose the canonical capability map without secrets or private payloads."""
+    """Expose the canonical capability map plus executable runtime routing state."""
     try:
         path = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
         registry = json.loads(path.read_text(encoding="utf-8"))
+        import importlib.util
+        runtime_path = Path(__file__).resolve().parent / ".ima" / "plugins" / "capability_runtime.py"
+        spec = importlib.util.spec_from_file_location("ima_capability_runtime_api", runtime_path)
+        if spec is None or spec.loader is None:
+            raise RuntimeError("capability runtime module spec unavailable")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        runtime = module.snapshot()
         return jsonify({
             "schema_version": registry.get("schema_version"),
             "policy": registry.get("policy", {}),
@@ -371,11 +379,29 @@ def capabilities():
                 }
                 for item in registry.get("connected", [])
             ],
-            "verified_source": ".ima/plugins/REGISTRY.json",
+            "runtime": runtime,
+            "verified_source": ".ima/plugins/REGISTRY.json + .ima/plugins/capability_runtime.py",
         })
     except Exception:
         app.logger.exception("IMA capability registry failure")
         return jsonify({"error": "capability registry unavailable"}), 500
+
+
+@app.get("/ima-api/capabilities/<capability>")
+def capability_route(capability):
+    """Return provider routing truth for one capability without executing it."""
+    try:
+        import importlib.util
+        runtime_path = Path(__file__).resolve().parent / ".ima" / "plugins" / "capability_runtime.py"
+        spec = importlib.util.spec_from_file_location("ima_capability_runtime_route", runtime_path)
+        if spec is None or spec.loader is None:
+            raise RuntimeError("capability runtime module spec unavailable")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return jsonify(module.route(capability))
+    except Exception:
+        app.logger.exception("IMA capability route failure")
+        return jsonify({"error": "capability route unavailable"}), 500
 
 @app.route("/", methods=["GET", "POST"])
 def home():
