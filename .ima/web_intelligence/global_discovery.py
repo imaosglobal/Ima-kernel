@@ -18,14 +18,19 @@ STATE = ROOT / ".ima" / "web_intelligence" / "state.json"
 JOURNAL = ROOT / ".ima" / "journal" / "development.jsonl"
 UA = os.getenv("IMA_WEB_INTELLIGENCE_UA", "IMA-Web-Intelligence/1.0 (+https://github.com/imaosglobal/Ima-kernel)")
 TIMEOUT = float(os.getenv("IMA_WEB_INTELLIGENCE_TIMEOUT", "12"))
-MAX_ITEMS = int(os.getenv("IMA_WEB_INTELLIGENCE_MAX_ITEMS", "120"))
+MAX_ITEMS = int(os.getenv("IMA_WEB_INTELLIGENCE_MAX_ITEMS", "300"))
 SEEDS = [
     "https://www.commoncrawl.org/",
+    "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+    "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+    "https://www.mozilla.org/en-US/firefox/notes/feed/",
+    "https://www.python.org/events/python-events/rss/",
     "https://github.blog/feed/",
     "https://hnrss.org/frontpage",
     "https://arxiv.org/rss/cs.AI",
     "https://www.nature.com/nature.rss",
     "https://www.w3.org/News/news.rss",
+    "https://feeds.feedburner.com/TechCrunch/",
 ]
 session = requests.Session()
 session.headers.update({"User-Agent": UA, "Accept": "*/*"})
@@ -176,6 +181,7 @@ def run():
             "public_sources_only": True,
             "robots_and_provider_terms_respected": True,
             "dynamic_authenticated_pages_deferred": True,
+            "learning_rule": "discovery is input; IMA changes only after verification and tests",
             "commoncrawl_cdx_polite_rate": "single-threaded with delay",
         },
         "items": changed[:MAX_ITEMS],
