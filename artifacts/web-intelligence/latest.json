@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-04T18:37:29Z",
+  "timestamp": "2026-10-04T22:19:29Z",
   "sources": 12,
-  "discovered": 80,
-  "changed": 80,
+  "discovered": 176,
+  "changed": 114,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -37,644 +29,916 @@
   },
   "items": [
     {
-      "id": "afd517ff06180871c64e",
-      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
-      "title": "AI is changing developer work. Here are three skills to strengthen.",
-      "source": "https://github.blog/feed/",
+      "id": "6f8f713ea15a1ab9dc91",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5022-5028-cashing-in-at-cache-creek/",
+      "title": "Curiosity Blog, Sols 5022-5028: Cashing in at Cache Creek",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "a0c03d16e7252acebfcd",
-      "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
-      "title": "10 technical talks I’m excited about at GitHub Universe 2026",
-      "source": "https://github.blog/feed/",
+      "id": "daace20f47f2cb1bd010",
+      "url": "https://www.nasa.gov/general/mapping-the-gaps-in-nasas-return-to-the-moon-featuring-richard-spolzino/",
+      "title": "Mapping the Gaps in NASA’s Return to the Moon, featuring Richard Spolzino",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "85a2ee1ccabf9baf3167",
-      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
-      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
-      "source": "https://github.blog/feed/",
+      "id": "518ef5b89828b8623ce5",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-4-supernumerary-rainbows-over-new-jersey/",
+      "title": "APOD: 2026 October 4 – Supernumerary Rainbows over New Jersey",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "0baeacde9feacfd49dfb",
-      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
-      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
-      "source": "https://github.blog/feed/",
+      "id": "32d936fd69e9a889106d",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-3-selfie-at-vera-rubin-ridge/",
+      "title": "APOD: 2026 October 3 – Selfie at Vera Rubin Ridge",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "b50539d473adb522ecd2",
-      "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
-      "title": "Highlights from Git 2.56",
-      "source": "https://github.blog/feed/",
+      "id": "4de9c63a1c81f9784abf",
+      "url": "https://www.nasa.gov/news-release/nasa-astronaut-christina-koch-to-join-nfl-fans-in-philadelphia/",
+      "title": "NASA Astronaut Christina Koch to Join NFL Fans in Philadelphia",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "a2908e03cf24041e9ff5",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
-      "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
-      "source": "https://github.blog/feed/",
+      "id": "9303edfce056f1aa358a",
+      "url": "https://www.nasa.gov/missions/station/iss-research/heading-home-nasas-spacex-crew-12-concludes-station-science-mission/",
+      "title": "Heading Home: NASA’s SpaceX Crew-12 Concludes Station Science Mission",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "c6ab1f25135f39c7dc53",
-      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-      "title": "Improving site performance by shipping more CSS",
-      "source": "https://github.blog/feed/",
+      "id": "9bb52c5a3fc5a2a20f42",
+      "url": "https://www.nasa.gov/image-article/nasas-davinci-probe-can-stand-the-heat/",
+      "title": "NASA’s DAVINCI Probe Can Stand the Heat",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "3d14844898469c56a41e",
-      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
-      "title": "When chat is the wrong UI",
-      "source": "https://github.blog/feed/",
+      "id": "42ac6ad06a31a70c99dd",
+      "url": "https://www.nasa.gov/news-release/la-nasa-abre-solicitudes-para-proxima-promocion-de-directores-de-vuelo/",
+      "title": "La NASA abre solicitudes para próxima promoción de directores de vuelo",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "4431c738b4b1e8a1a89c",
-      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
-      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-      "source": "https://github.blog/feed/",
+      "id": "2b3fb9c367c3391384b2",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/nasa-model-wing-lights-up-during-first-pressure-sensitive-paint-tests/",
+      "title": "NASA Model Wing Lights Up During First Pressure Sensitive Paint Tests",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "0f1a07da5479caba4ade",
-      "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
-      "title": "Rendering huge pull requests in the GitHub Copilot app",
-      "source": "https://github.blog/feed/",
+      "id": "fab738555ca449b6f77b",
+      "url": "https://www.nasa.gov/news-release/nasa-opens-applications-for-next-class-of-flight-directors/",
+      "title": "NASA Opens Applications for Next Class of Flight Directors",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:18Z"
+      "observed_at": "2026-10-04T22:18:58Z"
     },
     {
-      "id": "fba83a4b65f39bda102a",
-      "url": "https://awesomedataviz.com/",
-      "title": "Show HN: Dataviz, ranked daily from GitHub, NPM, PyPI and CRAN",
+      "id": "1e98197ec7f8529efba1",
+      "url": "https://www.nasa.gov/image-detail/davinci-heat-test-1/",
+      "title": "NASA's DAVINCI Probe Can Stand the Heat",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "125f77fa8d831dc9a62e",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-13-launch-3/",
+      "title": "NASA’s SpaceX Crew-13 Launches",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "e2054d47a388fb1399bd",
+      "url": "https://www.nasa.gov/image-detail/iss075e0144232/",
+      "title": "Star Trails",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "ec875e5336cf5c9478bc",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1312/",
+      "title": "Crew-13 Rocket and Spacecraft at Launch Pad",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "d0da49b9877b10338c7f",
+      "url": "https://www.nasa.gov/image-detail/gmt251_08_43_jessica-meir_northern-aurora-cupola-14mm/",
+      "title": "Space Station View of Earth at Night",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "7d503f9c07efece57008",
+      "url": "https://www.nasa.gov/image-detail/a-galaxy-spinning-out-of-sync/",
+      "title": "Hubble Spots Chaotic Secret in Galaxy",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f767f53fd643fda4cc2c",
+      "url": "https://www.nasa.gov/image-detail/nasa-navigation-experiment-shows-promise-for-landing-on-other-planets/",
+      "title": "Practicing for Safe Landings on the Moon and Beyond",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "0aaf7eacf87f7a022f07",
+      "url": "https://www.nasa.gov/image-detail/stsci-h-p26023a-m-2000x1207/",
+      "title": "NASA's Hubble Telescope Reaches Milestone, Looks for Elusive Supernova",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "2dadf5eefd515726fb06",
+      "url": "https://www.nasa.gov/image-detail/m101-lg/",
+      "title": "NASA's Chandra Finds Unusual Objects in Pinwheel Galaxy",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f4bbb787683ffd7c2030",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-mt-bank-stadium/",
+      "title": "NASA Astronaut Reid Wiseman Attends Ravens vs. Saints Game",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "8afe013f95efd1b4bb3e",
+      "url": "https://www.nasa.gov/image-detail/cosi-2026july-01/",
+      "title": "COSI Telescope Comes Together",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "dfb9bae9a4555b7fe5b5",
+      "url": "https://www.nasa.gov/image-detail/the-shuttle-enterprise-with-star-trek-cast/",
+      "title": "NASA Unveils Enterprise, the First Space Shuttle",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "4956d2164f092914b97e",
+      "url": "https://www.nasa.gov/image-detail/krakatau-oli-20260905-lrg/",
+      "title": "Indonesia's Anak Krakatau",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "5abd5224c3734a52bdab",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1307/",
+      "title": "Artemis III Crew Visits NASA Kennedy's Vehicle Assembly Building",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "97975be217a1bd5d435d",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-acrisure-stadium/",
+      "title": "NASA Kicks Off Inspiration Tour with Steelers vs. Falcons Game",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "5e339f35a58b7a5c7f42",
+      "url": "https://www.nasa.gov/image-detail/galaxies-iizw096/",
+      "title": "NASA's Chandra Spots Galactic Gem",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "dfa5bbd94cb2828c685a",
+      "url": "https://www.nasa.gov/image-detail/55459350878-2e1468b664-o/",
+      "title": "Dust and Water in Sagittarius A*",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "cd5067090d89008e1ca3",
+      "url": "https://www.nasa.gov/image-detail/msfc-09012026-artemis-ii-crew-visit-at-msfc-1orig/",
+      "title": "Artemis II Crew at NASA Marshall",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "ceba6e5b39be7203aa59",
+      "url": "https://www.nasa.gov/image-detail/hubble-n44-wfc3-large/",
+      "title": "Superbubble in the Large Magellanic Cloud",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "30c42c6803fd3cc30165",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202606170001/",
+      "title": "Lunar Occultation of Venus",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "0a18376084f98451b293",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202608300037/",
+      "title": "Igniting Roman's Journey",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f9221d65b75640a90e0d",
+      "url": "https://www.nasa.gov/image-detail/amf-maf_20260827_lunareclipse_01/",
+      "title": "August Lunar Eclipse Rises Over Louisiana",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "037a64919b394f0e47b0",
+      "url": "https://www.nasa.gov/image-detail/amf-ksc-20260825-ph-rcr01_0045/",
+      "title": "Artemis III RS-25 Engine Processing: #3 Lift",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "900f895587f072f2c3f8",
+      "url": "https://www.nasa.gov/image-detail/nancy-grace-roman-space-telescope-launch-2/",
+      "title": "NASA's Nancy Grace Roman Space Telescope Launches",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "8e1ccfd9653936aa4151",
+      "url": "https://www.nasa.gov/image-detail/20260828-120552-jk1-3999-2/",
+      "title": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "8d46a442fd5a36ce42aa",
+      "url": "https://www.nasa.gov/image-detail/nasa-civil-servant-swearing-in-ceremony/",
+      "title": "Civil Servants Sworn in at NASA Ames",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f0466a1d538494ea2e08",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1305/",
+      "title": "Roman Space Telescope Travels to SpaceX Hangar",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "3e171985fe4d5f90cead",
+      "url": "https://www.nasa.gov/image-detail/gmt230_ehdc1-2/",
+      "title": "Astronauts Anil Menon and Sophie Adenot on Spacewalk",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f9e480c220cb6699b5a6",
+      "url": "https://www.nasa.gov/image-detail/freedom-250-grand-prix/",
+      "title": "NASA Astronaut Reid Wiseman at Freedom 250 Grand Prix",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "83d6f25d8a2e58da9990",
+      "url": "https://www.nasa.gov/image-detail/webb-opens-a-treasure-chest-filled-with-stars/",
+      "title": "Webb Opens Treasure Chest",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "04bbe1cc05dc08fc663d",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1304/",
+      "title": "Artemis Mission Patches",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "20cdf8b2697e1b8bde14",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kz4n4d8g9ak26cf28hd5nt5n-d2d764/",
+      "title": "Ancient Milky Way Merger",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "e839b48a311cbaeb4d4b",
+      "url": "https://www.nasa.gov/image-detail/jsc2026e407303/",
+      "title": "NASA's B777 Gets New Coat of Paint",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "e51d8ed590b2b558d92e",
+      "url": "https://www.nasa.gov/image-detail/30dor-crop/",
+      "title": "Colorful Collage of Tarantula Nebula",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "987484f82ed2ea04c3d3",
+      "url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-3/",
+      "title": "Total Solar Eclipse in Sunflower Field",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "d977a17fe2bb444ecbb6",
+      "url": "https://www.nasa.gov/image-detail/perseidsorion-2/",
+      "title": "Perseids Meteor Shower",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f5468169780cb5afa1ed",
+      "url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-2/",
+      "title": "2026 Total Solar Eclipse in Spain",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "0cf586dce469dbb6fcf1",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kx6d0xbhsyp7q1em5qtc43rp/",
+      "title": "Lion Nebula Roars in Webb's Sights",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "40e6692d03cc5cbc8cb7",
+      "url": "https://www.nasa.gov/image-detail/iss075e0000191/",
+      "title": "NASA Astronaut Jessica Meir Uses VR Goggles",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "0c8b50411cdb7e4347f2",
+      "url": "https://www.nasa.gov/image-detail/ixpemagnetarartistsconcept-web/",
+      "title": "NASA's IXPE Studies Magnetar",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "4909929b752433d075c0",
+      "url": "https://www.nasa.gov/image-detail/55412014375-711b8f02f7-o/",
+      "title": "Taking Flight to Prepare for Space",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "e7d940227ebb3f15f856",
+      "url": "https://www.nasa.gov/image-detail/ksc-20260730-ph-as01-6583-2/",
+      "title": "Artemis III Orion Crew and Service Modules Joined",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "29f0de43664ddfbfed4b",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1303/",
+      "title": "Roman Space Telescope Plaque Install",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "f1ca33eec38ba72127a9",
+      "url": "https://www.nasa.gov/image-detail/bijagosarchipelago-oli-20251128-lrg/",
+      "title": "Guinea-Bissau Tidal Waters",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "93b8ab96b18ec2979e90",
+      "url": "https://www.nasa.gov/image-detail/fdrf-ribbon-cutting-ceremony-at-nasa-langley/",
+      "title": "NASA's Newest Wind Tunnel Opens at NASA Langley",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "be648a750b762363bb13",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kvt4gqmq5mxv6xdpfpzmxg65-30d932/",
+      "title": "Starburst Galaxy Centaurus A",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "230e82a1ecca3940bb6a",
+      "url": "https://www.nasa.gov/image-detail/pia22076-2/",
+      "title": "Understanding How Martian Auroras Are Made",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "af4961883d301f681898",
+      "url": "https://www.nasa.gov/image-detail/expedition-74-soyuz-landing/",
+      "title": "NASA Astronaut Chris Williams Returns to Earth",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "2b57e24c6054c4663571",
+      "url": "https://www.nasa.gov/image-detail/iss074e0814792/",
+      "title": "New Crew Members Welcomed to International Space Station",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "9ea91031b6d54d773c8a",
+      "url": "https://www.nasa.gov/image-detail/crews-move-artemis-iv-liquid-hydrogen-tank-for-proof-testing/",
+      "title": "Crews Move Artemis IV Liquid Hydrogen Tank",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "530dba3c3cda461de256",
+      "url": "https://www.nasa.gov/image-detail/250th-ngc4736/",
+      "title": "A New Look – and Sound – for Messier 94",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "79a04337af36379e7ec4",
+      "url": "https://www.nasa.gov/image-detail/pia26586/",
+      "title": "Psyche Approaches Mars",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "d9713b6ce674d9bc7532",
+      "url": "https://www.nasa.gov/image-detail/34280-mars-viking1-lander-1st-image-pia00381/",
+      "title": "Our First View of the Surface of Mars",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "881ac8b1bf0a7dd7d7b0",
+      "url": "https://www.nasa.gov/image-detail/lighthouse-lg/",
+      "title": "NASA's Chandra and IXPE Study Pulsar in Lighthouse Nebula",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "a0cce3d4ac9625821ce4",
+      "url": "https://www.nasa.gov/image-detail/55380623885-a00df544bb-o/",
+      "title": "Young Galaxy Cluster",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "16c7f47b7fef222928ba",
+      "url": "https://www.nasa.gov/image-detail/expedition-75-launch-3/",
+      "title": "Anil Menon Launches to Space Station",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "3462a2b0dac954a9c8e6",
+      "url": "https://www.nasa.gov/image-detail/55382014220-1dd17df9c0-o/",
+      "title": "Hubble Sees Crimson Cloud and Stars",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "317b04791c3fa32d831d",
+      "url": "https://www.nasa.gov/image-detail/jsc2026e000758/",
+      "title": "NASA Astronaut Anil Menon",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "0b094b2c27ede9727afb",
+      "url": "https://www.nasa.gov/image-detail/gmt177_ehdc1/",
+      "title": "Waxing Gibbous Moon",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "6b66a7afc53fe093b276",
+      "url": "https://www.nasa.gov/image-detail/nasa-iotd-curiosity-takes-a-close-look-at-martian-sulfur-crystals/",
+      "title": "Curiosity Sees Martian Sulfur Up Close",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-04T22:18:58Z"
+    },
+    {
+      "id": "554b4acd9029a3e93e8c",
+      "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+      "title": "Homa: The end of TCP for AI clusters [video]",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "6415a84ce720818dbb36",
-      "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
-      "title": "Building a RAG Pipeline for Semantic Code Search",
+      "id": "b0ff7ff167326d548247",
+      "url": "https://github.com/omlahore/RemoveMacAI",
+      "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "78239cd208372aef58bd",
-      "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
-      "title": "Blindsight (Watts Novel)",
+      "id": "0c592c50a09ac7b70f2a",
+      "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
+      "title": "Improper redaction reveals Google Data Center water and electricity usage",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "e961c820a54fe772fc45",
-      "url": "https://automatictransmission.khoury.northeastern.edu/",
-      "title": "Car is a smartphone on wheels. Here's who's listening",
+      "id": "ad90f0c89b677504769c",
+      "url": "https://scimigo.com/en/learn/build-with-python/01-draw-with-python",
+      "title": "Show HN: Build with Python – a beginner course where your code draws",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "89be4e220d9f6acb170f",
-      "url": "https://github.com/Niko1221/Strata",
-      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+      "id": "6cbb376bdb40e04b479e",
+      "url": "https://wieslawsoltes.github.io/VB6/",
+      "title": "A browser-native classic Visual Basic VB6 IDE",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "1d9e0fedc80d56047335",
-      "url": "https://github.com/allenv0/SCM",
-      "title": "Show HN: AI search for every photo and every frame of video on macOS",
+      "id": "bc4c5262e4f4f45bc0dc",
+      "url": "https://jacobg.co/emails-at-jacobg-co/",
+      "title": "All I wanted was a custom domain email",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "777226cc9e710885af09",
-      "url": "https://gamehistory.org/5k-magazines/",
-      "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
+      "id": "6f322d5d5fcf83011f01",
+      "url": "https://www.msoos.org/2026/10/incentives-in-academic-research/",
+      "title": "Incentives in Academic Research",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "8cc3cfdc7e1adde36139",
-      "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
-      "title": "What's the Future for Pure Math Research in the Age of AI?",
+      "id": "3dd60f09dfa2d000034a",
+      "url": "https://github.com/net4people/bbs/issues/672",
+      "title": "Xray-core concealed a certificate verification bypass vulnerability",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "72abe30b2005201c6e0c",
-      "url": "https://github.com/PowderworksCode/headstart",
-      "title": "Emitting metadata early makes building/checking Rust up to twice as fast",
+      "id": "0db283fcfa229b57cacb",
+      "url": "https://www.economist.com/international/2026/10/01/how-effective-altruism-conquered-the-world",
+      "title": "The evolution of effective altruism",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "a473e06b4f69feb35db5",
-      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
-      "title": "Why don't more developers “use the platform”?",
+      "id": "5d24db339b104dc6fe2b",
+      "url": "https://www.nytimes.com/2026/09/30/technology/william-draper-dead.html",
+      "title": "Bill Draper has died",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "b722d5fe788efcd8b4fa",
-      "url": "https://news.ycombinator.com/item?id=49949438",
-      "title": "Tell HN: Bob Cringely has died",
+      "id": "1c3fa1d8353c4563b68f",
+      "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+      "title": "How to scale intent, quality, and artistry with AI [video]",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "345f1755705d282a19e9",
-      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
-      "title": "We're going to need default hard budget caps on pretty much everything",
+      "id": "4cb220fccd36c1fd8756",
+      "url": "https://birdshistory.com/how-long-to-declare-a-bird-extinct/",
+      "title": "Declaring a bird extinct: The median wait is 36 years after the last sighting",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "99805f8d7d27e661b7c2",
-      "url": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked/",
-      "title": "Reasons I didn't become an EMT, ranked",
+      "id": "6319f46849d85834ba36",
+      "url": "https://www.historytoday.com/archive/review/neanderthals-among-us-peter-sahlins-review",
+      "title": "'Neanderthals Among Us' review",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "37a106d7f924ad981fc3",
-      "url": "https://blog.cloudflare.com/next-git-platform-on-cloudflare/",
-      "title": "We want you to build the next Git platform on Cloudflare",
+      "id": "d55eb8582836ddbd05e7",
+      "url": "https://sjg.io/writing/binrange-have-you-actually-put-the-bins-out/",
+      "title": "Surely you have ultra-wideband radios on your bins too?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
+      "observed_at": "2026-10-04T22:19:01Z"
     },
     {
-      "id": "737811d7489dff4e5738",
-      "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
-      "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "9b604f7e8ae2a435307a",
-      "url": "https://notoriousbfg.com/hole-punch/",
-      "title": "Hole Punch: Sling your spaceship around gravitational fields",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "cbf695e19904fa49c8f5",
-      "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
-      "title": "Treachery in the Rodin Museum 3D scan verdict",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "f0287c92448162787e96",
-      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "6923b5b640af2dc78134",
-      "url": "https://liao.gg/blog/agents-dont-need-memory",
-      "title": "Agents don't need memory, they need documentation",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "7072294e1d1c48ece305",
-      "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
-      "title": "I quit OpenAI because its culture is broken",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "0f94c1b2cc9695104e0d",
-      "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/",
-      "title": "Consortium Members elect Board of Directors",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "e74888c663f492eea866",
-      "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/",
-      "title": "W3C Workshop Report: The Future of ODRL",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "7ea510935dfd2aa76b5a",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/",
-      "title": "First Public Working Draft: Bitstring Status List v1.1",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "cb68915a226f5b31c5c4",
-      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/",
-      "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "f1b5f492edd59d79af68",
-      "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/",
-      "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "c8dc3e9414ec28a368ac",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/",
-      "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "6e4168f82218e48b2b73",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/",
-      "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "9b67edb55892cc147b16",
-      "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/",
-      "title": "W3C opens 2026 community survey",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "359b504aecb4a8066979",
-      "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/",
-      "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "0c06abcb0d06332e5331",
-      "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/",
-      "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "e9046d10c5a45a4be7b5",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/",
-      "title": "First Public Working Draft: The Profiles Vocabulary",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "1cb4dab4f76ed824568d",
-      "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/",
-      "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "073f9b4d7b387c99f07e",
-      "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/",
-      "title": "Updated W3C Recommendation: ARIA in HTML",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "e2b8edcef39b94c3378e",
-      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/",
-      "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "53199f615af74997230d",
-      "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/",
-      "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "41a209d76f100b1bd5d4",
-      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/",
-      "title": "W3C Invites Implementations of WebTransport",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "dbdb0820dcbaa5243b7d",
-      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/",
-      "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "1edd9d31a5fe545fe7fb",
-      "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/",
-      "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "1abec9d47a1273181fad",
-      "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/",
-      "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "abbc1e5e92269e8e60be",
-      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-epub-3-4-epub-reading-systems-3-4-and-epub-accessibility-1-2/",
-      "title": "W3C Invites Implementations of EPUB 3.4, EPUB Reading Systems 3.4 and EPUB Accessibility 1.2",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "7f415c17fd35abee711c",
-      "url": "https://www.w3.org/news/2026/proposed-advancement-of-webauthn-3-to-w3c-recommendation/",
-      "title": "Proposed Advancement of Web Authentication: An API for accessing Public Key Credentials Level 3 to W3C Recommendation",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "d27d31968e305dc54ffa",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-character-model-for-the-world-wide-web-string-matching/",
-      "title": "First Public Working Draft: Character Model for the World Wide Web: String Matching",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "77461a41e3a3f88ac7d4",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-strings-on-the-web-language-and-direction-metadata/",
-      "title": "First Public Working Draft: Strings on the Web: Language and Direction Metadata",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "41cb334c331d41f0d32d",
-      "url": "https://www.w3.org/news/2026/first-public-working-draft-css-linked-parameters-module-level-1/",
-      "title": "First Public Working Draft: CSS Linked Parameters Module Level 1",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "ba24e82693a968f5a6b1",
-      "url": "https://www.w3.org/news/2026/group-note-draft-linked-web-storage-vocabulary/",
-      "title": "Group Note Draft: Linked Web Storage Vocabulary",
-      "source": "https://www.w3.org/News/news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:21Z"
-    },
-    {
-      "id": "24dd95896911d8bd0b6d",
-      "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html",
-      "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "5c7b8bdb9c001de23cea",
-      "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html",
-      "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "8df3484f72ce4634a7e5",
-      "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html",
-      "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "129cee30a618dbacbfe9",
-      "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html",
-      "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "d3499e02aaa3943b73aa",
-      "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html",
-      "title": "Top 10 AI Content Generator & Writer Tools in 2022",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "c9b0ba2832f5c52645f2",
-      "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html",
-      "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "1104ec0ee393a7f4f909",
-      "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html",
-      "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "572a341c954c548987ad",
-      "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html",
-      "title": "Most Frequently Asked Questions About Affiliate Marketing",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "f63aedf5e35cee9cf2ff",
-      "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html",
-      "title": "What is Blockchain: Everything You Need to Know (2022)",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "eb3490aa3ebca0f4ef67",
-      "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html",
-      "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "5aebe77748d66a1bef9a",
-      "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html",
-      "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "469fe5a61b36c036d58c",
-      "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html",
-      "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "65763140459cf23fdedd",
-      "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html",
-      "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "f102a512d0bf0eec1887",
-      "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html",
-      "title": "Canva Review 2022: Details, Pricing & Features",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "4ae8efd7a9964cf3d437",
-      "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html",
-      "title": "Top 7 Best Wordpress Plugin Of All Time",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "c4ecc08e3dcd225bd13c",
-      "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html",
-      "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "44ca195f5b7c621a996e",
-      "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html",
-      "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "54b9d850727b6cdbe5ce",
-      "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html",
-      "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "fe934b9f69954d98e9d8",
-      "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html",
-      "title": "Most Frequently Asked Questions About Email Marketing",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "6cb428459606b5a9549d",
-      "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html",
-      "title": "7 Free Websites Every Content Creator Needs to Know",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "60e9a0a09a7e88daa6f4",
-      "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html",
-      "title": "Top 9 Free AI Tools That Make Your Life Easier",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "kind": "feed",
-      "observed_at": "2026-10-04T18:37:22Z"
-    },
-    {
-      "id": "b323e64961c2e562997c",
-      "url": "https://commoncrawl.org/",
-      "title": "https://commoncrawl.org/",
+      "id": "4d601f941b898d71b39c",
+      "url": "https://www.w3.org/",
+      "title": "https://www.w3.org/",
       "source": "Common Crawl CC-MAIN-2026-39",
       "kind": "commoncrawl",
-      "observed_at": "20260916150747"
+      "observed_at": "20260916193228"
     },
     {
-      "id": "809964c177391d331927",
-      "url": "https://www.commoncrawl.org/",
-      "title": "https://www.commoncrawl.org/",
+      "id": "71638b56f9a1f14476df",
+      "url": "https://www.w3.org/1999/02/26-modules/Distribution.html",
+      "title": "https://www.w3.org/1999/02/26-modules/Distribution.html",
       "source": "Common Crawl CC-MAIN-2026-39",
       "kind": "commoncrawl",
-      "observed_at": "20260910165852"
+      "observed_at": "20260913122004"
     },
     {
-      "id": "3cf3a4b8e5657774bf6b",
-      "url": "https://www.commoncrawl.org/about",
-      "title": "https://www.commoncrawl.org/about",
+      "id": "b1088cf61f6de673b6b9",
+      "url": "https://www.w3.org/1999/04/Editing/01",
+      "title": "https://www.w3.org/1999/04/Editing/01",
       "source": "Common Crawl CC-MAIN-2026-39",
       "kind": "commoncrawl",
-      "observed_at": "20260910162035"
+      "observed_at": "20260914154626"
     },
     {
-      "id": "24d2c7a9344d3f2e483c",
-      "url": "https://commoncrawl.org/about",
-      "title": "https://commoncrawl.org/about",
+      "id": "e12ca207f58f5f94b8e2",
+      "url": "https://www.w3.org/1999/05/XFA/xfa-template-19990614",
+      "title": "https://www.w3.org/1999/05/XFA/xfa-template-19990614",
       "source": "Common Crawl CC-MAIN-2026-39",
       "kind": "commoncrawl",
-      "observed_at": "20260912081042"
+      "observed_at": "20260914154825"
+    },
+    {
+      "id": "042f0d605ecedea64663",
+      "url": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html",
+      "title": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260915122856"
+    },
+    {
+      "id": "cfebc7a54430f2c01b38",
+      "url": "https://www.w3.org/1999/07/NOTE-annot-19990710/",
+      "title": "https://www.w3.org/1999/07/NOTE-annot-19990710/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916085138"
+    },
+    {
+      "id": "081b8d46830819ed08d5",
+      "url": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "title": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908184622"
+    },
+    {
+      "id": "4b2a14c2bf6dedad3c75",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260909170045"
+    },
+    {
+      "id": "d2d9271bc18ca0e03fdf",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916072029"
+    },
+    {
+      "id": "4851f435a9745385d942",
+      "url": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804",
+      "title": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916062356"
+    },
+    {
+      "id": "ead1b47ce9b6a79e0c70",
+      "url": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html",
+      "title": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260914171733"
+    },
+    {
+      "id": "fd8e46599f3ffb4655a9",
+      "url": "https://www.w3.org/1999/11/11-WWWProposal/",
+      "title": "https://www.w3.org/1999/11/11-WWWProposal/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260906002400"
+    },
+    {
+      "id": "fae2f20531a2dbd87d00",
+      "url": "https://www.w3.org/1999/11/AU-review-comments",
+      "title": "https://www.w3.org/1999/11/AU-review-comments",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910130708"
+    },
+    {
+      "id": "bd18c9996c59ea760df3",
+      "url": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru",
+      "title": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260914235414"
+    },
+    {
+      "id": "28bacb8b68411b9d1690",
+      "url": "https://arxiv.org/",
+      "title": "https://arxiv.org/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260913044913"
+    },
+    {
+      "id": "71c64942e0e1d2ff5b2c",
+      "url": "https://arxiv.org/?utm_source=startupspells&utm_medium=referral&utm_campaign=1-5m-text-to-music-ai-saas-growth-playbook",
+      "title": "https://arxiv.org/?utm_source=startupspells&utm_medium=referral&utm_campaign=1-5m-text-to-music-ai-saas-growth-playbook",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260915091813"
+    },
+    {
+      "id": "383ada9ef01252be4bfe",
+      "url": "https://arxiv.org/a/0000-0001-6773-0399.html",
+      "title": "https://arxiv.org/a/0000-0001-6773-0399.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260915160659"
+    },
+    {
+      "id": "ebc78b5cf1317c72a850",
+      "url": "https://arxiv.org/a/0000-0001-7293-3385.html",
+      "title": "https://arxiv.org/a/0000-0001-7293-3385.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260914163132"
+    },
+    {
+      "id": "a7b92c7987394947c93e",
+      "url": "https://arxiv.org/a/0000-0002-2311-4241.html",
+      "title": "https://arxiv.org/a/0000-0002-2311-4241.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908001923"
+    },
+    {
+      "id": "88b742f23d4dac3b1609",
+      "url": "https://arxiv.org/a/0000-0002-6767-921X.html",
+      "title": "https://arxiv.org/a/0000-0002-6767-921X.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916221449"
+    },
+    {
+      "id": "871b66766e122093cb25",
+      "url": "https://arxiv.org/a/0000-0002-7330-2718.html",
+      "title": "https://arxiv.org/a/0000-0002-7330-2718.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908122212"
+    },
+    {
+      "id": "bb94060882924fbc95da",
+      "url": "https://arxiv.org/a/abbott_a_1.html",
+      "title": "https://arxiv.org/a/abbott_a_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260911075851"
+    },
+    {
+      "id": "7711891c7c9aa677bbe7",
+      "url": "https://arxiv.org/a/achab_m_1.html",
+      "title": "https://arxiv.org/a/achab_m_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260907115034"
+    },
+    {
+      "id": "bc3502d37f8cbcbb18d6",
+      "url": "https://arxiv.org/a/akinshin_a_1.html",
+      "title": "https://arxiv.org/a/akinshin_a_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908205858"
+    },
+    {
+      "id": "76395bf328bc5704366e",
+      "url": "https://arxiv.org/a/albers_p_1.html",
+      "title": "https://arxiv.org/a/albers_p_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260912082737"
+    },
+    {
+      "id": "a38cb76a7a3e0f29557e",
+      "url": "https://arxiv.org/a/alekseev_v_1.html",
+      "title": "https://arxiv.org/a/alekseev_v_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260914022739"
+    },
+    {
+      "id": "8606c3d90128649d1035",
+      "url": "https://arxiv.org/a/allamanis_m_1.html",
+      "title": "https://arxiv.org/a/allamanis_m_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910015558"
+    },
+    {
+      "id": "2447a46c2a95e5501cc0",
+      "url": "http://arxiv.org/a/almeidalessa_l_1.atom",
+      "title": "http://arxiv.org/a/almeidalessa_l_1.atom",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910050257"
+    },
+    {
+      "id": "50c82f212a387a65e781",
+      "url": "https://arxiv.org/a/almeidalessa_l_1.html",
+      "title": "https://arxiv.org/a/almeidalessa_l_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916202920"
+    },
+    {
+      "id": "df9e3636d5e4a064b210",
+      "url": "https://arxiv.org/a/arakawa_k_1.html",
+      "title": "https://arxiv.org/a/arakawa_k_1.html",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260906071943"
     }
   ]
 }
