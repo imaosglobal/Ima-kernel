@@ -260,6 +260,18 @@
         "world_knowledge_ingestion",
         "device_game_ecosystem_integration"
       ]
+    },
+    {
+      "id": "ima_mcp_distribution",
+      "provider": "IMA",
+      "status": "implemented_deployment_pending_verification",
+      "capabilities": [
+        "portable_mcp_gateway",
+        "chatgpt_codex_distribution_package",
+        "cross_ai_interoperability",
+        "opt_in_distribution",
+        "public_capability_status"
+      ]
     }
   ],
   "routing": {
@@ -370,6 +382,17 @@
       "tinyfish",
       "github",
       "dropbox"
+    ],
+    "universal_distribution": [
+      "ima_mcp_distribution",
+      "github",
+      "render",
+      "plugin_management"
+    ],
+    "ai_interoperability": [
+      "ima_mcp_distribution",
+      "github",
+      "plugin_management"
     ]
   }
 }
