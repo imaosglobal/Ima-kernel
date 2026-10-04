@@ -264,14 +264,31 @@
     {
       "id": "ima_mcp_distribution",
       "provider": "IMA",
-      "status": "implemented_deployment_pending_verification",
+      "status": "deployed_public_endpoints_verified_mcp_protocol_pending",
       "capabilities": [
         "portable_mcp_gateway",
         "chatgpt_codex_distribution_package",
         "cross_ai_interoperability",
         "opt_in_distribution",
         "public_capability_status"
-      ]
+      ],
+      "verification": {
+        "deployment": "dep-db16bb3tqb8s7390hn70",
+        "commit": "07b7184d5e359324f943e4aa8be1956380d7aa35",
+        "verified_public_endpoints": [
+          "https://ima-server-1ptk.onrender.com/health",
+          "https://ima-server-1ptk.onrender.com/",
+          "https://ima-server-1ptk.onrender.com/privacy",
+          "https://ima-server-1ptk.onrender.com/terms",
+          "https://ima-server-1ptk.onrender.com/support"
+        ],
+        "remaining": [
+          "MCP protocol initialize/tools/list test",
+          "OpenAI challenge token",
+          "provider review/publication",
+          "demo recording"
+        ]
+      }
     }
   ],
   "routing": {
