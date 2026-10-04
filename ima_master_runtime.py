@@ -34,6 +34,19 @@ class IMAMaster:
 
     def ask(self, message, user_id="default", public=False, public_memory=None):
         context = identity_context.build_context(message, public=public)
+        capability_runtime = None
+        try:
+            import importlib.util
+            from pathlib import Path
+            runtime_path = Path(__file__).resolve().parent / ".ima" / "plugins" / "capability_runtime.py"
+            spec = importlib.util.spec_from_file_location("ima_capability_runtime_master", runtime_path)
+            if spec is not None and spec.loader is not None:
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                capability_runtime = module.snapshot()
+        except Exception:
+            capability_runtime = None
+
         result = {
             "time": time.time(),
             "identity": context.get("identity", {}),
@@ -42,6 +55,8 @@ class IMAMaster:
             "message": message,
             "connections": {
                 "identity": True, "memory": True, "brain": True, "mother": True,
+                "capability_registry": capability_runtime is not None,
+                "capability_runtime": capability_runtime,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
