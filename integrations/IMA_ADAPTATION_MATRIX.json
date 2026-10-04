@@ -1,0 +1,84 @@
+{
+  "schema": "IMA-ADAPTATION-MATRIX-1.0",
+  "purpose": "Continuously study proven patterns across products, platforms and domains, then adapt only patterns that improve IMA under verification.",
+  "rule": "Learn broadly; copy nothing blindly; preserve IMA identity, privacy, provenance, safety and human-centered principles.",
+  "dimensions": [
+    [
+      "interface",
+      "navigation, hierarchy, command surfaces, responsive behavior, progressive disclosure"
+    ],
+    [
+      "conversation",
+      "context, streaming, citations, editing, recovery, memory boundaries"
+    ],
+    [
+      "agent",
+      "transparent steps, previews, stop/edit controls, permissions, audit trail"
+    ],
+    [
+      "accessibility",
+      "keyboard, screen reader, zoom, reduced motion, touch targets, adaptive UI"
+    ],
+    [
+      "multimodal",
+      "voice, image, video, 3D, gesture, device continuity"
+    ],
+    [
+      "learning",
+      "discovery, evidence, comparison, experiments, regression tests, provenance"
+    ],
+    [
+      "memory",
+      "personal/shared separation, consent, retention, retrieval, correction"
+    ],
+    [
+      "trust",
+      "capability truth, status, uncertainty, source quality, failure visibility"
+    ],
+    [
+      "performance",
+      "latency, caching, incremental loading, bundle size, offline/fallback"
+    ],
+    [
+      "security",
+      "least privilege, auth boundaries, secret handling, prompt/tool safety"
+    ],
+    [
+      "developer experience",
+      "tests, contracts, observability, deployment, rollback, documentation"
+    ],
+    [
+      "growth",
+      "onboarding, sharing, localization, discovery, ethical monetization"
+    ],
+    [
+      "embodiment",
+      "avatar behavior, presence, voice, identity consistency, device portability"
+    ]
+  ],
+  "sources": {
+    "web_intelligence": "IMA Global Web Intelligence discovery layer",
+    "ux_evidence": [
+      "W3C ARIA practices",
+      "Google Natively Adaptive Interfaces",
+      "GitHub Primer progressive disclosure",
+      "public AI-agent UX research"
+    ],
+    "internal": [
+      "capability registry",
+      "continuous health",
+      "deployment smoke tests",
+      "learning gaps",
+      "journal"
+    ]
+  },
+  "acceptance": [
+    "Measurable improvement or clear reduction in friction/risk",
+    "Accessible on mobile and desktop where applicable",
+    "Does not expose private user data",
+    "Does not turn plans into claimed capabilities",
+    "Has tests or an explicit verification method",
+    "Keeps provenance and records rejected alternatives",
+    "Preserves IMA identity rather than cloning another product"
+  ]
+}
