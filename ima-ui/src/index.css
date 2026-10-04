@@ -235,3 +235,22 @@ nav{color:#74685f}.live-pill{background:rgba(255,252,248,.82);border-color:#d9ce
 .global-language-links a{background:rgba(255,251,247,.72);border-color:#d9cec4;color:#6b6058}
 footer{border-top-color:#d9cec4;color:#81766e}
 @media(max-width:900px){.topbar{background:rgba(247,242,236,.9)}}
+
+
+/* Adaptive interaction layer — evidence-informed */
+.command-trigger{border:1px solid #d9cec4;background:rgba(255,251,247,.82);color:#5f554d;border-radius:999px;padding:8px 12px;font-size:11px;cursor:pointer}
+.command-trigger:hover,.command-trigger:focus-visible{border-color:#9d7055;outline:3px solid rgba(157,112,85,.14)}
+.palette-backdrop{position:fixed;inset:0;z-index:100;background:rgba(35,27,22,.28);backdrop-filter:blur(8px);display:grid;place-items:start center;padding:12vh 18px 24px}
+.command-palette{width:min(680px,100%);background:#fffaf6;border:1px solid #d9cec4;border-radius:24px;box-shadow:0 35px 100px rgba(55,40,30,.25);padding:14px}
+.palette-head{display:flex;align-items:center;justify-content:space-between;padding:6px 6px 12px}
+.palette-head strong{font-size:16px}
+.palette-head button{border:0;background:transparent;font-size:24px;color:#756b63}
+.command-palette>input{width:100%;border:1px solid #d9cec4;background:#f8f1eb;border-radius:15px;padding:13px 15px;outline:none;color:#332b27}
+.command-palette>input:focus{border-color:#9d7055;box-shadow:0 0 0 3px rgba(157,112,85,.12)}
+.palette-results{display:grid;gap:6px;margin-top:10px}
+.palette-results button{display:flex;align-items:center;gap:12px;text-align:right;border:1px solid transparent;background:transparent;border-radius:14px;padding:12px;color:#403630}
+.palette-results button:hover,.palette-results button:focus-visible{background:#f2e8df;border-color:#dfd0c4;outline:none}
+.palette-results button span{display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#eaded4;color:#765746;font-size:11px}
+.command-palette small{display:block;color:#8a7d74;line-height:1.6;padding:10px 5px 3px}
+@media(max-width:700px){.command-trigger{display:none}.palette-backdrop{padding:7vh 10px 16px}.command-palette{border-radius:20px}.palette-results button{padding:14px 10px}}
+@media(prefers-reduced-motion:reduce){.palette-backdrop{backdrop-filter:none}}
