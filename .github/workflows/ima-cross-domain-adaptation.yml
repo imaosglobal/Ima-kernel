@@ -1,0 +1,37 @@
+name: IMA Cross-Domain Adaptation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-cross-domain-adaptation
+  cancel-in-progress: true
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate adaptation system
+        run: |
+          python -m unittest tests/test_adaptation_evaluator.py -v
+          python .ima/web_intelligence/adaptation_evaluator.py > /tmp/ima-adaptation.json
+      - name: Persist evidence
+        run: |
+          mkdir -p artifacts/web-intelligence
+          cp /tmp/ima-adaptation.json artifacts/web-intelligence/adaptation-state.json
+          git add .ima/web_intelligence/adaptation_state.json artifacts/web-intelligence/adaptation-state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "IMA Adaptation Steward"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "chore: refresh cross-domain adaptation state"
+          git push
