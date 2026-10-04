@@ -1,5 +1,6 @@
 import unittest
 from datetime import datetime, timezone
+from pathlib import Path
 
 from .capability_factory import (
     CapabilityAdapter, CapabilityEvidence, CapabilityGap,
