@@ -2,6 +2,10 @@ name: IMA Cross-Domain Adaptation
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "artifacts/web-intelligence/adaptation-state.json"
   schedule:
     - cron: "37 */6 * * *"
 
