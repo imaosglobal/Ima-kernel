@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Capability Graph",
+  "purpose": "Connect knowledge, models, engines, devices, world systems and user experiences through capabilities rather than vendor names.",
+  "node_types": [
+    "knowledge",
+    "model",
+    "engine",
+    "game_engine",
+    "rendering",
+    "device",
+    "protocol",
+    "tool",
+    "human_skill",
+    "world_component",
+    "experience"
+  ],
+  "edge_types": [
+    "enables",
+    "improves",
+    "depends_on",
+    "compatible_with",
+    "replaces",
+    "complements",
+    "verified_by",
+    "learned_from"
+  ],
+  "routing": {
+    "select_by_capability_first": true,
+    "vendor_is_secondary": true,
+    "allow_composition": true,
+    "per_user_per_request": true
+  },
+  "world": {
+    "experiences_can_be_composed": ["conversation","game","story","simulation","creation","education","tool","social","research","media"],
+    "persistent_ima_character": true,
+    "persistent_world_state": true
+  }
+}
