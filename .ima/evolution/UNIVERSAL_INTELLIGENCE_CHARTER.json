@@ -21,13 +21,24 @@
     "culture_and_languages",
     "business_and_industry",
     "public_web_knowledge",
-    "verified_connected_tools"
+    "verified_connected_tools",
+    "multimodal_media",
+    "edge_devices",
+    "wearables",
+    "smart_infrastructure",
+    "smart_cities",
+    "earth_systems",
+    "space_systems",
+    "human_expertise",
+    "distributed_and_federated_sources"
   ],
   "learning_loop": [
     "discover",
     "classify",
     "cross_check",
     "extract_capability",
+    "normalize_source",
+    "distribute_learning_plan",
     "benchmark",
     "integrate",
     "verify",
@@ -46,8 +57,26 @@
   },
   "optimization": {
     "objective": "maximize verified usefulness across people, domains and modalities",
-    "dimensions": ["accuracy","reasoning","creativity","adaptability","accessibility","latency","cost","safety","reproducibility","human_value"],
+    "dimensions": [
+      "accuracy",
+      "reasoning",
+      "creativity",
+      "adaptability",
+      "accessibility",
+      "latency",
+      "cost",
+      "safety",
+      "reproducibility",
+      "human_value"
+    ],
     "multi_engine_composition": true,
     "continuous_benchmarking": true
+  },
+  "distribution": {
+    "device_edge_fog_cloud_peer_human": true,
+    "raw_data_stays_at_source_by_default": true,
+    "authorized_derived_knowledge_only": true,
+    "federated_learning_candidate": true,
+    "federated_unlearning_candidate": true
   }
 }
