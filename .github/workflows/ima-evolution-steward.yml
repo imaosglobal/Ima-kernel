@@ -1,0 +1,34 @@
+name: IMA Evolution Steward
+
+on:
+  schedule:
+    - cron: "41 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Reconcile universal intelligence state
+        run: python .ima/evolution/EVOLUTION_CONTROLLER.py
+      - name: Validate JSON and Python
+        run: |
+          python -m json.tool .ima/evolution/UNIVERSAL_INTELLIGENCE_CHARTER.json >/dev/null
+          python -m json.tool .ima/evolution/CAPABILITY_GRAPH.json >/dev/null
+          python -m py_compile .ima/evolution/EVOLUTION_CONTROLLER.py
+      - name: Commit evolution state
+        run: |
+          git config user.name "IMA Evolution Steward"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "IMA_EVOLUTION=UNCHANGED"
+          else
+            git add .ima/evolution/STATE.json
+            git commit -m "chore: update IMA evolution state"
+            git push
+          fi
