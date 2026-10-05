@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Source Adapter Contract",
+  "purpose": "Uniform interface for adding new source families without changing IMA core identity.",
+  "adapter_lifecycle": ["discover", "describe", "authorize", "sample", "normalize", "cross_check", "benchmark", "publish_derived_knowledge", "reassess", "retire"],
+  "source_families": {
+    "human": ["expert", "teacher", "artist", "engineer", "community", "institution"],
+    "knowledge": ["book", "paper", "patent", "standard", "archive", "dataset"],
+    "media": ["article", "web_page", "video", "image", "audio", "podcast", "game"],
+    "software": ["repository", "package", "api", "model", "agent", "runtime"],
+    "physical": ["sensor", "wearable", "robot", "vehicle", "traffic_system", "building", "factory", "city", "laboratory"],
+    "planetary": ["earth_system", "weather", "ocean", "climate", "geospatial"],
+    "space": ["satellite", "telescope", "spacecraft", "station", "planetary_system", "deep_space"],
+    "future": ["emerging_technology", "research_prototype", "speculative_candidate"]
+  },
+  "adapter_requirements": {
+    "provider_neutral": true,
+    "credentials_never_persisted_in_repo": true,
+    "permission_boundary_explicit": true,
+    "truth_state_explicit": true,
+    "provenance_explicit": true,
+    "failure_isolated": true,
+    "source_can_be_added_without_core_changes": true
+  }
+}
