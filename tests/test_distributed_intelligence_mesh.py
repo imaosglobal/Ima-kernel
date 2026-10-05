@@ -17,14 +17,22 @@ def test_mesh_contracts_are_valid():
 
 def test_world_router_is_capability_first():
     sys.path.insert(0, str(ROOT))
-    from .ima.runtime.world_router import route
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("world_router", ROOT / ".ima/runtime/world_router.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    route = module.route
     result = route({"intent": "create an image"})
     assert result["capability_first"] is True
     assert result["truth_state"] == "routing_plan_only"
 
 def test_mesh_rejects_unauthorized_source():
     sys.path.insert(0, str(ROOT))
-    from .ima.runtime.distributed_knowledge_mesh import SourceObservation, plan_learning
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("mesh", ROOT / ".ima/runtime/distributed_knowledge_mesh.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    SourceObservation, plan_learning = module.SourceObservation, module.plan_learning
     item = SourceObservation("x", "sensor", "transport", "telemetry", "2026-10-06", "observed", {"source": "test"}, False)
     result = plan_learning(item)
     assert result.safe_to_integrate is False
