@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Distributed Knowledge Mesh",
+  "purpose": "Distribute IMA's learning surface across heterogeneous human, digital, physical and future sources without requiring raw source data to leave its owner.",
+  "scope": {
+    "sources": [
+      "books", "papers", "standards", "patents", "archives", "web_pages", "news",
+      "videos", "images", "audio", "music", "podcasts", "games", "software",
+      "open_source", "datasets", "models", "devices", "wearables", "phones",
+      "computers", "robots", "vehicles", "traffic_lights", "smart_buildings",
+      "smart_homes", "smart_cities", "smart_infrastructure", "industrial_systems",
+      "laboratories", "space_systems", "telescopes", "satellites", "sensors",
+      "human_experts", "communities", "educational_systems", "cultural_records"
+    ],
+    "domains": "open_world_domain_taxonomy; expand whenever a new domain is discovered",
+    "time": ["historical", "current", "emerging", "future_when_evidence_exists"]
+  },
+  "modalities": ["text", "image", "video", "audio", "speech", "sensor", "telemetry", "code", "structured_data", "3d", "interaction"],
+  "distribution": {
+    "architecture": ["device", "edge", "fog", "cloud", "peer", "human"],
+    "raw_data_stays_at_source_by_default": true,
+    "share_only_authorized_derived_knowledge": true,
+    "federated_learning_candidate": true,
+    "federated_unlearning_candidate": true,
+    "offline_first_learning_candidate": true,
+    "zero_trust_source_boundary": true
+  },
+  "knowledge_unit": {
+    "required": ["source_id", "source_type", "domain", "modality", "observed_at", "provenance", "truth_state"],
+    "truth_states": ["observed", "reported", "inferred", "verified", "disputed", "unknown", "retired"],
+    "provenance_required": true,
+    "source_ownership_and_permissions_required": true
+  },
+  "learning_policy": {
+    "discover": true,
+    "classify": true,
+    "cross_check": true,
+    "extract_capability": true,
+    "benchmark": true,
+    "integrate": true,
+    "verify": true,
+    "record_provenance": true,
+    "reassess": true,
+    "never_treat_discovery_as_truth": true,
+    "never_ingest_private_data_without_authorization": true,
+    "never_claim_future_knowledge_as_current_fact": true
+  }
+}
