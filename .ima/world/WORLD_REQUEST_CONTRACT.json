@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Universal World Request Contract",
+  "input": {
+    "intent": "string",
+    "user_context": "object",
+    "requested_change": "object",
+    "medium": "optional string",
+    "constraints": "optional object"
+  },
+  "pipeline": [
+    "understand",
+    "personalize",
+    "select_capabilities",
+    "compose_world_or_response",
+    "generate",
+    "verify",
+    "present",
+    "learn_from_explicit_feedback"
+  ],
+  "outputs": {
+    "world_state": "versioned object",
+    "experience": "game|scene|story|tool|conversation|creation|other",
+    "provenance": "required",
+    "verification": "required"
+  },
+  "rule": "A game is one experience mode inside IMA, not a separate identity."
+}
