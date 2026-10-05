@@ -39,3 +39,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git commit -m "chore: refresh cross-domain adaptation state"
           git push
+
+# Verification trigger: execute on the repaired workflow definition.
