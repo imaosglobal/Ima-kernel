@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Provider-neutral map for game/world runtime capabilities.",
+  "capabilities": {
+    "interactive_3d": ["webgpu","threejs","godot","unity","unreal"],
+    "2d_gameplay": ["web","canvas","godot","unity"],
+    "physics": ["godot","unity","unreal","webgpu"],
+    "large_world_streaming": ["unreal","unity","webgpu"],
+    "character_animation": ["unreal","unity","godot","threejs"],
+    "procedural_worlds": ["godot","unity","unreal","webgpu"],
+    "browser_delivery": ["webgpu","threejs","canvas"],
+    "native_delivery": ["godot","unity","unreal"],
+    "ai_content_generation": ["ima_engine_registry"],
+    "upscaling_and_frame_generation": ["dlss_when_supported","platform_equivalent_when_supported"]
+  },
+  "truth_rule": "Listing a capability does not mean the provider is connected or the user's device supports it; runtime verification is mandatory."
+}
