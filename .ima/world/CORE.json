@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Living World Core",
+  "identity": "IMA — אמא, by Ori Cohen",
+  "principle": "One IMA core, infinitely adaptable experiences.",
+  "modes": ["conversation","game","story","creation","learning","simulation","world","tool","device","future"],
+  "world_is_inside_ima": true,
+  "ima_is_playable_character": true,
+  "every_request_is_a_possible_world_entry": true,
+  "personalization": {
+    "scope": "per_user_per_request",
+    "dimensions": ["language","culture","accessibility","age_appropriate_presentation","style","pace","difficulty","interests","memory","time","place","events","device","medium"],
+    "core_identity_immutable": true
+  },
+  "composition": {
+    "engines": "capability_registry",
+    "game_engines": ["webgpu","threejs","godot","unity","unreal"],
+    "generation": ["image","video","audio","speech","music","3d","text","code"],
+    "future_engines": "discover_stage_verify_benchmark_route_reassess"
+  },
+  "interaction": {
+    "ima_character": "persistent",
+    "world_can_change_live": true,
+    "games_can_exist_inside_world": true,
+    "games_can_be_created_per_request": true,
+    "non_game_requests_remain_first_class": true
+  },
+  "safety": {
+    "truth_states_required": true,
+    "provider_secrets_in_core": false,
+    "external_actions_require_authorization": true,
+    "provenance_required_for_generated_assets": true
+  }
+}
