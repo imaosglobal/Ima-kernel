@@ -1,0 +1,29 @@
+name: IMA Engine Discovery
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Reconcile engine registry
+        run: python learning/engine_discovery.py
+      - name: Commit registry changes
+        run: |
+          git config user.name "IMA Engine Steward"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "IMA_ENGINE_REGISTRY=UNCHANGED"
+          else
+            git add .ima/engines/REGISTRY.json .ima/engines/DISCOVERY_STATE.json
+            git commit -m "chore: reconcile adaptive engine registry"
+            git push
+          fi
