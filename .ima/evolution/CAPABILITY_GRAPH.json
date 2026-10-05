@@ -13,7 +13,12 @@
     "tool",
     "human_skill",
     "world_component",
-    "experience"
+    "experience",
+    "source",
+    "sensor",
+    "infrastructure",
+    "human",
+    "domain"
   ],
   "edge_types": [
     "enables",
@@ -23,7 +28,12 @@
     "replaces",
     "complements",
     "verified_by",
-    "learned_from"
+    "learned_from",
+    "observes",
+    "located_at",
+    "authorized_by",
+    "derived_from",
+    "contradicts"
   ],
   "routing": {
     "select_by_capability_first": true,
@@ -32,7 +42,18 @@
     "per_user_per_request": true
   },
   "world": {
-    "experiences_can_be_composed": ["conversation","game","story","simulation","creation","education","tool","social","research","media"],
+    "experiences_can_be_composed": [
+      "conversation",
+      "game",
+      "story",
+      "simulation",
+      "creation",
+      "education",
+      "tool",
+      "social",
+      "research",
+      "media"
+    ],
     "persistent_ima_character": true,
     "persistent_world_state": true
   }
