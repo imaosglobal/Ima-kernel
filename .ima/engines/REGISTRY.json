@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Adaptive Engine Registry",
+  "purpose": "Provider-neutral registry for continuously discovered generative engines used to build IMA's personalized interactive world.",
+  "policy": {
+    "discover_automatically": true,
+    "stage_new_engines_automatically": true,
+    "auto_connect_external_provider": false,
+    "require_verified_capability_before_runtime_use": true,
+    "never_store_provider_secrets": true,
+    "preserve_core_identity": true,
+    "personalization": "per_user_per_request",
+    "continuous_reassessment": true
+  },
+  "requested_aliases": {
+    "dsll5": {
+      "requested_by_founder": true,
+      "status": "unverified_name",
+      "note": "No verified AI engine named DSLL5/DALL-E 5 was found. Current OpenAI image-generation line is GPT Image 2.5."
+    }
+  },
+  "verified_or_connected_engines": [
+    {
+      "id": "openai_gpt_image_2_5",
+      "provider": "OpenAI",
+      "family": "image",
+      "capabilities": ["text_to_image", "image_editing", "reference_consistency"],
+      "status": "available_via_connected_runtime",
+      "selection_role": "precision_creative"
+    },
+    {
+      "id": "runway_seedream_5",
+      "provider": "Runway",
+      "family": "image",
+      "capabilities": ["text_to_image", "image_generation"],
+      "status": "discovered_available",
+      "selection_role": "high_fidelity_creative"
+    },
+    {
+      "id": "runway_nano_banana_pro",
+      "provider": "Runway",
+      "family": "image",
+      "capabilities": ["text_to_image", "editing", "compositing"],
+      "status": "discovered_available",
+      "selection_role": "reference_and_iteration"
+    },
+    {
+      "id": "runway_gen4",
+      "provider": "Runway",
+      "family": "image",
+      "capabilities": ["text_to_image"],
+      "status": "discovered_available",
+      "selection_role": "rapid_iteration"
+    },
+    {
+      "id": "openart",
+      "provider": "OpenArt",
+      "family": "creative",
+      "capabilities": ["image_generation", "video_generation"],
+      "status": "connected",
+      "selection_role": "creative_fallback"
+    }
+  ],
+  "future_engine_contract": {
+    "required_fields": ["id", "provider", "family", "capabilities", "status", "discovered_at"],
+    "lifecycle": ["discovered", "staged", "verified", "connected", "benchmarked", "routable", "reassessed", "retired"],
+    "promotion_rule": "verified_evidence_plus_successful_capability_test",
+    "routing_rule": "select_by_user_intent_context_capability_quality_latency_cost_accessibility_and_safety"
+  }
+}
