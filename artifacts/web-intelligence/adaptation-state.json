@@ -1,0 +1,8 @@
+{
+  "schema": "IMA-ADAPTATION-STATE-1.0",
+  "timestamp": "2026-10-05T18:14:59Z",
+  "dimensions": [],
+  "candidate_count": 0,
+  "discovery_last_run": null,
+  "rule": "observe -> compare -> prototype -> test -> verify -> adopt/reject -> record"
+}
