@@ -289,6 +289,16 @@
           "demo recording"
         ]
       }
+    },
+    {
+      "id": "nylas_candidate",
+      "provider": "Nylas",
+      "status": "candidate",
+      "capabilities": [
+        "email_transport",
+        "message_webhooks",
+        "signed_delivery"
+      ]
     }
   ],
   "routing": {
@@ -307,8 +317,8 @@
       "github"
     ],
     "email": [
-      "nylas_ima_runtime",
-      "mailbox"
+      "mailbox",
+      "nylas_candidate"
     ],
     "analytics": [
       "posthog"
@@ -330,7 +340,7 @@
       "canva",
       "openart",
       "heygen",
-      "higgsfield"
+      "higgsfield_candidate"
     ],
     "audio_music": [
       "runway"
@@ -343,8 +353,8 @@
       "runway",
       "openart",
       "heygen",
-      "descript",
-      "higgsfield"
+      "descript_candidate",
+      "higgsfield_candidate"
     ],
     "apps_and_websites": [
       "base44",
