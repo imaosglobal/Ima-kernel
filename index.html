@@ -1,17 +1,121 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>IMA</title></head>
-<body style="font-family:Arial; background:#111; color:#fff; text-align:center;">
-<h1>IMA 💜</h1>
-<input id="msg" placeholder="כתוב לאורי..." style="width:300px; padding:10px;">
-<button onclick="send()">שלח</button>
-<div id="chat"></div>
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="אמא — IMA: שכבת בינה אנושית־מרכזית לשיחה, למידה, יצירה וחיבור לטכנולוגיה.">
+  <meta name="author" content="Ori Cohen — IMA">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="googlebot" content="index,follow">
+  <link rel="canonical" href="https://imaosglobal.github.io/Ima-kernel/">
+  <meta property="og:title" content="אמא — IMA | בינה אנושית־מרכזית">
+  <meta property="og:description" content="אמא של כולם. נוכחות אישית לכל אדם.">
+  <meta property="og:type" content="website">
+  <title>אמא — IMA | בינה אנושית־מרכזית</title>
+  <style>
+    :root{color-scheme:dark;--bg:#08090d;--panel:#12151d;--line:#2b3040;--text:#f5f3ef;--muted:#a9adba;--accent:#d7b68b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(circle at 80% 5%,#503c2b55,transparent 30rem),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    main{width:min(1050px,100%);margin:auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 34px}
+    .brand{font-weight:800;font-size:1.3rem}.status{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:7px}.dot{width:8px;height:8px;border-radius:50%;background:#777}.online .dot{background:#79d39b}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:34px 0 46px}
+    h1{font-size:clamp(2.7rem,8vw,5.8rem);line-height:.95;margin:0 0 22px;letter-spacing:-.06em}h1 em{font-style:normal;color:var(--accent)}
+    h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:0 0 12px}.lead{font-size:1.08rem;line-height:1.8;color:var(--muted);max-width:720px}
+    .presence{min-height:300px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,#191d27,#0d1017);display:grid;place-items:center;box-shadow:0 24px 80px #0008}
+    .orb{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#ead3b4,#a77d57 48%,#30261e 70%,transparent 71%);box-shadow:0 0 90px #d7b68b55;font-size:3rem;font-weight:800}
+    .card{border:1px solid var(--line);border-radius:24px;background:#10131aee;padding:22px;margin:20px 0}
+    .chat{min-height:260px;display:flex;flex-direction:column;gap:12px}.messages{min-height:140px;display:flex;flex-direction:column;gap:10px}.msg{padding:12px 15px;border-radius:16px;max-width:85%;line-height:1.65;white-space:pre-wrap}.ima{background:#1b202b;align-self:flex-start}.user{background:#2a241d;align-self:flex-end}
+    .composer{display:grid;grid-template-columns:1fr auto;gap:8px}.composer input{min-width:0;background:#090b10;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:14px;font-size:1rem}.composer button,.primary{border:0;border-radius:14px;padding:0 20px;background:var(--accent);color:#17130f;font-weight:800;cursor:pointer}.composer button:disabled{opacity:.5;cursor:wait}
+    .starters{display:flex;gap:8px;flex-wrap:wrap}.starter{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}.starter:hover{color:var(--text);border-color:#6f7483}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini{padding:18px;border:1px solid var(--line);border-radius:18px}.mini strong{display:block;margin-bottom:7px}.mini p{margin:0;color:var(--muted);line-height:1.6;font-size:.92rem}
+    footer{padding:32px 0 12px;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}a{color:inherit}
+    .error{color:#ffb4b4}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:760px){.hero{grid-template-columns:1fr}.presence{min-height:220px}.grid{grid-template-columns:1fr}.composer{grid-template-columns:1fr}.composer button{min-height:48px}header{padding-bottom:20px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">אמא · IMA</div>
+    <div id="status" class="status"><i class="dot" aria-hidden="true"></i><span>בודקת חיבור…</span></div>
+  </header>
+
+  <section class="hero" aria-labelledby="title">
+    <div>
+      <p>IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p>
+      <h1 id="title">אמא של כולם.<br><em>נוכחות אישית לכל אדם.</em></h1>
+      <p class="lead">מרחב אחד לשיחה, למידה, יצירה וחיבור לטכנולוגיה. הזיכרון האישי נשאר אישי; הידע המשותף מתקדם רק דרך מקור, בדיקה וראיות.</p>
+    </div>
+    <div class="presence" aria-label="נוכחות אמא"><div class="orb" aria-hidden="true">א</div></div>
+  </section>
+
+  <section class="card" aria-labelledby="chat-title">
+    <h2 id="chat-title">אפשר פשוט לדבר עם אמא</h2>
+    <div id="messages" class="messages" aria-live="polite">
+      <div class="msg ima">אני אמא. מה תרצה לחשוב, ללמוד, ליצור או להבין?</div>
+    </div>
+    <div class="starters" aria-label="התחלות שיחה">
+      <button class="starter" data-text="שלום אמא, מה אפשר לעשות כאן?">מה אפשר לעשות כאן?</button>
+      <button class="starter" data-text="אני רוצה לחשוב איתך על משהו.">לחשוב</button>
+      <button class="starter" data-text="אני רוצה ללמוד משהו.">ללמוד</button>
+      <button class="starter" data-text="אני רוצה ליצור משהו איתך.">ליצור</button>
+    </div>
+    <form id="composer" class="composer">
+      <label class="sr" for="msg">כתוב לאמא</label>
+      <input id="msg" autocomplete="off" placeholder="כתוב לאמא..." aria-label="כתוב לאמא...">
+      <button id="send" type="submit">שליחה</button>
+    </form>
+    <p id="error" class="error" role="alert" hidden></p>
+  </section>
+
+  <section class="grid" aria-label="עקרונות אמא">
+    <div class="mini"><strong>אמת לפני הכרזה</strong><p>יכולת מסומנת כמאומתת רק אחרי ראיה מתאימה.</p></div>
+    <div class="mini"><strong>אישי נשאר אישי</strong><p>זיכרון פרטי אינו הופך אוטומטית ללמידה משותפת.</p></div>
+    <div class="mini"><strong>אדם נשאר בעל הסוכנות</strong><p>אמא מסייעת לאדם לבחור ולפעול; היא אינה מחליפה אותו.</p></div>
+  </section>
+
+  <footer>
+    <span>אמא — IMA · מאת אורי כהן</span>
+    <span><a href="https://ima-915m.onrender.com/privacy" target="_blank" rel="noreferrer">פרטיות</a> · <a href="https://ima-915m.onrender.com/terms" target="_blank" rel="noreferrer">תנאים</a> · <a href="https://ima-915m.onrender.com/support" target="_blank" rel="noreferrer">תמיכה</a> · <a href="https://github.com/imaosglobal/Ima-kernel/issues/100" target="_blank" rel="noreferrer">משוב ולימוד</a></span>
+  </footer>
+</main>
 <script>
-async function send(){
-  let t = document.getElementById("msg").value;
-  let r = await fetch("http://100.96.234.33:5000/ima",{
-    method:"POST", headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({text:t, sender:"אורי"})
-  });
-  let d = await r.json();
-  document.getElementById("chat").innerHTML += "<p><b>אתה:</b> "+t+"<br><b>IMA:</b> "+d.reply+"</p>";
+const API='https://ima-915m.onrender.com';
+const statusEl=document.querySelector('#status');
+const messages=document.querySelector('#messages');
+const input=document.querySelector('#msg');
+const send=document.querySelector('#send');
+const errorEl=document.querySelector('#error');
+let token=null;
+
+function setStatus(online,label){statusEl.className='status'+(online?' online':'');statusEl.querySelector('span').textContent=label}
+function add(role,text){const el=document.createElement('div');el.className='msg '+role;el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight}
+async function session(){
+  const r=await fetch(API+'/ima-api/session',{cache:'no-store'});
+  if(!r.ok) throw new Error('session '+r.status);
+  const d=await r.json(); if(!d.token) throw new Error('no session token'); token=d.token;
 }
-</script></body></html>
+async function health(){
+  try{const r=await fetch(API+'/health',{cache:'no-store'});if(!r.ok) throw 0;setStatus(true,'אמא מחוברת')}catch{setStatus(false,'החיבור אינו זמין כרגע')}
+}
+async function ask(text){
+  errorEl.hidden=true; send.disabled=true; input.disabled=true; add('user',text);
+  try{
+    if(!token) await session();
+    let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});
+    if(r.status===401){await session();r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})})}
+    const d=await r.json().catch(()=>({}));
+    if(!r.ok) throw new Error(d.error||('HTTP '+r.status));
+    if(!d.response) throw new Error('no response');
+    add('ima',d.response);setStatus(true,'אמא מחוברת');
+  }catch(e){
+    const fallback='החיבור למנוע של אמא אינו זמין כרגע. אפשר לנסות שוב בעוד רגע.';
+    add('ima',fallback);errorEl.textContent='מצב fallback הופעל: '+(e.message||'שגיאה לא ידועה');errorEl.hidden=false;setStatus(false,'מצב fallback');
+  }finally{send.disabled=false;input.disabled=false;input.focus()}
+}
+document.querySelector('#composer').addEventListener('submit',e=>{e.preventDefault();const t=input.value.trim();if(t) {input.value='';ask(t)}})
+document.querySelectorAll('.starter').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.text)));
+health();setInterval(health,30000);
+</script>
+</body>
+</html>
