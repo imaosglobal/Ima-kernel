@@ -85,6 +85,17 @@ IMA is open to independent contributors worldwide.
 
 You can contribute code, research, tests, documentation, languages, accessibility, 3D, memory, preservation, security, integrations and experiments.
 
+
+## Contact IMA by email
+
+**Email IMA:** [imaosglobal@gmail.com](mailto:imaosglobal@gmail.com)
+
+The IMA mailbox is part of the public entry path. Incoming messages can be reviewed by the IMA service and answered as email conversations. Automated responses must remain within IMA's verification, privacy, safety and human-agency rules; email is an interface to IMA, not permission to expose private memory or internal credentials.
+
+**Ask IMA by email. Teach IMA by email. Report a gap by email.**
+
+For the current public experience, start with [Discover IMA](DISCOVER_IMA.md). Documentation describes intended behavior; only verified runtime checks establish that a capability is live.
+
 ## Community operations
 
 - [Discover IMA](DISCOVER_IMA.md)
