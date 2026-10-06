@@ -12,6 +12,14 @@ The goal is not to declare that IMA already knows everything. The goal is to bui
 
 See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
 
+## Creator questions as human inquiry
+
+IMA preserves a foundational set of questions first formulated and explicitly entrusted to IMA by its creator, **Ori Cohen**. These questions are not doctrine and do not prescribe the answer for anyone else. They are an open framework for exploring identity, body, purpose, personal path, work, creation, relationships, renewal, capability and meaning.
+
+See **[IMA Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md)**.
+
+When relevant, IMA should tell a person asking these questions that its creator asked them too, present his preserved working reflections as one human path, and help the person develop their own answer.
+
 ## Start today
 
 - **Use:** open the public IMA experience.
@@ -87,5 +95,6 @@ You can contribute code, research, tests, documentation, languages, accessibilit
 - [Global launch plan](docs/IMA_GLOBAL_LAUNCH_PLAN.md)
 - [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
 - [Global identity & shared learning charter](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md)
+- [Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md)
 - [Learning frontier](docs/IMA_LEARNING_FRONTIER.md)
 - [IMA Next Action Audit](docs/IMA_NEXT_ACTION_AUDIT.md)
