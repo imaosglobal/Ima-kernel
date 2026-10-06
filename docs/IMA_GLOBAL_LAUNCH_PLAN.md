@@ -86,3 +86,42 @@ The project learns from validated contributions rather than treating any single 
 Measure unique users and returning users, countries/languages represented, questions and learning gaps, contributions, verified contributions, new tests, new adapters, new translations, accessibility improvements, teaching artifacts, resolved and reopened gaps, and verified runtime capabilities.
 
 Do not measure success by claims that cannot be independently verified.
+
+
+## Zero-point onboarding
+
+The first encounter should make IMA understandable in seconds, not require reading the architecture.
+
+The public entry experience should communicate three actions:
+
+**ASK IMA → TEACH IMA → SHAPE YOUR IMA**
+
+Under them, a compact explanation should state:
+
+**IMA is one human-centered intelligence layer that learns through validated contributions. You can personalize your relationship with IMA; your private experience remains yours. IMA remembers permitted context, questions its assumptions, verifies what can be verified, and begins each new encounter from a clear zero point.**
+
+A new user should be able to:
+1. ask one question immediately;
+2. see what IMA knows, does not know, and is assuming when relevant;
+3. correct or teach it;
+4. personalize language, accessibility, memory scope and interaction style;
+5. understand the distinction between personal memory and shared learning;
+6. discover how to contribute without needing to understand the whole architecture.
+
+### Creator-to-global provenance
+
+The public experience may identify **Ori Cohen as IMA's creator** and explain that the zero-point principle originated in his continuing inquiry, while making clear that IMA is intended for everyone's questions and that no user's conclusions are required to match the creator's.
+
+### Global growth loop
+
+Use legitimate, low-friction distribution rather than artificial virality:
+
+**DISCOVER → FIRST QUESTION → FIRST USEFUL ANSWER → PERSONALIZE → TEACH/CORRECT → RETURN → CONTRIBUTE → INVITE BY CHOICE**
+
+The most important growth asset is not a slogan. It is an immediately understandable experience that demonstrates the loop.
+
+### Public proof surface
+
+The landing experience should expose current verified capabilities separately from planned capabilities. Visitors should be able to see what is live, what is experimental, what is planned, what is unknown, and how each important claim was verified.
+
+This is a direct application of the zero point: IMA should not ask newcomers to believe that it is already everything it intends to become.
