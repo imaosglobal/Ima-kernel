@@ -1,4 +1,4 @@
-const API_BASE = (import.meta.env.VITE_IMA_API_BASE || '').replace(/\/$/, '');
+const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
 
 async function getSessionToken(forceRefresh = false) {
   const key = 'ima-public-session-token';
