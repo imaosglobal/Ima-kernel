@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-05T18:21:27Z",
+  "timestamp": "2026-10-06T00:46:29Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 25,
+  "changed": 20,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,204 +29,164 @@
   },
   "items": [
     {
-      "id": "871b1228ab37b44b7c0c",
-      "url": "https://www.nasa.gov/image-article/nasa-astronaut-christina-koch-at-eagles-vs-rams/",
-      "title": "NASA Astronaut Christina Koch at Eagles vs. Rams",
+      "id": "4fdb28d7bb2823af19bc",
+      "url": "https://www.nasa.gov/news-release/nasa-to-stream-spacex-crew-12-return-splashdown-live/",
+      "title": "NASA to Stream SpaceX Crew-12 Return, Splashdown Live",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
+      "observed_at": "2026-10-06T00:45:57Z"
     },
     {
-      "id": "765a970371b92d31e8e0",
-      "url": "https://www.nasa.gov/image-article/nasa-testing-aims-at-supercooled-large-droplet-aviation-safety/",
-      "title": "NASA Testing Aims at Supercooled Large Droplet Aviation Safety",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "2a40ba055a44d196509c",
-      "url": "https://science.nasa.gov/missions/hubble/suspected-second-generation-planet-solves-nasa-hubble-cold-case/",
-      "title": "Suspected Second-generation Planet Solves NASA Hubble Cold Case",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "8c26b031cff235acd110",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-5-m104-the-sombrero-galaxys-tidal-streams/",
-      "title": "APOD: 2026 October 5 – M104: The Sombrero Galaxy’s Tidal Streams",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "e1514e913c3eba38cca6",
-      "url": "https://science.nasa.gov/earth/earth-observatory/moon-like-madagascar/",
-      "title": "Moon-Like Madagascar",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "9598ef10e2e425e75053",
-      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-lincoln-financial-field/",
-      "title": "NASA Astronaut Christina Koch at Eagles vs. Rams",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "6f397884428e9f0f14f3",
-      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
-      "title": "ReviewBench: An open benchmark for AI code review",
-      "source": "https://github.blog/feed/",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:17Z"
-    },
-    {
-      "id": "0bf65300a2ecec704f21",
-      "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
-      "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
+      "id": "df9e799a874b2dab7fc9",
+      "url": "https://edworkingpapers.com/ai26-1551",
+      "title": "AI Tutoring with Khanmigo in a Two-Year School Experiment",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
-      "id": "d55e7f73f4758dc1c9d3",
-      "url": "https://www.theguardian.com/world/2026/oct/05/russia-lab-worker-possibly-dies-of-plague-siberia-quarantine-measures-irkutsk",
-      "title": "US closely monitoring case of lab worker who possibly died of plague in Siberia",
+      "id": "bf97103a0a5568288535",
+      "url": "https://gwern.net/doc/design/2026-10-03-gwern-samon.html",
+      "title": "Samon: Designing a Zen Garden Raking Puzzle",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
-      "id": "514fa33e6f708f4f8a59",
-      "url": "https://openai.com/index/eu-text-provenance/",
-      "title": "Our approach to EU text provenance rules",
+      "id": "a8202a403e8e347d30ee",
+      "url": "https://lemire.me/blog/2026/10/05/ephemeral-testing/",
+      "title": "Ephemeral Testing",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
-      "id": "c80463b498b638db41a8",
-      "url": "https://onlys.ky/independence-is-interdependence/",
-      "title": "The future of independence is interdependence",
+      "id": "822fc398fb03ab8b8085",
+      "url": "https://armstr.ng/writing/worth-building",
+      "title": "Worth Building",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
-      "id": "ace1ee4742bc3165f1f4",
-      "url": "https://dosdays.co.uk/topics/Software/borland_turbo_basic.php",
-      "title": "Borland Turbo Basic",
+      "id": "3288015068afff415531",
+      "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+      "title": "Example.com Just Launched the Biggest Redesign in Decades",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
-      "id": "b735b9bc25842bcadb88",
-      "url": "https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/",
-      "title": "Making a GTK application in Haskell, part 1",
+      "id": "809cc06d80fad07e88fb",
+      "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
+      "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "67ec997cbcad0875f479",
+      "url": "https://globalsolaratlas.info/",
+      "title": "Global Solar Atlas: summary of solar power potential globally",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "16fba149e97bb8d441f4",
+      "url": "https://almostimplemented.github.io/jazz-pianist-style/",
+      "title": "Learning Jazz Pianist Style with Cross-Attention Conditioning",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "34024c94fb67e405a35f",
+      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
+      "title": "Friendship ended with Deno, now Node is my best friend",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "b514a9337b5ec0170c31",
+      "url": "https://nivdayan.github.io/dostoevsky.pdf",
+      "title": "Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores [pdf]",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "f279e48d1ae57414085d",
+      "url": "https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/",
+      "title": "Texas city demands $2M for public records on Flock usage",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "de443160be28a736274e",
+      "url": "https://www.graphicalui.com/",
+      "title": "Graphical UI",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "e6f0c1bcb92632a576a7",
+      "url": "https://flattensf.com/",
+      "title": "Find the flattest route between any two points in SF",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "4b350aa2264060c3cebc",
+      "url": "https://qlabs.sh/research/dust",
+      "title": "Dust: Pretraining Transformers Without Backpropagation",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "dbf6a51fde3f190f1405",
+      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
+      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "ed5197d10f48dfb1b2f2",
+      "url": "https://terrytao.wordpress.com/2026/10/05/the-future-of-mathematics/",
+      "title": "The Future of Mathematics",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
+    },
+    {
+      "id": "917ba46d3f15f0c5b9b7",
+      "url": "https://reflection.ai/blog/introducing-beam",
+      "title": "Beam: Reflection's 501B open-weight model",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
       "id": "21d2d1e9dd15fb3e6a3b",
       "url": "https://arslan.io/2026/10/05/the-lamps-in-my-house/",
-      "title": "The designer lamps in my house",
+      "title": "The lamps in my house",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     },
     {
       "id": "416c55bd38b4ac41ff11",
       "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
-      "title": "Linux containers in 500 lines of code",
+      "title": "Linux containers in 500 lines of code (2016)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "6102b8ee6b1f9802a25c",
-      "url": "https://blog.metabrainz.org/2026/10/04/picard-3-0-released/",
-      "title": "Picard 3.0",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "218cc3356838ee1629ac",
-      "url": "https://discuss.grapheneos.org/d/41564-pixel-11-doesnt-yet-meet-the-grapheneos-security-standards-and-may-be-skipped",
-      "title": "Pixel 11 doesn't yet meet the GrapheneOS security standards and may be skipped",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "d76ab843cb062985941b",
-      "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-      "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "cc384ea00ce9595ee9e5",
-      "url": "https://techfundingnews.com/europes-new-robotics-unicorn-germanys-robco-hits-1b-valuation/",
-      "title": "Germany’s RobCo hits $1B valuation",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "95fd9ac70095e46ba04f",
-      "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
-      "title": "Web Search API",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "37c4b57b451ab0225caa",
-      "url": "https://www.nobelprize.org/prizes/medicine/2026/summary/",
-      "title": "2026 Nobel Prize in Physiology or Medicine: Deisseroth, Hegemann, Nagel",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "ad0a42baac219f8c625d",
-      "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
-      "title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "fbf2278701ebd92cf8bd",
-      "url": "https://www.huawei.com/en/news/2026/10/qualcomm-broad-patent-agreement",
-      "title": "Huawei and Qualcomm announce broad patent license agreement",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "9c39b43f6b519346e232",
-      "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
-      "title": "Anthropic reported diary entry to police, woman faces felony charge",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
-    },
-    {
-      "id": "a77ef2b4ce4af71e6a2c",
-      "url": "https://worksinprogress.co/issue/mosquitoes-are-a-choice/",
-      "title": "The technology to eradicate mosquito-borne disease exists",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-05T18:21:18Z"
+      "observed_at": "2026-10-06T00:46:00Z"
     }
   ]
 }
