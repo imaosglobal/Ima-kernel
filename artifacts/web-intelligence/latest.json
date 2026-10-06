@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-06T00:46:29Z",
+  "timestamp": "2026-10-06T07:30:15Z",
   "sources": 12,
-  "discovered": 300,
-  "changed": 20,
+  "discovered": 150,
+  "changed": 10,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,164 +29,84 @@
   },
   "items": [
     {
-      "id": "4fdb28d7bb2823af19bc",
-      "url": "https://www.nasa.gov/news-release/nasa-to-stream-spacex-crew-12-return-splashdown-live/",
-      "title": "NASA to Stream SpaceX Crew-12 Return, Splashdown Live",
+      "id": "6a337996fce9b648126c",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-6-a-complete-auroral-oval-from-smile/",
+      "title": "APOD: 2026 October 6 – A Complete Auroral Oval from SMILE",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:45:57Z"
+      "observed_at": "2026-10-06T07:30:09Z"
     },
     {
-      "id": "df9e799a874b2dab7fc9",
-      "url": "https://edworkingpapers.com/ai26-1551",
-      "title": "AI Tutoring with Khanmigo in a Two-Year School Experiment",
-      "source": "https://hnrss.org/frontpage",
+      "id": "6d35da0ea915c84fbfa7",
+      "url": "https://science.nasa.gov/earth/earth-observatory/the-beaver-brown-waters-of-rupert-bay/",
+      "title": "The Beaver Brown Waters of Rupert Bay",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:09Z"
     },
     {
-      "id": "bf97103a0a5568288535",
-      "url": "https://gwern.net/doc/design/2026-10-03-gwern-samon.html",
-      "title": "Samon: Designing a Zen Garden Raking Puzzle",
-      "source": "https://hnrss.org/frontpage",
+      "id": "92ec09c4cd961b3d891e",
+      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5029-5035-back-in-the-lab/",
+      "title": "Curiosity Blog, Sols 5029-5035: Back in the Lab",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:09Z"
     },
     {
-      "id": "a8202a403e8e347d30ee",
-      "url": "https://lemire.me/blog/2026/10/05/ephemeral-testing/",
-      "title": "Ephemeral Testing",
-      "source": "https://hnrss.org/frontpage",
+      "id": "19aa2698bcfbd428d86c",
+      "url": "https://science.nasa.gov/blog/a-journey-to-the-depths-of-ancient-mars/",
+      "title": "A Journey to the Depths of Ancient Mars?",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:09Z"
     },
     {
-      "id": "822fc398fb03ab8b8085",
-      "url": "https://armstr.ng/writing/worth-building",
-      "title": "Worth Building",
+      "id": "ca1f7ee3b6af459a3949",
+      "url": "https://www.anildash.com/2026/10/06/kill-unalive/",
+      "title": "We are going to kill \"unalive\"",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:12Z"
+    },
+    {
+      "id": "f0d6fc75a64965206087",
+      "url": "https://blog.pipetogrep.org/2026/09/11/resurrecting-ichat-audio-and-video-conferencing/",
+      "title": "Resurrecting iChat Audio and Video Conferencing",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T07:30:12Z"
+    },
+    {
+      "id": "6f6d21ae5ee6fba679d6",
+      "url": "https://www.vivienhenz.com/common-lisp",
+      "title": "Why Common Lisp is now the best programming language",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T07:30:12Z"
     },
     {
       "id": "3288015068afff415531",
       "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
-      "title": "Example.com Just Launched the Biggest Redesign in Decades",
+      "title": "Example.com just launched the biggest redesign in decades",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:12Z"
     },
     {
-      "id": "809cc06d80fad07e88fb",
-      "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
-      "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+      "id": "91810f769b101efbc7f7",
+      "url": "https://stratechery.com/2026/apple-and-a-hackers-future/",
+      "title": "Apple and a hacker's future",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:12Z"
     },
     {
-      "id": "67ec997cbcad0875f479",
-      "url": "https://globalsolaratlas.info/",
-      "title": "Global Solar Atlas: summary of solar power potential globally",
+      "id": "c1723e24d567403b594e",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-05/qualcomm-licenses-patents-on-huawei-s-logicfolding-chip-tech",
+      "title": "Qualcomm licenses patents on Huawei’s LogicFolding chip tech",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "16fba149e97bb8d441f4",
-      "url": "https://almostimplemented.github.io/jazz-pianist-style/",
-      "title": "Learning Jazz Pianist Style with Cross-Attention Conditioning",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "34024c94fb67e405a35f",
-      "url": "https://dbushell.com/2026/10/03/deno-to-node/",
-      "title": "Friendship ended with Deno, now Node is my best friend",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "b514a9337b5ec0170c31",
-      "url": "https://nivdayan.github.io/dostoevsky.pdf",
-      "title": "Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores [pdf]",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "f279e48d1ae57414085d",
-      "url": "https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/",
-      "title": "Texas city demands $2M for public records on Flock usage",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "de443160be28a736274e",
-      "url": "https://www.graphicalui.com/",
-      "title": "Graphical UI",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "e6f0c1bcb92632a576a7",
-      "url": "https://flattensf.com/",
-      "title": "Find the flattest route between any two points in SF",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "4b350aa2264060c3cebc",
-      "url": "https://qlabs.sh/research/dust",
-      "title": "Dust: Pretraining Transformers Without Backpropagation",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "dbf6a51fde3f190f1405",
-      "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
-      "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "ed5197d10f48dfb1b2f2",
-      "url": "https://terrytao.wordpress.com/2026/10/05/the-future-of-mathematics/",
-      "title": "The Future of Mathematics",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "917ba46d3f15f0c5b9b7",
-      "url": "https://reflection.ai/blog/introducing-beam",
-      "title": "Beam: Reflection's 501B open-weight model",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "21d2d1e9dd15fb3e6a3b",
-      "url": "https://arslan.io/2026/10/05/the-lamps-in-my-house/",
-      "title": "The lamps in my house",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
-    },
-    {
-      "id": "416c55bd38b4ac41ff11",
-      "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
-      "title": "Linux containers in 500 lines of code (2016)",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-06T00:46:00Z"
+      "observed_at": "2026-10-06T07:30:12Z"
     }
   ]
 }
