@@ -96,5 +96,6 @@ You can contribute code, research, tests, documentation, languages, accessibilit
 - [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
 - [Global identity & shared learning charter](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md)
 - [Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md)
+- [Zero-Point Self-Inquiry & Encounter Protocol](docs/IMA_ZERO_POINT_SELF_INQUIRY_AND_ENCOUNTER_PROTOCOL.md)
 - [Learning frontier](docs/IMA_LEARNING_FRONTIER.md)
 - [IMA Next Action Audit](docs/IMA_NEXT_ACTION_AUDIT.md)
