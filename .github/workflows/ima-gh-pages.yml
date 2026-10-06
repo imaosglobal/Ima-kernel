@@ -1,0 +1,76 @@
+name: IMA GitHub Pages Branch Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ima-ui/**"
+      - "docs/IMA_CAPABILITY_REGISTRY.json"
+      - ".github/workflows/ima-gh-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-gh-pages-branch
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ima-ui/package-lock.json
+
+      - name: Install
+        working-directory: ima-ui
+        run: npm ci
+
+      - name: Lint
+        working-directory: ima-ui
+        run: npm run lint
+
+      - name: Build
+        working-directory: ima-ui
+        env:
+          VITE_IMA_API_BASE: https://ima-915m.onrender.com
+        run: npm run build
+
+      - name: Publish build to gh-pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/ima-gh-pages
+          mkdir -p /tmp/ima-gh-pages
+          cp -R ima-ui/dist/. /tmp/ima-gh-pages/
+          touch /tmp/ima-gh-pages/.nojekyll
+
+          git config user.name "IMA Pages Steward"
+          git config user.email "actions@users.noreply.github.com"
+
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git rm -rf .
+          cp -R /tmp/ima-gh-pages/. .
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "IMA_GH_PAGES_DEPLOY=NO_CHANGES"
+            exit 0
+          fi
+
+          git commit -m "deploy: IMA web experience"
+          git push origin gh-pages
+
+          echo "IMA_GH_PAGES_DEPLOY=PASS"
