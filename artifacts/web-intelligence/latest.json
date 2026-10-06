@@ -1,14 +1,22 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-06T07:30:15Z",
+  "timestamp": "2026-10-06T15:05:51Z",
   "sources": 12,
-  "discovered": 150,
-  "changed": 10,
+  "discovered": 113,
+  "changed": 34,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -29,84 +37,276 @@
   },
   "items": [
     {
-      "id": "6a337996fce9b648126c",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-6-a-complete-auroral-oval-from-smile/",
-      "title": "APOD: 2026 October 6 – A Complete Auroral Oval from SMILE",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-06T07:30:09Z"
-    },
-    {
-      "id": "6d35da0ea915c84fbfa7",
-      "url": "https://science.nasa.gov/earth/earth-observatory/the-beaver-brown-waters-of-rupert-bay/",
-      "title": "The Beaver Brown Waters of Rupert Bay",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-06T07:30:09Z"
-    },
-    {
-      "id": "92ec09c4cd961b3d891e",
-      "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5029-5035-back-in-the-lab/",
-      "title": "Curiosity Blog, Sols 5029-5035: Back in the Lab",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-06T07:30:09Z"
-    },
-    {
-      "id": "19aa2698bcfbd428d86c",
-      "url": "https://science.nasa.gov/blog/a-journey-to-the-depths-of-ancient-mars/",
-      "title": "A Journey to the Depths of Ancient Mars?",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-06T07:30:09Z"
-    },
-    {
-      "id": "ca1f7ee3b6af459a3949",
-      "url": "https://www.anildash.com/2026/10/06/kill-unalive/",
-      "title": "We are going to kill \"unalive\"",
+      "id": "f72bb50387111952a406",
+      "url": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
+      "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
     },
     {
-      "id": "f0d6fc75a64965206087",
-      "url": "https://blog.pipetogrep.org/2026/09/11/resurrecting-ichat-audio-and-video-conferencing/",
-      "title": "Resurrecting iChat Audio and Video Conferencing",
+      "id": "7171ac78141d1fbcb657",
+      "url": "https://jotbus.com/",
+      "title": "Show HN: Jotbus – a shared encrypted scratchpad for coding agents",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
     },
     {
-      "id": "6f6d21ae5ee6fba679d6",
-      "url": "https://www.vivienhenz.com/common-lisp",
-      "title": "Why Common Lisp is now the best programming language",
+      "id": "2b5450c77abf0beb8e7f",
+      "url": "https://www.parseable.com",
+      "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
     },
     {
-      "id": "3288015068afff415531",
-      "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
-      "title": "Example.com just launched the biggest redesign in decades",
+      "id": "1ef243007176e85cc8c6",
+      "url": "https://mistral.ai/news/mistral-large-4/",
+      "title": "Mistral Large 4: \"Le Chonk\"",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
     },
     {
-      "id": "91810f769b101efbc7f7",
-      "url": "https://stratechery.com/2026/apple-and-a-hackers-future/",
-      "title": "Apple and a hacker's future",
+      "id": "6c37fbb22f2f9770be74",
+      "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+      "title": "Mistral Large 4",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
     },
     {
-      "id": "c1723e24d567403b594e",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-05/qualcomm-licenses-patents-on-huawei-s-logicfolding-chip-tech",
-      "title": "Qualcomm licenses patents on Huawei’s LogicFolding chip tech",
+      "id": "b8b679815896538e8f0b",
+      "url": "https://twitter.com/MistralAI/status/2107456586813730854",
+      "title": "Mistral Large 4",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-06T07:30:12Z"
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "16806dc14c8271a8d0c6",
+      "url": "https://mastodon.social/@bagder/117392573268225646",
+      "title": "Two ARM64-specific compiler optimization bugs, in GCC 15/16 and Rust, hit curl",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "dca286109950622fd4d5",
+      "url": "https://www.ebsco.com/research-starters/power-and-energy/mathematics-geothermal-energy/",
+      "title": "Mathematics of Geothermal Energy",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "e6c2b045b47d75e43371",
+      "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
+      "title": "Meta's Muse Is an Adorable Privacy and Security Dumpster Fire",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "3dd31b1d10301cae2a97",
+      "url": "https://pola.rs/posts/release-polars-2/",
+      "title": "Release of Polars 2.0",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "f09b0f25b90d33d51d71",
+      "url": "https://www.helgilibrary.com/companies/jetbrains",
+      "title": "JetBrains reported a net financial loss first time in its tracked history",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "286702c01fce2fd8358d",
+      "url": "https://techcrunch.com/2026/10/01/worlds-first-enhanced-geothermal-power-plant-completed-in-just-23-months/",
+      "title": "World's First enhanced geothermal power plant completed in just 23 months",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "8485adbbfeefe4933351",
+      "url": "https://phys.org/news/2026-10-nature-capacity-species-lost-vastly.html",
+      "title": "Nature's capacity to 'bounce back' when species are lost is vastly overestimated",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "1d20d90be37d9d83c79a",
+      "url": "https://www.bbc.co.uk/news/articles/cj62ylzpr6d3o",
+      "title": "ASOS app users receive push notifications apparently sent by hackers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "ca1895079e9ae7cce068",
+      "url": "https://www.nobelprize.org/prizes/physics/2026/",
+      "title": "Nobel Prize in Physics goes to Francis Halzen",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "0bfe6d5e2f3bdc217da6",
+      "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+      "title": "Gleam doesn't compile to Erlang source anymore",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:19Z"
+    },
+    {
+      "id": "81a3389421f4bb56bc3d",
+      "url": "https://www.w3.org/news/2026/updated-candidate-recommendation-scalable-vector-graphics-svg-2/",
+      "title": "Updated Candidate Recommendation: Scalable Vector Graphics (SVG) 2",
+      "source": "https://www.w3.org/News/news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-06T15:05:20Z"
+    },
+    {
+      "id": "aa562fed8195cd927740",
+      "url": "https://github.blog/",
+      "title": "https://github.blog/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260917041621"
+    },
+    {
+      "id": "4b17809452afed4ede07",
+      "url": "https://github.blog/2018/05/",
+      "title": "https://github.blog/2018/05/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260915151951"
+    },
+    {
+      "id": "0953066a2546cab9451e",
+      "url": "https://github.blog/2018/11/",
+      "title": "https://github.blog/2018/11/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260916155430"
+    },
+    {
+      "id": "d32c6f1d75e91688a6a3",
+      "url": "https://github.blog/2018/page/15/",
+      "title": "https://github.blog/2018/page/15/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260913080733"
+    },
+    {
+      "id": "bdceea10a562c900af50",
+      "url": "https://github.blog/2019/11/",
+      "title": "https://github.blog/2019/11/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260907213924"
+    },
+    {
+      "id": "2006edcdf2fe437b2058",
+      "url": "https://github.blog/2020/",
+      "title": "https://github.blog/2020/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260904140021"
+    },
+    {
+      "id": "e2d0f176155b628a632a",
+      "url": "https://github.blog/2021/08/",
+      "title": "https://github.blog/2021/08/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260904142543"
+    },
+    {
+      "id": "02df634eb85f58046f15",
+      "url": "https://github.blog/2022/11/",
+      "title": "https://github.blog/2022/11/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260906020154"
+    },
+    {
+      "id": "2121a499edc2f04cfccb",
+      "url": "https://github.blog/2023/09/page/2/",
+      "title": "https://github.blog/2023/09/page/2/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260906085215"
+    },
+    {
+      "id": "affd7a3148bd536d2d67",
+      "url": "https://github.blog/2024/06/",
+      "title": "https://github.blog/2024/06/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910094634"
+    },
+    {
+      "id": "1ab410d341b18a1b5e12",
+      "url": "https://github.blog/2024/07/",
+      "title": "https://github.blog/2024/07/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910191837"
+    },
+    {
+      "id": "c8f8c133f225a04ef29e",
+      "url": "https://github.blog/2024/11/",
+      "title": "https://github.blog/2024/11/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908162214"
+    },
+    {
+      "id": "6f13263cee3a3ca00539",
+      "url": "https://github.blog/2024/12/",
+      "title": "https://github.blog/2024/12/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260910095831"
+    },
+    {
+      "id": "4b675d5297558ba77aee",
+      "url": "https://github.blog/2025/04/",
+      "title": "https://github.blog/2025/04/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260904233849"
+    },
+    {
+      "id": "7db61de641ea6930d719",
+      "url": "https://github.blog/2025/06/",
+      "title": "https://github.blog/2025/06/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260908150028"
+    },
+    {
+      "id": "1ea363bf86c49418652d",
+      "url": "https://github.blog/2025/12/",
+      "title": "https://github.blog/2025/12/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260909214600"
+    },
+    {
+      "id": "b7cbe8c4a9a229d83030",
+      "url": "https://github.blog/2026/06/page/2/",
+      "title": "https://github.blog/2026/06/page/2/",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "kind": "commoncrawl",
+      "observed_at": "20260906091823"
     }
   ]
 }
