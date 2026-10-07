@@ -164,7 +164,8 @@ def run():
     # Bound state growth.
     if len(state["seen"]) > 10000:
         state["seen"] = dict(list(state["seen"].items())[-10000:])
-    state["recent_items"] = changed[:MAX_ITEMS]
+    state["recent_items"] = items[:MAX_ITEMS]
+    state["recent_changed_items"] = changed[:MAX_ITEMS]
     state["last_run"] = now()
     state["latest_commoncrawl"] = crawl
     save_state(state)
