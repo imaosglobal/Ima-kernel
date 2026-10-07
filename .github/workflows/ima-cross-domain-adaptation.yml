@@ -2,10 +2,6 @@ name: IMA Daily Lifelong Learning
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths-ignore:
-      - "artifacts/web-intelligence/adaptation-state.json"
   schedule:
     - cron: "07 1 * * *"
 
