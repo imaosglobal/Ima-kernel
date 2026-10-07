@@ -29,29 +29,56 @@ def run():
     discovery=load_json(ROOT/".ima/web_intelligence/state.json",{"seen":{},"last_run":None})
     dimensions=[x[0] for x in matrix.get("dimensions",[])]
     seen=discovery.get("seen",{}) if isinstance(discovery.get("seen",{}),dict) else {}
+    recent_items=discovery.get("recent_items",[])
+    if not isinstance(recent_items,list):
+        recent_items=[]
     discovery_item_count=len(seen)
     candidates=[]
-    for dim in dimensions:
-        key=digest(dim)
+    for item in recent_items[:50]:
+        if not isinstance(item,dict) or not item.get("url"):
+            continue
+        source_text=f"{item.get('title','')} {item.get('source','')}".lower()
+        dimension=next((dim for dim in dimensions if dim.lower() in source_text), None)
         candidates.append({
-            "id":key,
-            "dimension":dim,
+            "id":digest(item.get("id",item["url"])),
+            "dimension":dimension,
             "status":"CANDIDATE",
-            "candidate_kind":"dimension_review",
+            "candidate_kind":"source_review",
+            "title":item.get("title",""),
+            "source_url":item["url"],
+            "source":item.get("source",""),
+            "kind":item.get("kind",""),
+            "observed_at":item.get("observed_at"),
             "evidence_required":matrix.get("acceptance",[]),
             "source_state_timestamp":discovery.get("last_run"),
-            "decision":"evaluate_against_current_implementation_before_adoption",
+            "decision":"compare_specific_source_evidence_against_current_implementation",
             "adoption_blocked":True,
-            "evidence_status":"insufficient_source_detail_for_adoption",
+            "evidence_status":"source_metadata_available_change_detail_required",
             "source_state_path":".ima/web_intelligence/state.json",
             "discovery_item_count":discovery_item_count
         })
+    if not candidates:
+        for dim in dimensions:
+            candidates.append({
+                "id":digest(dim),
+                "dimension":dim,
+                "status":"REVIEW_ONLY",
+                "candidate_kind":"dimension_review",
+                "evidence_required":matrix.get("acceptance",[]),
+                "source_state_timestamp":discovery.get("last_run"),
+                "decision":"await_specific_discovery_item",
+                "adoption_blocked":True,
+                "evidence_status":"no_recent_discovery_items",
+                "source_state_path":".ima/web_intelligence/state.json",
+                "discovery_item_count":discovery_item_count
+            })
+
     state={
         "schema":"IMA-ADAPTATION-STATE-1.0",
         "timestamp":now(),
         "dimensions":dimensions,
         "candidate_count":len(candidates),
-        "candidate_kind":"dimension_review",
+        "candidate_kind":"source_review" if recent_items else "dimension_review",
         "discovery_item_count":discovery_item_count,
         "discovery_last_run":discovery.get("last_run"),
         "rule":"observe -> compare -> prototype -> test -> verify -> adopt/reject -> record",
