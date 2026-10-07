@@ -1,11 +1,11 @@
 {
   "schema": "IMA-ADAPTATION-CANDIDATES-1.0",
-  "timestamp": "2026-10-07T17:43:20Z",
+  "timestamp": "2026-10-07T17:43:55Z",
   "candidates": [
     {
       "id": "c796d37c6d491e8f0c6e",
       "dimension": "interface",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -17,16 +17,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "8b34dbc2c05eb4d7e25d",
       "dimension": "conversation",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -38,16 +38,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "d4f0bc5a29de06b510f9",
       "dimension": "agent",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -59,16 +59,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "714db89df42bdb7ce4be",
       "dimension": "accessibility",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -80,16 +80,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "9caff5d2d21a7379826f",
       "dimension": "multimodal",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -101,16 +101,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "edd95740e339e6aa0a1d",
       "dimension": "learning",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -122,16 +122,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "c064fbca9d9de8dd9bb0",
       "dimension": "memory",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -143,16 +143,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "f796e2f28ae5811737cc",
       "dimension": "trust",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -164,16 +164,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "4a1898716ef67796fcc8",
       "dimension": "performance",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -185,16 +185,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "5d2d3ceb7abe55234427",
       "dimension": "security",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -206,16 +206,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "bafdb4d45dad1f416be6",
       "dimension": "developer experience",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -227,16 +227,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "19c64195eb8f22c39b4b",
       "dimension": "growth",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -248,16 +248,16 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     },
     {
       "id": "5b42a56da776ea2d851c",
       "dimension": "embodiment",
-      "status": "CANDIDATE",
+      "status": "REVIEW_ONLY",
       "candidate_kind": "dimension_review",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
@@ -269,9 +269,9 @@
         "Preserves IMA identity rather than cloning another product"
       ],
       "source_state_timestamp": "2026-10-07T15:31:46Z",
-      "decision": "evaluate_against_current_implementation_before_adoption",
+      "decision": "await_specific_discovery_item",
       "adoption_blocked": true,
-      "evidence_status": "insufficient_source_detail_for_adoption",
+      "evidence_status": "no_recent_discovery_items",
       "source_state_path": ".ima/web_intelligence/state.json",
       "discovery_item_count": 884
     }
