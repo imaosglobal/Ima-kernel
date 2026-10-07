@@ -28,6 +28,8 @@ def run():
     matrix=load_json(MATRIX,{})
     discovery=load_json(ROOT/".ima/web_intelligence/state.json",{"seen":{},"last_run":None})
     dimensions=[x[0] for x in matrix.get("dimensions",[])]
+    seen=discovery.get("seen",{}) if isinstance(discovery.get("seen",{}),dict) else {}
+    discovery_item_count=len(seen)
     candidates=[]
     for dim in dimensions:
         key=digest(dim)
@@ -35,17 +37,25 @@ def run():
             "id":key,
             "dimension":dim,
             "status":"CANDIDATE",
+            "candidate_kind":"dimension_review",
             "evidence_required":matrix.get("acceptance",[]),
             "source_state_timestamp":discovery.get("last_run"),
-            "decision":"evaluate_against_current_implementation_before_adoption"
+            "decision":"evaluate_against_current_implementation_before_adoption",
+            "adoption_blocked":True,
+            "evidence_status":"insufficient_source_detail_for_adoption",
+            "source_state_path":".ima/web_intelligence/state.json",
+            "discovery_item_count":discovery_item_count
         })
     state={
         "schema":"IMA-ADAPTATION-STATE-1.0",
         "timestamp":now(),
         "dimensions":dimensions,
         "candidate_count":len(candidates),
+        "candidate_kind":"dimension_review",
+        "discovery_item_count":discovery_item_count,
         "discovery_last_run":discovery.get("last_run"),
-        "rule":"observe -> compare -> prototype -> test -> verify -> adopt/reject -> record"
+        "rule":"observe -> compare -> prototype -> test -> verify -> adopt/reject -> record",
+        "adoption_gate":"blocked_until_candidate_has_specific_source_evidence_and_test"
     }
     STATE.parent.mkdir(parents=True,exist_ok=True)
     OUT.parent.mkdir(parents=True,exist_ok=True)
