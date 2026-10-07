@@ -18,7 +18,7 @@ IMA treats integrations as capabilities, not hard-coded vendor dependencies.
 The IMA runtime can maintain its own registry and routing policy, but ChatGPT plugin installation/connection remains user-authorized. IMA may discover and prepare an integration manifest; it must not claim a plugin is connected until the connection is actually verified.
 
 ## Nylas
-Nylas is a runtime integration rather than a ChatGPT plugin. It is the preferred continuous-mail transport for the IMA mailbox because it supports `message.created` webhooks and signed delivery.
+Nylas is currently a **candidate runtime integration**, not a verified connected ChatGPT capability. It is prepared as a possible continuous-mail transport because it supports `message.created` webhooks and signed delivery. IMA must not route production mail through Nylas or claim Nylas is connected until explicit authorization, connection, health, permissions, and execution are verified.
 
 ## Adapter contract
 Every adapter should expose `id`, `provider`, `capabilities`, `health()`, `permissions()`, `execute(action, input)`, `evidence(result)`, and `failure_mode`.
