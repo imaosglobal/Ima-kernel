@@ -1,4 +1,4 @@
-name: IMA Cross-Domain Adaptation
+name: IMA Daily Lifelong Learning
 
 on:
   workflow_dispatch:
@@ -7,13 +7,13 @@ on:
     paths-ignore:
       - "artifacts/web-intelligence/adaptation-state.json"
   schedule:
-    - cron: "37 */6 * * *"
+    - cron: "07 1 * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: ima-cross-domain-adaptation
+  group: ima-daily-lifelong-learning
   cancel-in-progress: true
 
 jobs:
@@ -27,15 +27,15 @@ jobs:
           python-version: "3.12"
       - name: Install web intelligence dependency
         run: python -m pip install --disable-pip-version-check requests
-      - name: Refresh discovery evidence
+      - name: Listen and refresh discovery evidence
         run: |
           python -m unittest tests/test_web_intelligence.py -v
           python .ima/web_intelligence/global_discovery.py --once > /tmp/ima-web-intelligence.json
-      - name: Validate adaptation system
+      - name: Learn compare prototype test and verify
         run: |
           python -m unittest tests/test_adaptation_evaluator.py -v
           python .ima/web_intelligence/adaptation_evaluator.py > /tmp/ima-adaptation.json
-      - name: Persist evidence
+      - name: Persist the single daily synthesis
         run: |
           mkdir -p artifacts/web-intelligence
           cp /tmp/ima-adaptation.json artifacts/web-intelligence/adaptation-state.json
