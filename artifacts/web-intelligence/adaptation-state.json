@@ -1,8 +1,22 @@
 {
   "schema": "IMA-ADAPTATION-STATE-1.0",
-  "timestamp": "2026-10-07T13:51:46Z",
-  "dimensions": [],
-  "candidate_count": 0,
-  "discovery_last_run": null,
+  "timestamp": "2026-10-07T17:37:36Z",
+  "dimensions": [
+    "interface",
+    "conversation",
+    "agent",
+    "accessibility",
+    "multimodal",
+    "learning",
+    "memory",
+    "trust",
+    "performance",
+    "security",
+    "developer experience",
+    "growth",
+    "embodiment"
+  ],
+  "candidate_count": 13,
+  "discovery_last_run": "2026-10-07T15:31:46Z",
   "rule": "observe -> compare -> prototype -> test -> verify -> adopt/reject -> record"
 }
