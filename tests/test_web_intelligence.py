@@ -34,5 +34,20 @@ class WebIntelligenceTests(unittest.TestCase):
                 mod.STATE = old
 
 
+    def test_state_supports_recent_items(self):
+        with tempfile.TemporaryDirectory() as td:
+            old = mod.STATE
+            try:
+                mod.STATE = Path(td) / "state.json"
+                state = {"schema": "test", "seen": {}, "recent_items": [
+                    {"id": "x", "url": "https://example.com", "title": "Example"}
+                ], "last_run": "2026-10-07T00:00:00Z"}
+                mod.save_state(state)
+                loaded = mod.load_state()
+                self.assertEqual(loaded["recent_items"][0]["url"], "https://example.com")
+            finally:
+                mod.STATE = old
+
+
 if __name__ == "__main__":
     unittest.main()
