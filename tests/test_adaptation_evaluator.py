@@ -17,5 +17,11 @@ class AdaptationTests(unittest.TestCase):
     def test_engine_compiles(self):
         subprocess.run([sys.executable,"-m","py_compile",str(ENGINE)],check=True)
 
+    def test_candidate_gate_is_explicit(self):
+        text=ENGINE.read_text(encoding="utf-8")
+        self.assertIn('"candidate_kind":"dimension_review"', text)
+        self.assertIn('"adoption_blocked":True', text)
+        self.assertIn('"evidence_status":"insufficient_source_detail_for_adoption"', text)
+
 if __name__=="__main__":
     unittest.main()
