@@ -42,7 +42,7 @@ def now():
 
 def load_state():
     if not STATE.exists():
-        return {"schema": "IMA-WEB-INTELLIGENCE-1.0", "seen": {}, "last_run": None}
+        return {"schema": "IMA-WEB-INTELLIGENCE-1.0", "seen": {}, "recent_items": [], "last_run": None}
     return json.loads(STATE.read_text(encoding="utf-8"))
 
 
@@ -164,6 +164,7 @@ def run():
     # Bound state growth.
     if len(state["seen"]) > 10000:
         state["seen"] = dict(list(state["seen"].items())[-10000:])
+    state["recent_items"] = changed[:MAX_ITEMS]
     state["last_run"] = now()
     state["latest_commoncrawl"] = crawl
     save_state(state)
