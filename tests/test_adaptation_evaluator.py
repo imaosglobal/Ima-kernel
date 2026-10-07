@@ -19,9 +19,18 @@ class AdaptationTests(unittest.TestCase):
 
     def test_candidate_gate_is_explicit(self):
         text=ENGINE.read_text(encoding="utf-8")
+        self.assertIn('"candidate_kind":"source_review"', text)
         self.assertIn('"candidate_kind":"dimension_review"', text)
         self.assertIn('"adoption_blocked":True', text)
-        self.assertIn('"evidence_status":"insufficient_source_detail_for_adoption"', text)
+        self.assertIn('"source_metadata_available_change_detail_required"', text)
+
+    def test_specific_discovery_item_shape_is_supported(self):
+        discovery={"seen":{"x":{"fingerprint":"f"}},"recent_items":[
+            {"id":"x","url":"https://example.com/item","title":"Adaptive interface pattern",
+             "source":"https://example.com/feed","kind":"feed","observed_at":"2026-10-07T00:00:00Z"},
+        ],"last_run":"2026-10-07T00:00:00Z"}
+        self.assertEqual(len(discovery["recent_items"]),1)
+        self.assertEqual(discovery["recent_items"][0]["url"],"https://example.com/item")
 
 if __name__=="__main__":
     unittest.main()
