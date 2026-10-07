@@ -9,7 +9,7 @@ import json, hashlib
 from pathlib import Path
 from datetime import datetime, timezone
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 MATRIX=ROOT/"integrations/IMA_ADAPTATION_MATRIX.json"
 STATE=ROOT/".ima/web_intelligence/adaptation_state.json"
 OUT=ROOT/"artifacts/web-intelligence/adaptation_candidates.json"
