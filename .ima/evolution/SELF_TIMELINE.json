@@ -1,0 +1,207 @@
+{
+  "schema": "IMA-SELF-TIMELINE-1.0",
+  "generated_at": "2026-10-08T12:56:00Z",
+  "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
+  "sources": {
+    "conversation_history_seed": 8,
+    "git_commits": 40,
+    "development_journal": "present",
+    "daily_summaries": "present"
+  },
+  "archive_inventory": {
+    "files": 1209,
+    "families": {
+      "other": 236,
+      "runtime": 182,
+      "security": 2,
+      "learning": 608,
+      "knowledge": 32,
+      "memory": 84,
+      "guardian": 52,
+      "evolution": 13
+    }
+  },
+  "open_issues": {
+    "status": "VERIFIED",
+    "count": 8,
+    "items": [
+      {
+        "number": 105,
+        "title": "Global discoverability: first-time visitor path and verified public entry points"
+      },
+      {
+        "number": 104,
+        "title": "IMA Global Discovery Hub — Start here"
+      },
+      {
+        "number": 101,
+        "title": "Audit automated demo PRs and require quality gates before release"
+      },
+      {
+        "number": 100,
+        "title": "[LEARNING] IMA global learning intake is open"
+      },
+      {
+        "number": 99,
+        "title": "IMA continuous health failure"
+      },
+      {
+        "number": 96,
+        "title": "[Community Task] Add IMA 3D contribution task"
+      },
+      {
+        "number": 90,
+        "title": "[Community Task] Improve IMA mobile onboarding"
+      },
+      {
+        "number": 88,
+        "title": "bug: example crashed"
+      }
+    ]
+  },
+  "current_gaps": {
+    "total": 12,
+    "by_state": {
+      "detected": 4,
+      "specified": 5,
+      "implemented": 1,
+      "scaffolded": 1
+    },
+    "items": [
+      {
+        "id": "hologram",
+        "state": "detected",
+        "priority": "high"
+      },
+      {
+        "id": "volumetric",
+        "state": "detected",
+        "priority": "high"
+      },
+      {
+        "id": "xr",
+        "state": "detected",
+        "priority": "high"
+      },
+      {
+        "id": "robotics",
+        "state": "detected",
+        "priority": "high"
+      },
+      {
+        "id": "plugin_marketplace",
+        "state": "specified",
+        "priority": "high"
+      },
+      {
+        "id": "capability_executor",
+        "state": "implemented",
+        "priority": "critical"
+      },
+      {
+        "id": "commercial_optimizer",
+        "state": "specified",
+        "priority": "medium"
+      },
+      {
+        "id": "universal_integration_fabric",
+        "state": "scaffolded",
+        "priority": "critical"
+      },
+      {
+        "id": "global_change_observatory",
+        "state": "specified",
+        "priority": "high"
+      },
+      {
+        "id": "cross_domain_learning",
+        "state": "specified",
+        "priority": "high"
+      },
+      {
+        "id": "device_and_game_ecosystem",
+        "state": "detected",
+        "priority": "high"
+      },
+      {
+        "id": "world_knowledge_ingestion",
+        "state": "specified",
+        "priority": "high"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-07-16",
+      "event": "history_query_v2_gap",
+      "summary": "V2 partial history/query identified missing real-time dates, daily summary, future view and unified historical query.",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "guardian_history",
+      "summary": "Guardian history and Git history were identified as durable evidence needing unified cycle records.",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-08-20",
+      "event": "memory_fragmentation_audit",
+      "summary": "Memory/history components were identified as fragmented and needing unified autobiographical structure.",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-10-02",
+      "event": "dated_development_journal",
+      "summary": "Dated append-only development memory was established as a project requirement.",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-10-03",
+      "event": "security_public_runtime_stewardship",
+      "summary": "Public runtime, signed sessions, memory isolation and error redaction were verified at contract/runtime levels; onboarding/indexing/feedback remained gaps.",
+      "source": "development journal"
+    },
+    {
+      "date": "2026-10-04",
+      "event": "global_web_intelligence",
+      "summary": "Global discovery layer, provenance and bounded learning pipeline were implemented; first execution verification remained a gate.",
+      "source": "development journal"
+    },
+    {
+      "date": "2026-10-04",
+      "event": "mcp_distribution",
+      "summary": "IMA MCP distribution layer reached live endpoint verification while protocol-level and publisher steps remained open.",
+      "source": "development journal"
+    },
+    {
+      "date": "2026-10-05",
+      "event": "plugin_registry_truth",
+      "summary": "Plugin routing was aligned with connected reality and execution boundaries were hardened.",
+      "source": "development journal"
+    },
+    {
+      "date": "2026-10-06",
+      "event": "zero_point_and_global_discovery",
+      "summary": "Zero-point self-inquiry and global discovery were integrated into IMA's identity and onboarding.",
+      "source": "git/conversation"
+    },
+    {
+      "date": "2026-10-07",
+      "event": "cross_domain_adaptation",
+      "summary": "Adaptation pipeline was repaired, source evidence persisted, adoption gates hardened and discovery/evaluation order fixed.",
+      "source": "git/development journal"
+    },
+    {
+      "date": "2026-10-08",
+      "event": "registry_boundary_n8n",
+      "summary": "Registry execution boundary was hardened; n8n interoperability became a research candidate with a minimal reversible contract test.",
+      "source": "git/development journal"
+    },
+    {
+      "date": "2026-10-08",
+      "event": "self_evolution_timeline",
+      "summary": "A persistent chronological self-evolution mechanism was added to connect history, archives, current gaps and daily learning.",
+      "source": "git/current execution"
+    }
+  ]
+}
