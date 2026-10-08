@@ -36,6 +36,25 @@ NYLAS_WEBHOOK_SETUP_TOKEN = os.environ.get("NYLAS_WEBHOOK_SETUP_TOKEN", "").stri
 NYLAS_WEBHOOK_URL = os.environ.get("NYLAS_WEBHOOK_URL", "https://ima-915m.onrender.com/ima-api/webhooks/nylas")
 SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
 
+REGISTRY_PATH = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
+
+
+def _registry_provider_status(provider: str) -> str:
+    """Return registry status for a provider; unknown providers are not executable."""
+    try:
+        registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+        for item in registry.get("connected", []):
+            if item.get("provider") == provider:
+                return item.get("status", "connected")
+    except Exception:
+        app.logger.exception("IMA capability registry read failed")
+    return "unknown"
+
+
+def _provider_execution_allowed(provider: str) -> bool:
+    return _registry_provider_status(provider) == "connected"
+
+
 
 def _issue_session():
     user_id = secrets.token_urlsafe(24)
@@ -132,6 +151,8 @@ def runtime_status():
 
 @app.get("/ima-api/email/status")
 def email_status():
+    if not _provider_execution_allowed("Nylas"):
+        return jsonify({"provider": "nylas", "configured": False, "status": "candidate_not_connected", "execution_allowed": False}), 503
     if nylas_email is None:
         return jsonify({"provider": "nylas", "configured": False, "status": "integration_unavailable"}), 503
     state = nylas_email.status()
@@ -141,6 +162,8 @@ def email_status():
 @app.get("/ima-api/email/verify")
 def email_verify():
     """Verify backend-to-Nylas mailbox access without returning message content."""
+    if not _provider_execution_allowed("Nylas"):
+        return jsonify({"provider": "nylas", "verified": False, "status": "candidate_not_connected", "execution_allowed": False}), 503
     if nylas_email is None:
         return jsonify({"provider": "nylas", "verified": False, "status": "integration_unavailable"}), 503
     if not _rate_ok("email-verify:" + (request.remote_addr or "unknown")):
@@ -213,6 +236,8 @@ def nylas_webhook():
 
 @app.get("/ima-api/email/monitor")
 def email_monitor_status():
+    if not _provider_execution_allowed("Nylas"):
+        return jsonify({"provider": "nylas", "mode": "webhook", "configured": False, "verified_signature": False, "events_buffered": 0, "last_event": None, "status": "candidate_not_connected", "execution_allowed": False}), 503
     events = list(NYLAS_WEBHOOK_EVENTS)
     return jsonify({
         "provider": "nylas",
@@ -227,6 +252,8 @@ def email_monitor_status():
 
 @app.route("/ima-api/email/webhook/setup", methods=["GET", "POST"])
 def email_webhook_setup():
+    if not _provider_execution_allowed("Nylas"):
+        return jsonify({"provider": "nylas", "created": False, "status": "candidate_not_connected", "execution_allowed": False}), 503
     setup_token = request.headers.get("X-IMA-Setup-Token", "") or request.args.get("token", "")
     if not NYLAS_WEBHOOK_SETUP_TOKEN or setup_token != NYLAS_WEBHOOK_SETUP_TOKEN:
         return jsonify({"error": "setup authorization required"}), 401
@@ -259,6 +286,8 @@ def email_webhook_setup():
 
 @app.get("/ima-api/email/messages")
 def email_messages():
+    if not _provider_execution_allowed("Nylas"):
+        return jsonify({"provider": "nylas", "data": [], "verified": False, "status": "candidate_not_connected", "execution_allowed": False}), 503
     if nylas_email is None:
         return jsonify({"error": "Nylas integration unavailable"}), 503
     if not _session_user_id():
