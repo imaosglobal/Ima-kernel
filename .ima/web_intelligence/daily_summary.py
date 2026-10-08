@@ -10,7 +10,8 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / ".ima/web_intelligence/state.json"
-ADAPT = ROOT / ".ima/web_intelligence/adaptation_state.json"
+ADAPT = ROOT / "artifacts/web-intelligence/adaptation-state.json"
+TIMELINE = ROOT / ".ima/evolution/SELF_TIMELINE.json"
 JOURNAL = ROOT / ".ima/journal/development.jsonl"
 DAILY = ROOT / ".ima/journal/daily"
 OUT = ROOT / "artifacts/web-intelligence/daily-summary.json"
@@ -70,6 +71,7 @@ def run():
     day = today()
     state = load(STATE, {})
     adapt = load(ADAPT, {})
+    timeline = load(TIMELINE, {})
     events = journal_events(day)
     lessons = concrete_lessons(events)
 
@@ -114,6 +116,11 @@ def run():
         "journal_events_today": len(events),
         "status_counts": dict(status_counts),
         "adaptation_dimensions_available": len(dimensions),
+        "timeline_generated_at": timeline.get("generated_at"),
+        "timeline_event_count": len(timeline.get("timeline", [])),
+        "timeline_archive_files": timeline.get("archive_inventory", {}).get("files", 0),
+        "timeline_open_issues": timeline.get("open_issues", {}).get("count"),
+        "timeline_gap_count": timeline.get("current_gaps", {}).get("total", 0),
         "status": "RECORDED",
     }
 
@@ -130,6 +137,8 @@ def run():
     md += f"- תשובה: {answer}\n"
     md += f"- שינויים שנצפו היום: {changed_today}\n"
     md += f"- אירועי פיתוח: {len(events)}\n"
+    md += f"- פריטי ציר התפתחות: {len(timeline.get('timeline', []))}\n"
+    md += f"- פערי יכולת פתוחים: {timeline.get('current_gaps', {}).get('total', 0)}\n"
     if lessons:
         md += "\n**מה נלמד בפועל:**\n" + "\n".join(
             f"- {item}" for item in lessons[:5]
