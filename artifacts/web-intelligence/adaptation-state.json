@@ -1,6 +1,6 @@
 {
   "schema": "IMA-ADAPTATION-STATE-1.0",
-  "timestamp": "2026-10-07T18:38:08Z",
+  "timestamp": "2026-10-08T07:17:08Z",
   "dimensions": [
     "interface",
     "conversation",
@@ -18,8 +18,8 @@
   ],
   "candidate_count": 50,
   "candidate_kind": "source_review",
-  "discovery_item_count": 918,
-  "discovery_last_run": "2026-10-07T18:38:08Z",
+  "discovery_item_count": 944,
+  "discovery_last_run": "2026-10-08T07:17:08Z",
   "rule": "observe -> compare -> prototype -> test -> verify -> adopt/reject -> record",
   "adoption_gate": "blocked_until_candidate_has_specific_source_evidence_and_test"
 }

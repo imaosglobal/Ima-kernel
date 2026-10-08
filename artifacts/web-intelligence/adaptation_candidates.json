@@ -1,17 +1,17 @@
 {
   "schema": "IMA-ADAPTATION-CANDIDATES-1.0",
-  "timestamp": "2026-10-07T18:38:08Z",
+  "timestamp": "2026-10-08T07:17:08Z",
   "candidates": [
     {
-      "id": "27934045e5611aa57f9e",
+      "id": "c753bc778330bbc2a558",
       "dimension": null,
       "status": "CANDIDATE",
       "candidate_kind": "source_review",
-      "title": "NASA’s Curiosity Looks Back After Reaching Elevation Milestone",
-      "source_url": "https://science.nasa.gov/photojournal/nasas-curiosity-looks-back-after-reaching-elevation-milestone/",
+      "title": "APOD: 2026 October 8 – The Saturn System Smörgåsbord",
+      "source_url": "https://science.nasa.gov/image-article/apod-2026-october-8-the-saturn-system-smorgasbord/",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -21,12 +21,142 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
+    },
+    {
+      "id": "9b60f78092b25fc517a0",
+      "dimension": null,
+      "status": "CANDIDATE",
+      "candidate_kind": "source_review",
+      "title": "Fighting Drought in Texas Cotton Country",
+      "source_url": "https://science.nasa.gov/earth/earth-observatory/fighting-drought-in-texas-cotton-country/",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-08T07:16:41Z",
+      "evidence_required": [
+        "Measurable improvement or clear reduction in friction/risk",
+        "Accessible on mobile and desktop where applicable",
+        "Does not expose private user data",
+        "Does not turn plans into claimed capabilities",
+        "Has tests or an explicit verification method",
+        "Keeps provenance and records rejected alternatives",
+        "Preserves IMA identity rather than cloning another product"
+      ],
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
+      "decision": "compare_specific_source_evidence_against_current_implementation",
+      "adoption_blocked": true,
+      "evidence_status": "source_metadata_available_change_detail_required",
+      "source_state_path": ".ima/web_intelligence/state.json",
+      "discovery_item_count": 944
+    },
+    {
+      "id": "bea50044f3db1155257b",
+      "dimension": null,
+      "status": "CANDIDATE",
+      "candidate_kind": "source_review",
+      "title": "NASA Sets Coverage for SpaceX 35th Station Resupply Launch, Arrival",
+      "source_url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-spacex-35th-station-resupply-launch-arrival/",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-08T07:16:41Z",
+      "evidence_required": [
+        "Measurable improvement or clear reduction in friction/risk",
+        "Accessible on mobile and desktop where applicable",
+        "Does not expose private user data",
+        "Does not turn plans into claimed capabilities",
+        "Has tests or an explicit verification method",
+        "Keeps provenance and records rejected alternatives",
+        "Preserves IMA identity rather than cloning another product"
+      ],
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
+      "decision": "compare_specific_source_evidence_against_current_implementation",
+      "adoption_blocked": true,
+      "evidence_status": "source_metadata_available_change_detail_required",
+      "source_state_path": ".ima/web_intelligence/state.json",
+      "discovery_item_count": 944
+    },
+    {
+      "id": "0aee329ef8d3308d9ff0",
+      "dimension": null,
+      "status": "CANDIDATE",
+      "candidate_kind": "source_review",
+      "title": "NASA’s SpaceX 35th Commercial Resupply Mission Overview",
+      "source_url": "https://www.nasa.gov/general/nasas-spacex-35th-commercial-resupply-mission-overview/",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-08T07:16:41Z",
+      "evidence_required": [
+        "Measurable improvement or clear reduction in friction/risk",
+        "Accessible on mobile and desktop where applicable",
+        "Does not expose private user data",
+        "Does not turn plans into claimed capabilities",
+        "Has tests or an explicit verification method",
+        "Keeps provenance and records rejected alternatives",
+        "Preserves IMA identity rather than cloning another product"
+      ],
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
+      "decision": "compare_specific_source_evidence_against_current_implementation",
+      "adoption_blocked": true,
+      "evidence_status": "source_metadata_available_change_detail_required",
+      "source_state_path": ".ima/web_intelligence/state.json",
+      "discovery_item_count": 944
+    },
+    {
+      "id": "9c57037375f13a9e1f73",
+      "dimension": null,
+      "status": "CANDIDATE",
+      "candidate_kind": "source_review",
+      "title": "NASA’s PRIMA Spacecraft (Artist’s Concept)",
+      "source_url": "https://science.nasa.gov/photojournal/nasas-prima-spacecraft-artists-concept/",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-08T07:16:41Z",
+      "evidence_required": [
+        "Measurable improvement or clear reduction in friction/risk",
+        "Accessible on mobile and desktop where applicable",
+        "Does not expose private user data",
+        "Does not turn plans into claimed capabilities",
+        "Has tests or an explicit verification method",
+        "Keeps provenance and records rejected alternatives",
+        "Preserves IMA identity rather than cloning another product"
+      ],
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
+      "decision": "compare_specific_source_evidence_against_current_implementation",
+      "adoption_blocked": true,
+      "evidence_status": "source_metadata_available_change_detail_required",
+      "source_state_path": ".ima/web_intelligence/state.json",
+      "discovery_item_count": 944
+    },
+    {
+      "id": "27934045e5611aa57f9e",
+      "dimension": null,
+      "status": "CANDIDATE",
+      "candidate_kind": "source_review",
+      "title": "NASA’s Curiosity Looks Back After Reaching Elevation Milestone",
+      "source_url": "https://science.nasa.gov/photojournal/nasas-curiosity-looks-back-after-reaching-elevation-milestone/",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-08T07:16:41Z",
+      "evidence_required": [
+        "Measurable improvement or clear reduction in friction/risk",
+        "Accessible on mobile and desktop where applicable",
+        "Does not expose private user data",
+        "Does not turn plans into claimed capabilities",
+        "Has tests or an explicit verification method",
+        "Keeps provenance and records rejected alternatives",
+        "Preserves IMA identity rather than cloning another product"
+      ],
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
+      "decision": "compare_specific_source_evidence_against_current_implementation",
+      "adoption_blocked": true,
+      "evidence_status": "source_metadata_available_change_detail_required",
+      "source_state_path": ".ima/web_intelligence/state.json",
+      "discovery_item_count": 944
     },
     {
       "id": "eba7da7cefaaa5dc2c41",
@@ -37,7 +167,7 @@
       "source_url": "https://science.nasa.gov/photojournal/nasas-curiosity-captures-dawn-breaking-on-wind-carved-cliffs/",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -47,12 +177,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "72cf186d9bcbf8fb335b",
@@ -63,7 +193,7 @@
       "source_url": "https://www.nasa.gov/image-article/artemis-ii-crew-moon-photo-annotations/",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -73,12 +203,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "c2987a3cfc439306793c",
@@ -89,7 +219,7 @@
       "source_url": "https://science.nasa.gov/image-article/apod-2026-october-7-supernova-remnant-pa-30/",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -99,12 +229,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "8f97be55c0df5d62737a",
@@ -115,7 +245,7 @@
       "source_url": "https://science.nasa.gov/earth/earth-observatory/arctic-sea-ice-shrinks-to-its-2026-minimum/",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -125,142 +255,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
-    },
-    {
-      "id": "8dfbe53b9272a74ec383",
-      "dimension": null,
-      "status": "CANDIDATE",
-      "candidate_kind": "source_review",
-      "title": "NASA to Cover Northrop Grumman CRS-24 Spacecraft Departure",
-      "source_url": "https://www.nasa.gov/news-release/nasa-to-cover-northrop-grumman-crs-24-spacecraft-departure/",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
-      "evidence_required": [
-        "Measurable improvement or clear reduction in friction/risk",
-        "Accessible on mobile and desktop where applicable",
-        "Does not expose private user data",
-        "Does not turn plans into claimed capabilities",
-        "Has tests or an explicit verification method",
-        "Keeps provenance and records rejected alternatives",
-        "Preserves IMA identity rather than cloning another product"
-      ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
-      "decision": "compare_specific_source_evidence_against_current_implementation",
-      "adoption_blocked": true,
-      "evidence_status": "source_metadata_available_change_detail_required",
-      "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
-    },
-    {
-      "id": "021d6feeb41d86997f04",
-      "dimension": null,
-      "status": "CANDIDATE",
-      "candidate_kind": "source_review",
-      "title": "October 2026 Satellite Puzzler",
-      "source_url": "https://science.nasa.gov/earth/earth-observatory/october-2026-satellite-puzzler/",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
-      "evidence_required": [
-        "Measurable improvement or clear reduction in friction/risk",
-        "Accessible on mobile and desktop where applicable",
-        "Does not expose private user data",
-        "Does not turn plans into claimed capabilities",
-        "Has tests or an explicit verification method",
-        "Keeps provenance and records rejected alternatives",
-        "Preserves IMA identity rather than cloning another product"
-      ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
-      "decision": "compare_specific_source_evidence_against_current_implementation",
-      "adoption_blocked": true,
-      "evidence_status": "source_metadata_available_change_detail_required",
-      "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
-    },
-    {
-      "id": "44e35c74ebb7ebe1d9d1",
-      "dimension": null,
-      "status": "CANDIDATE",
-      "candidate_kind": "source_review",
-      "title": "Lunar Grounding Challenge",
-      "source_url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/lunar-grounding-challenge/",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
-      "evidence_required": [
-        "Measurable improvement or clear reduction in friction/risk",
-        "Accessible on mobile and desktop where applicable",
-        "Does not expose private user data",
-        "Does not turn plans into claimed capabilities",
-        "Has tests or an explicit verification method",
-        "Keeps provenance and records rejected alternatives",
-        "Preserves IMA identity rather than cloning another product"
-      ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
-      "decision": "compare_specific_source_evidence_against_current_implementation",
-      "adoption_blocked": true,
-      "evidence_status": "source_metadata_available_change_detail_required",
-      "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
-    },
-    {
-      "id": "2532d732fac77a139acf",
-      "dimension": null,
-      "status": "CANDIDATE",
-      "candidate_kind": "source_review",
-      "title": "NASA Glenn Invites Phase 1 Proposals for Aerospace Power Systems Laboratory",
-      "source_url": "https://www.nasa.gov/news-release/nasa-glenn-invites-phase-1-proposals-for-aerospace-power-systems-laboratory/",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
-      "evidence_required": [
-        "Measurable improvement or clear reduction in friction/risk",
-        "Accessible on mobile and desktop where applicable",
-        "Does not expose private user data",
-        "Does not turn plans into claimed capabilities",
-        "Has tests or an explicit verification method",
-        "Keeps provenance and records rejected alternatives",
-        "Preserves IMA identity rather than cloning another product"
-      ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
-      "decision": "compare_specific_source_evidence_against_current_implementation",
-      "adoption_blocked": true,
-      "evidence_status": "source_metadata_available_change_detail_required",
-      "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
-    },
-    {
-      "id": "36152372e9e76d8e2aa0",
-      "dimension": null,
-      "status": "CANDIDATE",
-      "candidate_kind": "source_review",
-      "title": "Astronomers Solve Cosmic Cold Case with NASA Hubble Data",
-      "source_url": "https://www.nasa.gov/image-article/astronomers-solve-cosmic-cold-case-with-nasa-hubble-data/",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
-      "evidence_required": [
-        "Measurable improvement or clear reduction in friction/risk",
-        "Accessible on mobile and desktop where applicable",
-        "Does not expose private user data",
-        "Does not turn plans into claimed capabilities",
-        "Has tests or an explicit verification method",
-        "Keeps provenance and records rejected alternatives",
-        "Preserves IMA identity rather than cloning another product"
-      ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
-      "decision": "compare_specific_source_evidence_against_current_implementation",
-      "adoption_blocked": true,
-      "evidence_status": "source_metadata_available_change_detail_required",
-      "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "5024fc5527023162dc0e",
@@ -271,7 +271,7 @@
       "source_url": "https://www.nasa.gov/image-detail/fd07_impact-flashes/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -281,12 +281,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "ce25036677ced5ed0c61",
@@ -297,7 +297,7 @@
       "source_url": "https://www.nasa.gov/image-detail/stsci-01m3cbk3t6srkp4q7wv9cgfgw9/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -307,12 +307,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "fd5fbec220407f86a7ba",
@@ -323,7 +323,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-lincoln-financial-field/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -333,12 +333,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "997ee5ed69c139f66977",
@@ -349,7 +349,7 @@
       "source_url": "https://www.nasa.gov/image-detail/davinci-heat-test-1/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -359,12 +359,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "425f97a0d112e40739aa",
@@ -375,7 +375,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-13-launch-3/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -385,12 +385,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "35cce1d7e7faf7765d59",
@@ -401,7 +401,7 @@
       "source_url": "https://www.nasa.gov/image-detail/iss075e0144232/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -411,12 +411,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "09690c1d24a75936e673",
@@ -427,7 +427,7 @@
       "source_url": "https://www.nasa.gov/image-detail/afs-8-101-1312/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -437,12 +437,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "dc674d2527d900076c4b",
@@ -453,7 +453,7 @@
       "source_url": "https://www.nasa.gov/image-detail/gmt251_08_43_jessica-meir_northern-aurora-cupola-14mm/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -463,12 +463,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "dcde633e43aefa1324cf",
@@ -479,7 +479,7 @@
       "source_url": "https://www.nasa.gov/image-detail/a-galaxy-spinning-out-of-sync/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -489,12 +489,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "f7e29956358fcd56b313",
@@ -505,7 +505,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasa-navigation-experiment-shows-promise-for-landing-on-other-planets/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -515,12 +515,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "c5a220240098dda15797",
@@ -531,7 +531,7 @@
       "source_url": "https://www.nasa.gov/image-detail/stsci-h-p26023a-m-2000x1207/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -541,12 +541,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "0a19a6476098827940eb",
@@ -557,7 +557,7 @@
       "source_url": "https://www.nasa.gov/image-detail/m101-lg/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -567,12 +567,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "5115ed775670ac5c8bf5",
@@ -583,7 +583,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-mt-bank-stadium/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -593,12 +593,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "c93fc9f16e6ae6667dd5",
@@ -609,7 +609,7 @@
       "source_url": "https://www.nasa.gov/image-detail/cosi-2026july-01/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -619,12 +619,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "db957503786dc8e78c2e",
@@ -635,7 +635,7 @@
       "source_url": "https://www.nasa.gov/image-detail/the-shuttle-enterprise-with-star-trek-cast/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -645,12 +645,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "ca2b5f2586e1eee17c9e",
@@ -661,7 +661,7 @@
       "source_url": "https://www.nasa.gov/image-detail/krakatau-oli-20260905-lrg/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -671,12 +671,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "6465d173b9137b94d2d9",
@@ -687,7 +687,7 @@
       "source_url": "https://www.nasa.gov/image-detail/afs-8-101-1307/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -697,12 +697,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "56ff6057854fea052425",
@@ -713,7 +713,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-acrisure-stadium/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -723,12 +723,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "0155e6b8ad47e2963c76",
@@ -739,7 +739,7 @@
       "source_url": "https://www.nasa.gov/image-detail/galaxies-iizw096/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -749,12 +749,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "fa05b35be6b901b76aed",
@@ -765,7 +765,7 @@
       "source_url": "https://www.nasa.gov/image-detail/55459350878-2e1468b664-o/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -775,12 +775,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "efa35c4adce03b526e40",
@@ -791,7 +791,7 @@
       "source_url": "https://www.nasa.gov/image-detail/msfc-09012026-artemis-ii-crew-visit-at-msfc-1orig/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -801,12 +801,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "9c5d1cb95d100e256c2f",
@@ -817,7 +817,7 @@
       "source_url": "https://www.nasa.gov/image-detail/hubble-n44-wfc3-large/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -827,12 +827,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "554c45bd4c39f14765ca",
@@ -843,7 +843,7 @@
       "source_url": "https://www.nasa.gov/image-detail/amf-nhq202606170001/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -853,12 +853,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "b125499b540d587ff2b2",
@@ -869,7 +869,7 @@
       "source_url": "https://www.nasa.gov/image-detail/amf-nhq202608300037/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -879,12 +879,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "e1b0a7d979583dddcf1e",
@@ -895,7 +895,7 @@
       "source_url": "https://www.nasa.gov/image-detail/amf-maf_20260827_lunareclipse_01/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -905,12 +905,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "3cd009d5b841b73ae57f",
@@ -921,7 +921,7 @@
       "source_url": "https://www.nasa.gov/image-detail/amf-ksc-20260825-ph-rcr01_0045/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -931,12 +931,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "e9c061024cc716392d5a",
@@ -947,7 +947,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nancy-grace-roman-space-telescope-launch-2/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -957,12 +957,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "0fcaa742dad6dbfc3b86",
@@ -973,7 +973,7 @@
       "source_url": "https://www.nasa.gov/image-detail/20260828-120552-jk1-3999-2/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -983,12 +983,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "eece486213ee98b4e50a",
@@ -999,7 +999,7 @@
       "source_url": "https://www.nasa.gov/image-detail/nasa-civil-servant-swearing-in-ceremony/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1009,12 +1009,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "44a0a9d3189f17549946",
@@ -1025,7 +1025,7 @@
       "source_url": "https://www.nasa.gov/image-detail/afs-8-101-1305/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1035,12 +1035,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "59fff4cf0035e50728b8",
@@ -1051,7 +1051,7 @@
       "source_url": "https://www.nasa.gov/image-detail/gmt230_ehdc1-2/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1061,12 +1061,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "9f7cb4a1ddbda2a99d9a",
@@ -1077,7 +1077,7 @@
       "source_url": "https://www.nasa.gov/image-detail/freedom-250-grand-prix/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1087,12 +1087,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "ec8c247dab818c7d022c",
@@ -1103,7 +1103,7 @@
       "source_url": "https://www.nasa.gov/image-detail/webb-opens-a-treasure-chest-filled-with-stars/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1113,12 +1113,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "462d114fc517bb4c7236",
@@ -1129,7 +1129,7 @@
       "source_url": "https://www.nasa.gov/image-detail/afs-8-101-1304/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1139,12 +1139,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "5c046b800bbf0beba5c2",
@@ -1155,7 +1155,7 @@
       "source_url": "https://www.nasa.gov/image-detail/stsci-01kz4n4d8g9ak26cf28hd5nt5n-d2d764/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1165,12 +1165,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "3b20f9789368d96dbc5c",
@@ -1181,7 +1181,7 @@
       "source_url": "https://www.nasa.gov/image-detail/jsc2026e407303/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1191,12 +1191,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "ba09561f7e6e17fb69f3",
@@ -1207,7 +1207,7 @@
       "source_url": "https://www.nasa.gov/image-detail/30dor-crop/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1217,12 +1217,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "897bcab8a6a1ff0a0bd8",
@@ -1233,7 +1233,7 @@
       "source_url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-3/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1243,12 +1243,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "10cbbcc987489fb10c26",
@@ -1259,7 +1259,7 @@
       "source_url": "https://www.nasa.gov/image-detail/perseidsorion-2/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1269,12 +1269,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     },
     {
       "id": "ba97da8f9bc9828a590a",
@@ -1285,7 +1285,7 @@
       "source_url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-2/",
       "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T18:38:04Z",
+      "observed_at": "2026-10-08T07:16:41Z",
       "evidence_required": [
         "Measurable improvement or clear reduction in friction/risk",
         "Accessible on mobile and desktop where applicable",
@@ -1295,12 +1295,12 @@
         "Keeps provenance and records rejected alternatives",
         "Preserves IMA identity rather than cloning another product"
       ],
-      "source_state_timestamp": "2026-10-07T18:38:08Z",
+      "source_state_timestamp": "2026-10-08T07:17:08Z",
       "decision": "compare_specific_source_evidence_against_current_implementation",
       "adoption_blocked": true,
       "evidence_status": "source_metadata_available_change_detail_required",
       "source_state_path": ".ima/web_intelligence/state.json",
-      "discovery_item_count": 918
+      "discovery_item_count": 944
     }
   ]
 }
