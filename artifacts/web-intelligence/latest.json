@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-08T01:52:27Z",
+  "timestamp": "2026-10-08T08:52:40Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 7,
+  "changed": 5,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,60 +29,44 @@
   },
   "items": [
     {
-      "id": "fbb1e012c43d81af4b32",
-      "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-spacex-35th-station-resupply-launch-arrival/",
-      "title": "NASA Sets Coverage for SpaceX 35th Station Resupply Launch, Arrival",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "id": "cb64f35a050902147f3a",
+      "url": "https://twitter.com/danintheory/status/2108065033070789090",
+      "title": "OpenAI withdraws three mathematical results",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T01:52:21Z"
+      "observed_at": "2026-10-08T08:52:37Z"
+    },
+    {
+      "id": "48a45d15a2192489b7a0",
+      "url": "https://dat-ecosystem.org/",
+      "title": "Dat-ecosystem: high level applications built on top of P2P protocols",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T08:52:37Z"
+    },
+    {
+      "id": "7e5a424d3e58c44549c4",
+      "url": "https://sheets.works/data-viz/holding-up-the-internet",
+      "title": "The people holding up the internet",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T08:52:37Z"
+    },
+    {
+      "id": "584dd46a13ca6f2c3e85",
+      "url": "https://treylorswift.github.io/demoscene-recomp/web/",
+      "title": "Classic PC demoscene productions running natively in the browser",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T08:52:37Z"
     },
     {
       "id": "dc50683096dec8f940b1",
       "url": "https://github.com/pingdotgg/ts-rust",
-      "title": "Rust Port of TypeScript (Tsc)",
+      "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
-    },
-    {
-      "id": "39d2fed3d43463e525e6",
-      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
-      "title": "Margaret Hamilton has died",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
-    },
-    {
-      "id": "f6b7d718d0af58282341",
-      "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
-      "title": "'Jonathan' is the oldest land animal on Earth",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
-    },
-    {
-      "id": "2da8982b8a70d6f0f8aa",
-      "url": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
-      "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
-    },
-    {
-      "id": "af83c323f19b2a85d09f",
-      "url": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
-      "title": "House with 15m underground tunnels for sale for 300k",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
-    },
-    {
-      "id": "b6aec8c05cfc3e2f0fe3",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
-      "title": "Google Playground: Create and play custom games",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T01:52:22Z"
+      "observed_at": "2026-10-08T08:52:37Z"
     }
   ]
 }
