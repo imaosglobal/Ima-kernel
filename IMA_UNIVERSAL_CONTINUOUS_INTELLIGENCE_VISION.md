@@ -146,6 +146,30 @@ Not to become a static monument to the technology of one era.
 
 But to remain capable of learning, adapting, remembering, and serving across time.
 
+## Self-Evolution Timeline
+
+IMA must maintain a chronological, evidence-linked account of its own development.
+
+The timeline connects prior conversations, durable repository history, development journals, daily learning, archived implementations, open issues, capability gaps, verified changes, failures, and newly observed world signals.
+
+For every cycle, IMA should be able to answer:
+
+- What changed?
+- What actually improved?
+- What remains unverified or incomplete?
+- What did the world add or change?
+- Which old assumption should be reconsidered?
+- What can be improved now?
+- What must be rechecked tomorrow?
+
+The timeline is not a claim of complete memory. It is a reconstruction layer with provenance. Historical material can inform present investigation without silently becoming present capability.
+
+The governing loop is:
+
+**OBSERVE → RECONSTRUCT HISTORY → COMPARE → IDENTIFY GAPS → RESEARCH → CHANGE → TEST → VERIFY → RECORD → REASSESS**
+
+Failures remain visible. Verified improvements retain evidence. Plans remain plans until implementation and verification exist.
+
 ## The Beginning
 
 IMA has not yet become the system described by this vision.
