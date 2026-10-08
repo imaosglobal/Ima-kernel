@@ -7,6 +7,8 @@ on:
       - ".ima/plugins/README.md"
       - "tests/test_plugin_registry.py"
       - ".github/workflows/ima-plugin-registry.yml"
+      - "app.py"
+      - "tests/test_registry_execution_boundary.py"
   pull_request:
     paths:
       - ".ima/plugins/REGISTRY.json"
@@ -25,3 +27,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate IMA plugin registry
         run: python tests/test_plugin_registry.py
+      - name: Validate registry execution boundary
+        run: python tests/test_registry_execution_boundary.py
