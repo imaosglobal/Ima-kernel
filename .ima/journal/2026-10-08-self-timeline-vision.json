@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-08T13:00:00Z",
+  "event": "self_timeline_integrated_into_canonical_vision",
+  "summary": "ציר ההתפתחות העצמית הוגדר כחלק מהחזון הקנוני של IMA ולא כמסמך צדדי: היסטוריה, פערים, שינויים בעולם, אימות וכשלי עבר מחוברים ללולאת ההתפתחות היומית.",
+  "source": "IMA Project Steward; canonical IMA vision; historical audit",
+  "status": "EXECUTED_PENDING_CI",
+  "evidence": {
+    "vision_commit": "8c6e144687a7465c670d0d66b5f19ac61468c0a1",
+    "timeline_builder": "e9f3286315b4fe767b1db1fb326f4642f59c4fa9",
+    "daily_workflow": "a78ec46a0e3b817740506962b263860b6c2d8e3e"
+  },
+  "unresolved": [
+    "Latest Continuous Health verification is still running/pending after subsequent commits.",
+    "The timeline is reconstructed from durable project evidence and an explicit historical seed; it is not claimed to contain every past conversation verbatim."
+  ],
+  "next": [
+    "Verify CI conclusion, then use the resulting evidence to select and execute the next highest-value open loop."
+  ]
+}
