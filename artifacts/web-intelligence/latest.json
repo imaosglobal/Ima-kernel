@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-08T08:52:40Z",
+  "timestamp": "2026-10-08T16:26:01Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 5,
+  "changed": 14,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,44 +29,116 @@
   },
   "items": [
     {
-      "id": "cb64f35a050902147f3a",
-      "url": "https://twitter.com/danintheory/status/2108065033070789090",
-      "title": "OpenAI withdraws three mathematical results",
-      "source": "https://hnrss.org/frontpage",
+      "id": "06991627699fd4a6d844",
+      "url": "https://www.nasa.gov/news-release/nasa-energy-department-advance-new-era-of-nuclear-powered-exploration/",
+      "title": "NASA, Energy Department Advance New Era of Nuclear-Powered Exploration",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-08T08:52:37Z"
+      "observed_at": "2026-10-08T16:25:23Z"
     },
     {
-      "id": "48a45d15a2192489b7a0",
-      "url": "https://dat-ecosystem.org/",
-      "title": "Dat-ecosystem: high level applications built on top of P2P protocols",
-      "source": "https://hnrss.org/frontpage",
+      "id": "4df0bb8433803ae433e9",
+      "url": "https://science.nasa.gov/missions/lisa/nasa-advances-lisa-mission-contributions-with-new-test-telescope/",
+      "title": "NASA Advances LISA Mission Contributions With New Test Telescope",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-08T08:52:37Z"
+      "observed_at": "2026-10-08T16:25:23Z"
     },
     {
-      "id": "7e5a424d3e58c44549c4",
-      "url": "https://sheets.works/data-viz/holding-up-the-internet",
-      "title": "The people holding up the internet",
+      "id": "62fbb236a09d2cf5fc09",
+      "url": "https://newgtldprogram-aps.icann.org/applications/CD2694T-T26351/summary",
+      "title": "New gTLD Application for .lan",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T08:52:37Z"
+      "observed_at": "2026-10-08T16:25:23Z"
     },
     {
-      "id": "584dd46a13ca6f2c3e85",
-      "url": "https://treylorswift.github.io/demoscene-recomp/web/",
-      "title": "Classic PC demoscene productions running natively in the browser",
+      "id": "cff425fe872f9deacb92",
+      "url": "https://www.reuters.com/business/us-suspending-permanent-residency-program-for-microsoft-vance-says-2026-10-08/",
+      "title": "US suspends Microsoft, major IT firms from key green card program",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T08:52:37Z"
+      "observed_at": "2026-10-08T16:25:23Z"
     },
     {
-      "id": "dc50683096dec8f940b1",
-      "url": "https://github.com/pingdotgg/ts-rust",
-      "title": "Port of the TypeScript compiler, checker and lsp to Rust, by LLM",
+      "id": "b64d3220bf49bda963fd",
+      "url": "https://news.ycombinator.com/item?id=50006366",
+      "title": "Tell HN: I've been paying for a rural Tanzanian's education for 10 years",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T08:52:37Z"
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "f3278c768253085f8868",
+      "url": "https://orkut.com/",
+      "title": "Orkut.com",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "650a47eae09204f12b6e",
+      "url": "https://interop-rank.fxdx.dev/",
+      "title": "2027 Web Platform Feature Ranking",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "dea3f2aab79dd572284e",
+      "url": "https://github.com/SamsungLabs/LittleBit",
+      "title": "Sub-1-Bit LLM Compression via Latent Factorization",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "c1f5c5558bed0e28c7cf",
+      "url": "https://vale.rocks/posts/dvd-menus",
+      "title": "Beauty in DVD Menus",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "1b62cf7bb1a261620e08",
+      "url": "https://www.telnetbbsguide.com/",
+      "title": "Telnet BBS Guide",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "70620861a7df5ed7239a",
+      "url": "https://quesma.com/blog/invisible-cities-one-shot/",
+      "title": "I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "2551c688cfa7115fd10a",
+      "url": "https://www.theguardian.com/books/2026/oct/08/wins-the-nobel-prize-in-literature-2026",
+      "title": "Anne Carson wins Nobel Prize in literature 2026",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "8fdb962b6a49acb6499f",
+      "url": "https://github.com/openai/math/blob/main/history.md",
+      "title": "OpenAI Withdraws 3 Math Papers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
+    },
+    {
+      "id": "54726e7642bfe3b19443",
+      "url": "https://www.smithsonianmag.com/science-nature/archaeologists-are-reconstructing-the-invisible-technologies-of-the-stone-age-from-rope-to-thread-and-twine-180989534/",
+      "title": "Archaeologists Are Reconstructing the 'Invisible' Technologies of the Stone Age",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-08T16:25:23Z"
     }
   ]
 }
