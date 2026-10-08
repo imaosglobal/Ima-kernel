@@ -1,0 +1,62 @@
+{
+  "schema": "IMA-HISTORY-SEED-1.0",
+  "purpose": "Project-history anchors from prior IMA conversations and repository work. Not exhaustive; repository/workflow evidence supersedes this seed.",
+  "entries": [
+    {
+      "date": "2026-07-16",
+      "event": "history_query_v2_gap",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "V2 had partial event search and deduplication; missing real-time dates, daily summary, future view and unified historical query were identified."
+    },
+    {
+      "date": "2026-07-16",
+      "event": "guardian_history",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Guardian history had 619 lines with cycle boundaries and imported Git history; unified before/after evidence was identified as a needed improvement."
+    },
+    {
+      "date": "2026-08-20",
+      "event": "memory_fragmentation_audit",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Memory/history components were identified as fragmented, with a need for a unified autobiographical mechanism."
+    },
+    {
+      "date": "2026-10-02",
+      "event": "dated_development_journal",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Requested dated memory and journal records for every development step; repository development-journal infrastructure followed."
+    },
+    {
+      "date": "2026-10-05",
+      "event": "continuous_stewardship",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Requested full-history review and autonomous continuation; stewardship loop was defined as observe, compare, identify gaps, change, test, verify, document, reassess."
+    },
+    {
+      "date": "2026-10-06",
+      "event": "zero_point_and_global_discovery",
+      "source": "repository commits and prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Zero-point self-inquiry and global discovery were integrated into IMA's public and learning vision."
+    },
+    {
+      "date": "2026-10-07",
+      "event": "cross_domain_adaptation",
+      "source": "repository journal",
+      "status": "EVIDENCED",
+      "summary": "Adaptation pipeline was repaired, candidate persistence added, adoption gates hardened, source evidence pipeline expanded and discovery/evaluation ordering repaired."
+    },
+    {
+      "date": "2026-10-08",
+      "event": "n8n_interoperability",
+      "source": "repository journal and official research",
+      "status": "EVIDENCED",
+      "summary": "n8n agent interoperability was recorded as a research candidate and the smallest reversible contract test was added; runtime integration remains gated."
+    }
+  ]
+}
