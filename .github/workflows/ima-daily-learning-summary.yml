@@ -22,11 +22,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Rebuild chronological self-evolution timeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .ima/evolution/self_timeline.py
+      - name: Verify self-evolution timeline
+        run: python -m pytest -q tests/test_self_timeline.py
       - name: Build concise daily learning summary
         run: python .ima/web_intelligence/daily_summary.py
       - name: Persist daily summary and journal
         run: |
-          git add .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json
+          git add .ima/evolution/SELF_TIMELINE.json docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "IMA Daily Learning Steward"
           git config user.email "actions@users.noreply.github.com"
