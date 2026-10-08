@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-07T21:14:59Z",
+  "timestamp": "2026-10-08T01:52:27Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 14,
+  "changed": 7,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,116 +29,60 @@
   },
   "items": [
     {
-      "id": "1992c310d7b6f26d2e56",
-      "url": "https://www.nasa.gov/general/nasas-spacex-35th-commercial-resupply-mission-overview/",
-      "title": "NASA’s SpaceX 35th Commercial Resupply Mission Overview",
+      "id": "fbb1e012c43d81af4b32",
+      "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-spacex-35th-station-resupply-launch-arrival/",
+      "title": "NASA Sets Coverage for SpaceX 35th Station Resupply Launch, Arrival",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:54Z"
+      "observed_at": "2026-10-08T01:52:21Z"
     },
     {
-      "id": "dbbec36cc7dd966c30fc",
-      "url": "https://science.nasa.gov/photojournal/nasas-prima-spacecraft-artists-concept/",
-      "title": "NASA’s PRIMA Spacecraft (Artist’s Concept)",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:54Z"
-    },
-    {
-      "id": "b3b0408880158b0797c6",
-      "url": "https://link.springer.com/article/10.1007/s10739-026-09866-7",
-      "title": "Despite what Watson said, Rosalind Franklin understood structure of DNA first",
+      "id": "dc50683096dec8f940b1",
+      "url": "https://github.com/pingdotgg/ts-rust",
+      "title": "Rust Port of TypeScript (Tsc)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     },
     {
-      "id": "864cbfe55cb5547f9ff3",
-      "url": "https://gtlds.fyi/",
-      "title": "Show HN: gtlds.fyi – All the proposed new gTLDs",
+      "id": "39d2fed3d43463e525e6",
+      "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+      "title": "Margaret Hamilton has died",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     },
     {
-      "id": "b7160de8b18f07e7e1c3",
-      "url": "https://scottaaronson.blog/",
-      "title": "The Mathocalypse",
+      "id": "f6b7d718d0af58282341",
+      "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
+      "title": "'Jonathan' is the oldest land animal on Earth",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     },
     {
-      "id": "9b955ce8af2763d0997a",
-      "url": "https://scottaaronson.blog/?p=10169",
-      "title": "The Mathocalypse",
+      "id": "2da8982b8a70d6f0f8aa",
+      "url": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
+      "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     },
     {
-      "id": "e1bc0fc4043a9aa65211",
-      "url": "https://www.icann.org/en/announcements/details/icann-reveals-2026-round-applications-for-new-generic-top-level-domains-07-10-2026-en",
-      "title": "ICANN Reveals 2026 Round Applications for New Generic Top-Level Domains",
+      "id": "af83c323f19b2a85d09f",
+      "url": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
+      "title": "House with 15m underground tunnels for sale for 300k",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     },
     {
-      "id": "f912fde3e281653a5783",
-      "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
-      "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+      "id": "b6aec8c05cfc3e2f0fe3",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "title": "Google Playground: Create and play custom games",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "9e9c9bd1f0b8333743ed",
-      "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
-      "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "b856de0518197d6e3347",
-      "url": "https://agent.reviews/",
-      "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "80bbf9b00ca18f190748",
-      "url": "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees",
-      "title": "Visa, Mastercard, major banks facing new litigation over 'anticompetitive' fees",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "3983fbb72a3c3a77b6c7",
-      "url": "https://worksinprogress.co/issue/the-seven-vices-of-highly-effective-victorians/",
-      "title": "Why were Victorian elites so effective?",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "e8e7a8f2af0a845725dd",
-      "url": "https://synthid.com/",
-      "title": "SynthID Detector",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
-    },
-    {
-      "id": "4947297bbfe7b42d4519",
-      "url": "https://refactoringenglish.com/blog/anti-patterns-software-blogging/",
-      "title": "Anti-patterns in software blogging",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-07T21:14:55Z"
+      "observed_at": "2026-10-08T01:52:22Z"
     }
   ]
 }
