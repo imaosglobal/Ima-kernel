@@ -13,7 +13,7 @@
     ],
     [
       "agent",
-      "transparent steps, previews, stop/edit controls, permissions, audit trail"
+      "transparent steps, previews, stop/edit controls, permissions, audit trail, reusable agents, workflow-as-tool boundaries, approvals, execution provenance"
     ],
     [
       "accessibility",
@@ -25,11 +25,11 @@
     ],
     [
       "learning",
-      "discovery, evidence, comparison, experiments, regression tests, provenance"
+      "discovery, evidence, comparison, experiments, regression tests, provenance, agent-session evidence and tool execution feedback"
     ],
     [
       "memory",
-      "personal/shared separation, consent, retention, retrieval, correction"
+      "personal/shared separation, consent, retention, retrieval, correction, session-memory boundary and explicit synchronization"
     ],
     [
       "trust",
@@ -70,7 +70,34 @@
       "deployment smoke tests",
       "learning gaps",
       "journal"
-    ]
+    ],
+    "n8n_agents": {
+      "observed_at": "2026-10-08",
+      "status": "RESEARCH_CANDIDATE",
+      "primary_source": "n8n official Introducing n8n Agents",
+      "capabilities": [
+        "agents",
+        "MCP tools",
+        "workflows as tools",
+        "skills",
+        "knowledge",
+        "memory",
+        "sessions",
+        "sub-agents",
+        "approvals",
+        "scoped credentials",
+        "execution logs"
+      ],
+      "tests": [
+        "n8n_mcp_tool_boundary",
+        "n8n_workflow_as_tool",
+        "n8n_approval_gate",
+        "n8n_execution_provenance",
+        "n8n_agent_reuse",
+        "n8n_memory_boundary"
+      ],
+      "adoption_gate": "source-specific implementation + tests + runtime/external verification"
+    }
   },
   "acceptance": [
     "Measurable improvement or clear reduction in friction/risk",
