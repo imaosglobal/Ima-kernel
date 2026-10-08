@@ -1,0 +1,20 @@
+{
+  "schema": "IMA-N8N-CONTRACT-1.0",
+  "status": "RESEARCH_CANDIDATE",
+  "enabled": false,
+  "action_authority": "none",
+  "tool_scope": "explicit_only",
+  "approval_required_for_sensitive_actions": true,
+  "adoption_gate": "implementation + tests + runtime_or_external_verification",
+  "required_evidence": {
+    "source": true,
+    "test": true,
+    "verification": true
+  },
+  "allowed_test_surface": {
+    "mcp_discovery": "metadata_only",
+    "workflow_execution": "disabled",
+    "external_side_effects": "disabled",
+    "credentials": "none"
+  }
+}
