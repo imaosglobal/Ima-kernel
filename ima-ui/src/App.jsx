@@ -12,6 +12,11 @@ function Presence({ state = 'idle' }) {
   const { scene } = useGLTF('/Ima-kernel/mother_character.glb');
 
   useEffect(() => {
+    document.documentElement.dataset.imaMotion = reducedMotion ? 'reduced' : 'full';
+    localStorage.setItem('ima-reduced-motion', reducedMotion ? '1' : '0');
+  }, [reducedMotion]);
+
+  useEffect(() => {
     scene.traverse(object => {
       if (object.isMesh) {
         object.castShadow = true;
@@ -117,6 +122,8 @@ export default function App() {
   const [paletteQuery, setPaletteQuery] = useState('');
   const [activity, setActivity] = useState('מוכן');
   const [deviceContinuity, setDeviceContinuity] = useState(null);
+  const [reducedMotion, setReducedMotion] = useState(() => localStorage.getItem('ima-reduced-motion') === '1');
+  const [showTranscript, setShowTranscript] = useState(true);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. הזיכרון האישי של כל אדם נשמר בנפרד, בעוד שהידע והלמידה הציבוריים של אמא נבנים ממקורות רבים.' }
   ]);
@@ -182,11 +189,11 @@ export default function App() {
   ];
   const visibleCommands = commands.filter(c => c.label.includes(paletteQuery.trim())).slice(0, 8);
 
-  return <main className="ima-app" dir="rtl">
+  return <main className={'ima-app ' + (reducedMotion ? 'reduced-motion' : '')} dir="rtl" data-motion={reducedMotion ? 'reduced' : 'full'}>
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#space">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
+      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><button className="command-trigger" onClick={() => setReducedMotion(v => !v)} aria-pressed={reducedMotion}>{reducedMotion ? 'תנועה מופחתת' : 'תנועה מלאה'}</button><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero mother-home" id="home">
@@ -246,9 +253,9 @@ export default function App() {
     <section className="chat-section" id="space">
       <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p></div>
       <div className="chat-shell" id="chat">
-        <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button aria-label={voice ? 'כיבוי קול' : 'הפעלת קול'} className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button></div>
-        <div className="messages" aria-live="polite" aria-label="שיחת אמא">
-          {messages.map((m, i) => <div key={i} className={'message-row ' + m.role}><div className="message">{m.text}{m.fallback && <small> · מצב מקומי</small>}</div></div>)}
+        <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button aria-label={voice ? 'כיבוי קול' : 'הפעלת קול'} className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button><button className="voice" onClick={() => setShowTranscript(v => !v)} aria-pressed={showTranscript}>{showTranscript ? 'הסתרת תמלול' : 'הצגת תמלול'}</button></div>
+        <div className="messages" aria-live="polite" aria-label="שיחת אמא" aria-busy={busy}>
+          {messages.map((m, i) => <div key={i} className={'message-row ' + m.role}><div className="message">{showTranscript ? m.text : (m.role === 'ima' ? 'אמא מדברת' : 'הודעה שנשלחה')} {m.fallback && <small> · מצב מקומי</small>}</div></div>)}
           {busy && <div className="message-row ima"><div className="message typing"><i /><i /><i /></div></div>}
         </div>
         <div className="starters">{starters.map(s => <button key={s} onClick={() => send(s)}>{s}</button>)}</div>
