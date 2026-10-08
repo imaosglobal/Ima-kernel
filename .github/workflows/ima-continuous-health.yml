@@ -49,7 +49,9 @@ jobs:
 
       - name: Cross-domain adaptation tests
         run: python -m unittest tests/test_adaptation_evaluator.py -v
-\n      - name: n8n interoperability contract tests\n        run: python -m unittest tests/test_n8n_interoperability.py -v\n
+      - name: n8n interoperability contract tests
+        run: python -m unittest tests/test_n8n_interoperability.py -v
+
       - name: Cross-domain adaptation evaluation
         run: python .ima/web_intelligence/adaptation_evaluator.py
 
