@@ -9,6 +9,8 @@ on:
       - 'connectors/llm/ima_pipeline.py'
       - 'connectors/llm/identity_guard.py'
       - 'learning/learning_gate.py'
+      - 'learning/child_safety_engine.py'
+      - 'tests/test_child_safety_engine.py'
       - 'api/server.py'
       - 'tests/test_capability_factory.py'
       - 'tests/test_human_intelligence_policy.py'
@@ -49,3 +51,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_learning_gate.py' -v
       - name: Human-centered router tests
         run: python -m unittest discover -s tests -p 'test_human_centered_router.py' -v
+      - name: Child safety tests
+        run: python -m unittest discover -s tests -p 'test_child_safety_engine.py' -v
