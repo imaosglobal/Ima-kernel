@@ -352,6 +352,22 @@ def chat():
         response = str(result.get("response") or "").strip()
         if not response:
             raise RuntimeError("IMA returned no response")
+
+        # Until a verified age signal exists, public chat uses the protective
+        # unknown-age profile. Client-supplied age claims are not trusted here.
+        from learning.child_safety_engine import enforce_response
+        language = "he" if any("\\u0590" <= char <= "\\u05FF" for char in message) else "en"
+        safety = enforce_response(
+            age_band="unknown",
+            user_message=message.strip(),
+            assistant_response=response,
+            language=language,
+        )
+        response = safety["response"].strip()
+        if not response:
+            raise RuntimeError("IMA safety layer returned no response")
+
+        # Store only the final response after the first-pass safety screen.
         public_memory.append(user_id, message.strip(), response)
         return jsonify({
             "response": response,
@@ -359,6 +375,13 @@ def chat():
             "runtime": result.get("connections", {}),
             "memory": {"scope": "user", "hits": len(memory)},
             "verified": True,
+            "safety": {
+                "screened": True,
+                "policy_version": safety.get("policy_version"),
+                "risk_codes": safety.get("risk_codes", []),
+                "response_action": safety.get("response_action"),
+                "limitations": safety.get("limitations"),
+            },
         })
     except Exception as exc:
         app.logger.exception("IMA chat failure")
