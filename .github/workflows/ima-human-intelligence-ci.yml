@@ -10,6 +10,9 @@ on:
       - 'connectors/llm/identity_guard.py'
       - 'learning/learning_gate.py'
       - 'learning/child_safety_engine.py'
+      - 'learning/age_assurance.py'
+      - 'tests/test_age_assurance.py'
+      - 'tests/test_public_chat_safety.py'
       - 'tests/test_child_safety_engine.py'
       - 'api/server.py'
       - 'tests/test_capability_factory.py'
@@ -24,6 +27,10 @@ on:
       - 'connectors/llm/ima_pipeline.py'
       - 'connectors/llm/identity_guard.py'
       - 'learning/learning_gate.py'
+      - 'learning/age_assurance.py'
+      - 'tests/test_age_assurance.py'
+      - 'tests/test_public_chat_safety.py'
+      - 'tests/test_child_safety_engine.py'
       - 'api/server.py'
       - 'tests/test_capability_factory.py'
       - 'tests/test_human_intelligence_policy.py'
@@ -53,3 +60,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_human_centered_router.py' -v
       - name: Child safety tests
         run: python -m unittest discover -s tests -p 'test_child_safety_engine.py' -v
+      - name: Signed age assurance and public route tests
+        run: |
+          python -m unittest discover -s tests -p 'test_age_assurance.py' -v
+          python -m unittest discover -s tests -p 'test_public_chat_safety.py' -v
