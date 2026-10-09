@@ -102,6 +102,8 @@ jobs:
           }
           check_url render_health https://ima-915m.onrender.com/health
           check_url render_runtime https://ima-915m.onrender.com/ima-api/runtime
+          check_url age_status https://ima-915m.onrender.com/ima-api/age/status
+          echo "IMA_AGE_ASSURANCE_LIVE_STATUS=$(cat /tmp/ima-smoke-age_status.body 2>/dev/null || true)"
           check_url github_pages https://imaosglobal.github.io/Ima-kernel/
           if [ "$failures" -ne 0 ]; then
             echo "IMA_LIVE_DEPLOYMENT_SMOKE=FAIL count=$failures"
