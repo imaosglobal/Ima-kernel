@@ -1,9 +1,9 @@
-name: IMA Daily Lifelong Learning
+name: IMA Learning Evaluation Component (manual)
 
 on:
+  # Daily orchestration belongs to the single IMA Global Health Loop scheduler.
+  # This workflow is intentionally manual-only to avoid a second daily schedule.
   workflow_dispatch:
-  schedule:
-    - cron: "07 1 * * *"
 
 permissions:
   contents: write
