@@ -1,3 +1,7 @@
+import base64
+import hashlib
+import hmac
+import json
 import os
 import tempfile
 import unittest
@@ -10,12 +14,64 @@ os.environ["PUBLIC_MEMORY_DB"] = os.path.join(
 from app import app
 
 
+def _b64url(value):
+    return base64.urlsafe_b64encode(value).decode().rstrip("=")
+
+
+def _age_token(secret, user_id, age_band, now):
+    header = _b64url(json.dumps({"alg": "HS256", "typ": "JWT"}, separators=(",", ":")).encode())
+    claims = {
+        "iss": "trusted-age-provider",
+        "aud": "ima-public-chat",
+        "purpose": "age_assurance",
+        "iat": now - 5,
+        "exp": now + 300,
+        "age_band": age_band,
+        "session_binding": hashlib.sha256(user_id.encode()).hexdigest(),
+    }
+    body = _b64url(json.dumps(claims, separators=(",", ":")).encode())
+    signing_input = f"{header}.{body}".encode()
+    signature = _b64url(hmac.new(secret.encode(), signing_input, hashlib.sha256).digest())
+    return f"{header}.{body}.{signature}"
+
+
 class PublicChatSafetyIntegrationTests(unittest.TestCase):
     def setUp(self):
         app.config["TESTING"] = True
         self.client = app.test_client()
         token = self.client.get("/ima-api/session").get_json()["token"]
         self.headers = {"Authorization": f"Bearer {token}"}
+
+    @patch("public_memory.append")
+    @patch("public_memory.recall", return_value=[])
+    @patch("ima_master_runtime.ask")
+    def test_valid_age_attestation_is_used_by_public_route(self, ask, recall, append):
+        secret = "integration-test-secret"
+        now = int(__import__("time").time())
+        user_id = "public:" + self.headers["Authorization"].split(".")[0].split(" ")[1].split(".")[0]
+        # Derive the exact opaque session subject from the bearer token's first segment.
+        with patch.dict(os.environ, {
+            "IMA_AGE_ATTESTATION_SECRET": secret,
+            "IMA_AGE_ISSUER": "trusted-age-provider",
+            "IMA_AGE_AUDIENCE": "ima-public-chat",
+        }):
+            token = _age_token(secret, user_id, "adult", now)
+            ask.return_value = {
+                "response": "Here is a neutral explanation.",
+                "provider": "test",
+                "connections": {},
+            }
+            response = self.client.post(
+                "/ima-api/chat",
+                headers=self.headers,
+                json={"message": "Explain this topic.", "age_attestation": token},
+            )
+        self.assertEqual(response.status_code, 200)
+        payload = response.get_json()
+        self.assertTrue(payload["safety"]["age_assurance"]["verified"])
+        self.assertEqual(payload["safety"]["age_assurance"]["age_band"], "adult")
+        self.assertEqual(payload["safety"]["age_band"], "adult")
+        self.assertFalse(payload["safety"]["protective_mode"])
 
     @patch("public_memory.append")
     @patch("public_memory.recall", return_value=[])
