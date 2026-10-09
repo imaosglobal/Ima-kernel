@@ -32,6 +32,9 @@ Never commit the secret to Git, expose it to browser JavaScript, or put it in a 
 5. Confirm deployed configuration using `GET /ima-api/age/status`, then run a real end-to-end issuer test. Until then the endpoint must show `not_configured` or the actual failure state.
 6. Re-review retention, deletion, consent and child-facing UX before broad release.
 
+## Duplicate and legacy implementation audit
+The active `child_safety/child_safety_core.py` compatibility entry point now delegates to `learning.child_safety_engine`; it no longer has its own permissive `safe: true` stub policy. Older `child_safety_engine.py` copies under `_archive_20260808/` are preserved as historical backups and are not used as the canonical runtime path. The age-assurance implementation has one canonical module, `learning/age_assurance.py`, and is covered by the existing health/daily/regression workflows rather than a new scheduler.
+
 ## Limits
 
 This code verifies an issuer-signed assertion; it does not itself establish a person's age. The quality of age verification depends on the external issuer's method and governance. HMAC is a shared-secret trust model: if the secret is exposed, the issuer and IMA must rotate it immediately. Independent security/privacy review is required before broad child-facing deployment.
