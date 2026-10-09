@@ -214,7 +214,7 @@ class Handler(BaseHTTPRequestHandler):
                     }
                 else:
                     try:
-                        answer = ima_master_runtime.ask(question)
+                        answer = ima_master_runtime.ask(question, user_id=self.user_id(), public=True)
 
                         if isinstance(answer, dict):
                             response = answer.get("response","")
