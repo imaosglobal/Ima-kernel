@@ -7,7 +7,7 @@ import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 
 const statusLabel = status => ({ LIVE: 'פעיל ומאומת', VERIFIED: 'מאומת', TESTED: 'נבדק', IMPLEMENTED: 'ממומש — לא אומת בפריסה', PLANNED: 'בתכנון', NOT_VERIFIED: 'טרם אומת', DISABLED: 'כבוי' })[status] || 'לא ידוע';
 
-function Presence({ state = 'idle' }) {
+function Presence({ state = 'idle', reducedMotion = false }) {
   const group = useRef(null);
   const { scene } = useGLTF('/Ima-kernel/mother_character.glb');
 
@@ -27,6 +27,12 @@ function Presence({ state = 'idle' }) {
 
   useFrame(({ clock }, delta) => {
     if (!group.current) return;
+    if (reducedMotion) {
+      group.current.position.y = 0;
+      group.current.rotation.y = 0;
+      group.current.scale.setScalar(1);
+      return;
+    }
 
     const t = clock.getElapsedTime();
 
@@ -75,7 +81,7 @@ function Presence({ state = 'idle' }) {
 
 useGLTF.preload('/Ima-kernel/mother_character.glb');
 
-function PresenceScene({ state }) {
+function PresenceScene({ state, reducedMotion }) {
   return (
     <Canvas
       camera={{ position: [0, 0.65, 5.2], fov: 36 }}
@@ -87,7 +93,7 @@ function PresenceScene({ state }) {
 
       <Suspense fallback={<Html center>אמא מתעוררת…</Html>}>
         <Stage intensity={0.7} adjustCamera>
-          <Presence state={state} />
+          <Presence state={state} reducedMotion={reducedMotion} />
         </Stage>
         <Environment preset="studio" />
       </Suspense>
@@ -209,7 +215,7 @@ export default function App() {
       </div>
       <div className="presence-card mother-presence" aria-label="אמא — נוכחות תלת ממדית חיה">
         <div className="presence-aura" aria-hidden="true" />
-        <div className="orb"><PresenceScene state={avatarState} /></div>
+        <div className="orb"><PresenceScene state={avatarState} reducedMotion={reducedMotion} /></div>
         <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / NOW</b></div>
       </div>
     </section>
