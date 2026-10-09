@@ -4,6 +4,12 @@
 
 Make IMA easy for the right people to discover, try, understand and return to — without spam, manipulation or false claims.
 
+## Child-first and intergenerational growth
+
+Growth is a by-product of usefulness and trust, not the goal at any cost. Children require age-appropriate experiences, data minimization, non-manipulative design, no dependency-building, and caregiver/educator involvement where appropriate. Do not market emotional exclusivity to children or use child-targeted dark patterns. Do not scale child-facing acquisition until the safety, privacy, accessibility and independent-review gates in [the Intergenerational Global Action Plan](IMA_INTERGENERATIONAL_GLOBAL_ACTION_PLAN.md) pass.
+
+Word-of-mouth must be user-initiated: sharing, invitation or referral happens only after an explicit user action. Never upload contact books, message people automatically, create fake testimonials, or imply an institution endorses IMA without written permission. Measure voluntary referrals and useful outcomes, not time spent in chat.
+
 ## Growth funnel
 
 DISCOVER → LAND → UNDERSTAND → TRY → FIRST VALUE → RETURN → CONTRIBUTE → INVITE
