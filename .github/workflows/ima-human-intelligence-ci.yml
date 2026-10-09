@@ -68,3 +68,4 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_age_assurance.py' -v
           python -m unittest discover -s tests -p 'test_public_chat_safety.py' -v
+          python -m unittest discover -s tests -p 'test_child_safety_core_adapter.py' -v
