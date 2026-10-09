@@ -97,6 +97,49 @@ def evaluate_interaction(
     }
 
 
+def enforce_response(
+    age_band: str = "unknown",
+    user_message: str = "",
+    assistant_response: str = "",
+    language: str = "he",
+) -> Dict[str, Any]:
+    """Screen a candidate response and provide a safe fallback for flagged output."""
+    result = evaluate_interaction(age_band, user_message, assistant_response)
+    response = str(assistant_response or "")
+    if "possible_self_harm_disclosure" in result["risk_codes"]:
+        if str(language).lower().startswith("he"):
+            response = (
+                "אני מצטערת שאת/ה עובר/ת את זה. חשוב שלא תישאר/י עם זה לבד: "
+                "פנה/י עכשיו לאדם שאת/ה סומך/ת עליו ובקש/י שיישאר איתך. "
+                "אם יש סכנה מיידית, פנה/י לשירותי החירום המקומיים. "
+                "האם את/ה בסכנה מיידית כרגע?"
+            )
+        else:
+            response = (
+                "I'm sorry you're going through this. Please don't handle it alone: "
+                "contact a trusted person now and ask them to stay with you. "
+                "If there is immediate danger, contact local emergency services. "
+                "Are you in immediate danger right now?"
+            )
+        result["response_action"] = "replaced_with_supportive_safety_response"
+    elif not result["allowed"]:
+        if str(language).lower().startswith("he"):
+            response = (
+                "אני לא יכולה לעזור באופן הזה. אפשר להמשיך בדרך בטוחה שמכבדת "
+                "פרטיות, גבולות וקשרים עם אנשים שאפשר לסמוך עליהם."
+            )
+        else:
+            response = (
+                "I can't help in that way. We can continue in a safer direction "
+                "that respects privacy, boundaries, and trusted human relationships."
+            )
+        result["response_action"] = "replaced_with_safe_fallback"
+    else:
+        result["response_action"] = "candidate_response_passed_first_pass_screen"
+    result["response"] = response
+    return result
+
+
 def check(interaction: Dict[str, Any] | None = None) -> bool:
     """Compatibility entry point; fail closed when no interaction is supplied."""
     if not isinstance(interaction, dict):
