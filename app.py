@@ -330,6 +330,23 @@ def outcome_status():
         app.logger.exception("IMA outcome engine failure")
         return jsonify({"status": "error", "error": "IMA outcome engine unavailable"}), 500
 
+@app.get("/ima-api/age/status")
+def age_assurance_status():
+    """Expose age-assurance readiness without exposing secrets or user data."""
+    configured = bool(
+        os.environ.get("IMA_AGE_ATTESTATION_SECRET")
+        and os.environ.get("IMA_AGE_ISSUER")
+    )
+    return jsonify({
+        "status": "ready" if configured else "not_configured",
+        "method": "trusted_signed_age_attestation",
+        "audience": os.environ.get("IMA_AGE_AUDIENCE", "ima-public-chat"),
+        "verified_age_signal_available": configured,
+        "fallback": "protective_unknown_age",
+        "exact_birth_date_collected": False,
+    })
+
+
 @app.post("/ima-api/chat")
 def chat():
     payload = request.get_json(silent=True) or {}
