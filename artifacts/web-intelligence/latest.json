@@ -1,14 +1,22 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-09T02:05:15Z",
+  "timestamp": "2026-10-09T08:58:41Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 8,
+  "changed": 5,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -29,68 +37,44 @@
   },
   "items": [
     {
-      "id": "a7100dc6c0045ce89bfd",
-      "url": "https://github.com/edrisranjbar/lifeos",
-      "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
+      "id": "5e1da95645bd3e4e71ef",
+      "url": "https://bottleship.pages.dev/",
+      "title": "Run Windows games (up to D3D9) in the browser",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
+      "observed_at": "2026-10-09T08:58:04Z"
     },
     {
-      "id": "336fbe00f1f149002ad4",
-      "url": "https://svg-spark.vercel.app/",
-      "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools",
+      "id": "5146c1c81cb4f8240a5a",
+      "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
+      "title": "Programming Isn't Special",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
+      "observed_at": "2026-10-09T08:58:04Z"
     },
     {
-      "id": "673790a84b457abbefd4",
-      "url": "https://bevy.org/news/bevy-0-20/",
-      "title": "Bevy 0.20",
+      "id": "312998a90c89e3685b7e",
+      "url": "https://opentelemetry.io/blog/2026/otel-native-by-design/",
+      "title": "OTel-Native by Design – Building Products That Export to Any Observability Stack",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
+      "observed_at": "2026-10-09T08:58:04Z"
     },
     {
-      "id": "341a2ca6658c964d8d1c",
-      "url": "https://spinal.sh/",
-      "title": "Spinal: A near-instant, predictive surface for any codebase",
+      "id": "5db6f4c527def9713872",
+      "url": "https://www.oldroll.io/",
+      "title": "Show HN: OldRoll, a free vintage photo editor for the browser",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
+      "observed_at": "2026-10-09T08:58:04Z"
     },
     {
-      "id": "6d2ccd890a1e9daec2ad",
-      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
-      "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
+      "id": "0b10079a9e5fd6fd9570",
+      "url": "https://github.com/microsoft/mxc",
+      "title": "MXC - a sandboxed code execution system",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
-    },
-    {
-      "id": "a40db2c445455d8ca9fb",
-      "url": "https://pocketty.app/",
-      "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
-    },
-    {
-      "id": "da83eaa0f4900bf77fad",
-      "url": "https://blog.janestreet.com/scaling-and-benchmarking-a-critical-message-bus/",
-      "title": "Scaling and benchmarking a critical message bus using a new indexing strategy",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
-    },
-    {
-      "id": "9bce984ffc5c19d38bd1",
-      "url": "https://opper.ai/jevman-benchmark/",
-      "title": "Show HN: Jevman – AI decision models play Pac-Man",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T02:05:04Z"
+      "observed_at": "2026-10-09T08:58:04Z"
     }
   ]
 }
