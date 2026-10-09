@@ -1,8 +1,12 @@
 # IMA - Intelligent Meta Architecture
 
-## IMA — human-centered intelligence, connected to the world
+## IMA — בינה אנושית: מבינה אנשים
 
-IMA is an open human-centered intelligence architecture and product project designed to evolve through validated collaboration.
+IMA is an open human-centered intelligence architecture and product project designed to understand people, support self-understanding and human connection, and evolve through validated collaboration. Its purpose is not to claim superintelligence or omniscience: models, tools and knowledge are means; people, dignity and human agency are the end.
+
+**Identity charter:** [IMA Human Intelligence Charter](docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md) — the governing product direction for listening before solving, compassion with truth, calibrated uncertainty, consent-based memory, privacy, accessibility and verifiable learning.
+
+**North star:** not merely an AI that knows; a human-centered intelligence that seeks to understand.
 
 **Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.**
 
@@ -36,9 +40,11 @@ Use the GitHub issue template **IMA learning contribution** for a question, corr
 
 A contribution is not automatically treated as truth. It enters a validation and provenance pipeline.
 
-## The learning loop
+## The human-understanding loop
 
-DISCOVER -> USE -> QUESTION -> CONTRIBUTE -> VALIDATE -> LEARN -> TEST -> VERIFY -> TEACH -> REPEAT
+LISTEN -> UNDERSTAND CONTEXT -> SEPARATE FACT FROM INFERENCE -> RESPOND WITH CARE -> INVITE CORRECTION -> CHECK OUTCOME -> LEARN ONLY WITH AUTHORIZATION -> REGRESSION TEST -> DOCUMENT
+
+The learning loop remains evidence-led: DISCOVER -> USE -> QUESTION -> CONTRIBUTE -> VALIDATE -> LEARN -> TEST -> VERIFY -> TEACH -> REPEAT.
 
 IMA explicitly tracks unknowns, uncertainty, conflicting evidence, missing prerequisites, missing tools, missing tests, failure modes, cross-domain connections, technology upgrades and teaching opportunities.
 
@@ -105,6 +111,7 @@ For the current public experience, start with [Discover IMA](DISCOVER_IMA.md). D
 - [Contributing](CONTRIBUTING.md)
 - [Global launch plan](docs/IMA_GLOBAL_LAUNCH_PLAN.md)
 - [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
+- [Human Intelligence Charter — בינה אנושית](docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md)
 - [Global identity & shared learning charter](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md)
 - [Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md)
 - [Zero-Point Self-Inquiry & Encounter Protocol](docs/IMA_ZERO_POINT_SELF_INQUIRY_AND_ENCOUNTER_PROTOCOL.md)
