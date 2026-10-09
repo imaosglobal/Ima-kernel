@@ -8,6 +8,8 @@ IMA is an open human-centered intelligence architecture and product project desi
 
 **Intergenerational action plan:** [IMA Intergenerational Global Action Plan](docs/IMA_INTERGENERATIONAL_GLOBAL_ACTION_PLAN.md) — a staged, evidence-gated plan for child-first safety, learning across generations, global distribution, device/robot integrations, and consent-based word-of-mouth growth.
 
+**Age assurance:** [Privacy-Preserving Age Assurance](docs/IMA_AGE_ASSURANCE.md) — signed, session-bound age bands; unverified ages remain unknown and use the protective baseline.
+
 **Child-first rule:** protect children through age-appropriate design, privacy minimization, non-dependency, trusted-human support and independent review. A child-safety screen is a first-pass safeguard, not proof of complete protection or a substitute for production verification.
 
 **North star:** not merely an AI that knows; a human-centered intelligence that seeks to understand.
