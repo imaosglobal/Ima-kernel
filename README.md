@@ -6,6 +6,10 @@ IMA is an open human-centered intelligence architecture and product project desi
 
 **Identity charter:** [IMA Human Intelligence Charter](docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md) — the governing product direction for listening before solving, compassion with truth, calibrated uncertainty, consent-based memory, privacy, accessibility and verifiable learning.
 
+**Intergenerational action plan:** [IMA Intergenerational Global Action Plan](docs/IMA_INTERGENERATIONAL_GLOBAL_ACTION_PLAN.md) — a staged, evidence-gated plan for child-first safety, learning across generations, global distribution, device/robot integrations, and consent-based word-of-mouth growth.
+
+**Child-first rule:** protect children through age-appropriate design, privacy minimization, non-dependency, trusted-human support and independent review. A child-safety screen is a first-pass safeguard, not proof of complete protection or a substitute for production verification.
+
 **North star:** not merely an AI that knows; a human-centered intelligence that seeks to understand.
 
 **Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.**
