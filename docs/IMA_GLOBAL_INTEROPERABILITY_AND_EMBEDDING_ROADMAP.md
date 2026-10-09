@@ -36,6 +36,12 @@ The goal is not to force IMA into every product. The goal is to make IMA technic
 Each user receives an individualized context, preferences, accessibility configuration and conversation. Personal memory remains separated from shared learning unless explicit authorization and applicable privacy controls permit promotion.
 
 ## Integration strategy
+## Child-first integration gate
+
+Every child-facing app, game, toy, learning tool, wearable or robot must pass an age-appropriate safety and privacy review before release. Unknown age uses a protective baseline until a verified age signal exists. Child-facing integrations must not encourage secrecy, isolation, romantic/sexual dependency or unnecessary disclosure of personal data. Integrations involving microphones, cameras, location, biometric sensors or actuators require separate explicit permissions and visible controls. Robot/device actuation additionally requires least privilege, safe-state behavior, emergency stop, simulation tests, auditability and human confirmation for consequential actions. A first-pass text filter alone is never sufficient for broad child-facing launch.
+
+The staged rollout and acceptance criteria live in [IMA Intergenerational Global Action Plan](IMA_INTERGENERATIONAL_GLOBAL_ACTION_PLAN.md).
+
 
 Prefer open, documented interfaces and standards:
 - HTTPS/REST
