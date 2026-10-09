@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-08T22:02:05Z",
+  "timestamp": "2026-10-09T02:05:15Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 25,
+  "changed": 8,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,204 +29,68 @@
   },
   "items": [
     {
-      "id": "59ce0cb3c0592a8a60dc",
-      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission/",
-      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "e16f84280efb242f97e1",
-      "url": "https://www.nasa.gov/news-release/nasa-announces-bold-science-initiatives-for-americas-golden-age-summit/",
-      "title": "NASA Announces Bold Science Initiatives for America’s Golden Age Summit",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "c8f73fc3067539cf0e4c",
-      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasas-sspicy-mission-to-demonstrate-in-space-inspection-technologies/",
-      "title": "NASA’s SSPICY Mission to Demonstrate In-Space Inspection Technologies",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "9f4d01aca69009eaee8e",
-      "url": "https://www.nasa.gov/image-article/crew-12-returns-to-earth/",
-      "title": "Crew-12 Returns to Earth",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "5a9a117643219a5e7ee4",
-      "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/",
-      "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "e650abdb0bba3a074ee2",
-      "url": "https://science.nasa.gov/missions/webb/webb-measures-distance-to-farthest-fast-radio-burst-suggesting-origin/",
-      "title": "Webb Measures Distance to Farthest Fast Radio Burst, Suggesting Origin",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "508dbedb31c35a4cfe4c",
-      "url": "https://www.nasa.gov/news-release/nasas-spacex-crew-12-splashes-down-sets-briefing-to-discuss-mission/",
-      "title": "NASA’s SpaceX Crew‑12 Splashes Down, Sets Briefing to Discuss Mission",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "4cf8b354f2993f2805ce",
-      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-12-splashdown-2/",
-      "title": "Crew-12 Returns to Earth",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:27Z"
-    },
-    {
-      "id": "400f93c3a2faae18adc1",
-      "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
-      "title": "How one bug bounty researcher chooses the features they investigate",
-      "source": "https://github.blog/feed/",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:28Z"
-    },
-    {
-      "id": "52d0c7b75c081c085725",
-      "url": "https://github.com/thesnarkitecht/rembrandt",
-      "title": "Show HN: Free open source Adobe Lightroom alternative, completely local with AI",
+      "id": "a7100dc6c0045ce89bfd",
+      "url": "https://github.com/edrisranjbar/lifeos",
+      "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
-      "id": "4e8eb673a5649a6c2826",
-      "url": "https://twitter.com/matthew_d_green/status/2108278850555674975",
-      "title": "I think we might lose public key cryptography",
+      "id": "336fbe00f1f149002ad4",
+      "url": "https://svg-spark.vercel.app/",
+      "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
-      "id": "1314133a19f9a10de483",
-      "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-      "title": "AI-ready biological data: $1.8B global commitment",
+      "id": "673790a84b457abbefd4",
+      "url": "https://bevy.org/news/bevy-0-20/",
+      "title": "Bevy 0.20",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
+    },
+    {
+      "id": "341a2ca6658c964d8d1c",
+      "url": "https://spinal.sh/",
+      "title": "Spinal: A near-instant, predictive surface for any codebase",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
       "id": "6d2ccd890a1e9daec2ad",
       "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2025.1697900/full",
-      "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy",
+      "title": "ADHD as a circadian rhythm disorder: evidence and implications for chronotherapy (2025)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
-      "id": "d88b2762190eb59cd069",
-      "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
-      "title": "The value of not getting to the point (2015)",
+      "id": "a40db2c445455d8ca9fb",
+      "url": "https://pocketty.app/",
+      "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
-      "id": "56ae1b27cc90a7bda42c",
-      "url": "https://github.com/p10node/k10s",
-      "title": "Show HN: K10s – A Clickable Kubernetes TUI (Go, Bubble Tea)",
+      "id": "da83eaa0f4900bf77fad",
+      "url": "https://blog.janestreet.com/scaling-and-benchmarking-a-critical-message-bus/",
+      "title": "Scaling and benchmarking a critical message bus using a new indexing strategy",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     },
     {
-      "id": "59bde841e4dd6b43f877",
-      "url": "https://www.theranos.world/",
-      "title": "Theranos.world",
+      "id": "9bce984ffc5c19d38bd1",
+      "url": "https://opper.ai/jevman-benchmark/",
+      "title": "Show HN: Jevman – AI decision models play Pac-Man",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "8e671fda16b4ef2f8e72",
-      "url": "https://cactuscompute.com/blog/whistle",
-      "title": "Whistle: Speech to Text in 16.9 MB",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "4d8b68140620bc6a3a6b",
-      "url": "http://scottbezek.blogspot.com/2026/10/making-flexible-neon-t-shirt-with-leds.html",
-      "title": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "fb3c354fbfe34ef32c71",
-      "url": "https://openrouter.ai/stepfun/step-5-preview",
-      "title": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "f7d3cba37164da53f6cf",
-      "url": "https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea",
-      "title": "Trump administration is suspending Microsoft from a green card program",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "fb68af5156588156c4fd",
-      "url": "https://news.flinders.edu.au/blog/2026/10/06/vanillin-provides-a-sweet-solution-for-chronic-wound-healing/",
-      "title": "Vanillin provides a sweet solution for chronic wound healing",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "846685e54120be5aa56b",
-      "url": "https://www.techspot.com/article/3178-oled-burn-in-test/",
-      "title": "OLED burn-in test: 30-month update",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "3406cffa8805039a6cac",
-      "url": "https://htmx.org/essays/yes-and/",
-      "title": "Yes, and",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "3beba4e70132be15e78c",
-      "url": "https://thequietus.com/news/us-man-given-prison-sentence-for-bot-farming-music-streams/",
-      "title": "US man given prison sentence for bot-farming music streams",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
-    },
-    {
-      "id": "eb7b4293d4abd6bf1793",
-      "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
-      "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-08T22:01:30Z"
+      "observed_at": "2026-10-09T02:05:04Z"
     }
   ]
 }
