@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-09T08:58:41Z",
+  "timestamp": "2026-10-09T16:08:24Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 5,
+  "changed": 19,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -37,44 +37,156 @@
   },
   "items": [
     {
-      "id": "5e1da95645bd3e4e71ef",
-      "url": "https://bottleship.pages.dev/",
-      "title": "Run Windows games (up to D3D9) in the browser",
-      "source": "https://hnrss.org/frontpage",
+      "id": "85c11fca4aa44ff1793b",
+      "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
+      "title": "Hack the World: Why hackathons are still the best place to learn to build",
+      "source": "https://github.blog/feed/",
       "kind": "feed",
-      "observed_at": "2026-10-09T08:58:04Z"
+      "observed_at": "2026-10-09T16:08:15Z"
     },
     {
-      "id": "5146c1c81cb4f8240a5a",
-      "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
-      "title": "Programming Isn't Special",
+      "id": "aee58cc26b95d2987cca",
+      "url": "https://blog.torproject.org/on-tor-relationship-with-mullvad/",
+      "title": "A statement on the Tor Project's relationship with Mullvad",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T08:58:04Z"
+      "observed_at": "2026-10-09T16:08:15Z"
     },
     {
-      "id": "312998a90c89e3685b7e",
-      "url": "https://opentelemetry.io/blog/2026/otel-native-by-design/",
-      "title": "OTel-Native by Design – Building Products That Export to Any Observability Stack",
+      "id": "213f0ac7c01625164633",
+      "url": "https://bsky.app/profile/opinionhaver.bsky.social/post/3mxfo2mdjqs2z",
+      "title": "The super intelligence shit is a humiliation ritual for OpenAI",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T08:58:04Z"
+      "observed_at": "2026-10-09T16:08:15Z"
     },
     {
-      "id": "5db6f4c527def9713872",
-      "url": "https://www.oldroll.io/",
-      "title": "Show HN: OldRoll, a free vintage photo editor for the browser",
+      "id": "a3aee753a05d33d11e72",
+      "url": "https://timesofindia.indiatimes.com/world/europe/germany-is-turning-abandoned-coal-mines-into-23-lakes-the-former-mining-landscape-is-becoming-europes-largest-artificial-wetland/articleshow/134725669.cms",
+      "title": "Germany turning abandoned coal mines into 23 lakes, becoming artificial wetland",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T08:58:04Z"
+      "observed_at": "2026-10-09T16:08:15Z"
     },
     {
-      "id": "0b10079a9e5fd6fd9570",
-      "url": "https://github.com/microsoft/mxc",
-      "title": "MXC - a sandboxed code execution system",
+      "id": "f3905dae30177ed534e6",
+      "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-on-the-international-criminal-court/",
+      "title": "Imposing Sanctions on the International Criminal Court",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T08:58:04Z"
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "96eff79c1b7bf81265eb",
+      "url": "https://www.python.org/downloads/release/python-3150/",
+      "title": "Python 3.15.0",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "6df10d3e32117514f668",
+      "url": "https://www.reuters.com/world/us-imposes-sanctions-international-criminal-court-hours-after-former-judge-wins-2026-10-09/",
+      "title": "US imposes sanctions on ICC hours after former judge wins Nobel Peace Prize",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "e7114450f119bad4b861",
+      "url": "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277",
+      "title": "Yandex Takes a Second Data Center Hit in 48 Hours",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "e04d9f55940a523a4be2",
+      "url": "https://oxide.computer/blog/our-445m-series-d",
+      "title": "Our $445M Series D",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "212e9120a76a6fc27002",
+      "url": "https://deno.com/blog/cloudflare",
+      "title": "Deno Is Joining Cloudflare",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "4a698294559103c679d1",
+      "url": "https://www.nejm.org/doi/10.1056/NEJMoa2502760",
+      "title": "Study: Exercise increases cancer survival rates",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "eaebb0f3b416b6b9e9ca",
+      "url": "https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/",
+      "title": "Reactions to 100 Solutions",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "3ad2fc4c6ef267bc24ca",
+      "url": "https://www.washingtonpost.com/technology/2026/10/09/chatgpt-users-iran-planted-ai-generated-articles-us-news-media/",
+      "title": "Iranian campaign planted fake articles in real U.S. publications using ChatGPT",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "9fe583ab4080e49c8d04",
+      "url": "https://www.hetzner.com/blog/the-hetzner-cloud-network-stack-history-and-technical-overview/",
+      "title": "The Hetzner Cloud network stack – history and technical overview",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "bf2149b8045ec7a8d0e9",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "title": "Let your AI agents paint big arrows, boxes and text on your screen",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "b405effee4998d94d222",
+      "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+      "title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "0d8c74eec04dc0baad67",
+      "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+      "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "55ca6d06f45cd7e40955",
+      "url": "https://github.com/alex0ptr/once",
+      "title": "Once: Cache CLI Commands",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
+    },
+    {
+      "id": "2cfcf54003456e1de773",
+      "url": "https://iminafleeting.com/",
+      "title": "I'm in a Meeting",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T16:08:15Z"
     }
   ]
 }
