@@ -24,6 +24,9 @@ Do not optimize for session length, compulsive return, emotional exclusivity or 
 7. Every capability and marketing claim is labelled LIVE-VERIFIED, PREVIEW, PLANNED or NOT-AVAILABLE. A passing unit test is not proof of production deployment.
 8. Child-facing products require expert review, child and caregiver input, incident reporting, red-team testing, privacy review and jurisdiction-specific legal review before broad launch.
 
+## Age assurance status and gate
+The source now verifies short-lived, session-bound signed age attestations and applies a verified age band to the public chat safety engine. See [IMA Privacy-Preserving Age Assurance](IMA_AGE_ASSURANCE.md). This is **source-integrated, not yet production-verified**: the trusted issuer and deployment secrets must be configured, and a live issuer round-trip must pass. Until then, age remains unknown and protective mode remains active. Do not add a second age-verification scheduler; use the existing health and daily regression workflows.
+
 ## Delivery plan
 
 ### Phase 0 — Now to 30 days: trustworthy foundation
