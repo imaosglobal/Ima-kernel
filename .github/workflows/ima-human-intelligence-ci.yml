@@ -50,6 +50,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install runtime test dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
       - name: Capability factory regression tests
         run: python -m unittest discover -s tests -p 'test_capability_factory.py' -v
       - name: Human intelligence policy tests
