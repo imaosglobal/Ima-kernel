@@ -28,6 +28,7 @@ jobs:
           python -m unittest discover -s tests -p "test_learning_gate.py" -v
           python -m unittest discover -s tests -p "test_human_centered_router.py" -v
           python -m unittest discover -s tests -p "test_child_safety_engine.py" -v
+          python -m unittest discover -s tests -p "test_age_assurance.py" -v
       - name: Rebuild chronological self-evolution timeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
