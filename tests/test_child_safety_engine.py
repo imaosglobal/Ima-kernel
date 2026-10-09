@@ -1,6 +1,6 @@
 import unittest
 
-from learning.child_safety_engine import check, evaluate_interaction
+from learning.child_safety_engine import check, enforce_response, evaluate_interaction
 
 
 class ChildSafetyEngineTests(unittest.TestCase):
@@ -47,6 +47,22 @@ class ChildSafetyEngineTests(unittest.TestCase):
         self.assertFalse(check())
         self.assertFalse(check({"age_band": "10_12", "assistant_response": "You only need me."}))
         self.assertTrue(check({"age_band": "adult", "assistant_response": "Here is a math explanation."}))
+
+    def test_unsafe_minor_response_is_replaced_before_delivery(self):
+        result = enforce_response("unknown", "", "You only need me; don't talk to anyone else.", "en")
+        self.assertEqual(result["response_action"], "replaced_with_safe_fallback")
+        self.assertNotIn("You only need me", result["response"])
+        self.assertIn("trusted human relationships", result["response"])
+
+    def test_self_harm_gets_supportive_response_not_generic_block(self):
+        result = enforce_response("unknown", "I want to hurt myself.", "I can't help with that.", "en")
+        self.assertEqual(result["response_action"], "replaced_with_supportive_safety_response")
+        self.assertIn("trusted person", result["response"])
+        self.assertIn("immediate danger", result["response"])
+
+    def test_hebrew_safety_fallback_is_localized(self):
+        result = enforce_response("unknown", "אני רוצה לפגוע בעצמי", "לא יודע", "he")
+        self.assertIn("אדם שאת", result["response"])
 
 
 if __name__ == "__main__":
