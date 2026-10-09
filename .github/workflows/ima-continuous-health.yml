@@ -42,7 +42,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
       - name: Python syntax check
-        run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py .ima/plugins/capability_factory.py tests/test_capability_factory.py .ima/plugins/gap_queue.py tests/test_gap_queue.py .ima/plugins/factory_self_test.py .ima/plugins/capability_runtime.py tests/test_capability_runtime.py
+        run: python -m py_compile app.py public_memory.py identity_context.py ima_master_runtime.py tests/public_runtime.test.py .ima/plugins/capability_factory.py tests/test_capability_factory.py .ima/plugins/gap_queue.py tests/test_gap_queue.py .ima/plugins/factory_self_test.py .ima/plugins/capability_runtime.py tests/test_capability_runtime.py learning/child_safety_engine.py tests/test_child_safety_engine.py core/human_intelligence.py tests/test_human_intelligence_policy.py
 
       - name: Web intelligence tests
         run: python -m unittest tests/test_web_intelligence.py -v
@@ -65,6 +65,12 @@ jobs:
           python -m unittest discover -s tests -p "test_*factory.py" -v
           python -m unittest discover -s tests -p "test_*queue.py" -v
           python -m unittest discover -s tests -p "test_*runtime.py" -v
+      - name: Human intelligence, consent and child safety regression
+        run: |
+          python -m unittest discover -s tests -p "test_human_intelligence_policy.py" -v
+          python -m unittest discover -s tests -p "test_learning_gate.py" -v
+          python -m unittest discover -s tests -p "test_human_centered_router.py" -v
+          python -m unittest discover -s tests -p "test_child_safety_engine.py" -v
 
       - name: Frontend quality
         working-directory: ima-ui
