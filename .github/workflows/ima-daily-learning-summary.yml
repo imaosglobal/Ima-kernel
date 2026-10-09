@@ -22,6 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Daily human intelligence and child safety regression
+        run: |
+          python -m unittest discover -s tests -p "test_human_intelligence_policy.py" -v
+          python -m unittest discover -s tests -p "test_learning_gate.py" -v
+          python -m unittest discover -s tests -p "test_human_centered_router.py" -v
+          python -m unittest discover -s tests -p "test_child_safety_engine.py" -v
       - name: Rebuild chronological self-evolution timeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
