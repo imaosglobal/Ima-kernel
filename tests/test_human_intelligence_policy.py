@@ -21,7 +21,7 @@ class HumanIntelligencePolicyTests(unittest.TestCase):
         prompt = compose_prompt("Help me understand a conflict.")
         self.assertIn(SYSTEM_POLICY, prompt)
         self.assertIn("Help me understand a conflict.", prompt)
-        self.assertIn(POLICY_VERSION, __import__("core.human_intelligence", fromlist=["POLICY_VERSION"]).__dict__["POLICY_VERSION"])
+        self.assertTrue(POLICY_VERSION)
 
     def test_empty_message_is_handled(self):
         self.assertIn("USER MESSAGE", compose_prompt(""))
