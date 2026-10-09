@@ -14,6 +14,8 @@ def wrap_response(model_result, identity="IMA"):
         "latency": model_result.get("latency"),
         "processed_by": "IMA_identity_layer",
     }
+    if model_result.get("human_intelligence_policy"):
+        result["human_intelligence_policy"] = model_result["human_intelligence_policy"]
     for key in ("attempted", "attempted_providers", "time", "latency"):
         if key in model_result and key not in result:
             result[key] = model_result[key]
