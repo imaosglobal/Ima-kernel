@@ -14,6 +14,8 @@ on:
       - 'tests/test_age_assurance.py'
       - 'tests/test_public_chat_safety.py'
       - 'tests/test_child_safety_engine.py'
+      - 'child_safety/child_safety_core.py'
+      - 'tests/test_child_safety_core_adapter.py'
       - 'api/server.py'
       - 'tests/test_capability_factory.py'
       - 'tests/test_human_intelligence_policy.py'
