@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-09T16:08:24Z",
+  "timestamp": "2026-10-09T21:38:38Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 19,
+  "changed": 23,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -37,156 +29,188 @@
   },
   "items": [
     {
-      "id": "85c11fca4aa44ff1793b",
-      "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
-      "title": "Hack the World: Why hackathons are still the best place to learn to build",
-      "source": "https://github.blog/feed/",
+      "id": "a4106c4b8a33ca378d9f",
+      "url": "https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/",
+      "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "aee58cc26b95d2987cca",
-      "url": "https://blog.torproject.org/on-tor-relationship-with-mullvad/",
-      "title": "A statement on the Tor Project's relationship with Mullvad",
-      "source": "https://hnrss.org/frontpage",
+      "id": "b85427f614ddb37d467c",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/",
+      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "213f0ac7c01625164633",
-      "url": "https://bsky.app/profile/opinionhaver.bsky.social/post/3mxfo2mdjqs2z",
-      "title": "The super intelligence shit is a humiliation ritual for OpenAI",
-      "source": "https://hnrss.org/frontpage",
+      "id": "ad1fdecb2580d52be26c",
+      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors/",
+      "title": "Cosmic House of Mirrors",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "a3aee753a05d33d11e72",
-      "url": "https://timesofindia.indiatimes.com/world/europe/germany-is-turning-abandoned-coal-mines-into-23-lakes-the-former-mining-landscape-is-becoming-europes-largest-artificial-wetland/articleshow/134725669.cms",
-      "title": "Germany turning abandoned coal mines into 23 lakes, becoming artificial wetland",
-      "source": "https://hnrss.org/frontpage",
+      "id": "2d43482cb79ba055c795",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater/",
+      "title": "APOD: 2026 October 9 – Stickney Crater",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "f3905dae30177ed534e6",
-      "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-on-the-international-criminal-court/",
-      "title": "Imposing Sanctions on the International Criminal Court",
-      "source": "https://hnrss.org/frontpage",
+      "id": "4f89388d6e84ff78c35e",
+      "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand/",
+      "title": "Floodwaters Overwhelm Thailand",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "96eff79c1b7bf81265eb",
-      "url": "https://www.python.org/downloads/release/python-3150/",
-      "title": "Python 3.15.0",
-      "source": "https://hnrss.org/frontpage",
+      "id": "8a328104e8db0a06aebb",
+      "url": "https://www.nasa.gov/image-detail/galaxies-in-a-cosmic-house-of-mirrors/",
+      "title": "Cosmic House of Mirrors",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:54Z"
     },
     {
-      "id": "6df10d3e32117514f668",
-      "url": "https://www.reuters.com/world/us-imposes-sanctions-international-criminal-court-hours-after-former-judge-wins-2026-10-09/",
-      "title": "US imposes sanctions on ICC hours after former judge wins Nobel Peace Prize",
+      "id": "500dae7445b0744d302c",
+      "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
+      "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
-      "id": "e7114450f119bad4b861",
-      "url": "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277",
-      "title": "Yandex Takes a Second Data Center Hit in 48 Hours",
+      "id": "83299127c3afec3e51dc",
+      "url": "https://borretti.me/article/no-man-is-an-island",
+      "title": "No Man Is an Island",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
-      "id": "e04d9f55940a523a4be2",
-      "url": "https://oxide.computer/blog/our-445m-series-d",
-      "title": "Our $445M Series D",
+      "id": "d73d433a92c68c10e60b",
+      "url": "https://blog.bawolf.com/p/you-might-want-to-try-being-less",
+      "title": "You might want to try being less creative",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "fb900a38eb855015e847",
+      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+      "title": "Microsoft-Decision-1, our model for fast decision-making",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "113a70303c759bf19449",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k/executive",
+      "title": "M7.6 Earthquake in Panama",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "364267b012f4ea40b25a",
+      "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find",
+      "title": "Ideas aren't getting harder to find, anyone who tells you otherwise is a coward",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "64581bfda36978c6945c",
+      "url": "https://carrierexplode.com/",
+      "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "876449a0944e93d0a721",
+      "url": "https://readrare.com/",
+      "title": "Show HN: The rarest tech books and docs you've probably never read",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "917825c0315309567de6",
+      "url": "https://typesafe.ai/blog/series-ai",
+      "title": "Typesafe AI raises $870M at $7.5B",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "5f84afa7a273882a799e",
+      "url": "https://minesweeper.mikelacher.com/",
+      "title": "Triple-A Minesweeper",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "2b5521e8d7dcd391b427",
+      "url": "https://www.euronews.com/2026/04/14/almost-like-lake-como-germany-transforms-former-coal-mines-into-europes-largest-lake-lands",
+      "title": "Germany transforms former coal mines into Europe's largest lake landscape",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
+    },
+    {
+      "id": "459c78019c2b37a3e52d",
+      "url": "https://animationobsessive.substack.com/p/wallace-and-gromit-90-alone",
+      "title": "'Wallace and Gromit,' 90% Alone",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
       "id": "212e9120a76a6fc27002",
       "url": "https://deno.com/blog/cloudflare",
-      "title": "Deno Is Joining Cloudflare",
+      "title": "Cloudflare acquires Deno",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
-      "id": "4a698294559103c679d1",
-      "url": "https://www.nejm.org/doi/10.1056/NEJMoa2502760",
-      "title": "Study: Exercise increases cancer survival rates",
+      "id": "0c22ba88d1257169379c",
+      "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
+      "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
-    },
-    {
-      "id": "eaebb0f3b416b6b9e9ca",
-      "url": "https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/",
-      "title": "Reactions to 100 Solutions",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
-    },
-    {
-      "id": "3ad2fc4c6ef267bc24ca",
-      "url": "https://www.washingtonpost.com/technology/2026/10/09/chatgpt-users-iran-planted-ai-generated-articles-us-news-media/",
-      "title": "Iranian campaign planted fake articles in real U.S. publications using ChatGPT",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
-    },
-    {
-      "id": "9fe583ab4080e49c8d04",
-      "url": "https://www.hetzner.com/blog/the-hetzner-cloud-network-stack-history-and-technical-overview/",
-      "title": "The Hetzner Cloud network stack – history and technical overview",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
       "id": "bf2149b8045ec7a8d0e9",
       "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
-      "title": "Let your AI agents paint big arrows, boxes and text on your screen",
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
       "id": "b405effee4998d94d222",
       "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
-      "title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+      "title": "Nobel Peace Prize for 2026 to Navanethem Pillay",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
-    },
-    {
-      "id": "0d8c74eec04dc0baad67",
-      "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-      "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     },
     {
       "id": "55ca6d06f45cd7e40955",
       "url": "https://github.com/alex0ptr/once",
-      "title": "Once: Cache CLI Commands",
+      "title": "Once: Cache CLI commands",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
-    },
-    {
-      "id": "2cfcf54003456e1de773",
-      "url": "https://iminafleeting.com/",
-      "title": "I'm in a Meeting",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T16:08:15Z"
+      "observed_at": "2026-10-09T21:37:56Z"
     }
   ]
 }
