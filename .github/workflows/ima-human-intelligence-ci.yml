@@ -1,0 +1,51 @@
+name: IMA Human Intelligence Regression
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'core/human_intelligence.py'
+      - 'core/conversation_router.py'
+      - 'connectors/llm/ima_pipeline.py'
+      - 'connectors/llm/identity_guard.py'
+      - 'learning/learning_gate.py'
+      - 'api/server.py'
+      - 'tests/test_capability_factory.py'
+      - 'tests/test_human_intelligence_policy.py'
+      - 'tests/test_learning_gate.py'
+      - 'tests/test_human_centered_router.py'
+      - '.github/workflows/ima-human-intelligence-ci.yml'
+  pull_request:
+    paths:
+      - 'core/human_intelligence.py'
+      - 'core/conversation_router.py'
+      - 'connectors/llm/ima_pipeline.py'
+      - 'connectors/llm/identity_guard.py'
+      - 'learning/learning_gate.py'
+      - 'api/server.py'
+      - 'tests/test_capability_factory.py'
+      - 'tests/test_human_intelligence_policy.py'
+      - 'tests/test_learning_gate.py'
+      - 'tests/test_human_centered_router.py'
+      - '.github/workflows/ima-human-intelligence-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  human-intelligence-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Capability factory regression tests
+        run: python -m unittest discover -s tests -p 'test_capability_factory.py' -v
+      - name: Human intelligence policy tests
+        run: python -m unittest discover -s tests -p 'test_human_intelligence_policy.py' -v
+      - name: Consent-aware learning tests
+        run: python -m unittest discover -s tests -p 'test_learning_gate.py' -v
+      - name: Human-centered router tests
+        run: python -m unittest discover -s tests -p 'test_human_centered_router.py' -v
