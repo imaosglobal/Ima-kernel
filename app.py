@@ -353,12 +353,15 @@ def chat():
         if not response:
             raise RuntimeError("IMA returned no response")
 
-        # Until a verified age signal exists, public chat uses the protective
-        # unknown-age profile. Client-supplied age claims are not trusted here.
+        # Accept only a short-lived signed attestation from the configured trusted
+        # issuer, bound to this authenticated session. Never trust a raw client age.
+        from learning.age_assurance import verify_age_attestation
         from learning.child_safety_engine import enforce_response
+        age_signal = verify_age_attestation(payload.get("age_attestation"), user_id)
+        age_band = age_signal["age_band"] if age_signal.get("verified") else "unknown"
         language = "he" if any("\\u0590" <= char <= "\\u05FF" for char in message) else "en"
         safety = enforce_response(
-            age_band="unknown",
+            age_band=age_band,
             user_message=message.strip(),
             assistant_response=response,
             language=language,
@@ -378,6 +381,13 @@ def chat():
             "safety": {
                 "screened": True,
                 "policy_version": safety.get("policy_version"),
+                "age_band": safety.get("age_band", "unknown"),
+                "protective_mode": safety.get("protective_mode", True),
+                "age_assurance": {
+                    "verified": bool(age_signal.get("verified")),
+                    "status": age_signal.get("status", "unknown"),
+                    "age_band": age_band,
+                },
                 "risk_codes": safety.get("risk_codes", []),
                 "response_action": safety.get("response_action"),
                 "limitations": safety.get("limitations"),
