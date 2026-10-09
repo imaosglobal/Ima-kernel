@@ -12,7 +12,7 @@ spec.loader.exec_module(module)
 class CapabilityRuntimeTests(unittest.TestCase):
     def test_snapshot_connects_registry_and_gap_queue(self):
         snapshot = module.snapshot()
-        self.assertEqual(snapshot["schema"], "IMA-CAPABILITY-RUNTIME-1.0")
+        self.assertEqual(snapshot["schema"], "IMA-CAPABILITY-RUNTIME-1.1")
         self.assertIn("providers", snapshot)
         self.assertIn("next_gap", snapshot)
         self.assertIn("gap_snapshot", snapshot)
