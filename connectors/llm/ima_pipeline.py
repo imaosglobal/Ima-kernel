@@ -2,6 +2,7 @@ from .model_selector import current
 from .router import available_providers
 from .executor import execute
 from .identity_guard import wrap_response
+from core.human_intelligence import compose_prompt, POLICY_VERSION
 
 
 def ask(message):
@@ -14,7 +15,8 @@ def ask(message):
         if not provider or provider not in available:
             continue
         model = selection.get("model") if provider == preferred else None
-        result = execute(model=model, prompt=message, provider=provider)
+        result = execute(model=model, prompt=compose_prompt(message), provider=provider)
+        result["human_intelligence_policy"] = POLICY_VERSION
         if result.get("status") == "ok" and result.get("response"):
             result["attempted_providers"] = len(failures) + 1
             return wrap_response(result, "IMA")
