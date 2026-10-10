@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-10T20:02:17Z",
+  "timestamp": "2026-10-10T23:30:35Z",
   "sources": 12,
-  "discovered": 92,
-  "changed": 14,
+  "discovered": 156,
+  "changed": 1,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -25,6 +17,10 @@
     {
       "source": "https://www.python.org/events/python-events/rss/",
       "error": "HTTPError"
+    },
+    {
+      "source": "https://hnrss.org/frontpage",
+      "error": "ConnectTimeout"
     }
   ],
   "latest_commoncrawl": "CC-MAIN-2026-39",
@@ -37,116 +33,12 @@
   },
   "items": [
     {
-      "id": "cb934642242e6805698b",
-      "url": "https://en.wikipedia.org/wiki/Takeshi%27s_Castle",
-      "title": "Takeshi's Castle",
-      "source": "https://hnrss.org/frontpage",
+      "id": "a6250952bd65a37daef4",
+      "url": "https://www.nasa.gov/news-release/nasa-to-conduct-flyover-engage-nfl-fans-at-metlife-stadium/",
+      "title": "NASA to Conduct Flyover, Engage NFL Fans at MetLife Stadium",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "ff937c40252284431292",
-      "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
-      "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "ae7c9336500624c075ad",
-      "url": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300",
-      "title": "Vibe coded browser ports of Halo, The Simpsons: Hit And Run, GTA work well",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "39e14f68a85db1e2a62c",
-      "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
-      "title": "Why DuckDB 2.0 is faster",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "c2f9caad882ea679da7f",
-      "url": "https://www.thomas-huehn.com/knuth-reward-check/",
-      "title": "Knuth reward check",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "2ca3d7a8b94cb0f063ff",
-      "url": "https://chronicles.popvax.com/p/popvax-goes-clinical",
-      "title": "PVX-001: open-source Covid-19 vaccine starts Phase 1 trial",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "346ac849b05f075f7916",
-      "url": "https://www.theguardian.com/us-news/2026/oct/10/fda-toxic-chemicals-food-analysis",
-      "title": "FDA may allow some toxic chemicals to be added to food without safety review",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "4e3dd727b793f881e47c",
-      "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
-      "title": "Bitwarden Dual License Model",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "3cff51c1d22e9e0ead10",
-      "url": "https://ghuntley.com/unikernels/",
-      "title": "Unikernels were hard. key word: were",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "61aead273b1a218a2153",
-      "url": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
-      "title": "I would like the value of my home to rise, while my property taxes fall",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "ce69094308f4ea3d3d25",
-      "url": "https://www.opengroup.org//openbrand/register/",
-      "title": "Apple/macOS removed from official Unix registry",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "5c1db9239c15fa63153f",
-      "url": "https://github.com/rociiu/talorys",
-      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "1f6c7af33906764f2c79",
-      "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
-      "title": "`123456' password used in Danish CPR data breach",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
-    },
-    {
-      "id": "8cba259cd103107b11a9",
-      "url": "https://ndstudio.gov/posts/say-hello-to-rampart",
-      "title": "Rampart: Browser native on-device PII radaction",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T20:01:36Z"
+      "observed_at": "2026-10-10T23:30:07Z"
     }
   ]
 }
