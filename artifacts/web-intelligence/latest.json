@@ -1,14 +1,22 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-09T21:38:38Z",
+  "timestamp": "2026-10-10T01:43:50Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 23,
+  "changed": 13,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -29,188 +37,108 @@
   },
   "items": [
     {
-      "id": "a4106c4b8a33ca378d9f",
-      "url": "https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/",
-      "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "b85427f614ddb37d467c",
-      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/",
-      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "ad1fdecb2580d52be26c",
-      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors/",
-      "title": "Cosmic House of Mirrors",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "2d43482cb79ba055c795",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater/",
-      "title": "APOD: 2026 October 9 – Stickney Crater",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "4f89388d6e84ff78c35e",
-      "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand/",
-      "title": "Floodwaters Overwhelm Thailand",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "8a328104e8db0a06aebb",
-      "url": "https://www.nasa.gov/image-detail/galaxies-in-a-cosmic-house-of-mirrors/",
-      "title": "Cosmic House of Mirrors",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:54Z"
-    },
-    {
-      "id": "500dae7445b0744d302c",
-      "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
-      "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
+      "id": "bd7f0877a9a13e25bda2",
+      "url": "https://rea.tools/",
+      "title": "REA Reverse – Engineer Anything",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "83299127c3afec3e51dc",
-      "url": "https://borretti.me/article/no-man-is-an-island",
-      "title": "No Man Is an Island",
+      "id": "ab05ccb2d2baf08e5527",
+      "url": "https://phenomenalworld.org/analysis/has-the-autonomous-trucking-revolution-arrived/",
+      "title": "Has the Autonomous Trucking Revolution Arrived?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "d73d433a92c68c10e60b",
-      "url": "https://blog.bawolf.com/p/you-might-want-to-try-being-less",
-      "title": "You might want to try being less creative",
+      "id": "d608eb71f802f71b63a2",
+      "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/",
+      "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "fb900a38eb855015e847",
-      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
-      "title": "Microsoft-Decision-1, our model for fast decision-making",
+      "id": "f2158f75999b17423f7f",
+      "url": "https://jdb19937.github.io/log-irrationality-measure/logmeasure.pdf",
+      "title": "The logarithms of rational numbers have irrationality exponent 2 [pdf]",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "113a70303c759bf19449",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k/executive",
-      "title": "M7.6 Earthquake in Panama",
+      "id": "63943982f089ed8b787a",
+      "url": "https://lwn.net/Articles/1055211/",
+      "title": "Compiling Rust to readable C with Eurydice",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
+    },
+    {
+      "id": "5bb1c16aff1d31b387ca",
+      "url": "https://www.primeintellect.ai/blog/prime-agent-rust",
+      "title": "Rewriting Prime Agent in Rust",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-10T01:43:39Z"
+    },
+    {
+      "id": "3cf5dec78acbe7064c7d",
+      "url": "https://atarimuseum.nl/atari-falcon/",
+      "title": "Atari Falcon",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-10T01:43:39Z"
+    },
+    {
+      "id": "cc0447ff969467cbe527",
+      "url": "https://www.nber.org/papers/w35854",
+      "title": "Taxing Entrepreneurial Wealth: Evidence from Norway, 2021–2025",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-10T01:43:39Z"
+    },
+    {
+      "id": "0aa37f61cf8a1945049c",
+      "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
+      "title": "Anthropic AI model submits false tip on unsolved Philly murder",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
       "id": "364267b012f4ea40b25a",
       "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find",
-      "title": "Ideas aren't getting harder to find, anyone who tells you otherwise is a coward",
+      "title": "Ideas aren't getting harder to find (2022)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "64581bfda36978c6945c",
-      "url": "https://carrierexplode.com/",
-      "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+      "id": "4793d66f3e1b5c2e9020",
+      "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
+      "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "876449a0944e93d0a721",
-      "url": "https://readrare.com/",
-      "title": "Show HN: The rarest tech books and docs you've probably never read",
+      "id": "b98f7d04b8f8711d5b13",
+      "url": "https://twitter.com/WallStreetApes/status/2108594998656807078",
+      "title": "Scam American companies are using to manipulate ingredient lists",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     },
     {
-      "id": "917825c0315309567de6",
-      "url": "https://typesafe.ai/blog/series-ai",
-      "title": "Typesafe AI raises $870M at $7.5B",
+      "id": "44c5df736b37c77b6307",
+      "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/",
+      "title": "Can you use autoregressive diffusion to generate market data?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "5f84afa7a273882a799e",
-      "url": "https://minesweeper.mikelacher.com/",
-      "title": "Triple-A Minesweeper",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "2b5521e8d7dcd391b427",
-      "url": "https://www.euronews.com/2026/04/14/almost-like-lake-como-germany-transforms-former-coal-mines-into-europes-largest-lake-lands",
-      "title": "Germany transforms former coal mines into Europe's largest lake landscape",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "459c78019c2b37a3e52d",
-      "url": "https://animationobsessive.substack.com/p/wallace-and-gromit-90-alone",
-      "title": "'Wallace and Gromit,' 90% Alone",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "212e9120a76a6fc27002",
-      "url": "https://deno.com/blog/cloudflare",
-      "title": "Cloudflare acquires Deno",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "0c22ba88d1257169379c",
-      "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
-      "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "bf2149b8045ec7a8d0e9",
-      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
-      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "b405effee4998d94d222",
-      "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
-      "title": "Nobel Peace Prize for 2026 to Navanethem Pillay",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
-    },
-    {
-      "id": "55ca6d06f45cd7e40955",
-      "url": "https://github.com/alex0ptr/once",
-      "title": "Once: Cache CLI commands",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-09T21:37:56Z"
+      "observed_at": "2026-10-10T01:43:39Z"
     }
   ]
 }
