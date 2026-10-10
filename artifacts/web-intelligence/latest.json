@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-10T01:43:50Z",
+  "timestamp": "2026-10-10T08:25:55Z",
   "sources": 12,
-  "discovered": 300,
-  "changed": 13,
+  "discovered": 193,
+  "changed": 9,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -37,108 +29,76 @@
   },
   "items": [
     {
-      "id": "bd7f0877a9a13e25bda2",
-      "url": "https://rea.tools/",
-      "title": "REA Reverse – Engineer Anything",
-      "source": "https://hnrss.org/frontpage",
+      "id": "93af22c6863f6734479f",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-10-lunar-farside/",
+      "title": "APOD: 2026 October 10 – Lunar Farside",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:23Z"
     },
     {
-      "id": "ab05ccb2d2baf08e5527",
-      "url": "https://phenomenalworld.org/analysis/has-the-autonomous-trucking-revolution-arrived/",
-      "title": "Has the Autonomous Trucking Revolution Arrived?",
+      "id": "39fb470016511aac440e",
+      "url": "https://wiki.cateat.fish/art:computers_cannot_make_decisions",
+      "title": "Computers Cannot Make Decisions",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "d608eb71f802f71b63a2",
-      "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/",
-      "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
+      "id": "ca71ea852d5e3a67a196",
+      "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+      "title": "Food processing influences metabolism and brain activity",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "f2158f75999b17423f7f",
-      "url": "https://jdb19937.github.io/log-irrationality-measure/logmeasure.pdf",
-      "title": "The logarithms of rational numbers have irrationality exponent 2 [pdf]",
+      "id": "eba6dbe0588e4b11f034",
+      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "63943982f089ed8b787a",
-      "url": "https://lwn.net/Articles/1055211/",
-      "title": "Compiling Rust to readable C with Eurydice",
+      "id": "b9f193294e18f8d2dc27",
+      "url": "https://alexwang.ai/posts/put-a-price-on-breakthroughs/",
+      "title": "Put a price on breakthroughs",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "5bb1c16aff1d31b387ca",
-      "url": "https://www.primeintellect.ai/blog/prime-agent-rust",
-      "title": "Rewriting Prime Agent in Rust",
+      "id": "8ef77992af2cdce24271",
+      "url": "https://www.broadinstitute.org/news/clinical-trial-prion-disease-drug-candidate-begins-enrolling-participants",
+      "title": "Clinical trial of a prion disease drug candidate begins enrolling participants",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "3cf5dec78acbe7064c7d",
-      "url": "https://atarimuseum.nl/atari-falcon/",
-      "title": "Atari Falcon",
+      "id": "eaebb0f3b416b6b9e9ca",
+      "url": "https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/",
+      "title": "100+ reactions to 100+ solutions",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:24Z"
     },
     {
-      "id": "cc0447ff969467cbe527",
-      "url": "https://www.nber.org/papers/w35854",
-      "title": "Taxing Entrepreneurial Wealth: Evidence from Norway, 2021–2025",
-      "source": "https://hnrss.org/frontpage",
+      "id": "37ab1fbdd16439247835",
+      "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/",
+      "title": "First Draft Notes: Verifiable Credential Threat Models",
+      "source": "https://www.w3.org/News/news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:25Z"
     },
     {
-      "id": "0aa37f61cf8a1945049c",
-      "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
-      "title": "Anthropic AI model submits false tip on unsolved Philly murder",
-      "source": "https://hnrss.org/frontpage",
+      "id": "bcd7083976c76ae8688f",
+      "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/",
+      "title": "W3C issues press release about developing Verifiable Credential Barcodes",
+      "source": "https://www.w3.org/News/news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
-    },
-    {
-      "id": "364267b012f4ea40b25a",
-      "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find",
-      "title": "Ideas aren't getting harder to find (2022)",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
-    },
-    {
-      "id": "4793d66f3e1b5c2e9020",
-      "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
-      "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
-    },
-    {
-      "id": "b98f7d04b8f8711d5b13",
-      "url": "https://twitter.com/WallStreetApes/status/2108594998656807078",
-      "title": "Scam American companies are using to manipulate ingredient lists",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
-    },
-    {
-      "id": "44c5df736b37c77b6307",
-      "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/",
-      "title": "Can you use autoregressive diffusion to generate market data?",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z"
+      "observed_at": "2026-10-10T08:25:25Z"
     }
   ]
 }

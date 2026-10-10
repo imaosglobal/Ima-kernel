@@ -1,117 +1,645 @@
 {
-  "last_run": "2026-10-10T01:43:50Z",
+  "last_run": "2026-10-10T08:25:55Z",
   "latest_commoncrawl": "CC-MAIN-2026-39",
   "recent_changed_items": [
     {
-      "id": "bd7f0877a9a13e25bda2",
+      "id": "93af22c6863f6734479f",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "REA Reverse – Engineer Anything",
-      "url": "https://rea.tools/"
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 October 10 – Lunar Farside",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-10-lunar-farside/"
     },
     {
-      "id": "ab05ccb2d2baf08e5527",
+      "id": "39fb470016511aac440e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Has the Autonomous Trucking Revolution Arrived?",
-      "url": "https://phenomenalworld.org/analysis/has-the-autonomous-trucking-revolution-arrived/"
+      "title": "Computers Cannot Make Decisions",
+      "url": "https://wiki.cateat.fish/art:computers_cannot_make_decisions"
     },
     {
-      "id": "d608eb71f802f71b63a2",
+      "id": "ca71ea852d5e3a67a196",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
-      "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/"
+      "title": "Food processing influences metabolism and brain activity",
+      "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html"
     },
     {
-      "id": "f2158f75999b17423f7f",
+      "id": "eba6dbe0588e4b11f034",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "The logarithms of rational numbers have irrationality exponent 2 [pdf]",
-      "url": "https://jdb19937.github.io/log-irrationality-measure/logmeasure.pdf"
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/"
     },
     {
-      "id": "63943982f089ed8b787a",
+      "id": "b9f193294e18f8d2dc27",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Compiling Rust to readable C with Eurydice",
-      "url": "https://lwn.net/Articles/1055211/"
+      "title": "Put a price on breakthroughs",
+      "url": "https://alexwang.ai/posts/put-a-price-on-breakthroughs/"
     },
     {
-      "id": "5bb1c16aff1d31b387ca",
+      "id": "8ef77992af2cdce24271",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Rewriting Prime Agent in Rust",
-      "url": "https://www.primeintellect.ai/blog/prime-agent-rust"
+      "title": "Clinical trial of a prion disease drug candidate begins enrolling participants",
+      "url": "https://www.broadinstitute.org/news/clinical-trial-prion-disease-drug-candidate-begins-enrolling-participants"
     },
     {
-      "id": "3cf5dec78acbe7064c7d",
+      "id": "eaebb0f3b416b6b9e9ca",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Atari Falcon",
-      "url": "https://atarimuseum.nl/atari-falcon/"
+      "title": "100+ reactions to 100+ solutions",
+      "url": "https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/"
     },
     {
-      "id": "cc0447ff969467cbe527",
+      "id": "37ab1fbdd16439247835",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Taxing Entrepreneurial Wealth: Evidence from Norway, 2021–2025",
-      "url": "https://www.nber.org/papers/w35854"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Draft Notes: Verifiable Credential Threat Models",
+      "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/"
     },
     {
-      "id": "0aa37f61cf8a1945049c",
+      "id": "bcd7083976c76ae8688f",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Anthropic AI model submits false tip on unsolved Philly murder",
-      "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/"
-    },
-    {
-      "id": "364267b012f4ea40b25a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Ideas aren't getting harder to find (2022)",
-      "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find"
-    },
-    {
-      "id": "4793d66f3e1b5c2e9020",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
-      "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/"
-    },
-    {
-      "id": "b98f7d04b8f8711d5b13",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Scam American companies are using to manipulate ingredient lists",
-      "url": "https://twitter.com/WallStreetApes/status/2108594998656807078"
-    },
-    {
-      "id": "44c5df736b37c77b6307",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Can you use autoregressive diffusion to generate market data?",
-      "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C issues press release about developing Verifiable Credential Barcodes",
+      "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/"
     }
   ],
   "recent_items": [
     {
+      "id": "93af22c6863f6734479f",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 October 10 – Lunar Farside",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-10-lunar-farside/"
+    },
+    {
+      "id": "a4106c4b8a33ca378d9f",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
+      "url": "https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/"
+    },
+    {
+      "id": "b85427f614ddb37d467c",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/"
+    },
+    {
+      "id": "ad1fdecb2580d52be26c",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Cosmic House of Mirrors",
+      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors/"
+    },
+    {
+      "id": "2d43482cb79ba055c795",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 October 9 – Stickney Crater",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-9-stickney-crater/"
+    },
+    {
+      "id": "4f89388d6e84ff78c35e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Floodwaters Overwhelm Thailand",
+      "url": "https://science.nasa.gov/earth/earth-observatory/floodwaters-overwhelm-thailand/"
+    },
+    {
+      "id": "59ce0cb3c0592a8a60dc",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
+      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission/"
+    },
+    {
+      "id": "e16f84280efb242f97e1",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Announces Bold Science Initiatives for America’s Golden Age Summit",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-bold-science-initiatives-for-americas-golden-age-summit/"
+    },
+    {
+      "id": "c8f73fc3067539cf0e4c",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA’s SSPICY Mission to Demonstrate In-Space Inspection Technologies",
+      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasas-sspicy-mission-to-demonstrate-in-space-inspection-technologies/"
+    },
+    {
+      "id": "9f4d01aca69009eaee8e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Crew-12 Returns to Earth",
+      "url": "https://www.nasa.gov/image-article/crew-12-returns-to-earth/"
+    },
+    {
+      "id": "8a328104e8db0a06aebb",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Cosmic House of Mirrors",
+      "url": "https://www.nasa.gov/image-detail/galaxies-in-a-cosmic-house-of-mirrors/"
+    },
+    {
+      "id": "4cf8b354f2993f2805ce",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Crew-12 Returns to Earth",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-12-splashdown-2/"
+    },
+    {
+      "id": "9646943c9e0872c56c39",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis II Crew Moon Photo Annotations",
+      "url": "https://www.nasa.gov/image-detail/fd07_impact-flashes/"
+    },
+    {
+      "id": "6682b8c560d18b989ba8",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Astronomers Solve Cosmic Cold Case with NASA Hubble Data",
+      "url": "https://www.nasa.gov/image-detail/stsci-01m3cbk3t6srkp4q7wv9cgfgw9/"
+    },
+    {
+      "id": "9598ef10e2e425e75053",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Christina Koch at Eagles vs. Rams",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-lincoln-financial-field/"
+    },
+    {
+      "id": "1e98197ec7f8529efba1",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's DAVINCI Probe Can Stand the Heat",
+      "url": "https://www.nasa.gov/image-detail/davinci-heat-test-1/"
+    },
+    {
+      "id": "125f77fa8d831dc9a62e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA’s SpaceX Crew-13 Launches",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-13-launch-3/"
+    },
+    {
+      "id": "e2054d47a388fb1399bd",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Star Trails",
+      "url": "https://www.nasa.gov/image-detail/iss075e0144232/"
+    },
+    {
+      "id": "ec875e5336cf5c9478bc",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Crew-13 Rocket and Spacecraft at Launch Pad",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1312/"
+    },
+    {
+      "id": "d0da49b9877b10338c7f",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Space Station View of Earth at Night",
+      "url": "https://www.nasa.gov/image-detail/gmt251_08_43_jessica-meir_northern-aurora-cupola-14mm/"
+    },
+    {
+      "id": "7d503f9c07efece57008",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Hubble Spots Chaotic Secret in Galaxy",
+      "url": "https://www.nasa.gov/image-detail/a-galaxy-spinning-out-of-sync/"
+    },
+    {
+      "id": "f767f53fd643fda4cc2c",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Practicing for Safe Landings on the Moon and Beyond",
+      "url": "https://www.nasa.gov/image-detail/nasa-navigation-experiment-shows-promise-for-landing-on-other-planets/"
+    },
+    {
+      "id": "0aaf7eacf87f7a022f07",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Hubble Telescope Reaches Milestone, Looks for Elusive Supernova",
+      "url": "https://www.nasa.gov/image-detail/stsci-h-p26023a-m-2000x1207/"
+    },
+    {
+      "id": "2dadf5eefd515726fb06",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Chandra Finds Unusual Objects in Pinwheel Galaxy",
+      "url": "https://www.nasa.gov/image-detail/m101-lg/"
+    },
+    {
+      "id": "f4bbb787683ffd7c2030",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Reid Wiseman Attends Ravens vs. Saints Game",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-mt-bank-stadium/"
+    },
+    {
+      "id": "8afe013f95efd1b4bb3e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "COSI Telescope Comes Together",
+      "url": "https://www.nasa.gov/image-detail/cosi-2026july-01/"
+    },
+    {
+      "id": "dfb9bae9a4555b7fe5b5",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Unveils Enterprise, the First Space Shuttle",
+      "url": "https://www.nasa.gov/image-detail/the-shuttle-enterprise-with-star-trek-cast/"
+    },
+    {
+      "id": "4956d2164f092914b97e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Indonesia's Anak Krakatau",
+      "url": "https://www.nasa.gov/image-detail/krakatau-oli-20260905-lrg/"
+    },
+    {
+      "id": "5abd5224c3734a52bdab",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis III Crew Visits NASA Kennedy's Vehicle Assembly Building",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1307/"
+    },
+    {
+      "id": "97975be217a1bd5d435d",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Kicks Off Inspiration Tour with Steelers vs. Falcons Game",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-acrisure-stadium/"
+    },
+    {
+      "id": "5e339f35a58b7a5c7f42",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Chandra Spots Galactic Gem",
+      "url": "https://www.nasa.gov/image-detail/galaxies-iizw096/"
+    },
+    {
+      "id": "dfa5bbd94cb2828c685a",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Dust and Water in Sagittarius A*",
+      "url": "https://www.nasa.gov/image-detail/55459350878-2e1468b664-o/"
+    },
+    {
+      "id": "cd5067090d89008e1ca3",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis II Crew at NASA Marshall",
+      "url": "https://www.nasa.gov/image-detail/msfc-09012026-artemis-ii-crew-visit-at-msfc-1orig/"
+    },
+    {
+      "id": "ceba6e5b39be7203aa59",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Superbubble in the Large Magellanic Cloud",
+      "url": "https://www.nasa.gov/image-detail/hubble-n44-wfc3-large/"
+    },
+    {
+      "id": "30c42c6803fd3cc30165",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Lunar Occultation of Venus",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202606170001/"
+    },
+    {
+      "id": "0a18376084f98451b293",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Igniting Roman's Journey",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202608300037/"
+    },
+    {
+      "id": "f9221d65b75640a90e0d",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "August Lunar Eclipse Rises Over Louisiana",
+      "url": "https://www.nasa.gov/image-detail/amf-maf_20260827_lunareclipse_01/"
+    },
+    {
+      "id": "037a64919b394f0e47b0",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis III RS-25 Engine Processing: #3 Lift",
+      "url": "https://www.nasa.gov/image-detail/amf-ksc-20260825-ph-rcr01_0045/"
+    },
+    {
+      "id": "900f895587f072f2c3f8",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Nancy Grace Roman Space Telescope Launches",
+      "url": "https://www.nasa.gov/image-detail/nancy-grace-roman-space-telescope-launch-2/"
+    },
+    {
+      "id": "8e1ccfd9653936aa4151",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
+      "url": "https://www.nasa.gov/image-detail/20260828-120552-jk1-3999-2/"
+    },
+    {
+      "id": "8d46a442fd5a36ce42aa",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Civil Servants Sworn in at NASA Ames",
+      "url": "https://www.nasa.gov/image-detail/nasa-civil-servant-swearing-in-ceremony/"
+    },
+    {
+      "id": "f0466a1d538494ea2e08",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Roman Space Telescope Travels to SpaceX Hangar",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1305/"
+    },
+    {
+      "id": "3e171985fe4d5f90cead",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Astronauts Anil Menon and Sophie Adenot on Spacewalk",
+      "url": "https://www.nasa.gov/image-detail/gmt230_ehdc1-2/"
+    },
+    {
+      "id": "f9e480c220cb6699b5a6",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Reid Wiseman at Freedom 250 Grand Prix",
+      "url": "https://www.nasa.gov/image-detail/freedom-250-grand-prix/"
+    },
+    {
+      "id": "83d6f25d8a2e58da9990",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Webb Opens Treasure Chest",
+      "url": "https://www.nasa.gov/image-detail/webb-opens-a-treasure-chest-filled-with-stars/"
+    },
+    {
+      "id": "04bbe1cc05dc08fc663d",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis Mission Patches",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1304/"
+    },
+    {
+      "id": "20cdf8b2697e1b8bde14",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Ancient Milky Way Merger",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kz4n4d8g9ak26cf28hd5nt5n-d2d764/"
+    },
+    {
+      "id": "e839b48a311cbaeb4d4b",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's B777 Gets New Coat of Paint",
+      "url": "https://www.nasa.gov/image-detail/jsc2026e407303/"
+    },
+    {
+      "id": "e51d8ed590b2b558d92e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Colorful Collage of Tarantula Nebula",
+      "url": "https://www.nasa.gov/image-detail/30dor-crop/"
+    },
+    {
+      "id": "987484f82ed2ea04c3d3",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Total Solar Eclipse in Sunflower Field",
+      "url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-3/"
+    },
+    {
+      "id": "d977a17fe2bb444ecbb6",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Perseids Meteor Shower",
+      "url": "https://www.nasa.gov/image-detail/perseidsorion-2/"
+    },
+    {
+      "id": "f5468169780cb5afa1ed",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "2026 Total Solar Eclipse in Spain",
+      "url": "https://www.nasa.gov/image-detail/2026-total-solar-eclipse-2/"
+    },
+    {
+      "id": "0cf586dce469dbb6fcf1",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Lion Nebula Roars in Webb's Sights",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kx6d0xbhsyp7q1em5qtc43rp/"
+    },
+    {
+      "id": "40e6692d03cc5cbc8cb7",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Jessica Meir Uses VR Goggles",
+      "url": "https://www.nasa.gov/image-detail/iss075e0000191/"
+    },
+    {
+      "id": "0c8b50411cdb7e4347f2",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's IXPE Studies Magnetar",
+      "url": "https://www.nasa.gov/image-detail/ixpemagnetarartistsconcept-web/"
+    },
+    {
+      "id": "4909929b752433d075c0",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Taking Flight to Prepare for Space",
+      "url": "https://www.nasa.gov/image-detail/55412014375-711b8f02f7-o/"
+    },
+    {
+      "id": "e7d940227ebb3f15f856",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis III Orion Crew and Service Modules Joined",
+      "url": "https://www.nasa.gov/image-detail/ksc-20260730-ph-as01-6583-2/"
+    },
+    {
+      "id": "29f0de43664ddfbfed4b",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Roman Space Telescope Plaque Install",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1303/"
+    },
+    {
+      "id": "f1ca33eec38ba72127a9",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Guinea-Bissau Tidal Waters",
+      "url": "https://www.nasa.gov/image-detail/bijagosarchipelago-oli-20251128-lrg/"
+    },
+    {
+      "id": "93b8ab96b18ec2979e90",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Newest Wind Tunnel Opens at NASA Langley",
+      "url": "https://www.nasa.gov/image-detail/fdrf-ribbon-cutting-ceremony-at-nasa-langley/"
+    },
+    {
+      "id": "be648a750b762363bb13",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Starburst Galaxy Centaurus A",
+      "url": "https://www.nasa.gov/image-detail/stsci-01kvt4gqmq5mxv6xdpfpzmxg65-30d932/"
+    },
+    {
+      "id": "230e82a1ecca3940bb6a",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Understanding How Martian Auroras Are Made",
+      "url": "https://www.nasa.gov/image-detail/pia22076-2/"
+    },
+    {
+      "id": "af4961883d301f681898",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Chris Williams Returns to Earth",
+      "url": "https://www.nasa.gov/image-detail/expedition-74-soyuz-landing/"
+    },
+    {
+      "id": "2b57e24c6054c4663571",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "New Crew Members Welcomed to International Space Station",
+      "url": "https://www.nasa.gov/image-detail/iss074e0814792/"
+    },
+    {
+      "id": "9ea91031b6d54d773c8a",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Crews Move Artemis IV Liquid Hydrogen Tank",
+      "url": "https://www.nasa.gov/image-detail/crews-move-artemis-iv-liquid-hydrogen-tank-for-proof-testing/"
+    },
+    {
+      "id": "530dba3c3cda461de256",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "A New Look – and Sound – for Messier 94",
+      "url": "https://www.nasa.gov/image-detail/250th-ngc4736/"
+    },
+    {
+      "id": "79a04337af36379e7ec4",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Psyche Approaches Mars",
+      "url": "https://www.nasa.gov/image-detail/pia26586/"
+    },
+    {
+      "id": "d9713b6ce674d9bc7532",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Our First View of the Surface of Mars",
+      "url": "https://www.nasa.gov/image-detail/34280-mars-viking1-lander-1st-image-pia00381/"
+    },
+    {
+      "id": "881ac8b1bf0a7dd7d7b0",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Chandra and IXPE Study Pulsar in Lighthouse Nebula",
+      "url": "https://www.nasa.gov/image-detail/lighthouse-lg/"
+    },
+    {
+      "id": "a0cce3d4ac9625821ce4",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:23Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Young Galaxy Cluster",
+      "url": "https://www.nasa.gov/image-detail/55380623885-a00df544bb-o/"
+    },
+    {
       "id": "85c11fca4aa44ff1793b",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "Hack the World: Why hackathons are still the best place to learn to build",
       "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/"
@@ -119,7 +647,7 @@
     {
       "id": "400f93c3a2faae18adc1",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "How one bug bounty researcher chooses the features they investigate",
       "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/"
@@ -127,7 +655,7 @@
     {
       "id": "c6fb2b313984d9d24e98",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "Secret protection must scale with software",
       "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/"
@@ -135,7 +663,7 @@
     {
       "id": "9ddb77314617db92b6c9",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "Building Git infrastructure for agent-scale development",
       "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
@@ -143,7 +671,7 @@
     {
       "id": "6f397884428e9f0f14f3",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "ReviewBench: An open benchmark for AI code review",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
@@ -151,7 +679,7 @@
     {
       "id": "afd517ff06180871c64e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "AI is changing developer work. Here are three skills to strengthen.",
       "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/"
@@ -159,7 +687,7 @@
     {
       "id": "a0c03d16e7252acebfcd",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "10 technical talks I’m excited about at GitHub Universe 2026",
       "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/"
@@ -167,7 +695,7 @@
     {
       "id": "85a2ee1ccabf9baf3167",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "Developer policy update: Transparency, state policy, and what’s ahead",
       "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/"
@@ -175,7 +703,7 @@
     {
       "id": "0baeacde9feacfd49dfb",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
       "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/"
@@ -183,119 +711,87 @@
     {
       "id": "b50539d473adb522ecd2",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://github.blog/feed/",
       "title": "Highlights from Git 2.56",
       "url": "https://github.blog/open-source/git/highlights-from-git-2-56/"
     },
     {
+      "id": "39fb470016511aac440e",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Computers Cannot Make Decisions",
+      "url": "https://wiki.cateat.fish/art:computers_cannot_make_decisions"
+    },
+    {
+      "id": "ca71ea852d5e3a67a196",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Food processing influences metabolism and brain activity",
+      "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html"
+    },
+    {
+      "id": "eba6dbe0588e4b11f034",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+      "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/"
+    },
+    {
+      "id": "b9f193294e18f8d2dc27",
+      "kind": "feed",
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Put a price on breakthroughs",
+      "url": "https://alexwang.ai/posts/put-a-price-on-breakthroughs/"
+    },
+    {
       "id": "bd7f0877a9a13e25bda2",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "REA Reverse – Engineer Anything",
       "url": "https://rea.tools/"
     },
     {
-      "id": "ab05ccb2d2baf08e5527",
+      "id": "8ef77992af2cdce24271",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Has the Autonomous Trucking Revolution Arrived?",
-      "url": "https://phenomenalworld.org/analysis/has-the-autonomous-trucking-revolution-arrived/"
-    },
-    {
-      "id": "d608eb71f802f71b63a2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
-      "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/"
-    },
-    {
-      "id": "f2158f75999b17423f7f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "The logarithms of rational numbers have irrationality exponent 2 [pdf]",
-      "url": "https://jdb19937.github.io/log-irrationality-measure/logmeasure.pdf"
+      "title": "Clinical trial of a prion disease drug candidate begins enrolling participants",
+      "url": "https://www.broadinstitute.org/news/clinical-trial-prion-disease-drug-candidate-begins-enrolling-participants"
     },
     {
       "id": "63943982f089ed8b787a",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Compiling Rust to readable C with Eurydice",
       "url": "https://lwn.net/Articles/1055211/"
     },
     {
-      "id": "5bb1c16aff1d31b387ca",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Rewriting Prime Agent in Rust",
-      "url": "https://www.primeintellect.ai/blog/prime-agent-rust"
-    },
-    {
       "id": "3cf5dec78acbe7064c7d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Atari Falcon",
       "url": "https://atarimuseum.nl/atari-falcon/"
     },
     {
-      "id": "cc0447ff969467cbe527",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Taxing Entrepreneurial Wealth: Evidence from Norway, 2021–2025",
-      "url": "https://www.nber.org/papers/w35854"
-    },
-    {
-      "id": "0aa37f61cf8a1945049c",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Anthropic AI model submits false tip on unsolved Philly murder",
-      "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/"
-    },
-    {
       "id": "500dae7445b0744d302c",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
       "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306"
     },
     {
-      "id": "fb900a38eb855015e847",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Microsoft-Decision-1, our model for fast decision-making",
-      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
-    },
-    {
-      "id": "113a70303c759bf19449",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "M7.6 Earthquake in Panama",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k/executive"
-    },
-    {
-      "id": "364267b012f4ea40b25a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Ideas aren't getting harder to find (2022)",
-      "url": "https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find"
-    },
-    {
       "id": "64581bfda36978c6945c",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
       "url": "https://carrierexplode.com/"
@@ -303,7 +799,7 @@
     {
       "id": "4793d66f3e1b5c2e9020",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
       "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/"
@@ -311,7 +807,7 @@
     {
       "id": "876449a0944e93d0a721",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Show HN: The rarest tech books and docs you've probably never read",
       "url": "https://readrare.com/"
@@ -319,7 +815,7 @@
     {
       "id": "b98f7d04b8f8711d5b13",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Scam American companies are using to manipulate ingredient lists",
       "url": "https://twitter.com/WallStreetApes/status/2108594998656807078"
@@ -327,7 +823,7 @@
     {
       "id": "917825c0315309567de6",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Typesafe AI raises $870M at $7.5B",
       "url": "https://typesafe.ai/blog/series-ai"
@@ -335,7 +831,7 @@
     {
       "id": "5f84afa7a273882a799e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Triple-A Minesweeper",
       "url": "https://minesweeper.mikelacher.com/"
@@ -343,2170 +839,786 @@
     {
       "id": "44c5df736b37c77b6307",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
+      "observed_at": "2026-10-10T08:25:24Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Can you use autoregressive diffusion to generate market data?",
       "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/"
     },
     {
-      "id": "04a3afe8fc92fa04289a",
+      "id": "459c78019c2b37a3e52d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
-      "url": "https://arxiv.org/abs/2610.10541"
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "'Wallace and Gromit,' 90% Alone",
+      "url": "https://animationobsessive.substack.com/p/wallace-and-gromit-90-alone"
     },
     {
-      "id": "30c38a4f4bf9960ad2b0",
+      "id": "e04d9f55940a523a4be2",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Synthesis Through Simulation: Generating Coherent Enterprise Data via Scalable Agent-System Interaction",
-      "url": "https://arxiv.org/abs/2610.10549"
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Our $445M Series D",
+      "url": "https://oxide.computer/blog/our-445m-series-d"
     },
     {
-      "id": "ba63583808d70cbbc5e9",
+      "id": "212e9120a76a6fc27002",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Agent-Controlled Forgetting for Tool-Using Agents: Reversible Context Curation in Practice",
-      "url": "https://arxiv.org/abs/2610.10590"
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Cloudflare acquires Deno",
+      "url": "https://deno.com/blog/cloudflare"
     },
     {
-      "id": "1322a304a3c5e6527676",
+      "id": "eaebb0f3b416b6b9e9ca",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
-      "url": "https://arxiv.org/abs/2610.10611"
+      "observed_at": "2026-10-10T08:25:24Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "100+ reactions to 100+ solutions",
+      "url": "https://proofsandprompts.com/2026/10/08/100-reactions-to-100-solutions/"
     },
     {
-      "id": "20b6195dd6f81b9b870d",
+      "id": "37ab1fbdd16439247835",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Harness as the Only Mutable Surface: Compliance-Bounded Self-Evolution of LLM Agents in Credit Pipelines, with a Measured Admission Gate",
-      "url": "https://arxiv.org/abs/2610.10629"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Draft Notes: Verifiable Credential Threat Models",
+      "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/"
     },
     {
-      "id": "dc072a92c6c9bda084e3",
+      "id": "bcd7083976c76ae8688f",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
-      "url": "https://arxiv.org/abs/2610.10635"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C issues press release about developing Verifiable Credential Barcodes",
+      "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/"
     },
     {
-      "id": "de3301f4821ae8ca18c2",
+      "id": "81a3389421f4bb56bc3d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
-      "url": "https://arxiv.org/abs/2610.10786"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Updated Candidate Recommendation: Scalable Vector Graphics (SVG) 2",
+      "url": "https://www.w3.org/news/2026/updated-candidate-recommendation-scalable-vector-graphics-svg-2/"
     },
     {
-      "id": "5fbdf754feb46aff4ab8",
+      "id": "0f94c1b2cc9695104e0d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Whose Ground Truth? Embracing Ambiguity in Human-Centered AI",
-      "url": "https://arxiv.org/abs/2610.10805"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Consortium Members elect Board of Directors",
+      "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/"
     },
     {
-      "id": "2d399e565010d00a7c4c",
+      "id": "e74888c663f492eea866",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
-      "url": "https://arxiv.org/abs/2610.10833"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C Workshop Report: The Future of ODRL",
+      "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/"
     },
     {
-      "id": "83dfccd4c450e4a45139",
+      "id": "7ea510935dfd2aa76b5a",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Self-Supervised Keyframe Discovery for Horizon-Invariant Behavior Cloning",
-      "url": "https://arxiv.org/abs/2610.10857"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Bitstring Status List v1.1",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/"
     },
     {
-      "id": "58375e71a9edc0b3d1f1",
+      "id": "cb68915a226f5b31c5c4",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Reading the Room: Foundations, Design, and Challenges of Normative Competence in LLMs",
-      "url": "https://arxiv.org/abs/2610.10906"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/"
     },
     {
-      "id": "4a1872033043505bd5af",
+      "id": "f1b5f492edd59d79af68",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "StoreBench: A Live-Commerce Environment for Evaluating and Training Autonomous Operator Agents",
-      "url": "https://arxiv.org/abs/2610.10942"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
+      "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/"
     },
     {
-      "id": "b5d43e5e0471a6cd04f8",
+      "id": "c8dc3e9414ec28a368ac",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning How to Search for Plans with Exponentially Less Space",
-      "url": "https://arxiv.org/abs/2610.10954"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/"
     },
     {
-      "id": "5ca3b7efc7579d2c89f6",
+      "id": "6e4168f82218e48b2b73",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "How Narrative Wrapping Affects LLM Refusal: A Cross-Language Benchmark and Defense",
-      "url": "https://arxiv.org/abs/2610.11005"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/"
     },
     {
-      "id": "d552aa93099035d01308",
+      "id": "9b67edb55892cc147b16",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
-      "url": "https://arxiv.org/abs/2610.11007"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C opens 2026 community survey",
+      "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/"
     },
     {
-      "id": "737be4302593a390ec0a",
+      "id": "359b504aecb4a8066979",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Distillation for Incrimination and Distillation for Capabilities",
-      "url": "https://arxiv.org/abs/2610.11012"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
+      "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/"
     },
     {
-      "id": "159bdd18a62dbad86214",
+      "id": "0c06abcb0d06332e5331",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AgentHorizon: Evaluating Agentic Judges for Long-Horizon Computer-Use Tasks",
-      "url": "https://arxiv.org/abs/2610.11050"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
+      "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/"
     },
     {
-      "id": "a1282f32e7ff728b9b3e",
+      "id": "e9046d10c5a45a4be7b5",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Imitation: A Framework and Benchmark for LLM-Assisted Peer Review",
-      "url": "https://arxiv.org/abs/2610.11087"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: The Profiles Vocabulary",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/"
     },
     {
-      "id": "5a53c3bdb60bfc089728",
+      "id": "1cb4dab4f76ed824568d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "OpenProblemBench: Benchmarking AI on Open Problems in the Foundational Theoretical Sciences",
-      "url": "https://arxiv.org/abs/2610.11118"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
+      "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/"
     },
     {
-      "id": "eb5608dcc9e627a703f9",
+      "id": "073f9b4d7b387c99f07e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
-      "url": "https://arxiv.org/abs/2610.11123"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Updated W3C Recommendation: ARIA in HTML",
+      "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/"
     },
     {
-      "id": "c796c663136c9cc46abc",
+      "id": "e2b8edcef39b94c3378e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Balancing Reference Guidance and Free Generation in Trajectory Rollouts for Reasoning RL",
-      "url": "https://arxiv.org/abs/2610.11128"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/"
     },
     {
-      "id": "e5f7439dbecfeb750ec0",
+      "id": "53199f615af74997230d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GameCommBench: A Unified Benchmark and Type-Aware Evaluation for AI-Generated Game Commentary",
-      "url": "https://arxiv.org/abs/2610.11129"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
+      "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/"
     },
     {
-      "id": "d429f0ad599f6da8c1c9",
+      "id": "41a209d76f100b1bd5d4",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Social Pain Disrupts Emotion-Action Brain-State Dynamics in Adolescents with Non-Suicidal Self-Injury",
-      "url": "https://arxiv.org/abs/2610.11155"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C Invites Implementations of WebTransport",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/"
     },
     {
-      "id": "94882a621d98c96e5072",
+      "id": "dbdb0820dcbaa5243b7d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "What to Admit and How to Present: Governing Persistent Memory in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.11188"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/"
     },
     {
-      "id": "b116d1c9fd3ad9f1b79c",
+      "id": "1edd9d31a5fe545fe7fb",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AliO: Output Alignment Matters in Long-Term Time Series Forecasing",
-      "url": "https://arxiv.org/abs/2610.11213"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
+      "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/"
     },
     {
-      "id": "24aa545012964ecc1d06",
+      "id": "1abec9d47a1273181fad",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
-      "url": "https://arxiv.org/abs/2610.11226"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
+      "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/"
     },
     {
-      "id": "bce449da7a2298faee9e",
+      "id": "abbc1e5e92269e8e60be",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
-      "url": "https://arxiv.org/abs/2610.11231"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C Invites Implementations of EPUB 3.4, EPUB Reading Systems 3.4 and EPUB Accessibility 1.2",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-epub-3-4-epub-reading-systems-3-4-and-epub-accessibility-1-2/"
     },
     {
-      "id": "ce6ca28e99a1250e2145",
+      "id": "7f415c17fd35abee711c",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
-      "url": "https://arxiv.org/abs/2610.11253"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Proposed Advancement of Web Authentication: An API for accessing Public Key Credentials Level 3 to W3C Recommendation",
+      "url": "https://www.w3.org/news/2026/proposed-advancement-of-webauthn-3-to-w3c-recommendation/"
     },
     {
-      "id": "92d6868d8c3e9de5fce5",
+      "id": "d27d31968e305dc54ffa",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TaReD: Tool-Aware Recursive Decomposition for Long-Horizon Tasks",
-      "url": "https://arxiv.org/abs/2610.11268"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Character Model for the World Wide Web: String Matching",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-character-model-for-the-world-wide-web-string-matching/"
     },
     {
-      "id": "c0e89760c2e30631ad33",
+      "id": "24dd95896911d8bd0b6d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Open-ended Scientific Discovery with Possibilistic Reasoning",
-      "url": "https://arxiv.org/abs/2610.11289"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
+      "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html"
     },
     {
-      "id": "1cf5e4d9799d0912d04b",
+      "id": "5c7b8bdb9c001de23cea",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ORDO: Operation-level Round-aware Dynamic Ordering for MIP Presolve",
-      "url": "https://arxiv.org/abs/2610.11294"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
+      "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html"
     },
     {
-      "id": "61079f6d640a0a07fe56",
+      "id": "8df3484f72ce4634a7e5",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
-      "url": "https://arxiv.org/abs/2610.11299"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
+      "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html"
     },
     {
-      "id": "90d3c0e433ec4e571a77",
+      "id": "129cee30a618dbacbfe9",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MedBenchAgent: Towards Systematic Automation of Medical VLM Benchmark Construction",
-      "url": "https://arxiv.org/abs/2610.11312"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+      "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html"
     },
     {
-      "id": "fbd577837bf5da1f291d",
+      "id": "d3499e02aaa3943b73aa",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DivMoE: Fine-Grained MoE Upcycling via Cross-Domain Expert Composition",
-      "url": "https://arxiv.org/abs/2610.11317"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Content Generator & Writer Tools in 2022",
+      "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html"
     },
     {
-      "id": "9ce612aad58778d5cc0f",
+      "id": "c9b0ba2832f5c52645f2",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Finsler Flow Matching: Dynamics-Aware Geodesic Interpolation for Single-Snapshot Trajectory Inference",
-      "url": "https://arxiv.org/abs/2610.11318"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
+      "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html"
     },
     {
-      "id": "8e911491a17c10a07721",
+      "id": "1104ec0ee393a7f4f909",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Mine Odyssey: Benchmarking Spatial Agentic Intelligence in the Wild",
-      "url": "https://arxiv.org/abs/2610.11328"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html"
     },
     {
-      "id": "27c3c2cba22a01e5fab8",
+      "id": "572a341c954c548987ad",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TokenBank: Financial Infrastructure for AI Services",
-      "url": "https://arxiv.org/abs/2610.11333"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About Affiliate Marketing",
+      "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "165d8520370dff7c5eeb",
+      "id": "f63aedf5e35cee9cf2ff",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ReCast: Attribution-Oriented Step Representation Learning for LLM-Based Agent Systems",
-      "url": "https://arxiv.org/abs/2610.11334"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "What is Blockchain: Everything You Need to Know (2022)",
+      "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html"
     },
     {
-      "id": "795b51132cf40a82f8c9",
+      "id": "eb3490aa3ebca0f4ef67",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EvoSim: Learning to Model, Modeling to Learn",
-      "url": "https://arxiv.org/abs/2610.11344"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html"
     },
     {
-      "id": "a2259b2fffb789f00cd6",
+      "id": "5aebe77748d66a1bef9a",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.11345"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
+      "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html"
     },
     {
-      "id": "000ed3bf33caa6ac14e2",
+      "id": "469fe5a61b36c036d58c",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RL-ARC: Calibrating Large Reasoning Models via Reasoning-guided Uncertainty",
-      "url": "https://arxiv.org/abs/2610.11352"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
+      "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html"
     },
     {
-      "id": "50dffc340fef0b39faea",
+      "id": "65763140459cf23fdedd",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Writing for the Reviewer: Defensive Writing in GPT Models",
-      "url": "https://arxiv.org/abs/2610.11355"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html"
     },
     {
-      "id": "f27da46463754f114a59",
+      "id": "f102a512d0bf0eec1887",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
-      "url": "https://arxiv.org/abs/2610.11358"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Canva Review 2022: Details, Pricing & Features",
+      "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html"
     },
     {
-      "id": "cb7140329a27207af88a",
+      "id": "4ae8efd7a9964cf3d437",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "UniData: Universal Multimodal Instruction Generation Pipeline",
-      "url": "https://arxiv.org/abs/2610.11363"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 7 Best Wordpress Plugin Of All Time",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html"
     },
     {
-      "id": "804ef554cb46cb448b83",
+      "id": "c4ecc08e3dcd225bd13c",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RIT-RAG: Navigating Document Corpora with Retrieval-Induced Trees",
-      "url": "https://arxiv.org/abs/2610.11370"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html"
     },
     {
-      "id": "8b70838dccddef4d04f5",
+      "id": "44ca195f5b7c621a996e",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Equal Path Cost, Unequal Output Effects: Understanding Perturbation Propagation in Diffusion Models",
-      "url": "https://arxiv.org/abs/2610.11380"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
+      "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "dc9248cb5ace6d3f4648",
+      "id": "54b9d850727b6cdbe5ce",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Environmental Feedback Modeling Matters: Rethinking Feedback Treatment in Agentic Hindsight Self-Distillation",
-      "url": "https://arxiv.org/abs/2610.11384"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
+      "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html"
     },
     {
-      "id": "ca2a654b6e9f9d2e037e",
+      "id": "fe934b9f69954d98e9d8",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models",
-      "url": "https://arxiv.org/abs/2610.11392"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About Email Marketing",
+      "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "cca18e5b06768269fc32",
+      "id": "6cb428459606b5a9549d",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Estimating great expectations under autoregressive language models with potentials",
-      "url": "https://arxiv.org/abs/2610.11399"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "7 Free Websites Every Content Creator Needs to Know",
+      "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html"
     },
     {
-      "id": "fbb9f2a16224335f2ef7",
+      "id": "60e9a0a09a7e88daa6f4",
       "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Cognition-Oriented Emotion Tracing from Causes to Consequences in Real-World Social Scenes",
-      "url": "https://arxiv.org/abs/2610.11410"
+      "observed_at": "2026-10-10T08:25:25Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 9 Free AI Tools That Make Your Life Easier",
+      "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html"
     },
     {
-      "id": "986619973ffc90650ec3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Why machines will still not rule the world",
-      "url": "https://arxiv.org/abs/2610.11424"
-    },
-    {
-      "id": "762eed46b6dfca0ec9d8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Tracing the Thoughts of a Coding Agent Playing ARC-AGI-3: Lessons for Continual Learning",
-      "url": "https://arxiv.org/abs/2610.11450"
-    },
-    {
-      "id": "673a9ff1f1018be6657c",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SpikeSSL: A Universal Spike Inference Framework with Dynamics-Informed State-Space Layers",
-      "url": "https://arxiv.org/abs/2610.11456"
-    },
-    {
-      "id": "960c45e78789deab4418",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
-      "url": "https://arxiv.org/abs/2610.11464"
-    },
-    {
-      "id": "6ba3849eaa4b88a8d912",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Chain-of-Thought to Loops: Non-Autoregressive Latent Reasoning via Looped Transformers",
-      "url": "https://arxiv.org/abs/2610.11472"
-    },
-    {
-      "id": "a053fae61c1972fe0e4e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "BridgeGuard: Explicit Safety Drift for Diffusion-based Autonomous Driving",
-      "url": "https://arxiv.org/abs/2610.11483"
-    },
-    {
-      "id": "b26289998e6578c5fbe2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Fed-GRPO: Reward-Signal-Driven Federated Group Relative Policy Optimization",
-      "url": "https://arxiv.org/abs/2610.11502"
-    },
-    {
-      "id": "87d9afbcf9792df877c8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Operator Mismatch Problem: Deploying BEV Perception with Portable GPU Compute",
-      "url": "https://arxiv.org/abs/2610.11504"
-    },
-    {
-      "id": "202911e79bcb6e3299a5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AtomWorld-Mirror: Macro-Step World Modeling of Critical Evolution Backbones for Materials Dynamics",
-      "url": "https://arxiv.org/abs/2610.11527"
-    },
-    {
-      "id": "c96568b325726bc77e2b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ReTeach: Building a Self-Teacher through Multi-Round Reflection and Retry",
-      "url": "https://arxiv.org/abs/2610.11529"
-    },
-    {
-      "id": "36f84137f8a8d702c3e2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Safe, Persistent, and Evolving Agent Harness for Understanding Partially Observable Worlds",
-      "url": "https://arxiv.org/abs/2610.11552"
-    },
-    {
-      "id": "4761d9e3d9d012f23b90",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Workerville: Towards an Organizational Behavior Account of Agent Safety",
-      "url": "https://arxiv.org/abs/2610.11561"
-    },
-    {
-      "id": "cba0ba0b8b0be4e4a973",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Scaling to Tens of Thousands of Test-Time Iterations with Loop-Native Attention Residuals",
-      "url": "https://arxiv.org/abs/2610.11570"
-    },
-    {
-      "id": "b9cde0c1dac7577ef608",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies",
-      "url": "https://arxiv.org/abs/2610.11573"
-    },
-    {
-      "id": "2c7cd3dbd4ec71ed0128",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Error-Propagation Modeling for Failure Attribution in LLM-Based Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2610.11600"
-    },
-    {
-      "id": "57e6ee75838c3de8ce6f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AgentEvolver: System-Wide Self-Evolution Through Task Execution",
-      "url": "https://arxiv.org/abs/2610.11613"
-    },
-    {
-      "id": "8c4d9d794bec69ca1310",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Where to Adapt Matters: Layer-Selective Fine-Tuning for Capability Retention",
-      "url": "https://arxiv.org/abs/2610.11620"
-    },
-    {
-      "id": "e2cacdf17b050840b033",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Evidence-Traceable Dynamic Interviewer Architecture for Expertise-Adaptive Qualitative Interviews Using Local LLMs",
-      "url": "https://arxiv.org/abs/2610.11651"
-    },
-    {
-      "id": "4d5be4ead73c8211a884",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Harness Evolution Hits a Ceiling: When Weight Training Should Begin",
-      "url": "https://arxiv.org/abs/2610.11655"
-    },
-    {
-      "id": "3955594d1e8dcd7f4941",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Lamarck's Driving School: Discovering Autonomous Driving Training Strategies through Evolutionary Competition",
-      "url": "https://arxiv.org/abs/2610.11662"
-    },
-    {
-      "id": "461bc73a2f5374ad8d4d",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Constrained Command-Conditioned Reinforcement Learning with Bandit Strategy Selection in Real-Time Strategy Games",
-      "url": "https://arxiv.org/abs/2610.11663"
-    },
-    {
-      "id": "2b593ffce40b27cab4e3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
-      "url": "https://arxiv.org/abs/2610.11696"
-    },
-    {
-      "id": "f03125a9acc67b2201fb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Intervention anchors and scientific verification in synthetic vascular predictive representations",
-      "url": "https://arxiv.org/abs/2610.11704"
-    },
-    {
-      "id": "2fb93b972b3869335ebb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DeltaReplay: Task-Relative Memory Reuse for Mobile GUI Agents",
-      "url": "https://arxiv.org/abs/2610.11707"
-    },
-    {
-      "id": "db0b74b61175ca99e9ff",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Internalizer: Portable Context-to-Parameter Mapping for Very Large Language Models",
-      "url": "https://arxiv.org/abs/2610.11715"
-    },
-    {
-      "id": "2194e330bb3a9dfb45a8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MultiWorldBench: Do Independently Controlled Views Describe One Shared World?",
-      "url": "https://arxiv.org/abs/2610.11723"
-    },
-    {
-      "id": "27b73b9d66df97628fe1",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MemTrial: Learning When to Trust Memory in LLM Portfolio Agents",
-      "url": "https://arxiv.org/abs/2610.11732"
-    },
-    {
-      "id": "bf48ea056cffb9866212",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Onboard Marine Anomaly Detection on $\\Phi$sat-2: From Simulation-Based Development to In-Orbit Demonstration",
-      "url": "https://arxiv.org/abs/2610.11735"
-    },
-    {
-      "id": "dcd5f18c8a873769f1fa",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Scalable AI Uncertainty Quantification via Generalized Laplace Active Subspaces",
-      "url": "https://arxiv.org/abs/2610.11738"
-    },
-    {
-      "id": "b2220626150f9ebff241",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
-      "url": "https://arxiv.org/abs/2610.11750"
-    },
-    {
-      "id": "0476a40991c9db1e65d2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "What Output-Only Review Cannot Verify: Study Contracts for Research Agents",
-      "url": "https://arxiv.org/abs/2610.11754"
-    },
-    {
-      "id": "4f0779a4aecc2b1aa5ff",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models",
-      "url": "https://arxiv.org/abs/2610.11773"
-    },
-    {
-      "id": "1b2a795675cfe6af48a8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
-      "url": "https://arxiv.org/abs/2610.11775"
-    },
-    {
-      "id": "7d26a5c9a55b02eb9d17",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
-      "url": "https://arxiv.org/abs/2610.11794"
-    },
-    {
-      "id": "e8b373eb45aaede5599a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Probability-Signature Dynamics: Unpacking Modular Addition Learning Within Two-Layer Networks",
-      "url": "https://arxiv.org/abs/2610.11833"
-    },
-    {
-      "id": "3dd21cf2b9880eb7b56c",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LEVER: Adaptive Cost-Aware Proof Search Over AND/OR Graphs",
-      "url": "https://arxiv.org/abs/2610.11862"
-    },
-    {
-      "id": "b77ee31d35a18dcc8e43",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "How Is Automated Research Evaluated? A Survey of Benchmarks and Evaluation Practices",
-      "url": "https://arxiv.org/abs/2610.11877"
-    },
-    {
-      "id": "28b681e9ee2411cc842e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MindFlow: Mind Supernet Powered Thinking Flows for Research Idea Innovation",
-      "url": "https://arxiv.org/abs/2610.11966"
-    },
-    {
-      "id": "06cac7a9400c206e5dd4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MetaOPD: Meta-Learned Token Weighting for On-Policy Distillation",
-      "url": "https://arxiv.org/abs/2610.11989"
-    },
-    {
-      "id": "ae8f8a045812937095c0",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "An Interpretable Approach to PDE Solution Discovery via Structural Experience Distillation",
-      "url": "https://arxiv.org/abs/2610.12003"
-    },
-    {
-      "id": "33016bc84be2df6155b4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Complexity of Grounded Semantics and Preferred Semantics in Finitary Argumentation Frameworks",
-      "url": "https://arxiv.org/abs/2610.12008"
-    },
-    {
-      "id": "a9a3742b12efca410766",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PulseBound: Future-Beat State Forecasting Under an Explicit Information Boundary",
-      "url": "https://arxiv.org/abs/2610.12010"
-    },
-    {
-      "id": "494e9a5cebf11635139a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "InterviewPlayground: A Simulation Environment for Evaluating AI Interviewers",
-      "url": "https://arxiv.org/abs/2610.12023"
-    },
-    {
-      "id": "efde86304f92cddcb8f2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Structure Tax: How Structured Output affects LLMs Performance",
-      "url": "https://arxiv.org/abs/2610.12056"
-    },
-    {
-      "id": "280c134dce746d423154",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
-      "url": "https://arxiv.org/abs/2610.12061"
-    },
-    {
-      "id": "0aef09d1b57a8f56cd60",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Is Memorization Context-Sensitive? Prefix-Based Extraction Beyond Isolated Prefixes",
-      "url": "https://arxiv.org/abs/2610.12085"
-    },
-    {
-      "id": "ef48cb890dde5a105041",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EvoAlloc: A Self-Evolving Resource Allocation Agent for Efficient Program Evolution",
-      "url": "https://arxiv.org/abs/2610.12086"
-    },
-    {
-      "id": "c817cb8543dc27d64b03",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Recompose and Refine Latent Reasoning Flows for Vision-Language-Action Models",
-      "url": "https://arxiv.org/abs/2610.12090"
-    },
-    {
-      "id": "98cbb0268398beab6518",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Universal Textual Teaching for LLMs",
-      "url": "https://arxiv.org/abs/2610.12114"
-    },
-    {
-      "id": "1921ba760bac98b1a443",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Use and Disuse: Intent-Structured Experience Consolidation for Memory and Learning in LLM Agents",
-      "url": "https://arxiv.org/abs/2610.12124"
-    },
-    {
-      "id": "7d0e4fc9ecf26251de24",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "An Investigation of Model Coherence: Narrow Finetunes Contradict Themselves Under Resampling",
-      "url": "https://arxiv.org/abs/2610.12129"
-    },
-    {
-      "id": "bfb260afad37b97236ab",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "OA-MAP: Evidence-Grounded Multi-Agent Multimodal Framework for Interpretable Knee Osteoarthritis Progression",
-      "url": "https://arxiv.org/abs/2610.12134"
-    },
-    {
-      "id": "9abbc37231a63a814e97",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Q-Shaped Options for Hierarchical Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.12135"
-    },
-    {
-      "id": "53b9b3864189503562d2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Instruction-Conditioned Electromagnetic Spectrum Understanding via Budget-Adaptive Signal Tokenization",
-      "url": "https://arxiv.org/abs/2610.12142"
-    },
-    {
-      "id": "f863a9535d4656c62298",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning to Plan by Looking Back: Hindsight Hierarchies for Training Reasoning Models",
-      "url": "https://arxiv.org/abs/2610.12168"
-    },
-    {
-      "id": "7f79a91ca454996507ec",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
-      "url": "https://arxiv.org/abs/2610.12176"
-    },
-    {
-      "id": "f2d409c9a01a224a0313",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Has a Bayesian Neural Network Sampled Enough? Adaptive Inference Time with Statistical Guarantees",
-      "url": "https://arxiv.org/abs/2610.12212"
-    },
-    {
-      "id": "6c2638c13f09f8792d82",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails",
-      "url": "https://arxiv.org/abs/2610.12292"
-    },
-    {
-      "id": "38595f2762a758d7b529",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning Probabilistic Logic Programs with Functional Gradient Guided Language Models",
-      "url": "https://arxiv.org/abs/2610.12303"
-    },
-    {
-      "id": "57ab4fa8bea5c2e3a222",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Looking Inside LLMs: Small-World Connectivity as a Signature of Reasoning Performance",
-      "url": "https://arxiv.org/abs/2610.12304"
-    },
-    {
-      "id": "09c0d6a9a486511e6c32",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Structural Theory of Cognitive Representation and Problem Solving,Contexts, Invariance, and the Knowledge Space",
-      "url": "https://arxiv.org/abs/2610.12306"
-    },
-    {
-      "id": "20dd4fdcf45ed7a6d86d",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Verdict Without the Rule: Diagnosing and Auditing Regulatory Rule Sensitivity in LLM Compliance Systems",
-      "url": "https://arxiv.org/abs/2610.12313"
-    },
-    {
-      "id": "0730f83f6e98c3467600",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Prior or Feedback? What an LLM Uses When Adapting Neural Operators",
-      "url": "https://arxiv.org/abs/2610.12325"
-    },
-    {
-      "id": "1a8cfc06fd9508d67ee0",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
-      "url": "https://arxiv.org/abs/2610.12341"
-    },
-    {
-      "id": "df3508778d93dbf28289",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Overcoming Prior Barriers: Supervised Fine-Tuning under Long-Tail Distribution",
-      "url": "https://arxiv.org/abs/2610.12345"
-    },
-    {
-      "id": "07de1331c2668bd6e4bb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict",
-      "url": "https://arxiv.org/abs/2610.12360"
-    },
-    {
-      "id": "9b506cb9bd0203a703c4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Cited but Not Consulted: A Counterfactual Audit of Legal Chain-of-Thought Faithfulness",
-      "url": "https://arxiv.org/abs/2610.12361"
-    },
-    {
-      "id": "3c75b3161db3715af976",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "HANS: A Handwritten Answer Sheet Dataset for Noisy Hybrid Document Parsing",
-      "url": "https://arxiv.org/abs/2610.12363"
-    },
-    {
-      "id": "058e8f755da48d74f8ac",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
-      "url": "https://arxiv.org/abs/2610.12375"
-    },
-    {
-      "id": "dc067625695f21301b2e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GeoReform: Reflective Formalization Evolution for Multimodal Geometry Problem Solving",
-      "url": "https://arxiv.org/abs/2610.12391"
-    },
-    {
-      "id": "e9b188fcd640014ad5db",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "HRIL: Learning Multimodal Synergy via Higher-Order Tensor Modeling",
-      "url": "https://arxiv.org/abs/2610.12393"
-    },
-    {
-      "id": "3c421e9d0f1364200ba9",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Searching for \"Harmful Refusal\": A Psychometric Audit of an AI Safety Benchmark",
-      "url": "https://arxiv.org/abs/2610.12409"
-    },
-    {
-      "id": "9e774d4067d6bca3207a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
-      "url": "https://arxiv.org/abs/2610.12436"
-    },
-    {
-      "id": "e8c7464d018404c49113",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "BrickBench: Evaluating Agentic Brick Design",
-      "url": "https://arxiv.org/abs/2610.12452"
-    },
-    {
-      "id": "e72161b1710d329e09d1",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
-      "url": "https://arxiv.org/abs/2610.12466"
-    },
-    {
-      "id": "1de3b850b681079f5dd7",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Discovering Global False Negatives On the Fly for Self-supervised Contrastive Learning",
-      "url": "https://arxiv.org/abs/2502.20612"
-    },
-    {
-      "id": "d7bc16c4677cee7072ad",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SpectralCache: Accelerating Diffusion-Based World Models via Spectral Feature Caching",
-      "url": "https://arxiv.org/abs/2610.02660"
-    },
-    {
-      "id": "e30c816c08d7ec77bc11",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Pixels, Without Pre-training: Joint Generative and Self-Supervised Representation Learning in One Model",
-      "url": "https://arxiv.org/abs/2610.05711"
-    },
-    {
-      "id": "8189e1ede409a8bf5640",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Freeze the Decoder, Heal the Encoder: Parameter-Efficient Adaptation for SVD-Based KV-Cache Compression",
-      "url": "https://arxiv.org/abs/2610.10552"
-    },
-    {
-      "id": "833e2f390deaa317ae20",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Strategic Governance of AI Models in Earth Science",
-      "url": "https://arxiv.org/abs/2610.10560"
-    },
-    {
-      "id": "87f2acc3c33b27130de6",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SLVR: Structured Latent Visual Reasoning via Human-like Reasoning Flows",
-      "url": "https://arxiv.org/abs/2610.10563"
-    },
-    {
-      "id": "e8470173f4b19952a3a8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Survey on LLM-Integrated Hardware Design Verification",
-      "url": "https://arxiv.org/abs/2610.10580"
-    },
-    {
-      "id": "2ae367c42d12035b495c",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Certified Corruption Budgets: Anytime-Valid Leaderboard Claims under Adaptive Rigging",
-      "url": "https://arxiv.org/abs/2610.10597"
-    },
-    {
-      "id": "c3d6735177eb9de2395a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Type-checking: Towards Holistic Evaluation of Formal Specification Generation",
-      "url": "https://arxiv.org/abs/2610.10604"
-    },
-    {
-      "id": "72065eca78ebe823bb34",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Investigation Failures to Reliable SOC Agents: Understanding and Improving LLM-Based Alert Triage",
-      "url": "https://arxiv.org/abs/2610.10608"
-    },
-    {
-      "id": "0c5f226b18b67ba9f0fd",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Code Understanding is a Bottleneck for Coding Agents",
-      "url": "https://arxiv.org/abs/2610.10610"
-    },
-    {
-      "id": "9d62bfe90ff31fdd0765",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MRCert: Towards Post-deployment Patch Robustness Certification for Adversarially Patched Samples via Type-specific Masking",
-      "url": "https://arxiv.org/abs/2610.10617"
-    },
-    {
-      "id": "c3f86802f6b62e75b6f6",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution",
-      "url": "https://arxiv.org/abs/2610.10619"
-    },
-    {
-      "id": "57da777c4c2700254495",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When AI Finds Hidden Messages, Does It Report?",
-      "url": "https://arxiv.org/abs/2610.10620"
-    },
-    {
-      "id": "f9779065c319a655cf4f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "WorldBench: Evaluating LLMs on Three.js Voxel World Generation",
-      "url": "https://arxiv.org/abs/2610.10622"
-    },
-    {
-      "id": "c549cd200722eaaa004c",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SAVU-BENCH: A Real-World Benchmark for Spatial Audio-Visual Understanding",
-      "url": "https://arxiv.org/abs/2610.10624"
-    },
-    {
-      "id": "6b18397b41eae30539a1",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking",
-      "url": "https://arxiv.org/abs/2610.10628"
-    },
-    {
-      "id": "25ce52a0a83da40c0a45",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Phase-HDC: Replacing Optimizer History with Gradient Thresholds in Discrete Phase Learning",
-      "url": "https://arxiv.org/abs/2610.10630"
-    },
-    {
-      "id": "3829f7d633f214c88933",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Has LLM Screening Performance Stalled in Software Engineering Systematic Reviews?",
-      "url": "https://arxiv.org/abs/2610.10633"
-    },
-    {
-      "id": "4b5ca37ca923535cde10",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Visible Reasoning Is Not a Universal Optimizer: Persona- and Thinking-Dependent Effects in Analytics Code Generation",
-      "url": "https://arxiv.org/abs/2610.10639"
-    },
-    {
-      "id": "c3c0c6dc9ca5820946bb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
-      "url": "https://arxiv.org/abs/2610.10641"
-    },
-    {
-      "id": "ec401ab98bd184aa7b5a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Log-Odds to Shapley Values: An Explanatory Geometry for the Weighted Naive Bayes Classifier",
-      "url": "https://arxiv.org/abs/2610.10642"
-    },
-    {
-      "id": "ae6b6a8a3b7659d6f81d",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Masked Generative Motion Planning with Geometry-Guided Token Search",
-      "url": "https://arxiv.org/abs/2610.10646"
-    },
-    {
-      "id": "0cd8f4f0c17e48ed128a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond the Ergodic Wall: A Discrete Geometric Physics Sandbox for Analysing AI Scaling Limits and Complexity Collapse",
-      "url": "https://arxiv.org/abs/2610.10651"
-    },
-    {
-      "id": "b9ebf2cb9f41bf1ee495",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Nullify: Null-Space Activation Steering for Training-Free LLM Unlearning",
-      "url": "https://arxiv.org/abs/2610.10655"
-    },
-    {
-      "id": "19dea6892488bc0bf78f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Owls: Subliminal Learning Can Transfer Learned Capabilities and Backdoors",
-      "url": "https://arxiv.org/abs/2610.10657"
-    },
-    {
-      "id": "1bbf73ec8258519a45d5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LinSlot: Exploiting Linear Representation hypothesis for unsupervised attribute discovery from slot based object representation",
-      "url": "https://arxiv.org/abs/2610.10722"
-    },
-    {
-      "id": "15caffd1edcef1f82f6a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Conversational Task Disambiguation over Tabular Data: Leakage-Aware Formulation, Benchmark Suite, and Training",
-      "url": "https://arxiv.org/abs/2610.10740"
-    },
-    {
-      "id": "a343365d8305f3eb88cc",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
-      "url": "https://arxiv.org/abs/2610.10742"
-    },
-    {
-      "id": "101489b52765feb01972",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Clarify, Then Focus: Statement Normalization for Conversation Analytics at Scale",
-      "url": "https://arxiv.org/abs/2610.10758"
-    },
-    {
-      "id": "3ceda1411b5d92fdf923",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AI-Mediated Self: How HCI Defines and Relates to the Self",
-      "url": "https://arxiv.org/abs/2610.10770"
-    },
-    {
-      "id": "4026c25c8bc8c1d65a52",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MemoWM: How World Models Change What Agents Need to Remember",
-      "url": "https://arxiv.org/abs/2610.10778"
-    },
-    {
-      "id": "b2c2f0e4bfdde53ac19f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "VICO: Visual Environments Co-Evolving for Vision-Language Model Reasoning",
-      "url": "https://arxiv.org/abs/2610.10782"
-    },
-    {
-      "id": "30427144a96a059508af",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime",
-      "url": "https://arxiv.org/abs/2610.10787"
-    },
-    {
-      "id": "3cfdb313e450153a27a1",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Grammar Concept Annotation at Scale: Deployed Fine-Tuned Small Language Models Outperform Prompted Frontier Models",
-      "url": "https://arxiv.org/abs/2610.10827"
-    },
-    {
-      "id": "7126cbf1300d5943d33b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Real Long-Term Memory for AI: A 50-Million-Token Window That Is Faster and Cheaper Than Recompute",
-      "url": "https://arxiv.org/abs/2610.10845"
-    },
-    {
-      "id": "f220821fadd32db2cfee",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
-      "url": "https://arxiv.org/abs/2610.10858"
-    },
-    {
-      "id": "a181b44abf8b1b109a32",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Stochastic Teacher Intervention for Agentic On-Policy Distillation",
-      "url": "https://arxiv.org/abs/2610.10878"
-    },
-    {
-      "id": "d43636f5f20bf8d0a878",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Missing Fourth Term for the Emulation Tensor Memory Equilibrium (TME) Model: The Residue Deconstruction Cost",
-      "url": "https://arxiv.org/abs/2610.10924"
-    },
-    {
-      "id": "31e97f86014d904e6830",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Speedbumps: Rejection Attacks on Speculative Decoding",
-      "url": "https://arxiv.org/abs/2610.10929"
-    },
-    {
-      "id": "d941afc48b5123b2c75a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Rethinking the Tradeoff Between Temporal Encoding and Nonlinear Computation in Spiking Language Models",
-      "url": "https://arxiv.org/abs/2610.10933"
-    },
-    {
-      "id": "d65296e36116cb3b9e65",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TRACE: A Governance Framework for Measuring Explainability Debt in Production AI Systems",
-      "url": "https://arxiv.org/abs/2610.10957"
-    },
-    {
-      "id": "260d4d591209413680ee",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Cross-Provider Review as a Runtime Contract for Coding Agents: A Controlled Pilot and Fault-Injection Study",
-      "url": "https://arxiv.org/abs/2610.10961"
-    },
-    {
-      "id": "108ab75ba95a2b5e6b3f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "iAm.md: Robot Skill Self-Assessment through Agentic Introspection for Unknown Open-Vocabulary Domains",
-      "url": "https://arxiv.org/abs/2610.10962"
-    },
-    {
-      "id": "8a7443b9aa45f390bce5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
-      "url": "https://arxiv.org/abs/2610.10971"
-    },
-    {
-      "id": "13704e8939d8e007b22b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Budgeted Multi-Source Counterfactual Annotation for Off-Policy Evaluation",
-      "url": "https://arxiv.org/abs/2610.10974"
-    },
-    {
-      "id": "2d113eed372725d1a6ed",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Optimizing Large Language Models with Chained LMOs",
-      "url": "https://arxiv.org/abs/2610.10975"
-    },
-    {
-      "id": "68d9fe8377bb2850328b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Probabilistic Sensing, Deterministic Authority: Admitting Model-Produced Observations into Sufficiency-Checked Governance Contracts",
-      "url": "https://arxiv.org/abs/2610.10978"
-    },
-    {
-      "id": "e7c177de8e098cf85113",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Why LLM Agents Favor Their Group: Stakes, Observed Norms, and Reputation",
-      "url": "https://arxiv.org/abs/2610.11008"
-    },
-    {
-      "id": "dd0d8d42018678c79bc2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Mid-Training Language Models on Raw Video",
-      "url": "https://arxiv.org/abs/2610.11019"
-    },
-    {
-      "id": "0a25198089b102556730",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Intent Graph: Navigating the Analytical Reasoning Space for Exploratory Data Analysis",
-      "url": "https://arxiv.org/abs/2610.11025"
-    },
-    {
-      "id": "af34c8036042e08c5690",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents",
-      "url": "https://arxiv.org/abs/2610.11030"
-    },
-    {
-      "id": "7823b07ce18cdff41e42",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Language Modeling is Monotone Compression",
-      "url": "https://arxiv.org/abs/2610.11031"
-    },
-    {
-      "id": "02d863a83c9e8dedb5b4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AffordDrive3D: Affordance-Aware World-Action Modeling with Spatial Understanding",
-      "url": "https://arxiv.org/abs/2610.11060"
-    },
-    {
-      "id": "e5c511bd02a5543b0a4f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Emergent Inverse-Depth Scaling From Nonlinearity In Attention",
-      "url": "https://arxiv.org/abs/2610.11063"
-    },
-    {
-      "id": "94f1e8b7a567a9a1979e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Stability-Plasticity Balance via Singular-Vector Selection in LLM Continual Learning",
-      "url": "https://arxiv.org/abs/2610.11076"
-    },
-    {
-      "id": "7c6932fc09a66f527a5b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Continuous Ground-Truth Construction and a Recovery Policy for Air--Water Robotic Tracking",
-      "url": "https://arxiv.org/abs/2610.11096"
-    },
-    {
-      "id": "50717e40ae0182e22af6",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SFT-as-Context Mitigates Forgetting in Supervised Fine-Tuning",
-      "url": "https://arxiv.org/abs/2610.11132"
-    },
-    {
-      "id": "bccfc0cff38c9b29e912",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ActiveMedAgent: Cost-Aware Trajectory Learning for Multimodal Medical Diagnosis",
-      "url": "https://arxiv.org/abs/2610.11140"
-    },
-    {
-      "id": "104b76501c0fad13e2e7",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Improving Image-Based Nutrition Estimation Through Multimodal Food-Item Verification and Recovery",
-      "url": "https://arxiv.org/abs/2610.11144"
-    },
-    {
-      "id": "2a7bc2054303b705c1a4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SP-DocReader: Difference-Aware Self-Play for Precise Document OCR",
-      "url": "https://arxiv.org/abs/2610.11148"
-    },
-    {
-      "id": "a09cf217d4a404f95d0e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CARE: Constrained Attention Refinement for Fine-Grained Visual Classification via Teacher-Student Distillation",
-      "url": "https://arxiv.org/abs/2610.11153"
-    },
-    {
-      "id": "2693c35bd5cbf59c69dc",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Characterizing Statistical Separability in TP-CRIV for Probabilistic AI Models",
-      "url": "https://arxiv.org/abs/2610.11163"
-    },
-    {
-      "id": "1f89f9b1f52dd7b77afb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PIVOT: Perplexity-Informed KD-to-RL Transition Scheduling for Vertical-Domain Few-Shot Distillation",
-      "url": "https://arxiv.org/abs/2610.11167"
-    },
-    {
-      "id": "7ff3eee2f1a73086c7aa",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PMTRM: Pseudo-Memory Temporal Re-encoding Module for Embodied Policy Learning",
-      "url": "https://arxiv.org/abs/2610.11168"
-    },
-    {
-      "id": "0957a12050e37dbb46e5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "VAMR: Multi-Question Agentic Reasoning for Efficient Long-Form Video Understanding",
-      "url": "https://arxiv.org/abs/2610.11171"
-    },
-    {
-      "id": "07efc9a78deca25fdb56",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Higher-Order Action Supervision Makes A Strong Policy Class",
-      "url": "https://arxiv.org/abs/2610.11175"
-    },
-    {
-      "id": "b25201eaab9aa6f800bb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RAG-Stress: Probing the Limits of Evidence Reliance in Retrieval-Augmented Generation",
-      "url": "https://arxiv.org/abs/2610.11183"
-    },
-    {
-      "id": "b5c4202bbc01f441542f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SafeInferCom: Safe Inference-Time Compute via Verifier-Guided Mid-Generation Intervention for Robotic Task Planning",
-      "url": "https://arxiv.org/abs/2610.11223"
-    },
-    {
-      "id": "f3514ce14e15dc76cbe8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neuro-Memory Fuzzy Inference System for Mimicking Human-like Car Following Behavior",
-      "url": "https://arxiv.org/abs/2610.11252"
-    },
-    {
-      "id": "de37a31267318b635480",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Gated Memory: Admission-Controlled Memory Formation for Conversational AI",
-      "url": "https://arxiv.org/abs/2610.11270"
-    },
-    {
-      "id": "1dfdad0d7f3ee8e816af",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "How to post-train on a surrogate: Envelope sampling mitigates reward hacking",
-      "url": "https://arxiv.org/abs/2610.11281"
-    },
-    {
-      "id": "3033487814f4b8635330",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution",
-      "url": "https://arxiv.org/abs/2610.11284"
-    },
-    {
-      "id": "eb76b50b54c8ab91d86f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "REMORY: Learning Residual Memory for Context Compaction",
-      "url": "https://arxiv.org/abs/2610.11287"
-    },
-    {
-      "id": "ad5c6113f555fdc40383",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Characterizing Overconfident Failure in LLM-Based Code Generation",
-      "url": "https://arxiv.org/abs/2610.11300"
-    },
-    {
-      "id": "6beb54e9c9f0393367d3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
-      "url": "https://arxiv.org/abs/2610.11309"
-    },
-    {
-      "id": "a369f37a3ac49d285182",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MetaEncoder: Exploring the Limit of Bi-Encoders for Multimodal System One Decision Making with Natural Language Interface",
-      "url": "https://arxiv.org/abs/2610.11316"
-    },
-    {
-      "id": "a0ffb217219d15dfee9b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Rethinking Contrastive Loss in CLIP Post-training: A Complementary Framework with Frozen Text Encoder",
-      "url": "https://arxiv.org/abs/2610.11374"
-    },
-    {
-      "id": "5658e2b1c86c9f8a7558",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CRISP: Fixing Flying Pixels in Latent LiDAR Generation via Diffusion Decoding",
-      "url": "https://arxiv.org/abs/2610.11376"
-    },
-    {
-      "id": "309e322c4afd3b5b9b3a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EvoKnow: Continual Knowledge Evolution for AI-Generated Image Detection",
-      "url": "https://arxiv.org/abs/2610.11381"
-    },
-    {
-      "id": "1855810a56f9324fa6a8",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RISR: Residual-Informed Scientific Equation Discovery with Large Language Models",
-      "url": "https://arxiv.org/abs/2610.11387"
-    },
-    {
-      "id": "f3ce1f130826ef155772",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Rewiring Semantics, Dynamics, and Control: A Simple yet Effective Action-Centric Tri-Stream Transformer",
-      "url": "https://arxiv.org/abs/2610.11416"
-    },
-    {
-      "id": "c97d6388ef93c142ce9e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Missing Modality-Aware Calibration for Trustworthy Brain Tumor Segmentation",
-      "url": "https://arxiv.org/abs/2610.11419"
-    },
-    {
-      "id": "800fcc474d558efd483a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Closed-loop evaluation of LLM agents for embedded software development",
-      "url": "https://arxiv.org/abs/2610.11447"
-    },
-    {
-      "id": "ec8462a9e4cc24ed1866",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Zatom-2: Multitask Pretraining on Atomistic Data for Generative Modeling across Domains",
-      "url": "https://arxiv.org/abs/2610.11454"
-    },
-    {
-      "id": "8c8ca999f1b1624f9ebc",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Generative Adversarial Loops",
-      "url": "https://arxiv.org/abs/2610.11458"
-    },
-    {
-      "id": "2039404ea365c12329c9",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ProtoSemImage: Image-Valued Prototypes with Deformable Row Alignment for Interpretable Document Classification",
-      "url": "https://arxiv.org/abs/2610.11460"
-    },
-    {
-      "id": "1eca7f5cf4ae95f1d964",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GROB: A Multi-Agent Architecture for Public-Trace Investigation of Candidate Agentic Activity",
-      "url": "https://arxiv.org/abs/2610.11467"
-    },
-    {
-      "id": "bb81ae216a216a1e88fb",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Conditional Residual Prediction: Improving Autoregressive Video Diffusion without a Bidirectional Teacher",
-      "url": "https://arxiv.org/abs/2610.11479"
-    },
-    {
-      "id": "2165e1564564ed3938d2",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes",
-      "url": "https://arxiv.org/abs/2610.11480"
-    },
-    {
-      "id": "bb5126e8123484d0bcea",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
-      "url": "https://arxiv.org/abs/2610.11482"
-    },
-    {
-      "id": "03315af93ffae6ccfc35",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Compactness and Consistency: A Conjoint Framework for Deep Graph Clustering",
-      "url": "https://arxiv.org/abs/2610.11506"
-    },
-    {
-      "id": "a329360dcc59ee904895",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MSGAT: Multi-Head Spiking Graph Attention with Similarity-Space Fusion for Image-Text Retrieval",
-      "url": "https://arxiv.org/abs/2610.11526"
-    },
-    {
-      "id": "8d989da76d73b4721e49",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Design Creativity Bench: Measuring creativity in LLM-Generated UI",
-      "url": "https://arxiv.org/abs/2610.11539"
-    },
-    {
-      "id": "f386752cdacd151b6f63",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Constitutional Gating and Deterministic Recovery for Multi-Agent LLM Negotiation: Ablations Against a Stateful Adversarial Gatekeeper",
-      "url": "https://arxiv.org/abs/2610.11542"
-    },
-    {
-      "id": "52de222f90ddfa197cb5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning to Orchestrate Evolutionary Search: Progression-Aware Deep Reinforcement Learning for Dynamic DE-CMA-ES Coordination in Optimization and Structural Model Updating",
-      "url": "https://arxiv.org/abs/2610.11546"
-    },
-    {
-      "id": "68134226d52a3e463daf",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SWE-Journey: Towards More Realistic Evaluation of Coding Assistants through Long-Horizon, Multi-Turn Interaction",
-      "url": "https://arxiv.org/abs/2610.11559"
-    },
-    {
-      "id": "f345aeb390f9b507dc49",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Sera: Semantic Representation Aggregation for Reliable and Interpretable Battery Health Forecasting",
-      "url": "https://arxiv.org/abs/2610.11567"
+      "id": "4d601f941b898d71b39c",
+      "kind": "commoncrawl",
+      "observed_at": "20260916193228",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/",
+      "url": "https://www.w3.org/"
     },
     {
-      "id": "9c884704ed8cda3c7060",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SDPAD: A Fully Spike-Driven Pipeline for End-to-End Autonomous Driving",
-      "url": "https://arxiv.org/abs/2610.11583"
-    },
-    {
-      "id": "a3ff684ef2c28b1496e4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Adapting English Quality Classifiers for Multilingual LLM Pretraining Data Selection",
-      "url": "https://arxiv.org/abs/2610.11585"
+      "id": "71638b56f9a1f14476df",
+      "kind": "commoncrawl",
+      "observed_at": "20260913122004",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/02/26-modules/Distribution.html",
+      "url": "https://www.w3.org/1999/02/26-modules/Distribution.html"
     },
     {
-      "id": "9195646b461caf9716f5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Runnable Commit Untangling for Coding Agents",
-      "url": "https://arxiv.org/abs/2610.11593"
+      "id": "b1088cf61f6de673b6b9",
+      "kind": "commoncrawl",
+      "observed_at": "20260914154626",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/04/Editing/01",
+      "url": "https://www.w3.org/1999/04/Editing/01"
     },
     {
-      "id": "4fa1f7ec176a05cf3fa4",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Large Language Model Turnover Undermines Screening for Artificial Intelligence-Assisted Scientific Writing",
-      "url": "https://arxiv.org/abs/2610.11599"
+      "id": "e12ca207f58f5f94b8e2",
+      "kind": "commoncrawl",
+      "observed_at": "20260914154825",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/05/XFA/xfa-template-19990614",
+      "url": "https://www.w3.org/1999/05/XFA/xfa-template-19990614"
     },
     {
-      "id": "8bb253fccf85b62e76ce",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "NanoProof: Open and Efficient Automated Theorem Proving in Lean 4",
-      "url": "https://arxiv.org/abs/2610.11605"
+      "id": "042f0d605ecedea64663",
+      "kind": "commoncrawl",
+      "observed_at": "20260915122856",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html",
+      "url": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html"
     },
     {
-      "id": "9953e7488946e3419336",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Report Imitation: Clinically Aware Multi-Image Ultrasound Report Generation from Visible Evidence",
-      "url": "https://arxiv.org/abs/2610.11610"
+      "id": "cfebc7a54430f2c01b38",
+      "kind": "commoncrawl",
+      "observed_at": "20260916085138",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/NOTE-annot-19990710/",
+      "url": "https://www.w3.org/1999/07/NOTE-annot-19990710/"
     },
     {
-      "id": "9e342d839f12656445e3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TAM: Task-Aware Memory Distillation for Efficient Spatiotemporal Prediction",
-      "url": "https://arxiv.org/abs/2610.11617"
+      "id": "081b8d46830819ed08d5",
+      "kind": "commoncrawl",
+      "observed_at": "20260908184622",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "url": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/"
     },
     {
-      "id": "137406a14c3ad0c7c6c3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neural Networks for Temporal Pattern Recognition and Dynamic Arm Gesture Speed Estimation for Robot Control",
-      "url": "https://arxiv.org/abs/2610.11631"
+      "id": "4b2a14c2bf6dedad3c75",
+      "kind": "commoncrawl",
+      "observed_at": "20260909170045",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html"
     },
     {
-      "id": "23ee93550e4ddd248081",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense",
-      "url": "https://arxiv.org/abs/2610.11634"
+      "id": "d2d9271bc18ca0e03fdf",
+      "kind": "commoncrawl",
+      "observed_at": "20260916072029",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html"
     },
     {
-      "id": "8c4f394792e262cde558",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "One Skill Too Many: How Co-Installed Skills Conflict in Coding Agents",
-      "url": "https://arxiv.org/abs/2610.11647"
+      "id": "4851f435a9745385d942",
+      "kind": "commoncrawl",
+      "observed_at": "20260916062356",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804",
+      "url": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804"
     },
     {
-      "id": "6acefafb1c7f18823bf5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking",
-      "url": "https://arxiv.org/abs/2610.11650"
+      "id": "ead1b47ce9b6a79e0c70",
+      "kind": "commoncrawl",
+      "observed_at": "20260914171733",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html",
+      "url": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html"
     },
     {
-      "id": "f211694c05edd3f659a3",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DIAL-OPD: Learning More from Fewer Tokens in On-Policy Distillation",
-      "url": "https://arxiv.org/abs/2610.11659"
+      "id": "fd8e46599f3ffb4655a9",
+      "kind": "commoncrawl",
+      "observed_at": "20260906002400",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/11/11-WWWProposal/",
+      "url": "https://www.w3.org/1999/11/11-WWWProposal/"
     },
     {
-      "id": "9834e84908cde7ad08ac",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "HI3D 3.0 (Twinkle3D): Object-specific 3D Asset Generation with High Resolution",
-      "url": "https://arxiv.org/abs/2610.11685"
+      "id": "fae2f20531a2dbd87d00",
+      "kind": "commoncrawl",
+      "observed_at": "20260910130708",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/11/AU-review-comments",
+      "url": "https://www.w3.org/1999/11/AU-review-comments"
     },
     {
-      "id": "f6b878442ddd1bb8edc9",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Epistemic Disturbance in the Graph Model for Conflict Resolution: State-Preserving Actions, Four-Valued Assessments, and the Distinction between Capability and Intention",
-      "url": "https://arxiv.org/abs/2610.11690"
+      "id": "bd18c9996c59ea760df3",
+      "kind": "commoncrawl",
+      "observed_at": "20260914235414",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru",
+      "url": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru"
     },
     {
-      "id": "fa10a44200c2fea46542",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can Jev be Your Q or Policy in Reinforcement Learning?",
-      "url": "https://arxiv.org/abs/2610.11692"
+      "id": "aa562fed8195cd927740",
+      "kind": "commoncrawl",
+      "observed_at": "20260917041621",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/",
+      "url": "https://github.blog/"
     },
     {
-      "id": "7175cfe0a799a1f2fb6d",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Elucidating the Space of Enzymatic Reaction: A Unified Benchmark and Pretrained Model",
-      "url": "https://arxiv.org/abs/2610.11694"
+      "id": "4b17809452afed4ede07",
+      "kind": "commoncrawl",
+      "observed_at": "20260915151951",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/05/",
+      "url": "https://github.blog/2018/05/"
     },
     {
-      "id": "ad7bee83bbc881e99e58",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
-      "url": "https://arxiv.org/abs/2610.11727"
+      "id": "0953066a2546cab9451e",
+      "kind": "commoncrawl",
+      "observed_at": "20260916155430",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/11/",
+      "url": "https://github.blog/2018/11/"
     },
     {
-      "id": "2ef4a0f38e0ffcdba608",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Timer-M1: A Multivariate Time Series Foundation Model via Learning Primitives",
-      "url": "https://arxiv.org/abs/2610.11734"
+      "id": "d32c6f1d75e91688a6a3",
+      "kind": "commoncrawl",
+      "observed_at": "20260913080733",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/page/15/",
+      "url": "https://github.blog/2018/page/15/"
     },
     {
-      "id": "ea7d3e23eadfbbd9be57",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Uncovering and Fixing Collider Bias in Bayesian PINNs",
-      "url": "https://arxiv.org/abs/2610.11737"
+      "id": "bdceea10a562c900af50",
+      "kind": "commoncrawl",
+      "observed_at": "20260907213924",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2019/11/",
+      "url": "https://github.blog/2019/11/"
     },
     {
-      "id": "f78ace8bd89a7c6894ee",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DEX: Digit-Level Early Exit for Energy-Efficient MSDF Neural Network Inference",
-      "url": "https://arxiv.org/abs/2610.11748"
+      "id": "2006edcdf2fe437b2058",
+      "kind": "commoncrawl",
+      "observed_at": "20260904140021",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2020/",
+      "url": "https://github.blog/2020/"
     },
     {
-      "id": "d5409be0019a40c924a6",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Same Outcome, Different Evidence: Intent Recovery in LLM Safety Evaluation",
-      "url": "https://arxiv.org/abs/2610.11766"
+      "id": "e2d0f176155b628a632a",
+      "kind": "commoncrawl",
+      "observed_at": "20260904142543",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2021/08/",
+      "url": "https://github.blog/2021/08/"
     },
     {
-      "id": "51be91f656f0de2eb824",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Narrow and Deep: An Ontology Tower as the Knowledge of an LLM Agent for an Industrial Equipment System",
-      "url": "https://arxiv.org/abs/2610.11768"
+      "id": "02df634eb85f58046f15",
+      "kind": "commoncrawl",
+      "observed_at": "20260906020154",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2022/11/",
+      "url": "https://github.blog/2022/11/"
     },
     {
-      "id": "a8a8add58e1fde1df73d",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
-      "url": "https://arxiv.org/abs/2610.11792"
+      "id": "2121a499edc2f04cfccb",
+      "kind": "commoncrawl",
+      "observed_at": "20260906085215",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2023/09/page/2/",
+      "url": "https://github.blog/2023/09/page/2/"
     },
     {
-      "id": "be8892829da59754ec9f",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Pixels to Structure: Lightweight Vision-Language Models for Document OCR and Structured JSON Extraction",
-      "url": "https://arxiv.org/abs/2610.11818"
+      "id": "affd7a3148bd536d2d67",
+      "kind": "commoncrawl",
+      "observed_at": "20260910094634",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/06/",
+      "url": "https://github.blog/2024/06/"
     },
     {
-      "id": "d08b2b263bc22bb33481",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Suppression to Repair: Mitigating Object Hallucination in Large Vision-Language Models via Localized Distribution Alignment",
-      "url": "https://arxiv.org/abs/2610.11826"
+      "id": "1ab410d341b18a1b5e12",
+      "kind": "commoncrawl",
+      "observed_at": "20260910191837",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/07/",
+      "url": "https://github.blog/2024/07/"
     },
     {
-      "id": "61a1e591bb22188da265",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GRPODropout: Less is More for Online Reinforcement Learning Rollouts",
-      "url": "https://arxiv.org/abs/2610.11854"
+      "id": "c8f8c133f225a04ef29e",
+      "kind": "commoncrawl",
+      "observed_at": "20260908162214",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/11/",
+      "url": "https://github.blog/2024/11/"
     },
     {
-      "id": "4e2a76a96df1e845e642",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Trajectory-Guided Fault Localization for Agent Skill Evolution",
-      "url": "https://arxiv.org/abs/2610.11858"
+      "id": "6f13263cee3a3ca00539",
+      "kind": "commoncrawl",
+      "observed_at": "20260910095831",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/12/",
+      "url": "https://github.blog/2024/12/"
     },
     {
-      "id": "01be4d0af204db73da4b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Evaluating Exact Output and Checkpoint-State Prediction in Real Programs",
-      "url": "https://arxiv.org/abs/2610.11889"
+      "id": "4b675d5297558ba77aee",
+      "kind": "commoncrawl",
+      "observed_at": "20260904233849",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/04/",
+      "url": "https://github.blog/2025/04/"
     },
     {
-      "id": "0527c0feb9ab7209e2cc",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
-      "url": "https://arxiv.org/abs/2610.11899"
+      "id": "7db61de641ea6930d719",
+      "kind": "commoncrawl",
+      "observed_at": "20260908150028",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/06/",
+      "url": "https://github.blog/2025/06/"
     },
     {
-      "id": "8944a79b0bfaa0b42596",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Visual Enhancement: Adaptive Multi-Context Steering to Mitigate LVLM Hallucinations",
-      "url": "https://arxiv.org/abs/2610.11907"
+      "id": "1ea363bf86c49418652d",
+      "kind": "commoncrawl",
+      "observed_at": "20260909214600",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/12/",
+      "url": "https://github.blog/2025/12/"
     },
     {
-      "id": "6d31025f15b2718695a6",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
-      "url": "https://arxiv.org/abs/2610.11918"
+      "id": "b7cbe8c4a9a229d83030",
+      "kind": "commoncrawl",
+      "observed_at": "20260906091823",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2026/06/page/2/",
+      "url": "https://github.blog/2026/06/page/2/"
     },
     {
-      "id": "37573463175da7483c49",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neural Decoding as Cognitive Inference",
-      "url": "https://arxiv.org/abs/2610.11923"
+      "id": "28bacb8b68411b9d1690",
+      "kind": "commoncrawl",
+      "observed_at": "20260913044913",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/",
+      "url": "https://arxiv.org/"
     },
     {
-      "id": "2b120b4392bc6fc56fdf",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Stochastic Grouping Conformal Prediction for Effective Subgroup Reliability",
-      "url": "https://arxiv.org/abs/2610.11957"
+      "id": "71c64942e0e1d2ff5b2c",
+      "kind": "commoncrawl",
+      "observed_at": "20260915091813",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/?utm_source=startupspells&utm_medium=referral&utm_campaign=1-5m-text-to-music-ai-saas-growth-playbook",
+      "url": "https://arxiv.org/?utm_source=startupspells&utm_medium=referral&utm_campaign=1-5m-text-to-music-ai-saas-growth-playbook"
     },
     {
-      "id": "23433089e3df9e6a59d5",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can LLMs Fix It Without Code? Toward Automated Verification of No-Code Bug Fixes",
-      "url": "https://arxiv.org/abs/2610.11963"
+      "id": "383ada9ef01252be4bfe",
+      "kind": "commoncrawl",
+      "observed_at": "20260915160659",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/0000-0001-6773-0399.html",
+      "url": "https://arxiv.org/a/0000-0001-6773-0399.html"
     },
     {
-      "id": "7fa1e94ee7e2fb3caa10",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DataVista: Diagnosing Multimodal LLMs on Data Video Understanding",
-      "url": "https://arxiv.org/abs/2610.11993"
+      "id": "ebc78b5cf1317c72a850",
+      "kind": "commoncrawl",
+      "observed_at": "20260914163132",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/0000-0001-7293-3385.html",
+      "url": "https://arxiv.org/a/0000-0001-7293-3385.html"
     },
     {
-      "id": "18ec81a85c1652eeff68",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neural Network Verification for Deep Joint Source-Channel Coding",
-      "url": "https://arxiv.org/abs/2610.11994"
+      "id": "a7b92c7987394947c93e",
+      "kind": "commoncrawl",
+      "observed_at": "20260908001923",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/0000-0002-2311-4241.html",
+      "url": "https://arxiv.org/a/0000-0002-2311-4241.html"
     },
     {
-      "id": "c3916a005b0931a7b8ae",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Agentic-TTT: Training test-time policy for test-time training",
-      "url": "https://arxiv.org/abs/2610.12002"
+      "id": "88b742f23d4dac3b1609",
+      "kind": "commoncrawl",
+      "observed_at": "20260916221449",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/0000-0002-6767-921X.html",
+      "url": "https://arxiv.org/a/0000-0002-6767-921X.html"
     },
     {
-      "id": "3c3a72e2270b5d7f5db9",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Polytopal Neural Network",
-      "url": "https://arxiv.org/abs/2610.12004"
+      "id": "871b66766e122093cb25",
+      "kind": "commoncrawl",
+      "observed_at": "20260908122212",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/0000-0002-7330-2718.html",
+      "url": "https://arxiv.org/a/0000-0002-7330-2718.html"
     },
     {
-      "id": "6c5be47d4270114eb2ab",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
-      "url": "https://arxiv.org/abs/2610.12007"
+      "id": "bb94060882924fbc95da",
+      "kind": "commoncrawl",
+      "observed_at": "20260911075851",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/abbott_a_1.html",
+      "url": "https://arxiv.org/a/abbott_a_1.html"
     },
     {
-      "id": "3a27c28dbc794f41ae08",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Examining Social Attribution in LLM Reasoning: A Theory-Guided Probing Methodology",
-      "url": "https://arxiv.org/abs/2610.12022"
+      "id": "7711891c7c9aa677bbe7",
+      "kind": "commoncrawl",
+      "observed_at": "20260907115034",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/achab_m_1.html",
+      "url": "https://arxiv.org/a/achab_m_1.html"
     },
     {
-      "id": "d110f7ade597d52f61d9",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Humanoid World Action Model With Joint State--Action Generation",
-      "url": "https://arxiv.org/abs/2610.12026"
+      "id": "bc3502d37f8cbcbb18d6",
+      "kind": "commoncrawl",
+      "observed_at": "20260908205858",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/akinshin_a_1.html",
+      "url": "https://arxiv.org/a/akinshin_a_1.html"
     },
     {
-      "id": "bc2c72d51d08ed5c8190",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Traceable World State: A Provenance-Aware State Representation and Deterministic Replay Framework for Robotic Systems",
-      "url": "https://arxiv.org/abs/2610.12033"
+      "id": "76395bf328bc5704366e",
+      "kind": "commoncrawl",
+      "observed_at": "20260912082737",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/albers_p_1.html",
+      "url": "https://arxiv.org/a/albers_p_1.html"
     },
     {
-      "id": "9154aa7c7f8bb5f85e77",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MPGE: A Multi-Perspective Graph Explainer for Molecular Classification Explanation",
-      "url": "https://arxiv.org/abs/2610.12039"
+      "id": "a38cb76a7a3e0f29557e",
+      "kind": "commoncrawl",
+      "observed_at": "20260914022739",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/alekseev_v_1.html",
+      "url": "https://arxiv.org/a/alekseev_v_1.html"
     },
     {
-      "id": "de5fc94654eb8793c84b",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MAST: Motif-Augmented Diffusion with Search Tree for Spectroscopic Molecular Structure Elucidation",
-      "url": "https://arxiv.org/abs/2610.12067"
+      "id": "8606c3d90128649d1035",
+      "kind": "commoncrawl",
+      "observed_at": "20260910015558",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/allamanis_m_1.html",
+      "url": "https://arxiv.org/a/allamanis_m_1.html"
     },
     {
-      "id": "bdc8a2b9e95199ae691a",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "All Verdicts are Not Equal: Rethinking LLM Judge Reliability",
-      "url": "https://arxiv.org/abs/2610.12083"
+      "id": "2447a46c2a95e5501cc0",
+      "kind": "commoncrawl",
+      "observed_at": "20260910050257",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "http://arxiv.org/a/almeidalessa_l_1.atom",
+      "url": "http://arxiv.org/a/almeidalessa_l_1.atom"
     },
     {
-      "id": "7a08f34335b01da79874",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "VINCIE-NExT: Unlocking Video Editing from Images via In-Context Modeling",
-      "url": "https://arxiv.org/abs/2610.12104"
+      "id": "50c82f212a387a65e781",
+      "kind": "commoncrawl",
+      "observed_at": "20260916202920",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/almeidalessa_l_1.html",
+      "url": "https://arxiv.org/a/almeidalessa_l_1.html"
     },
     {
-      "id": "7ff1a83a1a349ca8d47e",
-      "kind": "feed",
-      "observed_at": "2026-10-10T01:43:39Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Geometric Approach to Soft Actor-Critic with Zonotopes for Locomotion Learning",
-      "url": "https://arxiv.org/abs/2610.12113"
+      "id": "df9e3636d5e4a064b210",
+      "kind": "commoncrawl",
+      "observed_at": "20260906071943",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://arxiv.org/a/arakawa_k_1.html",
+      "url": "https://arxiv.org/a/arakawa_k_1.html"
     }
   ],
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
@@ -2561,7 +1673,7 @@
     },
     "037a64919b394f0e47b0": {
       "fingerprint": "be86e63e8127954f28e6",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "03fc4333f29c54393aaf": {
       "fingerprint": "257adbefecfd2bfbb683",
@@ -2589,7 +1701,7 @@
     },
     "04bbe1cc05dc08fc663d": {
       "fingerprint": "5c69c98cdd958cc5395e",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "05040ab5f9a4556b2216": {
       "fingerprint": "2bad6e3511a0628ff486",
@@ -2645,7 +1757,7 @@
     },
     "073f9b4d7b387c99f07e": {
       "fingerprint": "5617e0870f02e2aa545f",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "073fd7234bdb561db068": {
       "fingerprint": "d470a6f4ce1014762e66",
@@ -2709,7 +1821,7 @@
     },
     "0a18376084f98451b293": {
       "fingerprint": "7ba704295ea52add47ab",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "0a22d3e7b9165398b664": {
       "fingerprint": "dfc159d83cc04755f0e5",
@@ -2733,7 +1845,7 @@
     },
     "0aaf7eacf87f7a022f07": {
       "fingerprint": "5728c738c335ca73e84a",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "0aef09d1b57a8f56cd60": {
       "fingerprint": "d85c9fc4e9644bf92f63",
@@ -2749,7 +1861,7 @@
     },
     "0baeacde9feacfd49dfb": {
       "fingerprint": "04f1946aba9946dc14e3",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "0bf65300a2ecec704f21": {
       "fingerprint": "a1cc08717d896666e639",
@@ -2761,7 +1873,7 @@
     },
     "0c06abcb0d06332e5331": {
       "fingerprint": "c1fe748e34820ea74371",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "0c22ba88d1257169379c": {
       "fingerprint": "630b026710705cfe5ce8",
@@ -2781,7 +1893,7 @@
     },
     "0c8b50411cdb7e4347f2": {
       "fingerprint": "9b32c4cae1900e575ce8",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "0cd8f4f0c17e48ed128a": {
       "fingerprint": "5312b7689d6edf44d7c1",
@@ -2793,7 +1905,7 @@
     },
     "0cf586dce469dbb6fcf1": {
       "fingerprint": "46638376bf486c6e887c",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "0d2b759c8ff8305d50b0": {
       "fingerprint": "b064789066fa5ba9bfb8",
@@ -2833,7 +1945,7 @@
     },
     "0f94c1b2cc9695104e0d": {
       "fingerprint": "b4808d5e5a6e8cb7dc46",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "101489b52765feb01972": {
       "fingerprint": "63cdd3454e0148330e8e",
@@ -2861,7 +1973,7 @@
     },
     "1104ec0ee393a7f4f909": {
       "fingerprint": "a50e60bb94caa61da2a7",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "113a70303c759bf19449": {
       "fingerprint": "3aff5f8cce90027ad8d3",
@@ -2885,11 +1997,11 @@
     },
     "125f77fa8d831dc9a62e": {
       "fingerprint": "4636e401453d491c26ae",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "129cee30a618dbacbfe9": {
       "fingerprint": "e19f89cf9bff597ac035",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "12a4904af7aa0825c402": {
       "fingerprint": "8f15fe0c3b97d8402904",
@@ -3077,7 +2189,7 @@
     },
     "1abec9d47a1273181fad": {
       "fingerprint": "ee6e815e521b5f42b3b0",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "1b2a795675cfe6af48a8": {
       "fingerprint": "cd497b4e4b41a8e6ed46",
@@ -3117,7 +2229,7 @@
     },
     "1cb4dab4f76ed824568d": {
       "fingerprint": "d1a7b6fafcc299e88891",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "1cf5e4d9799d0912d04b": {
       "fingerprint": "37ab5af96723a7ab4cca",
@@ -3165,7 +2277,7 @@
     },
     "1e98197ec7f8529efba1": {
       "fingerprint": "30fa1a307100cd7f62a7",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "1ea363bf86c49418652d": {
       "fingerprint": "762f9fac22f991225795",
@@ -3177,7 +2289,7 @@
     },
     "1edd9d31a5fe545fe7fb": {
       "fingerprint": "277682851d1fe310a3f6",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "1ef243007176e85cc8c6": {
       "fingerprint": "1108cf5295ec1bbcb775",
@@ -3221,7 +2333,7 @@
     },
     "20cdf8b2697e1b8bde14": {
       "fingerprint": "555ce4101c6d85e23630",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "20dd4fdcf45ed7a6d86d": {
       "fingerprint": "002fd75229d75b97ac81",
@@ -3241,7 +2353,7 @@
     },
     "212e9120a76a6fc27002": {
       "fingerprint": "ae7aa103d970d577f47e",
-      "last_seen": "2026-10-09T21:37:56Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "213f0ac7c01625164633": {
       "fingerprint": "8684e7e54b1766f3275b",
@@ -3269,7 +2381,7 @@
     },
     "230e82a1ecca3940bb6a": {
       "fingerprint": "2d28ded9c2f17762439a",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "23433089e3df9e6a59d5": {
       "fingerprint": "7c4376c6aa980183a3d6",
@@ -3301,7 +2413,7 @@
     },
     "24dd95896911d8bd0b6d": {
       "fingerprint": "bbb0223d0ac5211236dc",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "24ea13c732146e2c4412": {
       "fingerprint": "7a4a7f712f0c4586aefd",
@@ -3413,7 +2525,7 @@
     },
     "29f0de43664ddfbfed4b": {
       "fingerprint": "4d01bec13ba202d06f6d",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "2a162f71f0b694d73bbe": {
       "fingerprint": "846b397ee2df3d628809",
@@ -3457,7 +2569,7 @@
     },
     "2b57e24c6054c4663571": {
       "fingerprint": "06a70b64568561e6c3a7",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "2b593ffce40b27cab4e3": {
       "fingerprint": "41b93b4cb18597b20ca4",
@@ -3505,7 +2617,7 @@
     },
     "2d43482cb79ba055c795": {
       "fingerprint": "0caf8bc65f49cef702c0",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "2d95a1c57f5ff22842b9": {
       "fingerprint": "39aafbf7bb34ee416ee7",
@@ -3517,7 +2629,7 @@
     },
     "2dadf5eefd515726fb06": {
       "fingerprint": "70d21303c46a3a92cdf4",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "2e3b726e83e7ecd48bcf": {
       "fingerprint": "ff45f5662eed0973a520",
@@ -3565,7 +2677,7 @@
     },
     "30c42c6803fd3cc30165": {
       "fingerprint": "05344fe25b981c49b72a",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "31163605c996e3da6fee": {
       "fingerprint": "5a62bab507122da0e216",
@@ -3661,7 +2773,7 @@
     },
     "359b504aecb4a8066979": {
       "fingerprint": "103019b45cc5e0c9cdfa",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "35c6f6677253a25e1297": {
       "fingerprint": "4699b37ab54f00877026",
@@ -3686,6 +2798,10 @@
     "37a106d7f924ad981fc3": {
       "fingerprint": "de1f3dddccd743db8202",
       "last_seen": "2026-10-04T18:37:21Z"
+    },
+    "37ab1fbdd16439247835": {
+      "fingerprint": "626e4fa88ce503e91b73",
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "37c4b57b451ab0225caa": {
       "fingerprint": "aa295953034ba13cee42",
@@ -3742,6 +2858,10 @@
     "39e3ed7eac8ffd4c5d49": {
       "fingerprint": "e7c3d4f4d731ea112958",
       "last_seen": "2026-10-09T08:58:04Z"
+    },
+    "39fb470016511aac440e": {
+      "fingerprint": "d940563965d1e0af1c0d",
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "3a27c28dbc794f41ae08": {
       "fingerprint": "7beb5555e92fe2707bae",
@@ -3801,7 +2921,7 @@
     },
     "3cf5dec78acbe7064c7d": {
       "fingerprint": "869a3e27e0073c137787",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "3cfdb313e450153a27a1": {
       "fingerprint": "a60f9eb4d6ea1a45d488",
@@ -3833,7 +2953,7 @@
     },
     "3e171985fe4d5f90cead": {
       "fingerprint": "23b2a71c131e0dc0017f",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "3e1fccb6ce25ce749a14": {
       "fingerprint": "e778e47f9b75b1f088e8",
@@ -3873,7 +2993,7 @@
     },
     "400f93c3a2faae18adc1": {
       "fingerprint": "d37e1d15b9efe3d33fdf",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "4026c25c8bc8c1d65a52": {
       "fingerprint": "0c1acf75fc9e5a65bd3b",
@@ -3893,7 +3013,7 @@
     },
     "40e6692d03cc5cbc8cb7": {
       "fingerprint": "2c2093eefa60f19bd58e",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "40e9f43ed914f8193a97": {
       "fingerprint": "def5f05070f0c49eb5e1",
@@ -3905,7 +3025,7 @@
     },
     "41a209d76f100b1bd5d4": {
       "fingerprint": "761c2d885194709340d7",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "41cb334c331d41f0d32d": {
       "fingerprint": "94b97b05193e8633083d",
@@ -3949,15 +3069,15 @@
     },
     "44c5df736b37c77b6307": {
       "fingerprint": "c1faff2291ee73f6e397",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "44ca195f5b7c621a996e": {
       "fingerprint": "39d7b57174a6dff70e27",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "459c78019c2b37a3e52d": {
       "fingerprint": "02b771174e519e7dc67f",
-      "last_seen": "2026-10-09T21:37:56Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "45dd4f0e964ad6dda8c4": {
       "fingerprint": "74bad42d892ba53851f6",
@@ -3977,7 +3097,7 @@
     },
     "469fe5a61b36c036d58c": {
       "fingerprint": "aa6c78bb067aec267e9c",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "473695cefa9dbe261e2d": {
       "fingerprint": "ea42a8c452df67d17524",
@@ -3989,7 +3109,7 @@
     },
     "4793d66f3e1b5c2e9020": {
       "fingerprint": "e74fe5a1d653092abaeb",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "4795a6ae30bd611b4cb9": {
       "fingerprint": "5ed732b4ba554c64c2ba",
@@ -4017,7 +3137,7 @@
     },
     "4909929b752433d075c0": {
       "fingerprint": "64d8a61591bd83f4afaf",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "4947297bbfe7b42d4519": {
       "fingerprint": "b67171c661bec608515b",
@@ -4029,7 +3149,7 @@
     },
     "4956d2164f092914b97e": {
       "fingerprint": "920d4f4597b8910c74b6",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "49e484b89a4943e98ac7": {
       "fingerprint": "05007dc10b517dbdfd64",
@@ -4057,7 +3177,7 @@
     },
     "4ae8efd7a9964cf3d437": {
       "fingerprint": "bf8a29b99e53c5a5aa26",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "4b17809452afed4ede07": {
       "fingerprint": "05979ac22816a93a439b",
@@ -4097,7 +3217,7 @@
     },
     "4cf8b354f2993f2805ce": {
       "fingerprint": "335086e36b016d1dbcde",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "4d5be4ead73c8211a884": {
       "fingerprint": "f744ffe5f8f4488e4d7a",
@@ -4157,7 +3277,7 @@
     },
     "4f89388d6e84ff78c35e": {
       "fingerprint": "5a2ddbc268fb4ee9386b",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "4fa1f7ec176a05cf3fa4": {
       "fingerprint": "709ee9248916adaf52ea",
@@ -4169,7 +3289,7 @@
     },
     "500dae7445b0744d302c": {
       "fingerprint": "0bdd9e43da3a5e28e729",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "5051c103cf228dc4ec87": {
       "fingerprint": "6009928bd91407d9da32",
@@ -4265,11 +3385,11 @@
     },
     "530dba3c3cda461de256": {
       "fingerprint": "a935f7c9e495967fcf1b",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "53199f615af74997230d": {
       "fingerprint": "2d8410548d71f046723e",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "532ac8fb16bcaba2e00c": {
       "fingerprint": "7291ba2de5526fb4a1c1",
@@ -4317,7 +3437,7 @@
     },
     "54b9d850727b6cdbe5ce": {
       "fingerprint": "5961765d8cd3e0f7aab4",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "554b4acd9029a3e93e8c": {
       "fingerprint": "e0edea38f8cec55188f3",
@@ -4345,7 +3465,7 @@
     },
     "572a341c954c548987ad": {
       "fingerprint": "041206e50d7b5a981931",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "5740c3feedb65e91e6d9": {
       "fingerprint": "c3993cf5f7dbea7665fe",
@@ -4409,7 +3529,7 @@
     },
     "59ce0cb3c0592a8a60dc": {
       "fingerprint": "4d47c80eec3d91adeb38",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "59f90402c17605a54ca4": {
       "fingerprint": "491235ede956a1b3298c",
@@ -4433,11 +3553,11 @@
     },
     "5abd5224c3734a52bdab": {
       "fingerprint": "531749ad515f5375d789",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "5aebe77748d66a1bef9a": {
       "fingerprint": "6edb70e83e5b836d3241",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "5aed1ec194f0f73d84ee": {
       "fingerprint": "55ec6e452146d1bb361f",
@@ -4461,7 +3581,7 @@
     },
     "5c7b8bdb9c001de23cea": {
       "fingerprint": "fb79e40eccffe5ae3873",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "5c99956c98c41594b2a3": {
       "fingerprint": "39b6e05a3ebf19d5c7ef",
@@ -4509,7 +3629,7 @@
     },
     "5e339f35a58b7a5c7f42": {
       "fingerprint": "19fe466bba44ed976b52",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "5e5f3413370a1da437b4": {
       "fingerprint": "b009249bac3a0d8f3617",
@@ -4529,7 +3649,7 @@
     },
     "5f84afa7a273882a799e": {
       "fingerprint": "2a297ff9f3ad8667986e",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "5fbdf754feb46aff4ab8": {
       "fingerprint": "239b0636189dc9b9f507",
@@ -4545,7 +3665,7 @@
     },
     "60e9a0a09a7e88daa6f4": {
       "fingerprint": "f1ed042be514de75c24a",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "6102b8ee6b1f9802a25c": {
       "fingerprint": "4abb17e986a151102823",
@@ -4597,7 +3717,7 @@
     },
     "63943982f089ed8b787a": {
       "fingerprint": "d69f10191e9f4376b732",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "63ad59679b7d8fa780f4": {
       "fingerprint": "2c713df466b954fbb2e5",
@@ -4613,7 +3733,7 @@
     },
     "64581bfda36978c6945c": {
       "fingerprint": "ffcc03bacd6566ea17c6",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "64c24f0c988d34bf6228": {
       "fingerprint": "f9eb7b87b0014372f2cf",
@@ -4629,7 +3749,7 @@
     },
     "65763140459cf23fdedd": {
       "fingerprint": "e5850e344e568509ec64",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "658ce2f5726b56703b5d": {
       "fingerprint": "3ffbd85491b5b2af8041",
@@ -4645,7 +3765,7 @@
     },
     "6682b8c560d18b989ba8": {
       "fingerprint": "31f19c0c1d0c0042a7f4",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "673790a84b457abbefd4": {
       "fingerprint": "77b89d222e8297cbe669",
@@ -4757,7 +3877,7 @@
     },
     "6cb428459606b5a9549d": {
       "fingerprint": "f5730f3fb67387ccb48a",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "6cbb376bdb40e04b479e": {
       "fingerprint": "d403883bdea4f55b5f44",
@@ -4797,7 +3917,7 @@
     },
     "6e4168f82218e48b2b73": {
       "fingerprint": "61bd6d98642efc83fb89",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "6f13263cee3a3ca00539": {
       "fingerprint": "0c8752b5f7353f5f9f04",
@@ -4809,7 +3929,7 @@
     },
     "6f397884428e9f0f14f3": {
       "fingerprint": "590b3e7097c6aa6c9450",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "6f55737addfb022f9ba9": {
       "fingerprint": "8f766112b11750025483",
@@ -5009,7 +4129,7 @@
     },
     "79a04337af36379e7ec4": {
       "fingerprint": "44a1b19d61067ceaa4c0",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "79fad930abba8a219ac6": {
       "fingerprint": "8c3a0deac43da7be593a",
@@ -5069,7 +4189,7 @@
     },
     "7d503f9c07efece57008": {
       "fingerprint": "31c0eac5529d3cb8d0e1",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "7db61de641ea6930d719": {
       "fingerprint": "898c4d3330b1947cf12e",
@@ -5085,7 +4205,7 @@
     },
     "7ea510935dfd2aa76b5a": {
       "fingerprint": "86ed56ee03fd22b63f65",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "7f10d5d20ad90fb795cd": {
       "fingerprint": "38116b106d70836579d9",
@@ -5093,7 +4213,7 @@
     },
     "7f415c17fd35abee711c": {
       "fingerprint": "ce6541d56307fc07b508",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "7f79a91ca454996507ec": {
       "fingerprint": "5a199315282c70b68aa3",
@@ -5165,7 +4285,7 @@
     },
     "81a3389421f4bb56bc3d": {
       "fingerprint": "fad2b46fff0d7527d6ea",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "820eb6b487a504f71b1a": {
       "fingerprint": "0355f1453e2165c79fa9",
@@ -5213,7 +4333,7 @@
     },
     "83d6f25d8a2e58da9990": {
       "fingerprint": "899b517e2187a9f24f64",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "83dfccd4c450e4a45139": {
       "fingerprint": "d6b0beb8237e099f54e8",
@@ -5245,11 +4365,11 @@
     },
     "85a2ee1ccabf9baf3167": {
       "fingerprint": "1ae70c1430868726a7b9",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "85c11fca4aa44ff1793b": {
       "fingerprint": "9c3261bb21519a270083",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "85f8a9d7bcfae2a805fd": {
       "fingerprint": "9d0e51d548e0ee90fb05",
@@ -5285,7 +4405,7 @@
     },
     "876449a0944e93d0a721": {
       "fingerprint": "4461d8d795a9eb0baee8",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "876d8e8b2ef5edc047a9": {
       "fingerprint": "122428743aa024fa2192",
@@ -5305,7 +4425,7 @@
     },
     "881ac8b1bf0a7dd7d7b0": {
       "fingerprint": "99e1ce1aeae9aa77e289",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "886791aa3cf67ceb2687": {
       "fingerprint": "691be732801658882252",
@@ -5345,7 +4465,7 @@
     },
     "8a328104e8db0a06aebb": {
       "fingerprint": "b74cc8e62e17a688c256",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "8a7443b9aa45f390bce5": {
       "fingerprint": "be5f465d36aadb1598d2",
@@ -5357,7 +4477,7 @@
     },
     "8afe013f95efd1b4bb3e": {
       "fingerprint": "1a3a1c9b0d089924c43a",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "8b01562a542974d19da4": {
       "fingerprint": "196de358618bd185e115",
@@ -5397,7 +4517,7 @@
     },
     "8d46a442fd5a36ce42aa": {
       "fingerprint": "b6ccb5ee106152ae432a",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "8d989da76d73b4721e49": {
       "fingerprint": "d2bb6075e18688fd4662",
@@ -5413,11 +4533,11 @@
     },
     "8df3484f72ce4634a7e5": {
       "fingerprint": "eaf10a20de62aa9b1bcb",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "8e1ccfd9653936aa4151": {
       "fingerprint": "3c629d9894c75c680fc5",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "8e671fda16b4ef2f8e72": {
       "fingerprint": "669d8b60f0d30ec1259b",
@@ -5435,6 +4555,10 @@
       "fingerprint": "45d63a1a89e4d49933d9",
       "last_seen": "2026-10-07T00:38:18Z"
     },
+    "8ef77992af2cdce24271": {
+      "fingerprint": "6dd6669a42b3b476607a",
+      "last_seen": "2026-10-10T08:25:24Z"
+    },
     "8f2df10be0fc74dec677": {
       "fingerprint": "f40fe87b2d421a001189",
       "last_seen": "2026-10-09T02:05:05Z"
@@ -5445,7 +4569,7 @@
     },
     "900f895587f072f2c3f8": {
       "fingerprint": "1b56dabc4600f21bd74b",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "9033cbfbde99b0be8b12": {
       "fingerprint": "689e00392f9cadaf8e7d",
@@ -5477,7 +4601,7 @@
     },
     "917825c0315309567de6": {
       "fingerprint": "fe2c59c9bd3b9ad65fd4",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "917ba46d3f15f0c5b9b7": {
       "fingerprint": "a9c878024d0977472640",
@@ -5515,13 +4639,17 @@
       "fingerprint": "8a5bb85832c34b62eedc",
       "last_seen": "2026-10-09T02:05:05Z"
     },
+    "93af22c6863f6734479f": {
+      "fingerprint": "54959a155ef9eaabe70f",
+      "last_seen": "2026-10-10T08:25:23Z"
+    },
     "93b88a8ac7720145c600": {
       "fingerprint": "b99c150ce14f5c564bd7",
       "last_seen": "2026-10-06T00:46:01Z"
     },
     "93b8ab96b18ec2979e90": {
       "fingerprint": "125c9033030b4e37bafb",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "942a9179dcab44f8326b": {
       "fingerprint": "2d8c368d644e1e0166e8",
@@ -5553,7 +4681,7 @@
     },
     "9598ef10e2e425e75053": {
       "fingerprint": "255d2831cc81b0d16e30",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "95ac17328033f3edd004": {
       "fingerprint": "3a9f5469727afe31b6a0",
@@ -5581,7 +4709,7 @@
     },
     "9646943c9e0872c56c39": {
       "fingerprint": "8c1d3353b03e92a6f06f",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "966a0eedda0dcdcf8f38": {
       "fingerprint": "cea5e3058e4a67071827",
@@ -5613,7 +4741,7 @@
     },
     "97975be217a1bd5d435d": {
       "fingerprint": "22d7ffca4d9688103850",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "97dcf6a1ab124d21a218": {
       "fingerprint": "bdf445ccefc05f359d35",
@@ -5641,7 +4769,7 @@
     },
     "987484f82ed2ea04c3d3": {
       "fingerprint": "605efb423dd06b2f6baa",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "9880aac42aa3a29fb780": {
       "fingerprint": "f548d9ea29afa3a91629",
@@ -5689,7 +4817,7 @@
     },
     "9b67edb55892cc147b16": {
       "fingerprint": "0157ed03a6dbbf6e9cd5",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "9b955ce8af2763d0997a": {
       "fingerprint": "852d145628da3fe8b312",
@@ -5753,7 +4881,7 @@
     },
     "9ddb77314617db92b6c9": {
       "fingerprint": "37ae2ade35f63dba8cba",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "9e342d839f12656445e3": {
       "fingerprint": "2ba1c1024ca3d2778ee1",
@@ -5781,7 +4909,7 @@
     },
     "9ea91031b6d54d773c8a": {
       "fingerprint": "27f607278a8df5f2a178",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "9efb606cc8e6ce471b48": {
       "fingerprint": "8b19f7c0a7596c420687",
@@ -5789,7 +4917,7 @@
     },
     "9f4d01aca69009eaee8e": {
       "fingerprint": "091e7dced639a23bb07c",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "9f5b8f19585d918de24d": {
       "fingerprint": "64efd2dfb20c6476603d",
@@ -5821,11 +4949,11 @@
     },
     "a0c03d16e7252acebfcd": {
       "fingerprint": "4ff09ec6fa66e56425de",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "a0cce3d4ac9625821ce4": {
       "fingerprint": "98c59bdae4b006ff18ff",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "a0deace9213d8ce28b80": {
       "fingerprint": "5dd48d77999c57e10061",
@@ -5909,7 +5037,7 @@
     },
     "a4106c4b8a33ca378d9f": {
       "fingerprint": "cadd67e290b2d084a834",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "a473e06b4f69feb35db5": {
       "fingerprint": "c947b1b7b16bfd5868f0",
@@ -6021,7 +5149,7 @@
     },
     "abbc1e5e92269e8e60be": {
       "fingerprint": "a01e03ebc67f214e95a5",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "abd93a7a0d7df4abc76e": {
       "fingerprint": "645cf63c299d83915846",
@@ -6041,7 +5169,7 @@
     },
     "ad1fdecb2580d52be26c": {
       "fingerprint": "fa8581d3e151d9b9359f",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "ad5c6113f555fdc40383": {
       "fingerprint": "6113eeed3188fe7fb56b",
@@ -6097,7 +5225,7 @@
     },
     "af4961883d301f681898": {
       "fingerprint": "6d69d97ea2308459b8d3",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "af6fb58376a65c87a3dc": {
       "fingerprint": "7dd9b41662dcd042f4cd",
@@ -6117,7 +5245,7 @@
     },
     "afd517ff06180871c64e": {
       "fingerprint": "1b28b748048b09e7ea26",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "afdecd136fba8911ef45": {
       "fingerprint": "9dd35eb5edcfc514447a",
@@ -6225,7 +5353,7 @@
     },
     "b50539d473adb522ecd2": {
       "fingerprint": "c2bf822731ee65ee1591",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "b514a9337b5ec0170c31": {
       "fingerprint": "edddeee81969ed617a7b",
@@ -6285,7 +5413,7 @@
     },
     "b85427f614ddb37d467c": {
       "fingerprint": "f55bf4558b9f9acf60bd",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "b856de0518197d6e3347": {
       "fingerprint": "4fe52cd3e012eace7c50",
@@ -6309,7 +5437,7 @@
     },
     "b98f7d04b8f8711d5b13": {
       "fingerprint": "0167c85e226530afc238",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "b9cde0c1dac7577ef608": {
       "fingerprint": "d7d471a698a3dcf705d5",
@@ -6318,6 +5446,10 @@
     "b9ebf2cb9f41bf1ee495": {
       "fingerprint": "f693841e8ecd6fd5cb48",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "b9f193294e18f8d2dc27": {
+      "fingerprint": "f9bfb55002699b16e33d",
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "ba1b400a537a6f652d68": {
       "fingerprint": "e9fbdf08a9b5bb056922",
@@ -6403,6 +5535,10 @@
       "fingerprint": "bbb487f55e43915aa917",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "bcd7083976c76ae8688f": {
+      "fingerprint": "5bfbe60eabdc0806d677",
+      "last_seen": "2026-10-10T08:25:25Z"
+    },
     "bce449da7a2298faee9e": {
       "fingerprint": "3c53456b8efdd361d2a3",
       "last_seen": "2026-10-10T01:43:39Z"
@@ -6417,7 +5553,7 @@
     },
     "bd7f0877a9a13e25bda2": {
       "fingerprint": "f7213565bc8579d24852",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "bdc8a2b9e95199ae691a": {
       "fingerprint": "2722e78b6618308e194e",
@@ -6433,7 +5569,7 @@
     },
     "be648a750b762363bb13": {
       "fingerprint": "dc8e9908d3344ebd6df3",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "be8892829da59754ec9f": {
       "fingerprint": "36fb79440f9e0dc4c97a",
@@ -6537,7 +5673,7 @@
     },
     "c4ecc08e3dcd225bd13c": {
       "fingerprint": "7b0b0a262e9c4ed3b3c5",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "c549cd200722eaaa004c": {
       "fingerprint": "2eee70299e539f88ce7f",
@@ -6557,7 +5693,7 @@
     },
     "c6fb2b313984d9d24e98": {
       "fingerprint": "809060943866f47ccb7a",
-      "last_seen": "2026-10-10T01:43:39Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "c70f4f691c332413f788": {
       "fingerprint": "5f1b9c1380956aa49896",
@@ -6585,7 +5721,7 @@
     },
     "c8dc3e9414ec28a368ac": {
       "fingerprint": "4606a9e0ec143a4a7374",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "c8e3c56660a745b6e255": {
       "fingerprint": "f293b6ee24d0caf98aaa",
@@ -6593,7 +5729,7 @@
     },
     "c8f73fc3067539cf0e4c": {
       "fingerprint": "cde84dfc9a83ab530e78",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "c8f8c133f225a04ef29e": {
       "fingerprint": "d23a9f528482d222bac4",
@@ -6613,7 +5749,7 @@
     },
     "c9b0ba2832f5c52645f2": {
       "fingerprint": "507fb3a2a4ad48a0026c",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "ca1895079e9ae7cce068": {
       "fingerprint": "a0a7b2750cddad14b6b1",
@@ -6639,6 +5775,10 @@
       "fingerprint": "47a758a1397cd2cfe90a",
       "last_seen": "2026-10-07T18:33:09Z"
     },
+    "ca71ea852d5e3a67a196": {
+      "fingerprint": "a77299fd37f1d97d916a",
+      "last_seen": "2026-10-10T08:25:24Z"
+    },
     "cb1488b2e2114c61066f": {
       "fingerprint": "77c3c5e72fb0c7770585",
       "last_seen": "2026-10-06T00:46:01Z"
@@ -6649,7 +5789,7 @@
     },
     "cb68915a226f5b31c5c4": {
       "fingerprint": "926ada9b136d341f42ad",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "cb7140329a27207af88a": {
       "fingerprint": "4798f119a1a78e08625e",
@@ -6685,7 +5825,7 @@
     },
     "cd5067090d89008e1ca3": {
       "fingerprint": "a195a3abebe8456b7582",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "cdb1d51fae0431106fed": {
       "fingerprint": "72aaf65b47daf6397ce5",
@@ -6701,7 +5841,7 @@
     },
     "ceba6e5b39be7203aa59": {
       "fingerprint": "de41980ac23570b9ec33",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "cec5c090e54e4b454aed": {
       "fingerprint": "d156ffa7ad325f8ba96f",
@@ -6761,7 +5901,7 @@
     },
     "d0da49b9877b10338c7f": {
       "fingerprint": "e9a485a549cd58019a6f",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "d110f7ade597d52f61d9": {
       "fingerprint": "f61d5df25f7d1a0e3764",
@@ -6781,7 +5921,7 @@
     },
     "d27d31968e305dc54ffa": {
       "fingerprint": "a7f0567dbcfd0dc6782f",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "d2d9271bc18ca0e03fdf": {
       "fingerprint": "020e62b7ba2039d12491",
@@ -6805,7 +5945,7 @@
     },
     "d3499e02aaa3943b73aa": {
       "fingerprint": "e6a6544c7768c9a0e0c3",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "d35068acfba8ae295688": {
       "fingerprint": "3fba7fd4c2d4e8fcda19",
@@ -6945,11 +6085,11 @@
     },
     "d9713b6ce674d9bc7532": {
       "fingerprint": "3091c641dfef96d03300",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "d977a17fe2bb444ecbb6": {
       "fingerprint": "3c5095802fc79fa549f0",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "d9ae5a9e80693cef139c": {
       "fingerprint": "f921492b47567afc512f",
@@ -6989,7 +6129,7 @@
     },
     "dbdb0820dcbaa5243b7d": {
       "fingerprint": "3efcd7376ca1091d5ca1",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "dbe0940f362ad9d87e6b": {
       "fingerprint": "0115907abcc89e1fc1c2",
@@ -7101,15 +6241,15 @@
     },
     "dfa5bbd94cb2828c685a": {
       "fingerprint": "59a0203a409c4c0d06f7",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "dfb9bae9a4555b7fe5b5": {
       "fingerprint": "47068cf6f513655d85c4",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e04d9f55940a523a4be2": {
       "fingerprint": "f6e0fb24bcee33654b2e",
-      "last_seen": "2026-10-09T21:37:56Z"
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "e0bb7480c75f38cbe06c": {
       "fingerprint": "46e4d76bcb8eb5770605",
@@ -7133,7 +6273,7 @@
     },
     "e16f84280efb242f97e1": {
       "fingerprint": "240571bde7baa552b4e4",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e1a01d451c6e9e976ecc": {
       "fingerprint": "e13d78884cd9aa495421",
@@ -7145,7 +6285,7 @@
     },
     "e2054d47a388fb1399bd": {
       "fingerprint": "98f21ad51378a42c4da5",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e210849485e3a27ebb8b": {
       "fingerprint": "0d95e76886ff4e66f811",
@@ -7165,7 +6305,7 @@
     },
     "e2b8edcef39b94c3378e": {
       "fingerprint": "c0bd81ea028c42207c2f",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "e2cacdf17b050840b033": {
       "fingerprint": "240d514fecf51e6a9cea",
@@ -7197,7 +6337,7 @@
     },
     "e51d8ed590b2b558d92e": {
       "fingerprint": "dc1ea3b7c895d06437e1",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e59e6bf2ca747933f10b": {
       "fingerprint": "4fc11dbee3becf735c73",
@@ -7253,7 +6393,7 @@
     },
     "e74888c663f492eea866": {
       "fingerprint": "108ee9605268dadb7495",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "e7c177de8e098cf85113": {
       "fingerprint": "5c6ccec788682227bd2b",
@@ -7261,7 +6401,7 @@
     },
     "e7d940227ebb3f15f856": {
       "fingerprint": "fb072a6ab9f47c592645",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e7f7d11cacca3e3aef43": {
       "fingerprint": "1ee24057f725c9d475b4",
@@ -7273,7 +6413,7 @@
     },
     "e839b48a311cbaeb4d4b": {
       "fingerprint": "8b8c1bcade034719a5a1",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "e8470173f4b19952a3a8": {
       "fingerprint": "59754124b200b9b70f00",
@@ -7305,7 +6445,7 @@
     },
     "e9046d10c5a45a4be7b5": {
       "fingerprint": "627a719f8c8a5c3f70b5",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "e961c820a54fe772fc45": {
       "fingerprint": "ca6b4409b39888c48453",
@@ -7336,12 +6476,12 @@
       "last_seen": "20260914171733"
     },
     "eaebb0f3b416b6b9e9ca": {
-      "fingerprint": "185c03e7e03a81d16e82",
-      "last_seen": "2026-10-09T16:08:15Z"
+      "fingerprint": "f5e4ec95ca9ee8c0b8be",
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "eb3490aa3ebca0f4ef67": {
       "fingerprint": "e1ba8142ac73ffabd032",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "eb5608dcc9e627a703f9": {
       "fingerprint": "367aad8304ffd2d83fa6",
@@ -7358,6 +6498,10 @@
     "eb84c1ff10bf57f02904": {
       "fingerprint": "ba3357f81dead025f35d",
       "last_seen": "2026-10-06T20:14:44Z"
+    },
+    "eba6dbe0588e4b11f034": {
+      "fingerprint": "318f89b8059c1923c285",
+      "last_seen": "2026-10-10T08:25:24Z"
     },
     "ebc78b5cf1317c72a850": {
       "fingerprint": "c372b2f054bace40445a",
@@ -7385,7 +6529,7 @@
     },
     "ec875e5336cf5c9478bc": {
       "fingerprint": "52837d5ff2f6027c3214",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "ecc44b539b9524e1821f": {
       "fingerprint": "6821c5b3296bed8befcc",
@@ -7457,7 +6601,7 @@
     },
     "f0466a1d538494ea2e08": {
       "fingerprint": "4e2372e1f844461cea87",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f09b0f25b90d33d51d71": {
       "fingerprint": "b2e1651e33968e4d8f1d",
@@ -7469,7 +6613,7 @@
     },
     "f102a512d0bf0eec1887": {
       "fingerprint": "5595b22c8d0c031c20ce",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "f102b133982c85cf2d9c": {
       "fingerprint": "fb74414faa6cdcdf6883",
@@ -7481,11 +6625,11 @@
     },
     "f1b5f492edd59d79af68": {
       "fingerprint": "d81cb0e2914cbc9e3021",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "f1ca33eec38ba72127a9": {
       "fingerprint": "4991478b9904c0986a69",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f211694c05edd3f659a3": {
       "fingerprint": "fddebaeb1d8a078c2a47",
@@ -7553,7 +6697,7 @@
     },
     "f4bbb787683ffd7c2030": {
       "fingerprint": "0c8d96128d479cb6e5df",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f4feab91784ddc5daa12": {
       "fingerprint": "ad88fa8a8120319b9829",
@@ -7561,7 +6705,7 @@
     },
     "f5468169780cb5afa1ed": {
       "fingerprint": "98d453f15b1931063495",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f55b9b62b3e06d5d2c3d": {
       "fingerprint": "90de9cb60f6bc87864e1",
@@ -7585,7 +6729,7 @@
     },
     "f63aedf5e35cee9cf2ff": {
       "fingerprint": "ef07a851d0e4ec847bbc",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "f6b7d718d0af58282341": {
       "fingerprint": "a6ce5994fe955368ab13",
@@ -7617,7 +6761,7 @@
     },
     "f767f53fd643fda4cc2c": {
       "fingerprint": "03385242ac528caa8025",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f78ace8bd89a7c6894ee": {
       "fingerprint": "1d39a556e4676e9cb274",
@@ -7661,7 +6805,7 @@
     },
     "f9221d65b75640a90e0d": {
       "fingerprint": "440a4517cd10d6275a81",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "f969694074bee232bc01": {
       "fingerprint": "a43fe6b781081c054b00",
@@ -7685,7 +6829,7 @@
     },
     "f9e480c220cb6699b5a6": {
       "fingerprint": "909defd89e20ed50001c",
-      "last_seen": "2026-10-09T21:37:54Z"
+      "last_seen": "2026-10-10T08:25:23Z"
     },
     "fa0cf5ac8d7c0ffe8afd": {
       "fingerprint": "3296dbdcc59ff28beda3",
@@ -7785,7 +6929,7 @@
     },
     "fe934b9f69954d98e9d8": {
       "fingerprint": "2d3212886421eb2f0ef0",
-      "last_seen": "2026-10-07T00:38:19Z"
+      "last_seen": "2026-10-10T08:25:25Z"
     },
     "feabbf9fa7cd0a4b748d": {
       "fingerprint": "2f7dbda2315b0343f973",
