@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-11T12:42:22Z",
+  "timestamp": "2026-10-11T18:02:11Z",
   "sources": 12,
-  "discovered": 76,
-  "changed": 0,
+  "discovered": 80,
+  "changed": 17,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -25,10 +25,6 @@
     {
       "source": "https://www.python.org/events/python-events/rss/",
       "error": "HTTPError"
-    },
-    {
-      "source": "https://hnrss.org/frontpage",
-      "error": "ConnectTimeout"
     }
   ],
   "latest_commoncrawl": "CC-MAIN-2026-39",
@@ -39,5 +35,142 @@
     "learning_rule": "discovery is input; IMA changes only after verification and tests",
     "commoncrawl_cdx_polite_rate": "single-threaded with delay"
   },
-  "items": []
+  "items": [
+    {
+      "id": "094770153c5f45f12576",
+      "url": "https://www.tomshardware.com/tech-industry/cyber-security/canadian-youtuber-builds-flock-like-camera-to-exclusively-track-police-vehicles-officers-visit-his-home-to-express-privacy-concerns",
+      "title": "YouTuber builds 'Flock-like' camera to track police vehicles, gets police visit",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "204e3d90b89782114084",
+      "url": "https://github.com/rogerbinns/apsw",
+      "title": "apsw: Another Python SQLite Wrapper",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "f638dd8ae568b213569b",
+      "url": "https://asheradeniyi.com/2026/04/10/how-to-build-wealth-as-a-career-person/",
+      "title": "How to Build Wealth as a Career Person",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "4bea287ebaa94ee72b84",
+      "url": "http://epestr.com/blog/reverse-engineering-a-commercial-spatial-audio-effect/",
+      "title": "How I reverse engineered a commercial spatial audio effect",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "5bcca924e1ff951f819e",
+      "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
+      "title": "I'm sorry, but you still have to think",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "d1963f780213c300e77d",
+      "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
+      "title": "Documents add to evidence in climate deception case against ExxonMobil",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "1359074c93e6b5edef12",
+      "url": "https://disconnect3d.pl//2026/10/02/dont-put-tilde-in-your-path/",
+      "title": "The tilde in your PATH may not be your HOME",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "33268a3ef04a66c37e70",
+      "url": "https://verdagon.dev/blog/valen-group-borrowing",
+      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "e6753b8422696224208c",
+      "url": "https://betterwispr.com/",
+      "title": "Show HN: BetterWispr – Free, open-source dictation for Mac",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "ee6740167f5fd1a735f9",
+      "url": "https://jobs.ashbyhq.com/weave-os",
+      "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "2a779a9898efce2a94b5",
+      "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
+      "title": "I paid people to try and follow my README",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "90a1ae7f383f8daf15f9",
+      "url": "https://nitter.net",
+      "title": "Nitter: Update Oct 10th seeking funding and legal help",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "b60db2522282e8d440e9",
+      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
+      "title": "Bot traffic from Yandex",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "9e10c52c4b108790fb9b",
+      "url": "https://ircv3.net/",
+      "title": "IRCv3",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "2f421a538b313e6083ce",
+      "url": "https://status.yandex.cloud/en/incidents/2136",
+      "title": "3rd Yandex Cloud Data Center Was Hit",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "2a491621020b062d637f",
+      "url": "https://lineageos.org/Changelog-32/",
+      "title": "LineageOS 24.0",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    },
+    {
+      "id": "cced2021da731e1e8432",
+      "url": "https://hexrat.cc/pages/blog/2026_10_07",
+      "title": "Rat's Register Allocator",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-11T18:01:30Z"
+    }
+  ]
 }
