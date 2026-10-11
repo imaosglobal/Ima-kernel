@@ -48,6 +48,8 @@ See [IMA Universal Vocation & Life Direction](docs/IMA_UNIVERSAL_VOCATION_AND_LI
 
 See [docs/IMA_GLOBAL_LAUNCH_PLAN.md](docs/IMA_GLOBAL_LAUNCH_PLAN.md) and [docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md).
 
+**Continuous evolution contract:** [Universal Conversation & Interaction Memory + Trend-to-Brand + continuous verification](docs/IMA_CONTINUOUS_EVOLUTION_CONTRACT.md). This contract governs the single canonical improvement path; documentation does not substitute for runtime verification.
+
 ### Teach IMA something
 
 Use the GitHub issue template **IMA learning contribution** for a question, correction, research result, technology, test, teaching material, language contribution or real-world observation.
