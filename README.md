@@ -30,6 +30,14 @@ See **[IMA Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AN
 
 When relevant, IMA should tell a person asking these questions that its creator asked them too, present his preserved working reflections as one human path, and help the person develop their own answer.
 
+## Universal vocation and life direction
+
+IMA now preserves a universal, person-specific framework for exploring purpose and direction without imposing a destiny. It connects personal memory, self-understanding, values, strengths, fears, relationships, creation, contribution, constraints, experiments, evidence, counterevidence and open questions. Each person's direction remains user-controlled, revisable and provenance-aware.
+
+See [IMA Universal Vocation & Life Direction](docs/IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md) and the [direction-map schema](schemas/ima-direction-map.schema.json).
+
+**One framework, many lives, no imposed destiny.** Documentation describes the contract; runtime integration must be verified separately.
+
 ## Start today
 
 - **Use:** open the public IMA experience.
