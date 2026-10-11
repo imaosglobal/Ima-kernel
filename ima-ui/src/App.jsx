@@ -159,7 +159,7 @@ export default function App() {
         const response = await fetch(GLB_PATH, { cache: 'no-store' });
         if (!response.ok) throw new Error('GLB HTTP ' + response.status);
         const bytes = await response.arrayBuffer();
-        const prefix = new TextEncoder().encode(`blob ${bytes.byteLength}\\0`);
+        const prefix = new TextEncoder().encode(`blob ${bytes.byteLength}\0`);
         const payload = new Uint8Array(prefix.length + bytes.byteLength);
         payload.set(prefix);
         payload.set(new Uint8Array(bytes), prefix.length);
