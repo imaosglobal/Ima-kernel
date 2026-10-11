@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-11T18:02:11Z",
+  "timestamp": "2026-10-11T21:52:09Z",
   "sources": 12,
-  "discovered": 80,
-  "changed": 17,
+  "discovered": 110,
+  "changed": 12,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -37,140 +37,100 @@
   },
   "items": [
     {
-      "id": "094770153c5f45f12576",
-      "url": "https://www.tomshardware.com/tech-industry/cyber-security/canadian-youtuber-builds-flock-like-camera-to-exclusively-track-police-vehicles-officers-visit-his-home-to-express-privacy-concerns",
-      "title": "YouTuber builds 'Flock-like' camera to track police vehicles, gets police visit",
+      "id": "73ae61f26eaef66882ae",
+      "url": "https://www.inc.com/chloe-rosenberg/a-remote-employee-refused-160-webcam-photos-a-day-her-employer-fired-her/91415963",
+      "title": "A Remote Employee Refused 160 Webcam Photos a Day. Her Employer Fired Her",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "204e3d90b89782114084",
-      "url": "https://github.com/rogerbinns/apsw",
-      "title": "apsw: Another Python SQLite Wrapper",
+      "id": "d16bd93ff857d83dc220",
+      "url": "https://twitter.com/karpathy/status/2109361546505966046",
+      "title": "The gap in shared understanding of LLM capability is widening",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "f638dd8ae568b213569b",
-      "url": "https://asheradeniyi.com/2026/04/10/how-to-build-wealth-as-a-career-person/",
-      "title": "How to Build Wealth as a Career Person",
+      "id": "d41642ac29318b77ebf3",
+      "url": "https://cartographers-nk.wonyoung.so/",
+      "title": "Cartographers of North Korea",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "4bea287ebaa94ee72b84",
-      "url": "http://epestr.com/blog/reverse-engineering-a-commercial-spatial-audio-effect/",
-      "title": "How I reverse engineered a commercial spatial audio effect",
+      "id": "79f9d0eebf5ad79abcc0",
+      "url": "https://richwhitehouse.com/index.php?postid=78",
+      "title": "Artificial Insanity",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "5bcca924e1ff951f819e",
-      "url": "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/",
-      "title": "I'm sorry, but you still have to think",
+      "id": "970e4e42b61bcd4867f0",
+      "url": "https://theonion.com/archivehunt/",
+      "title": "Do You Have Pre-2012 Onion Issues?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "d1963f780213c300e77d",
-      "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
-      "title": "Documents add to evidence in climate deception case against ExxonMobil",
+      "id": "20dd58bae8775d8c753f",
+      "url": "https://blog.kammel.dev/post/nixos_vex/",
+      "title": "The Unreasonable Effectiveness of Vex in NixOS",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "1359074c93e6b5edef12",
-      "url": "https://disconnect3d.pl//2026/10/02/dont-put-tilde-in-your-path/",
-      "title": "The tilde in your PATH may not be your HOME",
+      "id": "04c1e8f8123b90fda8a3",
+      "url": "https://www.ways-of-seeing.com/ch1",
+      "title": "Chapter 1 of Ways of Seeing by John Berger",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "33268a3ef04a66c37e70",
-      "url": "https://verdagon.dev/blog/valen-group-borrowing",
-      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+      "id": "d49fdf3cc73e1b28b085",
+      "url": "https://nanolathe.gg",
+      "title": "Total Annihilation, rebuilt for modern computers",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "e6753b8422696224208c",
-      "url": "https://betterwispr.com/",
-      "title": "Show HN: BetterWispr – Free, open-source dictation for Mac",
+      "id": "f059340783d441bc0dfb",
+      "url": "https://www.nyc.gov/main/click-to-cancel",
+      "title": "NYC's \"Click to Cancel\" rule is now in effect",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "ee6740167f5fd1a735f9",
-      "url": "https://jobs.ashbyhq.com/weave-os",
-      "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
+      "id": "7e77eee235f99033edc8",
+      "url": "https://www.playgrnd.tools/",
+      "title": "Playgrnd – tiny tools for making weird, beautiful things",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "2a779a9898efce2a94b5",
-      "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
-      "title": "I paid people to try and follow my README",
+      "id": "ac38fe5de161cfa6a87b",
+      "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+      "title": "Terence Tao: Math 2.0 [pdf]",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     },
     {
-      "id": "90a1ae7f383f8daf15f9",
-      "url": "https://nitter.net",
-      "title": "Nitter: Update Oct 10th seeking funding and legal help",
+      "id": "8fae80ef12f72b04b0ff",
+      "url": "https://phys.org/news/2024-02-scandinavia-farmers-slaughtered-hunter-population.html",
+      "title": "Scandinavia's first farmers slaughtered hunter-gatherer population, DNA suggests",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
-    },
-    {
-      "id": "b60db2522282e8d440e9",
-      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d",
-      "title": "Bot traffic from Yandex",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
-    },
-    {
-      "id": "9e10c52c4b108790fb9b",
-      "url": "https://ircv3.net/",
-      "title": "IRCv3",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
-    },
-    {
-      "id": "2f421a538b313e6083ce",
-      "url": "https://status.yandex.cloud/en/incidents/2136",
-      "title": "3rd Yandex Cloud Data Center Was Hit",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
-    },
-    {
-      "id": "2a491621020b062d637f",
-      "url": "https://lineageos.org/Changelog-32/",
-      "title": "LineageOS 24.0",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
-    },
-    {
-      "id": "cced2021da731e1e8432",
-      "url": "https://hexrat.cc/pages/blog/2026_10_07",
-      "title": "Rat's Register Allocator",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T18:01:30Z"
+      "observed_at": "2026-10-11T21:51:43Z"
     }
   ]
 }
