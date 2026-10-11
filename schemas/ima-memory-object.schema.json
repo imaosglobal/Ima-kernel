@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://imaosglobal.github.io/Ima-kernel/schemas/ima-memory-object.schema.json",
+  "title":"IMA Memory Object",
+  "type":"object",
+  "required":["id","owner","memory_type","content","status","provenance","created_at","schema_version"],
+  "properties":{
+    "id":{"type":"string"},
+    "owner":{"type":"string"},
+    "memory_type":{"type":"string","enum":["episode","identity","self_understanding","health_sensitive","relationship","creative","timeline","learning","legacy","ima_system"]},
+    "content":{},
+    "status":{"type":"string","enum":["first_person_report","observed","verified","interpretation","hypothesis","unknown"]},
+    "created_at":{"type":"string","format":"date-time"},
+    "observed_at":{"type":["string","null"],"format":"date-time"},
+    "valid_from":{"type":["string","null"],"format":"date-time"},
+    "valid_to":{"type":["string","null"],"format":"date-time"},
+    "provenance":{"type":"object","required":["source_type"],"properties":{"source_type":{"type":"string"},"source_id":{"type":["string","null"]},"method":{"type":["string","null"]},"evidence_refs":{"type":"array","items":{"type":"string"}}},"additionalProperties":true},
+    "confidence":{"type":["number","null"],"minimum":0,"maximum":1},
+    "sensitivity":{"type":"string","enum":["normal","sensitive","highly_sensitive"]},
+    "visibility":{"type":"string"},
+    "consent":{"type":"object","additionalProperties":true},
+    "content_hash":{"type":["string","null"]},
+    "supersedes":{"type":["string","null"]},
+    "schema_version":{"type":"string"}
+  },
+  "additionalProperties":true
+}
