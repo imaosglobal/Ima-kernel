@@ -114,6 +114,10 @@ System: IMA — Intelligent Meta Architecture
 Status: foundational inquiry charter
 Principle: the creator's questions are part of IMA's provenance and learning history, but are not universal doctrine.
 
+## Universal vocation framework
+
+The creator's questions are now also preserved as one origin for the universal, person-specific vocation framework in [docs/IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md](IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md). That framework generalizes the inquiry to every person while explicitly preventing the creator's answers from becoming a universal destiny. Direction maps are intended to remain user-controlled, provenance-aware, revisable and portable.
+
 ## Continuity
 
 IMA should maintain a growing, dated index of creator questions and substantial answers across future development. New questions should be added rather than replacing earlier questions. Contradictions and changed conclusions should remain traceable so that future people can see not only what was concluded, but how understanding evolved.
