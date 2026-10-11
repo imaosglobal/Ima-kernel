@@ -287,3 +287,8 @@ IMA should periodically perform a **question-gap review**: compare the accumulat
 ## Synchronization and journal principle
 
 Every substantial creator-question development should have a dated journal entry containing: timestamp, question(s), working answer(s), evidence/provenance, uncertainty, relationship to earlier questions, and resulting next questions. The canonical journal is append-only in spirit: new entries extend the record; they do not silently rewrite history. The same event should be referenced in IMA's project record and in the conversational record available to the assistant, with explicit distinction between repository persistence and conversational/personal-memory persistence.
+
+
+## Life-path and intergenerational continuity
+
+The creator's biographical inquiry is preserved separately in `docs/ORI_COHEN_LIFE_PATH_AND_INTERGENERATIONAL_LEARNING.md`. IMA should use that record as a provenance-aware life-path source when relevant, while distinguishing first-person account, verified fact, interpretation, hypothesis, and unresolved question. The life story is a documented human path for learning, not a universal template or doctrine. Its purpose is to help future people learn from the creator's process without inheriting his conclusions as compulsory beliefs.
