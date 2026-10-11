@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-11T05:39:03Z",
+  "timestamp": "2026-10-11T12:42:22Z",
   "sources": 12,
-  "discovered": 127,
-  "changed": 12,
+  "discovered": 76,
+  "changed": 0,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -25,6 +25,10 @@
     {
       "source": "https://www.python.org/events/python-events/rss/",
       "error": "HTTPError"
+    },
+    {
+      "source": "https://hnrss.org/frontpage",
+      "error": "ConnectTimeout"
     }
   ],
   "latest_commoncrawl": "CC-MAIN-2026-39",
@@ -35,102 +39,5 @@
     "learning_rule": "discovery is input; IMA changes only after verification and tests",
     "commoncrawl_cdx_polite_rate": "single-threaded with delay"
   },
-  "items": [
-    {
-      "id": "994d69bf84065725d078",
-      "url": "https://atoll92.github.io/agent-standup/",
-      "title": "AI agents in a stand-up call",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "5e035c2780d1a9364018",
-      "url": "https://www.youtube.com/watch?v=XiZmM6hwwAU",
-      "title": "GameBoy on E-Paper ESP32 at 30FPS [video]",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "a756aa92ebc3793e4816",
-      "url": "https://worldfacts.app",
-      "title": "CIA World Facebook Is Dead – Here Is an Attempt at Recreation",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "59499c68644ca0485f53",
-      "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
-      "title": "500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "bf79879b3089419367aa",
-      "url": "https://wallhop.io/",
-      "title": "WallHop – 12ft.io is gone, so I built a replacement",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "5a9fbef9a98543da0c61",
-      "url": "https://github.com/othermod/PSPi-Version-6",
-      "title": "PSPi 6 – Raspberry Pi in a PSP",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "63a4e11e2b73a80981a9",
-      "url": "https://nishtahir.com/build-your-own-decision-model/",
-      "title": "Build your own decision model",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "91459c8bff819c06f2e4",
-      "url": "https://housing.over.pizza/",
-      "title": "A city-building game in which the city would prefer you didn't",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "0139f84d8e8be97b6a6c",
-      "url": "https://lightbulbcomputer.com/",
-      "title": "The Lightbulb Computer",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "f2f20e4ee90e0fa2b6fb",
-      "url": "https://celld.dev/docs/engineering/deterministic-simulation-testing/",
-      "title": "Deterministic Simulation Testing in Celld",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "1c6440c4fed57598e705",
-      "url": "https://www.cockroachlabs.com/blog/experiment-running-hospital-code/",
-      "title": "Five months treating bugs like patients and coding agents like a medical team",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    },
-    {
-      "id": "aa0b7e27b1df66683fc1",
-      "url": "https://werwolv.net/posts/macromedia_copy_protection/",
-      "title": "Getting old Macromedia Director Games to run on modern Hardware",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T05:38:34Z"
-    }
-  ]
+  "items": []
 }
