@@ -312,6 +312,47 @@ def email_messages():
         return jsonify({"error": "Nylas mailbox request failed"}), 502
 
 
+@app.route("/ima-api/direction", methods=["GET", "PUT", "OPTIONS"])
+def direction_map():
+    """User-owned vocation/direction map. Nothing is inferred or shared automatically."""
+    if request.method == "OPTIONS":
+        return ("", 204)
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
+    from learning import direction_map as dm
+    if request.method == "GET":
+        return jsonify({"direction_map": dm.get(user_id), "ownership": "user-controlled", "shared": False})
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return jsonify({"error": "direction_map object is required"}), 400
+    try:
+        return jsonify({"direction_map": dm.replace(user_id, payload), "ownership": "user-controlled", "shared": False})
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+
+@app.route("/ima-api/direction/entry", methods=["POST", "DELETE", "OPTIONS"])
+def direction_entry():
+    if request.method == "OPTIONS":
+        return ("", 204)
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
+    from learning import direction_map as dm
+    payload = request.get_json(silent=True) or {}
+    category = payload.get("category")
+    if request.method == "POST":
+        try:
+            result = dm.add_entry(user_id, category, payload.get("entry"))
+            return jsonify({"direction_map": result, "ownership": "user-controlled"}), 201
+        except ValueError as exc:
+            return jsonify({"error": str(exc)}), 400
+    try:
+        removed, result = dm.delete_entry(user_id, category, payload.get("entry_id"))
+        return jsonify({"deleted": removed, "direction_map": result}), 200
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+
 @app.get("/ima-api/outcome")
 def outcome_status():
     try:
