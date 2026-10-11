@@ -41,6 +41,10 @@ jobs:
         working-directory: ima-ui
         run: npm run lint
 
+      - name: Verify canonical mother GLB
+        working-directory: ima-ui
+        run: npm run verify:mother-glb
+
       - name: Build
         working-directory: ima-ui
         env:
