@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "verify:mother-glb": "node scripts/verify-mother-glb.mjs"
+    "verify:mother-glb": "node scripts/verify-mother-glb.mjs",
+    "verify:growth": "node scripts/verify-growth-measurement.mjs"
   },
   "dependencies": {
     "@react-three/drei": "10.7.7",
