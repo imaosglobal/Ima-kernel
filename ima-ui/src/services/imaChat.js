@@ -1,3 +1,4 @@
+import { trackImaEvent } from './analytics';
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
 
 async function getSessionToken(forceRefresh = false) {
@@ -35,11 +36,13 @@ async function request(path, options = {}, retry = true) {
 }
 
 export async function askIma(message) {
+  trackImaEvent('ima_chat_started');
   const data = await request('/ima-api/chat', {
     method: 'POST',
     body: JSON.stringify({ message }),
   });
   if (!data.response) throw new Error('IMA returned no response');
+  trackImaEvent('ima_chat_completed');
   return data.response;
 }
 
