@@ -4,6 +4,7 @@ import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { askIma, getImaRuntime } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
+import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 
 const GLB_PATH = '/Ima-kernel/mother_character.glb';
 const GLB_GIT_BLOB_SHA1 = '217170d2bd67051270be974292dc3b834eefe206';
@@ -147,6 +148,8 @@ export default function App() {
   useEffect(() => {
     const onKey = e => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setPaletteOpen(true); } if (e.key === 'Escape') setPaletteOpen(false); };
     window.addEventListener('keydown', onKey);
+    initializeImaAnalytics();
+    trackImaEvent('ima_interface_opened');
     Promise.resolve().then(() => { if (alive) setDeviceContinuity(registerContinuity()); });
     let alive = true;
     const refresh = async () => {
