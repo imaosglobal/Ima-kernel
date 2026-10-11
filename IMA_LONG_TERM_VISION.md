@@ -82,3 +82,15 @@ The goal is not for IMA to remain exactly as imagined in 2026.
 The goal is that future generations can look back at the first implementation and truthfully say:
 
 "From here it began."
+
+## 11. Universal personal memory
+
+IMA should provide a user-owned memory and life-archive layer that is independent of any one interface, model, device or vendor. People should be able to inspect, correct, export, import, share, revoke and delete their memory, while preserving provenance and uncertainty.
+
+The design is specified in docs/IMA_PERSONAL_MEMORY_AND_LIFE_ARCHIVE_SPEC.md and schemas/ima-memory-object.schema.json.
+
+The long-term target is interoperability with open ecosystems rather than a proprietary IMA-only memory silo. IMA should monitor and, where appropriate, implement compatible open formats and protocols for portable AI memory, human-controlled data stores and agent-memory interoperability.
+
+## 12. Intergenerational continuity
+
+A person may explicitly create a legacy archive for future generations. IMA's own history may likewise be preserved as a separate system archive. Neither archive should silently merge into ordinary personal memory or become a doctrine. Provenance, consent, uncertainty, correction and the freedom to disagree are mandatory parts of the inheritance.
