@@ -282,3 +282,11 @@ Every implementation should eventually expose:
 
 **Memory belongs to the person. IMA is a steward and tool, not the owner.**
 
+
+## Vocation and life-direction continuity
+
+The personal memory layer may host the user's evolving direction map defined in [IMA Universal Vocation & Life Direction](IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md). Direction data is not a separate identity silo: it is a permissioned interpretation layer connected to provenance-aware episodes, values, creations, experiments and learning.
+
+IMA MUST preserve the distinction between a person's report, observation, verification, interpretation, hypothesis and unknown. A direction hypothesis may change without rewriting the underlying history. Deleting or restricting a direction entry follows the same user-control, consent, provenance and deletion rules as other personal memory.
+
+Direction history may be included in a Legacy Capsule only when explicitly selected by the person.
