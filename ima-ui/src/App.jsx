@@ -1,15 +1,24 @@
-import { Suspense, useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
 import { askIma, getImaRuntime } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 
+const GLB_PATH = '/Ima-kernel/mother_character.glb';
+const GLB_SHA256 = '217170d2bd67051270be974292dc3b834eefe206';
 const statusLabel = status => ({ LIVE: 'פעיל ומאומת', VERIFIED: 'מאומת', TESTED: 'נבדק', IMPLEMENTED: 'ממומש — לא אומת בפריסה', PLANNED: 'בתכנון', NOT_VERIFIED: 'טרם אומת', DISABLED: 'כבוי' })[status] || 'לא ידוע';
+
+class PresenceErrorBoundary extends React.Component {
+  constructor(props) { super(props); this.state = { failed: false }; }
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch(error) { this.props.onError?.(error); }
+  render() { return this.state.failed ? <Html center><span role="status">נוכחות 3D אינה זמינה — אמא ממשיכה בממשק השיחה.</span></Html> : this.props.children; }
+}
 
 function Presence({ state = 'idle', reducedMotion = false }) {
   const group = useRef(null);
-  const { scene } = useGLTF('/Ima-kernel/mother_character.glb');
+  const { scene } = useGLTF(GLB_PATH);
 
   useEffect(() => {
     document.documentElement.dataset.imaMotion = reducedMotion ? 'reduced' : 'full';
@@ -79,9 +88,9 @@ function Presence({ state = 'idle', reducedMotion = false }) {
   );
 }
 
-useGLTF.preload('/Ima-kernel/mother_character.glb');
+useGLTF.preload(GLB_PATH);
 
-function PresenceScene({ state, reducedMotion }) {
+function PresenceScene({ state, reducedMotion, onAssetError }) {
   return (
     <Canvas
       camera={{ position: [0, 0.65, 5.2], fov: 36 }}
@@ -91,12 +100,12 @@ function PresenceScene({ state, reducedMotion }) {
       <pointLight position={[2, 3, 4]} intensity={18} distance={9} />
       <pointLight position={[-3, 1, 2]} intensity={10} distance={8} />
 
-      <Suspense fallback={<Html center>אמא מתעוררת…</Html>}>
+      <PresenceErrorBoundary onError={onAssetError}><Suspense fallback={<Html center>אמא מתעוררת…</Html>}>
         <Stage intensity={0.7} adjustCamera>
           <Presence state={state} reducedMotion={reducedMotion} />
         </Stage>
         <Environment preset="studio" />
-      </Suspense>
+      </Suspense></PresenceErrorBoundary>
     </Canvas>
   );
 }
@@ -128,6 +137,7 @@ export default function App() {
   const [paletteQuery, setPaletteQuery] = useState('');
   const [activity, setActivity] = useState('מוכן');
   const [deviceContinuity, setDeviceContinuity] = useState(null);
+  const [avatarAssetState, setAvatarAssetState] = useState('checking');
   const [reducedMotion, setReducedMotion] = useState(() => localStorage.getItem('ima-reduced-motion') === '1');
   const [showTranscript, setShowTranscript] = useState(true);
   const [messages, setMessages] = useState([
@@ -144,6 +154,20 @@ export default function App() {
       catch { if (alive) setApiState('offline'); }
     };
     refresh();
+    const verifyAvatarAsset = async () => {
+      try {
+        const response = await fetch(GLB_PATH, { cache: 'no-store' });
+        if (!response.ok) throw new Error('GLB HTTP ' + response.status);
+        const bytes = await response.arrayBuffer();
+        const digest = await crypto.subtle.digest('SHA-256', bytes);
+        const hash = Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+        if (hash !== GLB_SHA256) throw new Error('GLB hash mismatch');
+        setAvatarAssetState('verified');
+      } catch (error) {
+        setAvatarAssetState('failed');
+      }
+    };
+    verifyAvatarAsset();
     const timer = setInterval(refresh, 30000);
     return () => { alive = false; clearInterval(timer); window.removeEventListener('keydown', onKey); };
   }, []);
@@ -215,8 +239,8 @@ export default function App() {
       </div>
       <div className="presence-card mother-presence" aria-label="אמא — נוכחות תלת ממדית חיה">
         <div className="presence-aura" aria-hidden="true" />
-        <div className="orb"><PresenceScene state={avatarState} reducedMotion={reducedMotion} /></div>
-        <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / NOW</b></div>
+        <div className="orb"><PresenceScene state={avatarState} reducedMotion={reducedMotion} onAssetError={() => setAvatarAssetState('failed')} /></div>
+        <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / {avatarAssetState === 'verified' ? '3D VERIFIED' : avatarAssetState === 'failed' ? '3D FALLBACK' : '3D CHECKING'}</b></div>
       </div>
     </section>
 
