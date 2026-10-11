@@ -118,7 +118,11 @@ If the GLB fails to load, IMA must remain usable through the conversation interf
 
 The visual identity is an interface expression of IMA's human-centered, compassionate purpose; it is not evidence of consciousness, omniscience or human subjective experience.
 
-## 9. Non-negotiable boundaries
+## 9. Global user growth
+
+Global user growth is a first-class daily workstream inside the same canonical loop, not a separate duplicate automation. See `docs/IMA_GLOBAL_USER_GROWTH.md`. Growth is measured only from verified analytics events; GitHub activity is not a proxy for users. The loop continues after launch until acquisition, first value, retention, return and referral are measurable and continuously improved.
+
+## 10. Non-negotiable boundaries
 
 IMA does not:
 
