@@ -6,7 +6,7 @@ import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 
 const GLB_PATH = '/Ima-kernel/mother_character.glb';
-const GLB_SHA256 = '217170d2bd67051270be974292dc3b834eefe206';
+const GLB_GIT_BLOB_SHA1 = '217170d2bd67051270be974292dc3b834eefe206';
 const statusLabel = status => ({ LIVE: 'פעיל ומאומת', VERIFIED: 'מאומת', TESTED: 'נבדק', IMPLEMENTED: 'ממומש — לא אומת בפריסה', PLANNED: 'בתכנון', NOT_VERIFIED: 'טרם אומת', DISABLED: 'כבוי' })[status] || 'לא ידוע';
 
 class PresenceErrorBoundary extends React.Component {
@@ -159,9 +159,13 @@ export default function App() {
         const response = await fetch(GLB_PATH, { cache: 'no-store' });
         if (!response.ok) throw new Error('GLB HTTP ' + response.status);
         const bytes = await response.arrayBuffer();
-        const digest = await crypto.subtle.digest('SHA-256', bytes);
+        const prefix = new TextEncoder().encode(`blob ${bytes.byteLength}\\0`);
+        const payload = new Uint8Array(prefix.length + bytes.byteLength);
+        payload.set(prefix);
+        payload.set(new Uint8Array(bytes), prefix.length);
+        const digest = await crypto.subtle.digest('SHA-1', payload);
         const hash = Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
-        if (hash !== GLB_SHA256) throw new Error('GLB hash mismatch');
+        if (hash !== GLB_GIT_BLOB_SHA1) throw new Error('GLB Git blob hash mismatch');
         setAvatarAssetState('verified');
       } catch (error) {
         setAvatarAssetState('failed');
