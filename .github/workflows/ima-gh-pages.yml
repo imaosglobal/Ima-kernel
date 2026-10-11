@@ -45,6 +45,10 @@ jobs:
         working-directory: ima-ui
         run: npm run verify:mother-glb
 
+      - name: Verify global user growth measurement path
+        working-directory: ima-ui
+        run: npm run verify:growth
+
       - name: Build
         working-directory: ima-ui
         env:
