@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://imaosglobal.github.io/Ima-kernel/schemas/ima-direction-map.schema.json",
+  "title": "IMA Universal Direction Map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "owner", "updated_at"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "owner": {"type": "string", "minLength": 1},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "values": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "strengths": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "needs": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "interests": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "protective_commitments": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "concerns": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "relationships": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "creations": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "contribution_hypotheses": {"type": "array", "items": {"$ref": "#/$defs/hypothesis"}},
+    "constraints": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "experiments": {"type": "array", "items": {"$ref": "#/$defs/experiment"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "direction_hypotheses": {"type": "array", "items": {"$ref": "#/$defs/hypothesis"}},
+    "counterevidence": {"type": "array", "items": {"$ref": "#/$defs/entry"}},
+    "open_questions": {"type": "array", "items": {"$ref": "#/$defs/entry"}}
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "content", "status", "provenance"],
+      "properties": {
+        "id": {"type": "string"},
+        "content": {"type": "string"},
+        "status": {"enum": ["FIRST_PERSON_REPORT", "OBSERVED", "VERIFIED", "INTERPRETATION", "HYPOTHESIS", "UNKNOWN"]},
+        "provenance": {"type": "string"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "hypothesis": {
+      "allOf": [{"$ref": "#/$defs/entry"}],
+      "type": "object",
+      "properties": {
+        "testable": {"type": "boolean"},
+        "next_experiment_id": {"type": ["string", "null"]}
+      }
+    },
+    "experiment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "hypothesis_id", "action", "result", "learning"],
+      "properties": {
+        "id": {"type": "string"},
+        "hypothesis_id": {"type": "string"},
+        "action": {"type": "string"},
+        "result": {"type": "string"},
+        "learning": {"type": "string"},
+        "started_at": {"type": ["string", "null"], "format": "date-time"},
+        "completed_at": {"type": ["string", "null"], "format": "date-time"},
+        "provenance": {"type": "string"}
+      }
+    }
+  }
+}
