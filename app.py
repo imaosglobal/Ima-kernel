@@ -137,6 +137,26 @@ def health():
         "time": time.time(),
     })
 
+@app.route("/ima-api/memory/consent", methods=["GET", "PUT", "OPTIONS"])
+def memory_consent():
+    if request.method == "OPTIONS":
+        return ("", 204)
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
+    try:
+        memory = _universal_memory()
+        if request.method == "GET":
+            return jsonify({"scope": "user", "consent": memory.get_consent(user_id)})
+        payload = request.get_json(silent=True) or {}
+        result = memory.set_consent(user_id, payload.get("status"), source="public-runtime")
+        return jsonify({"scope": "user", "consent": result})
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+    except Exception:
+        app.logger.exception("Universal memory consent operation failed")
+        return jsonify({"error": "universal memory consent unavailable"}), 503
+
 @app.get("/ima-api/runtime")
 def runtime_status():
     return jsonify({
