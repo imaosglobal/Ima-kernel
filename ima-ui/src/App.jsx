@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
-import { askIma, getImaRuntime } from './services/imaChat';
+import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
@@ -141,6 +141,8 @@ export default function App() {
   const [avatarAssetState, setAvatarAssetState] = useState('checking');
   const [reducedMotion, setReducedMotion] = useState(() => localStorage.getItem('ima-reduced-motion') === '1');
   const [showTranscript, setShowTranscript] = useState(true);
+  const [memoryConsent, setMemoryConsentState] = useState('UNKNOWN');
+  const [memoryBusy, setMemoryBusy] = useState(false);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. הזיכרון האישי של כל אדם נשמר בנפרד, בעוד שהידע והלמידה הציבוריים של אמא נבנים ממקורות רבים.' }
   ]);
@@ -157,6 +159,7 @@ export default function App() {
       catch { if (alive) setApiState('offline'); }
     };
     refresh();
+    getMemoryConsent().then(data => setMemoryConsentState(data?.consent?.status || 'UNKNOWN')).catch(() => setMemoryConsentState('UNKNOWN'));
     const verifyAvatarAsset = async () => {
       try {
         const response = await fetch(GLB_PATH, { cache: 'no-store' });
@@ -279,6 +282,17 @@ export default function App() {
     <section className="live-strip" id="tools"><div><span>פעילות</span><strong>{activity}</strong></div><div><span>מצב</span><strong>{apiState.toUpperCase()}</strong></div><div><span>זיכרון</span><strong>{apiRuntime?.memory?.mode === 'per-user' ? 'מופרד למשתמש' : 'נפרד'}</strong></div><div><span>נוכחות</span><strong>3D Mother</strong></div><div><span>מכשיר</span><strong>{deviceContinuity?.device?.family || 'מזהה…'}</strong></div></section>
 
     {paletteOpen && <div className="palette-backdrop" role="presentation" onMouseDown={() => setPaletteOpen(false)}><section className="command-palette" role="dialog" aria-modal="true" aria-label="פעולות אמא" onMouseDown={e => e.stopPropagation()}><div className="palette-head"><strong>מה תרצה לעשות?</strong><button onClick={() => setPaletteOpen(false)} aria-label="סגירה">×</button></div><input autoFocus value={paletteQuery} onChange={e => setPaletteQuery(e.target.value)} placeholder="חפש פעולה..." aria-label="חיפוש פעולה" /><div className="palette-results">{visibleCommands.map((command, i) => <button key={command.label} onClick={() => { setPaletteOpen(false); command.action(); }}><span>{i + 1}</span>{command.label}</button>)}{!visibleCommands.length && <p>לא נמצאה פעולה. נסה ניסוח אחר.</p>}</div><small>הפעולות נשארות שקופות: אמא מציגה מה היא עושה ואינה מציגה יכולת שלא אומתה.</small></section></div>}
+
+    <section className="memory-controls" aria-labelledby="memory-heading">
+      <div className="section-heading"><p className="eyebrow">IMA · YOUR MEMORY</p><h2 id="memory-heading">הזיכרון שלך בשליטתך.</h2><p>הזיכרון הקנוני של IMA נשמר רק לאחר הסכמה מפורשת ונשאר אישי ונפרד מהלמידה המשותפת.</p></div>
+      <div className="feature-grid"><article className="feature-card">
+        <h3>מצב: {memoryConsent === 'GRANTED' ? 'פעיל' : memoryConsent === 'DENIED' ? 'כבוי' : 'לא נבחר'}</h3>
+        <div className="hero-actions">
+          <button className="primary" disabled={memoryBusy || memoryConsent === 'GRANTED'} onClick={async () => { setMemoryBusy(true); try { const data = await setMemoryConsent('GRANTED'); setMemoryConsentState(data.consent.status); } finally { setMemoryBusy(false); } }}>הפעלת זיכרון אישי</button>
+          <button className="secondary" disabled={memoryBusy || memoryConsent === 'DENIED'} onClick={async () => { setMemoryBusy(true); try { const data = await setMemoryConsent('DENIED'); setMemoryConsentState(data.consent.status); } finally { setMemoryBusy(false); } }}>כיבוי זיכרון</button>
+        </div>
+      </article></div>
+    </section>
 
     <section className="capability-truth" id="capabilities" aria-labelledby="capability-heading">
       <div className="section-heading"><p className="eyebrow">IMA · VERIFIED CAPABILITIES</p><h2 id="capability-heading">מה אמא יכולה — ומה עדיין לא אומת.</h2><p>המצב מוצג מתוך מרשם היכולות של הפרויקט. תכנון או מסמך אינם הוכחה ליכולת פעילה.</p></div>
