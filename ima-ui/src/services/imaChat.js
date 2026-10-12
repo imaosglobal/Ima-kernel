@@ -49,3 +49,23 @@ export async function askIma(message) {
 export async function getImaRuntime() {
   return request('/ima-api/runtime', { cache: 'no-store' });
 }
+
+
+export async function getMemoryConsent() {
+  return request('/ima-api/memory/consent', { cache: 'no-store' });
+}
+
+export async function setMemoryConsent(status) {
+  return request('/ima-api/memory/consent', {
+    method: 'PUT',
+    body: JSON.stringify({ status }),
+  });
+}
+
+export async function exportMemory() {
+  return request('/ima-api/memory/export', { cache: 'no-store' });
+}
+
+export async function deleteMemory() {
+  return request('/ima-api/memory', { method: 'DELETE' });
+}
