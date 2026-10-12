@@ -70,7 +70,8 @@ def run():
                 "adoption_blocked":True,
                 "evidence_status":"no_recent_discovery_items",
                 "source_state_path":".ima/web_intelligence/state.json",
-                "discovery_item_count":discovery_item_count
+                "discovery_item_count":discovery_item_count,
+                "trend_to_brand":None
             })
 
     state={
