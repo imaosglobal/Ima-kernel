@@ -22,3 +22,10 @@ Nylas is currently a **candidate runtime integration**, not a verified connected
 
 ## Adapter contract
 Every adapter should expose `id`, `provider`, `capabilities`, `health()`, `permissions()`, `execute(action, input)`, `evidence(result)`, and `failure_mode`.
+
+
+## Universal Conversation & Interaction Memory
+`ima_universal_interaction_memory` is a canonical IMA-owned capability. It is not an external connector. Runtime storage is user-scoped and requires explicit consent before canonical capture; generalized learning additionally requires explicit authorization. Export and deletion are user-controlled. Secrets and credential-like content are rejected.
+
+## Trend-to-Brand Engine
+`ima_trend_to_brand_engine` is a canonical IMA-owned research capability. It consumes only permitted public evidence supplied by authorized discovery paths, preserves provenance and uncertainty, and produces research-only opportunity cards. It cannot purchase, publish, contact creators, place orders, or claim revenue without separate authorization and verified evidence.
