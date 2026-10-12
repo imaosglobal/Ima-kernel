@@ -299,6 +299,47 @@
         "message_webhooks",
         "signed_delivery"
       ]
+    },
+    {
+      "id": "ima_universal_interaction_memory",
+      "provider": "IMA",
+      "status": "implemented_not_yet_production_verified",
+      "capabilities": [
+        "capture",
+        "consent_gate",
+        "normalize",
+        "utc_timestamp",
+        "classify",
+        "store",
+        "index",
+        "verify",
+        "export",
+        "delete",
+        "authorized_learning"
+      ],
+      "verification": {
+        "source": ".ima/memory/universal_interaction_memory.py",
+        "tests": "tests/test_universal_interaction_memory.py"
+      }
+    },
+    {
+      "id": "ima_trend_to_brand_engine",
+      "provider": "IMA",
+      "status": "implemented_not_yet_production_verified",
+      "capabilities": [
+        "public_trend_signals",
+        "provenance",
+        "multi_source_evidence",
+        "opportunity_scoring",
+        "mvp_cards",
+        "risk_gates",
+        "creator_fit_framework",
+        "commerce_safety_gates"
+      ],
+      "verification": {
+        "source": ".ima/web_intelligence/trend_to_brand.py",
+        "tests": "tests/test_trend_to_brand.py"
+      }
     }
   ],
   "routing": {
@@ -380,7 +421,8 @@
       "ima_capability_factory",
       "stripe",
       "github",
-      "tinyfish"
+      "tinyfish",
+      "ima_trend_to_brand_engine"
     ],
     "universal_integration": [
       "ima_capability_factory",
@@ -392,7 +434,8 @@
     "global_change_observatory": [
       "tinyfish",
       "github",
-      "plugin_management"
+      "plugin_management",
+      "ima_trend_to_brand_engine"
     ],
     "cross_domain_learning": [
       "ima_capability_factory",
@@ -420,6 +463,9 @@
       "ima_mcp_distribution",
       "github",
       "plugin_management"
+    ],
+    "memory": [
+      "ima_universal_interaction_memory"
     ]
   }
 }
