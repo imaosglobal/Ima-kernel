@@ -462,6 +462,27 @@ def chat():
 
         # Store only the final response after the first-pass safety screen.
         public_memory.append(user_id, message.strip(), response)
+        try:
+            universal = _universal_memory()
+            consent = universal.get_consent(user_id)
+            if consent.get("status") == "GRANTED":
+                universal.capture(
+                    user_id=user_id,
+                    source="ima-api/chat",
+                    content=message.strip(),
+                    consent="GRANTED",
+                    language=language,
+                    interface="public-web-chat",
+                    outcome=response,
+                    verification="first-pass-safety-screen",
+                    temporal_class="PRESENT",
+                    authorized_learning=False,
+                    status="VERIFIED",
+                )
+        except ValueError as exc:
+            app.logger.warning("Universal memory capture skipped: %s", exc)
+        except Exception:
+            app.logger.exception("Universal memory capture failed")
         return jsonify({
             "response": response,
             "provider": result.get("provider", "IMA MASTER"),
