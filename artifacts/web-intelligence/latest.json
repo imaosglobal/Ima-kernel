@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-11T21:52:09Z",
+  "timestamp": "2026-10-12T01:16:55Z",
   "sources": 12,
-  "discovered": 110,
-  "changed": 12,
+  "discovered": 92,
+  "changed": 13,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -37,100 +37,108 @@
   },
   "items": [
     {
-      "id": "73ae61f26eaef66882ae",
-      "url": "https://www.inc.com/chloe-rosenberg/a-remote-employee-refused-160-webcam-photos-a-day-her-employer-fired-her/91415963",
-      "title": "A Remote Employee Refused 160 Webcam Photos a Day. Her Employer Fired Her",
+      "id": "156bf54f8b17196a4afc",
+      "url": "https://tedhaley.ca/pensieve/",
+      "title": "Local Indexing to reduce tool calling and token usage",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
+      "observed_at": "2026-10-12T01:16:11Z"
     },
     {
-      "id": "d16bd93ff857d83dc220",
-      "url": "https://twitter.com/karpathy/status/2109361546505966046",
-      "title": "The gap in shared understanding of LLM capability is widening",
+      "id": "a3f0b7b889931007f6ea",
+      "url": "https://github.com/hashicorp/boundary",
+      "title": "HashiCorp archives the Boundary open source repo",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "1b572d2e4d4dbebcbf0c",
+      "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
+      "title": "Whatever became of holography? (2011)",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "b69ea5748fd33630b8ed",
+      "url": "https://github.com/plimsollmark/plimsoll",
+      "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "c572df358638151c13f7",
+      "url": "https://www.economist.com/finance-and-economics/2026/10/08/governments-are-mishandling-the-affordability-crisis",
+      "title": "Governments are mishandling the affordability crisis",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "23c36dde8c598e39e4c4",
+      "url": "https://terrytao.wordpress.com/2026/10/11/illustration-beyond-proof/",
+      "title": "Illustration Beyond Proof",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "e248c1b0c86be473b73a",
+      "url": "https://github.com/swimmingbrain/brainotes",
+      "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "04264482f0251792ebf3",
+      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+      "title": "Fingerprints Are the New Cookies",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "584059889c4fc9ead5a3",
+      "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
+      "title": "Google is illegaly cutting forest to build data centers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "604be226fcb801115c58",
+      "url": "https://pub.sakana.ai/mass/",
+      "title": "Recursive self-improvement through collective intelligence",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
+    },
+    {
+      "id": "69f867972cf056852236",
+      "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+      "title": "Passkeys are a trap. Do not use them",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-12T01:16:11Z"
     },
     {
       "id": "d41642ac29318b77ebf3",
       "url": "https://cartographers-nk.wonyoung.so/",
-      "title": "Cartographers of North Korea",
+      "title": "Cartographers of North Korea (2019)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "79f9d0eebf5ad79abcc0",
-      "url": "https://richwhitehouse.com/index.php?postid=78",
-      "title": "Artificial Insanity",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
+      "observed_at": "2026-10-12T01:16:11Z"
     },
     {
       "id": "970e4e42b61bcd4867f0",
       "url": "https://theonion.com/archivehunt/",
-      "title": "Do You Have Pre-2012 Onion Issues?",
+      "title": "So, You’d Like To Sell Your Print Issues Of The Onion?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "20dd58bae8775d8c753f",
-      "url": "https://blog.kammel.dev/post/nixos_vex/",
-      "title": "The Unreasonable Effectiveness of Vex in NixOS",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "04c1e8f8123b90fda8a3",
-      "url": "https://www.ways-of-seeing.com/ch1",
-      "title": "Chapter 1 of Ways of Seeing by John Berger",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "d49fdf3cc73e1b28b085",
-      "url": "https://nanolathe.gg",
-      "title": "Total Annihilation, rebuilt for modern computers",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "f059340783d441bc0dfb",
-      "url": "https://www.nyc.gov/main/click-to-cancel",
-      "title": "NYC's \"Click to Cancel\" rule is now in effect",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "7e77eee235f99033edc8",
-      "url": "https://www.playgrnd.tools/",
-      "title": "Playgrnd – tiny tools for making weird, beautiful things",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "ac38fe5de161cfa6a87b",
-      "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-      "title": "Terence Tao: Math 2.0 [pdf]",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
-    },
-    {
-      "id": "8fae80ef12f72b04b0ff",
-      "url": "https://phys.org/news/2024-02-scandinavia-farmers-slaughtered-hunter-population.html",
-      "title": "Scandinavia's first farmers slaughtered hunter-gatherer population, DNA suggests",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-11T21:51:43Z"
+      "observed_at": "2026-10-12T01:16:11Z"
     }
   ]
 }
