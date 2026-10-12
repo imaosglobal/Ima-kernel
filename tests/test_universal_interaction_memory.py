@@ -15,6 +15,23 @@ class UniversalMemoryTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     m.capture(user_id="u",source="chat",content="x",consent="UNKNOWN",authorized_learning=True)
             finally: public_memory._DB=old
+    def test_consent_and_audit(self):
+        with tempfile.TemporaryDirectory() as td:
+            old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
+            try:
+                m.set_consent("u","GRANTED")
+                self.assertEqual(m.get_consent("u")["status"],"GRANTED")
+                self.assertEqual(m.audit_events("u")[0]["action"],"CONSENT_UPDATE")
+            finally: public_memory._DB=old
+
+    def test_secret_like_content_is_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
+            try:
+                with self.assertRaises(ValueError):
+                    m.capture(user_id="u",source="chat",content="Authorization: Bearer abc",consent="GRANTED")
+            finally: public_memory._DB=old
+
     def test_roundtrip_and_delete(self):
         with tempfile.TemporaryDirectory() as td:
             old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
