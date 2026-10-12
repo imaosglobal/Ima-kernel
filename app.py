@@ -157,6 +157,32 @@ def memory_consent():
         app.logger.exception("Universal memory consent operation failed")
         return jsonify({"error": "universal memory consent unavailable"}), 503
 
+@app.get("/ima-api/memory/export")
+def memory_export():
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
+    try:
+        memory = _universal_memory()
+        return jsonify({"scope": "user", "records": memory.export_user_memory(user_id), "consent": memory.get_consent(user_id)})
+    except Exception:
+        app.logger.exception("Universal memory export failed")
+        return jsonify({"error": "universal memory export unavailable"}), 503
+
+@app.delete("/ima-api/memory")
+def memory_delete():
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
+    try:
+        memory = _universal_memory()
+        deleted = memory.delete_user_memory(user_id)
+        memory.set_consent(user_id, "DENIED", source="public-runtime-delete")
+        return jsonify({"deleted": deleted, "scope": "user", "consent": memory.get_consent(user_id)})
+    except Exception:
+        app.logger.exception("Universal memory deletion failed")
+        return jsonify({"error": "universal memory deletion unavailable"}), 503
+
 @app.get("/ima-api/runtime")
 def runtime_status():
     return jsonify({
