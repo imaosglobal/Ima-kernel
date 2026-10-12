@@ -11,6 +11,7 @@ from ima_ledger import cmd_deposit, cmd_balance
 from billing.api import billing_api
 import public_memory
 import requests
+import importlib.util
 
 try:
     from integrations import nylas_email
@@ -37,6 +38,15 @@ NYLAS_WEBHOOK_URL = os.environ.get("NYLAS_WEBHOOK_URL", "https://ima-915m.onrend
 SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
 
 REGISTRY_PATH = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
+UNIVERSAL_MEMORY_PATH = Path(__file__).resolve().parent / ".ima" / "memory" / "universal_interaction_memory.py"
+
+def _universal_memory():
+    spec = importlib.util.spec_from_file_location("ima_universal_interaction_memory", UNIVERSAL_MEMORY_PATH)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("universal interaction memory unavailable")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def _registry_provider_status(provider: str) -> str:
@@ -143,6 +153,8 @@ def runtime_status():
             "three_d_presence": True,
             "voice_browser": True,
             "per_user_session_memory": True,
+            "universal_interaction_memory": True,
+            "universal_memory_requires_consent": True,
             "outcome_as_a_service": True,
             "external_models": "configured providers only",
             "autonomous_external_actions": False,
