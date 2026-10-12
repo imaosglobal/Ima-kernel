@@ -138,6 +138,7 @@ def capture(*, user_id: str, source: str, content: str, consent: str,
            temporal_class, json.dumps(evidence_refs or [],ensure_ascii=False),
            int(bool(authorized_learning))),
         )
+        con.execute("INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",(str(uuid.uuid4()),_safe_user_id(user_id),record["timestamp"],"CAPTURE",event_id,status))
     return record
 
 def export_user_memory(user_id: str) -> list[dict]:
@@ -163,6 +164,7 @@ def delete_user_memory(user_id: str) -> int:
     ensure_schema()
     with _LOCK, _connect() as con:
         cur=con.execute("DELETE FROM interaction_memory WHERE user_id=?",( _safe_user_id(user_id),))
+        con.execute("INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",(str(uuid.uuid4()),_safe_user_id(user_id),utc_now(),"DELETE",None,str(cur.rowcount)))
         return cur.rowcount
 
 def learning_records() -> list[dict]:
