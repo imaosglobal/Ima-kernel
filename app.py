@@ -463,7 +463,9 @@ def chat():
 
     try:
         from ima_master_runtime import ask
-        memory = public_memory.recall(user_id, message)
+        universal = _universal_memory()
+        consent = universal.get_consent(user_id)
+        memory = public_memory.recall(user_id, message) if consent.get("status") == "GRANTED" else []
         result = ask(message.strip(), user_id=user_id, public=True, public_memory=memory)
         response = str(result.get("response") or "").strip()
         if not response:
@@ -487,10 +489,9 @@ def chat():
             raise RuntimeError("IMA safety layer returned no response")
 
         # Store only the final response after the first-pass safety screen.
-        public_memory.append(user_id, message.strip(), response)
+        if consent.get("status") == "GRANTED":
+            public_memory.append(user_id, message.strip(), response)
         try:
-            universal = _universal_memory()
-            consent = universal.get_consent(user_id)
             if consent.get("status") == "GRANTED":
                 universal.capture(
                     user_id=user_id,
