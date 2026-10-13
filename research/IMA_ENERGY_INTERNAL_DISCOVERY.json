@@ -1,0 +1,63 @@
+{
+  "schema": "IMA-DISCOVERY-LOOP-1.0",
+  "name": "energy-internal-unifying-discovery",
+  "purpose": "Continuously investigate what connects energy, change, information, interaction, time, entropy, life, emotion, consciousness, dreams and reality without collapsing scientific evidence into metaphor.",
+  "principles": [
+    "Separate established fact, hypothesis, metaphor and open question.",
+    "Measure before claiming improvement.",
+    "Prefer models that make testable predictions.",
+    "Actively seek falsification and disconfirming evidence.",
+    "Compare structures across physics, chemistry, biology, neuroscience, psychology, information theory and philosophy without treating analogy as proof.",
+    "Preserve uncertainty and provenance.",
+    "Every completed finding must generate the next highest-value question."
+  ],
+  "loop": [
+    "OBSERVE",
+    "MEASURE",
+    "MODEL",
+    "PREDICT",
+    "TRY_TO_DISPROVE",
+    "CROSS_DOMAIN_COMPARE",
+    "VERIFY",
+    "RECORD",
+    "TEACH",
+    "GENERATE_NEXT_QUESTION"
+  ],
+  "initial_hypotheses": [
+    {
+      "id": "energy-is-not-direction",
+      "claim": "Energy is not itself a force, intention, or direction; system dynamics and interactions determine how available energy is expressed.",
+      "status": "SUPPORTED",
+      "confidence": "HIGH",
+      "next_test": "Check each future cross-domain claim for accidental treatment of energy as agency or direction."
+    },
+    {
+      "id": "relations-generate-dynamics",
+      "claim": "A promising cross-domain research hypothesis is that interactions/relations are a more general organizing concept than energy alone.",
+      "status": "OPEN_HYPOTHESIS",
+      "confidence": "LOW",
+      "next_test": "Compare predictive explanatory power of relation-centered versus energy-centered descriptions across selected domains."
+    },
+    {
+      "id": "information-as-bridge",
+      "claim": "Information is a recurring formal concept across physics, computation and living systems, but 'reality is information' is not established by that recurrence alone.",
+      "status": "OPEN_HYPOTHESIS",
+      "confidence": "MEDIUM",
+      "next_test": "Collect primary sources and identify where information is formally defined, measured and causally useful in each domain."
+    }
+  ],
+  "measurement": {
+    "required_metrics": [
+      "new_primary_sources_checked",
+      "claims_promoted_to_verified",
+      "claims_downgraded_or_rejected",
+      "open_questions_added",
+      "cross_domain_links_tested",
+      "predictions_generated",
+      "predictions_tested",
+      "falsifications",
+      "teaching_artifacts_created"
+    ],
+    "success_rule": "No improvement is counted unless a measurable change in evidence, model quality, test coverage, or teaching capability is recorded."
+  }
+}
