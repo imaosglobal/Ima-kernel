@@ -15,6 +15,8 @@ TIMELINE = ROOT / ".ima/evolution/SELF_TIMELINE.json"
 JOURNAL = ROOT / ".ima/journal/development.jsonl"
 DAILY = ROOT / ".ima/journal/daily"
 OUT = ROOT / "artifacts/web-intelligence/daily-summary.json"
+RESEARCH = ROOT / "research/IMA_ENERGY_INTERNAL_DISCOVERY.json"
+RESEARCH_RESULT = ROOT / "artifacts/web-intelligence/energy-internal-discovery.json"
 TZ = ZoneInfo("Asia/Jerusalem")
 
 
@@ -72,6 +74,8 @@ def run():
     state = load(STATE, {})
     adapt = load(ADAPT, {})
     timeline = load(TIMELINE, {})
+    research = load(RESEARCH, {})
+    research_result = load(RESEARCH_RESULT, {})
     events = journal_events(day)
     lessons = concrete_lessons(events)
 
@@ -120,11 +124,38 @@ def run():
         "timeline_event_count": len(timeline.get("timeline", [])),
         "timeline_archive_files": timeline.get("archive_inventory", {}).get("files", 0),
         "timeline_open_issues": timeline.get("open_issues", {}).get("count"),
+        "discovery_research": {
+            "name": research.get("name"),
+            "loop_stages": len(research.get("loop", [])),
+            "open_hypotheses": sum(1 for x in research.get("initial_hypotheses", []) if x.get("status") == "OPEN_HYPOTHESIS"),
+            "result_recorded": bool(research_result),
+            "metrics": research_result.get("metrics", {}) if isinstance(research_result, dict) else {},
+        },
         "timeline_gap_count": timeline.get("current_gaps", {}).get("total", 0),
         "status": "RECORDED",
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    if not RESEARCH_RESULT.exists():
+        RESEARCH_RESULT.parent.mkdir(parents=True, exist_ok=True)
+        RESEARCH_RESULT.write_text(json.dumps({
+            "schema": "IMA-DISCOVERY-RESULT-1.0",
+            "date": day,
+            "topic": research.get("name", "energy-internal-unifying-discovery"),
+            "metrics": {
+                "new_primary_sources_checked": 0,
+                "claims_promoted_to_verified": 0,
+                "claims_downgraded_or_rejected": 0,
+                "open_questions_added": len(research.get("initial_hypotheses", [])),
+                "cross_domain_links_tested": 0,
+                "predictions_generated": 0,
+                "predictions_tested": 0,
+                "falsifications": 0,
+                "teaching_artifacts_created": 0
+            },
+            "status": "BASELINE_ONLY",
+            "rule": research.get("measurement", {}).get("success_rule")
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     DAILY.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
