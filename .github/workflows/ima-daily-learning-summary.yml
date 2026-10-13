@@ -30,6 +30,7 @@ jobs:
           python -m unittest discover -s tests -p "test_child_safety_engine.py" -v
           python -m unittest discover -s tests -p "test_age_assurance.py" -v
           python -m unittest discover -s tests -p "test_child_safety_core_adapter.py" -v
+          python -m unittest tests/test_energy_internal_discovery.py -v
       - name: Rebuild chronological self-evolution timeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
