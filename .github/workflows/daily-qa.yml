@@ -1,0 +1,49 @@
+name: IMA Daily QA and Doodle
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  qa:
+    name: Product, QA, smoke and monkey checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run daily QA
+        run: python3 qa/daily_qa.py
+
+  doodle:
+    name: Renew IMA doodle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate today's doodle variant
+        shell: python
+        run: |
+          from datetime import date
+          from pathlib import Path
+          day = date.today().timetuple().tm_yday
+          variants = [
+            '<circle cx="37" cy="54" r="3" fill="#713c45"/><circle cx="63" cy="54" r="3" fill="#713c45"/><path d="M42 66c5 5 11 5 16 0" fill="none" stroke="#713c45" stroke-width="3" stroke-linecap="round"/>',
+            '<path d="M34 54h7m18 0h7" stroke="#713c45" stroke-width="3" stroke-linecap="round"/><path d="M42 63c5 2 11 2 16 0" fill="none" stroke="#713c45" stroke-width="3" stroke-linecap="round"/>',
+            '<circle cx="37" cy="54" r="3" fill="#713c45"/><circle cx="63" cy="54" r="3" fill="#713c45"/><path d="M42 66c5-3 11-3 16 0" fill="none" stroke="#713c45" stroke-width="3" stroke-linecap="round"/>',
+            '<circle cx="37" cy="54" r="3" fill="#713c45"/><circle cx="63" cy="54" r="3" fill="#713c45"/><path d="M43 64c4 3 10 3 14 0" fill="none" stroke="#713c45" stroke-width="3" stroke-linecap="round"/><path d="M48 72h4" stroke="#c9a16a" stroke-width="2" stroke-linecap="round"/>'
+          ]
+          face=variants[(day-1)%len(variants)]
+          svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-day="{day}"><rect width="100" height="100" rx="28" fill="#fffaf3"/><path d="M19 51c2-21 15-34 31-34 17 0 29 13 31 34" fill="none" stroke="#9d5963" stroke-width="5" stroke-linecap="round"/><path d="M27 44c6-6 12-8 18-8m10 0c7 0 13 2 18 8" fill="none" stroke="#c9a16a" stroke-width="3.5" stroke-linecap="round"/>{face}<path d="M48 59c-2 2-2 4 0 5 2-1 2-3 0-5" fill="none" stroke="#c9a16a" stroke-width="2" stroke-linecap="round"/></svg>'''
+          Path("favicon.svg").write_text(svg, encoding="utf-8")
+      - name: Commit if changed
+        run: |
+          git config user.name "IMA Daily Steward"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add favicon.svg
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: daily IMA doodle refresh"
+          git push
