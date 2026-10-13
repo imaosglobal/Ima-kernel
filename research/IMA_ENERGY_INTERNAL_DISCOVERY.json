@@ -12,6 +12,7 @@
     "Every completed finding must generate the next highest-value question."
   ],
   "loop": [
+    "ZERO",
     "OBSERVE",
     "MEASURE",
     "MODEL",
@@ -21,7 +22,8 @@
     "VERIFY",
     "RECORD",
     "TEACH",
-    "GENERATE_NEXT_QUESTION"
+    "GENERATE_NEXT_QUESTION",
+    "ZERO"
   ],
   "initial_hypotheses": [
     {
@@ -59,5 +61,7 @@
       "teaching_artifacts_created"
     ],
     "success_rule": "No improvement is counted unless a measurable change in evidence, model quality, test coverage, or teaching capability is recorded."
-  }
+  },
+  "canonical_zero_point": "research/IMA_ZERO_POINT_DISCOVERY_PROTOCOL.json",
+  "integration_rule": "This is a specialized research loop inside IMA's single canonical ZERO cycle; it does not create a second reset or baseline. Enter from ZERO, perform the research with evidence and measurement, record what changed or was falsified, teach only what is supported, generate the next question, and return to ZERO."
 }
