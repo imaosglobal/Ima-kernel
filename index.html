@@ -6,6 +6,15 @@
 <meta name="description" content="אמא — בינה אנושית־מרכזית. מרחב אישי לשיחה, למידה, יצירה, זיכרון וקהילה, כשהאדם נשאר במרכז.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://imaosglobal.github.io/Ima-kernel/">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#f6f1e8">
+<meta property="og:url" content="https://imaosglobal.github.io/Ima-kernel/">
+<meta property="og:site_name" content="אמא — IMA">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="אמא — בינה אנושית־מרכזית">
+<meta name="twitter:description" content="מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.">
 <meta property="og:title" content="אמא — בינה אנושית־מרכזית">
 <meta property="og:description" content="מרחב אישי לשיחה, למידה, יצירה וחיבור בין אנשים וטכנולוגיה.">
 <meta property="og:type" content="website">
@@ -38,6 +47,12 @@ h2{font-size:2rem;letter-spacing:-.025em;margin:0 0 10px}.lead{font-size:1.05rem
 footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.84rem;padding:35px 0 10px}.status{font-size:.78rem;color:var(--muted)}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#b9afa1;margin-left:5px}.online .dot{background:#4d9a69}.error{color:#9d3434;font-size:.85rem}
 @media(max-width:800px){header{height:auto;padding:7px 0;align-items:flex-start}nav{display:none}.hero{grid-template-columns:1fr;gap:15px;padding:48px 0 35px;min-height:auto}.visual{min-height:260px;order:-1}.halo{width:230px;height:230px}.visual .mark{width:125px;height:125px}h1{font-size:clamp(3.2rem,18vw,5rem)}.grid,.product{grid-template-columns:1fr}.card{padding:22px}.composer{grid-template-columns:1fr}.composer button{min-height:48px}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"IMA — Human-Centered Intelligence","alternateName":"אמא","url":"https://imaosglobal.github.io/Ima-kernel/","logo":"https://imaosglobal.github.io/Ima-kernel/favicon.svg","founder":{"@type":"Person","name":"Ori Cohen"}},
+{"@type":"WebSite","name":"אמא — בינה אנושית־מרכזית","url":"https://imaosglobal.github.io/Ima-kernel/","inLanguage":"he-IL","description":"מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר."}
+]}
+</script>
 </head>
 <body>
 <div class="shell">
@@ -48,7 +63,7 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 
 <section class="hero">
 <div><p class="eyebrow">IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p><h1>אמא<br><span>של כולם.</span></h1><p class="lead">מרחב אישי לחשוב, ללמוד, ליצור ולהתחבר. אמא לומדת עם האדם — לא במקומו — ושומרת על הזיכרון האישי בשליטתו.</p>
-<div class="cta"><button class="primary" id="enter">כניסה עם Google</button><button class="secondary" data-tab="ima">להכיר את אמא</button></div>
+<div class="cta"><button class="primary" id="enter">כניסה עם Google</button><button class="secondary" data-tab="ima">להכיר את אמא</button><button class="secondary" id="share">לשתף את אמא</button></div>
 <div class="signin"><div id="google-button" class="google"></div><div id="identity" class="identity"></div></div>
 <div id="login-note" class="status" style="margin-top:8px"></div></div>
 <div class="visual"><div class="halo"></div><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g2" x1="0" x2="1"><stop stop-color="#a85c63"/><stop offset="1" stop-color="#c59a61"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="url(#g2)"/><path d="M28 68V34c0-3 4-4 6-1l16 21 16-21c2-3 6-2 6 1v34" fill="none" stroke="#fffaf2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -77,6 +92,9 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 </div>
 <script>
 const API='https://ima-915m.onrender.com';let token=null,identity=null;
+function showLoginRequired(){ $('#login-note').textContent='כדי לדבר עם אמא נדרשת כניסה מאומתת עם Google. השיחה אינה זמינה לאורחים.'; $('#google-button').scrollIntoView({behavior:'smooth',block:'center'}); }
+async function shareIMA(){const data={title:'אמא — בינה אנושית־מרכזית',text:'הכירו את אמא — מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.',url:location.href};try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);$('#login-note').textContent='הקישור לאמא הועתק. אפשר לשתף אותו.'}}catch(e){}}
+$('#share').onclick=shareIMA;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 function switchTab(name){$$('[data-panel]').forEach(p=>p.classList.toggle('active',p.dataset.panel===name));$$('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===name));$('#world').scrollIntoView({behavior:'smooth',block:'start'})}
 $$('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
