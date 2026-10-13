@@ -66,8 +66,8 @@ def _provider_execution_allowed(provider: str) -> bool:
 
 
 
-def _issue_session():
-    user_id = secrets.token_urlsafe(24)
+def _issue_session(user_id=None):
+    user_id = user_id or secrets.token_urlsafe(24)
     signature = hmac.new(
         SESSION_SECRET.encode(), user_id.encode(), hashlib.sha256
     ).hexdigest()
@@ -121,6 +121,44 @@ def add_cors(response):
 @app.route("/ima-api/chat", methods=["OPTIONS"])
 def chat_options():
     return ("", 204)
+
+@app.get("/ima-api/auth/config")
+def auth_config():
+    return jsonify({
+        "google": {
+            "enabled": bool(os.environ.get("GOOGLE_CLIENT_ID", "").strip()),
+            "client_id": os.environ.get("GOOGLE_CLIENT_ID", "").strip() or None,
+        },
+        "memory": "consent-based",
+    })
+
+@app.post("/ima-api/auth/google")
+def google_auth():
+    payload = request.get_json(silent=True) or {}
+    credential = str(payload.get("credential") or "").strip()
+    client_id = os.environ.get("GOOGLE_CLIENT_ID", "").strip()
+    if not credential or not client_id:
+        return jsonify({"error": "Google sign-in is not configured"}), 503
+    try:
+        response = requests.get("https://oauth2.googleapis.com/tokeninfo", params={"id_token": credential}, timeout=10)
+        response.raise_for_status()
+        claims = response.json()
+        if claims.get("aud") != client_id:
+            return jsonify({"error": "Google credential audience mismatch"}), 401
+        if claims.get("iss") not in {"accounts.google.com", "https://accounts.google.com"}:
+            return jsonify({"error": "Google credential issuer mismatch"}), 401
+        if int(claims.get("exp", "0")) <= int(time.time()):
+            return jsonify({"error": "Google credential expired"}), 401
+        subject = claims.get("sub")
+        if not subject:
+            return jsonify({"error": "Google credential missing subject"}), 401
+        user_id = "google:" + subject
+        return jsonify({"token": _issue_session(user_id), "scope": "google-user", "user": {"id": user_id, "name": claims.get("name"), "email": claims.get("email"), "picture": claims.get("picture"), "email_verified": claims.get("email_verified") == "true"}})
+    except requests.HTTPError:
+        return jsonify({"error": "Google credential could not be verified"}), 401
+    except Exception:
+        app.logger.exception("Google authentication failed")
+        return jsonify({"error": "Google authentication unavailable"}), 502
 
 @app.route("/ima-api/session", methods=["GET", "OPTIONS"])
 def session():
