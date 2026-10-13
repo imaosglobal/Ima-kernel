@@ -1,0 +1,71 @@
+{
+  "schema": "IMA-UNIFIED-SYSTEM-1.0",
+  "status": "CANONICAL",
+  "purpose": "Single architectural contract that unifies IMA identity, runtime, memory, feedback, capability learning, zero-point reorientation, research, safety, age assurance, provenance, daily evolution, and verification without creating parallel authorities.",
+  "canonical_vision": "IMA_CANONICAL_VISION.md",
+  "canonical_authorities": {
+    "brain_orchestrator": "learning/meta_orchestrator.py",
+    "runtime": "kernel/runtime/CANONICAL/python_bridge.py",
+    "memory": "learning/learning_memory.py",
+    "feedback": "learning/feedback_engine.py",
+    "learning_registry": "learning/module_registry.py",
+    "capability_loop": ".ima/plugins/CAPABILITY_LEARNING_LOOP.md",
+    "zero_point": "research/IMA_ZERO_POINT_DISCOVERY_PROTOCOL.json",
+    "energy_research": "research/IMA_ENERGY_INTERNAL_DISCOVERY.json",
+    "age_assurance": "learning/age_assurance.py",
+    "daily_workflow": ".github/workflows/ima-daily-learning-summary.yml",
+    "self_evolution": ".ima/evolution/SELF_TIMELINE.json"
+  },
+  "truth_states": [
+    "ESTABLISHED_FACT",
+    "SUPPORTED_FINDING",
+    "OPEN_HYPOTHESIS",
+    "INTERPRETATION",
+    "METAPHOR",
+    "UNKNOWN"
+  ],
+  "system_cycle": [
+    "ZERO",
+    "CONTEXT_HISTORY_INTENT",
+    "OBSERVE",
+    "DISTINGUISH_FACT_INFERENCE_UNCERTAINTY",
+    "DISCOVER_MAP_CONNECT_AUTHENTICATE_EXECUTE",
+    "MEASURE",
+    "MODEL_PREDICT",
+    "TRY_TO_DISPROVE",
+    "RISK_SAFETY_PRIVACY_AUTHORIZATION_CHECK",
+    "VERIFY",
+    "RECORD_PROVENANCE",
+    "INTEGRATE",
+    "TEACH",
+    "REASSESS",
+    "GENERATE_NEXT_QUESTION",
+    "ZERO"
+  ],
+  "authority_rules": [
+    "One canonical brain/orchestrator; no parallel brain or orchestrator.",
+    "One canonical memory write authority.",
+    "One canonical feedback processing authority.",
+    "One canonical ZERO reorientation boundary.",
+    "Specialized research and capability loops are child loops, not independent systems.",
+    "Private memory and identity remain user-scoped; shareable knowledge must be explicitly designated and verified.",
+    "A capability is never verified merely because a provider advertises it.",
+    "No improvement is counted without measurable evidence.",
+    "No connection, deployment, user count, age verification, or capability is represented as complete without evidence.",
+    "Every meaningful change records provenance, verification status, and what remains unknown."
+  ],
+  "daily_outputs": [
+    "self-evolution timeline",
+    "daily learning summary",
+    "development journal",
+    "capability/research evidence",
+    "regression-test results",
+    "open gaps and next highest-value questions"
+  ],
+  "no_duplication": [
+    "Do not create new brain/orchestrator/kernel/reset/zero-point authority.",
+    "Do not create a second memory write path or feedback authority.",
+    "Do not count static inventory as learning.",
+    "Do not turn hypotheses or metaphors into verified knowledge without evidence."
+  ]
+}
