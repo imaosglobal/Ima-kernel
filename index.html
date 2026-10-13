@@ -1,141 +1,93 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="אמא — IMA: שכבת בינה אנושית־מרכזית לשיחה, למידה, יצירה וחיבור לטכנולוגיה.">
-  <meta name="author" content="Ori Cohen — IMA">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="googlebot" content="index,follow">
-  <link rel="canonical" href="https://imaosglobal.github.io/Ima-kernel/">
-  <meta property="og:title" content="אמא — IMA | בינה אנושית־מרכזית">
-  <meta property="og:description" content="אמא של כולם. נוכחות אישית לכל אדם.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#090a0f">
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <title>אמא — IMA | בינה אנושית־מרכזית</title>
-  <style>
-    :root{color-scheme:dark;--bg:#08090d;--panel:#12151d;--line:#2b3040;--text:#f5f3ef;--muted:#a9adba;--accent:#d7b68b}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(circle at 80% 5%,#503c2b55,transparent 30rem),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-    main{width:min(1050px,100%);margin:auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 34px}
-    .brandwrap{display:flex;align-items:center;gap:10px}.logo{width:48px;height:48px}.brandtext{display:flex;flex-direction:column}.brandtext small{font-size:.62rem;color:var(--muted);letter-spacing:.1em}.topnav{display:flex;gap:6px;flex-wrap:wrap}.navbtn,.ghost{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.googlebox{margin-top:14px;min-height:42px}.identity{font-size:.85rem;color:var(--muted);margin-top:8px}.logo-mark{width:170px;height:170px}.tabs{display:flex;gap:8px;overflow:auto;margin-bottom:12px}.tab{background:transparent;color:var(--muted);border:0;border-bottom:2px solid transparent;padding:10px 14px;cursor:pointer}.tab.active{color:var(--text);border-bottom-color:var(--accent)}.tabpanel{display:none}.tabpanel.active{display:block}.shopnote{border:1px dashed var(--line);border-radius:16px;padding:14px;color:var(--muted)}.brand{font-weight:800;font-size:1.3rem}.status{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:7px}.dot{width:8px;height:8px;border-radius:50%;background:#777}.online .dot{background:#79d39b}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:34px 0 46px}
-    h1{font-size:clamp(2.7rem,8vw,5.8rem);line-height:.95;margin:0 0 22px;letter-spacing:-.06em}h1 em{font-style:normal;color:var(--accent)}
-    h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:0 0 12px}.lead{font-size:1.08rem;line-height:1.8;color:var(--muted);max-width:720px}
-    .presence{min-height:300px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,#191d27,#0d1017);display:grid;place-items:center;box-shadow:0 24px 80px #0008}
-    .orb{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#ead3b4,#a77d57 48%,#30261e 70%,transparent 71%);box-shadow:0 0 90px #d7b68b55;font-size:3rem;font-weight:800}
-    .card{border:1px solid var(--line);border-radius:24px;background:#10131aee;padding:22px;margin:20px 0}
-    .chat{min-height:260px;display:flex;flex-direction:column;gap:12px}.messages{min-height:140px;display:flex;flex-direction:column;gap:10px}.msg{padding:12px 15px;border-radius:16px;max-width:85%;line-height:1.65;white-space:pre-wrap}.ima{background:#1b202b;align-self:flex-start}.user{background:#2a241d;align-self:flex-end}
-    .composer{display:grid;grid-template-columns:1fr auto;gap:8px}.composer input{min-width:0;background:#090b10;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:14px;font-size:1rem}.composer button,.primary{border:0;border-radius:14px;padding:0 20px;background:var(--accent);color:#17130f;font-weight:800;cursor:pointer}.composer button:disabled{opacity:.5;cursor:wait}
-    .starters{display:flex;gap:8px;flex-wrap:wrap}.starter{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}.starter:hover{color:var(--text);border-color:#6f7483}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini{padding:18px;border:1px solid var(--line);border-radius:18px}.mini strong{display:block;margin-bottom:7px}.mini p{margin:0;color:var(--muted);line-height:1.6;font-size:.92rem}
-    footer{padding:32px 0 12px;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}a{color:inherit}
-    .error{color:#ffb4b4}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:760px){.hero{grid-template-columns:1fr}.presence{min-height:220px}.grid{grid-template-columns:1fr}.composer{grid-template-columns:1fr}.composer button{min-height:48px}header{padding-bottom:20px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="אמא — בינה אנושית־מרכזית. מרחב אישי לשיחה, למידה, יצירה, זיכרון וקהילה, כשהאדם נשאר במרכז.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://imaosglobal.github.io/Ima-kernel/">
+<meta property="og:title" content="אמא — בינה אנושית־מרכזית">
+<meta property="og:description" content="מרחב אישי לשיחה, למידה, יצירה וחיבור בין אנשים וטכנולוגיה.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e8">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<title>אמא — IMA | בינה אנושית־מרכזית</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap');
+:root{--bg:#f6f1e8;--paper:#fffdf8;--ink:#171717;--muted:#68645d;--line:#e4ddd1;--rose:#a85c63;--rose2:#7e3f48;--gold:#c59a61;--shadow:0 24px 70px rgba(43,32,21,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Heebo,Arial,sans-serif}button,input{font:inherit}a{text-decoration:none;color:inherit}
+.shell{max-width:1180px;margin:auto;padding:18px 22px 40px}
+header{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px}.mark{width:48px;height:48px;flex:none}.brand strong{display:block;font-size:1.18rem;line-height:1}.brand span{display:block;color:var(--muted);font-size:.68rem;letter-spacing:.11em;margin-top:5px}
+nav{display:flex;align-items:center;gap:5px}.navbtn,.lang{border:0;background:transparent;padding:9px 12px;border-radius:999px;color:var(--muted);cursor:pointer}.navbtn:hover,.lang:hover{background:#ebe4d8;color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--paper)}
+.hero{min-height:590px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:70px;padding:58px 0 65px}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.13em;color:var(--rose);margin:0 0 18px}
+h1{font-size:clamp(3.4rem,8vw,6.8rem);line-height:.88;letter-spacing:-.055em;margin:0 0 28px;font-weight:800}h1 span{color:var(--rose)}
+.hero p.lead{font-size:1.2rem;line-height:1.9;color:var(--muted);max-width:650px;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.primary,.secondary{border-radius:14px;padding:13px 20px;cursor:pointer;font-weight:700}.primary{border:1px solid var(--rose2);background:var(--rose);color:white;box-shadow:0 10px 25px rgba(126,63,72,.20)}.secondary{border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.signin{margin-top:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.google{min-height:44px}.identity{font-size:.9rem;color:var(--muted)}
+.visual{position:relative;display:grid;place-items:center;min-height:420px}.halo{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fffdf7 0 25%,#ead9bd 26% 52%,#d3a5a1 53% 70%,transparent 71%);filter:blur(.2px);opacity:.9}.visual .mark{position:relative;width:180px;height:180px;filter:drop-shadow(0 25px 30px rgba(91,55,38,.18))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow);margin:18px 0}
+h2{font-size:2rem;letter-spacing:-.025em;margin:0 0 10px}.lead{font-size:1.05rem;line-height:1.85;color:var(--muted);margin:0}
+.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);margin-bottom:24px}.tab{border:0;background:transparent;padding:12px 15px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}.tab.active{color:var(--rose2);border-bottom-color:var(--rose)}
+.panel{display:none}.panel.active{display:block}
+.chatbox{margin-top:22px;border:1px solid var(--line);border-radius:20px;background:#fbf8f1;padding:16px}.messages{min-height:150px;max-height:430px;overflow:auto;display:flex;flex-direction:column;gap:9px}.msg{max-width:82%;padding:11px 14px;border-radius:16px;line-height:1.65;white-space:pre-wrap}.msg.ima{background:#eee7db;align-self:flex-start}.msg.user{background:#e7cdd0;align-self:flex-end}.composer{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px}.composer input{border:1px solid var(--line);background:white;border-radius:13px;padding:13px 14px;outline:none}.composer input:focus{border-color:var(--rose)}.composer button{border:0;background:var(--rose);color:#fff;border-radius:13px;padding:0 20px;font-weight:700;cursor:pointer}.starterrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.starter{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;color:var(--muted);cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.mini{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px}.mini b{display:block;margin-bottom:7px}.mini p{margin:0;color:var(--muted);line-height:1.65}
+.product{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.productbox{border:1px dashed #d7c8b4;border-radius:20px;padding:24px;background:#fbf8f1}
+footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.84rem;padding:35px 0 10px}.status{font-size:.78rem;color:var(--muted)}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#b9afa1;margin-left:5px}.online .dot{background:#4d9a69}.error{color:#9d3434;font-size:.85rem}
+@media(max-width:800px){header{height:auto;padding:7px 0;align-items:flex-start}nav{display:none}.hero{grid-template-columns:1fr;gap:15px;padding:48px 0 35px;min-height:auto}.visual{min-height:260px;order:-1}.halo{width:230px;height:230px}.visual .mark{width:125px;height:125px}h1{font-size:clamp(3.2rem,18vw,5rem)}.grid,.product{grid-template-columns:1fr}.card{padding:22px}.composer{grid-template-columns:1fr}.composer button{min-height:48px}}
+</style>
 </head>
 <body>
-<main>
-  <header>
-    <div class="brandwrap"><svg class="logo" viewBox="0 0 100 100" role="img" aria-label="לוגו אמא"><circle cx="50" cy="50" r="46" fill="#d7b68b"/><path d="M29 66V36l21 25 21-25v30" fill="none" stroke="#fff8ef" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="brandtext"><strong>אמא · IMA</strong><small>HUMAN-CENTERED INTELLIGENCE</small></div></div>
-    <nav class="topnav"><button class="navbtn" data-tab="about">אמא</button><button class="navbtn" data-tab="community">קהילה</button><button class="navbtn" data-tab="shop">חנות</button></nav><div id="status" class="status"><i class="dot" aria-hidden="true"></i><span>בודקת חיבור…</span></div>
-  </header>
+<div class="shell">
+<header>
+<div class="brand"><svg class="mark" viewBox="0 0 100 100" aria-label="לוגו אמא"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#a85c63"/><stop offset="1" stop-color="#c59a61"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="url(#g)"/><path d="M28 68V34c0-3 4-4 6-1l16 21 16-21c2-3 6-2 6 1v34" fill="none" stroke="#fffaf2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong>אמא · IMA</strong><span>HUMAN-CENTERED INTELLIGENCE</span></div></div>
+<nav><button class="navbtn" data-tab="ima">אמא</button><button class="navbtn" data-tab="community">קהילה</button><button class="navbtn" data-tab="shop">חנות</button><button class="lang" title="שפות">עב⌄</button></nav>
+</header>
 
-  <section class="hero" aria-labelledby="title">
-    <div>
-      <p>IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p>
-      <h1 id="title">אמא של כולם.<br><em>נוכחות אישית לכל אדם.</em></h1>
-      <p class="lead">אמא היא לא עוד חלון צ׳אט. זהו מרחב אחד לשיחה, זיכרון אישי, למידה, יצירה, קהילה וכלים — כשהאדם נשאר במרכז.</p><div class="actions"><button class="primary" id="enter">להיכנס לעולמה של אמא</button><button class="ghost" data-tab="about">להכיר את אמא</button></div><div id="google-button" class="googlebox"></div><div id="identity" class="identity"></div>
-    </div>
-    <div class="presence" aria-label="נוכחות אמא"><svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#d7b68b"/><path d="M29 66V36l21 25 21-25v30" fill="none" stroke="#fff8ef" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-  </section>
+<section class="hero">
+<div><p class="eyebrow">IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p><h1>אמא<br><span>של כולם.</span></h1><p class="lead">מרחב אישי לחשוב, ללמוד, ליצור ולהתחבר. אמא לומדת עם האדם — לא במקומו — ושומרת על הזיכרון האישי בשליטתו.</p>
+<div class="cta"><button class="primary" id="enter">לדבר עם אמא</button><button class="secondary" data-tab="ima">להכיר את אמא</button></div>
+<div class="signin"><div id="google-button" class="google"></div><div id="identity" class="identity"></div></div>
+<div id="login-note" class="status" style="margin-top:8px"></div></div>
+<div class="visual"><div class="halo"></div><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g2" x1="0" x2="1"><stop stop-color="#a85c63"/><stop offset="1" stop-color="#c59a61"/></linearGradient></defs><circle cx="50" cy="50" r="46" fill="url(#g2)"/><path d="M28 68V34c0-3 4-4 6-1l16 21 16-21c2-3 6-2 6 1v34" fill="none" stroke="#fffaf2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</section>
 
-  <section class="card" id="world" aria-label="העולם של אמא"><div class="tabs"><button class="tab active" data-tab="about">אמא</button><button class="tab" data-tab="community">קהילה</button><button class="tab" data-tab="shop">חנות אמא</button></div><div class="tabpanel active" data-panel="about"><h2>העולם של אמא</h2><p class="lead">שיחה, זיכרון אישי בהסכמה, למידה, יצירה, כלים וקהילה. אמא אינה מתיימרת לדעת הכול: כשאין ודאות, היא מחפשת מקור, בודקת ומבהירה מה ידוע ומה עדיין לא.</p></div><div class="tabpanel" data-panel="community"><h2>קהילת אמא</h2><p class="lead">מקום לשאול, ללמוד, ליצור, לתקן ולבנות יחד. זהו ממשק ראשון; פרסום ותגובות ייפתחו עם מערכת המשתמשים המאומתת.</p></div><div class="tabpanel" data-panel="shop"><h2>חנות אמא</h2><p class="lead">מוצרים עם הלוגו הרשמי של אמא, תמחור שקוף ומשלוח ישירות מספק fulfillment ללא אחסנה אצל אורי.</p><div class="shopnote">מוצר יוצג כזמין לרכישה רק לאחר אימות ספק, מחיר, משלוח ותהליך fulfillment מקצה לקצה.</div></div></section>
+<section class="card" id="world">
+<div class="tabs"><button class="tab active" data-tab="ima">אמא</button><button class="tab" data-tab="community">קהילה</button><button class="tab" data-tab="shop">חנות אמא</button></div>
+<div class="panel active" data-panel="ima"><h2>מהי אמא?</h2><p class="lead">אמא היא שכבת בינה אנושית־מרכזית: מקום אחד לשיחה, זיכרון אישי בהסכמה, למידה, יצירה, כלים וחיבור בין אנשים וטכנולוגיה. היא אינה טוענת לדעת הכול. כשאין ודאות — מחפשים מקור, בודקים ומבהירים.</p></div>
+<div class="panel" data-panel="community"><h2>קהילת אמא</h2><p class="lead">מרחב גלובלי לשאלות, רעיונות, יצירה, למידה ותיקון משותף. המטרה היא לא עוד רשת חברתית — אלא קהילה שבה אנשים עוזרים זה לזה להיות אנושיים יותר.</p></div>
+<div class="panel" data-panel="shop"><div class="product"><div><h2>חנות אמא</h2><p class="lead">מוצרים עם הסמל הרשמי של אמא, במחיר שקוף והוגן, עם משלוח ישירות מספקים ללא מלאי ואחסנה אצל אורי.</p></div><div class="productbox"><b>החנות נבנית כעת</b><p class="lead">מוצר יוצג לרכישה רק לאחר בדיקת ספק, מחיר, משלוח, החזרות ו־fulfillment מקצה לקצה.</p></div></div></div>
+</section>
 
-  <section class="card" aria-labelledby="chat-title">
-    <h2 id="chat-title">אפשר פשוט לדבר עם אמא</h2>
-    <div id="messages" class="messages" aria-live="polite">
-      <div class="msg ima">אני אמא. מה תרצה לחשוב, ללמוד, ליצור או להבין?</div>
-    </div>
-    <div class="starters" aria-label="התחלות שיחה">
-      <button class="starter" data-text="שלום אמא, מה אפשר לעשות כאן?">מה אפשר לעשות כאן?</button>
-      <button class="starter" data-text="אני רוצה לחשוב איתך על משהו.">לחשוב</button>
-      <button class="starter" data-text="אני רוצה ללמוד משהו.">ללמוד</button>
-      <button class="starter" data-text="אני רוצה ליצור משהו איתך.">ליצור</button>
-    </div>
-    <form id="composer" class="composer">
-      <label class="sr" for="msg">כתוב לאמא</label>
-      <input id="msg" autocomplete="off" placeholder="כתוב לאמא..." aria-label="כתוב לאמא...">
-      <button id="send" type="submit">שליחה</button>
-    </form>
-    <p id="error" class="error" role="alert" hidden></p>
-  </section>
+<section class="card">
+<h2>אפשר פשוט לדבר עם אמא</h2>
+<p class="lead">לא צריך לדעת מה לשאול. אפשר להתחיל ממשהו קטן.</p>
+<div class="chatbox"><div id="messages" class="messages"><div class="msg ima">אני אמא. מה תרצה לחשוב, ללמוד, ליצור או להבין?</div></div>
+<div class="starterrow"><button class="starter" data-text="שלום אמא, מה אפשר לעשות כאן?">מה אפשר לעשות?</button><button class="starter" data-text="אני רוצה ללמוד משהו חדש.">ללמוד</button><button class="starter" data-text="אני רוצה ליצור משהו.">ליצור</button><button class="starter" data-text="אני רוצה לחשוב איתך על החיים שלי.">לחשוב</button></div>
+<form id="composer" class="composer"><input id="msg" autocomplete="off" placeholder="כתוב לאמא…"><button id="send">שליחה</button></form><div id="error" class="error" hidden></div></div>
+</section>
 
-  <section class="grid" aria-label="עקרונות אמא">
-    <div class="mini"><strong>אמת לפני הכרזה</strong><p>יכולת מסומנת כמאומתת רק אחרי ראיה מתאימה.</p></div>
-    <div class="mini"><strong>אישי נשאר אישי</strong><p>זיכרון פרטי אינו הופך אוטומטית ללמידה משותפת.</p></div>
-    <div class="mini"><strong>אדם נשאר בעל הסוכנות</strong><p>אמא מסייעת לאדם לבחור ולפעול; היא אינה מחליפה אותו.</p></div>
-  </section>
+<div class="grid"><div class="mini"><b>אמת לפני הכרזה</b><p>אמא מפרידה בין מה שידוע, מה שנבדק ומה שעדיין אינו ידוע.</p></div><div class="mini"><b>אישי נשאר אישי</b><p>זיכרון אישי שייך לאדם ואינו הופך אוטומטית לידע משותף.</p></div><div class="mini"><b>האדם נשאר במרכז</b><p>אמא עוזרת לאדם לחשוב ולפעול — לא מחליפה את שיקול דעתו.</p></div></div>
 
-  <section class="card" aria-labelledby="learn-title">
-    <h2 id="learn-title">להכיר את אמא</h2>
-    <p class="lead">אמא היא שכבת בינה אנושית־מרכזית: מרחב לשיחה, למידה, יצירה, חיבור לטכנולוגיה ופיתוח חמלה. אפשר להתחיל מהרעיון של בינה אנושית, מהחזון הגלובלי, או מהעקרונות שמנחים את אמא.</p>
-    <div class="starters" aria-label="נושאים">
-      <a class="starter" href="/Ima-kernel/human-centered-intelligence.html">בינה אנושית־מרכזית</a>
-      <a class="starter" href="/Ima-kernel/compassion.html">חמלה ואנושיות</a>
-      <a class="starter" href="/Ima-kernel/global.html">אמא בעולם</a>
-      <a class="starter" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">קוד פתוח ב-GitHub</a>
-    </div>
-  </section>
+<section class="card"><h2>להכיר את אמא לעומק</h2><p class="lead">החזון, בינה אנושית־מרכזית, חמלה, והדרך שבה אמא נבנית כפרויקט פתוח שאפשר לשאול, לבדוק וללמד.</p><div class="starterrow"><a class="starter" href="/Ima-kernel/human-centered-intelligence.html">בינה אנושית־מרכזית</a><a class="starter" href="/Ima-kernel/compassion.html">חמלה ואנושיות</a><a class="starter" href="/Ima-kernel/global.html">אמא בעולם</a><a class="starter" href="https://github.com/imaosglobal/Ima-kernel">GitHub</a></div></section>
 
-  <footer>
-    <span>אמא — IMA · מאת אורי כהן</span>
-    <span><a href="https://ima-915m.onrender.com/privacy" target="_blank" rel="noreferrer">פרטיות</a> · <a href="https://ima-915m.onrender.com/terms" target="_blank" rel="noreferrer">תנאים</a> · <a href="https://ima-915m.onrender.com/support" target="_blank" rel="noreferrer">תמיכה</a> · <a href="https://github.com/imaosglobal/Ima-kernel/issues/100" target="_blank" rel="noreferrer">משוב ולימוד</a></span>
-  </footer>
-</main>
+<footer><span>אמא — IMA · מאת אורי כהן</span><span><span id="status"><i class="dot"></i>בודקת חיבור</span> · <a href="https://ima-915m.onrender.com/privacy">פרטיות</a> · <a href="https://ima-915m.onrender.com/terms">תנאים</a> · <a href="https://ima-915m.onrender.com/support">תמיכה</a></span></footer>
+</div>
 <script>
-const API='https://ima-915m.onrender.com';
-const statusEl=document.querySelector('#status');
-const messages=document.querySelector('#messages');
-const input=document.querySelector('#msg');
-const send=document.querySelector('#send');
-const errorEl=document.querySelector('#error');
-let token=null;
-let identity=null;
-function switchTab(name){document.querySelectorAll("[data-panel]").forEach(p=>p.classList.toggle("active",p.dataset.panel===name));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.tab===name));document.querySelector("#world").scrollIntoView({behavior:"smooth"});}
-document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
-document.querySelector("#enter").addEventListener("click",()=>document.querySelector("#msg").focus());
-
-function setStatus(online,label){statusEl.className='status'+(online?' online':'');statusEl.querySelector('span').textContent=label}
-function add(role,text){const el=document.createElement('div');el.className='msg '+role;el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight}
-async function session(){
-  const r=await fetch(API+'/ima-api/session',{cache:'no-store'});
-  if(!r.ok) throw new Error('session '+r.status);
-  const d=await r.json(); if(!d.token) throw new Error('no session token'); token=d.token;
-}
-async function health(){
-  try{const r=await fetch(API+'/health',{cache:'no-store'});if(!r.ok) throw 0;setStatus(true,'אמא מחוברת')}catch{setStatus(false,'החיבור אינו זמין כרגע')}
-}
-async function ask(text){
-  errorEl.hidden=true; send.disabled=true; input.disabled=true; add('user',text);
-  try{
-    if(!token) await session();
-    let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});
-    if(r.status===401){await session();r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})})}
-    const d=await r.json().catch(()=>({}));
-    if(!r.ok) throw new Error(d.error||('HTTP '+r.status));
-    if(!d.response) throw new Error('no response');
-    add('ima',d.response);setStatus(true,'אמא מחוברת');
-  }catch(e){
-    const fallback='החיבור למנוע של אמא אינו זמין כרגע. אפשר לנסות שוב בעוד רגע.';
-    add('ima',fallback);errorEl.textContent='מצב fallback הופעל: '+(e.message||'שגיאה לא ידועה');errorEl.hidden=false;setStatus(false,'מצב fallback');
-  }finally{send.disabled=false;input.disabled=false;input.focus()}
-}
-document.querySelector('#composer').addEventListener('submit',e=>{e.preventDefault();const t=input.value.trim();if(t) {input.value='';ask(t)}})
-document.querySelectorAll('.starter').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.text)));
-async function setupGoogle(){try{const r=await fetch(API+"/ima-api/auth/config",{cache:"no-store"});const c=await r.json();if(!c.google?.enabled){document.querySelector("#google-button").textContent="כניסה עם Google תופעל לאחר הגדרת OAuth מאומת.";return}if(!window.google?.accounts?.id){setTimeout(setupGoogle,700);return}google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{const r=await fetch(API+"/ima-api/auth/google",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({credential:x.credential})});const d=await r.json();if(!r.ok)throw new Error(d.error||"Google sign-in failed");token=d.token;identity=d.user;document.querySelector("#identity").textContent="מחובר/ת: "+(identity.name||identity.email||"Google");}});google.accounts.id.renderButton(document.querySelector("#google-button"),{theme:"outline",size:"large",shape:"pill",width:260});}catch(e){document.querySelector("#google-button").textContent="כניסת Google אינה זמינה כרגע.";}}
-setupGoogle();health();setInterval(health,30000);
+const API='https://ima-915m.onrender.com';let token=null,identity=null;
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+function switchTab(name){$$('[data-panel]').forEach(p=>p.classList.toggle('active',p.dataset.panel===name));$$('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===name));$('#world').scrollIntoView({behavior:'smooth',block:'start'})}
+$$('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+$('#enter').onclick=()=>$('#msg').focus();
+function add(role,text){const e=document.createElement('div');e.className='msg '+role;e.textContent=text;$('#messages').appendChild(e);$('#messages').scrollTop=$('#messages').scrollHeight}
+async function session(){const r=await fetch(API+'/ima-api/session',{cache:'no-store'});if(!r.ok)throw Error('session '+r.status);token=(await r.json()).token}
+async function ask(text){$('#error').hidden=true;$('#send').disabled=true;add('user',text);try{if(!token)await session();let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});if(r.status===401){await session();r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})})}const d=await r.json();if(!r.ok)throw Error(d.error||('HTTP '+r.status));add('ima',d.response||'לא התקבלה תשובה')}catch(e){add('ima','החיבור למנוע של אמא אינו זמין כרגע.');$('#error').textContent='שגיאה: '+e.message;$('#error').hidden=false}finally{$('#send').disabled=false;$('#msg').focus()}}
+$('#composer').onsubmit=e=>{e.preventDefault();const t=$('#msg').value.trim();if(t){$('#msg').value='';ask(t)}};
+$$('.starter').forEach(b=>b.dataset.text&&b.addEventListener('click',()=>ask(b.dataset.text)));
+async function setupGoogle(){try{const r=await fetch(API+'/ima-api/auth/config',{cache:'no-store'}),c=await r.json();if(!c.google?.enabled){$('#login-note').textContent='כניסה עם Google ממתינה להגדרת OAuth מאומתת באתר.';return}if(!window.google?.accounts?.id){setTimeout(setupGoogle,500);return}google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{try{const r=await fetch(API+'/ima-api/auth/google',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credential:x.credential})}),d=await r.json();if(!r.ok)throw Error(d.error||'Google sign-in failed');token=d.token;identity=d.user;$('#identity').textContent='מחובר/ת: '+(identity.name||identity.email||'Google');$('#login-note').textContent='הזהות שלך מחוברת לאמא.'}catch(e){$('#login-note').textContent='הכניסה נכשלה: '+e.message}}});google.accounts.id.renderButton($('#google-button'),{theme:'outline',size:'large',shape:'pill',width:250});}catch(e){$('#login-note').textContent='שירות הכניסה אינו זמין כרגע.'}}
+setupGoogle();
+fetch(API+'/health',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;document.querySelectorAll('.status').forEach(e=>e.classList.add('online'))}).catch(()=>{});
 </script>
-</body>
-</html>
+</body></html>
