@@ -11,6 +11,8 @@
   <meta property="og:title" content="אמא — IMA | בינה אנושית־מרכזית">
   <meta property="og:description" content="אמא של כולם. נוכחות אישית לכל אדם.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#090a0f">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <title>אמא — IMA | בינה אנושית־מרכזית</title>
   <style>
     :root{color-scheme:dark;--bg:#08090d;--panel:#12151d;--line:#2b3040;--text:#f5f3ef;--muted:#a9adba;--accent:#d7b68b}
@@ -36,17 +38,17 @@
 <body>
 <main>
   <header>
-    <div class="brand">אמא · IMA</div>
-    <div id="status" class="status"><i class="dot" aria-hidden="true"></i><span>בודקת חיבור…</span></div>
+    <div class="brandwrap"><svg class="logo" viewBox="0 0 100 100" role="img" aria-label="לוגו אמא"><circle cx="50" cy="50" r="46" fill="#d7b68b"/><path d="M29 66V36l21 25 21-25v30" fill="none" stroke="#fff8ef" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="brandtext"><strong>אמא · IMA</strong><small>HUMAN-CENTERED INTELLIGENCE</small></div></div>
+    <nav class="topnav"><button class="navbtn" data-tab="about">אמא</button><button class="navbtn" data-tab="community">קהילה</button><button class="navbtn" data-tab="shop">חנות</button></nav><div id="status" class="status"><i class="dot" aria-hidden="true"></i><span>בודקת חיבור…</span></div>
   </header>
 
   <section class="hero" aria-labelledby="title">
     <div>
       <p>IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p>
       <h1 id="title">אמא של כולם.<br><em>נוכחות אישית לכל אדם.</em></h1>
-      <p class="lead">מרחב אחד לשיחה, למידה, יצירה וחיבור לטכנולוגיה. הזיכרון האישי נשאר אישי; הידע המשותף מתקדם רק דרך מקור, בדיקה וראיות.</p>
+      <p class="lead">אמא היא לא עוד חלון צ׳אט. זהו מרחב אחד לשיחה, זיכרון אישי, למידה, יצירה, קהילה וכלים — כשהאדם נשאר במרכז.</p><div class="actions"><button class="primary" id="enter">להיכנס לעולמה של אמא</button><button class="ghost" data-tab="about">להכיר את אמא</button></div><div id="google-button" class="googlebox"></div><div id="identity" class="identity"></div>
     </div>
-    <div class="presence" aria-label="נוכחות אמא"><div class="orb" aria-hidden="true">א</div></div>
+    <div class="presence" aria-label="נוכחות אמא"><svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#d7b68b"/><path d="M29 66V36l21 25 21-25v30" fill="none" stroke="#fff8ef" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
   </section>
 
   <section class="card" aria-labelledby="chat-title">
@@ -98,6 +100,10 @@ const input=document.querySelector('#msg');
 const send=document.querySelector('#send');
 const errorEl=document.querySelector('#error');
 let token=null;
+let identity=null;
+function switchTab(name){document.querySelectorAll("[data-panel]").forEach(p=>p.classList.toggle("active",p.dataset.panel===name));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.tab===name));document.querySelector("#world").scrollIntoView({behavior:"smooth"});}
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
+document.querySelector("#enter").addEventListener("click",()=>document.querySelector("#msg").focus());
 
 function setStatus(online,label){statusEl.className='status'+(online?' online':'');statusEl.querySelector('span').textContent=label}
 function add(role,text){const el=document.createElement('div');el.className='msg '+role;el.textContent=text;messages.appendChild(el);messages.scrollTop=messages.scrollHeight}
@@ -126,7 +132,8 @@ async function ask(text){
 }
 document.querySelector('#composer').addEventListener('submit',e=>{e.preventDefault();const t=input.value.trim();if(t) {input.value='';ask(t)}})
 document.querySelectorAll('.starter').forEach(b=>b.addEventListener('click',()=>ask(b.dataset.text)));
-health();setInterval(health,30000);
+async function setupGoogle(){try{const r=await fetch(API+"/ima-api/auth/config",{cache:"no-store"});const c=await r.json();if(!c.google?.enabled){document.querySelector("#google-button").textContent="כניסה עם Google תופעל לאחר הגדרת OAuth מאומת.";return}if(!window.google?.accounts?.id){setTimeout(setupGoogle,700);return}google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{const r=await fetch(API+"/ima-api/auth/google",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({credential:x.credential})});const d=await r.json();if(!r.ok)throw new Error(d.error||"Google sign-in failed");token=d.token;identity=d.user;document.querySelector("#identity").textContent="מחובר/ת: "+(identity.name||identity.email||"Google");}});google.accounts.id.renderButton(document.querySelector("#google-button"),{theme:"outline",size:"large",shape:"pill",width:260});}catch(e){document.querySelector("#google-button").textContent="כניסת Google אינה זמינה כרגע.";}}
+setupGoogle();health();setInterval(health,30000);
 </script>
 </body>
 </html>
