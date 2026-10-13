@@ -205,7 +205,7 @@ export default function App() {
     const text = (textValue ?? input).trim();
     if (!text || busy) return;
     setMessages(m => [...m, { role: 'user', text }]);
-    setInput(''); setBusy(true); setActivity('חושבת ובודקת'); setAvatarState('thinking');
+    setInput(''); setBusy(true); setActivity('מקשיבה, בודקת ומבינה הקשר'); setAvatarState('listening');
     try {
       const response = await askIma(text);
       setMessages(m => [...m, { role: 'ima', text: response }]); setActivity('תשובה מוכנה');
@@ -229,7 +229,7 @@ export default function App() {
   ];
   const visibleCommands = commands.filter(c => c.label.includes(paletteQuery.trim())).slice(0, 8);
 
-  return <main className={'ima-app ' + (reducedMotion ? 'reduced-motion' : '')} dir="rtl" data-motion={reducedMotion ? 'reduced' : 'full'}>
+  return <main className={'ima-app ' + (reducedMotion ? 'reduced-motion' : '')} dir="rtl" data-motion={reducedMotion ? 'reduced' : 'full'} data-ima-listening-policy="human_listening_harmony_v1" data-ima-listening-scope="universal">
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#space">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
@@ -302,7 +302,7 @@ export default function App() {
     </section>
 
     <section className="chat-section" id="space">
-      <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p></div>
+      <div className="section-heading"><p className="eyebrow">THE MOTHER SPACE</p><h2>אפשר פשוט להיות כאן.</h2><p>אמא לא אמורה להרגיש כמו לוח בקרה. היא אמורה להרגיש כמו מקום שאפשר לחזור אליו.</p><p className="listening-principle">להקשיב לפני שמפרשים · להבחין בין עובדה לפרשנות · לשאול כשלא יודעים · לכבד שונות בלי לדרוש אחידות.</p></div>
       <div className="chat-shell" id="chat">
         <div className="chat-head"><div><strong>אמא</strong><span>מרחב שיחה</span></div><button aria-label={voice ? 'כיבוי קול' : 'הפעלת קול'} className={voice ? 'voice active' : 'voice'} onClick={() => setVoice(v => !v)}>◉ {voice ? 'קול פעיל' : 'קול'}</button><button className="voice" onClick={() => setShowTranscript(v => !v)} aria-pressed={showTranscript}>{showTranscript ? 'הסתרת תמלול' : 'הצגת תמלול'}</button></div>
         <div className="messages" aria-live="polite" aria-label="שיחת אמא" aria-busy={busy}>
