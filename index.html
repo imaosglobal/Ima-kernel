@@ -30,7 +30,7 @@ nav{display:flex;gap:5px}.navbtn,.lang{border:0;background:transparent;padding:9
 .hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px;padding:62px 0 72px}.eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.13em;color:var(--rose);margin:0 0 18px}
 h1{font-size:clamp(3.8rem,8vw,7rem);line-height:.86;letter-spacing:-.06em;margin:0 0 28px;font-weight:800}h1 span{color:var(--rose)}.lead{font-size:1.12rem;line-height:1.9;color:var(--muted);max-width:650px;margin:0}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.secondary{border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:13px 20px;cursor:pointer;font-weight:700}.secondary:hover{border-color:#cdbca8;transform:translateY(-1px)}
-.login-area{margin-top:18px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,253,248,.75);max-width:430px}.login-title{font-weight:800;margin-bottom:5px}.google{min-height:44px}.identity{font-size:.9rem;color:#4f6757;margin-top:9px}.login-error{font-size:.86rem;color:#963f48;margin-top:9px}
+.login-area{margin-top:18px;padding:18px 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,253,248,.75);max-width:430px}.login-title{font-weight:800;margin-bottom:5px}.google{min-height:44px}.identity{font-size:.9rem;color:#4f6757;margin-top:9px}.login-error{font-size:.86rem;color:#963f48;margin-top:9px}.share-status{font-size:.86rem;color:#4f6757;margin-top:9px}
 .visual{position:relative;display:grid;place-items:center;min-height:430px}.halo{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle at 50% 42%,#fffdf8 0 24%,#ead9bd 25% 51%,#d6a5a7 52% 69%,transparent 70%);opacity:.92}.doodle{position:relative;width:260px;height:260px;filter:drop-shadow(0 28px 28px rgba(91,55,38,.15))}.doodle path,.doodle circle,.doodle ellipse{vector-effect:non-scaling-stroke}.face{display:none}.face.active{display:block}
 .section{scroll-margin-top:30px}.card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:32px;box-shadow:var(--shadow);margin:18px 0}h2{font-size:2rem;letter-spacing:-.025em;margin:0 0 10px}
 .tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);margin-bottom:24px}.tab{border:0;background:transparent;padding:12px 15px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}.tab.active{color:var(--rose2);border-bottom-color:var(--rose)}.panel{display:none}.panel.active{display:block}
@@ -68,11 +68,9 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 <p class="lead">מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר. אמא לומדת עם האדם — לא במקומו — ומעדיפה אמת, חמלה וסקרנות על פני יומרה לדעת הכול.</p>
 <div class="cta"><a class="secondary" href="#about">להכיר את אמא</a><button class="secondary" id="share" type="button">לשתף את אמא</button></div>
 <div class="login-area" id="login-area">
-<div class="login-title">כניסה עם Google</div>
 <div id="google-button" class="google" aria-label="כניסה עם Google"></div>
-<button id="google-fallback" class="secondary" type="button" style="margin-top:10px;display:none">כניסה עם Google</button>
 <div id="identity" class="identity"></div>
-<div id="login-error" class="login-error" hidden></div>
+<div id="login-error" class="login-error" hidden></div><div id="share-status" class="share-status" hidden></div>
 </div>
 </div>
 <div class="visual"><div class="halo"></div>
@@ -88,13 +86,9 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 </svg></div>
 </section>
 
-<section class="card section" id="about">
-<h2>מהי אמא?</h2>
-<p class="lead">אמא היא שכבת בינה אנושית־מרכזית: מקום אחד לשיחה, זיכרון אישי בהסכמה, למידה, יצירה, כלים וחיבור בין אנשים וטכנולוגיה. כשאין ודאות — אמא אמורה לומר זאת, לחפש ראיות ולבדוק.</p>
-<div class="links"><a class="linkpill" href="./human-centered-intelligence.html">בינה אנושית־מרכזית</a><a class="linkpill" href="./compassion.html">חמלה ואנושיות</a><a class="linkpill" href="./global.html">אמא בעולם</a></div>
-</section>
+<section class="card section" id="about"><h2>אמא</h2><p class="lead">מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.</p></section>
 
-<section class="grid"><div class="mini"><b>אמת לפני הכרזה</b><p>מפרידים בין ידוע, נבדק, משוער ולא ידוע.</p></div><div class="mini"><b>אישי נשאר אישי</b><p>זיכרון אישי דורש הסכמה ואינו הופך אוטומטית לידע משותף.</p></div><div class="mini"><b>האדם נשאר במרכז</b><p>אמא מסייעת לחשוב ולפעול; היא אינה מחליפה שיקול דעת אנושי.</p></div></section>
+
 
 <section class="card chat-app" id="chat-app" aria-live="polite">
 <div class="chat-top"><div><h2>אמא</h2><p class="lead">הגישה נפתחה לאחר אימות Google.</p></div><button class="logout" id="logout" type="button">יציאה</button></div>
@@ -110,7 +104,7 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 
 </section>
 
-<footer><span>אמא — IMA · מאת אורי כהן</span><span><span id="status"><i class="dot"></i>בודקת חיבור</span> · <a href="https://ima-915m.onrender.com/privacy">פרטיות</a> · <a href="https://ima-915m.onrender.com/terms">תנאים</a> · <a href="https://ima-915m.onrender.com/support">תמיכה</a></span></footer>
+<footer><span>אמא — IMA · מאת אורי כהן</span><span><span id="status"><i class="dot"></i>בודקת חיבור</span> · <a href="https://ima-915m.onrender.com/privacy">פרטיות</a> · <a href="https://ima-915m.onrender.com/support">תמיכה</a></span></footer>
 </div><script>
 const API='https://ima-915m.onrender.com';let token=null,identity=null;
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
@@ -118,14 +112,14 @@ function dayDoodle(){const day=Math.floor((Date.now()-new Date(new Date().getFul
 dayDoodle();
 function showLoginError(text){const e=$('#login-error');e.textContent=text;e.hidden=!text;}
 function openChat(){if(!token||!identity)return;$('#chat-app').classList.add('open');$('#chat-app').scrollIntoView({behavior:'smooth',block:'start'});$('#msg').focus();}
-async function shareIMA(){const data={title:'אמא — בינה אנושית־מרכזית',text:'הכירו את אמא — מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.',url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);const e=$('#login-error');e.textContent='הקישור הועתק.';e.hidden=false;}}catch(e){}}
+async function shareIMA(){const data={title:'אמא — IMA',text:'הכירו את אמא.',url:location.href};const out=$('#share-status');try{if(navigator.share){await navigator.share(data);out.textContent='השיתוף נפתח.';}else if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(location.href);out.textContent='הקישור הועתק.';}else{const ta=document.createElement('textarea');ta.value=location.href;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();out.textContent='הקישור הועתק.';}out.hidden=false;}catch(e){if(e?.name==='AbortError')return;out.textContent='לא ניתן לשתף כרגע.';out.hidden=false;}}
 $('#share').onclick=shareIMA;
 $('.post-login-tabs .tab').forEach(b=>b.addEventListener('click',()=>{$('.post-login-panels .panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===b.dataset.tab));$('.post-login-tabs .tab').forEach(t=>t.classList.toggle('active',t===b));}));
 function add(role,text){const e=document.createElement('div');e.className='msg '+role;e.textContent=text;$('#messages').appendChild(e);$('#messages').scrollTop=$('#messages').scrollHeight}
 async function ask(text){if(!token||!identity)return;$('#error').hidden=true;$('#send').disabled=true;add('user',text);try{let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});const d=await r.json();if(!r.ok)throw Error(d.error||('HTTP '+r.status));add('ima',d.response||'לא התקבלה תשובה');}catch(e){$('#error').textContent='החיבור לאמא נכשל כרגע.';$('#error').hidden=false;}finally{$('#send').disabled=false;$('#msg').focus();}}
 $('#composer').onsubmit=e=>{e.preventDefault();const t=$('#msg').value.trim();if(t){$('#msg').value='';ask(t)}};
 function signedIn(d){token=d.token;identity=d.user;$('#identity').textContent='מחובר/ת: '+(identity.name||identity.email||'Google');showLoginError('');openChat();}
-async function setupGoogle(){try{const r=await fetch(API+'/ima-api/auth/config',{cache:'no-store'});const c=await r.json();if(!c.google?.enabled){showLoginError('כניסה עם Google אינה מוגדרת כרגע בשרת. יש להגדיר GOOGLE_CLIENT_ID ואת המקור המורשה של האתר.');return}let tries=0;while(!window.google?.accounts?.id&&tries<40){await new Promise(x=>setTimeout(x,250));tries++}if(!window.google?.accounts?.id){showLoginError('שירות Google לא נטען.');return}google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{try{const r=await fetch(API+'/ima-api/auth/google',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credential:x.credential})});const d=await r.json();if(!r.ok)throw Error(d.error||'Google sign-in failed');signedIn(d);}catch(e){showLoginError('האימות מול Google נכשל.')}}});google.accounts.id.renderButton($('#google-button'),{theme:'outline',size:'large',shape:'pill',width:300,text:'signin_with',locale:'he'});$('#google-fallback').style.display='inline-block';$('#google-fallback').onclick=()=>google.accounts.id.prompt();}catch(e){showLoginError('שירות הכניסה אינו זמין כרגע.');}}
+async function setupGoogle(){try{const r=await fetch(API+'/ima-api/auth/config',{cache:'no-store'});const c=await r.json();if(!c.google?.enabled)return;let tries=0;while(!window.google?.accounts?.id&&tries<80){await new Promise(x=>setTimeout(x,250));tries++;}if(!window.google?.accounts?.id)return;google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{try{const r=await fetch(API+'/ima-api/auth/google',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credential:x.credential})});const d=await r.json();if(!r.ok)throw Error(d.error||'Google sign-in failed');signedIn(d);}catch(e){showLoginError('האימות מול Google נכשל.');}}});google.accounts.id.renderButton($('#google-button'),{type:'standard',theme:'outline',size:'large',shape:'rectangular',width:320,text:'signin_with',locale:'he'});}catch(e){}}
 $('#logout').onclick=()=>{token=null;identity=null;$('#chat-app').classList.remove('open');$('#identity').textContent='';showLoginError('');window.scrollTo({top:0,behavior:'smooth'});};
 setupGoogle();
 fetch(API+'/health',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;$('#status').classList.add('online');$('#status').innerHTML='<i class="dot"></i>אמא מחוברת';}).catch(()=>{});
