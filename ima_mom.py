@@ -3,21 +3,50 @@ import json, os, time
 
 MEM_FILE = "founder/data/ima_memory.json"
 
+
 def load():
-    if os.path.exists(MEM_FILE):
-        with open(MEM_FILE, "r") as f:
-            return json.load(f)
-    return {"qa": []}
+    """Load the legacy fallback memory without letting malformed data break chat."""
+    if not os.path.exists(MEM_FILE):
+        return {"qa": []}
+
+    try:
+        with open(MEM_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError, TypeError):
+        return {"qa": []}
+
+    if not isinstance(data, dict):
+        return {"qa": []}
+
+    qa = data.get("qa")
+    if not isinstance(qa, list):
+        data["qa"] = []
+    else:
+        data["qa"] = [
+            item for item in qa
+            if isinstance(item, dict) and isinstance(item.get("q"), str)
+        ]
+    return data
+
 
 def save(mem):
     from ima_canonical_memory_adapter import save_memory
     save_memory(mem)
 
+
 def generate_answer(q, mem):
     ql = q.lower()
+    qa = mem.setdefault("qa", [])
+    if not isinstance(qa, list):
+        qa = []
+        mem["qa"] = qa
 
     # מניעת חזרות
-    recent_q = [x["q"] for x in mem["qa"][-10:]]
+    recent_q = [
+        item.get("q")
+        for item in qa[-10:]
+        if isinstance(item, dict)
+    ]
     if q in recent_q:
         return "כבר שאלת את זה. רוצה שנעמיק בזה אחרת?"
 
@@ -31,10 +60,11 @@ def generate_answer(q, mem):
     elif "היי" in ql or "שלום" in ql:
         a = "אני כאן. מה אתה צריך ממני עכשיו?"
     else:
-        a = "אני כאן, אורי. שמעתי אותך. אפשר לדבר, ליצור או לחקור משהו יחד."
+        a = "אני כאן. אפשר לדבר, ליצור או לחקור משהו יחד."
 
-    mem["qa"].append({"t": time.time(), "q": q, "a": a})
+    qa.append({"t": time.time(), "q": q, "a": a})
     return a
+
 
 def run():
     mem = load()
@@ -49,6 +79,7 @@ def run():
         print(a)
 
         save(mem)
+
 
 if __name__ == "__main__":
     run()
