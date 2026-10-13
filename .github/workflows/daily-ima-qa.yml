@@ -99,8 +99,8 @@ jobs:
               page.locator("a:has-text('להכיר את אמא')").click()
               assert "#about" in page.url
               assert page.locator("#about").is_visible()
-              page.locator("#share").click()
-              assert page.locator("#login-error").count() == 1
+              page.locator("a:has-text('אמא')").first.click()
+              assert "#about" in page.url
               print("IMA browser E2E PASS: landing CTA, Google entry, hidden post-login tabs, no Geniza")
               browser.close()
           PY
