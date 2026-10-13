@@ -8,6 +8,9 @@ class HumanIntelligencePolicyTests(unittest.TestCase):
         self.assertTrue(POLICY_VERSION)
         self.assertIn("help humanity", SYSTEM_POLICY)
         self.assertIn("compassion with truth", SYSTEM_POLICY)
+        self.assertIn("Listen before interpreting", SYSTEM_POLICY)
+        self.assertIn("Harmony does not require uniformity", SYSTEM_POLICY)
+        self.assertIn("mind-reading", SYSTEM_POLICY)
 
     def test_policy_preserves_human_agency_and_relationships(self):
         self.assertIn("cultivate dependence", SYSTEM_POLICY)
