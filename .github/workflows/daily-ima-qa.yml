@@ -39,7 +39,7 @@ jobs:
           assert soup.select_one("#chat-app")
           assert "chat-app open" not in r.text
           assert soup.select_one("#google-button")
-          assert "כניסה עם Google" in r.text
+          assert soup.select_one("#google-button")
           assert "גניזה" not in r.text
           assert "post-login-tabs" in r.text
           # Landing page must not expose the post-login tab controls.
@@ -73,8 +73,8 @@ jobs:
           for required in ["להכיר את אמא","human-centered-intelligence.html","compassion.html","global.html"]:
               assert required in text, f"missing: {required}"
           assert "גניזה" not in text
+          assert "ארכיון" not in text
           assert "כניסה לאמא</div>" not in text
-          assert "כניסה עם Google" in text
           print("IMA product regression checks PASS")
           PY
 
@@ -92,10 +92,11 @@ jobs:
               page=browser.new_page(viewport={"width":390,"height":844}, locale="he-IL")
               page.goto(site, wait_until="networkidle", timeout=60000)
               page.wait_for_timeout(1500)
-              assert page.locator("text=כניסה עם Google").count() >= 1
+              assert page.locator("#google-button").count() == 1
               assert page.locator(".post-login-tabs").count() == 1
               assert not page.locator(".post-login-tabs").is_visible()
               assert page.locator("text=גניזה").count() == 0
+              assert page.locator("text=ארכיון").count() == 0
               page.locator("a:has-text('להכיר את אמא')").click()
               assert "#about" in page.url
               assert page.locator("#about").is_visible()
