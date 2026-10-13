@@ -1,0 +1,68 @@
+name: IMA Daily QA
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install test tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Public smoke + monkey QA
+        env:
+          SITE: https://imaosglobal.github.io/Ima-kernel/
+          API: https://ima-915m.onrender.com
+        run: |
+          python - <<'PY'
+          import os, random, re, requests
+          from bs4 import BeautifulSoup
+          site=os.environ["SITE"]
+          api=os.environ["API"]
+          s=requests.Session()
+          r=s.get(site,timeout=20); r.raise_for_status()
+          soup=BeautifulSoup(r.text,"html.parser")
+          assert soup.title and "אמא" in soup.title.text
+          assert soup.find("html",attrs={"dir":"rtl"})
+          assert soup.select_one("#google-button")
+          assert soup.select_one("#chat-app")
+          assert "chat-app open" not in r.text
+          assert soup.find("a",string=re.compile("להכיר את אמא"))
+          links=[a.get("href") for a in soup.find_all("a",href=True)]
+          internal=[x for x in links if x.startswith("./") and x.endswith(".html")]
+          random.shuffle(internal)
+          for href in internal:
+              u=site+href[2:]
+              rr=s.get(u,timeout=20)
+              assert rr.status_code==200,(u,rr.status_code)
+              assert "אמא" in rr.text,(u,"missing brand")
+          health=s.get(api+"/health",timeout=20); assert health.status_code==200
+          cfg=s.get(api+"/ima-api/auth/config",timeout=20); assert cfg.status_code==200
+          bad=s.post(api+"/ima-api/chat",json={"message":"QA unauthorized probe"},timeout=20)
+          assert bad.status_code==401,(bad.status_code,bad.text)
+          print("IMA QA PASS: landing, links, RTL, gated chat, API health, auth config, unauthorized chat")
+          print("Google enabled:", cfg.json().get("google",{}).get("enabled"))
+          PY
+
+      - name: Check obvious product regressions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          text=Path("index.html").read_text(encoding="utf-8")
+          forbidden=["אפשר פשוט לדבר עם אמא","כדי לדבר עם אמא יש להתחבר תחילה"]
+          for item in forbidden:
+              assert item not in text, f"regression: {item}"
+          for required in ["להכיר את אמא","geniza.html","human-centered-intelligence.html","compassion.html","global.html"]:
+              assert required in text, f"missing: {required}"
+          print("IMA product regression checks PASS")
+          PY
