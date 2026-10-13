@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-13T01:18:32Z",
+  "timestamp": "2026-10-13T09:20:15Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 22,
+  "changed": 10,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,180 +29,84 @@
   },
   "items": [
     {
-      "id": "5142995a1ac90d871636",
-      "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research/",
-      "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
+      "id": "ec4ed696f89364767180",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-13-desert-stairway-to-heaven/",
+      "title": "APOD: 2026 October 13 – Desert Stairway to Heaven",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:52Z"
+      "observed_at": "2026-10-13T09:20:08Z"
     },
     {
-      "id": "23216cfbe10c8c92d859",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
-      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
-      "source": "https://github.blog/feed/",
+      "id": "76663832d6deac25d800",
+      "url": "https://science.nasa.gov/earth/earth-observatory/an-impact-structure-with-legs/",
+      "title": "An Impact Structure With Legs",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:08Z"
     },
     {
-      "id": "e71895561593393c201a",
-      "url": "https://doi.org/10.1111/acel.70751",
-      "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
+      "id": "6ebd2be1e8c903344600",
+      "url": "https://www.natemeyvis.com/where-is-all-the-new-good-software/",
+      "title": "Where is all the new, good software?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "587281d93e4949fea87d",
-      "url": "https://github.com/andrewfader/blokkily",
-      "title": "Show HN: An experimental pattern-first DAW that supports MCP",
+      "id": "0c42a96b023c5941e450",
+      "url": "https://www.unsiloed.ai/blog/document-review-unsiloed-typesafe-jev",
+      "title": "Document Review with Unsiloed and TypeSafe Jev",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "6bc12f2b5da912143027",
-      "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
-      "title": "GPT-6 Astra Helped Me Jailbreak My Kindle",
+      "id": "bd3c7ebfc9f888c4317c",
+      "url": "https://github.com/composo-ai/DishwasherBench",
+      "title": "DishwasherBench – Can Frontier Models Stack a Dishwasher?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "fb74735d5802ca25b570",
-      "url": "https://news.sky.com/story/breaking-bad-star-rj-mitte-dies-aged-34-13598332",
-      "title": "RJ Mitte has died",
+      "id": "9905e90cac32e6026e2b",
+      "url": "https://www.lemonde.fr/en/international/article/2026/10/10/denmark-set-to-allow-the-return-of-physical-force-to-maintain-order-in-schools_6758443_4.html",
+      "title": "Denmark set to allow return of 'physical force' in school",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "a6f0cc316480792c8fee",
-      "url": "https://github.com/prabanta-dev/janas",
-      "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+      "id": "a4ff4cfab3e039400733",
+      "url": "https://www.argmin.net/p/faster-fourier-transforms",
+      "title": "A look at the math that OpenAI claims computes faster Fourier transforms",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "5f1b01b54df7637c5716",
-      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
-      "title": "AI is a tool and using it well takes skill",
+      "id": "b693a6e80e752f67e358",
+      "url": "https://arxiv.org/abs/2610.13928",
+      "title": "AI models can provably hide arbitrary capabilities",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
-      "id": "0ba218dfeba65a55567d",
-      "url": "https://phreak.ing/",
-      "title": "Phreak.ing – Internet Phone Switch",
+      "id": "233e30c6f22de11e0e49",
+      "url": "https://github.com/bherbruck/solidcraft",
+      "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "6a78f6efee3a21f22375",
-      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
-      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     },
     {
       "id": "18487b0af91cd32de017",
       "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
-      "title": "Who Is Vfmaddrnd231pd?",
+      "title": "Who is vfmaddrnd231pd?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "5394c51ed710a7836a0c",
-      "url": "https://brickbrag.com/",
-      "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "84c4f127dbc3d79863da",
-      "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
-      "title": "Writing a Demoscene Intro for the ZX Spectrum",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "7ed0d9888ce5e464ab06",
-      "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
-      "title": "Making big downloads resumable in Firefox",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "99e810c974b3b03406fb",
-      "url": "https://github.com/openai/codex/issues/48195",
-      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "de2c74460bc4e60489bc",
-      "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
-      "title": "'AI' Is Not a Tool by Rich Hickey",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "46a47c0772812524944b",
-      "url": "https://www.spinellis.gr/blog/20261008/?li261008",
-      "title": "Thinking will become a hobby",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "7758c02a15e383930365",
-      "url": "https://research.meta.ai/blog/muse-wonder",
-      "title": "Muse Wonder",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "93481ec2e3a9d5b087b6",
-      "url": "https://news.ycombinator.com/item?id=50059096",
-      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "a471bcd8b380da087ebb",
-      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
-      "title": "A Modern Web App in C",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "ab91ee9162f42d3508ec",
-      "url": "https://z.ai/blog/glm-legal",
-      "title": "GLM-Legal",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
-    },
-    {
-      "id": "c56e71953c1a7c84aec4",
-      "url": "https://taylor.town/kk-ai-2026",
-      "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T01:17:53Z"
+      "observed_at": "2026-10-13T09:20:10Z"
     }
   ]
 }
