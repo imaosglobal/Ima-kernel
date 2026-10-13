@@ -1,4 +1,10 @@
-# IMA - Intelligent Meta Architecture
+# IMA — בינה אנושית־מרכזית
+
+**[פתח את אמא עכשיו](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
+
+**Human-centered intelligence · compassion · human agency · evidence-based learning**
+
+IMA is a public, open human-centered intelligence project: a space for conversation, learning, creation and connection to technology. The public experience is available now; the repository documents the architecture and provides a place to question, contribute, test and build.
 
 ## IMA — בינה אנושית: מבינה אנשים
 
