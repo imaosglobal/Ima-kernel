@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-12T09:06:32Z",
+  "timestamp": "2026-10-13T01:18:32Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 216,
+  "changed": 22,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,1732 +29,180 @@
   },
   "items": [
     {
-      "id": "446843354b9a1b0d7527",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-12-jupiter-and-the-moons/",
-      "title": "APOD: 2026 October 12 – Jupiter and the Moons",
+      "id": "5142995a1ac90d871636",
+      "url": "https://science.nasa.gov/missions/station/nasas-spacex-crs-35-mission-to-launch-health-research/",
+      "title": "NASA’s SpaceX CRS-35 Mission to Launch Health Research",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:54Z"
+      "observed_at": "2026-10-13T01:17:52Z"
     },
     {
-      "id": "a7867473cdb52eec7850",
-      "url": "https://science.nasa.gov/earth/earth-observatory/antarctic-sea-ice-grows-to-its-2026-maximum/",
-      "title": "Antarctic Sea Ice Grows to Its 2026 Maximum",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "id": "23216cfbe10c8c92d859",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+      "source": "https://github.blog/feed/",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:54Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "3de8cde1689eb09961ac",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-11-ice-fishing-for-cosmic-neutrinos/",
-      "title": "APOD: 2026 October 11 – Ice Fishing for Cosmic Neutrinos",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:54Z"
-    },
-    {
-      "id": "66f4637059d5f449088c",
-      "url": "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
-      "title": "Zod 4.6.6 compromised by malware?",
+      "id": "e71895561593393c201a",
+      "url": "https://doi.org/10.1111/acel.70751",
+      "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "97e026a93ef159e9a064",
-      "url": "https://github.com/snuri00/ps2-web-recomp",
-      "title": "Show HN: PS2 games statically recompiled to WebAssembly",
+      "id": "587281d93e4949fea87d",
+      "url": "https://github.com/andrewfader/blokkily",
+      "title": "Show HN: An experimental pattern-first DAW that supports MCP",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "0e4eb789d3b306330b32",
-      "url": "https://clickhouse.com/blog/posette-talk-recap-postgres-isnt-slow-your-storage-is",
-      "title": "Postgres isn't slow, your storage is",
+      "id": "6bc12f2b5da912143027",
+      "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
+      "title": "GPT-6 Astra Helped Me Jailbreak My Kindle",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "a6d1a90bc9e9264d5a05",
-      "url": "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html",
-      "title": "Research Firm Calls Anthropic's IPO 'Unprecedented Test of Investor Gullibity'",
+      "id": "fb74735d5802ca25b570",
+      "url": "https://news.sky.com/story/breaking-bad-star-rj-mitte-dies-aged-34-13598332",
+      "title": "RJ Mitte has died",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "8460a7ddf90b376a136b",
-      "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
-      "title": "Type-safe HTML templating in Zig",
+      "id": "a6f0cc316480792c8fee",
+      "url": "https://github.com/prabanta-dev/janas",
+      "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "4c420bb9a82291d1b714",
-      "url": "https://amosbbatto.wordpress.com/2026/10/05/linux-phones-alternative/",
-      "title": "Will Linux phones become a viable alternative to the Android/iOS duopoly?",
+      "id": "5f1b01b54df7637c5716",
+      "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+      "title": "AI is a tool and using it well takes skill",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "d57224c195e5a4eb8940",
-      "url": "https://crestbrowser.com/",
-      "title": "Crest – an Arc-inspired open-source browser for Mac",
+      "id": "0ba218dfeba65a55567d",
+      "url": "https://phreak.ing/",
+      "title": "Phreak.ing – Internet Phone Switch",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "87718895ca43a777aed8",
-      "url": "https://github.com/shaongitbd/doory",
-      "title": "Doory – Open-Source Canva",
+      "id": "6a78f6efee3a21f22375",
+      "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+      "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "b960ff7beab600e07ffe",
-      "url": "https://datacenters.google/locations/",
-      "title": "Google Data Centers around the world",
+      "id": "18487b0af91cd32de017",
+      "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+      "title": "Who Is Vfmaddrnd231pd?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "04264482f0251792ebf3",
-      "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
-      "title": "Fingerprints are the new cookies",
+      "id": "5394c51ed710a7836a0c",
+      "url": "https://brickbrag.com/",
+      "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "69f867972cf056852236",
-      "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-      "title": "Passkeys are a trap",
+      "id": "84c4f127dbc3d79863da",
+      "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
+      "title": "Writing a Demoscene Intro for the ZX Spectrum",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "970e4e42b61bcd4867f0",
-      "url": "https://theonion.com/archivehunt/",
-      "title": "So, you’d like to sell your print issues of The Onion?",
+      "id": "7ed0d9888ce5e464ab06",
+      "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
+      "title": "Making big downloads resumable in Firefox",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "04c1e8f8123b90fda8a3",
-      "url": "https://www.ways-of-seeing.com/ch1",
-      "title": "Chapter 1 of \"Ways of Seeing\" by John Berger (1972)",
+      "id": "99e810c974b3b03406fb",
+      "url": "https://github.com/openai/codex/issues/48195",
+      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:55Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "5633ac0815d3b59e4394",
-      "url": "https://arxiv.org/abs/2610.12493",
-      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "de2c74460bc4e60489bc",
+      "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+      "title": "'AI' Is Not a Tool by Rich Hickey",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "be23a3f6c27fbe895a84",
-      "url": "https://arxiv.org/abs/2610.12536",
-      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "46a47c0772812524944b",
+      "url": "https://www.spinellis.gr/blog/20261008/?li261008",
+      "title": "Thinking will become a hobby",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "efb0e73fb923584ab288",
-      "url": "https://arxiv.org/abs/2610.12542",
-      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "7758c02a15e383930365",
+      "url": "https://research.meta.ai/blog/muse-wonder",
+      "title": "Muse Wonder",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "f515c352b2b1e0ca5293",
-      "url": "https://arxiv.org/abs/2610.12593",
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "93481ec2e3a9d5b087b6",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "4e1d9d23d49d980baef0",
-      "url": "https://arxiv.org/abs/2610.12596",
-      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "a471bcd8b380da087ebb",
+      "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+      "title": "A Modern Web App in C",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "5e67eaf20784dd128440",
-      "url": "https://arxiv.org/abs/2610.12598",
-      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "ab91ee9162f42d3508ec",
+      "url": "https://z.ai/blog/glm-legal",
+      "title": "GLM-Legal",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     },
     {
-      "id": "a1f07204653975b51b41",
-      "url": "https://arxiv.org/abs/2610.12655",
-      "title": "CLEAT: Learning Value-Guided Clarification for Interactive Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "c56e71953c1a7c84aec4",
+      "url": "https://taylor.town/kk-ai-2026",
+      "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e56efa2c114e5c2800f6",
-      "url": "https://arxiv.org/abs/2610.12659",
-      "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "6eb954742c5d07358a11",
-      "url": "https://arxiv.org/abs/2610.12762",
-      "title": "Faithful and Complete LLM-Assisted Automated Construction of Hierarchical Hardware Knowledge Graphs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "21e39efdd240830c71d2",
-      "url": "https://arxiv.org/abs/2610.12781",
-      "title": "Representation Alignment from a Few Paired Data via Distilled Optimal Transport",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "dc5079437446d0d598b3",
-      "url": "https://arxiv.org/abs/2610.12789",
-      "title": "EvoBelief: Falsifiable World Models for Self-Improving LLM Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a458a7a32accc47148a4",
-      "url": "https://arxiv.org/abs/2610.12813",
-      "title": "VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a4dd90d6140c3ef216a2",
-      "url": "https://arxiv.org/abs/2610.12822",
-      "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2cd54cd01a9dda181dad",
-      "url": "https://arxiv.org/abs/2610.12842",
-      "title": "Neural networks are more modular than single neurons suggest",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c44cddece3f785e8b6a2",
-      "url": "https://arxiv.org/abs/2610.12845",
-      "title": "Towards Defining, Measuring, and Leveraging Creativity in AI Applications",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d2dabc55598a631b9ee2",
-      "url": "https://arxiv.org/abs/2610.12855",
-      "title": "Mitigating Capability Degradation in LLM Self-Improvement via Representation Geometry Regularization",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5d8272b33ddc1af4bd0a",
-      "url": "https://arxiv.org/abs/2610.12872",
-      "title": "Collaborative Theory of Mind: Learning to Self-Revise by Anticipating User Responses",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "cddd38274975085ddd37",
-      "url": "https://arxiv.org/abs/2610.12879",
-      "title": "One-Step Text Generation by Seq-Drifting",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "000fc968bb43e92480cb",
-      "url": "https://arxiv.org/abs/2610.12881",
-      "title": "Mind the Spatial Gap: A Benchmark for Geospatial Reasoning and Constrained Spatial Editing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "44ca12e19a40f7fcc672",
-      "url": "https://arxiv.org/abs/2610.12914",
-      "title": "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ef0706f3d0161a7692c1",
-      "url": "https://arxiv.org/abs/2610.12916",
-      "title": "DeFiRank: Federated Pairwise Ranking for Governance in Decentralized Financial Networks",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f14628c7e101ae1887d8",
-      "url": "https://arxiv.org/abs/2610.12917",
-      "title": "AI-Mediation in Retail Markets: Revenue Effects and Assortment Optimization",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c26ae049a2a52761b212",
-      "url": "https://arxiv.org/abs/2610.12921",
-      "title": "Teaching neural decoders with language",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "0fcd4629093f8692e4cc",
-      "url": "https://arxiv.org/abs/2610.12927",
-      "title": "Collaborative Learning and Reasoning over Model Slices",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "8df6df601655f17ef834",
-      "url": "https://arxiv.org/abs/2610.12933",
-      "title": "Learning More by Training Less: Uncertainty-Guided Progressive Contraction for Efficient Reasoning Post-Training",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "337bffa945c3c3037e2b",
-      "url": "https://arxiv.org/abs/2610.12954",
-      "title": "MathVis: Can AI Reason through Drawing? A Benchmark for Mathematical Figure Generation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3c0ea8efb293333262ab",
-      "url": "https://arxiv.org/abs/2610.12975",
-      "title": "SmartSalesBench: A Resistance-Aware Multi-Turn Benchmark for Evaluating LLM Sales Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5eb56ffe342cbfb4fbf0",
-      "url": "https://arxiv.org/abs/2610.12977",
-      "title": "Beyond Semantic IDs: Finite-Beam Reachability and Continuous-Query Generation in Generative Recommendation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c1b31c8c05bd11e3eeed",
-      "url": "https://arxiv.org/abs/2610.12984",
-      "title": "Work2Skill: Capturing Human GUI Experience for Reusable Agent Skill Induction",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2e24bb1246e345066233",
-      "url": "https://arxiv.org/abs/2610.12997",
-      "title": "Benchmarking Embedding Geometries and Clustering Algorithms for Unsupervised Patent Claim Classification",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "990a9823b1d96f352af8",
-      "url": "https://arxiv.org/abs/2610.13000",
-      "title": "Hindsight Structured Advice Distillation: Steering Executor Agents with Advisors Trained on Their Failures and Task Characteristics",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c22812f9b2beaa7a190b",
-      "url": "https://arxiv.org/abs/2610.13002",
-      "title": "Scaling Empowered Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "663ab8cc55c03e343d7b",
-      "url": "https://arxiv.org/abs/2610.13008",
-      "title": "Provenance-Aware Belief Updating in Human-AI Feedback Loops",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "97aa05f1d051eb672c9b",
-      "url": "https://arxiv.org/abs/2610.13021",
-      "title": "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "191d228d683329607722",
-      "url": "https://arxiv.org/abs/2610.13058",
-      "title": "Travel Back To Move Forward: Retrospective Exploration and Evolving for Long Horizon Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "b6bf0fdfa270c5c7673b",
-      "url": "https://arxiv.org/abs/2610.13075",
-      "title": "LongHarness: Advancing Agentic Reasoning over 100M-Token Corpora via Stateful Evidence Management",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f4734edbfc4b22d3ed9c",
-      "url": "https://arxiv.org/abs/2610.13078",
-      "title": "Attention Sees, MLP Refuses: Tracing the Attention-to-MLP Safety Pathway in LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "cf42b98924406eb39d7b",
-      "url": "https://arxiv.org/abs/2610.13081",
-      "title": "SWEAR: Section-Wise Efficient Audio Reasoning via Self-Rated Difficulty",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "594615cd7f1a19448ce1",
-      "url": "https://arxiv.org/abs/2610.13092",
-      "title": "When Faster Decisions Do Not Make Better Agents: An Empirical Study of Jev in Agent Workflows",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "48a4a3686c699ca2e16a",
-      "url": "https://arxiv.org/abs/2610.13098",
-      "title": "VETR: Execution-Grounded Self-Improving Agent for Symbolic Graphics Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7faf581c58225e249681",
-      "url": "https://arxiv.org/abs/2610.13112",
-      "title": "Does Location Matter? A Black-Box Causal Audit Reveals Model-Dependent Audio Grounding in LALM Hallucination",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "83a32e28b246d13ad230",
-      "url": "https://arxiv.org/abs/2610.13116",
-      "title": "DRYLAB-Bench: Benchmarking the Biosecurity Risk of Agentic LLM Mutation Design",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2b6f1e274ee6bf51a648",
-      "url": "https://arxiv.org/abs/2610.13128",
-      "title": "Locate, Judge, Read: Role-Specialized Tool Agents over a Knowledge-Point Index for Open-Domain Multimodal Document QA",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c609c3ac34953cab2b0f",
-      "url": "https://arxiv.org/abs/2610.13131",
-      "title": "Looking Ahead and Back: Anticipatory Generative Modeling for Road-Network Trajectories",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ba0f9462ae5fc6597b1a",
-      "url": "https://arxiv.org/abs/2610.13132",
-      "title": "DP-MIND: Differentially private memory-guided Long context Inference",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "bfe8ae07189841e60bd0",
-      "url": "https://arxiv.org/abs/2610.13144",
-      "title": "Competence-Aware Orchestration for LLM-Based Multi-Agent Systems",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "34dbc21467246d9cdad8",
-      "url": "https://arxiv.org/abs/2610.13145",
-      "title": "VIGOR: Verifiable Industrial Geometry Optimization and Repair in Scene Programs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3d39e1110117674d2d19",
-      "url": "https://arxiv.org/abs/2610.13152",
-      "title": "Quality, Not Just Outcome: A Structural Scoring Framework for Selecting Coding-Agent Trajectories for Supervised Fine-Tuning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d32699b75785caabba93",
-      "url": "https://arxiv.org/abs/2610.13172",
-      "title": "RoleWorld: Knowledge Transfer in World Modeling with Functional Role Abstractions",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3e6c7158193e998982ca",
-      "url": "https://arxiv.org/abs/2610.13184",
-      "title": "AdaC-GRPO: Towards Mastering Long-Horizon Visual Sudoku Puzzles via Adaptive Curriculum Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ff469b4c8e0c863447ad",
-      "url": "https://arxiv.org/abs/2610.13194",
-      "title": "JANUS: Enhancing Long-Horizon Autonomous Research with Co-Evolving World Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "0cc7f3aa891c86427ee0",
-      "url": "https://arxiv.org/abs/2610.13267",
-      "title": "Forgetting is Not Always Bad: A Neuro-Inspired Memory Repair Mechanism for Poisoned LLM Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c176f7076321d27879d1",
-      "url": "https://arxiv.org/abs/2610.13285",
-      "title": "BoundaryEvo: Data-Model Co-Evolution at the Capability Boundary for Long-Chain Reasoning Distillation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f29f58ee0624f1c9fb62",
-      "url": "https://arxiv.org/abs/2610.13330",
-      "title": "Masked Diffusion Language Agents for Tool-Integrated Chemical Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f5aefb680b3b6ddc18a1",
-      "url": "https://arxiv.org/abs/2610.13354",
-      "title": "AlphaNIST: Emergent Assembly Skills from Binary Task Rewards",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9a1b6f9e9bfc2850e98d",
-      "url": "https://arxiv.org/abs/2610.13356",
-      "title": "SWE-Critix: Post-Training Generalist Verifiers for Assessing Coding-Agent Trajectories",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "781175b9c814b94a48cf",
-      "url": "https://arxiv.org/abs/2610.13399",
-      "title": "RegulaTutor: A Theory-Informed Framework for Long-Term Personalized Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "af64a0a381728d9e9c99",
-      "url": "https://arxiv.org/abs/2610.13416",
-      "title": "Web$hell: A Unified Interface for Agentic Web Access",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1c95b54b4bccfe7cb875",
-      "url": "https://arxiv.org/abs/2610.13437",
-      "title": "Local Diagnostics of Learned Event Representations for Anomaly Detection at the HL-LHC",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9ea28aa2905705f3ede9",
-      "url": "https://arxiv.org/abs/2610.13438",
-      "title": "Rollout-Time Intervention: Unlocking Agentic Reinforcement Learning Beyond Policy Limits",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "4193c43ec37ac6ab7f62",
-      "url": "https://arxiv.org/abs/2610.13455",
-      "title": "Agentic Large Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a371112a5b752838107a",
-      "url": "https://arxiv.org/abs/2610.13461",
-      "title": "SqueezeBench: Saturation-Resilient Evaluation of Mathematical Capability",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7380dba17f5dbf9fffdc",
-      "url": "https://arxiv.org/abs/2610.13479",
-      "title": "A Local Agentic AI Framework to Generate Edge Case Scenarios for Safety Assurance",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c52738e79c78d6c1b6ce",
-      "url": "https://arxiv.org/abs/2610.13481",
-      "title": "Branching On-Policy Distillation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1a262793e5f32e1f5bea",
-      "url": "https://arxiv.org/abs/2610.13494",
-      "title": "Humanize MLE Agents: Multi-Agent Session Alternation Beyond Single-Agent Limits",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ef8eac1e5a0267d4ba6a",
-      "url": "https://arxiv.org/abs/2610.13510",
-      "title": "Retrieval-Augmented Multimodal Language Model with Heterogeneous Evidence Integration for Clinical Prognosis",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "24d566e7bfe47e5a60a0",
-      "url": "https://arxiv.org/abs/2610.13520",
-      "title": "Causal Effect Identifiability in Causal Abstractions: A Strict Hierarchy of Criteria",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d7e42dab3dc75e357ab6",
-      "url": "https://arxiv.org/abs/2610.13521",
-      "title": "Beyond Domain-Routed Supervision: Cross-Teacher Guarding for Multi-Teacher On-Policy Distillation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "80f4a2e59825235e31be",
-      "url": "https://arxiv.org/abs/2610.13534",
-      "title": "MAGMA-Bench: Evaluating Long-Horizon Embodied Agents under Dynamic Tasks and Execution Failures",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "854cc127b8a3cdd46eca",
-      "url": "https://arxiv.org/abs/2610.13570",
-      "title": "Constructing Pareto Frontiers of Optimal Reasoning Termination Methods for Overthinking in Reasoning Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f5b8f03c149068ad4c58",
-      "url": "https://arxiv.org/abs/2610.13594",
-      "title": "MENTOR: Learning from Failure with On-Policy Pedagogical Intervention",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "4b152a91481f82f2f36d",
-      "url": "https://arxiv.org/abs/2610.13632",
-      "title": "Humanize Olympiad Agents: A Multi-Session Workflow for Olympiad Problem Solving with Solve, Review, Wiki, Verify",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d8e8b02d32c62ed3dbf3",
-      "url": "https://arxiv.org/abs/2610.13640",
-      "title": "Learning Size Independent Constraint Models from Input Data and Positive and Negative Example Solutions",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ce99a1de56d1f964260a",
-      "url": "https://arxiv.org/abs/2610.13663",
-      "title": "A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "dda2412bc2d8658cf23e",
-      "url": "https://arxiv.org/abs/2610.13669",
-      "title": "A Step Harder, Not a Step Too Far: The Benefits and Limits of Curriculum Difficulty Progression in GRPO",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ee64bdcb074f2a2ce931",
-      "url": "https://arxiv.org/abs/2610.13703",
-      "title": "A Baseline Assessment for the Agentic Web Technology Stack",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a3908f9b5e65d5d2c3da",
-      "url": "https://arxiv.org/abs/2610.13708",
-      "title": "Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a750d481558e37f27e55",
-      "url": "https://arxiv.org/abs/2610.13744",
-      "title": "A Privileged Teacher That Only Scores Cannot Search: Critique-Conditioned On-Policy Self-Distillation for Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "89dc8ff17b2fc7c0d5c9",
-      "url": "https://arxiv.org/abs/2610.13783",
-      "title": "UkrMeme: Multimodal Explainable Persuasion Detection in Ukrainian Memes",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "63821f1cdd498b1e0605",
-      "url": "https://arxiv.org/abs/2610.13840",
-      "title": "Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2dc5d7317eb84740e89f",
-      "url": "https://arxiv.org/abs/2610.13886",
-      "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1599ed0f74596729e1e4",
-      "url": "https://arxiv.org/abs/2610.13889",
-      "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "228cd1debe7d03b9526a",
-      "url": "https://arxiv.org/abs/2610.13948",
-      "title": "Can Language Models Play the Wikipedia Game?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1dd46abcfef01e98986f",
-      "url": "https://arxiv.org/abs/2610.02626",
-      "title": "Imagine the Future, Internalize the Gist: Efficient VLA Reasoning via Internalized Spatiotemporal Imagination",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "add7e11ad964d1ef033c",
-      "url": "https://arxiv.org/abs/2610.12495",
-      "title": "Kairos: Toward a Byte-Level Foundation Model for Every Modality",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e0d69c571414762c8f07",
-      "url": "https://arxiv.org/abs/2610.12507",
-      "title": "Energy-Efficient Spiking Neural Networks for Sensing-Aided Beam Prediction",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a706979044b95fdb3dfe",
-      "url": "https://arxiv.org/abs/2610.12520",
-      "title": "CircuitTree: Composing Circuits into A Syllable Transcriber",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f441a29f2e5a7dfc66db",
-      "url": "https://arxiv.org/abs/2610.12545",
-      "title": "AutoIndexer: Flexible-Order Decoding by Training Causal Models on Chains of Edits",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "860a4a91b7a69b77fe99",
-      "url": "https://arxiv.org/abs/2610.12602",
-      "title": "Self-Preservation in Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a562e25da9f3bee17015",
-      "url": "https://arxiv.org/abs/2610.12618",
-      "title": "Mesh-Native Tokenisation: Retrofitting Foundation Models to Unstructured Data",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5753f5cf058422f73eb7",
-      "url": "https://arxiv.org/abs/2610.12638",
-      "title": "Machine Learning and Time-Series Foundation Models for Day-Ahead Electricity Forecasting in a University Building",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5358dbd27ddb83f6edb0",
-      "url": "https://arxiv.org/abs/2610.12644",
-      "title": "Cancerous Backdoor Attack: Gradual Activation via Invisible Tokens and A Stage Controller",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e7d290e35f16c4a7817b",
-      "url": "https://arxiv.org/abs/2610.12657",
-      "title": "Kronecker Product Attention: Memory-Efficient KV Compression via Structured Factorization",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7e53557d498f8961ba48",
-      "url": "https://arxiv.org/abs/2610.12666",
-      "title": "Incremental Retrieval-Augmented Generation for Human-in-the-Loop Decision Support",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "364a6a90b50733f0f8cc",
-      "url": "https://arxiv.org/abs/2610.12668",
-      "title": "Recurrent Harness for Agentic Continual Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2fc33985a077f57cd8bd",
-      "url": "https://arxiv.org/abs/2610.12669",
-      "title": "GeoFitBench-LLM: A Benchmark for Assessing Large Language Models' Capabilities in Geospatial Data Requirements Elicitation for Geo-Analytic Tasks",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "dc396439bbeafd56b2a8",
-      "url": "https://arxiv.org/abs/2610.12707",
-      "title": "Unsupervised Multimodal Reward Modeling",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "92b3894e4fc8f0cf1cd8",
-      "url": "https://arxiv.org/abs/2610.12738",
-      "title": "KITE: A Knowledge-Injected Temporal Encoder for Time-Series Event Forecasting",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "2db012a87aeaa54a587e",
-      "url": "https://arxiv.org/abs/2610.12747",
-      "title": "Trajectory Prediction for Autonomous Driving in Road Construction Zones Using Human-in-the-Loop Driving Data",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "171ef86ae9c3b3d34e80",
-      "url": "https://arxiv.org/abs/2610.12768",
-      "title": "Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "da7daa1ff64218e05828",
-      "url": "https://arxiv.org/abs/2610.12769",
-      "title": "REDaCT: Collapse-Free Unlearning in Large Reasoning Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "755fdb47e1cc0722b4d0",
-      "url": "https://arxiv.org/abs/2610.12794",
-      "title": "Meta-Reflective Evolution Effectively Improves Production AI Systems",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d7eccc12d1310bde0033",
-      "url": "https://arxiv.org/abs/2610.12796",
-      "title": "Efficient Audio-Visual Speech Enhancement via Reinforcement Learning-Based Neural Architecture Search",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7bc4a4cb6fb24537ddd7",
-      "url": "https://arxiv.org/abs/2610.12818",
-      "title": "LeWAM: End-to-End World and Action Modeling with JEPAs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a913da3a71a3028caf81",
-      "url": "https://arxiv.org/abs/2610.12837",
-      "title": "COFFEQA: Counterfactual-Guided Few-Shot Distillation for LLM Question Answering",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "108a19e8b9338f19653f",
-      "url": "https://arxiv.org/abs/2610.12847",
-      "title": "When Generative Models Act as Simulators",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "4df9768cecd5052c3648",
-      "url": "https://arxiv.org/abs/2610.12849",
-      "title": "Co-Modifying Application Code and Deployment Infrastructure: A Causal Study of AI Agent Pull Requests",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d422b8dd428551972758",
-      "url": "https://arxiv.org/abs/2610.12870",
-      "title": "Localized Generative Design of Ship Hulls with Diffusion Models and High-Fidelity Assessment",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e780cced91e832804864",
-      "url": "https://arxiv.org/abs/2610.12939",
-      "title": "Surfing the Activation Wave: Analyzing the Information and Geometry of LLM Hidden States for Speculative Decoding",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "acd0c721b98d0f8d932a",
-      "url": "https://arxiv.org/abs/2610.12957",
-      "title": "JoyInside-VLM-Agent: Product-Conditioned Multimodal Policy Learning for Embodied Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5b4825a7ce8705525103",
-      "url": "https://arxiv.org/abs/2610.12963",
-      "title": "MotionCoach: Constructing Multimodal Guidance for Video Professional Motion Editing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ab3e97f18a7acf22bd1d",
-      "url": "https://arxiv.org/abs/2610.12981",
-      "title": "The Evidence Anchoring Boundary: Where Visual Interventions Matter and When They Help in Multimodal LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "046f5e47c296a412481b",
-      "url": "https://arxiv.org/abs/2610.12995",
-      "title": "What Should SFT Learn? Conditional Information Gain for Generalizable Post-Training",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a57804f5c53ed886e6e5",
-      "url": "https://arxiv.org/abs/2610.13015",
-      "title": "Generalized Proximal Policy Optimization: Unifying LLM RL Algorithms from the Perspective of Divergence",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "b83334bfba361aa13f05",
-      "url": "https://arxiv.org/abs/2610.13022",
-      "title": "Don't Guess, Just Ask: Evaluating Interactive Requirement Clarification for Repository-Level Software Development",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "30c47d0aa77ce6bf1414",
-      "url": "https://arxiv.org/abs/2610.13035",
-      "title": "GeoGR: Spatial-Semantic Token Compression and Group Routing for Efficient 3D VLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "6f3223923412ecc47e2a",
-      "url": "https://arxiv.org/abs/2610.13057",
-      "title": "CoBe: A Benchmark For Conversational Counterfactual Text Editing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "05e3c78bc14c2574fe8f",
-      "url": "https://arxiv.org/abs/2610.13066",
-      "title": "Evolving Creatives with Clicks: CTR-Driven Advertising image Editing via Attribute Disentanglement and Preference Alignment",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "88606617869c7ccb5ede",
-      "url": "https://arxiv.org/abs/2610.13113",
-      "title": "Continually Post-training Small Models via Synthetic Self-distillation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "0e2c1f31d88aa75cc408",
-      "url": "https://arxiv.org/abs/2610.13197",
-      "title": "Does Learning Recurrent Networks Matter in Partially Observable RL?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c299755dd8832cfb7d38",
-      "url": "https://arxiv.org/abs/2610.13212",
-      "title": "Beyond Actions: Learning Future Operation Targets for Vision-Language-Action Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "cc1a16027e56c7b4aecd",
-      "url": "https://arxiv.org/abs/2610.13225",
-      "title": "ReSFlow: Rectifying Categorical Flows on Statistical Manifolds for One-Step Generation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7f6780bd81f990dac21d",
-      "url": "https://arxiv.org/abs/2610.13236",
-      "title": "How Reliable are AMR Parser Outputs? Uncertainty Estimation for AMR Parsing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3d9b6e9f8c821b3babee",
-      "url": "https://arxiv.org/abs/2610.13253",
-      "title": "Tabular Foundation Models Are Effectively Shallow",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ce7641181c72bef3ec15",
-      "url": "https://arxiv.org/abs/2610.13273",
-      "title": "Agent4Spec: An LLM-based Agentic System to Optimize API Specifications through Automated Validation and Market Analysis",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3e9ff545c5536a1b1c4e",
-      "url": "https://arxiv.org/abs/2610.13296",
-      "title": "PRIME: Pre-Retrieval Index Modeling Enhancement for Structured Document Retrieval-Real",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "797f34b731c6796ffaa3",
-      "url": "https://arxiv.org/abs/2610.13303",
-      "title": "Agreement Without Alignment: Label-Free Rubric Clarification Increases LLM-Judge Consensus but Not Agreement with Humans",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "25c56d04a1b27afc6e50",
-      "url": "https://arxiv.org/abs/2610.13361",
-      "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "14018f29e4f50c8e2d87",
-      "url": "https://arxiv.org/abs/2610.13395",
-      "title": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "b641d79993f90df99d0f",
-      "url": "https://arxiv.org/abs/2610.13411",
-      "title": "In-Context Learning for System Identification: Probabilistic Formulation, Long-Sequence Handling, and Benchmark Validation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "764ff3c453c3be54cced",
-      "url": "https://arxiv.org/abs/2610.13433",
-      "title": "CNN-Transformer with Sigmoid Label for High-Resolution Sub-Degree DOA Estimation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c1613e85ad51cf5a995e",
-      "url": "https://arxiv.org/abs/2610.13439",
-      "title": "Collective Autonomous Vehicle Routing Needs Social Awareness for Coexistence with Human Drivers",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a804c55fdbef57793fb4",
-      "url": "https://arxiv.org/abs/2610.13465",
-      "title": "When MLLMs miss what humans read: diagnosing and learning to read squint text",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d90a90f373e5893d6690",
-      "url": "https://arxiv.org/abs/2610.13504",
-      "title": "Beyond Temporal Proximity: Explanatory World Models for Credit Assignment in Reinforcement Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "f2e1defbc7ad3b7c1c70",
-      "url": "https://arxiv.org/abs/2610.13516",
-      "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "34a89355c24cb5d4a2b7",
-      "url": "https://arxiv.org/abs/2610.13536",
-      "title": "Defence against the dark arts of distillation: Unsupervised discovery of subliminal learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e9679f0308aec23f4683",
-      "url": "https://arxiv.org/abs/2610.13600",
-      "title": "AudioTETRIS: Token Elimination via Transitional Importance Signals for Efficient Audio LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "fe889c91d153279c6f7e",
-      "url": "https://arxiv.org/abs/2610.13626",
-      "title": "SWE-DeceptionBench: Benchmarking Deceptive Behaviors of LLMs Across the Software Development Lifecycle",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "18475bc229b479b02bf1",
-      "url": "https://arxiv.org/abs/2610.13637",
-      "title": "Model-agnostic Knowledge Augmented Machine Learning for Weakly Annotated Bioimaging Data",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "287fabcd19b53676bc83",
-      "url": "https://arxiv.org/abs/2610.13644",
-      "title": "SelectArena: A Modern Benchmark for Feature Selection on Real-world Tabular Data",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "06cbff890641ac81ce1a",
-      "url": "https://arxiv.org/abs/2610.13660",
-      "title": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3fef399397dfdefa17b0",
-      "url": "https://arxiv.org/abs/2610.13672",
-      "title": "Inject a Turn, Not a Token: Learning Where to Redirect LLM Reasoning for Self-Correction",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a8ba7077fce6df5cd824",
-      "url": "https://arxiv.org/abs/2610.13674",
-      "title": "Not All Dimensions Are Equal: Outlier-Aware Attention Linearization with Grouped Quadratic Kernels",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c8372229754278169e4f",
-      "url": "https://arxiv.org/abs/2610.13692",
-      "title": "Variance-Reduced Policy Gradient is Nearly Minimax-Optimal",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "430449f3446bed0ad7bd",
-      "url": "https://arxiv.org/abs/2610.13693",
-      "title": "Calibration in One Go: Jointly Learning Accurate and Calibrated Neural Networks",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1f077e683650f670d85c",
-      "url": "https://arxiv.org/abs/2610.13724",
-      "title": "Amortized Counterfactual Prediction with Graph Neural Networks",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "48e4876855f74dd136b9",
-      "url": "https://arxiv.org/abs/2610.13732",
-      "title": "LAPT-Scale: Scaling Embodied Policies with Latent Action Pre-Training on Human Videos",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a06752ce7245d2ae1e8a",
-      "url": "https://arxiv.org/abs/2610.13735",
-      "title": "Orthros: Phase-Aware Heterogeneous Attention for Efficient Transformers",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "6dbe0559fe2522e1fff5",
-      "url": "https://arxiv.org/abs/2610.13737",
-      "title": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "89a6239a0ab19877c0c1",
-      "url": "https://arxiv.org/abs/2610.13755",
-      "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "63c86ed6ca9d81c64c00",
-      "url": "https://arxiv.org/abs/2610.13765",
-      "title": "When Edge Independence Fails: Joint Graph Diffusion with Latent Sociability Priors",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d2336bb80b4794f45588",
-      "url": "https://arxiv.org/abs/2610.13767",
-      "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "0d9def9400fa612957fd",
-      "url": "https://arxiv.org/abs/2610.13778",
-      "title": "ReplaySSM: Cache SSM Inputs, Not State",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "fa633c3f78375a43b820",
-      "url": "https://arxiv.org/abs/2610.13786",
-      "title": "Your Discrete Graph Diffusion Model is Secretly Memorizing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "6a1b8aa6dbb14c0072dd",
-      "url": "https://arxiv.org/abs/2610.13806",
-      "title": "FORTE: A Production Framework for Feature Evaluation and Deprecation in Industrial Recommender Systems",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7340f23568e995aab5d6",
-      "url": "https://arxiv.org/abs/2610.13823",
-      "title": "Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e7a482afdd6942d5f8dd",
-      "url": "https://arxiv.org/abs/2610.13829",
-      "title": "MC-EvoBench: Auditing Experience-Driven Self-Improvement in Minecraft Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "18dc1ad52eb54d5ddea7",
-      "url": "https://arxiv.org/abs/2610.13832",
-      "title": "SpatialASM: Internalizing Active Mentalization for Spatial Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9cd914869a13d05acf99",
-      "url": "https://arxiv.org/abs/2610.13895",
-      "title": "Task Context Shapes Component Roles in Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "b5ad01c4100002f585e6",
-      "url": "https://arxiv.org/abs/2610.13909",
-      "title": "Revisiting Tabular Deep Regression: Objectives and the Limits of Global Early Stopping",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "4c6c4f87a3ff80f46926",
-      "url": "https://arxiv.org/abs/2610.13935",
-      "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "563088c9525e2dfa354c",
-      "url": "https://arxiv.org/abs/2507.19364",
-      "title": "From the Fluency Fallacy to the Micro-to-Macro Validity Gap: Opportunities and Pitfalls of LLMs in Social Simulation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e5f4d811152fe72bd15f",
-      "url": "https://arxiv.org/abs/2507.19608",
-      "title": "DeltaLLM: Delta-Key Sparse Attention for Edge LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a3194684b950f9892290",
-      "url": "https://arxiv.org/abs/2601.13600",
-      "title": "Global Consistency Repair for Natural-Language Claim Sets",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5ae4faf3113d696a9c9e",
-      "url": "https://arxiv.org/abs/2602.09159",
-      "title": "CoMMa: Contribution-Aware Medical Multi-Agents for Decentralized Oncology Decision Support",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1355e742f6211ae21414",
-      "url": "https://arxiv.org/abs/2603.07427",
-      "title": "AutoControl Arena: Synthesizing Executable Test Environments for Frontier AI Risk Evaluation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "5495b0a1faa723b57d37",
-      "url": "https://arxiv.org/abs/2603.16148",
-      "title": "NeuronSpark: Selective Spiking State Space Models with Adaptive Computation for Language Modeling",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7d8a27cb5a0f32bb76fa",
-      "url": "https://arxiv.org/abs/2603.18048",
-      "title": "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9430aad45865db6dde5d",
-      "url": "https://arxiv.org/abs/2605.07251",
-      "title": "Can Agents Price a Reaction? Evaluating LLMs on Chemical Cost Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ccb03b5a3fd9ba97c3a7",
-      "url": "https://arxiv.org/abs/2605.07675",
-      "title": "FactoryBench: Evaluating Industrial Machine Understanding",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "25f24bcb6eda0ba70ef6",
-      "url": "https://arxiv.org/abs/2605.09040",
-      "title": "UxSID: Semantic-Aware User Interests Modeling for Ultra-Long Sequence",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "b94cef6ea5cabed9114f",
-      "url": "https://arxiv.org/abs/2605.10064",
-      "title": "MAGE: Multi-Agent Self-Evolution with Co-Evolutionary Knowledge Graphs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "79fb69d569ee694ed997",
-      "url": "https://arxiv.org/abs/2605.11928",
-      "title": "When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "add6384d659bc6581684",
-      "url": "https://arxiv.org/abs/2605.19781",
-      "title": "From SGD to Muon: Adaptive Optimization via Schatten-p Norms",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "53451b4dc233b01e3798",
-      "url": "https://arxiv.org/abs/2605.26279",
-      "title": "MPMMine: Better Benchmarks for Constraint Acquisition",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "3d1bf543c576a303a775",
-      "url": "https://arxiv.org/abs/2606.00726",
-      "title": "Latent Reward Steering: An Adaptive Inference-Time Framework that Implicitly Promotes Cognitive Behaviors in Reasoning LLMs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "37b876e9b7396fe713d4",
-      "url": "https://arxiv.org/abs/2606.03678",
-      "title": "EvoDrive: Pareto Evolution for Safety-Critical Autonomous Driving via Self-Improving LLM Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "027fe44d10a3e2182d53",
-      "url": "https://arxiv.org/abs/2606.04296",
-      "title": "The Saturation Trap and the Subjectivity of Intervention Timing: Why Affect-Based Triggers and LLM Judges Fail to Time Interventions on Autonomous Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "eb114745468e14f45cb9",
-      "url": "https://arxiv.org/abs/2606.05405",
-      "title": "Agents' Last Exam",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "6624d04a887b7d9531b3",
-      "url": "https://arxiv.org/abs/2606.05670",
-      "title": "Do More Agents Help? Evaluating Accuracy and Cost in LLM Multi-Agent Workflows",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "bb0c3c947831caab3aca",
-      "url": "https://arxiv.org/abs/2606.09365",
-      "title": "Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self-Evolving Skill Memory",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "7e922696c4ffcd3265f3",
-      "url": "https://arxiv.org/abs/2606.19821",
-      "title": "TelcoAgent: A Scalable 5G Multi-KPM Forecasting With 3GPP-Grounded Explainability",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "77d9534013675d1f2532",
-      "url": "https://arxiv.org/abs/2606.29315",
-      "title": "Hierarchical Experimentalist Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9efe5c5dc30e24c45096",
-      "url": "https://arxiv.org/abs/2607.04419",
-      "title": "Agent Step Value: Auditing Evaluation-Channel Sensitivity in Black-Box Agent Traces",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9e612f98dc933fe46f15",
-      "url": "https://arxiv.org/abs/2607.04528",
-      "title": "Measuring Harness-Induced Belief Divergence in Multi-Step LLM Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "28c39744a6cb58094fff",
-      "url": "https://arxiv.org/abs/2607.09996",
-      "title": "Who&When Pro: Can LLMs Really Attribute Failures in AI Agents?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "77c546247cf836ca463e",
-      "url": "https://arxiv.org/abs/2607.21552",
-      "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "bbc1783810ef7709fb4e",
-      "url": "https://arxiv.org/abs/2608.03565",
-      "title": "Enhancing Tabular Learners with Context-Aware Semantic Embeddings",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "1bf2de1e585efc3d65bf",
-      "url": "https://arxiv.org/abs/2608.05359",
-      "title": "CASCADE: An Agentic Regulatory Network Framework for Patient-Data-Validated Downstream Perturbation Prediction",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "a9cb66950a7e4f92e136",
-      "url": "https://arxiv.org/abs/2608.06912",
-      "title": "Fast LapSum: Exact Differentiable Top-$k$ at Million Scale",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "9c2e3b6e1c7cc32454c4",
-      "url": "https://arxiv.org/abs/2608.07418",
-      "title": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "e49766ed20cfd3d77e07",
-      "url": "https://arxiv.org/abs/2608.09109",
-      "title": "Different Feedback, Different Updates: Selective Self-Learning from User Interactions for Large Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "311288b523f15f965b26",
-      "url": "https://arxiv.org/abs/2608.10434",
-      "title": "Conversational versus Dashboard Explainable AI for UAV Intrusion Detection: An Empirical Study of Operator Trust and Reliance",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "bbc291c4586c7b995e9e",
-      "url": "https://arxiv.org/abs/2608.21668",
-      "title": "From Mastery Profile to Simulated Response: Stochastic Student Knowledge Graphs (SSKG) for Faithful LLM Student Simulation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "69ff77dcf483b136adcf",
-      "url": "https://arxiv.org/abs/2608.22055",
-      "title": "GenCoord: Executable Commitments for Embodied LLM Agents under Private Information",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "4906f0ee9f1349c48134",
-      "url": "https://arxiv.org/abs/2608.28620",
-      "title": "Preference Elicitation for Policy Optimization and Application to Aligning Heart Transplantation with Human Values",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "d248b7e1f0175430ed15",
-      "url": "https://arxiv.org/abs/2608.29460",
-      "title": "Can escalation channels redirect reward hacking toward defect disclosure?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "ff63366a13e23dd71be3",
-      "url": "https://arxiv.org/abs/2609.01038",
-      "title": "Data-Driven Persona-Conditioned Agents for A/B Test Simulation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "96c9e18d18f5d4d6ce0e",
-      "url": "https://arxiv.org/abs/2609.01216",
-      "title": "H2Table: Hierarchical Hypergraph-Enhanced Large Language Models for Complex Table Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
-    },
-    {
-      "id": "c6c7d0db2e34f7803b8f",
-      "url": "https://arxiv.org/abs/2609.04518",
-      "title": "Multi-Harness Reinforcement Learning for Coding Agents: Training Gains and Harness Dependence",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-12T09:05:56Z"
+      "observed_at": "2026-10-13T01:17:53Z"
     }
   ]
 }
