@@ -40,7 +40,7 @@ jobs:
         run: python .ima/web_intelligence/daily_summary.py
       - name: Persist daily summary and journal
         run: |
-          git add .ima/evolution/SELF_TIMELINE.json docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json
+          git add .ima/evolution/SELF_TIMELINE.json docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json artifacts/web-intelligence/energy-internal-discovery.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "IMA Daily Learning Steward"
           git config user.email "actions@users.noreply.github.com"
