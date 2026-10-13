@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-13T09:20:15Z",
+  "timestamp": "2026-10-13T17:34:00Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 10,
+  "changed": 24,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,84 +29,196 @@
   },
   "items": [
     {
-      "id": "ec4ed696f89364767180",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-13-desert-stairway-to-heaven/",
-      "title": "APOD: 2026 October 13 – Desert Stairway to Heaven",
+      "id": "5c49da1eb7e5efefc3dc",
+      "url": "https://www.nasa.gov/organizations/ogc/job-opportunities-nasa-office-of-the-general-counsel/",
+      "title": "JOB OPPORTUNITIES: NASA OFFICE OF THE GENERAL COUNSEL",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:08Z"
+      "observed_at": "2026-10-13T17:33:47Z"
     },
     {
-      "id": "76663832d6deac25d800",
-      "url": "https://science.nasa.gov/earth/earth-observatory/an-impact-structure-with-legs/",
-      "title": "An Impact Structure With Legs",
+      "id": "dd53e3f058a1b7791539",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-08-complex-modes-in-lightly-damped-structural-systemsa-two-mode-interaction-perspective/",
+      "title": "TB 26-08 Complex Modes in Lightly Damped Structural Systems: A Two-Mode Interaction Perspective",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:08Z"
+      "observed_at": "2026-10-13T17:33:47Z"
     },
     {
-      "id": "6ebd2be1e8c903344600",
-      "url": "https://www.natemeyvis.com/where-is-all-the-new-good-software/",
-      "title": "Where is all the new, good software?",
-      "source": "https://hnrss.org/frontpage",
+      "id": "9bbfc0f84ff7a182abdf",
+      "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/",
+      "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:47Z"
     },
     {
-      "id": "0c42a96b023c5941e450",
-      "url": "https://www.unsiloed.ai/blog/document-review-unsiloed-typesafe-jev",
-      "title": "Document Review with Unsiloed and TypeSafe Jev",
-      "source": "https://hnrss.org/frontpage",
+      "id": "e2b470dba130b961666e",
+      "url": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/",
+      "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:47Z"
     },
     {
-      "id": "bd3c7ebfc9f888c4317c",
-      "url": "https://github.com/composo-ai/DishwasherBench",
-      "title": "DishwasherBench – Can Frontier Models Stack a Dishwasher?",
+      "id": "fc1b19fa5c5deb9fad83",
+      "url": "https://www.ycombinator.com/companies/coris/jobs/h0nDly8-backend-engineer-ai-native-risk-infrastructure-integrations",
+      "title": "Coris (YC S22) Is Hiring Back End Engineer",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
     },
     {
-      "id": "9905e90cac32e6026e2b",
-      "url": "https://www.lemonde.fr/en/international/article/2026/10/10/denmark-set-to-allow-the-return-of-physical-force-to-maintain-order-in-schools_6758443_4.html",
-      "title": "Denmark set to allow return of 'physical force' in school",
+      "id": "78a8ab0baa0cb9eb6c36",
+      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+      "title": "Gemini 4 Argon for Robotics",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
     },
     {
-      "id": "a4ff4cfab3e039400733",
-      "url": "https://www.argmin.net/p/faster-fourier-transforms",
-      "title": "A look at the math that OpenAI claims computes faster Fourier transforms",
+      "id": "9e6b3e58f34392fdb8e6",
+      "url": "https://news.gallup.com/poll/715361/trust-federal-government-sinks-new-depths.aspx",
+      "title": "Americans Trust in Federal Government Sinks to New Depths",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
     },
     {
-      "id": "b693a6e80e752f67e358",
-      "url": "https://arxiv.org/abs/2610.13928",
-      "title": "AI models can provably hide arbitrary capabilities",
+      "id": "f27be5862356700e8d07",
+      "url": "https://ua.news/en/world/kiberataka-zupinila-budivnitstvo-tuneliu-mizh-daniieiu-ta-nimechchinoiu-rmf24",
+      "title": "Cyberattack halts construction of tunnel between Denmark and Germany",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
     },
     {
-      "id": "233e30c6f22de11e0e49",
-      "url": "https://github.com/bherbruck/solidcraft",
-      "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)",
+      "id": "7a89d3ba2a72b6c4334c",
+      "url": "https://deepmind.google/models/gemini/",
+      "title": "Gemini 4 Argon",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
     },
     {
-      "id": "18487b0af91cd32de017",
-      "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
-      "title": "Who is vfmaddrnd231pd?",
+      "id": "56ee56e48ed29025cce5",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "title": "Redesigning Source Control at Anthropic",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T09:20:10Z"
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "c0f3efa6baba2d65cbf1",
+      "url": "https://news.ycombinator.com/item?id=50073471",
+      "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "164ef0f32666d135ed8f",
+      "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+      "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "caddf50138e81bec27fd",
+      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
+      "title": "The United Kingdom Generates Less Electricity per Person Than in the 1970s",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "c3658c03e2980ab479eb",
+      "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
+      "title": "Thunderbird for iOS",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "6b5ca3d8f46446ef3bdf",
+      "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
+      "title": "How to engineer an AI harness for game development",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "373921b96a1395d93919",
+      "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
+      "title": "New Apple TV 4K",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "60d0a235888ac64a5b58",
+      "url": "https://www.apple.com/apple-homeview/",
+      "title": "Apple HomeView",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "a3f487dddb678986a09a",
+      "url": "https://github.com/jeff87654/busy-beaver/blob/main/BB10/1RB0RA_1LC1LF_1RD0LB_1RA1LE_1LI0LC_0RG1LD_1RH1LG_1LC0RG_0LJ0LI_1RZ0LC.md",
+      "title": "BB(10) > Graham's Number",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "49ea926c111e41bb66ed",
+      "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
+      "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "8854d78214dd6150ee10",
+      "url": "https://www.firefox.com/en-US/enterprise/",
+      "title": "Mozilla Introduces Firefox Enterprise",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "cf72ec06160eb5f4cfba",
+      "url": "https://photonlines.substack.com/p/a-visual-intro-to-complex-numbers",
+      "title": "A Visual Intro to Complex Numbers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "f02a8c8151dd5c896b6b",
+      "url": "https://eg2.haku.sh/",
+      "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "e011cc3858c1d4e28da1",
+      "url": "https://github.com/rust-lang/rust/issues/164250",
+      "title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
+    },
+    {
+      "id": "a5629ff3a2ef38f9757b",
+      "url": "https://pdftomp3.com/connect-ai/",
+      "title": "Show HN: Use your OpenAI subscription to create audiobooks",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-13T17:33:49Z"
     }
   ]
 }
