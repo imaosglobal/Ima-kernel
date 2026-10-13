@@ -493,8 +493,8 @@ def chat():
     if not isinstance(message, str) or not message.strip():
         return jsonify({"error": "message is required"}), 400
 
-    if not user_id:
-        return jsonify({"error": "valid IMA session required"}), 401
+    if not user_id or not user_id.startswith("public:google:"):
+        return jsonify({"error": "verified Google sign-in required"}), 401
 
     if not _rate_ok(request.remote_addr or "unknown"):
         return jsonify({"error": "rate limit exceeded; try again shortly"}), 429
