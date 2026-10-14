@@ -254,3 +254,25 @@ footer{border-top-color:#d9cec4;color:#81766e}
 .command-palette small{display:block;color:#8a7d74;line-height:1.6;padding:10px 5px 3px}
 @media(max-width:700px){.command-trigger{display:none}.palette-backdrop{padding:7vh 10px 16px}.command-palette{border-radius:20px}.palette-results button{padding:14px 10px}}
 @media(prefers-reduced-motion:reduce){.palette-backdrop{backdrop-filter:none}}
+
+
+/* Global resilience: keep readable text and controls intact across languages and widths. */
+h1,h2,h3,h4,h5,h6,p,li,article,section,.message,.mode-card,.principles>div,.everyone-grid article,.affiliate-copy{
+  min-width:0;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+.topbar nav a,.command-trigger,.live-pill,.primary,.secondary,.voice,.starters button{
+  white-space:nowrap;
+}
+img,svg,canvas,video{
+  max-width:100%;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
