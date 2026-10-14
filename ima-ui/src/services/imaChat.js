@@ -92,6 +92,14 @@ export async function signInWithGoogleCredential(credential) {
   return data;
 }
 
+export function adoptGoogleSession(data) {
+  if (!data?.token) throw new Error('Google session token missing');
+  localStorage.setItem('ima-public-session-token', data.token);
+  if (data.user) localStorage.setItem('ima-google-user', JSON.stringify(data.user));
+  trackImaEvent('ima_google_signin_completed');
+  return data;
+}
+
 export function getStoredGoogleUser() {
   try { return JSON.parse(localStorage.getItem('ima-google-user') || 'null'); } catch { return null; }
 }
