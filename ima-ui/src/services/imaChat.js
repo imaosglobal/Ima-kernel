@@ -69,3 +69,34 @@ export async function exportMemory() {
 export async function deleteMemory() {
   return request('/ima-api/memory', { method: 'DELETE' });
 }
+
+
+export async function getAuthConfig() {
+  const response = await fetch((API_BASE || '') + '/ima-api/auth/config', { cache: 'no-store' });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || 'IMA auth config unavailable');
+  return data;
+}
+
+export async function signInWithGoogleCredential(credential) {
+  const response = await fetch((API_BASE || '') + '/ima-api/auth/google', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ credential }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.token) throw new Error(data.error || 'Google sign-in failed');
+  localStorage.setItem('ima-public-session-token', data.token);
+  if (data.user) localStorage.setItem('ima-google-user', JSON.stringify(data.user));
+  trackImaEvent('ima_google_signin_completed');
+  return data;
+}
+
+export function getStoredGoogleUser() {
+  try { return JSON.parse(localStorage.getItem('ima-google-user') || 'null'); } catch { return null; }
+}
+
+export function signOutIma() {
+  localStorage.removeItem('ima-public-session-token');
+  localStorage.removeItem('ima-google-user');
+}
