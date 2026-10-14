@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
-import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfig, signInWithGoogleCredential, getStoredGoogleUser, signOutIma } from './services/imaChat';
+import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfig, signInWithGoogleCredential, adoptGoogleSession, getStoredGoogleUser, signOutIma } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
@@ -159,6 +159,10 @@ export default function App() {
           setGoogleAuth(s => ({ ...s, status: 'not_configured' }));
           return;
         }
+        if (window.__imaGoogleSignIn) {
+          setGoogleAuth(s => ({ ...s, status: 'ready', native: true }));
+          return;
+        }
         const loadScript = () => new Promise((resolve, reject) => {
           if (window.google?.accounts?.id) return resolve();
           const existing = document.querySelector('script[data-ima-google-gsi]');
@@ -298,7 +302,7 @@ export default function App() {
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#space">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><button className="command-trigger" onClick={() => setReducedMotion(v => !v)} aria-pressed={reducedMotion}>{reducedMotion ? 'תנועה מופחתת' : 'תנועה מלאה'}</button><div className="google-auth" aria-label="כניסה לאמא עם Google"><div ref={googleButtonRef} className="google-signin-button" />{googleAuth.status === 'not_configured' && <small>Google טרם הוגדר בשרת</small>}{googleAuth.status === 'signing_in' && <small>מתחברת עם Google…</small>}{googleAuth.status === 'error' && <small role="alert">הכניסה עם Google נכשלה — נסה שוב</small>}{googleAuth.status === 'signed_in' && <button className="google-signout" onClick={() => { signOutIma(); setGoogleAuth({ status: 'ready', user: null }); }}>יציאה</button>}</div><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
+      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><button className="command-trigger" onClick={() => setReducedMotion(v => !v)} aria-pressed={reducedMotion}>{reducedMotion ? 'תנועה מופחתת' : 'תנועה מלאה'}</button><div className="google-auth" aria-label="כניסה לאמא עם Google">{googleAuth.native ? <button className="google-native-button" onClick={async () => { try { setGoogleAuth(s => ({ ...s, status: 'signing_in' })); const result = await window.__imaGoogleSignIn((await getAuthConfig()).google.client_id); adoptGoogleSession(result); setGoogleAuth({ status: 'signed_in', user: result.user || null, native: true }); } catch (error) { setGoogleAuth(s => ({ ...s, status: 'error', error: error.message, native: true })); } }}>G&nbsp;&nbsp;כניסה עם Google</button> : <div ref={googleButtonRef} className="google-signin-button" />}{googleAuth.status === 'not_configured' && <small>Google טרם הוגדר בשרת</small>}{googleAuth.status === 'signing_in' && <small>מתחברת עם Google…</small>}{googleAuth.status === 'error' && <small role="alert">הכניסה עם Google נכשלה — נסה שוב</small>}{googleAuth.status === 'signed_in' && <button className="google-signout" onClick={() => { signOutIma(); setGoogleAuth({ status: 'ready', user: null, native: googleAuth.native }); }}>יציאה</button>}</div><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero mother-home" id="home">
