@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-14T13:39:48Z",
+  "timestamp": "2026-10-14T18:33:09Z",
   "sources": 12,
-  "discovered": 80,
-  "changed": 12,
+  "discovered": 92,
+  "changed": 19,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -37,100 +37,156 @@
   },
   "items": [
     {
-      "id": "03191a7a2f1ff9f0609b",
-      "url": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
-      "title": "Switzerland proposes banning profiling-based ads to minors",
+      "id": "d12e09342932b4beca9e",
+      "url": "https://github.com/bealesh/neckbeard",
+      "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "e758fe86bc5ef61b667b",
-      "url": "https://ma.tt/2026/10/rip-eric/",
-      "title": "RIP Eric Binnion",
+      "id": "3edeaa8d7764aa277fd5",
+      "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+      "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "37f17410db427eeb2d13",
-      "url": "https://aaronsonoracle.com/",
-      "title": "The Aaronson Oracle",
+      "id": "15de3fa1c6ff3ab644de",
+      "url": "https://www.ft.com/content/18b65495-9e2a-45d6-be85-7641442ab61a",
+      "title": "OpenAI claims employee sent secret device information to Apple",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "a27c24dc6a7e532216aa",
-      "url": "https://github.com/timescale/pg_vectorsearch",
-      "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
+      "id": "fc4075cbffe7d773b1d5",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/14/sally-rooney-says-she-can-no-longer-sell-books-in-the-uk-because-of-palestine-action-support",
+      "title": "Sally Rooney can no longer sell books in UK due to Palestine Action support",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "9c8e0559bae908082b29",
-      "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
-      "title": "TV4 postpones show after AI agent erases edited material",
+      "id": "bdfd949b4a772ffeee2c",
+      "url": "https://www.theguardian.com/us-news/2026/oct/14/dating-app-scams-us-congress",
+      "title": "US report details extent of 'devastating' dating-app scams",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "24d908521ed48a00c071",
-      "url": "https://blog.lorenzano.eu/pulsar-at-esug-2026/",
-      "title": "Pulsar at ESUG 2026 (new Smalltalk IDE)",
+      "id": "cb0908fa52c7962720d5",
+      "url": "https://clova.email/",
+      "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "89326f317aff2817024b",
-      "url": "https://www.quera.com/blog-posts/holding-the-light-teaching-an-ai-to-lock-and-tune-our-quantum-computers-lasers",
-      "title": "AI Laser Locking for Quantum Computers: How QuEra Automates It",
+      "id": "e86502df4595e24bf9cf",
+      "url": "https://lwn.net/Articles/1100449/",
+      "title": "Linus Torvalds's first LLM-assisted patch series",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "80b17e5ba2acecb38463",
-      "url": "https://museumofages.org/w/vinci",
-      "title": "Show HN: A guided 3D Leonardo da Vinci museum, built in code",
+      "id": "aa20a97d703482a1baf6",
+      "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
+      "title": "Has AI Tells",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "07212103b8cae30929db",
-      "url": "https://www.zetter-zeroday.com/who-is-planting-backdoors-in-ledger-crypto-wallets/",
-      "title": "Who Is Planting Backdoors in Ledger Crypto Wallets?",
+      "id": "2da123662ba3298b8f26",
+      "url": "https://www.extremetech.com/cars/teslas-robotaxis-blow-through-school-zones-nhtsa-petition-alleges",
+      "title": "Tesla's Robotaxis Blow Through School Zones, NHTSA Petition Alleges",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "9c034c3cdf79921b35cd",
-      "url": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
-      "title": "Amazon pushes up prices across the Internet",
+      "id": "61b1035a00b15cc0e9b1",
+      "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/",
+      "title": "Why do LLM pelicans look like this?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "941213c73f2808a1469b",
-      "url": "https://typeof.net/Iosevka/",
-      "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+      "id": "1adae70ed0107eb34f79",
+      "url": "https://go.dev/blog/http-connection-reuse",
+      "title": "Better HTTP/1 connection reuse in Go 1.27",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
     },
     {
-      "id": "81dee08a5762829049d7",
-      "url": "https://strafe.chat/",
-      "title": "Strafe: A new open-source, E2E Encrypted, and federated alternative to Discord",
+      "id": "ff142d6fe27002e2eb71",
+      "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+      "title": "Google is silently linking your phone number across all signed-in accounts",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T13:39:17Z"
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "991773bf58f58dbcda55",
+      "url": "https://prospect.org/2026/10/14/ice-planning-nightmare-domestic-spy-program-ero-one/",
+      "title": "ICE Planning $100M 'Nightmare' Domestic Spy Program",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "10b72d3c5e1b0f84969d",
+      "url": "https://blog.apnic.net/2026/10/14/submarine-cable-resilience/",
+      "title": "Submarine cable resilience",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "1882e55caad4e932b478",
+      "url": "https://github.com/graphicle-ai/graphicle",
+      "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "8d752c9104f484bb1033",
+      "url": "https://www.qawolf.com/blog/how-we-solved-windows-desktop-automation",
+      "title": "Running Windows desktop tests from Linux with disposable VMs",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "bf4176bf7e1b5c3001d6",
+      "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/",
+      "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "85d5408a652410ad54de",
+      "url": "https://e360.yale.edu/digest/teaching-birds-lost-songs",
+      "title": "Scientists Are Teaching Birds to Sing Lost Songs",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
+    },
+    {
+      "id": "b2f3e29faec5c80f148c",
+      "url": "https://dfarq.homeip.net/nvidias-first-gpu-geforce-256/",
+      "title": "Nvidia's first GPU: GeForce 256",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T18:32:30Z"
     }
   ]
 }
