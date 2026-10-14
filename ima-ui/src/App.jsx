@@ -186,12 +186,16 @@ export default function App() {
         await loadScript();
         if (cancelled || !googleButtonRef.current || !window.google?.accounts?.id) return;
         googleButtonRef.current.innerHTML = '';
+        const nonceBytes = new Uint8Array(24);
+        crypto.getRandomValues(nonceBytes);
+        const nonce = Array.from(nonceBytes).map(b => b.toString(16).padStart(2, '0')).join('');
         window.google.accounts.id.initialize({
           client_id: config.google.client_id,
+          nonce,
           callback: async response => {
             try {
               setGoogleAuth(s => ({ ...s, status: 'signing_in' }));
-              const result = await signInWithGoogleCredential(response.credential);
+              const result = await signInWithGoogleCredential(response.credential, nonce);
               if (!cancelled) setGoogleAuth({ status: 'signed_in', user: result.user || null });
             } catch (error) {
               if (!cancelled) setGoogleAuth({ status: 'error', user: null, error: error.message });
