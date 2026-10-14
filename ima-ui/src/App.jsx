@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
-import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent } from './services/imaChat';
+import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfig, signInWithGoogleCredential, getStoredGoogleUser, signOutIma } from './services/imaChat';
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
@@ -143,9 +143,74 @@ export default function App() {
   const [showTranscript, setShowTranscript] = useState(true);
   const [memoryConsent, setMemoryConsentState] = useState('UNKNOWN');
   const [memoryBusy, setMemoryBusy] = useState(false);
+  const [googleAuth, setGoogleAuth] = useState({ status: 'checking', user: getStoredGoogleUser() });
+  const googleButtonRef = useRef(null);
   const [messages, setMessages] = useState([
     { role: 'ima', text: 'אני אמא. אני של כולם — ובכל שיחה אני פוגשת אדם אחד באמת. הזיכרון האישי של כל אדם נשמר בנפרד, בעוד שהידע והלמידה הציבוריים של אמא נבנים ממקורות רבים.' }
   ]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const setupGoogle = async () => {
+      try {
+        const config = await getAuthConfig();
+        if (cancelled) return;
+        if (!config?.google?.enabled || !config.google.client_id) {
+          setGoogleAuth(s => ({ ...s, status: 'not_configured' }));
+          return;
+        }
+        const loadScript = () => new Promise((resolve, reject) => {
+          if (window.google?.accounts?.id) return resolve();
+          const existing = document.querySelector('script[data-ima-google-gsi]');
+          if (existing) {
+            existing.addEventListener('load', resolve, { once: true });
+            existing.addEventListener('error', reject, { once: true });
+            return;
+          }
+          const script = document.createElement('script');
+          script.src = 'https://accounts.google.com/gsi/client';
+          script.async = true;
+          script.defer = true;
+          script.dataset.imaGoogleGsi = 'true';
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+        await loadScript();
+        if (cancelled || !googleButtonRef.current || !window.google?.accounts?.id) return;
+        googleButtonRef.current.innerHTML = '';
+        window.google.accounts.id.initialize({
+          client_id: config.google.client_id,
+          callback: async response => {
+            try {
+              setGoogleAuth(s => ({ ...s, status: 'signing_in' }));
+              const result = await signInWithGoogleCredential(response.credential);
+              if (!cancelled) setGoogleAuth({ status: 'signed_in', user: result.user || null });
+            } catch (error) {
+              if (!cancelled) setGoogleAuth({ status: 'error', user: null, error: error.message });
+            }
+          },
+          auto_select: false,
+          use_fedcm_for_button: true,
+        });
+        window.google.accounts.id.renderButton(googleButtonRef.current, {
+          type: 'standard',
+          theme: 'outline',
+          size: 'large',
+          text: 'signin_with',
+          shape: 'rectangular',
+          logo_alignment: 'left',
+          width: 240,
+          locale: document.documentElement.lang || 'he',
+        });
+        setGoogleAuth(s => ({ ...s, status: 'ready' }));
+      } catch (error) {
+        if (!cancelled) setGoogleAuth(s => ({ ...s, status: 'error', error: error.message }));
+      }
+    };
+    setupGoogle();
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     const onKey = e => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setPaletteOpen(true); } if (e.key === 'Escape') setPaletteOpen(false); };
@@ -233,7 +298,7 @@ export default function App() {
     <header className="topbar">
       <a className="brand" href="#home"><span className="brand-mark">א</span><span>אמא</span></a>
       <nav><a href="#space">המרחב</a><a href="#space">יצירה</a><a href="#affiliate">שותפים</a><a href="#tools">כלים</a><a href="#about">על IMA</a></nav>
-      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><button className="command-trigger" onClick={() => setReducedMotion(v => !v)} aria-pressed={reducedMotion}>{reducedMotion ? 'תנועה מופחתת' : 'תנועה מלאה'}</button><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
+      <button className="command-trigger" onClick={() => setPaletteOpen(true)} aria-keyshortcuts="Control+K">⌘K · פעולה</button><button className="command-trigger" onClick={() => setReducedMotion(v => !v)} aria-pressed={reducedMotion}>{reducedMotion ? 'תנועה מופחתת' : 'תנועה מלאה'}</button><div className="google-auth" aria-label="כניסה לאמא עם Google"><div ref={googleButtonRef} className="google-signin-button" />{googleAuth.status === 'not_configured' && <small>Google טרם הוגדר בשרת</small>}{googleAuth.status === 'signing_in' && <small>מתחברת עם Google…</small>}{googleAuth.status === 'error' && <small role="alert">הכניסה עם Google נכשלה — נסה שוב</small>}{googleAuth.status === 'signed_in' && <button className="google-signout" onClick={() => { signOutIma(); setGoogleAuth({ status: 'ready', user: null }); }}>יציאה</button>}</div><span className={'live-pill ' + apiState} role="status" aria-live="polite"><i aria-hidden="true" /> {apiState === 'online' ? 'אמא מחוברת' : apiState === 'checking' ? 'בודקת חיבור' : 'חיבור לא זמין'}</span>
     </header>
 
     <section className="hero mother-home" id="home">
