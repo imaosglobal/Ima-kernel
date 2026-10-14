@@ -40,7 +40,10 @@ def visual_contract_checks():
         cs, _, css = get(urllib.parse.urljoin(BASE, href))
         assert cs == 200, f'CSS {href}: HTTP {cs}'
         assert 'overflow-wrap' in css or 'word-break' in css, f'CSS {href}: text overflow protection missing'
-    assert 'prefers-reduced-motion' in html or 'reduced-motion' in html, 'motion accessibility contract missing'
+    css_blob = ''
+    for href in css_urls:
+        css_blob += get(urllib.parse.urljoin(BASE, href))[2]
+    assert 'prefers-reduced-motion' in css_blob or 'reduced-motion' in css_blob, 'motion accessibility contract missing'
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
