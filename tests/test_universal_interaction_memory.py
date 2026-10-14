@@ -71,7 +71,7 @@ class UniversalMemoryTests(unittest.TestCase):
                 self.assertEqual(len(m.learning_records()),1)
                 self.assertEqual(m.delete_user_memory("u"),1)
                 self.assertEqual(m.export_user_memory("u"),[])
-                self.assertEqual([x["action"] for x in m.audit_events("u")],["CAPTURE","DELETE"])
+                self.assertEqual([x["action"] for x in m.audit_events("u")],["CONSENT_UPDATE","CAPTURE","DELETE"])
             finally: public_memory._DB=old
 
 if __name__=="__main__": unittest.main()
