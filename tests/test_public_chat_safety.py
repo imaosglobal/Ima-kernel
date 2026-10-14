@@ -87,6 +87,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
         self.assertEqual(payload["safety"]["age_band"], "adult")
         self.assertFalse(payload["safety"]["protective_mode"])
 
+    @patch("app._session_user_id", return_value="public:google:test-user")
     @patch("public_memory.append")
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
@@ -110,6 +111,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
         append.assert_called_once()
         self.assertEqual(append.call_args.args[2], payload["response"])
 
+    @patch("app._session_user_id", return_value="public:google:test-user")
     @patch("public_memory.append")
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
