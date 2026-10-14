@@ -114,8 +114,12 @@ def capture(*, user_id: str, source: str, content: str, consent: str,
         raise ValueError("invalid temporal class")
     if status not in STATUSES:
         raise ValueError("invalid status")
-    if authorized_learning and consent != "GRANTED":
-        raise ValueError("generalized learning requires explicit consent")
+    uid = _safe_user_id(user_id)
+    stored_consent = get_consent(user_id)["status"]
+    if stored_consent != "GRANTED" or consent != "GRANTED":
+        raise ValueError("capture requires explicit stored GRANTED consent")
+    if authorized_learning and (consent != "GRANTED" or stored_consent != "GRANTED"):
+        raise ValueError("generalized learning requires explicit stored consent")
     event_id = str(uuid.uuid4())
     record = {
         "schema": SCHEMA, "id": event_id, "timestamp": utc_now(),
@@ -131,14 +135,14 @@ def capture(*, user_id: str, source: str, content: str, consent: str,
            original_content,translation_refs,actions,outcome,verification,uncertainty,
            temporal_class,evidence_refs,authorized_learning)
           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-          (event_id, _safe_user_id(user_id), record["timestamp"], source, language,
+          (event_id, uid, record["timestamp"], source, language,
            interface, json.dumps(participants or [],ensure_ascii=False),
            consent, content, json.dumps(translation_refs or [],ensure_ascii=False),
            json.dumps(actions or [],ensure_ascii=False), outcome, verification, uncertainty,
            temporal_class, json.dumps(evidence_refs or [],ensure_ascii=False),
            int(bool(authorized_learning))),
         )
-        con.execute("INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",(str(uuid.uuid4()),_safe_user_id(user_id),record["timestamp"],"CAPTURE",event_id,status))
+        con.execute("INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",(str(uuid.uuid4()),uid,record["timestamp"],"CAPTURE",event_id,status))
     return record
 
 def export_user_memory(user_id: str) -> list[dict]:
