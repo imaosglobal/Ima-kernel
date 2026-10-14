@@ -160,8 +160,8 @@ public class MainActivity extends Activity {
                 .addCredentialOption(googleOption)
                 .build();
         credentialManager.getCredentialAsync(
-                request,
                 this,
+                request,
                 new CancellationSignal(),
                 googleExecutor,
                 new CredentialManagerCallback<GetCredentialResponse, GetCredentialException>() {
