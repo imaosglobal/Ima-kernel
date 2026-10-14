@@ -116,12 +116,8 @@ def capture(*, user_id: str, source: str, content: str, consent: str,
         raise ValueError("invalid status")
     uid = _safe_user_id(user_id)
     stored_consent = get_consent(user_id)["status"]
-    if stored_consent != "GRANTED" and consent == "GRANTED":
-        raise ValueError("capture requires a stored explicit GRANTED consent record")
-    if stored_consent == "DENIED" or consent == "DENIED":
-        raise ValueError("capture is blocked when memory consent is DENIED")
-    if stored_consent == "UNKNOWN" and consent != "UNKNOWN":
-        raise ValueError("capture consent must match the stored consent state")
+    if stored_consent != "GRANTED" or consent != "GRANTED":
+        raise ValueError("capture requires explicit stored GRANTED consent")
     if authorized_learning and (consent != "GRANTED" or stored_consent != "GRANTED"):
         raise ValueError("generalized learning requires explicit stored consent")
     event_id = str(uuid.uuid4())
