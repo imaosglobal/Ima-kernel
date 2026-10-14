@@ -32,9 +32,9 @@ def page_checks():
     assert "כניסה עם Google" in source_app, "Google entry missing from canonical UI source"
     assert '<section class="card chat-app" id="chat-app"' in html, "chat container missing"
     assert 'class="chat-app open"' not in html, "chat is not gated"
-    assert "אפשר פשוט לדבר עם אמא" not in bundle, "old landing copy still present"
-    assert "chat-tools" not in bundle and "chat-section" not in bundle, "stale broken selectors remain"
-    assert 'href="#about"' in bundle or 'href="#about"' in html, "Learn-about CTA has no destination"
+    assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
+    assert "chat-tools" not in source_app and "chat-section" not in source_app, "stale broken selectors remain"
+    assert 'href="#about"' in source_app or 'href="#about"' in html, "Learn-about CTA has no destination"
     assert "google.accounts.id.renderButton" in source_app, "official GIS button rendering missing from canonical UI source"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
