@@ -34,8 +34,13 @@ def page_checks():
 def visual_contract_checks():
     s, _, html = get(BASE)
     assert s == 200, f'visual source HTTP {s}'
-    assert 'overflow-wrap' in html or 'overflow-wrap' in get(urllib.parse.urljoin(BASE, 'assets/index.css'))[2], 'text overflow protection missing'
-    assert 'reduced-motion' in html or 'prefers-reduced-motion' in html, 'motion accessibility contract missing'
+    css_urls = re.findall(r'href=[\"\\\']([^\"\\\']+\\.css)[\"\\\']', html)
+    assert css_urls, 'runtime CSS link missing'
+    for href in css_urls:
+        cs, _, css = get(urllib.parse.urljoin(BASE, href))
+        assert cs == 200, f'CSS {href}: HTTP {cs}'
+        assert 'overflow-wrap' in css or 'word-break' in css, f'CSS {href}: text overflow protection missing'
+    assert 'prefers-reduced-motion' in html or 'reduced-motion' in html, 'motion accessibility contract missing'
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
