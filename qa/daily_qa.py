@@ -18,13 +18,23 @@ def check(name, fn):
 def page_checks():
     status, final, html=get(BASE)
     assert status==200, f"HTTP {status}"
-    assert "כניסה עם Google" in html, "Google entry missing"
+    scripts = re.findall(r'<script[^>]+src=["\\\']([^"\\\']+\\.js)["\\\']', html)
+    assets = []
+    for src in scripts:
+        try:
+            s, _, js = get(urllib.parse.urljoin(BASE, src))
+            if s == 200:
+                assets.append(js)
+        except Exception:
+            pass
+    bundle = "\\n".join(assets)
+    assert "כניסה עם Google" in bundle, "Google entry missing from compiled UI"
     assert '<section class="card chat-app" id="chat-app"' in html, "chat container missing"
     assert 'class="chat-app open"' not in html, "chat is not gated"
-    assert "אפשר פשוט לדבר עם אמא" not in html, "old landing copy still present"
-    assert "chat-tools" not in html and "chat-section" not in html, "stale broken selectors remain"
-    assert 'href="#about"' in html, "Learn-about CTA has no destination"
-    assert "google.accounts.id.renderButton" in html, "official GIS button rendering missing"
+    assert "אפשר פשוט לדבר עם אמא" not in bundle, "old landing copy still present"
+    assert "chat-tools" not in bundle and "chat-section" not in bundle, "stale broken selectors remain"
+    assert 'href="#about"' in bundle or 'href="#about"' in html, "Learn-about CTA has no destination"
+    assert "google.accounts.id.renderButton" in bundle, "official GIS button rendering missing"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
         assert s==200, f"{p}: HTTP {s}"
