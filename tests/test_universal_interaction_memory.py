@@ -15,6 +15,14 @@ class UniversalMemoryTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     m.capture(user_id="u",source="chat",content="x",consent="UNKNOWN",authorized_learning=True)
             finally: public_memory._DB=old
+    def test_missing_consent_blocks_capture(self):
+        with tempfile.TemporaryDirectory() as td:
+            old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
+            try:
+                with self.assertRaises(ValueError):
+                    m.capture(user_id="u",source="chat",content="hello",consent="UNKNOWN")
+            finally: public_memory._DB=old
+
     def test_capture_requires_stored_grant(self):
         with tempfile.TemporaryDirectory() as td:
             old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
