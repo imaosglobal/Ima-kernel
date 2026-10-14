@@ -31,6 +31,11 @@ def page_checks():
         assert "<title>" in h and 'rel="canonical"' in h, f"{p}: SEO metadata incomplete"
         assert 'href="./index.html"' in h, f"{p}: no return path"
 
+def visual_contract_checks():
+    s, _, html = get(BASE)
+    assert s == 200, f'visual source HTTP {s}'
+    assert 'overflow-wrap' in html or 'overflow-wrap' in get(urllib.parse.urljoin(BASE, 'assets/index.css'))[2], 'text overflow protection missing'
+    assert 'reduced-motion' in html or 'prefers-reduced-motion' in html, 'motion accessibility contract missing'
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
@@ -55,6 +60,7 @@ def monkey_checks():
 
 check("landing-page",page_checks)
 check("runtime-auth",api_checks)
+check("visual-contract",visual_contract_checks)
 check("monkey-navigation",monkey_checks)
 if failures:
     print("IMA DAILY QA FAILED")
