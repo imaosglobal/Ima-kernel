@@ -98,7 +98,14 @@ def _cors():
             "Access-Control-Allow-Origin": origin,
             "Vary": "Origin",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
-            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        }
+    if origin == "null" and request.path == "/ima-api/auth/config":
+        return {
+            "Access-Control-Allow-Origin": "null",
+            "Vary": "Origin",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
         }
     return {}
 
