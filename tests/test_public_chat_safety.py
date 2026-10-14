@@ -42,6 +42,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
         token = self.client.get("/ima-api/session").get_json()["token"]
         self.headers = {"Authorization": f"Bearer {token}"}
         self.public_google_user = "public:google:test-user"
+        app._universal_memory().set_consent(self.public_google_user, "GRANTED", source="test")
 
     def test_age_status_does_not_claim_unconfigured_verifier_is_ready(self):
         with patch.dict(os.environ, {
