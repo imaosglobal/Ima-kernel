@@ -62,10 +62,13 @@ def ensure_schema() -> None:
         cols = {row[1] for row in con.execute("PRAGMA table_info(interaction_memory)").fetchall()}
         if "content_hash" not in cols:
             con.execute("ALTER TABLE interaction_memory ADD COLUMN content_hash TEXT")
-        con.execute(
-            "UPDATE interaction_memory SET content_hash=? WHERE content_hash IS NULL AND original_content IS NOT NULL",
-            (_digest(""),),
-        )
+        for row_id, original in con.execute(
+            "SELECT id, original_content FROM interaction_memory WHERE content_hash IS NULL AND original_content IS NOT NULL"
+        ).fetchall():
+            con.execute(
+                "UPDATE interaction_memory SET content_hash=? WHERE id=?",
+                (_digest(original), row_id),
+            )
         CREATE INDEX IF NOT EXISTS idx_interaction_user_time
           ON interaction_memory(user_id, created_at);
         CREATE INDEX IF NOT EXISTS idx_interaction_learning
