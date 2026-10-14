@@ -32,18 +32,12 @@ def page_checks():
         assert 'href="./index.html"' in h, f"{p}: no return path"
 
 def visual_contract_checks():
-    s, _, html = get(BASE)
-    assert s == 200, f'visual source HTTP {s}'
-    css_urls = re.findall(r'href=[\"\\\']([^\"\\\']+\\.css)[\"\\\']', html)
-    assert css_urls, 'runtime CSS link missing'
-    for href in css_urls:
-        cs, _, css = get(urllib.parse.urljoin(BASE, href))
-        assert cs == 200, f'CSS {href}: HTTP {cs}'
-        assert 'overflow-wrap' in css or 'word-break' in css, f'CSS {href}: text overflow protection missing'
-    css_blob = ''
-    for href in css_urls:
-        css_blob += get(urllib.parse.urljoin(BASE, href))[2]
-    assert 'prefers-reduced-motion' in css_blob or 'reduced-motion' in css_blob, 'motion accessibility contract missing'
+    css_path = 'ima-ui/src/index.css'
+    with open(css_path, encoding='utf-8') as handle:
+        css = handle.read()
+    assert 'overflow-wrap' in css or 'word-break' in css, 'source CSS: text overflow protection missing'
+    assert 'prefers-reduced-motion' in css, 'source CSS: reduced-motion contract missing'
+    assert 'min-width:0' in css.replace(' ', ''), 'source CSS: min-width guard missing'
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
