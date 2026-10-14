@@ -19,7 +19,7 @@ def page_checks():
     status, final, html=get(BASE)
     assert status==200, f"HTTP {status}"
     assert "כניסה עם Google" in html, "Google entry missing"
-    assert 'id="chat-app" class="chat-app"' in html, "chat container missing"
+    assert '<section class="card chat-app" id="chat-app"' in html, "chat container missing"
     assert 'class="chat-app open"' not in html, "chat is not gated"
     assert "אפשר פשוט לדבר עם אמא" not in html, "old landing copy still present"
     assert "chat-tools" not in html and "chat-section" not in html, "stale broken selectors remain"
