@@ -19,11 +19,11 @@ def page_checks():
     status, final, html=get(BASE)
     assert status==200, f"HTTP {status}"
     assert "כניסה עם Google" in html, "Google entry missing"
-    assert "id="chat-app" class="chat-app"" in html, "chat container missing"
-    assert "class="chat-app open"" not in html, "chat is not gated"
+    assert 'id="chat-app" class="chat-app"' in html, "chat container missing"
+    assert 'class="chat-app open"' not in html, "chat is not gated"
     assert "אפשר פשוט לדבר עם אמא" not in html, "old landing copy still present"
     assert "chat-tools" not in html and "chat-section" not in html, "stale broken selectors remain"
-    assert "href="#about"" in html, "Learn-about CTA has no destination"
+    assert 'href="#about"' in html, "Learn-about CTA has no destination"
     assert "google.accounts.id.renderButton" in html, "official GIS button rendering missing"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
