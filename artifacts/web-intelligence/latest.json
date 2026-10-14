@@ -1,14 +1,22 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-14T01:51:09Z",
+  "timestamp": "2026-10-14T07:31:03Z",
   "sources": 12,
-  "discovered": 300,
-  "changed": 5,
+  "discovered": 110,
+  "changed": 7,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -29,44 +37,60 @@
   },
   "items": [
     {
-      "id": "9b21fa9a4490c8d7d390",
-      "url": "https://pulseos.finance",
-      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+      "id": "e402bd002c0d36048d13",
+      "url": "https://github.com/android/ndk/issues/2260",
+      "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T01:50:52Z"
+      "observed_at": "2026-10-14T07:30:43Z"
     },
     {
-      "id": "8293a57bf1a61219ac66",
-      "url": "https://www.cphiri.dev/presentations/recreational-programming",
-      "title": "Recreational Programming",
+      "id": "4d3819acd38d892ded93",
+      "url": "https://felixrieseberg.com/",
+      "title": "Felix Rieseberg Homepage",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T01:50:52Z"
+      "observed_at": "2026-10-14T07:30:43Z"
     },
     {
-      "id": "8a610aaf1a3dba10cbf5",
-      "url": "https://alpha-nist.github.io/",
-      "title": "AlphaNIST",
+      "id": "56c0690ddc7dfaf49d4b",
+      "url": "https://blumify.io/people",
+      "title": "I built a tool to track what AI leaders say and how their views change on video",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T01:50:52Z"
+      "observed_at": "2026-10-14T07:30:43Z"
     },
     {
-      "id": "6db6724e155ae1c6acb9",
-      "url": "https://www.pi.website/blog/api-beta",
-      "title": "Physical Intelligence API Beta: Frontier Models for Every Robot",
+      "id": "680798bef1b339b0f62d",
+      "url": "https://brookslybrand.com/posts/do-frameworks-matter-anymore/",
+      "title": "Do Frameworks Matter Anymore?",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T01:50:52Z"
+      "observed_at": "2026-10-14T07:30:43Z"
     },
     {
-      "id": "8854d78214dd6150ee10",
-      "url": "https://www.firefox.com/en-US/enterprise/",
-      "title": "Firefox Enterprise",
+      "id": "8785249a286ea0bd2862",
+      "url": "https://anitab.org/press-release",
+      "title": "Grace Hopper Celebration Cancelled",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T01:50:52Z"
+      "observed_at": "2026-10-14T07:30:43Z"
+    },
+    {
+      "id": "99b50cda3751ead44855",
+      "url": "https://music.xy.dev/",
+      "title": "Show HN: XY Music Notation",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T07:30:43Z"
+    },
+    {
+      "id": "5f7af9b18c9e706029b9",
+      "url": "https://lab.specr.net/rigged-draw/",
+      "title": "Show HN: How random are you?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T07:30:43Z"
     }
   ]
 }
