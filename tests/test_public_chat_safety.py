@@ -59,10 +59,10 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
     @patch("public_memory.append")
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
-    def test_valid_age_attestation_is_used_by_public_route(self, ask, recall, append):
+    def test_valid_age_attestation_is_used_by_public_route(self, ask, recall, append, session_user):
         secret = "integration-test-secret"
         now = int(__import__("time").time())
-        user_id = "public:" + self.headers["Authorization"].split(".")[0].split(" ")[1].split(".")[0]
+        user_id = self.public_google_user
         # Derive the exact opaque session subject from the bearer token's first segment.
         with patch.dict(os.environ, {
             "IMA_AGE_ATTESTATION_SECRET": secret,
@@ -91,7 +91,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
     def test_unsafe_companion_response_is_replaced_before_memory_write(
-        self, ask, recall, append
+        self, ask, recall, append, session_user
     ):
         ask.return_value = {
             "response": "You only need me; don't talk to anyone else.",
@@ -114,7 +114,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
     def test_self_harm_disclosure_receives_supportive_fallback(
-        self, ask, recall, append
+        self, ask, recall, append, session_user
     ):
         ask.return_value = {
             "response": "I can't help with that.",
