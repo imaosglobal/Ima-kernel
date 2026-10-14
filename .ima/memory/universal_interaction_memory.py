@@ -43,7 +43,8 @@ def ensure_schema() -> None:
           uncertainty TEXT,
           temporal_class TEXT NOT NULL,
           evidence_refs TEXT,
-          authorized_learning INTEGER NOT NULL DEFAULT 0
+          authorized_learning INTEGER NOT NULL DEFAULT 0,
+          content_hash TEXT
         );
         CREATE TABLE IF NOT EXISTS memory_consent (
           user_id TEXT PRIMARY KEY,
@@ -59,6 +60,11 @@ def ensure_schema() -> None:
           record_id TEXT,
           result TEXT NOT NULL
         );
+        CREATE INDEX IF NOT EXISTS idx_interaction_user_time
+          ON interaction_memory(user_id, created_at);
+        CREATE INDEX IF NOT EXISTS idx_interaction_learning
+          ON interaction_memory(authorized_learning);
+        """)
         cols = {row[1] for row in con.execute("PRAGMA table_info(interaction_memory)").fetchall()}
         if "content_hash" not in cols:
             con.execute("ALTER TABLE interaction_memory ADD COLUMN content_hash TEXT")
@@ -69,11 +75,6 @@ def ensure_schema() -> None:
                 "UPDATE interaction_memory SET content_hash=? WHERE id=?",
                 (_digest(original), row_id),
             )
-        CREATE INDEX IF NOT EXISTS idx_interaction_user_time
-          ON interaction_memory(user_id, created_at);
-        CREATE INDEX IF NOT EXISTS idx_interaction_learning
-          ON interaction_memory(authorized_learning);
-        """)
 
 def set_consent(user_id: str, status: str, source: str="user") -> dict:
     if status not in {"GRANTED","DENIED","UNKNOWN"}:
