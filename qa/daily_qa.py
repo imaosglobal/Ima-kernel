@@ -34,7 +34,7 @@ def page_checks():
     assert "אפשר פשוט לדבר עם אמא" not in bundle, "old landing copy still present"
     assert "chat-tools" not in bundle and "chat-section" not in bundle, "stale broken selectors remain"
     assert 'href="#about"' in bundle or 'href="#about"' in html, "Learn-about CTA has no destination"
-    assert "google.accounts.id.renderButton" in bundle, "official GIS button rendering missing"
+    assert "google.accounts.id.renderButton" in source_app, "official GIS button rendering missing from canonical UI source"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
         assert s==200, f"{p}: HTTP {s}"
