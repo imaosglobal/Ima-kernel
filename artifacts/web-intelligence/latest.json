@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-14T07:31:03Z",
+  "timestamp": "2026-10-14T13:39:48Z",
   "sources": 12,
-  "discovered": 110,
-  "changed": 7,
+  "discovered": 80,
+  "changed": 12,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -37,60 +37,100 @@
   },
   "items": [
     {
-      "id": "e402bd002c0d36048d13",
-      "url": "https://github.com/android/ndk/issues/2260",
-      "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+      "id": "03191a7a2f1ff9f0609b",
+      "url": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
+      "title": "Switzerland proposes banning profiling-based ads to minors",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "4d3819acd38d892ded93",
-      "url": "https://felixrieseberg.com/",
-      "title": "Felix Rieseberg Homepage",
+      "id": "e758fe86bc5ef61b667b",
+      "url": "https://ma.tt/2026/10/rip-eric/",
+      "title": "RIP Eric Binnion",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "56c0690ddc7dfaf49d4b",
-      "url": "https://blumify.io/people",
-      "title": "I built a tool to track what AI leaders say and how their views change on video",
+      "id": "37f17410db427eeb2d13",
+      "url": "https://aaronsonoracle.com/",
+      "title": "The Aaronson Oracle",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "680798bef1b339b0f62d",
-      "url": "https://brookslybrand.com/posts/do-frameworks-matter-anymore/",
-      "title": "Do Frameworks Matter Anymore?",
+      "id": "a27c24dc6a7e532216aa",
+      "url": "https://github.com/timescale/pg_vectorsearch",
+      "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "8785249a286ea0bd2862",
-      "url": "https://anitab.org/press-release",
-      "title": "Grace Hopper Celebration Cancelled",
+      "id": "9c8e0559bae908082b29",
+      "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
+      "title": "TV4 postpones show after AI agent erases edited material",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "99b50cda3751ead44855",
-      "url": "https://music.xy.dev/",
-      "title": "Show HN: XY Music Notation",
+      "id": "24d908521ed48a00c071",
+      "url": "https://blog.lorenzano.eu/pulsar-at-esug-2026/",
+      "title": "Pulsar at ESUG 2026 (new Smalltalk IDE)",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
     },
     {
-      "id": "5f7af9b18c9e706029b9",
-      "url": "https://lab.specr.net/rigged-draw/",
-      "title": "Show HN: How random are you?",
+      "id": "89326f317aff2817024b",
+      "url": "https://www.quera.com/blog-posts/holding-the-light-teaching-an-ai-to-lock-and-tune-our-quantum-computers-lasers",
+      "title": "AI Laser Locking for Quantum Computers: How QuEra Automates It",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T07:30:43Z"
+      "observed_at": "2026-10-14T13:39:17Z"
+    },
+    {
+      "id": "80b17e5ba2acecb38463",
+      "url": "https://museumofages.org/w/vinci",
+      "title": "Show HN: A guided 3D Leonardo da Vinci museum, built in code",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T13:39:17Z"
+    },
+    {
+      "id": "07212103b8cae30929db",
+      "url": "https://www.zetter-zeroday.com/who-is-planting-backdoors-in-ledger-crypto-wallets/",
+      "title": "Who Is Planting Backdoors in Ledger Crypto Wallets?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T13:39:17Z"
+    },
+    {
+      "id": "9c034c3cdf79921b35cd",
+      "url": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
+      "title": "Amazon pushes up prices across the Internet",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T13:39:17Z"
+    },
+    {
+      "id": "941213c73f2808a1469b",
+      "url": "https://typeof.net/Iosevka/",
+      "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T13:39:17Z"
+    },
+    {
+      "id": "81dee08a5762829049d7",
+      "url": "https://strafe.chat/",
+      "title": "Strafe: A new open-source, E2E Encrypted, and federated alternative to Discord",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-14T13:39:17Z"
     }
   ]
 }
