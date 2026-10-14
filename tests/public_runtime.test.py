@@ -1,6 +1,7 @@
 import os
 import tempfile
 import unittest
+from unittest.mock import patch
 
 os.environ["PUBLIC_MEMORY_DB"] = os.path.join(
     tempfile.gettempdir(), "ima_public_memory_test.sqlite3"
@@ -70,7 +71,8 @@ class PublicRuntimeContractTest(unittest.TestCase):
         )
         self.assertEqual(response.status_code, 401)
 
-    def test_chat_contract_and_user_scope(self):
+    @patch("app._session_user_id", return_value="public:google:test-user")
+    def test_chat_contract_and_user_scope(self, session_user):
         response = self.client.post(
             "/ima-api/chat",
             headers=self._session_headers(),
