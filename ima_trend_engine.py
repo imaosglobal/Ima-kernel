@@ -9,6 +9,15 @@ from datetime import datetime
 from urllib.parse import urlparse
 from typing import Any
 
+FIELD_VALIDATION_STAGES = (
+    "OBSERVE_REAL_WORKFLOW",
+    "IDENTIFY_REAL_PROBLEM",
+    "TEST_WITH_REAL_USERS",
+    "VERIFY_INTEGRATION",
+    "VERIFY_SAFETY_COMPLIANCE",
+    "VERIFY_UNIT_ECONOMICS",
+    "PLAN_FOR_SCALE",
+)
 DIMENSIONS = (
     "trend_acceleration",
     "demand_persistence",
@@ -149,6 +158,19 @@ def assess_demand(signals: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def assess_field_validation(stages: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Gate product claims on evidence from the real operating environment."""
+    stages = stages or {}
+    completed = [stage for stage in FIELD_VALIDATION_STAGES if stages.get(stage) is True]
+    missing = [stage for stage in FIELD_VALIDATION_STAGES if stage not in completed]
+    return {
+        "completed": completed,
+        "missing": missing,
+        "coverage": round(len(completed) / len(FIELD_VALIDATION_STAGES), 3),
+        "field_validated": len(completed) == len(FIELD_VALIDATION_STAGES),
+        "scale_ready": len(completed) == len(FIELD_VALIDATION_STAGES),
+        "rule": "Do not equate a working model with a deployable product.",
+    }
 def build_opportunity_brief(
     *, title: str, customer_problem: str, market: str,
     dimensions: dict[str, Any], signals: list[dict[str, Any]],
