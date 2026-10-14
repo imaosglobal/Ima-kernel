@@ -173,7 +173,7 @@ export default function App() {
         const hash = Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
         if (hash !== GLB_GIT_BLOB_SHA1) throw new Error('GLB Git blob hash mismatch');
         setAvatarAssetState('verified');
-      } catch (error) {
+      } catch {
         setAvatarAssetState('failed');
       }
     };
