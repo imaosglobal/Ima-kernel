@@ -143,6 +143,7 @@ def auth_config():
 def google_auth():
     payload = request.get_json(silent=True) or {}
     credential = str(payload.get("credential") or "").strip()
+    expected_nonce = str(payload.get("nonce") or "").strip()
     client_id = os.environ.get("GOOGLE_CLIENT_ID", "").strip()
     if not credential or not client_id:
         return jsonify({"error": "Google sign-in is not configured"}), 503
@@ -156,6 +157,8 @@ def google_auth():
             return jsonify({"error": "Google credential issuer mismatch"}), 401
         if int(claims.get("exp", "0")) <= int(time.time()):
             return jsonify({"error": "Google credential expired"}), 401
+        if expected_nonce and claims.get("nonce") != expected_nonce:
+            return jsonify({"error": "Google credential nonce mismatch"}), 401
         subject = claims.get("sub")
         if not subject:
             return jsonify({"error": "Google credential missing subject"}), 401
