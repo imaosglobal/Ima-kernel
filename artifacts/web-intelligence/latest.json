@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-13T22:39:52Z",
+  "timestamp": "2026-10-14T01:51:09Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 19,
+  "changed": 5,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,156 +29,44 @@
   },
   "items": [
     {
-      "id": "17666ac8cb2e44ce3aa5",
-      "url": "https://www.nasa.gov/news-release/nasa-names-astronaut-christina-koch-acting-deputy-chief-engineer/",
-      "title": "NASA Names Astronaut Christina Koch Acting Deputy Chief Engineer",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "b017df62841bd87608cb",
-      "url": "https://science.nasa.gov/photojournal/comparing-off-world-rover-driving-distances/",
-      "title": "Comparing Off-World Rover Driving Distances",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "44dbcee82122f9c0d18b",
-      "url": "https://science.nasa.gov/photojournal/nasas-record-setting-perseverance-rover-team/",
-      "title": "NASA’s Record-Setting Perseverance Rover Team",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "c0d9b7ae26fda919c7d8",
-      "url": "https://science.nasa.gov/photojournal/perseverance-navcam-image-marks-record-drive/",
-      "title": "Perseverance Navcam Image Marks Record Drive",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "df1c1b3cdf8fc6f2e3c9",
-      "url": "https://www.nasa.gov/image-article/transporter-18-smallsats-encapsulation/",
-      "title": "Transporter-18 SmallSats Encapsulation",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "4c493ed319e7f16a9de2",
-      "url": "https://science.nasa.gov/photojournal/voyager-technologies-griffin-1-completes-environmental-testing-at-nasa-jpl/",
-      "title": "Voyager Technologies’ Griffin-1 Completes Environmental Testing at NASA JPL",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "5f66990b2ef05a98f55f",
-      "url": "https://www.nasa.gov/image-detail/afs-8-101-1315/",
-      "title": "Transporter-18 SmallSats Encapsulation",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:38Z"
-    },
-    {
-      "id": "7a679d710e8c186b4153",
-      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
-      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
-      "source": "https://github.blog/feed/",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:39Z"
-    },
-    {
-      "id": "2dcdb6a72797a0ff9300",
-      "url": "https://meshapplied.com",
-      "title": "Running Qwen3.8 at 255 tok/s on a single 5090",
+      "id": "9b21fa9a4490c8d7d390",
+      "url": "https://pulseos.finance",
+      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
+      "observed_at": "2026-10-14T01:50:52Z"
     },
     {
-      "id": "1b16c179d9e5d28dfb8e",
-      "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
-      "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
+      "id": "8293a57bf1a61219ac66",
+      "url": "https://www.cphiri.dev/presentations/recreational-programming",
+      "title": "Recreational Programming",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
+      "observed_at": "2026-10-14T01:50:52Z"
     },
     {
-      "id": "95aefa2303a28f89976d",
-      "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-      "title": "OpenAI engineer arrested in bugging of executive conference room",
+      "id": "8a610aaf1a3dba10cbf5",
+      "url": "https://alpha-nist.github.io/",
+      "title": "AlphaNIST",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
+      "observed_at": "2026-10-14T01:50:52Z"
     },
     {
-      "id": "22dbce1dd938b87d23a1",
-      "url": "https://parsimony.lasu.dev/",
-      "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
+      "id": "6db6724e155ae1c6acb9",
+      "url": "https://www.pi.website/blog/api-beta",
+      "title": "Physical Intelligence API Beta: Frontier Models for Every Robot",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
+      "observed_at": "2026-10-14T01:50:52Z"
     },
     {
-      "id": "c52335acdcd12e2cb682",
-      "url": "https://newsletter.pessimistsarchive.org/p/the-1st-time-machines-mogged-mathematicians",
-      "title": "The Four Colour Theorem: The first time machines mogged mathematicians",
+      "id": "8854d78214dd6150ee10",
+      "url": "https://www.firefox.com/en-US/enterprise/",
+      "title": "Firefox Enterprise",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "a52daacfcae867271ea5",
-      "url": "https://guitoro.com/",
-      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "5f7af9b18c9e706029b9",
-      "url": "https://lab.specr.net/rigged-draw/",
-      "title": "Show HN: How Random Are You?",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "56ee56e48ed29025cce5",
-      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "title": "Redesigning source control at Anthropic",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "caddf50138e81bec27fd",
-      "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
-      "title": "The United Kingdom generates less electricity per person than in the 1970s",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "980e32e49af70cab47e3",
-      "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
-      "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
-    },
-    {
-      "id": "ff9b5e58ebc263164a7d",
-      "url": "https://www.nytimes.com/2026/10/13/science/inhabitable-planets-solar-system.html",
-      "title": "Worlds more habitable than Earth?",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-13T22:39:43Z"
+      "observed_at": "2026-10-14T01:50:52Z"
     }
   ]
 }
