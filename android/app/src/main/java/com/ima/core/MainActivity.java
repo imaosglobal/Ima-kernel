@@ -178,7 +178,7 @@ public class MainActivity extends Activity {
                             }
                             GoogleIdTokenCredential googleCredential =
                                     GoogleIdTokenCredential.createFrom(custom.getData());
-                            JSONObject server = postGoogleCredential(googleCredential.getIdToken());
+                            JSONObject server = postGoogleCredential(googleCredential.getIdToken(), nonce);
                             if (server.optString("token", "").isEmpty()) {
                                 finishGoogle(id, false, null, server.optString("error", "Google authentication failed"));
                                 return;
@@ -202,7 +202,7 @@ public class MainActivity extends Activity {
         return Base64.encodeToString(bytes, Base64.NO_WRAP | Base64.URL_SAFE | Base64.NO_PADDING);
     }
 
-    private JSONObject postGoogleCredential(String idToken) throws Exception {
+    private JSONObject postGoogleCredential(String idToken, String nonce) throws Exception {
         java.net.URL url = new java.net.URL("https://ima-915m.onrender.com/ima-api/auth/google");
         java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
@@ -212,6 +212,7 @@ public class MainActivity extends Activity {
         connection.setRequestProperty("Content-Type", "application/json");
         JSONObject payload = new JSONObject();
         payload.put("credential", idToken);
+        payload.put("nonce", nonce);
         try (java.io.OutputStream out = connection.getOutputStream()) {
             out.write(payload.toString().getBytes(StandardCharsets.UTF_8));
         }
