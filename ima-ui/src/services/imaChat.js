@@ -78,11 +78,11 @@ export async function getAuthConfig() {
   return data;
 }
 
-export async function signInWithGoogleCredential(credential) {
+export async function signInWithGoogleCredential(credential, nonce) {
   const response = await fetch((API_BASE || '') + '/ima-api/auth/google', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ credential }),
+    body: JSON.stringify({ credential, nonce }),
   });
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.token) throw new Error(data.error || 'Google sign-in failed');
