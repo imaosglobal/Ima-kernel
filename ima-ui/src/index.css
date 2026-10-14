@@ -276,3 +276,10 @@ img,svg,canvas,video{
     transition-duration:.01ms !important;
   }
 }
+
+
+.google-auth{display:flex;align-items:center;gap:8px;min-height:40px}
+.google-signin-button{min-width:240px;min-height:40px;display:flex;align-items:center}
+.google-auth small{font-size:.72rem;opacity:.7}
+.google-auth [role="alert"]{max-width:180px}
+.google-signout{border:0;background:transparent;text-decoration:underline;cursor:pointer}
