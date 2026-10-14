@@ -1,165 +1,173 @@
 {
-  "last_run": "2026-10-14T18:33:09Z",
+  "last_run": "2026-10-14T22:15:50Z",
   "latest_commoncrawl": "CC-MAIN-2026-39",
   "recent_changed_items": [
     {
+      "id": "3cbafd4338038f81ee3b",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:28Z",
+      "source": "https://github.blog/feed/",
+      "title": "GitHub availability report: September 2026",
+      "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/"
+    },
+    {
+      "id": "f919ddb4bb1767a45732",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:28Z",
+      "source": "https://github.blog/feed/",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/"
+    },
+    {
+      "id": "616037433c784b2a7562",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+      "url": "https://typesafe.ai/blog/jev-1-14"
+    },
+    {
+      "id": "d001316ff15b7db6937e",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "OpenCode 2.0",
+      "url": "https://anoma.ly/notes/opencode-2-0/"
+    },
+    {
+      "id": "891468d096a68883d5cc",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Anthropic's Scion is heavily inspired by Mononoke",
+      "url": "https://sunshowers.io/posts/anthropic-mononoke/"
+    },
+    {
+      "id": "049f752dea89d9de43df",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Yandex outage: data shows that instead of going dark, malicious bots moved",
+      "url": "https://blog.cloudflare.com/yandex-outage/"
+    },
+    {
+      "id": "a75b5151ba54c3908f0e",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Fancy Curl Sites",
+      "url": "https://nytpu.com/gemlog/2026-03-18"
+    },
+    {
+      "id": "537c3562be36e30aae78",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Things to know when you get cancer – 2026 Edition",
+      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/"
+    },
+    {
+      "id": "5793f55a8070ab6917bf",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Suicide rates highest ever among middle-aged men",
+      "url": "https://www.telegraph.co.uk/news/2026/10/13/suicide-rates-highest-ever-among-middle-aged-men/"
+    },
+    {
+      "id": "272216152be46ab5ca36",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
+      "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/"
+    },
+    {
+      "id": "8eb3e0ba9b803883c209",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Banks are now trying to offload the AI data center debt they just underwrote",
+      "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/"
+    },
+    {
+      "id": "8046c79956428cb16663",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+      "url": "https://petal.live/"
+    },
+    {
+      "id": "77f4262bbf311427db6f",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Virtual Oxide Labs: Emulating a Full Oxide Rack",
+      "url": "https://oxide.computer/blog/voxel-labs"
+    },
+    {
+      "id": "c8445f2ac4bdd486beb4",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "America didn't lose its rare earth industry, it sold it",
+      "url": "https://www.lawfaremedia.org/article/america-didn-t-lose-its-rare-earth-industry.-it-sold-it"
+    },
+    {
       "id": "d12e09342932b4beca9e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
+      "title": "Neckbeard – A DevOps/platform/SRE plugin for your agent",
       "url": "https://github.com/bealesh/neckbeard"
     },
     {
       "id": "3edeaa8d7764aa277fd5",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
       "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html"
-    },
-    {
-      "id": "15de3fa1c6ff3ab644de",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "OpenAI claims employee sent secret device information to Apple",
-      "url": "https://www.ft.com/content/18b65495-9e2a-45d6-be85-7641442ab61a"
-    },
-    {
-      "id": "fc4075cbffe7d773b1d5",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Sally Rooney can no longer sell books in UK due to Palestine Action support",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/14/sally-rooney-says-she-can-no-longer-sell-books-in-the-uk-because-of-palestine-action-support"
-    },
-    {
-      "id": "bdfd949b4a772ffeee2c",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "US report details extent of 'devastating' dating-app scams",
-      "url": "https://www.theguardian.com/us-news/2026/oct/14/dating-app-scams-us-congress"
-    },
-    {
-      "id": "cb0908fa52c7962720d5",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
-      "url": "https://clova.email/"
-    },
-    {
-      "id": "e86502df4595e24bf9cf",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Linus Torvalds's first LLM-assisted patch series",
-      "url": "https://lwn.net/Articles/1100449/"
     },
     {
       "id": "aa20a97d703482a1baf6",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Has AI Tells",
+      "title": "Has AI tells",
       "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1"
     },
     {
-      "id": "2da123662ba3298b8f26",
+      "id": "6ea4e6a562d2bc5ff658",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Tesla's Robotaxis Blow Through School Zones, NHTSA Petition Alleges",
-      "url": "https://www.extremetech.com/cars/teslas-robotaxis-blow-through-school-zones-nhtsa-petition-alleges"
-    },
-    {
-      "id": "61b1035a00b15cc0e9b1",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Why do LLM pelicans look like this?",
-      "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/"
-    },
-    {
-      "id": "1adae70ed0107eb34f79",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Better HTTP/1 connection reuse in Go 1.27",
-      "url": "https://go.dev/blog/http-connection-reuse"
-    },
-    {
-      "id": "ff142d6fe27002e2eb71",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Google is silently linking your phone number across all signed-in accounts",
-      "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/"
-    },
-    {
-      "id": "991773bf58f58dbcda55",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "ICE Planning $100M 'Nightmare' Domestic Spy Program",
-      "url": "https://prospect.org/2026/10/14/ice-planning-nightmare-domestic-spy-program-ero-one/"
-    },
-    {
-      "id": "10b72d3c5e1b0f84969d",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Submarine cable resilience",
-      "url": "https://blog.apnic.net/2026/10/14/submarine-cable-resilience/"
-    },
-    {
-      "id": "1882e55caad4e932b478",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents",
-      "url": "https://github.com/graphicle-ai/graphicle"
-    },
-    {
-      "id": "8d752c9104f484bb1033",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Running Windows desktop tests from Linux with disposable VMs",
-      "url": "https://www.qawolf.com/blog/how-we-solved-windows-desktop-automation"
-    },
-    {
-      "id": "bf4176bf7e1b5c3001d6",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
-      "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/"
-    },
-    {
-      "id": "85d5408a652410ad54de",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Scientists Are Teaching Birds to Sing Lost Songs",
-      "url": "https://e360.yale.edu/digest/teaching-birds-lost-songs"
-    },
-    {
-      "id": "b2f3e29faec5c80f148c",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Nvidia's first GPU: GeForce 256",
-      "url": "https://dfarq.homeip.net/nvidias-first-gpu-geforce-256/"
+      "title": "Americans' social activity has steeply declined in the past 30 years",
+      "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years"
     }
   ],
   "recent_items": [
     {
+      "id": "3cbafd4338038f81ee3b",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:28Z",
+      "source": "https://github.blog/feed/",
+      "title": "GitHub availability report: September 2026",
+      "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/"
+    },
+    {
+      "id": "f919ddb4bb1767a45732",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:28Z",
+      "source": "https://github.blog/feed/",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/"
+    },
+    {
       "id": "7a679d710e8c186b4153",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
@@ -167,7 +175,7 @@
     {
       "id": "23216cfbe10c8c92d859",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/"
@@ -175,7 +183,7 @@
     {
       "id": "85c11fca4aa44ff1793b",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "Hack the World: Why hackathons are still the best place to learn to build",
       "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/"
@@ -183,7 +191,7 @@
     {
       "id": "400f93c3a2faae18adc1",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "How one bug bounty researcher chooses the features they investigate",
       "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/"
@@ -191,7 +199,7 @@
     {
       "id": "c6fb2b313984d9d24e98",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "Secret protection must scale with software",
       "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/"
@@ -199,7 +207,7 @@
     {
       "id": "9ddb77314617db92b6c9",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "Building Git infrastructure for agent-scale development",
       "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
@@ -207,7 +215,7 @@
     {
       "id": "6f397884428e9f0f14f3",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "ReviewBench: An open benchmark for AI code review",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
@@ -215,111 +223,143 @@
     {
       "id": "afd517ff06180871c64e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
+      "observed_at": "2026-10-14T22:15:28Z",
       "source": "https://github.blog/feed/",
       "title": "AI is changing developer work. Here are three skills to strengthen.",
       "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/"
     },
     {
-      "id": "a0c03d16e7252acebfcd",
+      "id": "616037433c784b2a7562",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
-      "source": "https://github.blog/feed/",
-      "title": "10 technical talks I’m excited about at GitHub Universe 2026",
-      "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/"
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+      "url": "https://typesafe.ai/blog/jev-1-14"
     },
     {
-      "id": "85a2ee1ccabf9baf3167",
+      "id": "d001316ff15b7db6937e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:29Z",
-      "source": "https://github.blog/feed/",
-      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
-      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/"
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "OpenCode 2.0",
+      "url": "https://anoma.ly/notes/opencode-2-0/"
+    },
+    {
+      "id": "891468d096a68883d5cc",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Anthropic's Scion is heavily inspired by Mononoke",
+      "url": "https://sunshowers.io/posts/anthropic-mononoke/"
+    },
+    {
+      "id": "049f752dea89d9de43df",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Yandex outage: data shows that instead of going dark, malicious bots moved",
+      "url": "https://blog.cloudflare.com/yandex-outage/"
+    },
+    {
+      "id": "a75b5151ba54c3908f0e",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Fancy Curl Sites",
+      "url": "https://nytpu.com/gemlog/2026-03-18"
+    },
+    {
+      "id": "537c3562be36e30aae78",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Things to know when you get cancer – 2026 Edition",
+      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/"
+    },
+    {
+      "id": "5793f55a8070ab6917bf",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Suicide rates highest ever among middle-aged men",
+      "url": "https://www.telegraph.co.uk/news/2026/10/13/suicide-rates-highest-ever-among-middle-aged-men/"
+    },
+    {
+      "id": "272216152be46ab5ca36",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
+      "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/"
+    },
+    {
+      "id": "8eb3e0ba9b803883c209",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Banks are now trying to offload the AI data center debt they just underwrote",
+      "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/"
+    },
+    {
+      "id": "8046c79956428cb16663",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+      "url": "https://petal.live/"
+    },
+    {
+      "id": "77f4262bbf311427db6f",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Virtual Oxide Labs: Emulating a Full Oxide Rack",
+      "url": "https://oxide.computer/blog/voxel-labs"
+    },
+    {
+      "id": "c8445f2ac4bdd486beb4",
+      "kind": "feed",
+      "observed_at": "2026-10-14T22:15:33Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "America didn't lose its rare earth industry, it sold it",
+      "url": "https://www.lawfaremedia.org/article/america-didn-t-lose-its-rare-earth-industry.-it-sold-it"
     },
     {
       "id": "d12e09342932b4beca9e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
+      "title": "Neckbeard – A DevOps/platform/SRE plugin for your agent",
       "url": "https://github.com/bealesh/neckbeard"
     },
     {
       "id": "3edeaa8d7764aa277fd5",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
       "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html"
-    },
-    {
-      "id": "15de3fa1c6ff3ab644de",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "OpenAI claims employee sent secret device information to Apple",
-      "url": "https://www.ft.com/content/18b65495-9e2a-45d6-be85-7641442ab61a"
-    },
-    {
-      "id": "fc4075cbffe7d773b1d5",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Sally Rooney can no longer sell books in UK due to Palestine Action support",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/14/sally-rooney-says-she-can-no-longer-sell-books-in-the-uk-because-of-palestine-action-support"
-    },
-    {
-      "id": "bdfd949b4a772ffeee2c",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "US report details extent of 'devastating' dating-app scams",
-      "url": "https://www.theguardian.com/us-news/2026/oct/14/dating-app-scams-us-congress"
     },
     {
       "id": "cb0908fa52c7962720d5",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
       "url": "https://clova.email/"
     },
     {
-      "id": "e86502df4595e24bf9cf",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Linus Torvalds's first LLM-assisted patch series",
-      "url": "https://lwn.net/Articles/1100449/"
-    },
-    {
       "id": "aa20a97d703482a1baf6",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "Has AI Tells",
+      "title": "Has AI tells",
       "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1"
-    },
-    {
-      "id": "2da123662ba3298b8f26",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Tesla's Robotaxis Blow Through School Zones, NHTSA Petition Alleges",
-      "url": "https://www.extremetech.com/cars/teslas-robotaxis-blow-through-school-zones-nhtsa-petition-alleges"
-    },
-    {
-      "id": "61b1035a00b15cc0e9b1",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Why do LLM pelicans look like this?",
-      "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/"
     },
     {
       "id": "1adae70ed0107eb34f79",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Better HTTP/1 connection reuse in Go 1.27",
       "url": "https://go.dev/blog/http-connection-reuse"
@@ -327,79 +367,31 @@
     {
       "id": "ff142d6fe27002e2eb71",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Google is silently linking your phone number across all signed-in accounts",
       "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/"
     },
     {
-      "id": "991773bf58f58dbcda55",
+      "id": "6ea4e6a562d2bc5ff658",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
-      "title": "ICE Planning $100M 'Nightmare' Domestic Spy Program",
-      "url": "https://prospect.org/2026/10/14/ice-planning-nightmare-domestic-spy-program-ero-one/"
+      "title": "Americans' social activity has steeply declined in the past 30 years",
+      "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years"
     },
     {
       "id": "10b72d3c5e1b0f84969d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://hnrss.org/frontpage",
       "title": "Submarine cable resilience",
       "url": "https://blog.apnic.net/2026/10/14/submarine-cable-resilience/"
     },
     {
-      "id": "1882e55caad4e932b478",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents",
-      "url": "https://github.com/graphicle-ai/graphicle"
-    },
-    {
-      "id": "8d752c9104f484bb1033",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Running Windows desktop tests from Linux with disposable VMs",
-      "url": "https://www.qawolf.com/blog/how-we-solved-windows-desktop-automation"
-    },
-    {
-      "id": "bf4176bf7e1b5c3001d6",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
-      "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/"
-    },
-    {
-      "id": "85d5408a652410ad54de",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Scientists Are Teaching Birds to Sing Lost Songs",
-      "url": "https://e360.yale.edu/digest/teaching-birds-lost-songs"
-    },
-    {
-      "id": "b2f3e29faec5c80f148c",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Nvidia's first GPU: GeForce 256",
-      "url": "https://dfarq.homeip.net/nvidias-first-gpu-geforce-256/"
-    },
-    {
-      "id": "a27c24dc6a7e532216aa",
-      "kind": "feed",
-      "observed_at": "2026-10-14T18:32:30Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
-      "url": "https://github.com/timescale/pg_vectorsearch"
-    },
-    {
       "id": "37ab1fbdd16439247835",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Draft Notes: Verifiable Credential Threat Models",
       "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/"
@@ -407,7 +399,7 @@
     {
       "id": "bcd7083976c76ae8688f",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C issues press release about developing Verifiable Credential Barcodes",
       "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/"
@@ -415,7 +407,7 @@
     {
       "id": "81a3389421f4bb56bc3d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Updated Candidate Recommendation: Scalable Vector Graphics (SVG) 2",
       "url": "https://www.w3.org/news/2026/updated-candidate-recommendation-scalable-vector-graphics-svg-2/"
@@ -423,7 +415,7 @@
     {
       "id": "0f94c1b2cc9695104e0d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Consortium Members elect Board of Directors",
       "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/"
@@ -431,7 +423,7 @@
     {
       "id": "e74888c663f492eea866",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C Workshop Report: The Future of ODRL",
       "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/"
@@ -439,7 +431,7 @@
     {
       "id": "7ea510935dfd2aa76b5a",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Bitstring Status List v1.1",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/"
@@ -447,7 +439,7 @@
     {
       "id": "cb68915a226f5b31c5c4",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
       "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/"
@@ -455,7 +447,7 @@
     {
       "id": "f1b5f492edd59d79af68",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
       "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/"
@@ -463,7 +455,7 @@
     {
       "id": "c8dc3e9414ec28a368ac",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/"
@@ -471,7 +463,7 @@
     {
       "id": "6e4168f82218e48b2b73",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/"
@@ -479,7 +471,7 @@
     {
       "id": "9b67edb55892cc147b16",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C opens 2026 community survey",
       "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/"
@@ -487,7 +479,7 @@
     {
       "id": "359b504aecb4a8066979",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
       "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/"
@@ -495,7 +487,7 @@
     {
       "id": "0c06abcb0d06332e5331",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
       "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/"
@@ -503,7 +495,7 @@
     {
       "id": "e9046d10c5a45a4be7b5",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: The Profiles Vocabulary",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/"
@@ -511,7 +503,7 @@
     {
       "id": "1cb4dab4f76ed824568d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
       "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/"
@@ -519,7 +511,7 @@
     {
       "id": "073f9b4d7b387c99f07e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Updated W3C Recommendation: ARIA in HTML",
       "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/"
@@ -527,7 +519,7 @@
     {
       "id": "e2b8edcef39b94c3378e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
       "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/"
@@ -535,7 +527,7 @@
     {
       "id": "53199f615af74997230d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
       "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/"
@@ -543,7 +535,7 @@
     {
       "id": "41a209d76f100b1bd5d4",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C Invites Implementations of WebTransport",
       "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/"
@@ -551,7 +543,7 @@
     {
       "id": "dbdb0820dcbaa5243b7d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
       "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/"
@@ -559,7 +551,7 @@
     {
       "id": "1edd9d31a5fe545fe7fb",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
       "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/"
@@ -567,7 +559,7 @@
     {
       "id": "1abec9d47a1273181fad",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
       "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/"
@@ -575,7 +567,7 @@
     {
       "id": "abbc1e5e92269e8e60be",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C Invites Implementations of EPUB 3.4, EPUB Reading Systems 3.4 and EPUB Accessibility 1.2",
       "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-epub-3-4-epub-reading-systems-3-4-and-epub-accessibility-1-2/"
@@ -583,7 +575,7 @@
     {
       "id": "7f415c17fd35abee711c",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Proposed Advancement of Web Authentication: An API for accessing Public Key Credentials Level 3 to W3C Recommendation",
       "url": "https://www.w3.org/news/2026/proposed-advancement-of-webauthn-3-to-w3c-recommendation/"
@@ -591,7 +583,7 @@
     {
       "id": "d27d31968e305dc54ffa",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:33Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Character Model for the World Wide Web: String Matching",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-character-model-for-the-world-wide-web-string-matching/"
@@ -599,7 +591,7 @@
     {
       "id": "24dd95896911d8bd0b6d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
       "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html"
@@ -607,7 +599,7 @@
     {
       "id": "5c7b8bdb9c001de23cea",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
       "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html"
@@ -615,7 +607,7 @@
     {
       "id": "8df3484f72ce4634a7e5",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
       "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html"
@@ -623,7 +615,7 @@
     {
       "id": "129cee30a618dbacbfe9",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
       "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html"
@@ -631,7 +623,7 @@
     {
       "id": "d3499e02aaa3943b73aa",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Content Generator & Writer Tools in 2022",
       "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html"
@@ -639,7 +631,7 @@
     {
       "id": "c9b0ba2832f5c52645f2",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
       "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html"
@@ -647,7 +639,7 @@
     {
       "id": "1104ec0ee393a7f4f909",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
       "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html"
@@ -655,7 +647,7 @@
     {
       "id": "572a341c954c548987ad",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About Affiliate Marketing",
       "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html"
@@ -663,7 +655,7 @@
     {
       "id": "f63aedf5e35cee9cf2ff",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "What is Blockchain: Everything You Need to Know (2022)",
       "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html"
@@ -671,7 +663,7 @@
     {
       "id": "eb3490aa3ebca0f4ef67",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
       "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html"
@@ -679,7 +671,7 @@
     {
       "id": "5aebe77748d66a1bef9a",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
       "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html"
@@ -687,7 +679,7 @@
     {
       "id": "469fe5a61b36c036d58c",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
       "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html"
@@ -695,7 +687,7 @@
     {
       "id": "65763140459cf23fdedd",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
       "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html"
@@ -703,7 +695,7 @@
     {
       "id": "f102a512d0bf0eec1887",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Canva Review 2022: Details, Pricing & Features",
       "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html"
@@ -711,7 +703,7 @@
     {
       "id": "4ae8efd7a9964cf3d437",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 7 Best Wordpress Plugin Of All Time",
       "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html"
@@ -719,7 +711,7 @@
     {
       "id": "c4ecc08e3dcd225bd13c",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
       "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html"
@@ -727,7 +719,7 @@
     {
       "id": "44ca195f5b7c621a996e",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
       "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html"
@@ -735,7 +727,7 @@
     {
       "id": "54b9d850727b6cdbe5ce",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
       "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html"
@@ -743,7 +735,7 @@
     {
       "id": "fe934b9f69954d98e9d8",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About Email Marketing",
       "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html"
@@ -751,7 +743,7 @@
     {
       "id": "6cb428459606b5a9549d",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "7 Free Websites Every Content Creator Needs to Know",
       "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html"
@@ -759,10 +751,258 @@
     {
       "id": "60e9a0a09a7e88daa6f4",
       "kind": "feed",
-      "observed_at": "2026-10-14T18:32:32Z",
+      "observed_at": "2026-10-14T22:15:34Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 9 Free AI Tools That Make Your Life Easier",
       "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html"
+    },
+    {
+      "id": "4d601f941b898d71b39c",
+      "kind": "commoncrawl",
+      "observed_at": "20260916193228",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/",
+      "url": "https://www.w3.org/"
+    },
+    {
+      "id": "71638b56f9a1f14476df",
+      "kind": "commoncrawl",
+      "observed_at": "20260913122004",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/02/26-modules/Distribution.html",
+      "url": "https://www.w3.org/1999/02/26-modules/Distribution.html"
+    },
+    {
+      "id": "b1088cf61f6de673b6b9",
+      "kind": "commoncrawl",
+      "observed_at": "20260914154626",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/04/Editing/01",
+      "url": "https://www.w3.org/1999/04/Editing/01"
+    },
+    {
+      "id": "e12ca207f58f5f94b8e2",
+      "kind": "commoncrawl",
+      "observed_at": "20260914154825",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/05/XFA/xfa-template-19990614",
+      "url": "https://www.w3.org/1999/05/XFA/xfa-template-19990614"
+    },
+    {
+      "id": "042f0d605ecedea64663",
+      "kind": "commoncrawl",
+      "observed_at": "20260915122856",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html",
+      "url": "https://www.w3.org/1999/07/06/WD-SVG-19990706/color.html"
+    },
+    {
+      "id": "cfebc7a54430f2c01b38",
+      "kind": "commoncrawl",
+      "observed_at": "20260916085138",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/NOTE-annot-19990710/",
+      "url": "https://www.w3.org/1999/07/NOTE-annot-19990710/"
+    },
+    {
+      "id": "081b8d46830819ed08d5",
+      "kind": "commoncrawl",
+      "observed_at": "20260908184622",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "url": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/"
+    },
+    {
+      "id": "4b2a14c2bf6dedad3c75",
+      "kind": "commoncrawl",
+      "observed_at": "20260909170045",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/ISOAMSAe2.html"
+    },
+    {
+      "id": "d2d9271bc18ca0e03fdf",
+      "kind": "commoncrawl",
+      "observed_at": "20260916072029",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html",
+      "url": "https://www.w3.org/1999/07/REC-MathML-19990707/chap6/MMALIAS1.html"
+    },
+    {
+      "id": "4851f435a9745385d942",
+      "kind": "commoncrawl",
+      "observed_at": "20260916062356",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804",
+      "url": "https://www.w3.org/1999/08/NOTE-CSS-access-19990804"
+    },
+    {
+      "id": "ead1b47ce9b6a79e0c70",
+      "kind": "commoncrawl",
+      "observed_at": "20260914171733",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html",
+      "url": "https://www.w3.org/1999/08/WD-SVG-19990812/script.html"
+    },
+    {
+      "id": "fd8e46599f3ffb4655a9",
+      "kind": "commoncrawl",
+      "observed_at": "20260906002400",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/11/11-WWWProposal/",
+      "url": "https://www.w3.org/1999/11/11-WWWProposal/"
+    },
+    {
+      "id": "fae2f20531a2dbd87d00",
+      "kind": "commoncrawl",
+      "observed_at": "20260910130708",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/11/AU-review-comments",
+      "url": "https://www.w3.org/1999/11/AU-review-comments"
+    },
+    {
+      "id": "bd18c9996c59ea760df3",
+      "kind": "commoncrawl",
+      "observed_at": "20260914235414",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru",
+      "url": "https://www.w3.org/1999/xhtml/?utm_source=artzolin.ru"
+    },
+    {
+      "id": "aa562fed8195cd927740",
+      "kind": "commoncrawl",
+      "observed_at": "20260917041621",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/",
+      "url": "https://github.blog/"
+    },
+    {
+      "id": "4b17809452afed4ede07",
+      "kind": "commoncrawl",
+      "observed_at": "20260915151951",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/05/",
+      "url": "https://github.blog/2018/05/"
+    },
+    {
+      "id": "0953066a2546cab9451e",
+      "kind": "commoncrawl",
+      "observed_at": "20260916155430",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/11/",
+      "url": "https://github.blog/2018/11/"
+    },
+    {
+      "id": "d32c6f1d75e91688a6a3",
+      "kind": "commoncrawl",
+      "observed_at": "20260913080733",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2018/page/15/",
+      "url": "https://github.blog/2018/page/15/"
+    },
+    {
+      "id": "bdceea10a562c900af50",
+      "kind": "commoncrawl",
+      "observed_at": "20260907213924",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2019/11/",
+      "url": "https://github.blog/2019/11/"
+    },
+    {
+      "id": "2006edcdf2fe437b2058",
+      "kind": "commoncrawl",
+      "observed_at": "20260904140021",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2020/",
+      "url": "https://github.blog/2020/"
+    },
+    {
+      "id": "e2d0f176155b628a632a",
+      "kind": "commoncrawl",
+      "observed_at": "20260904142543",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2021/08/",
+      "url": "https://github.blog/2021/08/"
+    },
+    {
+      "id": "02df634eb85f58046f15",
+      "kind": "commoncrawl",
+      "observed_at": "20260906020154",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2022/11/",
+      "url": "https://github.blog/2022/11/"
+    },
+    {
+      "id": "2121a499edc2f04cfccb",
+      "kind": "commoncrawl",
+      "observed_at": "20260906085215",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2023/09/page/2/",
+      "url": "https://github.blog/2023/09/page/2/"
+    },
+    {
+      "id": "affd7a3148bd536d2d67",
+      "kind": "commoncrawl",
+      "observed_at": "20260910094634",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/06/",
+      "url": "https://github.blog/2024/06/"
+    },
+    {
+      "id": "1ab410d341b18a1b5e12",
+      "kind": "commoncrawl",
+      "observed_at": "20260910191837",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/07/",
+      "url": "https://github.blog/2024/07/"
+    },
+    {
+      "id": "c8f8c133f225a04ef29e",
+      "kind": "commoncrawl",
+      "observed_at": "20260908162214",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/11/",
+      "url": "https://github.blog/2024/11/"
+    },
+    {
+      "id": "6f13263cee3a3ca00539",
+      "kind": "commoncrawl",
+      "observed_at": "20260910095831",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2024/12/",
+      "url": "https://github.blog/2024/12/"
+    },
+    {
+      "id": "4b675d5297558ba77aee",
+      "kind": "commoncrawl",
+      "observed_at": "20260904233849",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/04/",
+      "url": "https://github.blog/2025/04/"
+    },
+    {
+      "id": "7db61de641ea6930d719",
+      "kind": "commoncrawl",
+      "observed_at": "20260908150028",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/06/",
+      "url": "https://github.blog/2025/06/"
+    },
+    {
+      "id": "1ea363bf86c49418652d",
+      "kind": "commoncrawl",
+      "observed_at": "20260909214600",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2025/12/",
+      "url": "https://github.blog/2025/12/"
+    },
+    {
+      "id": "b7cbe8c4a9a229d83030",
+      "kind": "commoncrawl",
+      "observed_at": "20260906091823",
+      "source": "Common Crawl CC-MAIN-2026-39",
+      "title": "https://github.blog/2026/06/page/2/",
+      "url": "https://github.blog/2026/06/page/2/"
     },
     {
       "id": "28bacb8b68411b9d1690",
@@ -991,6 +1231,10 @@
       "fingerprint": "92b47aa83cd665f30ad5",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "049f752dea89d9de43df": {
+      "fingerprint": "9eccb2bd63b85fa3d497",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "04a3afe8fc92fa04289a": {
       "fingerprint": "355149201c99d6a6e284",
       "last_seen": "2026-10-10T01:43:39Z"
@@ -1069,7 +1313,7 @@
     },
     "073f9b4d7b387c99f07e": {
       "fingerprint": "5617e0870f02e2aa545f",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "073fd7234bdb561db068": {
       "fingerprint": "d470a6f4ce1014762e66",
@@ -1193,7 +1437,7 @@
     },
     "0c06abcb0d06332e5331": {
       "fingerprint": "c1fe748e34820ea74371",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "0c22ba88d1257169379c": {
       "fingerprint": "630b026710705cfe5ce8",
@@ -1285,7 +1529,7 @@
     },
     "0f94c1b2cc9695104e0d": {
       "fingerprint": "b4808d5e5a6e8cb7dc46",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "0fcd4629093f8692e4cc": {
       "fingerprint": "85f2c93cf9d151b24ea7",
@@ -1321,11 +1565,11 @@
     },
     "10b72d3c5e1b0f84969d": {
       "fingerprint": "73308f6434b06fd37859",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "1104ec0ee393a7f4f909": {
       "fingerprint": "a50e60bb94caa61da2a7",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "113a70303c759bf19449": {
       "fingerprint": "3aff5f8cce90027ad8d3",
@@ -1353,7 +1597,7 @@
     },
     "129cee30a618dbacbfe9": {
       "fingerprint": "e19f89cf9bff597ac035",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "12a4904af7aa0825c402": {
       "fingerprint": "8f15fe0c3b97d8402904",
@@ -1601,11 +1845,11 @@
     },
     "1abec9d47a1273181fad": {
       "fingerprint": "ee6e815e521b5f42b3b0",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "1adae70ed0107eb34f79": {
       "fingerprint": "0711bbe727412b011986",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "1b16c179d9e5d28dfb8e": {
       "fingerprint": "a867e6d78c68df8735aa",
@@ -1665,7 +1909,7 @@
     },
     "1cb4dab4f76ed824568d": {
       "fingerprint": "d1a7b6fafcc299e88891",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "1cf5e4d9799d0912d04b": {
       "fingerprint": "37ab5af96723a7ab4cca",
@@ -1729,7 +1973,7 @@
     },
     "1edd9d31a5fe545fe7fb": {
       "fingerprint": "277682851d1fe310a3f6",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "1ef243007176e85cc8c6": {
       "fingerprint": "1108cf5295ec1bbcb775",
@@ -1853,7 +2097,7 @@
     },
     "23216cfbe10c8c92d859": {
       "fingerprint": "4fa21842e8b6c941c0ef",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "233e30c6f22de11e0e49": {
       "fingerprint": "c381c3a21b76b535d4c1",
@@ -1901,7 +2145,7 @@
     },
     "24dd95896911d8bd0b6d": {
       "fingerprint": "bbb0223d0ac5211236dc",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "24ea13c732146e2c4412": {
       "fingerprint": "7a4a7f712f0c4586aefd",
@@ -1966,6 +2210,10 @@
     "270d2009beef3a33ff16": {
       "fingerprint": "edc7fe0c3bc0303675a4",
       "last_seen": "2026-10-08T07:16:42Z"
+    },
+    "272216152be46ab5ca36": {
+      "fingerprint": "6dbd98b29fbfda705ba4",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "2737a1b22a727f1624fa": {
       "fingerprint": "093ee48892e0eb32bba9",
@@ -2353,7 +2601,7 @@
     },
     "359b504aecb4a8066979": {
       "fingerprint": "103019b45cc5e0c9cdfa",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "35c6f6677253a25e1297": {
       "fingerprint": "4699b37ab54f00877026",
@@ -2389,7 +2637,7 @@
     },
     "37ab1fbdd16439247835": {
       "fingerprint": "626e4fa88ce503e91b73",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "37b876e9b7396fe713d4": {
       "fingerprint": "3dce99b4e96e7cf8e578",
@@ -2515,6 +2763,10 @@
       "fingerprint": "448b18f58acdb1f8a4bb",
       "last_seen": "2026-10-06T00:46:01Z"
     },
+    "3cbafd4338038f81ee3b": {
+      "fingerprint": "2a61e496e9062580e739",
+      "last_seen": "2026-10-14T22:15:28Z"
+    },
     "3ceda1411b5d92fdf923": {
       "fingerprint": "cda4dca50449e40e6c4f",
       "last_seen": "2026-10-10T01:43:39Z"
@@ -2600,8 +2852,8 @@
       "last_seen": "2026-10-07T07:10:55Z"
     },
     "3edeaa8d7764aa277fd5": {
-      "fingerprint": "d2ff4515bcb9783eebac",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "fingerprint": "c048cebc008a32a70ad4",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "3f04751adc624bfa765f": {
       "fingerprint": "3eb3da087bdcbff68798",
@@ -2633,7 +2885,7 @@
     },
     "400f93c3a2faae18adc1": {
       "fingerprint": "d37e1d15b9efe3d33fdf",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "4026c25c8bc8c1d65a52": {
       "fingerprint": "0c1acf75fc9e5a65bd3b",
@@ -2669,7 +2921,7 @@
     },
     "41a209d76f100b1bd5d4": {
       "fingerprint": "761c2d885194709340d7",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "41cb334c331d41f0d32d": {
       "fingerprint": "94b97b05193e8633083d",
@@ -2729,7 +2981,7 @@
     },
     "44ca195f5b7c621a996e": {
       "fingerprint": "39d7b57174a6dff70e27",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "44dbcee82122f9c0d18b": {
       "fingerprint": "b6a2b6af7d9f80961379",
@@ -2757,7 +3009,7 @@
     },
     "469fe5a61b36c036d58c": {
       "fingerprint": "aa6c78bb067aec267e9c",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "46a47c0772812524944b": {
       "fingerprint": "91f3bb1b91d23b5e5ae1",
@@ -2857,7 +3109,7 @@
     },
     "4ae8efd7a9964cf3d437": {
       "fingerprint": "bf8a29b99e53c5a5aa26",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "4b152a91481f82f2f36d": {
       "fingerprint": "f8017d5c6dd6eebf9f40",
@@ -3109,7 +3361,7 @@
     },
     "53199f615af74997230d": {
       "fingerprint": "2d8410548d71f046723e",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "532ac8fb16bcaba2e00c": {
       "fingerprint": "7291ba2de5526fb4a1c1",
@@ -3130,6 +3382,10 @@
     "5358dbd27ddb83f6edb0": {
       "fingerprint": "3fee466efc4ee3d673bc",
       "last_seen": "2026-10-14T01:50:53Z"
+    },
+    "537c3562be36e30aae78": {
+      "fingerprint": "b0ebaeb475ad3794eada",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "538157b8b3b505c0d2de": {
       "fingerprint": "ccaf5d0e505a1691561e",
@@ -3173,7 +3429,7 @@
     },
     "54b9d850727b6cdbe5ce": {
       "fingerprint": "5961765d8cd3e0f7aab4",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "554b4acd9029a3e93e8c": {
       "fingerprint": "e0edea38f8cec55188f3",
@@ -3217,7 +3473,7 @@
     },
     "572a341c954c548987ad": {
       "fingerprint": "041206e50d7b5a981931",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "5740c3feedb65e91e6d9": {
       "fingerprint": "c3993cf5f7dbea7665fe",
@@ -3234,6 +3490,10 @@
     "577550a179d8de10c992": {
       "fingerprint": "af4f348f86543bb62ee6",
       "last_seen": "2026-10-09T02:05:05Z"
+    },
+    "5793f55a8070ab6917bf": {
+      "fingerprint": "d5d9171912f85cee2ecc",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "57ab4fa8bea5c2e3a222": {
       "fingerprint": "8e6b7eaabc1792271ba9",
@@ -3337,7 +3597,7 @@
     },
     "5aebe77748d66a1bef9a": {
       "fingerprint": "6edb70e83e5b836d3241",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "5aed1ec194f0f73d84ee": {
       "fingerprint": "55ec6e452146d1bb361f",
@@ -3377,7 +3637,7 @@
     },
     "5c7b8bdb9c001de23cea": {
       "fingerprint": "fb79e40eccffe5ae3873",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "5c99956c98c41594b2a3": {
       "fingerprint": "39b6e05a3ebf19d5c7ef",
@@ -3497,7 +3757,7 @@
     },
     "60e9a0a09a7e88daa6f4": {
       "fingerprint": "f1ed042be514de75c24a",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "6102b8ee6b1f9802a25c": {
       "fingerprint": "4abb17e986a151102823",
@@ -3506,6 +3766,10 @@
     "61079f6d640a0a07fe56": {
       "fingerprint": "d28fbf2096fc2b6ee8b5",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "616037433c784b2a7562": {
+      "fingerprint": "ba7552cdac7b005c4a57",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "616afaf76617f3c859c8": {
       "fingerprint": "c1fed59098806835a839",
@@ -3601,7 +3865,7 @@
     },
     "65763140459cf23fdedd": {
       "fingerprint": "e5850e344e568509ec64",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "658ce2f5726b56703b5d": {
       "fingerprint": "3ffbd85491b5b2af8041",
@@ -3769,7 +4033,7 @@
     },
     "6cb428459606b5a9549d": {
       "fingerprint": "f5730f3fb67387ccb48a",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "6cbb376bdb40e04b479e": {
       "fingerprint": "d403883bdea4f55b5f44",
@@ -3817,7 +4081,11 @@
     },
     "6e4168f82218e48b2b73": {
       "fingerprint": "61bd6d98642efc83fb89",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
+    "6ea4e6a562d2bc5ff658": {
+      "fingerprint": "d7bf34442178b771d14b",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "6eb954742c5d07358a11": {
       "fingerprint": "40987e9519f996f8cd93",
@@ -3841,7 +4109,7 @@
     },
     "6f397884428e9f0f14f3": {
       "fingerprint": "590b3e7097c6aa6c9450",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "6f55737addfb022f9ba9": {
       "fingerprint": "8f766112b11750025483",
@@ -4047,6 +4315,10 @@
       "fingerprint": "25eaa361efadd8528f94",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "77f4262bbf311427db6f": {
+      "fingerprint": "ea2157587b23c812e724",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "780fff8d8c4a422838ca": {
       "fingerprint": "d2cf7c2fc92a5252c200",
       "last_seen": "2026-10-05T08:54:11Z"
@@ -4113,7 +4385,7 @@
     },
     "7a679d710e8c186b4153": {
       "fingerprint": "ff0e924833399c96d051",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "7a7e8236303ab8ee7741": {
       "fingerprint": "d8ef05158fc98374ff6c",
@@ -4201,7 +4473,7 @@
     },
     "7ea510935dfd2aa76b5a": {
       "fingerprint": "86ed56ee03fd22b63f65",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "7ed0d9888ce5e464ab06": {
       "fingerprint": "cd24dc30e76e58494fbb",
@@ -4213,7 +4485,7 @@
     },
     "7f415c17fd35abee711c": {
       "fingerprint": "ce6541d56307fc07b508",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "7f6780bd81f990dac21d": {
       "fingerprint": "a6b54efc1a318aca0f5c",
@@ -4263,6 +4535,10 @@
       "fingerprint": "0432fedcce124a5b59b6",
       "last_seen": "2026-10-06T00:46:01Z"
     },
+    "8046c79956428cb16663": {
+      "fingerprint": "c3a8deed6c7d8a3781f1",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "804ef554cb46cb448b83": {
       "fingerprint": "2fe66d99dcbf849eb7bb",
       "last_seen": "2026-10-10T01:43:39Z"
@@ -4301,7 +4577,7 @@
     },
     "81a3389421f4bb56bc3d": {
       "fingerprint": "fad2b46fff0d7527d6ea",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "81dee08a5762829049d7": {
       "fingerprint": "0ae31f5748f35df9f91e",
@@ -4409,7 +4685,7 @@
     },
     "85c11fca4aa44ff1793b": {
       "fingerprint": "9c3261bb21519a270083",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "85d5408a652410ad54de": {
       "fingerprint": "806487fec8d13cd5e71a",
@@ -4502,6 +4778,10 @@
     "88cd4db756db01c9b83a": {
       "fingerprint": "548ff5f510dd5136d386",
       "last_seen": "2026-10-06T00:46:01Z"
+    },
+    "891468d096a68883d5cc": {
+      "fingerprint": "123083443581d74fc5b6",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "8927d8cacf660ae99fbf": {
       "fingerprint": "b7ea8abe64d58ad10f9f",
@@ -4621,7 +4901,7 @@
     },
     "8df3484f72ce4634a7e5": {
       "fingerprint": "eaf10a20de62aa9b1bcb",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "8df6df601655f17ef834": {
       "fingerprint": "ad2045244b4334c4f8b6",
@@ -4642,6 +4922,10 @@
     "8e911491a17c10a07721": {
       "fingerprint": "688e6165319e3ba1fb3e",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "8eb3e0ba9b803883c209": {
+      "fingerprint": "6b1dd8edb07937df83f4",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "8ec1111cdc4c4f2d4c45": {
       "fingerprint": "45d63a1a89e4d49933d9",
@@ -4993,7 +5277,7 @@
     },
     "9b67edb55892cc147b16": {
       "fingerprint": "0157ed03a6dbbf6e9cd5",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "9b955ce8af2763d0997a": {
       "fingerprint": "852d145628da3fe8b312",
@@ -5077,7 +5361,7 @@
     },
     "9ddb77314617db92b6c9": {
       "fingerprint": "37ae2ade35f63dba8cba",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "9e10c52c4b108790fb9b": {
       "fingerprint": "c2417621b095ab613845",
@@ -5379,6 +5663,10 @@
       "fingerprint": "4c02216440bad1156b08",
       "last_seen": "2026-10-11T05:38:34Z"
     },
+    "a75b5151ba54c3908f0e": {
+      "fingerprint": "1a664dde3633c1242a45",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "a77ef2b4ce4af71e6a2c": {
       "fingerprint": "d3c436cbf969e59ffa8c",
       "last_seen": "2026-10-05T18:21:18Z"
@@ -5448,8 +5736,8 @@
       "last_seen": "2026-10-07T07:10:55Z"
     },
     "aa20a97d703482a1baf6": {
-      "fingerprint": "2ba94bb190ff18aa27eb",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "fingerprint": "3b253f4055bced8e5c8a",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "aa40e28c58ea4d0b81f9": {
       "fingerprint": "60cfb0f95fd62c21b0d6",
@@ -5489,7 +5777,7 @@
     },
     "abbc1e5e92269e8e60be": {
       "fingerprint": "a01e03ebc67f214e95a5",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "abd93a7a0d7df4abc76e": {
       "fingerprint": "645cf63c299d83915846",
@@ -5609,7 +5897,7 @@
     },
     "afd517ff06180871c64e": {
       "fingerprint": "1b28b748048b09e7ea26",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "afdecd136fba8911ef45": {
       "fingerprint": "9dd35eb5edcfc514447a",
@@ -5961,7 +6249,7 @@
     },
     "bcd7083976c76ae8688f": {
       "fingerprint": "5bfbe60eabdc0806d677",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "bce449da7a2298faee9e": {
       "fingerprint": "3c53456b8efdd361d2a3",
@@ -6165,7 +6453,7 @@
     },
     "c4ecc08e3dcd225bd13c": {
       "fingerprint": "7b0b0a262e9c4ed3b3c5",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "c52335acdcd12e2cb682": {
       "fingerprint": "00388b1f32216b757cdc",
@@ -6209,7 +6497,7 @@
     },
     "c6fb2b313984d9d24e98": {
       "fingerprint": "809060943866f47ccb7a",
-      "last_seen": "2026-10-14T18:32:29Z"
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "c70f4f691c332413f788": {
       "fingerprint": "5f1b9c1380956aa49896",
@@ -6235,13 +6523,17 @@
       "fingerprint": "fbc88a42dad8a88d0f50",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "c8445f2ac4bdd486beb4": {
+      "fingerprint": "5e1f2c6ab751bd28deb7",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "c8a16bb5b360fdb2dfdc": {
       "fingerprint": "c453da558ca7158f8ba5",
       "last_seen": "2026-10-06T00:46:01Z"
     },
     "c8dc3e9414ec28a368ac": {
       "fingerprint": "4606a9e0ec143a4a7374",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "c8e3c56660a745b6e255": {
       "fingerprint": "f293b6ee24d0caf98aaa",
@@ -6269,7 +6561,7 @@
     },
     "c9b0ba2832f5c52645f2": {
       "fingerprint": "507fb3a2a4ad48a0026c",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "ca1895079e9ae7cce068": {
       "fingerprint": "a0a7b2750cddad14b6b1",
@@ -6305,7 +6597,7 @@
     },
     "cb0908fa52c7962720d5": {
       "fingerprint": "2ac086e4bd4a858094a9",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "cb1488b2e2114c61066f": {
       "fingerprint": "77c3c5e72fb0c7770585",
@@ -6317,7 +6609,7 @@
     },
     "cb68915a226f5b31c5c4": {
       "fingerprint": "926ada9b136d341f42ad",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "cb7140329a27207af88a": {
       "fingerprint": "4798f119a1a78e08625e",
@@ -6443,6 +6735,10 @@
       "fingerprint": "477e19f37817cb099cab",
       "last_seen": "2026-10-08T16:25:23Z"
     },
+    "d001316ff15b7db6937e": {
+      "fingerprint": "b8c17d3e3020d647ec59",
+      "last_seen": "2026-10-14T22:15:33Z"
+    },
     "d0110221d0d4263cf7c1": {
       "fingerprint": "dca7aad967607b1147f4",
       "last_seen": "2026-10-06T00:46:01Z"
@@ -6476,8 +6772,8 @@
       "last_seen": "2026-10-10T01:43:39Z"
     },
     "d12e09342932b4beca9e": {
-      "fingerprint": "7ad8c854e17a14323dd9",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "fingerprint": "6081494ecdf3733de310",
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "d1321338c3f6fec6dfbe": {
       "fingerprint": "6bac1397771ff1bb723c",
@@ -6509,7 +6805,7 @@
     },
     "d27d31968e305dc54ffa": {
       "fingerprint": "a7f0567dbcfd0dc6782f",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "d2d9271bc18ca0e03fdf": {
       "fingerprint": "020e62b7ba2039d12491",
@@ -6541,7 +6837,7 @@
     },
     "d3499e02aaa3943b73aa": {
       "fingerprint": "e6a6544c7768c9a0e0c3",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "d35068acfba8ae295688": {
       "fingerprint": "3fba7fd4c2d4e8fcda19",
@@ -6761,7 +7057,7 @@
     },
     "dbdb0820dcbaa5243b7d": {
       "fingerprint": "3efcd7376ca1091d5ca1",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "dbe0940f362ad9d87e6b": {
       "fingerprint": "0115907abcc89e1fc1c2",
@@ -6977,7 +7273,7 @@
     },
     "e2b8edcef39b94c3378e": {
       "fingerprint": "c0bd81ea028c42207c2f",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "e2cacdf17b050840b033": {
       "fingerprint": "240d514fecf51e6a9cea",
@@ -7089,7 +7385,7 @@
     },
     "e74888c663f492eea866": {
       "fingerprint": "108ee9605268dadb7495",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "e758fe86bc5ef61b667b": {
       "fingerprint": "43dc669957d8d389521d",
@@ -7161,7 +7457,7 @@
     },
     "e9046d10c5a45a4be7b5": {
       "fingerprint": "627a719f8c8a5c3f70b5",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "e961c820a54fe772fc45": {
       "fingerprint": "ca6b4409b39888c48453",
@@ -7205,7 +7501,7 @@
     },
     "eb3490aa3ebca0f4ef67": {
       "fingerprint": "e1ba8142ac73ffabd032",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "eb5608dcc9e627a703f9": {
       "fingerprint": "367aad8304ffd2d83fa6",
@@ -7369,7 +7665,7 @@
     },
     "f102a512d0bf0eec1887": {
       "fingerprint": "5595b22c8d0c031c20ce",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "f102b133982c85cf2d9c": {
       "fingerprint": "fb74414faa6cdcdf6883",
@@ -7385,7 +7681,7 @@
     },
     "f1b5f492edd59d79af68": {
       "fingerprint": "d81cb0e2914cbc9e3021",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "f1ca33eec38ba72127a9": {
       "fingerprint": "4991478b9904c0986a69",
@@ -7529,7 +7825,7 @@
     },
     "f63aedf5e35cee9cf2ff": {
       "fingerprint": "ef07a851d0e4ec847bbc",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "f6b7d718d0af58282341": {
       "fingerprint": "a6ce5994fe955368ab13",
@@ -7602,6 +7898,10 @@
     "f912fde3e281653a5783": {
       "fingerprint": "f3361d1837ee3e79ffca",
       "last_seen": "2026-10-08T01:52:22Z"
+    },
+    "f919ddb4bb1767a45732": {
+      "fingerprint": "11aebe3e7a3d407538f7",
+      "last_seen": "2026-10-14T22:15:28Z"
     },
     "f9221d65b75640a90e0d": {
       "fingerprint": "440a4517cd10d6275a81",
@@ -7749,7 +8049,7 @@
     },
     "fe934b9f69954d98e9d8": {
       "fingerprint": "2d3212886421eb2f0ef0",
-      "last_seen": "2026-10-14T18:32:32Z"
+      "last_seen": "2026-10-14T22:15:34Z"
     },
     "feabbf9fa7cd0a4b748d": {
       "fingerprint": "2f7dbda2315b0343f973",
@@ -7761,7 +8061,7 @@
     },
     "ff142d6fe27002e2eb71": {
       "fingerprint": "c13bc60cc71134b265fe",
-      "last_seen": "2026-10-14T18:32:30Z"
+      "last_seen": "2026-10-14T22:15:33Z"
     },
     "ff37ab6e01e735b146ba": {
       "fingerprint": "1079ed58538150b30a47",
