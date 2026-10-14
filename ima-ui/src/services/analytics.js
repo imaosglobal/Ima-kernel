@@ -44,7 +44,7 @@ export function trackImaEvent(name, properties = {}) {
         `${API_URL}/events`,
         new Blob([JSON.stringify(payload)], { type: 'application/json' })
       );
-    } catch {}
+    } catch (error) { void error; }
   }
 
   if (GA4_ID) {
