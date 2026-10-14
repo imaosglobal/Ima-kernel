@@ -159,6 +159,9 @@ export default function App() {
           setGoogleAuth(s => ({ ...s, status: 'not_configured' }));
           return;
         }
+        for (let attempt = 0; attempt < 30 && !window.__imaGoogleSignIn && !cancelled; attempt += 1) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
         if (window.__imaGoogleSignIn) {
           setGoogleAuth(s => ({ ...s, status: 'ready', native: true }));
           return;
