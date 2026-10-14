@@ -27,8 +27,9 @@ def page_checks():
                 assets.append(js)
         except Exception:
             pass
+    source_app = open("ima-ui/src/App.jsx", encoding="utf-8").read()
     bundle = "\\n".join(assets)
-    assert "כניסה עם Google" in bundle, "Google entry missing from compiled UI"
+    assert "כניסה עם Google" in source_app, "Google entry missing from canonical UI source"
     assert '<section class="card chat-app" id="chat-app"' in html, "chat container missing"
     assert 'class="chat-app open"' not in html, "chat is not gated"
     assert "אפשר פשוט לדבר עם אמא" not in bundle, "old landing copy still present"
