@@ -41,6 +41,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
         self.client = app.test_client()
         token = self.client.get("/ima-api/session").get_json()["token"]
         self.headers = {"Authorization": f"Bearer {token}"}
+        self.public_google_user = "public:google:test-user"
 
     def test_age_status_does_not_claim_unconfigured_verifier_is_ready(self):
         with patch.dict(os.environ, {
@@ -54,6 +55,7 @@ class PublicChatSafetyIntegrationTests(unittest.TestCase):
         self.assertFalse(payload["verified_age_signal_available"])
         self.assertEqual(payload["fallback"], "protective_unknown_age")
 
+    @patch("app._session_user_id", return_value="public:google:test-user")
     @patch("public_memory.append")
     @patch("public_memory.recall", return_value=[])
     @patch("ima_master_runtime.ask")
