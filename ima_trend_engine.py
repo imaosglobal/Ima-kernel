@@ -174,6 +174,7 @@ def assess_field_validation(stages: dict[str, Any] | None = None) -> dict[str, A
 def build_opportunity_brief(
     *, title: str, customer_problem: str, market: str,
     dimensions: dict[str, Any], signals: list[dict[str, Any]],
+    field_validation: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Create a reproducible opportunity brief with explicit evidence boundaries."""
     if not isinstance(title, str) or not title.strip():
@@ -185,6 +186,7 @@ def build_opportunity_brief(
 
     demand = assess_demand(signals)
     score = score_opportunity(dimensions)
+    field = assess_field_validation(field_validation)
     return {
         "schema_version": "1.0",
         "title": title.strip(),
@@ -194,6 +196,7 @@ def build_opportunity_brief(
         "opportunity_score": score,
         "evidence_state": demand["status"],
         "commercial_state": "NOT_ESTABLISHED",
+        "field_validation": field,
         "next_action": (
             "design a small, authorized validation test"
             if demand["status"] == "VALIDATED" and score["recommendation"] == "test_small"
