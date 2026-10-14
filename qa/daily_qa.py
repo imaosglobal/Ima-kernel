@@ -30,7 +30,7 @@ def page_checks():
     source_app = open("ima-ui/src/App.jsx", encoding="utf-8").read()
     bundle = "\\n".join(assets)
     assert "כניסה עם Google" in source_app, "Google entry missing from canonical UI source"
-    assert '<section class="card chat-app" id="chat-app"' in html, "chat container missing"
+    assert '<section className="chat-section" id="space">' in source_app, "canonical chat section missing"
     assert 'id="chat"' in source_app and 'className="chat-shell"' in source_app, "canonical chat shell missing"
     assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
     assert "chat-tools" not in source_app and "chat-section" not in source_app, "stale broken selectors remain"
