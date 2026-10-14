@@ -57,3 +57,18 @@ Every meaningful run records ISO-8601 UTC timestamp, event, summary, provenance,
 
 ## Relationship to IMA
 The engine is a module above the canonical IMA core. It must not alter IMA identity, privacy boundaries or truthfulness. Start with research and small validation experiments, then add execution adapters only where supported and authorized. Production capability is not claimed until implemented, tested and verified.
+
+
+## Real-world workflow gate
+
+A technically working model is not treated as a deployable product. Before IMA recommends scaling an opportunity, it records evidence for:
+
+1. **OBSERVE_REAL_WORKFLOW** — observe the actual environment and workflow.
+2. **IDENTIFY_REAL_PROBLEM** — verify the problem with people who actually experience it.
+3. **TEST_WITH_REAL_USERS** — test the smallest useful version with appropriate users and authorization.
+4. **VERIFY_INTEGRATION** — validate identity, data flow, APIs, infrastructure and operational dependencies.
+5. **VERIFY_SAFETY_COMPLIANCE** — verify privacy, security, accessibility, safety and applicable regulation.
+6. **VERIFY_UNIT_ECONOMICS** — validate who pays, cost-to-serve, margins, returns and financing assumptions.
+7. **PLAN_FOR_SCALE** — design for the target future operating environment, not only today's workflow.
+
+Missing evidence keeps an opportunity in research/validation status. It cannot be silently converted into a product claim.
