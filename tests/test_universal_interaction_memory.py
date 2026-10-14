@@ -15,6 +15,26 @@ class UniversalMemoryTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     m.capture(user_id="u",source="chat",content="x",consent="UNKNOWN",authorized_learning=True)
             finally: public_memory._DB=old
+    def test_capture_requires_stored_grant(self):
+        with tempfile.TemporaryDirectory() as td:
+            old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
+            try:
+                with self.assertRaises(ValueError):
+                    m.capture(user_id="u",source="chat",content="hello",consent="GRANTED")
+                m.set_consent("u","GRANTED")
+                row=m.capture(user_id="u",source="chat",content="hello",consent="GRANTED")
+                self.assertEqual(row["status"],"EXECUTED")
+            finally: public_memory._DB=old
+
+    def test_denied_consent_blocks_capture(self):
+        with tempfile.TemporaryDirectory() as td:
+            old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
+            try:
+                m.set_consent("u","DENIED")
+                with self.assertRaises(ValueError):
+                    m.capture(user_id="u",source="chat",content="hello",consent="DENIED")
+            finally: public_memory._DB=old
+
     def test_consent_and_audit(self):
         with tempfile.TemporaryDirectory() as td:
             old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
@@ -36,6 +56,7 @@ class UniversalMemoryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             old=public_memory._DB; public_memory._DB=Path(td)/"m.sqlite3"
             try:
+                m.set_consent("u","GRANTED")
                 m.capture(user_id="u",source="chat",content="hello",consent="GRANTED",authorized_learning=True)
                 rows=m.export_user_memory("u")
                 self.assertEqual(len(rows),1)
