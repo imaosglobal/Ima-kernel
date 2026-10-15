@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-15T18:14:32Z",
+  "timestamp": "2026-10-15T22:12:07Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 90,
+  "changed": 29,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -25,10 +17,6 @@
     {
       "source": "https://www.python.org/events/python-events/rss/",
       "error": "HTTPError"
-    },
-    {
-      "source": "https://hnrss.org/frontpage",
-      "error": "ConnectTimeout"
     }
   ],
   "latest_commoncrawl": "CC-MAIN-2026-39",
@@ -41,724 +29,236 @@
   },
   "items": [
     {
-      "id": "a27f20f21ef2ca45f3c8",
-      "url": "https://arxiv.org/abs/2610.16555",
-      "title": "AI Discovery in Combinatorics: From Problems to Solutions and Back to Bigger Problems",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "1f13d15fe2d8a8f6f8e8",
+      "url": "https://science.nasa.gov/directorates/smd/planetary-science-division/nasa-to-help-unlock-mysteries-of-mars-moons-in-upcoming-mission/",
+      "title": "NASA to Help Unlock Mysteries of Mars’ Moons in Upcoming Mission",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "2b41d70cc1ac426eaea0",
-      "url": "https://arxiv.org/abs/2610.16558",
-      "title": "G$^2$WAM: World Action Models for Efficient and Geometry Grounded Image-Goal Navigation",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "8323fcf5aec48f650bdc",
+      "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
+      "title": "NASA Satellites Observe Historic 2026 El Niño",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "123c5518f61bf8da7546",
-      "url": "https://arxiv.org/abs/2610.16593",
-      "title": "Double-Rollout Reinforcement Learning with Sampling-based Reward Estimation",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "249fd8d9e74a7921bc41",
+      "url": "https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/",
+      "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "bd5e848382fcd33d06b2",
-      "url": "https://arxiv.org/abs/2610.16615",
-      "title": "When 1+1 Backfires: Rethinking Relevance-Diversity Balancing for Sample-Aware Visual Token Reduction",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "ec7a3b45638121f8120d",
+      "url": "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/",
+      "title": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "0f68377655354a285b84",
-      "url": "https://arxiv.org/abs/2610.16620",
-      "title": "Weak Segmentation-Guided GAN for~Realistic Color Edition",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "4071bf79af1fe83d5836",
+      "url": "https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/",
+      "title": "NASA Welcomes All Ages, Experience Levels for Space Apps Challenge",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "ec0648f3e93bd9f08b77",
-      "url": "https://arxiv.org/abs/2610.16625",
-      "title": "LATCH: LLM-Assisted Timing Closure Harness for Post-Route FPGA Optimisation",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "cc1e4c4496ff0178c93f",
+      "url": "https://www.nasa.gov/learning-resources/nasa-awards-enable-research-technology-to-build-future-workforce/",
+      "title": "NASA Awards Enable Research, Technology to Build Future Workforce",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "caa49ac993fb78d7109e",
-      "url": "https://arxiv.org/abs/2610.16655",
-      "title": "Does a Hosted Decision Model Respect Irrelevant Alternatives? A Pre-Registered Test of Option-Set Dependence in Jev",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "51f04c477c6b6a601f13",
+      "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
+      "title": "Rigorous Analysis Confirms NASA’s Artemis II Heat Shield Performance",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "0984262d1369dac83d87",
-      "url": "https://arxiv.org/abs/2610.16661",
-      "title": "Structural Baselines Matter for Agent Failure Detection and Attribution",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "87e7af3475d1f70728c0",
+      "url": "https://www.nasa.gov/image-article/chandra-finds-possible-origin-of-treble-clef-waves/",
+      "title": "Chandra Finds Possible Origin of ‘Treble Clef’ Waves",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "8e56b5724bd9db58c75a",
-      "url": "https://arxiv.org/abs/2610.16725",
-      "title": "Trace-to-Architecture: Capability Bottleneck Diagnosis for Harness Revision",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "d5313957a56567b0816b",
+      "url": "https://www.nasa.gov/image-detail/shape-3601-3601/",
+      "title": "Chandra Finds Possible Origin of 'Treble Clef' Waves",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:31Z"
     },
     {
-      "id": "42eef879f08df1be91b2",
-      "url": "https://arxiv.org/abs/2610.16730",
-      "title": "Queue-Aware Token Communications: Bridging AI Representation and Wireless Service",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "a47e85dd89b9a25321b0",
+      "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+      "title": "The next developer interface is ambient intelligence",
+      "source": "https://github.blog/feed/",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "60772bb8b1ae2821852e",
-      "url": "https://arxiv.org/abs/2610.16761",
-      "title": "Separating Prompt Harmfulness from Interaction Safety via Partial Generation",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "377b59f097432230ce0d",
+      "url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+      "source": "https://github.blog/feed/",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "5b334952253115dfe9a0",
-      "url": "https://arxiv.org/abs/2610.16769",
-      "title": "Geospatial Vector Geometry as a Native Spatial Modality for Vision-Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "929178f1fd79e6649f14",
+      "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+      "title": "What I Self-Host",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "676139065bd056a8c078",
-      "url": "https://arxiv.org/abs/2610.16776",
-      "title": "Game-Creation-Agents: Autonomous Game Production",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "e2cb7eb86fd507793644",
+      "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+      "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "6ac67bf5a20e63afd000",
-      "url": "https://arxiv.org/abs/2610.16782",
-      "title": "LIBERO-Industry: Benchmarking Robotic Manipulation under Industrial Process Constraints",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "80605505b2be44190ed3",
+      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
+      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "113e1f8173e3427b0178",
-      "url": "https://arxiv.org/abs/2610.16838",
-      "title": "Same Operation, Different Permission: Evaluating Whether Guardrails Honor Authorization",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "f2f6754fa05dc4089c3c",
+      "url": "https://hamishcampbell.com/we-are-entering-a-period-of-overlapping-crises/",
+      "title": "We are entering a period of overlapping crises",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "03a2cdf7d0effd66c322",
-      "url": "https://arxiv.org/abs/2610.16876",
-      "title": "CLIVO: Differentiable Cluster-Based Instruction Mixing with Learned Validation Objectives",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "4134498bd5a52e0a6189",
+      "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
+      "title": "E Ink Kaleido 4",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "20dba357a738fe30be98",
-      "url": "https://arxiv.org/abs/2610.16881",
-      "title": "Acceptable Misalignment",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "499fcbd081b8b35bf472",
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "title": "Muse Spark Open",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "a03c250905dfd0c8d65b",
-      "url": "https://arxiv.org/abs/2610.16887",
-      "title": "Transparency as Answerability: Role-Dependent Information Flow Modeling",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "1014834b299e3fbdaf20",
+      "url": "https://zachlandes.com/trolley-problem/",
+      "title": "Jev meets the Trolley Problem",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "f53796322c3b3c37a61d",
-      "url": "https://arxiv.org/abs/2610.16895",
-      "title": "Observe, Share, or Predict? Disentangling Partner Information in Embodied Multi-Agent Collaboration",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "50150b2440eae6e7477a",
+      "url": "https://www.krea.ai/krea-3",
+      "title": "Krea 3 – An image model built for editing at scale",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "12578bf51c3119fde0a8",
-      "url": "https://arxiv.org/abs/2610.16902",
-      "title": "Neural Bayesian Networks for Modular and Scalable Decision-Making Under Uncertainty",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "c304254f82ae473dd9e4",
+      "url": "https://already-clean.goodfire.com/",
+      "title": "Neural networks are clean",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "5380f2a46e943743f528",
-      "url": "https://arxiv.org/abs/2610.16911",
-      "title": "Audit tools of the trade: Automated Auditor Elicitation Can Be Sensitive to the Context the Auditor Is Given",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "ea07492bcf112b1fca32",
+      "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
+      "title": "Steam Client is now faster than Epic's new vibe coded launcher",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "24a2e154ab00100fbc69",
-      "url": "https://arxiv.org/abs/2610.16916",
-      "title": "Transparent Information Flow Modeling for Role-Aware AI Act Assessment",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "66ce1636137bc229f389",
+      "url": "https://proa.so/",
+      "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "28b6826b8529de1ad133",
-      "url": "https://arxiv.org/abs/2610.16927",
-      "title": "WeFair: Fidelity-Aware Alignment from Human Feedback for Personalized Query Rewriting in Short-Video Search",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "6979593215aeb89f62df",
+      "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
+      "title": "Celebrating 70 Years of Fortran",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "10e7631e5ca66af2ce5e",
-      "url": "https://arxiv.org/abs/2610.16975",
-      "title": "MADDIE: Multi-Agent Drug Discovery Engine",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "cac83430057dec591023",
+      "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+      "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "2af8130e851cb5eebe43",
-      "url": "https://arxiv.org/abs/2610.16980",
-      "title": "PRAISE: A Reproducible Workflow for Non-Programmer Scientists to Implement Published AI Models",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "a949e89b4b36cefd6e00",
+      "url": "https://www.signalscorps.com/blog/prompt-injection-in-http-headers/",
+      "title": "Prompt injection in HTTP headers: what 217M web responses show",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "41c21097bbc190370b97",
-      "url": "https://arxiv.org/abs/2610.16998",
-      "title": "Glasseek: A Transparent Recipe for Training and Trustworthy Evaluation of DeepSearch Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "ef44c8c2fd567dd7b456",
+      "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+      "title": "Using AI to reverse engineer hardware",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "4dd714fafcfa88a0c7fa",
-      "url": "https://arxiv.org/abs/2610.17019",
-      "title": "Understanding Personalization Gains in Whisper",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "d0538427bd9feeb71203",
+      "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+      "title": "I know why the mathematicians weep",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "0c303a789b51d7ffb36e",
-      "url": "https://arxiv.org/abs/2610.17027",
-      "title": "Benchmarking Quantum Kernel SVMs for Credit Card Fraud Detection: Performance Realities Under NISQ Constraints",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "edead0865162a199597e",
+      "url": "https://github.com/fyzugx/DEsk",
+      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     },
     {
-      "id": "95fd05e501d0860b130f",
-      "url": "https://arxiv.org/abs/2610.17043",
-      "title": "Neos: Learning to Interleave Search and Visual Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
+      "id": "5a32a331bcfbcc2bde74",
+      "url": "https://www.cppstories.com/2026/cpp26_contracts/",
+      "title": "C++26 Contracts: Introduction to Preconditions and Postconditions",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "66773d58f9ea6be3f6f4",
-      "url": "https://arxiv.org/abs/2610.17057",
-      "title": "VL-DocIR: A Benchmark for Vision-Based Long Document Information Retrieval",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "23163740838c2461a952",
-      "url": "https://arxiv.org/abs/2610.17059",
-      "title": "PatientWM: Towards Generalizable Clinical World Models via Unified Patient States",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "f9d450986009cb09e0a1",
-      "url": "https://arxiv.org/abs/2610.17093",
-      "title": "SFT Leaves a Reproducible Signature in Activation Geometry: Calibrating Post-Training Interpretability Against Run-to-Run Noise",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "24adf7a16d0ad2d707ea",
-      "url": "https://arxiv.org/abs/2610.17118",
-      "title": "When LLM Agents See a Conflict but Still Proceed: Cross-Domain Dependencies in Network Slicing",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "7826a9fd78684396f151",
-      "url": "https://arxiv.org/abs/2610.17130",
-      "title": "EvoQuantLab: Training-Free Dual-Loop Evolution for Auditable Quantitative Research",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "f7a8c9112dce81cebf80",
-      "url": "https://arxiv.org/abs/2610.17158",
-      "title": "The Format is the Filter: Scoring Format Fixes What an LLM Judge Can Express",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "186e0a9d368f5bf59d8a",
-      "url": "https://arxiv.org/abs/2610.17164",
-      "title": "Learning Perceptual Geometry of Natural Odor Mixtures from LLM-Derived Descriptors",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "17c86ebfc804b386cbf1",
-      "url": "https://arxiv.org/abs/2610.17183",
-      "title": "ChemExplain: A Multimodal Benchmark for Explanatory Chemical Reasoning",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "9c1f7403b64a43afbc42",
-      "url": "https://arxiv.org/abs/2610.17192",
-      "title": "Size Generalization for Diffusion Routing Solvers",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "959e6a0f97dc3ecda83d",
-      "url": "https://arxiv.org/abs/2610.17205",
-      "title": "Releasing the Inner Jev: A Simple Recipe for Open Decision Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "a1baa558b4e163954bd6",
-      "url": "https://arxiv.org/abs/2610.17206",
-      "title": "AutoMARS: Automatic and Scalable Multi-Agent Large Language Model Framework for Supply Chain Risk Assessment",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "7615e31c82241a53211e",
-      "url": "https://arxiv.org/abs/2610.17234",
-      "title": "IsoVRBench: Video Reward Modeling Without Human Feedback",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "20cc329e6bdd5ec13e4b",
-      "url": "https://arxiv.org/abs/2610.17256",
-      "title": "Does a Governed Confidence Score Know When a Text-to-SQL Answer Is Right? An Exploratory Study on BIRD and a Pre-registered Confirmation on Spider",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "a77d1ca6ecea6363294c",
-      "url": "https://arxiv.org/abs/2610.17266",
-      "title": "RL Post-Training Diffusion Language Models Along Their Own Generation Paths",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "44e964b31c780ae80447",
-      "url": "https://arxiv.org/abs/2610.17271",
-      "title": "Reasoning for Propaganda Detection via Label-Guided CoT Optimisation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "01159f7c7ddfb3eba70a",
-      "url": "https://arxiv.org/abs/2610.17288",
-      "title": "PhysCodeGym: Benchmarking Coding Agents for Physically Verifiable 4D Reconstruction",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "62a2704d813f71791807",
-      "url": "https://arxiv.org/abs/2610.17296",
-      "title": "Towards Resilience: Slice-Driven Orchestration of Mobile IoMT in 6G-Edge-Continuum",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "56f4b7632112668dd66f",
-      "url": "https://arxiv.org/abs/2610.17301",
-      "title": "The Agent Knew: Internal States Forecast Unauthorized Actions and Stop Them, and the Lies That Follow",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "3e4135126f2cbd197b0c",
-      "url": "https://arxiv.org/abs/2610.17305",
-      "title": "Reliable Text-to-SQL in Resource-Constrained Settings with Small LLMs via Iterative Retry Workflows",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "00c6b5d65db1e47b9c21",
-      "url": "https://arxiv.org/abs/2610.17310",
-      "title": "Beyond Successful Play: Diagnosing Opponent Modeling in Large Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "42146446f7d311cd3770",
-      "url": "https://arxiv.org/abs/2610.17331",
-      "title": "Do Theorem Provers Need Theorem-Proving Agents? mini-Lean-agent: A Coding-Agent Baseline for Lean",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "4ccc9d0de81ad4f215ea",
-      "url": "https://arxiv.org/abs/2610.17338",
-      "title": "Budgeted KV-Cache Repair for Evolving Contexts",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "4ee9e29e2f0e50d841aa",
-      "url": "https://arxiv.org/abs/2610.17365",
-      "title": "When Goals Leak Across Relationships: How Cached Goal Representations Shape Cross-Client Decisions",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "e9f2f9baa9cae537e814",
-      "url": "https://arxiv.org/abs/2610.17376",
-      "title": "What Makes a Latent Space Shared? Direct and Recoverable Compatibility in Motion VAEs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "520b93c915421483b7e8",
-      "url": "https://arxiv.org/abs/2610.17378",
-      "title": "Get In, Decide, Prove: A Merchant-Side Readiness Benchmark for Agentic Commerce",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "9335ad67af51ee7f5f3e",
-      "url": "https://arxiv.org/abs/2610.17379",
-      "title": "EPOCH: Coverage-Aware Evolution with Experiential Preference Optimization for LLM-based Automated Heuristic Design",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "abbdd1f2d78bac7c79de",
-      "url": "https://arxiv.org/abs/2610.17391",
-      "title": "Learning to Play: Reinforcement Learning and Games",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "2145d96b61c2fd797527",
-      "url": "https://arxiv.org/abs/2610.17401",
-      "title": "Generalizable field of view extension for diffusion MRI via conditional flow matching",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "c81977d45f8b3f976236",
-      "url": "https://arxiv.org/abs/2610.17410",
-      "title": "Agency as a New Organizing Abstraction for Computer Science",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "00d9b182f29cc17a7dc1",
-      "url": "https://arxiv.org/abs/2610.17436",
-      "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "62e9abc928a81a5c297d",
-      "url": "https://arxiv.org/abs/2610.17439",
-      "title": "Large Language Models Extend Known Research But Do Not Create New Research Directions",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "95228e7826def6595a4e",
-      "url": "https://arxiv.org/abs/2610.17463",
-      "title": "An FPGA-Based Spiking Neural Network for Spatiotemporal Pattern Learning and Classification",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "70427ac57669aa8b5e3a",
-      "url": "https://arxiv.org/abs/2610.17473",
-      "title": "REA: From Correct LLM Judgments to Safe Decision Delivery",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "28fdd45fa33f5466f939",
-      "url": "https://arxiv.org/abs/2610.17540",
-      "title": "TacitVLA: Reasoning Vision-Language-Action Models Without Reasoning Latency",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "d97c6fe150e591ad5a7c",
-      "url": "https://arxiv.org/abs/2610.17549",
-      "title": "Reference Wording Shapes Retrieval of Robot Task Instructions",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "57ffc8c069e131a04fa9",
-      "url": "https://arxiv.org/abs/2610.17584",
-      "title": "RAN-JEPA: An Action-Conditioned World Model for Energy-efficient Mobile Network Control",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "d753212771182899391d",
-      "url": "https://arxiv.org/abs/2610.17609",
-      "title": "Verifier-Harness Co-Evolution for Training-Free Self-Improvement on Open-Ended Tasks",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "8e1f74cce2e987050223",
-      "url": "https://arxiv.org/abs/2610.17610",
-      "title": "OpenDepth: Repurposing Image Editing Priors for Robust Open-World Monocular Depth Estimation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "d487a5596d99128c7e2e",
-      "url": "https://arxiv.org/abs/2610.17613",
-      "title": "MAS-Gate: Unlocking Multi-Agent System Lifecycle via Node-Centric Quantification",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "d3e40945d37726d05200",
-      "url": "https://arxiv.org/abs/2610.17633",
-      "title": "Executable Prefix Values for Locating Agent Failures",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "1102c39dcd25ad660ff4",
-      "url": "https://arxiv.org/abs/2610.17641",
-      "title": "Beyond Bias Scores: Answerability Confounds in Activation Steering with Gradient-Constrained Direction Design (GCD)",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "e95e484bd261dbb2be50",
-      "url": "https://arxiv.org/abs/2610.17643",
-      "title": "When Should Enterprise Policy Decisions Be Learned, and When Should They Be Reasoned?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "7369f9f5971ee28669f1",
-      "url": "https://arxiv.org/abs/2610.17659",
-      "title": "Can Agents Truly Forget? Explore Machine Unlearning for LLM Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "0a43a03df5e1bf74a27c",
-      "url": "https://arxiv.org/abs/2610.17665",
-      "title": "RoTA-Bench: Evaluating 3D Spatial Reasoning through Interactive Projection Alignment",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "0a5b98d5e7b7a0578636",
-      "url": "https://arxiv.org/abs/2610.17670",
-      "title": "Cowork-Gym: Synthesizing Interactive Work Environments at Scale",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "0b97ca277f870d6b75a1",
-      "url": "https://arxiv.org/abs/2610.17672",
-      "title": "Encounter-Driven City-Scale Human Mobility Generation with Large Language Models",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "696521db84255e12abb0",
-      "url": "https://arxiv.org/abs/2610.17689",
-      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "1c350df971c45695ee88",
-      "url": "https://arxiv.org/abs/2610.17690",
-      "title": "MedEvo: Medical Reasoning Evolution through Knowledge Navigation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "ebc9ab1f44bb791dfb7c",
-      "url": "https://arxiv.org/abs/2610.17699",
-      "title": "Understanding Gene Expression-to-Image Learning: Spatial Structure and Information Fidelity",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "8cf5fd9ea2fd3ef2f584",
-      "url": "https://arxiv.org/abs/2610.17702",
-      "title": "A Node Embedding Framework for Model-Centric Conformance Checking in Process Mining",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "4b2b919fe54cd63e7047",
-      "url": "https://arxiv.org/abs/2610.17710",
-      "title": "Adaptive-Group Process Rewards for GUI Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "4f543aaf09b8e37b8423",
-      "url": "https://arxiv.org/abs/2610.17718",
-      "title": "ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "6169a0d41579fa2b74d7",
-      "url": "https://arxiv.org/abs/2610.17719",
-      "title": "Keep Your Receipts: Trustworthy Cleanup of Agent-Built Knowledge Graphs",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "636de132ba428ce7a242",
-      "url": "https://arxiv.org/abs/2610.17723",
-      "title": "Upstream Influence, Downstream Re-Anchoring in LLM Agent Chains",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "d940c8c31187f5bf570c",
-      "url": "https://arxiv.org/abs/2610.17724",
-      "title": "Evidence-First Agentic Verification",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "2a914bb65f0078acdf05",
-      "url": "https://arxiv.org/abs/2610.17728",
-      "title": "Safety for Whom? Benchmarking Understanding Beyond Refusal in Egocentric Multimodal Assistants",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "fc7006cf22147305be6f",
-      "url": "https://arxiv.org/abs/2610.17738",
-      "title": "DuplexAct: How Interactive Are Frontier Full-Duplex Spoken Language Models?",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "1c90321d9f5905858926",
-      "url": "https://arxiv.org/abs/2610.17740",
-      "title": "Coupled Harness--Model Evolution for Scientific Equation Discovery",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "e21a1c434bbb521d7641",
-      "url": "https://arxiv.org/abs/2610.17757",
-      "title": "Instructions Are Evidence, Not Objectives: Measuring Outcome Alignment of Agents",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "ed0fcc5d16599bd6eded",
-      "url": "https://arxiv.org/abs/2610.17762",
-      "title": "Autonomous 3D Visual-Thermal Inspection for Utility-Scale Solar Farms",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
-    },
-    {
-      "id": "8ee90053385ae5664d36",
-      "url": "https://arxiv.org/abs/2610.17763",
-      "title": "Memory Echo in Single-Agent Long-Term Memory: Lifecycle Evaluation and Provenance-Guided Mitigation",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "kind": "feed",
-      "observed_at": "2026-10-15T18:14:00Z"
+      "observed_at": "2026-10-15T22:11:33Z"
     }
   ]
 }
