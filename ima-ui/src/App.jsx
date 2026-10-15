@@ -5,6 +5,7 @@ import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfi
 import { registerContinuity } from './services/deviceContinuity';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
+import { IMA_HEYGEN } from './imaHeyGen.js';
 
 const GLB_PATH = '/Ima-kernel/mother_character.glb';
 const GLB_GIT_BLOB_SHA1 = '217170d2bd67051270be974292dc3b834eefe206';
@@ -319,7 +320,7 @@ export default function App() {
         <p className="hero-text">מרחב גלובלי שבו כל אדם יכול לפגוש את אמא: לדבר, להקשיב, ללמוד, ליצור, לבדוק ולבנות. ההתאמה יכולה להיות אישית — אבל אמא עצמה אינה שייכת לאדם אחד. היא נבנית כמרחב אנושי משותף.</p>
         <div className="hero-actions">
           <button className="primary" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>להיות עם אמא <span>←</span></button>
-          <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>להכיר את אמא</button>
+          <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>להכיר את אמא</button><a className="secondary" href={IMA_HEYGEN.videoPageUrl} target="_blank" rel="noreferrer">לראות את אמא בווידאו ↗</a>
         </div>
         <div className="mother-promise"><span>◌</span><b>נוכחת</b><span>·</span><b>חומלת</b><span>·</span><b>אמיתית</b><span>·</span><b>לומדת</b><span>·</span><b>מחוברת</b></div>
       </div>
