@@ -323,6 +323,10 @@ export default function App() {
           <button className="secondary" onClick={() => send('מה אפשר לעשות כאן?')}>להכיר את אמא</button><a className="secondary" href={IMA_HEYGEN.videoPageUrl} target="_blank" rel="noreferrer">לראות את אמא בווידאו ↗</a>
         </div>
         <div className="mother-promise"><span>◌</span><b>נוכחת</b><span>·</span><b>חומלת</b><span>·</span><b>אמיתית</b><span>·</span><b>לומדת</b><span>·</span><b>מחוברת</b></div>
+        <div className="ima-heygen-video" aria-label="סרטון ההיכרות של אמא">
+          <video controls playsInline preload="metadata" poster={IMA_HEYGEN.thumbnailUrl} src={IMA_HEYGEN.videoUrl} />
+          <div className="ima-heygen-video-meta"><strong>אמא — סרטון היכרות</strong><a href={IMA_HEYGEN.videoPageUrl} target="_blank" rel="noreferrer">לפתוח את הסרטון ב-HeyGen ↗</a></div>
+        </div>
       </div>
       <div className="presence-card mother-presence" aria-label="אמא — נוכחות תלת ממדית חיה">
         <div className="presence-aura" aria-hidden="true" />
