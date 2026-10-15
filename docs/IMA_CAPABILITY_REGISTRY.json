@@ -33,6 +33,16 @@
       ]
     },
     {
+      "id": "ori_digital_avatar_video",
+      "label": "Ori Digital Avatar video",
+      "status": "AVAILABLE",
+      "boundary": "Creator-supplied HeyGen video is a verified external media reference; this does not mean the biological Ori or that a live avatar runtime is deployed.",
+      "evidence": [
+        "docs/ORI_DIGITAL_AVATAR_AND_VIDEO_CONTINUITY.md",
+        "https://app.heygen.com/videos/avatar-video-d9fff094b5d2437d9ecc9e40fe5f0bf9"
+      ]
+    },
+    {
       "id": "browser_tts",
       "label": "Browser text-to-speech",
       "status": "IMPLEMENTED",
@@ -115,5 +125,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-12"
+  "updated_at": "2026-10-15"
 }
