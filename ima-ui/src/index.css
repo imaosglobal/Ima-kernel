@@ -283,3 +283,11 @@ img,svg,canvas,video{
 .google-auth small{font-size:.72rem;opacity:.7}
 .google-auth [role="alert"]{max-width:180px}
 .google-signout{border:0;background:transparent;text-decoration:underline;cursor:pointer}
+
+
+/* Canonical HeyGen Mother introduction — embedded public presentation */
+.ima-heygen-video{margin-top:26px;padding:14px;border:1px solid rgba(95,72,60,.14);border-radius:24px;background:rgba(255,251,247,.72);box-shadow:0 18px 55px rgba(79,59,45,.08);backdrop-filter:blur(14px)}
+.ima-heygen-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;background:#161313}
+.ima-heygen-video-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px 2px;color:#4c3d34;font-size:12px}
+.ima-heygen-video-meta a{text-decoration:underline;color:#805740}
+@media(max-width:600px){.ima-heygen-video{margin-top:18px;padding:9px}.ima-heygen-video-meta{align-items:flex-start;flex-direction:column}}
