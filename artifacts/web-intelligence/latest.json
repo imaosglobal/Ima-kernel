@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-14T22:15:50Z",
+  "timestamp": "2026-10-15T01:25:23Z",
   "sources": 12,
-  "discovered": 123,
-  "changed": 18,
+  "discovered": 150,
+  "changed": 12,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -37,148 +29,100 @@
   },
   "items": [
     {
-      "id": "3cbafd4338038f81ee3b",
-      "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
-      "title": "GitHub availability report: September 2026",
-      "source": "https://github.blog/feed/",
+      "id": "9ab900e4fa8fe878141f",
+      "url": "https://www.nasa.gov/news-release/nasa-to-host-news-conference-previewing-us-spacewalks-100-101/",
+      "title": "NASA to Host News Conference Previewing US Spacewalks 100, 101",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-14T22:15:28Z"
+      "observed_at": "2026-10-15T01:25:19Z"
     },
     {
-      "id": "f919ddb4bb1767a45732",
-      "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
-      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
-      "source": "https://github.blog/feed/",
+      "id": "13dd6fe9a9252ccd9f9a",
+      "url": "https://www.nasa.gov/learning-resources/nasa-astronauts-to-answer-questions-from-florida-students/",
+      "title": "NASA Astronauts to Answer Questions from Florida Students",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-14T22:15:28Z"
+      "observed_at": "2026-10-15T01:25:19Z"
     },
     {
-      "id": "616037433c784b2a7562",
-      "url": "https://typesafe.ai/blog/jev-1-14",
-      "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+      "id": "ccb5266bb450f46f27f1",
+      "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-breaks-down-treble-clefs-galaxy-cluster-collision/",
+      "title": "NASA’s Chandra Breaks Down ‘Treble Clef’s’ Galaxy Cluster Collision",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "07e53cea639f25f30455",
+      "url": "https://www.nasa.gov/image-article/nasas-space-x-crs-35-launch-jellyfish/",
+      "title": "NASA’s Space X CRS-35 Launch Jellyfish",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "47fad2329e7a41ac4a5a",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/nasa-develops-batteries-to-power-humanitys-return-to-moon/",
+      "title": "NASA Develops Batteries to Power Humanity’s Return to Moon",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "3b2f7a3b6ccfa131981a",
+      "url": "https://www.nasa.gov/news-release/nasa-to-discuss-artemis-acceleration-status-of-upcoming-moon-missions/",
+      "title": "NASA to Discuss Artemis Acceleration, Status of Upcoming Moon Missions",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "6e334e66e0eb46b0f93e",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-14-mars-and-the-beehive-under-an-aurora/",
+      "title": "APOD: 2026 October 14 – Mars and the Beehive Under an Aurora",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "9759b7394ace50610030",
+      "url": "https://science.nasa.gov/earth/earth-observatory/hurricane-simon-lurks-off-the-mexican-coast/",
+      "title": "Hurricane Simon Lurks Off the Mexican Coast",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "6f4a1fa6b15ab56d1baa",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crs-35-launch/",
+      "title": "NASA’s SpaceX CRS-35 Launch Jellyfish",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-15T01:25:19Z"
+    },
+    {
+      "id": "364f5f1cad75fb5b888b",
+      "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+      "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
+      "observed_at": "2026-10-15T01:25:20Z"
     },
     {
-      "id": "d001316ff15b7db6937e",
-      "url": "https://anoma.ly/notes/opencode-2-0/",
-      "title": "OpenCode 2.0",
+      "id": "f3082b1f672e9c065aab",
+      "url": "https://ghuntley.com/remix/",
+      "title": "A new model for open source: closed to pull requests, open to remix",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
+      "observed_at": "2026-10-15T01:25:20Z"
     },
     {
-      "id": "891468d096a68883d5cc",
-      "url": "https://sunshowers.io/posts/anthropic-mononoke/",
-      "title": "Anthropic's Scion is heavily inspired by Mononoke",
+      "id": "884571b923cce1b1b1a8",
+      "url": "https://tinylittleoffice.com/",
+      "title": "Tiny Little Office",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "049f752dea89d9de43df",
-      "url": "https://blog.cloudflare.com/yandex-outage/",
-      "title": "Yandex outage: data shows that instead of going dark, malicious bots moved",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "a75b5151ba54c3908f0e",
-      "url": "https://nytpu.com/gemlog/2026-03-18",
-      "title": "Fancy Curl Sites",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "537c3562be36e30aae78",
-      "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
-      "title": "Things to know when you get cancer – 2026 Edition",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "5793f55a8070ab6917bf",
-      "url": "https://www.telegraph.co.uk/news/2026/10/13/suicide-rates-highest-ever-among-middle-aged-men/",
-      "title": "Suicide rates highest ever among middle-aged men",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "272216152be46ab5ca36",
-      "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
-      "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "8eb3e0ba9b803883c209",
-      "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
-      "title": "Banks are now trying to offload the AI data center debt they just underwrote",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "8046c79956428cb16663",
-      "url": "https://petal.live/",
-      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "77f4262bbf311427db6f",
-      "url": "https://oxide.computer/blog/voxel-labs",
-      "title": "Virtual Oxide Labs: Emulating a Full Oxide Rack",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "c8445f2ac4bdd486beb4",
-      "url": "https://www.lawfaremedia.org/article/america-didn-t-lose-its-rare-earth-industry.-it-sold-it",
-      "title": "America didn't lose its rare earth industry, it sold it",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "d12e09342932b4beca9e",
-      "url": "https://github.com/bealesh/neckbeard",
-      "title": "Neckbeard – A DevOps/platform/SRE plugin for your agent",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "3edeaa8d7764aa277fd5",
-      "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
-      "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "aa20a97d703482a1baf6",
-      "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
-      "title": "Has AI tells",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
-    },
-    {
-      "id": "6ea4e6a562d2bc5ff658",
-      "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
-      "title": "Americans' social activity has steeply declined in the past 30 years",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-14T22:15:33Z"
+      "observed_at": "2026-10-15T01:25:20Z"
     }
   ]
 }
