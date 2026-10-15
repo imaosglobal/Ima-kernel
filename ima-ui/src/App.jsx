@@ -326,7 +326,7 @@ export default function App() {
       <div className="presence-card mother-presence" aria-label="אמא — נוכחות תלת ממדית חיה">
         <div className="presence-aura" aria-hidden="true" />
         <div className="orb"><PresenceScene state={avatarState} reducedMotion={reducedMotion} onAssetError={() => setAvatarAssetState('failed')} /></div>
-        <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b>IMA / {avatarAssetState === 'verified' ? '3D VERIFIED' : avatarAssetState === 'failed' ? '3D FALLBACK' : '3D CHECKING'}</b></div>
+        <div className="presence-label"><span>{avatarState === 'thinking' ? 'חושבת איתך' : avatarState === 'speaking' ? 'מדברת איתך' : 'נוכחת איתך'}</span><b title="אימות הקובץ והשלמותו בריפו; אינו טוען לאימות איכות חזותית">IMA / {avatarAssetState === 'verified' ? '3D ASSET VERIFIED' : avatarAssetState === 'failed' ? '3D FALLBACK' : '3D CHECKING'}</b></div>
       </div>
     </section>
 
