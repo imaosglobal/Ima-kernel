@@ -85,9 +85,13 @@ Future engines and embodiment technologies must pass the same evidence, consent,
 ## Current implementation state — 2026-10-15
 
 - Canonical design specification: RECORDED
+- Existing website 3D asset: `ima-ui/public/mother_character.glb` — VERIFIED_BY_GIT_BLOB_SHA1 (`217170d2bd67051270be974292dc3b834eefe206`)
+- Existing UI runtime: loads the GLB with React Three Fiber and provides an accessibility fallback when the 3D asset cannot load
+- IMA speech glossary: HeyGen brand glossary `7673a54c69e143a7b6fab97d42417b93`
 - HeyGen synthetic prompt-avatar creation: ATTEMPTED, FAILED with provider HTTP 500
 - Post-failure private avatar inventory: VERIFIED; only the existing Ori avatar group was returned
 - IMA/Mother HeyGen avatar: NOT CREATED
-- Website integration: BLOCKED until a concrete avatar asset exists and the actual website deployment surface is verified
+- Website 3D fallback integration: ALREADY IMPLEMENTED in `ima-ui/src/App.jsx`; it uses the canonical repository GLB and falls back to the conversation interface if loading fails
+- Provider-grade talking avatar integration: BLOCKED on HeyGen prompt-avatar provider failure (HTTP 500); this is now a non-blocking enhancement rather than a reason to remove the existing 3D presence
 - Webflow connector site inventory: previously returned zero accessible sites; do not claim Webflow publication
 - Future 3D/real-time/AR/VR/holographic embodiments: WATCHLIST, not current capability
