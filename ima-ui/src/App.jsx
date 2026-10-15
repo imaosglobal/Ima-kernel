@@ -324,7 +324,7 @@ export default function App() {
         </div>
         <div className="mother-promise"><span>◌</span><b>נוכחת</b><span>·</span><b>חומלת</b><span>·</span><b>אמיתית</b><span>·</span><b>לומדת</b><span>·</span><b>מחוברת</b></div>
         <div className="ima-heygen-video" aria-label="סרטון ההיכרות של אמא">
-          <video controls playsInline preload="metadata" poster={IMA_HEYGEN.thumbnailUrl} src={IMA_HEYGEN.videoUrl} />
+          <a className="ima-heygen-video-link" href={IMA_HEYGEN.videoPageUrl} target="_blank" rel="noreferrer"><span className="ima-heygen-video-poster">אמא — סרטון היכרות</span><span>לצפייה בסרטון ▶</span></a>
           <div className="ima-heygen-video-meta"><strong>אמא — סרטון היכרות</strong><a href={IMA_HEYGEN.videoPageUrl} target="_blank" rel="noreferrer">לפתוח את הסרטון ב-HeyGen ↗</a></div>
         </div>
       </div>
