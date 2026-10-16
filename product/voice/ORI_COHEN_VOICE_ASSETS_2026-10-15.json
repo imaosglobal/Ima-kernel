@@ -1,63 +1,117 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "verified_at": "2026-10-16",
   "owner": "Ori Cohen",
-  "purpose": "Verified registry of voice artifacts recovered from the 2026-10-15 vidIQ workflow.",
-  "consent_scope": "User-owned voice recordings; cloning workflow was explicitly requested by Ori Cohen.",
+  "purpose": "Verified registry of Ori Cohen voice artifacts recovered/recreated from the 2026-10-15/16 vidIQ workflow.",
+  "consent_scope": "User-owned voice recordings; cloning and processing were explicitly requested by Ori Cohen.",
+  "source_videos": [
+    {
+      "title": "האיש החצוי",
+      "videoId": "DS9JavmHJ1A",
+      "url": "https://www.youtube.com/watch?v=DS9JavmHJ1A",
+      "durationSeconds": 259.933016
+    },
+    {
+      "title": "בהילוך איטי",
+      "videoId": "ynPj8ViiTMs",
+      "url": "https://www.youtube.com/watch?v=ynPj8ViiTMs",
+      "durationSeconds": 292.193016
+    },
+    {
+      "title": "אין הבדל",
+      "videoId": "5TUYevzcOQI",
+      "url": "https://www.youtube.com/watch?v=5TUYevzcOQI",
+      "durationSeconds": 165.893016
+    },
+    {
+      "title": "לתאר את זה",
+      "videoId": "SdArzjCVn18",
+      "url": "https://www.youtube.com/watch?v=SdArzjCVn18",
+      "durationSeconds": 227.153016
+    },
+    {
+      "title": "כל השדים",
+      "videoId": "gUvJj2ZWfqw",
+      "url": "https://www.youtube.com/watch?v=gUvJj2ZWfqw",
+      "durationSeconds": 242.533016
+    }
+  ],
   "custom_voices": [
     {
       "name": "Ori Cohen — האיש החצוי",
       "voiceId": "dGNzYIFpLCcqUTpynXms",
       "cloneJobId": "job_552208d8-4ba8-4cdf-8d1a-fcdae6a0c314",
-      "status": "completed"
+      "status": "completed",
+      "type": "speech/voiceover"
     },
     {
       "name": "Ori Cohen — בהילוך איטי",
       "voiceId": "Rb3k12mIPP3aNSxOqgxC",
       "cloneJobId": "job_76becca2-1d51-49d3-83e4-d69b1dafd762",
-      "status": "completed"
+      "status": "completed",
+      "type": "speech/voiceover"
     }
   ],
-  "extracted_audio": [
+  "extracted_audio_recreated": [
     {
-      "artifact": "ori_cohen_extracted_audio_01.mp3",
-      "jobId": "job_b270096b-0285-48bf-bc51-6aaf154285e9",
-      "durationSeconds": 242.533016,
-      "sizeBytes": 5822523,
-      "status": "completed",
-      "titleMapping": "unverified"
-    },
-    {
-      "artifact": "ori_cohen_extracted_audio_02.mp3",
-      "jobId": "job_9484b0ba-e094-447e-9b8e-acaed9dd7ce6",
-      "durationSeconds": 227.153016,
-      "sizeBytes": 5453256,
-      "status": "completed",
-      "titleMapping": "unverified"
-    },
-    {
-      "artifact": "ori_cohen_extracted_audio_03.mp3",
-      "jobId": "job_b31d97a1-7ce7-4978-8f04-ece1dc8b2b2b",
-      "durationSeconds": 165.893016,
-      "sizeBytes": 3983085,
-      "status": "completed",
-      "titleMapping": "unverified"
-    },
-    {
-      "artifact": "ori_cohen_extracted_audio_04.mp3",
-      "jobId": "job_fe0b7a0e-3592-4ae8-9742-77ece5d3628d",
-      "durationSeconds": 292.193016,
-      "sizeBytes": 7014334,
-      "status": "completed",
-      "titleMapping": "unverified"
-    },
-    {
-      "artifact": "ori_cohen_extracted_audio_05.mp3",
-      "jobId": "job_92a12f58-737b-476e-be57-265db0addd15",
+      "title": "האיש החצוי",
+      "videoId": "DS9JavmHJ1A",
+      "jobId": "job_63477d9e-b4b2-4ea9-8534-c3b29629c419",
+      "format": "wav",
+      "sampleRateHz": 44100,
+      "channels": 2,
       "durationSeconds": 259.933016,
-      "sizeBytes": 6240064,
+      "sizeBytes": 45852262,
       "status": "completed",
-      "titleMapping": "unverified"
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "בהילוך איטי",
+      "videoId": "ynPj8ViiTMs",
+      "jobId": "job_ec87d7a9-28d2-4f51-becb-09c9fb03321b",
+      "format": "wav",
+      "sampleRateHz": 44100,
+      "channels": 2,
+      "durationSeconds": 292.193016,
+      "sizeBytes": 51542926,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "אין הבדל",
+      "videoId": "5TUYevzcOQI",
+      "jobId": "job_3f1ea98f-7a51-4a8d-b040-efe481830917",
+      "format": "wav",
+      "sampleRateHz": 44100,
+      "channels": 2,
+      "durationSeconds": 165.893016,
+      "sizeBytes": 29263606,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "לתאר את זה",
+      "videoId": "SdArzjCVn18",
+      "jobId": "job_9dfc2600-fa5e-4a7a-8e39-ef34d3eff5fe",
+      "format": "wav",
+      "sampleRateHz": 44100,
+      "channels": 2,
+      "durationSeconds": 227.153016,
+      "sizeBytes": 40069870,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "כל השדים",
+      "videoId": "gUvJj2ZWfqw",
+      "jobId": "job_baf70676-bf64-4dc8-b368-b0deb32d4a89",
+      "format": "wav",
+      "sampleRateHz": 44100,
+      "channels": 2,
+      "durationSeconds": 242.533016,
+      "sizeBytes": 42782902,
+      "status": "completed",
+      "temporaryUrlOnly": true
     }
   ],
   "verified_voice_analysis": {
@@ -65,12 +119,19 @@
     "source": "YouTube / בהילוך איטי",
     "result": "warm intimate male baritone/low-tenor; clear Hebrew diction; suitable for melodic quiet material; vocal isolation recommended before using mixed recordings as training data."
   },
-  "pending": [
-    "download and permanently archive the five extracted MP3 files before temporary signed URLs expire",
-    "identify/map each extracted asset to its exact song title",
-    "perform vocal/stem isolation on the mixed recordings",
-    "build a normalized unified master training package",
-    "store durable copies outside temporary vidIQ URLs",
-    "evaluate singing-voice conversion separately from speech voice cloning; the existing vidIQ clone is a speech/voiceover clone, not proof of singing synthesis"
+  "status": {
+    "extraction": "RECREATED_AND_VERIFIED",
+    "durable_binary_archive": "NOT_YET_COMPLETED",
+    "vocal_stem_isolation": "NOT_YET_COMPLETED",
+    "unified_master_training_package": "NOT_YET_COMPLETED",
+    "singing_voice_conversion": "NOT_YET_VALIDATED",
+    "note": "The recreated WAV outputs are temporary vidIQ URLs and must be downloaded/archived before expiry. vidIQ documents generated media links as temporary and recommends immediate saving."
+  },
+  "historical_expired_jobs": [
+    "job_b270096b-0285-48bf-bc51-6aaf154285e9",
+    "job_9484b0ba-e094-447e-9b8e-acaed9dd7ce6",
+    "job_b31d97a1-7ce7-4978-8f04-ece1dc8b2b2b",
+    "job_fe0b7a0e-3592-4ae8-9742-77ece5d3628d",
+    "job_92a12f58-737b-476b-be57-265db0addd15"
   ]
 }
