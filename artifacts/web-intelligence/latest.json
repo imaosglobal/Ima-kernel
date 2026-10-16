@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-16T21:01:13Z",
+  "timestamp": "2026-10-16T23:31:45Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 15,
+  "changed": 3,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,124 +29,28 @@
   },
   "items": [
     {
-      "id": "472f9f8e7d3f265b598f",
-      "url": "https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/",
-      "title": "NASA Names Stephen Cash Marshall Space Flight Center Director",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "id": "30a2dfe8e10c777c45cc",
+      "url": "https://neuralwatt.com/news/why-harnesses-matter-for-energy-efficiency",
+      "title": "Why harnesses matter for energy (and token) efficiency",
+      "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T21:00:37Z"
+      "observed_at": "2026-10-16T23:31:34Z"
+    },
+    {
+      "id": "6b04052164311588fe6a",
+      "url": "https://github.com/home-assistant/home-assistant.io/issues/49314",
+      "title": "I never authorized an integration that scans my secrets",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T23:31:34Z"
     },
     {
       "id": "155c7b54b4cbd80e144f",
       "url": "https://bfl.ai/blog/flux-3-image-klein",
-      "title": "Flux 3 Image Klein: open weights, 5.6B parameters",
+      "title": "FLUX 3 Image Klein",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "6cf74a1e057f0a27bc54",
-      "url": "https://www.themarshallproject.org/2026/10/16/911-book-policing-mental-health",
-      "title": "The Fatal Flaw of 911",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "c7dfeeeb6dfb1916550c",
-      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-      "title": "How the Claude Code team does code review",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "520b0400db3cdd577249",
-      "url": "https://alexwang.ai/posts/associative-memory/",
-      "title": "You could have invented transformers from memory",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "918cdd953ecffda0b678",
-      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-      "title": "Claude reveals ECDSA curve origins",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "996025c543b8b99d7b42",
-      "url": "https://stoke.money",
-      "title": "Show HN: Stoke Money – Personal finance app built around a cash flow forecast",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "9718abb803a3dfbc1127",
-      "url": "https://www.sandordargo.com/blog/2026/09/30/cpp26-debugging",
-      "title": "C++26: The New Debugging Header",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "7661019fe020ff681604",
-      "url": "https://github.com/cobanov/PS5LM",
-      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "fe204f516be8541db0a3",
-      "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
-      "title": "Anthropic assigned highest junk credit rating in June",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "3ae723fea1db391caa3e",
-      "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
-      "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "d0817155767aa3ab4345",
-      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-      "title": "Designing more efficient quantum circuits with Claude",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "45785de078ed53534b8a",
-      "url": "https://gifcities.org/",
-      "title": "GifCities",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "6b10edb38f7953beed93",
-      "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
-      "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
-    },
-    {
-      "id": "5775e4ac5e1aef1b2b8a",
-      "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
-      "title": "Waymo in Toronto",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-16T21:00:41Z"
+      "observed_at": "2026-10-16T23:31:34Z"
     }
   ]
 }
