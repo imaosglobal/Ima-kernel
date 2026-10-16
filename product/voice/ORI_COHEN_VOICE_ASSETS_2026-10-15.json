@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "verified_at": "2026-10-16",
+  "owner": "Ori Cohen",
+  "purpose": "Verified registry of voice artifacts recovered from the 2026-10-15 vidIQ workflow.",
+  "consent_scope": "User-owned voice recordings; cloning workflow was explicitly requested by Ori Cohen.",
+  "custom_voices": [
+    {
+      "name": "Ori Cohen — האיש החצוי",
+      "voiceId": "dGNzYIFpLCcqUTpynXms",
+      "cloneJobId": "job_552208d8-4ba8-4cdf-8d1a-fcdae6a0c314",
+      "status": "completed"
+    },
+    {
+      "name": "Ori Cohen — בהילוך איטי",
+      "voiceId": "Rb3k12mIPP3aNSxOqgxC",
+      "cloneJobId": "job_76becca2-1d51-49d3-83e4-d69b1dafd762",
+      "status": "completed"
+    }
+  ],
+  "extracted_audio": [
+    {
+      "artifact": "ori_cohen_extracted_audio_01.mp3",
+      "jobId": "job_b270096b-0285-48bf-bc51-6aaf154285e9",
+      "durationSeconds": 242.533016,
+      "sizeBytes": 5822523,
+      "status": "completed",
+      "titleMapping": "unverified"
+    },
+    {
+      "artifact": "ori_cohen_extracted_audio_02.mp3",
+      "jobId": "job_9484b0ba-e094-447e-9b8e-acaed9dd7ce6",
+      "durationSeconds": 227.153016,
+      "sizeBytes": 5453256,
+      "status": "completed",
+      "titleMapping": "unverified"
+    },
+    {
+      "artifact": "ori_cohen_extracted_audio_03.mp3",
+      "jobId": "job_b31d97a1-7ce7-4978-8f04-ece1dc8b2b2b",
+      "durationSeconds": 165.893016,
+      "sizeBytes": 3983085,
+      "status": "completed",
+      "titleMapping": "unverified"
+    },
+    {
+      "artifact": "ori_cohen_extracted_audio_04.mp3",
+      "jobId": "job_fe0b7a0e-3592-4ae8-9742-77ece5d3628d",
+      "durationSeconds": 292.193016,
+      "sizeBytes": 7014334,
+      "status": "completed",
+      "titleMapping": "unverified"
+    },
+    {
+      "artifact": "ori_cohen_extracted_audio_05.mp3",
+      "jobId": "job_92a12f58-737b-476e-be57-265db0addd15",
+      "durationSeconds": 259.933016,
+      "sizeBytes": 6240064,
+      "status": "completed",
+      "titleMapping": "unverified"
+    }
+  ],
+  "verified_voice_analysis": {
+    "sourceVideoId": "ynPj8ViiTMs",
+    "source": "YouTube / בהילוך איטי",
+    "result": "warm intimate male baritone/low-tenor; clear Hebrew diction; suitable for melodic quiet material; vocal isolation recommended before using mixed recordings as training data."
+  },
+  "pending": [
+    "download and permanently archive the five extracted MP3 files before temporary signed URLs expire",
+    "identify/map each extracted asset to its exact song title",
+    "perform vocal/stem isolation on the mixed recordings",
+    "build a normalized unified master training package",
+    "store durable copies outside temporary vidIQ URLs",
+    "evaluate singing-voice conversion separately from speech voice cloning; the existing vidIQ clone is a speech/voiceover clone, not proof of singing synthesis"
+  ]
+}
