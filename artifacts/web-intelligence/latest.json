@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-16T12:22:51Z",
+  "timestamp": "2026-10-16T17:22:19Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 4,
+  "changed": 23,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,36 +29,188 @@
   },
   "items": [
     {
-      "id": "876f2e365ccffb939aea",
-      "url": "https://science.nasa.gov/image-article/apod-2026-october-16-chasing-the-international-space-station/",
-      "title": "APOD: 2026 October 16 – Chasing the International Space Station",
+      "id": "f899e30222bf644bedc9",
+      "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+      "title": "Artemis II Heat Shield After Splashdown",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-16T12:22:16Z"
+      "observed_at": "2026-10-16T17:22:04Z"
     },
     {
-      "id": "072d14671b798f80555c",
-      "url": "https://science.nasa.gov/earth/earth-observatory/isaias-dims-the-gulf-coast/",
-      "title": "Isaias Dims the Gulf Coast",
+      "id": "3b5dbc13df98572c8764",
+      "url": "https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/",
+      "title": "I Am Artemis: Allison Mjoen",
       "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-16T12:22:16Z"
+      "observed_at": "2026-10-16T17:22:04Z"
     },
     {
-      "id": "947a7939bfc8adf6b58b",
-      "url": "https://www.foxbusiness.com/technology/teslas-new-roadster-makes-flying-debut-hitting-60-mph-under-second",
-      "title": "Tesla's new Roadster makes a flying debut, hitting 60 MPH in under a second",
-      "source": "https://hnrss.org/frontpage",
+      "id": "5c0d8f6486aaa5554d15",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-spies-spirals-edge/",
+      "title": "NASA’s Hubble Spies Spiral’s Edge",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-16T12:22:17Z"
+      "observed_at": "2026-10-16T17:22:04Z"
     },
     {
-      "id": "be0b2e00ff30742ea6cb",
-      "url": "https://danieltemkin.com/esolangs/folders",
-      "title": "The Folders Programming Language",
+      "id": "bc9559da5a172fba9bd9",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1320/",
+      "title": "Artemis II Heat Shield After Splashdown",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:04Z"
+    },
+    {
+      "id": "15094b610e5ba33b1fc5",
+      "url": "https://job-boards.greenhouse.io/piramidalinc/jobs/4443102009",
+      "title": "Piramidal (YC W24) Is Hiring",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T12:22:17Z"
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "2c0edfc7145c456f7a15",
+      "url": "https://dev-null.sh",
+      "title": "/dev/null: social network for developers",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "10b54ab063f9dee7fc8b",
+      "url": "https://news.gallup.com/poll/708614/desire-migrate-drops-new-low.aspx",
+      "title": "Desire to Move Permanently to U.S. at New Low",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "f84f7d825df2cf78053c",
+      "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
+      "title": "JPEG XL vs. AVIF for web use-cases",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "e5b4df0964644beb8122",
+      "url": "https://ritchietorres.house.gov/posts/rep-torres-announces-power-to-the-players-act-legislation-to-ensure-gamers-own-their-games",
+      "title": "US Rep Announces Congressional Legislation to Protect Video Game Ownership",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "4e676cca7ebacb3b2b30",
+      "url": "https://www.readergrev.com/p/polymarket-paid-quote-retweet-esports-investigation",
+      "title": "Inside Polymarket's paid quote-retweet esports program",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "711ff4437e8bd1782b49",
+      "url": "https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471",
+      "title": "Postgres 19 delayed after AI reviewers find more bugs than humans can fix",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "d1252e93ea4783d9a73c",
+      "url": "https://onedeploy.co",
+      "title": "Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "cb6af5990e3391b545bb",
+      "url": "https://calif.io/research/big-fish",
+      "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "8a231454d50f269918b4",
+      "url": "https://rstation.ai/",
+      "title": "Show HN: rStation – A shared research lab for your AI agents",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "da63495c6be4438a0490",
+      "url": "https://www.worksinprogress.news/p/porcelain",
+      "title": "What on Earth Is Dekton?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "3a7946cd06e1a37aed4d",
+      "url": "https://starskirmish.com/bench/v0-2/",
+      "title": "Show HN: Gemini 4 Argon plays StarCraft",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "09a3482126c767593723",
+      "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1002/aaai.70113",
+      "title": "How to make System 1 LLMs show System 2 competencies?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "5793ef86373c76e5d920",
+      "url": "https://xenaproject.wordpress.com/2026/10/16/how-to-formalize-all-of-mathematics/",
+      "title": "How to Formalize All of Mathematics",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "a80ac8068cf5aba129cc",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "b3f4007ed57d5fcef923",
+      "url": "https://dfarq.homeip.net/what-was-a-token-ring-network/",
+      "title": "What was a Token Ring network?",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "b0e78694b8db35febd42",
+      "url": "https://anuragbhatia.com/post/2026/06/rfc8950-announce-ipv4-with-ipv6-next-hop/",
+      "title": "RFC8950: Announce IPv4 with an IPv6 next-hop",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "aee37d3c9276547a1bf0",
+      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+      "title": "I Love Software Rendering",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
+    },
+    {
+      "id": "ef3cf941b41a78b75ef3",
+      "url": "https://blog.bityard.net/articles/2026/October/bark-the-toll-free-bbs-for-90s-teens",
+      "title": "Bark: The Toll-Free BBS for 90s Teens",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-16T17:22:06Z"
     }
   ]
 }
