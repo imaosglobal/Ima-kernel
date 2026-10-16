@@ -1,7 +1,15 @@
 {
-  "status": "connected_foundation",
-  "input": ["speech", "text"],
-  "output": ["voice", "text"],
+  "status": "canonical_voice_architecture_v1",
+  "input": [
+    "speech",
+    "text",
+    "authorized_singing_source"
+  ],
+  "output": [
+    "voice",
+    "text",
+    "authorized_singing_voice_media"
+  ],
   "browser": {
     "speech_synthesis": true,
     "language": "he-IL",
@@ -9,7 +17,34 @@
   },
   "providers": {
     "external_tts": "pluggable",
-    "realtime_lipsync": "pluggable"
+    "realtime_lipsync": "pluggable",
+    "singing_voice_conversion": "pluggable"
   },
-  "truth_rule": "Only advertise external voice providers when a real connection is verified."
+  "canonical_voice_contract": {
+    "identity": "separate from voice profile",
+    "consent": "explicit and revocable",
+    "provenance": [
+      "source_asset",
+      "source_url_or_storage",
+      "processing_provider",
+      "model",
+      "created_at",
+      "sha256",
+      "revocation_state"
+    ],
+    "default_visibility": "private",
+    "generation_rule": "only authorized voice profiles",
+    "singing_rule": "requires authorized singing source plus authorized voice profile",
+    "no_silent_voice_substitution": true,
+    "synthetic_label_required": true
+  },
+  "canonical_ori_pipeline": {
+    "source_recordings": "product/voice/ORI_COHEN_VOICE_ASSETS_2026-10-15.json",
+    "vocal_stem_archive": "product/voice/canonical/",
+    "archive_method": "Git LFS",
+    "separation_workflow": ".github/workflows/canonical-ori-singing-voice.yml",
+    "separation_model": "demucs-infer / htdemucs_ft",
+    "status": "pipeline_added; archive becomes canonical only after successful workflow validation"
+  },
+  "truth_rule": "Only advertise external voice providers or completed singing conversion when a real connection and output are verified."
 }
