@@ -1,0 +1,64 @@
+name: Canonical Ori Voice Archive
+
+on:
+  push:
+    paths:
+      - ".github/workflows/canonical-ori-voice-archive.yml"
+      - "product/voice/ORI_COHEN_VOICE_ASSETS_2026-10-15.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Install media tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg git-lfs
+          python -m pip install --upgrade yt-dlp
+
+      - name: Configure Git LFS
+        run: |
+          git lfs install
+          git lfs track "product/voice/canonical/**/*.wav"
+          git add .gitattributes
+
+      - name: Download canonical source recordings
+        run: |
+          mkdir -p product/voice/canonical
+          yt-dlp --extract-audio --audio-format wav --audio-quality 0 --no-playlist             -o 'product/voice/canonical/01-haish-hatzui.%(ext)s'             'https://www.youtube.com/watch?v=DS9JavmHJ1A'
+          yt-dlp --extract-audio --audio-format wav --audio-quality 0 --no-playlist             -o 'product/voice/canonical/02-behiluch-iti.%(ext)s'             'https://www.youtube.com/watch?v=ynPj8ViiTMs'
+          yt-dlp --extract-audio --audio-format wav --audio-quality 0 --no-playlist             -o 'product/voice/canonical/03-ein-hevdel.%(ext)s'             'https://www.youtube.com/watch?v=5TUYevzcOQI'
+          yt-dlp --extract-audio --audio-format wav --audio-quality 0 --no-playlist             -o 'product/voice/canonical/04-letaar-et-ze.%(ext)s'             'https://www.youtube.com/watch?v=SdArzjCVn18'
+          yt-dlp --extract-audio --audio-format wav --audio-quality 0 --no-playlist             -o 'product/voice/canonical/05-kol-hashedim.%(ext)s'             'https://www.youtube.com/watch?v=gUvJj2ZWfqw'
+
+      - name: Validate archive
+        run: |
+          set -e
+          test -s product/voice/canonical/01-haish-hatzui.wav
+          test -s product/voice/canonical/02-behiluch-iti.wav
+          test -s product/voice/canonical/03-ein-hevdel.wav
+          test -s product/voice/canonical/04-letaar-et-ze.wav
+          test -s product/voice/canonical/05-kol-hashedim.wav
+          sha256sum product/voice/canonical/*.wav | tee product/voice/canonical/SHA256SUMS.txt
+
+      - name: Commit canonical archive
+        run: |
+          git config user.name "IMA Canonical Voice Archive"
+          git config user.email "imaosglobal@users.noreply.github.com"
+          git add product/voice/canonical .gitattributes
+          if git diff --cached --quiet; then
+            echo "No archive changes."
+            exit 0
+          fi
+          git commit -m "Archive canonical Ori Cohen voice sources in Git LFS"
+          git push
