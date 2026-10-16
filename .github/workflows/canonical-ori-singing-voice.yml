@@ -27,7 +27,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg git-lfs
           python -m pip install --upgrade pip
-          python -m pip install "demucs-infer>=4.1.0" yt-dlp
+          python -m pip install demucs yt-dlp
 
       - name: Configure Git LFS
         run: |
@@ -52,7 +52,7 @@ jobs:
           set -euo pipefail
           mkdir -p work/separated
           for f in work/input/*.wav; do
-            demucs-infer -n htdemucs_ft --two-stems=vocals -o work/separated "$f"
+            demucs -n htdemucs_ft --two-stems=vocals -o work/separated "$f"
           done
 
       - name: Build canonical FLAC stems and hashes
@@ -90,7 +90,7 @@ jobs:
               "asset_type":"ori_cohen_canonical_singing_voice_stems",
               "status":"verified_if_workflow_passes",
               "source_policy":"user-authorized public recordings; vocal stem generated from source mix",
-              "separation_model":"demucs-infer / htdemucs_ft",
+              "separation_model":"demucs / htdemucs_ft",
               "created_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "files":files
           }
