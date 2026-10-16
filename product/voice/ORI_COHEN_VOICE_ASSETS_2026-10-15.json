@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "verified_at": "2026-10-16",
   "owner": "Ori Cohen",
   "purpose": "Verified registry of Ori Cohen voice artifacts recovered/recreated from the 2026-10-15/16 vidIQ workflow.",
@@ -176,5 +176,26 @@
       "status": "completed",
       "temporaryUrlOnly": true
     }
-  ]
+  ],
+  "canonical_status": {
+    "source_mix_archive": "NOT_CANONICAL",
+    "vocal_stem_archive": "PIPELINE_RUNNING_OR_PENDING",
+    "unified_master_training_package": "PENDING_VOCAL_STEM_ARCHIVE",
+    "singing_voice_conversion": "NOT_AVAILABLE_IN_CURRENT_CONNECTED_PROVIDER",
+    "speech_voiceover": "VERIFIED_PROVIDER_PROFILES_ONLY",
+    "rule": "The prior vidIQ voiceover test is synthetic speech and is not a canonical representation of Ori Cohen's singing voice."
+  },
+  "canonical_workflow": {
+    "path": ".github/workflows/canonical-ori-singing-voice.yml",
+    "commit": "dfe25d79521a2ef5c17d9b4a44980d1696bbca7c",
+    "model": "demucs-infer / htdemucs_ft",
+    "output": "product/voice/canonical/*.vocals.flac",
+    "storage": "Git LFS",
+    "validation": "SHA-256 manifest"
+  },
+  "truth_correction": {
+    "corrected_at": "2026-10-16",
+    "prior_error": "A text-to-speech voiceover was incorrectly treated as a faithful representation of Ori's singing voice.",
+    "correction": "Canonical singing assets must be isolated vocal recordings and must not be replaced by TTS output."
+  }
 }
