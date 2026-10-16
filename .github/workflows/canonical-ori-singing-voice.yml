@@ -1,0 +1,109 @@
+name: Canonical Ori Singing Voice Archive
+
+on:
+  push:
+    paths:
+      - ".github/workflows/canonical-ori-singing-voice.yml"
+      - "product/voice/ORI_COHEN_VOICE_ASSETS_2026-10-15.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: canonical-ori-singing-voice
+  cancel-in-progress: false
+
+jobs:
+  separate-and-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Install audio tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg git-lfs
+          python -m pip install --upgrade pip
+          python -m pip install "demucs-infer>=4.1.0" yt-dlp
+
+      - name: Configure Git LFS
+        run: |
+          git lfs install
+          git lfs track "product/voice/canonical/**/*.flac"
+          git add .gitattributes
+
+      - name: Download verified source recordings
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/input
+          yt-dlp --no-playlist --extract-audio --audio-format wav --audio-quality 0             -o 'work/input/01-haish-hatzui.%(ext)s' 'https://www.youtube.com/watch?v=DS9JavmHJ1A'
+          yt-dlp --no-playlist --extract-audio --audio-format wav --audio-quality 0             -o 'work/input/02-behiluch-iti.%(ext)s' 'https://www.youtube.com/watch?v=ynPj8ViiTMs'
+          yt-dlp --no-playlist --extract-audio --audio-format wav --audio-quality 0             -o 'work/input/03-ein-hevdel.%(ext)s' 'https://www.youtube.com/watch?v=5TUYevzcOQI'
+          yt-dlp --no-playlist --extract-audio --audio-format wav --audio-quality 0             -o 'work/input/04-letaar-et-ze.%(ext)s' 'https://www.youtube.com/watch?v=SdArzjCVn18'
+          yt-dlp --no-playlist --extract-audio --audio-format wav --audio-quality 0             -o 'work/input/05-kol-hashedim.%(ext)s' 'https://www.youtube.com/watch?v=gUvJj2ZWfqw'
+
+      - name: Separate vocals
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/separated
+          for f in work/input/*.wav; do
+            demucs-infer -n htdemucs_ft --two-stems=vocals -o work/separated "$f"
+          done
+
+      - name: Build canonical FLAC stems and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p product/voice/canonical
+          declare -A map
+          map["01-haish-hatzui"]="01-haish-hatzui"
+          map["02-behiluch-iti"]="02-behiluch-iti"
+          map["03-ein-hevdel"]="03-ein-hevdel"
+          map["04-letaar-et-ze"]="04-letaar-et-ze"
+          map["05-kol-hashedim"]="05-kol-hashedim"
+          for key in "${!map[@]}"; do
+            src="work/separated/htdemucs_ft/$key/vocals.wav"
+            test -s "$src"
+            ffmpeg -y -i "$src" -c:a flac -compression_level 8 "product/voice/canonical/${map[$key]}.vocals.flac"
+          done
+          sha256sum product/voice/canonical/*.flac > product/voice/canonical/SHA256SUMS.txt
+
+      - name: Write archive manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, subprocess, datetime
+          root=pathlib.Path("product/voice/canonical")
+          files=[]
+          for p in sorted(root.glob("*.flac")):
+              files.append({
+                  "path": str(p),
+                  "bytes": p.stat().st_size,
+                  "sha256": hashlib.sha256(p.read_bytes()).hexdigest()
+              })
+          manifest={
+              "schema_version":"1.0",
+              "asset_type":"ori_cohen_canonical_singing_voice_stems",
+              "status":"verified_if_workflow_passes",
+              "source_policy":"user-authorized public recordings; vocal stem generated from source mix",
+              "separation_model":"demucs-infer / htdemucs_ft",
+              "created_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "files":files
+          }
+          (root/"MANIFEST.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+          PY
+
+      - name: Commit canonical assets
+        run: |
+          git config user.name "IMA Canonical Voice Archive"
+          git config user.email "imaosglobal@users.noreply.github.com"
+          git add .gitattributes product/voice/canonical
+          git commit -m "Archive canonical Ori Cohen vocal stems in Git LFS" || exit 0
+          git push
