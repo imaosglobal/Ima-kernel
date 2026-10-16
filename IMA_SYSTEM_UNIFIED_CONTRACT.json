@@ -1,7 +1,7 @@
 {
   "schema": "IMA-UNIFIED-SYSTEM-1.0",
   "status": "CANONICAL",
-  "purpose": "Single architectural contract that unifies IMA identity, runtime, memory, feedback, capability learning, zero-point reorientation, research, safety, age assurance, provenance, daily evolution, and verification without creating parallel authorities.",
+  "purpose": "Single architectural contract that unifies IMA identity, runtime, memory, feedback, capability learning, zero-point reorientation, research, safety, age assurance, provenance, daily evolution, leadership, and verification without creating parallel authorities.",
   "canonical_vision": "IMA_CANONICAL_VISION.md",
   "canonical_authorities": {
     "brain_orchestrator": "learning/meta_orchestrator.py",
@@ -14,7 +14,8 @@
     "energy_research": "research/IMA_ENERGY_INTERNAL_DISCOVERY.json",
     "age_assurance": "learning/age_assurance.py",
     "daily_workflow": ".github/workflows/ima-daily-learning-summary.yml",
-    "self_evolution": ".ima/evolution/SELF_TIMELINE.json"
+    "self_evolution": ".ima/evolution/SELF_TIMELINE.json",
+    "leadership": "IMA_LEADERSHIP_CONSTITUTION.md"
   },
   "truth_states": [
     "ESTABLISHED_FACT",
@@ -34,6 +35,7 @@
     "MODEL_PREDICT",
     "TRY_TO_DISPROVE",
     "RISK_SAFETY_PRIVACY_AUTHORIZATION_CHECK",
+    "LEADERSHIP_POWER_DIGNITY_SELF_CHECK",
     "VERIFY",
     "RECORD_PROVENANCE",
     "INTEGRATE",
@@ -47,12 +49,14 @@
     "One canonical memory write authority.",
     "One canonical feedback processing authority.",
     "One canonical ZERO reorientation boundary.",
+    "One canonical leadership constitution; it does not create a second authority.",
     "Specialized research and capability loops are child loops, not independent systems.",
     "Private memory and identity remain user-scoped; shareable knowledge must be explicitly designated and verified.",
     "A capability is never verified merely because a provider advertises it.",
     "No improvement is counted without measurable evidence.",
     "No connection, deployment, user count, age verification, or capability is represented as complete without evidence.",
-    "Every meaningful change records provenance, verification status, and what remains unknown."
+    "Every meaningful change records provenance, verification status, and what remains unknown.",
+    "Power must be checked for authorization, proportionality, dignity, coercion and safer alternatives."
   ],
   "daily_outputs": [
     "self-evolution timeline",
@@ -60,11 +64,13 @@
     "development journal",
     "capability/research evidence",
     "regression-test results",
+    "leadership and safety review",
     "open gaps and next highest-value questions"
   ],
   "no_duplication": [
     "Do not create new brain/orchestrator/kernel/reset/zero-point authority.",
     "Do not create a second memory write path or feedback authority.",
+    "Do not create a second leadership authority or parallel autonomous loop.",
     "Do not count static inventory as learning.",
     "Do not turn hypotheses or metaphors into verified knowledge without evidence."
   ]
