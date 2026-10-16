@@ -2,9 +2,6 @@ name: Canonical Ori Singing Voice Archive
 
 on:
   push:
-    paths:
-      - ".github/workflows/canonical-ori-singing-voice.yml"
-      - "product/voice/ORI_COHEN_VOICE_ASSETS_2026-10-15.json"
   workflow_dispatch:
 
 permissions:
