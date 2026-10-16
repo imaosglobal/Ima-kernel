@@ -1,10 +1,10 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-15T22:12:07Z",
+  "timestamp": "2026-10-16T01:15:54Z",
   "sources": 12,
   "discovered": 300,
-  "changed": 29,
+  "changed": 3,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
@@ -29,236 +29,28 @@
   },
   "items": [
     {
-      "id": "1f13d15fe2d8a8f6f8e8",
-      "url": "https://science.nasa.gov/directorates/smd/planetary-science-division/nasa-to-help-unlock-mysteries-of-mars-moons-in-upcoming-mission/",
-      "title": "NASA to Help Unlock Mysteries of Mars’ Moons in Upcoming Mission",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "8323fcf5aec48f650bdc",
-      "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
-      "title": "NASA Satellites Observe Historic 2026 El Niño",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "249fd8d9e74a7921bc41",
-      "url": "https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/",
-      "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "ec7a3b45638121f8120d",
-      "url": "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/",
-      "title": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "4071bf79af1fe83d5836",
-      "url": "https://science.nasa.gov/universe/nasa-welcomes-all-ages-experience-levels-for-space-apps-challenge/",
-      "title": "NASA Welcomes All Ages, Experience Levels for Space Apps Challenge",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "cc1e4c4496ff0178c93f",
-      "url": "https://www.nasa.gov/learning-resources/nasa-awards-enable-research-technology-to-build-future-workforce/",
-      "title": "NASA Awards Enable Research, Technology to Build Future Workforce",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "51f04c477c6b6a601f13",
-      "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
-      "title": "Rigorous Analysis Confirms NASA’s Artemis II Heat Shield Performance",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "87e7af3475d1f70728c0",
-      "url": "https://www.nasa.gov/image-article/chandra-finds-possible-origin-of-treble-clef-waves/",
-      "title": "Chandra Finds Possible Origin of ‘Treble Clef’ Waves",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "d5313957a56567b0816b",
-      "url": "https://www.nasa.gov/image-detail/shape-3601-3601/",
-      "title": "Chandra Finds Possible Origin of 'Treble Clef' Waves",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:31Z"
-    },
-    {
-      "id": "a47e85dd89b9a25321b0",
-      "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
-      "title": "The next developer interface is ambient intelligence",
-      "source": "https://github.blog/feed/",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "377b59f097432230ce0d",
-      "url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
-      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
-      "source": "https://github.blog/feed/",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "929178f1fd79e6649f14",
-      "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
-      "title": "What I Self-Host",
+      "id": "7e2b5dc0fda272159537",
+      "url": "https://ipinfo.io/blog/rpki-protects-70-internet-routes",
+      "title": "RPKI Now Protects 70% of Internet Routes, Up from 54% a Year Ago",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
+      "observed_at": "2026-10-16T01:15:52Z"
     },
     {
-      "id": "e2cb7eb86fd507793644",
-      "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
-      "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+      "id": "efc85909ee757e8bd387",
+      "url": "https://github.com/johnrash/bebox",
+      "title": "BeBox is a Haiku application that emulates Be Inc.'s BeBox",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
+      "observed_at": "2026-10-16T01:15:52Z"
     },
     {
-      "id": "80605505b2be44190ed3",
-      "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
-      "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+      "id": "679425e2c5ab85db838a",
+      "url": "https://krebsonsecurity.com/2026/10/u-k-sanctions-cryptomus-for-ru-money-laundering/",
+      "title": "U.K. Sanctions Cryptomus for RU Money Laundering",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "f2f6754fa05dc4089c3c",
-      "url": "https://hamishcampbell.com/we-are-entering-a-period-of-overlapping-crises/",
-      "title": "We are entering a period of overlapping crises",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "4134498bd5a52e0a6189",
-      "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
-      "title": "E Ink Kaleido 4",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "499fcbd081b8b35bf472",
-      "url": "https://research.meta.ai/blog/muse-spark-open",
-      "title": "Muse Spark Open",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "1014834b299e3fbdaf20",
-      "url": "https://zachlandes.com/trolley-problem/",
-      "title": "Jev meets the Trolley Problem",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "50150b2440eae6e7477a",
-      "url": "https://www.krea.ai/krea-3",
-      "title": "Krea 3 – An image model built for editing at scale",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "c304254f82ae473dd9e4",
-      "url": "https://already-clean.goodfire.com/",
-      "title": "Neural networks are clean",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "ea07492bcf112b1fca32",
-      "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
-      "title": "Steam Client is now faster than Epic's new vibe coded launcher",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "66ce1636137bc229f389",
-      "url": "https://proa.so/",
-      "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "6979593215aeb89f62df",
-      "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
-      "title": "Celebrating 70 Years of Fortran",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "cac83430057dec591023",
-      "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
-      "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "a949e89b4b36cefd6e00",
-      "url": "https://www.signalscorps.com/blog/prompt-injection-in-http-headers/",
-      "title": "Prompt injection in HTTP headers: what 217M web responses show",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "ef44c8c2fd567dd7b456",
-      "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
-      "title": "Using AI to reverse engineer hardware",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "d0538427bd9feeb71203",
-      "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
-      "title": "I know why the mathematicians weep",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "edead0865162a199597e",
-      "url": "https://github.com/fyzugx/DEsk",
-      "title": "Wayland desktop for Linux with skeuomorphic design",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
-    },
-    {
-      "id": "5a32a331bcfbcc2bde74",
-      "url": "https://www.cppstories.com/2026/cpp26_contracts/",
-      "title": "C++26 Contracts: Introduction to Preconditions and Postconditions",
-      "source": "https://hnrss.org/frontpage",
-      "kind": "feed",
-      "observed_at": "2026-10-15T22:11:33Z"
+      "observed_at": "2026-10-16T01:15:52Z"
     }
   ]
 }
