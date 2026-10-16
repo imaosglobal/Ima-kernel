@@ -125,7 +125,8 @@
     "vocal_stem_isolation": "NOT_YET_COMPLETED",
     "unified_master_training_package": "NOT_YET_COMPLETED",
     "singing_voice_conversion": "NOT_YET_VALIDATED",
-    "note": "The recreated WAV outputs are temporary vidIQ URLs and must be downloaded/archived before expiry. vidIQ documents generated media links as temporary and recommends immediate saving."
+    "note": "All five source recordings were re-extracted directly from their verified YouTube URLs. All five were also independently normalized to -16 LUFS directly from the YouTube sources, avoiding reuse of expired temporary S3 inputs. The resulting normalized media URLs are temporary and must be saved immediately.",
+    "normalization": "COMPLETED"
   },
   "historical_expired_jobs": [
     "job_b270096b-0285-48bf-bc51-6aaf154285e9",
@@ -133,5 +134,47 @@
     "job_b31d97a1-7ce7-4978-8f04-ece1dc8b2b2b",
     "job_fe0b7a0e-3592-4ae8-9742-77ece5d3628d",
     "job_92a12f58-737b-476b-be57-265db0addd15"
+  ],
+  "normalized_audio": [
+    {
+      "title": "האיש החצוי",
+      "jobId": "job_4eb7fd4a-3142-4dc6-9e7a-d2481e0dc8d8",
+      "targetLufs": -16,
+      "durationSeconds": 259.933,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "בהילוך איטי",
+      "jobId": "job_3c11855f-4ee2-4701-b39a-3d0846029b92",
+      "targetLufs": -16,
+      "durationSeconds": 292.193,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "אין הבדל",
+      "jobId": "job_fdfefc09-a29e-487d-8866-3e9ed1b61dcc",
+      "targetLufs": -16,
+      "durationSeconds": 165.893,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "לתאר את זה",
+      "jobId": "job_2a52bc42-3bd9-4607-b189-145567595471",
+      "targetLufs": -16,
+      "durationSeconds": 227.153,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    },
+    {
+      "title": "כל השדים",
+      "jobId": "job_53974fb2-4c31-48cb-a7f0-b0b769003fc7",
+      "targetLufs": -16,
+      "durationSeconds": 242.533,
+      "status": "completed",
+      "temporaryUrlOnly": true
+    }
   ]
 }
