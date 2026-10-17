@@ -65,6 +65,7 @@ COMMANDS = {
     ],
     "product_qa": ["python", "qa/daily_qa.py"],
     "culture_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_culture.py", "-v"],
+    "distribution": ["python", ".ima/distribution/prepare.py"],
     "human_intelligence_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_intelligence_policy.py", "-v"],
 }
 
@@ -74,7 +75,7 @@ def now_local() -> datetime:
 def due(now: datetime) -> list[str]:
     # One hourly tick is the canonical scheduler. Tasks retain their useful
     # frequencies without creating independent schedules.
-    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests"]
+    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "distribution"]
     if now.hour % 6 == 0:
         tasks.append("evolution")
     if now.hour == 3:
