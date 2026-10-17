@@ -72,6 +72,9 @@ jobs:
           python -m unittest discover -s tests -p "test_*factory.py" -v
           python -m unittest discover -s tests -p "test_*queue.py" -v
           python -m unittest discover -s tests -p "test_*runtime.py" -v
+      - name: Human culture regression
+        run: python -m unittest discover -s tests -p "test_human_culture.py" -v
+
       - name: Human intelligence, consent and child safety regression
         run: |
           python -m unittest discover -s tests -p "test_human_intelligence_policy.py" -v
