@@ -30,6 +30,12 @@ The goal is not to declare that IMA already knows everything. The goal is to bui
 
 See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
 
+## Human culture / Culture of the Heart
+
+IMA now has an executable human-culture policy layer in addition to the cultural charter. It is designed to connect humanity without replacing, ranking or erasing existing cultures; preserve languages, numerical traditions, calendars, histories, arts, ordinary lives and cultural memory; distinguish evidence from tradition and myth; and keep founder status separate from authority or ownership. The policy is injected into the provider-neutral model prompt and covered by regression tests. Runtime production behavior remains subject to live verification.
+
+See [IMA Human Culture Charter](docs/IMA_HUMAN_CULTURE_CHARTER.md) and [executable culture policy](core/human_culture.py).
+
 ## Intergenerational memory and historical preservation
 
 IMA treats preservation as a core human function: carrying names, lives, languages, stories, art, science and cultural memory across generations while preserving evidence and uncertainty. Historical sources are explicitly separated from interpretation, myth, cultural memory and hypothesis. Originals, variants and provenance remain recoverable; corrections extend the record rather than silently replacing it.
