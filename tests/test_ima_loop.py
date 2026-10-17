@@ -1,6 +1,6 @@
 import unittest
 
-from core.ima_loop import LOOP_STAGES, loop_context, loop_contract
+from core.ima_loop import IMA_IDENTITY_CONTEXT, LOOP_STAGES, loop_context, loop_contract
 
 
 class UnifiedLoopTests(unittest.TestCase):
@@ -21,6 +21,16 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertTrue(required.issubset(set(LOOP_STAGES)))
         self.assertIn("single canonical improvement, learning, preservation", loop_context())
         self.assertIn("add this to the loop", loop_context())
+
+    def test_ima_knows_self_world_and_user_boundaries(self):
+        contract = loop_contract()
+        self.assertTrue(contract["identity"]["one_global_ima"])
+        self.assertTrue(contract["identity"]["human_centered"])
+        self.assertTrue(contract["identity"]["world_model_is_uncertain_and_updateable"])
+        self.assertTrue(contract["identity"]["user_context_is_private_by_default"])
+        self.assertIn("one global human-centered intelligence identity", IMA_IDENTITY_CONTEXT)
+        self.assertIn("Private user context is isolated", IMA_IDENTITY_CONTEXT)
+        self.assertIn("current user is the immediate human context", IMA_IDENTITY_CONTEXT)
 
 if __name__ == "__main__":
     unittest.main()
