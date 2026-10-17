@@ -1,11 +1,11 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-17T13:27:22+00:00",
+  "generated_at": "2026-10-17T14:10:31+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
     "git_commits": 1,
-    "development_journal": 24,
+    "development_journal": 25,
     "daily_summaries": 4
   },
   "archive_inventory": {
@@ -445,17 +445,24 @@
       "source": "IMA Global Health Loop; GitHub repository; Render"
     },
     {
-      "timestamp": "2026-10-17T13:27:22+00:00",
+      "timestamp": "2026-10-17T14:10:31+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "commit": "698538002f7602dce62eacbb2e8860d81cbf3b71",
-      "timestamp": "2026-10-17T16:27:10+03:00",
+      "timestamp": "2026-10-17T16:00:00Z",
+      "event": "ori_digital_daily_continuity_and_blocker_repair",
+      "summary": "נשמרה נקודת המשך יומית קנונית ל-Ori Digital: זהות Avatar וקול אומתו דרך render קיים, נבנה registry פלטפורמה-אגנוסטי, והפרסום נשאר חסום רק עד חיבור יעד כתיבה מאומת. מחזורי העתיד חייבים להמשיך מנקודה זו ולא להתחיל מחדש.",
+      "status": "GAPS_RECORDED",
+      "source": "HeyGen verified render evidence; GitHub repository; Metricool account connection check; user-requested daily continuity policy"
+    },
+    {
+      "commit": "767a40f3439b428d3e450ce558c44c991343070e",
+      "timestamp": "2026-10-17T16:52:25+03:00",
       "event": "commit",
-      "summary": "test: verify arXiv remains in scientific discovery",
+      "summary": "governance: anchor IMA nonprofit finance expenses and succession",
       "source": "git"
     }
   ]
