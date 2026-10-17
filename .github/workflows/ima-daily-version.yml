@@ -1,8 +1,6 @@
 name: IMA Daily Version
 
 on:
-  schedule:
-    - cron: "15 0 * * *"
   workflow_dispatch:
 
 permissions:
