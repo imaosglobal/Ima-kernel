@@ -56,6 +56,12 @@ SYSTEM_SCOPE = (
     "capability radar and engine discovery",
     "release/version stewardship",
     "repository health/statistics review",
+    "real-user growth and retention",
+    "privacy-preserving product analytics and feedback",
+    "global localization and accessibility",
+    "app-store readiness and verified reputation",
+    "lawful growth experiments and partnership discovery",
+    "long-horizon continuity (daily/monthly/yearly/decadal)",
 )
 
 COMMANDS = {
@@ -74,6 +80,7 @@ COMMANDS = {
     "capability_radar": ["python", "scripts/ima_capability_radar.py"],
     "engine_discovery": ["python", "learning/engine_discovery.py"],
     "capability_contract": ["npm", "run", "test:capabilities"],
+    "growth_cycle": ["python", "scripts/ima_growth_cycle.py"],
 }
 
 def now_local() -> datetime:
@@ -82,7 +89,7 @@ def now_local() -> datetime:
 def due(now: datetime) -> list[str]:
     # One hourly tick is the canonical scheduler. Tasks retain their useful
     # frequencies without creating independent schedules.
-    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "unified_loop_tests", "distribution", "capability_contract"]
+    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "unified_loop_tests", "distribution", "capability_contract", "growth_cycle"]
     if now.hour % 6 == 0:
         tasks.extend(["evolution", "engine_discovery"])
     if now.hour == 3:
@@ -113,7 +120,7 @@ def run_loop() -> dict:
     tasks = due(now)
     results = [run_task(task) for task in tasks]
     record = {
-        "schema": "IMA-UNIFIED-LOOP-1.1",
+        "schema": "IMA-UNIFIED-LOOP-1.2",
         "timestamp": now.isoformat(),
         "timezone": "Asia/Jerusalem",
         "stages": list(STAGES),
