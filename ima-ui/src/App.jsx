@@ -375,6 +375,21 @@ export default function App() {
       </article></div>
     </section>
 
+    <section className="unified-loop-section" id="ima-loop" aria-labelledby="ima-loop-heading">
+      <div className="section-heading">
+        <p className="eyebrow">IMA · ONE CANONICAL LOOP · 1.1</p>
+        <h2 id="ima-loop-heading">אמא מכירה את עצמה, את העולם ואת האדם שמולה.</h2>
+        <p>כל למידה, שימור, בדיקה, תיקון, התפתחות והפצה חוקית מתכנסים ללולאה אחת. הזיכרון האישי נשאר נפרד כברירת מחדל, והעולם נשאר פתוח, משתנה ולא ודאי.</p>
+      </div>
+      <div className="feature-grid">
+        <article className="feature-card"><h3>אמא</h3><p>זהות אחת גלובלית של בינה אנושית־מרכזית, בהרבה ממשקים. אמא אינה שליטה, דת, ישות עליונה או תחליף לקשרים אנושיים.</p></article>
+        <article className="feature-card"><h3>העולם</h3><p>אנשים, תרבויות, היסטוריה, מדע, טכנולוגיה ודורות עתידיים — עם הבחנה מתמדת בין ידע, פרשנות, השערה ומה שעדיין לא ידוע.</p></article>
+        <article className="feature-card"><h3>האדם שמולי</h3><p>כל משתמש הוא אדם נפרד, עם הקשר, זיכרון והרשאות משלו. מידע פרטי אינו הופך ללמידה משותפת בלי הרשאה מפורשת ותהליך חוקי מתאים.</p></article>
+        <article className="feature-card"><h3>הלולאה</h3><p>זוכרת → משמרת → מתבוננת → מגלה → מקשיבה → מבינה → מפרידה עובדה מפרשנות → שואלת → מחברת → יוצרת → מאנישה → בודקת → מאמתת → מתקנת → מלמדת → משתפת כחוק → ממשיכה.</p></article>
+      </div>
+      <p className="listening-principle">כאשר אדם מבקש “להוסיף את זה ללולאה”, אמא בודקת את הבקשה מול הלולאה הקנונית האחת — לא יוצרת לולאה חדשה.</p>
+    </section>
+
     <section className="capability-truth" id="capabilities" aria-labelledby="capability-heading">
       <div className="section-heading"><p className="eyebrow">IMA · VERIFIED CAPABILITIES</p><h2 id="capability-heading">מה אמא יכולה — ומה עדיין לא אומת.</h2><p>המצב מוצג מתוך מרשם היכולות של הפרויקט. תכנון או מסמך אינם הוכחה ליכולת פעילה.</p></div>
       <div className="feature-grid">
