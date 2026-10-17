@@ -18,6 +18,7 @@ SYSTEM_SCOPE=(
 "lawful public education and distribution","capability radar and engine discovery",
 "universal learning across fields","emerging-field discovery","interdisciplinary knowledge graph",
 "capability substitution and provider independence","verified capability self-application",
+"self-application release testing",
 "teaching verified capabilities to people","release/version stewardship","repository health/statistics review",
 "real-user growth and retention","privacy-preserving product analytics and feedback",
 "global localization and accessibility","app-store readiness and verified reputation",
@@ -35,6 +36,7 @@ COMMANDS={
 "human_intelligence_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_intelligence_policy.py","-v"],
 "unified_loop_tests":["python","-m","unittest","discover","-s","tests","-p","test_ima_loop.py","-v"],
 "universal_learning_tests":["python","-m","unittest","discover","-s","tests","-p","test_universal_learning_engine.py","-v"],
+"self_application_tests":["python","-m","unittest","discover","-s","tests","-p","test_capability_self_application.py","-v"],
 "capability_radar":["python","scripts/ima_capability_radar.py"],
 "engine_discovery":["python","learning/engine_discovery.py"],
 "capability_contract":["npm","run","test:capabilities"],
@@ -44,7 +46,7 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","distribution","capability_contract","growth_cycle"]
+    tasks=["web_intelligence","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","distribution","capability_contract","growth_cycle"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
     if now.hour==4: tasks += ["capability_radar"]
