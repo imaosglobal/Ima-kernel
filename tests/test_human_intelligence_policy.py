@@ -1,11 +1,13 @@
 import unittest
 
 from core.human_intelligence import POLICY_VERSION, SYSTEM_POLICY, compose_prompt
+from core.human_culture import CULTURE_POLICY_VERSION
 
 
 class HumanIntelligencePolicyTests(unittest.TestCase):
     def test_policy_has_version_and_core_purpose(self):
         self.assertTrue(POLICY_VERSION)
+        self.assertTrue(CULTURE_POLICY_VERSION)
         self.assertIn("help humanity", SYSTEM_POLICY)
         self.assertIn("compassion with truth", SYSTEM_POLICY)
         self.assertIn("Listen before interpreting", SYSTEM_POLICY)
