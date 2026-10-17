@@ -81,6 +81,15 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - Runtime capability requires the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
 - Canonical specification: [IMA Intergenerational Memory & Historical Preservation Charter](IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
 
+### LOOP-001 — Single Canonical IMA Loop
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- All periodic IMA maintenance, learning, reflection, preservation, culture, web intelligence, evolution, QA and lawful distribution preparation must reconcile through `.ima/loop/unified_loop.py`.
+- The single scheduler is `.github/workflows/ima-unified-loop.yml`, hourly in Asia/Jerusalem.
+- Event-driven CI may remain for immediate push/PR verification; it is not a second periodic loop.
+- Every explicitly authorized request to add something to “the loop” belongs in this canonical contract.
+- Private conversations are not automatically imported into IMA. Cross-conversation learning requires an explicit authorized ingestion path.
+- Runtime behavior remains subject to TESTED → DEPLOYED → VERIFIED_LIVE evidence.
+
 ### CULT-001 — Human Culture / Culture of the Heart
 Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - Build a shared global cultural layer without replacing, erasing or ranking existing cultures.
