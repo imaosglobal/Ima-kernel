@@ -32,6 +32,10 @@ class UniversalMemoryTests(unittest.TestCase):
                 m.set_consent("u","GRANTED")
                 row=m.capture(user_id="u",source="chat",content="hello",consent="GRANTED")
                 self.assertEqual(row["status"],"EXECUTED")
+                normalized=m.normalize_interaction(source="chat",content="hello",language="he",interface="web")
+                self.assertEqual(normalized["content_hash"],row["content_hash"])
+                checked=m.verify_record("u",row["id"])
+                self.assertTrue(checked["verified"])
             finally: public_memory._DB=old
 
     def test_denied_consent_blocks_capture(self):
@@ -71,7 +75,10 @@ class UniversalMemoryTests(unittest.TestCase):
                 self.assertEqual(len(m.learning_records()),1)
                 self.assertEqual(m.delete_user_memory("u"),1)
                 self.assertEqual(m.export_user_memory("u"),[])
-                self.assertEqual([x["action"] for x in m.audit_events("u")],["CONSENT_UPDATE","CAPTURE","DELETE"])
+                actions=[x["action"] for x in m.audit_events("u")]
+                self.assertIn("VERIFY",actions)
+                self.assertEqual(actions[:2],["CONSENT_UPDATE","CAPTURE"])
+                self.assertEqual(actions[-1],"DELETE")
             finally: public_memory._DB=old
 
 if __name__=="__main__": unittest.main()
