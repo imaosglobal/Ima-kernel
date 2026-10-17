@@ -4,6 +4,7 @@ import conversation_layer
 import ima_brain
 from learning.learning_loop import learn_from_event
 import ima_mom
+from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 
@@ -34,6 +35,8 @@ class IMAMaster:
 
     def ask(self, message, user_id="default", public=False, public_memory=None):
         context = identity_context.build_context(message, public=public)
+        context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
+        context["ima_unified_loop"] = loop_context()
         capability_runtime = None
         learning_governance = None
         try:
@@ -140,12 +143,34 @@ class IMAMaster:
             result["reflection_error"] = str(exc)
 
         if not public:
-            conversation_layer.update(message, result.get("response", ""))
+            # Private continuity and learning require explicit memory consent.
+            consent_status = "UNKNOWN"
             try:
-                if len(message.strip()) > 8:
-                    learn_from_event({"source": "user", "user_id": user_id, "text": message, "response": result.get("response", "")})
+                import importlib.util
+                from pathlib import Path
+                memory_path = Path(__file__).resolve().parent / ".ima" / "memory" / "universal_interaction_memory.py"
+                spec = importlib.util.spec_from_file_location("ima_private_memory_gate", memory_path)
+                if spec and spec.loader:
+                    mod = importlib.util.module_from_spec(spec)
+                    spec.loader.exec_module(mod)
+                    consent_status = mod.get_consent(user_id).get("status", "UNKNOWN")
             except Exception:
-                pass
+                consent_status = "UNKNOWN"
+
+            if consent_status == "GRANTED":
+                conversation_layer.update(message, result.get("response", ""))
+                try:
+                    if len(message.strip()) > 8:
+                        learn_from_event({
+                            "source": "user",
+                            "user_id": user_id,
+                            "text": message,
+                            "response": result.get("response", ""),
+                            "authorized_learning": False,
+                            "consent": "GRANTED",
+                        })
+                except Exception:
+                    pass
         return result
 
 IMA = IMAMaster()
