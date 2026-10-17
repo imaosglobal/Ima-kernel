@@ -5,7 +5,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from core.long_horizon_foresight import HORIZONS, create_trajectory, prioritize_actions, system_foresight
-from core.long_horizon_foresight import system_foresight, prioritize_actions
 
 ROOT=Path(__file__).resolve().parents[2]
 TZ=ZoneInfo("Asia/Jerusalem")
@@ -29,6 +28,8 @@ SYSTEM_SCOPE=(
 
 COMMANDS={
 "web_intelligence":["python",".ima/web_intelligence/global_discovery.py","--once"],
+"scientific_open_research":["python","scripts/scientific_open_research_health.py"],
+"scientific_open_research_tests":["python","-m","unittest","discover","-s","tests","-p","test_scientific_open_research_health.py","-v"],
 "evolution":["python",".ima/evolution/EVOLUTION_CONTROLLER.py"],
 "daily_summary":["python",".ima/web_intelligence/daily_summary.py"],
 "community_frontier":["python","-c","from learning.learning_gap_detector import detect; from learning.conclusion_engine import conclude; from learning.teaching_artifact import create_teaching_artifact; print('IMA_LEARNING_SYSTEM=PASS')"],
@@ -50,8 +51,9 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","distribution","capability_contract","growth_cycle"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","distribution","capability_contract","growth_cycle"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
+    if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
     if now.hour==4: tasks += ["capability_radar"]
     if now.hour==21: tasks += ["daily_summary"]
@@ -67,9 +69,7 @@ def run_task(name):
 def run_loop():
     now=now_local(); tasks=due(now); results=[run_task(t) for t in tasks]
     foresight=system_foresight(SYSTEM_SCOPE)
-    foresight_actions=prioritize_actions([create_trajectory(HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
-    foresight=system_foresight(SYSTEM_SCOPE)
-    foresight_actions=prioritize_actions([__import__('core.long_horizon_foresight', fromlist=['FutureCapability']).create_trajectory(__import__('core.long_horizon_foresight', fromlist=['HORIZONS']).HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
+    foresight_actions=prioritize_actions([create_trajectory(HORIZONS[0], item["outcome"], first_actions=item["first_actions"]) for packets in foresight.values() for item in packets[:1]])
     findings=[]
     for result in results:
         status=result.get("status")
@@ -77,7 +77,6 @@ def run_loop():
         action="carry_forward" if status=="PASS" else ("inspect_logs_before_change" if status=="FAIL" else "inspect_runtime_evidence")
         findings.append({"task":task,"finding":status or "UNKNOWN","action":action})
     record={"schema":"IMA-UNIFIED-LOOP-1.3","timestamp":now.isoformat(),"timezone":"Asia/Jerusalem","stages":list(STAGES),"scope":list(SYSTEM_SCOPE),"tasks":results,
-      "foresight":{"components":foresight,"priority_now_actions":foresight_actions},
       "foresight":{"components":foresight,"priority_now_actions":foresight_actions},
       "diagnostics":{"summary":{"total":len(results),"passed":sum(r.get("status")=="PASS" for r in results),"failed":sum(r.get("status")=="FAIL" for r in results),"errors":sum(r.get("status") in {"ERROR","UNKNOWN",None} for r in results)},"findings":findings,"truth_rule":"Diagnostics describe this run; they do not prove live deployment without runtime evidence."},
       "single_scheduler":True,
