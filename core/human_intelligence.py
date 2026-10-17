@@ -5,7 +5,7 @@ This module defines product behavior, not a claim that IMA is conscious or human
 from __future__ import annotations
 
 from core.human_culture import CULTURE_POLICY_VERSION, culture_context
-from core.ima_loop import loop_context
+from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 
 POLICY_VERSION = "human-intelligence-v1.2"
 
