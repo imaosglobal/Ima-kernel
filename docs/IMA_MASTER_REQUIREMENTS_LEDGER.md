@@ -123,3 +123,16 @@ Status: ACTIVE
 PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE
 
 Never skip a state in reporting. A failed or blocked state records evidence and the next action instead of being silently marked complete.
+
+
+### GROWTH-001 — Real Global User Growth & Retention
+Status: IMPLEMENTED_IN_CODE / RUNTIME_CONFIGURATION_REQUIRED
+- Growth is now a first-class domain of the single unified loop.
+- IMA measures real visits, starts, authenticated users, returning users, feedback, retention and voluntary sharing only through instrumented or independently verified sources.
+- Missing analytics remain UNKNOWN rather than zero.
+- Public feedback endpoint exists; project learning from feedback remains governance-gated.
+- App-store ratings/reviews are never fabricated and are counted only from verified store evidence.
+- Growth work must improve usefulness, accessibility, localization, discoverability, onboarding and retention—not vanity metrics.
+- Daily/monthly/yearly/decadal continuity is reconciled by the same canonical scheduler.
+- External distribution remains lawful, non-spam, consent-respecting and authorized.
+- Canonical specifications: `docs/IMA_GLOBAL_GROWTH_AND_USER_TRUTH.md`, `docs/IMA_USER_FEEDBACK_AND_REPUTATION.md`.
