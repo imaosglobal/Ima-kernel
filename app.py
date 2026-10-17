@@ -651,6 +651,136 @@ def capability_route(capability):
         app.logger.exception("IMA capability route failure")
         return jsonify({"error": "capability route unavailable"}), 500
 
+
+# --- Real-user growth, feedback and reputation instrumentation ---
+GROWTH_DIR = Path(__file__).resolve().parent / ".ima" / "growth"
+FEEDBACK_QUEUE = GROWTH_DIR / "feedback.runtime.jsonl"
+EVENT_QUEUE = GROWTH_DIR / "events.runtime.jsonl"
+POSTHOG_HOST = os.environ.get("POSTHOG_HOST", "").strip().rstrip("/")
+POSTHOG_API_KEY = os.environ.get("POSTHOG_API_KEY", "").strip()
+
+def _growth_identity():
+    """Return a privacy-preserving event identity; never store raw email."""
+    uid = _session_user_id()
+    if uid:
+        return "user_" + hashlib.sha256(uid.encode()).hexdigest()[:24]
+    anon = request.headers.get("X-IMA-Anonymous-ID", "").strip()
+    if anon:
+        return "anon_" + hashlib.sha256(anon.encode()).hexdigest()[:24]
+    return "anon_session_" + hashlib.sha256((request.remote_addr or "unknown").encode()).hexdigest()[:24]
+
+def _posthog_capture(event_name, properties):
+    if not POSTHOG_HOST or not POSTHOG_API_KEY:
+        return {"sent": False, "status": "not_configured"}
+    payload = {
+        "api_key": POSTHOG_API_KEY,
+        "event": event_name,
+        "distinct_id": _growth_identity(),
+        "properties": {**properties, "product": "IMA", "schema": "IMA-GROWTH-1.0"},
+    }
+    response = requests.post(
+        f"{POSTHOG_HOST}/capture/",
+        json=payload,
+        timeout=8,
+        headers={"Content-Type": "application/json"},
+    )
+    response.raise_for_status()
+    return {"sent": True, "status": "accepted"}
+
+def _queue_runtime(path, record):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+@app.post("/ima-api/analytics")
+def analytics_event():
+    payload = request.get_json(silent=True) or {}
+    event = str(payload.get("event") or "").strip()
+    allowed = {
+        "page_view", "chat_started", "chat_completed", "share_clicked",
+        "feedback_opened", "feedback_submitted", "install_prompt",
+        "pwa_installed", "rating_prompt_shown", "rating_clicked",
+        "language_changed", "onboarding_completed",
+    }
+    if event not in allowed:
+        return jsonify({"error": "unsupported event"}), 400
+    properties = payload.get("properties")
+    if not isinstance(properties, dict):
+        properties = {}
+    safe = {
+        str(k)[:64]: str(v)[:256]
+        for k, v in properties.items()
+        if k not in {"email", "name", "message", "text", "token", "credential"}
+    }
+    record = {
+        "time": time.time(),
+        "event": event,
+        "identity": _growth_identity(),
+        "properties": safe,
+    }
+    try:
+        provider = _posthog_capture(event, safe)
+        if not provider["sent"]:
+            _queue_runtime(EVENT_QUEUE, record)
+        return jsonify({"accepted": True, "provider": provider["status"]})
+    except Exception:
+        app.logger.exception("IMA analytics provider failed")
+        _queue_runtime(EVENT_QUEUE, record)
+        return jsonify({"accepted": True, "provider": "runtime_queue"})
+
+@app.post("/ima-api/feedback")
+def feedback():
+    payload = request.get_json(silent=True) or {}
+    sentiment = str(payload.get("sentiment") or "").strip()
+    text = str(payload.get("text") or "").strip()
+    language = str(payload.get("language") or "unknown").strip()[:16]
+    allowed = {"useful", "not_useful", "problem", "improvement"}
+    if sentiment not in allowed:
+        return jsonify({"error": "invalid feedback type"}), 400
+    if not text or len(text) > 4000:
+        return jsonify({"error": "feedback text is required and must be <= 4000 characters"}), 400
+    record = {
+        "time": time.time(),
+        "sentiment": sentiment,
+        "language": language,
+        "text": text,
+        "identity": _growth_identity(),
+        "source": "public-runtime",
+    }
+    try:
+        provider = _posthog_capture(
+            "feedback_submitted",
+            {"sentiment": sentiment, "language": language, "source": "public-runtime"},
+        )
+    except Exception:
+        provider = {"sent": False, "status": "provider_error"}
+    # The feedback text remains in the runtime queue unless a configured,
+    # privacy-reviewed durable feedback store is available.
+    _queue_runtime(FEEDBACK_QUEUE, record)
+    return jsonify({
+        "accepted": True,
+        "stored_runtime": True,
+        "analytics": provider["status"],
+        "truth": "feedback received; project learning requires separate governance",
+    }), 201
+
+@app.get("/ima-api/growth/status")
+def growth_status():
+    return jsonify({
+        "schema": "IMA-GLOBAL-GROWTH-1.0",
+        "real_user_truth": True,
+        "analytics": {
+            "configured": bool(POSTHOG_API_KEY and POSTHOG_HOST),
+            "provider": "PostHog" if POSTHOG_API_KEY and POSTHOG_HOST else None,
+        },
+        "feedback": {"endpoint": True},
+        "store_ratings": {"verified_listing": False},
+        "synthetic_users": False,
+        "synthetic_ratings": False,
+        "note": "No user count is claimed here unless backed by verified analytics.",
+    })
+
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     msg = ""
