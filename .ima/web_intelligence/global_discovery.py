@@ -19,6 +19,12 @@ JOURNAL = ROOT / ".ima" / "journal" / "development.jsonl"
 UA = os.getenv("IMA_WEB_INTELLIGENCE_UA", "IMA-Web-Intelligence/1.0 (+https://github.com/imaosglobal/Ima-kernel)")
 TIMEOUT = float(os.getenv("IMA_WEB_INTELLIGENCE_TIMEOUT", "12"))
 MAX_ITEMS = int(os.getenv("IMA_WEB_INTELLIGENCE_MAX_ITEMS", "300"))
+SCIENTIFIC_APIS = [
+    "https://api.openalex.org/works?search=artificial%20intelligence&per-page=10&sort=publication_date:desc",
+    "https://api.semanticscholar.org/graph/v1/paper/search?query=artificial%20intelligence&limit=10&fields=title,url,year",
+    "https://api.crossref.org/works?query=artificial%20intelligence&rows=10&sort=published&order=desc",
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=artificial%20intelligence&retmax=10&sort=pub_date",
+]
 SEEDS = [
     "https://www.commoncrawl.org/",
     "https://www.nasa.gov/rss/dyn/breaking_news.rss",
@@ -94,6 +100,25 @@ def discover_feed(url, items):
             add(items, link, title, url, "feed")
 
 
+def discover_scientific_api(url, items):
+    r = fetch(url)
+    host = urlparse(url).netloc
+    if "openalex.org" in host:
+        for row in r.json().get("results", []):
+            add(items, row.get("doi") or row.get("id"), row.get("title", ""), "OpenAlex", "scientific_api", row.get("publication_date"))
+    elif "semanticscholar.org" in host:
+        for row in r.json().get("data", []):
+            add(items, row.get("url"), row.get("title", ""), "Semantic Scholar", "scientific_api", str(row.get("year") or ""))
+    elif "crossref.org" in host:
+        for row in r.json().get("message", {}).get("items", []):
+            url_value = row.get("URL") or (("https://doi.org/" + row["DOI"]) if row.get("DOI") else None)
+            parts = row.get("published", {}).get("date-parts", [[]])
+            observed = "-".join(str(x) for x in parts[0]) if parts and parts[0] else None
+            add(items, url_value, " ".join(row.get("title", [])), "Crossref", "scientific_api", observed)
+    elif "ncbi.nlm.nih.gov" in host:
+        for pmid in re.findall(r"<Id>(\d+)</Id>", r.text):
+            add(items, f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/", f"PubMed PMID {pmid}", "PubMed", "scientific_api")
+
 def discover_sitemap(url, items):
     r = fetch(url)
     root = ET.fromstring(r.content)
@@ -142,6 +167,11 @@ def run():
             discover_feed(seed, items)
         except Exception as exc:
             errors.append({"source": seed, "error": type(exc).__name__})
+    for api in SCIENTIFIC_APIS:
+        try:
+            discover_scientific_api(api, items)
+        except Exception as exc:
+            errors.append({"source": api, "error": type(exc).__name__})
     try:
         crawl = latest_commoncrawl()
         discover_commoncrawl(items, crawl)
@@ -174,13 +204,14 @@ def run():
         "schema": "IMA-WEB-INTELLIGENCE-1.0",
         "status": "completed",
         "timestamp": state["last_run"],
-        "sources": len(SEEDS) + 1,
+        "sources": len(SEEDS) + len(SCIENTIFIC_APIS) + 1,
         "discovered": len(items),
         "changed": len(changed),
         "errors": errors,
         "latest_commoncrawl": crawl,
         "policy": {
             "public_sources_only": True,
+            "scientific_open_sources": ["OpenAlex", "Semantic Scholar", "Crossref", "PubMed", "arXiv"],
             "robots_and_provider_terms_respected": True,
             "dynamic_authenticated_pages_deferred": True,
             "learning_rule": "discovery is input; IMA changes only after verification and tests",
