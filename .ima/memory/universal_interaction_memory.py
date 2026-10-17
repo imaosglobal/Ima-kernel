@@ -190,3 +190,70 @@ def learning_records() -> list[dict]:
         ).fetchall()
     return [{"id":r[0],"timestamp":r[1],"source":r[2],"content_hash":r[3],
              "verification":r[4],"evidence_refs":json.loads(r[5] or "[]")} for r in rows]
+
+
+def normalize_interaction(*, source: str, content: str, language: str|None = None,
+                          interface: str|None = None,
+                          temporal_class: str = "PRESENT") -> dict:
+    """Normalize non-content metadata without rewriting the user's original content."""
+    if not source or not content:
+        raise ValueError("source and content are required")
+    if temporal_class not in {"PAST", "PRESENT", "FUTURE"}:
+        raise ValueError("invalid temporal class")
+    return {
+        "source": source.strip(),
+        "language": language.strip() if isinstance(language, str) else language,
+        "interface": interface.strip() if isinstance(interface, str) else interface,
+        "temporal_class": temporal_class,
+        "content_hash": _digest(content),
+    }
+
+
+def verify_record(user_id: str, record_id: str) -> dict:
+    """Verify stored provenance, consent and content integrity for one record."""
+    ensure_schema()
+    uid = _safe_user_id(user_id)
+    with _LOCK, _connect() as con:
+        row = con.execute(
+            """SELECT id,created_at,source,consent_status,original_content,
+                      authorized_learning,temporal_class,content_hash
+               FROM interaction_memory WHERE user_id=? AND id=?""",
+            (uid, record_id),
+        ).fetchone()
+    if not row:
+        return {"verified": False, "reason": "NOT_FOUND", "record_id": record_id}
+    expected_hash = _digest(row[4])
+    consent_ok = row[3] == "GRANTED"
+    hash_ok = row[7] == expected_hash
+    temporal_ok = row[6] in {"PAST", "PRESENT", "FUTURE"}
+    learning_ok = not bool(row[5]) or consent_ok
+    verified = all((consent_ok, hash_ok, temporal_ok, learning_ok))
+    ts = utc_now()
+    with _LOCK, _connect() as con:
+        con.execute(
+            "INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",
+            (str(uuid.uuid4()), uid, ts, "VERIFY", record_id, "VERIFIED" if verified else "FAILED"),
+        )
+    return {
+        "verified": verified,
+        "record_id": row[0],
+        "timestamp": row[1],
+        "consent_ok": consent_ok,
+        "hash_ok": hash_ok,
+        "temporal_ok": temporal_ok,
+        "learning_authorization_ok": learning_ok,
+    }
+
+
+def verify_user_memory(user_id: str) -> dict:
+    """Verify all records for a user and return an auditable aggregate result."""
+    records = export_user_memory(user_id)
+    results = [verify_record(user_id, row["id"]) for row in records]
+    verified = all(r["verified"] for r in results)
+    return {
+        "verified": verified,
+        "record_count": len(results),
+        "verified_count": sum(1 for r in results if r["verified"]),
+        "failed_count": sum(1 for r in results if not r["verified"]),
+        "results": results,
+    }
