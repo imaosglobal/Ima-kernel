@@ -27,6 +27,9 @@ class TrendTests(unittest.TestCase):
         c=m.build_card(item,independent_sources=3,persistence=1,
                        purchase_intent=1,competition=0,safety=1,testability=1)
         self.assertGreater(c["opportunity_score"],0)
+        safe = m.build_card(item,independent_sources=3,persistence=1,purchase_intent=1,competition=0,safety=1,testability=1)["opportunity_score"]
+        unsafe = m.build_card(item,independent_sources=3,persistence=1,purchase_intent=1,competition=0,safety=0,testability=1)["opportunity_score"]
+        self.assertGreater(safe, unsafe)
         self.assertIn("creator_rights_status",c)
         self.assertEqual(c["commerce_channel_status"],"UNVERIFIED")
 
