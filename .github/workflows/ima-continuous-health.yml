@@ -72,6 +72,8 @@ jobs:
           python -m unittest discover -s tests -p "test_*runtime.py" -v
       - name: Human culture regression
         run: python -m unittest discover -s tests -p "test_human_culture.py" -v
+      - name: Global growth and real-user contract
+        run: python -m unittest tests/test_global_growth_contract.py -v
 
       - name: Human intelligence, consent and child safety regression
         run: |
