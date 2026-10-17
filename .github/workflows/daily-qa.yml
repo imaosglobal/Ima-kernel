@@ -1,8 +1,6 @@
 name: IMA Daily QA and Doodle
 
 on:
-  schedule:
-    - cron: "17 4 * * *"
   workflow_dispatch:
   push:
     branches: [main]
