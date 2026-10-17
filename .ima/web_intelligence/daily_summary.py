@@ -180,7 +180,8 @@ def run():
     md += f"- שינויים שנצפו היום: {changed_today}\n"
     md += f"- אירועי פיתוח: {len(events)}\n"
     md += f"- פריטי ציר התפתחות: {len(timeline.get('timeline', []))}\n"
-    md += f"- פערי יכולת פתוחים: {timeline.get('current_gaps', {}).get('total', 0)}\n    md += f"- תרבות אנושית: {'VALID' if culture_validation['valid'] else 'INVALID'}; תחומים={len(culture['domains'])}; סוגי ידע={len(culture['epistemic_classes'])}\n"
+    md += f"- פערי יכולת פתוחים: {timeline.get('current_gaps', {}).get('total', 0)}\n"
+    md += f"- תרבות אנושית: {'VALID' if culture_validation['valid'] else 'INVALID'}; תחומים={len(culture['domains'])}; סוגי ידע={len(culture['epistemic_classes'])}\n"
     if lessons:
         md += "\n**מה נלמד בפועל:**\n" + "\n".join(
             f"- {item}" for item in lessons[:5]
