@@ -43,6 +43,8 @@ jobs:
         run: |
           git config user.name "IMA Unified Loop"
           git config user.email "actions@users.noreply.github.com"
+          git fetch origin main
+          git rebase --autostash origin/main
           git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
           git diff --cached --quiet && exit 0
           git commit -m "chore: record unified IMA loop cycle"
