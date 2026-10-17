@@ -53,6 +53,14 @@ Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - Failures instruct the system to inspect actual logs before changing code.
 - Diagnostics are evidence about a run, not proof of deployment or live capability.
 
+### FORESIGHT-001 — Continuous Long-Horizon Foresight & Present Preparation
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- IMA models plausible futures for each meaningful subsystem across NOW, 90-day, one-year, multi-year and long horizons.
+- Futures are hypotheses, not predictions.
+- Each trajectory records signals, prerequisites and safe present actions.
+- The canonical loop evaluates these trajectories continuously and may prepare IMA now for capabilities that become plausible later.
+- No future assumption is treated as runtime proof.
+
 ## Current priority gates
 
 ### AUTH-001 — Persistent Google authentication
