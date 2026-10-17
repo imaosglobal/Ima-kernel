@@ -13,8 +13,6 @@ on:
       - tests/capability_registry.test.cjs
       - package.json
       - .github/workflows/ima-next-audit.yml
-  schedule:
-    - cron: "23 6 * * 1"
   workflow_dispatch:
 
 permissions:
