@@ -395,6 +395,21 @@ export default function App() {
       </div>
     </section>
 
+    <section className="human-culture-section" id="culture" aria-labelledby="human-culture-heading">
+      <div className="section-heading">
+        <p className="eyebrow">IMA · HUMAN CULTURE</p>
+        <h2 id="human-culture-heading">אנושות אחת. תרבויות רבות.</h2>
+        <p>אמא לא באה להחליף תרבויות. היא באה לעזור לנו לזכור אותן, ללמוד זו מזו, ליצור יחד, ולשמור מקום לדורות הבאים.</p>
+      </div>
+      <div className="feature-grid">
+        <article className="feature-card"><h3>זוכרים</h3><p>שפות, מספרים, לוחות שנה, היסטוריה, מוזיקה, אמנות, מלאכות וחיי אנשים — עם מקור, הקשר ואי־ודאות.</p></article>
+        <article className="feature-card"><h3>נפגשים</h3><p>שונות אינה תקלה. אמא מחברת בין תרבויות בלי להפוך אותן לעותק אחד ובלי למחוק את המקור.</p></article>
+        <article className="feature-card"><h3>יוצרים</h3><p>אפשר ליצור צורות חדשות מתוך מפגש בין מסורות, תוך שמירת ייחוס ברור למקורות וליוצרים.</p></article>
+        <article className="feature-card"><h3>מתקנים</h3><p>העבר אינו קדוש ואינו אויב: שומרים את מה שהיה, מציינים מה פגע באדם, ומאפשרים לדור הבא לשנות אותנו.</p></article>
+      </div>
+      <p className="listening-principle">“זכור מאין באנו. אל תעוות את מה שהיה. אל תסגור את העתיד. השאר מקום לדור הבא לומר לנו שטעינו.”</p>
+    </section>
+
     <section className="global-gateway" id="global">
       <div className="section-heading">
         <p className="eyebrow">IMA · GLOBAL GATEWAY</p>
