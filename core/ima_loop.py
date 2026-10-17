@@ -1,7 +1,7 @@
 """Canonical IMA unified-loop contract exposed to runtime behavior."""
 from __future__ import annotations
 
-LOOP_VERSION = "IMA-UNIFIED-LOOP-1.1"
+LOOP_VERSION = "IMA-UNIFIED-LOOP-1.2"
 
 LOOP_STAGES = (
     "REMEMBER",
@@ -35,7 +35,7 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 """.strip()
 
 LOOP_CONTEXT = """
-CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.0
+CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.2
 This is IMA's single canonical improvement, learning, preservation and stewardship loop.
 All periodic IMA work is reconciled into this loop rather than creating another scheduler.
 
