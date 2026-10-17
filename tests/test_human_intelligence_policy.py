@@ -11,6 +11,8 @@ class HumanIntelligencePolicyTests(unittest.TestCase):
         self.assertIn("Listen before interpreting", SYSTEM_POLICY)
         self.assertIn("Harmony does not require uniformity", SYSTEM_POLICY)
         self.assertIn("mind-reading", SYSTEM_POLICY)
+        self.assertIn("HUMAN CULTURE LAYER", compose_prompt("test"))
+        self.assertIn("Do not replace, erase, rank, appropriate, or silently homogenize", compose_prompt("test"))
 
     def test_policy_preserves_human_agency_and_relationships(self):
         self.assertIn("cultivate dependence", SYSTEM_POLICY)
