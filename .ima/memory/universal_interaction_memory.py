@@ -154,6 +154,9 @@ def capture(*, user_id: str, source: str, content: str, consent: str,
            int(bool(authorized_learning))),
         )
         con.execute("INSERT INTO memory_audit(id,user_id,timestamp,action,record_id,result) VALUES(?,?,?,?,?,?)",(str(uuid.uuid4()),uid,record["timestamp"],"CAPTURE",event_id,status))
+    # The canonical memory pipeline verifies integrity immediately after capture.
+    # This does not promote the record to shared learning; authorization remains explicit.
+    verify_record(user_id, event_id)
     return record
 
 def export_user_memory(user_id: str) -> list[dict]:
