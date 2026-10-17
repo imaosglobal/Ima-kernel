@@ -39,6 +39,20 @@ A request is never considered complete merely because documentation exists.
 - Global user metrics must use real instrumentation and never treat missing analytics as zero users.
 - The daily operating loop remains the single cross-domain orchestrator; historical job names are aliases or retired paths, not additional daily systems.
 
+
+### CREATIVE-001 — Creative Bridge / Gap-to-Structure Engine
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- IMA can model a meaningful gap between domains as a hypothesis, connect it, test it and verify it with evidence.
+- Unverified bridges remain hypotheses and are never promoted to established capability without evidence.
+- Canonical loop includes a creative-bridge test task and records diagnostics for each run.
+- Runtime/CI verification remains required before marking live.
+
+### DIAG-001 — Canonical Loop Findings & Diagnosis
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- Every canonical loop cycle records pass/fail/error findings and a next diagnostic action.
+- Failures instruct the system to inspect actual logs before changing code.
+- Diagnostics are evidence about a run, not proof of deployment or live capability.
+
 ## Current priority gates
 
 ### AUTH-001 — Persistent Google authentication
