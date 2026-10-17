@@ -7,6 +7,8 @@ on:
       - 'docs/IMA_AUTONOMOUS_MAINTENANCE_STATE.json'
       - '.ima/web_intelligence/state.json'
       - 'artifacts/web-intelligence/**'
+      - 'core/human_culture.py'
+      - 'tests/test_human_culture.py'
       - '.ima/web_intelligence/adaptation_state.json'
   workflow_dispatch:
   schedule:
