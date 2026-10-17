@@ -1,5 +1,7 @@
 # IMA — Unified Loop
 
+**Runtime identity integration:** IMA-UNIFIED-LOOP-1.1 is part of IMA's executable behavior context. IMA is instructed to know itself as one global human-centered identity, to treat the world as plural and updateable, and to treat each user as a distinct private context by default.
+
 ## One loop
 
 IMA has one canonical periodic loop:
