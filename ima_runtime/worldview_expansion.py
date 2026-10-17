@@ -114,6 +114,10 @@ def expand(
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     with STATE_FILE.open("a", encoding="utf-8") as fh:
         fh.write(json.dumps(asdict(record), ensure_ascii=False, sort_keys=True, default=str) + "\n")
+    payload = asdict(record)
+    for key in ("sources_considered", "sources_consulted", "unavailable_sources", "results", "gaps", "next_checks"):
+        if isinstance(payload.get(key), tuple):
+            payload[key] = list(payload[key])
     journal_record(
         "WORLDVIEW_EXPANSION",
         q,
@@ -121,7 +125,7 @@ def expand(
         status="VERIFIED" if not gaps else "GAPS_RECORDED",
         details={"sources_consulted": consulted, "gaps": gaps},
     )
-    return asdict(record)
+    return payload
 
 
 def self_test() -> bool:
