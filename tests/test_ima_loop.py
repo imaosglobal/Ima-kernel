@@ -9,7 +9,7 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertTrue(contract["single_scheduler"])
         self.assertTrue(contract["requires_explicit_learning_authorization"])
         self.assertTrue(contract["requires_runtime_verification"])
-        self.assertTrue(contract["lawful_distribution_only"])
+        self.assertTrue(contract["lawful_distribution_only"])\n        self.assertTrue(contract["universal_learning"])\n        self.assertTrue(contract["capability_self_application"])\n        self.assertTrue(contract["capability_teaching"])\n        self.assertTrue(contract["provider_independence"])
 
     def test_all_required_stages_exist(self):
         required = {
@@ -30,7 +30,7 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertTrue(contract["identity"]["user_context_is_private_by_default"])
         self.assertIn("one global human-centered intelligence identity", IMA_IDENTITY_CONTEXT)
         self.assertIn("Private user context is isolated", IMA_IDENTITY_CONTEXT)
-        self.assertIn("current user is the immediate human context", IMA_IDENTITY_CONTEXT)
+        self.assertIn("current user is the immediate human context", IMA_IDENTITY_CONTEXT)\n        self.assertIn("Every verified capability belongs to two paths", IMA_IDENTITY_CONTEXT)
 
 if __name__ == "__main__":
     unittest.main()
