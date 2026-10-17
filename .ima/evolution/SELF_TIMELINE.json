@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-17T14:10:31+00:00",
+  "generated_at": "2026-10-17T16:17:54+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -445,13 +445,6 @@
       "source": "IMA Global Health Loop; GitHub repository; Render"
     },
     {
-      "timestamp": "2026-10-17T14:10:31+00:00",
-      "event": "TEST",
-      "summary": "journal test",
-      "status": "VERIFIED",
-      "source": "unit-test"
-    },
-    {
       "timestamp": "2026-10-17T16:00:00Z",
       "event": "ori_digital_daily_continuity_and_blocker_repair",
       "summary": "נשמרה נקודת המשך יומית קנונית ל-Ori Digital: זהות Avatar וקול אומתו דרך render קיים, נבנה registry פלטפורמה-אגנוסטי, והפרסום נשאר חסום רק עד חיבור יעד כתיבה מאומת. מחזורי העתיד חייבים להמשיך מנקודה זו ולא להתחיל מחדש.",
@@ -459,10 +452,17 @@
       "source": "HeyGen verified render evidence; GitHub repository; Metricool account connection check; user-requested daily continuity policy"
     },
     {
-      "commit": "767a40f3439b428d3e450ce558c44c991343070e",
-      "timestamp": "2026-10-17T16:52:25+03:00",
+      "timestamp": "2026-10-17T16:17:53+00:00",
+      "event": "TEST",
+      "summary": "journal test",
+      "status": "VERIFIED",
+      "source": "unit-test"
+    },
+    {
+      "commit": "b0c4aa24d0a340d9d97f59b3f5bd15f0d9d358f3",
+      "timestamp": "2026-10-17T19:17:17+03:00",
       "event": "commit",
-      "summary": "governance: anchor IMA nonprofit finance expenses and succession",
+      "summary": "fix: rebase loop state before persistence push",
       "source": "git"
     }
   ]
