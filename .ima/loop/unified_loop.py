@@ -53,6 +53,9 @@ SYSTEM_SCOPE = (
     "energy-internal research",
     "product and public QA",
     "lawful public education and distribution",
+    "capability radar and engine discovery",
+    "release/version stewardship",
+    "repository health/statistics review",
 )
 
 COMMANDS = {
@@ -67,6 +70,9 @@ COMMANDS = {
     "culture_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_culture.py", "-v"],
     "distribution": ["python", ".ima/distribution/prepare.py"],
     "human_intelligence_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_intelligence_policy.py", "-v"],
+    "capability_radar": ["python", "scripts/ima_capability_radar.py"],
+    "engine_discovery": ["python", "learning/engine_discovery.py"],
+    "capability_contract": ["npm", "run", "test:capabilities"],
 }
 
 def now_local() -> datetime:
@@ -75,11 +81,13 @@ def now_local() -> datetime:
 def due(now: datetime) -> list[str]:
     # One hourly tick is the canonical scheduler. Tasks retain their useful
     # frequencies without creating independent schedules.
-    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "distribution"]
+    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "distribution", "capability_contract"]
     if now.hour % 6 == 0:
-        tasks.append("evolution")
+        tasks.extend(["evolution", "engine_discovery"])
     if now.hour == 3:
         tasks.extend(["community_frontier", "product_qa"])
+    if now.hour == 4:
+        tasks.append("capability_radar")
     if now.hour == 21:
         tasks.append("daily_summary")
     return tasks
@@ -104,7 +112,7 @@ def run_loop() -> dict:
     tasks = due(now)
     results = [run_task(task) for task in tasks]
     record = {
-        "schema": "IMA-UNIFIED-LOOP-1.0",
+        "schema": "IMA-UNIFIED-LOOP-1.1",
         "timestamp": now.isoformat(),
         "timezone": "Asia/Jerusalem",
         "stages": list(STAGES),
