@@ -66,6 +66,21 @@ Status: IN_PROGRESS
 - 3D presence, modes, chat, device continuity and native Android shell exist.
 - Future engines and interfaces must be capability adapters under the same identity and learning loop.
 
+
+### PRES-001 — Intergenerational memory & historical preservation
+Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
+- Preserve human names, lives, oral histories, languages, art, science, philosophy and cultural memory across generations.
+- Distinguish primary evidence, textual tradition, historical interpretation, cultural memory, myth/theology, hypothesis and unknown.
+- Preserve provenance, source variants, uncertainty, translations, transformations, hashes where appropriate, and original/derivative relationships.
+- Never silently replace an original with an AI-generated translation, summary, restoration or interpretation.
+- Preserve ordinary lives as well as rulers and famous figures.
+- Historical teaching must retain both the value of cultural memory and the limits of the evidence; ancient or repeated claims are not automatically facts.
+- Use the Sumerian King List as a canonical example of layered memory: historical place/person traditions intertwined with mythic, theological, ideological and numerical traditions.
+- Corrections extend provenance rather than erase the record of prior belief.
+- Private personal stories remain private unless explicitly authorized for broader preservation.
+- Runtime capability requires the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
+- Canonical specification: [IMA Intergenerational Memory & Historical Preservation Charter](IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
+
 ### HISTORY-001 — Historical request reconciliation
 Status: ACTIVE
 - This ledger is the canonical reconciliation anchor.
