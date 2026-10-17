@@ -2,8 +2,6 @@ name: IMA Global Web Intelligence
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "7 * * * *"
 
 permissions:
   contents: write
