@@ -82,12 +82,15 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - Canonical specification: [IMA Intergenerational Memory & Historical Preservation Charter](IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
 
 ### CULT-001 — Human Culture / Culture of the Heart
-Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - Build a shared global cultural layer without replacing, erasing or ranking existing cultures.
 - Preserve languages, numerical traditions, calendars, histories, heroes, ordinary lives, music, dance, architecture, food, craft, education, governance, economic experiments, stories, myths, science and future cultural forms.
 - Record Ori Cohen as initiator/founder of the project only; founder status never grants permanent authority or ownership of the culture.
 - Keep human agency primary: no coercive membership, permanent ruler, sacred political authority or personality cult.
 - IMA is infrastructure for memory, learning, translation, connection and reflection, not the sovereign of the culture.
+- Executable cultural policy lives in `core/human_culture.py` and is injected into the provider-neutral LLM prompt through `core/human_intelligence.py`.
+- Regression coverage lives in `tests/test_human_culture.py`; continuous health and the daily learning review execute it.
+- Live runtime behavior still requires deployment verification on the canonical production surface.
 - Canonical charter: [IMA Human Culture Charter](IMA_HUMAN_CULTURE_CHARTER.md).
 - Daily refinement follows the single Global Health Loop; it must not create a second scheduler: [IMA Human Culture Daily Loop](IMA_HUMAN_CULTURE_DAILY_LOOP.md).
 - Runtime capability requires PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE.
