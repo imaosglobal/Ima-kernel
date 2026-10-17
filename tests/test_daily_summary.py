@@ -1,7 +1,7 @@
 import importlib.util
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / ".ima" / "web_intelligence" / "daily_summary.py"
 
 spec = importlib.util.spec_from_file_location("daily_summary", TARGET)
