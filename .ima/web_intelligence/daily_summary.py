@@ -8,6 +8,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from core.human_culture import validate_culture_contract, culture_contract
+
 ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / ".ima/web_intelligence/state.json"
 ADAPT = ROOT / "artifacts/web-intelligence/adaptation-state.json"
@@ -86,6 +88,8 @@ def run():
         if str(item.get("last_seen", "")).startswith(day)
     )
     status_counts = Counter(str(e.get("status", "UNKNOWN")) for e in events)
+    culture_validation = validate_culture_contract()
+    culture = culture_contract()
 
     # The daily question is mandatory: identify the highest-value weakness visible
     # in today's evidence, then record whether a concrete improvement was executed.
@@ -132,6 +136,13 @@ def run():
             "metrics": research_result.get("metrics", {}) if isinstance(research_result, dict) else {},
         },
         "timeline_gap_count": timeline.get("current_gaps", {}).get("total", 0),
+        "human_culture": {
+            "validation": culture_validation,
+            "domains": len(culture["domains"]),
+            "epistemic_classes": len(culture["epistemic_classes"]),
+            "founder_role": culture["founder_role"],
+            "ima_role": culture["ima_role"],
+        },
         "status": "RECORDED",
     }
 
@@ -169,7 +180,7 @@ def run():
     md += f"- שינויים שנצפו היום: {changed_today}\n"
     md += f"- אירועי פיתוח: {len(events)}\n"
     md += f"- פריטי ציר התפתחות: {len(timeline.get('timeline', []))}\n"
-    md += f"- פערי יכולת פתוחים: {timeline.get('current_gaps', {}).get('total', 0)}\n"
+    md += f"- פערי יכולת פתוחים: {timeline.get('current_gaps', {}).get('total', 0)}\n    md += f"- תרבות אנושית: {'VALID' if culture_validation['valid'] else 'INVALID'}; תחומים={len(culture['domains'])}; סוגי ידע={len(culture['epistemic_classes'])}\n"
     if lessons:
         md += "\n**מה נלמד בפועל:**\n" + "\n".join(
             f"- {item}" for item in lessons[:5]
