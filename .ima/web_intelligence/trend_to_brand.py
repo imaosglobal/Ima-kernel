@@ -42,8 +42,8 @@ def _score(
     # Higher is better except competition, production complexity, regulation,
     # logistics and inventory risk, which are inverted below.
     weights = {
-        "signal": 0.14,
-        "source": 0.10,
+        "signal": 0.12,
+        "source": 0.09,
         "persistence": 0.10,
         "audience": 0.07,
         "purchase_intent": 0.12,
@@ -51,13 +51,14 @@ def _score(
         "competition": 0.07,
         "price_fit": 0.05,
         "margin": 0.06,
-        "production": 0.04,
+        "production": 0.03,
         "regulation": 0.04,
-        "logistics": 0.03,
+        "logistics": 0.02,
         "sustainability": 0.02,
         "inventory": 0.02,
         "culture": 0.02,
         "testability": 0.04,
+        "safety": 0.06,
     }
     values = {
         "signal": _bounded(item.get("signal_strength")),
@@ -76,6 +77,7 @@ def _score(
         "inventory": 1 - _bounded(item.get("inventory_risk"), 0.5),
         "culture": _bounded(item.get("cultural_fit"), 0.5),
         "testability": _bounded(testability),
+        "safety": _bounded(safety),
     }
     return round(100 * sum(weights[k] * values[k] for k in weights), 2)
 
