@@ -1,8 +1,6 @@
 name: IMA Engine Discovery
 
 on:
-  schedule:
-    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
