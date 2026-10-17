@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from core.long_horizon_foresight import system_foresight, prioritize_actions
+from core.long_horizon_foresight import system_foresight, prioritize_actions
 
 ROOT=Path(__file__).resolve().parents[2]
 TZ=ZoneInfo("Asia/Jerusalem")
@@ -67,6 +68,8 @@ def run_loop():
     now=now_local(); tasks=due(now); results=[run_task(t) for t in tasks]
     foresight=system_foresight(SYSTEM_SCOPE)
     foresight_actions=prioritize_actions([__import__('core.long_horizon_foresight', fromlist=['FutureCapability']).create_trajectory(__import__('core.long_horizon_foresight', fromlist=['HORIZONS']).HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
+    foresight=system_foresight(SYSTEM_SCOPE)
+    foresight_actions=prioritize_actions([__import__('core.long_horizon_foresight', fromlist=['FutureCapability']).create_trajectory(__import__('core.long_horizon_foresight', fromlist=['HORIZONS']).HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
     findings=[]
     for result in results:
         status=result.get("status")
@@ -74,6 +77,7 @@ def run_loop():
         action="carry_forward" if status=="PASS" else ("inspect_logs_before_change" if status=="FAIL" else "inspect_runtime_evidence")
         findings.append({"task":task,"finding":status or "UNKNOWN","action":action})
     record={"schema":"IMA-UNIFIED-LOOP-1.3","timestamp":now.isoformat(),"timezone":"Asia/Jerusalem","stages":list(STAGES),"scope":list(SYSTEM_SCOPE),"tasks":results,
+      "foresight":{"components":foresight,"priority_now_actions":foresight_actions},
       "foresight":{"components":foresight,"priority_now_actions":foresight_actions},
       "diagnostics":{"summary":{"total":len(results),"passed":sum(r.get("status")=="PASS" for r in results),"failed":sum(r.get("status")=="FAIL" for r in results),"errors":sum(r.get("status") in {"ERROR","UNKNOWN",None} for r in results)},"findings":findings,"truth_rule":"Diagnostics describe this run; they do not prove live deployment without runtime evidence."},
       "single_scheduler":True,
