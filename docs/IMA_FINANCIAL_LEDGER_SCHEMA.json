@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "status": "governance_anchored",
+  "as_of": "2026-10-17",
+  "legal_status": "not_yet_registered_as_a_nonprofit_entity",
+  "currency_policy": "record_original_currency_and_normalized_reporting_currency_with_fx_source_and_timestamp",
+  "income": {
+    "required": ["event_id","date","source","program","gross","currency","fees","taxes","net","received_status","payout_status","evidence","media_or_campaign_version","restricted_or_unrestricted"],
+    "never_infer_from": ["views","likes","followers","eligibility","estimated_cpm","projections"]
+  },
+  "expenses": {
+    "required": ["event_id","date","payee","category","description","gross","currency","taxes","fees","net","status","authorization","receipt_or_invoice_evidence","purpose","beneficiary","recurring","contract_reference"],
+    "categories": ["hosting","domains","software","ai_generation","voice_video","distribution","payment_processing","legal","accounting","insurance","accessibility","research","security","tax","compliance","education","community_benefit","creator_compensation","other"],
+    "rules": {
+      "record_only_verified_expenses": true,
+      "no_unapproved_spending": true,
+      "no_hidden_related_party_payments": true,
+      "keep_personal_and_nonprofit_expenses_separate": true
+    }
+  },
+  "reserves": {
+    "track_separately": true,
+    "minimum_target": "set_by_legal_entity_and_risk_review",
+    "no_fixed_percentage_without_explicit_approval": true
+  },
+  "allocation": {
+    "order": [
+      "refunds_chargebacks_and_required_taxes",
+      "verified_transaction_and_platform_fees",
+      "authorized_operating_expenses",
+      "documented_creator_compensation_or_license_royalty",
+      "required_reserve",
+      "nonprofit_mission_reinvestment",
+      "authorized_humanitarian_or_community_benefit"
+    ],
+    "rule": "no_distribution_without_legal_and_contractual_basis"
+  },
+  "creator": {
+    "canonical_creator_id": "creator_001",
+    "name": "Ori Cohen",
+    "role": ["founder","creator","architect"],
+    "rights_are_separate_from_nonprofit_assets": true
+  },
+  "inheritance": {
+    "creator_owed_compensation_and_personal_property": "passes_to_Ori_estate_and_valid_heirs_or_beneficiaries_under_applicable_law_and_valid_will",
+    "nonprofit_mission_assets": "do_not_pass_to_heirs_as_personal_property",
+    "designated_heirs": "not_yet_specified_in_this_repository",
+    "legal_will_required_for_personal_estate_instructions": true
+  },
+  "audit": {
+    "every_event_requires_provenance": true,
+    "status_values": ["PLANNED","ATTEMPTED","EXECUTED","VERIFIED","FAILED","GAPS_RECORDED"],
+    "immutable_history_preferred": true
+  }
+}
