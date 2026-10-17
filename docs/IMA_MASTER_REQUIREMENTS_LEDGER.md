@@ -81,6 +81,13 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - Runtime capability requires the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
 - Canonical specification: [IMA Intergenerational Memory & Historical Preservation Charter](IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
 
+### DIST-001 — Lawful Global Distribution
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- Public Culture of the Heart page is published in the repository and linked from the public entry point.
+- The unified loop prepares a provenance-bearing distribution queue.
+- External social/press/community posting remains gated by authorized accounts/connections and platform/legal rules; no claim of autonomous universal posting is made.
+- Non-spam, no impersonation, no manipulation and attribution rules are explicit.
+
 ### LOOP-001 — Single Canonical IMA Loop
 Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - All periodic IMA maintenance, learning, reflection, preservation, culture, web intelligence, evolution, QA and lawful distribution preparation must reconcile through `.ima/loop/unified_loop.py`.
