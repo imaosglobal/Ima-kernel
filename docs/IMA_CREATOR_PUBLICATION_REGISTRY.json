@@ -1,0 +1,30 @@
+{
+  "schema": "ima.creator-publication-registry.v1",
+  "last_verified": "2026-10-17",
+  "identity": {
+    "name": "Ori Digital",
+    "provider": "HeyGen",
+    "canonical_avatar_look_id": "aec38d1f20be404fb380ee6d22bdaab4",
+    "canonical_avatar_status": "completed",
+    "verified_voice_id": "d079fb06d94f4cbfbd85284b34a06269",
+    "voice_verification_basis": "prior_completed_HeyGen_render",
+    "consent_required_for_new_identity_or_voice": true
+  },
+  "quality_baseline": {
+    "video_id": "d9fff094b5d2437d9ecc9e40fe5f0bf9",
+    "duration_seconds": 18.3641,
+    "resolution": "720p",
+    "aspect_ratio": "9:16"
+  },
+  "destinations": [
+    {
+      "provider": "Metricool",
+      "status": "blocked",
+      "reason": "No social network is currently connected to the Metricool brand; therefore no write destination is authorized or publishable.",
+      "verified_at": "2026-10-17"
+    }
+  ],
+  "future_destination_rule": "Any newly connected destination inherits this registry, identity, quality gate, deduplication rule, provenance tracking and publication verification workflow only after its write permission is verified.",
+  "milestone_video_policy": "Do not create a new creator milestone video without meaningful verified progress.",
+  "status": "integrated_identity_binding_verified_publication_blocked"
+}
