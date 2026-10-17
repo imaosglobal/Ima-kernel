@@ -1,68 +1,35 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-08T12:56:00Z",
+  "generated_at": "2026-10-17T13:27:22+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
-    "git_commits": 40,
-    "development_journal": "present",
-    "daily_summaries": "present"
+    "git_commits": 1,
+    "development_journal": 24,
+    "daily_summaries": 4
   },
   "archive_inventory": {
-    "files": 1209,
+    "files": 1210,
     "families": {
       "other": 236,
       "runtime": 182,
       "security": 2,
       "learning": 608,
       "knowledge": 32,
-      "memory": 84,
+      "memory": 85,
       "guardian": 52,
       "evolution": 13
     }
   },
   "open_issues": {
-    "status": "VERIFIED",
-    "count": 8,
-    "items": [
-      {
-        "number": 105,
-        "title": "Global discoverability: first-time visitor path and verified public entry points"
-      },
-      {
-        "number": 104,
-        "title": "IMA Global Discovery Hub — Start here"
-      },
-      {
-        "number": 101,
-        "title": "Audit automated demo PRs and require quality gates before release"
-      },
-      {
-        "number": 100,
-        "title": "[LEARNING] IMA global learning intake is open"
-      },
-      {
-        "number": 99,
-        "title": "IMA continuous health failure"
-      },
-      {
-        "number": 96,
-        "title": "[Community Task] Add IMA 3D contribution task"
-      },
-      {
-        "number": 90,
-        "title": "[Community Task] Improve IMA mobile onboarding"
-      },
-      {
-        "number": 88,
-        "title": "bug: example crashed"
-      }
-    ]
+    "status": "UNAVAILABLE",
+    "count": null,
+    "items": []
   },
   "current_gaps": {
     "total": 12,
     "by_state": {
-      "detected": 4,
+      "detected": 5,
       "specified": 5,
       "implemented": 1,
       "scaffolded": 1
@@ -70,63 +37,168 @@
     "items": [
       {
         "id": "hologram",
+        "capability": "hologram",
         "state": "detected",
-        "priority": "high"
+        "priority": "high",
+        "providers": [],
+        "next": [
+          "research APIs/protocols",
+          "build adapter candidates",
+          "test hardware/software path"
+        ]
       },
       {
         "id": "volumetric",
+        "capability": "volumetric_media",
         "state": "detected",
-        "priority": "high"
+        "priority": "high",
+        "providers": [],
+        "next": [
+          "research capture/render/display APIs",
+          "build provider-neutral adapter"
+        ]
       },
       {
         "id": "xr",
+        "capability": "AR_VR_XR",
         "state": "detected",
-        "priority": "high"
+        "priority": "high",
+        "providers": [],
+        "next": [
+          "map WebXR/OpenXR/device APIs",
+          "build adapter"
+        ]
       },
       {
         "id": "robotics",
+        "capability": "robot_control",
         "state": "detected",
-        "priority": "high"
+        "priority": "high",
+        "providers": [],
+        "next": [
+          "map authorized robot APIs",
+          "build safety-gated adapter"
+        ]
       },
       {
         "id": "plugin_marketplace",
+        "capability": "adapter_marketplace",
         "state": "specified",
-        "priority": "high"
+        "priority": "high",
+        "providers": [
+          "Stripe",
+          "GitHub"
+        ],
+        "next": [
+          "implement catalog",
+          "provider onboarding",
+          "billing",
+          "evidence publishing"
+        ]
       },
       {
         "id": "capability_executor",
+        "capability": "runtime_capability_execution",
         "state": "implemented",
-        "priority": "critical"
+        "priority": "critical",
+        "providers": [
+          "IMA"
+        ],
+        "next": [
+          "run CI tests",
+          "integrate into runtime routing",
+          "verify production"
+        ]
       },
       {
         "id": "commercial_optimizer",
+        "capability": "multi-party_revenue_optimization",
         "state": "specified",
-        "priority": "medium"
+        "priority": "medium",
+        "providers": [
+          "Stripe"
+        ],
+        "next": [
+          "define metrics",
+          "contract-aware revenue rules",
+          "measure outcomes"
+        ]
       },
       {
         "id": "universal_integration_fabric",
+        "capability": "universal_integration_fabric",
         "state": "scaffolded",
-        "priority": "critical"
+        "priority": "critical",
+        "providers": [
+          "IMA"
+        ],
+        "next": [
+          "connect canonical adapters",
+          "publish evidence model",
+          "run provider/device discovery tests",
+          "verify production routing"
+        ]
       },
       {
         "id": "global_change_observatory",
+        "capability": "global_change_observatory",
         "state": "specified",
-        "priority": "high"
+        "priority": "high",
+        "providers": [
+          "TinyFish",
+          "GitHub",
+          "IMA"
+        ],
+        "next": [
+          "monitor official change sources",
+          "convert changes to evidence records",
+          "create regression tests",
+          "reassess affected adapters"
+        ]
       },
       {
         "id": "cross_domain_learning",
+        "capability": "cross_domain_learning",
         "state": "specified",
-        "priority": "high"
+        "priority": "high",
+        "providers": [
+          "IMA"
+        ],
+        "next": [
+          "evidence-gated learning records",
+          "independent corroboration",
+          "small bounded updates",
+          "regression verification"
+        ]
       },
       {
         "id": "device_and_game_ecosystem",
+        "capability": "device_game_ecosystem_integration",
         "state": "detected",
-        "priority": "high"
+        "priority": "high",
+        "providers": [],
+        "next": [
+          "map console and device APIs",
+          "map OS integration paths",
+          "map game platform interfaces",
+          "build authorized adapters"
+        ]
       },
       {
         "id": "world_knowledge_ingestion",
+        "capability": "world_knowledge_ingestion",
         "state": "specified",
-        "priority": "high"
+        "priority": "high",
+        "providers": [
+          "TinyFish",
+          "GitHub"
+        ],
+        "next": [
+          "source classification",
+          "provenance capture",
+          "verification",
+          "knowledge graph updates"
+        ]
       }
     ]
   },
@@ -134,74 +206,257 @@
     {
       "date": "2026-07-16",
       "event": "history_query_v2_gap",
-      "summary": "V2 partial history/query identified missing real-time dates, daily summary, future view and unified historical query.",
-      "source": "conversation"
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "V2 had partial event search and deduplication; missing real-time dates, daily summary, future view and unified historical query were identified."
     },
     {
       "date": "2026-07-16",
       "event": "guardian_history",
-      "summary": "Guardian history and Git history were identified as durable evidence needing unified cycle records.",
-      "source": "conversation"
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Guardian history had 619 lines with cycle boundaries and imported Git history; unified before/after evidence was identified as a needed improvement."
     },
     {
       "date": "2026-08-20",
       "event": "memory_fragmentation_audit",
-      "summary": "Memory/history components were identified as fragmented and needing unified autobiographical structure.",
-      "source": "conversation"
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Memory/history components were identified as fragmented, with a need for a unified autobiographical mechanism."
     },
     {
       "date": "2026-10-02",
       "event": "dated_development_journal",
-      "summary": "Dated append-only development memory was established as a project requirement.",
-      "source": "conversation"
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Requested dated memory and journal records for every development step; repository development-journal infrastructure followed."
     },
     {
-      "date": "2026-10-03",
-      "event": "security_public_runtime_stewardship",
-      "summary": "Public runtime, signed sessions, memory isolation and error redaction were verified at contract/runtime levels; onboarding/indexing/feedback remained gaps.",
-      "source": "development journal"
+      "timestamp": "2026-10-03T12:34:16Z",
+      "event": "external_capability_benchmark",
+      "summary": "Compared IMA against current official OpenAI, Google, Anthropic and Apple capabilities and recorded the highest-value gaps.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA Project Steward; official provider documentation"
     },
     {
-      "date": "2026-10-04",
-      "event": "global_web_intelligence",
-      "summary": "Global discovery layer, provenance and bounded learning pipeline were implemented; first execution verification remained a gate.",
-      "source": "development journal"
+      "timestamp": "2026-10-03T16:50:00Z",
+      "event": "daily_stewardship_fixes",
+      "summary": "Added CI self-trigger protection and corrected the PWA icon URL to an existing asset; runtime and growth readiness remain unverified.",
+      "status": "EXECUTED",
+      "source": "Connected GitHub MCP repository reads/writes; Render workspace discovery"
     },
     {
-      "date": "2026-10-04",
-      "event": "mcp_distribution",
-      "summary": "IMA MCP distribution layer reached live endpoint verification while protocol-level and publisher steps remained open.",
-      "source": "development journal"
+      "timestamp": "2026-10-03T17:05:00Z",
+      "event": "daily_stewardship_verification",
+      "summary": "Rechecked IMA public readiness against the actual repository, latest CI execution, runtime contract tests and live deployment smoke checks; previously identified public-session and error-disclosure blockers are now covered by executed code and passing CI.",
+      "status": "VERIFIED",
+      "source": "IMA Project Steward; connected GitHub repository and GitHub Actions execution evidence"
+    },
+    {
+      "timestamp": "2026-10-03T17:37:26Z",
+      "event": "daily_version_automation_configured",
+      "summary": "Created a reversible checkpoint and added an autonomous daily version workflow that tags and publishes the current main state once per UTC day, with an auditable journal entry.",
+      "status": "EXECUTED",
+      "source": "Connected GitHub repository read/write tools; GitHub Actions configuration"
+    },
+    {
+      "timestamp": "2026-10-04T00:00:00Z",
+      "event": "global_web_intelligence_layer_implemented",
+      "summary": "Implemented the first fast global web-intelligence discovery layer: hourly GitHub Actions discovery, public feeds, Common Crawl latest-index sampling, deduplication/change detection, bounded persistent state, provenance, tests, and continuous-health integration.",
+      "status": "IMPLEMENTED_PENDING_FIRST_SCHEDULED_VERIFICATION",
+      "source": "IMA Project Steward; Common Crawl official documentation; connected GitHub repository"
+    },
+    {
+      "timestamp": "2026-10-04T12:58:00Z",
+      "event": "plugin_registry_health_audit",
+      "summary": "Audited plugin registry routing against connected tool evidence; verified OpenArt authentication and checked HeyGen connection readiness.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA Project Steward; connected OpenArt and HeyGen tools; IMA plugin registry"
+    },
+    {
+      "timestamp": "2026-10-04T14:25:00Z",
+      "event": "cross_provider_repair_cycle",
+      "summary": "Repaired the verified Vercel Express entrypoint issue in Ima-3d-mom and initiated a fresh production deployment; audited the stale GitHub health failure against current main.",
+      "status": "EXECUTED",
+      "source": "Connected GitHub and Vercel provider evidence"
+    },
+    {
+      "timestamp": "2026-10-04T14:36:15Z",
+      "event": "daily_self_question_and_improvement",
+      "summary": "Answered the mandatory daily question 'What can be improved in IMA today?' from current repository evidence and executed a concrete improvement: the daily learning report now derives lessons from actual journal evidence instead of static adaptation dimensions.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; current IMA repository evidence; GitHub Actions documentation"
+    },
+    {
+      "timestamp": "2026-10-04T14:42:30Z",
+      "event": "universal_ima_distribution_mcp",
+      "summary": "Prepared IMA's portable MCP distribution layer and added the workstream to the existing daily Global Health Loop.",
+      "status": "EXECUTED",
+      "source": "development.jsonl"
+    },
+    {
+      "timestamp": "2026-10-04T14:43:20Z",
+      "event": "universal_ima_distribution_verification",
+      "summary": "Verified the live Render deployment and public distribution metadata endpoints for the new IMA MCP layer.",
+      "status": "VERIFIED",
+      "source": "development.jsonl"
+    },
+    {
+      "timestamp": "2026-10-04T15:32:00Z",
+      "event": "universal_ima_distribution_activation_and_continuous_recovery",
+      "summary": "Activated the IMA distribution workstream inside the existing daily Global Health Loop and hardened the MCP server for continuous automated verification. Added explicit MCP safety annotations, structured output schemas, a remote-client protocol smoke test, and a daily CI health workflow. The newest Render deployment is still building; the previously verified deployment remains the live fallback until the new build completes.",
+      "status": "EXECUTED",
+      "source": "development.jsonl"
     },
     {
       "date": "2026-10-05",
-      "event": "plugin_registry_truth",
-      "summary": "Plugin routing was aligned with connected reality and execution boundaries were hardened.",
-      "source": "development journal"
+      "event": "continuous_stewardship",
+      "source": "prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Requested full-history review and autonomous continuation; stewardship loop was defined as observe, compare, identify gaps, change, test, verify, document, reassess."
+    },
+    {
+      "date": "2026-10-05",
+      "event": "daily_summary",
+      "summary": "## IMA — סיכום למידה יומי\n\n**2026-10-05**\n\n- שאלה יומית: מה עוד ניתן לשפר באמא היום?\n- תשובה: אין מספיק ראיות חדשות לקביעה אמיתית; לא מסמנים שיפור שלא הוכח.\n- שינויים שנצפו היום: 0\n- אירועי פיתוח: 0\n",
+      "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-05.md"
+    },
+    {
+      "timestamp": "2026-10-05T12:16:00Z",
+      "event": "plugin_registry_truth_repair",
+      "summary": "Synchronized IMA plugin routing with the authoritative registry and added a CI contract test so unknown routing targets fail automatically.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; connected GitHub repository; .ima/plugins/REGISTRY.json; .ima/plugins/README.md; docs/IMA_DEVELOPMENT_MEMORY_STANDARD.md"
     },
     {
       "date": "2026-10-06",
       "event": "zero_point_and_global_discovery",
-      "summary": "Zero-point self-inquiry and global discovery were integrated into IMA's identity and onboarding.",
-      "source": "git/conversation"
+      "source": "repository commits and prior IMA conversation",
+      "status": "HISTORICAL",
+      "summary": "Zero-point self-inquiry and global discovery were integrated into IMA's public and learning vision."
+    },
+    {
+      "date": "2026-10-06",
+      "event": "daily_summary",
+      "summary": "## IMA — סיכום למידה יומי\n\n**2026-10-06**\n\n- שאלה יומית: מה עוד ניתן לשפר באמא היום?\n- תשובה: אין מספיק ראיות חדשות לקביעה אמיתית; לא מסמנים שיפור שלא הוכח.\n- שינויים שנצפו היום: 0\n- אירועי פיתוח: 0\n",
+      "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-06.md"
+    },
+    {
+      "timestamp": "2026-10-06T17:09:52.968Z",
+      "event": "daily_global_health_and_distribution_cycle",
+      "summary": "Production MCP protocol verification passed; public GitHub Pages build pipeline was repaired to target the active gh-pages branch; actual live public page remained on the older chat shell during final browser verification, so public first-conversation readiness remains blocked.",
+      "status": "GAPS_RECORDED",
+      "source": "development.jsonl"
     },
     {
       "date": "2026-10-07",
       "event": "cross_domain_adaptation",
-      "summary": "Adaptation pipeline was repaired, source evidence persisted, adoption gates hardened and discovery/evaluation order fixed.",
-      "source": "git/development journal"
+      "source": "repository journal",
+      "status": "EVIDENCED",
+      "summary": "Adaptation pipeline was repaired, candidate persistence added, adoption gates hardened, source evidence pipeline expanded and discovery/evaluation ordering repaired."
+    },
+    {
+      "date": "2026-10-07",
+      "event": "daily_summary",
+      "summary": "## IMA — סיכום למידה יומי\n\n**2026-10-07**\n\n- שאלה יומית: מה עוד ניתן לשפר באמא היום?\n- תשובה: אין מספיק ראיות חדשות לקביעה אמיתית; לא מסמנים שיפור שלא הוכח.\n- שינויים שנצפו היום: 0\n- אירועי פיתוח: 0\n",
+      "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-07.md"
+    },
+    {
+      "timestamp": "2026-10-07T12:53:00Z",
+      "event": "plugin_registry_truth_repair_followup",
+      "summary": "Corrected the plugin manager documentation so Nylas is explicitly described as a candidate runtime integration rather than a connected capability.",
+      "status": "VERIFIED",
+      "source": "IMA Project Steward; .ima/plugins/REGISTRY.json; .ima/plugins/README.md; GitHub repository write"
+    },
+    {
+      "timestamp": "2026-10-07T17:40:00Z",
+      "event": "cross_domain_adaptation_root_repair_verified",
+      "summary": "The repaired adaptation evaluator ran after the repository-root fix and produced 13 adaptation dimensions with a non-null discovery timestamp; persistence is now materially populated instead of the prior empty state.",
+      "status": "VERIFIED",
+      "source": "IMA Project Steward; connected GitHub repository and GitHub Actions-generated commit evidence"
+    },
+    {
+      "timestamp": "2026-10-07T17:41:00Z",
+      "event": "cross_domain_adaptation_evidence_persistence_expansion",
+      "summary": "Expanded the adaptation workflow's persistence step to retain the evaluator's generated candidate evidence alongside the state summary.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; connected GitHub repository inspection"
+    },
+    {
+      "timestamp": "2026-10-07T17:45:00Z",
+      "event": "cross_domain_adaptation_candidate_evidence_verified",
+      "summary": "אימות טרי הראה שהרחבת ה-CI אכן יצרה ושמרה את artifact המועמדים, לאחר שה-workflow evaluator רץ על ה-root המתוקן.",
+      "status": "VERIFIED",
+      "source": "IMA Project Steward; connected GitHub repository evidence"
+    },
+    {
+      "timestamp": "2026-10-07T17:50:00Z",
+      "event": "cross_domain_adaptation_candidate_gate_hardening",
+      "summary": "התגלה שה-artifact הקודם ייצג 13 ממדי בדיקה כלליים ולא מועמדי שינוי ספציפיים. הקשחתי את המעריך כך שהמצב הזה מסומן במפורש, עם חסימת אימוץ עד מקור ספציפי ו-test.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; connected GitHub repository inspection"
+    },
+    {
+      "timestamp": "2026-10-07T18:00:00Z",
+      "event": "cross_domain_adaptation_source_evidence_pipeline_expansion",
+      "summary": "הרחבתי את שכבת Web Intelligence כך שהגילוי האחרון נשמר כפריטי מקור ממשיים, והמעריך יוצר source_review מועמדים הניתנים להשוואה במקום להציג ממדי בדיקה כלליים כמועמדים.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; connected GitHub repository inspection"
+    },
+    {
+      "timestamp": "2026-10-07T18:10:00Z",
+      "event": "cross_domain_adaptation_discovery_execution_chain_repair",
+      "summary": "נמצא שה־adaptation workflow הריץ evaluator לפני discovery, ולכן recent_items לא יכלו להיווצר. תיקנתי את השרשרת כך שה־discovery מתרענן לפני ההערכה, ושמרתי את פריטי המקור הנוכחיים גם כאשר הם לא השתנו.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; connected GitHub repository inspection"
     },
     {
       "date": "2026-10-08",
-      "event": "registry_boundary_n8n",
-      "summary": "Registry execution boundary was hardened; n8n interoperability became a research candidate with a minimal reversible contract test.",
-      "source": "git/development journal"
+      "event": "n8n_interoperability",
+      "source": "repository journal and official research",
+      "status": "EVIDENCED",
+      "summary": "n8n agent interoperability was recorded as a research candidate and the smallest reversible contract test was added; runtime integration remains gated."
     },
     {
       "date": "2026-10-08",
-      "event": "self_evolution_timeline",
-      "summary": "A persistent chronological self-evolution mechanism was added to connect history, archives, current gaps and daily learning.",
-      "source": "git/current execution"
+      "event": "daily_summary",
+      "summary": "## IMA — סיכום למידה יומי\n\n**2026-10-08**\n\n- שאלה יומית: מה עוד ניתן לשפר באמא היום?\n- תשובה: אין מספיק ראיות חדשות לקביעה אמיתית; לא מסמנים שיפור שלא הוכח.\n- שינויים שנצפו היום: 0\n- אירועי פיתוח: 0\n",
+      "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-08.md"
+    },
+    {
+      "timestamp": "2026-10-08T12:06:00Z",
+      "event": "registry_execution_boundary_hardening",
+      "summary": "Aligned the runtime Nylas email endpoints with the authoritative plugin registry: candidate providers can no longer execute merely because source code and secrets exist.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; .ima/plugins/REGISTRY.json; app.py; GitHub repository"
+    },
+    {
+      "timestamp": "2026-10-08T16:43:43.940Z",
+      "event": "next_generation_experience_production_step",
+      "summary": "הורחבה שכבת חוויית IMA בפועל ונשלחה ל-Render אוטומטית: בקרת תנועה נגישה, מצב תמלול, מצב busy נגיש, ושימור העדפת תנועה מקומית. במקביל הורחב החוזה היומי לחוויית קול/דמות/אתר/זיכרון/נגישות/רציפות/מעבדה/שפה/עתיד.",
+      "status": "EXECUTED",
+      "source": "IMA Project Steward; GitHub repository; Render deployment evidence; IMA — התפתחות מתמדת"
+    },
+    {
+      "timestamp": "2026-10-17T10:42:00Z",
+      "event": "universal_memory_trend_to_brand_runtime_cycle",
+      "summary": "הורחבו Universal Conversation & Interaction Memory ו-IMA Trend-to-Brand Engine במחזור מאוחד; בטיחות נכנסה בפועל לציון הזדמנות, ונוספו normalization ו-runtime provenance verification לזיכרון.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA Global Health Loop; GitHub repository; Render"
+    },
+    {
+      "timestamp": "2026-10-17T13:27:22+00:00",
+      "event": "TEST",
+      "summary": "journal test",
+      "status": "VERIFIED",
+      "source": "unit-test"
+    },
+    {
+      "commit": "698538002f7602dce62eacbb2e8860d81cbf3b71",
+      "timestamp": "2026-10-17T16:27:10+03:00",
+      "event": "commit",
+      "summary": "test: verify arXiv remains in scientific discovery",
+      "source": "git"
     }
   ]
 }

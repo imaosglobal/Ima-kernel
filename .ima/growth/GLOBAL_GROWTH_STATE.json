@@ -1,0 +1,51 @@
+{
+  "schema": "IMA-GLOBAL-GROWTH-1.0",
+  "timestamp": "2026-10-17T13:28:08.402462+00:00",
+  "principle": "real_users_only",
+  "funnel": [
+    "DISCOVER",
+    "VISIT",
+    "START",
+    "RETURN",
+    "VALUE",
+    "FEEDBACK",
+    "IMPROVE",
+    "SHARE",
+    "RETURN"
+  ],
+  "analytics": {
+    "posthog_configured": {
+      "available": false,
+      "source": "runtime environment"
+    },
+    "posthog_host_configured": {
+      "available": false,
+      "source": "runtime environment"
+    }
+  },
+  "distribution": {
+    "website": true,
+    "pwa": true,
+    "android_project": true,
+    "store_listing_verified": false,
+    "external_social_authorization": false
+  },
+  "feedback": {
+    "api_contract": true,
+    "public_feedback_page": true
+  },
+  "localization_target": [
+    "he",
+    "en",
+    "ar",
+    "es",
+    "fr",
+    "pt",
+    "de",
+    "hi",
+    "ja",
+    "ko",
+    "zh"
+  ],
+  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews."
+}

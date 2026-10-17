@@ -1,0 +1,4142 @@
+{
+  "schema": "IMA-UNIFIED-LOOP-1.3",
+  "timestamp": "2026-10-17T16:27:22+03:00",
+  "timezone": "Asia/Jerusalem",
+  "stages": [
+    "REMEMBER",
+    "PRESERVE",
+    "OBSERVE",
+    "DISCOVER",
+    "LISTEN",
+    "UNDERSTAND",
+    "SEPARATE_FACT_FROM_INFERENCE",
+    "QUESTION",
+    "CONNECT",
+    "CREATE",
+    "HUMANIZE",
+    "TEST",
+    "VERIFY",
+    "CORRECT",
+    "TEACH",
+    "SHARE_LAWFULLY",
+    "CARRY_FORWARD"
+  ],
+  "scope": [
+    "human intelligence",
+    "human culture",
+    "intergenerational memory and historical preservation",
+    "consent-aware private memory",
+    "child safety and age assurance",
+    "learning and knowledge gaps",
+    "web intelligence",
+    "self-reflection and evolution",
+    "energy-internal research",
+    "product and public QA",
+    "lawful public education and distribution",
+    "capability radar and engine discovery",
+    "universal learning across fields",
+    "emerging-field discovery",
+    "interdisciplinary knowledge graph",
+    "capability substitution and provider independence",
+    "verified capability self-application",
+    "self-application release testing",
+    "teaching verified capabilities to people",
+    "release/version stewardship",
+    "repository health/statistics review",
+    "real-user growth and retention",
+    "privacy-preserving product analytics and feedback",
+    "global localization and accessibility",
+    "app-store readiness and verified reputation",
+    "lawful growth experiments and partnership discovery",
+    "long-horizon continuity (daily/monthly/yearly/decadal)"
+  ],
+  "tasks": [
+    {
+      "task": "web_intelligence",
+      "command": [
+        "python",
+        ".ima/web_intelligence/global_discovery.py",
+        "--once"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "    },\n    {\n      \"id\": \"bc34387f9dbcbb0f4509\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42666366/\",\n      \"title\": \"PubMed PMID 42666366\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    },\n    {\n      \"id\": \"4249a7d70b2927596001\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42609944/\",\n      \"title\": \"PubMed PMID 42609944\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    },\n    {\n      \"id\": \"7dca06cdd5d42aa4b049\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42524027/\",\n      \"title\": \"PubMed PMID 42524027\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    },\n    {\n      \"id\": \"89f1578e40b5c749efef\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42428234/\",\n      \"title\": \"PubMed PMID 42428234\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    },\n    {\n      \"id\": \"1830a67aef48fb3c1cf3\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42368549/\",\n      \"title\": \"PubMed PMID 42368549\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    },\n    {\n      \"id\": \"4a22452a4bef0240c89a\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42311608/\",\n      \"title\": \"PubMed PMID 42311608\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-10-17T13:27:27Z\"\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "foresight_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_long_horizon_foresight.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_future_is_hypothesis_and_has_present_actions (test_long_horizon_foresight.ForesightTests.test_future_is_hypothesis_and_has_present_actions) ... ok\ntest_multiple_horizons_exist (test_long_horizon_foresight.ForesightTests.test_multiple_horizons_exist) ... ok\ntest_prioritize_actions_puts_now_before_year (test_long_horizon_foresight.ForesightTests.test_prioritize_actions_puts_now_before_year) ... ok\ntest_re_evaluation_plan_is_explicit (test_long_horizon_foresight.ForesightTests.test_re_evaluation_plan_is_explicit) ... ok\ntest_system_foresight_covers_every_component (test_long_horizon_foresight.ForesightTests.test_system_foresight_covers_every_component) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "culture_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_human_culture.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_context_is_available_to_model_pipeline (test_human_culture.HumanCultureTests.test_context_is_available_to_model_pipeline) ... ok\ntest_contract_is_valid (test_human_culture.HumanCultureTests.test_contract_is_valid) ... ok\ntest_founder_is_not_authority (test_human_culture.HumanCultureTests.test_founder_is_not_authority) ... ok\ntest_preserves_epistemic_distinctions (test_human_culture.HumanCultureTests.test_preserves_epistemic_distinctions) ... ok\ntest_preserves_many_cultures_without_homogenization (test_human_culture.HumanCultureTests.test_preserves_many_cultures_without_homogenization) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "human_intelligence_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_human_intelligence_policy.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_empty_message_is_handled (test_human_intelligence_policy.HumanIntelligencePolicyTests.test_empty_message_is_handled) ... ok\ntest_policy_has_version_and_core_purpose (test_human_intelligence_policy.HumanIntelligencePolicyTests.test_policy_has_version_and_core_purpose) ... ok\ntest_policy_preserves_human_agency_and_relationships (test_human_intelligence_policy.HumanIntelligencePolicyTests.test_policy_preserves_human_agency_and_relationships) ... ok\ntest_policy_requires_consent_for_cross_user_learning (test_human_intelligence_policy.HumanIntelligencePolicyTests.test_policy_requires_consent_for_cross_user_learning) ... ok\ntest_prompt_includes_policy_and_user_request (test_human_intelligence_policy.HumanIntelligencePolicyTests.test_prompt_includes_policy_and_user_request) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "unified_loop_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ima_loop.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_all_required_stages_exist (test_ima_loop.UnifiedLoopTests.test_all_required_stages_exist) ... ok\ntest_ima_knows_self_world_and_user_boundaries (test_ima_loop.UnifiedLoopTests.test_ima_knows_self_world_and_user_boundaries) ... ok\ntest_single_scheduler_contract (test_ima_loop.UnifiedLoopTests.test_single_scheduler_contract) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "universal_learning_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_universal_learning_engine.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_capability_requires_verified_state (test_universal_learning_engine.UniversalLearningEngineTests.test_capability_requires_verified_state) ... ok\ntest_domains_connect_both_ways (test_universal_learning_engine.UniversalLearningEngineTests.test_domains_connect_both_ways) ... ok\ntest_emerging_field_is_only_a_proposal (test_universal_learning_engine.UniversalLearningEngineTests.test_emerging_field_is_only_a_proposal) ... ok\ntest_evidence_and_unknowns_are_preserved (test_universal_learning_engine.UniversalLearningEngineTests.test_evidence_and_unknowns_are_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "self_application_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_capability_self_application.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_unverified_capability_cannot_self_apply (test_capability_self_application.SelfApplicationTests.test_unverified_capability_cannot_self_apply) ... ok\ntest_verified_capability_creates_bounded_plan (test_capability_self_application.SelfApplicationTests.test_verified_capability_creates_bounded_plan) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "creative_bridge_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_creative_bridge.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_bridge_needs_tests_and_evidence (test_creative_bridge.CreativeBridgeTests.test_bridge_needs_tests_and_evidence) ... ok\ntest_failed_bridge_is_not_verified (test_creative_bridge.CreativeBridgeTests.test_failed_bridge_is_not_verified) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "distribution",
+      "command": [
+        "python",
+        ".ima/distribution/prepare.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-10-17T13:28:07Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "capability_contract",
+      "command": [
+        "npm",
+        "run",
+        "test:capabilities"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "\n> ima-kernel@1.0.0 test:capabilities\n> node tests/capability_registry.test.cjs\n\nIMA capability registry + Next Action CLI: PASS (14 capabilities; 13 queued actions; UI wired)\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "growth_cycle",
+      "command": [
+        "python",
+        "scripts/ima_growth_cycle.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-10-17T13:28:08.402462+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "foresight": {
+    "components": {
+      "human intelligence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make human intelligence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for human intelligence"
+          ],
+          "first_actions": [
+            "inspect current human intelligence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for human intelligence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make human intelligence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for human intelligence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for human intelligence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare human intelligence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that human intelligence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for human intelligence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for human intelligence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve human intelligence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting human intelligence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for human intelligence"
+          ],
+          "tests": [
+            "exercise the fallback path for human intelligence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep human intelligence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct human intelligence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for human intelligence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for human intelligence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "human culture": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make human culture observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for human culture"
+          ],
+          "first_actions": [
+            "inspect current human culture implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for human culture"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make human culture reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for human culture"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for human culture"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare human culture for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that human culture remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for human culture"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for human culture"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve human culture across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting human culture"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for human culture"
+          ],
+          "tests": [
+            "exercise the fallback path for human culture"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep human culture understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct human culture"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for human culture"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for human culture"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "intergenerational memory and historical preservation": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make intergenerational memory and historical preservation observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for intergenerational memory and historical preservation"
+          ],
+          "first_actions": [
+            "inspect current intergenerational memory and historical preservation implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for intergenerational memory and historical preservation"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make intergenerational memory and historical preservation reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for intergenerational memory and historical preservation"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for intergenerational memory and historical preservation"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare intergenerational memory and historical preservation for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that intergenerational memory and historical preservation remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for intergenerational memory and historical preservation"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for intergenerational memory and historical preservation"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve intergenerational memory and historical preservation across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting intergenerational memory and historical preservation"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for intergenerational memory and historical preservation"
+          ],
+          "tests": [
+            "exercise the fallback path for intergenerational memory and historical preservation"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep intergenerational memory and historical preservation understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct intergenerational memory and historical preservation"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for intergenerational memory and historical preservation"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for intergenerational memory and historical preservation"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "consent-aware private memory": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make consent-aware private memory observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for consent-aware private memory"
+          ],
+          "first_actions": [
+            "inspect current consent-aware private memory implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for consent-aware private memory"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make consent-aware private memory reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for consent-aware private memory"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for consent-aware private memory"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare consent-aware private memory for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that consent-aware private memory remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for consent-aware private memory"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for consent-aware private memory"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve consent-aware private memory across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting consent-aware private memory"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for consent-aware private memory"
+          ],
+          "tests": [
+            "exercise the fallback path for consent-aware private memory"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep consent-aware private memory understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct consent-aware private memory"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for consent-aware private memory"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for consent-aware private memory"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "child safety and age assurance": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make child safety and age assurance observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for child safety and age assurance"
+          ],
+          "first_actions": [
+            "inspect current child safety and age assurance implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for child safety and age assurance"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make child safety and age assurance reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for child safety and age assurance"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for child safety and age assurance"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare child safety and age assurance for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that child safety and age assurance remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for child safety and age assurance"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for child safety and age assurance"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve child safety and age assurance across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting child safety and age assurance"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for child safety and age assurance"
+          ],
+          "tests": [
+            "exercise the fallback path for child safety and age assurance"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep child safety and age assurance understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct child safety and age assurance"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for child safety and age assurance"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for child safety and age assurance"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "learning and knowledge gaps": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make learning and knowledge gaps observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for learning and knowledge gaps"
+          ],
+          "first_actions": [
+            "inspect current learning and knowledge gaps implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for learning and knowledge gaps"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make learning and knowledge gaps reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for learning and knowledge gaps"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for learning and knowledge gaps"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare learning and knowledge gaps for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that learning and knowledge gaps remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for learning and knowledge gaps"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for learning and knowledge gaps"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve learning and knowledge gaps across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting learning and knowledge gaps"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for learning and knowledge gaps"
+          ],
+          "tests": [
+            "exercise the fallback path for learning and knowledge gaps"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep learning and knowledge gaps understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct learning and knowledge gaps"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for learning and knowledge gaps"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for learning and knowledge gaps"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "web intelligence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make web intelligence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for web intelligence"
+          ],
+          "first_actions": [
+            "inspect current web intelligence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for web intelligence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make web intelligence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for web intelligence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for web intelligence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare web intelligence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that web intelligence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for web intelligence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for web intelligence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve web intelligence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting web intelligence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for web intelligence"
+          ],
+          "tests": [
+            "exercise the fallback path for web intelligence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep web intelligence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct web intelligence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for web intelligence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for web intelligence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "self-reflection and evolution": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make self-reflection and evolution observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for self-reflection and evolution"
+          ],
+          "first_actions": [
+            "inspect current self-reflection and evolution implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for self-reflection and evolution"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make self-reflection and evolution reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for self-reflection and evolution"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for self-reflection and evolution"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare self-reflection and evolution for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that self-reflection and evolution remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for self-reflection and evolution"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for self-reflection and evolution"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve self-reflection and evolution across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting self-reflection and evolution"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for self-reflection and evolution"
+          ],
+          "tests": [
+            "exercise the fallback path for self-reflection and evolution"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep self-reflection and evolution understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct self-reflection and evolution"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for self-reflection and evolution"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for self-reflection and evolution"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "energy-internal research": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make energy-internal research observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for energy-internal research"
+          ],
+          "first_actions": [
+            "inspect current energy-internal research implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for energy-internal research"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make energy-internal research reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for energy-internal research"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for energy-internal research"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare energy-internal research for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that energy-internal research remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for energy-internal research"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for energy-internal research"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve energy-internal research across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting energy-internal research"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for energy-internal research"
+          ],
+          "tests": [
+            "exercise the fallback path for energy-internal research"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep energy-internal research understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct energy-internal research"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for energy-internal research"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for energy-internal research"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "product and public QA": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make product and public QA observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for product and public QA"
+          ],
+          "first_actions": [
+            "inspect current product and public QA implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for product and public QA"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make product and public QA reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for product and public QA"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for product and public QA"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare product and public QA for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that product and public QA remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for product and public QA"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for product and public QA"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve product and public QA across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting product and public QA"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for product and public QA"
+          ],
+          "tests": [
+            "exercise the fallback path for product and public QA"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep product and public QA understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct product and public QA"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for product and public QA"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for product and public QA"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "lawful public education and distribution": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make lawful public education and distribution observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for lawful public education and distribution"
+          ],
+          "first_actions": [
+            "inspect current lawful public education and distribution implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for lawful public education and distribution"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make lawful public education and distribution reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for lawful public education and distribution"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for lawful public education and distribution"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare lawful public education and distribution for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that lawful public education and distribution remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for lawful public education and distribution"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for lawful public education and distribution"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve lawful public education and distribution across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting lawful public education and distribution"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for lawful public education and distribution"
+          ],
+          "tests": [
+            "exercise the fallback path for lawful public education and distribution"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep lawful public education and distribution understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct lawful public education and distribution"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for lawful public education and distribution"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for lawful public education and distribution"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "capability radar and engine discovery": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make capability radar and engine discovery observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for capability radar and engine discovery"
+          ],
+          "first_actions": [
+            "inspect current capability radar and engine discovery implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for capability radar and engine discovery"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make capability radar and engine discovery reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for capability radar and engine discovery"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for capability radar and engine discovery"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare capability radar and engine discovery for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that capability radar and engine discovery remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for capability radar and engine discovery"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for capability radar and engine discovery"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve capability radar and engine discovery across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting capability radar and engine discovery"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for capability radar and engine discovery"
+          ],
+          "tests": [
+            "exercise the fallback path for capability radar and engine discovery"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep capability radar and engine discovery understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct capability radar and engine discovery"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for capability radar and engine discovery"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for capability radar and engine discovery"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "universal learning across fields": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make universal learning across fields observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for universal learning across fields"
+          ],
+          "first_actions": [
+            "inspect current universal learning across fields implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for universal learning across fields"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make universal learning across fields reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for universal learning across fields"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for universal learning across fields"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare universal learning across fields for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that universal learning across fields remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for universal learning across fields"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for universal learning across fields"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve universal learning across fields across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting universal learning across fields"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for universal learning across fields"
+          ],
+          "tests": [
+            "exercise the fallback path for universal learning across fields"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep universal learning across fields understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct universal learning across fields"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for universal learning across fields"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for universal learning across fields"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "emerging-field discovery": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make emerging-field discovery observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for emerging-field discovery"
+          ],
+          "first_actions": [
+            "inspect current emerging-field discovery implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for emerging-field discovery"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make emerging-field discovery reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for emerging-field discovery"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for emerging-field discovery"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare emerging-field discovery for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that emerging-field discovery remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for emerging-field discovery"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for emerging-field discovery"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve emerging-field discovery across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting emerging-field discovery"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for emerging-field discovery"
+          ],
+          "tests": [
+            "exercise the fallback path for emerging-field discovery"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep emerging-field discovery understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct emerging-field discovery"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for emerging-field discovery"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for emerging-field discovery"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "interdisciplinary knowledge graph": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make interdisciplinary knowledge graph observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for interdisciplinary knowledge graph"
+          ],
+          "first_actions": [
+            "inspect current interdisciplinary knowledge graph implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for interdisciplinary knowledge graph"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make interdisciplinary knowledge graph reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for interdisciplinary knowledge graph"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for interdisciplinary knowledge graph"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare interdisciplinary knowledge graph for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that interdisciplinary knowledge graph remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for interdisciplinary knowledge graph"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for interdisciplinary knowledge graph"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve interdisciplinary knowledge graph across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting interdisciplinary knowledge graph"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for interdisciplinary knowledge graph"
+          ],
+          "tests": [
+            "exercise the fallback path for interdisciplinary knowledge graph"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep interdisciplinary knowledge graph understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct interdisciplinary knowledge graph"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for interdisciplinary knowledge graph"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for interdisciplinary knowledge graph"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "capability substitution and provider independence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make capability substitution and provider independence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for capability substitution and provider independence"
+          ],
+          "first_actions": [
+            "inspect current capability substitution and provider independence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for capability substitution and provider independence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make capability substitution and provider independence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for capability substitution and provider independence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for capability substitution and provider independence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare capability substitution and provider independence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that capability substitution and provider independence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for capability substitution and provider independence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for capability substitution and provider independence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve capability substitution and provider independence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting capability substitution and provider independence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for capability substitution and provider independence"
+          ],
+          "tests": [
+            "exercise the fallback path for capability substitution and provider independence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep capability substitution and provider independence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct capability substitution and provider independence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for capability substitution and provider independence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for capability substitution and provider independence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "verified capability self-application": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make verified capability self-application observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for verified capability self-application"
+          ],
+          "first_actions": [
+            "inspect current verified capability self-application implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for verified capability self-application"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make verified capability self-application reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for verified capability self-application"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for verified capability self-application"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare verified capability self-application for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that verified capability self-application remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for verified capability self-application"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for verified capability self-application"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve verified capability self-application across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting verified capability self-application"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for verified capability self-application"
+          ],
+          "tests": [
+            "exercise the fallback path for verified capability self-application"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep verified capability self-application understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct verified capability self-application"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for verified capability self-application"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for verified capability self-application"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "self-application release testing": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make self-application release testing observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for self-application release testing"
+          ],
+          "first_actions": [
+            "inspect current self-application release testing implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for self-application release testing"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make self-application release testing reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for self-application release testing"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for self-application release testing"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare self-application release testing for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that self-application release testing remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for self-application release testing"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for self-application release testing"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve self-application release testing across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting self-application release testing"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for self-application release testing"
+          ],
+          "tests": [
+            "exercise the fallback path for self-application release testing"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep self-application release testing understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct self-application release testing"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for self-application release testing"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for self-application release testing"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "teaching verified capabilities to people": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make teaching verified capabilities to people observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for teaching verified capabilities to people"
+          ],
+          "first_actions": [
+            "inspect current teaching verified capabilities to people implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for teaching verified capabilities to people"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make teaching verified capabilities to people reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for teaching verified capabilities to people"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for teaching verified capabilities to people"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare teaching verified capabilities to people for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that teaching verified capabilities to people remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for teaching verified capabilities to people"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for teaching verified capabilities to people"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve teaching verified capabilities to people across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting teaching verified capabilities to people"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for teaching verified capabilities to people"
+          ],
+          "tests": [
+            "exercise the fallback path for teaching verified capabilities to people"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep teaching verified capabilities to people understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct teaching verified capabilities to people"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for teaching verified capabilities to people"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for teaching verified capabilities to people"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "release/version stewardship": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make release/version stewardship observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for release/version stewardship"
+          ],
+          "first_actions": [
+            "inspect current release/version stewardship implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for release/version stewardship"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make release/version stewardship reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for release/version stewardship"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for release/version stewardship"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare release/version stewardship for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that release/version stewardship remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for release/version stewardship"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for release/version stewardship"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve release/version stewardship across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting release/version stewardship"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for release/version stewardship"
+          ],
+          "tests": [
+            "exercise the fallback path for release/version stewardship"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep release/version stewardship understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct release/version stewardship"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for release/version stewardship"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for release/version stewardship"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "repository health/statistics review": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make repository health/statistics review observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for repository health/statistics review"
+          ],
+          "first_actions": [
+            "inspect current repository health/statistics review implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for repository health/statistics review"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make repository health/statistics review reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for repository health/statistics review"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for repository health/statistics review"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare repository health/statistics review for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that repository health/statistics review remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for repository health/statistics review"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for repository health/statistics review"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve repository health/statistics review across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting repository health/statistics review"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for repository health/statistics review"
+          ],
+          "tests": [
+            "exercise the fallback path for repository health/statistics review"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep repository health/statistics review understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct repository health/statistics review"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for repository health/statistics review"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for repository health/statistics review"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "real-user growth and retention": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make real-user growth and retention observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for real-user growth and retention"
+          ],
+          "first_actions": [
+            "inspect current real-user growth and retention implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for real-user growth and retention"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make real-user growth and retention reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for real-user growth and retention"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for real-user growth and retention"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare real-user growth and retention for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that real-user growth and retention remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for real-user growth and retention"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for real-user growth and retention"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve real-user growth and retention across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting real-user growth and retention"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for real-user growth and retention"
+          ],
+          "tests": [
+            "exercise the fallback path for real-user growth and retention"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep real-user growth and retention understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct real-user growth and retention"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for real-user growth and retention"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for real-user growth and retention"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "privacy-preserving product analytics and feedback": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make privacy-preserving product analytics and feedback observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for privacy-preserving product analytics and feedback"
+          ],
+          "first_actions": [
+            "inspect current privacy-preserving product analytics and feedback implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for privacy-preserving product analytics and feedback"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make privacy-preserving product analytics and feedback reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for privacy-preserving product analytics and feedback"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for privacy-preserving product analytics and feedback"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare privacy-preserving product analytics and feedback for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that privacy-preserving product analytics and feedback remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for privacy-preserving product analytics and feedback"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for privacy-preserving product analytics and feedback"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve privacy-preserving product analytics and feedback across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting privacy-preserving product analytics and feedback"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for privacy-preserving product analytics and feedback"
+          ],
+          "tests": [
+            "exercise the fallback path for privacy-preserving product analytics and feedback"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep privacy-preserving product analytics and feedback understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct privacy-preserving product analytics and feedback"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for privacy-preserving product analytics and feedback"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for privacy-preserving product analytics and feedback"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "global localization and accessibility": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global localization and accessibility observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global localization and accessibility"
+          ],
+          "first_actions": [
+            "inspect current global localization and accessibility implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global localization and accessibility"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global localization and accessibility reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global localization and accessibility"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global localization and accessibility"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global localization and accessibility for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global localization and accessibility remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global localization and accessibility"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global localization and accessibility"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global localization and accessibility across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global localization and accessibility"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global localization and accessibility"
+          ],
+          "tests": [
+            "exercise the fallback path for global localization and accessibility"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global localization and accessibility understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global localization and accessibility"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global localization and accessibility"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global localization and accessibility"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "app-store readiness and verified reputation": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make app-store readiness and verified reputation observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for app-store readiness and verified reputation"
+          ],
+          "first_actions": [
+            "inspect current app-store readiness and verified reputation implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for app-store readiness and verified reputation"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make app-store readiness and verified reputation reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for app-store readiness and verified reputation"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for app-store readiness and verified reputation"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare app-store readiness and verified reputation for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that app-store readiness and verified reputation remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for app-store readiness and verified reputation"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for app-store readiness and verified reputation"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve app-store readiness and verified reputation across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting app-store readiness and verified reputation"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for app-store readiness and verified reputation"
+          ],
+          "tests": [
+            "exercise the fallback path for app-store readiness and verified reputation"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep app-store readiness and verified reputation understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct app-store readiness and verified reputation"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for app-store readiness and verified reputation"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for app-store readiness and verified reputation"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "lawful growth experiments and partnership discovery": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make lawful growth experiments and partnership discovery observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for lawful growth experiments and partnership discovery"
+          ],
+          "first_actions": [
+            "inspect current lawful growth experiments and partnership discovery implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for lawful growth experiments and partnership discovery"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make lawful growth experiments and partnership discovery reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for lawful growth experiments and partnership discovery"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for lawful growth experiments and partnership discovery"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare lawful growth experiments and partnership discovery for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that lawful growth experiments and partnership discovery remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for lawful growth experiments and partnership discovery"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for lawful growth experiments and partnership discovery"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve lawful growth experiments and partnership discovery across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting lawful growth experiments and partnership discovery"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for lawful growth experiments and partnership discovery"
+          ],
+          "tests": [
+            "exercise the fallback path for lawful growth experiments and partnership discovery"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep lawful growth experiments and partnership discovery understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct lawful growth experiments and partnership discovery"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for lawful growth experiments and partnership discovery"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for lawful growth experiments and partnership discovery"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "long-horizon continuity (daily/monthly/yearly/decadal)": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make long-horizon continuity (daily/monthly/yearly/decadal) observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "first_actions": [
+            "inspect current long-horizon continuity (daily/monthly/yearly/decadal) implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make long-horizon continuity (daily/monthly/yearly/decadal) reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare long-horizon continuity (daily/monthly/yearly/decadal) for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that long-horizon continuity (daily/monthly/yearly/decadal) remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve long-horizon continuity (daily/monthly/yearly/decadal) across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "tests": [
+            "exercise the fallback path for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep long-horizon continuity (daily/monthly/yearly/decadal) understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for long-horizon continuity (daily/monthly/yearly/decadal)"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ]
+    },
+    "priority_now_actions": [
+      {
+        "action": "inspect current app-store readiness and verified reputation implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current capability radar and engine discovery implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current capability substitution and provider independence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current child safety and age assurance implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current consent-aware private memory implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current emerging-field discovery implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current energy-internal research implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global localization and accessibility implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current human culture implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current human intelligence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current interdisciplinary knowledge graph implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current intergenerational memory and historical preservation implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current lawful growth experiments and partnership discovery implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current lawful public education and distribution implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current learning and knowledge gaps implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current long-horizon continuity (daily/monthly/yearly/decadal) implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current privacy-preserving product analytics and feedback implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current product and public QA implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current real-user growth and retention implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current release/version stewardship implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current repository health/statistics review implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current self-application release testing implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current self-reflection and evolution implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current teaching verified capabilities to people implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current universal learning across fields implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current verified capability self-application implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current web intelligence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      }
+    ]
+  },
+  "diagnostics": {
+    "summary": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "errors": 0
+    },
+    "findings": [
+      {
+        "task": "web_intelligence",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "foresight_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "culture_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "human_intelligence_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "unified_loop_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "universal_learning_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "self_application_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "creative_bridge_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "distribution",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "capability_contract",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "growth_cycle",
+        "finding": "PASS",
+        "action": "carry_forward"
+      }
+    ],
+    "truth_rule": "Diagnostics describe this run; they do not prove live deployment without runtime evidence."
+  },
+  "single_scheduler": true,
+  "universal_learning_rule": "Every newly accessible field or capability is discovered, evidenced, tested, verified, taught and evaluated for bounded self-application through this loop.",
+  "creative_bridge_rule": "When a meaningful gap is detected between domains, IMA may form a bridge hypothesis; it must be tested and evidenced before being treated as verified.",
+  "foresight_rule": "For every meaningful IMA component, continuously model plausible future states across near, one-year, multi-year and long horizons; treat them as hypotheses, identify signals and prerequisites, and take only safe present actions that prepare for them.",
+  "self_application_rule": "A verified capability may improve IMA itself only through the same inspect -> change -> test -> verify -> carry-forward gates.",
+  "provider_independence_rule": "Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
+  "truth_rule": "Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
+  "lawful_distribution_rule": "Public sharing is limited to lawful, consent-respecting, non-spam channels and authorized accounts.",
+  "user_change_rule": "Every explicit request to add or change the loop is reconciled into this canonical loop contract."
+}

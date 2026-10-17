@@ -1,0 +1,40 @@
+{
+  "schema": "IMA-LAWFUL-DISTRIBUTION-1.0",
+  "content_id": "b38453732a30bb887c3a",
+  "prepared_at": "2026-10-17T13:28:07Z",
+  "content": {
+    "canonical_message": "One humanity. Many cultures. Shared memory. Shared future.",
+    "hebrew_message": "אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.",
+    "link": "https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html",
+    "purpose": "Introduce IMA and the Culture of the Heart without replacing existing cultures."
+  },
+  "channels": [
+    {
+      "name": "public_website",
+      "status": "PUBLISHED_IN_REPOSITORY"
+    },
+    {
+      "name": "github",
+      "status": "PUBLISHED_IN_REPOSITORY"
+    },
+    {
+      "name": "authorized_social",
+      "status": "READY_PENDING_AUTHORIZED_CONNECTION"
+    },
+    {
+      "name": "press_and_community",
+      "status": "READY_PENDING_AUTHORIZED_OUTREACH"
+    },
+    {
+      "name": "education_and_events",
+      "status": "READY"
+    }
+  ],
+  "rules": [
+    "lawful",
+    "consent_respecting",
+    "non_spam",
+    "no_impersonation",
+    "source_attribution"
+  ]
+}
