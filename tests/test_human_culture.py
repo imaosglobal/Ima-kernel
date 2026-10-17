@@ -19,7 +19,7 @@ class HumanCultureTests(unittest.TestCase):
         self.assertTrue(CULTURE_POLICY_VERSION)
 
     def test_preserves_many_cultures_without_homogenization(self):
-        self.assertIn("one humanity, many cultures, shared memory, shared future", SYSTEM_CONTEXT)
+        self.assertIn("one humanity, many cultures, shared memory, shared future", culture_contract()["principles"])
         self.assertIn("Do not replace, erase, rank, appropriate, or silently homogenize", SYSTEM_CONTEXT)
         self.assertGreaterEqual(len(CULTURAL_DOMAINS), 10)
 
