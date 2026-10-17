@@ -4,7 +4,7 @@ import json, subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from core.long_horizon_foresight import system_foresight, prioritize_actions
+from core.long_horizon_foresight import HORIZONS, create_trajectory, prioritize_actions, system_foresight
 from core.long_horizon_foresight import system_foresight, prioritize_actions
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -67,7 +67,7 @@ def run_task(name):
 def run_loop():
     now=now_local(); tasks=due(now); results=[run_task(t) for t in tasks]
     foresight=system_foresight(SYSTEM_SCOPE)
-    foresight_actions=prioritize_actions([__import__('core.long_horizon_foresight', fromlist=['FutureCapability']).create_trajectory(__import__('core.long_horizon_foresight', fromlist=['HORIZONS']).HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
+    foresight_actions=prioritize_actions([create_trajectory(HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
     foresight=system_foresight(SYSTEM_SCOPE)
     foresight_actions=prioritize_actions([__import__('core.long_horizon_foresight', fromlist=['FutureCapability']).create_trajectory(__import__('core.long_horizon_foresight', fromlist=['HORIZONS']).HORIZONS[0], item['outcome'], first_actions=item['first_actions']) for packets in foresight.values() for item in packets[:1]])
     findings=[]
