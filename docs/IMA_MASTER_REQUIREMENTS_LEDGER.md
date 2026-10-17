@@ -90,6 +90,7 @@ Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 
 ### LOOP-001 — Single Canonical IMA Loop
 Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- Runtime identity context is injected into IMA behavior: one global IMA identity, an uncertain/updateable world model, and isolated user context by default.
 - All periodic IMA maintenance, learning, reflection, preservation, culture, web intelligence, evolution, QA and lawful distribution preparation must reconcile through `.ima/loop/unified_loop.py`.
 - The single scheduler is `.github/workflows/ima-unified-loop.yml`, hourly in Asia/Jerusalem.
 - Event-driven CI may remain for immediate push/PR verification; it is not a second periodic loop.
