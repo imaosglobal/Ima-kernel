@@ -38,7 +38,8 @@ def extract_concepts(term):
         if key.lower() in low:
             found.append(key)
 
-        if node.get("name", "").lower() in low:
+        name = node.get("name", "") if isinstance(node, dict) else ""
+        if isinstance(name, str) and name.lower() in low:
             found.append(key)
 
     return list(set(found))
