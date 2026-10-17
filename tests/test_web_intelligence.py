@@ -24,6 +24,7 @@ class WebIntelligenceTests(unittest.TestCase):
 
     def test_scientific_sources_are_free_and_public(self):
         self.assertEqual(len(mod.SCIENTIFIC_APIS), 4)
+        self.assertTrue(any("arxiv.org" in url for url in mod.SEEDS))
         self.assertTrue(all(url.startswith("https://") for url in mod.SCIENTIFIC_APIS))
         self.assertTrue(any("openalex.org" in url for url in mod.SCIENTIFIC_APIS))
         self.assertTrue(any("semanticscholar.org" in url for url in mod.SCIENTIFIC_APIS))
