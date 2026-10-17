@@ -17,6 +17,9 @@ It unifies the previously separated periodic responsibilities:
 - self-reflection and evolution;
 - energy-internal research review;
 - product/QA review;
+- capability radar and engine discovery;
+- capability-contract and next-action validation;
+- release/version stewardship and repository health review;
 - lawful public education/distribution preparation.
 
 The canonical scheduler is .github/workflows/ima-unified-loop.yml.
@@ -25,7 +28,7 @@ The canonical scheduler is .github/workflows/ima-unified-loop.yml.
 
 Push/PR CI and deployment workflows may remain because they are event-driven verification gates. They are not independent periodic learning loops.
 
-No new culture, memory, evolution, web-intelligence or distribution scheduler should be created.
+No new culture, memory, evolution, web-intelligence, capability-radar, engine-discovery, release, statistics or distribution scheduler should be created.
 
 ## User requests and the loop
 
