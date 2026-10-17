@@ -36,6 +36,7 @@ COMMANDS={
 "human_intelligence_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_intelligence_policy.py","-v"],
 "unified_loop_tests":["python","-m","unittest","discover","-s","tests","-p","test_ima_loop.py","-v"],
 "universal_learning_tests":["python","-m","unittest","discover","-s","tests","-p","test_universal_learning_engine.py","-v"],
+"foresight_tests":["python","-m","unittest","discover","-s","tests","-p","test_long_horizon_foresight.py","-v"],
 "creative_bridge_tests":["python","-m","unittest","discover","-s","tests","-p","test_creative_bridge.py","-v"],
 "self_application_tests":["python","-m","unittest","discover","-s","tests","-p","test_capability_self_application.py","-v"],
 "capability_radar":["python","scripts/ima_capability_radar.py"],
@@ -47,7 +48,7 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","distribution","capability_contract","growth_cycle"]
+    tasks=["web_intelligence","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","distribution","capability_contract","growth_cycle"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
     if now.hour==4: tasks += ["capability_radar"]
@@ -74,6 +75,7 @@ def run_loop():
       "single_scheduler":True,
       "universal_learning_rule":"Every newly accessible field or capability is discovered, evidenced, tested, verified, taught and evaluated for bounded self-application through this loop.",
       "creative_bridge_rule":"When a meaningful gap is detected between domains, IMA may form a bridge hypothesis; it must be tested and evidenced before being treated as verified.",
+      "foresight_rule":"For every meaningful IMA component, continuously model plausible future states across near, one-year, multi-year and long horizons; treat them as hypotheses, identify signals and prerequisites, and take only safe present actions that prepare for them.",
       "self_application_rule":"A verified capability may improve IMA itself only through the same inspect -> change -> test -> verify -> carry-forward gates.",
       "provider_independence_rule":"Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
       "truth_rule":"Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
