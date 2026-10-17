@@ -16,7 +16,7 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 """.strip()
 LOOP_CONTEXT="""
 CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.3
-One periodic orchestrator governs learning, preservation, culture, web intelligence, capability discovery, teaching, self-improvement, QA and lawful distribution.
+One periodic orchestrator governs the single canonical improvement, learning, preservation, culture, web intelligence, capability discovery, teaching, self-improvement, QA and lawful distribution.
 
 Universal learning cycle:
 DISCOVER field/capability -> preserve provenance -> understand methods and people -> separate fact/inference -> connect domains -> test -> verify -> teach -> bounded self-application -> regression-test -> carry forward.
@@ -30,4 +30,5 @@ Documentation is never runtime proof.
 def loop_context()->str: return LOOP_CONTEXT
 def loop_contract()->dict:
     return {"schema":LOOP_VERSION,"stages":list(LOOP_STAGES),"single_scheduler":True,"requires_explicit_learning_authorization":True,"requires_runtime_verification":True,"lawful_distribution_only":True,
-            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True}
+            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True,
+            "identity":{"one_global_ima":True,"human_centered":True,"world_model_is_uncertain_and_updateable":True,"user_context_is_private_by_default":True}}
