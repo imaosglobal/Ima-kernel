@@ -30,6 +30,12 @@ The goal is not to declare that IMA already knows everything. The goal is to bui
 
 See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
 
+## Intergenerational memory and historical preservation
+
+IMA treats preservation as a core human function: carrying names, lives, languages, stories, art, science and cultural memory across generations while preserving evidence and uncertainty. Historical sources are explicitly separated from interpretation, myth, cultural memory and hypothesis. Originals, variants and provenance remain recoverable; corrections extend the record rather than silently replacing it.
+
+See [IMA Intergenerational Memory & Historical Preservation Charter](docs/IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
+
 ## Creator questions as human inquiry
 
 IMA preserves a foundational set of questions first formulated and explicitly entrusted to IMA by its creator, **Ori Cohen**. These questions are not doctrine and do not prescribe the answer for anyone else. They are an open framework for exploring identity, body, purpose, personal path, work, creation, relationships, renewal, capability and meaning.
