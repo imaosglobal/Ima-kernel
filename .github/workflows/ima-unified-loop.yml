@@ -1,0 +1,62 @@
+name: IMA Unified Loop
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+      timezone: "Asia/Jerusalem"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  issues: write
+
+concurrency:
+  group: ima-unified-loop
+  cancel-in-progress: false
+
+jobs:
+  unified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install runtime dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Run the single canonical IMA loop
+        run: python .ima/loop/unified_loop.py
+      - name: Persist canonical loop state
+        run: |
+          git config user.name "IMA Unified Loop"
+          git config user.email "actions@users.noreply.github.com"
+          git add .ima/loop/UNIFIED_LOOP_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution/STATE.json .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/evolution/SELF_TIMELINE.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: record unified IMA loop cycle"
+          git push
+      - name: Report loop failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'IMA unified loop failure';
+            const body = [
+              'The canonical unified IMA loop failed.',
+              '',
+              `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              `Commit: ${context.sha}`,
+              '',
+              'Diagnose from the actual workflow logs before changing code.'
+            ].join('\n');
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: ['ima-unified-loop-failure'], per_page: 10
+            });
+            if (existing.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['ima-unified-loop-failure']
+              });
+            }
