@@ -1,14 +1,22 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-16T23:31:45Z",
+  "timestamp": "2026-10-17T04:16:58Z",
   "sources": 12,
-  "discovered": 300,
-  "changed": 3,
+  "discovered": 127,
+  "changed": 5,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -29,28 +37,44 @@
   },
   "items": [
     {
-      "id": "30a2dfe8e10c777c45cc",
-      "url": "https://neuralwatt.com/news/why-harnesses-matter-for-energy-efficiency",
-      "title": "Why harnesses matter for energy (and token) efficiency",
+      "id": "46a80dfd591b4a968fbe",
+      "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+      "title": "Butlerian Jihad",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T23:31:34Z"
+      "observed_at": "2026-10-17T04:16:49Z"
     },
     {
-      "id": "6b04052164311588fe6a",
-      "url": "https://github.com/home-assistant/home-assistant.io/issues/49314",
-      "title": "I never authorized an integration that scans my secrets",
+      "id": "1f8b35f5b6b08f8c931f",
+      "url": "https://www.flexport.com/company/careers/",
+      "title": "Flexport Is Hiring a Biz Ops Leader in Office of CEO",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T23:31:34Z"
+      "observed_at": "2026-10-17T04:16:49Z"
     },
     {
-      "id": "155c7b54b4cbd80e144f",
-      "url": "https://bfl.ai/blog/flux-3-image-klein",
-      "title": "FLUX 3 Image Klein",
+      "id": "b2d8bf32e6e5df922c00",
+      "url": "https://fakeipedia.org",
+      "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-16T23:31:34Z"
+      "observed_at": "2026-10-17T04:16:49Z"
+    },
+    {
+      "id": "aa295988f4329552ffc0",
+      "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
+      "title": "Nine-Inch Snails",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-17T04:16:49Z"
+    },
+    {
+      "id": "aee37d3c9276547a1bf0",
+      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+      "title": "I love software rendering",
+      "source": "https://hnrss.org/frontpage",
+      "kind": "feed",
+      "observed_at": "2026-10-17T04:16:49Z"
     }
   ]
 }
