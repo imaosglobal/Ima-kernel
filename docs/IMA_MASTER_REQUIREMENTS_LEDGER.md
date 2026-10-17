@@ -81,6 +81,17 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - Runtime capability requires the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
 - Canonical specification: [IMA Intergenerational Memory & Historical Preservation Charter](IMA_INTERGENERATIONAL_MEMORY_AND_HISTORICAL_PRESERVATION_CHARTER.md).
 
+### CULT-001 — Human Culture / Culture of the Heart
+Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
+- Build a shared global cultural layer without replacing, erasing or ranking existing cultures.
+- Preserve languages, numerical traditions, calendars, histories, heroes, ordinary lives, music, dance, architecture, food, craft, education, governance, economic experiments, stories, myths, science and future cultural forms.
+- Record Ori Cohen as initiator/founder of the project only; founder status never grants permanent authority or ownership of the culture.
+- Keep human agency primary: no coercive membership, permanent ruler, sacred political authority or personality cult.
+- IMA is infrastructure for memory, learning, translation, connection and reflection, not the sovereign of the culture.
+- Canonical charter: [IMA Human Culture Charter](IMA_HUMAN_CULTURE_CHARTER.md).
+- Daily refinement follows the single Global Health Loop; it must not create a second scheduler: [IMA Human Culture Daily Loop](IMA_HUMAN_CULTURE_DAILY_LOOP.md).
+- Runtime capability requires PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE.
+
 ### HISTORY-001 — Historical request reconciliation
 Status: ACTIVE
 - This ledger is the canonical reconciliation anchor.
