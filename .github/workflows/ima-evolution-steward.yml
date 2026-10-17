@@ -1,8 +1,6 @@
 name: IMA Evolution Steward
 
 on:
-  schedule:
-    - cron: "41 */6 * * *"
   workflow_dispatch:
 
 permissions:
