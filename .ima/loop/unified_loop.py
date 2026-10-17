@@ -63,7 +63,14 @@ def run_task(name):
 
 def run_loop():
     now=now_local(); tasks=due(now); results=[run_task(t) for t in tasks]
+    findings=[]
+    for result in results:
+        status=result.get("status")
+        task=result.get("task","unknown")
+        action="carry_forward" if status=="PASS" else ("inspect_logs_before_change" if status=="FAIL" else "inspect_runtime_evidence")
+        findings.append({"task":task,"finding":status or "UNKNOWN","action":action})
     record={"schema":"IMA-UNIFIED-LOOP-1.3","timestamp":now.isoformat(),"timezone":"Asia/Jerusalem","stages":list(STAGES),"scope":list(SYSTEM_SCOPE),"tasks":results,
+      "diagnostics":{"summary":{"total":len(results),"passed":sum(r.get("status")=="PASS" for r in results),"failed":sum(r.get("status")=="FAIL" for r in results),"errors":sum(r.get("status") in {"ERROR","UNKNOWN",None} for r in results)},"findings":findings,"truth_rule":"Diagnostics describe this run; they do not prove live deployment without runtime evidence."},
       "single_scheduler":True,
       "universal_learning_rule":"Every newly accessible field or capability is discovered, evidenced, tested, verified, taught and evaluated for bounded self-application through this loop.",
       "creative_bridge_rule":"When a meaningful gap is detected between domains, IMA may form a bridge hypothesis; it must be tested and evidenced before being treated as verified.",
