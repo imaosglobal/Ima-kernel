@@ -9,6 +9,7 @@ const verify = fs.readFileSync("scripts/verify-ima.mjs", "utf8");
 const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
 const selfHealingDoc = fs.readFileSync("docs/IMA_SELF_HEALING_AND_AUTOMATED_REPAIR.md", "utf8");
+const unifiedLoop = fs.readFileSync(".ima/loop/unified_loop.py", "utf8");
 
 assert.ok(health.includes("npm run ima:verify"), "continuous health must invoke the canonical verification runner");
 for (const required of [
@@ -25,9 +26,9 @@ for (const required of ["npm ci", "npm run lint", "npm run build"]) {
   assert.ok(health.includes(required), `continuous health missing frontend step: ${required}`);
 }
 
-assert.ok(health.includes("schedule:"), "continuous health must remain scheduled");
 assert.ok(health.includes("IMA_LIVE_DEPLOYMENT_SMOKE=PASS"), "live deployment smoke test must remain enabled");
-assert.ok(health.includes('cron: "17 */6 * * *"'), "continuous health cadence changed unexpectedly");
+assert.ok(unifiedLoop.includes("IMA-UNIFIED-LOOP-1.1"), "canonical unified loop must be current");
+assert.ok(unifiedLoop.includes("single_scheduler"), "canonical unified loop must remain the single scheduler");
 assert.ok(pages.includes("VITE_IMA_API_BASE"), "Pages must publish the runtime API base");
 assert.ok(pages.includes("artifact_name: github-pages-"), "Pages artifact must remain uniquely named");
 assert.ok(coreTest.includes("IMA_CORE_TEST=PASS"), "core test must have a deterministic success marker");
