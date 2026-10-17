@@ -2,8 +2,6 @@ name: IMA Daily Learning Summary
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 21 * * *"
       timezone: "Asia/Jerusalem"
 
 permissions:
