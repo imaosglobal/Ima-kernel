@@ -1,22 +1,14 @@
 {
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
   "status": "completed",
-  "timestamp": "2026-10-17T04:16:58Z",
+  "timestamp": "2026-10-17T09:16:17Z",
   "sources": 12,
-  "discovered": 127,
+  "discovered": 181,
   "changed": 5,
   "errors": [
     {
       "source": "https://www.commoncrawl.org/",
       "error": "ParseError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "error": "HTTPError"
     },
     {
       "source": "https://www.mozilla.org/en-US/firefox/notes/feed/",
@@ -37,44 +29,44 @@
   },
   "items": [
     {
-      "id": "46a80dfd591b4a968fbe",
-      "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
-      "title": "Butlerian Jihad",
-      "source": "https://hnrss.org/frontpage",
+      "id": "e1b9f2d4fdbd304b9441",
+      "url": "https://science.nasa.gov/image-article/apod-2026-october-17-3d-67p/",
+      "title": "APOD: 2026 October 17 – 3D 67P",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
       "kind": "feed",
-      "observed_at": "2026-10-17T04:16:49Z"
+      "observed_at": "2026-10-17T09:15:48Z"
     },
     {
-      "id": "1f8b35f5b6b08f8c931f",
-      "url": "https://www.flexport.com/company/careers/",
-      "title": "Flexport Is Hiring a Biz Ops Leader in Office of CEO",
+      "id": "bb7567bf1088595fe353",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+      "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-17T04:16:49Z"
+      "observed_at": "2026-10-17T09:15:50Z"
     },
     {
-      "id": "b2d8bf32e6e5df922c00",
-      "url": "https://fakeipedia.org",
-      "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist",
+      "id": "cac24968e5aa0d5bf28d",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "title": "DeepSeek-v4.1-Flash-1017",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-17T04:16:49Z"
+      "observed_at": "2026-10-17T09:15:50Z"
     },
     {
-      "id": "aa295988f4329552ffc0",
-      "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
-      "title": "Nine-Inch Snails",
+      "id": "5cf8bc3a52e1e15c3bc1",
+      "url": "https://llmspeed.dev/",
+      "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-17T04:16:49Z"
+      "observed_at": "2026-10-17T09:15:50Z"
     },
     {
-      "id": "aee37d3c9276547a1bf0",
-      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
-      "title": "I love software rendering",
+      "id": "eb4eb8e5eb48cb4a6eed",
+      "url": "https://adepts.of0x.cc/eufy-homestation2-firmware/",
+      "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
       "source": "https://hnrss.org/frontpage",
       "kind": "feed",
-      "observed_at": "2026-10-17T04:16:49Z"
+      "observed_at": "2026-10-17T09:15:50Z"
     }
   ]
 }
