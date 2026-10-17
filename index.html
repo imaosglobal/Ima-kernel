@@ -66,7 +66,7 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 <p class="eyebrow">IMA · GLOBAL HUMAN-CENTERED INTELLIGENCE</p>
 <h1>אמא<br><span>של כולם.</span></h1>
 <p class="lead">מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר. אמא לומדת עם האדם — לא במקומו — ומעדיפה אמת, חמלה וסקרנות על פני יומרה לדעת הכול.</p>
-<div class="cta"><a class="secondary" href="#about">להכיר את אמא</a><button class="secondary" id="share" type="button">לשתף את אמא</button></div>
+<div class="cta"><a class="secondary" href="#about">להכיר את אמא</a><button class="secondary" id="share" type="button">לשתף את אמא</button><a class="secondary" href="./feedback.html" id="feedback-link">לתת משוב אמיתי</a></div>
 <div class="login-area" id="login-area">
 <div id="google-button" class="google" aria-label="כניסה עם Google"></div>
 <div id="identity" class="identity"></div>
@@ -86,7 +86,7 @@ footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:
 </svg></div>
 </section>
 
-<section class="card section" id="about"><h2>אמא</h2><p class="lead">מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.</p></section>
+<section class="card section" id="about"><h2>אמא</h2><p class="lead">מרחב אנושי לחשוב, ללמוד, ליצור ולהתחבר.</p><div class="grid"><div class="mini"><b>לשאול</b><p>שיחה שמתחילה מהאדם ומהשאלה האמיתית שלו.</p></div><div class="mini"><b>ליצור</b><p>רעיונות, מוזיקה, טקסט, ידע וכלים במקום אחד.</p></div><div class="mini"><b>להשפיע</b><p>משוב אמיתי מאנשים הוא חומר הגלם לשיפור הבא.</p></div></div></section>
 
 
 
@@ -113,12 +113,12 @@ dayDoodle();
 function showLoginError(text){const e=$('#login-error');e.textContent=text;e.hidden=!text;}
 function openChat(){if(!token||!identity)return;$('#chat-app').classList.add('open');$('#chat-app').scrollIntoView({behavior:'smooth',block:'start'});$('#msg').focus();}
 async function shareIMA(){const data={title:'אמא — IMA',text:'הכירו את אמא.',url:location.href};const out=$('#share-status');try{if(navigator.share){await navigator.share(data);out.textContent='השיתוף נפתח.';}else if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(location.href);out.textContent='הקישור הועתק.';}else{const ta=document.createElement('textarea');ta.value=location.href;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();out.textContent='הקישור הועתק.';}out.hidden=false;}catch(e){if(e?.name==='AbortError')return;out.textContent='לא ניתן לשתף כרגע.';out.hidden=false;}}
-$('#share').onclick=shareIMA;
+function track(event,properties={}){try{const id=localStorage.getItem('ima_anon_id')||crypto.randomUUID();localStorage.setItem('ima_anon_id',id);navigator.sendBeacon?.(API+'/ima-api/analytics',new Blob([JSON.stringify({event,properties})],{type:'application/json'}));}catch(e){}}\ntrack('page_view',{language:document.documentElement.lang,referrer:document.referrer||'direct'});\n$('#share').onclick=()=>{track('share_clicked');shareIMA();};\n$('#feedback-link').onclick=()=>track('feedback_opened');
 $('.post-login-tabs .tab').forEach(b=>b.addEventListener('click',()=>{$('.post-login-panels .panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===b.dataset.tab));$('.post-login-tabs .tab').forEach(t=>t.classList.toggle('active',t===b));}));
 function add(role,text){const e=document.createElement('div');e.className='msg '+role;e.textContent=text;$('#messages').appendChild(e);$('#messages').scrollTop=$('#messages').scrollHeight}
-async function ask(text){if(!token||!identity)return;$('#error').hidden=true;$('#send').disabled=true;add('user',text);try{let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});const d=await r.json();if(!r.ok)throw Error(d.error||('HTTP '+r.status));add('ima',d.response||'לא התקבלה תשובה');}catch(e){$('#error').textContent='החיבור לאמא נכשל כרגע.';$('#error').hidden=false;}finally{$('#send').disabled=false;$('#msg').focus();}}
+async function ask(text){if(!token||!identity)return;$('#error').hidden=true;$('#send').disabled=true;add('user',text);try{let r=await fetch(API+'/ima-api/chat',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify({message:text})});const d=await r.json();if(!r.ok)throw Error(d.error||('HTTP '+r.status));add('ima',d.response||'לא התקבלה תשובה');track('chat_completed',{has_response:Boolean(d.response)});}catch(e){$('#error').textContent='החיבור לאמא נכשל כרגע.';$('#error').hidden=false;}finally{$('#send').disabled=false;$('#msg').focus();}}
 $('#composer').onsubmit=e=>{e.preventDefault();const t=$('#msg').value.trim();if(t){$('#msg').value='';ask(t)}};
-function signedIn(d){token=d.token;identity=d.user;$('#identity').textContent='מחובר/ת: '+(identity.name||identity.email||'Google');showLoginError('');openChat();}
+function signedIn(d){track('onboarding_completed',{auth:'google'});token=d.token;identity=d.user;$('#identity').textContent='מחובר/ת: '+(identity.name||identity.email||'Google');showLoginError('');openChat();}
 async function setupGoogle(){try{const r=await fetch(API+'/ima-api/auth/config',{cache:'no-store'});const c=await r.json();if(!c.google?.enabled)return;let tries=0;while(!window.google?.accounts?.id&&tries<80){await new Promise(x=>setTimeout(x,250));tries++;}if(!window.google?.accounts?.id)return;google.accounts.id.initialize({client_id:c.google.client_id,callback:async x=>{try{const r=await fetch(API+'/ima-api/auth/google',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credential:x.credential})});const d=await r.json();if(!r.ok)throw Error(d.error||'Google sign-in failed');signedIn(d);}catch(e){showLoginError('האימות מול Google נכשל.');}}});google.accounts.id.renderButton($('#google-button'),{type:'standard',theme:'outline',size:'large',shape:'rectangular',width:320,text:'signin_with',locale:'he'});}catch(e){}}
 $('#logout').onclick=()=>{token=null;identity=null;$('#chat-app').classList.remove('open');$('#identity').textContent='';showLoginError('');window.scrollTo({top:0,behavior:'smooth'});};
 setupGoogle();
