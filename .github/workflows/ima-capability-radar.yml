@@ -1,8 +1,6 @@
 name: IMA Continuous AI Capability Radar
 
 on:
-  schedule:
-    - cron: "35 4 * * *"
   workflow_dispatch:
 
 permissions:
