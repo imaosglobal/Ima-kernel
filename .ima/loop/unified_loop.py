@@ -70,6 +70,7 @@ COMMANDS = {
     "culture_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_culture.py", "-v"],
     "distribution": ["python", ".ima/distribution/prepare.py"],
     "human_intelligence_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_human_intelligence_policy.py", "-v"],
+    "unified_loop_tests": ["python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_ima_loop.py", "-v"],
     "capability_radar": ["python", "scripts/ima_capability_radar.py"],
     "engine_discovery": ["python", "learning/engine_discovery.py"],
     "capability_contract": ["npm", "run", "test:capabilities"],
@@ -81,7 +82,7 @@ def now_local() -> datetime:
 def due(now: datetime) -> list[str]:
     # One hourly tick is the canonical scheduler. Tasks retain their useful
     # frequencies without creating independent schedules.
-    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "distribution", "capability_contract"]
+    tasks = ["web_intelligence", "culture_tests", "human_intelligence_tests", "unified_loop_tests", "distribution", "capability_contract"]
     if now.hour % 6 == 0:
         tasks.extend(["evolution", "engine_discovery"])
     if now.hour == 3:
