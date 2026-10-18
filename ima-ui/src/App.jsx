@@ -1,6 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Environment, Html, Stage, useGLTF } from '@react-three/drei';
+import React, { useEffect, useRef, useState } from 'react';
 import { askIma, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfig, signInWithGoogleCredential, getStoredGoogleUser, signOutIma } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
