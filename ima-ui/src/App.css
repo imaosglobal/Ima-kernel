@@ -182,3 +182,14 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* Canonical HeyGen embodiment */
+.heygen-avatar-frame{position:relative;width:min(100%,430px);aspect-ratio:3/4;border-radius:36px;overflow:hidden;background:linear-gradient(180deg,#f7efe8,#ead7d2);box-shadow:0 30px 80px rgba(73,45,38,.18);margin:auto}
+.heygen-avatar-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.heygen-avatar-frame.compact{width:150px;aspect-ratio:3/4;border-radius:24px;box-shadow:0 16px 35px rgba(73,45,38,.14)}
+.heygen-speaking{position:absolute;bottom:12px;right:12px;background:rgba(113,60,69,.9);color:#fff;padding:6px 10px;border-radius:999px;font-size:.75rem}
+.heygen-intro-video{display:block;width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:26px;background:#1b1816}
+.video-visual{position:relative;overflow:hidden;border-radius:26px}
+.video-source{position:absolute;left:14px;top:14px;background:rgba(255,253,248,.88);z-index:2}
+@media(max-width:800px){.heygen-avatar-frame{width:min(100%,340px)}.heygen-intro-video{min-height:220px}}
