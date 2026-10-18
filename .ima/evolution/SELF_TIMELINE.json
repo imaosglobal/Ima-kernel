@@ -1,12 +1,12 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-18T18:01:34+00:00",
+  "generated_at": "2026-10-18T20:11:12+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
     "git_commits": 1,
     "development_journal": 25,
-    "daily_summaries": 4
+    "daily_summaries": 5
   },
   "archive_inventory": {
     "files": 1210,
@@ -452,18 +452,24 @@
       "source": "HeyGen verified render evidence; GitHub repository; Metricool account connection check; user-requested daily continuity policy"
     },
     {
-      "commit": "ea548e314ced5f9201530fb803ba9f15e46279c5",
-      "timestamp": "2026-10-18T14:31:26Z",
-      "event": "commit",
-      "summary": "chore: record unified IMA loop cycle",
-      "source": "git"
+      "date": "2026-10-18",
+      "event": "daily_summary",
+      "summary": "## IMA — סיכום למידה יומי\n\n**2026-10-18**\n\n- שאלה יומית: מה עוד ניתן לשפר באמא היום?\n- תשובה: החולשה המרכזית שנמצאה היום: סיכום הלמידה לא הבחין בין ידע סטטי לבין למידה חדשה ומוכחת. זה תוקן כעת: הסיכום מפיק ממצאים מיומן הפיתוח, סופר שינויים שנצפו בפועל, ומציג אזור שיפור אמיתי במקום רשימת ממדים קבועה.\n- שינויים שנצפו היום: 183\n- אירועי פיתוח: 4\n- פריטי ציר התפתחות: 38\n- פערי יכולת פתוחים: 12\n- תרבות אנושית: VALID; תחומים=19; סוגי ידע=8\n\n**מה נלמד בפועל:**\n- journal test [VERIFIED]\n- test [VERIFIED]\n- IMA worldview expansion self-test [VERIFIED]\n- test [GAPS_RECORDED]\n\n**מה שופר בפועל:**\n- הוחלף סיכום הלמידה היומי ממדדים סטטיים לממצאים מתוך הראיות היומיות.\n- תאריך הסיכום הוגדר במפורש לפי Asia/Jerusalem ולא לפי אזור הזמן של runner.\n- נוספו מדדי changed_today ו-status_counts כדי להבדיל בין פעילות לבין למידה מוכחת.\n",
+      "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-18.md"
     },
     {
-      "timestamp": "2026-10-18T18:01:34+00:00",
+      "timestamp": "2026-10-18T20:11:11+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
+    },
+    {
+      "commit": "79115e20584f55ad405e360c81d716b8648ef02c",
+      "timestamp": "2026-10-18T23:10:56+03:00",
+      "event": "commit",
+      "summary": "feat: integrate provenance and cross-domain reconciliation into unified loop",
+      "source": "git"
     }
   ]
 }

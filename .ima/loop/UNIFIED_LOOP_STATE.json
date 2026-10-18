@@ -1,6 +1,6 @@
 {
   "schema": "IMA-UNIFIED-LOOP-1.3",
-  "timestamp": "2026-10-18T21:01:34+03:00",
+  "timestamp": "2026-10-18T23:11:12+03:00",
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -60,7 +60,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "com/ai-artificial-intelligence/1013195/ai-agents-blocked-web\",\n      \"title\": \"Websites are closing their doors to AI agents\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-10-18T18:01:37Z\"\n    },\n    {\n      \"id\": \"70f182dccc3f27a58292\",\n      \"url\": \"https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/\",\n      \"title\": \"Java sealed classes and exhaustive pattern matching\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-10-18T18:01:37Z\"\n    },\n    {\n      \"id\": \"bc6360fe341c7bc63ef9\",\n      \"url\": \"https://www.thing.net/~rdom/ecd/EDTECD.html\",\n      \"title\": \"The Electronic Disturbance Theater and Electronic Civil Disobedience (1998)\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-10-18T18:01:37Z\"\n    },\n    {\n      \"id\": \"956d462d69506633458b\",\n      \"url\": \"https://legendofhyrule.com/\",\n      \"title\": \"Show HN: The Zelda timeline to catch up before the Ocarina of Time remake\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-10-18T18:01:37Z\"\n    },\n    {\n      \"id\": \"4d77eb22a21fda2ac202\",\n      \"url\": \"https://www.youtube.com/watch?v=QH_LPimUJMs\",\n      \"title\": \"Beyond Tetris: The Other Games of Alexey Pajitnov [video]\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-10-18T18:01:37Z\"\n    }\n  ]\n}\n",
+      "stdout_tail": " Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2023\"\n    },\n    {\n      \"id\": \"e126a9b37bb27929aee0\",\n      \"url\": \"https://www.semanticscholar.org/paper/a9a654ea503386cbfd8bb119fc650cc3d08dc206\",\n      \"title\": \"Revised Surgical CAse REport (SCARE) guideline: An update for the age of Artificial Intelligence\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2025\"\n    },\n    {\n      \"id\": \"3fbf0044b56479aa9e03\",\n      \"url\": \"https://www.semanticscholar.org/paper/6a132499ca1dc0d23cfe7d5db841b819df63b51b\",\n      \"title\": \"Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2019\"\n    },\n    {\n      \"id\": \"a76b8356c07043d77366\",\n      \"url\": \"https://www.semanticscholar.org/paper/312e66bcee5bad5376a97f4d771ecdcca2c78078\",\n      \"title\": \"Transparency In The reporting of Artificial INtelligence – the TITAN guideline\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2025\"\n    },\n    {\n      \"id\": \"5d256e08cb3b8cfa64a4\",\n      \"url\": \"https://www.semanticscholar.org/paper/10f919b1a5161b560504c225cfb2d1b3a4768f80\",\n      \"title\": \"Artificial intelligence in healthcare: past, present and future\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2017\"\n    }\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -79,7 +79,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.154s\n\nOK\n"
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.248s\n\nOK\n"
     },
     {
       "task": "foresight_tests",
@@ -215,7 +215,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-10-18T18:02:21Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-10-18T20:11:43Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -238,18 +238,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-10-18T18:02:21.532069+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
-      "stderr_tail": ""
-    },
-    {
-      "task": "daily_summary",
-      "command": [
-        "python",
-        ".ima/web_intelligence/daily_summary.py"
-      ],
-      "status": "PASS",
-      "returncode": 0,
-      "stdout_tail": "{\"schema\": \"IMA-DAILY-SUMMARY-2.0\", \"date\": \"2026-10-18\", \"question\": \"מה עוד ניתן לשפר באמא היום?\", \"improvement_answer\": \"החולשה המרכזית שנמצאה היום: סיכום הלמידה לא הבחין בין ידע סטטי לבין למידה חדשה ומוכחת. זה תוקן כעת: הסיכום מפיק ממצאים מיומן הפיתוח, סופר שינויים שנצפו בפועל, ומציג אזור שיפור אמיתי במקום רשימת ממדים קבועה.\", \"improvements_executed\": [\"הוחלף סיכום הלמידה היומי ממדדים סטטיים לממצאים מתוך הראיות היומיות.\", \"תאריך הסיכום הוגדר במפורש לפי Asia/Jerusalem ולא לפי אזור הזמן של runner.\", \"נוספו מדדי changed_today ו-status_counts כדי להבדיל בין פעילות לבין למידה מוכחת.\"], \"learned_today\": [\"journal test [VERIFIED]\", \"test [VERIFIED]\", \"IMA worldview expansion self-test [VERIFIED]\", \"test [GAPS_RECORDED]\"], \"learning_count\": 4, \"discovery_seen_total\": 2506, \"discovery_changed_today\": 183, \"journal_events_today\": 4, \"status_counts\": {\"VERIFIED\": 3, \"GAPS_RECORDED\": 1}, \"adaptation_dimensions_available\": 13, \"timeline_generated_at\": \"2026-10-18T18:01:34+00:00\", \"timeline_event_count\": 38, \"timeline_archive_files\": 1210, \"timeline_open_issues\": null, \"discovery_research\": {\"name\": \"energy-internal-unifying-discovery\", \"loop_stages\": 12, \"open_hypotheses\": 2, \"result_recorded\": true, \"metrics\": {}}, \"timeline_gap_count\": 12, \"human_culture\": {\"validation\": {\"valid\": true, \"missing\": [], \"policy_version\": \"human-culture-v1.0\"}, \"domains\": 19, \"epistemic_classes\": 8, \"founder_role\": \"initiator_only\", \"ima_role\": \"infrastructure_not_sovereign\"}, \"status\": \"RECORDED\"}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-10-18T20:11:43.997543+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
       "stderr_tail": ""
     }
   ],
@@ -4095,8 +4084,8 @@
   },
   "diagnostics": {
     "summary": {
-      "total": 13,
-      "passed": 12,
+      "total": 12,
+      "passed": 11,
       "failed": 1,
       "errors": 0
     },
@@ -4160,11 +4149,6 @@
         "task": "growth_cycle",
         "finding": "PASS",
         "action": "carry_forward"
-      },
-      {
-        "task": "daily_summary",
-        "finding": "PASS",
-        "action": "carry_forward"
       }
     ],
     "truth_rule": "Diagnostics describe this run; they do not prove live deployment without runtime evidence."
@@ -4177,5 +4161,8 @@
   "provider_independence_rule": "Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
   "truth_rule": "Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
   "lawful_distribution_rule": "Public sharing is limited to lawful, consent-respecting, non-spam channels and authorized accounts.",
-  "user_change_rule": "Every explicit request to add or change the loop is reconciled into this canonical loop contract."
+  "user_change_rule": "Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
+  "provenance_rule": "Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
+  "cross_domain_reconciliation_rule": "All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
+  "global_user_benefit_rule": "Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data."
 }

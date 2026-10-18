@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-10-18T18:01:34+00:00
+- נוצר: 2026-10-18T20:11:12+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -17,7 +17,6 @@
 6. מה צריך להיבדק מחדש מחר?
 
 ## נקודות ציון אחרונות
-- 2026-10-04T00:00:00Z — global_web_intelligence_layer_implemented — Implemented the first fast global web-intelligence discovery layer: hourly GitHub Actions discovery, public feeds, Common Crawl latest-index sampling, deduplication/change detection, bounded persistent state, provenance,
 - 2026-10-04T12:58:00Z — plugin_registry_health_audit — Audited plugin registry routing against connected tool evidence; verified OpenArt authentication and checked HeyGen connection readiness.
 - 2026-10-04T14:25:00Z — cross_provider_repair_cycle — Repaired the verified Vercel Express entrypoint issue in Ima-3d-mom and initiated a fresh production deployment; audited the stale GitHub health failure against current main.
 - 2026-10-04T14:36:15Z — daily_self_question_and_improvement — Answered the mandatory daily question 'What can be improved in IMA today?' from current repository evidence and executed a concrete improvement: the daily learning report now derives lessons from actual journal evidence 
@@ -45,8 +44,9 @@
 - 2026-10-08T16:43:43.940Z — next_generation_experience_production_step — הורחבה שכבת חוויית IMA בפועל ונשלחה ל-Render אוטומטית: בקרת תנועה נגישה, מצב תמלול, מצב busy נגיש, ושימור העדפת תנועה מקומית. במקביל הורחב החוזה היומי לחוויית קול/דמות/אתר/זיכרון/נגישות/רציפות/מעבדה/שפה/עתיד.
 - 2026-10-17T10:42:00Z — universal_memory_trend_to_brand_runtime_cycle — הורחבו Universal Conversation & Interaction Memory ו-IMA Trend-to-Brand Engine במחזור מאוחד; בטיחות נכנסה בפועל לציון הזדמנות, ונוספו normalization ו-runtime provenance verification לזיכרון.
 - 2026-10-17T16:00:00Z — ori_digital_daily_continuity_and_blocker_repair — נשמרה נקודת המשך יומית קנונית ל-Ori Digital: זהות Avatar וקול אומתו דרך render קיים, נבנה registry פלטפורמה-אגנוסטי, והפרסום נשאר חסום רק עד חיבור יעד כתיבה מאומת. מחזורי העתיד חייבים להמשיך מנקודה זו ולא להתחיל מחדש.
-- 2026-10-18T14:31:26Z — commit — chore: record unified IMA loop cycle
-- 2026-10-18T18:01:34+00:00 — TEST — journal test
+- 2026-10-18 — daily_summary — ## IMA — סיכום למידה יומי
+- 2026-10-18T20:11:11+00:00 — TEST — journal test
+- 2026-10-18T23:10:56+03:00 — commit — feat: integrate provenance and cross-domain reconciliation into unified loop
 
 ## פערי יכולת
 
