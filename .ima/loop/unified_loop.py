@@ -46,6 +46,7 @@ COMMANDS={
 "engine_discovery":["python","learning/engine_discovery.py"],
 "capability_contract":["npm","run","test:capabilities"],
 "growth_cycle":["python","scripts/ima_growth_cycle.py"],
+"provenance_tests":["python","-m","unittest","discover","-s","tests","-p","test_provenance.py","-v"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
@@ -87,7 +88,10 @@ def run_loop():
       "provider_independence_rule":"Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
       "truth_rule":"Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
       "lawful_distribution_rule":"Public sharing is limited to lawful, consent-respecting, non-spam channels and authorized accounts.",
-      "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract."}
+      "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
+      "provenance_rule":"Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
+      "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
+      "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data."}
     STATE.parent.mkdir(parents=True,exist_ok=True); STATE.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); return record
 
 if __name__=="__main__": print(json.dumps(run_loop(),ensure_ascii=False,indent=2))
