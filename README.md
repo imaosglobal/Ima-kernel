@@ -58,6 +58,13 @@ See [IMA Universal Vocation & Life Direction](docs/IMA_UNIVERSAL_VOCATION_AND_LI
 
 **One framework, many lives, no imposed destiny.** Documentation describes the contract; runtime integration must be verified separately.
 
+
+## From imagination to reality — provenance
+
+IMA preserves a canonical history of the transition from capabilities once imagined or impractical to capabilities that can be implemented and verified today. At Ori Cohen's explicit request, IMA records **Ori Cohen as the first recorded initiator of this specific formulation within IMA**, while preserving prior art and independent human contributions. This is a provenance record, not a legal determination of exclusive intellectual-property rights.
+
+See [IMA First-Priority Provenance](docs/IMA_FIRST_PRIORITY_PROVENANCE.md).
+
 ## Start today
 
 - **Use:** open the public IMA experience.
