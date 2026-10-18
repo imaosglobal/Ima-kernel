@@ -1,15 +1,50 @@
 {
   "schema": "IMA-DAILY-SUMMARY-2.0",
-  "date": "2026-10-08",
+  "date": "2026-10-18",
   "question": "מה עוד ניתן לשפר באמא היום?",
-  "improvement_answer": "אין מספיק ראיות חדשות לקביעה אמיתית; לא מסמנים שיפור שלא הוכח.",
-  "improvements_executed": [],
-  "learned_today": [],
-  "learning_count": 0,
-  "discovery_seen_total": 930,
-  "discovery_changed_today": 0,
-  "journal_events_today": 0,
-  "status_counts": {},
-  "adaptation_dimensions_available": 0,
+  "improvement_answer": "החולשה המרכזית שנמצאה היום: סיכום הלמידה לא הבחין בין ידע סטטי לבין למידה חדשה ומוכחת. זה תוקן כעת: הסיכום מפיק ממצאים מיומן הפיתוח, סופר שינויים שנצפו בפועל, ומציג אזור שיפור אמיתי במקום רשימת ממדים קבועה.",
+  "improvements_executed": [
+    "הוחלף סיכום הלמידה היומי ממדדים סטטיים לממצאים מתוך הראיות היומיות.",
+    "תאריך הסיכום הוגדר במפורש לפי Asia/Jerusalem ולא לפי אזור הזמן של runner.",
+    "נוספו מדדי changed_today ו-status_counts כדי להבדיל בין פעילות לבין למידה מוכחת."
+  ],
+  "learned_today": [
+    "journal test [VERIFIED]",
+    "test [VERIFIED]",
+    "IMA worldview expansion self-test [VERIFIED]",
+    "test [GAPS_RECORDED]"
+  ],
+  "learning_count": 4,
+  "discovery_seen_total": 2506,
+  "discovery_changed_today": 183,
+  "journal_events_today": 4,
+  "status_counts": {
+    "VERIFIED": 3,
+    "GAPS_RECORDED": 1
+  },
+  "adaptation_dimensions_available": 13,
+  "timeline_generated_at": "2026-10-18T18:01:34+00:00",
+  "timeline_event_count": 38,
+  "timeline_archive_files": 1210,
+  "timeline_open_issues": null,
+  "discovery_research": {
+    "name": "energy-internal-unifying-discovery",
+    "loop_stages": 12,
+    "open_hypotheses": 2,
+    "result_recorded": true,
+    "metrics": {}
+  },
+  "timeline_gap_count": 12,
+  "human_culture": {
+    "validation": {
+      "valid": true,
+      "missing": [],
+      "policy_version": "human-culture-v1.0"
+    },
+    "domains": 19,
+    "epistemic_classes": 8,
+    "founder_role": "initiator_only",
+    "ima_role": "infrastructure_not_sovereign"
+  },
   "status": "RECORDED"
 }

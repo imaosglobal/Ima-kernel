@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-18T14:31:09+00:00",
+  "generated_at": "2026-10-18T18:01:34+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -452,18 +452,18 @@
       "source": "HeyGen verified render evidence; GitHub repository; Metricool account connection check; user-requested daily continuity policy"
     },
     {
-      "timestamp": "2026-10-18T14:31:09+00:00",
+      "commit": "ea548e314ced5f9201530fb803ba9f15e46279c5",
+      "timestamp": "2026-10-18T14:31:26Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-10-18T18:01:34+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
-    },
-    {
-      "commit": "2a30c7f96f7d9f170f5cf9cf32f681cf1aa5c464",
-      "timestamp": "2026-10-18T14:31:45+03:00",
-      "event": "commit",
-      "summary": "fix(public): use exact canonical HeyGen avatar asset reference",
-      "source": "git"
     }
   ]
 }
