@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-17T23:03:01+00:00",
+  "generated_at": "2026-10-18T00:56:12+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -452,18 +452,18 @@
       "source": "HeyGen verified render evidence; GitHub repository; Metricool account connection check; user-requested daily continuity policy"
     },
     {
-      "timestamp": "2026-10-17T23:03:00+00:00",
+      "commit": "b31e8af35f5f37c6178e949f5e742e55ba35fa3e",
+      "timestamp": "2026-10-17T23:03:28Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-10-18T00:56:12+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
-    },
-    {
-      "commit": "f6fe2e95ced465a3b19a0fd12a9bfc56215cbe17",
-      "timestamp": "2026-10-18T00:56:40+03:00",
-      "event": "commit",
-      "summary": "feat: redesign IMA as simple welcoming interface",
-      "source": "git"
     }
   ]
 }
