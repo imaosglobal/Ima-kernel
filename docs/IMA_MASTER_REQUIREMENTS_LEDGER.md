@@ -181,3 +181,12 @@ Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - Creator provenance remains permanently attributed to Ori Cohen / creator_001; heirs are never inferred.
 - Live monetization still requires external account eligibility, enrollment, payout permissions and platform evidence. Documentation and source code do not prove that money can currently be received.
 - Verification command: `python scripts/ima_monetization_readiness.py`.
+
+
+### FIN-002 — PayPal as Primary Payment Provider
+Status: IMPLEMENTED_PENDING_HUMAN_ACCOUNT_ACTIVATION
+- Stripe is no longer the canonical payment-provider route for IMA.
+- PayPal is the primary global online payment route, subject to country/account/product eligibility.
+- Israel is supported by PayPal's official business/payment services.
+- Live account verification, bank linkage, compliance approval and payout evidence remain human-controlled external prerequisites.
+- No credentials are stored in the repository and no autonomous transaction is permitted.
