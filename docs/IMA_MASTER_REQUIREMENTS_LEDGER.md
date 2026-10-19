@@ -190,3 +190,16 @@ Status: IMPLEMENTED_PENDING_HUMAN_ACCOUNT_ACTIVATION
 - Israel is supported by PayPal's official business/payment services.
 - Live account verification, bank linkage, compliance approval and payout evidence remain human-controlled external prerequisites.
 - No credentials are stored in the repository and no autonomous transaction is permitted.
+
+
+### FIN-003 — Multi-Provider Payment Router
+Status: IMPLEMENTED_PENDING_LIVE_PROVIDER_ACTIVATION
+- IMA no longer treats one payment provider as a permanent dependency.
+- The canonical routing model supports PayPal, Google Pay, Apple Pay, GitHub Sponsors, YouTube, Open Collective and future provider adapters.
+- Google Pay is modeled as a wallet layer that requires a supported payment processor/gateway; it is not itself the settlement provider.
+- When multiple verified providers are available, the checkout may expose a user/provider choice subject to country, currency, product, device, compliance and provider availability.
+- A new provider can be added as an adapter without changing the financial ledger or Unified Global Health Loop.
+- Actual revenue remains evidence-only: no account, button, Merchant ID, eligibility or estimate is treated as revenue.
+- No autonomous transaction, transfer, purchase, donation, subscription, sponsorship or payout is permitted.
+- No payment credentials are stored in the repository.
+- Canonical implementation specification: `docs/IMA_PAYMENT_PROVIDER_STANDARD.md`.
