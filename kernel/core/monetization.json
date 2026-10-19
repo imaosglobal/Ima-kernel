@@ -5,13 +5,88 @@
   "telemetry": false,
   "analytics": true,
   "payment_provider": {
+    "mode": "multi_provider_router",
     "primary": "paypal",
-    "status": "human_activation_required",
-    "scope": "global_online_checkout_and_payment_requests",
-    "israel_supported": true,
-    "no_autonomous_transactions": true,
+    "selection": "user_or_policy_based",
+    "fallback": "enabled_when_configured_and_eligible",
+    "providers": [
+      {
+        "id": "paypal",
+        "type": "payment_provider",
+        "status": "human_activation_required",
+        "capabilities": [
+          "checkout",
+          "payment_links",
+          "payment_requests"
+        ],
+        "israel_supported": true
+      },
+      {
+        "id": "google_pay",
+        "type": "wallet",
+        "status": "integration_ready_human_activation_required",
+        "capabilities": [
+          "wallet_checkout"
+        ],
+        "depends_on": "supported_payment_processor_or_gateway",
+        "israel_availability": "verify_per_merchant_and_processor"
+      },
+      {
+        "id": "apple_pay",
+        "type": "wallet",
+        "status": "integration_ready_human_activation_required",
+        "capabilities": [
+          "wallet_checkout"
+        ],
+        "depends_on": "supported_payment_processor_or_gateway"
+      },
+      {
+        "id": "github_sponsors",
+        "type": "sponsorship",
+        "status": "separate_platform_route",
+        "capabilities": [
+          "sponsorships"
+        ]
+      },
+      {
+        "id": "youtube",
+        "type": "platform_revenue",
+        "status": "eligibility_required",
+        "capabilities": [
+          "creator_revenue"
+        ]
+      },
+      {
+        "id": "open_collective",
+        "type": "funding_platform",
+        "status": "separate_platform_route",
+        "capabilities": [
+          "community_funding"
+        ]
+      },
+      {
+        "id": "future_provider",
+        "type": "extensible_adapter",
+        "status": "auto_discoverable_when_added"
+      }
+    ],
+    "routing_rules": {
+      "never_assume_eligibility": true,
+      "choose_only_configured_and_verified_provider": true,
+      "expose_available_methods_by_country_currency_device_and_product": true,
+      "never_store_payment_credentials_in_repo": true,
+      "no_autonomous_transactions": true,
+      "ledger_normalizes_all_verified_receipts": true
+    },
     "credentials_location": "runtime_secret_store_only",
     "credentials_must_not_be_committed": true
   },
-  "futureRevenue": ["cloud hosting","premium agents","api access","enterprise runtime","authorized digital products and services","authorized memberships and donations"]
+  "futureRevenue": [
+    "cloud hosting",
+    "premium agents",
+    "api access",
+    "enterprise runtime",
+    "authorized digital products and services",
+    "authorized memberships and donations"
+  ]
 }
