@@ -1,13 +1,17 @@
 {
   "npmPackage": "${PACKAGE}",
-  "donations": false,
+  "donations": true,
   "premium": false,
   "telemetry": false,
   "analytics": true,
-  "futureRevenue": [
-    "cloud hosting",
-    "premium agents",
-    "api access",
-    "enterprise runtime"
-  ]
+  "payment_provider": {
+    "primary": "paypal",
+    "status": "human_activation_required",
+    "scope": "global_online_checkout_and_payment_requests",
+    "israel_supported": true,
+    "no_autonomous_transactions": true,
+    "credentials_location": "runtime_secret_store_only",
+    "credentials_must_not_be_committed": true
+  },
+  "futureRevenue": ["cloud hosting","premium agents","api access","enterprise runtime","authorized digital products and services","authorized memberships and donations"]
 }
