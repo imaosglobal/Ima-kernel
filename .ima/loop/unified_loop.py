@@ -23,7 +23,7 @@ SYSTEM_SCOPE=(
 "teaching verified capabilities to people","release/version stewardship","repository health/statistics review",
 "real-user growth and retention","privacy-preserving product analytics and feedback",
 "global localization and accessibility","app-store readiness and verified reputation",
-"lawful growth experiments and partnership discovery","long-horizon continuity (daily/monthly/yearly/decadal)"
+"lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)"
 )
 
 COMMANDS={
@@ -46,6 +46,7 @@ COMMANDS={
 "engine_discovery":["python","learning/engine_discovery.py"],
 "capability_contract":["npm","run","test:capabilities"],
 "growth_cycle":["python","scripts/ima_growth_cycle.py"],
+"monetization_readiness":["python","scripts/ima_monetization_readiness.py"],
 "provenance_tests":["python","-m","unittest","discover","-s","tests","-p","test_provenance.py","-v"],
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
 }
@@ -53,7 +54,7 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","distribution","capability_contract","growth_cycle"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -92,7 +93,10 @@ def run_loop():
       "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
       "provenance_rule":"Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
       "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
-      "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.","human_agency_rule":"IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.","critical_ai_dependency_rule":"For high-impact systems, IMA continuously checks intelligibility, contestability, human override, traceability, independent verification, reversibility, provider plurality, rights visibility, failure behavior and concentration of power; when verification fails, autonomy must not silently increase."}
+      "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.","human_agency_rule":"IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.","finance_truth_rule":"Revenue and expenses require evidence; estimates, views, followers, eligibility and projections are never income; no autonomous spending or financial commitment is permitted.",
+      "nonprofit_creator_separation_rule":"Public-benefit mission assets remain separate from Ori Cohen personal property, creator compensation, royalties and estate rights; legal nonprofit status is never inferred from repository governance.",
+      "surplus_allocation_rule":"refunds/chargebacks/required_taxes -> verified_transaction_and_platform_fees -> authorized_operating_expenses -> documented_creator_compensation_or_license_royalty -> required_reserve -> nonprofit_mission_reinvestment -> authorized_humanitarian_or_community_benefit; no fixed percentages without explicit approval.",
+      "critical_ai_dependency_rule":"For high-impact systems, IMA continuously checks intelligibility, contestability, human override, traceability, independent verification, reversibility, provider plurality, rights visibility, failure behavior and concentration of power; when verification fails, autonomy must not silently increase."}
     STATE.parent.mkdir(parents=True,exist_ok=True); STATE.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); return record
 
 if __name__=="__main__": print(json.dumps(run_loop(),ensure_ascii=False,indent=2))
