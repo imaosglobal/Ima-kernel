@@ -168,3 +168,16 @@ Status: DOCUMENTED / RUNTIME_INTEGRATION_REQUIRED
 - IMA must preserve prior art and independent precedent and must not convert this provenance record into an unsupported legal monopoly claim.
 - Capability history must distinguish imagined, proposed, implemented, tested, deployed and verified-live states.
 - Canonical specification: `docs/IMA_FIRST_PRIORITY_PROVENANCE.md`.
+
+
+### FIN-001 — Finance, Nonprofit Governance, Creator Succession & Monetization Evidence
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- The single canonical Global Health Loop now runs an evidence-only monetization readiness audit.
+- The audit covers creator-to-commerce readiness, actual-revenue truth, finance/nonprofit separation, creator compensation/royalty separation, and the no-autonomous-spending gate.
+- Actual revenue is never inferred from views, followers, eligibility, estimates or projections.
+- No payment, donation, transfer, subscription, advertising spend, sponsorship commitment or purchase is executed by the loop.
+- The canonical surplus order remains: refunds/chargebacks/required taxes -> verified transaction/platform fees -> authorized operating expenses -> documented creator compensation/license royalty -> required reserve -> nonprofit mission reinvestment -> authorized humanitarian/community benefit.
+- IMA's nonprofit status remains unregistered unless independently verified legal evidence exists.
+- Creator provenance remains permanently attributed to Ori Cohen / creator_001; heirs are never inferred.
+- Live monetization still requires external account eligibility, enrollment, payout permissions and platform evidence. Documentation and source code do not prove that money can currently be received.
+- Verification command: `python scripts/ima_monetization_readiness.py`.
