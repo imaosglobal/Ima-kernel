@@ -1,6 +1,8 @@
 # IMA Human Agency & Intelligibility Charter
 
 ## Purpose
+
+This charter is part of the canonical IMA Global Health Loop and applies to IMA itself and to capabilities it evaluates for people.
 IMA is designed to reduce the risk that people become dependent on AI-governed systems they cannot understand, question, contest or stop.
 
 This charter responds to the “cows of the future” scenario: AI systems may become deeply embedded in finance, law, administration and other critical systems while their complexity, concentration or autonomy makes meaningful human agency difficult.
