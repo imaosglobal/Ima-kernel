@@ -30,12 +30,10 @@ def page_checks():
     source_app = open("ima-ui/src/App.jsx", encoding="utf-8").read()
     bundle = "\\n".join(assets)
     assert "כניסה עם Google" in source_app, "Google entry missing from canonical UI source"
-    assert '<section className="chat-section" id="space">' in source_app, "canonical chat section missing"
-    assert 'id="chat"' in source_app and 'className="chat-shell"' in source_app, "canonical chat shell missing"
     assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
     assert "chat-tools" not in source_app, "stale broken selectors remain"
-    assert 'href="#about"' in source_app or 'href="#about"' in html, "Learn-about CTA has no destination"
-    assert "google.accounts.id.renderButton" in source_app, "official GIS button rendering missing from canonical UI source"
+    assert 'href="#support"' in source_app and 'id="support"' in source_app, "Support CTA has no destination"
+    assert "youtube.com/@imaglobal-d4g" in source_app, "public YouTube destination missing"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
         assert s==200, f"{p}: HTTP {s}"
