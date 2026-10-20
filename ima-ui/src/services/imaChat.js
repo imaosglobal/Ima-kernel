@@ -35,11 +35,11 @@ async function request(path, options = {}, retry = true) {
   return data;
 }
 
-export async function askIma(message) {
+export async function askIma(message, personalization = {}) {
   trackImaEvent('ima_chat_started');
   const data = await request('/ima-api/chat', {
     method: 'POST',
-    body: JSON.stringify({ message }),
+    body: JSON.stringify({ message, personalization }),
   });
   if (!data.response) throw new Error('IMA returned no response');
   trackImaEvent('ima_chat_completed');
