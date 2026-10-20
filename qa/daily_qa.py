@@ -36,7 +36,7 @@ def page_checks():
     assert "youtube.com/@imaglobal-d4g" in source_app, "public YouTube destination missing"
     buttons = re.findall(r"<button\b([^>]*)>", source_app)
     for attrs in buttons:
-        assert "onClick=" in attrs or "type="submit"" in attrs, f"button without action: {attrs[:120]}"
+        assert "onClick=" in attrs or 'type="submit"' in attrs, f"button without action: {attrs[:120]}"
     assert source_app.count("<button") < 30, "public UI has excessive button repetition"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
