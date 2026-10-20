@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://imaosglobal.github.io/Ima-kernel/schemas/ima-capability.schema.json",
+  "title":"IMA Universal Capability Descriptor",
+  "type":"object",
+  "required":["schema_version","identity","interface","authority","safety"],
+  "properties":{
+    "schema_version":{"type":"string"},
+    "identity":{"type":"object","required":["class","vendor","model"],"properties":{"class":{"type":"string"},"vendor":{"type":"string"},"model":{"type":"string"},"version":{"type":"string"}}},
+    "interface":{"type":"object","properties":{"protocols":{"type":"array","items":{"type":"string"}},"apis":{"type":"array","items":{"type":"string"}},"sdk":{"type":"array","items":{"type":"string"}},"compute":{"type":"array","items":{"type":"string"}},"os":{"type":"array","items":{"type":"string"}}}},
+    "authority":{"type":"object","required":["max_level"],"properties":{"max_level":{"type":"integer","minimum":0,"maximum":5},"human_confirmation_default":{"type":"boolean"}}},
+    "safety":{"type":"object","required":["failsafe","audit"],"properties":{"failsafe":{"type":"boolean"},"audit":{"type":"boolean"},"emergency_stop":{"type":"boolean"},"risk_classes":{"type":"array","items":{"type":"string"}}}}
+  }
+}
