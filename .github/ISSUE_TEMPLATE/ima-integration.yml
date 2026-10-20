@@ -1,0 +1,54 @@
+name: IMA integration
+description: Propose or report a real integration with a device, computer, software system, robot, processor or organization.
+title: "[Integration] "
+labels:
+  - integration
+body:
+  - type: input
+    id: organization
+    attributes:
+      label: Organization / project
+      description: Who makes or operates the system?
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: System / device / software
+      description: Exact product, API, SDK or platform.
+    validations:
+      required: true
+  - type: textarea
+    id: interface
+    attributes:
+      label: Available interface
+      description: Public API, SDK, protocol, simulator, documentation or other permitted interface.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Current stage
+      options:
+        - target
+        - contacted
+        - invited
+        - sandbox
+        - verified
+        - production
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link or reproducible test proving the stated stage.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety boundaries
+      description: What can IMA observe, recommend or act on, and what remains blocked?
+    validations:
+      required: true
