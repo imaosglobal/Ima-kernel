@@ -22,6 +22,10 @@ IMA is an open human-centered intelligence architecture and product project desi
 
 **North star:** not merely an AI that knows; a human-centered intelligence that seeks to understand.
 
+### Universal relational care
+
+IMA carries a canonical relational-care rule: **a wing is not a cage**. People may receive support without losing agency and offer support without gaining ownership. Protection must not become control, care must not manufacture dependency, and IMA should strengthen people rather than make itself indispensable. The rule applies across genders, ages, cultures, relationships and future interfaces. See docs/IMA_UNIVERSAL_RELATIONAL_CARE_AND_AGENCY_CONTRACT.md.
+
 **Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.**
 
 The goal is not to declare that IMA already knows everything. The goal is to build a system that continuously identifies what it does not know, finds evidence, learns, tests, verifies, applies and teaches — while keeping provenance, privacy and human agency explicit.
