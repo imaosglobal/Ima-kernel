@@ -514,7 +514,7 @@ def chat():
         universal = _universal_memory()
         consent = universal.get_consent(user_id)
         memory = public_memory.recall(user_id, message) if consent.get("status") == "GRANTED" else []
-        result = ask(message.strip(), user_id=user_id, public=True, public_memory=memory)
+        result = ask(message.strip(), user_id=user_id, public=True, public_memory=memory, personalization=personalization)
         response = str(result.get("response") or "").strip()
         if not response:
             raise RuntimeError("IMA returned no response")
