@@ -12,6 +12,7 @@ const portableIdentity = require("./IMA_PORTABLE_IDENTITY");
 const derivationRegistry = require("./IMA_DERIVATION_REGISTRY");
 const selfHosted = require("./IMA_SELF_HOSTED");
 const relationalCare = require("./IMA_RELATIONAL_CARE");
+const relationalCare = require("./IMA_RELATIONAL_CARE");
 
 const runtime = {
     boot() {
@@ -21,6 +22,7 @@ const runtime = {
         state.set("runtime", "CANONICAL");
         state.set("last_boot", Date.now());
         state.set("health", health);
+        state.set("relational_care", relationalCare.contract());
         state.set("relational_care", relationalCare.contract());
 
         events.emit("BOOT", {
