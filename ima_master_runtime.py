@@ -33,8 +33,8 @@ class IMAMaster:
     def __init__(self):
         self.name = "IMA MASTER"
 
-    def ask(self, message, user_id="default", public=False, public_memory=None):
-        context = identity_context.build_context(message, public=public)
+    def ask(self, message, user_id="default", public=False, public_memory=None, personalization=None):
+        personalization = personalization if isinstance(personalization, dict) else {}\n        requested_language = str(personalization.get("language") or "").strip()\n        response_instruction = f"\n\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\n" if requested_language else ""\n        provider_message = message + response_instruction\n        context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
         capability_runtime = None
@@ -87,14 +87,14 @@ class IMAMaster:
                 events = [] if public else ima_brain.load_events()
                 if ask_models is not None:
                     try:
-                        result["llm"] = ask_models(message)
+                        result["llm"] = ask_models(provider_message)
                     except Exception as exc:
                         result["llm"] = {"status": "error", "error": str(exc)}
 
                 llm_answer = None
                 if ima_llm_answer is not None:
                     try:
-                        candidate = ima_llm_answer(message)
+                        candidate = ima_llm_answer(provider_message)
                         if isinstance(candidate, dict):
                             status = candidate.get("status")
                             text = candidate.get("response") or candidate.get("text")
