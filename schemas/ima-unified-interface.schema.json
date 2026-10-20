@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"IMA Unified Interface Contract",
+  "type":"object",
+  "required":["identity","capabilities","personalization","evidence","authority"],
+  "properties":{
+    "identity":{"type":"object","required":["canonical"],"properties":{"canonical":{"const":"IMA / אמא"},"instance":{"type":"string"}}},
+    "capabilities":{"type":"array","items":{"type":"object","required":["id","status"],"properties":{"id":{"type":"string"},"status":{"enum":["unknown","planned","experimental","implemented","tested","verified","production"]},"evidence":{"type":"array","items":{"type":"string"}}}}},
+    "personalization":{"type":"object","properties":{"language":{"type":"string"},"tone":{"type":"string"},"depth":{"type":"string"},"accessibility":{"type":"array","items":{"type":"string"}},"memory_scope":{"type":"string"},"interface":{"type":"string"},"domain":{"type":"string"},"culture":{"type":"string"},"safety_profile":{"type":"string"}}},
+    "evidence":{"type":"array","items":{"type":"object","required":["source","status"],"properties":{"source":{"type":"string"},"status":{"enum":["unverified","partial","reproduced","verified"]},"observed_at":{"type":"string"}}}},
+    "authority":{"type":"object","required":["level"],"properties":{"level":{"type":"integer","minimum":0,"maximum":5},"explicit_authorization":{"type":"boolean"}}}
+  }
+}
