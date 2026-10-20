@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "status_values": ["target", "contacted", "invited", "sandbox", "verified", "production"],
+  "targets": [
+    {"name":"W3C Web of Things","type":"standard","status":"target","official":"https://www.w3.org/WoT/"},
+    {"name":"Matter","type":"smart-home-standard","status":"target","official":"https://csa-iot.org/all-solutions/matter/"},
+    {"name":"RISC-V International","type":"compute-standard","status":"target","official":"https://riscv.org/"},
+    {"name":"Linux Foundation","type":"software-ecosystem","status":"target","official":"https://www.linuxfoundation.org/"},
+    {"name":"Figure","type":"robotics","status":"target","official":"https://www.figure.ai/"},
+    {"name":"1X","type":"robotics","status":"target","official":"https://www.1x.tech/"},
+    {"name":"Apptronik","type":"robotics","status":"target","official":"https://apptronik.com/"},
+    {"name":"Agility Robotics","type":"robotics","status":"target","official":"https://www.agilityrobotics.com/"},
+    {"name":"Boston Dynamics","type":"robotics","status":"target","official":"https://bostondynamics.com/"},
+    {"name":"Unitree","type":"robotics","status":"target","official":"https://www.unitree.com/"},
+    {"name":"UBTECH Robotics","type":"robotics","status":"target","official":"https://www.ubtrobot.com/"},
+    {"name":"Tesla Optimus","type":"robotics","status":"target","official":"https://www.tesla.com/"},
+    {"name":"NVIDIA","type":"compute/robotics","status":"target","official":"https://www.nvidia.com/"},
+    {"name":"AMD","type":"compute","status":"target","official":"https://www.amd.com/"},
+    {"name":"Intel","type":"compute","status":"target","official":"https://www.intel.com/"},
+    {"name":"Qualcomm","type":"compute/mobile","status":"target","official":"https://www.qualcomm.com/"},
+    {"name":"Google","type":"software/compute","status":"target","official":"https://www.google.com/"},
+    {"name":"Microsoft","type":"software/cloud","status":"target","official":"https://www.microsoft.com/"},
+    {"name":"Apple","type":"software/devices","status":"target","official":"https://www.apple.com/"},
+    {"name":"Samsung","type":"devices/compute","status":"target","official":"https://www.samsung.com/"}
+  ],
+  "evidence_policy": "Never upgrade status without recorded, reproducible evidence."
+}
