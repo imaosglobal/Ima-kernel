@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://imaosglobal.github.io/Ima-kernel/schemas/ima-device-capability.schema.json",
+  "title": "IMA Physical Device Capability",
+  "type": "object",
+  "required": ["schema_version","device","capabilities","authority"],
+  "properties": {
+    "schema_version": {"type":"string"},
+    "device": {
+      "type":"object",
+      "required":["class","vendor","model"],
+      "properties":{
+        "class":{"type":"string","enum":["robot","glasses","watch","wearable","home","vehicle","traffic","computer","phone","other"]},
+        "vendor":{"type":"string"},
+        "model":{"type":"string"}
+      }
+    },
+    "capabilities": {
+      "type":"object",
+      "properties":{
+        "observe":{"type":"array","items":{"type":"string"}},
+        "act":{"type":"array","items":{"type":"string"}},
+        "transport":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "authority": {
+      "type":"object",
+      "required":["max_level","human_confirmation_default"],
+      "properties":{
+        "max_level":{"type":"integer","minimum":0,"maximum":5},
+        "human_confirmation_default":{"type":"boolean"},
+        "emergency_stop":{"type":"boolean"}
+      }
+    }
+  }
+}
