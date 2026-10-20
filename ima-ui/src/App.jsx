@@ -38,9 +38,9 @@ function GoogleLogin({auth,setAuth,locale}){
   window.google.accounts.id.initialize({client_id:config.google.client_id,nonce,callback:async response=>{try{setAuth(a=>({...a,status:'signing_in'}));const result=await signInWithGoogleCredential(response.credential,nonce);setAuth({status:'signed_in',user:result.user||null})}catch(e){setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}},auto_select:false,use_fedcm_for_button:true});
   window.google.accounts.id.renderButton(ref.current,{type:'standard',theme:'outline',size:'large',text:'signin_with',shape:'pill',logo_alignment:'left',width:280,locale:getLocale(detectLanguage()).code});
   if(!cancelled)setAuth(a=>({...a,status:'ready'}))
- }catch(e){if(!cancelled)setAuth(a=>({...a,status:'error',error:e.message}))}})();return()=>{cancelled=true}},[setAuth]);
+ }catch(e){if(!cancelled)setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}})();return()=>{cancelled=true}},[setAuth]);
  if(auth.status==='signed_in')return <div className="account-chip"><img className="account-photo" src={auth.user?.picture||''} alt="" onError={e=>{e.currentTarget.style.display='none'}}/><span>{auth.user?.name||auth.user?.email||'IMA'}</span><button onClick={()=>{signOutIma();setAuth({status:'ready',user:null})}}>{locale.labels.logout}</button></div>;
- return <div className="google-entry"><div ref={ref}/><small>{auth.status==='signing_in'?'…':auth.status==='error'?locale.labels.loginRequired:''}</small></div>;
+ return <div className="google-entry"><div ref={ref}/><small>{auth.status==='signing_in'?'…':auth.error==='signin_unavailable'?locale.labels.loginRequired:''}</small></div>;
 }
 
 function AvatarScene({state,compact=false}){return <div className={`heygen-avatar-frame ${compact?'compact':''} ${state==='speaking'?'speaking':''}`}><img src={IMA_HEYGEN.avatarImageUrl} alt="IMA avatar" loading={compact?'lazy':'eager'}/>{state==='speaking'&&<span className="heygen-speaking">IMA</span>}</div>}
