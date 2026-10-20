@@ -1,0 +1,5 @@
+{
+  "version":"1.0",
+  "domains":["personal","family","community","healthcare","mental-health-support","transportation","aviation","maritime","construction","manufacturing","laboratories","energy","agriculture","education","smart-home","software","cybersecurity","finance","disaster-response","space","future-domain"],
+  "default_policy":"hazard-detection + least-privilege + human-agency + incident-learning"
+}
