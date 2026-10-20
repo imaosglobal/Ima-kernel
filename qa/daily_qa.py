@@ -29,7 +29,7 @@ def page_checks():
             pass
     source_app = open("ima-ui/src/App.jsx", encoding="utf-8").read()
     bundle = "\\n".join(assets)
-    assert "כניסה עם Google" in source_app, "Google entry missing from canonical UI source"
+    assert "GoogleLogin" in source_app and "google.accounts.id.renderButton" in source_app, "Google entry missing from canonical UI source"
     assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
     assert "chat-tools" not in source_app, "stale broken selectors remain"
     assert 'href="#support"' in source_app and 'id="support"' in source_app, "Support CTA has no destination"
