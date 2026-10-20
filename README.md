@@ -158,6 +158,8 @@ For the current public experience, start with [Discover IMA](DISCOVER_IMA.md). D
 - [Global contribution protocol](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md)
 - [Human Intelligence Charter — בינה אנושית](docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md)
 - [Global identity & shared learning charter](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md)
+- [Unified global interface charter](docs/IMA_UNIFIED_GLOBAL_INTERFACE_CHARTER.md)
+- [Permanent verification & self-repair contract](docs/IMA_PERMANENT_VERIFICATION_AND_SELF_REPAIR_CONTRACT.md)
 - [Creator Questions & Human Path Charter](docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md)
 - [Zero-Point Self-Inquiry & Encounter Protocol](docs/IMA_ZERO_POINT_SELF_INQUIRY_AND_ENCOUNTER_PROTOCOL.md)
 - [Learning frontier](docs/IMA_LEARNING_FRONTIER.md)
