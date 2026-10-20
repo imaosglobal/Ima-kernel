@@ -34,6 +34,10 @@ def page_checks():
     assert "chat-tools" not in source_app, "stale broken selectors remain"
     assert 'href="#support"' in source_app and 'id="support"' in source_app, "Support CTA has no destination"
     assert "youtube.com/@imaglobal-d4g" in source_app, "public YouTube destination missing"
+    buttons = re.findall(r"<button\\b([^>]*)>", source_app)
+    for attrs in buttons:
+        assert "onClick=" in attrs or "type="submit"" in attrs, f"button without action: {attrs[:120]}"
+    assert source_app.count("<button") < 30, "public UI has excessive button repetition"
     for p in PAGES[1:]:
         s,_,h=get(urllib.parse.urljoin(BASE,p))
         assert s==200, f"{p}: HTTP {s}"
