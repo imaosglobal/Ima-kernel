@@ -1,0 +1,22 @@
+{
+  "standard": "IMA Physical World Standard 0.1",
+  "generated": "2026-10-20",
+  "policy": "vendor-neutral",
+  "live_integrations": [],
+  "integration_targets": [
+    {"class":"robot","vendor":"Figure AI","model":"Figure 03","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"Agility Robotics","model":"Digit","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"Apptronik","model":"Apollo","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"1X Technologies","model":"NEO","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"Unitree Robotics","model":"G1/H-series","path":"official-sdk"},
+    {"class":"robot","vendor":"UBTECH","model":"Walker series","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"Boston Dynamics","model":"Atlas","path":"official-api"},
+    {"class":"robot","vendor":"Tesla","model":"Optimus","path":"oem/official-api"},
+    {"class":"robot","vendor":"AgiBot","model":"A2/X2/G2","path":"official-api-or-oem"},
+    {"class":"robot","vendor":"Humanoid","model":"HMND 01","path":"official-api-or-oem"},
+    {"class":"smart_home","vendor":"Matter ecosystem","model":"Matter-certified devices","path":"matter"},
+    {"class":"wearable","vendor":"Android/iOS wearable ecosystems","model":"future/current devices","path":"official-os-api"},
+    {"class":"vehicle","vendor":"OEM ecosystem","model":"connected vehicles","path":"official-api-or-oem"},
+    {"class":"traffic","vendor":"municipal/infrastructure operators","model":"connected infrastructure","path":"authorized-api"}
+  ]
+}
