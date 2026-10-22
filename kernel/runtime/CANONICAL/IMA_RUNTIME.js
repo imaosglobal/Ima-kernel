@@ -12,7 +12,9 @@ const portableIdentity = require("./IMA_PORTABLE_IDENTITY");
 const derivationRegistry = require("./IMA_DERIVATION_REGISTRY");
 const selfHosted = require("./IMA_SELF_HOSTED");
 const relationalCare = require("./IMA_RELATIONAL_CARE");
-const relationalCare = require("./IMA_RELATIONAL_CARE");
+const truthGate = require("./IMA_TRUTH_GATE");
+const agencyGate = require("./IMA_HUMAN_AGENCY_GATE");
+const revenueEvidence = require("./IMA_REVENUE_EVIDENCE");
 
 const runtime = {
     boot() {
@@ -23,7 +25,7 @@ const runtime = {
         state.set("last_boot", Date.now());
         state.set("health", health);
         state.set("relational_care", relationalCare.contract());
-        state.set("relational_care", relationalCare.contract());
+        state.set("governance", { truth_gate: "CANONICAL", human_agency_gate: "CANONICAL", revenue_evidence: "CANONICAL" });
 
         events.emit("BOOT", {
             status: state.get("status"),
@@ -52,6 +54,11 @@ const runtime = {
         return {
             status: state.get("status"),
             health,
+            governance: {
+                truth_gate: truthGate.STATUSES,
+                human_agency_gate: agencyGate.ACTION_CLASSES,
+                revenue_evidence: { received_only: true }
+            },
             policy: {
                 safe_actions: policy.SAFE_ACTIONS,
                 approval_required: policy.APPROVAL_REQUIRED,
