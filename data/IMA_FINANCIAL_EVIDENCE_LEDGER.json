@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "status": "evidence_ledger_initialized",
+  "as_of": "2026-10-22",
+  "events": [],
+  "rule": "Only actual received revenue or verified contractually committed expenses/receivables with evidence may be added. Views, followers, eligibility, estimates and projections never create income events.",
+  "separation": [
+    "personal_ori_expenses",
+    "creator_compensation",
+    "nonprofit_operating_expenses",
+    "restricted_funds",
+    "humanitarian_community_benefit"
+  ],
+  "surplus_order": [
+    "refunds_chargebacks_required_taxes",
+    "verified_transaction_platform_fees",
+    "authorized_operating_expenses",
+    "documented_creator_compensation_or_license_royalty",
+    "required_reserve",
+    "nonprofit_mission_reinvestment",
+    "authorized_humanitarian_or_community_benefit"
+  ]
+}
