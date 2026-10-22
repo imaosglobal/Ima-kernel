@@ -1,0 +1,20 @@
+name: IMA Governance Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Governance audit
+        run: npm run ima:governance
+      - name: Capability registry test
+        run: npm run test:capabilities
