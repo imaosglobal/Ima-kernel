@@ -49,12 +49,13 @@ COMMANDS={
 "monetization_readiness":["python","scripts/ima_monetization_readiness.py"],
 "provenance_tests":["python","-m","unittest","discover","-s","tests","-p","test_provenance.py","-v"],
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
+"global_integration_intake":["node","scripts/ima-daily-loop-intake.mjs"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","global_integration_intake","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -93,6 +94,7 @@ def run_loop():
       "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
       "provenance_rule":"Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
       "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
+      "global_integration_rule":"Every newly verified external integration is automatically ingested through the canonical daily intake, deduplicated, evidence-checked and carried into the next improvement cycle; no second daily orchestrator is created.",
       "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.","human_agency_rule":"IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.","finance_truth_rule":"Revenue and expenses require evidence; estimates, views, followers, eligibility and projections are never income; no autonomous spending or financial commitment is permitted.",
       "nonprofit_creator_separation_rule":"Public-benefit mission assets remain separate from Ori Cohen personal property, creator compensation, royalties and estate rights; legal nonprofit status is never inferred from repository governance.",
       "surplus_allocation_rule":"refunds/chargebacks/required_taxes -> verified_transaction_and_platform_fees -> authorized_operating_expenses -> documented_creator_compensation_or_license_royalty -> required_reserve -> nonprofit_mission_reinvestment -> authorized_humanitarian_or_community_benefit; no fixed percentages without explicit approval.",
