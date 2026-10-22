@@ -20,3 +20,14 @@ Date: 2026-10-22
 ## Entry 2026-10-22 — creator succession
 
 - VERIFIED: creator_001 / Ori Cohen remains canonical founder, creator and architect; no heirs are inferred; repository metadata is not a will.
+
+
+## 2026-10-22 — Runtime governance wiring
+
+- EXECUTED: Added canonical runtime modules for truth/evidence gating, human-agency authorization, and verified-revenue evidence.
+- EXECUTED: Wired the human-agency gate into the canonical action engine so consequential actions are blocked without explicit authorization.
+- EXECUTED: Wired governance modules into the canonical runtime boot report.
+- EXECUTED: Removed the duplicate relational-care declaration/state write from `IMA_RUNTIME.js`.
+- EXECUTED: Added `npm run ima:governance` as the deterministic governance audit entry point.
+- VERIFIED: GitHub read-back confirmed the updated runtime/action-engine source contains the new governance wiring.
+- GAPS_RECORDED: The audit was not executed in this environment because external GitHub repository cloning is unavailable here; therefore runtime execution/CI success is not claimed.
