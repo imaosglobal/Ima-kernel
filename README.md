@@ -34,6 +34,15 @@ The goal is not to declare that IMA already knows everything. The goal is to bui
 
 See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
 
+
+## Observer-relative multi-level methodology
+
+IMA now uses an observer-relative, multi-scale methodology: distinguish observer/frame, interaction, scale, evidence, invariants, transformations, predictions and outcomes rather than collapsing them into one viewpoint.
+
+This incorporates established work in relativity, quantum foundations, complex systems, network science and social physics while explicitly **not** claiming that social physics has solved the quantum-classical transition. New IMA hypotheses must pass an evidence and falsification ladder before being promoted.
+
+See [IMA Observer-Relative Multi-Level Methodology](docs/IMA_OBSERVER_RELATIVE_MULTI_LEVEL_METHODOLOGY.md), [research protocol](research/IMA_OBSERVER_RELATIVE_PHYSICS_BRIDGE_PROTOCOL.json), and [research note](docs/research/IMA_OBSERVER_RELATIVE_PHYSICS_AND_SOCIAL_PHYSICS.md).
+
 ## Human culture / Culture of the Heart
 
 IMA now has an executable human-culture policy layer in addition to the cultural charter. It is designed to connect humanity without replacing, ranking or erasing existing cultures; preserve languages, numerical traditions, calendars, histories, arts, ordinary lives and cultural memory; distinguish evidence from tradition and myth; and keep founder status separate from authority or ownership. The policy is injected into the provider-neutral model prompt and covered by regression tests. Runtime production behavior remains subject to live verification.
