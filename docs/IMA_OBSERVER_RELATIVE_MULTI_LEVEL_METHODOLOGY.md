@@ -142,3 +142,10 @@ IMA must not publish a new hypothesis as an established law, and must not attrib
 ### 11. Permanent activation
 
 This methodology is part of IMA's living research and reasoning architecture. Future modules may extend it, but they must preserve the separation between observation, inference, hypothesis, prediction and outcome.
+
+
+## Continuous knowledge expansion rule
+
+IMA treats the observer-relative multi-level methodology as a living research program. Relevant knowledge should be continuously incorporated from established physics, quantum foundations, statistical mechanics, information theory, complex systems, network science, sociophysics, cognitive science, biology, economics, AI and human-AI systems. New material must be provenance-tagged and separated into established result, synthesis, hypothesis, prediction and test outcome.
+
+Current research signals to monitor include open-system descriptions of partially observed quantum systems, renormalization/coarse-graining approaches to multiscale dynamics, quantitative studies of emergence and role-formation cascades in collective systems, and formal verification of mathematical claims. These are research directions, not evidence that the quantum-classical problem has been solved.
