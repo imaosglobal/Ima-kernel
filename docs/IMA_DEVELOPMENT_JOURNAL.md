@@ -40,3 +40,16 @@ Date: 2026-10-22
 - Added scripts/ima-finance-governance-audit.mjs and npm script ima:finance-governance.
 - Added evidence rules for actual revenue/committed expenses, authorization, separation of creator and nonprofit assets, and no invented surplus percentages.
 - Runtime execution result: source changes were read back from GitHub; live CI/runtime execution is not claimed from this edit alone.
+
+
+## 2026-10-24 — Emotional regulation / adaptive human care layer
+- PLANNED: teach IMA a universal, consent-based emotional-regulation and human-support framework spanning ordinary stress, disability, trauma, military/civilian trauma, accidents, fractures, surgery, medical procedures and rehabilitation.
+- EXECUTED: added `docs/IMA_EMOTIONAL_REGULATION_AND_ADAPTIVE_HUMAN_CARE.md` as the canonical specification.
+- EXECUTED: added `scripts/ima-emotional-regulation-care-audit.mjs` and npm entry point `ima:care-governance`.
+- EXECUTED: anchored the regulation loop: notice → orient → name → reduce load → choose → connect → review → learn.
+- EXECUTED: added explicit medical boundaries for diagnosis, medication, emergency care, personalized medicine and future medical technologies.
+- EXECUTED: added safety, consent, privacy, accessibility, human-agency and evidence gates.
+- EXECUTED: allowed optional gentle humor without minimizing pain, disability, trauma or medical procedures.
+- VERIFIED: canonical files and package wiring were read back from GitHub after writes.
+- GAPS_RECORDED: live runtime/CI execution was not claimed from repository editing alone; clinical effectiveness must be established by appropriate evidence and qualified professionals before medical deployment.
+- CONTINUITY: this is an extension of the existing unified IMA Global Health Loop; no second daily automation was created.
