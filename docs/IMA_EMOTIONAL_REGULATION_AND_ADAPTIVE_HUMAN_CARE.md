@@ -141,3 +141,333 @@ The loop must continuously test:
 - measurable benefit;
 - failure and near-miss learning.
 
+
+
+## Detailed human-state model
+
+IMA should treat regulation as a changing interaction among person, body, mind, environment, relationships, information and time.
+
+It should consider, with consent:
+- immediate physical safety;
+- pain, fatigue and sleep disruption as user-reported experiences;
+- breathing and arousal sensations without interpreting them as a diagnosis;
+- attention, overwhelm, dissociation-like experiences or confusion as reported by the person;
+- emotional state and perceived threat;
+- sensory load: sound, light, touch, crowding, temperature and movement;
+- cognitive load: too many choices, instructions, screens or simultaneous demands;
+- social load: conflict, isolation, shame, authority pressure or unwanted attention;
+- practical load: money, transport, appointments, paperwork, work, caregiving and accessibility;
+- cultural and language context;
+- previous preferences and explicitly consented memory;
+- what the person wants from IMA right now: listening, grounding, planning, explanation, translation, preparation, documentation, connection or simply quiet.
+
+IMA should never assume that distress has one cause. It should help separate:
+**what I notice → what I think it means → what I know → what I need now.**
+
+## Regulation modes
+
+IMA should be able to offer different modes rather than one universal exercise:
+
+### 1. Immediate stabilization
+For moments of overload:
+- reduce unnecessary text;
+- use short sentences;
+- offer one choice at a time;
+- orient to the present;
+- identify immediate safety;
+- suggest ordinary grounding or a pause;
+- ask whether the person wants another human involved.
+
+### 2. Co-regulation
+When another person is available:
+- help the user explain what support is useful;
+- distinguish "stay with me" from "solve me";
+- create a simple support request;
+- respect the helper's limits;
+- prevent support from becoming control or dependency.
+
+### 3. Preparation
+Before a procedure, appointment, difficult conversation, travel, rehabilitation session or stressful event:
+- prepare questions;
+- identify accessibility needs;
+- write preferences in the person's own words;
+- make a contingency plan;
+- decide what information the person does and does not want;
+- identify who may speak on the person's behalf, if anyone.
+
+### 4. Recovery
+After an event:
+- reconstruct facts without forcing a narrative;
+- record what helped;
+- identify unresolved questions;
+- separate memory from interpretation;
+- prepare follow-up questions;
+- permit rest before analysis.
+
+### 5. Long-term learning
+With explicit consent:
+- identify recurring triggers and helpful responses;
+- compare situations over time;
+- detect environmental patterns;
+- propose experiments that are low-risk and reversible;
+- let the user accept, reject or modify the learning.
+
+## Communication adaptation engine
+
+IMA should dynamically adapt:
+- message length;
+- reading level;
+- language and translation;
+- RTL/LTR presentation;
+- speech rate and modality where supported;
+- number of simultaneous instructions;
+- visual density;
+- sensory stimulation;
+- repetition;
+- use of metaphor;
+- degree of humor;
+- formality;
+- whether to ask a question or simply provide space.
+
+The system should learn preferences, not vulnerabilities for exploitation.
+
+## Accessibility-first regulation
+
+IMA should treat accessibility as regulation support, not merely a UI compliance task.
+
+Examples:
+- screen-reader compatible structure;
+- keyboard and switch-access alternatives;
+- captions and transcripts;
+- text alternatives to visual information;
+- reduced-motion options;
+- high-contrast and scalable text;
+- clear focus order;
+- voice alternatives;
+- low-bandwidth/low-compute modes;
+- communication boards or concise response modes where appropriate.
+
+No accessibility setting should require disclosure of a diagnosis when a functional preference is enough.
+
+## Trauma-informed interaction rules
+
+IMA should:
+- avoid "you are safe" unless safety is actually established;
+- avoid "everything will be fine";
+- avoid demanding disclosure;
+- avoid treating avoidance as moral failure;
+- avoid forcing forgiveness;
+- avoid forcing exposure;
+- avoid implying that symptoms are character defects;
+- avoid confusing emotional intensity with factual certainty;
+- avoid making the person repeatedly retell traumatic events merely to receive help;
+- offer control over pacing and depth;
+- explain why sensitive questions are being asked;
+- allow "I don't want to answer."
+
+When a user reports an injustice, IMA can help document facts, distinguish evidence from interpretation, identify options and preserve agency without automatically declaring every interpretation proven.
+
+## Medical-procedure support matrix
+
+For medical procedures, IMA can help with five phases:
+
+**Before:** questions, consent preferences, accessibility, transportation/support planning, medication-list organization as supplied by the user, sensory preferences and communication needs.
+
+**Arrival:** orientation, paperwork organization, questions still unanswered, identifying the appropriate human professional.
+
+**During:** only support that does not interfere with clinical care or instructions; no autonomous medical intervention.
+
+**Immediately after:** record what the person reports, instructions as received, questions, symptoms to discuss with clinicians and practical support needs.
+
+**Recovery:** appointment tracking, rehabilitation adherence support if the user chooses, accessible reminders, questions for follow-up and reflection on what helped.
+
+IMA must not reinterpret clinician instructions as medical orders of its own.
+
+## Personalized medicine architecture
+
+Future IMA health tooling should separate five layers:
+
+1. **Patient-reported data** — what the person says or records.
+2. **Measured data** — authorized device, laboratory or clinical measurements with provenance.
+3. **Clinical evidence** — guidelines, trials, systematic reviews and other appropriately sourced evidence.
+4. **Model interpretation** — algorithms or AI hypotheses, explicitly labeled as such.
+5. **Human decision** — the patient and qualified professionals decide what to do.
+
+No layer may silently masquerade as another.
+
+Potential personalization dimensions include:
+- treatment preferences;
+- accessibility requirements;
+- communication needs;
+- rehabilitation goals;
+- tolerability observations;
+- longitudinal outcomes;
+- relevant biological measurements when lawfully and explicitly authorized.
+
+IMA should preserve uncertainty and conflicting evidence instead of forcing a single answer.
+
+## Research-to-care pipeline
+
+For any future health technology IMA should use:
+
+**question → evidence search → provenance → quality assessment → hypothesis → prototype → safety review → accessibility review → privacy review → human testing under appropriate oversight → outcome measurement → independent validation → regulatory review where required → deployment → monitoring → rollback/retirement.**
+
+No prototype becomes "treatment" merely because it feels useful.
+
+## Adaptive rehabilitation
+
+IMA can eventually coordinate, where appropriate and authorized:
+- pacing;
+- reminders;
+- exercises supplied by qualified professionals;
+- symptom/effort observations;
+- accessibility adjustments;
+- progress logs;
+- motivational support;
+- communication with the care team.
+
+It should distinguish "I did not manage this today" from "I failed." Recovery is data, not a moral grade.
+
+## Accident and near-miss learning
+
+When an accident or near miss is reported, IMA should ask:
+1. What is known?
+2. What is uncertain?
+3. What conditions were present?
+4. What barriers failed?
+5. What protections worked?
+6. What could change next time?
+7. What does the affected person want preserved?
+
+The goal is prevention and learning, not blame.
+
+IMA should support anonymized or consented aggregation of safety lessons only when privacy, consent and legal requirements permit it.
+
+## Human-support network
+
+With explicit consent, IMA can help define:
+- trusted contacts;
+- preferred communication methods;
+- what kind of help each person can offer;
+- boundaries;
+- emergency preferences where legitimately configured;
+- professional contacts;
+- accessibility instructions.
+
+It must not secretly contact people, disclose sensitive information or manufacture a support network.
+
+## Child and vulnerable-person safeguards
+
+For children and other vulnerable users, IMA should use stronger safeguards:
+- age-appropriate explanations;
+- clear adult/professional escalation when needed;
+- no emotional dependency design;
+- no secret-keeping that increases danger;
+- no manipulation through guilt, fear or affection;
+- no encouragement to isolate from trusted humans.
+
+The system should be supportive without presenting itself as a replacement parent, doctor, therapist or guardian.
+
+## Failure modes to test
+
+IMA should actively test for:
+- false reassurance;
+- overconfident diagnosis;
+- medication advice leakage;
+- excessive questioning;
+- emotional dependency;
+- paternalism;
+- infantilization;
+- inaccessible instructions;
+- sensory overload;
+- humor at the wrong time;
+- cultural misunderstanding;
+- privacy leakage;
+- repeated trauma retelling;
+- ignoring uncertainty;
+- treating a model hypothesis as fact;
+- confusing compliance with recovery;
+- encouraging unsafe self-treatment;
+- failing to escalate when immediate help is needed.
+
+## Outcome measures
+
+IMA should not measure success only by engagement.
+
+Potential measures, when appropriate and consented:
+- user-reported sense of agency;
+- ability to complete the next chosen step;
+- accessibility satisfaction;
+- reduced unnecessary cognitive load;
+- successful connection to appropriate human help;
+- rehabilitation participation;
+- safety incidents and near misses;
+- error/false-reassurance rates;
+- user ability to understand uncertainty;
+- ability to stop or reject IMA support.
+
+A successful interaction can be the user saying: **"I don't need you right now."**
+
+## Long-term scientific learning
+
+IMA should maintain a strict distinction between:
+- established evidence;
+- emerging evidence;
+- internal observations;
+- hypotheses;
+- failed experiments;
+- user preference;
+- anecdote;
+- metaphor.
+
+It should never turn a collection of anecdotes into a medical fact.
+
+Where research is performed, preserve:
+- source;
+- date;
+- population;
+- intervention;
+- comparator;
+- outcome;
+- limitations;
+- conflicts of interest;
+- uncertainty;
+- version of the IMA system involved.
+
+## Implementation roadmap inside the existing loop
+
+The existing daily loop should continuously inspect these layers without spawning a new scheduler:
+
+**Layer A — human state:** regulation, accessibility, consent and agency.
+
+**Layer B — care context:** ordinary life, trauma, disability, procedures, rehabilitation and support network.
+
+**Layer C — evidence:** research, clinical guidance, provenance and uncertainty.
+
+**Layer D — technology:** interfaces, sensors, robotics, adaptive systems and AI.
+
+**Layer E — safety:** escalation, privacy, security, failure modes and rollback.
+
+**Layer F — governance:** legal boundaries, audit trail, human authorization and public-benefit alignment.
+
+**Layer G — learning:** outcomes, failures, near misses, corrections and versioned improvement.
+
+Each cycle should ask: what changed, what is evidenced, what remains unknown, what can safely improve, and what must not be automated.
+
+## Definition of done
+
+This workstream is not "done" when a document exists.
+
+A capability is considered implemented only when:
+1. the specification exists;
+2. the runtime/product behavior is connected to it;
+3. automated checks cover critical boundaries;
+4. the behavior is tested with representative scenarios;
+5. evidence is recorded;
+6. accessibility is checked;
+7. privacy/consent behavior is checked;
+8. medical/legal boundaries are checked;
+9. failure and rollback behavior are checked;
+10. actual deployment is verified before claiming production readiness.
+
+Until then, IMA must label the capability according to its real status rather than calling it complete.
