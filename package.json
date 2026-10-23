@@ -30,7 +30,8 @@
     "test:physical": "node tests/ima_physical_adapter.test.js",
     "test:public-ui": "node tests/public_ui_contract.test.mjs",
     "ima:governance": "node scripts/ima-governance-audit.mjs",
-    "ima:finance-governance": "node scripts/ima-finance-governance-audit.mjs"
+    "ima:finance-governance": "node scripts/ima-finance-governance-audit.mjs",
+    "ima:care-governance": "node scripts/ima-emotional-regulation-care-audit.mjs"
   },
   "repository": {
     "type": "git",
