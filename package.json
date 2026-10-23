@@ -32,7 +32,8 @@
     "ima:governance": "node scripts/ima-governance-audit.mjs",
     "ima:finance-governance": "node scripts/ima-finance-governance-audit.mjs",
     "ima:care-governance": "node scripts/ima-emotional-regulation-care-audit.mjs",
-    "ima:empowerment-governance": "node scripts/ima-healthy-empowerment-audit.mjs"
+    "ima:empowerment-governance": "node scripts/ima-healthy-empowerment-audit.mjs",
+    "ima:betterment-governance": "node scripts/ima-continuous-betterment-audit.mjs"
   },
   "repository": {
     "type": "git",
