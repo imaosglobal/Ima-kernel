@@ -15,6 +15,7 @@ const relationalCare = require("./IMA_RELATIONAL_CARE");
 const truthGate = require("./IMA_TRUTH_GATE");
 const agencyGate = require("./IMA_HUMAN_AGENCY_GATE");
 const revenueEvidence = require("./IMA_REVENUE_EVIDENCE");
+const healthyEmpowerment = require("./IMA_HEALTHY_EMPOWERMENT");
 
 const runtime = {
     boot() {
@@ -25,7 +26,9 @@ const runtime = {
         state.set("last_boot", Date.now());
         state.set("health", health);
         state.set("relational_care", relationalCare.contract());
-        state.set("governance", { truth_gate: "CANONICAL", human_agency_gate: "CANONICAL", revenue_evidence: "CANONICAL" });
+        state.set("governance", { truth_gate: "CANONICAL", human_agency_gate: "CANONICAL", revenue_evidence: "CANONICAL", healthy_empowerment: "CANONICAL" });
+        const empowerment = healthyEmpowerment.selfAssessment({ safety: "UNKNOWN", capacity: "UNKNOWN", energy: "UNKNOWN", overload: "UNKNOWN", agency: "HIGH" });
+        state.set("healthy_empowerment", empowerment);
 
         events.emit("BOOT", {
             status: state.get("status"),
@@ -57,7 +60,8 @@ const runtime = {
             governance: {
                 truth_gate: truthGate.STATUSES,
                 human_agency_gate: agencyGate.ACTION_CLASSES,
-                revenue_evidence: { received_only: true }
+                revenue_evidence: { received_only: true },
+                healthy_empowerment: empowerment
             },
             policy: {
                 safe_actions: policy.SAFE_ACTIONS,
