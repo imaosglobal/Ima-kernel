@@ -3,6 +3,7 @@
 const { createContract, validateContract } =
   require("../IMA_CORE_CONTRACT");
 const agencyGate = require("../IMA_HUMAN_AGENCY_GATE");
+const healthyEmpowerment = require("../IMA_HEALTHY_EMPOWERMENT");
 
 async function execute(input = {}) {
   const contract = createContract({
@@ -30,6 +31,7 @@ async function execute(input = {}) {
 
   let result = null;
 
+  const empowermentPlan = healthyEmpowerment.plan(contract.context || {});
   const agencyDecision = agencyGate.decide(contract.action, contract.context);
   if (!agencyDecision.allowed) {
     return {
@@ -40,7 +42,8 @@ async function execute(input = {}) {
         blocked: true,
         reason: agencyDecision.reason,
         approval_required: agencyDecision.approval_required,
-        agency_class: agencyDecision.class
+        agency_class: agencyDecision.class,
+        empowerment: empowermentPlan
       },
       executed_at: new Date().toISOString()
     };
