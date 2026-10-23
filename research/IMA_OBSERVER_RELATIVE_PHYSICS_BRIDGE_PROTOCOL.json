@@ -1,0 +1,38 @@
+{
+  "name": "IMA Observer-Relative Multi-Level Methodology",
+  "version": "1.0.0",
+  "activated_at": "2026-10-24",
+  "author": "Ori Cohen, through IMA",
+  "epistemic_status": "methodology_and_research_program",
+  "claims": {
+    "social_physics_exists": true,
+    "social_physics_solves_quantum_classical_gap": false,
+    "quantum_classical_unification_is_solved": false,
+    "observer_relative_multi_level_analysis_is_an_ima_method": true
+  },
+  "required_state_fields": [
+    "observer","frame","scale","state","interaction","evidence","uncertainty",
+    "invariants","transformation","prediction","outcome"
+  ],
+  "perspectives": [
+    "inside_or_local","external_or_system","alternative_observer_or_frame",
+    "different_scale","adversarial_falsification"
+  ],
+  "evidence_ladder": [
+    "observation","measurement","model","derived_prediction","predefined_test",
+    "independent_or_alternative_test","replication","falsification_attempt","status"
+  ],
+  "status_values": ["SUPPORTED","REJECTED","INCONCLUSIVE","OPEN"],
+  "hard_rules": [
+    "Never treat analogy as proof.",
+    "Never treat correlation as causation without causal evidence.",
+    "Never treat a simulation as empirical confirmation by itself.",
+    "Never promote a hypothesis to fact without evidence.",
+    "Preserve human agency and privacy in social-system interventions.",
+    "Separate established science from IMA synthesis and new hypotheses."
+  ],
+  "research_targets": [
+    "observer/frame transformations","coarse_graining","decoherence","emergence",
+    "information_theoretic descriptions","multi-scale coupled dynamics","human-AI social systems"
+  ]
+}
