@@ -31,3 +31,12 @@ Date: 2026-10-22
 - EXECUTED: Added `npm run ima:governance` as the deterministic governance audit entry point.
 - VERIFIED: GitHub read-back confirmed the updated runtime/action-engine source contains the new governance wiring.
 - GAPS_RECORDED: The audit was not executed in this environment because external GitHub repository cloning is unavailable here; therefore runtime execution/CI success is not claimed.
+
+
+## 2026-10-23 — Finance / nonprofit / creator succession wired into the canonical daily loop
+- Status: EXECUTED
+- Added finance/nonprofit/succession governance as an explicit daily-loop workstream.
+- Canonical specifications: IMA_GLOBAL_NONPROFIT_CHARTER.md, IMA_FINANCIAL_LEDGER_SCHEMA.json, IMA_CREATOR_SUCCESSION_AND_ESTATE.md, IMA_FINANCIAL_EVIDENCE_LEDGER.json.
+- Added scripts/ima-finance-governance-audit.mjs and npm script ima:finance-governance.
+- Added evidence rules for actual revenue/committed expenses, authorization, separation of creator and nonprofit assets, and no invented surplus percentages.
+- Runtime execution result: source changes were read back from GitHub; live CI/runtime execution is not claimed from this edit alone.
