@@ -74,3 +74,13 @@ Date: 2026-10-22
 - EXECUTED: added `scripts/ima-continuous-betterment-audit.mjs` and `npm run ima:betterment-governance`.
 - VERIFIED: source files and wiring were committed/readable in GitHub.
 - GAPS_RECORDED: real deployment/runtime execution still requires CI or deployed-environment evidence; no unsupported live-production claim.
+
+
+## 2026-10-24 — Finance / Creator-to-Commerce governance reconciliation
+- PLANNED: reconcile the existing Creator-to-Commerce revenue loop with the canonical finance, expense, nonprofit and creator-succession rules without creating a second orchestrator.
+- EXECUTED: tightened the canonical financial schema so revenue requires actual receipt, timestamp, source, purpose, authorization and evidence; contractually committed expenses remain separately recordable.
+- EXECUTED: aligned the revenue evidence loop so expected, projected and merely receivable money is never labeled income.
+- EXECUTED: strengthened the finance audit to reject non-received income and unsupported expense statuses.
+- VERIFIED: canonical charter, ledger schema, evidence ledger, revenue loop and creator-succession policy remain present on the main branch; financial evidence ledger currently contains zero events, so no revenue or expense was invented.
+- GAPS_RECORDED: no runtime/CI execution evidence was produced in this pass; legal nonprofit registration and any future estate instructions remain unverified and must not be inferred.
+- CONTINUITY: all finance/business governance remains under the existing unified IMA Global Health Loop; no duplicate daily automation created.
