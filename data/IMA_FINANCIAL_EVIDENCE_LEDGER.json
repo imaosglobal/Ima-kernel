@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "status": "evidence_ledger_initialized",
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-24",
   "events": [],
-  "rule": "Only actual received revenue or verified contractually committed expenses/receivables with evidence may be added. Views, followers, eligibility, estimates and projections never create income events.",
+  "rule": "Only actual received revenue or verified incurred/paid/contractually committed expenses with evidence may be added. Views, followers, eligibility, estimates, projections and merely receivable revenue never create income events.",
   "separation": [
     "personal_ori_expenses",
     "creator_compensation",
