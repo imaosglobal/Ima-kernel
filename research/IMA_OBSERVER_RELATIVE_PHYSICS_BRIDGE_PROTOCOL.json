@@ -1,6 +1,6 @@
 {
   "name": "IMA Observer-Relative Multi-Level Methodology",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "activated_at": "2026-10-24",
   "author": "Ori Cohen, through IMA",
   "epistemic_status": "methodology_and_research_program",
@@ -11,18 +11,42 @@
     "observer_relative_multi_level_analysis_is_an_ima_method": true
   },
   "required_state_fields": [
-    "observer","frame","scale","state","interaction","evidence","uncertainty",
-    "invariants","transformation","prediction","outcome"
+    "observer",
+    "frame",
+    "scale",
+    "state",
+    "interaction",
+    "evidence",
+    "uncertainty",
+    "invariants",
+    "transformation",
+    "prediction",
+    "outcome"
   ],
   "perspectives": [
-    "inside_or_local","external_or_system","alternative_observer_or_frame",
-    "different_scale","adversarial_falsification"
+    "inside_or_local",
+    "external_or_system",
+    "alternative_observer_or_frame",
+    "different_scale",
+    "adversarial_falsification"
   ],
   "evidence_ladder": [
-    "observation","measurement","model","derived_prediction","predefined_test",
-    "independent_or_alternative_test","replication","falsification_attempt","status"
+    "observation",
+    "measurement",
+    "model",
+    "derived_prediction",
+    "predefined_test",
+    "independent_or_alternative_test",
+    "replication",
+    "falsification_attempt",
+    "status"
   ],
-  "status_values": ["SUPPORTED","REJECTED","INCONCLUSIVE","OPEN"],
+  "status_values": [
+    "SUPPORTED",
+    "REJECTED",
+    "INCONCLUSIVE",
+    "OPEN"
+  ],
   "hard_rules": [
     "Never treat analogy as proof.",
     "Never treat correlation as causation without causal evidence.",
@@ -32,7 +56,52 @@
     "Separate established science from IMA synthesis and new hypotheses."
   ],
   "research_targets": [
-    "observer/frame transformations","coarse_graining","decoherence","emergence",
-    "information_theoretic descriptions","multi-scale coupled dynamics","human-AI social systems"
+    "observer/frame transformations",
+    "coarse_graining",
+    "decoherence",
+    "emergence",
+    "information_theoretic descriptions",
+    "multi-scale coupled dynamics",
+    "human-AI social systems"
+  ],
+  "social_physics_law": "docs/IMA_SOCIAL_PHYSICS_UNIFIED_LAW.md",
+  "additional_required_state_fields": [
+    "environment",
+    "rules_institutions",
+    "history",
+    "values_goals",
+    "knowledge_state",
+    "observation_model",
+    "measurement_protocol",
+    "intervention",
+    "causal_effect",
+    "harm",
+    "agency"
+  ],
+  "network_model": [
+    "pairwise_edges",
+    "higher_order_interactions",
+    "adaptive_network"
+  ],
+  "intervention_constraints": [
+    "minimize_intervention_cost",
+    "minimum_required_benefit",
+    "harm_below_defined_threshold",
+    "agency_non_decrease",
+    "privacy_preservation"
+  ],
+  "validation_extensions": [
+    "causal_or_quasi_experimental_test_when_feasible",
+    "cross_context_validation",
+    "distribution_shift_check",
+    "adversarial_falsification",
+    "reflexive_intervention_check"
+  ],
+  "continuous_update": [
+    "new_evidence",
+    "contradictions",
+    "prediction_errors",
+    "parameter_reestimation",
+    "versioned_regression_tests"
   ]
 }
