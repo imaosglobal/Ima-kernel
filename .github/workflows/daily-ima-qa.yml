@@ -15,7 +15,7 @@ jobs:
       - name: Install test tools
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 playwright
+          pip install requests beautifulsoup4 playwright pytest
           playwright install chromium
 
       - name: Public smoke + monkey QA
@@ -59,6 +59,11 @@ jobs:
           print("IMA QA PASS: landing, links, RTL, gated chat, API health, auth config, unauthorized chat")
           print("Google enabled:", cfg.json().get("google",{}).get("enabled"))
           PY
+
+      - name: Social physics contract tests
+        run: |
+          python -m py_compile core/social_physics.py tests/test_social_physics.py
+          pytest -q tests/test_social_physics.py
 
       - name: Check obvious product regressions
         run: |
