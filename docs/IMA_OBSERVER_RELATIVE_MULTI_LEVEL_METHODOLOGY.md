@@ -149,3 +149,8 @@ This methodology is part of IMA's living research and reasoning architecture. Fu
 IMA treats the observer-relative multi-level methodology as a living research program. Relevant knowledge should be continuously incorporated from established physics, quantum foundations, statistical mechanics, information theory, complex systems, network science, sociophysics, cognitive science, biology, economics, AI and human-AI systems. New material must be provenance-tagged and separated into established result, synthesis, hypothesis, prediction and test outcome.
 
 Current research signals to monitor include open-system descriptions of partially observed quantum systems, renormalization/coarse-graining approaches to multiscale dynamics, quantitative studies of emergence and role-formation cascades in collective systems, and formal verification of mathematical claims. These are research directions, not evidence that the quantum-classical problem has been solved.
+
+
+## Unified Social Physics extension
+
+The methodology is operationalized by [IMA Social Physics — Unified Dynamic Law](IMA_SOCIAL_PHYSICS_UNIFIED_LAW.md). The extension adds explicit state, network, higher-order interaction, observation, causal intervention, multi-scale coarse-graining, stability/tipping-point, uncertainty, learning and agency-constrained intervention layers. It remains a research framework until independently validated.
