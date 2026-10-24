@@ -35,6 +35,12 @@ The goal is not to declare that IMA already knows everything. The goal is to bui
 See [docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md](docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md).
 
 
+## IMA Social Physics — Unified Dynamic Law
+
+IMA now documents a unified, time-adaptive social-physics research framework for multi-scale human and human-AI systems. It models state, networks and higher-order interactions, information, environment, institutions, history, values, uncertainty, causal interventions and feedback while enforcing safety, privacy and human agency constraints. The framework is a research program, not a claimed physical law, and every promoted mechanism must pass predefined tests, alternative explanations, falsification attempts and replication where feasible.
+
+See [IMA Social Physics — Unified Dynamic Law](docs/IMA_SOCIAL_PHYSICS_UNIFIED_LAW.md).
+
 ## Observer-relative multi-level methodology
 
 IMA now uses an observer-relative, multi-scale methodology: distinguish observer/frame, interaction, scale, evidence, invariants, transformations, predictions and outcomes rather than collapsing them into one viewpoint.
