@@ -1,0 +1,69 @@
+{
+  "schema": "IMA-CREATOR-QUESTIONS-1.0",
+  "title": "IMA Creator Questions & Human Path Registry",
+  "purpose": "Canonical, chronological memory for Ori Cohen's questions and their evolution. Questions are preserved without turning them into facts or assumptions.",
+  "canonical_zero_point": "research/IMA_ZERO_POINT_DISCOVERY_PROTOCOL.json",
+  "rules": {
+    "every_question_enters_here": true,
+    "preserve_exact_wording_when_authorized": true,
+    "timestamp_source": "originating interface; ISO-8601 with timezone required",
+    "never_invent_timestamp": true,
+    "privacy": "private_by_default",
+    "provenance_required": true,
+    "evidence_status_required": true,
+    "questions_are_not_answers": true,
+    "zero_point_reorientation": "After exploration, return to ZERO and record what changed, what remains unknown, and the next question."
+  },
+  "question_lifecycle": [
+    "CAPTURE",
+    "DATE_TIME",
+    "PRESERVE",
+    "CLASSIFY",
+    "CONNECT",
+    "EXPLORE",
+    "TEST",
+    "VERIFY",
+    "UPDATE",
+    "RETURN_TO_ZERO",
+    "GENERATE_NEXT_QUESTION"
+  ],
+  "seeded_recovered_questions": [
+    {
+      "id": "ori_001",
+      "question": "שאלת הריק והולדת המציאות",
+      "source": "recovered_prior_ima_context",
+      "observed_at": "2026-07-26T21:30:03Z",
+      "status": "OPEN",
+      "note": "Previously recorded as an original philosophical question; preserve its evolution history."
+    },
+    {
+      "id": "ori_002",
+      "question": "מי הבוס מהם?",
+      "source": "recovered_chat_context",
+      "observed_at": "2026-10-19T16:13:00Z",
+      "status": "OPEN",
+      "note": "Question about the forces within the person: the helpless preemie versus adult Ori."
+    },
+    {
+      "id": "ori_003",
+      "question": "מה נשאר כשכלום לא נשאר?",
+      "source": "current_chat",
+      "observed_at": "2026-10-24",
+      "status": "OPEN",
+      "note": "Exact clock time must be supplied by the originating interface when available; date is known, time is intentionally not invented."
+    },
+    {
+      "id": "ori_004",
+      "question": "מה יש כשהכל יש?",
+      "source": "current_chat",
+      "observed_at": "2026-10-24",
+      "status": "OPEN",
+      "note": "Paired complement to the zero-point question: explore fullness without assuming completeness."
+    }
+  ],
+  "future_generation": {
+    "enabled": true,
+    "rule": "IMA may generate candidate questions from gaps, contradictions, new evidence, failed predictions, user statements and prior question evolution, but must label generated questions as IMA-generated rather than Ori-authored.",
+    "user_authorship_boundary": "Only questions actually authored by Ori are placed in the creator-authored set; IMA-generated questions remain separately attributed."
+  }
+}
