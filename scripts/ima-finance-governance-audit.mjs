@@ -24,10 +24,12 @@ for (const event of ledger.events) {
   if (!event || typeof event !== "object") throw new Error("Invalid ledger event");
   const fields = new Set(Object.keys(event));
   if (event.type === "income") {
+    if (event.received_status !== "received") throw new Error("Income event must represent actual received revenue");
     for (const f of incomeFields) if (!fields.has(f)) throw new Error("Income event missing " + f);
     for (const f of forbiddenIncomeSignals) if (event[f] !== undefined) throw new Error("Income event uses forbidden inference field " + f);
   }
   if (event.type === "expense") {
+    if (!["incurred","paid","committed"].includes(event.status)) throw new Error("Expense status must be incurred, paid or committed");
     for (const f of expenseFields) if (!fields.has(f)) throw new Error("Expense event missing " + f);
     if (event.authorization === false || event.status === "unapproved") throw new Error("Unapproved expense present in canonical ledger");
   }
