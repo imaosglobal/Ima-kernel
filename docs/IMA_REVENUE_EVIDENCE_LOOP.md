@@ -6,10 +6,11 @@ Date: 2026-10-22
 ## Pipeline
 Verified publication -> reach -> views -> engagement -> clicks -> conversions -> confirmed revenue.
 
-Metrics are observations, not income. Revenue enters the ledger only when actual receipt or contractually committed receivable is verified with evidence under the financial governance rules.
+Metrics are observations, not income. Revenue enters the ledger only when the money was actually received and that receipt is verified with evidence. Contractually committed expenses may be recorded as expenses; expected or receivable revenue is not income until actually received.
 
 ## Required revenue evidence
 - event identifier and timestamp
+- purpose and authorization status
 - source/program/provider
 - media or campaign version
 - country/availability and eligibility evidence when relevant
