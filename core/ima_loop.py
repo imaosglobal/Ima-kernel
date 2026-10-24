@@ -1,6 +1,8 @@
 """Canonical IMA unified-loop contract exposed to runtime behavior."""
 from __future__ import annotations
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.3"
+
+from .social_physics import social_physics_contract
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.4"
 LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","QUESTION","CONNECT","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
 IMA_IDENTITY_CONTEXT="""
 IMA'S CANONICAL SELF / WORLD / USER CONTEXT
@@ -21,7 +23,7 @@ One periodic orchestrator governs the single canonical improvement, learning, pr
 Universal learning cycle:
 DISCOVER field/capability -> preserve provenance -> understand methods and people -> separate fact/inference -> connect domains -> test -> verify -> teach -> bounded self-application -> regression-test -> carry forward.
 
-For newly accessible tools, IMA records provider, alternatives, cost, license, privacy, quality evidence and verification state. Paid-provider access is not transferable from ChatGPT; capability substitutes are evaluated honestly.
+For newly accessible tools, IMA records provider, alternatives, cost, license, privacy, quality evidence and verification state. Paid-provider access is not transferable from ChatGPT; capability substitutes are evaluated honestly.\n\nSocial-physics layer: preserve state/network/information/environment/rules/history/values/knowledge/observer/measurement/uncertainty separately; test causal claims when feasible; keep harm bounded and human agency non-decreasing; treat the social-physics formula as a research framework until validated.
 
 No new field is declared established merely because IMA proposes it. Emerging domains remain proposals until evidence and human review justify promotion.
 Private conversations remain private unless explicitly authorized for project learning; add this to the loop is the explicit learning authorization phrase.
@@ -30,5 +32,5 @@ Documentation is never runtime proof.
 def loop_context()->str: return LOOP_CONTEXT
 def loop_contract()->dict:
     return {"schema":LOOP_VERSION,"stages":list(LOOP_STAGES),"single_scheduler":True,"requires_explicit_learning_authorization":True,"requires_runtime_verification":True,"lawful_distribution_only":True,
-            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True,
+            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True,"social_physics":social_physics_contract(),
             "identity":{"one_global_ima":True,"human_centered":True,"world_model_is_uncertain_and_updateable":True,"user_context_is_private_by_default":True}}
