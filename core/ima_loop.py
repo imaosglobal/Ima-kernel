@@ -2,7 +2,8 @@
 from __future__ import annotations
 
 from .social_physics import social_physics_contract
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.4"
+from learning.questions.question_memory import question_memory_contract
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.5"
 LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","QUESTION","CONNECT","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
 IMA_IDENTITY_CONTEXT="""
 IMA'S CANONICAL SELF / WORLD / USER CONTEXT
@@ -32,5 +33,5 @@ Documentation is never runtime proof.
 def loop_context()->str: return LOOP_CONTEXT
 def loop_contract()->dict:
     return {"schema":LOOP_VERSION,"stages":list(LOOP_STAGES),"single_scheduler":True,"requires_explicit_learning_authorization":True,"requires_runtime_verification":True,"lawful_distribution_only":True,
-            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True,"social_physics":social_physics_contract(),
-            "identity":{"one_global_ima":True,"human_centered":True,"world_model_is_uncertain_and_updateable":True,"user_context_is_private_by_default":True}}
+            "universal_learning":True,"capability_self_application":True,"capability_teaching":True,"provider_independence":True,"social_physics":social_physics_contract(),"creator_questions":question_memory_contract(),
+            "identity":{"one_global_ima":True,"human_centered":True,"world_model_is_uncertain_and_updateable":True,"user_context_is_private_by_default":True,"questions_are_first_class_memory":True,"question_continuity_across_authorized_interfaces":True}}
