@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-10-26T00:38:00+02:00",
+  "event": "global_research_and_human_knowledge_network_expansion",
+  "summary": "Scanned IMA's existing worldview, continuous-improvement, AI capability radar and web-intelligence layers, then added a canonical multidisciplinary research and human-knowledge network covering public research infrastructures, literature, datasets, researcher identities, citizen science, standards, ethics, arts and humanities.",
+  "source": [
+    "IMA repository current canonical documents",
+    "UNESCO Open Science",
+    "European Open Science Cloud",
+    "OpenAIRE",
+    "OpenAlex/Crossref/ORCID ecosystem",
+    "Acumen current research brief",
+    "public official research infrastructure sources"
+  ],
+  "status": "EXECUTED",
+  "details": {
+    "new_files": [
+      "docs/IMA_GLOBAL_RESEARCH_AND_HUMAN_KNOWLEDGE_NETWORK.json",
+      "docs/IMA_GLOBAL_RESEARCH_AND_HUMAN_KNOWLEDGE_NETWORK.md"
+    ],
+    "registry_scope": [
+      "physics",
+      "mathematics",
+      "chemistry",
+      "biology",
+      "medicine",
+      "neuroscience",
+      "psychology",
+      "earth_science",
+      "climate",
+      "ocean",
+      "biodiversity",
+      "agriculture",
+      "food",
+      "space",
+      "engineering",
+      "computer_science",
+      "AI",
+      "robotics",
+      "social_science",
+      "economics",
+      "law",
+      "ethics",
+      "philosophy",
+      "history",
+      "linguistics",
+      "education",
+      "arts",
+      "culture",
+      "accessibility",
+      "public_health",
+      "policy",
+      "open_science",
+      "metascience"
+    ],
+    "connection_layers": [
+      "literature_discovery",
+      "researcher_identity",
+      "datasets_and_apis",
+      "preprints_and_repositories",
+      "observatories_and_measurements",
+      "research_institutions",
+      "standards_and_ethics",
+      "citizen_science",
+      "human_expert_perspectives"
+    ],
+    "governance": [
+      "public-first",
+      "no unsolicited outreach",
+      "no private credential storage",
+      "no invented collaborations or endorsements",
+      "human consent for direct contact",
+      "discovery is not verification"
+    ],
+    "current_research_signals": [
+      "open science is broadening toward reproducibility and research integrity",
+      "AI-assisted science needs contestable provenance",
+      "citizen science can complement official monitoring",
+      "knowledge graphs can expose collaboration structures",
+      "machine-accessible scholarly metadata is increasingly important"
+    ],
+    "verification": {
+      "registry_commit": "f32a677edd899e5db5bfe8a598ce7770012498ad",
+      "documentation_commit": "a50c62023ce4dabde51ad8be2285e397bf63f06b",
+      "runtime_ci": "NOT_VERIFIED"
+    },
+    "gap": "Attempted to extend docs/UNIFIED_DAILY_LEARNING_AND_EMAIL_LOOP.md directly, but the repository safety boundary blocked that mutation. The new canonical network explicitly assigns itself to the existing unified daily loop and does not create a scheduler."
+  }
+}
