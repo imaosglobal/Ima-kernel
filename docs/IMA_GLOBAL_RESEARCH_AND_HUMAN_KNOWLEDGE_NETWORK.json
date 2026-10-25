@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0",
+  "status": "canonical research-and-human-knowledge network specification",
+  "purpose": "Connect IMA to public scientific knowledge, researchers, research institutions, datasets, repositories, observatories, standards bodies, citizen-science communities and interdisciplinary networks across life domains.",
+  "governance": {
+    "no_claim_of_personal_connection": true,
+    "public_first": true,
+    "no_unsolicited_outreach": true,
+    "human_consent_required_for_direct_contact": true,
+    "private_credentials_never_stored": true,
+    "discovery_is_not_verification": true
+  },
+  "coverage": [
+    "physics",
+    "mathematics",
+    "chemistry",
+    "biology",
+    "medicine",
+    "neuroscience",
+    "psychology",
+    "earth_science",
+    "climate",
+    "ocean",
+    "biodiversity",
+    "agriculture",
+    "food",
+    "space",
+    "engineering",
+    "computer_science",
+    "AI",
+    "robotics",
+    "social_science",
+    "economics",
+    "law",
+    "ethics",
+    "philosophy",
+    "history",
+    "linguistics",
+    "education",
+    "arts",
+    "culture",
+    "accessibility",
+    "public_health",
+    "policy",
+    "open_science",
+    "metascience"
+  ],
+  "connection_layers": [
+    "literature_discovery",
+    "researcher_identity",
+    "datasets_and_apis",
+    "preprints_and_repositories",
+    "observatories_and_measurements",
+    "research_institutions",
+    "standards_and_ethics",
+    "citizen_science",
+    "human_expert_perspectives"
+  ],
+  "sources": [
+    [
+      "OpenAlex",
+      "https://openalex.org",
+      "literature, authors, institutions, concepts, citations",
+      "open_metadata"
+    ],
+    [
+      "Crossref",
+      "https://www.crossref.org",
+      "DOIs, scholarly metadata and relationships",
+      "open_metadata"
+    ],
+    [
+      "ORCID",
+      "https://orcid.org",
+      "persistent researcher identities and public researcher records",
+      "public_identity"
+    ],
+    [
+      "arXiv",
+      "https://arxiv.org",
+      "physics, mathematics, computer science and related preprints",
+      "preprints"
+    ],
+    [
+      "bioRxiv",
+      "https://www.biorxiv.org",
+      "life-science preprints",
+      "preprints"
+    ],
+    [
+      "medRxiv",
+      "https://www.medrxiv.org",
+      "health and medical preprints",
+      "preprints"
+    ],
+    [
+      "PubMed",
+      "https://pubmed.ncbi.nlm.nih.gov",
+      "biomedical literature discovery",
+      "literature"
+    ],
+    [
+      "Europe PMC",
+      "https://europepmc.org",
+      "life-sciences literature and research data links",
+      "literature_api"
+    ],
+    [
+      "ClinicalTrials.gov",
+      "https://clinicaltrials.gov",
+      "registered clinical studies and results",
+      "clinical_registry"
+    ],
+    [
+      "WHO",
+      "https://www.who.int",
+      "global health evidence, standards and public-health guidance",
+      "institution"
+    ],
+    [
+      "NIH",
+      "https://www.nih.gov",
+      "biomedical research and public research infrastructure",
+      "institution"
+    ],
+    [
+      "NSF",
+      "https://www.nsf.gov",
+      "science and engineering research ecosystem",
+      "institution"
+    ],
+    [
+      "UNESCO Open Science",
+      "https://www.unesco.org/en/open-science",
+      "global open-science policy and knowledge-sharing infrastructure",
+      "policy"
+    ],
+    [
+      "EOSC",
+      "https://eosc.eu",
+      "European multidisciplinary research data, tools and services",
+      "research_infrastructure"
+    ],
+    [
+      "OpenAIRE",
+      "https://www.openaire.eu",
+      "open research discovery, interoperability and research graphs",
+      "research_infrastructure"
+    ],
+    [
+      "Zenodo",
+      "https://zenodo.org",
+      "multidisciplinary research outputs, data and software",
+      "repository"
+    ],
+    [
+      "OSF",
+      "https://osf.io",
+      "open projects, preregistration, research files and communities",
+      "research_platform"
+    ],
+    [
+      "GBIF",
+      "https://www.gbif.org",
+      "global biodiversity occurrence data",
+      "biodiversity_data"
+    ],
+    [
+      "EMBL-EBI",
+      "https://www.ebi.ac.uk",
+      "bioinformatics databases, genomics and life-science resources",
+      "life_science_data"
+    ],
+    [
+      "NASA",
+      "https://www.nasa.gov",
+      "space, Earth observation and planetary science",
+      "observatory"
+    ],
+    [
+      "ESA",
+      "https://www.esa.int",
+      "space science, Earth observation and exploration",
+      "observatory"
+    ],
+    [
+      "CERN",
+      "https://home.cern",
+      "particle physics and large-scale scientific infrastructure",
+      "research_institution"
+    ],
+    [
+      "NOAA",
+      "https://www.noaa.gov",
+      "atmosphere, ocean, climate and Earth systems",
+      "observatory"
+    ],
+    [
+      "Copernicus",
+      "https://www.copernicus.eu",
+      "European Earth-observation data and services",
+      "earth_observation"
+    ],
+    [
+      "IPCC",
+      "https://www.ipcc.ch",
+      "climate-science assessments",
+      "assessment"
+    ],
+    [
+      "FAO",
+      "https://www.fao.org",
+      "food, agriculture, nutrition and natural resources",
+      "institution"
+    ],
+    [
+      "IEA",
+      "https://www.iea.org",
+      "energy data, analysis and transition research",
+      "energy"
+    ],
+    [
+      "IEEE",
+      "https://www.ieee.org",
+      "engineering, computing and technical standards",
+      "professional_network"
+    ],
+    [
+      "ACM",
+      "https://www.acm.org",
+      "computing research and professional community",
+      "professional_network"
+    ],
+    [
+      "AAAS",
+      "https://www.aaas.org",
+      "multidisciplinary science community and science policy",
+      "professional_network"
+    ],
+    [
+      "Royal Society",
+      "https://royalsociety.org",
+      "multidisciplinary scientific community and evidence",
+      "professional_network"
+    ],
+    [
+      "TWAS",
+      "https://twas.org",
+      "global science network with strong developing-world representation",
+      "professional_network"
+    ],
+    [
+      "Research Data Alliance",
+      "https://www.rd-alliance.org",
+      "global research-data interoperability community",
+      "data_network"
+    ],
+    [
+      "CODATA",
+      "https://codata.org",
+      "international research-data policy and interoperability",
+      "data_network"
+    ],
+    [
+      "Center for Open Science",
+      "https://www.cos.io",
+      "open, reproducible and transparent research practices",
+      "metascience"
+    ],
+    [
+      "COPE",
+      "https://publicationethics.org",
+      "publication ethics and research-integrity practices",
+      "ethics"
+    ],
+    [
+      "WIPO",
+      "https://www.wipo.int",
+      "intellectual-property standards and research-related policy",
+      "policy"
+    ],
+    [
+      "Creative Commons",
+      "https://creativecommons.org",
+      "open licensing and knowledge sharing",
+      "licensing"
+    ],
+    [
+      "Europeana",
+      "https://www.europeana.eu",
+      "cultural heritage, humanities and arts collections",
+      "culture"
+    ],
+    [
+      "Smithsonian",
+      "https://www.si.edu",
+      "natural history, culture, science and public knowledge",
+      "culture_science"
+    ],
+    [
+      "World Wide Science",
+      "https://worldwidescience.org",
+      "multinational scientific search and discovery",
+      "discovery"
+    ],
+    [
+      "RePEc",
+      "https://repec.org",
+      "economics research and author/publication metadata",
+      "social_science"
+    ],
+    [
+      "PsyArXiv",
+      "https://psyarxiv.com",
+      "psychology preprints",
+      "social_science"
+    ],
+    [
+      "SocArXiv",
+      "https://osf.io/preprints/socarxiv",
+      "social-science preprints",
+      "social_science"
+    ],
+    [
+      "Humanities Commons",
+      "https://hcommons.org",
+      "humanities scholarship and researcher community",
+      "humanities"
+    ],
+    [
+      "Zooniverse",
+      "https://www.zooniverse.org",
+      "citizen-science projects and public participation in research",
+      "citizen_science"
+    ],
+    [
+      "iNaturalist",
+      "https://www.inaturalist.org",
+      "community biodiversity observations",
+      "citizen_science"
+    ],
+    [
+      "SciStarter",
+      "https://scistarter.org",
+      "citizen-science project discovery",
+      "citizen_science"
+    ]
+  ],
+  "ranking": {
+    "priority_order": [
+      "primary evidence",
+      "research infrastructure",
+      "open datasets/APIs",
+      "peer-reviewed literature",
+      "preprints",
+      "expert/community interpretation",
+      "media/commentary"
+    ],
+    "dimensions": [
+      "evidence_strength",
+      "recency",
+      "independence",
+      "reproducibility",
+      "openness",
+      "coverage",
+      "relevance_to_IMA",
+      "accessibility",
+      "cost",
+      "licensing",
+      "privacy",
+      "safety"
+    ]
+  },
+  "person_connection": {
+    "allowed": [
+      "discover public researcher profiles",
+      "link publications to public researcher identifiers",
+      "map expertise to topics",
+      "surface public institutional contact routes"
+    ],
+    "prohibited_without_consent": [
+      "scrape private contact details",
+      "infer private identity attributes",
+      "send unsolicited messages",
+      "claim collaboration",
+      "claim endorsement",
+      "store passwords or private credentials"
+    ]
+  },
+  "daily_loop": {
+    "orchestrator": "existing unified daily IMA Global Health Loop",
+    "no_new_scheduler": true,
+    "actions": [
+      "scan configured public sources",
+      "detect gaps and new evidence",
+      "map researchers and institutions by public provenance",
+      "compare disciplines and counterevidence",
+      "propose high-value connections",
+      "verify before integration",
+      "append findings to development journal"
+    ]
+  }
+}
