@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "policy": "public-first multidisciplinary evidence network",
+  "source_tiers": [
+    {
+      "tier": 1,
+      "name": "primary research and official measurement",
+      "examples": [
+        "peer-reviewed papers",
+        "registered trials",
+        "official observatories",
+        "government and intergovernmental datasets",
+        "institutional research outputs"
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "open scholarly infrastructure",
+      "examples": [
+        "OpenAlex",
+        "Crossref",
+        "ORCID",
+        "Zenodo",
+        "OSF",
+        "OpenAIRE",
+        "EOSC"
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "expert and professional networks",
+      "examples": [
+        "scientific societies",
+        "researcher profiles",
+        "standards organizations"
+      ]
+    },
+    {
+      "tier": 4,
+      "name": "preprints and community research",
+      "examples": [
+        "arXiv",
+        "bioRxiv",
+        "medRxiv",
+        "PsyArXiv",
+        "SocArXiv",
+        "citizen science"
+      ]
+    },
+    {
+      "tier": 5,
+      "name": "secondary interpretation",
+      "examples": [
+        "reviews",
+        "journalism",
+        "commentary",
+        "blogs"
+      ]
+    }
+  ],
+  "rules": [
+    "Never equate source discovery with factual verification.",
+    "Use primary evidence when making high-stakes claims.",
+    "Cross-check important claims across independent sources.",
+    "Preserve uncertainty and disagreement.",
+    "Record source URL, timestamp, version where available, and evidence type.",
+    "Prefer free/open access where legally available.",
+    "Do not purchase access or subscribe autonomously.",
+    "Do not contact researchers autonomously.",
+    "Do not store unnecessary personal data.",
+    "Respect licenses and attribution requirements."
+  ],
+  "daily_outputs": [
+    "new evidence",
+    "new researchers or institutions",
+    "new datasets",
+    "counterevidence",
+    "stale sources",
+    "disciplinary gaps",
+    "geographic/language gaps",
+    "accessibility gaps",
+    "verification tasks"
+  ]
+}
