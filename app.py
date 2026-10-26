@@ -19,7 +19,13 @@ except Exception:
     nylas_email = None
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.environ.get("IMA_FLASK_SECRET") or os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
 app.register_blueprint(billing_api)
+try:
+    from api.auth.google_oauth import google_auth
+    app.register_blueprint(google_auth)
+except Exception:
+    google_auth = None
 USER = "test_user"
 
 PUBLIC_ORIGINS = {
@@ -514,6 +520,7 @@ def chat():
         universal = _universal_memory()
         consent = universal.get_consent(user_id)
         memory = public_memory.recall(user_id, message) if consent.get("status") == "GRANTED" else []
+        personalization = payload.get("personalization") if isinstance(payload.get("personalization"), dict) else {}
         result = ask(message.strip(), user_id=user_id, public=True, public_memory=memory, personalization=personalization)
         response = str(result.get("response") or "").strip()
         if not response:
