@@ -29,7 +29,7 @@ function GoogleLogin({auth,setAuth,locale}){
  const ref=useRef(null);
  useEffect(()=>{let cancelled=false;(async()=>{try{
   const config=await getAuthConfig();
-  if(!config?.google?.enabled||!config.google.client_id){if(!cancelled)setAuth(a=>({...a,status:'not_configured'}));return}
+  if(!config?.google?.enabled||!config.google.client_id){if(!cancelled)setAuth(a=>({...a,status:'not_configured',error:'google_not_configured'}));return}
   for(let i=0;i<30&&!window.google?.accounts?.id&&!cancelled;i++)await new Promise(r=>setTimeout(r,100));
   if(!window.google?.accounts?.id||!ref.current)throw new Error('Google Sign-In unavailable');
   ref.current.innerHTML='';
@@ -40,7 +40,7 @@ function GoogleLogin({auth,setAuth,locale}){
   if(!cancelled)setAuth(a=>({...a,status:'ready'}))
  }catch(e){if(!cancelled)setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}})();return()=>{cancelled=true}},[setAuth]);
  if(auth.status==='signed_in')return <div className="account-chip"><img className="account-photo" src={auth.user?.picture||''} alt="" onError={e=>{e.currentTarget.style.display='none'}}/><span>{auth.user?.name||auth.user?.email||'IMA'}</span><button onClick={()=>{signOutIma();setAuth({status:'ready',user:null})}}>{locale.labels.logout}</button></div>;
- return <div className="google-entry"><div ref={ref}/><small>{auth.status==='signing_in'?'…':auth.error==='signin_unavailable'?locale.labels.loginRequired:''}</small></div>;
+ return <div className="google-entry"><div ref={ref}/><small>{auth.status==='signing_in'?'…':auth.error==='signin_unavailable'?'Google sign-in could not be completed.':auth.error==='google_not_configured'?'Google sign-in is not configured on the public runtime yet.':' '}</small></div>;
 }
 
 function AvatarScene({state,compact=false}){return <div className={`heygen-avatar-frame ${compact?'compact':''} ${state==='speaking'?'speaking':''}`}><img src={IMA_HEYGEN.avatarImageUrl} alt="IMA avatar" loading={compact?'lazy':'eager'}/>{state==='speaking'&&<span className="heygen-speaking">IMA</span>}</div>}
