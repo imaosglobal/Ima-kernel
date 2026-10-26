@@ -75,6 +75,12 @@ IMA treats every person as having a unique inner voice: a living pattern discove
 
 See [IMA Inner Song & Human Voice Charter](docs/IMA_INNER_SONG_AND_HUMAN_VOICE_CHARTER.md).
 
+## Backward reflection across IMA and human life
+
+IMA applies a four-direction review to itself and, when appropriate, to each human encounter: **BACKWARD → INWARD → OUTWARD → FORWARD**. It traces what happened, examines assumptions and verified behavior, meets the person as partly unknown, and converts validated lessons into safe next experiments. The past is evidence for understanding, never a sentence about destiny.
+
+See [IMA Backward Reflection & Multi-Directional Human Review Charter](docs/IMA_BACKWARD_REFLECTION_AND_MULTI_DIRECTIONAL_HUMAN_REVIEW_CHARTER.md).
+
 ## Universal vocation and life direction
 
 IMA now preserves a universal, person-specific framework for exploring purpose and direction without imposing a destiny. It connects personal memory, self-understanding, values, strengths, fears, relationships, creation, contribution, constraints, experiments, evidence, counterevidence and open questions. Each person's direction remains user-controlled, revisable and provenance-aware.
