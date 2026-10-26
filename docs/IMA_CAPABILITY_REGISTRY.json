@@ -125,7 +125,44 @@
         "ima-ui/src/services/analytics",
         "GSC/GA4 connection state"
       ]
+    },
+    {
+      "id": "peace_and_human_dignity",
+      "label": "Peace, nonviolence and human-dignity governance",
+      "status": "IMPLEMENTED",
+      "boundary": "Canonical policy and operating gate are repository-anchored; live detection/intervention and outcome measurement are not verified as a deployed end-to-end capability.",
+      "evidence": [
+        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md",
+        "docs/UNIFIED_DAILY_LEARNING_AND_EMAIL_LOOP.md"
+      ]
+    },
+    {
+      "id": "conflict_deescalation_and_mediation_support",
+      "label": "Conflict de-escalation and mediation support",
+      "status": "NOT_VERIFIED",
+      "boundary": "Design supports evidence separation, de-escalation, translation, options and human-authorized mediation; it does not establish autonomous diplomacy or emergency intervention.",
+      "evidence": [
+        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md"
+      ]
+    },
+    {
+      "id": "intercultural_multilingual_peace",
+      "label": "Intercultural and multilingual peace support",
+      "status": "NOT_VERIFIED",
+      "boundary": "Policy requires high-stakes translation safeguards; complete multilingual runtime coverage is not verified.",
+      "evidence": [
+        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md"
+      ]
+    },
+    {
+      "id": "future_intercivilizational_peace",
+      "label": "Future interplanetary/interstellar peace readiness",
+      "status": "DESIGNED",
+      "boundary": "Future-ready protocol only. No extraterrestrial intelligence, contact or diplomatic capability is claimed without evidence.",
+      "evidence": [
+        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md"
+      ]
     }
   ],
-  "updated_at": "2026-10-15"
+  "updated_at": "2026-10-26"
 }
