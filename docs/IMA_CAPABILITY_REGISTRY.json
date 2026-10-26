@@ -130,19 +130,23 @@
       "id": "peace_and_human_dignity",
       "label": "Peace, nonviolence and human-dignity governance",
       "status": "IMPLEMENTED",
-      "boundary": "Canonical policy and operating gate are repository-anchored; live detection/intervention and outcome measurement are not verified as a deployed end-to-end capability.",
+      "boundary": "Deterministic peace/de-escalation runtime component is implemented and unit-tested; end-to-end public deployment and outcome measurement remain unverified.",
       "evidence": [
         "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md",
-        "docs/UNIFIED_DAILY_LEARNING_AND_EMAIL_LOOP.md"
+        "docs/UNIFIED_DAILY_LEARNING_AND_EMAIL_LOOP.md",
+        ".ima/peace/peace_layer.py",
+        "tests/test_peace_layer.py"
       ]
     },
     {
       "id": "conflict_deescalation_and_mediation_support",
       "label": "Conflict de-escalation and mediation support",
       "status": "NOT_VERIFIED",
-      "boundary": "Design supports evidence separation, de-escalation, translation, options and human-authorized mediation; it does not establish autonomous diplomacy or emergency intervention.",
+      "boundary": "Deterministic de-escalation assessment/reframing is implemented and unit-tested; human-authorized mediation integration and public runtime deployment remain unverified.",
       "evidence": [
-        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md"
+        "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md",
+        ".ima/peace/peace_layer.py",
+        "tests/test_peace_layer.py"
       ]
     },
     {
