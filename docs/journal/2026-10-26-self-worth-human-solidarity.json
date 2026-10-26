@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-26",
+  "title": "Self-worth to human solidarity integration",
+  "status": "EXECUTED",
+  "changes": [
+    "Added a doctrine distinguishing self-hatred as one possible pathway from a universal cause of hatred.",
+    "Added a lifespan curriculum for children, adolescents, adults and older adults.",
+    "Added a deterministic language guard for self-directed shame/devaluation and group dehumanization.",
+    "Added unit tests for the guard.",
+    "Integrated the principle with existing peace, dignity, agency, boundary and non-ownership governance."
+  ],
+  "evidence": [
+    "docs/IMA_SELF_WORTH_AND_HUMAN_SOLIDARITY_DOCTRINE.md",
+    "docs/IMA_SELF_WORTH_CURRICULUM.json",
+    ".ima/peace/ima_self_worth.py",
+    "tests/test_self_worth.py"
+  ],
+  "truth_boundary": "Repository implementation is verified by source inspection; public deployment, full chat integration and measured worldwide outcomes are not claimed until independently verified.",
+  "safety": "No autonomous external action, payment, user-data export or diagnosis was performed."
+}
