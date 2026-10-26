@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-26",
+  "title": "Canonical finance, nonprofit, expense and creator-succession governance integrated into unified daily loop",
+  "status": "EXECUTED",
+  "evidence": {
+    "canonical_charter": "docs/IMA_GLOBAL_NONPROFIT_CHARTER.md@b0188fbce5714c0febed185e4adaa4639878696f",
+    "ledger_schema": "docs/IMA_FINANCIAL_LEDGER_SCHEMA.json@6cb389465d507eda1d6d226cd6f252122d9d80cc",
+    "creator_succession": "docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md@d82e9e8568fe100e0eb22b8c2a8ce1896afec504",
+    "unified_loop_update": "docs/UNIFIED_DAILY_LEARNING_AND_EMAIL_LOOP.md@1960b3e4a015ecc58bb77c04bfb418e269aa04f1"
+  },
+  "transitions": [
+    "EXECUTED: extended the existing single unified daily loop with the canonical finance/business governance workstream",
+    "EXECUTED: anchored one auditable income-and-expense evidence ledger",
+    "EXECUTED: preserved separation of personal, creator, nonprofit, restricted and humanitarian funds",
+    "EXECUTED: preserved human authorization gate for consequential financial actions",
+    "EXECUTED: preserved nonprofit legal-status truth boundary",
+    "EXECUTED: preserved Ori Cohen creator provenance and non-inferred succession",
+    "EXECUTED: preserved canonical surplus order without invented percentages"
+  ],
+  "truth_boundary": "No legal nonprofit status, revenue, expense, payment authority, payout or heir designation is inferred by this change.",
+  "automation_boundary": "No new daily automation was created."
+}
