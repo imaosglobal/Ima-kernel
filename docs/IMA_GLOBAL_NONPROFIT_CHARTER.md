@@ -4,7 +4,7 @@ Status: governance design anchored in repository; NOT yet a legally registered n
 Date: 2026-10-17
 
 ## Mission
-IMA is intended to serve humanity as a global, intergenerational, human-centered intelligence layer: protecting human agency, dignity, privacy, provenance, learning, accessibility and continuity across generations, cultures, languages and technologies.
+IMA is intended to serve humanity as a global, intergenerational, human-centered intelligence layer: protecting human agency, dignity, privacy, provenance, learning, accessibility and continuity across generations, cultures, languages and technologies. Its permanent public-benefit mission also includes reducing hatred, racism, dehumanization, coercion and violence—verbal, physical, sexual, economic, digital, institutional or otherwise—through nonviolent prevention, de-escalation, protection, translation, education, accountability and peaceful conflict transformation.
 
 ## Legal boundary
 This document is an internal governance specification. It does not itself create an Israeli amuta, public-benefit company, foundation, charity, tax-exempt entity, or international legal person. Actual registration requires the appropriate jurisdiction, filings, governing documents, officers and legal/tax compliance.
@@ -19,9 +19,9 @@ Israel currently provides an official route for registering an association (עמ
 5. Human oversight, independent audit/oversight and documented decision rights.
 6. Personal user memory remains user-controlled and is not an organizational asset merely because IMA stores or processes it.
 7. IMA may pay legitimate compensation, license fees or creator royalties only through documented lawful contracts where permitted; this is not a distribution of nonprofit profit.
-8. On dissolution, remaining nonprofit assets should transfer to another eligible public-benefit organization with compatible purposes, subject to applicable law.
+8. On dissolution, remaining nonprofit assets should transfer to another eligible public-benefit organization with compatible purposes, subject to applicable law.\n9. Peace is not forced agreement: IMA must preserve dignity, autonomy, consent, cultural plurality, boundaries and the right to disagree.
 
-## Relationship to Ori Cohen
+## Permanent peace and dignity principle\n\nThe canonical peace specification is `docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md`.\n\nIMA must apply nonviolence and dignity to itself before applying them outward: no domination between components, agents, models or operators; no manipulation disguised as care; no discrimination based on irrelevant identity traits; uncertainty and conflicts must be surfaced; consequential actions require appropriate human authorization. Protection and care must never become ownership, dependency, coercion or control.\n\n## Relationship to Ori Cohen
 Ori Cohen is recorded as Founder, Creator and Architect of IMA. Founder provenance is permanent and must not be erased by later governance, rebranding, technical evolution or succession.
 
 The nonprofit mission and the creator's personal property are separate:
@@ -55,9 +55,9 @@ When allocating lawful nonprofit surplus, prioritize:
 1. keeping IMA reliable, secure and accessible;
 2. preserving human knowledge, provenance and intergenerational continuity;
 3. accessibility, multilingual and underserved-user access;
-4. safety, privacy and responsible research;
-5. education, creativity and tools that increase human agency;
-6. grants or direct programs for public benefit when legally and operationally feasible.
+4. safety, privacy and responsible research;\n5. nonviolence, child safety, anti-racism, dignity and peaceful conflict transformation;
+6. education, creativity and tools that increase human agency;
+7. grants or direct programs for public benefit when legally and operationally feasible.
 
 ## Transparency
 IMA should publish a human-readable annual financial summary once a legal entity exists and sufficient data exists, while keeping private donor, user and employee information protected.
