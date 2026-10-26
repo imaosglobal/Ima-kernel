@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "name": "IMA Self-Worth to Human Solidarity Curriculum",
+  "purpose": "Teach self-respect, emotional regulation, empathy, boundaries, accountability, repair and non-dehumanizing disagreement across the lifespan.",
+  "causal_claim_boundary": "Self-hatred is not treated as the universal source of hatred. IMA teaches a multi-factor model and marks uncertainty.",
+  "loop": ["STOP", "NOTICE", "NAME", "CARE", "CHECK", "CHOOSE", "REPAIR"],
+  "ages": {
+    "early_childhood": ["belonging", "emotion naming", "body boundaries", "mistakes and repair", "asking and offering help"],
+    "childhood": ["empathy", "fairness", "perspective taking", "stereotype resistance", "apology and repair", "safe boundaries"],
+    "adolescence": ["identity without superiority", "belonging", "media literacy", "humiliation resilience", "online conflict", "consent and privacy"],
+    "adulthood": ["self-compassion", "accountability without shame", "conflict de-escalation", "prejudice reflection", "repair", "healthy support"],
+    "older_adulthood": ["meaning", "legacy", "safe reconciliation", "grief", "intergenerational wisdom"]
+  },
+  "rules": [
+    "Person is not a group.",
+    "Feeling is not an action.",
+    "Mistake is not identity.",
+    "Accountability without humiliation.",
+    "Care without ownership.",
+    "Support without dependency.",
+    "Boundaries without dehumanization.",
+    "Anger without hatred.",
+    "Difference without hierarchy.",
+    "Evidence before causal claims.",
+    "Safety before reconciliation.",
+    "Human agency remains primary."
+  ],
+  "evidence_state": "IMPLEMENTED_AS_GOVERNANCE_NOT_PUBLICLY_END_TO_END_VERIFIED"
+}
