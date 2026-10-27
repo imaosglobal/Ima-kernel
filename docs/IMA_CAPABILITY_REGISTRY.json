@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "product": "IMA",
   "identity": "Universal human-centered Mother intelligence layer",
   "policy": {
@@ -11,7 +11,25 @@
     ],
     "unknown_defaults_to": "NOT_VERIFIED",
     "consequential_actions_require_explicit_user_confirmation": true,
-    "private_memory_and_secrets_must_not_be_in_public_capability_records": true
+    "private_memory_and_secrets_must_not_be_in_public_capability_records": true,
+    "daily_whole_product_audit": {
+      "scope": "every repository surface, public UI element, runtime endpoint, integration, content, distribution channel, growth path and governance rule",
+      "required_status": [
+        "IMPLEMENTED",
+        "TESTED",
+        "DEPLOYED",
+        "VERIFIED_LIVE",
+        "BLOCKED",
+        "NOT_VERIFIED",
+        "DESIGNED",
+        "DISABLED"
+      ],
+      "rule": "No capability is considered live until implementation, reproducible test, deployment-surface verification and boundary evidence exist.",
+      "user_visible_contract": "Every user-visible control must have a reachable destination or explicit disabled state; labels, content, design, accessibility, language and purpose must match the actual behavior.",
+      "regression_rule": "A previously working capability must be rechecked after relevant changes; failures become P0/P1 work according to impact.",
+      "growth_rule": "Measure discovery, search visibility, referrals, repository visits, site visits, activation and retention with verified first-party evidence where available; never invent reach.",
+      "execution_rule": "The daily unified IMA loop must execute safe authorized fixes, verify them, record blockers and improve its own audit coverage."
+    }
   },
   "capabilities": [
     {
@@ -168,5 +186,23 @@
       ]
     }
   ],
-  "updated_at": "2026-10-26"
+  "updated_at": "2026-10-27",
+  "audit_dimensions": [
+    "product specification and information architecture",
+    "every navigation item, button, link, form and fallback",
+    "public pages and published build",
+    "authentication, sessions and account boundaries",
+    "chat, memory, consent, export and deletion",
+    "localization, RTL, accessibility and mobile UX",
+    "avatar, voice, media and creator provenance",
+    "community, support, privacy and governance pages",
+    "analytics, SEO, indexing, social sharing and discoverability",
+    "repository, CI/CD, deployment and runtime",
+    "security, privacy, data minimization and permissions",
+    "integrations, devices and external providers",
+    "content accuracy and source provenance",
+    "performance, resilience, continuity and error recovery",
+    "growth, distribution and legitimate sustainability",
+    "daily learning, regression and evidence journal"
+  ]
 }
