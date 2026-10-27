@@ -184,6 +184,21 @@
       "evidence": [
         "docs/IMA_PEACE_AND_HUMAN_DIGNITY_DOCTRINE.md"
       ]
+    },
+    {
+      "id": "device_health_bridge",
+      "label": "Privacy-preserving device health bridge",
+      "status": "IMPLEMENTED",
+      "boundary": "Reports coarse runtime diagnostics from the user's IMA web/PWA surface without photos, messages, files, credentials or private chat content; daily background execution is best-effort and depends on platform support and app activity.",
+      "evidence": [
+        "ima-ui/src/services/deviceHealth.js",
+        "ima-ui/src/main.jsx",
+        "Supabase Edge Function ima-device-health",
+        "public.ima_device_health"
+      ],
+      "test_verified": true,
+      "deployment_verified": true,
+      "live_verification_required": true
     }
   ],
   "updated_at": "2026-10-27",
