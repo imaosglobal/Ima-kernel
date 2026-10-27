@@ -43,5 +43,15 @@
     "ignored": "Newsletters, promotional messages and unrelated notifications."
   },
   "truth_boundary": "Continuity is provider-dependent. Supabase restoration is in progress; Render is live. No guarantee of uninterrupted availability is claimed.",
-  "safety": "No secrets, credentials, payment permissions, destructive actions or paid upgrades were used."
+  "safety": "No secrets, credentials, payment permissions, destructive actions or paid upgrades were used.",
+  "security_remediation": {
+    "status": "VERIFIED",
+    "provider": "Supabase",
+    "project_id": "tenpzpvqvtezezaossjd",
+    "action": "REVOKE EXECUTE ON FUNCTION public.rls_auto_enable() FROM PUBLIC, anon, authenticated",
+    "evidence": "Supabase apply_migration returned success; post-change routine_privileges shows only postgres and service_role retain EXECUTE.",
+    "remaining_gap": "9 public tables have RLS enabled without policies; no policies were invented because ownership/access semantics were not yet evidenced.",
+    "remediation_url": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "timestamp": "2026-10-27"
+  }
 }
