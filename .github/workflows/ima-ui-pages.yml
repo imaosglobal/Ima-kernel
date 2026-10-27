@@ -1,11 +1,6 @@
 name: IMA UI Pages
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'ima-ui/**'
-      - '.github/workflows/ima-ui-pages.yml'
   workflow_dispatch:
 
 permissions:
