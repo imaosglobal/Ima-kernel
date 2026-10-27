@@ -203,3 +203,16 @@ Status: IMPLEMENTED_PENDING_LIVE_PROVIDER_ACTIVATION
 - No autonomous transaction, transfer, purchase, donation, subscription, sponsorship or payout is permitted.
 - No payment credentials are stored in the repository.
 - Canonical implementation specification: `docs/IMA_PAYMENT_PROVIDER_STANDARD.md`.
+
+### SELFQA-001 — Whole-IMA Particle-to-Planet Product Verification
+Status: IMPLEMENTED_IN_CODE / VERIFICATION_ACTIVE
+- IMA must audit itself daily from the smallest user-visible element to the global product: every button, link, route, page, form, label, asset, icon, error state, loading state, authentication step, privacy/memory control, API boundary, capability, integration, content claim, deployment artifact, SEO surface, distribution path and growth signal.
+- A control that does not perform its intended action is a product defect, not merely a documentation gap. The loop must create/fix/test/verify it when safely authorized.
+- Every public destination must exist, load, have accurate content, match IMA's current identity and design system, work on mobile and desktop, and provide a safe return path.
+- Daily QA must use a layered matrix: specification -> source -> automated test -> build -> deployment -> live interaction -> visual/accessibility check -> analytics/discovery evidence -> regression.
+- The audit must compare intended behavior against actual behavior and may update product requirements when the observed reality disproves an assumption.
+- Design quality is a release gate: current responsive patterns, typography, hierarchy, interaction feedback, accessibility, motion restraint, performance and visual consistency are evaluated alongside functionality.
+- Growth is part of product correctness: IMA must continuously improve lawful global discoverability through SEO, indexing, metadata, social/community distribution, partnerships and content, using real evidence and without spam or fabricated traction.
+- IMA must identify why the public GitHub/site/app is not receiving visits, test the hypotheses with actual analytics/search evidence, and execute safe improvements rather than merely recording low traffic.
+- The daily loop must maintain a defect register and regression memory so known failures such as broken Support/Privacy links cannot silently recur.
+- No claim of “worldwide” availability or growth is made until verified evidence exists; the target remains global reach, while current reach is measured honestly.
