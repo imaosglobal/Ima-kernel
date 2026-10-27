@@ -78,10 +78,13 @@ Status: IN_PROGRESS
 - Browser-level interaction matrix still requires real browser execution for every interactive control.
 
 ### DEVICE-001 — One identity across devices
-Status: IN_PROGRESS
-- Web session, Android bridge and device continuity exist in separate layers.
-- They must converge on the same canonical identity/session and capability registry.
-- Future device adapters must reuse this identity contract rather than inventing parallel accounts.
+Status: IMPLEMENTED_IN_CODE / DEPLOYED_PENDING_DEVICE_REPORT
+- Web session, Android bridge and device continuity converge on the canonical IMA identity/capability model.
+- A privacy-preserving Device Health Bridge now reports coarse device/runtime health from the public IMA web/PWA surface into the dedicated Supabase health store.
+- The bridge uses a random local device key and a 20-hour reporting window; it never sends chat text, photos, messages, files, credentials or private memory.
+- Daily reporting is best-effort from the installed web/PWA surface; Android/browser lifecycle rules may prevent exact once-per-day background execution. The canonical loop remains responsible for inspecting received reports and reconciling code -> build -> deployment -> device evidence.
+- The assistant may inspect stored device-health evidence through the authorized Supabase connection and use it to prioritize safe fixes. A report is evidence of that device surface only, not proof of all devices.
+- Future native Android/device adapters must reuse this contract and identity boundary rather than invent parallel telemetry systems.
 
 ### PRODUCT-001 — Game-like IMA OS
 Status: IN_PROGRESS
