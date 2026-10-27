@@ -35,7 +35,7 @@ export function getDeviceContinuity() {
 
 export function registerContinuity() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/Ima-kernel/sw.js', { scope: '/Ima-kernel/' }).catch(() => {});
+    navigator.serviceWorker.register('/Ima-kernel/sw.js', { scope: '/Ima-kernel/' }).then(reg => reg.update()).catch(() => {});
   }
   return getDeviceContinuity();
 }
