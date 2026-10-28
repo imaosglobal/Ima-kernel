@@ -7,13 +7,15 @@ import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
 
 const GLB_PATH='/Ima-kernel/mother_character.glb';
 const GLB_GIT_BLOB_SHA1='217170d2bd67051270be974292dc3b834eefe206';
-const PERSONALIZATION_KEY='ima-unified-personalization-v1';
+const PERSONALIZATION_KEY='ima-unified-personalization-v2';
 const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'normal',memoryScope:'personal',interface:'IMA',theme:'system'};
 
-function loadProfile(){try{return {...defaults,...JSON.parse(localStorage.getItem(PERSONALIZATION_KEY)||'{}')}}catch{return {...defaults}}}
+function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';return PERSONALIZATION_KEY+':'+String(id).toLowerCase()}
+function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
+function saveProfile(user,profile){localStorage.setItem(profileStorageKey(user),JSON.stringify(profile))}
 
 function PersonalizationPanel({profile,setProfile,locale}){
- const set=(key,value)=>{const next={...profile,[key]:value};setProfile(next);localStorage.setItem(PERSONALIZATION_KEY,JSON.stringify(next));if(key==='language'){localStorage.setItem('ima-language-v2',value);window.location.reload()}};
+ const set=(key,value)=>{const next={...profile,[key]:value};setProfile(next);saveProfile(getStoredGoogleUser(),next);if(key==='language'){localStorage.setItem('ima-language-v2',value);window.location.reload()}};
  return <details className="personalization-panel"><summary>{locale.labels.personalize}</summary><div className="personalization-grid">
   <label>{locale.labels.language}<select value={profile.language} onChange={e=>set('language',e.target.value)}><option value="auto">Auto</option>{Object.entries(SUPPORTED).map(([code,x])=><option key={code} value={code}>{x.name}</option>)}</select></label>
   <label>{(locale.labels.tone||'Tone')}<select value={profile.tone} onChange={e=>set('tone',e.target.value)}><option value="balanced">Balanced</option><option value="direct">Direct</option><option value="warm">Warm</option><option value="professional">Professional</option><option value="simple">Simple</option></select></label>
@@ -49,7 +51,7 @@ export default function App(){
  const [lang,setLang]=useState(detectLanguage());
  const locale=getLocale(lang);
  const [auth,setAuth]=useState({status:getStoredGoogleUser()?'signed_in':'checking',user:getStoredGoogleUser()});
- const [profile,setProfile]=useState(loadProfile());
+ const [profile,setProfile]=useState(loadProfile(getStoredGoogleUser()));
  const [input,setInput]=useState('');
  const [messages,setMessages]=useState([]);
  const [busy,setBusy]=useState(false);
@@ -65,6 +67,7 @@ export default function App(){
   const handler=e=>{e.preventDefault();setInstallEvent(e)};window.addEventListener('beforeinstallprompt',handler);return()=>window.removeEventListener('beforeinstallprompt',handler)
  },[lang,locale.code,locale.dir]);
 
+ useEffect(()=>{if(auth.status==='signed_in')setProfile(loadProfile(auth.user));},[auth.status,auth.user?.email,auth.user?.sub]);
  const loggedIn=auth.status==='signed_in';
  const go=id=>{setActive(id);document.getElementById(id)?.scrollIntoView({behavior:'smooth'})};
  const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');setBusy(true);setAvatarState('listening');try{const answer=await askIma(text,{...profile,language:lang,device:navigator.userAgent,region:navigator.language});setMessages(m=>[...m,{role:'ima',text:answer}]);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
