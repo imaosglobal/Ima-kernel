@@ -34,7 +34,7 @@ class IMAMaster:
         self.name = "IMA MASTER"
 
     def ask(self, message, user_id="default", public=False, public_memory=None, personalization=None):
-        personalization = personalization if isinstance(personalization, dict) else {}\n        requested_language = str(personalization.get("language") or "").strip()\n        response_instruction = f"\n\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\n" if requested_language else ""\n        provider_message = message + response_instruction\n        context = identity_context.build_context(message, public=public)
+        personalization = personalization if isinstance(personalization, dict) else {}\n        requested_language = str(personalization.get("language") or "").strip()\n        response_instruction = (\n            f"\\n\\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\\n"\n            if requested_language else ""\n        )\n        provider_message = message + response_instruction\n        context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
         capability_runtime = None
