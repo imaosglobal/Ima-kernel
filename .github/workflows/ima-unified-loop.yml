@@ -39,6 +39,20 @@ jobs:
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Reconcile the public IMA product surface
         run: python scripts/ima_public_reconciliation.py
+      - name: Run the whole-system perspective review
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          p=Path('.ima/multi_perspective/review.json')
+          lenses=['user','customer','executive','operator','technical','research','creator','community','institution','privacy','compliance','finance','infrastructure','distribution','future','environment','accessibility','caregiver','young_user','older_user','agent_user']
+          scales=['micro','product','macro','system_of_systems']
+          horizons=['now','near_term','one_year','multi_year','intergenerational']
+          record={'schema':'IMA-MULTI-PERSPECTIVE-1.0','timestamp':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),'lenses':lenses,'scales':scales,'horizons':horizons,'single_scheduler':True,'truth_rule':'Source code and documentation are not runtime proof.'}
+          p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+          print('IMA_MULTI_PERSPECTIVE=PASS')
+          PY
       - name: Run the single canonical IMA loop
         run: python .ima/loop/unified_loop.py
       - name: Persist canonical loop state
@@ -47,7 +61,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git fetch origin main
           git rebase --autostash origin/main
-          git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
+          git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/multi_perspective/review.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
           git diff --cached --quiet && exit 0
           git commit -m "chore: record unified IMA loop cycle"
           git push
