@@ -182,5 +182,5 @@ class IMAMaster:
 
 IMA = IMAMaster()
 
-def ask(message, user_id="default", public=False, public_memory=None):
-    return IMA.ask(message, user_id=user_id, public=public, public_memory=public_memory)
+def ask(message, user_id="default", public=False, public_memory=None, personalization=None):
+    return IMA.ask(message, user_id=user_id, public=public, public_memory=public_memory, personalization=personalization)
