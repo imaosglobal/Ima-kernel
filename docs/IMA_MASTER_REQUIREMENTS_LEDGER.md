@@ -219,3 +219,13 @@ Status: IMPLEMENTED_IN_CODE / VERIFICATION_ACTIVE
 - IMA must identify why the public GitHub/site/app is not receiving visits, test the hypotheses with actual analytics/search evidence, and execute safe improvements rather than merely recording low traffic.
 - The daily loop must maintain a defect register and regression memory so known failures such as broken Support/Privacy links cannot silently recur.
 - No claim of “worldwide” availability or growth is made until verified evidence exists; the target remains global reach, while current reach is measured honestly.
+
+
+### MPR-001 — Multi-Perspective Whole-System Review
+Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_PENDING
+- IMA is evaluated through user, customer, executive, operator, technical, research, creator, community, institutional, privacy, finance, infrastructure, distribution, accessibility and future-steward lenses.
+- Reviews span micro, product, macro and system-of-systems scales and now through intergenerational horizons.
+- Customer and executive views explicitly test value, trust, risk, economics, governance, dependency, scalability and evidence rather than sales alone.
+- Source/document/generated state never equals runtime proof.
+- This requirement belongs to the single IMA Global Health Loop.
+- Canonical protocol: docs/IMA_MULTI_PERSPECTIVE_REVIEW_PROTOCOL.md.
