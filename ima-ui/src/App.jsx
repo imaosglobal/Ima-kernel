@@ -13,6 +13,14 @@ const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'no
 function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';return PERSONALIZATION_KEY+':'+String(id).toLowerCase()}
 function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
 function saveProfile(user,profile){localStorage.setItem(profileStorageKey(user),JSON.stringify(profile))}
+function applyChatPersonalization(text,profile){
+ const t=String(text||'').trim().toLowerCase(), next={...profile}; let changed=false;
+ const set=(k,v)=>{if(v&&next[k]!==v){next[k]=v;changed=true}};
+ const l=t.match(/(?:language|שפה)\s*(?:to|ל|=)?\s*(hebrew|עברית|english|אנגלית|arabic|ערבית)/); const lm={hebrew:'he',עברית:'he',english:'en',אנגלית:'en',arabic:'ar',ערבית:'ar'}; if(l)set('language',lm[l[1]]);
+ const tone=t.match(/(?:tone|סגנון)\s*(?:to|ל|=)?\s*(balanced|direct|warm|professional|simple|מאוזן|ישיר|חם|מקצועי|פשוט)/); const tm={balanced:'balanced',direct:'direct',warm:'warm',professional:'professional',simple:'simple',מאוזן:'balanced',ישיר:'direct',חם:'warm',מקצועי:'professional',פשוט:'simple'}; if(tone)set('tone',tm[tone[1]]);
+ const depth=t.match(/(?:depth|עומק)\s*(?:to|ל|=)?\s*(short|normal|deep|קצר|רגיל|עמוק)/); const dm={short:'short',normal:'normal',deep:'deep',קצר:'short',רגיל:'normal',עמוק:'deep'}; if(depth)set('depth',dm[depth[1]]);
+ return {next,changed};
+}
 
 function PersonalizationPanel({profile,setProfile,locale}){
  const set=(key,value)=>{const next={...profile,[key]:value};setProfile(next);saveProfile(getStoredGoogleUser(),next);if(key==='language'){localStorage.setItem('ima-language-v2',value);window.location.reload()}};
@@ -68,9 +76,10 @@ export default function App(){
  },[lang,locale.code,locale.dir]);
 
  useEffect(()=>{if(auth.status==='signed_in')setProfile(loadProfile(auth.user));},[auth.status,auth.user?.email,auth.user?.sub]);
+ useEffect(()=>{if(auth.status==='signed_in')setProfile(loadProfile(auth.user));},[auth.status,auth.user?.email,auth.user?.sub]);
  const loggedIn=auth.status==='signed_in';
  const go=id=>{setActive(id);document.getElementById(id)?.scrollIntoView({behavior:'smooth'})};
- const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');setBusy(true);setAvatarState('listening');try{const answer=await askIma(text,{...profile,language:lang,device:navigator.userAgent,region:navigator.language});setMessages(m=>[...m,{role:'ima',text:answer}]);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
+ const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');const customization=applyChatPersonalization(text,profile);if(customization.changed){setProfile(customization.next);saveProfile(auth.user,customization.next);setMessages(m=>[...m,{role:'ima',text:customization.next.language==='he'?'שיניתי את ההעדפה שלך.':'I updated your preference.'}]);if(customization.next.language&&customization.next.language!==lang) {localStorage.setItem('ima-language-v2',customization.next.language);window.setTimeout(()=>window.location.reload(),50)}return;}setBusy(true);setAvatarState('listening');try{const answer=await askIma(text,{...profile,language:lang,device:navigator.userAgent,region:navigator.language});setMessages(m=>[...m,{role:'ima',text:answer}]);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
  const install=async()=>{if(installEvent){installEvent.prompt();await installEvent.userChoice;setInstallEvent(null)}else{alert(locale.labels.install+': use your browser menu and choose “Add to Home screen” / “Install app”.')}};
 
  return <main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
