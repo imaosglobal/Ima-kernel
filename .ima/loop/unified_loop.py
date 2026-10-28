@@ -54,13 +54,12 @@ COMMANDS={
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
 "global_integration_intake":["node","scripts/ima-daily-loop-intake.mjs"],
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
-"multi_perspective_review":["python","scripts/ima_public_reconciliation.py"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness","multi_perspective_review"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
