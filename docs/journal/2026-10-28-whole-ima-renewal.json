@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-28",
+  "status": "VERIFIED",
+  "scope": "Unified Daily IMA Global Health Loop — whole-IMA reconciliation",
+  "repository": {
+    "provider": "GitHub",
+    "repository": "imaosglobal/Ima-kernel",
+    "default_branch": "main",
+    "evidence": [
+      "docs/IMA_CAPABILITY_REGISTRY.json",
+      "docs/IMA_MASTER_REQUIREMENTS_LEDGER.md",
+      "docs/IMA_GLOBAL_NONPROFIT_CHARTER.md",
+      "docs/IMA_FINANCIAL_LEDGER_SCHEMA.json",
+      "docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md",
+      "ima-ui/"
+    ],
+    "result": "Canonical governance and capability truth model present; unknown capabilities remain NOT_VERIFIED rather than inferred live."
+  },
+  "public_product_reconciliation": {
+    "status": "GAPS_RECORDED",
+    "verified_source_facts": [
+      "Google Identity Services script is present in ima-ui/index.html.",
+      "Google sign-in UI and credential exchange are implemented in ima-ui/src/App.jsx and ima-ui/src/services/imaChat.js.",
+      "Public chat routes through the configured IMA API base with a session-token gate.",
+      "Multilingual UI definitions and RTL support exist in ima-ui/src/i18n.js.",
+      "Accessibility controls include large text, high contrast and reduced motion."
+    ],
+    "runtime_gap": "GitHub source inspection does not prove public GitHub Pages runtime availability, Google authentication completion, or live API reachability.",
+    "evidence_rule": "No VERIFIED_LIVE claim made from source code alone."
+  },
+  "service_continuity": [
+    {
+      "provider": "Supabase",
+      "service": "IMA first  global AGI",
+      "project_id": "tenpzpvqvtezezaossjd",
+      "status": "ACTIVE_HEALTHY",
+      "evidence": "Supabase list_projects at 2026-10-28 showed ACTIVE_HEALTHY."
+    },
+    {
+      "provider": "Supabase",
+      "service": "ima-device-health",
+      "project_id": "tenpzpvqvtezezaossjd",
+      "status": "ACTIVE",
+      "version": 2,
+      "verify_jwt": false,
+      "boundary": "Function enforces publishable API key plus validated x-ima-device-key and writes through server-side secret; live end-to-end browser verification remains required."
+    }
+  ],
+  "security": {
+    "status": "GAPS_RECORDED",
+    "verified_existing_remediation": "public.rls_auto_enable() EXECUTE remains restricted to postgres/service_role from the prior verified remediation.",
+    "current_advisory": "9 public tables have RLS enabled with no policies.",
+    "affected_tables": [
+      "billing_customers",
+      "billing_events",
+      "conversations",
+      "ima_memory",
+      "memory",
+      "payments",
+      "sessions",
+      "subscriptions",
+      "users"
+    ],
+    "rows_observed": 0,
+    "action": "No speculative RLS policies added because table ownership/access semantics are not yet evidenced."
+  },
+  "governance": {
+    "canonical_creator": "Ori Cohen / creator_001 / founder/creator/architect",
+    "nonprofit_status": "No legal nonprofit status inferred or claimed.",
+    "finance": "No revenue inferred; no autonomous spending, purchase, donation, transfer or contract executed.",
+    "succession": "No heirs inferred; legal estate documents remain authoritative."
+  },
+  "safety": "No secrets, credentials, payment permissions, destructive production actions or duplicate daily automations used.",
+  "timestamp": "2026-10-28T18:55:29+02:00"
+}
