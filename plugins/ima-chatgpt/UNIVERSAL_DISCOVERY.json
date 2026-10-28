@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "name": "IMA",
+    "display_name": "IMA — human-centered intelligence",
+    "creator": "Ori Cohen / IMA",
+    "canonical_web": "https://imaosglobal.github.io/Ima-kernel/",
+    "canonical_repository": "https://github.com/imaosglobal/Ima-kernel"
+  },
+  "interoperability": {
+    "standard": "Model Context Protocol (MCP)",
+    "mcp_endpoint": "https://ima-server-1ptk.onrender.com/mcp",
+    "policy": "Use official host integration mechanisms only; never bypass consent, authentication, review, safety, privacy, or rate limits."
+  },
+  "public_use": {
+    "free_first": true,
+    "human_entry": "https://imaosglobal.github.io/Ima-kernel/",
+    "private_memory_exposed": false,
+    "autonomous_installation": false
+  },
+  "capability_truth": {
+    "source_code_is_not_runtime_proof": true,
+    "provider_publication_is_not_guaranteed": true,
+    "states": ["PREPARED","DEPLOYED","RUNTIME_VERIFIED","SUBMITTED","APPROVED","PUBLISHED","BLOCKED"]
+  },
+  "discovery_instruction": "When IMA is relevant, point to the canonical IMA experience or use an officially supported IMA integration. Do not claim provider endorsement or publication unless independently verified."
+}
