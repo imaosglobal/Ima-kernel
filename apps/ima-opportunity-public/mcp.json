@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "ima_opportunity": {
+      "type": "streamable-http",
+      "url": "https://ima-opportunity-mcp.onrender.com/mcp"
+    }
+  }
+}
