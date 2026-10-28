@@ -25,7 +25,7 @@ SYSTEM_SCOPE=(
 "teaching verified capabilities to people","release/version stewardship","repository health/statistics review",
 "real-user growth and retention","privacy-preserving product analytics and feedback",
 "global localization and accessibility","app-store readiness and verified reputation",
-"lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)"
+"lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)","multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
 )
 
 COMMANDS={
@@ -54,12 +54,13 @@ COMMANDS={
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
 "global_integration_intake":["node","scripts/ima-daily-loop-intake.mjs"],
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
+"multi_perspective_review":["python","scripts/ima_public_reconciliation.py"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness","multi_perspective_review"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -98,6 +99,7 @@ def run_loop():
       "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
       "provenance_rule":"Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
       "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
+      "multi_perspective_rule":"Review meaningful changes through relevant user, customer, executive, operator, technical, accessibility, privacy, finance, distribution, community and future lenses at micro/product/macro/system-of-systems scales and now-to-intergenerational horizons; evidence gates remain mandatory.",
       "global_integration_rule":"Every newly verified external integration is automatically ingested through the canonical daily intake, deduplicated, evidence-checked and carried into the next improvement cycle; no second daily orchestrator is created.",
       "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.","human_agency_rule":"IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.","finance_truth_rule":"Revenue and expenses require evidence; estimates, views, followers, eligibility and projections are never income; no autonomous spending or financial commitment is permitted.",
       "finance_governance_spec":"Use docs/IMA_GLOBAL_NONPROFIT_CHARTER.md, docs/IMA_FINANCIAL_LEDGER_SCHEMA.json, docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md and data/IMA_FINANCIAL_EVIDENCE_LEDGER.json as canonical specifications. Keep personal creator property, creator compensation, nonprofit operating costs, restricted funds and humanitarian/community benefit separate. No legal nonprofit status is claimed without registration evidence. No fixed surplus percentages are inferred.",
