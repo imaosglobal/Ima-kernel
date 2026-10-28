@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ima-opportunity-intelligence",
+  "version": "1.0.0",
+  "description": "Evaluate business opportunities with evidence, uncertainty, risk and reversible next actions.",
+  "author": {
+    "name": "Ori Cohen",
+    "email": "ori4u2@gmail.com",
+    "url": "https://imaosglobal.github.io/Ima-kernel/"
+  },
+  "homepage": "https://imaosglobal.github.io/Ima-kernel/docs/ima-opportunity-engine.html",
+  "repository": "https://github.com/imaosglobal/Ima-kernel",
+  "license": "MIT",
+  "keywords": ["business", "opportunity", "validation", "risk", "revenue"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "IMA Opportunity Intelligence",
+        "shortDescription": "Evaluate opportunities safely.",
+        "longDescription": "A free-first decision-support app for evaluating business opportunities. It separates facts, assumptions, estimates and unknowns; assesses demand evidence, revenue clarity, acquisition friction, delivery cost, trust and risk, time-to-value and reversibility; then identifies the weakest link and proposes the cheapest zero-cost reversible test. It does not invent customers, demand, partners, prices or results, and it does not make purchases, payments, spam, signatures or external commercial commitments.",
+        "category": "Business"
+      }
+    }
+  }
+}
