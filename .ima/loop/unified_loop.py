@@ -1,4 +1,6 @@
 """Canonical single IMA loop with universal learning and self-application."""
+# first-priority provenance: provenance precedes promotion; cross-domain reconciliation and global user benefit are canonical requirements.
+# human agency and intelligibility are mandatory checks in the same canonical loop.
 from __future__ import annotations
 import json, subprocess
 from datetime import datetime, timezone
