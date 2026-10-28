@@ -1,0 +1,23 @@
+name: Build IMA Opportunity public plugin
+
+on:
+  push:
+    paths:
+      - "apps/ima-opportunity-public/**"
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package plugin
+        run: |
+          cd apps/ima-opportunity-public
+          zip -r ../../ima-opportunity-intelligence-public.zip . -x "*.DS_Store"
+      - name: Upload plugin package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ima-opportunity-intelligence-public
+          path: ima-opportunity-intelligence-public.zip
+          retention-days: 30
