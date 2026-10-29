@@ -39,6 +39,10 @@ Automation may shorten this ladder only when the risk is demonstrably low and re
 
 For high-impact or irreversible decisions, skipping meaningful human agency requires explicit evidence, lawful authority and a documented reason.
 
+## Anti-dependency test
+
+The anti-dependency test is the practical gate for detecting whether a capability risks making people dependent on an AI system they cannot understand, question, override or recover from.
+
 ## Anti-"cow" test
 
 A capability fails the IMA anti-dependency gate if a reasonable affected person cannot answer, at an appropriate level:
