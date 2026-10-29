@@ -1,4 +1,4 @@
-from .ima_self_worth import assess_self_worth
+from tests.ima_self_worth import assess_self_worth
 
 
 def test_self_worth_detects_shame_without_diagnosing():
