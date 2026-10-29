@@ -1,4 +1,8 @@
-from tests.ima_self_worth import assess_self_worth
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / ".ima" / "peace"))
+from ima_self_worth import assess_self_worth
 
 
 def test_self_worth_detects_shame_without_diagnosing():
