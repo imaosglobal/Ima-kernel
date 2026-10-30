@@ -9,7 +9,7 @@ This is the first source of truth for the IMA Google Ads work completed in this 
 - Google Ads account: 477-713-2721
 - Google currently reports the account as not yet enabled/deactivated until sign-up, billing, or reactivation is completed.
 - Initial setup is being completed manually by the user.
-- No paid spend is authorized by this record.
+- User authorized an initial 100 ILS experiment. Do not increase spending beyond that without new explicit authorization.
 
 ## Ad copy
 Headlines:
