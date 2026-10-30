@@ -203,3 +203,23 @@ New user proposals are not lost in chat. The canonical loop must:
 12. Continuous future-capability intake through this same ledger.
 
 No item is allowed to disappear merely because it was discussed months earlier.
+
+
+## 10. 2026-10-30 execution delta
+
+### Public chat P0
+- **Fix committed:** `c6c4fb41d332cdd3705a823f8e478c0b4a330862`.
+- The master runtime now isolates provider, knowledge-graph, brain and private-memory answer paths.
+- Malformed knowledge/provider data can no longer be returned as the public response.
+- Internal exceptions are retained only in runtime diagnostics; a bounded safe answer is returned instead.
+- **Regression test committed:** `0b1751c5cd344b73e926a61880dc5fe45c8a02e` — verifies the previously reported list-index shape error cannot leak to the user.
+- **State remains:** TESTED_PENDING_DEPLOYMENT until a fresh deployed/browser request proves a normal response.
+
+### Canonical memory consolidation
+- **Compatibility fix committed:** `9fe03cae798b911aa0fc4d3f2009c1878783c7f4`.
+- `conversation_layer.py` no longer owns a JSON conversation store; it delegates its historical API to the canonical universal interaction-memory runtime.
+- This removes a known parallel persistence authority while preserving existing callers.
+- **State:** IMPLEMENTED_IN_CODE / TESTED_PENDING_DEPLOYMENT; live consent/isolation/export/deletion verification remains required.
+
+### Verification boundary
+These commits are implementation evidence only. No deployment or live-public success is declared until a fresh runtime/browser test produces independently inspectable evidence.
