@@ -76,6 +76,43 @@ def run_task(name):
         return {"task":name,"command":command,"status":"PASS" if p.returncode==0 else "FAIL","returncode":p.returncode,"stdout_tail":p.stdout[-1500:],"stderr_tail":p.stderr[-1500:]}
     except Exception as exc: return {"task":name,"command":command,"status":"ERROR","error":repr(exc)}
 
+def append_journal(now, results):
+    JOURNAL.parent.mkdir(parents=True, exist_ok=True)
+    with JOURNAL.open("a", encoding="utf-8") as f:
+        for result in results:
+            status = result.get("status")
+            event_status = "EXECUTED" if status == "PASS" else ("FAILED" if status == "FAIL" else "GAPS_RECORDED")
+            entry = {
+                "timestamp": now.isoformat(),
+                "event": "canonical_loop_task",
+                "summary": f"Canonical IMA loop task {result.get('task', 'unknown')} completed with {status or 'UNKNOWN'}",
+                "source": "ima-unified-loop",
+                "status": event_status,
+                "details": {
+                    "task": result.get("task"),
+                    "command": result.get("command"),
+                    "returncode": result.get("returncode"),
+                    "evidence": result.get("stdout_tail", ""),
+                    "limitations": result.get("stderr_tail", "") if status != "PASS" else "",
+                },
+            }
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        summary_status = "VERIFIED" if results and all(r.get("status") == "PASS" for r in results) else "GAPS_RECORDED"
+        f.write(json.dumps({
+            "timestamp": now.isoformat(),
+            "event": "canonical_loop_cycle",
+            "summary": "Canonical whole-IMA cycle completed; task-level evidence recorded.",
+            "source": "ima-unified-loop",
+            "status": summary_status,
+            "details": {
+                "task_count": len(results),
+                "passed": sum(r.get("status") == "PASS" for r in results),
+                "failed": sum(r.get("status") == "FAIL" for r in results),
+                "errors": sum(r.get("status") in {"ERROR", "UNKNOWN", None} for r in results),
+                "truth_rule": "Task execution evidence is not proof of public runtime capability.",
+            },
+        }, ensure_ascii=False) + "\n")
+
 def run_loop():
     now=now_local(); tasks=due(now); results=[run_task(t) for t in tasks]
     foresight=system_foresight(SYSTEM_SCOPE)
@@ -86,7 +123,7 @@ def run_loop():
         task=result.get("task","unknown")
         action="carry_forward" if status=="PASS" else ("inspect_logs_before_change" if status=="FAIL" else "inspect_runtime_evidence")
         findings.append({"task":task,"finding":status or "UNKNOWN","action":action})
-    record={"schema":"IMA-UNIFIED-LOOP-1.3","timestamp":now.isoformat(),"timezone":"Asia/Jerusalem","stages":list(STAGES),"scope":list(SYSTEM_SCOPE),"tasks":results,
+    record={"schema":"IMA-UNIFIED-LOOP-1.4","timestamp":now.isoformat(),"timezone":"Asia/Jerusalem","stages":list(STAGES),"scope":list(SYSTEM_SCOPE),"tasks":results,
       "foresight":{"components":foresight,"priority_now_actions":foresight_actions},
       "diagnostics":{"summary":{"total":len(results),"passed":sum(r.get("status")=="PASS" for r in results),"failed":sum(r.get("status")=="FAIL" for r in results),"errors":sum(r.get("status") in {"ERROR","UNKNOWN",None} for r in results)},"findings":findings,"truth_rule":"Diagnostics describe this run; they do not prove live deployment without runtime evidence."},
       "single_scheduler":True,
@@ -108,6 +145,9 @@ def run_loop():
       "nonprofit_creator_separation_rule":"Public-benefit mission assets remain separate from Ori Cohen personal property, creator compensation, royalties and estate rights; legal nonprofit status is never inferred from repository governance.",
       "surplus_allocation_rule":"refunds/chargebacks/required_taxes -> verified_transaction_and_platform_fees -> authorized_operating_expenses -> documented_creator_compensation_or_license_royalty -> required_reserve -> nonprofit_mission_reinvestment -> authorized_humanitarian_or_community_benefit; no fixed percentages without explicit approval.",
       "critical_ai_dependency_rule":"For high-impact systems, IMA continuously checks intelligibility, contestability, human override, traceability, independent verification, reversibility, provider plurality, rights visibility, failure behavior and concentration of power; when verification fails, autonomy must not silently increase."}
-    STATE.parent.mkdir(parents=True,exist_ok=True); STATE.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); return record
+    STATE.parent.mkdir(parents=True,exist_ok=True)
+    STATE.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    append_journal(now, results)
+    return record
 
 if __name__=="__main__": print(json.dumps(run_loop(),ensure_ascii=False,indent=2))
