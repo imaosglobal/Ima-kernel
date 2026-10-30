@@ -60,6 +60,5 @@ document.querySelector("#f").addEventListener("submit",async e=>{
    status.textContent="המשוב התקבל ונכנס לארכיון. "+(d.receipt?.received_at||"")+" · "+(d.receipt?.auth_state==="google_authenticated"?"מחובר/ת Google":"אורח/ת");
    e.target.reset();
  }catch(err){status.textContent="המשוב לא נשמר כרגע. נסה/י שוב מאוחר יותר.";}
- catch(err){status.textContent="המשוב לא נשלח כרגע. אפשר לנסות שוב מאוחר יותר.";}
 });
 </script></main></body></html>
