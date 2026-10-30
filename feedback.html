@@ -4,11 +4,13 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>משוב לאמא — IMA</title>
 <meta name="description" content="משוב אמיתי למען שיפור אמא — IMA.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <style>body{font-family:system-ui,sans-serif;max-width:760px;margin:auto;padding:32px;line-height:1.7;background:#f7f2e9;color:#211b18}main{background:#fffdf8;padding:28px;border-radius:24px}button,textarea,select{font:inherit;padding:11px;border-radius:12px;border:1px solid #d8cbbd}button{cursor:pointer}textarea{width:100%;min-height:140px}fieldset{border:0;padding:0}label{display:block;margin:8px 0}#status{margin-top:15px}</style>
 </head>
 <body><main>
 <h1>משוב לאמא</h1>
 <p>המשוב שלך עוזר לאמא להשתפר. אפשר גם להשאיר משוב בלי להזדהות.</p>
+<div id="connection" style="padding:10px 12px;border-radius:12px;background:#f1eadf;margin:12px 0;color:#5f574f">בודקת חיבור לאמא…</div>
 <form id="f">
 <fieldset><legend>איך הייתה החוויה?</legend>
 <label><input type="radio" name="sentiment" value="useful" required> שימושית</label>
@@ -21,13 +23,43 @@
 <label>שפה <input name="language" value="he" maxlength="16"></label>
 <button type="submit">שליחת משוב</button>
 </form><p id="status"></p>
-<p><a href="./">חזרה לאמא</a></p>
+<p id="archive-note" style="color:#6d665e;font-size:.9rem">כל משוב מקבל זמן קבלה, תאריך, שעה, שפה, עמוד מקור, מפנה, אזור זמן ומצב חיבור. התוכן נשמר בארכיון המערכת ובספק ניתוח רק כאשר הוא מוגדר.</p>
+<p><a href="./">חזרה לאמא</a> · <a href="./privacy.html">פרטיות</a> · <a href="./support.html">תמיכה</a></p>
 <script>
 const API="https://ima-915m.onrender.com";
+const connection=document.querySelector("#connection");
+function getToken(){return sessionStorage.getItem("ima_session_token")||""}
+async function refreshConnection(){
+  try{
+    const token=getToken();
+    const r=await fetch(API+"/ima-api/auth/config",{cache:"no-store"});
+    const cfg=await r.json();
+    connection.textContent=token ? "מחובר/ת לאמא דרך Google — המשוב יסומן כמשוב ממשתמש/ת מחובר/ת." : "לא מחובר/ת לאמא — אפשר לשלוח משוב גם כאורח/ת.";
+    connection.style.background=token ? "#e6f0e8" : "#f1eadf";
+    return {token,googleConfigured:Boolean(cfg.google?.enabled)};
+  }catch(e){connection.textContent="לא ניתן לבדוק כרגע את מצב החיבור; המשוב עדיין ניתן לשליחה.";return {token:getToken(),googleConfigured:false}}
+}
+refreshConnection();
 document.querySelector("#f").addEventListener("submit",async e=>{
  e.preventDefault(); const f=new FormData(e.target); const status=document.querySelector("#status");
- const payload={sentiment:f.get("sentiment"),text:f.get("text"),language:f.get("language"),page:location.href};
- try{const r=await fetch(API+"/ima-api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw Error(d.error||"failed");status.textContent="המשוב התקבל. תודה.";e.target.reset();}
+ const now=new Date();
+ const payload={
+   sentiment:f.get("sentiment"),
+   text:f.get("text"),
+   language:f.get("language"),
+   page:location.href,
+   referrer:document.referrer||"direct",
+   client_time:now.toISOString(),
+   timezone:Intl.DateTimeFormat().resolvedOptions().timeZone||"unknown"
+ };
+ const headers={"Content-Type":"application/json"};
+ const token=getToken(); if(token) headers.Authorization="Bearer "+token;
+ try{
+   const r=await fetch(API+"/ima-api/feedback",{method:"POST",headers,body:JSON.stringify(payload)});
+   const d=await r.json();if(!r.ok||!d.accepted)throw Error(d.error||"failed");
+   status.textContent="המשוב התקבל ונכנס לארכיון. "+(d.receipt?.received_at||"")+" · "+(d.receipt?.auth_state==="google_authenticated"?"מחובר/ת Google":"אורח/ת");
+   e.target.reset();
+ }catch(err){status.textContent="המשוב לא נשמר כרגע. נסה/י שוב מאוחר יותר.";}
  catch(err){status.textContent="המשוב לא נשלח כרגע. אפשר לנסות שוב מאוחר יותר.";}
 });
 </script></main></body></html>
