@@ -26,6 +26,13 @@ https://imaosglobal.github.io/Ima-kernel/subscription-confirmation.html
 Commit: 9f9d032900890b21fec98d451e3f743c7005276f
 This is a static confirmation page, not proof of a real subscription conversion.
 
+## Public site and app integration
+- Canonical campaign logo is now used in the public site/app main visual and brand image.
+- GitHub commit: c2f3aca71e14846c699671d4ccaf90fb71db5882
+- Canonical logo URL: https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png
+- The previous HeyGen avatar image was replaced in all 3 occurrences in index.html.
+- Open Graph and Twitter image metadata now point to the canonical campaign logo.
+
 ## Creative assets
 Two IMA advertising creatives were generated in this conversation.
 
