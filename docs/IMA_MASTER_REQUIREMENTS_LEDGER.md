@@ -239,3 +239,12 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_PENDING
 - Source/document/generated state never equals runtime proof.
 - This requirement belongs to the single IMA Global Health Loop.
 - Canonical protocol: docs/IMA_MULTI_PERSPECTIVE_REVIEW_PROTOCOL.md.
+
+
+### ULE-002 — Universal Domain Graph + Self-Marketing Growth Engine
+Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_ACTIVE
+- IMA treats domains, occupations, hobbies, travel, hospitality, food, commerce, economics, interfaces, devices, robotics, software/hardware, aviation, land/sea/underwater/atmosphere, astronomy/space, mathematics, physics, sciences, engineering, arts, music, education, governance and emerging fields as one continuously extensible knowledge-and-action graph.
+- Marketing, sales and brand are part of the same product learning loop, not a separate growth silo.
+- Canonical growth progression: discover -> understand -> segment -> value hypothesis -> message -> channel -> experiment -> measure -> verify -> learn -> improve.
+- No fabricated users, testimonials, revenue, partnerships or performance claims. Actual commercial value requires evidence.
+- Canonical specifications: docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md and docs/IMA_GLOBAL_USER_GROWTH.md.
