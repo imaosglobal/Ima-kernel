@@ -1,11 +1,13 @@
 {
-  "name":"אמא — IMA",
-  "short_name":"אמא",
+  "name":"IMA — אמא | בינה אנושית לכולם",
+  "short_name":"IMA",
   "start_url":"/Ima-kernel/",
   "scope":"/Ima-kernel/",
   "display":"standalone",
   "lang":"he",
   "dir":"rtl",
-  "description":"IMA — בינה אנושית־מרכזית לשיחה, למידה, יצירה וחיבור לטכנולוגיה.",
-  "icons":[{"src":"https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png","sizes":"1024x1024","type":"image/png","purpose":"any maskable"}]
+  "theme_color":"#f5efe5",
+  "background_color":"#f5efe5",
+  "description":"IMA — בינה אנושית לכולם: לחשוב, ללמוד, ליצור, לשאול ולבדוק.",
+  "icons":[{"src":"./favicon.svg","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}]
 }
