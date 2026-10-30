@@ -98,22 +98,24 @@ class IMAMaster:
                     except Exception as exc:
                         result["llm"] = {"status": "error", "error": str(exc)}
 
+                # Each answer source is isolated. A malformed provider payload or
+                # knowledge-graph record must never become the public response.
                 llm_answer = None
                 if ima_llm_answer is not None:
                     try:
                         candidate = ima_llm_answer(provider_message)
                         if isinstance(candidate, dict):
                             status = candidate.get("status")
-                            text = candidate.get("response") or candidate.get("text")
-                            if status not in ("no_provider", "error") and text:
-                                llm_answer = str(text)
+                            text_value = candidate.get("response") or candidate.get("text")
+                            if status not in ("no_provider", "error") and text_value:
+                                llm_answer = str(text_value)
                                 result["llm_response"] = candidate
                             elif status == "error":
                                 result["llm_error"] = candidate.get("error") or candidate.get("attempted")
                         elif isinstance(candidate, str) and candidate.strip():
                             llm_answer = candidate.strip()
                     except Exception as exc:
-                        result["llm_error"] = str(exc)
+                        result["llm_error"] = repr(exc)
 
                 if llm_answer:
                     result["response"] = llm_answer
@@ -122,19 +124,43 @@ class IMAMaster:
                     try:
                         nodes = search_concept(message)
                         if nodes:
-                            brain_answer = build_answer({"domain": "knowledge_graph", "content": nodes}, message)
+                            # Normalize provider/graph shapes before answer building.
+                            normalized_nodes = nodes if isinstance(nodes, list) else [nodes]
+                            safe_nodes = [node for node in normalized_nodes if isinstance(node, (dict, str))]
+                            if safe_nodes:
+                                brain_answer = build_answer(
+                                    {"domain": "knowledge_graph", "content": safe_nodes},
+                                    message,
+                                )
                     except Exception as exc:
-                        result["knowledge_error"] = str(exc)
+                        result["knowledge_error"] = repr(exc)
+
                     if not brain_answer and not public:
-                        brain_answer = ima_brain.answer(message, events)
+                        try:
+                            brain_answer = ima_brain.answer(message, events)
+                        except Exception as exc:
+                            result["brain_error"] = repr(exc)
+
                     if brain_answer:
-                        result["response"] = brain_answer
+                        result["response"] = str(brain_answer)
                     elif public_memory:
-                        result["response"] = "מצאתי הקשר בזיכרון הפרטי של השיחה שלך:\n" + "\n".join(x.get("response", "") for x in public_memory[-5:])
+                        safe_memory = [x for x in public_memory[-5:] if isinstance(x, dict)]
+                        snippets = [str(x.get("response", "")).strip() for x in safe_memory]
+                        snippets = [x for x in snippets if x]
+                        if snippets:
+                            result["response"] = "מצאתי הקשר בזיכרון הפרטי של השיחה שלך:\n" + "\n".join(snippets)
+                        else:
+                            result["response"] = ima_mom.generate_answer(message, ima_mom.load())
                     else:
                         result["response"] = ima_mom.generate_answer(message, ima_mom.load())
             except Exception as exc:
-                result["response"] = "IMA runtime fallback: " + str(exc)
+                # Never expose internal exception details to users. Keep them in
+                # server logs/diagnostics and provide a bounded public fallback.
+                result["internal_runtime_error"] = repr(exc)
+                try:
+                    result["response"] = ima_mom.generate_answer(message, ima_mom.load())
+                except Exception:
+                    result["response"] = "אני כאן. אפשר להתחיל מחדש מהשאלה שלך."
 
         # Every live response passes through the reflection gate. When no genuinely
         # independent conclusion is available, the runtime records TRUE_UNKNOWN;
