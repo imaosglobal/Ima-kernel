@@ -205,7 +205,14 @@ New user proposals are not lost in chat. The canonical loop must:
 No item is allowed to disappear merely because it was discussed months earlier.
 
 
-## 10. 2026-10-30 execution delta
+## 10. Technology frontier and IP execution
+
+- Added `docs/IMA_TECHNOLOGY_FRONTIER_RADAR.md` as the canonical technology-intake and integration policy across 20 frontier domains.
+- Added `docs/IMA_INVENTION_DISCLOSURE_AND_IP_PIPELINE.md` with four invention candidates, prior-art warnings, human-inventorship/legal gates, and a revenue-ledger design.
+- Initial 2026 prior-art review found substantial existing patent activity around agent orchestration, approval-bound execution, provenance, AI lineage, consent-aware personalization and multi-agent consent. Therefore IMA will not label any candidate a patent or claim novelty until a dated invention disclosure, human contribution record, claim chart and professional review exist.
+- Economic rule: potential royalties may be recorded only after actual licensing and payment evidence. The target allocation model is mission + creator + community/user benefit, subject to ratified governance and law.
+
+## 11. 2026-10-30 execution delta
 
 ### Public chat P0
 - **Fix committed:** `c6c4fb41d332cdd3705a823f8e478c0b4a330862`.
