@@ -215,7 +215,15 @@
       "evolution_policy": "docs/IMA_WORLD_MODEL_EVOLUTION_POLICY.md",
       "device_adaptation": true,
       "provider_neutral": true,
-      "upgrade_status": "MONITORED_PENDING_PROVIDER_ACCESS"
+      "upgrade_status": "ACCESS_REQUIRED",
+      "official_state_as_of": "2026-10-30",
+      "official_evidence": [
+        "Google DeepMind Genie 4 official page: research preview for trusted testers; coming soon to Google AI Ultra Project Genie users and early-access Gemini API/AI Studio partners.",
+        "scripts/ima_world_model_availability_check.py monitors the official DeepMind availability signal.",
+        "No IMA deployment credential or successful live Genie 4 generation request has been verified."
+      ],
+      "monitor": "scripts/ima_world_model_availability_check.py",
+      "next_gate": "AUTHORIZED_PROVIDER_ACCESS_AND_SUCCESSFUL_BOUNDED_LIVE_REQUEST"
     }
   ],
   "updated_at": "2026-10-30",
