@@ -224,6 +224,28 @@
       ],
       "monitor": "scripts/ima_world_model_availability_check.py",
       "next_gate": "AUTHORIZED_PROVIDER_ACCESS_AND_SUCCESSFUL_BOUNDED_LIVE_REQUEST"
+    },
+    {
+      "id": "technology_frontier_radar",
+      "label": "Technology Frontier Radar & Integration Engine",
+      "status": "IMPLEMENTED_IN_CODE",
+      "boundary": "Canonical policy and evidence framework for scanning frontier technologies; does not imply provider access or live integration.",
+      "evidence": [
+        "docs/IMA_TECHNOLOGY_FRONTIER_RADAR.md"
+      ],
+      "test_verified": false,
+      "deployment_verified": false
+    },
+    {
+      "id": "invention_disclosure_ip_pipeline",
+      "label": "Responsible Invention Disclosure & IP Pipeline",
+      "status": "IMPLEMENTED_IN_CODE",
+      "boundary": "Candidate invention management and revenue design only; no patent filing, grant, license or income is claimed without official evidence.",
+      "evidence": [
+        "docs/IMA_INVENTION_DISCLOSURE_AND_IP_PIPELINE.md"
+      ],
+      "test_verified": false,
+      "deployment_verified": false
     }
   ],
   "updated_at": "2026-10-30",
