@@ -27,13 +27,23 @@ Commit: 9f9d032900890b21fec98d451e3f743c7005276f
 This is a static confirmation page, not proof of a real subscription conversion.
 
 ## Creative assets
-Two IMA advertising creatives were generated. The logo-focused creative was imported into HeyGen and verified completed.
-HeyGen asset ID: ec271ccf289a4a858c17d540b9965a88
-Logo file: a_bright_polished_high_resolution_friendly_col.png
-Earlier promotional file: a_bright_polished_illustrative_promotional_colla.png
-Use square creative for square requirements and a distinct landscape asset when Google requires one. Use only legally cleared assets.
+Two IMA advertising creatives were generated in this conversation.
 
-## Search terms — one per line
+### Promotional creative
+HeyGen asset ID: ec271ccf289a4a858c17d540b9965a88
+Verified status: completed
+HeyGen asset URL: https://dynamic.heygen.ai/image/ec271ccf289a4a858c17d540b9965a88/original.png
+Filename: a_bright_polished_illustrative_promotional_colla.png
+
+### Canonical logo creative
+HeyGen asset ID: f057cd08143342f2994f85d847572fa8
+Verified status: completed
+HeyGen asset URL: https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png
+Filename: a_bright_polished_high_resolution_friendly_col.png
+
+Use the square creative for square Google Ads requirements and a distinct landscape asset when Google explicitly requires a separate horizontal file. Use only legally cleared assets.
+
+## Search terms — one term per line, grouped by topic
 
 ### Core AI
 בינה מלאכותית
@@ -66,3 +76,6 @@ Discover -> activate account -> measure -> expand high-intent terms -> exclude i
 
 ## Continuation rule
 After the initial user connection/setup, continue preparing and improving additional IMA advertising work independently where tool access permits, prioritizing free/organic or explicitly approved low-budget activity. Never spend money, change billing, or publish paid campaigns without the required authorization and permissions.
+
+## GitHub asset note
+The canonical marketing record is stored in this repository. The image binaries themselves are currently stored in HeyGen and referenced above; the available GitHub connector does not expose a verified binary-file upload operation for these generated PNGs, so the images are not falsely marked as uploaded to GitHub.
