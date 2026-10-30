@@ -1,4 +1,4 @@
-const CACHE='ima-shell-v3';
+const CACHE='ima-shell-v4';
 const SHELL=['./','./index.html','./manifest.webmanifest','./feedback.html','./privacy.html','./support.html'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
