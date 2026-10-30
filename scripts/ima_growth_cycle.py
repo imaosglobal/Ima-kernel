@@ -34,6 +34,11 @@ def run() -> dict:
             "store_listing_verified": False,
             "external_social_authorization": False,
         },
+        "self_marketing": {
+            "spec_present": Path(ROOT / "docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md").exists(),
+            "global_growth_spec_present": Path(ROOT / "docs/IMA_GLOBAL_USER_GROWTH.md").exists(),
+            "truth_rule": "marketing claims require evidence; attention is not verified value",
+        },
         "feedback": {
             "api_contract": Path(ROOT / "app.py").exists(),
             "public_feedback_page": Path(ROOT / "feedback.html").exists(),
