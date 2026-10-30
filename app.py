@@ -663,6 +663,14 @@ def capability_route(capability):
 GROWTH_DIR = Path(__file__).resolve().parent / ".ima" / "growth"
 FEEDBACK_QUEUE = GROWTH_DIR / "feedback.runtime.jsonl"
 EVENT_QUEUE = GROWTH_DIR / "events.runtime.jsonl"
+FEEDBACK_ARCHIVE_DIR = GROWTH_DIR / "feedback_archive"
+
+def _utc_now():
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+def _feedback_archive_path(epoch=None):
+    stamp = time.gmtime(epoch if epoch is not None else time.time())
+    return FEEDBACK_ARCHIVE_DIR / f"feedback-{time.strftime('%Y-%m-%d', stamp)}.jsonl"
 POSTHOG_HOST = os.environ.get("POSTHOG_HOST", "").strip().rstrip("/")
 POSTHOG_API_KEY = os.environ.get("POSTHOG_API_KEY", "").strip()
 
@@ -746,29 +754,79 @@ def feedback():
         return jsonify({"error": "invalid feedback type"}), 400
     if not text or len(text) > 4000:
         return jsonify({"error": "feedback text is required and must be <= 4000 characters"}), 400
-    record = {
-        "time": time.time(),
+
+    received_epoch = time.time()
+    user_id = _session_user_id()
+    auth_state = "google_authenticated" if user_id and user_id.startswith("public:google:") else "anonymous"
+    client_timezone = str(payload.get("timezone") or "unknown")[:80]
+    client_now = str(payload.get("client_time") or "")[:80]
+    page = str(payload.get("page") or "")[:1000]
+    referrer = str(payload.get("referrer") or "")[:1000]
+    user_agent = request.headers.get("User-Agent", "")[:1000]
+    archive_record = {
+        "received_at": _utc_now(),
+        "received_epoch": received_epoch,
+        "date_utc": time.strftime("%Y-%m-%d", time.gmtime(received_epoch)),
+        "hour_utc": int(time.strftime("%H", time.gmtime(received_epoch))),
         "sentiment": sentiment,
         "language": language,
         "text": text,
         "identity": _growth_identity(),
+        "auth_state": auth_state,
+        "page": page,
+        "referrer": referrer,
+        "client_timezone": client_timezone,
+        "client_time": client_now,
+        "user_agent": user_agent,
         "source": "public-runtime",
     }
+
+    # Always append to the current runtime archive and a date-partitioned archive.
     try:
-        provider = _posthog_capture(
+        _queue_runtime(FEEDBACK_QUEUE, archive_record)
+        _queue_runtime(_feedback_archive_path(received_epoch), archive_record)
+        stored_runtime = True
+    except Exception:
+        app.logger.exception("IMA feedback archive write failed")
+        stored_runtime = False
+
+    analytics = {"sent": False, "status": "not_configured"}
+    try:
+        analytics = _posthog_capture(
             "feedback_submitted",
-            {"sentiment": sentiment, "language": language, "source": "public-runtime"},
+            {
+                "sentiment": sentiment,
+                "language": language,
+                "source": "public-runtime",
+                "auth_state": auth_state,
+                "page": page,
+                "referrer": referrer,
+                "client_timezone": client_timezone,
+                "client_time": client_now,
+                "received_at": archive_record["received_at"],
+                # Feedback text is included only when PostHog is explicitly configured.
+                "feedback_text": text,
+            },
         )
     except Exception:
-        provider = {"sent": False, "status": "provider_error"}
-    # The feedback text remains in the runtime queue unless a configured,
-    # privacy-reviewed durable feedback store is available.
-    _queue_runtime(FEEDBACK_QUEUE, record)
+        app.logger.exception("IMA feedback analytics provider failed")
+        analytics = {"sent": False, "status": "provider_error"}
+
+    if not stored_runtime and not analytics.get("sent"):
+        return jsonify({"accepted": False, "error": "feedback could not be archived"}), 503
+
     return jsonify({
         "accepted": True,
-        "stored_runtime": True,
-        "analytics": provider["status"],
-        "truth": "feedback received; project learning requires separate governance",
+        "receipt": {
+            "received_at": archive_record["received_at"],
+            "date_utc": archive_record["date_utc"],
+            "hour_utc": archive_record["hour_utc"],
+            "auth_state": auth_state,
+        },
+        "stored_runtime": stored_runtime,
+        "analytics": analytics["status"],
+        "durability": "PostHog" if analytics.get("sent") else "runtime_archive_only",
+        "learning": "queued_for_review",
     }), 201
 
 @app.get("/ima-api/growth/status")
@@ -780,7 +838,14 @@ def growth_status():
             "configured": bool(POSTHOG_API_KEY and POSTHOG_HOST),
             "provider": "PostHog" if POSTHOG_API_KEY and POSTHOG_HOST else None,
         },
-        "feedback": {"endpoint": True},
+        "feedback": {
+            "endpoint": True,
+            "runtime_archive": True,
+            "daily_partitioning": True,
+            "durable_provider": bool(POSTHOG_API_KEY and POSTHOG_HOST),
+            "durable_provider_name": "PostHog" if POSTHOG_API_KEY and POSTHOG_HOST else None,
+            "learning_queue": True,
+        },
         "store_ratings": {"verified_listing": False},
         "synthetic_users": False,
         "synthetic_ratings": False,
