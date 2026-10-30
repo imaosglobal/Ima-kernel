@@ -211,7 +211,11 @@
         "tests/test_world_model_humanization.py"
       ],
       "test_verified": false,
-      "deployment_verified": false
+      "deployment_verified": false,
+      "evolution_policy": "docs/IMA_WORLD_MODEL_EVOLUTION_POLICY.md",
+      "device_adaptation": true,
+      "provider_neutral": true,
+      "upgrade_status": "MONITORED_PENDING_PROVIDER_ACCESS"
     }
   ],
   "updated_at": "2026-10-30",
