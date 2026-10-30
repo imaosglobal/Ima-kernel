@@ -246,6 +246,25 @@
       ],
       "test_verified": false,
       "deployment_verified": false
+    },
+    {
+      "id": "self_marketing_growth_engine",
+      "label": "Self-Marketing, Sales, Brand & Growth Engine",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE",
+      "boundary": "Evidence-bounded discovery, messaging, lawful growth experiments and consultative sales preparation; no spam, impersonation, fabricated traction or autonomous paid/binding commercial actions.",
+      "evidence": [
+        "docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md",
+        "docs/IMA_GLOBAL_USER_GROWTH.md",
+        "scripts/ima_growth_cycle.py",
+        "core/ima_loop.py",
+        "tests/test_ima_loop.py"
+      ],
+      "test_verified": false,
+      "deployment_verified": false,
+      "analytics_verified": false,
+      "revenue_verified": false,
+      "evolution_policy": "single canonical IMA Global Health Loop; real-user evidence required before promotion",
+      "updated_at": "2026-10-30"
     }
   ],
   "updated_at": "2026-10-30",
