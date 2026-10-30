@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location(
-    "humanity_honor", ROOT / ".ima/peace/humanity_honor.py"
+    "humanity_honor", ROOT / "core/humanity_honor.py"
 )
 MOD = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
