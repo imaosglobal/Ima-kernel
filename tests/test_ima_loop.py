@@ -37,5 +37,11 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertIn("current user is the immediate human context", IMA_IDENTITY_CONTEXT)
         self.assertIn("Every verified capability belongs to two paths", IMA_IDENTITY_CONTEXT)
 
+    def test_self_marketing_is_evidence_bounded(self):
+        contract = loop_contract()
+        self.assertTrue(contract["self_marketing"])
+        self.assertTrue(contract["sales_and_brand_learning"])
+        self.assertTrue(contract["growth_requires_verified_value"])
+
 if __name__ == "__main__":
     unittest.main()
