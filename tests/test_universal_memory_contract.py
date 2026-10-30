@@ -1,28 +1,31 @@
+import importlib.util
 import os
 import tempfile
 import unittest
 from pathlib import Path
-import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
 
-spec = importlib.util.spec_from_file_location(
-    "ima_universal_interaction_memory_test_target",
-    ROOT / ".ima" / "memory" / "universal_interaction_memory.py",
-)
-if spec is None or spec.loader is None:
-    raise ImportError("memory runtime unavailable")
-memory = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(memory)
+
+def load_memory_module(db_path):
+    os.environ["PUBLIC_MEMORY_DB"] = db_path
+    spec = importlib.util.spec_from_file_location(
+        "ima_universal_interaction_memory_test_target",
+        ROOT / ".ima" / "memory" / "universal_interaction_memory.py",
+    )
+    if spec is None or spec.loader is None:
+        raise ImportError("memory runtime unavailable")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 class UniversalMemoryContractTests(unittest.TestCase):
     def test_consent_is_required_and_export_delete_are_user_scoped(self):
+        old_db = os.environ.get("PUBLIC_MEMORY_DB")
         with tempfile.TemporaryDirectory() as tmp:
-            db = str(Path(tmp) / "memory.sqlite3")
-            old_db = os.environ.get("PUBLIC_MEMORY_DB")
-            os.environ["PUBLIC_MEMORY_DB"] = db
             try:
+                memory = load_memory_module(str(Path(tmp) / "memory.sqlite3"))
                 memory.set_consent("user-a", "GRANTED", source="test")
                 record = memory.capture(
                     user_id="user-a",
@@ -46,9 +49,10 @@ class UniversalMemoryContractTests(unittest.TestCase):
                     os.environ["PUBLIC_MEMORY_DB"] = old_db
 
     def test_capture_rejects_non_granted_consent_and_secret_like_content(self):
+        old_db = os.environ.get("PUBLIC_MEMORY_DB")
         with tempfile.TemporaryDirectory() as tmp:
-            os.environ["PUBLIC_MEMORY_DB"] = str(Path(tmp) / "memory.sqlite3")
             try:
+                memory = load_memory_module(str(Path(tmp) / "memory.sqlite3"))
                 memory.set_consent("user-a", "DENIED", source="test")
                 with self.assertRaises(ValueError):
                     memory.capture(
@@ -66,7 +70,10 @@ class UniversalMemoryContractTests(unittest.TestCase):
                         consent="GRANTED",
                     )
             finally:
-                os.environ.pop("PUBLIC_MEMORY_DB", None)
+                if old_db is None:
+                    os.environ.pop("PUBLIC_MEMORY_DB", None)
+                else:
+                    os.environ["PUBLIC_MEMORY_DB"] = old_db
 
 
 if __name__ == "__main__":
