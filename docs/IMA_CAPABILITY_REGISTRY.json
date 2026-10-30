@@ -199,9 +199,22 @@
       "test_verified": true,
       "deployment_verified": true,
       "live_verification_required": true
+    },
+    {
+      "id": "world_model_humanization",
+      "label": "Human-centered interactive world-model bridge",
+      "status": "IMPLEMENTED",
+      "boundary": "Provides provider-neutral behavioral safeguards for interactive world-model use; it does not itself provide a live world-model generation provider or claim physical-world validation.",
+      "evidence": [
+        "core/world_model_humanization.py",
+        "core/human_intelligence.py",
+        "tests/test_world_model_humanization.py"
+      ],
+      "test_verified": false,
+      "deployment_verified": false
     }
   ],
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-30",
   "audit_dimensions": [
     "product specification and information architecture",
     "every navigation item, button, link, form and fallback",
