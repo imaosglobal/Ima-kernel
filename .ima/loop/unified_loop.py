@@ -40,6 +40,7 @@ COMMANDS={
 "distribution":["python",".ima/distribution/prepare.py"],
 "human_intelligence_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_intelligence_policy.py","-v"],
 "world_model_tests":["python","-m","unittest","discover","-s","tests","-p","test_world_model_humanization.py","-v"],
+"world_model_availability":["python","scripts/ima_world_model_availability_check.py"],
 "unified_loop_tests":["python","-m","unittest","discover","-s","tests","-p","test_ima_loop.py","-v"],
 "universal_learning_tests":["python","-m","unittest","discover","-s","tests","-p","test_universal_learning_engine.py","-v"],
 "foresight_tests":["python","-m","unittest","discover","-s","tests","-p","test_long_horizon_foresight.py","-v"],
@@ -60,7 +61,7 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
