@@ -664,6 +664,7 @@ GROWTH_DIR = Path(__file__).resolve().parent / ".ima" / "growth"
 FEEDBACK_QUEUE = GROWTH_DIR / "feedback.runtime.jsonl"
 EVENT_QUEUE = GROWTH_DIR / "events.runtime.jsonl"
 FEEDBACK_ARCHIVE_DIR = GROWTH_DIR / "feedback_archive"
+FEEDBACK_LEARNING_DIR = GROWTH_DIR / "feedback_learning"
 
 def _utc_now():
     return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
@@ -671,6 +672,40 @@ def _utc_now():
 def _feedback_archive_path(epoch=None):
     stamp = time.gmtime(epoch if epoch is not None else time.time())
     return FEEDBACK_ARCHIVE_DIR / f"feedback-{time.strftime('%Y-%m-%d', stamp)}.jsonl"
+
+def _feedback_learning_path(epoch=None):
+    stamp = time.gmtime(epoch if epoch is not None else time.time())
+    return FEEDBACK_LEARNING_DIR / f"learning-{time.strftime('%Y-%m-%d', stamp)}.jsonl"
+
+def _derive_feedback_lesson(sentiment, text):
+    lowered = text.lower()
+    tags = []
+    if sentiment == "problem":
+        tags.append("bug")
+    if sentiment == "improvement":
+        tags.append("feature_request")
+    if any(x in lowered for x in ["לא עובד", "לא עובדת", "תקוע", "תקועה", "שגיאה", "error", "broken"]):
+        tags.append("reliability")
+    if any(x in lowered for x in ["גוגל", "google", "כניסה", "login"]):
+        tags.append("authentication")
+    if any(x in lowered for x in ["משוב", "feedback"]):
+        tags.append("feedback_loop")
+    if any(x in lowered for x in ["התקנה", "install", "מסך הבית"]):
+        tags.append("installation")
+    if any(x in lowered for x in ["קישור", "לינק", "link"]):
+        tags.append("navigation")
+    if any(x in lowered for x in ["איטי", "מהיר", "טעינה", "טוען"]):
+        tags.append("performance")
+    if not tags:
+        tags.append("general")
+    lesson = {
+        "action": "investigate_and_verify" if sentiment in {"problem", "not_useful"} else "evaluate_and_prioritize",
+        "tags": sorted(set(tags)),
+        "source_sentiment": sentiment,
+        "summary": text[:500],
+        "applied_automatically": False,
+    }
+    return lesson
 POSTHOG_HOST = os.environ.get("POSTHOG_HOST", "").strip().rstrip("/")
 POSTHOG_API_KEY = os.environ.get("POSTHOG_API_KEY", "").strip()
 
@@ -781,10 +816,19 @@ def feedback():
         "source": "public-runtime",
     }
 
+    lesson = _derive_feedback_lesson(sentiment, text)
+    archive_record["lesson"] = lesson
+
     # Always append to the current runtime archive and a date-partitioned archive.
     try:
         _queue_runtime(FEEDBACK_QUEUE, archive_record)
         _queue_runtime(_feedback_archive_path(received_epoch), archive_record)
+        _queue_runtime(_feedback_learning_path(received_epoch), {
+            "received_at": archive_record["received_at"],
+            "feedback_date_utc": archive_record["date_utc"],
+            "feedback_id": archive_record["identity"] + ":" + str(int(received_epoch * 1000)),
+            "lesson": lesson,
+        })
         stored_runtime = True
     except Exception:
         app.logger.exception("IMA feedback archive write failed")
@@ -826,7 +870,12 @@ def feedback():
         "stored_runtime": stored_runtime,
         "analytics": analytics["status"],
         "durability": "PostHog" if analytics.get("sent") else "runtime_archive_only",
-        "learning": "queued_for_review",
+        "learning": {
+            "status": "derived_and_queued",
+            "applied_automatically": False,
+            "reason": "Feedback is converted into a structured lesson candidate, but product changes require verification before application.",
+            "lesson_tags": lesson["tags"],
+        },
     }), 201
 
 @app.get("/ima-api/growth/status")
