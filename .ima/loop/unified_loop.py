@@ -18,7 +18,7 @@ SYSTEM_SCOPE=(
 "human intelligence","human culture","human-centered interactive world-models","intergenerational memory and historical preservation",
 "consent-aware private memory","child safety and age assurance","learning and knowledge gaps",
 "web intelligence","self-reflection and evolution","energy-internal research","product and public QA",
-"lawful public education and distribution","capability radar and engine discovery",
+"lawful public education and distribution","self-marketing, sales, brand and growth","capability radar and engine discovery",
 "universal learning across fields","emerging-field discovery","interdisciplinary knowledge graph",
 "capability substitution and provider independence","verified capability self-application",
 "self-application release testing",
