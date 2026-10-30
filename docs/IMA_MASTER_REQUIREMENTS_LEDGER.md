@@ -4,7 +4,7 @@
 
 This is the canonical reconciliation point for IMA requirements gathered from the project's historical direction and subsequent development cycles. It is not a second backlog or scheduler. The single IMA Global Health Loop reconciles new requests against this ledger, existing issues, workflows, product code, tests and deployment state.
 
-## Non-negotiable operating rule
+**Canonical state/gap companion:** `docs/IMA_MASTER_STATE_AND_GAP_LEDGER.md` records implementation/test/deployment/live evidence gaps and historical reconciliation without becoming a second scheduler or backlog.\n\n## Non-negotiable operating rule
 
 Every new IMA request is:
 1. timestamped;
