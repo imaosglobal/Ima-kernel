@@ -80,6 +80,27 @@ def _issue_session(user_id=None):
     return f"{user_id}.{signature}"
 
 
+def _supabase_feedback_insert(record):
+    base = os.environ.get("IMA_FEEDBACK_SUPABASE_URL", "").strip().rstrip("/")
+    key = os.environ.get("IMA_FEEDBACK_SUPABASE_KEY", "").strip()
+    if not base or not key:
+        return {"sent": False, "status": "not_configured"}
+    headers = {"apikey": key, "Authorization": "Bearer " + key, "Content-Type": "application/json", "Prefer": "return=representation"}
+    payload = {k: record.get(k) for k in (
+        "received_at","date_utc","hour_utc","sentiment","language","text","identity",
+        "auth_state","page","referrer","client_timezone","client_time","user_agent","source"
+    )}
+    try:
+        resp = requests.post(base + "/rest/v1/feedback_archive", headers=headers, json=payload, timeout=10)
+        if 200 <= resp.status_code < 300:
+            rows = resp.json() if resp.content else []
+            return {"sent": True, "status": "durable_archive", "id": (rows[0].get("id") if rows else None)}
+        app.logger.error("Supabase feedback archive failed: %s %s", resp.status_code, resp.text[:500])
+        return {"sent": False, "status": "archive_error"}
+    except Exception:
+        app.logger.exception("Supabase feedback archive unavailable")
+        return {"sent": False, "status": "archive_unavailable"}
+
 def _session_user_id():
     authorization = request.headers.get("Authorization", "")
     if not authorization.startswith("Bearer "):
@@ -834,6 +855,7 @@ def feedback():
         app.logger.exception("IMA feedback archive write failed")
         stored_runtime = False
 
+    durable = _supabase_feedback_insert(archive_record)
     analytics = {"sent": False, "status": "not_configured"}
     try:
         analytics = _posthog_capture(
@@ -856,7 +878,7 @@ def feedback():
         app.logger.exception("IMA feedback analytics provider failed")
         analytics = {"sent": False, "status": "provider_error"}
 
-    if not stored_runtime and not analytics.get("sent"):
+    if not stored_runtime and not durable.get("sent") and not analytics.get("sent"):
         return jsonify({"accepted": False, "error": "feedback could not be archived"}), 503
 
     return jsonify({
@@ -868,8 +890,10 @@ def feedback():
             "auth_state": auth_state,
         },
         "stored_runtime": stored_runtime,
+        "durable_archive": durable["sent"],
+        "archive_id": durable.get("id"),
         "analytics": analytics["status"],
-        "durability": "PostHog" if analytics.get("sent") else "runtime_archive_only",
+        "durability": "Supabase" if durable.get("sent") else ("PostHog" if analytics.get("sent") else "runtime_archive_only"),
         "learning": {
             "status": "derived_and_queued",
             "applied_automatically": False,
