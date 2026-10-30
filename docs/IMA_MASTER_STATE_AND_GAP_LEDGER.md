@@ -64,6 +64,13 @@ State: IN_PROGRESS.
 Evidence: public reconciliation checks source presence for Google login, chat, memory controls, accessibility, RTL, community, shop, media and PWA.  
 Required: real browser matrix across supported controls, auth states, mobile, loading/error/fallback paths.
 
+## 2026-10-30 daily reconciliation update
+
+- **PUBLIC-DEPLOY-001 — canonical Pages reconciliation:** current `gh-pages/index.html` was materially older/different from the canonical `ima-ui` source. A native GitHub Actions build-and-publish workflow was added at `.github/workflows/deploy-ima-pages.yml` (commit `b0ff277ca04786c86aa04bec6a7694f71a15dd89`). State: **EXECUTED / DEPLOYMENT_PENDING_VERIFICATION**.
+- **LOOP-JOURNAL-001 — development memory continuity:** the canonical unified loop now appends task-level and cycle-level state transitions to `.ima/journal/development.jsonl` (commit `eae744916b50eae633995092648e8e8f18844e00`). State: **IMPLEMENTED_IN_CODE / FRESH_RUNTIME_VERIFICATION_PENDING**.
+- **GROWTH-002 — self-marketing capability registry:** self-marketing/sales/brand/growth is explicitly registered as a first-class capability, evidence-bounded and not live-promoted without runtime analytics/evidence (commit `4492ce75ab959232e51f596a81567f19993bf624`). State: **IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE**.
+- **CI-VERIFY-001:** historical failed workflow runs remain historical evidence only; no current successful canonical run was available through the connected GitHub workflow-run surface in this cycle. State: **NOT_VERIFIED**.
+
 ## 4. Major capability families
 
 ### Human-centered intelligence
