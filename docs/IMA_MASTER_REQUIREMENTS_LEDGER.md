@@ -137,6 +137,16 @@ Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - Daily refinement follows the single Global Health Loop; it must not create a second scheduler: [IMA Human Culture Daily Loop](IMA_HUMAN_CULTURE_DAILY_LOOP.md).
 - Runtime capability requires PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE.
 
+
+### WORLD-001 — Human-centered world-model bridge
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- IMA treats interactive world models as simulations rather than reality.
+- Simulations may support education, prototyping and bounded hypothesis testing, but never replace real-world validation for high-impact decisions.
+- Generated environments and synthetic media require provenance and truthful labeling when the distinction matters.
+- Consequential real-world actions remain human-controlled, reversible where possible and subject to appropriate authorization.
+- The bridge is provider-neutral: it does not claim that IMA currently has a live Genie/other world-model generation integration.
+- Implementation: `core/world_model_humanization.py`; behavior connection: `core/human_intelligence.py`; regression test: `tests/test_world_model_humanization.py`.
+
 ### HISTORY-001 — Historical request reconciliation
 Status: ACTIVE
 - This ledger is the canonical reconciliation anchor.
