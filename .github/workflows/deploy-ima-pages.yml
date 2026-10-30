@@ -1,0 +1,65 @@
+name: Deploy canonical IMA public product
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "ima-ui/**"
+      - "docs/IMA_CAPABILITY_REGISTRY.json"
+      - "manifest.webmanifest"
+      - ".github/workflows/deploy-ima-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout canonical source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: ima-ui/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ima-ui
+        run: npm ci
+
+      - name: Build canonical public IMA
+        working-directory: ima-ui
+        run: npm run build
+
+      - name: Publish dist to the single GitHub Pages branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages
+          rm -rf /tmp/ima-gh-pages
+          git worktree add /tmp/ima-gh-pages origin/gh-pages
+          find /tmp/ima-gh-pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R ima-ui/dist/. /tmp/ima-gh-pages/
+          touch /tmp/ima-gh-pages/.nojekyll
+          cd /tmp/ima-gh-pages
+          git config user.name "IMA Pages Deploy"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "IMA_PAGES=UNCHANGED"
+            exit 0
+          fi
+          git commit -m "chore: deploy canonical IMA public product"
+          git push origin HEAD:gh-pages
