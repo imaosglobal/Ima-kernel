@@ -58,3 +58,12 @@ The growth system is complete only when:
 **event emitted → event received → unique user counted → daily trend visible → acquisition source measurable → retention measurable → experiment measurable → verified improvement**
 
 Until then, growth is a tracked implementation gap rather than a claimed capability.
+
+
+## Self-marketing integration — 2026-10-30
+
+Marketing, sales and brand are measured as part of the same product-growth loop. The canonical self-marketing specification is `docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md`.
+
+The loop must optimize for verified human value rather than exposure alone: discoverability → first value → useful outcome → return → voluntary sharing → verified demand/value. Messaging experiments are product experiments and must preserve truth, privacy, accessibility and human agency.
+
+No paid advertising, commercial commitment or mass outreach is activated merely by this specification. Authorized channels can be added only when their account, permission and runtime evidence exist.
