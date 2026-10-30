@@ -3,9 +3,10 @@ from __future__ import annotations
 
 from .social_physics import social_physics_contract
 from .ima_good_harm import good_harm_contract
+from .humanity_honor import contract as humanity_honor_contract
 from learning.questions.question_memory import question_memory_contract
 
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.6"
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.7"
 LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
 
 IMA_IDENTITY_CONTEXT="""
@@ -60,6 +61,7 @@ def loop_contract()->dict:
         "growth_requires_verified_value":True,
         "social_physics":social_physics_contract(),
         "good_harm":good_harm_contract(),
+        "humanity_honor":humanity_honor_contract(),
         "creator_questions":question_memory_contract(),
         "identity":{
             "one_global_ima":True,
