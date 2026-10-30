@@ -1,85 +1,86 @@
-import json
-from pathlib import Path
-import time
-import hashlib
+"""Compatibility facade for IMA's single canonical interaction-memory runtime.
+
+This module preserves the historical API used by the master runtime while
+delegating all persistence to .ima/memory/universal_interaction_memory.py.
+It intentionally creates no JSON conversation store and no second authority.
+"""
+from __future__ import annotations
+
 import importlib.util
+from pathlib import Path
 
-try:
-    spec=importlib.util.spec_from_file_location('memory_bus','.ima/runtime/memory_bus.py')
-    memory_bus=importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(memory_bus)
-except Exception:
-    memory_bus=None
+ROOT = Path(__file__).resolve().parent
+ADAPTER_PATH = ROOT / ".ima" / "ima_canonical_memory_adapter.py"
+RUNTIME_PATH = ROOT / ".ima" / "memory" / "universal_interaction_memory.py"
 
-MEMORY_ROOT=Path(".ima/conversation_memory")
-LEGACY_MEMORY_FILE=Path(".ima/conversation_memory.json")
+_spec = importlib.util.spec_from_file_location("ima_canonical_memory_adapter", ADAPTER_PATH)
+if _spec is None or _spec.loader is None:
+    raise ImportError("canonical memory adapter unavailable")
+_adapter = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_adapter)
 
-def _user_key(user_id=None):
-    raw=(user_id or "anonymous").strip()
-    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
+_spec_runtime = importlib.util.spec_from_file_location("ima_universal_memory_compat", RUNTIME_PATH)
+if _spec_runtime is None or _spec_runtime.loader is None:
+    raise ImportError("canonical universal memory runtime unavailable")
+_runtime = importlib.util.module_from_spec(_spec_runtime)
+_spec_runtime.loader.exec_module(_runtime)
 
-def _file(user_id=None):
-    return MEMORY_ROOT / f"{_user_key(user_id)}.json"
 
-def _load(user_id=None):
-    path=_file(user_id)
-    if path.exists():
-        try:
-            return json.loads(path.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    # Legacy memory is not automatically exposed to public users.
-    if user_id is None and LEGACY_MEMORY_FILE.exists():
-        try:
-            return json.loads(LEGACY_MEMORY_FILE.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    return []
+def _records(user_id):
+    if not user_id:
+        return []
+    try:
+        return _runtime.export_user_memory(user_id)
+    except Exception:
+        return []
 
-def _save(data,user_id=None):
-    path=_file(user_id)
-    path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
 
-def update(question,response="",user_id=None):
-    data=_load(user_id)
-    data.append({"time":time.time(),"question":question,"response":response})
-    _save(data,user_id)
-    if memory_bus:
-        try:
-            memory_bus.log_event("conversation",{"question":question,"response":response,"user_id":user_id or "anonymous"})
-        except Exception:
-            pass
+def update(question, response="", user_id=None):
+    """Store one already-authorized interaction in the canonical store."""
+    if not user_id:
+        return
+    if _runtime.get_consent(user_id).get("status") != "GRANTED":
+        return
+    _adapter.save_memory({
+        "user_id": user_id,
+        "source": "master-runtime/conversation-layer-compat",
+        "content": f"User: {question}\nIMA: {response}",
+        "consent": "GRANTED",
+        "interface": "master-runtime",
+        "temporal_class": "PRESENT",
+        "authorized_learning": False,
+        "status": "EXECUTED",
+    })
+
 
 def context(user_id=None):
-    data=_load(user_id)
-    return {"count":len(data),"recent":data[-10:],"user_id":user_id or "anonymous"}
+    data = _records(user_id)
+    return {
+        "count": len(data),
+        "recent": data[-10:],
+        "user_id": user_id or "anonymous",
+        "store": "canonical-universal-interaction-memory",
+    }
 
-def recall(query,user_id=None):
-    data=_load(user_id)
-    q=query.lower().strip()
+
+def recall(query, user_id=None):
+    data = _records(user_id)
+    q = (query or "").lower().strip()
     if not q:
-        filtered=[x for x in reversed(data) if x.get("response","").strip()][:10]
-        return list(reversed(filtered))
+        return list(reversed([x for x in data if str(x.get("content", "")).strip()][:10]))
 
-    memory_commands=["מה אתה זוכר","מה את זוכרת","זיכרון","תזכיר לי","מה דיברנו","היסטוריה"]
+    memory_commands = ["מה אתה זוכר", "מה את זוכרת", "זיכרון", "תזכיר לי", "מה דיברנו", "היסטוריה"]
     if any(cmd in q for cmd in memory_commands):
-        filtered=[]
-        for item in reversed(data):
-            response=item.get("response","").strip()
-            question=item.get("question","").strip()
-            if not response or any(cmd in question for cmd in memory_commands):
-                continue
-            filtered.append(item)
-            if len(filtered)>=10: break
-        return list(reversed(filtered))
+        return list(reversed([x for x in data if str(x.get("content", "")).strip()][-10:]))
 
-    words=[w for w in q.split() if len(w)>2]
-    results=[]
+    words = [w for w in q.split() if len(w) > 2]
+    results = []
     for item in data:
-        text=(item.get("question","")+" "+item.get("response","")).lower()
-        score=sum(1 for w in words if w in text)
-        if score>0 and item.get("response","").strip():
-            item=dict(item); item["_score"]=score; results.append(item)
-    results.sort(key=lambda x:x.get("_score",0),reverse=True)
+        text = str(item.get("content", "")).lower()
+        score = sum(1 for w in words if w in text)
+        if score:
+            row = dict(item)
+            row["_score"] = score
+            results.append(row)
+    results.sort(key=lambda x: x.get("_score", 0), reverse=True)
     return results[:5]
