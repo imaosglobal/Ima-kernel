@@ -223,3 +223,9 @@ No item is allowed to disappear merely because it was discussed months earlier.
 
 ### Verification boundary
 These commits are implementation evidence only. No deployment or live-public success is declared until a fresh runtime/browser test produces independently inspectable evidence.
+
+
+### Canonical memory regression coverage
+- **Regression test added:** `6b32c1e47ef14e4b751af92527dcd1f0ed66fe83`.
+- Covers explicit consent gating, per-user isolation, integrity verification, deletion, and rejection of credential-like content.
+- **State:** TESTED_PENDING_DEPLOYMENT; this is repository-level evidence, not live deployment proof.
