@@ -38,7 +38,7 @@
         fetch(root + 'version.json?ts=' + Date.now(), { cache: 'no-store' })
           .then(r => r.ok ? r.json() : null)
           .then(v => {
-            if (v?.version && localVersion && localVersion !== '__IMA_BUILD_VERSION__' && localVersion !== v.version) {
+            if (v?.version && localVersion && localVersion !== v.version) {
               const target = root + '?v=' + encodeURIComponent(v.version);
               if (location.href !== target) location.replace(target);
             }
