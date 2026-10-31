@@ -1,12 +1,15 @@
 {
   "name": "אמא — IMA",
-  "short_name": "אמא",
+  "short_name": "IMA",
+  "id": "/Ima-kernel/",
   "description": "IMA — global, intergenerational compassionate intelligence.",
   "lang": "he",
   "dir": "rtl",
   "start_url": "/Ima-kernel/?source=pwa",
   "scope": "/Ima-kernel/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "prefer_related_applications": false,
   "background_color": "#05060a",
   "theme_color": "#11131b",
   "icons": [
