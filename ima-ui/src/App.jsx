@@ -7,6 +7,7 @@ import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
 
 const GLB_PATH='/Ima-kernel/mother_character.glb';
 const GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils';
+const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL+'&utm_content=ima_logo';
 const GLB_GIT_BLOB_SHA1='217170d2bd67051270be974292dc3b834eefe206';
 const PERSONALIZATION_KEY='ima-unified-personalization-v2';
 const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'normal',memoryScope:'personal',interface:'IMA',theme:'system'};
@@ -88,7 +89,7 @@ export default function App(){
  const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();await e.userChoice}catch{}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
 
  return <main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
-  <header className="topbar"><div className="topbar-inner"><a className="brand" href={GOOGLE_CAMPAIGN_URL}><span className="brand-mark">א</span><span><b>IMA</b><small>אמא · human-centered intelligence</small></span></a>
+  <header className="topbar"><div className="topbar-inner"><a className="brand" href={GOOGLE_CAMPAIGN_LOGO_URL} data-campaign="google-ads" aria-label="Open IMA Google campaign"><span className="brand-mark">א</span><span><b>IMA</b><small>אמא · human-centered intelligence</small></span></a>
    <nav>{[['home',locale.labels.home],['chat',locale.labels.chat],['community',locale.labels.community],['shop',locale.labels.shop],['capabilities',lang==='he'?'יכולות':'Capabilities'],['watch',locale.labels.video]].map(([id,label])=><button key={id} className={active===id?'active':''} onClick={()=>go(id)}>{label}</button>)}</nav>
    <div className="top-actions"><button className="install-button" onClick={install}>{locale.labels.install}</button><PersonalizationPanel profile={profile} setProfile={setProfile} locale={locale}/></div>
   </div></header>
