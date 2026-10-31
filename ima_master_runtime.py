@@ -40,7 +40,16 @@ class IMAMaster:
             f"\n\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\n"
             if requested_language else ""
         )
-        provider_message = message + response_instruction
+        opportunity_terms = (
+            "הזדמנות", "רעיון עסקי", "עסק", "השקעה", "לקוח", "לקוחות",
+            "מיזם", "מוצר", "שירות", "להרוויח", "הכנסה", "שיווק", "כדאיות",
+            "opportunity", "business idea", "investment", "startup", "customer"
+        )
+        opportunity_context = (
+            "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
+            if any(term in message.casefold() for term in opportunity_terms) else ""
+        )
+        provider_message = message + response_instruction + opportunity_context
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
