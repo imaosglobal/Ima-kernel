@@ -81,24 +81,46 @@ def _issue_session(user_id=None):
 
 
 def _supabase_feedback_insert(record):
+    # Feedback is archived through a tightly scoped Postgres RPC so the public
+    # publishable key never receives SELECT access to the feedback table.
     base = os.environ.get("IMA_FEEDBACK_SUPABASE_URL", "").strip().rstrip("/")
     key = os.environ.get("IMA_FEEDBACK_SUPABASE_KEY", "").strip()
     if not base or not key:
         return {"sent": False, "status": "not_configured"}
-    headers = {"apikey": key, "Authorization": "Bearer " + key, "Content-Type": "application/json", "Prefer": "return=representation"}
+    headers = {
+        "apikey": key,
+        "Authorization": "Bearer " + key,
+        "Content-Type": "application/json",
+        "Prefer": "return=representation",
+    }
     payload = {k: record.get(k) for k in (
         "received_at","date_utc","hour_utc","sentiment","language","text","identity",
         "auth_state","page","referrer","client_timezone","client_time","user_agent","source"
     )}
     try:
-        resp = requests.post(base + "/rest/v1/feedback_archive", headers=headers, json=payload, timeout=10)
+        resp = requests.post(
+            base + "/rest/v1/rpc/archive_feedback",
+            headers=headers,
+            json={"p_record": payload},
+            timeout=10,
+        )
         if 200 <= resp.status_code < 300:
-            rows = resp.json() if resp.content else []
-            return {"sent": True, "status": "durable_archive", "id": (rows[0].get("id") if rows else None)}
-        app.logger.error("Supabase feedback archive failed: %s %s", resp.status_code, resp.text[:500])
+            data = resp.json() if resp.content else {}
+            if isinstance(data, list):
+                data = data[0] if data else {}
+            if not isinstance(data, dict) or data.get("durable") is not True or not data.get("id"):
+                app.logger.error("Supabase feedback RPC returned no durable receipt: %s", str(data)[:500])
+                return {"sent": False, "status": "archive_unverified"}
+            return {
+                "sent": True,
+                "status": "durable_archive",
+                "id": data.get("id"),
+                "received_at": data.get("received_at"),
+            }
+        app.logger.error("Supabase feedback archive RPC failed: %s %s", resp.status_code, resp.text[:500])
         return {"sent": False, "status": "archive_error"}
     except Exception:
-        app.logger.exception("Supabase feedback archive unavailable")
+        app.logger.exception("Supabase feedback archive RPC unavailable")
         return {"sent": False, "status": "archive_unavailable"}
 
 def _session_user_id():
@@ -878,8 +900,17 @@ def feedback():
         app.logger.exception("IMA feedback analytics provider failed")
         analytics = {"sent": False, "status": "provider_error"}
 
-    if not stored_runtime and not durable.get("sent") and not analytics.get("sent"):
-        return jsonify({"accepted": False, "error": "feedback could not be archived"}), 503
+    # A feedback submission is successful only when the durable archive confirms
+    # the insert and returns an archive id. Runtime files/analytics are fallback
+    # observability, never a substitute for durable persistence.
+    if not durable.get("sent"):
+        return jsonify({
+            "accepted": False,
+            "error": "feedback could not be durably archived",
+            "stored_runtime": stored_runtime,
+            "durable_archive": False,
+            "analytics": analytics["status"],
+        }), 503
 
     return jsonify({
         "accepted": True,
