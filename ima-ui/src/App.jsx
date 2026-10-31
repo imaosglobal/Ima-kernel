@@ -72,7 +72,7 @@ export default function App(){
  const [installEvent,setInstallEvent]=useState(null);
 
  useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});fetch(GLB_PATH,{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error();const bytes=await r.arrayBuffer(),prefix=new TextEncoder().encode('blob '+bytes.byteLength+'\\0'),payload=new Uint8Array(prefix.length+bytes.byteLength);payload.set(prefix);payload.set(new Uint8Array(bytes),prefix.length);const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-1',payload))).map(b=>b.toString(16).padStart(2,'0')).join('');setAvatarVerified(hash===GLB_GIT_BLOB_SHA1)}).catch(()=>setAvatarVerified(false));
-  const before=window.__imaBeforeInstall; if(before)setInstallEvent(before);
+  const before=window.__imaBeforeInstall||window.__imaInstallPrompt; if(before)setInstallEvent(before);
   const handler=e=>{e.preventDefault();setInstallEvent(e)};window.addEventListener('beforeinstallprompt',handler);return()=>window.removeEventListener('beforeinstallprompt',handler)
    const languageChanged=()=>{if(!localStorage.getItem('ima-language-v2')||localStorage.getItem('ima-language-v2')==='auto')setLang(detectLanguage())};
   window.addEventListener('languagechange',languageChanged);
