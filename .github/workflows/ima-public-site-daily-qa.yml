@@ -40,6 +40,24 @@ jobs:
           SITE: https://imaosglobal.github.io/Ima-kernel/
         run: python3 scripts/public_site_browser_smoke.py
 
+      - name: Verify all README headings are English
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          bad=[]
+          for p in Path('.').rglob('README.md'):
+              if any(part.startswith('_archive') for part in p.parts):
+                  continue
+              for n,line in enumerate(p.read_text(encoding='utf-8', errors='ignore').splitlines(),1):
+                  if re.match(r'^#{1,6}\s+', line) and re.search(r'[\u0590-\u05ff]', line):
+                      bad.append(f"{p}:{n}:{line}")
+          if bad:
+              print("\n".join(bad))
+              raise SystemExit("README_HEADING_LANGUAGE_REGRESSION")
+          print("README_HEADINGS_ENGLISH=PASS")
+          PY
+
       - name: Verify canonical campaign destination
         run: |
           python3 - <<'PY'
