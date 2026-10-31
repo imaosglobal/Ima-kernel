@@ -19,6 +19,7 @@ page = check_url(s, SITE, "public site")
 soup = BeautifulSoup(page.text, "html.parser")
 
 assert soup.find("script", src=re.compile(r"accounts\\.google\\.com/gsi/client")), "Google Identity Services library missing"
+assert soup.find("link", rel="manifest"), "PWA manifest link missing"
 assert soup.find(id="root"), "React root missing"
 assert "Ima-kernel" in page.url, "unexpected public site URL"
 
@@ -41,6 +42,11 @@ for tag, attr, url in resources:
 check_url(s, API + "/health", "API health")
 cfg = check_url(s, API + "/ima-api/auth/config", "Google auth config").json()
 assert cfg.get("google", {}).get("enabled") is True, f"Google auth not enabled: {cfg}"
+manifest_url = urljoin(SITE, soup.find("link", rel="manifest").get("href"))
+manifest = check_url(s, manifest_url, "PWA manifest").json()
+icons = manifest.get("icons") or []
+assert any(i.get("src") and i.get("sizes") in ("192x192","any") for i in icons), "PWA 192/any icon missing"
+assert any(i.get("src") and i.get("sizes") == "512x512" for i in icons), "PWA 512 icon missing"
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
@@ -58,6 +64,8 @@ with sync_playwright() as p:
     assert tab.locator(".avatar-campaign-link").count() == 1, "IMA campaign image link missing"
     campaign = tab.locator(".avatar-campaign-link").get_attribute("href")
     assert campaign and "utm_source=google" in campaign and "utm_medium=cpc" in campaign, f"campaign destination invalid: {campaign}"
+assert tab.locator("button.install-button").count() >= 1, "install button missing"
+assert tab.locator("button.install-button").first.is_visible(), "install button not visible"
 
     # Check every same-origin anchor target.
     anchors = tab.locator("a[href]")
