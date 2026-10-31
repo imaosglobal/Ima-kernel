@@ -1,6 +1,6 @@
 {
   "schema": "ima.creator-publication-registry.v1",
-  "last_verified": "2026-10-17",
+  "last_verified": "2026-10-31",
   "identity": {
     "name": "Ori Digital",
     "provider": "HeyGen",
@@ -19,12 +19,48 @@
   "destinations": [
     {
       "provider": "Metricool",
-      "status": "blocked",
-      "reason": "No social network is currently connected to the Metricool brand; therefore no write destination is authorized or publishable.",
-      "verified_at": "2026-10-17"
+      "brand_id": "7256363",
+      "brand_name": "Ima Global",
+      "timezone": "Asia/Jerusalem",
+      "owner": "imaosglobal@gmail.com",
+      "status": "verified_connected",
+      "write_destinations": [
+        {
+          "network": "LinkedIn",
+          "destination_id": "urn:li:person:clEFwjsD6K",
+          "write_permission_verified": true
+        },
+        {
+          "network": "YouTube",
+          "destination_id": "UCHY8YfNlogpmYTSbijsGSaA",
+          "write_permission_verified": true
+        }
+      ],
+      "scheduled_posts_current_window": 0,
+      "verified_at": "2026-10-31"
     }
   ],
   "future_destination_rule": "Any newly connected destination inherits this registry, identity, quality gate, deduplication rule, provenance tracking and publication verification workflow only after its write permission is verified.",
   "milestone_video_policy": "Do not create a new creator milestone video without meaningful verified progress.",
-  "status": "integrated_identity_binding_verified_publication_blocked"
+  "status": "identity_binding_verified_publication_capable_generation_blocked",
+  "generation_status": {
+    "provider": "HeyGen",
+    "plan": "free",
+    "status": "blocked",
+    "reason": "Avatar IV / video generation duration quota exhausted; current account exposes no remaining premium or add-on credits.",
+    "checked_at": "2026-10-31",
+    "failed_attempts_not_retried": [
+      "ae8dbaf7a5417bf6b75f5d3b20950f2a",
+      "aedba32f66db397308b4a2f2448f8db6",
+      "bc239efc596401d60c072147107848be",
+      "07d5ffe5b4e49d11abdc0aea088ed624"
+    ]
+  },
+  "publication_gate": {
+    "meaningful_milestone_required": true,
+    "quality_baseline_required": true,
+    "duplicate_prevention": true,
+    "publish_only_after_completed_video_and_quality_check": true,
+    "current_state": "no_new_video_available"
+  }
 }
