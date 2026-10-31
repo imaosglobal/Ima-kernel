@@ -71,13 +71,12 @@ jobs:
           git commit -m "chore: deploy canonical IMA public product"
           git push origin HEAD:gh-pages
           git fetch origin gh-pages
-          DEPLOYED_SHA="$(git -C /tmp/ima-gh-pages rev-parse HEAD)"
           if ! grep -q "$GITHUB_SHA" /tmp/ima-gh-pages/index.html; then
             echo "ERROR: gh-pages index.html does not contain deployed source SHA $GITHUB_SHA"
             exit 1
           fi
-          if [ "$DEPLOYED_SHA" = "$(git rev-parse HEAD)" ]; then
-            echo "IMA_PAGES=VERIFIED"
-          else
-            echo "IMA_PAGES=VERIFY_PENDING"
+          if ! grep -q "\"version\": \"$GITHUB_SHA\"" /tmp/ima-gh-pages/version.json; then
+            echo "ERROR: gh-pages version.json does not match source SHA $GITHUB_SHA"
+            exit 1
           fi
+          echo "IMA_PAGES=VERIFIED"
