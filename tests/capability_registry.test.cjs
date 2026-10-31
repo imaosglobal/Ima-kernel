@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const file = path.join(__dirname, '..', 'docs', 'IMA_CAPABILITY_REGISTRY.json');
 const registry = JSON.parse(fs.readFileSync(file, 'utf8'));
-const allowed = new Set(['LIVE','VERIFIED','TESTED','IMPLEMENTED','PLANNED','NOT_VERIFIED','DISABLED']);
+const allowed = new Set(['LIVE','VERIFIED','TESTED','IMPLEMENTED','PLANNED','NOT_VERIFIED','DISABLED','DESIGNED','IMPLEMENTED_IN_CODE','IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE','TESTED_PENDING_DEPLOYMENT','DEPLOYED_PENDING_LIVE','VERIFIED_LIVE','BLOCKED','ACCESS_REQUIRED','ACCOUNT_ELIGIBLE','CONNECTED_AND_AUTHORIZED','RUNTIME_VERIFIED','PRODUCT_AVAILABLE']);
 assert.equal(registry.product, 'IMA');
 assert.ok(Array.isArray(registry.capabilities) && registry.capabilities.length > 0);
 const ids = new Set();
