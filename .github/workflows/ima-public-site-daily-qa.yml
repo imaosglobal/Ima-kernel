@@ -35,6 +35,11 @@ jobs:
           SITE: https://imaosglobal.github.io/Ima-kernel/
         run: python3 scripts/public_site_browser_smoke.py
 
+      - name: Real-browser critical control smoke test
+        env:
+          SITE: https://imaosglobal.github.io/Ima-kernel/
+        run: python3 scripts/public_site_browser_smoke.py
+
       - name: Verify canonical campaign destination
         run: |
           python3 - <<'PY'
