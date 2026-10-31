@@ -1,4 +1,4 @@
-# IMA — בינה אנושית־מרכזית
+# IMA — Human-Centered Intelligence
 
 **[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
 
@@ -6,7 +6,7 @@
 
 IMA is a public, open human-centered intelligence project: a space for conversation, learning, creation and connection to technology. The public experience is available now; the repository documents the architecture and provides a place to question, contribute, test and build.
 
-## IMA — בינה אנושית: מבינה אנשים
+## IMA — Human Intelligence: Understanding People
 
 IMA is an open human-centered intelligence architecture and product project designed to understand people, support self-understanding and human connection, and evolve through validated collaboration. Its purpose is not to claim superintelligence or omniscience: models, tools and knowledge are means; people, dignity and human agency are the end.
 
