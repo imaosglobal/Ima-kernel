@@ -1,6 +1,6 @@
 # IMA — בינה אנושית־מרכזית
 
-**[פתח את אמא עכשיו](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
+**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning**
 
