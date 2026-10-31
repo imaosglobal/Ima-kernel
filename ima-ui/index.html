@@ -38,19 +38,31 @@
         fetch(root + 'version.json?ts=' + Date.now(), { cache: 'no-store' })
           .then(r => r.ok ? r.json() : null)
           .then(v => {
-            if (v?.version && localVersion && v.version !== localVersion) {
-              const u = new URL(window.location.href);
-              u.searchParams.set('v', v.version);
-              window.location.replace(u.toString());
+            if (v?.version && localVersion && localVersion !== v.version) {
+              const target = root + '?v=' + encodeURIComponent(v.version);
+              if (location.href !== target) location.replace(target);
             }
           })
           .catch(() => {});
       })();
     </script>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "אמא — IMA",
+      "alternateName": "IMA",
+      "url": "https://imaosglobal.github.io/Ima-kernel/",
+      "description": "Human-centered intelligence for conversation, memory, learning, creation and connected technology.",
+      "inLanguage": [
+        "he",
+        "en"
+      ]
+    }
+    </script>
   </head>
-  <body>
+  <body>\n    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <div id="root"></div>
-    <script type="module" src="/Ima-kernel/assets/index.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
