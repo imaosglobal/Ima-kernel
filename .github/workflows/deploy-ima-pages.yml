@@ -135,9 +135,10 @@ jobs:
           import json, os
           from datetime import datetime, timezone
           from pathlib import Path
-          evidence = {
+          cdn_verified = Path("/tmp/ima-cdn-ok").read_text(encoding="utf-8").strip() == "1"
+evidence = {
               "verified": True,
-              "cdn_verified": cdn_ok,
+              "cdn_verified": cdn_verified,
               "source_sha": os.environ["GITHUB_SHA"],
               "public_url": os.environ["SITE"] + "/",
               "version_url": os.environ["SITE"] + "/version.json",
