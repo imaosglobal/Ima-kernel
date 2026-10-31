@@ -2,7 +2,7 @@ const CACHE = 'ima-shell-v2';
 const SHELL = [
   '/Ima-kernel/',
   '/Ima-kernel/index.html',
-  '/Ima-kernel/manifest.webmanifest'
+  '/Ima-kernel/manifest.json'
 ];
 
 self.addEventListener('install', event => {
