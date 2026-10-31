@@ -117,12 +117,12 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
           evidence = {
-              "verified": True,
+              "verified": os.environ.get("LIVE_VERIFIED") == "1",
               "source_sha": os.environ["GITHUB_SHA"],
               "public_url": os.environ["SITE"] + "/",
               "version_url": os.environ["SITE"] + "/version.json",
               "verified_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-              "checks": ["version_sha", "live_index_sha", "google_gis_script", "react_root"],
+              "checks": ["gh_pages_publish", "version_sha", "live_index_sha", "google_gis_script", "react_root"],
           }
           Path("/tmp/ima-gh-pages/public-live-verification.json").write_text(
               json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
