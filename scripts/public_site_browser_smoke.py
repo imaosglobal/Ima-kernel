@@ -36,8 +36,9 @@ with sync_playwright() as p:
     href = brand.get_attribute("href") or ""
     assert "utm_source=google" in href and "utm_medium=cpc" in href and "utm_campaign=ima_initial_100ils" in href, "Brand campaign destination missing"
     page.locator(".google-entry").first.wait_for(state="visible", timeout=15000)
-    google_frames = page.locator(".google-entry iframe")
-    assert google_frames.count() >= 1, "Official Google Identity Services button did not render"
-    assert google_frames.first.is_visible(), "Official Google Identity Services button is not visible"
+    google_root = page.locator(".google-entry > div").first
+    assert google_root.count() == 1, "Google Identity Services mount point missing"
+    page.wait_for_function("() => !!window.google?.accounts?.id", timeout=15000)
+    assert google_root.inner_html().strip(), "Official Google Identity Services button did not render into its mount point"
     print("IMA_BROWSER_SMOKE=PASS")
     browser.close()
