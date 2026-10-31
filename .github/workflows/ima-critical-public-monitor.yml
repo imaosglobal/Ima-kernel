@@ -1,0 +1,51 @@
+name: IMA Critical Public Monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ima-critical-public-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify canonical source contracts
+        run: |
+          set -euo pipefail
+          grep -Fq "home:'Open IMA now'" ima-ui/src/i18n.js
+          grep -Fq "GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils'" ima-ui/src/App.jsx
+          grep -Fq 'accounts.google.com/gsi/client' ima-ui/index.html
+          grep -Fq "CACHE = 'ima-shell-v3'" ima-ui/public/sw.js
+          echo "IMA_SOURCE_CRITICAL_CONTRACTS=PASS"
+
+      - name: Verify public deployment identity and critical assets
+        env:
+          SITE: https://imaosglobal.github.io/Ima-kernel/
+        run: |
+          set -euo pipefail
+          expected=$(git rev-parse HEAD)
+          version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)")
+          printf '%s' "$version" | grep -Fq "\"version\": \"$expected\"" || {
+            echo "PUBLIC_VERSION_MISMATCH expected=$expected actual=$version"
+            exit 2
+          }
+          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/?v=$expected" -o /tmp/index.html
+          grep -Fq "$expected" /tmp/index.html
+          grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html
+          grep -Fq 'id="root"' /tmp/index.html
+          manifest=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/manifest.json")
+          printf '%s' "$manifest" | grep -Fq 'ima-192.svg'
+          printf '%s' "$manifest" | grep -Fq 'ima-512.svg'
+          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-192.svg" >/dev/null
+          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-512.svg" >/dev/null
+          echo "IMA_PUBLIC_CRITICAL_MONITOR=PASS"
