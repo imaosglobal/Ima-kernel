@@ -33,14 +33,4 @@ jobs:
         with:
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: ima-ui/dist
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+  # Deliberately no deploy job: the canonical public deployment is deploy-ima-pages.yml.
