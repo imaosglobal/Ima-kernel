@@ -52,6 +52,16 @@ jobs:
           git worktree add /tmp/ima-gh-pages origin/gh-pages
           find /tmp/ima-gh-pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -R ima-ui/dist/. /tmp/ima-gh-pages/
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path('/tmp/ima-gh-pages')
+          index = root / 'index.html'
+          text = index.read_text(encoding='utf-8')
+          text = text.replace('__IMA_BUILD_VERSION__', os.environ['GITHUB_SHA'])
+          index.write_text(text, encoding='utf-8')
+          (root / 'version.json').write_text(json.dumps({'version': os.environ['GITHUB_SHA']}, ensure_ascii=False), encoding='utf-8')
+          PY
           touch /tmp/ima-gh-pages/.nojekyll
           cd /tmp/ima-gh-pages
           git config user.name "IMA Pages Deploy"
