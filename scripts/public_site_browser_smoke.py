@@ -11,7 +11,15 @@ with sync_playwright() as p:
     page.on("console", lambda m: console_errors.append(m.text) if m.type == "error" else None)
     page.on("pageerror", lambda e: page_errors.append(str(e)))
     response = page.goto(SITE, wait_until="networkidle", timeout=60000)
-    page.wait_for_selector("#root", state="attached", timeout=15000)
+    try:
+        page.wait_for_selector("#root", state="attached", timeout=15000)
+    except Exception:
+        print("BROWSER_DIAGNOSTIC_URL=", page.url)
+        print("BROWSER_DIAGNOSTIC_STATUS=", response.status if response else None)
+        print("BROWSER_CONSOLE_ERRORS=", console_errors)
+        print("BROWSER_PAGE_ERRORS=", page_errors)
+        print("BROWSER_HTML_HEAD=", page.content()[:6000])
+        raise
     page.wait_for_timeout(3000)
     if not page.locator("#root").inner_text(timeout=2000):
         print("BROWSER_DIAGNOSTIC_URL=", page.url)
