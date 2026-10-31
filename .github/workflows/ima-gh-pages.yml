@@ -1,11 +1,6 @@
 name: IMA GitHub Pages Branch Deploy
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'ima-ui/**'
-      - '.github/workflows/ima-gh-pages.yml'
   workflow_dispatch:
 
 permissions:
