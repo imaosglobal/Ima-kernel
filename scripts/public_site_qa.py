@@ -18,7 +18,7 @@ s = requests.Session()
 page = check_url(s, SITE, "public site")
 soup = BeautifulSoup(page.text, "html.parser")
 
-assert soup.find("script", src=re.compile(r"accounts\\.google\\.com/gsi/client")), "Google Identity Services library missing"
+assert soup.find("script", src=re.compile(r"accounts\.google\.com/gsi/client")), "Google Identity Services library missing"
 assert soup.find("link", rel="manifest"), "PWA manifest link missing"
 assert soup.find(id="root"), "React root missing"
 assert "Ima-kernel" in page.url, "unexpected public site URL"
