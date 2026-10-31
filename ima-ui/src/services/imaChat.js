@@ -46,6 +46,33 @@ export async function askIma(message, personalization = {}) {
   return data.response;
 }
 
+export async function archiveChatLearningSignal(message, response, personalization = {}) {
+  const text = String(message || '').trim();
+  if (!text) return { accepted: false, skipped: true };
+  const now = new Date();
+  const payload = {
+    sentiment: 'chat',
+    text,
+    language: personalization.language || navigator.language || 'auto',
+    page: window.location.href,
+    referrer: document.referrer || '',
+    client_time: now.toISOString(),
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+    auth_state: localStorage.getItem('ima-google-user') ? 'authenticated' : 'anonymous',
+    source: 'ima-chat',
+    identity: { session: localStorage.getItem('ima-public-session-token') ? 'session' : 'anonymous' },
+    metadata: { response_present: Boolean(response), interface: 'chat' }
+  };
+  try {
+    const data = await request('/ima-api/feedback', { method: 'POST', body: JSON.stringify(payload) });
+    trackImaEvent('ima_chat_learning_archived');
+    return data;
+  } catch (error) {
+    trackImaEvent('ima_chat_learning_archive_failed');
+    return { accepted: false, error: error?.message || 'archive_failed' };
+  }
+}
+
 export async function getImaRuntime() {
   return request('/ima-api/runtime', { cache: 'no-store' });
 }
