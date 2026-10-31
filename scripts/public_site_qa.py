@@ -64,8 +64,8 @@ with sync_playwright() as p:
     assert tab.locator(".avatar-campaign-link").count() == 1, "IMA campaign image link missing"
     campaign = tab.locator(".avatar-campaign-link").get_attribute("href")
     assert campaign and "utm_source=google" in campaign and "utm_medium=cpc" in campaign, f"campaign destination invalid: {campaign}"
-assert tab.locator("button.install-button").count() >= 1, "install button missing"
-assert tab.locator("button.install-button").first.is_visible(), "install button not visible"
+    assert tab.locator("button.install-button").count() >= 1, "install button missing"
+    assert tab.locator("button.install-button").first.is_visible(), "install button not visible"
 
     # Check every same-origin anchor target.
     anchors = tab.locator("a[href]")
