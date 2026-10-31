@@ -51,4 +51,20 @@ jobs:
           printf '%s' "$manifest" | grep -Fq 'ima-512.svg'
           curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-192.svg" >/dev/null
           curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-512.svg" >/dev/null
+          bundle=$(python3 - <<'PY'
+import re,requests
+html=requests.get("https://imaosglobal.github.io/Ima-kernel/?v="+str(__import__("time").time_ns()),timeout=15).text
+m=re.search(r'<script type="module" crossorigin src="([^"]+\.js)"',html)
+if not m: raise SystemExit("PUBLIC_JS_BUNDLE_NOT_FOUND")
+url="https://imaosglobal.github.io"+m.group(1)
+print(requests.get(url,timeout=15).text)
+PY
+)
+printf '%s' "$bundle" | grep -Fq 'Open IMA now'
+printf '%s' "$bundle" | grep -Fq 'Install IMA'
+printf '%s' "$bundle" | grep -Fq 'beforeinstallprompt'
+printf '%s' "$bundle" | grep -Fq 'ima-install-available'
+printf '%s' "$bundle" | grep -Fq 'shape:`rectangular`'
+printf '%s' "$bundle" | grep -Fq 'utm_campaign=ima_initial_100ils'
+echo "IMA_PUBLIC_CRITICAL_BUNDLE_CONTRACTS=PASS"
           echo "IMA_PUBLIC_CRITICAL_MONITOR=PASS"
