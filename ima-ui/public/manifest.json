@@ -4,12 +4,16 @@
   "description": "IMA — global, intergenerational compassionate intelligence.",
   "lang": "he",
   "dir": "rtl",
-  "start_url": "/Ima-kernel/",
+  "start_url": "/Ima-kernel/?source=pwa",
   "scope": "/Ima-kernel/",
   "display": "standalone",
   "background_color": "#05060a",
   "theme_color": "#11131b",
   "icons": [
-    { "src": "/Ima-kernel/icons.svg", "sizes": "any", "type": "image/svg+xml" }
+    {
+      "src": "/Ima-kernel/icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
   ]
 }
