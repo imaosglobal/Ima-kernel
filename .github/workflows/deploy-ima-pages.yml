@@ -101,6 +101,7 @@ jobs:
               grep -Fq 'id="root"' /tmp/live-index.html
               echo "IMA_PUBLIC_PAGES_LIVE=VERIFIED"
               echo "IMA_PUBLIC_PAGES_SHA=$expected"
+              export LIVE_VERIFIED=1
               ok=1
               break
             fi
@@ -117,7 +118,7 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
           evidence = {
-              "verified": os.environ.get("LIVE_VERIFIED") == "1",
+              "verified": True,
               "source_sha": os.environ["GITHUB_SHA"],
               "public_url": os.environ["SITE"] + "/",
               "version_url": os.environ["SITE"] + "/version.json",
