@@ -87,23 +87,28 @@ jobs:
           import json, os, time, urllib.request
           expected=os.environ["GITHUB_SHA"]
           site=os.environ["SITE"].rstrip("/")
-          raw_base=f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/gh-pages"
+          api_base=f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/contents"
 
           def get(url):
-              req=urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier"})
+              req=urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier","Accept":"application/vnd.github+json"})
               with urllib.request.urlopen(req,timeout=30) as r:
                   return r.read().decode("utf-8")
 
-          version=json.loads(get(raw_base+"/version.json"))
+          def get_branch_file(path):
+              payload=json.loads(get(api_base+"/"+path+"?ref=gh-pages"))
+              import base64
+              return base64.b64decode(payload["content"]).decode("utf-8")
+
+          version=json.loads(get_branch_file("version.json"))
           assert version.get("version")==expected, f"GH_PAGES_VERSION_MISMATCH expected={expected} actual={version}"
-          index=get(raw_base+"/index.html")
+          index=get_branch_file("index.html")
           assert expected in index, "GH_PAGES_INDEX_SHA_MISSING"
           assert "accounts.google.com/gsi/client" in index, "GOOGLE_GIS_SCRIPT_MISSING"
           assert 'id="root"' in index, "REACT_ROOT_MISSING"
           import re
           match=re.search(r'assets/index-[^"]+\.js',index)
           assert match, "PUBLIC_BUNDLE_REFERENCE_MISSING"
-          bundle=get(raw_base+"/"+match.group(0))
+          bundle=get_branch_file(match.group(0))
           required=["Open IMA now","Install IMA","Talk to IMA","beforeinstallprompt","renderButton","rectangular"]
           missing=[x for x in required if x not in bundle]
           assert not missing, "PUBLIC_BUNDLE_CONTRACTS_MISSING="+",".join(missing)
@@ -112,7 +117,7 @@ jobs:
           print("IMA_GHPAGES_BRANCH_SHA="+expected)
 
           cdn_ok=False
-          for attempt in range(12):
+          for attempt in range(30):
               try:
                   live=json.loads(get(site+"/version.json?ts="+str(time.time_ns())))
                   if live.get("version")==expected:
