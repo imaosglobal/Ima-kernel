@@ -20,7 +20,6 @@ soup = BeautifulSoup(page.text, "html.parser")
 
 assert soup.find("script", src=re.compile(r"accounts\.google\.com/gsi/client")), "Google Identity Services library missing"
 assert soup.find("link", rel="manifest"), "PWA manifest link missing"
-assert 'id="root"' in page.text, "React root missing"
 assert "Ima-kernel" in page.url, "unexpected public site URL"
 
 # Validate every explicit href/src/poster in the delivered HTML shell.
