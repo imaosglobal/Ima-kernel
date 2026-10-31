@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="אמא — IMA | Human-centered intelligence" />
     <meta name="twitter:description" content="Use IMA. Question IMA. Teach IMA. Build IMA." />
     <title>אמא — IMA | Human-centered intelligence</title>
-    <meta name="ima-build-version" content="ebc51b14e924b60ae420c93e10678b3af791ef04" />
+    <meta name="ima-build-version" content="585e577d1ab867a4bab00e2f7ff53a217230576b" />
     <script>
       (() => {
         const root = '/Ima-kernel/';
@@ -38,7 +38,7 @@
         fetch(root + 'version.json?ts=' + Date.now(), { cache: 'no-store' })
           .then(r => r.ok ? r.json() : null)
           .then(v => {
-            if (v?.version && localVersion && localVersion !== 'ebc51b14e924b60ae420c93e10678b3af791ef04' && localVersion !== v.version) {
+            if (v?.version && localVersion && localVersion !== '585e577d1ab867a4bab00e2f7ff53a217230576b' && localVersion !== v.version) {
               const target = root + '?v=' + encodeURIComponent(v.version);
               if (location.href !== target) location.replace(target);
             }
