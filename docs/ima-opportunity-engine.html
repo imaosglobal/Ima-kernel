@@ -3,54 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IMA Opportunity Engine — בדיקת הזדמנות</title>
-<meta name="description" content="כלי חינמי לבדיקת כדאיות ראשונית של הזדמנות עסקית, בלי להבטיח הכנסה ובלי להסתיר אי־ודאות.">
+<title>IMA — בדיקת הזדמנות עם אמא</title>
+<meta name="description" content="בדקו רעיון או הזדמנות עם אמא: הפרידו עובדות מהנחות, מצאו את החוליה החלשה ובדקו לפני שמסכנים כסף, זמן או אמון.">
 <style>
-:root{--bg:#f7f2e9;--paper:#fffdf8;--ink:#1b1816;--muted:#6d665e;--line:#e3d9cc;--accent:#9d5963;--good:#496957;--warn:#8a633c}
+:root{--bg:#f7f2e9;--paper:#fffdf8;--ink:#1b1816;--muted:#6d665e;--line:#e3d9cc;--accent:#9d5963;--good:#496957}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,system-ui,sans-serif;line-height:1.65}.wrap{max-width:900px;margin:auto;padding:28px 18px 60px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px}a{color:inherit}.brand{font-weight:800}.back{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:var(--paper);text-decoration:none}
-.hero,.panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 18px 55px rgba(55,38,25,.08)}h1{font-size:clamp(2rem,7vw,4rem);line-height:1;margin:0 0 14px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}label{display:block;font-weight:700}input,select{width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit}button{border:0;border-radius:13px;padding:13px 18px;background:var(--accent);color:#fff;font-weight:800;cursor:pointer;margin-top:18px}.result{margin-top:22px;padding:20px;border-radius:18px;background:#f4eee5;display:none}.score{font-size:3rem;font-weight:800;color:var(--accent)}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.fact{padding:14px;background:#fff;border:1px solid var(--line);border-radius:14px}.good{color:var(--good)}.warn{color:var(--warn)}@media(max-width:650px){.grid,.facts{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}}
+.hero,.panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 18px 55px rgba(55,38,25,.08)}h1{font-size:clamp(2rem,7vw,4rem);line-height:1.05;margin:0 0 14px}.muted{color:var(--muted)}.eyebrow{font-weight:800;color:var(--accent)}.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.step{padding:18px;background:#f4eee5;border-radius:18px;border:1px solid var(--line)}.step b{display:block;margin-bottom:5px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.button{display:inline-block;border-radius:13px;padding:13px 18px;font-weight:800;text-decoration:none}.primary{background:var(--accent);color:#fff}.secondary{background:#fff;border:1px solid var(--line)}.note{margin-top:18px;padding:16px 18px;border-radius:16px;background:#eef3ee;color:#33483a}.internal{margin-top:18px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);padding-top:18px}
+@media(max-width:650px){.steps{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}.actions{flex-direction:column}.button{text-align:center}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><div class="brand">IMA — Opportunity Engine</div><a class="back" href="./">חזרה לאמא</a></header>
+<header><div class="brand">IMA — אמא</div><a class="back" href="./">חזרה לאמא</a></header>
 <section class="hero">
-<p class="muted">כלי חינמי לבדיקת הזדמנות לפני שמבזבזים כסף, זמן או אמון.</p>
-<h1>האם ההזדמנות הזאת באמת שווה בדיקה?</h1>
-<p class="muted">הזינו הערכות פשוטות. התוצאה היא מסנן ראשוני בלבד — לא הבטחת הכנסה ולא ייעוץ פיננסי.</p>
+<span class="eyebrow">בדקו את ההזדמנות עם אמא</span>
+<h1>יש לכם הזדמנות או רעיון שאתם רוצים לבדוק?</h1>
+<p class="muted">במקום לתת לעצמכם ציון וליצור ודאות מדומה, ספרו לאמא מה אתם שוקלים. אמא תעזור לפרק את השאלה ולבדוק מה באמת ידוע.</p>
+<div class="steps">
+<div class="step"><b>1. להבין</b>מה בדיוק ההזדמנות, למי היא מיועדת ומה אתם מנסים להשיג.</div>
+<div class="step"><b>2. להפריד</b>מה כבר ידוע ומה עדיין רק הנחה שצריך לאמת.</div>
+<div class="step"><b>3. למצוא חוליה חלשה</b>איזו נקודה עלולה להפיל את הרעיון אם היא אינה נכונה.</div>
+<div class="step"><b>4. לבדוק בזול</b>מהי הבדיקה הקטנה והמעשית שאפשר לעשות לפני השקעה גדולה.</div>
+<div class="step"><b>5. לזהות סיכון</b>עלויות נסתרות, זמן, אמון, תלות בצדדים אחרים וסיכונים נוספים.</div>
+<div class="step"><b>6. להחליט בזהירות</b>אם צריך, אמא תעזור לנסח את הבדיקה הבאה או להפנות להמשך בדיקה מתאים.</div>
+</div>
+<div class="actions">
+<a class="button primary" href="./#chat">שוחחו עם אמא</a>
+<a class="button secondary" href="mailto:imaosglobal@gmail.com?subject=בדיקת%20הזדמנות%20עם%20אמא">צרו קשר עם אמא במייל</a>
+</div>
+<div class="note"><b>כלל אמא: עובדה לפני הכרזה.</b><br>אם אין מספיק ראיות, התשובה אינה “100/100”. התשובה היא: “כרגע אין מספיק ראיות כדי לקבוע. בואו נבדוק את הנקודה הקריטית ביותר לפני שמוציאים כסף או מסכנים זמן ואמון.”</div>
 </section>
 <section class="panel" style="margin-top:18px">
-<div class="grid">
-<label>ראיות לביקוש
-<select id="demand"><option value="1">חלשות</option><option value="2">בינוניות</option><option value="3">חזקות</option><option value="4">חזקות מאוד</option><option value="5">מאומתות</option></select></label>
-<label>בהירות ההכנסה
-<select id="revenue"><option value="1">לא ברורה</option><option value="2">חלקית</option><option value="3">ברורה</option><option value="4">מוכחת חלקית</option><option value="5">מוכחת</option></select></label>
-<label>קלות רכישת לקוח
-<select id="acq"><option value="1">קשה מאוד</option><option value="2">קשה</option><option value="3">בינונית</option><option value="4">קלה</option><option value="5">קלה מאוד</option></select></label>
-<label>עלות אספקה
-<select id="cost"><option value="1">גבוהה מאוד</option><option value="2">גבוהה</option><option value="3">בינונית</option><option value="4">נמוכה</option><option value="5">נמוכה מאוד</option></select></label>
-<label>אמון וסיכון
-<select id="trust"><option value="1">סיכון גבוה</option><option value="2">סיכון משמעותי</option><option value="3">בינוני</option><option value="4">נמוך</option><option value="5">נמוך מאוד</option></select></label>
-<label>זמן עד ערך
-<select id="time"><option value="1">ארוך מאוד</option><option value="2">ארוך</option><option value="3">בינוני</option><option value="4">קצר</option><option value="5">מיידי/כמעט מיידי</option></select></label>
-</div>
-<button onclick="score()">חשב ציון ראשוני</button>
-<div id="result" class="result"></div>
-</section>
-<section class="panel" style="margin-top:18px">
-<strong>כלל IMA:</strong> עובדה לפני הכרזה. אם חסרה ראיה, מסמנים אותה כחסר מידע ולא הופכים הנחה לעובדה.
+<b>המחשבון הישן לא נמחק.</b>
+<p class="muted">הציון יכול להישאר כאות פנימי לאחר שנאסף מידע אמיתי. הוא אינו מוצג כאן כמנגנון שמכריע אם כדאי להמשיך, ואינו מחליף ראיות, בדיקה או שיקול דעת.</p>
+<p class="internal">כך הכלי מחובר ישירות למוצר: אמא היא המקום שבו בודקים את ההזדמנות, והמחשבון — אם יש בו ערך — הוא רק אחד מהאותות שאמא יכולה להשתמש בהם.</p>
 </section>
 </div>
-<script>
-function v(id){return Number(document.getElementById(id).value)}
-function score(){
- const vals=[v('demand'),v('revenue'),v('acq'),v('cost'),v('trust'),v('time')];
- const s=Math.round(vals.reduce((a,b)=>a+b,0)/30*100);
- let title=s>=75?'כדאי להמשיך לבדיקה':s>=55?'יש פוטנציאל, אבל חסרות ראיות':'לעצור לפני השקעה ולבדוק את הבסיס';
- let cls=s>=75?'good':'warn';
- document.getElementById('result').style.display='block';
- document.getElementById('result').innerHTML='<div class="score">'+s+'/100</div><h2 class="'+cls+'">'+title+'</h2><p>הציון הוא כלי סינון פנימי בלבד. לפני פעולה מסחרית יש לאמת ביקוש, תנאים, עלויות, זהות הצדדים והסיכונים.</p><div class="facts"><div class="fact"><b>מה ידוע</b><br>הערכים שהזנתם.</div><div class="fact"><b>מה לא ידוע</b><br>נתוני שוק חיצוניים שלא אומתו.</div><div class="fact"><b>הצעד הבא</b><br>לאמת את החוליה החלשה ביותר.</div></div>';
-}
-</script>
 </body>
 </html>
