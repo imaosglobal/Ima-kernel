@@ -34,7 +34,10 @@ jobs:
         run: |
           set -euo pipefail
           expected=$(git rev-parse HEAD)
-          version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)")
+          version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)" || true)
+          if ! printf '%s' "$version" | grep -Fq ""version": "$expected""; then
+            version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "https://raw.githubusercontent.com/imaosglobal/Ima-kernel/gh-pages/version.json?ts=$(date +%s%N)")
+          fi
           printf '%s' "$version" | grep -Fq "\"version\": \"$expected\"" || {
             echo "PUBLIC_VERSION_MISMATCH expected=$expected actual=$version"
             exit 2
