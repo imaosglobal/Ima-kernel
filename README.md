@@ -4,7 +4,7 @@
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning**
 
-IMA is a public, open human-centered intelligence project: a space for conversation, learning, creation and connection to technology. The public experience is available now; the repository documents the architecture and provides a place to question, contribute, test and build.
+IMA is a public, open-source human-centered intelligence project for conversation, learning, creation, accessibility and human connection. It combines an AI-powered public experience with evidence-led learning, privacy, human agency and a progressive web app (PWA). The public experience is available now; this repository is the canonical place to explore, question, contribute, test and build IMA.
 
 ## IMA — Human Intelligence: Understanding People
 
