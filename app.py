@@ -841,6 +841,11 @@ def feedback():
     page = str(payload.get("page") or "")[:1000]
     referrer = str(payload.get("referrer") or "")[:1000]
     user_agent = request.headers.get("User-Agent", "")[:1000]
+    requested_source = str(payload.get("source") or "public-runtime").strip()[:80]
+    allowed_sources = {"public-runtime", "ima-chat", "ima-app", "meta", "whatsapp", "telegram", "email", "api"}
+    source = requested_source if requested_source in allowed_sources else "public-runtime"
+    metadata = payload.get("metadata") if isinstance(payload.get("metadata"), dict) else {}
+    metadata = {str(k)[:64]: (v if isinstance(v, (str, int, float, bool)) or v is None else str(v)[:500]) for k, v in metadata.items()}
     archive_record = {
         "received_at": _utc_now(),
         "received_epoch": received_epoch,
@@ -856,7 +861,8 @@ def feedback():
         "client_timezone": client_timezone,
         "client_time": client_now,
         "user_agent": user_agent,
-        "source": "public-runtime",
+        "source": source,
+        "metadata": metadata,
     }
 
     lesson = _derive_feedback_lesson(sentiment, text)
@@ -885,7 +891,7 @@ def feedback():
             {
                 "sentiment": sentiment,
                 "language": language,
-                "source": "public-runtime",
+                "source": source,
                 "auth_state": auth_state,
                 "page": page,
                 "referrer": referrer,
