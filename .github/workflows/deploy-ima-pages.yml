@@ -134,3 +134,13 @@ jobs:
           git commit -m "chore: record public IMA Pages live verification"
           git push origin HEAD:gh-pages
           echo "IMA_PUBLIC_LIVE_EVIDENCE=PUBLISHED"
+
+      - name: Install browser smoke-test dependencies
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          playwright install --with-deps chromium
+
+      - name: Verify critical public controls in a real browser
+        env:
+          SITE: https://imaosglobal.github.io/Ima-kernel/
+        run: python3 scripts/public_site_browser_smoke.py
