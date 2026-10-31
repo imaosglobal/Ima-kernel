@@ -47,7 +47,7 @@ function GoogleLogin({auth,setAuth,locale}){
   const bytes=new Uint8Array(24);crypto.getRandomValues(bytes);
   const nonce=Array.from(bytes).map(b=>b.toString(16).padStart(2,'0')).join('');
   window.google.accounts.id.initialize({client_id:config.google.client_id,nonce,callback:async response=>{try{setAuth(a=>({...a,status:'signing_in'}));const result=await signInWithGoogleCredential(response.credential,nonce);setAuth({status:'signed_in',user:result.user||null})}catch(e){setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}},auto_select:false,use_fedcm_for_button:false,ux_mode:'popup'});
-  window.google.accounts.id.renderButton(ref.current,{type:'standard',theme:'outline',size:'large',text:'signin_with',shape:'pill',logo_alignment:'left',width:280,locale:getLocale(detectLanguage()).code});
+  window.google.accounts.id.renderButton(ref.current,{type:'standard',theme:'outline',size:'large',text:'signin_with',shape:'rectangular',logo_alignment:'left',width:300,locale:getLocale(detectLanguage()).code});
   if(!cancelled)setAuth(a=>({...a,status:'ready'}))
  }catch(e){if(!cancelled)setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}})();return()=>{cancelled=true}},[setAuth]);
  if(auth.status==='signed_in')return <div className="account-chip"><img className="account-photo" src={auth.user?.picture||''} alt="" onError={e=>{e.currentTarget.style.display='none'}}/><span>{auth.user?.name||auth.user?.email||'IMA'}</span><button onClick={()=>{signOutIma();setAuth({status:'ready',user:null})}}>{locale.labels.logout}</button></div>;
@@ -72,18 +72,20 @@ export default function App(){
  const [installEvent,setInstallEvent]=useState(null);
 
  useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});fetch(GLB_PATH,{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error();const bytes=await r.arrayBuffer(),prefix=new TextEncoder().encode('blob '+bytes.byteLength+'\\0'),payload=new Uint8Array(prefix.length+bytes.byteLength);payload.set(prefix);payload.set(new Uint8Array(bytes),prefix.length);const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-1',payload))).map(b=>b.toString(16).padStart(2,'0')).join('');setAvatarVerified(hash===GLB_GIT_BLOB_SHA1)}).catch(()=>setAvatarVerified(false));
+  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
   const before=window.__imaBeforeInstall||window.__imaInstallPrompt; if(before)setInstallEvent(before);
-  const handler=e=>{e.preventDefault();setInstallEvent(e)};window.addEventListener('beforeinstallprompt',handler);return()=>window.removeEventListener('beforeinstallprompt',handler)
-   const languageChanged=()=>{if(!localStorage.getItem('ima-language-v2')||localStorage.getItem('ima-language-v2')==='auto')setLang(detectLanguage())};
+  window.addEventListener('beforeinstallprompt',adoptInstallEvent);
+  window.addEventListener('ima-install-available',()=>adoptInstallEvent(window.__imaInstallPrompt));
+  const languageChanged=()=>{if(!localStorage.getItem('ima-language-v2')||localStorage.getItem('ima-language-v2')==='auto')setLang(detectLanguage())};
   window.addEventListener('languagechange',languageChanged);
-  return()=>{window.removeEventListener('languagechange',languageChanged);window.removeEventListener('beforeinstallprompt',handler)}
+  return()=>{window.removeEventListener('languagechange',languageChanged);window.removeEventListener('beforeinstallprompt',adoptInstallEvent)}
  },[lang,locale.code,locale.dir]);
 
  useEffect(()=>{if(auth.status==='signed_in')setProfile(loadProfile(auth.user));},[auth.status,auth.user?.email,auth.user?.sub]);
  const loggedIn=auth.status==='signed_in'; useEffect(()=>{if(loggedIn)go('chat')},[loggedIn]);
  const go=id=>{setActive(id);document.getElementById(id)?.scrollIntoView({behavior:'smooth'})};
  const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');const customization=applyChatPersonalization(text,profile);if(customization.changed){setProfile(customization.next);saveProfile(auth.user,customization.next);setMessages(m=>[...m,{role:'ima',text:customization.next.language==='he'?'שיניתי את ההעדפה שלך.':'I updated your preference.'}]);if(customization.next.language&&customization.next.language!==lang) {localStorage.setItem('ima-language-v2',customization.next.language);window.setTimeout(()=>window.location.reload(),50)}return;}setBusy(true);setAvatarState('listening');try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
- const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){e.prompt();await e.userChoice;window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
+ const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();await e.userChoice}catch{}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
 
  return <main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
   <header className="topbar"><div className="topbar-inner"><a className="brand" href={GOOGLE_CAMPAIGN_URL}><span className="brand-mark">א</span><span><b>IMA</b><small>אמא · human-centered intelligence</small></span></a>
