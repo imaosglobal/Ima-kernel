@@ -28,7 +28,8 @@
 <script>
 const API="https://ima-915m.onrender.com";
 const connection=document.querySelector("#connection");
-function getToken(){return sessionStorage.getItem("ima_session_token")||""}
+function getToken(){return sessionStorage.getItem("ima_session_token")||localStorage.getItem("ima-public-session-token")||""}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[ch]))}
 async function refreshConnection(){
   try{
     const token=getToken();
@@ -56,8 +57,9 @@ document.querySelector("#f").addEventListener("submit",async e=>{
  const token=getToken(); if(token) headers.Authorization="Bearer "+token;
  try{
    const r=await fetch(API+"/ima-api/feedback",{method:"POST",headers,body:JSON.stringify(payload)});
-   const d=await r.json();if(!r.ok||!d.accepted)throw Error(d.error||"failed");
-   status.textContent="המשוב התקבל ונכנס לארכיון. "+(d.receipt?.received_at||"")+" · "+(d.receipt?.auth_state==="google_authenticated"?"מחובר/ת Google":"אורח/ת");
+   const d=await r.json();if(!r.ok||!d.accepted||!d.durable_archive||!d.archive_id)throw Error(d.error||"failed");
+   const savedText=String(f.get("text")||"").trim();
+   status.innerHTML="המשוב התקבל ונשמר בארכיון המתמשך.<br><strong>מה נשמר:</strong> "+escapeHtml(savedText)+"<br><small>זמן: "+escapeHtml(d.receipt?.received_at||"")+" · מזהה ארכיון: "+escapeHtml(d.archive_id||"")+" · "+(d.receipt?.auth_state==="google_authenticated"?"מחובר/ת Google":"אורח/ת")+"</small>";
    e.target.reset();
  }catch(err){status.textContent="המשוב לא נשמר כרגע. נסה/י שוב מאוחר יותר.";}
 });
