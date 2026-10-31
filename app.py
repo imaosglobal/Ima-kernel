@@ -932,9 +932,10 @@ def feedback():
         "analytics": analytics["status"],
         "durability": "Supabase" if durable.get("sent") else ("PostHog" if analytics.get("sent") else "runtime_archive_only"),
         "learning": {
-            "status": "derived_and_queued",
-            "applied_automatically": False,
-            "reason": "Feedback is converted into a structured lesson candidate, but product changes require verification before application.",
+            "status": "derived_and_queued_for_automatic_execution",
+            "learning_ingest_automatic": True,
+            "product_change_applied": False,
+            "reason": "The learning-ingest stage is executed automatically by the feedback executor; product changes remain evidence- and test-gated.",
             "lesson_tags": lesson["tags"],
         },
     }), 201
