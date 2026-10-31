@@ -34,7 +34,7 @@ with sync_playwright() as p:
     assert page.get_by_text("Talk to IMA", exact=True).count() >= 1, "Talk to IMA CTA missing"
     brand = page.locator("a.brand").first
     href = brand.get_attribute("href") or ""
-    assert "utm_source=google" in href and "utm_medium=cpc" in href and "utm_campaign=ima_initial_100ils" in href, "Brand campaign destination missing"
+    assert "utm_source=google" in href and "utm_medium=cpc" in href and "utm_campaign=ima_initial_100ils" in href and "utm_content=ima_logo" in href, "Brand campaign destination missing"
     page.locator(".google-entry").first.wait_for(state="visible", timeout=15000)
     google_root = page.locator(".google-entry > div").first
     assert google_root.count() == 1, "Google Identity Services mount point missing"
