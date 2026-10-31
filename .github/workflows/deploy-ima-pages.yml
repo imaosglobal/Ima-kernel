@@ -111,3 +111,25 @@ jobs:
             echo "Last version response: $version"
             exit 1
           fi
+
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          evidence = {
+              "verified": True,
+              "source_sha": os.environ["GITHUB_SHA"],
+              "public_url": os.environ["SITE"] + "/",
+              "version_url": os.environ["SITE"] + "/version.json",
+              "verified_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+              "checks": ["version_sha", "live_index_sha", "google_gis_script", "react_root"],
+          }
+          Path("/tmp/ima-gh-pages/public-live-verification.json").write_text(
+              json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+          )
+          PY
+          cd /tmp/ima-gh-pages
+          git add public-live-verification.json
+          git commit -m "chore: record public IMA Pages live verification"
+          git push origin HEAD:gh-pages
+          echo "IMA_PUBLIC_LIVE_EVIDENCE=PUBLISHED"
