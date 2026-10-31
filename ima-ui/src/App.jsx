@@ -46,7 +46,7 @@ function GoogleLogin({auth,setAuth,locale}){
   ref.current.innerHTML='';
   const bytes=new Uint8Array(24);crypto.getRandomValues(bytes);
   const nonce=Array.from(bytes).map(b=>b.toString(16).padStart(2,'0')).join('');
-  window.google.accounts.id.initialize({client_id:config.google.client_id,nonce,callback:async response=>{try{setAuth(a=>({...a,status:'signing_in'}));const result=await signInWithGoogleCredential(response.credential,nonce);setAuth({status:'signed_in',user:result.user||null})}catch(e){setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}},auto_select:false,use_fedcm_for_button:true});
+  window.google.accounts.id.initialize({client_id:config.google.client_id,nonce,callback:async response=>{try{setAuth(a=>({...a,status:'signing_in'}));const result=await signInWithGoogleCredential(response.credential,nonce);setAuth({status:'signed_in',user:result.user||null})}catch(e){setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}},auto_select:false,use_fedcm_for_button:false,ux_mode:'popup'});
   window.google.accounts.id.renderButton(ref.current,{type:'standard',theme:'outline',size:'large',text:'signin_with',shape:'pill',logo_alignment:'left',width:280,locale:getLocale(detectLanguage()).code});
   if(!cancelled)setAuth(a=>({...a,status:'ready'}))
  }catch(e){if(!cancelled)setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}})();return()=>{cancelled=true}},[setAuth]);
