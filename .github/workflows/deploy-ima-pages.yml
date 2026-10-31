@@ -97,13 +97,15 @@ jobs:
           bundle="$(grep -o 'assets/index-[^"]*\\.js' /tmp/live-index.html | head -n 1)"
           test -n "$bundle"
           curl -fsSL --retry 3 --connect-timeout 10 --max-time 30 "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/$bundle" -o /tmp/live-bundle.js
-          grep -Fq 'Open IMA now' /tmp/live-bundle.js
-          grep -Fq 'Install IMA' /tmp/live-bundle.js
-          grep -Fq 'Talk to IMA' /tmp/live-bundle.js
-          grep -Fq 'beforeinstallprompt' /tmp/live-bundle.js
-          grep -Fq 'renderButton' /tmp/live-bundle.js
-          grep -Fq 'rectangular' /tmp/live-bundle.js
-          echo "IMA_PUBLIC_BUNDLE_CRITICAL_CONTRACTS=VERIFIED"
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path("/tmp/live-bundle.js").read_text(encoding="utf-8")
+          required=["Open IMA now","Install IMA","Talk to IMA","beforeinstallprompt","renderButton","rectangular"]
+          missing=[x for x in required if x not in s]
+          if missing:
+              raise SystemExit("PUBLIC_BUNDLE_CONTRACTS_MISSING="+",".join(missing))
+          print("IMA_PUBLIC_BUNDLE_CRITICAL_CONTRACTS=VERIFIED")
+          PY
           echo "IMA_GHPAGES_BRANCH_LIVE=VERIFIED"
           echo "IMA_GHPAGES_BRANCH_SHA=$expected"
           pages_ok=0
