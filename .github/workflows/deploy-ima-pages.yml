@@ -80,47 +80,51 @@ jobs:
           echo "IMA_PAGES=VERIFIED"
 
       - name: Verify the real public GitHub Pages response
-        shell: bash
         env:
           SITE: https://imaosglobal.github.io/Ima-kernel
         run: |
-          set -euo pipefail
-          expected="$GITHUB_SHA"
-          raw_version_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/version.json"
-          raw_index_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/index.html"
-          version="$(curl -fsSL --retry 3 --connect-timeout 10 --max-time 30 "$raw_version_url")"
-          printf '%s' "$version" | grep -Fq "\"version\": \"$expected\""
-          curl -fsSL --retry 3 --connect-timeout 10 --max-time 30 "$raw_index_url" -o /tmp/live-index.html
-          grep -Fq "$expected" /tmp/live-index.html
-          grep -Fq "accounts.google.com/gsi/client" /tmp/live-index.html
-          grep -Fq 'id="root"' /tmp/live-index.html
-          bundle="$(grep -o 'assets/index-[^"]*\\.js' /tmp/live-index.html | head -n 1)"
-          test -n "$bundle"
-          curl -fsSL --retry 3 --connect-timeout 10 --max-time 30 "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/gh-pages/$bundle" -o /tmp/live-bundle.js
           python3 - <<'PY'
-          from pathlib import Path
-          s=Path("/tmp/live-bundle.js").read_text(encoding="utf-8")
+          import json, os, time, urllib.request
+          expected=os.environ["GITHUB_SHA"]
+          site=os.environ["SITE"].rstrip("/")
+          raw_base=f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/gh-pages"
+
+          def get(url):
+              req=urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier"})
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  return r.read().decode("utf-8")
+
+          version=json.loads(get(raw_base+"/version.json"))
+          assert version.get("version")==expected, f"GH_PAGES_VERSION_MISMATCH expected={expected} actual={version}"
+          index=get(raw_base+"/index.html")
+          assert expected in index, "GH_PAGES_INDEX_SHA_MISSING"
+          assert "accounts.google.com/gsi/client" in index, "GOOGLE_GIS_SCRIPT_MISSING"
+          assert 'id="root"' in index, "REACT_ROOT_MISSING"
+          import re
+          match=re.search(r'assets/index-[^"]+\.js',index)
+          assert match, "PUBLIC_BUNDLE_REFERENCE_MISSING"
+          bundle=get(raw_base+"/"+match.group(0))
           required=["Open IMA now","Install IMA","Talk to IMA","beforeinstallprompt","renderButton","rectangular"]
-          missing=[x for x in required if x not in s]
-          if missing:
-              raise SystemExit("PUBLIC_BUNDLE_CONTRACTS_MISSING="+",".join(missing))
+          missing=[x for x in required if x not in bundle]
+          assert not missing, "PUBLIC_BUNDLE_CONTRACTS_MISSING="+",".join(missing)
+          print("IMA_GHPAGES_BRANCH_LIVE=VERIFIED")
           print("IMA_PUBLIC_BUNDLE_CRITICAL_CONTRACTS=VERIFIED")
+          print("IMA_GHPAGES_BRANCH_SHA="+expected)
+
+          cdn_ok=False
+          for attempt in range(12):
+              try:
+                  live=json.loads(get(site+"/version.json?ts="+str(time.time_ns())))
+                  if live.get("version")==expected:
+                      cdn_ok=True
+                      print("IMA_PUBLIC_PAGES_CDN=VERIFIED")
+                      break
+              except Exception as exc:
+                  print("CDN_CHECK_ERROR",type(exc).__name__)
+              time.sleep(10)
+          if not cdn_ok:
+              raise SystemExit("IMA_PUBLIC_PAGES_CDN_NOT_VERIFIED")
           PY
-          echo "IMA_GHPAGES_BRANCH_LIVE=VERIFIED"
-          echo "IMA_GHPAGES_BRANCH_SHA=$expected"
-          pages_ok=0
-          for attempt in $(seq 1 12); do
-            echo "Public Pages CDN observation $attempt/12"
-            if curl -fsSL --retry 1 --connect-timeout 10 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)" 2>/dev/null | grep -Fq "\"version\": \"$expected\""; then
-              echo "IMA_PUBLIC_PAGES_CDN=VERIFIED"
-              pages_ok=1
-              break
-            fi
-            sleep 10
-          done
-          if [ "$pages_ok" -ne 1 ]; then
-            echo "WARNING: Pages CDN did not expose the new SHA within the observation window; gh-pages branch is verified."
-          fi
 
           python3 - <<'PY'
           import json, os
@@ -132,7 +136,7 @@ jobs:
               "public_url": os.environ["SITE"] + "/",
               "version_url": os.environ["SITE"] + "/version.json",
               "verified_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-              "checks": ["gh_pages_publish", "version_sha", "live_index_sha", "google_gis_script", "react_root"],
+              "checks": ["gh_pages_publish", "version_sha", "live_index_sha", "public_bundle_contracts", "google_gis_script", "react_root", "pages_cdn"],
           }
           Path("/tmp/ima-gh-pages/public-live-verification.json").write_text(
               json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
