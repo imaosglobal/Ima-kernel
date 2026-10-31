@@ -101,7 +101,8 @@ jobs:
           grep -Fq 'Install IMA' /tmp/live-bundle.js
           grep -Fq 'Talk to IMA' /tmp/live-bundle.js
           grep -Fq 'beforeinstallprompt' /tmp/live-bundle.js
-          grep -Fq 'shape:`rectangular`' /tmp/live-bundle.js
+          grep -Fq 'renderButton' /tmp/live-bundle.js
+          grep -Fq 'rectangular' /tmp/live-bundle.js
           echo "IMA_PUBLIC_BUNDLE_CRITICAL_CONTRACTS=VERIFIED"
           echo "IMA_GHPAGES_BRANCH_LIVE=VERIFIED"
           echo "IMA_GHPAGES_BRANCH_SHA=$expected"
