@@ -80,3 +80,34 @@ jobs:
             exit 1
           fi
           echo "IMA_PAGES=VERIFIED"
+
+      - name: Verify the real public GitHub Pages response
+        shell: bash
+        env:
+          SITE: https://imaosglobal.github.io/Ima-kernel
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          version_url="$SITE/version.json?ts=$(date +%s%N)"
+          index_url="$SITE/?v=$expected"
+          ok=0
+          for attempt in $(seq 1 18); do
+            echo "Public Pages verification attempt $attempt/18"
+            version="$(curl -fsSL --retry 2 --connect-timeout 10 --max-time 20 "$version_url" 2>/dev/null || true)"
+            if printf '%s' "$version" | grep -Fq "\"version\": \"$expected\""; then
+              curl -fsSL --retry 2 --connect-timeout 10 --max-time 20 "$index_url" -o /tmp/live-index.html
+              grep -Fq "$expected" /tmp/live-index.html
+              grep -Fq "accounts.google.com/gsi/client" /tmp/live-index.html
+              grep -Fq 'id="root"' /tmp/live-index.html
+              echo "IMA_PUBLIC_PAGES_LIVE=VERIFIED"
+              echo "IMA_PUBLIC_PAGES_SHA=$expected"
+              ok=1
+              break
+            fi
+            sleep 10
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "ERROR: public GitHub Pages did not expose source SHA $expected after 180 seconds"
+            echo "Last version response: $version"
+            exit 1
+          fi
