@@ -86,7 +86,7 @@ export default function App(){
  const install=async()=>{if(installEvent){installEvent.prompt();await installEvent.userChoice;setInstallEvent(null)}else{alert(locale.labels.install+': use your browser menu and choose “Add to Home screen” / “Install app”.')}};
 
  return <main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
-  <header className="topbar"><div className="topbar-inner"><button className="brand" onClick={()=>go('home')}><span className="brand-mark">א</span><span><b>IMA</b><small>אמא · human-centered intelligence</small></span></button>
+  <header className="topbar"><div className="topbar-inner"><a className="brand" href={GOOGLE_CAMPAIGN_URL}><span className="brand-mark">א</span><span><b>IMA</b><small>אמא · human-centered intelligence</small></span></a>
    <nav>{[['home',locale.labels.home],['chat',locale.labels.chat],['community',locale.labels.community],['shop',locale.labels.shop],['capabilities',lang==='he'?'יכולות':'Capabilities'],['watch',locale.labels.video]].map(([id,label])=><button key={id} className={active===id?'active':''} onClick={()=>go(id)}>{label}</button>)}</nav>
    <div className="top-actions"><button className="install-button" onClick={install}>{locale.labels.install}</button><PersonalizationPanel profile={profile} setProfile={setProfile} locale={locale}/></div>
   </div></header>
