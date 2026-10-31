@@ -61,10 +61,15 @@ with sync_playwright() as p:
     # Official GIS must actually render its button, not merely exist in source.
     assert tab.locator("iframe[src*='accounts.google.com']").count() >= 1 or tab.locator("div[role='button']").count() >= 1, "Google-rendered sign-in button not observed"
     assert tab.locator(".avatar-campaign-link").count() == 1, "IMA campaign image link missing"
+    assert tab.locator("a.brand").count() == 1, "IMA brand link missing"
+    brand_campaign = tab.locator("a.brand").get_attribute("href")
+    assert brand_campaign and "utm_source=google" in brand_campaign and "utm_medium=cpc" in brand_campaign, f"brand campaign destination invalid: {brand_campaign}"
     campaign = tab.locator(".avatar-campaign-link").get_attribute("href")
     assert campaign and "utm_source=google" in campaign and "utm_medium=cpc" in campaign, f"campaign destination invalid: {campaign}"
     assert tab.locator("button.install-button").count() >= 1, "install button missing"
     assert tab.locator("button.install-button").first.is_visible(), "install button not visible"
+    assert tab.get_by_text("Install IMA", exact=True).count() >= 1, "global English Install IMA CTA missing"
+    assert tab.get_by_text("Talk to IMA", exact=True).count() >= 1, "global English Talk to IMA CTA missing"
 
     # Check every same-origin anchor target.
     anchors = tab.locator("a[href]")
