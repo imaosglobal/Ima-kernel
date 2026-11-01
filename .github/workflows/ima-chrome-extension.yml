@@ -15,15 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Generate store icons
+        run: python ima-chrome-extension/scripts/generate-icons.py
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Validate manifest
+      - name: Validate manifest and security boundaries
         run: node ima-chrome-extension/tests/manifest.test.cjs
       - name: Package extension
         run: |
           cd ima-chrome-extension
-          zip -r ../ima-browser-bridge-${GITHUB_SHA}.zip . -x "tests/*"
+          zip -r ../ima-browser-bridge-${GITHUB_SHA}.zip . -x "tests/*" -x "scripts/*"
       - name: Upload extension artifact
         uses: actions/upload-artifact@v4
         with:
