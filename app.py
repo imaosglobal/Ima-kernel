@@ -742,7 +742,7 @@ def _derive_feedback_lesson(sentiment, text):
     if not tags:
         tags.append("general")
     lesson = {
-        "action": "investigate_and_verify" if sentiment in {"problem", "not_useful"} else "evaluate_and_prioritize",
+        "action": "investigate_and_verify" if sentiment in {"problem", "not_useful", "chat"} else "evaluate_and_prioritize",
         "tags": sorted(set(tags)),
         "source_sentiment": sentiment,
         "summary": text[:500],
@@ -827,7 +827,7 @@ def feedback():
     sentiment = str(payload.get("sentiment") or "").strip()
     text = str(payload.get("text") or "").strip()
     language = str(payload.get("language") or "unknown").strip()[:16]
-    allowed = {"useful", "not_useful", "problem", "improvement"}
+    allowed = {"useful", "not_useful", "problem", "improvement", "chat"}
     if sentiment not in allowed:
         return jsonify({"error": "invalid feedback type"}), 400
     if not text or len(text) > 4000:
