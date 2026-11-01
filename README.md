@@ -106,6 +106,8 @@ See [IMA First-Priority Provenance](docs/IMA_FIRST_PRIORITY_PROVENANCE.md).
 
 See [docs/IMA_GLOBAL_LAUNCH_PLAN.md](docs/IMA_GLOBAL_LAUNCH_PLAN.md) and [docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md](docs/IMA_GLOBAL_CONTRIBUTION_PROTOCOL.md).
 
+**Continuity & breakthrough synchronization:** [IMA Shared Continuity & Breakthrough Synchronization](docs/IMA_SHARED_CONTINUITY_AND_BREAKTHROUGH_SYNC.md) — keeps validated lessons recoverable across assistants, tools, interfaces and future iterations without treating any single model's private memory as canonical.
+
 **Master requirements & continuity ledger:** [IMA Master Requirements Ledger](docs/IMA_MASTER_REQUIREMENTS_LEDGER.md) — the canonical reconciliation point for historical and new requests.
 
 **Continuous evolution contract:** [Universal Conversation & Interaction Memory + Trend-to-Brand + continuous verification](docs/IMA_CONTINUOUS_EVOLUTION_CONTRACT.md). This contract governs the single canonical improvement path; documentation does not substitute for runtime verification.
