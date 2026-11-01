@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "IMA Browser Bridge",
+  "version": "0.1.0",
+  "description": "Secure, user-controlled browser bridge for IMA. Works with the current tab without exporting passwords or cookies.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "action": {
+    "default_title": "IMA Browser Bridge",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "icons": {}
+}
