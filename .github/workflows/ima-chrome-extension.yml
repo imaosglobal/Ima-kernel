@@ -1,0 +1,31 @@
+name: IMA Chrome Browser Bridge
+
+on:
+  push:
+    paths:
+      - "ima-chrome-extension/**"
+      - ".github/workflows/ima-chrome-extension.yml"
+  pull_request:
+    paths:
+      - "ima-chrome-extension/**"
+      - ".github/workflows/ima-chrome-extension.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate manifest
+        run: node ima-chrome-extension/tests/manifest.test.cjs
+      - name: Package extension
+        run: |
+          cd ima-chrome-extension
+          zip -r ../ima-browser-bridge-${GITHUB_SHA}.zip . -x "tests/*"
+      - name: Upload extension artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ima-browser-bridge
+          path: ima-browser-bridge-${GITHUB_SHA}.zip
