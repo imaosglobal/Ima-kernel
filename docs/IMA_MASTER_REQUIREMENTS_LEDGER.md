@@ -248,3 +248,5 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_ACTIVE
 - Canonical growth progression: discover -> understand -> segment -> value hypothesis -> message -> channel -> experiment -> measure -> verify -> learn -> improve.
 - No fabricated users, testimonials, revenue, partnerships or performance claims. Actual commercial value requires evidence.
 - Canonical specifications: docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md and docs/IMA_GLOBAL_USER_GROWTH.md.
+
+<!-- Deployment verification policy baseline: every public release must pass source/build/gh-pages/runtime SHA reconciliation and browser smoke verification. -->
