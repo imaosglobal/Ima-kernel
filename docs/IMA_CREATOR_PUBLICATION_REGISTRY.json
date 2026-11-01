@@ -1,6 +1,6 @@
 {
   "schema": "ima.creator-publication-registry.v1",
-  "last_verified": "2026-10-31",
+  "last_verified": "2026-11-01",
   "identity": {
     "name": "Ori Digital",
     "provider": "HeyGen",
@@ -48,13 +48,22 @@
     "plan": "free",
     "status": "blocked",
     "reason": "Avatar IV / video generation duration quota exhausted; current account exposes no remaining premium or add-on credits.",
-    "checked_at": "2026-10-31",
+    "checked_at": "2026-11-01",
     "failed_attempts_not_retried": [
       "ae8dbaf7a5417bf6b75f5d3b20950f2a",
       "aedba32f66db397308b4a2f2448f8db6",
       "bc239efc596401d60c072147107848be",
-      "07d5ffe5b4e49d11abdc0aea088ed624"
-    ]
+      "07d5ffe5b4e49d11abdc0aea088ed624",
+      "495cc66056ae522c9ffbcc0f042ba88c"
+    ],
+    "last_attempt": {
+      "video_id": "495cc66056ae522c9ffbcc0f042ba88c",
+      "status": "failed",
+      "failure_code": "AVATAR_IV_VIDEO_GENERATION_DURATION_LIMIT_REACHED",
+      "failure_message": "You've reached your Avatar IV monthly limit",
+      "engine_requested": "avatar_v",
+      "attempted_at": "2026-11-01T14:36:00Z"
+    }
   },
   "publication_gate": {
     "meaningful_milestone_required": true,
