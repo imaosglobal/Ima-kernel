@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMA Browser Bridge Settings</title>
+<style>body{font:16px system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px}label{display:block;margin:16px 0}input{width:100%;box-sizing:border-box;padding:9px}</style>
+</head>
+<body>
+<h1>IMA Browser Bridge</h1>
+<label><input id="enabled" type="checkbox"> Enable bridge</label>
+<label>IMA endpoint (optional)<input id="endpoint" type="url" placeholder="https://example.com/bridge"></label>
+<label>Scoped token (optional)<input id="token" type="password" autocomplete="off"></label>
+<button id="save">Save</button>
+<p id="status"></p>
+<script src="options.js"></script>
+</body>
+</html>
