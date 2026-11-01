@@ -110,7 +110,7 @@ jobs:
           SITE: https://imaosglobal.github.io/Ima-kernel
         run: |
           python3 - <<'PY'
-          import base64, json, os, re, urllib.request
+          import base64, json, os, re, urllib.request, requests
           expected=os.environ["GITHUB_SHA"]
           repo=os.environ["GITHUB_REPOSITORY"]
           api=f"https://api.github.com/repos/{repo}/contents"
