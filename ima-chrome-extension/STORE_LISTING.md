@@ -28,4 +28,4 @@ The first release intentionally does not automate financial transactions, destru
 
 **Support**
 
-https://imaosglobal.github.io/Ima-kernel/
+https://github.com/imaosglobal/Ima-kernel/blob/main/ima-chrome-extension/PRIVACY_POLICY.md
