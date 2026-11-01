@@ -110,7 +110,7 @@ jobs:
           SITE: https://imaosglobal.github.io/Ima-kernel
         run: |
           python3 - <<'PY'
-          import base64, json, os, re, urllib.request, requests
+          import base64, json, os, re, urllib.request
           expected=os.environ["GITHUB_SHA"]
           repo=os.environ["GITHUB_REPOSITORY"]
           api=f"https://api.github.com/repos/{repo}/contents"
@@ -164,8 +164,9 @@ jobs:
               live=json.loads(get(site+"/version.json"))
               print("IMA_PUBLIC_PAGES_VERSION="+str(live.get("version")))
               for path in ("support.html","privacy.html"):
-                  page=requests.get(site+"/"+path,headers={"Cache-Control":"no-cache"},timeout=30)
-                  assert page.ok, f"LIVE_PUBLIC_PAGE_FAILED={path}:{page.status_code}"
+                  req=urllib.request.Request(site+"/"+path,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier"})
+                  with urllib.request.urlopen(req,timeout=30) as resp:
+                      assert 200 <= resp.status < 400, f"LIVE_PUBLIC_PAGE_FAILED={path}:{resp.status}"
           except Exception as exc:
               print("IMA_PUBLIC_PAGES_CDN_CHECK_DEFERRED",type(exc).__name__,str(exc))
           PY
