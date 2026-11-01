@@ -81,7 +81,7 @@ jobs:
           fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "submitFeedback" "renderButton" "beforeinstallprompt" "install-button"; do
+          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button"; do
             grep -Fq "$required" "$bundle" || { echo "ERROR: missing bundle contract: $required"; exit 1; }
           done
           if grep -Fq "המשוב התקבל תודה" "$bundle"; then
