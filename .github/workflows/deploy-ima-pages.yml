@@ -45,6 +45,9 @@ jobs:
           grep -Fq "המשוב נשמר וקיבל קבלה." src/App.jsx
           grep -Fq "feedback-panel" src/App.jsx
           grep -Fq "submitFeedback" src/App.jsx
+          grep -Fq "SUPPORT_URL" src/App.jsx
+          grep -Fq "PRIVACY_URL" src/App.jsx
+          grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
           if grep -Fq "המשוב התקבל תודה" src/App.jsx; then
             echo "ERROR: legacy acknowledgement detected in canonical source"
             exit 1
@@ -150,6 +153,9 @@ jobs:
           missing=[x for x in required if x not in bundle]
           assert not missing, "PUBLIC_BUNDLE_CONTRACTS_MISSING="+",".join(missing)
           assert "המשוב התקבל תודה" not in bundle, "LEGACY_FEEDBACK_ACK_PRESENT"
+          for path in ("support.html","privacy.html"):
+              page=branch_file(path)
+              assert "IMA" in page, f"PUBLIC_PAGE_INVALID={path}"
           print("IMA_GHPAGES_BRANCH_LIVE=VERIFIED")
           print("IMA_FEEDBACK_PUBLIC_CONTRACT=VERIFIED")
           print("IMA_GHPAGES_BRANCH_SHA="+expected)
@@ -157,6 +163,9 @@ jobs:
           try:
               live=json.loads(get(site+"/version.json"))
               print("IMA_PUBLIC_PAGES_VERSION="+str(live.get("version")))
+              for path in ("support.html","privacy.html"):
+                  page=requests.get(site+"/"+path,headers={"Cache-Control":"no-cache"},timeout=30)
+                  assert page.ok, f"LIVE_PUBLIC_PAGE_FAILED={path}:{page.status_code}"
           except Exception as exc:
               print("IMA_PUBLIC_PAGES_CDN_CHECK_DEFERRED",type(exc).__name__,str(exc))
           PY
