@@ -6,15 +6,21 @@
 <title>IMA Browser Bridge</title>
 <style>
 body{font:14px system-ui,sans-serif;min-width:320px;margin:0;padding:16px}
-button{width:100%;padding:10px;margin-top:8px}
+button,a{width:100%;padding:10px;margin-top:8px;box-sizing:border-box}
+a{display:block;text-align:center;text-decoration:none;border:1px solid #bbb;border-radius:8px;color:inherit}
+.primary{border:0;border-radius:8px;background:#111;color:#fff}
 #status{white-space:pre-wrap;margin-top:12px}
+.note{font-size:12px;opacity:.72;margin-top:10px}
 </style>
 </head>
 <body>
 <h1>IMA Browser Bridge</h1>
 <p>Reads the visible content of the current tab only. It never exports passwords or cookies.</p>
-<button id="read">Read current page</button>
+<button class="primary" id="read">Read current page</button>
+<a href="https://imaosglobal.github.io/Ima-kernel/?utm_source=ima_extension&utm_medium=referral&utm_campaign=browser_bridge" target="_blank" rel="noreferrer">Open IMA</a>
+<a href="https://imaosglobal.github.io/Ima-kernel/?utm_source=ima_extension&utm_medium=referral&utm_campaign=browser_bridge&utm_content=pro" target="_blank" rel="noreferrer">Explore IMA Pro</a>
 <button id="options">Settings</button>
+<div class="note">The extension stays free. Paid features, when available, are provided by IMA outside the extension.</div>
 <div id="status"></div>
 <script src="popup.js"></script>
 </body>
