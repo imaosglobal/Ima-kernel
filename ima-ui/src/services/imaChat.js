@@ -46,6 +46,20 @@ export async function askIma(message, personalization = {}) {
   return data.response;
 }
 
+export async function submitFeedback(sentiment, text, metadata = {}) {
+  const value = String(text || '').trim();
+  if (!value) return { accepted: false, error: 'feedback_required' };
+  const now = new Date();
+  const payload = {
+    sentiment, text: value, language: metadata.language || navigator.language || 'auto',
+    page: window.location.href, referrer: document.referrer || '', client_time: now.toISOString(),
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+    source: metadata.source || 'public-runtime',
+    metadata: { interface: 'public-feedback', ...(metadata.extra || {}) },
+  };
+  return request('/ima-api/feedback', { method: 'POST', body: JSON.stringify(payload) });
+}
+
 export async function archiveChatLearningSignal(message, response, personalization = {}) {
   const text = String(message || '').trim();
   if (!text) return { accepted: false, skipped: true };
