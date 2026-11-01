@@ -160,15 +160,14 @@ jobs:
           print("IMA_FEEDBACK_PUBLIC_CONTRACT=VERIFIED")
           print("IMA_GHPAGES_BRANCH_SHA="+expected)
 
-          try:
-              live=json.loads(get(site+"/version.json"))
-              print("IMA_PUBLIC_PAGES_VERSION="+str(live.get("version")))
-              for path in ("support.html","privacy.html"):
-                  req=urllib.request.Request(site+"/"+path,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier"})
-                  with urllib.request.urlopen(req,timeout=30) as resp:
-                      assert 200 <= resp.status < 400, f"LIVE_PUBLIC_PAGE_FAILED={path}:{resp.status}"
-          except Exception as exc:
-              print("IMA_PUBLIC_PAGES_CDN_CHECK_DEFERRED",type(exc).__name__,str(exc))
+          live=json.loads(get(site+"/version.json"))
+          assert live.get("version")==expected, f"LIVE_PUBLIC_VERSION_MISMATCH expected={expected} actual={live.get('version')}"
+          print("IMA_PUBLIC_PAGES_VERSION="+str(live.get("version")))
+          for path in ("support.html","privacy.html"):
+              req=urllib.request.Request(site+"/"+path,headers={"Cache-Control":"no-cache","User-Agent":"IMA-public-verifier"})
+              with urllib.request.urlopen(req,timeout=30) as resp:
+                  assert 200 <= resp.status < 400, f"LIVE_PUBLIC_PAGE_FAILED={path}:{resp.status}"
+          print("IMA_PUBLIC_PAGES_CDN=VERIFIED")
           PY
 
       - name: Install browser smoke-test dependencies
