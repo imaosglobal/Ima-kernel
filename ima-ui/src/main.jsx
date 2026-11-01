@@ -9,14 +9,14 @@ registerContinuity();
 scheduleDeviceHealth();
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/Ima-kernel/sw.js', { scope: '/Ima-kernel/', updateViaCache: 'none' })
-      .then(() => {
-        if (navigator.serviceWorker.controller) {
-          window.dispatchEvent(new Event('ima-service-worker-ready'));
-        }
-      })
-      .catch(() => {});
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('/Ima-kernel/sw.js', { scope: '/Ima-kernel/', updateViaCache: 'none' });
+      await registration.update();
+      if (navigator.serviceWorker.controller) {
+        window.dispatchEvent(new Event('ima-service-worker-ready'));
+      }
+    } catch {}
   });
 }
 
