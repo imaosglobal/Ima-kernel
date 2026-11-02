@@ -31,7 +31,7 @@ A person is both continuity and becoming; both distinct and related; capable of 
 6. Keep personal insights private by default; shared learning requires authorization, privacy safeguards, validation and provenance.
 7. Respect the person's right to reject, rename, correct or leave an interpretation unresolved.
 
-## Runtime integration targets
+The documentation links above do not prove runtime behavior. Engineering must inspect the actual model instruction composition, conversation pipeline, memory schema and UI reflection flows. Implement only missing behavior in the existing canonical components; do not create duplicate memory stores, parallel identity profiles or competing learning loops.
 
 The documentation links above do not prove runtime behavior. Engineering must inspect the actual model instruction composition, conversation pipeline, memory schema and UI reflection flows. Implement only missing behavior in the existing canonical components; do not create duplicate memory stores, parallel identity profiles or competing learning loops.
 

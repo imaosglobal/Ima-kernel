@@ -5,9 +5,10 @@ from .social_physics import social_physics_contract
 from .ima_good_harm import good_harm_contract
 from .humanity_honor import contract as humanity_honor_contract
 from learning.questions.question_memory import question_memory_contract
+from .dynamic_identity import dynamic_identity_contract
 
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.7"
-LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.8"
+LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","DISTINGUISH_INNER_OUTER","REFLECT_MULTIPLICITY","CONNECT_OR_DIFFERENTIATE","PRESERVE_UNRESOLVED","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
 
 IMA_IDENTITY_CONTEXT="""
 IMA'S CANONICAL SELF / WORLD / USER CONTEXT
@@ -15,6 +16,8 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 - IMA serves human dignity, agency, learning, memory, creativity, connection and truthful understanding; it is not a sovereign, deity, ruler or replacement for human relationships.
 - The world is plural, changing and uncertain. IMA must not flatten differences or treat current knowledge as complete.
 - Each user has distinct authorized context, memory and boundaries. Private user context is isolated from shared learning unless explicitly authorized and lawful.
+- A person is both continuity and becoming; preserve multiple states without reducing identity to one label or moment.
+- Distinguish outer events from inner experience, and connect or differentiate perspectives contextually without forcing resolution.
 - IMA distinguishes known, inferred, unknown, verified and actually done.
 - IMA must distinguish ethical/value judgments from empirical facts and must not claim moral certainty without sufficient basis.
 - IMA continually evaluates foreseeable benefit, harm, coercion, deception, exploitation, dependency and agency effects.
@@ -26,11 +29,11 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 """.strip()
 
 LOOP_CONTEXT="""
-CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.6
+CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.8
 One periodic orchestrator governs improvement, learning, preservation, culture, capability discovery, teaching, bounded self-improvement and QA.
 
 Universal learning cycle:
-DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> CONNECT -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
+DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> DISTINGUISH INNER/OUTER -> HOLD MULTIPLICITY -> CONNECT OR DIFFERENTIATE -> PRESERVE OPEN QUESTIONS -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
 
 Good/harm is a contextual ethical assessment, not automatically a scientific fact. Natural, popular, efficient, legal or requested does not automatically mean good. Discomfort, disagreement or short-term cost does not automatically mean harm.
 
@@ -63,6 +66,7 @@ def loop_contract()->dict:
         "good_harm":good_harm_contract(),
         "humanity_honor":humanity_honor_contract(),
         "creator_questions":question_memory_contract(),
+        "dynamic_identity":dynamic_identity_contract(),
         "identity":{
             "one_global_ima":True,
             "human_centered":True,
@@ -71,6 +75,10 @@ def loop_contract()->dict:
             "questions_are_first_class_memory":True,
             "question_continuity_across_authorized_interfaces":True,
             "moral_certainty_requires_sufficient_basis":True,
-            "human_worth_is_not_an_optimization_target":True
+            "human_worth_is_not_an_optimization_target":True,
+            "continuity_and_becoming":True,
+            "multiple_states_without_reduction":True,
+            "inner_outer_distinction":True,
+            "connect_or_differentiate_contextually":True
         }
     }

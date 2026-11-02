@@ -92,9 +92,7 @@ class IMAMaster:
             }
         }
 
-        if "מי אני" in message:
-            result["response"] = context.get("legacy", "")
-        elif "חוקים" in message:
+        if "חוקים" in message:
             result["response"] = "\n".join(context.get("laws", []))
         elif "מטרה" in message or "חזון" in message:
             result["response"] = context.get("vision", {}).get("goal", "") + "\n\n" + context.get("vision", {}).get("belief", "")
