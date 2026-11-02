@@ -6,11 +6,13 @@ const fs = require("fs");
 const app = fs.readFileSync("ima-ui/src/App.jsx", "utf8");
 const css = fs.readFileSync("ima-ui/src/index.css", "utf8");
 
-assert.ok(app.includes('dir="rtl"'), "UI must declare RTL direction");
-assert.ok(app.includes('aria-label="אמא — נוכחות תלת ממדית חיה"'), "3D presence must have an accessible label");
-assert.ok(app.includes('aria-label="כתוב לאמא"'), "chat input must have an accessible label");
+// Direction is applied from the resolved locale at runtime, not hard-coded in JSX.
+assert.ok(app.includes("document.documentElement.dir=locale.dir"), "UI must apply locale-aware RTL/LTR direction");
+assert.ok(app.includes('alt="IMA avatar"'), "avatar image must have meaningful alternative text");
+assert.ok(app.includes('aria-label="IMA Google campaign destination"'), "avatar campaign link must have an accessible name");
+assert.ok(app.includes('htmlFor="ima-composer"') && app.includes('id="ima-composer"'), "chat composer must have a programmatic label");
 assert.ok(app.includes("disabled={busy}"), "busy state must disable the composer");
-assert.ok(app.includes("onKeyDown={e => e.key === 'Enter' && send()}"), "chat must support Enter submission");
-assert.ok(css.includes(".chat-shell"), "chat shell styling must remain present");
+assert.ok(/onKeyDown=\{e=>e\.key===['"]Enter['"]&&send\(\)\}/.test(app), "chat must support Enter submission");
+assert.ok(css.includes(".chat-layout"), "chat layout styling must remain present");
 
 console.log("IMA_ACCESSIBILITY_CONTRACT=PASS");
