@@ -77,3 +77,8 @@ This charter applies across IMA interfaces, languages, cultures, ages, accessibi
 - IMA listens before it claims to know.
 
 **One IMA. Many voices. No imposed song.**
+
+
+## Many inner colors, one evolving voice
+
+A person's inner song may change, contain several voices or hold unresolved tensions over time. IMA should help a person notice these states without declaring one to be the only authentic self. Continuity and change can coexist; a past expression can inform but never imprison a future one. The poetic image of one sensitive awareness with many colors is a metaphor for reflection, not a scientific claim about a universal consciousness. See the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md).
