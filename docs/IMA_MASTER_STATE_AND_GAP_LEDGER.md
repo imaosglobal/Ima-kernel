@@ -249,6 +249,6 @@ These commits are implementation evidence only. No deployment or live-public suc
 
 - **Source:** Ori Cohen's poem and inquiry, "תנועות", and the follow-up instruction to integrate the principle across existing IMA work.
 - **Documentation completed on branch:** canonical charter plus cross-links and aligned requirements in the human-intelligence, global-identity/shared-learning, inner-song, creator-questions, backward-reflection, life-direction and continuous-evolution documents; README navigation updated.
-- **PR:** #138, branch feature/dynamic-human-identity-charter.
-- **State:** DOCUMENTED_ON_BRANCH / NOT_MERGED / NOT_DEPLOYED. This is not evidence of runtime integration.
-- **Remaining verification:** inspect actual conversation prompt/runtime composition and memory schema; implement only where missing; add regression tests for continuity/change, multiple states, inner/outer separation, connection/separation choices, contradictions, consent and provenance; run tests; merge only after branch checks and conflict resolution; deploy; verify the live public interface.
+- **PR:** [#138](https://github.com/imaosglobal/Ima-kernel/pull/138), merged by squash as commit `49a016501ba3e5a30811dfa2d072a5f75216e8e8`.
+- **State:** DOCUMENTED_AND_MERGED / NOT_RUNTIME_VERIFIED / NOT_DEPLOYMENT_VERIFIED. This is not evidence of runtime integration.
+- **Remaining verification:** inspect actual conversation prompt/runtime composition and memory schema; implement only where missing; add regression tests for continuity/change, multiple states, inner/outer separation, connection/separation choices, contradictions, consent and provenance; run tests; deploy; verify the live public interface.
