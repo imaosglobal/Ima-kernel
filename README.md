@@ -12,6 +12,8 @@ IMA is an open human-centered intelligence architecture and product project desi
 
 **Identity charter:** [IMA Human Intelligence Charter](docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md) — the governing product direction for listening before solving, compassion with truth, calibrated uncertainty, consent-based memory, privacy, accessibility and verifiable learning.
 
+**Dynamic identity & movement:** [IMA Dynamic Human Identity, Multiplicity & Inner–Outer Movement Charter](docs/IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md) — treats each person as both continuity and becoming; supports plurality without reduction, distinguishes inner experience from outer events, and allows connection or separation without forcing a single interpretation. Inspired by Ori Cohen's poem “תנועות”; an inquiry source, not a universal doctrine.
+
 **Creator digital presence:** [Ori Digital Avatar & Video Continuity](docs/ORI_DIGITAL_AVATAR_AND_VIDEO_CONTINUITY.md) — the canonical provenance record for Ori Cohen's verified digital-avatar media and future milestone videos. The creator representation is distinct from IMA/Mother Core.
 
 **Intergenerational action plan:** [IMA Intergenerational Global Action Plan](docs/IMA_INTERGENERATIONAL_GLOBAL_ACTION_PLAN.md) — a staged, evidence-gated plan for child-first safety, learning across generations, global distribution, device/robot integrations, and consent-based word-of-mouth growth.
