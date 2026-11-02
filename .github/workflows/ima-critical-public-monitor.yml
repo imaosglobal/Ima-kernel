@@ -71,3 +71,10 @@ printf '%s' "$bundle" | grep -Fq 'shape:`rectangular`'
 printf '%s' "$bundle" | grep -Fq 'utm_campaign=ima_initial_100ils'
 echo "IMA_PUBLIC_CRITICAL_BUNDLE_CONTRACTS=PASS"
           echo "IMA_PUBLIC_CRITICAL_MONITOR=PASS"
+
+  skip-non-main:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm production monitor is intentionally skipped
+        run: echo "Production monitor is restricted to the default branch; no public runtime checks were run for this ref."
