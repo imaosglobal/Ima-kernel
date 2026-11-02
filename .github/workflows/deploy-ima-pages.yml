@@ -18,6 +18,8 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    outputs:
+      mirror_artifact_ready: ${{ steps.upload_mirror_artifact.outcome == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -159,6 +161,7 @@ jobs:
           PY
 
       - name: Upload exact verified build for gh-pages mirror
+        id: upload_mirror_artifact
         uses: actions/upload-artifact@v4
         with:
           name: ima-public-dist
@@ -179,7 +182,7 @@ jobs:
   mirror-gh-pages:
     name: Mirror verified canonical artifact to gh-pages
     needs: build-and-publish
-    if: always() && needs.build-and-publish.result != 'cancelled'
+    if: always() && needs.build-and-publish.outputs.mirror_artifact_ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
