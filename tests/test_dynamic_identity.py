@@ -46,6 +46,11 @@ class DynamicIdentityTests(unittest.TestCase):
         self.assertIn("משתנה", answer)
         self.assertIn("אינך מצטמצם", answer)
 
+    def test_poetic_unity_is_not_presented_as_scientific_fact(self):
+        self.assertIn("metaphor", DYNAMIC_IDENTITY_CONTEXT.lower())
+        self.assertIn("not an established scientific claim", DYNAMIC_IDENTITY_CONTEXT)
+        self.assertTrue(dynamic_identity_contract()["universal_consciousness_is_not_asserted"])
+
 
 if __name__ == "__main__":
     unittest.main()
