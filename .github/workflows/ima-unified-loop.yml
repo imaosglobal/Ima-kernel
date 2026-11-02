@@ -8,9 +8,6 @@ on:
       - "tests/**"
       - "requirements.txt"
       - ".github/workflows/ima-unified-loop.yml"
-  schedule:
-    - cron: "7 * * * *"
-      timezone: "Asia/Jerusalem"
   workflow_dispatch:
 
 permissions:
