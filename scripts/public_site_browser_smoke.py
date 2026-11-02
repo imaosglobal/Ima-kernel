@@ -10,7 +10,18 @@ with sync_playwright() as p:
     console_errors = []
     page_errors = []
     page.on("console", lambda m: console_errors.append(f"{m.text} @ {m.location}") if m.type == "error" else None)
-    page.on("pageerror", lambda e: page_errors.append(f"{e}\n{getattr(e, 'stack', '')}"))
+    page.on("pageerror", lambda e: page_errors.append(str(e)))
+    page.add_init_script("""
+        window.__imaRuntimeErrors = [];
+        window.addEventListener('error', event => window.__imaRuntimeErrors.push({
+            message: event.message, filename: event.filename, line: event.lineno,
+            column: event.colno, stack: event.error?.stack || ''
+        }));
+        window.addEventListener('unhandledrejection', event => window.__imaRuntimeErrors.push({
+            message: String(event.reason?.message || event.reason),
+            stack: event.reason?.stack || ''
+        }));
+    """)
     def verify_index(url, label):
         response = page.goto(url, wait_until="networkidle", timeout=60000)
         try:
@@ -26,6 +37,10 @@ with sync_playwright() as p:
             print("BROWSER_DIAGNOSTIC_STATUS=", response.status if response else None)
             print("BROWSER_CONSOLE_ERRORS=", console_errors)
             print("BROWSER_PAGE_ERRORS=", page_errors)
+            try:
+                print("BROWSER_RUNTIME_ERRORS=", page.evaluate("() => window.__imaRuntimeErrors || []"))
+            except Exception as diagnostic_error:
+                print("BROWSER_RUNTIME_ERRORS_UNAVAILABLE=", str(diagnostic_error))
             print("BROWSER_HTML_HEAD=", page.content()[:6000])
             raise
 
