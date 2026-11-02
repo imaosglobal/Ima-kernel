@@ -167,7 +167,7 @@ jobs:
         id: upload_mirror_artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ima-public-dist
+          name: ima-public-dist-${{ github.run_id }}-${{ github.run_attempt }}
           path: ima-ui/dist
           if-no-files-found: error
           retention-days: 1
@@ -196,7 +196,7 @@ jobs:
       - name: Download exact verified artifact
         uses: actions/download-artifact@v4
         with:
-          name: ima-public-dist
+          name: ima-public-dist-${{ github.run_id }}-${{ github.run_attempt }}
           path: site
 
       - name: Checkout gh-pages mirror branch
