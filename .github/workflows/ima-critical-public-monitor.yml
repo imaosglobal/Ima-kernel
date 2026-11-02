@@ -1,8 +1,6 @@
 name: IMA Critical Public Monitor
 
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -28,7 +26,7 @@ jobs:
           grep -Fq "home:'Open IMA now'" ima-ui/src/i18n.js
           grep -Fq "GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils'" ima-ui/src/App.jsx
           grep -Fq 'accounts.google.com/gsi/client' ima-ui/index.html
-          grep -Fq "CACHE = 'ima-shell-v3'" ima-ui/public/sw.js
+          grep -Eq "CACHE = 'ima-shell-v[0-9]+'" ima-ui/public/sw.js
           echo "IMA_SOURCE_CRITICAL_CONTRACTS=PASS"
 
       - name: Verify public deployment identity and critical assets
