@@ -58,7 +58,7 @@ function collectDom() {
 
 async function collectPwa() {
   let serviceWorker = false;
-  try { serviceWorker = 'serviceWorker' in navigator && !!(await navigator.serviceWorker.getRegistration()); } catch {}
+  try { serviceWorker = 'serviceWorker' in navigator && !!(await navigator.serviceWorker.getRegistration()); } catch (error) { captureError(error); }
   return {
     service_worker: serviceWorker,
     standalone: window.matchMedia?.('(display-mode: standalone)').matches || navigator.standalone === true,
