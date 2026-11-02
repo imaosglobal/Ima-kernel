@@ -147,7 +147,24 @@ jobs:
               if not 200 <= status < 400:
                   raise SystemExit(f"PUBLIC_PAGE_FAILED: {path} status={status}")
           print("IMA_PUBLIC_STATIC_PAGES=VERIFIED")
+          status, index = get("/")
+          if status != 200:
+              raise SystemExit(f"PUBLIC_INDEX_FAILED: status={status}")
+          marker = f'<meta name="ima-build-version" content="{expected}"'
+          if marker not in index:
+              raise SystemExit("PUBLIC_INDEX_VERSION_VERIFY_FAILED")
+          if 'id="root"' not in index or "assets/index-" not in index:
+              raise SystemExit("PUBLIC_INDEX_IS_NOT_CANONICAL_REACT_BUILD")
+          print("IMA_PUBLIC_INDEX=VERIFIED")
           PY
+
+      - name: Upload exact verified build for gh-pages mirror
+        uses: actions/upload-artifact@v4
+        with:
+          name: ima-public-dist
+          path: ima-ui/dist
+          if-no-files-found: error
+          retention-days: 1
 
       - name: Install browser smoke-test dependencies
         run: |
@@ -158,3 +175,54 @@ jobs:
         env:
           SITE: ${{ steps.deployment.outputs.page_url }}
         run: python3 scripts/public_site_browser_smoke.py
+
+  mirror-gh-pages:
+    name: Mirror verified canonical artifact to gh-pages
+    needs: build-and-publish
+    if: always() && needs.build-and-publish.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - name: Download exact verified artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ima-public-dist
+          path: site
+
+      - name: Checkout gh-pages mirror branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Mirror and verify source SHA
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          actual = json.loads(Path("site/version.json").read_text(encoding="utf-8")).get("version")
+          expected = os.environ["SOURCE_SHA"]
+          if actual != expected:
+              raise SystemExit(f"artifact SHA mismatch: {actual} != {expected}")
+          PY
+          rsync -a --delete --exclude='.git' site/ gh-pages/
+          touch gh-pages/.nojekyll
+          git -C gh-pages config user.name "IMA Pages Mirror"
+          git -C gh-pages config user.email "actions@users.noreply.github.com"
+          git -C gh-pages add -A
+          if ! git -C gh-pages diff --cached --quiet; then
+            git -C gh-pages commit -m "mirror: canonical IMA Pages ${SOURCE_SHA}"
+            git -C gh-pages push origin HEAD:gh-pages
+          fi
+          git -C gh-pages fetch origin gh-pages
+          remote_version="$(git -C gh-pages show origin/gh-pages:version.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["version"])')"
+          test "$remote_version" = "$SOURCE_SHA"
+          echo "IMA_GH_PAGES_VERSION=VERIFIED"
