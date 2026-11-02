@@ -7,6 +7,7 @@ const health = fs.readFileSync(".github/workflows/ima-continuous-health.yml", "u
 const pages = fs.readFileSync(".github/workflows/ima-ui-pages.yml", "utf8");
 const canonicalPages = fs.readFileSync(".github/workflows/deploy-ima-pages.yml", "utf8");
 const publicMonitor = fs.readFileSync(".github/workflows/ima-critical-public-monitor.yml", "utf8");
+const unifiedWorkflow = fs.readFileSync(".github/workflows/ima-unified-loop.yml", "utf8");
 const verify = fs.readFileSync("scripts/verify-ima.mjs", "utf8");
 const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
@@ -41,6 +42,7 @@ assert.ok(!/^\\s*push:/m.test(publicMonitor), "public monitor must not run on pu
 assert.ok(publicMonitor.includes('cron: "*/5 * * * *"'), "public monitor must retain its periodic schedule");
 assert.ok(publicMonitor.includes("workflow_dispatch:"), "public monitor must remain manually runnable");
 assert.ok(publicMonitor.includes("if: github.ref == 'refs/heads/main'"), "public runtime monitor must not compare a feature branch to production");
+assert.ok(unifiedWorkflow.includes("branches: [main]"), "canonical unified orchestrator must run on main pushes only");
 assert.ok(coreTest.includes("IMA_CORE_TEST=PASS"), "core test must have a deterministic success marker");
 
 for (const required of [
