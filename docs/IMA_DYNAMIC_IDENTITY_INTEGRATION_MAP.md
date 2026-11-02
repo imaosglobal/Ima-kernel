@@ -31,9 +31,9 @@ A person is both continuity and becoming; both distinct and related; capable of 
 6. Keep personal insights private by default; shared learning requires authorization, privacy safeguards, validation and provenance.
 7. Respect the person's right to reject, rename, correct or leave an interpretation unresolved.
 
-The documentation links above do not prove runtime behavior. Engineering must inspect the actual model instruction composition, conversation pipeline, memory schema and UI reflection flows. Implement only missing behavior in the existing canonical components; do not create duplicate memory stores, parallel identity profiles or competing learning loops.
+Initial runtime integration was merged to `main` in commit `94031873639e0afcf5c835eb9474a5ac38484b97`: `core/dynamic_identity.py` supplies the policy; `core/human_intelligence.py::compose_prompt` injects it into provider prompts; `core/ima_loop.py` exposes the principle in the canonical loop; `ima_master_runtime.py` routes identity questions through the full prompt; and `ima_mom.py` supplies a non-reductive fallback. Regression tests are committed in `tests/test_dynamic_identity.py`.
 
-The documentation links above do not prove runtime behavior. Engineering must inspect the actual model instruction composition, conversation pipeline, memory schema and UI reflection flows. Implement only missing behavior in the existing canonical components; do not create duplicate memory stores, parallel identity profiles or competing learning loops.
+The existing universal interaction memory remains the only memory authority; its schema was not changed. No CI workflow or status checks were found, so tests have not been executed in a reproducible environment. Deployment and live chat behavior remain unverified.
 
 ## Acceptance tests
 
