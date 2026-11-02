@@ -1,7 +1,6 @@
 name: Canonical Ori Singing Voice Archive
 
 on:
-  push:
   workflow_dispatch:
 
 permissions:

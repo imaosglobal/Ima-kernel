@@ -1,6 +1,8 @@
 name: IMA Critical Public Monitor
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -14,6 +16,7 @@ concurrency:
 
 jobs:
   monitor:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -34,18 +37,20 @@ jobs:
         run: |
           set -euo pipefail
           expected=$(git rev-parse HEAD)
-          version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)" || true)
-          if ! printf '%s' "$version" | grep -Fq ""version": "$expected""; then
-            version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "https://raw.githubusercontent.com/imaosglobal/Ima-kernel/gh-pages/version.json?ts=$(date +%s%N)")
-          fi
+          version=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/version.json?ts=$(date +%s%N)")
           printf '%s' "$version" | grep -Fq "\"version\": \"$expected\"" || {
             echo "PUBLIC_VERSION_MISMATCH expected=$expected actual=$version"
             exit 2
           }
-          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/?v=$expected" -o /tmp/index.html
-          grep -Fq "$expected" /tmp/index.html
-          grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html
-          grep -Fq 'id="root"' /tmp/index.html
+          SITE_ROOT="${SITE%/}"
+          for index_url in "$SITE_ROOT/" "$SITE_ROOT/?v=$expected"; do
+            curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$index_url" -o /tmp/index.html
+            grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\"" /tmp/index.html || { echo "PUBLIC_INDEX_VERSION_MISMATCH url=$index_url"; exit 3; }
+            grep -Fq 'id="root"' /tmp/index.html || { echo "PUBLIC_REACT_ROOT_MISSING url=$index_url"; exit 4; }
+            grep -Eq 'assets/index-[^"]+\.js' /tmp/index.html || { echo "PUBLIC_BUNDLE_REFERENCE_MISSING url=$index_url"; exit 5; }
+            grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html || { echo "PUBLIC_GOOGLE_IDENTITY_SCRIPT_MISSING url=$index_url"; exit 6; }
+          done
+          echo "IMA_PUBLIC_INDEX_NORMAL_AND_CACHE_BUSTED=VERIFIED"
           manifest=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/manifest.json")
           printf '%s' "$manifest" | grep -Fq 'ima-192.svg'
           printf '%s' "$manifest" | grep -Fq 'ima-512.svg'
@@ -68,3 +73,10 @@ printf '%s' "$bundle" | grep -Fq 'shape:`rectangular`'
 printf '%s' "$bundle" | grep -Fq 'utm_campaign=ima_initial_100ils'
 echo "IMA_PUBLIC_CRITICAL_BUNDLE_CONTRACTS=PASS"
           echo "IMA_PUBLIC_CRITICAL_MONITOR=PASS"
+
+  skip-non-main:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm production monitor is intentionally skipped
+        run: echo "Production monitor is restricted to the default branch; no public runtime checks were run for this ref."

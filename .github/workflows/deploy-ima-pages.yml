@@ -101,11 +101,14 @@ jobs:
       - name: Upload canonical Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
+          name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: ima-ui/dist
 
       - name: Deploy canonical Pages artifact
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Verify public release
         env:
@@ -164,7 +167,7 @@ jobs:
         id: upload_mirror_artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ima-public-dist
+          name: ima-public-dist-${{ github.run_id }}-${{ github.run_attempt }}
           path: ima-ui/dist
           if-no-files-found: error
           retention-days: 1
@@ -177,6 +180,7 @@ jobs:
       - name: Verify critical public controls in a real browser
         env:
           SITE: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED_SHA: ${{ github.sha }}
         run: python3 scripts/public_site_browser_smoke.py
 
   mirror-gh-pages:
@@ -192,7 +196,7 @@ jobs:
       - name: Download exact verified artifact
         uses: actions/download-artifact@v4
         with:
-          name: ima-public-dist
+          name: ima-public-dist-${{ github.run_id }}-${{ github.run_attempt }}
           path: site
 
       - name: Checkout gh-pages mirror branch
