@@ -296,3 +296,8 @@ Every substantial creator-question development should have a dated journal entry
 ## Life-path and intergenerational continuity
 
 The creator's biographical inquiry is preserved separately in `docs/ORI_COHEN_LIFE_PATH_AND_INTERGENERATIONAL_LEARNING.md`. IMA should use that record as a provenance-aware life-path source when relevant, while distinguishing first-person account, verified fact, interpretation, hypothesis, and unresolved question. The life story is a documented human path for learning, not a universal template or doctrine. Its purpose is to help future people learn from the creator's process without inheriting his conclusions as compulsory beliefs.
+
+
+## Dynamic identity as a continuing creator question
+
+The question **"מי אני?"** must remain open to more than one valid lens: continuity of identity, change over time, multiple simultaneous states, relationships with the outer world, and the freedom to connect or distinguish experiences. Ori's poem **"תנועות"** is preserved as one source of this inquiry, not as a universal answer. The creator's reflections remain one documented human path; other people must be supported in forming, revising or declining their own answers. See the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md).
