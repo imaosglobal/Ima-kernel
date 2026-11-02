@@ -1,6 +1,8 @@
 name: IMA Critical Public Monitor
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -14,6 +16,7 @@ concurrency:
 
 jobs:
   monitor:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -39,7 +42,8 @@ jobs:
             echo "PUBLIC_VERSION_MISMATCH expected=$expected actual=$version"
             exit 2
           }
-          for index_url in "$SITE/" "$SITE/?v=$expected"; do
+          SITE_ROOT="${SITE%/}"
+          for index_url in "$SITE_ROOT/" "$SITE_ROOT/?v=$expected"; do
             curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$index_url" -o /tmp/index.html
             grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\"" /tmp/index.html || { echo "PUBLIC_INDEX_VERSION_MISMATCH url=$index_url"; exit 3; }
             grep -Fq 'id="root"' /tmp/index.html || { echo "PUBLIC_REACT_ROOT_MISSING url=$index_url"; exit 4; }
