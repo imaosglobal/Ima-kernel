@@ -5,9 +5,10 @@ from .social_physics import social_physics_contract
 from .ima_good_harm import good_harm_contract
 from .humanity_honor import contract as humanity_honor_contract
 from learning.questions.question_memory import question_memory_contract
+from .dynamic_identity import dynamic_identity_contract
 
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.7"
-LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.8"
+LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","DISTINGUISH_INNER_OUTER","REFLECT_MULTIPLICITY","CONNECT_OR_DIFFERENTIATE","PRESERVE_UNRESOLVED","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
 
 IMA_IDENTITY_CONTEXT="""
 IMA'S CANONICAL SELF / WORLD / USER CONTEXT
@@ -62,7 +63,7 @@ def loop_contract()->dict:
         "social_physics":social_physics_contract(),
         "good_harm":good_harm_contract(),
         "humanity_honor":humanity_honor_contract(),
-        "creator_questions":question_memory_contract(),
+        "creator_questions":question_memory_contract(),\n        "dynamic_identity":dynamic_identity_contract(),
         "identity":{
             "one_global_ima":True,
             "human_centered":True,
@@ -71,6 +72,6 @@ def loop_contract()->dict:
             "questions_are_first_class_memory":True,
             "question_continuity_across_authorized_interfaces":True,
             "moral_certainty_requires_sufficient_basis":True,
-            "human_worth_is_not_an_optimization_target":True
+            "human_worth_is_not_an_optimization_target":True,\n            "continuity_and_becoming":True,\n            "multiple_states_without_reduction":True,\n            "inner_outer_distinction":True,\n            "connect_or_differentiate_contextually":True
         }
     }
