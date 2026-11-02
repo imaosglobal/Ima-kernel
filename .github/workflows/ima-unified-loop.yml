@@ -22,6 +22,7 @@ concurrency:
 
 jobs:
   unified:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -63,6 +64,13 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "chore: record unified IMA loop cycle"
           git push
+      - name: Trigger canonical Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/dispatches" -f event_type=ima-canonical-deploy
+          echo "IMA_CANONICAL_DEPLOY_DISPATCH=REQUESTED"
       - name: Report loop failure
         if: failure()
         uses: actions/github-script@v7

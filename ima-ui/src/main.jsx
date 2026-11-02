@@ -16,7 +16,9 @@ if ('serviceWorker' in navigator) {
       if (navigator.serviceWorker.controller) {
         window.dispatchEvent(new Event('ima-service-worker-ready'));
       }
-    } catch {}
+    } catch (error) {
+      console.warn('IMA service worker update failed', error);
+    }
   });
 }
 
