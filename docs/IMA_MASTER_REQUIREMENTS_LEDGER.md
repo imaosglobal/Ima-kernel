@@ -253,7 +253,7 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_ACTIVE
 
 
 ### DHI-001 — Dynamic Human Identity, Multiplicity & Inner–Outer Movement
-Status: RUNTIME_IMPLEMENTED_AND_DEPLOYED / TESTS_NOT_EXECUTED / LIVE_BEHAVIOR_NOT_VERIFIED
+Status: RUNTIME_IMPLEMENTED_AND_DEPLOYED / REGRESSION_TESTS_PASSED / LIVE_BEHAVIOR_NOT_VERIFIED
 
 - Treat a person as both continuity and becoming; allow identity, memory, values and self-understanding to evolve without erasing provenance.
 - Represent multiple simultaneous or changing states without reducing a person to one label, role, event, emotion, score or past interpretation.
