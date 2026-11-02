@@ -1,3 +1,4 @@
+import sys
 import unittest
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -6,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SPEC = spec_from_file_location("peace_layer", ROOT / ".ima/peace/peace_layer.py")
 MOD = module_from_spec(SPEC)
 assert SPEC.loader is not None
+sys.modules[SPEC.name] = MOD
 SPEC.loader.exec_module(MOD)
 
 class PeaceLayerTests(unittest.TestCase):
