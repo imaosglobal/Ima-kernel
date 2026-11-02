@@ -9,8 +9,8 @@ with sync_playwright() as p:
     page = browser.new_page(viewport={"width": 390, "height": 844}, locale="en-US")
     console_errors = []
     page_errors = []
-    page.on("console", lambda m: console_errors.append(m.text) if m.type == "error" else None)
-    page.on("pageerror", lambda e: page_errors.append(str(e)))
+    page.on("console", lambda m: console_errors.append(f"{m.text} @ {m.location}") if m.type == "error" else None)
+    page.on("pageerror", lambda e: page_errors.append(f"{e}\n{getattr(e, 'stack', '')}"))
     def verify_index(url, label):
         response = page.goto(url, wait_until="networkidle", timeout=60000)
         try:
