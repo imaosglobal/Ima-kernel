@@ -31,7 +31,7 @@ CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.6
 One periodic orchestrator governs improvement, learning, preservation, culture, capability discovery, teaching, bounded self-improvement and QA.
 
 Universal learning cycle:
-DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> CONNECT -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
+DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> DISTINGUISH INNER/OUTER -> HOLD MULTIPLICITY -> CONNECT OR DIFFERENTIATE -> PRESERVE OPEN QUESTIONS -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
 
 Good/harm is a contextual ethical assessment, not automatically a scientific fact. Natural, popular, efficient, legal or requested does not automatically mean good. Discomfort, disagreement or short-term cost does not automatically mean harm.
 
