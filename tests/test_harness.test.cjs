@@ -8,6 +8,7 @@ const pages = fs.readFileSync(".github/workflows/ima-ui-pages.yml", "utf8");
 const canonicalPages = fs.readFileSync(".github/workflows/deploy-ima-pages.yml", "utf8");
 const publicMonitor = fs.readFileSync(".github/workflows/ima-critical-public-monitor.yml", "utf8");
 const unifiedWorkflow = fs.readFileSync(".github/workflows/ima-unified-loop.yml", "utf8");
+const healthWorkflow = fs.readFileSync(".github/workflows/ima-continuous-health.yml", "utf8");
 const verify = fs.readFileSync("scripts/verify-ima.mjs", "utf8");
 const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
@@ -40,6 +41,8 @@ assert.ok(canonicalPages.includes("types: [ima-canonical-deploy]"), "canonical P
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
 assert.ok(unifiedWorkflow.includes("ima-canonical-deploy"), "unified loop must request a canonical deployment after persisting state");
 assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified loop must run only on main");
+assert.ok(healthWorkflow.includes("java-version: 17"), "Android health build must pin a Gradle-compatible JDK 17");
+assert.ok(healthWorkflow.includes("android-actions/setup-android@v4"), "Android health build must provision the Android SDK");
 assert.ok(!publicMonitor.includes("raw.githubusercontent.com/imaosglobal/Ima-kernel/gh-pages/version.json"), "public monitor must never substitute branch metadata for public runtime evidence");
 assert.ok(publicMonitor.includes("IMA_PUBLIC_INDEX_NORMAL_AND_CACHE_BUSTED=VERIFIED"), "public monitor must compare normal and cache-busted HTML paths");
 assert.ok(!/^\\s*push:/m.test(publicMonitor), "public monitor must not run on pushes and race canonical deployment");
