@@ -29,7 +29,7 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 """.strip()
 
 LOOP_CONTEXT="""
-CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.6
+CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.8
 One periodic orchestrator governs improvement, learning, preservation, culture, capability discovery, teaching, bounded self-improvement and QA.
 
 Universal learning cycle:
