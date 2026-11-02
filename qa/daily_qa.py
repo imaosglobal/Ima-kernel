@@ -32,7 +32,8 @@ def page_checks():
     assert "GoogleLogin" in source_app and "google.accounts.id.renderButton" in source_app, "Google entry missing from canonical UI source"
     assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
     assert "chat-tools" not in source_app, "stale broken selectors remain"
-    assert 'href="#support"' in source_app and 'id="support"' in source_app, "Support CTA has no destination"
+    support_page = open("ima-ui/public/support.html", encoding="utf-8").read()
+    assert 'id="support"' in source_app and "SUPPORT_URL" in source_app and "href={SUPPORT_URL}" in source_app and 'href="/Ima-kernel/#support"' in support_page, "Support CTA has no destination"
     assert "youtube.com/@imaglobal-d4g" in source_app, "public YouTube destination missing"
     buttons = re.findall(r"<button\b([^>]*)>", source_app)
     for attrs in buttons:
