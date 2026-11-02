@@ -189,7 +189,7 @@ jobs:
       - name: Verify critical public controls in a real browser
         env:
           SITE: ${{ steps.deployment.outputs.page_url }}
-          EXPECTED_SHA: ${{ github.sha }}
+          EXPECTED_SHA: ${{ steps.source.outputs.sha }}
         run: python3 scripts/public_site_browser_smoke.py
 
   mirror-gh-pages:
