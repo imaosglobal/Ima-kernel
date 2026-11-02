@@ -39,6 +39,7 @@ assert.ok(canonicalPages.includes("artifact_name: ima-pages-${{ github.run_id }}
 assert.ok(canonicalPages.includes("types: [ima-canonical-deploy]"), "canonical Pages deploy must accept the unified-loop dispatch");
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
 assert.ok(unifiedWorkflow.includes("ima-canonical-deploy"), "unified loop must request a canonical deployment after persisting state");
+assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified loop must run only on main");
 assert.ok(!publicMonitor.includes("raw.githubusercontent.com/imaosglobal/Ima-kernel/gh-pages/version.json"), "public monitor must never substitute branch metadata for public runtime evidence");
 assert.ok(publicMonitor.includes("IMA_PUBLIC_INDEX_NORMAL_AND_CACHE_BUSTED=VERIFIED"), "public monitor must compare normal and cache-busted HTML paths");
 assert.ok(!/^\\s*push:/m.test(publicMonitor), "public monitor must not run on pushes and race canonical deployment");
