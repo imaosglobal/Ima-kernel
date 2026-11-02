@@ -243,3 +243,12 @@ These commits are implementation evidence only. No deployment or live-public suc
 - **Regression test added:** `6b32c1e47ef14e4b751af92527dcd1f0ed66fe83`.
 - Covers explicit consent gating, per-user isolation, integrity verification, deletion, and rejection of credential-like content.
 - **State:** TESTED_PENDING_DEPLOYMENT; this is repository-level evidence, not live deployment proof.
+
+
+## 2026-11-03 — Dynamic identity and movement integration
+
+- **Source:** Ori Cohen's poem and inquiry, "תנועות", and the follow-up instruction to integrate the principle across existing IMA work.
+- **Documentation completed on branch:** canonical charter plus cross-links and aligned requirements in the human-intelligence, global-identity/shared-learning, inner-song, creator-questions, backward-reflection, life-direction and continuous-evolution documents; README navigation updated.
+- **PR:** #138, branch feature/dynamic-human-identity-charter.
+- **State:** DOCUMENTED_ON_BRANCH / NOT_MERGED / NOT_DEPLOYED. This is not evidence of runtime integration.
+- **Remaining verification:** inspect actual conversation prompt/runtime composition and memory schema; implement only where missing; add regression tests for continuity/change, multiple states, inner/outer separation, connection/separation choices, contradictions, consent and provenance; run tests; merge only after branch checks and conflict resolution; deploy; verify the live public interface.

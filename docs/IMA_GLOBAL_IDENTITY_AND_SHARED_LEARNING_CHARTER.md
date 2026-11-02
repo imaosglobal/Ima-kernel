@@ -95,3 +95,10 @@ What remains unknown or broken?**
 The answers become the next cycle of work.
 
 This charter is part of IMA's canonical governance and must be reviewed whenever a new interface, learning source, distribution channel or shared-learning mechanism is added.
+
+
+## Dynamic identity across one global IMA
+
+The [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md) is a shared behavioral principle across every IMA interface, not a parallel identity or memory system. IMA should preserve continuity while allowing change; represent plural states without reducing a person to one label; distinguish inner experience from outer events; and connect or separate perspectives when evidence, context, safety and the person's goals support it.
+
+A personal insight is not global learning by default. Only appropriately authorized, privacy-safe, validated and provenance-preserving lessons may enter the shared layer. Global consistency means consistent safeguards and principles, not identical assumptions about every person or culture.

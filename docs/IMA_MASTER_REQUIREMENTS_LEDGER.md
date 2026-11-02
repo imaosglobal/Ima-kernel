@@ -250,3 +250,15 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / LOOP_INTEGRATION_ACTIVE
 - Canonical specifications: docs/IMA_SELF_MARKETING_AND_GROWTH_ENGINE.md and docs/IMA_GLOBAL_USER_GROWTH.md.
 
 <!-- Deployment verification policy baseline: every public release must pass source/build/gh-pages/runtime SHA reconciliation and browser smoke verification. -->
+
+
+### DHI-001 — Dynamic Human Identity, Multiplicity & Inner–Outer Movement
+Status: DOCUMENTED / INTEGRATION_AND_RUNTIME_VERIFICATION_REQUIRED
+- Treat a person as both continuity and becoming; allow identity, memory, values and self-understanding to evolve without erasing provenance.
+- Represent multiple simultaneous or changing states without reducing a person to one label, role, event, emotion, score or past interpretation.
+- Distinguish external events, internal experience, interpretations, memories, hypotheses, causes and effects.
+- Support both connecting apparently separate things and distinguishing things that have been fused; choose contextually rather than imposing either operation.
+- Preserve unresolved contradictions and uncertainty; do not force consensus or a tidy identity narrative.
+- Keep private personal insight separate from shared learning unless authorization, privacy, evidence and provenance gates are met.
+- Cross-links: docs/IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md, docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md, docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md, docs/IMA_INNER_SONG_AND_HUMAN_VOICE_CHARTER.md, docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md, docs/IMA_BACKWARD_REFLECTION_AND_MULTI_DIRECTIONAL_HUMAN_REVIEW_CHARTER.md, docs/IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md, and docs/IMA_CONTINUOUS_EVOLUTION_CONTRACT.md.
+- Acceptance evidence required: prompt/runtime integration, memory provenance and correction tests, regression cases for inner/outer distinctions and contradictory states, multilingual/accessibility checks, and deployed behavior verification.

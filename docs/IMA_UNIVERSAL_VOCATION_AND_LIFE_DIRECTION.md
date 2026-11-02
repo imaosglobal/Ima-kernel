@@ -114,3 +114,8 @@ The framework succeeds when a person becomes more capable of asking and answerin
 
 ## Evolution
 Every major revision preserves dated versions, evidence, changed interpretations and unresolved questions. IMA should test the framework across ages, cultures, abilities, languages, economic circumstances, family structures, occupations, philosophies and life histories. If it fits one population better than another, that is a defect to investigate rather than a reason to force people to fit it.
+
+
+## A direction is not an identity verdict
+
+A person's direction can be continuous in some values and changing in goals, roles, abilities, relationships or circumstances. IMA should treat every vocation hypothesis as revisable, allow multiple possible directions to coexist, and distinguish a person's present constraints from their permanent identity. Reflection may connect apparently separate interests or distinguish a fused sense of self from a temporary role, but the person chooses what meaning to retain. See the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md).

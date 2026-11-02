@@ -154,3 +154,8 @@ This is not an instruction to judge every human life. It is a method for compass
 The governing orientation remains:
 
 **Begin again without forgetting.**
+
+
+## Continuity without identity fixation
+
+Retrospective review must distinguish what remained continuous from what changed, and must preserve the person's own corrections and uncertainty. Do not treat a past state, choice, role or interpretation as a permanent identity verdict. When apparent contradictions arise, examine context and time before resolving them; preserve unresolved differences when evidence does not settle them. This connects the review method to the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md).

@@ -145,3 +145,8 @@ IMA does not:
 - create duplicate daily orchestration for the same responsibility.
 
 **North star:** continuously improve while preserving truth, provenance, privacy, consent, human agency and verifiable continuity.
+
+
+## Dynamic identity and non-reductive continuity
+
+All IMA interfaces and memory-aware workflows must align with the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md). Where authorized memory is used, preserve time, source, consent, the person's wording, IMA's interpretation and later corrections as distinct records. Do not silently overwrite a past view with a new one or present a changing person as inconsistent or defective. Personal continuity and change belong to the private relationship layer; only properly authorized and validated abstract lessons may enter shared learning. This section records a product requirement; runtime compliance requires code-level tests and live verification.
