@@ -1,6 +1,6 @@
 {
-  "schema": "IMA-UNIFIED-LOOP-1.3",
-  "timestamp": "2026-10-18T23:11:12+03:00",
+  "schema": "IMA-UNIFIED-LOOP-1.4",
+  "timestamp": "2026-11-03T01:43:28+02:00",
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -24,6 +24,7 @@
   "scope": [
     "human intelligence",
     "human culture",
+    "human-centered interactive world-models",
     "intergenerational memory and historical preservation",
     "consent-aware private memory",
     "child safety and age assurance",
@@ -33,6 +34,7 @@
     "energy-internal research",
     "product and public QA",
     "lawful public education and distribution",
+    "self-marketing, sales, brand and growth",
     "capability radar and engine discovery",
     "universal learning across fields",
     "emerging-field discovery",
@@ -48,7 +50,10 @@
     "global localization and accessibility",
     "app-store readiness and verified reputation",
     "lawful growth experiments and partnership discovery",
-    "long-horizon continuity (daily/monthly/yearly/decadal)"
+    "creator-to-commerce and revenue evidence",
+    "nonprofit finance, expenses and creator succession governance",
+    "long-horizon continuity (daily/monthly/yearly/decadal)",
+    "multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
   ],
   "tasks": [
     {
@@ -60,7 +65,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": " Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2023\"\n    },\n    {\n      \"id\": \"e126a9b37bb27929aee0\",\n      \"url\": \"https://www.semanticscholar.org/paper/a9a654ea503386cbfd8bb119fc650cc3d08dc206\",\n      \"title\": \"Revised Surgical CAse REport (SCARE) guideline: An update for the age of Artificial Intelligence\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2025\"\n    },\n    {\n      \"id\": \"3fbf0044b56479aa9e03\",\n      \"url\": \"https://www.semanticscholar.org/paper/6a132499ca1dc0d23cfe7d5db841b819df63b51b\",\n      \"title\": \"Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2019\"\n    },\n    {\n      \"id\": \"a76b8356c07043d77366\",\n      \"url\": \"https://www.semanticscholar.org/paper/312e66bcee5bad5376a97f4d771ecdcca2c78078\",\n      \"title\": \"Transparency In The reporting of Artificial INtelligence – the TITAN guideline\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2025\"\n    },\n    {\n      \"id\": \"5d256e08cb3b8cfa64a4\",\n      \"url\": \"https://www.semanticscholar.org/paper/10f919b1a5161b560504c225cfb2d1b3a4768f80\",\n      \"title\": \"Artificial intelligence in healthcare: past, present and future\",\n      \"source\": \"Semantic Scholar\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2017\"\n    }\n  ]\n}\n",
+      "stdout_tail": "6\",\n      \"title\": \"Supplementary Material for \\\"Same Same, but Different: How Dedicated AI Leadership Roles Differentiate from Technology Leadership\\\"\",\n      \"source\": \"OpenAlex\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2027-01-01\"\n    },\n    {\n      \"id\": \"ba55c736d0e06f9d2972\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42897078/\",\n      \"title\": \"PubMed PMID 42897078\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-11-02T23:43:34Z\"\n    },\n    {\n      \"id\": \"1edcf07daa377911e0c6\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42898633/\",\n      \"title\": \"PubMed PMID 42898633\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-11-02T23:43:34Z\"\n    },\n    {\n      \"id\": \"16e0ec1f7fe9186c8e5d\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42715211/\",\n      \"title\": \"PubMed PMID 42715211\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-11-02T23:43:34Z\"\n    },\n    {\n      \"id\": \"e0b8f653c7e1b610e122\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42671320/\",\n      \"title\": \"PubMed PMID 42671320\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-11-02T23:43:34Z\"\n    },\n    {\n      \"id\": \"58c617247c71f5f5060a\",\n      \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42670087/\",\n      \"title\": \"PubMed PMID 42670087\",\n      \"source\": \"PubMed\",\n      \"kind\": \"scientific_api\",\n      \"observed_at\": \"2026-11-02T23:43:34Z\"\n    }\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -79,7 +84,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.248s\n\nOK\n"
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 2.241s\n\nOK\n"
     },
     {
       "task": "foresight_tests",
@@ -151,7 +156,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_all_required_stages_exist (test_ima_loop.UnifiedLoopTests.test_all_required_stages_exist) ... ok\ntest_ima_knows_self_world_and_user_boundaries (test_ima_loop.UnifiedLoopTests.test_ima_knows_self_world_and_user_boundaries) ... ok\ntest_single_scheduler_contract (test_ima_loop.UnifiedLoopTests.test_single_scheduler_contract) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+      "stderr_tail": "test_all_required_stages_exist (test_ima_loop.UnifiedLoopTests.test_all_required_stages_exist) ... ok\ntest_ima_knows_self_world_and_user_boundaries (test_ima_loop.UnifiedLoopTests.test_ima_knows_self_world_and_user_boundaries) ... ok\ntest_self_marketing_is_evidence_bounded (test_ima_loop.UnifiedLoopTests.test_self_marketing_is_evidence_bounded) ... ok\ntest_single_scheduler_contract (test_ima_loop.UnifiedLoopTests.test_single_scheduler_contract) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
     },
     {
       "task": "universal_learning_tests",
@@ -208,6 +213,86 @@
       "stderr_tail": "test_bridge_needs_tests_and_evidence (test_creative_bridge.CreativeBridgeTests.test_bridge_needs_tests_and_evidence) ... ok\ntest_failed_bridge_is_not_verified (test_creative_bridge.CreativeBridgeTests.test_failed_bridge_is_not_verified) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
     },
     {
+      "task": "human_agency_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_human_agency_intelligibility.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_charter (test_human_agency_intelligibility.HumanAgencyIntelligibilityTests.test_charter) ... ok\ntest_loop (test_human_agency_intelligibility.HumanAgencyIntelligibilityTests.test_loop) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "world_model_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_world_model_humanization.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_high_impact_use_requires_real_world_validation (test_world_model_humanization.WorldModelHumanizationTests.test_high_impact_use_requires_real_world_validation) ... ok\ntest_ordinary_exploration_is_bounded (test_world_model_humanization.WorldModelHumanizationTests.test_ordinary_exploration_is_bounded) ... ok\ntest_simulation_is_not_reality (test_world_model_humanization.WorldModelHumanizationTests.test_simulation_is_not_reality) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "world_model_availability",
+      "command": [
+        "python",
+        "scripts/ima_world_model_availability_check.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "lity signals do not prove that this IMA deployment has credentials, tester access, or a successful live generation request.\",\n  \"official_sources\": {\n    \"genie4_official\": {\n      \"url\": \"https://deepmind.google/models/genie/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"genie4_announcement\": {\n      \"url\": \"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"gemini_api_models\": {\n      \"url\": \"https://ai.google.dev/api/models\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    }\n  },\n  \"errors\": {},\n  \"next_gate\": [\n    \"obtain authorized Genie 4 / Project Genie / Gemini API access if offered\",\n    \"connect credentials only through a secure deployment secret store\",\n    \"run a bounded low-risk generation request\",\n    \"verify output provenance and device fallback\",\n    \"only then mark VERIFIED_LIVE\"\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "global_integration_intake",
+      "command": [
+        "node",
+        "scripts/ima-daily-loop-intake.mjs"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"generated_at\": \"2026-11-02T23:44:20.866Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "public_reconciliation",
+      "command": [
+        "python",
+        "scripts/ima_public_reconciliation.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "   \"evidence\": \"ima-ui/src/App.jsx\"\n    },\n    {\n      \"surface\": \"i18n\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/i18n.js\"\n    },\n    {\n      \"surface\": \"chat\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/imaChat.js\"\n    },\n    {\n      \"surface\": \"analytics\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/analytics.js\"\n    },\n    {\n      \"surface\": \"capability_registry\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CAPABILITY_REGISTRY.json\"\n    },\n    {\n      \"surface\": \"requirements\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_MASTER_REQUIREMENTS_LEDGER.md\"\n    },\n    {\n      \"surface\": \"nonprofit\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_GLOBAL_NONPROFIT_CHARTER.md\"\n    },\n    {\n      \"surface\": \"finance\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_FINANCIAL_LEDGER_SCHEMA.json\"\n    },\n    {\n      \"surface\": \"succession\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md\"\n    }\n  ],\n  \"checks\": {\n    \"google_identity_flow_present\": true,\n    \"chat_entry_present\": true,\n    \"memory_controls_present\": true,\n    \"accessibility_controls_present\": true,\n    \"rtl_localization_present\": true,\n    \"community_entry_present\": true,\n    \"shop_entry_present\": true,\n    \"media_entry_present\": true,\n    \"install_pwa_entry_present\": true\n  },\n  \"next_gate\": \"browser/API/deployment verification for public runtime\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "finance_governance_audit",
+      "command": [
+        "node",
+        "scripts/ima-finance-governance-audit.mjs"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"ok\": true,\n  \"ledger_events\": 0,\n  \"legal_status\": \"not_yet_registered_as_a_nonprofit_entity\",\n  \"surplus_order\": [\n    \"refunds_chargebacks_required_taxes\",\n    \"verified_transaction_platform_fees\",\n    \"authorized_operating_expenses\",\n    \"documented_creator_compensation_or_license_royalty\",\n    \"required_reserve\",\n    \"nonprofit_mission_reinvestment\",\n    \"authorized_humanitarian_or_community_benefit\"\n  ],\n  \"no_autonomous_spend\": true,\n  \"creator_nonprofit_separation\": true,\n  \"succession_is_not_a_will\": true\n}\n",
+      "stderr_tail": ""
+    },
+    {
       "task": "distribution",
       "command": [
         "python",
@@ -215,7 +300,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-10-18T20:11:43Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-02T23:44:20Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -225,10 +310,10 @@
         "run",
         "test:capabilities"
       ],
-      "status": "FAIL",
-      "returncode": 1,
-      "stdout_tail": "\n> ima-kernel@1.0.0 test:capabilities\n> node tests/capability_registry.test.cjs\n\n",
-      "stderr_tail": "v className=\"video-copy\"><span className=\"tag\">סרטון היכרות קנוני · {IMA_HEYGEN.createdAt}</span><h3>{IMA_HEYGEN.videoTitle}</h3><p>זהו סרטון ההיכרות הקנוני של אמא. הוא מוצג כאן ישירות כחלק מהממשק הציבורי, ולא רק כקישור חיצוני.</p><a className=\"primary\" href={IMA_HEYGEN.videoPageUrl} target=\"_blank\" rel=\"noreferrer\">פתיחת הסרטון ב־HeyGen</a></div></div></section>\\n' +\n    `    <section className=\"after-login\" id=\"more\"><div className=\"section-head\"><span className=\"eyebrow\">אחרי הכניסה</span><h2>העולם של אמא, בלי לוח בקרה.</h2><p>העמקנו את המרחב מאחורי הכניסה: הזיכרון שלך, הידע המאומת, היצירה, הסרטונים והדרך לבנות יחד.</p></div><div className=\"deep-grid\"><article><span>01</span><h3>הזיכרון שלי</h3><p>זיכרון אישי נשאר אישי ורק בהסכמה.</p><button onClick={async()=>{const next=memory==='GRANTED'?'DENIED':'GRANTED';const x=await setMemoryConsent(next);setMemory(x?.consent?.status||next)}}>{memory==='GRANTED'?'כיבוי זיכרון':'הפעלת זיכרון אישי'}</button></article><article><span>02</span><h3>מה אמא יודעת</h3><p>יכולות וידע מוצגים לפי מצב האימות שלהם, לא לפי הבטחה.</p><div className=\"status-line\">{capabilityRegistry.capabilities.filter(x=>['VERIFIED','TESTED','IMPLEMENTED','LIVE'].includes(x.status)).length} יכולות עם ראיות בפרויקט</div></article><article><span>03</span><h3>ליצור עם אמא</h3><p>טקסט, מוזיקה, רעיונות, למידה וסרטונים מתפתחים מאותו מרחב`... 986 more characters,\n  expected: /capabilityRegistry\\.capabilities\\.map/,\n  operator: 'match',\n  diff: 'simple'\n}\n\nNode.js v22.23.3\n"
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "\n> ima-kernel@1.0.0 test:capabilities\n> node tests/capability_registry.test.cjs\n\nIMA capability registry + Next Action CLI: PASS (23 capabilities; 18 queued actions; UI wired)\n",
+      "stderr_tail": ""
     },
     {
       "task": "growth_cycle",
@@ -238,7 +323,18 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-10-18T20:11:43.997543+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-02T23:44:21.242404+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "monetization_readiness",
+      "command": [
+        "python",
+        "scripts/ima_monetization_readiness.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"schema\": \"IMA-MONETIZATION-READINESS-1.2\",\n  \"status\": \"READY_FOR_HUMAN_AUTHORIZATION\",\n  \"payment_router_mode\": \"multi_provider_router\",\n  \"primary_payment_provider\": \"paypal\",\n  \"providers\": [\n    \"paypal\",\n    \"google_pay\",\n    \"apple_pay\",\n    \"github_sponsors\",\n    \"youtube\",\n    \"open_collective\",\n    \"future_provider\"\n  ],\n  \"blockers\": [],\n  \"findings\": [\n    {\n      \"route\": \"Multi-provider payment router\",\n      \"status\": \"HUMAN_ACTIVATION_REQUIRED\",\n      \"reason\": \"Provider configuration in the repository does not prove live merchant activation, eligibility, compliance approval or payout permission.\"\n    },\n    {\n      \"route\": \"Revenue ledger\",\n      \"status\": \"READY_FOR_EVIDENCE\",\n      \"principle\": \"actual_confirmed_revenue_only\",\n      \"rule\": \"views/followers/eligibility/estimates/projections are never income\"\n    }\n  ],\n  \"actual_revenue\": 0,\n  \"actual_revenue_claimed\": false,\n  \"autonomous_spending\": false,\n  \"next_actions\": [\n    \"activate and verify each desired provider externally\",\n    \"complete required merchant/business, bank, compliance and payout setup\",\n    \"store API credentials only in deployment/runtime secrets\",\n    \"verify a human-authorized real transaction if appropriate\",\n    \"record actual receipt/payout evidence\",\n    \"verify YouTube and GitHub Sponsors separately\"\n  ]\n}\n",
       "stderr_tail": ""
     }
   ],
@@ -505,6 +601,142 @@
           ],
           "tests": [
             "perform a reconstruction/readability test for human culture"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "human-centered interactive world-models": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make human-centered interactive world-models observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for human-centered interactive world-models"
+          ],
+          "first_actions": [
+            "inspect current human-centered interactive world-models implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for human-centered interactive world-models"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make human-centered interactive world-models reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for human-centered interactive world-models"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for human-centered interactive world-models"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare human-centered interactive world-models for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that human-centered interactive world-models remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for human-centered interactive world-models"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for human-centered interactive world-models"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve human-centered interactive world-models across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting human-centered interactive world-models"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for human-centered interactive world-models"
+          ],
+          "tests": [
+            "exercise the fallback path for human-centered interactive world-models"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep human-centered interactive world-models understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct human-centered interactive world-models"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for human-centered interactive world-models"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for human-centered interactive world-models"
           ],
           "reevaluate_when": [
             "new generation",
@@ -1729,6 +1961,142 @@
           ],
           "tests": [
             "perform a reconstruction/readability test for lawful public education and distribution"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "self-marketing, sales, brand and growth": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make self-marketing, sales, brand and growth observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for self-marketing, sales, brand and growth"
+          ],
+          "first_actions": [
+            "inspect current self-marketing, sales, brand and growth implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for self-marketing, sales, brand and growth"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make self-marketing, sales, brand and growth reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for self-marketing, sales, brand and growth"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for self-marketing, sales, brand and growth"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare self-marketing, sales, brand and growth for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that self-marketing, sales, brand and growth remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for self-marketing, sales, brand and growth"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for self-marketing, sales, brand and growth"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve self-marketing, sales, brand and growth across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting self-marketing, sales, brand and growth"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for self-marketing, sales, brand and growth"
+          ],
+          "tests": [
+            "exercise the fallback path for self-marketing, sales, brand and growth"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep self-marketing, sales, brand and growth understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct self-marketing, sales, brand and growth"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for self-marketing, sales, brand and growth"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for self-marketing, sales, brand and growth"
           ],
           "reevaluate_when": [
             "new generation",
@@ -3780,6 +4148,278 @@
           "not_prediction": true
         }
       ],
+      "creator-to-commerce and revenue evidence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make creator-to-commerce and revenue evidence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for creator-to-commerce and revenue evidence"
+          ],
+          "first_actions": [
+            "inspect current creator-to-commerce and revenue evidence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for creator-to-commerce and revenue evidence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make creator-to-commerce and revenue evidence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for creator-to-commerce and revenue evidence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for creator-to-commerce and revenue evidence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare creator-to-commerce and revenue evidence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that creator-to-commerce and revenue evidence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for creator-to-commerce and revenue evidence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for creator-to-commerce and revenue evidence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve creator-to-commerce and revenue evidence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting creator-to-commerce and revenue evidence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for creator-to-commerce and revenue evidence"
+          ],
+          "tests": [
+            "exercise the fallback path for creator-to-commerce and revenue evidence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep creator-to-commerce and revenue evidence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct creator-to-commerce and revenue evidence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for creator-to-commerce and revenue evidence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for creator-to-commerce and revenue evidence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "nonprofit finance, expenses and creator succession governance": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make nonprofit finance, expenses and creator succession governance observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for nonprofit finance, expenses and creator succession governance"
+          ],
+          "first_actions": [
+            "inspect current nonprofit finance, expenses and creator succession governance implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for nonprofit finance, expenses and creator succession governance"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make nonprofit finance, expenses and creator succession governance reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for nonprofit finance, expenses and creator succession governance"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for nonprofit finance, expenses and creator succession governance"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare nonprofit finance, expenses and creator succession governance for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that nonprofit finance, expenses and creator succession governance remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for nonprofit finance, expenses and creator succession governance"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for nonprofit finance, expenses and creator succession governance"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve nonprofit finance, expenses and creator succession governance across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting nonprofit finance, expenses and creator succession governance"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for nonprofit finance, expenses and creator succession governance"
+          ],
+          "tests": [
+            "exercise the fallback path for nonprofit finance, expenses and creator succession governance"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep nonprofit finance, expenses and creator succession governance understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct nonprofit finance, expenses and creator succession governance"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for nonprofit finance, expenses and creator succession governance"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for nonprofit finance, expenses and creator succession governance"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
       "long-horizon continuity (daily/monthly/yearly/decadal)": [
         {
           "horizon": "NOW",
@@ -3915,6 +4555,142 @@
           "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
           "not_prediction": true
         }
+      ],
+      "multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "first_actions": [
+            "inspect current multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "tests": [
+            "exercise the fallback path for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
       ]
     },
     "priority_now_actions": [
@@ -3949,6 +4725,12 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current creator-to-commerce and revenue evidence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current emerging-field discovery implementation and evidence",
         "horizon": "NOW",
         "months": 0,
@@ -3974,6 +4756,12 @@
       },
       {
         "action": "inspect current human intelligence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current human-centered interactive world-models implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4015,6 +4803,18 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current multi-perspective whole-system review (user/customer/executive/operator/technical/community/future) implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current nonprofit finance, expenses and creator succession governance implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current privacy-preserving product analytics and feedback implementation and evidence",
         "horizon": "NOW",
         "months": 0,
@@ -4046,6 +4846,12 @@
       },
       {
         "action": "inspect current self-application release testing implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current self-marketing, sales, brand and growth implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4084,9 +4890,9 @@
   },
   "diagnostics": {
     "summary": {
-      "total": 12,
-      "passed": 11,
-      "failed": 1,
+      "total": 19,
+      "passed": 19,
+      "failed": 0,
       "errors": 0
     },
     "findings": [
@@ -4136,17 +4942,52 @@
         "action": "carry_forward"
       },
       {
+        "task": "human_agency_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "world_model_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "world_model_availability",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "global_integration_intake",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "public_reconciliation",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "finance_governance_audit",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
         "task": "distribution",
         "finding": "PASS",
         "action": "carry_forward"
       },
       {
         "task": "capability_contract",
-        "finding": "FAIL",
-        "action": "inspect_logs_before_change"
+        "finding": "PASS",
+        "action": "carry_forward"
       },
       {
         "task": "growth_cycle",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "monetization_readiness",
         "finding": "PASS",
         "action": "carry_forward"
       }
@@ -4164,5 +5005,14 @@
   "user_change_rule": "Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
   "provenance_rule": "Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
   "cross_domain_reconciliation_rule": "All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
-  "global_user_benefit_rule": "Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data."
+  "multi_perspective_rule": "Review meaningful changes through relevant user, customer, executive, operator, technical, accessibility, privacy, finance, distribution, community and future lenses at micro/product/macro/system-of-systems scales and now-to-intergenerational horizons; evidence gates remain mandatory.",
+  "global_integration_rule": "Every newly verified external integration is automatically ingested through the canonical daily intake, deduplicated, evidence-checked and carried into the next improvement cycle; no second daily orchestrator is created.",
+  "global_user_benefit_rule": "Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.",
+  "world_model_rule": "Interactive world models are simulations, not reality. Use them for bounded exploration, education and hypothesis testing; preserve provenance, human control and reversible actions, and require real-world validation for high-impact decisions. Do not claim a live world-model provider integration unless independently verified.",
+  "human_agency_rule": "IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.",
+  "finance_truth_rule": "Revenue and expenses require evidence; estimates, views, followers, eligibility and projections are never income; no autonomous spending or financial commitment is permitted.",
+  "finance_governance_spec": "Use docs/IMA_GLOBAL_NONPROFIT_CHARTER.md, docs/IMA_FINANCIAL_LEDGER_SCHEMA.json, docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md and data/IMA_FINANCIAL_EVIDENCE_LEDGER.json as canonical specifications. Keep personal creator property, creator compensation, nonprofit operating costs, restricted funds and humanitarian/community benefit separate. No legal nonprofit status is claimed without registration evidence. No fixed surplus percentages are inferred.",
+  "nonprofit_creator_separation_rule": "Public-benefit mission assets remain separate from Ori Cohen personal property, creator compensation, royalties and estate rights; legal nonprofit status is never inferred from repository governance.",
+  "surplus_allocation_rule": "refunds/chargebacks/required_taxes -> verified_transaction_and_platform_fees -> authorized_operating_expenses -> documented_creator_compensation_or_license_royalty -> required_reserve -> nonprofit_mission_reinvestment -> authorized_humanitarian_or_community_benefit; no fixed percentages without explicit approval.",
+  "critical_ai_dependency_rule": "For high-impact systems, IMA continuously checks intelligibility, contestability, human override, traceability, independent verification, reversibility, provider plurality, rights visibility, failure behavior and concentration of power; when verification fails, autonomy must not silently increase."
 }

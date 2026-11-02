@@ -1,0 +1,42 @@
+{
+  "schema": "IMA-MULTI-PERSPECTIVE-1.0",
+  "timestamp": "2026-11-02T23:43:28+00:00",
+  "lenses": [
+    "user",
+    "customer",
+    "executive",
+    "operator",
+    "technical",
+    "research",
+    "creator",
+    "community",
+    "institution",
+    "privacy",
+    "compliance",
+    "finance",
+    "infrastructure",
+    "distribution",
+    "future",
+    "environment",
+    "accessibility",
+    "caregiver",
+    "young_user",
+    "older_user",
+    "agent_user"
+  ],
+  "scales": [
+    "micro",
+    "product",
+    "macro",
+    "system_of_systems"
+  ],
+  "horizons": [
+    "now",
+    "near_term",
+    "one_year",
+    "multi_year",
+    "intergenerational"
+  ],
+  "single_scheduler": true,
+  "truth_rule": "Source code and documentation are not runtime proof."
+}\n

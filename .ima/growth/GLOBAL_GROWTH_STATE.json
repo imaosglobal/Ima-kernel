@@ -1,6 +1,6 @@
 {
   "schema": "IMA-GLOBAL-GROWTH-1.0",
-  "timestamp": "2026-10-18T20:11:43.997543+00:00",
+  "timestamp": "2026-11-02T23:44:21.242404+00:00",
   "principle": "real_users_only",
   "funnel": [
     "DISCOVER",
@@ -29,6 +29,11 @@
     "android_project": true,
     "store_listing_verified": false,
     "external_social_authorization": false
+  },
+  "self_marketing": {
+    "spec_present": true,
+    "global_growth_spec_present": true,
+    "truth_rule": "marketing claims require evidence; attention is not verified value"
   },
   "feedback": {
     "api_contract": true,

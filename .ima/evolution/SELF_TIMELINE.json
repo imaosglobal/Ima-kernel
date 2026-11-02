@@ -1,11 +1,11 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-10-18T20:11:12+00:00",
+  "generated_at": "2026-11-02T23:43:28+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
     "git_commits": 1,
-    "development_journal": 25,
+    "development_journal": 49,
     "daily_summaries": 5
   },
   "archive_inventory": {
@@ -458,17 +458,185 @@
       "source": "/home/runner/work/Ima-kernel/Ima-kernel/.ima/journal/daily/2026-10-18.md"
     },
     {
-      "timestamp": "2026-10-18T20:11:11+00:00",
+      "timestamp": "2026-10-30T19:19:00+02:00",
+      "event": "whole_ima_daily_renewal",
+      "summary": "Daily whole-IMA reconciliation executed against current repository, public source, governance, growth and CI evidence.",
+      "status": "EXECUTED",
+      "source": "IMA Global Health Loop"
+    },
+    {
+      "timestamp": "2026-10-30T19:19:00+02:00",
+      "event": "canonical_loop_journal_hardening",
+      "summary": "Added runtime development-journal persistence to the canonical unified loop so task and cycle transitions are preserved with evidence and failure states.",
+      "status": "EXECUTED",
+      "source": "commit eae744916b50eae633995092648e8e8f18844e00"
+    },
+    {
+      "timestamp": "2026-10-30T19:19:00+02:00",
+      "event": "public_deployment_reconciliation",
+      "summary": "Detected that gh-pages public index was materially older/different from current ima-ui source; added a canonical native GitHub Actions build-and-publish workflow for the single Pages branch.",
+      "status": "EXECUTED",
+      "source": "commit b0ff277ca04786c86aa04bec6a7694f71a15dd89"
+    },
+    {
+      "timestamp": "2026-10-30T19:19:00+02:00",
+      "event": "growth_capability_registry",
+      "summary": "Registered the evidence-bounded self-marketing, sales, brand and growth engine in the canonical capability registry.",
+      "status": "EXECUTED",
+      "source": "commit 4492ce75ab959232e51f596a81567f19993bf624"
+    },
+    {
+      "timestamp": "2026-10-30T19:19:00+02:00",
+      "event": "ci_gap_preserved",
+      "summary": "Historical unified-loop failures were re-inspected; they ran older commits and therefore were not used as evidence against current fixes. No unsupported success claim was made.",
+      "status": "GAPS_RECORDED",
+      "source": "GitHub Actions runs 39802263902 and 39035743009"
+    },
+    {
+      "timestamp": "2026-10-31T16:23:10+02:00",
+      "event": "ori_digital_creator_video_pipeline_reconciliation",
+      "summary": "Reconciled Ori Digital creator-video identity, generation capacity and Metricool destinations. Canonical avatar and verified voice remain bound; Metricool YouTube and LinkedIn write destinations are now directly verified, while HeyGen generation is blocked by exhausted free-tier video quota. No new milestone video was generated or published.",
+      "status": "GAPS_RECORDED",
+      "source": "HeyGen account/video evidence; Metricool brand evidence; GitHub publication registry"
+    },
+    {
+      "timestamp": "2026-10-31T18:55:14+02:00",
+      "event": "whole_ima_daily_renewal_capability_registry_regression_repair",
+      "summary": "Daily whole-IMA reconciliation found a real regression in the capability-registry CI contract: the registry had evidence-state values (DESIGNED, IMPLEMENTED_IN_CODE and IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE) that the JavaScript contract test rejected. The public UI already renders the canonical registry via capabilities.map, so the test failure was a stale status allowlist rather than a missing UI capability.",
+      "status": "EXECUTED",
+      "source": "GitHub repository inspection; commit b5f4e136aefcab88b1616cc9496889abc8ea2491"
+    },
+    {
+      "timestamp": "2026-10-31T18:55:14+02:00",
+      "event": "capability_delta_openai_event_trigger_monitoring",
+      "summary": "Official OpenAI documentation was checked for newly available app and event-triggered task capabilities. Event-triggered Gmail, Slack and GitHub tasks exist for eligible plans, but Free accounts cannot create them. Therefore IMA's current daily loop remains the canonical polling orchestrator; no real-time event monitoring is claimed or created.",
+      "status": "GAPS_RECORDED",
+      "source": "OpenAI Help Center, Scheduled tasks in ChatGPT and Connected apps in ChatGPT, checked 2026-10-31"
+    },
+    {
+      "timestamp": "2026-11-02T18:59:46.731Z",
+      "event": "feedback_daily_rollup_repair",
+      "summary": "Corrected the daily feedback rollup so the 00:05 UTC job refreshes completed UTC dates instead of the newly opened current date; the query now uses distinct feedback IDs to avoid join fan-out. The migration is reversible and the database result is verified. The separate public Pages P0 remains blocked in issue #130.",
+      "status": "VERIFIED",
+      "source": "Supabase project IMA first global AGI; GitHub branch fix-feedback-daily-rollup-20261102"
+    },
+    {
+      "timestamp": "2026-11-02T19:05:52.761Z",
+      "event": "canonical_pages_mirror_and_index_guard",
+      "summary": "Prepared one canonical Pages path: require the served index build marker and React root to match the source SHA, then mirror the same verified artifact to gh-pages with a narrowly scoped workflow token. Retired the separate manual branch publisher.",
+      "status": "PLANNED",
+      "source": "GitHub Actions deployment run 41505890610; gh-pages branch version.json; repository workflow inspection"
+    },
+    {
+      "timestamp": "2026-11-02T20:10:50Z",
+      "event": "workflow_trigger_guard_recheck",
+      "summary": "The first post-change check still contained a workflow-level failure with zero jobs for the critical monitor on the feature branch. A fresh journal-only commit is being used to verify whether the schedule/manual-only trigger now prevents new feature-push runs. The prior failed run is retained as evidence and is not reclassified.",
+      "status": "ATTEMPTED",
+      "source": "GitHub Actions run 41516484502, event=push, branch=fix-pages-artifact-collision-20261102, head=fe6236f85af1f729a3de88946a98cb5f92d4a10f, conclusion=failure, jobs=0"
+    },
+    {
+      "timestamp": "2026-11-02T20:12:00Z",
+      "event": "critical_monitor_non_main_noop",
+      "summary": "GitHub still created push-event runs for the production monitor on feature refs even after the push trigger was removed; those runs had zero jobs and failed at workflow level. Added an explicit successful no-op job for non-main refs while keeping the production monitor job restricted to main. This prevents a feature-branch event from being mistaken for a production health result.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions runs 41516328118, 41516476373, 41516484502 and 41516917100; each was a push event on fix-pages-artifact-collision-20261102 with conclusion=failure and zero jobs."
+    },
+    {
+      "timestamp": "2026-11-02T20:13:30Z",
+      "event": "critical_monitor_explicit_push_noop",
+      "summary": "The production monitor's push-event workflow run continued to appear as a zero-job failure on feature refs even with no push trigger declared. To make this behavior explicit and harmless, the workflow now declares the push event and routes non-main refs to a successful no-op job; the actual public checks remain restricted to main. This avoids a false failing CI signal without running production checks on a feature branch.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions run 41517023136, event=push, branch=fix-pages-artifact-collision-20261102, conclusion=failure, jobs=0; branch workflow source"
+    },
+    {
+      "timestamp": "2026-11-02T20:14:30Z",
+      "event": "sole_daily_ima_orchestrator_enforcement",
+      "summary": "The automation registry contains one enabled IMA Global Health Loop task; the other IMA task automations are disabled. The repository's canonical unified-loop workflow was also scheduled hourly (cron 7 * * * *), creating a competing whole-system orchestrator. Removed only that hourly schedule while preserving path-based push execution and manual dispatch. The enabled daily task remains the sole daily whole-IMA scheduler; component-level five/ten-minute public health monitors remain separate monitors, not whole-system renewal loops.",
+      "status": "EXECUTED",
+      "source": "Automations.peek (9 total tasks, 1 enabled); .github/workflows/ima-unified-loop.yml on main SHA eed4da882a250b1d60af8583b8cc68275212b0e4"
+    },
+    {
+      "timestamp": "2026-11-02T20:17:00Z",
+      "event": "pages_mirror_artifact_attempt_scoping",
+      "summary": "Extended the Pages artifact collision repair to the gh-pages mirror artifact: both upload and download now use the same run-id/run-attempt-specific name. This prevents a rerun from selecting an older mirror artifact with the same static name.",
+      "status": "EXECUTED",
+      "source": "PR #133 .github/workflows/deploy-ima-pages.yml inspection; actions/upload-artifact@v4 and actions/download-artifact@v4 pairing"
+    },
+    {
+      "timestamp": "2026-11-02T20:25:00Z",
+      "event": "critical_monitor_yaml_indentation_repair",
+      "summary": "After PR #133 merged, the main-branch critical monitor workflow produced a completed failure with zero jobs. Inspection found shell lines in the multiline run block unindented at YAML level, making the workflow invalid. Re-indented the embedded Python here-doc and following shell checks so they remain inside the run block; monitor logic and public-only SHA checks are unchanged.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions run 41518411205, event=push, branch=main, head=a5c60b8aa458bf196fef828365a7dff4d59ad430, conclusion=failure, jobs=0; .github/workflows/ima-critical-public-monitor.yml"
+    },
+    {
+      "timestamp": "2026-11-02T20:27:30Z",
+      "event": "critical_monitor_source_contract_and_race_repair",
+      "summary": "After the YAML repair made the critical monitor execute, its source-contract gate failed because it still required ima-shell-v3 while the canonical service worker now declares ima-shell-v5. Replaced the stale exact-version assertion with a versioned-cache pattern. Removed the immediate push trigger so the monitor cannot race the Pages deployment on a main push; the canonical deploy workflow performs immediate release verification, while the monitor continues every five minutes and on manual dispatch.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions run 41519218869, job 125530597627; failing step Verify canonical source contracts; ima-ui/public/sw.js declares CACHE = 'ima-shell-v5'."
+    },
+    {
+      "timestamp": "2026-11-02T21:35:17+02:00",
+      "event": "pages_artifact_collision_and_public_monitor_hardening",
+      "summary": "The post-merge Pages run failed before deployment because a rerun left two github-pages artifacts in the same workflow run. The public monitor also allowed raw gh-pages metadata to substitute for a mismatched public version endpoint. A focused repair is being prepared: unique artifact names per run attempt, strict public-only version checks, normal/cache-busted HTML parity in both monitor and browser smoke, and correction of stale QA assertions for the real support route and current unified-loop schema.",
+      "status": "ATTEMPTED",
+      "source": "GitHub Actions run 41506866659 attempt 2; artifacts 13171286342 and 13171672565; main SHA eed4da882a250b1d60af8583b8cc68275212b0e4; source workflow/test inspection"
+    },
+    {
+      "timestamp": "2026-11-02T21:48:00+02:00",
+      "event": "pr133_ci_contract_reconciliation",
+      "summary": "PR checks exposed one more stale contract: the canonical app links to ima-ui/public/manifest.json, while the public UI test expected manifest.webmanifest. The critical public monitor also executed on the feature branch, so its production-only comparison must be gated to main. The test now checks the manifest actually served by the canonical index, and the monitor is explicitly restricted to main pushes and main runtime.",
+      "status": "ATTEMPTED",
+      "source": "GitHub PR #133 check run 41512705565 job 125508349826; workflow runs 41512626074–41512670183 on fix-pages-artifact-collision-20261102; source files on PR branch"
+    },
+    {
+      "timestamp": "2026-11-02T21:50:00+02:00",
+      "event": "feedback_legacy_definer_rpc_privilege_reduction",
+      "summary": "Revoked EXECUTE on the unused public SECURITY DEFINER trigger function public.queue_feedback_learning() from PUBLIC, anon and authenticated. Confirmed no trigger or other function calls this public function; the real feedback_archive trigger remains bound to ima_internal.enqueue_feedback_learning(). Verified anonymous/authenticated execution is false, service_role execution remains true, and the public archive_feedback(jsonb) RPC remains executable for anonymous and authenticated submissions.",
+      "status": "VERIFIED",
+      "source": "Supabase project IMA first global AGI; pg_proc/pg_trigger inspection and has_function_privilege before/after"
+    },
+    {
+      "timestamp": "2026-11-02T21:50:30+02:00",
+      "event": "feedback_identity_and_email_notification_boundary",
+      "summary": "Verified the public feedback backend derives a privacy-preserving identity from its HMAC-validated IMA session and hashes it before archival; raw email is not stored by _growth_identity(). Current durable archive contains 9 records: 6 on 2026-10-31 and 3 on 2026-11-01, with 0 authenticated records; 9 learning-ingest actions are applied and 9 product-change candidates remain proposed, with no product change auto-applied. Email notification delivery is not implemented in the feedback route and the feedback ledgers have no notification-status field; no authorized outbound notification transport is verified. Google sign-in remains blocked by missing GOOGLE_CLIENT_ID.",
+      "status": "GAPS_RECORDED",
+      "source": "app.py lines 83-160 and 824-935; ima-ui/src/services/imaChat.js; Supabase feedback tables, policies, rollups and action counts; daily QA failure"
+    },
+    {
+      "timestamp": "2026-11-02T22:03:12+02:00",
+      "event": "voice_archive_workflow_manual_trigger_guard",
+      "summary": "The canonical voice archive workflow previously ran on every push, including unrelated PR branches, and attempted to download YouTube source recordings. The 2026-11-02 run failed because YouTube required bot verification. The push trigger was removed while retaining workflow_dispatch, preventing unrelated commits from launching an expensive external download job. No voice stems or media publication are claimed; manual source acquisition remains subject to source availability and authorization.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions run 41514056421, job 125512932830; workflow .github/workflows/canonical-ori-singing-voice.yml"
+    },
+    {
+      "timestamp": "2026-11-02T22:03:12+02:00",
+      "event": "critical_monitor_schedule_only_guard",
+      "summary": "A push from the Pages repair branch created a workflow-level failure with zero jobs for the production critical monitor, even though its job was guarded to main. The monitor remains on its five-minute schedule and manual dispatch, but the push trigger was removed so feature-branch updates cannot launch production-only checks. The canonical deployment workflow still runs on main pushes and performs release verification.",
+      "status": "EXECUTED",
+      "source": "GitHub Actions run 41516328118, event=push, branch=fix-pages-artifact-collision-20261102, head=828b5086100d4a7a4cacaa36abc881dd71707535, conclusion=failure, total jobs=0; workflow .github/workflows/ima-critical-public-monitor.yml"
+    },
+    {
+      "timestamp": "2026-11-02T23:43:26+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "commit": "79115e20584f55ad405e360c81d716b8648ef02c",
-      "timestamp": "2026-10-18T23:10:56+03:00",
+      "timestamp": "2026-11-02T23:43:26+00:00",
+      "event": "REFLECTION",
+      "summary": "תשובת IMA בטוחה",
+      "status": "VERIFIED",
+      "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "commit": "a1e7d43f875c896740f40742e749833d462ee8f3",
+      "timestamp": "2026-11-03T01:43:10+02:00",
       "event": "commit",
-      "summary": "feat: integrate provenance and cross-domain reconciliation into unified loop",
+      "summary": "Fix stale monitor trigger contract in health harness (#141)",
       "source": "git"
     }
   ]

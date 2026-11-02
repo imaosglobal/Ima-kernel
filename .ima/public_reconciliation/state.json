@@ -1,0 +1,66 @@
+{
+  "schema": "IMA-PUBLIC-RECONCILIATION-1.0",
+  "timestamp": "2026-11-02T23:44:20+00:00",
+  "status": "SOURCE_RECONCILED",
+  "runtime_status": "NOT_VERIFIED",
+  "truth_rule": "Source code presence is not runtime proof.",
+  "findings": [
+    {
+      "surface": "app",
+      "status": "IMPLEMENTED",
+      "evidence": "ima-ui/src/App.jsx"
+    },
+    {
+      "surface": "i18n",
+      "status": "IMPLEMENTED",
+      "evidence": "ima-ui/src/i18n.js"
+    },
+    {
+      "surface": "chat",
+      "status": "IMPLEMENTED",
+      "evidence": "ima-ui/src/services/imaChat.js"
+    },
+    {
+      "surface": "analytics",
+      "status": "IMPLEMENTED",
+      "evidence": "ima-ui/src/services/analytics.js"
+    },
+    {
+      "surface": "capability_registry",
+      "status": "IMPLEMENTED",
+      "evidence": "docs/IMA_CAPABILITY_REGISTRY.json"
+    },
+    {
+      "surface": "requirements",
+      "status": "IMPLEMENTED",
+      "evidence": "docs/IMA_MASTER_REQUIREMENTS_LEDGER.md"
+    },
+    {
+      "surface": "nonprofit",
+      "status": "IMPLEMENTED",
+      "evidence": "docs/IMA_GLOBAL_NONPROFIT_CHARTER.md"
+    },
+    {
+      "surface": "finance",
+      "status": "IMPLEMENTED",
+      "evidence": "docs/IMA_FINANCIAL_LEDGER_SCHEMA.json"
+    },
+    {
+      "surface": "succession",
+      "status": "IMPLEMENTED",
+      "evidence": "docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md"
+    }
+  ],
+  "checks": {
+    "google_identity_flow_present": true,
+    "chat_entry_present": true,
+    "memory_controls_present": true,
+    "accessibility_controls_present": true,
+    "rtl_localization_present": true,
+    "community_entry_present": true,
+    "shop_entry_present": true,
+    "media_entry_present": true,
+    "install_pwa_entry_present": true
+  },
+  "next_gate": "browser/API/deployment verification for public runtime"
+}
