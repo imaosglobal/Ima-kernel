@@ -2,6 +2,7 @@ name: IMA Unified Loop
 
 on:
   push:
+    branches: [main]
     paths:
       - ".ima/loop/unified_loop.py"
       - "core/**"

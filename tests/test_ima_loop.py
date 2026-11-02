@@ -23,8 +23,8 @@ class UnifiedLoopTests(unittest.TestCase):
             "CORRECT", "TEACH", "SHARE_LAWFULLY", "CARRY_FORWARD",
         }
         self.assertTrue(required.issubset(set(LOOP_STAGES)))
-        self.assertIn("single canonical improvement, learning, preservation", loop_context())
-        self.assertIn("add this to the loop", loop_context())
+        self.assertIn("One periodic orchestrator governs improvement, learning, preservation", loop_context())
+        self.assertIn("Documentation is never runtime proof", loop_context())
 
     def test_ima_knows_self_world_and_user_boundaries(self):
         contract = loop_contract()
@@ -34,7 +34,7 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertTrue(contract["identity"]["user_context_is_private_by_default"])
         self.assertIn("one global human-centered intelligence identity", IMA_IDENTITY_CONTEXT)
         self.assertIn("Private user context is isolated", IMA_IDENTITY_CONTEXT)
-        self.assertIn("current user is the immediate human context", IMA_IDENTITY_CONTEXT)
+        self.assertIn("Each user has distinct authorized context", IMA_IDENTITY_CONTEXT)
         self.assertIn("Every verified capability belongs to two paths", IMA_IDENTITY_CONTEXT)
 
     def test_self_marketing_is_evidence_bounded(self):

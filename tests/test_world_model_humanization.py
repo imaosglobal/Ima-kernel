@@ -5,7 +5,7 @@ from core.world_model_humanization import assess_world_model_use, world_model_co
 
 class WorldModelHumanizationTests(unittest.TestCase):
     def test_simulation_is_not_reality(self):
-        self.assertIn("simulations, not reality", world_model_context())
+        self.assertIn("generated world is not the physical world", world_model_context())
 
     def test_high_impact_use_requires_real_world_validation(self):
         result = assess_world_model_use("robot autonomous driving safety")
