@@ -252,5 +252,6 @@ These commits are implementation evidence only. No deployment or live-public suc
 - **PR:** [#138](https://github.com/imaosglobal/Ima-kernel/pull/138), merged by squash as commit `49a016501ba3e5a30811dfa2d072a5f75216e8e8`.
 - **State:** DOCUMENTED_AND_MERGED / NOT_RUNTIME_VERIFIED / NOT_DEPLOYMENT_VERIFIED. This is not evidence of runtime integration.
 - **Runtime code implementation (separate PR):** branch `feature/dynamic-identity-runtime` adds `core/dynamic_identity.py`, injects its policy through `core/human_intelligence.py::compose_prompt`, connects the canonical loop contract in `core/ima_loop.py`, removes the legacy “מי אני?” response shortcut from `ima_master_runtime.py`, and updates the no-provider fallback in `ima_mom.py`; adds `tests/test_dynamic_identity.py`.
-- **State:** IMPLEMENTED_ON_BRANCH / TESTS_PENDING / NOT_MERGED / NOT_DEPLOYED. Existing canonical memory schema retained; no second identity or memory store created.
-- **Remaining verification:** CI/unit tests, inspect PR diff, merge after checks, deploy the merged commit, and verify live chat behavior.
+- **Runtime PR:** [#139](https://github.com/imaosglobal/Ima-kernel/pull/139), merged as `94031873639e0afcf5c835eb9474a5ac38484b97`.
+- **State:** IMPLEMENTED_AND_MERGED / TESTS_NOT_EXECUTED / DEPLOYMENT_NOT_VERIFIED. Existing canonical memory schema retained; no second identity or memory store created.
+- **Verification gap:** no GitHub Actions workflow or status checks were found. Tests exist but were not executed in a reproducible environment. Deployment and live chat behavior remain unverified.
