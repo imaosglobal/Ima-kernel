@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 
 const app=fs.readFileSync(new URL('../ima-ui/src/App.jsx',import.meta.url),'utf8');
 const index=fs.readFileSync(new URL('../ima-ui/index.html',import.meta.url),'utf8');
-const manifest=fs.readFileSync(new URL('../ima-ui/public/manifest.webmanifest',import.meta.url),'utf8');
+const manifest=fs.readFileSync(new URL('../ima-ui/public/manifest.json',import.meta.url),'utf8');
 const support=fs.readFileSync(new URL('../ima-ui/public/support.html',import.meta.url),'utf8');
 
 assert.match(app,/id="support"/,'public support section missing');
@@ -16,7 +16,7 @@ assert.match(app,/getStoredGoogleUser\(\)/,'Google session must be restored');
 assert.match(app,/signInWithGoogleCredential/,'Google verification flow must exist');
 assert.match(app,/loggedIn\?go\('chat'\):go\('login'\)/,'chat must be gated behind verified sign-in');
 assert.match(app,/beforeinstallprompt/,'installable PWA flow missing');
-assert.match(index,/manifest\.webmanifest/,'manifest link missing');
+assert.match(index,/manifest\.json/,'canonical manifest link missing');
 assert.match(manifest,/"display": "standalone"/,'PWA must be installable as standalone');
 const ids=[...app.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);
 for(const target of [...app.matchAll(/href="#([^"]+)"/g)].map(m=>m[1])) assert.ok(ids.includes(target),`broken internal anchor #${target}`);
