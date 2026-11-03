@@ -38,6 +38,8 @@ assert.ok(pages.includes("name: github-pages-${{ github.run_id }}-${{ github.run
 assert.ok(canonicalPages.includes("name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}"), "canonical Pages upload must use a unique run-attempt name");
 assert.ok(canonicalPages.includes("artifact_name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}"), "canonical Pages deploy must consume the unique run-attempt artifact");
 assert.ok(canonicalPages.includes("types: [ima-canonical-deploy]"), "canonical Pages deploy must accept the unified-loop dispatch");
+assert.ok(canonicalPages.includes('workflow_run:') && canonicalPages.includes('"IMA Daily QA and Doodle"') && canonicalPages.includes('"IMA Continuous Health"') && canonicalPages.includes('"IMA Global Web Intelligence"'), "canonical Pages deploy must reconcile state-writing workflows after completion");
+assert.ok(!canonicalPages.includes('"IMA Unified Loop"'), "unified loop must use its single explicit dispatch rather than trigger a duplicate deployment");
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
 assert.ok(unifiedWorkflow.includes("ima-canonical-deploy"), "unified loop must request a canonical deployment after persisting state");
 assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified loop must run only on main");
