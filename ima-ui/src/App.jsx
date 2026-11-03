@@ -6,8 +6,8 @@ import { IMA_HEYGEN } from './imaHeyGen.js';
 import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
 
 const GLB_PATH='/Ima-kernel/mother_character.glb';
-const GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils';
-const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL+'&utm_content=ima_logo';
+const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537';
+const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL;
 const SUPPORT_URL='/Ima-kernel/support.html';
 const PRIVACY_URL='/Ima-kernel/privacy.html';
 const GLB_GIT_BLOB_SHA1='217170d2bd67051270be974292dc3b834eefe206';
@@ -93,7 +93,7 @@ export default function App(){
  const go=id=>{setActive(id);document.getElementById(id)?.scrollIntoView({behavior:'smooth'})};
  useEffect(()=>{if(loggedIn)document.getElementById('chat')?.scrollIntoView({behavior:'smooth'})},[loggedIn]);
  const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');const customization=applyChatPersonalization(text,profile);if(customization.changed){setProfile(customization.next);saveProfile(auth.user,customization.next);setMessages(m=>[...m,{role:'ima',text:customization.next.language==='he'?'שיניתי את ההעדפה שלך.':'I updated your preference.'}]);if(customization.next.language&&customization.next.language!==lang) {localStorage.setItem('ima-language-v2',customization.next.language);window.setTimeout(()=>window.location.reload(),50)}return;}setBusy(true);setAvatarState('listening');try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
- const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();await e.userChoice}catch{trackImaEvent('ima_install_prompt_failed')}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
+ const install=async()=>{if(window.matchMedia?.('(display-mode: standalone)').matches)return;const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();const choice=await e.userChoice;if(choice?.outcome==='accepted')trackImaEvent('ima_install_completed');else trackImaEvent('ima_install_dismissed')}catch{trackImaEvent('ima_install_prompt_failed')}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}trackImaEvent('ima_install_fallback');alert(locale.labels.install+': פתחו את תפריט Chrome ובחרו “התקנה” או “הוספה למסך הבית”. אם האפשרות אינה מופיעה, טענו מחדש את האתר לאחר כמה שניות.');};
  const share=async()=>{try{if(navigator.share){await navigator.share({title:'IMA — אמא',text:'הכירו את IMA — בינה אנושית לכולם.',url:location.href})}else{await navigator.clipboard.writeText(location.href);alert(lang==='he'?'הקישור הועתק.':'Link copied.')}}catch{trackImaEvent('ima_share_cancelled')}};
 
  return <main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
