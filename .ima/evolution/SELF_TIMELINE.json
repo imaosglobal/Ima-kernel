@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T14:16:55+00:00",
+=======
+  "generated_at": "2026-11-03T14:17:17+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -787,14 +791,22 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:16:54+00:00",
+=======
+      "timestamp": "2026-11-03T14:17:16+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:16:54+00:00",
+=======
+      "timestamp": "2026-11-03T14:17:16+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1361,10 +1373,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "122b59594136f7e3ae20d89db27f64f22afb5ca1",
       "timestamp": "2026-11-03T16:16:39+02:00",
       "event": "commit",
       "summary": "freeze IMA auth navigation manifest and campaign invariants in production gate",
+=======
+      "commit": "1951a1ae827cc8d4e3593fa301666afc9441764a",
+      "timestamp": "2026-11-03T16:16:48+02:00",
+      "event": "commit",
+      "summary": "make IMA return links absolute and deployment-safe",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]
