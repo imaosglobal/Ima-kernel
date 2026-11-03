@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T13:57:19+00:00",
+=======
+  "generated_at": "2026-11-03T13:57:36+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -675,14 +679,22 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T13:57:18+00:00",
+=======
+      "timestamp": "2026-11-03T13:57:36+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T13:57:18+00:00",
+=======
+      "timestamp": "2026-11-03T13:57:36+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -829,10 +841,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "984d63f69460cb86356cd89b44679edda524605a",
       "timestamp": "2026-11-03T15:57:05+02:00",
       "event": "commit",
       "summary": "restore canonical IMA campaign logo inside public site",
+=======
+      "commit": "e1008b53610d08e2e891737012a5cca75c873077",
+      "timestamp": "2026-11-03T15:57:12+02:00",
+      "event": "commit",
+      "summary": "align browser identity with canonical campaign logo",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]
