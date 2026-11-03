@@ -100,6 +100,10 @@ jobs:
           grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
           grep -Fq "install-button" src/App.jsx
           grep -Fq "renderButton" src/App.jsx
+          test "$(grep -o '<GoogleLogin auth=' src/App.jsx | wc -l)" -eq 1
+          grep -Fq '<link rel="manifest" href="/Ima-kernel/manifest.json" />' index.html
+          grep -Fq "utm_campaign=ima_initial_100ils" src/App.jsx
+          if grep -Fq 'href="/n"' src/App.jsx index.html support.html privacy.html; then echo "ERROR: broken /n navigation"; exit 1; fi
           if grep -Fq "המשוב התקבל תודה" src/App.jsx; then
             echo "ERROR: legacy feedback acknowledgement detected"
             exit 1
