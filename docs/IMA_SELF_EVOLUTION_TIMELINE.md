@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-11-03T14:09:13+00:00
+- נוצר: 2026-11-03T14:14:22+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -46,7 +46,7 @@
 - 2026-11-03T16:07:25+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
 - 2026-11-03T16:07:25+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
 - 2026-11-03T16:07:25+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
-- 2026-11-03T16:08:57+02:00 — commit — bind authenticated feedback and chat requests to the Google session token
+- 2026-11-03T16:14:07+02:00 — commit — fix canonical IMA account control and single Google entry point
 
 ## פערי יכולת
 
