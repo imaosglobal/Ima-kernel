@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-11-03T10:49:50+00:00
+- נוצר: 2026-11-03T13:18:35+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -17,7 +17,6 @@
 6. מה צריך להיבדק מחדש מחר?
 
 ## נקודות ציון אחרונות
-- 2026-10-17T16:00:00Z — ori_digital_daily_continuity_and_blocker_repair — נשמרה נקודת המשך יומית קנונית ל-Ori Digital: זהות Avatar וקול אומתו דרך render קיים, נבנה registry פלטפורמה-אגנוסטי, והפרסום נשאר חסום רק עד חיבור יעד כתיבה מאומת. מחזורי העתיד חייבים להמשיך מנקודה זו ולא להתחיל מחדש.
 - 2026-10-18 — daily_summary — ## IMA — סיכום למידה יומי
 - 2026-10-30T19:19:00+02:00 — whole_ima_daily_renewal — Daily whole-IMA reconciliation executed against current repository, public source, governance, growth and CI evidence.
 - 2026-10-30T19:19:00+02:00 — canonical_loop_journal_hardening — Added runtime development-journal persistence to the canonical unified loop so task and cycle transitions are preserved with evidence and failure states.
@@ -43,10 +42,11 @@
 - 2026-11-02T22:03:12+02:00 — voice_archive_workflow_manual_trigger_guard — The canonical voice archive workflow previously ran on every push, including unrelated PR branches, and attempted to download YouTube source recordings. The 2026-11-02 run failed because YouTube required bot verification
 - 2026-11-02T22:03:12+02:00 — critical_monitor_schedule_only_guard — A push from the Pages repair branch created a workflow-level failure with zero jobs for the production critical monitor, even though its job was guarded to main. The monitor remains on its five-minute schedule and manual
 - 2026-11-03T07:07:03Z — canonical_daily_sync_and_build_failure_repair — Daily canonical IMA reconciliation inspected the cross-chat sync protocol, development-memory standard, self-evolution timeline and current GitHub Actions evidence. The latest public deployment chain is blocked by a real
-- 2026-11-03T07:14:06Z — commit — chore: record unified IMA loop cycle
 - 2026-11-03T07:18:00Z — public_deploy_verification_google_runtime_blocker — The repaired frontend now builds and the canonical Pages version reached gh-pages at commit cda98e4f8aae6a10710d318caedf6ff4d4ab4548, but the deployment verification correctly failed at the real-browser step because the 
-- 2026-11-03T10:49:48+00:00 — TEST — journal test
-- 2026-11-03T10:49:48+00:00 — REFLECTION — תשובת IMA בטוחה
+- 2026-11-03T13:18:34+00:00 — TEST — journal test
+- 2026-11-03T13:18:34+00:00 — REFLECTION — תשובת IMA בטוחה
+- 2026-11-03T13:30:00Z — public_login_campaign_install_repair — Canonical user requirement: the IMA logo must point to the Google Ads campaign management destination, the sign-in control must remain the genuine Google Identity Services button, and the install control must execute the
+- 2026-11-03T15:17:51+02:00 — commit — docs: record login campaign and install repair status
 
 ## פערי יכולת
 
