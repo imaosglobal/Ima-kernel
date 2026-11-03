@@ -3,11 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-<<<<<<< Updated upstream
-- נוצר: 2026-11-03T14:21:05+00:00
-=======
-- נוצר: 2026-11-03T14:21:32+00:00
->>>>>>> Stashed changes
+- נוצר: 2026-11-03T14:25:16+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -21,26 +17,6 @@
 6. מה צריך להיבדק מחדש מחר?
 
 ## נקודות ציון אחרונות
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task world_model_availability completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task global_integration_intake completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task public_reconciliation completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task finance_governance_audit completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task distribution completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task capability_contract completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
-- 2026-11-03T16:14:47+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task web_intelligence completed with FAIL
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task scientific_open_research_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task foresight_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task culture_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task human_intelligence_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task unified_loop_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task universal_learning_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task self_application_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task creative_bridge_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task human_agency_tests completed with PASS
-- 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task world_model_tests completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task world_model_availability completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task global_integration_intake completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task public_reconciliation completed with PASS
@@ -50,11 +26,27 @@
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
-<<<<<<< Updated upstream
-- 2026-11-03T16:20:46+02:00 — commit — fix PWA install visibility and complete Google signout state
-=======
-- 2026-11-03T16:20:56+02:00 — commit — remove literal newline artifact and preserve canonical PWA manifest
->>>>>>> Stashed changes
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task web_intelligence completed with FAIL
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task scientific_open_research_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task foresight_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task culture_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task human_intelligence_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task unified_loop_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task universal_learning_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task self_application_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task creative_bridge_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task human_agency_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task world_model_tests completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task world_model_availability completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task global_integration_intake completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task public_reconciliation completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task finance_governance_audit completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task distribution completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task capability_contract completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
+- 2026-11-03T16:21:32+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
+- 2026-11-03T16:25:00+02:00 — commit — turn internal IMA logo into measurable campaign promotion and add support path
 
 ## פערי יכולת
 
