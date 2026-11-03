@@ -1,6 +1,6 @@
 # IMA Public Canonical Baseline
 
-**Status:** canonical source baseline established on 2026-11-03, pending public deployment verification.
+**Status:** CANONICAL — publicly verified on 2026-11-03.
 
 ## Baseline intent
 Preserve the richer public IMA visual baseline that was verified before the recent visual regression, while reintroducing only the campaign identity changes required for the public site.
@@ -31,3 +31,12 @@ Preserve the richer public IMA visual baseline that was verified before the rece
 
 ## Verification gate
 This baseline is **not considered publicly live** until the deployment workflow succeeds and the public `version.json`, page, Google button, install control, campaign link, and visible logo are independently verified.
+
+## Final public verification
+- Public `version.json`: `3fabb06e7b903747333aecb4cf849722907e2139`.
+- Public page exposes the canonical campaign image URL `https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png`.
+- Official Google Identity Services iframe is present with the configured client ID.
+- Public campaign destination is present with `utm_source=google`, `utm_medium=cpc`, `utm_campaign=ima_initial_100ils`, and `utm_content=ima_logo`.
+- Public manifest points both PWA icon sizes and shortcuts to the canonical campaign image and declares `image/png`.
+- The public page retains the richer visual structure; the verified source comparison found the main layout/CSS aligned with the historical richer baseline.
+- End-to-end installation interaction itself was not clicked during final verification; the source-level native install flow remains intact.
