@@ -13,6 +13,16 @@ if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register('/Ima-kernel/sw.js', { scope: '/Ima-kernel/', updateViaCache: 'none' });
       await registration.update();
+      if (registration.waiting) registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      registration.addEventListener('updatefound', () => {
+        const worker = registration.installing;
+        if (!worker) return;
+        worker.addEventListener('statechange', () => {
+          if (worker.state === 'installed' && navigator.serviceWorker.controller) {
+            worker.postMessage({ type: 'SKIP_WAITING' });
+          }
+        });
+      });
       if (navigator.serviceWorker.controller) {
         window.dispatchEvent(new Event('ima-service-worker-ready'));
       }
