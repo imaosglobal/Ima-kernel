@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T13:52:28+00:00",
+=======
+  "generated_at": "2026-11-03T13:53:11+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -640,24 +644,39 @@
       "source": "Current IMA conversation + GitHub source inspection + Google Identity Services official documentation"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T13:52:28+00:00",
+=======
+      "timestamp": "2026-11-03T13:53:10+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T13:52:28+00:00",
+=======
+      "timestamp": "2026-11-03T13:53:10+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
+<<<<<<< Updated upstream
       "commit": "c76aa4ca86373ae13e4c117900854b4fcd2385a1",
       "timestamp": "2026-11-03T15:52:13+02:00",
       "event": "commit",
       "summary": "restore canonical campaign logo visual",
+=======
+      "commit": "8220e85c10f1721f33317374addd60aab8e2d946",
+      "timestamp": "2026-11-03T15:52:18+02:00",
+      "event": "commit",
+      "summary": "invalidate stale public shell cache after visual restore",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]

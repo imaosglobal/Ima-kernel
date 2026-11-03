@@ -1,6 +1,10 @@
 {
   "schema": "IMA-UNIFIED-LOOP-1.4",
+<<<<<<< Updated upstream
   "timestamp": "2026-11-03T15:52:28+02:00",
+=======
+  "timestamp": "2026-11-03T15:53:11+02:00",
+>>>>>>> Stashed changes
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -65,7 +69,11 @@
       ],
       "status": "PASS",
       "returncode": 0,
+<<<<<<< Updated upstream
       "stdout_tail": "rror\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://www.python.org/events/python-events/rss/\",\n      \"error\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://api.semanticscholar.org/graph/v1/paper/search?query=artificial%20intelligence&limit=10&fields=title,url,year\",\n      \"error\": \"HTTPError\"\n    }\n  ],\n  \"latest_commoncrawl\": \"CC-MAIN-2026-43\",\n  \"policy\": {\n    \"public_sources_only\": true,\n    \"scientific_open_sources\": [\n      \"OpenAlex\",\n      \"Semantic Scholar\",\n      \"Crossref\",\n      \"PubMed\",\n      \"arXiv\"\n    ],\n    \"robots_and_provider_terms_respected\": true,\n    \"dynamic_authenticated_pages_deferred\": true,\n    \"learning_rule\": \"discovery is input; IMA changes only after verification and tests\",\n    \"commoncrawl_cdx_polite_rate\": \"single-threaded with delay\"\n  },\n  \"items\": [\n    {\n      \"id\": \"a0aba0f3663ad6e62e29\",\n      \"url\": \"https://dfarq.homeip.net/charles-tandy-the-mastermind-behind-radio-shack/\",\n      \"title\": \"Charles Tandy, the mastermind behind Radio Shack\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:52:30Z\"\n    },\n    {\n      \"id\": \"d2dfafa6e2557244bb21\",\n      \"url\": \"https://deepsense.ai/blog/harness-engineering-for-coding-agents-9-patterns-for-more-reliable-ai-assisted-development/\",\n      \"title\": \"Ten harness patterns that you can apply to a real repo\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:52:30Z\"\n    }\n  ]\n}\n",
+=======
+      "stdout_tail": "f40844\",\n      \"url\": \"https://kvittas.app\",\n      \"title\": \"Show HN: Kvittas, an Expense Splitting App\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:53:12Z\"\n    },\n    {\n      \"id\": \"d58eee98a42697ff3a25\",\n      \"url\": \"https://getbema.app/\",\n      \"title\": \"Show HN: Bema: Work messaging built for humans\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:53:12Z\"\n    },\n    {\n      \"id\": \"a0aba0f3663ad6e62e29\",\n      \"url\": \"https://dfarq.homeip.net/charles-tandy-the-mastermind-behind-radio-shack/\",\n      \"title\": \"Charles Tandy, the mastermind behind Radio Shack\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:53:12Z\"\n    },\n    {\n      \"id\": \"d2dfafa6e2557244bb21\",\n      \"url\": \"https://deepsense.ai/blog/harness-engineering-for-coding-agents-9-patterns-for-more-reliable-ai-assisted-development/\",\n      \"title\": \"Ten harness patterns that you can apply to a real repo\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:53:12Z\"\n    },\n    {\n      \"id\": \"3c3df74dab2380f5ee3c\",\n      \"url\": \"https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/\",\n      \"title\": \"If you love a website, back it up\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-03T13:53:12Z\"\n    }\n  ]\n}\n",
+>>>>>>> Stashed changes
       "stderr_tail": ""
     },
     {
@@ -84,7 +92,11 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
+<<<<<<< Updated upstream
       "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.648s\n\nOK\n"
+=======
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.620s\n\nOK\n"
+>>>>>>> Stashed changes
     },
     {
       "task": "foresight_tests",
@@ -256,7 +268,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "lity signals do not prove that this IMA deployment has credentials, tester access, or a successful live generation request.\",\n  \"official_sources\": {\n    \"genie4_official\": {\n      \"url\": \"https://deepmind.google/models/genie/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"genie4_announcement\": {\n      \"url\": \"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"gemini_api_models\": {\n      \"url\": \"https://ai.google.dev/api/models\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    }\n  },\n  \"errors\": {},\n  \"next_gate\": [\n    \"obtain authorized Genie 4 / Project Genie / Gemini API access if offered\",\n    \"connect credentials only through a secure deployment secret store\",\n    \"run a bounded low-risk generation request\",\n    \"verify output provenance and device fallback\",\n    \"only then mark VERIFIED_LIVE\"\n  ]\n}\n",
+      "stdout_tail": "ls do not prove that this IMA deployment has credentials, tester access, or a successful live generation request.\",\n  \"official_sources\": {\n    \"genie4_official\": {\n      \"url\": \"https://deepmind.google/models/genie/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    },\n    \"genie4_announcement\": {\n      \"url\": \"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    },\n    \"gemini_api_models\": {\n      \"url\": \"https://ai.google.dev/api/models\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    }\n  },\n  \"errors\": {},\n  \"next_gate\": [\n    \"obtain authorized Genie 4 / Project Genie / Gemini API access if offered\",\n    \"connect credentials only through a secure deployment secret store\",\n    \"run a bounded low-risk generation request\",\n    \"verify output provenance and device fallback\",\n    \"only then mark VERIFIED_LIVE\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -267,7 +279,11 @@
       ],
       "status": "PASS",
       "returncode": 0,
+<<<<<<< Updated upstream
       "stdout_tail": "{\n  \"generated_at\": \"2026-11-03T13:52:51.991Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+=======
+      "stdout_tail": "{\n  \"generated_at\": \"2026-11-03T13:53:58.231Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+>>>>>>> Stashed changes
       "stderr_tail": ""
     },
     {
@@ -300,7 +316,11 @@
       ],
       "status": "PASS",
       "returncode": 0,
+<<<<<<< Updated upstream
       "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-03T13:52:52Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+=======
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-03T13:53:58Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+>>>>>>> Stashed changes
       "stderr_tail": ""
     },
     {
@@ -323,7 +343,11 @@
       ],
       "status": "PASS",
       "returncode": 0,
+<<<<<<< Updated upstream
       "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-03T13:52:54.187825+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+=======
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-03T13:53:58.663635+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+>>>>>>> Stashed changes
       "stderr_tail": ""
     },
     {
