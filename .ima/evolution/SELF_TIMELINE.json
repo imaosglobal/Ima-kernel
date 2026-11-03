@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T14:07:06+00:00",
+=======
+  "generated_at": "2026-11-03T14:07:25+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -717,14 +721,22 @@
       "source": "ChatGPT implementation"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:07:06+00:00",
+=======
+      "timestamp": "2026-11-03T14:07:24+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:07:06+00:00",
+=======
+      "timestamp": "2026-11-03T14:07:24+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1011,10 +1023,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "b2e1bf5a8a79f02008059936370d6cf7a994ae4a",
       "timestamp": "2026-11-03T16:06:50+02:00",
       "event": "commit",
       "summary": "fix feedback connection state to require Google identity and matching session",
+=======
+      "commit": "11f1180f38d383520300449539a559d838c30977",
+      "timestamp": "2026-11-03T16:07:02+02:00",
+      "event": "commit",
+      "summary": "fix installed app icon to canonical IMA campaign logo",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]
