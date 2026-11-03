@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-11-03T00:33:17+00:00
+- נוצר: 2026-11-03T00:34:45+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -44,9 +44,9 @@
 - 2026-11-02T21:50:30+02:00 — feedback_identity_and_email_notification_boundary — Verified the public feedback backend derives a privacy-preserving identity from its HMAC-validated IMA session and hashes it before archival; raw email is not stored by _growth_identity(). Current durable archive contain
 - 2026-11-02T22:03:12+02:00 — voice_archive_workflow_manual_trigger_guard — The canonical voice archive workflow previously ran on every push, including unrelated PR branches, and attempted to download YouTube source recordings. The 2026-11-02 run failed because YouTube required bot verification
 - 2026-11-02T22:03:12+02:00 — critical_monitor_schedule_only_guard — A push from the Pages repair branch created a workflow-level failure with zero jobs for the production critical monitor, even though its job was guarded to main. The monitor remains on its five-minute schedule and manual
-- 2026-11-03T00:33:14+00:00 — TEST — journal test
-- 2026-11-03T00:33:14+00:00 — REFLECTION — תשובת IMA בטוחה
-- 2026-11-03T02:32:57+02:00 — commit — Merge pull request #147 from imaosglobal/repair/public-ux-regression-2026-11-03
+- 2026-11-03T00:34:43+00:00 — TEST — journal test
+- 2026-11-03T00:34:43+00:00 — REFLECTION — תשובת IMA בטוחה
+- 2026-11-03T02:34:28+02:00 — commit — Fix public UX lint regression in share control
 
 ## פערי יכולת
 
