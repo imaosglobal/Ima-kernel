@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T14:14:22+00:00",
+=======
+  "generated_at": "2026-11-03T14:14:47+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -752,14 +756,22 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:14:22+00:00",
+=======
+      "timestamp": "2026-11-03T14:14:46+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:14:22+00:00",
+=======
+      "timestamp": "2026-11-03T14:14:46+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1186,10 +1198,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "d2225b2dbf3a1d220023babe66062d420f9282d8",
       "timestamp": "2026-11-03T16:14:07+02:00",
       "event": "commit",
       "summary": "fix canonical IMA account control and single Google entry point",
+=======
+      "commit": "9e27b5f63045e3d8cb0cf69f9afc27e43569312e",
+      "timestamp": "2026-11-03T16:14:22+02:00",
+      "event": "commit",
+      "summary": "prevent stale installed IMA shell from restoring old design",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]
