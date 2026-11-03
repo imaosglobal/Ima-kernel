@@ -29,13 +29,15 @@
 const API="https://ima-915m.onrender.com";
 const connection=document.querySelector("#connection");
 function getToken(){return sessionStorage.getItem("ima_session_token")||localStorage.getItem("ima-public-session-token")||""}
+function getGoogleUser(){try{return JSON.parse(localStorage.getItem("ima-google-user")||"null")}catch{return null}}
+function isGoogleConnected(){return Boolean(getToken()&&getGoogleUser())}
 function escapeHtml(value){return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[ch]))}
 async function refreshConnection(){
   try{
-    const token=getToken();
+    const token=isGoogleConnected()?getToken():"";
     const r=await fetch(API+"/ima-api/auth/config",{cache:"no-store"});
     const cfg=await r.json();
-    connection.textContent=token ? "מחובר/ת לאמא דרך Google — המשוב יסומן כמשוב ממשתמש/ת מחובר/ת." : "לא מחובר/ת לאמא — אפשר לשלוח משוב גם כאורח/ת.";
+    connection.textContent=isGoogleConnected() ? "מחובר/ת לאמא דרך Google — המשוב יסומן כמשוב ממשתמש/ת מחובר/ת." : "לא מחובר/ת לאמא — אפשר לשלוח משוב גם כאורח/ת.";
     connection.style.background=token ? "#e6f0e8" : "#f1eadf";
     return {token,googleConfigured:Boolean(cfg.google?.enabled)};
   }catch(e){connection.textContent="לא ניתן לבדוק כרגע את מצב החיבור; המשוב עדיין ניתן לשליחה.";return {token:getToken(),googleConfigured:false}}
@@ -54,7 +56,7 @@ document.querySelector("#f").addEventListener("submit",async e=>{
    timezone:Intl.DateTimeFormat().resolvedOptions().timeZone||"unknown"
  };
  const headers={"Content-Type":"application/json"};
- const token=getToken(); if(token) headers.Authorization="Bearer "+token;
+ const token=isGoogleConnected()?getToken():""; if(token) headers.Authorization="Bearer "+token;
  try{
    const r=await fetch(API+"/ima-api/feedback",{method:"POST",headers,body:JSON.stringify(payload)});
    const d=await r.json();if(!r.ok||!d.accepted||!d.durable_archive||!d.archive_id)throw Error(d.error||"failed");
