@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-11-03T13:59:40+00:00
+- נוצר: 2026-11-03T14:01:19+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -46,7 +46,7 @@
 - 2026-11-03T15:57:37+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
 - 2026-11-03T15:57:37+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
 - 2026-11-03T15:57:37+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
-- 2026-11-03T15:59:24+02:00 — commit — correct canonical campaign PWA icon media type
+- 2026-11-03T16:01:04+02:00 — commit — mark canonical public baseline verified after independent public release check
 
 ## פערי יכולת
 
