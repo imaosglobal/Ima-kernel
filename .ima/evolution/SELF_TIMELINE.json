@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-03T00:09:31+00:00",
+  "generated_at": "2026-11-03T00:33:17+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -619,24 +619,24 @@
       "source": "GitHub Actions run 41516328118, event=push, branch=fix-pages-artifact-collision-20261102, head=828b5086100d4a7a4cacaa36abc881dd71707535, conclusion=failure, total jobs=0; workflow .github/workflows/ima-critical-public-monitor.yml"
     },
     {
-      "timestamp": "2026-11-03T00:09:29+00:00",
+      "timestamp": "2026-11-03T00:33:14+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-03T00:09:29+00:00",
+      "timestamp": "2026-11-03T00:33:14+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "558d69c0b00954a0d24610a586acc31befee1b2f",
-      "timestamp": "2026-11-03T02:09:14+02:00",
+      "commit": "6374a1861097f497a0eb26ad0e0d1974eaf5e685",
+      "timestamp": "2026-11-03T02:32:57+02:00",
       "event": "commit",
-      "summary": "Reconcile canonical Pages after state-writing workflows (#146)",
+      "summary": "Merge pull request #147 from imaosglobal/repair/public-ux-regression-2026-11-03",
       "source": "git"
     }
   ]
