@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   unified:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'push' || (github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'chore: record unified IMA loop cycle'))
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
