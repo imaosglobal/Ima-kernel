@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T14:21:05+00:00",
+=======
+  "generated_at": "2026-11-03T14:21:32+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -822,14 +826,22 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:21:03+00:00",
+=======
+      "timestamp": "2026-11-03T14:21:31+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:21:03+00:00",
+=======
+      "timestamp": "2026-11-03T14:21:31+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1536,10 +1548,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "d6f560318efe71862ee204291d227fa8e3898740",
       "timestamp": "2026-11-03T16:20:46+02:00",
       "event": "commit",
       "summary": "fix PWA install visibility and complete Google signout state",
+=======
+      "commit": "1a73d671b552e4884e060ccf1bdf4132cdb1e5c8",
+      "timestamp": "2026-11-03T16:20:56+02:00",
+      "event": "commit",
+      "summary": "remove literal newline artifact and preserve canonical PWA manifest",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]

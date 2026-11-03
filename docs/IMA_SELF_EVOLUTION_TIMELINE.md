@@ -3,7 +3,11 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
+<<<<<<< Updated upstream
 - נוצר: 2026-11-03T14:21:05+00:00
+=======
+- נוצר: 2026-11-03T14:21:32+00:00
+>>>>>>> Stashed changes
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -46,7 +50,11 @@
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task growth_cycle completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_task — Canonical IMA loop task monetization_readiness completed with PASS
 - 2026-11-03T16:17:17+02:00 — canonical_loop_cycle — Canonical whole-IMA cycle completed; task-level evidence recorded.
+<<<<<<< Updated upstream
 - 2026-11-03T16:20:46+02:00 — commit — fix PWA install visibility and complete Google signout state
+=======
+- 2026-11-03T16:20:56+02:00 — commit — remove literal newline artifact and preserve canonical PWA manifest
+>>>>>>> Stashed changes
 
 ## פערי יכולת
 
