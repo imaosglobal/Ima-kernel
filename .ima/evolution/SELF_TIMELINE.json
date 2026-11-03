@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-03T13:31:54+00:00",
+  "generated_at": "2026-11-03T13:52:28+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -640,24 +640,24 @@
       "source": "Current IMA conversation + GitHub source inspection + Google Identity Services official documentation"
     },
     {
-      "timestamp": "2026-11-03T13:31:53+00:00",
+      "timestamp": "2026-11-03T13:52:28+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-03T13:31:53+00:00",
+      "timestamp": "2026-11-03T13:52:28+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "55dc06e4c8e8d6c7706ea71c544406f35935f81b",
-      "timestamp": "2026-11-03T15:31:36+02:00",
+      "commit": "c76aa4ca86373ae13e4c117900854b4fcd2385a1",
+      "timestamp": "2026-11-03T15:52:13+02:00",
       "event": "commit",
-      "summary": "restore public UX to verified richer version; preserve current backend and Google auth config",
+      "summary": "restore canonical campaign logo visual",
       "source": "git"
     }
   ]

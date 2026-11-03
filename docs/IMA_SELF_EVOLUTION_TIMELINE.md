@@ -3,7 +3,7 @@
 המסמך נבנה מחדש בכל מחזור מתוך Git, יומן הפיתוח, היומנים היומיים, עוגני ההיסטוריה וארכיון הקוד.
 
 ## מצב נוכחי
-- נוצר: 2026-11-03T13:31:54+00:00
+- נוצר: 2026-11-03T13:52:28+00:00
 - פערי יכולת פתוחים: 12
 - פריטי ארכיון/גיבוי שנסרקו: 1210
 - Issues פתוחים שנאספו: UNAVAILABLE
@@ -44,9 +44,9 @@
 - 2026-11-03T07:07:03Z — canonical_daily_sync_and_build_failure_repair — Daily canonical IMA reconciliation inspected the cross-chat sync protocol, development-memory standard, self-evolution timeline and current GitHub Actions evidence. The latest public deployment chain is blocked by a real
 - 2026-11-03T07:18:00Z — public_deploy_verification_google_runtime_blocker — The repaired frontend now builds and the canonical Pages version reached gh-pages at commit cda98e4f8aae6a10710d318caedf6ff4d4ab4548, but the deployment verification correctly failed at the real-browser step because the 
 - 2026-11-03T13:30:00Z — public_login_campaign_install_repair — Canonical user requirement: the IMA logo must point to the Google Ads campaign management destination, the sign-in control must remain the genuine Google Identity Services button, and the install control must execute the
-- 2026-11-03T13:31:53+00:00 — TEST — journal test
-- 2026-11-03T13:31:53+00:00 — REFLECTION — תשובת IMA בטוחה
-- 2026-11-03T15:31:36+02:00 — commit — restore public UX to verified richer version; preserve current backend and Google auth config
+- 2026-11-03T13:52:28+00:00 — TEST — journal test
+- 2026-11-03T13:52:28+00:00 — REFLECTION — תשובת IMA בטוחה
+- 2026-11-03T15:52:13+02:00 — commit — restore canonical campaign logo visual
 
 ## פערי יכולת
 
