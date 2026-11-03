@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-02T23:59:22+00:00",
+  "generated_at": "2026-11-03T00:04:03+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -619,24 +619,24 @@
       "source": "GitHub Actions run 41516328118, event=push, branch=fix-pages-artifact-collision-20261102, head=828b5086100d4a7a4cacaa36abc881dd71707535, conclusion=failure, total jobs=0; workflow .github/workflows/ima-critical-public-monitor.yml"
     },
     {
-      "timestamp": "2026-11-02T23:59:20+00:00",
+      "timestamp": "2026-11-03T00:04:00+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-02T23:59:20+00:00",
+      "timestamp": "2026-11-03T00:04:00+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "191587adf8170193ff99cda19c061821858aeb61",
-      "timestamp": "2026-11-03T01:59:05+02:00",
+      "commit": "41559e5036cee7371760b1dfa4bd179823d9f7da",
+      "timestamp": "2026-11-03T02:03:46+02:00",
       "event": "commit",
-      "summary": "Fix Android health build JDK compatibility (#144)",
+      "summary": "Schedule one daily whole-IMA loop and cover every main update (#145)",
       "source": "git"
     }
   ]
