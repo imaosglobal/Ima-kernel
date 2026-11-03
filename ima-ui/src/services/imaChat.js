@@ -3,6 +3,9 @@ const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrende
 
 async function getSessionToken(forceRefresh = false) {
   const key = 'ima-public-session-token';
+  const googleToken = localStorage.getItem('ima-google-session-token');
+  const googleUser = localStorage.getItem('ima-google-user');
+  if (googleToken && googleUser && !forceRefresh) return googleToken;
   const cached = localStorage.getItem(key);
   if (cached && !forceRefresh) return cached;
   if (forceRefresh) localStorage.removeItem(key);
@@ -128,6 +131,7 @@ export async function signInWithGoogleCredential(credential, nonce) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.token) throw new Error(data.error || 'Google sign-in failed');
   localStorage.setItem('ima-public-session-token', data.token);
+  localStorage.setItem('ima-google-session-token', data.token);
   if (data.user) localStorage.setItem('ima-google-user', JSON.stringify(data.user));
   trackImaEvent('ima_google_signin_completed');
   return data;
@@ -136,6 +140,7 @@ export async function signInWithGoogleCredential(credential, nonce) {
 export function adoptGoogleSession(data) {
   if (!data?.token) throw new Error('Google session token missing');
   localStorage.setItem('ima-public-session-token', data.token);
+  localStorage.setItem('ima-google-session-token', data.token);
   if (data.user) localStorage.setItem('ima-google-user', JSON.stringify(data.user));
   trackImaEvent('ima_google_signin_completed');
   return data;
@@ -147,5 +152,6 @@ export function getStoredGoogleUser() {
 
 export function signOutIma() {
   localStorage.removeItem('ima-public-session-token');
+  localStorage.removeItem('ima-google-session-token');
   localStorage.removeItem('ima-google-user');
 }
