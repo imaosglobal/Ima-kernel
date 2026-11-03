@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-03T13:18:35+00:00",
+  "generated_at": "2026-11-03T13:31:54+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -633,20 +633,6 @@
       "source": "GitHub Actions deploy run 41594502323 and source files ima-ui/src/App.jsx, app.py, .env.production.template"
     },
     {
-      "timestamp": "2026-11-03T13:18:34+00:00",
-      "event": "TEST",
-      "summary": "journal test",
-      "status": "VERIFIED",
-      "source": "unit-test"
-    },
-    {
-      "timestamp": "2026-11-03T13:18:34+00:00",
-      "event": "REFLECTION",
-      "summary": "תשובת IMA בטוחה",
-      "status": "VERIFIED",
-      "source": "ima_runtime.reflection_runtime"
-    },
-    {
       "timestamp": "2026-11-03T13:30:00Z",
       "event": "public_login_campaign_install_repair",
       "summary": "Canonical user requirement: the IMA logo must point to the Google Ads campaign management destination, the sign-in control must remain the genuine Google Identity Services button, and the install control must execute the browser install flow rather than behave as a dead button. Updated the logo target to campaign 24409551537 and hardened install prompt handling. The Google button itself is already rendered by Google's official GIS renderButton API; it cannot become a functioning authenticated sign-in without an authorized Google OAuth client ID configured in the public runtime. This requirement is therefore partially repaired and partially unresolved rather than falsely marked complete.",
@@ -654,10 +640,24 @@
       "source": "Current IMA conversation + GitHub source inspection + Google Identity Services official documentation"
     },
     {
-      "commit": "d6f3579cf1282a62d6f785aec50eee01606afe8a",
-      "timestamp": "2026-11-03T15:17:51+02:00",
+      "timestamp": "2026-11-03T13:31:53+00:00",
+      "event": "TEST",
+      "summary": "journal test",
+      "status": "VERIFIED",
+      "source": "unit-test"
+    },
+    {
+      "timestamp": "2026-11-03T13:31:53+00:00",
+      "event": "REFLECTION",
+      "summary": "תשובת IMA בטוחה",
+      "status": "VERIFIED",
+      "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "commit": "55dc06e4c8e8d6c7706ea71c544406f35935f81b",
+      "timestamp": "2026-11-03T15:31:36+02:00",
       "event": "commit",
-      "summary": "docs: record login campaign and install repair status",
+      "summary": "restore public UX to verified richer version; preserve current backend and Google auth config",
       "source": "git"
     }
   ]
