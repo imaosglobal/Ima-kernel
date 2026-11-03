@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-03T14:25:16+00:00",
+  "generated_at": "2026-11-03T14:30:18+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -857,14 +857,14 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
-      "timestamp": "2026-11-03T14:25:16+00:00",
+      "timestamp": "2026-11-03T14:30:17+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-03T14:25:16+00:00",
+      "timestamp": "2026-11-03T14:30:17+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1711,10 +1711,10 @@
       "source": "ima-unified-loop"
     },
     {
-      "commit": "14a1b185298f3c630e4c2a60877c8b9f992eb8c2",
-      "timestamp": "2026-11-03T16:25:00+02:00",
+      "commit": "a42e0cc57b6e842481b45069c045e863dd6417c7",
+      "timestamp": "2026-11-03T16:30:02+02:00",
       "event": "commit",
-      "summary": "turn internal IMA logo into measurable campaign promotion and add support path",
+      "summary": "enforce one official Google sign-in control across IMA",
       "source": "git"
     }
   ]
