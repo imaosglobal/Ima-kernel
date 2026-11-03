@@ -3,12 +3,19 @@ name: IMA Unified Loop
 on:
   push:
     branches: [main]
-    paths:
-      - ".ima/loop/unified_loop.py"
-      - "core/**"
-      - "tests/**"
-      - "requirements.txt"
-      - ".github/workflows/ima-unified-loop.yml"
+    paths-ignore:
+      - ".ima/loop/UNIFIED_LOOP_STATE.json"
+      - ".ima/public_reconciliation/state.json"
+      - ".ima/multi_perspective/review.json"
+      - ".ima/distribution/prepared_queue.json"
+      - ".ima/growth/GLOBAL_GROWTH_STATE.json"
+      - ".ima/web_intelligence/state.json"
+      - "artifacts/web-intelligence/**"
+      - ".ima/evolution/**"
+      - ".ima/journal/daily/**"
+      - "docs/IMA_SELF_EVOLUTION_TIMELINE.md"
+  schedule:
+    - cron: "17 3 * * *"
   workflow_dispatch:
 
 permissions:
