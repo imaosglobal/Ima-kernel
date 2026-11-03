@@ -1,4 +1,5 @@
 import { trackImaEvent } from './analytics';
+import { observeIma } from './imaLearningBus';
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
 
 async function getSessionToken(forceRefresh = false) {
@@ -46,6 +47,7 @@ export async function askIma(message, personalization = {}) {
   });
   if (!data.response) throw new Error('IMA returned no response');
   trackImaEvent('ima_chat_completed');
+  observeIma({ type: 'chat_completed', source: 'chat', outcome: 'response_received', data: { response_present: true } });
   return data.response;
 }
 
@@ -60,7 +62,9 @@ export async function submitFeedback(sentiment, text, metadata = {}) {
     source: metadata.source || 'public-runtime',
     metadata: { interface: 'public-feedback', ...(metadata.extra || {}) },
   };
-  return request('/ima-api/feedback', { method: 'POST', body: JSON.stringify(payload) });
+  const result = await request('/ima-api/feedback', { method: 'POST', body: JSON.stringify(payload) });
+  observeIma({ type: 'feedback', source: metadata.source || 'public-feedback', outcome: 'accepted', data: { sentiment, language: payload.language } });
+  return result;
 }
 
 export async function archiveChatLearningSignal(message, response, personalization = {}) {
@@ -83,6 +87,7 @@ export async function archiveChatLearningSignal(message, response, personalizati
   try {
     const data = await request('/ima-api/feedback', { method: 'POST', body: JSON.stringify(payload) });
     trackImaEvent('ima_chat_learning_archived');
+    observeIma({ type: 'learning_signal_archived', source: 'chat', outcome: 'accepted', data: { language: payload.language } });
     return data;
   } catch (error) {
     trackImaEvent('ima_chat_learning_archive_failed');
@@ -91,7 +96,9 @@ export async function archiveChatLearningSignal(message, response, personalizati
 }
 
 export async function getImaRuntime() {
-  return request('/ima-api/runtime', { cache: 'no-store' });
+  const data = await request('/ima-api/runtime', { cache: 'no-store' });
+  observeIma({ type: 'runtime_checked', source: 'runtime', outcome: 'available' });
+  return data;
 }
 
 
@@ -100,10 +107,12 @@ export async function getMemoryConsent() {
 }
 
 export async function setMemoryConsent(status) {
-  return request('/ima-api/memory/consent', {
+  const data = await request('/ima-api/memory/consent', {
     method: 'PUT',
     body: JSON.stringify({ status }),
   });
+  observeIma({ type: 'memory_changed', source: 'memory', outcome: String(status) });
+  return data;
 }
 
 export async function exportMemory() {
