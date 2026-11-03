@@ -1,4 +1,4 @@
-const CACHE = 'ima-shell-v7';
+const CACHE = 'ima-shell-v8';
 const SHELL = [
   '/Ima-kernel/',
   '/Ima-kernel/index.html',
@@ -12,6 +12,8 @@ self.addEventListener('install', event => {
       .then(() => self.skipWaiting())
   );
 });
+
+self.addEventListener('message', event => { if (event.data?.type === 'SKIP_WAITING') self.skipWaiting(); });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
