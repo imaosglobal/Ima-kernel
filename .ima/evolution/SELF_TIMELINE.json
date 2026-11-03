@@ -1,6 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
+<<<<<<< Updated upstream
   "generated_at": "2026-11-03T14:30:18+00:00",
+=======
+  "generated_at": "2026-11-03T14:30:43+00:00",
+>>>>>>> Stashed changes
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -857,14 +861,22 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:30:17+00:00",
+=======
+      "timestamp": "2026-11-03T14:30:42+00:00",
+>>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
+<<<<<<< Updated upstream
       "timestamp": "2026-11-03T14:30:17+00:00",
+=======
+      "timestamp": "2026-11-03T14:30:42+00:00",
+>>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1711,10 +1723,17 @@
       "source": "ima-unified-loop"
     },
     {
+<<<<<<< Updated upstream
       "commit": "a42e0cc57b6e842481b45069c045e863dd6417c7",
       "timestamp": "2026-11-03T16:30:02+02:00",
       "event": "commit",
       "summary": "enforce one official Google sign-in control across IMA",
+=======
+      "commit": "fecf281a25b2b569d42ce6d6de1683a8f2ddf1eb",
+      "timestamp": "2026-11-03T16:30:17+02:00",
+      "event": "commit",
+      "summary": "restore public feedback.html page",
+>>>>>>> Stashed changes
       "source": "git"
     }
   ]
