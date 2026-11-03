@@ -1,15 +1,11 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-<<<<<<< Updated upstream
-  "generated_at": "2026-11-03T14:14:22+00:00",
-=======
-  "generated_at": "2026-11-03T14:14:47+00:00",
->>>>>>> Stashed changes
+  "generated_at": "2026-11-03T14:16:55+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
     "git_commits": 1,
-    "development_journal": 128,
+    "development_journal": 153,
     "daily_summaries": 5
   },
   "archive_inventory": {
@@ -756,22 +752,49 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
-<<<<<<< Updated upstream
-      "timestamp": "2026-11-03T14:14:22+00:00",
-=======
       "timestamp": "2026-11-03T14:14:46+00:00",
->>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-<<<<<<< Updated upstream
-      "timestamp": "2026-11-03T14:14:22+00:00",
-=======
       "timestamp": "2026-11-03T14:14:46+00:00",
->>>>>>> Stashed changes
+      "event": "REFLECTION",
+      "summary": "תשובת IMA בטוחה",
+      "status": "VERIFIED",
+      "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "timestamp": "2026-11-03T14:14:47+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "test",
+      "status": "VERIFIED",
+      "source": "ima_runtime.worldview_expansion"
+    },
+    {
+      "timestamp": "2026-11-03T14:14:47+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "IMA worldview expansion self-test",
+      "status": "VERIFIED",
+      "source": "ima_runtime.worldview_expansion"
+    },
+    {
+      "timestamp": "2026-11-03T14:14:47+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "test",
+      "status": "GAPS_RECORDED",
+      "source": "ima_runtime.worldview_expansion"
+    },
+    {
+      "timestamp": "2026-11-03T14:16:54+00:00",
+      "event": "TEST",
+      "summary": "journal test",
+      "status": "VERIFIED",
+      "source": "unit-test"
+    },
+    {
+      "timestamp": "2026-11-03T14:16:54+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
@@ -1198,17 +1221,150 @@
       "source": "ima-unified-loop"
     },
     {
-<<<<<<< Updated upstream
-      "commit": "d2225b2dbf3a1d220023babe66062d420f9282d8",
-      "timestamp": "2026-11-03T16:14:07+02:00",
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task web_intelligence completed with FAIL",
+      "status": "FAILED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task scientific_open_research_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task foresight_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task culture_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task human_intelligence_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task unified_loop_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task universal_learning_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task self_application_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task creative_bridge_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task human_agency_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task world_model_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task world_model_availability completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task global_integration_intake completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task public_reconciliation completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task finance_governance_audit completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task distribution completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task capability_contract completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task growth_cycle completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task monetization_readiness completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:14:47+02:00",
+      "event": "canonical_loop_cycle",
+      "summary": "Canonical whole-IMA cycle completed; task-level evidence recorded.",
+      "status": "GAPS_RECORDED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "commit": "122b59594136f7e3ae20d89db27f64f22afb5ca1",
+      "timestamp": "2026-11-03T16:16:39+02:00",
       "event": "commit",
-      "summary": "fix canonical IMA account control and single Google entry point",
-=======
-      "commit": "9e27b5f63045e3d8cb0cf69f9afc27e43569312e",
-      "timestamp": "2026-11-03T16:14:22+02:00",
-      "event": "commit",
-      "summary": "prevent stale installed IMA shell from restoring old design",
->>>>>>> Stashed changes
+      "summary": "freeze IMA auth navigation manifest and campaign invariants in production gate",
       "source": "git"
     }
   ]
