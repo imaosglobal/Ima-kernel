@@ -4,7 +4,7 @@ import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { IMA_HEYGEN } from './imaHeyGen.js';
 import GlobalPrinciples from './GlobalPrinciples.jsx';
-import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
+import { detectLanguage, getLocale } from './i18n.js';
 import { observeIma } from './services/imaLearningBus';
 
 const GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils';
@@ -18,15 +18,6 @@ const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'no
 function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';return PERSONALIZATION_KEY+':'+String(id).toLowerCase()}
 function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
 function saveProfile(user,profile){localStorage.setItem(profileStorageKey(user),JSON.stringify(profile))}
-function applyChatPersonalization(text,profile){
- const t=String(text||'').trim().toLowerCase(), next={...profile}; let changed=false;
- const set=(k,v)=>{if(v&&next[k]!==v){next[k]=v;changed=true}};
- const l=t.match(/(?:language|שפה)\s*(?:to|ל|=)?\s*(hebrew|עברית|english|אנגלית|arabic|ערבית)/); const lm={hebrew:'he',עברית:'he',english:'en',אנגלית:'en',arabic:'ar',ערבית:'ar'}; if(l)set('language',lm[l[1]]);
- const tone=t.match(/(?:tone|סגנון)\s*(?:to|ל|=)?\s*(balanced|direct|warm|professional|simple|מאוזן|ישיר|חם|מקצועי|פשוט)/); const tm={balanced:'balanced',direct:'direct',warm:'warm',professional:'professional',simple:'simple',מאוזן:'balanced',ישיר:'direct',חם:'warm',מקצועי:'professional',פשוט:'simple'}; if(tone)set('tone',tm[tone[1]]);
- const depth=t.match(/(?:depth|עומק)\s*(?:to|ל|=)?\s*(short|normal|deep|קצר|רגיל|עמוק)/); const dm={short:'short',normal:'normal',deep:'deep',קצר:'short',רגיל:'normal',עמוק:'deep'}; if(depth)set('depth',dm[depth[1]]);
- return {next,changed};
-}
-
 
 function GoogleLogin({auth,setAuth,locale,setProfile,setActive}){
  const ref=useRef(null);
