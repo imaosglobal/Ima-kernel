@@ -118,3 +118,12 @@ Date: 2026-10-22
 - EXECUTED: updated the harness contract to assert manual-only operation, zero cron schedules, no push trigger, and the shared state-writer concurrency lock.
 - VERIFIED (prior deployment): canonical deployment job logs for `3c68068a52eb25e675478d7c08696436b875fd44` show `IMA_PUBLIC_VERSION=VERIFIED`, `IMA_PUBLIC_STATIC_PAGES=VERIFIED`, `IMA_PUBLIC_INDEX=VERIFIED`, and `IMA_BROWSER_SMOKE=PASS`; `gh-pages/version.json` matched that SHA.
 - GAPS_RECORDED: current `main` is ahead of the public version; final post-commit CI and deployment must complete before LIVE can be claimed.
+
+
+## 2026-11-04 — mobile navigation regression repair (execution recorded; public verification pending)
+
+- VERIFIED (pre-fix baseline): canonical `main`, `gh-pages/version.json`, and public `/version.json` matched `2795cb06f61aa0a9731afabb64e854aef372af0c`. Canonical Pages run `41881310295` completed successfully; its logs show `IMA_PUBLIC_VERSION=VERIFIED`, `IMA_PUBLIC_STATIC_PAGES=VERIFIED`, `IMA_PUBLIC_INDEX=VERIFIED`, and `IMA_BROWSER_SMOKE=PASS`.
+- FAILED (user-visible regression): the 390px mobile navigation rendered labels as narrow vertical letter stacks. Root cause is the loaded `ima-ui/src/index.css` global rule `.ima-app *{overflow-wrap:anywhere;min-width:0}`, which allows navigation buttons to shrink and wrap. `ima-ui/src/main.jsx` imports `index.css`, not the similarly named `App.css`; edits to `App.css` would not repair the live surface.
+- EXECUTED: added navigation-specific no-wrap, non-shrinking button rules and horizontal overflow behavior to the loaded `ima-ui/src/index.css`. Added real-browser regression assertions at 390px, 768px and 1280px to `scripts/public_site_browser_smoke.py`. Code commit: `f0ff607c94e3f04ba86c9e263b4d9462a42ecc7b`.
+- GAPS_RECORDED: canonical deployment run `41882021083` began before commit `f0ff607` and its event SHA is `2795cb`; it cannot by itself verify the navigation fix. The generated `pages build and deployment` run `41882097260` is not the canonical publisher and must not be treated as deployment evidence. A canonical run whose checked-out source is the post-fix main SHA, followed by public version/mirror checks and the expanded Playwright smoke, is required before this repair is VERIFIED.
+- TIMESTAMP: 2026-11-04T17:58:51.018Z.
