@@ -127,3 +127,13 @@ Date: 2026-10-22
 - EXECUTED: added navigation-specific no-wrap, non-shrinking button rules and horizontal overflow behavior to the loaded `ima-ui/src/index.css`. Added real-browser regression assertions at 390px, 768px and 1280px to `scripts/public_site_browser_smoke.py`. Code commit: `f0ff607c94e3f04ba86c9e263b4d9462a42ecc7b`.
 - GAPS_RECORDED: canonical deployment run `41882021083` began before commit `f0ff607` and its event SHA is `2795cb`; it cannot by itself verify the navigation fix. The generated `pages build and deployment` run `41882097260` is not the canonical publisher and must not be treated as deployment evidence. A canonical run whose checked-out source is the post-fix main SHA, followed by public version/mirror checks and the expanded Playwright smoke, is required before this repair is VERIFIED.
 - TIMESTAMP: 2026-11-04T17:58:51.018Z.
+
+
+## 2026-11-04 — QA contract reconciliation (execution recorded; post-change workflows pending)
+
+- EXECUTED: updated `tests/test_harness.test.cjs` to match the canonical deployment contract: deploy on main push/manual/repository dispatch, with no broad `workflow_run` fan-out. This removes the stale assertion that caused `IMA Continuous Health` run `41882319314` to fail at `Core and contract tests`.
+- EXECUTED: added bounded GitHub Pages retry to `qa/daily_qa.py` for 404/429/5xx and network errors (24 attempts, 5 seconds apart). A persistent outage still fails after the retry budget; no failure is downgraded to a warning. The previous `IMA Daily QA and Doodle` run `41882319601` failed at `landing-page: HTTP Error 404` while a Pages deployment was in progress.
+- EXECUTED: `.github/workflows/ima-public-site-daily-qa.yml` now passes `EXPECTED_SHA: ${{ github.sha }}` to the real-browser smoke script, so the scheduled monitor can compare the public marker to the checked-out source SHA. The smoke script covers navigation at 390px, 768px and 1280px.
+- FAILED / BLOCKED: `IMA Firecrawl Live Browser QA` run `41882319414` stopped at `Require Firecrawl credential` because repository secret `FIRECRAWL_API_KEY` is absent; the browser session and tests were skipped. No secret was created or requested.
+- GAPS_RECORDED: code commit `c226c264c92a4e5cd4ace9e8ba8c7f1e7b749471` contains these QA changes, but they are not VERIFIED until the post-change GitHub checks complete and the canonical public deployment/runtime checks pass.
+- TIMESTAMP: 2026-11-04T18:03:01.028Z.
