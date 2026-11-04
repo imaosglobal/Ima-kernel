@@ -7,8 +7,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: ima-web-intelligence
-  cancel-in-progress: true
+  group: ima-web-intelligence-state-writer
+  cancel-in-progress: false
 
 jobs:
   discover:
@@ -35,6 +35,8 @@ jobs:
           print("IMA_WEB_INTELLIGENCE=PASS")
           print("discovered=", d["discovered"], "changed=", d["changed"])
           PY
+      - name: Validate web-intelligence state before persistence
+        run: python -m json.tool .ima/web_intelligence/state.json >/dev/null
       - name: Persist evidence
         run: |
           mkdir -p artifacts/web-intelligence

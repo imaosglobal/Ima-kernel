@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: ima-daily-lifelong-learning
-  cancel-in-progress: true
+  group: ima-web-intelligence-state-writer
+  cancel-in-progress: false
 
 jobs:
   evaluate:
@@ -27,6 +27,8 @@ jobs:
         run: |
           python -m unittest tests/test_web_intelligence.py -v
           python .ima/web_intelligence/global_discovery.py --once > /tmp/ima-web-intelligence.json
+      - name: Validate web-intelligence state before adaptation
+        run: python -m json.tool .ima/web_intelligence/state.json >/dev/null
       - name: Learn compare prototype test and verify
         run: |
           python -m unittest tests/test_adaptation_evaluator.py -v

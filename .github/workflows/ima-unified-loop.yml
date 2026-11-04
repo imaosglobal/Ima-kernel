@@ -14,8 +14,6 @@ on:
       - ".ima/evolution/**"
       - ".ima/journal/daily/**"
       - "docs/IMA_SELF_EVOLUTION_TIMELINE.md"
-  schedule:
-    - cron: "17 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,7 +22,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: ima-unified-loop
+  group: ima-web-intelligence-state-writer
   cancel-in-progress: false
 
 jobs:
@@ -36,6 +34,11 @@ jobs:
       PYTHONPATH: .
     steps:
       - uses: actions/checkout@v4
+      - name: Start from the latest canonical main before generating state
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard FETCH_HEAD
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -66,7 +69,15 @@ jobs:
           git config user.name "IMA Unified Loop"
           git config user.email "actions@users.noreply.github.com"
           git fetch origin main
-          git rebase --autostash origin/main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            echo "::error::main advanced during this cycle; refusing to merge generated state"
+            exit 1
+          fi
+          python -m json.tool .ima/web_intelligence/state.json >/dev/null
+          if grep -nE '^(<<<<<<<|=======|>>>>>>>)' .ima/web_intelligence/state.json; then
+            echo "::error::merge conflict markers detected in web-intelligence state"
+            exit 1
+          fi
           git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/multi_perspective/review.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
           git diff --cached --quiet && exit 0
           git commit -m "chore: record unified IMA loop cycle"

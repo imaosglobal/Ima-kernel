@@ -205,7 +205,6 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Verify critical public controls in a real browser
-        continue-on-error: true
         env:
           SITE: ${{ steps.deployment.outputs.page_url }}
           EXPECTED_SHA: ${{ steps.source.outputs.sha }}
