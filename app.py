@@ -42,6 +42,10 @@ NYLAS_WEBHOOK_SECRET = os.environ.get("NYLAS_WEBHOOK_SECRET", "").strip()
 NYLAS_WEBHOOK_SETUP_TOKEN = os.environ.get("NYLAS_WEBHOOK_SETUP_TOKEN", "").strip()
 NYLAS_WEBHOOK_URL = os.environ.get("NYLAS_WEBHOOK_URL", "https://ima-915m.onrender.com/ima-api/webhooks/nylas")
 SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
+LIVE_BROWSER_PROVIDER = os.environ.get("IMA_LIVE_BROWSER_PROVIDER", "firecrawl").strip().lower()
+FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "").strip()
+FIRECRAWL_BASE_URL = os.environ.get("FIRECRAWL_BASE_URL", "https://api.firecrawl.dev/v2").strip().rstrip("/")
+LIVE_BROWSER_TARGET = os.environ.get("IMA_LIVE_BROWSER_TARGET", "https://imaosglobal.github.io/Ima-kernel/").strip()
 
 REGISTRY_PATH = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
 UNIVERSAL_MEMORY_PATH = Path(__file__).resolve().parent / ".ima" / "memory" / "universal_interaction_memory.py"
@@ -279,6 +283,42 @@ def memory_delete():
     except Exception:
         app.logger.exception("Universal memory deletion failed")
         return jsonify({"error": "universal memory deletion unavailable"}), 503
+
+def _live_browser_headers():
+    return {"Authorization": f"Bearer {FIRECRAWL_API_KEY}", "Content-Type": "application/json", "Accept": "application/json"}
+def _firecrawl_json(method, path, payload=None):
+    if not FIRECRAWL_API_KEY: raise RuntimeError("FIRECRAWL_API_KEY not configured")
+    response=requests.request(method,FIRECRAWL_BASE_URL+path,headers=_live_browser_headers(),json=payload,timeout=45)
+    data=response.json() if response.content else {}
+    if response.status_code>=400: raise RuntimeError(str(data.get("error") if isinstance(data,dict) else f"Firecrawl HTTP {response.status_code}"))
+    return data
+@app.get("/ima-api/live-browser/status")
+def live_browser_status():
+    return jsonify({"provider":LIVE_BROWSER_PROVIDER,"configured":bool(FIRECRAWL_API_KEY) if LIVE_BROWSER_PROVIDER=="firecrawl" else False,"target":LIVE_BROWSER_TARGET,"interactive_takeover":LIVE_BROWSER_PROVIDER=="firecrawl","status":"ready" if LIVE_BROWSER_PROVIDER=="firecrawl" and FIRECRAWL_API_KEY else "awaiting_provider_configuration"})
+@app.post("/ima-api/live-browser/session")
+def live_browser_session():
+    user_id=_session_user_id()
+    if not user_id:return jsonify({"error":"valid Google/IMA session required"}),401
+    if LIVE_BROWSER_PROVIDER!="firecrawl" or not FIRECRAWL_API_KEY:return jsonify({"error":"FIRECRAWL_API_KEY is not configured on the IMA runtime"}),503
+    try:
+        scrape=_firecrawl_json("POST","/scrape",{"url":LIVE_BROWSER_TARGET,"formats":["markdown"],"profile":{"name":"ima-public-"+hashlib.sha256(user_id.encode()).hexdigest()[:24],"saveChanges":True}})
+        scrape_id=scrape.get("id") or (scrape.get("metadata") or {}).get("scrapeId")
+        if not scrape_id: raise RuntimeError("Firecrawl did not return a scrapeId")
+        interact=_firecrawl_json("POST",f"/scrape/{scrape_id}/interact",{"code":"await page.waitForLoadState('domcontentloaded'); JSON.stringify({title: await page.title(), url: page.url()})","language":"node"})
+        interactive_url=interact.get("interactiveLiveViewUrl") or interact.get("interactive_live_view_url")
+        live_url=interact.get("liveViewUrl") or interact.get("live_view_url")
+        if not interactive_url: raise RuntimeError("Firecrawl did not return an interactive live-view URL")
+        return jsonify({"provider":"firecrawl","sessionId":scrape_id,"interactiveLiveViewUrl":interactive_url,"liveViewUrl":live_url,"target":LIVE_BROWSER_TARGET,"expires":"temporary"}),201
+    except Exception as exc:
+        app.logger.exception("IMA live browser session creation failed"); return jsonify({"error":str(exc)[:300]}),503
+@app.delete("/ima-api/live-browser/session/<session_id>")
+def live_browser_session_stop(session_id):
+    if not _session_user_id(): return jsonify({"error":"valid Google/IMA session required"}),401
+    if not FIRECRAWL_API_KEY:return jsonify({"error":"FIRECRAWL_API_KEY is not configured on the IMA runtime"}),503
+    if not session_id or len(session_id)>100 or any(ch not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_" for ch in session_id):return jsonify({"error":"invalid session id"}),400
+    try:
+        _firecrawl_json("DELETE",f"/scrape/{session_id}/interact"); return jsonify({"stopped":True,"sessionId":session_id})
+    except Exception as exc:return jsonify({"error":str(exc)[:300]}),503
 
 @app.get("/ima-api/runtime")
 def runtime_status():
