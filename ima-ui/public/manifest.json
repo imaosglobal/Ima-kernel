@@ -42,8 +42,8 @@
       ]
     },
     {
-      "name": "ללמד את אמא",
-      "url": "/Ima-kernel/#global",
+      "name": "קהילת אמא",
+      "url": "/Ima-kernel/#community",
       "icons": [
         {
           "src": "https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png",
@@ -53,8 +53,8 @@
       ]
     },
     {
-      "name": "לבנות את אמא",
-      "url": "/Ima-kernel/#about",
+      "name": "יכולות",
+      "url": "/Ima-kernel/#capabilities",
       "icons": [
         {
           "src": "https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png",
@@ -63,5 +63,11 @@
         }
       ]
     }
-  ]
+  ],
+  "categories": [
+    "education",
+    "lifestyle",
+    "social"
+  ],
+  "orientation": "portrait-primary"
 }
