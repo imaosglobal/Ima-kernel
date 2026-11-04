@@ -1,4 +1,4 @@
-const CACHE = 'ima-shell-v9';
+const CACHE = 'ima-shell-v10';
 const SHELL = [
   '/Ima-kernel/',
   '/Ima-kernel/index.html',
