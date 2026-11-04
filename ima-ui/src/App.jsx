@@ -6,7 +6,7 @@ import { IMA_HEYGEN } from './imaHeyGen.js';
 import GlobalPrinciples from './GlobalPrinciples.jsx';
 import { detectLanguage, getLocale } from './i18n.js';
 import { observeIma } from './services/imaLearningBus';
-import { createLiveBrowserSession, stopLiveBrowserSession, getLocalLiveBrowserScreenshot, localNavigate, localClick, localType, localKey } from './services/liveBrowserBridge';
+import { createLiveBrowserSession, stopLiveBrowserSession, getLocalLiveBrowserScreenshot, localNavigate, localType, localKey } from './services/liveBrowserBridge';
 
 const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537';
 const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL;
