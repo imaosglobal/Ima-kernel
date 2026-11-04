@@ -137,3 +137,12 @@ Date: 2026-10-22
 - FAILED / BLOCKED: `IMA Firecrawl Live Browser QA` run `41882319414` stopped at `Require Firecrawl credential` because repository secret `FIRECRAWL_API_KEY` is absent; the browser session and tests were skipped. No secret was created or requested.
 - GAPS_RECORDED: code commit `c226c264c92a4e5cd4ace9e8ba8c7f1e7b749471` contains these QA changes, but they are not VERIFIED until the post-change GitHub checks complete and the canonical public deployment/runtime checks pass.
 - TIMESTAMP: 2026-11-04T18:03:01.028Z.
+
+
+## 2026-11-04 — manual-only orchestrator contract repair (verification pending)
+
+- FAILED: `IMA Continuous Health` run `41883271466` reached `Core and contract tests` and failed with `AssertionError: canonical unified orchestrator must run on main pushes only`. The current contract intentionally makes the GitHub unified loop manual-only; ChatGPT's Global Health Loop is the sole daily orchestrator. The test assertion was stale and contradicted the existing manual-only/no-push assertions.
+- EXECUTED: replaced the stale push assertion in `tests/test_harness.test.cjs` with a check for the existing `refs/heads/main` guard. Commit: `0826d9ce70f5693d90c421a50aaa39e34ebf4af7`.
+- VERIFIED (source readback only): merged PR #152 (`ab47290d9cb459089175e311e9f3421d6e091263`) retains the mobile-navigation CSS fix and the 390px/768px/1280px browser assertions. PR #152 removes the nonfunctional personalization control and chat-command auto-mutation path while retaining the public chat, feedback, Google sign-in, campaign, PWA, community/shop and capability surfaces. This is a concurrent merged workstream, not counted as an improvement executed by this loop.
+- GAPS_RECORDED: post-PR #152 canonical deployment and post-fix contract tests are still pending. Do not mark the public release LIVE until current `main`, `gh-pages/version.json`, public `/version.json`, and the real-browser smoke all match.
+- TIMESTAMP: 2026-11-04T18:05:48.879Z.
