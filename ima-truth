@@ -1,3 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/bash
-python $HOME/ima_kernel/truth_engine.py >/dev/null
-python $HOME/ima_kernel/truth_query.py "$@"

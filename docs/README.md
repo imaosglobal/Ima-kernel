@@ -1,3 +1,0 @@
-# IMA Documentation
-
-Product documentation.
