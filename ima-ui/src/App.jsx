@@ -5,15 +5,13 @@ import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
 import { IMA_HEYGEN } from './imaHeyGen.js';
 import GlobalPrinciples from './GlobalPrinciples.jsx';
 import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
-import { observeIma, recordImaPreference, deriveImaAdaptations } from './services/imaLearningBus';
+import { observeIma } from './services/imaLearningBus';
 
-const GLB_PATH='/Ima-kernel/mother_character.glb';
 const GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils';
 const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL+'&utm_content=ima_logo';
 const CLEAN_LOGO_URL='https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
 const SUPPORT_URL='/Ima-kernel/support.html';
 const PRIVACY_URL='/Ima-kernel/privacy.html';
-const GLB_GIT_BLOB_SHA1='217170d2bd67051270be974292dc3b834eefe206';
 const PERSONALIZATION_KEY='ima-unified-personalization-v2';
 const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'normal',memoryScope:'personal',interface:'IMA',theme:'system'};
 
@@ -29,18 +27,6 @@ function applyChatPersonalization(text,profile){
  return {next,changed};
 }
 
-function PersonalizationPanel({profile,setProfile,locale}){
- const set=(key,value)=>{const next={...profile,[key]:value};setProfile(next);saveProfile(getStoredGoogleUser(),next);recordImaPreference(key,value);if(key==='accessibility')observeIma({type:'accessibility_changed',source:'personalization',data:{value}});if(key==='language'){localStorage.setItem('ima-language-v2',value);window.location.reload()}};
- return <details className="personalization-panel"><summary>{locale.labels.personalize}</summary><div className="personalization-grid">
-  <label>{locale.labels.language}<select value={profile.language} onChange={e=>set('language',e.target.value)}><option value="auto">Auto</option>{Object.entries(SUPPORTED).map(([code,x])=><option key={code} value={code}>{x.name}</option>)}</select></label>
-  <label>{(locale.labels.tone||'Tone')}<select value={profile.tone} onChange={e=>set('tone',e.target.value)}><option value="balanced">Balanced</option><option value="direct">Direct</option><option value="warm">Warm</option><option value="professional">Professional</option><option value="simple">Simple</option></select></label>
-  <label>{(locale.labels.depth||'Depth')}<select value={profile.depth} onChange={e=>set('depth',e.target.value)}><option value="short">Short</option><option value="normal">Normal</option><option value="deep">Deep</option></select></label>
-  <label>{(locale.labels.accessibility||'Accessibility')}<select value={profile.accessibility} onChange={e=>set('accessibility',e.target.value)}><option value="normal">Standard</option><option value="large">Large text</option><option value="contrast">High contrast</option><option value="reduced-motion">Reduced motion</option></select></label>
-  <label>{(locale.labels.memory||'Memory')}<select value={profile.memoryScope} onChange={e=>set('memoryScope',e.target.value)}><option value="personal">Personal</option><option value="minimal">Minimal</option><option value="none">No memory</option></select></label>
-  <label>Interface<select value={profile.interface} onChange={e=>set('interface',e.target.value)}><option>IMA</option><option>Voice</option><option>Mobile</option><option>Device</option><option>Robot</option></select></label>
-  <label>Theme<select value={profile.theme} onChange={e=>set('theme',e.target.value)}><option>System</option><option>Light</option><option>Dark</option></select></label>
- </div></details>
-}
 
 function GoogleLogin({auth,setAuth,locale,setProfile,setActive}){
  const ref=useRef(null);
@@ -66,7 +52,6 @@ function FeedbackPanel(){
  return <div className="feedback-panel"><div className="feedback-controls"><select value={type} onChange={e=>setType(e.target.value)}><option value="useful">Useful</option><option value="not_useful">Not useful</option><option value="problem">Problem</option><option value="improvement">Improvement</option></select><textarea value={text} onChange={e=>setText(e.target.value)} maxLength={4000} placeholder="כתוב/י לאמא מה עבד, מה לא, ומה צריך להשתפר." aria-label="Feedback"/></div><button className="primary" onClick={send} disabled={busy||!text.trim()}>{busy?'שומר…':'שליחת משוב'}</button>{status&&<small role="status">{status}</small>}</div>
 }
 
-function AvatarScene({state,compact=false}){return <div className={`heygen-avatar-frame ${compact?'compact':''} ${state==='speaking'?'speaking':''}`}><img src={CLEAN_LOGO_URL} alt="IMA avatar" loading={compact?'lazy':'eager'}/>{state==='speaking'&&<span className="heygen-speaking">IMA</span>}</div>}
 
 export default function App(){
  const [lang,setLang]=useState(detectLanguage());
@@ -76,17 +61,13 @@ export default function App(){
  const [input,setInput]=useState('');
  const [messages,setMessages]=useState([]);
  const [busy,setBusy]=useState(false);
- const [avatarState,setAvatarState]=useState('idle');
  const [runtime,setRuntime]=useState(null);
  const [memory,setMemory]=useState('UNKNOWN');
  const [active,setActive]=useState(()=>getStoredGoogleUser()?'chat':'home');
- const [avatarVerified,setAvatarVerified]=useState(false);
  const [installEvent,setInstallEvent]=useState(()=>typeof window!=='undefined'?(window.__imaBeforeInstall||window.__imaInstallPrompt||null):null);
  const [shareOpen,setShareOpen]=useState(false);
- const learning=deriveImaAdaptations();
 
- useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});fetch(GLB_PATH,{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error();const bytes=await r.arrayBuffer(),prefix=new TextEncoder().encode('blob '+bytes.byteLength+'\\0'),payload=new Uint8Array(prefix.length+bytes.byteLength);payload.set(prefix);payload.set(new Uint8Array(bytes),prefix.length);const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-1',payload))).map(b=>b.toString(16).padStart(2,'0')).join('');setAvatarVerified(hash===GLB_GIT_BLOB_SHA1)}).catch(()=>setAvatarVerified(false));
-  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
+ useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
   window.addEventListener('beforeinstallprompt',adoptInstallEvent);
   window.addEventListener('ima-install-available',()=>adoptInstallEvent(window.__imaInstallPrompt));
   const languageChanged=()=>{if(!localStorage.getItem('ima-language-v2')||localStorage.getItem('ima-language-v2')==='auto')setLang(detectLanguage())};
@@ -97,7 +78,7 @@ export default function App(){
  const loggedIn=auth.status==='signed_in';
  const go=id=>{observeIma({type:'navigation',source:'public-ui',data:{section:id}});setActive(id);const el=document.getElementById(id);if(el){history.replaceState(null,'',`#${id}`);el.scrollIntoView({behavior:'smooth',block:'start'})}};
  useEffect(()=>{if(loggedIn)document.getElementById('chat')?.scrollIntoView({behavior:'smooth'})},[loggedIn]);
- const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');const customization=applyChatPersonalization(text,profile);if(customization.changed){setProfile(customization.next);saveProfile(auth.user,customization.next);setMessages(m=>[...m,{role:'ima',text:customization.next.language==='he'?'שיניתי את ההעדפה שלך.':'I updated your preference.'}]);observeIma({type:'personalization_command',source:'chat',data:{keys:Object.keys(customization.next)}});if(customization.next.language&&customization.next.language!==lang) {localStorage.setItem('ima-language-v2',customization.next.language);window.setTimeout(()=>window.location.reload(),50)}return;}setBusy(true);setAvatarState('listening');try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
+ const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');setBusy(true);try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);}finally{setBusy(false)}};
  const shareFromDevice=async()=>{try{const url=location.href;if(navigator.share)await navigator.share({title:'IMA — אמא',text:'הכירו את IMA — בינה אנושית לכולם.',url});else{await navigator.clipboard.writeText(url);alert(lang==='he'?'הקישור הועתק.':'Link copied.')}trackImaEvent('ima_share_complete')}catch{observeIma({type:'share_failed',source:'public-ui'})}};
  const copyShareLink=async()=>{try{await navigator.clipboard.writeText(location.href);alert(lang==='he'?'הקישור הועתק.':'Link copied.');trackImaEvent('ima_share_copy')}catch{observeIma({type:'share_copy_failed',source:'public-ui'})}};
  const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();await e.userChoice}catch{observeIma({type:'install_failed',source:'pwa'});trackImaEvent('ima_install_prompt_failed')}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
