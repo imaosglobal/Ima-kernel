@@ -1,6 +1,6 @@
 # IMA — Human-Centered Intelligence
 
-**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
+**[IMA project on GitHub](https://github.com/imaosglobal/Ima-kernel)**
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning**
 
