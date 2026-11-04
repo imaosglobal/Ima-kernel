@@ -62,3 +62,33 @@ footer{max-width:1180px;margin:auto;border-top:1px solid #dfe5ec;padding:24px 20
 
 
 .global-principles-section{max-width:1180px;margin:auto;padding:76px 20px;border-top:1px solid #dfe5ec}.principles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.principle-card{background:#fff;border:1px solid #d7dee7;border-radius:16px;padding:20px;min-height:210px}.principle-card>span{display:inline-block;color:#53657a;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.principle-card h3{margin:10px 0 8px;font-size:20px}.principle-card p{color:#64748b;line-height:1.65;margin:0 0 14px}.principle-card small{color:#53657a;font-weight:800}.principles-rule{margin-top:14px;padding:16px 18px;border:1px solid #cfd8e3;border-radius:14px;background:#fff;color:#475569;line-height:1.7}.principles-rule b{color:#17202a}@media(max-width:900px){.principles-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.global-principles-section{padding-left:14px;padding-right:14px}.principles-grid{grid-template-columns:1fr}}
+/* IMA global-quality polish — additive, non-destructive */
+:root{color-scheme:light;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+button,a,input,select,textarea{touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+button,a{transition:transform .16s ease,box-shadow .16s ease,background-color .16s ease,border-color .16s ease,color .16s ease}
+button:hover:not(:disabled),a.secondary:hover,.install-button:hover{transform:translateY(-1px)}
+.primary:hover:not(:disabled){box-shadow:0 8px 22px #17202a22}
+.secondary:focus-visible,.install-button:focus-visible,.primary:focus-visible{box-shadow:0 0 0 4px #246bce22}
+nav{scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+.topbar{box-shadow:0 1px 0 #17202a08}
+.hero-avatar,.feature-grid article,.deep-grid article,.mode,.chat-card,.chat-avatar,.video-card,.login-card,.principle-card{box-shadow:0 8px 28px #17202a0a}
+.hero-avatar:hover,.feature-grid article:hover,.deep-grid article:hover,.mode:hover,.video-card:hover{box-shadow:0 16px 40px #17202a12}
+.hero-copy>p,.section-head p,.video-copy p,.deep-grid p,.principle-card p{text-wrap:pretty}
+.composer input,.feedback-panel textarea,.feedback-panel select{min-height:46px}
+.local-browser-workspace{margin-top:16px;border:1px solid #d7dee7;border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 12px 34px #17202a0c}
+.local-browser-toolbar{display:grid;grid-template-columns:1fr auto auto;gap:8px;padding:10px;border-bottom:1px solid #e3e8ef;background:#f8fafc}
+.local-browser-toolbar input{min-width:0;border:1px solid #cfd8e3;border-radius:10px;padding:10px 12px;background:#fff}
+.local-browser-viewport{min-height:260px;background:#eef2f7;display:grid;place-items:center}
+.local-browser-viewport img{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain}
+.live-browser-status{padding:30px;color:#64748b}
+.local-browser-controls{display:flex;gap:8px;flex-wrap:wrap;padding:10px;border-top:1px solid #e3e8ef}
+.local-browser-workspace>small{display:block;padding:0 12px 12px;color:#64748b}
+@media(max-width:600px){
+ .topbar-inner{gap:8px}nav button{min-height:44px;padding-inline:12px}
+ .local-browser-toolbar{grid-template-columns:1fr 1fr}.local-browser-toolbar input{grid-column:1/-1}
+ .local-browser-toolbar button{min-height:44px}.local-browser-viewport{min-height:210px}
+}
+@media(prefers-reduced-motion:reduce){button,a{transition:none!important}}
+@media print{.topbar,.hero-actions,.top-actions,nav,.install-button,.support-actions,.share-overlay{display:none!important}.ima-app{background:#fff!important;color:#000!important}.hero,.simple-section,.video-section,.support-section{padding-block:24px!important}}
