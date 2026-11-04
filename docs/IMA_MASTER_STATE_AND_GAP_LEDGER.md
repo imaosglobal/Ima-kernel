@@ -258,3 +258,41 @@ These commits are implementation evidence only. No deployment or live-public suc
 - **Render deployment:** service `Ima` (`srv-d0r96hadbo4c73a4o910`) deployed commit `874acea39f1547486cf419bfb5f2de68d17b8af4`; deploy `dep-dbkgnt6c6qcc7394n130` reached status `live`.
 - **State:** IMPLEMENTED_AND_MERGED_AND_DEPLOYED / FIVE_REGRESSION_TESTS_PASSED / LIVE_BEHAVIOR_NOT_VERIFIED. Existing canonical memory schema retained; no second identity or memory store created.
 - **Remaining verification:** the dedicated GitHub Actions workflow is configured but no run/status has been surfaced through the available GitHub checks. A real chat request verifying the new identity prompt and fallback behavior remains outstanding.
+
+
+## 2026-11-04 — Single-source, deployment deduplication and live-browser audit
+
+**Audit scope:** canonical GitHub repository, Pages deployment workflow, current public website in Firecrawl Live Browser, repository tree, and continuity protocol.
+
+### Verified public website
+- Canonical public URL: `https://imaosglobal.github.io/Ima-kernel/` (HTTP 200).
+- The root URL `https://imaosglobal.github.io/` is not the project site; do not use it as a second public target.
+- Render `https://ima-915m.onrender.com/` is an API/backend service, not a second public website.
+- At the time of the live browser capture, the deployed UI build and `version.json` both matched source SHA `835aafac68caf7ec23be7754c82072d18237259b`.
+- A 390×844 mobile browser check exposed a visible responsive defect: navigation labels collapse into narrow vertical letter stacks. State: **VERIFIED_LIVE_DEFECT / FIX_PENDING**.
+- Chat, Community and Shop sections currently show a Google sign-in gate when logged out. Google Identity iframe was present; a successful user login was not attempted.
+
+### Deployment duplication finding and repair
+- Before repair, `.github/workflows/deploy-ima-pages.yml` listened to `workflow_run` completions from multiple unrelated IMA workflows in addition to push/manual/repository-dispatch. This caused multiple production deployment runs for the same source SHA; several redundant runs were queued, cancelled, or overlapped.
+- Removed the broad `workflow_run` trigger. Canonical deploy triggers are now only `push` to `main`, `workflow_dispatch`, and `repository_dispatch` type `ima-canonical-deploy`.
+- `.github/workflows/ima-ui-pages.yml` is manual-only and deliberately has no deploy job. `.github/workflows/ima-gh-pages.yml` is retired and deliberately exits with an error to prevent a second publisher.
+- The generated GitHub Pages `pages build and deployment` run attempted to package the repository root, failed at artifact upload, and skipped its deploy job. The canonical React artifact workflow remains the intended publisher.
+- Workflow change is committed in `503e0ff233e66c1204dda9b0aca106042d824f08`. A successful canonical deployment of this commit has **not** yet been verified. The deployed UI remains the previously verified build until a successful run confirms otherwise.
+
+### Repository duplication inventory
+- Repository contains 50 branches, 77 workflow YAML files, and approximately 1,270 paths matching archive/backup/snapshot naming. These counts do not mean every item is active or a competing deployment.
+- The repository tree contains multiple memory-like JSON/JSONL stores and adapters across legacy, archive, UI, founder, kernel and learning paths.
+- Existing master-state evidence already identifies `conversation_layer.py` as retaining a separate legacy JSON conversation store beside the canonical universal-memory adapter. This remains an explicit reconciliation target.
+- Do not mass-delete branches, backups, or memory files before tracing active readers/writers, comparing contents, preserving unique records, and verifying rollback. Historical artifacts must not be mistaken for active runtime authorities.
+
+### Continuity and cross-chat status
+- Consolidated the duplicated assistant-continuity protocol into `.ima/continuity/ASSISTANT_BIDIRECTIONAL_SYNC.md`; `.ima/chatgpt_bridge/PROTOCOL.md` now points to that canonical file.
+- This is a durable project policy, not proof of automated synchronization. Cross-chat transport remains **NOT VERIFIED / PENDING AUTHENTICATED ENDPOINT**. ChatGPT UI histories cannot be merged by repository code.
+- Firecrawl monitor for the canonical public URL and `version.json` is active on a six-hour schedule. It does not provide a permanent shared interactive browser session.
+
+### Next required actions
+1. Fix the mobile navigation collapse in the canonical React source and verify at 390px, tablet and desktop widths.
+2. Obtain one successful canonical deployment for the current `main` SHA and verify the public version marker and `gh-pages` mirror.
+3. Audit the 50 branches and 77 workflows; keep one production deploy path and classify every other workflow as QA, build-only, retired or genuinely required.
+4. Trace all active memory readers/writers; migrate unique data into the canonical universal-memory runtime, then disable redundant writers only after backup and tests.
+5. Implement and verify an authenticated, consent-aware continuity transport before claiming any cross-chat synchronization.
