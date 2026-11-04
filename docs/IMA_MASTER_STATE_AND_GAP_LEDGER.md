@@ -296,3 +296,15 @@ These commits are implementation evidence only. No deployment or live-public suc
 3. Audit the 50 branches and 77 workflows; keep one production deploy path and classify every other workflow as QA, build-only, retired or genuinely required.
 4. Trace all active memory readers/writers; migrate unique data into the canonical universal-memory runtime, then disable redundant writers only after backup and tests.
 5. Implement and verify an authenticated, consent-aware continuity transport before claiming any cross-chat synchronization.
+
+
+## 2026-11-04 20:15 — Authenticated live-browser Collaboration Bridge
+
+- Request: activate a shared interactive browser inside IMA Chat after verified Google sign-in, with human takeover when available; keep Opera as a connector and Firecrawl/Browser Use-style alternatives behind one bridge.
+- Implemented: public React Chat now contains a live-browser collaboration panel; backend exposes authenticated live-browser status/session/stop routes; client adapter is ima-ui/src/services/liveBrowserBridge.js.
+- Provider: Firecrawl /v2/scrape plus /v2/scrape/{scrapeId}/interact, returning interactiveLiveViewUrl for human takeover. Provider capability was verified during this audit.
+- Security boundary: first bridge opens only IMA's canonical public URL; session creation requires a valid IMA/Google bearer session; no unrestricted arbitrary-URL proxy.
+- Opera: connector remains NOT_CONNECTED and its current exposed surface does not provide an embeddable takeover URL. Do not claim Opera integration is live.
+- Deployment: Render service is currently LIVE on commit 58e4ff08b58c8bbf1bb26208359767294b5c2d15. GitHub Pages run 41886349195 is still pending and therefore public UI deployment is not yet verified.
+- Blocker: Render does not yet have FIRECRAWL_API_KEY configured, so the live-browser session endpoint will remain 503 until the secret is added. The secret must never be committed to Git.
+- Next: add FIRECRAWL_API_KEY to Render service srv-d0r96hadbo4c73a4o910, then verify authenticated session creation, iframe rendering, human takeover and clean stop; afterward verify GitHub Pages run and public browser smoke test.
