@@ -146,3 +146,14 @@ Date: 2026-10-22
 - VERIFIED (source readback only): merged PR #152 (`ab47290d9cb459089175e311e9f3421d6e091263`) retains the mobile-navigation CSS fix and the 390px/768px/1280px browser assertions. PR #152 removes the nonfunctional personalization control and chat-command auto-mutation path while retaining the public chat, feedback, Google sign-in, campaign, PWA, community/shop and capability surfaces. This is a concurrent merged workstream, not counted as an improvement executed by this loop.
 - GAPS_RECORDED: post-PR #152 canonical deployment and post-fix contract tests are still pending. Do not mark the public release LIVE until current `main`, `gh-pages/version.json`, public `/version.json`, and the real-browser smoke all match.
 - TIMESTAMP: 2026-11-04T18:05:48.879Z.
+
+
+## 2026-11-04 — Supabase feedback FK index repair
+
+- VERIFIED (baseline): canonical `main` is `1f09ebe2bb3fecb9a14abd8438721227e98a372a`; `gh-pages/version.json` contains the same source SHA. The `gh-pages` branch tip is a deployment mirror commit, not the application source SHA.
+- GAPS_RECORDED: the real browser connector is unavailable in this run (`Browser not connected`), and direct public GitHub Pages access is unavailable from the web/runtime environment; therefore public `/version.json` and real-browser smoke cannot be independently marked VERIFIED.
+- FAILED / BLOCKED: the performance advisor identified two unindexed feedback foreign keys: `feedback_actions.feedback_id` and `feedback_execution_log.action_id`.
+- EXECUTED: added covering indexes `idx_feedback_actions_feedback_id` and `idx_feedback_execution_log_action_id` through the Supabase migration `add_feedback_fk_indexes_20261104`.
+- VERIFIED: direct Postgres read-back confirms both indexes exist with the intended btree definitions. The performance advisor no longer reports the two unindexed-foreign-key findings; it now reports the newly created indexes as unused, which is expected immediately after creation and is not a deployment failure.
+- CONTINUITY: no user-visible product feature was introduced. Security findings remain open and were not altered without a complete policy review.
+- TIMESTAMP: 2026-11-04T18:13:42Z.
