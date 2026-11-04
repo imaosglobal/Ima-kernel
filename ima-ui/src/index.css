@@ -10,3 +10,8 @@
 
 .value-section{padding-top:55px}.value-section .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.value-section article{background:#fffdf9;border:1px solid #e0d5ca;border-radius:22px;padding:22px;min-height:190px}.value-section article b{font-size:19px}.value-section article p{color:#766c64;line-height:1.65}@media(max-width:850px){.value-section .feature-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.value-section .feature-grid{grid-template-columns:1fr}}
 .campaign-logo{object-fit:cover;object-position:center;padding:0;overflow:hidden;border-radius:50%;background:#fffdf9;border:1px solid #e1d7cc}.brand .campaign-logo{flex:0 0 40px}
+
+/* Preserve navigation labels on one line; narrow screens scroll horizontally. */
+.topbar nav{flex-wrap:nowrap}
+.topbar nav button{flex:0 0 auto;min-width:max-content;white-space:nowrap;overflow-wrap:normal}
+@media(max-width:850px){.topbar nav{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}}

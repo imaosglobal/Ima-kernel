@@ -48,6 +48,28 @@ with sync_playwright() as p:
     cache_busted_url = SITE + ("&" if "?" in SITE else "?") + "ima-smoke=" + EXPECTED_SHA
     cache_busted_marker = verify_index(cache_busted_url, "cache-busted")
     assert normal_marker == cache_busted_marker, "normal and cache-busted public index versions differ"
+
+    def verify_navigation(width):
+        page.set_viewport_size({"width": width, "height": 844})
+        page.wait_for_timeout(150)
+        nav = page.locator(".topbar nav")
+        assert nav.is_visible(), f"Navigation is not visible at {width}px"
+        nav_metrics = nav.evaluate("(el) => ({clientWidth: el.clientWidth, scrollWidth: el.scrollWidth, overflowX: getComputedStyle(el).overflowX})")
+        if width <= 850:
+            assert nav_metrics["overflowX"] in ("auto", "scroll"), f"Mobile navigation is not horizontally scrollable at {width}px: {nav_metrics}"
+        buttons = nav.locator("button")
+        assert buttons.count() == 8, f"Expected 8 navigation controls at {width}px, found {buttons.count()}"
+        for index in range(buttons.count()):
+            metrics = buttons.nth(index).evaluate("(el) => ({whiteSpace: getComputedStyle(el).whiteSpace, flexShrink: getComputedStyle(el).flexShrink, scrollWidth: el.scrollWidth, clientWidth: el.clientWidth})")
+            assert metrics["whiteSpace"] == "nowrap", f"Navigation label {index} wraps at {width}px: {metrics}"
+            assert metrics["flexShrink"] == "0", f"Navigation control {index} shrinks at {width}px: {metrics}"
+            assert metrics["scrollWidth"] <= metrics["clientWidth"] + 1, f"Navigation label {index} overflows its own button at {width}px: {metrics}"
+        if width <= 400:
+            assert nav_metrics["scrollWidth"] > nav_metrics["clientWidth"], f"390px navigation should expose horizontal scrolling: {nav_metrics}"
+
+    for viewport_width in (390, 768, 1280):
+        verify_navigation(viewport_width)
+    page.set_viewport_size({"width": 390, "height": 844})
     page.wait_for_timeout(1000)
     assert not page_errors, f"browser runtime errors: {page_errors}"
     page.wait_for_selector("button.install-button", timeout=15000)
