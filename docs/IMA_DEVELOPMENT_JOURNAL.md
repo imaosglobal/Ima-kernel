@@ -104,3 +104,9 @@ Date: 2026-10-22
 - FAILED: the first post-repair push runs `41878474329` (continuous health) and `41878472353` (unified loop) terminated immediately with no job records. Read-back exposed an empty health-workflow step left by the previous insertion and an unwrapped `!startsWith(...)` token in the unified-loop YAML condition.
 - EXECUTED: restored a valid single health step for JSON validation followed by adaptation evaluation; wrapped the unified-loop job condition in the GitHub Actions expression delimiter.
 - GAPS_RECORDED: corrected workflow runs, the canonical Pages deployment and the public runtime checks remain pending; no release is marked LIVE from this syntax repair alone.
+
+## 2026-11-04 — unified-loop YAML scalar correction
+
+- FAILED: the first two post-repair workflow definitions still registered as raw file paths with no job records. The health workflow's empty step was corrected; the remaining unified-loop YAML issue was the unquoted expression scalar containing the colon-space in the loop commit message.
+- EXECUTED: quoted the complete GitHub Actions `if` expression so the YAML parser treats the embedded expression as one scalar.
+- GAPS_RECORDED: the corrected push-triggered unified-loop and health runs must still execute with jobs and complete successfully before the cycle can be marked fully verified.
