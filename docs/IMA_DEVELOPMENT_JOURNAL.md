@@ -98,3 +98,9 @@ Date: 2026-10-22
 - FAILED (non-canonical path): GitHub's generated `pages build and deployment` run `41828381513` attempted to upload repository root `path: .` and failed. The canonical `deploy-ima-pages.yml` path succeeded and verified the public runtime; the generated branch-build path remains a separate configuration gap.
 - GAPS_RECORDED: post-change CI, mirror and public runtime verification are pending. Supabase is `ACTIVE_HEALTHY`; feedback archive has 12 rows (0 today UTC, 3 yesterday UTC), 12 learning candidates, 12 applied learning-ingest executions and 12 proposed product-change actions. One `authenticated_user` archive row has an empty identity object and the table has no dedicated user-ID column, so per-user attribution is not yet proven. No email/notification table or mail Edge Function was found in this Supabase project; Render backend configuration could not be inspected without explicit workspace selection.
 - CONTINUITY: no new product feature was introduced while these integrity and verification defects were being repaired.
+
+## 2026-11-04 — post-repair workflow syntax correction
+
+- FAILED: the first post-repair push runs `41878474329` (continuous health) and `41878472353` (unified loop) terminated immediately with no job records. Read-back exposed an empty health-workflow step left by the previous insertion and an unwrapped `!startsWith(...)` token in the unified-loop YAML condition.
+- EXECUTED: restored a valid single health step for JSON validation followed by adaptation evaluation; wrapped the unified-loop job condition in the GitHub Actions expression delimiter.
+- GAPS_RECORDED: corrected workflow runs, the canonical Pages deployment and the public runtime checks remain pending; no release is marked LIVE from this syntax repair alone.

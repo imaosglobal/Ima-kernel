@@ -59,10 +59,9 @@ jobs:
       - name: Self-evolution timeline tests
         run: python -m unittest tests/test_self_timeline.py -v
 
-      - name: Cross-domain adaptation evaluation
       - name: Validate web-intelligence state JSON
         run: python -m json.tool .ima/web_intelligence/state.json >/dev/null
-      - name: Generate bounded adaptation candidates
+      - name: Cross-domain adaptation evaluation
         run: python .ima/web_intelligence/adaptation_evaluator.py
 
       - name: Core and contract tests
