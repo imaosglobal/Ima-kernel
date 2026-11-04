@@ -66,3 +66,11 @@ footer{max-width:1180px}
 @media (max-width:700px){
   .hero-below-image-actions{width:min(100%,320px)}
 }
+
+
+.live-browser-panel{margin:18px 0;padding:16px;border:1px solid rgba(80,60,70,.14);border-radius:20px;background:rgba(255,255,255,.72);box-shadow:0 10px 30px rgba(80,60,70,.08)}
+.live-browser-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.live-browser-head div{display:flex;flex-direction:column;gap:4px}
+.live-browser-head small{opacity:.72}
+.live-browser-frame{display:block;width:100%;min-height:560px;border:0;border-radius:14px;background:#fff}
+@media(max-width:700px){.live-browser-head{align-items:stretch;flex-direction:column}.live-browser-frame{min-height:460px}}
