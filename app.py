@@ -46,6 +46,10 @@ LIVE_BROWSER_PROVIDER = os.environ.get("IMA_LIVE_BROWSER_PROVIDER", "firecrawl")
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "").strip()
 FIRECRAWL_BASE_URL = os.environ.get("FIRECRAWL_BASE_URL", "https://api.firecrawl.dev/v2").strip().rstrip("/")
 LIVE_BROWSER_TARGET = os.environ.get("IMA_LIVE_BROWSER_TARGET", "https://imaosglobal.github.io/Ima-kernel/").strip()
+LIVE_BROWSER_PROVIDER = os.environ.get("IMA_LIVE_BROWSER_PROVIDER", "firecrawl").strip().lower()
+FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "").strip()
+FIRECRAWL_BASE_URL = os.environ.get("FIRECRAWL_BASE_URL", "https://api.firecrawl.dev/v2").strip().rstrip("/")
+LIVE_BROWSER_TARGET = os.environ.get("IMA_LIVE_BROWSER_TARGET", "https://imaosglobal.github.io/Ima-kernel/").strip()
 
 REGISTRY_PATH = Path(__file__).resolve().parent / ".ima" / "plugins" / "REGISTRY.json"
 UNIVERSAL_MEMORY_PATH = Path(__file__).resolve().parent / ".ima" / "memory" / "universal_interaction_memory.py"
