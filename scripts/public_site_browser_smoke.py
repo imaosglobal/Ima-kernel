@@ -77,7 +77,15 @@ with sync_playwright() as p:
     assert page.get_by_text("Open IMA now", exact=True).count() >= 1, "Open IMA now CTA missing"
     brand = page.locator("a.brand").first
     href = brand.get_attribute("href") or ""
-    assert "utm_source=google" in href and "utm_medium=cpc" in href and "utm_campaign=ima_initial_100ils" in href and "utm_content=ima_logo" in href, "Brand campaign destination missing"
+    assert "ads.google.com/aw/campaigns" in href and "campaignId=24409551537" in href, "Brand Google Ads campaign destination missing"
+    hero_campaign = page.locator("a.avatar-campaign-link").first
+    hero_href = hero_campaign.get_attribute("href") or ""
+    assert "ads.google.com/aw/campaigns" in hero_href and "campaignId=24409551537" in hero_href, "Hero image does not link to the Google Ads campaign"
+    assert page.locator("a.skip-link").count() == 0, "Skip to IMA link must stay removed"
+    below = page.locator(".hero-below-image-actions").first
+    assert below.is_visible(), "Hero controls container missing"
+    assert below.locator(".google-entry").count() == 1, "Google sign-in must be directly below the hero image"
+    assert below.locator("button.install-button").count() == 1, "Install/home-screen control must be directly below the hero image"
     assert page.locator(".personalization-panel").count() == 0, "nonfunctional personalization panel must stay removed"
     logo = page.locator(".clean-ima-logo").first
     assert logo.is_visible(), "clean IMA logo hero is missing"
