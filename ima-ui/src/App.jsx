@@ -17,7 +17,6 @@ const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'no
 
 function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';return PERSONALIZATION_KEY+':'+String(id).toLowerCase()}
 function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
-function saveProfile(user,profile){localStorage.setItem(profileStorageKey(user),JSON.stringify(profile))}
 
 function GoogleLogin({auth,setAuth,locale,setProfile,setActive}){
  const ref=useRef(null);
