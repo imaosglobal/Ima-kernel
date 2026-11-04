@@ -14,6 +14,9 @@ const coreTest = fs.readFileSync("tests/ima_core.test.cjs", "utf8");
 const portableIdentity = fs.readFileSync("kernel/runtime/CANONICAL/IMA_PORTABLE_IDENTITY.js", "utf8");
 const selfHealingDoc = fs.readFileSync("docs/IMA_SELF_HEALING_AND_AUTOMATED_REPAIR.md", "utf8");
 const unifiedLoop = fs.readFileSync(".ima/loop/unified_loop.py", "utf8");
+const publicBrowserSmoke = fs.readFileSync("scripts/public_site_browser_smoke.py", "utf8");
+const publicDailyQA = fs.readFileSync(".github/workflows/ima-public-site-daily-qa.yml", "utf8");
+const dailyQA = fs.readFileSync("qa/daily_qa.py", "utf8");
 
 assert.ok(health.includes("npm run ima:verify"), "continuous health must invoke the canonical verification runner");
 for (const required of [
@@ -38,8 +41,12 @@ assert.ok(pages.includes("name: github-pages-${{ github.run_id }}-${{ github.run
 assert.ok(canonicalPages.includes("name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}"), "canonical Pages upload must use a unique run-attempt name");
 assert.ok(canonicalPages.includes("artifact_name: ima-pages-${{ github.run_id }}-${{ github.run_attempt }}"), "canonical Pages deploy must consume the unique run-attempt artifact");
 assert.ok(canonicalPages.includes("types: [ima-canonical-deploy]"), "canonical Pages deploy must accept the unified-loop dispatch");
-assert.ok(canonicalPages.includes('workflow_run:') && canonicalPages.includes('"IMA Daily QA and Doodle"') && canonicalPages.includes('"IMA Continuous Health"') && canonicalPages.includes('"IMA Global Web Intelligence"'), "canonical Pages deploy must reconcile state-writing workflows after completion");
+assert.ok(canonicalPages.includes('push:\n    branches: ["main"]'), "canonical Pages deploy must run on main updates");
+assert.ok(!canonicalPages.includes("workflow_run:"), "canonical Pages deploy must not duplicate production deploys after unrelated state-writing workflows complete");
 assert.ok(!canonicalPages.includes('"IMA Unified Loop"'), "unified loop must use its single explicit dispatch rather than trigger a duplicate deployment");
+assert.ok(publicBrowserSmoke.includes("for viewport_width in (390, 768, 1280):") && publicBrowserSmoke.includes('metrics["whiteSpace"] == "nowrap"'), "public browser smoke must prevent mobile navigation label wrapping");
+assert.ok(publicDailyQA.includes("EXPECTED_SHA: ${{ github.sha }}"), "scheduled public QA must compare runtime against the current source SHA");
+assert.ok(dailyQA.includes("PUBLIC_PAGES_RETRY="), "push QA must retry transient GitHub Pages deployment responses without suppressing final failure");
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
 assert.ok(unifiedWorkflow.includes("ima-canonical-deploy"), "unified loop must request a canonical deployment after persisting state");
 assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified loop must run only on main");

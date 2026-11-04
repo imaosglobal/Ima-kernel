@@ -33,6 +33,7 @@ jobs:
       - name: Real-browser critical control smoke test
         env:
           SITE: https://imaosglobal.github.io/Ima-kernel/
+          EXPECTED_SHA: ${{ github.sha }}
         run: python3 scripts/public_site_browser_smoke.py
 
 

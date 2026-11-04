@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import json, random, re, sys, urllib.parse, urllib.request
+import json, random, re, sys, time, urllib.parse, urllib.request
+from urllib.error import HTTPError, URLError
 
 BASE="https://imaosglobal.github.io/Ima-kernel/"
 API="https://ima-915m.onrender.com"
@@ -8,8 +9,24 @@ failures=[]
 
 def get(url, timeout=20):
     req=urllib.request.Request(url, headers={"User-Agent":"IMA-Daily-QA/1.0"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.status, r.geturl(), r.read().decode("utf-8","replace")
+    is_pages = urllib.parse.urlparse(url).hostname == "imaosglobal.github.io"
+    attempts = 24 if is_pages else 1
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.status, r.geturl(), r.read().decode("utf-8","replace")
+        except HTTPError as e:
+            if not is_pages or e.code not in (404, 429, 500, 502, 503, 504) or attempt == attempts - 1:
+                raise
+            last_error = f"HTTP {e.code}"
+        except (URLError, TimeoutError) as e:
+            if not is_pages or attempt == attempts - 1:
+                raise
+            last_error = str(e)
+        print(f"PUBLIC_PAGES_RETRY={attempt + 1}/{attempts} {url} {last_error}", flush=True)
+        time.sleep(5)
+    raise RuntimeError(f"GitHub Pages remained unavailable after {attempts} attempts: {last_error}")
 
 def check(name, fn):
     try: fn()
@@ -52,6 +69,7 @@ def visual_contract_checks():
     assert 'overflow-wrap' in css or 'word-break' in css, 'source CSS: text overflow protection missing'
     assert 'prefers-reduced-motion' in css, 'source CSS: reduced-motion contract missing'
     assert 'min-width:0' in css.replace(' ', ''), 'source CSS: min-width guard missing'
+    assert '.topbar nav button{flex:0 0 auto;min-width:max-content;white-space:nowrap;overflow-wrap:normal}' in css, 'source CSS: mobile navigation labels must remain on one line'
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
