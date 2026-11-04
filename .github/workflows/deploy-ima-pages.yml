@@ -6,20 +6,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [ima-canonical-deploy]
-  workflow_run:
-    workflows:
-      - "IMA Daily QA and Doodle"
-      - "IMA Continuous Health"
-      - "IMA Continuous AI Capability Radar"
-      - "IMA Learning Evaluation Component (manual)"
-      - "IMA Cross-Domain Adaptation"
-      - "IMA Daily Learning Summary"
-      - "IMA Engine Discovery"
-      - "IMA Evolution Steward"
-      - "IMA Global Web Intelligence"
-      - "IMA Learning Frontier"
-      - "Squad Promote"
-    types: [completed]
 
 permissions:
   contents: read
