@@ -1,19 +1,6 @@
 name: IMA Unified Loop
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - ".ima/loop/UNIFIED_LOOP_STATE.json"
-      - ".ima/public_reconciliation/state.json"
-      - ".ima/multi_perspective/review.json"
-      - ".ima/distribution/prepared_queue.json"
-      - ".ima/growth/GLOBAL_GROWTH_STATE.json"
-      - ".ima/web_intelligence/state.json"
-      - "artifacts/web-intelligence/**"
-      - ".ima/evolution/**"
-      - ".ima/journal/daily/**"
-      - "docs/IMA_SELF_EVOLUTION_TIMELINE.md"
   workflow_dispatch:
 
 permissions:
@@ -27,7 +14,7 @@ concurrency:
 
 jobs:
   unified:
-    if: "${{ github.ref == 'refs/heads/main' && github.event_name != 'push' || (github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'chore: record unified IMA loop cycle')) }}"
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:

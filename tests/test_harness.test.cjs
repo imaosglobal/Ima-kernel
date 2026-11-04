@@ -43,9 +43,9 @@ assert.ok(!canonicalPages.includes('"IMA Unified Loop"'), "unified loop must use
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
 assert.ok(unifiedWorkflow.includes("ima-canonical-deploy"), "unified loop must request a canonical deployment after persisting state");
 assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified loop must run only on main");
-assert.ok((unifiedWorkflow.match(/cron:/g) || []).length === 1 && unifiedWorkflow.includes('cron: "17 3 * * *"'), "the whole-IMA orchestrator must have exactly one daily schedule");
-assert.ok(unifiedWorkflow.includes("paths-ignore:"), "loop state commits must not recursively start another cycle");
-assert.ok(unifiedWorkflow.includes(".ima/loop/UNIFIED_LOOP_STATE.json"), "the canonical loop's own state file must be excluded from push retriggers");
+assert.ok((unifiedWorkflow.match(/cron:/g) || []).length === 0 && unifiedWorkflow.includes("workflow_dispatch:"), "the ChatGPT Global Health Loop is the sole daily whole-IMA orchestrator; GitHub unified loop is manual-only");
+assert.ok(!unifiedWorkflow.includes("\n  push:"), "GitHub unified loop must not be a duplicate push-triggered whole-IMA orchestrator");
+assert.ok(unifiedWorkflow.includes("ima-web-intelligence-state-writer"), "all web-intelligence state writers must share one concurrency lock");
 assert.ok(healthWorkflow.includes("java-version: 17"), "Android health build must pin a Gradle-compatible JDK 17");
 assert.ok(healthWorkflow.includes("android-actions/setup-android@v4"), "Android health build must provision the Android SDK");
 assert.ok(!publicMonitor.includes("raw.githubusercontent.com/imaosglobal/Ima-kernel/gh-pages/version.json"), "public monitor must never substitute branch metadata for public runtime evidence");

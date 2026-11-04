@@ -110,3 +110,11 @@ Date: 2026-10-22
 - FAILED: the first two post-repair workflow definitions still registered as raw file paths with no job records. The health workflow's empty step was corrected; the remaining unified-loop YAML issue was the unquoted expression scalar containing the colon-space in the loop commit message.
 - EXECUTED: quoted the complete GitHub Actions `if` expression so the YAML parser treats the embedded expression as one scalar.
 - GAPS_RECORDED: the corrected push-triggered unified-loop and health runs must still execute with jobs and complete successfully before the cycle can be marked fully verified.
+
+## 2026-11-04 — single-scheduler contract and CI regression correction
+
+- FAILED: health and unified-loop runs `41878691473` and `41878828693` reached `npm run ima:verify` but failed `tests/test_harness.test.cjs:45-46` because the harness still required the old push-triggered workflow and a second daily cron. The health run had already passed the JSON-state validation and adaptation-evaluator steps; the remaining failure was the stale workflow contract.
+- EXECUTED: made the GitHub `IMA Unified Loop` workflow manual-only (`workflow_dispatch`, main branch only), with no schedule and no push trigger. This leaves the scheduled ChatGPT Global Health Loop as the sole daily whole-IMA orchestrator; the GitHub workflow remains an explicit manual recovery/maintenance path.
+- EXECUTED: updated the harness contract to assert manual-only operation, zero cron schedules, no push trigger, and the shared state-writer concurrency lock.
+- VERIFIED (prior deployment): canonical deployment job logs for `3c68068a52eb25e675478d7c08696436b875fd44` show `IMA_PUBLIC_VERSION=VERIFIED`, `IMA_PUBLIC_STATIC_PAGES=VERIFIED`, `IMA_PUBLIC_INDEX=VERIFIED`, and `IMA_BROWSER_SMOKE=PASS`; `gh-pages/version.json` matched that SHA.
+- GAPS_RECORDED: current `main` is ahead of the public version; final post-commit CI and deployment must complete before LIVE can be claimed.
