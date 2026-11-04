@@ -21,3 +21,9 @@ assert.match(manifest,/"display": "standalone"/,'PWA must be installable as stan
 const ids=[...app.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);
 for(const target of [...app.matchAll(/href="#([^"]+)"/g)].map(m=>m[1])) assert.ok(ids.includes(target),`broken internal anchor #${target}`);
 console.log('PUBLIC_UI_CONTRACT_OK',JSON.stringify({ids,internalAnchors:[...new Set([...app.matchAll(/href="#([^"]+)"/g)].map(m=>m[1]))]}));
+
+assert.doesNotMatch(app,/PersonalizationPanel|personalization-panel|applyChatPersonalization|recordImaPreference/,'the broken public personalization engine must not be shown or run');
+assert.doesNotMatch(app,/AvatarScene|mother_character\.glb|hero-avatar canvas/,'the public hero must not show the old character render');
+assert.match(app,/clean-ima-logo/,'the clean IMA logo hero must be present');
+assert.match(app,/CLEAN_LOGO_URL/,'the clean canonical IMA logo asset must be used');
+assert.match(app,/בינה\s*<br\/>\s*<em>אנושית לכולם\./,'the clean Hebrew IMA hero headline must be restored');
