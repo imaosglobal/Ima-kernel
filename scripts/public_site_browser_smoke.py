@@ -78,6 +78,11 @@ with sync_playwright() as p:
     brand = page.locator("a.brand").first
     href = brand.get_attribute("href") or ""
     assert "utm_source=google" in href and "utm_medium=cpc" in href and "utm_campaign=ima_initial_100ils" in href and "utm_content=ima_logo" in href, "Brand campaign destination missing"
+    assert page.locator(".personalization-panel").count() == 0, "nonfunctional personalization panel must stay removed"
+    logo = page.locator(".clean-ima-logo").first
+    assert logo.is_visible(), "clean IMA logo hero is missing"
+    assert "f057cd08143342f2994f85d847572fa8" in (logo.get_attribute("src") or ""), "clean canonical IMA logo asset mismatch"
+    assert page.locator(".hero-avatar canvas").count() == 0, "legacy character render must not return to the public hero"
     page.locator(".google-entry").first.wait_for(state="visible", timeout=15000)
     google_roots = page.locator(".google-entry")
     assert google_roots.count() == 1, f"Expected exactly one Google login control, found {google_roots.count()}"

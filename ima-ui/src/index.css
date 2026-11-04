@@ -15,3 +15,43 @@
 .topbar nav{flex-wrap:nowrap}
 .topbar nav button{flex:0 0 auto;min-width:max-content;white-space:nowrap;overflow-wrap:normal}
 @media(max-width:850px){.topbar nav{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}}
+
+
+/* Clean public IMA design restored from the 2026-11-02 canonical visual baseline. */
+:root{background:#f5efe5;color:#191614}
+body{background:#f5efe5}
+.ima-app{background:radial-gradient(circle at 85% 5%,#fffaf0 0 18%,transparent 40%),#f5efe5;color:#191614}
+.topbar{height:auto;max-width:none;width:100%;padding:0 20px;justify-content:center;background:rgba(245,239,229,.88);border-bottom:1px solid rgba(226,215,201,.7)}
+.topbar-inner{width:100%;max-width:1180px;margin:auto;padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.topbar nav{display:flex;flex:1;gap:4px;align-items:center;justify-content:center;min-width:0}
+.topbar nav button{border:0;background:transparent;padding:9px 12px;border-radius:999px;color:#6d665e;cursor:pointer;white-space:nowrap;flex:0 0 auto}
+.topbar nav button:hover,.topbar nav button.active{background:#ebe2d6;color:#191614}
+.top-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.install-button{border:1px solid #e2d7c9;background:#fffdf8;color:#191614;border-radius:14px;padding:10px 14px;min-height:42px;font-weight:800;white-space:nowrap}
+.hero{max-width:1180px;min-height:0;padding:64px 20px 42px;grid-template-columns:1.05fr .95fr;gap:52px}
+.hero-avatar.clean-hero-logo{height:auto;min-height:420px;position:relative;border-radius:0;background:none;overflow:visible;display:grid;place-items:center}
+.clean-hero-logo .avatar-campaign-link{display:grid;place-items:center;width:100%;height:100%;background:none;box-shadow:none}
+.clean-ima-logo{display:block;width:min(470px,90vw);aspect-ratio:1;object-fit:contain;border-radius:42px;background:#fff;box-shadow:0 30px 80px rgba(55,38,25,.15);padding:12px}
+.chat-layout{grid-template-columns:minmax(0,1fr);max-width:920px}
+.chat-card{min-width:0}
+.login-card{max-width:450px}
+.section-head h2{letter-spacing:-.03em}
+.feedback-panel{max-width:760px}
+footer{max-width:1180px}
+@media(max-width:850px){
+ .topbar{padding:0 14px}
+ .topbar-inner{flex-wrap:wrap;gap:8px}
+ .topbar nav{order:3;width:100%;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;padding:4px 0 7px;scrollbar-width:none}
+ .topbar nav::-webkit-scrollbar{display:none}
+ .topbar nav button{flex:0 0 auto;min-width:max-content;white-space:nowrap}
+ .top-actions{margin-right:auto}
+ .hero{grid-template-columns:1fr;min-height:0;padding:38px 14px 30px;gap:20px}
+ .hero-avatar.clean-hero-logo{order:-1;min-height:280px}
+ .clean-ima-logo{width:min(330px,82vw);border-radius:30px}
+}
+@media(max-width:520px){
+ .hero-avatar.clean-hero-logo{min-height:260px}
+ .clean-ima-logo{width:min(300px,82vw);padding:8px}
+ .topbar-inner{padding:8px 0}
+ .top-actions .install-button{padding:8px 10px;font-size:12px}
+}
