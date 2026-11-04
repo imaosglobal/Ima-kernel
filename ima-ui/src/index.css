@@ -55,3 +55,14 @@ footer{max-width:1180px}
  .topbar-inner{padding:8px 0}
  .top-actions .install-button{padding:8px 10px;font-size:12px}
 }
+
+
+/* Hero control order: the campaign image is followed only by Google sign-in and install/home-screen. */
+.hero-avatar.clean-hero-logo{display:flex;flex-direction:column;align-items:center;gap:18px}
+.avatar-campaign-link{display:block}
+.hero-below-image-actions{display:flex;flex-direction:column;align-items:center;gap:12px;width:min(100%,340px)}
+.hero-below-image-actions .login-card{width:100%;margin:0}
+.hero-below-image-actions .install-button{width:100%}
+@media (max-width:700px){
+  .hero-below-image-actions{width:min(100%,320px)}
+}
