@@ -61,7 +61,7 @@ assert.ok(!/^\\s*push:/m.test(publicMonitor), "public monitor must not run on pu
 assert.ok(publicMonitor.includes('cron: "*/5 * * * *"'), "public monitor must retain its periodic schedule");
 assert.ok(publicMonitor.includes("workflow_dispatch:"), "public monitor must remain manually runnable");
 assert.ok(publicMonitor.includes("if: github.ref == 'refs/heads/main'"), "public runtime monitor must not compare a feature branch to production");
-assert.ok(unifiedWorkflow.includes("branches: [main]"), "canonical unified orchestrator must run on main pushes only");
+assert.ok(unifiedWorkflow.includes("if: github.ref == 'refs/heads/main'"), "canonical unified orchestrator must remain guarded to main");
 assert.ok(coreTest.includes("IMA_CORE_TEST=PASS"), "core test must have a deterministic success marker");
 
 for (const required of [
