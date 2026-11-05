@@ -62,7 +62,7 @@ export default function App(){
  const [shareOpen,setShareOpen]=useState(false);
  const [liveBrowser,setLiveBrowser]=useState(null);
  const [liveBrowserBusy,setLiveBrowserBusy]=useState(false);
- useImaWebMCP(loggedIn);
+ useImaWebMCP(auth.status==='signed_in');
 
  useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
   window.addEventListener('beforeinstallprompt',adoptInstallEvent);
