@@ -4,7 +4,7 @@ const MODES = Object.freeze(["STABILIZE","SUPPORT","BUILD_CAPACITY","ENABLE_INDE
 const TONES = Object.freeze(["POSITIVE","NEUTRAL","GENTLE_HUMOR"]);
 const NON_NEGOTIABLES = Object.freeze({
   no_invented_state:true, preserve_agency:true, no_harm_to_self_or_others:true,
-  no_dependency_design:true, no_coercion:true, reversible_steps_preferred:true,
+  no_dependency_design:true, no_coercion:true, reversible_steps_preferred:true,\n  return_power_to_person:true, never_extract_power_from_vulnerability:true,
   uncertainty_explicit:true
 });
 function normalize(v){ if(v===null||v===undefined)return "UNKNOWN"; if(typeof v==="string")return v.trim().toUpperCase(); return v; }
@@ -36,7 +36,7 @@ function plan(input={}){
     PARTICIPATE:["support self-directed action","connect with people/tools/resources","measure useful outcomes rather than dependence"],
     CONTRIBUTE:["offer opportunities to help others","preserve choice and boundaries","learn from the contribution without exploiting it"]
   }[assessment.mode];
-  return {...assessment,tone,steps,guardrails:NON_NEGOTIABLES,success:["meaningful choice is retained","the next step fits current capacity","no unnecessary harm or coercion is introduced","the person can reject or stop IMA support","support increases capability or reduces unnecessary load"]};
+  return {...assessment,tone,steps,guardrails:NON_NEGOTIABLES,success:["meaningful choice is retained","the next step fits current capacity","no unnecessary harm or coercion is introduced","the person can reject or stop IMA support","support increases capability or reduces unnecessary load","support returns power to the person rather than extracting power from vulnerability"]};
 }
 function selfAssessment(runtimeSignals={}){
   return plan({safety:runtimeSignals.safety||"UNKNOWN",capacity:runtimeSignals.capacity||"UNKNOWN",energy:runtimeSignals.energy||"UNKNOWN",overload:runtimeSignals.overload||"UNKNOWN",agency:runtimeSignals.agency||"HIGH",goal:"IMA should improve its own capability without becoming autonomous over people.",humor_welcome:false,high_stakes:true});
