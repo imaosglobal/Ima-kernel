@@ -1,7 +1,9 @@
+import { getSessionToken } from './imaChat';
+
 const API_BASE=(import.meta.env.VITE_IMA_API_BASE||'https://ima-915m.onrender.com').replace(/\/$/,'');
 const LOCAL='http://127.0.0.1:8787';
 
-function authHeaders(){const token=localStorage.getItem('ima-public-session-token');if(!token)throw new Error('valid Google/IMA session required');return {'Content-Type':'application/json','Authorization':`Bearer ${token}`};}
+async function authHeaders(){const token=await getSessionToken();if(!token)throw new Error('valid Google/IMA session required');return {'Content-Type':'application/json','Authorization':`Bearer ${token}`};}
 
 async function localJson(path,options={}){
  const response=await fetch(LOCAL+path,{...options,headers:{'Content-Type':'application/json',...(options.headers||{})}});
@@ -28,7 +30,7 @@ export async function localKey(key){return localJson('/key',{method:'POST',body:
 export async function createLiveBrowserSession(){
  const local=await getLocalLiveBrowserStatus();
  if(local?.ok)return {mode:'local-termux-chrome',sessionId:'local-termux-chrome',bridgeUrl:LOCAL,target:local.target,interactiveLiveViewUrl:null};
- const response=await fetch(API_BASE+'/ima-api/live-browser/session',{method:'POST',headers:authHeaders(),body:'{}'});
+ const response=await fetch(API_BASE+'/ima-api/live-browser/session',{method:'POST',headers:await authHeaders(),body:'{}'});
  const data=await response.json().catch(()=>({}));
  if(!response.ok)throw new Error(data.error||`live browser HTTP ${response.status}`);
  return {...data,mode:data.mode||'remote-provider'};
