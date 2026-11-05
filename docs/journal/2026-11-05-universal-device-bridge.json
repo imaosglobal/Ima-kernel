@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-05",
+  "title": "Universal device action bridge",
+  "request": "Turn the Termux plus Chrome connection into a permanent, network-independent, reusable IMA device capability and product.",
+  "work_completed_today": [
+    "Inspected the current Termux Chrome bridge, public live-browser UI, plugin registry, device architecture, rights and revenue governance.",
+    "Confirmed the existing public IMA chat already contains a live browser workspace that can display the real Chrome screen when the local bridge is available.",
+    "Added an owner-scoped device command plane backed by the active IMA Supabase project.",
+    "Added one-time device-key issuance with server-side hashing and revocation.",
+    "Added transactional command claiming, expiring commands and result reporting.",
+    "Added a reusable outbound-only Termux device agent that works across changing Wi-Fi and cellular networks.",
+    "Connected the device agent to the existing Chrome CDP bridge and Android AccessibilityService command contract.",
+    "Added the Universal Device Bridge safety policy and capability registry entry.",
+    "Added the IMA-specific Universal Action Bridge architecture and breakthrough record.",
+    "Created the first private IMA Universal Device Bridge plugin distribution artifact.",
+    "Extended IMA rights/provenance records to cover the new capability."
+  ],
+  "research_findings": [
+    "The general concept is not unique: browser agents, WebMCP, Android accessibility bridges and outbound device relays already exist.",
+    "The differentiating IMA formulation is the unified provider-neutral action layer combined with evidence-gated capability promotion, consent, revocation, continuity, adaptive interface selection and post-action verification.",
+    "WebMCP is an emerging browser standard for structured agent tools and should be added to IMA's preferred execution ladder.",
+    "Android background execution remains a real production constraint; Termux:Boot, foreground execution and device-specific battery settings must be verified rather than promised."
+  ],
+  "remaining_gates": [
+    "Run live registration and end-to-end command tests on Ori's current phone.",
+    "Add a user-facing device management and consent UI.",
+    "Harden Android always-on lifecycle and reconnect behavior.",
+    "Add independent security testing and abuse-case tests.",
+    "Complete MCP/provider review before claiming public publication.",
+    "Validate pricing and real customer demand before declaring commercial success."
+  ],
+  "next_learning_rule": "Every future IMA improvement cycle must inspect historical requirements, current runtime evidence and new external developments, then prefer verified, reversible improvements without duplicating existing capabilities."
+}
