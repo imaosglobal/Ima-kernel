@@ -11,9 +11,11 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registryPath = path.join(root, 'docs/IMA_CAPABILITY_REGISTRY.json');
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
 const rank = { NOT_VERIFIED: 0, PLANNED: 1, IMPLEMENTED: 2, TESTED: 3, VERIFIED: 4, LIVE: 5, DISABLED: 6 };
+const priorityOrder = new Map((registry.priority_order || []).map(x => [x.id, x.priority]));
+const capabilityPriority = id => priorityOrder.get(id) ?? 99;
 const unresolved = registry.capabilities
   .filter(x => ['NOT_VERIFIED', 'PLANNED', 'IMPLEMENTED'].includes(x.status))
-  .sort((a, b) => rank[a.status] - rank[b.status] || a.id.localeCompare(b.id));
+  .sort((a, b) => capabilityPriority(a.id) - capabilityPriority(b.id) || rank[a.status] - rank[b.status] || a.id.localeCompare(b.id));
 const rows = unresolved.map((x, i) => ({
   priority: i + 1,
   id: x.id,
@@ -31,6 +33,7 @@ const report = {
   generated_at: new Date().toISOString(),
   registry_version: registry.schema_version,
   unresolved_count: rows.length,
+  priority_source: 'IMA_SYSTEM_UNIFIED_CONTRACT.json priority_order',
   next_actions: rows
 };
 console.log(JSON.stringify(report, null, 2));
