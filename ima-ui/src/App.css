@@ -92,3 +92,9 @@ nav{scrollbar-width:none}nav::-webkit-scrollbar{display:none}
 }
 @media(prefers-reduced-motion:reduce){button,a{transition:none!important}}
 @media print{.topbar,.hero-actions,.top-actions,nav,.install-button,.support-actions,.share-overlay{display:none!important}.ima-app{background:#fff!important;color:#000!important}.hero,.simple-section,.video-section,.support-section{padding-block:24px!important}}
+
+.local-browser-viewport.interactive{touch-action:none;user-select:none;-webkit-user-select:none;cursor:pointer;overflow:hidden}
+.local-browser-viewport.interactive img{pointer-events:none}
+.local-browser-input{display:flex;gap:8px;padding:10px;border-top:1px solid #e3e8ef}
+.local-browser-input input{flex:1;min-width:0;min-height:42px;padding:10px;border:1px solid #ccd5df;border-radius:10px}
+@media(max-width:600px){.local-browser-input button{min-height:44px}.local-browser-input input{font-size:16px}}
