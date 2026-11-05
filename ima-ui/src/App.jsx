@@ -8,7 +8,7 @@ import { detectLanguage, getLocale } from './i18n.js';
 import { observeIma } from './services/imaLearningBus';
 import { createLiveBrowserSession, stopLiveBrowserSession, getLocalLiveBrowserScreenshot, localNavigate, localType, localKey } from './services/liveBrowserBridge';
 
-const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537';
+const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537&ocid=4777132721';
 const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL;
 const CLEAN_LOGO_URL='https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
 const SUPPORT_URL='/Ima-kernel/support.html';
