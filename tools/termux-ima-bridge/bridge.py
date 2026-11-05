@@ -23,7 +23,7 @@ def target():
 
 def cdp(method, params=None):
     t=target()
-    ws=websocket.create_connection(t['webSocketDebuggerUrl'], timeout=8, origin='devtools://devtools')
+    ws=websocket.create_connection(t['webSocketDebuggerUrl'], timeout=8, suppress_origin=True)
     try:
         ws.send(json.dumps({'id':1,'method':method,'params':params or {}}))
         while True:
