@@ -283,6 +283,51 @@ def device_command():
     command = (result.get("data") or [{}])[0]
     return jsonify({"ok": True, "command_id": command.get("id"), "status": "queued"}), 202
 
+@app.post("/ima-api/device/mcp-command")
+def device_mcp_command():
+    """Authenticated device-key command bridge for the IMA MCP Apps live window."""
+    device = _device_auth()
+    if not device:
+        return jsonify({"error": "valid device key required"}), 401
+    body = request.get_json(silent=True) or {}
+    action = str(body.get("action") or "").strip()
+    payload = body.get("payload") if isinstance(body.get("payload"), dict) else {}
+    if action not in DEVICE_ALLOWED_ACTIONS:
+        return jsonify({"error": "unsupported_device_action"}), 400
+    if action == "navigate":
+        from urllib.parse import urlparse
+        u = str(payload.get("url") or "").strip()
+        if urlparse(u).scheme not in {"http", "https"}:
+            return jsonify({"error": "navigate_requires_http_or_https"}), 400
+    result = supabase_insert("ima_device_commands", {
+        "owner_user_id": device["owner_user_id"],
+        "device_id": device["id"],
+        "action": action,
+        "payload": payload,
+        "status": "queued",
+        "expires_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() + 45)),
+    })
+    if result.get("status") not in (200, 201):
+        return jsonify({"error": "device_command_queue_failed"}), 503
+    command = (result.get("data") or [{}])[0]
+    command_id = command.get("id")
+    deadline = time.time() + 40
+    while time.time() < deadline:
+        row = supabase_get("ima_device_commands", {
+            "select": "id,status,result,error,completed_at",
+            "id": "eq." + str(command_id),
+            "device_id": "eq." + str(device["id"]),
+            "limit": "1",
+        })
+        if row.get("status") == 200 and row.get("data"):
+            current = row["data"][0]
+            if current.get("status") in {"completed", "failed", "expired"}:
+                if current.get("status") != "completed":
+                    return jsonify({"ok": False, "command_id": command_id, "status": current.get("status"), "error": current.get("error")}), 502
+                return jsonify({"ok": True, "command_id": command_id, "status": "completed", "result": current.get("result") or {}})
+        time.sleep(0.5)
+    return jsonify({"ok": False, "command_id": command_id, "status": "timeout", "error": "device_command_timeout"}), 504
+
 @app.get("/ima-api/device/poll")
 def device_poll():
     device = _device_auth()
