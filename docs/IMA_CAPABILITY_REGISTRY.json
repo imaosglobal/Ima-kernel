@@ -284,6 +284,35 @@
       "security_review_required": true,
       "provider_neutral": true,
       "evolution_policy": "Observe → Map → Connect → Execute → Verify → Document → Reassess"
+    },
+    {
+      "id": "universal_interoperability",
+      "label": "Universal intelligence/device interoperability",
+      "status": "DESIGNED",
+      "boundary": "Provider-neutral adapter architecture for models, browsers, mobile, desktop, wearables, XR, consoles, vehicles, robots, sensors, spacecraft and future device classes; individual integrations require separate verification.",
+      "evidence": [
+        "docs/IMA_UNIVERSAL_INTEROPERABILITY_AND_PUBLIC_IDENTITY.md",
+        "docs/IMA_UNIVERSAL_ADAPTER_REGISTRY.json"
+      ]
+    },
+    {
+      "id": "voice_toggle",
+      "label": "User-controlled IMA voice",
+      "status": "IMPLEMENTED",
+      "boundary": "Browser speech synthesis can be enabled or disabled by the user; this is not yet a provider-backed bidirectional real-time voice agent.",
+      "evidence": [
+        "ima-ui/src/App.jsx"
+      ]
+    },
+    {
+      "id": "terms_consent",
+      "label": "Terms and consent gate",
+      "status": "IMPLEMENTED",
+      "boundary": "Google sign-in UI requires acceptance of the published product terms before interaction with the Google sign-in control.",
+      "evidence": [
+        "terms.html",
+        "ima-ui/src/App.jsx"
+      ]
     }
   ],
   "updated_at": "2026-11-05",
