@@ -7,7 +7,7 @@ function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${en
 function getCookie(name){try{const row=document.cookie.split('; ').find(x=>x.startsWith(name+'='));return row?decodeURIComponent(row.slice(name.length+1)):null}catch{return null}}
 function clearCookie(name){try{document.cookie=`${name}=; Max-Age=0; Path=/; SameSite=Lax`;}catch{}}
 
-async function getSessionToken(forceRefresh = false) {
+export async function getSessionToken(forceRefresh = false) {
   const key = 'ima-public-session-token';
   const googleToken = localStorage.getItem('ima-google-session-token') || getCookie(GOOGLE_TOKEN_COOKIE);
   const googleUser = localStorage.getItem('ima-google-user') || getCookie(GOOGLE_USER_COOKIE);
