@@ -1,11 +1,16 @@
 import { trackImaEvent } from './analytics';
 import { observeIma } from './imaLearningBus';
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
+const GOOGLE_USER_COOKIE='ima-google-user-v1';
+const GOOGLE_TOKEN_COOKIE='ima-google-session-v1';
+function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;}catch{}}
+function getCookie(name){try{const row=document.cookie.split('; ').find(x=>x.startsWith(name+'='));return row?decodeURIComponent(row.slice(name.length+1)):null}catch{return null}}
+function clearCookie(name){try{document.cookie=`${name}=; Max-Age=0; Path=/; SameSite=Lax`;}catch{}}
 
 async function getSessionToken(forceRefresh = false) {
   const key = 'ima-public-session-token';
-  const googleToken = localStorage.getItem('ima-google-session-token');
-  const googleUser = localStorage.getItem('ima-google-user');
+  const googleToken = localStorage.getItem('ima-google-session-token') || getCookie(GOOGLE_TOKEN_COOKIE);
+  const googleUser = localStorage.getItem('ima-google-user') || getCookie(GOOGLE_USER_COOKIE);
   if (googleToken && googleUser && !forceRefresh) return googleToken;
   const cached = localStorage.getItem(key);
   if (cached && !forceRefresh) return cached;
@@ -141,7 +146,8 @@ export async function signInWithGoogleCredential(credential, nonce) {
   if (!response.ok || !data.token) throw new Error(data.error || 'Google sign-in failed');
   localStorage.setItem('ima-public-session-token', data.token);
   localStorage.setItem('ima-google-session-token', data.token);
-  if (data.user) localStorage.setItem('ima-google-user', JSON.stringify(data.user));
+  setCookie(GOOGLE_TOKEN_COOKIE,data.token);
+  if (data.user) { localStorage.setItem('ima-google-user', JSON.stringify(data.user)); setCookie(GOOGLE_USER_COOKIE,JSON.stringify(data.user)); }
   trackImaEvent('ima_google_signin_completed');
   return data;
 }
@@ -156,11 +162,13 @@ export function adoptGoogleSession(data) {
 }
 
 export function getStoredGoogleUser() {
-  try { return JSON.parse(localStorage.getItem('ima-google-user') || 'null'); } catch { return null; }
+  try { const raw=localStorage.getItem('ima-google-user') || getCookie(GOOGLE_USER_COOKIE) || 'null'; return JSON.parse(raw); } catch { return null; }
 }
 
 export function signOutIma() {
   localStorage.removeItem('ima-public-session-token');
   localStorage.removeItem('ima-google-session-token');
   localStorage.removeItem('ima-google-user');
+  clearCookie(GOOGLE_TOKEN_COOKIE);
+  clearCookie(GOOGLE_USER_COOKIE);
 }
