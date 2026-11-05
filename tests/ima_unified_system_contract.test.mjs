@@ -16,3 +16,15 @@ assert.match(bus, /MAX_EVENTS = 120/);
 assert.doesNotMatch(bus, /deploy|publish|spend|contact/i);
 
 console.log('IMA_UNIFIED_SYSTEM_CONTRACT=PASS');
+const contract = JSON.parse(fs.readFileSync('IMA_SYSTEM_UNIFIED_CONTRACT.json', 'utf8'));
+assert.deepEqual(contract.priority_order.map(x => x.id), [
+  'human_agency_truth_safety',
+  'production_reliability',
+  'canonical_unification',
+  'memory_learning_feedback',
+  'universal_action_core',
+  'continuity_interoperability_preservation',
+  'sustainable_growth_and_revenue',
+  'frontier_research_and_creation'
+]);
+assert.match(fs.readFileSync('scripts/ima-next-action.mjs', 'utf8'), /priorityOrder/);
