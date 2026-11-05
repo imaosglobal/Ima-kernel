@@ -1,0 +1,37 @@
+{
+  "date":"2026-11-05",
+  "title":"OTA continuous stewardship — canonical baseline verification and mobile QA repair",
+  "request":"Steward the current canonical IMA website and application from main without reviving older UI/product versions.",
+  "baseline":{
+    "source_sha_before_change":"25eff780c2bc0b5fe4d2a73da3c21145ff791689",
+    "public_version_before_change":"eb7da04a23226d0f91d9510ba2bc7ad5f2ecaea1",
+    "evidence":[
+      "main ref resolved to 25eff780c2bc0b5fe4d2a73da3c21145ff791689",
+      "gh-pages version.json resolved to eb7da04a23226d0f91d9510ba2bc7ad5f2ecaea1",
+      "canonical deployment for 25eff... built and passed build/regression/deploy steps but real-browser verification failed"
+    ]
+  },
+  "action":{
+    "change":"Adjusted scripts/public_site_browser_smoke.py so compact canonical navigation is accepted when it fits the 390px viewport; scrolling remains required only when content actually overflows.",
+    "change_sha":"e2d465b9a26667a68366c09fa87232230b1a05ab",
+    "scope":"Test-only; no product UI, authentication, backend, bridge or public content changed."
+  },
+  "verification":{
+    "build":"PASS",
+    "regression_gate":"PASS",
+    "public_deploy":"IN_PROGRESS at canonical run 42071546828; not declared live",
+    "browser_smoke":"Pending fresh post-change run; prior failure was the stale 390px overflow assertion",
+    "chain":"e2d465... -> build PASS -> Pages verification pending"
+  },
+  "collaboration_surface":{
+    "status":"No authenticated shared interactive browser session was proven active in this run",
+    "blockers":["Previous repository evidence says Render live-browser bridge requires FIRECRAWL_API_KEY","Previous repository evidence says Opera connector was NOT_CONNECTED"]
+  },
+  "quality":{
+    "security":"No secrets changed or exposed",
+    "privacy":"No user data or credentials changed",
+    "payments":"None"
+  },
+  "blocker":"Canonical GitHub Pages deployment run 42071546828 remained in progress at the deploy step; the new source state was therefore not called live.",
+  "next_action":"Verify only the same/newer main SHA through canonical deployment, version.json equality and real-browser smoke test before promoting to verified-live."
+}
