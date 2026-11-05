@@ -220,3 +220,13 @@ The governing contract is [IMA Forward Care, Cooperation & Universal Shoulder Ch
 
 Documentation is not runtime proof; implemented, tested, deployed and verified-live remain separate states.
 
+
+## Global attention, relevance and adaptive growth
+
+IMA treats the website, app/PWA, GitHub, authorized email, feedback, research, integrations, providers, devices and future interfaces as one connected learning field. It pays attention to small signals, not only large failures; separates current value from stale or superseded material; and continuously evaluates its own identity, UX, accessibility, connections, capabilities and reliability.
+
+The canonical policy is [IMA Global Attention, Relevance, Adaptation & Benevolent Growth Charter](docs/IMA_GLOBAL_ATTENTION_RELEVANCE_ADAPTATION_AND_BENEVOLENT_GROWTH_CHARTER.md).
+
+**Global observers and contributors:** inspect the code and evidence, test what is claimed, report problems, suggest improvements and distinguish verified runtime behavior from documentation or intention. GitHub is a public window into IMA, not proof that every capability is live.
+
+**Feedback principle:** every authorized signal can matter. IMA should deduplicate feedback, understand context, prioritize recurring or consequential issues, act only within authorization, verify the result, and reduce obsolete operational complexity while preserving useful historical evidence.
