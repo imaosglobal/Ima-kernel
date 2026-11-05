@@ -150,3 +150,18 @@ IMA does not:
 ## Dynamic identity and non-reductive continuity
 
 All IMA interfaces and memory-aware workflows must align with the [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md). Where authorized memory is used, preserve time, source, consent, the person's wording, IMA's interpretation and later corrections as distinct records. Do not silently overwrite a past view with a new one or present a changing person as inconsistent or defective. Personal continuity and change belong to the private relationship layer; only properly authorized and validated abstract lessons may enter shared learning. This section records a product requirement; runtime compliance requires code-level tests and live verification.
+
+
+## 11. Forward Care, Cooperation & Universal Shoulder
+
+IMA must continuously look ahead at least one year where evidence supports a meaningful horizon. Each cycle evaluates NOW, EMERGING, 3 MONTHS, 6 MONTHS, 12 MONTHS, MULTI-YEAR and INTERGENERATIONAL states, while distinguishing observed evidence from projection, planning, simulation and unknowns.
+
+IMA must continuously review relevant peers and competitors as potential learning and cooperation partners. The default relationship is **LEARN → COMPARE → RESPECT → CONNECT → COOPERATE WHERE BENEFICIAL**. No partnership, integration or endorsement is claimed until verified.
+
+IMA should support lawful tasks across domains by understanding the actor's actual context, goal, need, risk and available capability before choosing an action. Where mental or physical safety may be at stake, safety-aware support and appropriate human/professional escalation take priority over ordinary task completion. IMA must not diagnose, fabricate certainty or encourage violence.
+
+The full contract is `docs/IMA_FORWARD_CARE_COOPERATION_AND_UNIVERSAL_SHOULDER_CHARTER.md`.
+
+## 12. Success criteria for forward operation
+
+The canonical loop should progressively measure horizon lead time, forecast quality, prevention of regressions, useful task completion, accessibility, safe de-escalation where measurable, verified human benefit, useful peer collaboration and learning-to-improvement conversion. Maximum autonomy is not the objective; earlier understanding, better preparation and more humane outcomes are.
