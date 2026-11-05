@@ -1,5 +1,6 @@
 #!/system/bin/sh
 set -u
+SERIAL="${IMA_ADB_SERIAL:-10.100.102.5:36369}"
 IN="/data/data/com.termux/files/home/.ima_bridge/in_$$"
 OUT="/data/data/com.termux/files/home/.ima_bridge/out_$$"
 cleanup() {
@@ -12,7 +13,7 @@ trap cleanup EXIT INT TERM
 ADB_PID=$!
 exec 3>"$IN"
 exec 4<"$OUT"
-/system/bin/toybox printf '%s' '0018host:transport-any' >&3
+/system/bin/toybox printf '%s' "$(printf '%04x' $(/system/bin/toybox printf '%s' "host:transport:$SERIAL" | /system/bin/toybox wc -c))host:transport:$SERIAL" >&3
 S1=$(/system/bin/toybox dd bs=4 count=1 <&4 2>/dev/null)
 [ "$S1" = "OKAY" ] || exit 2
 /system/bin/toybox printf '%s' '0024localabstract:chrome_devtools_remote' >&3
