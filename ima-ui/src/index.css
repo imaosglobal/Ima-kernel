@@ -139,7 +139,7 @@ footer{max-width:1180px}
 .ima-app.logged-in .mode{min-height:88px;padding:15px 17px;border-radius:18px;display:flex;align-items:center;gap:12px}
 .ima-app.logged-in .mode span{margin:0;font-size:20px}
 .ima-app.logged-in .mode small{display:none}
-.ima-app.logged-in .live-browser-panel{display:none}
+.ima-app.logged-in .live-browser-panel{display:block !important}
 .ima-app.logged-in .chat-card{border:0;background:rgba(255,253,249,.78);box-shadow:0 24px 80px rgba(65,45,36,.10);border-radius:30px;padding:18px;min-height:calc(100vh - 300px);display:flex;flex-direction:column}
 .ima-app.logged-in .messages{flex:1;min-height:390px;max-height:none;padding:14px 8px}
 .ima-app.logged-in .message{font-size:16px;max-width:min(760px,84%);padding:14px 18px;border-radius:22px}
