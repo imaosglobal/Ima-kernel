@@ -148,6 +148,209 @@ def _session_user_id():
         return None
     return "public:" + user_id
 
+DEVICE_ALLOWED_ACTIONS = {
+    "status", "screenshot", "tabs", "navigate", "click", "type", "key",
+    "android_tap", "android_swipe", "android_text", "android_back",
+    "android_home", "android_read_text"
+}
+
+def _device_key_hash(raw_key):
+    return hashlib.sha256(str(raw_key).encode("utf-8")).hexdigest()
+
+def _device_auth():
+    raw = request.headers.get("X-IMA-Device-Key", "").strip()
+    if not raw:
+        return None
+    digest = _device_key_hash(raw)
+    result = supabase_get("ima_devices", {
+        "select": "id,owner_user_id,device_label,platform,capabilities,status,metadata",
+        "device_key_hash": "eq." + digest,
+        "limit": "1",
+    })
+    if result.get("status") != 200 or not result.get("data"):
+        return None
+    device = result["data"][0]
+    if device.get("status") == "revoked":
+        return None
+    return device
+
+def _device_touch(device):
+    try:
+        supabase_update("ima_devices", {
+            "status": "online",
+            "last_seen_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }, {"id": "eq." + str(device["id"])})
+    except Exception:
+        app.logger.exception("IMA device heartbeat update failed")
+
+def _supabase_rpc(name, payload):
+    base = os.environ.get("SUPABASE_URL", "").rstrip("/")
+    key = os.environ.get("SUPABASE_SERVICE_KEY", "")
+    if not base or not key:
+        raise RuntimeError("Supabase device bridge is not configured")
+    response = requests.post(
+        base + "/rest/v1/rpc/" + name,
+        headers={
+            "apikey": key,
+            "Authorization": "Bearer " + key,
+            "Content-Type": "application/json",
+            "Prefer": "return=representation",
+        },
+        json=payload,
+        timeout=15,
+    )
+    data = response.json() if response.content else []
+    if response.status_code >= 400:
+        raise RuntimeError("Supabase RPC failed: " + str(data)[:300])
+    return data
+
+@app.post("/ima-api/device/register")
+def device_register():
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    body = request.get_json(silent=True) or {}
+    device_label = str(body.get("device_label") or "IMA device").strip()[:120]
+    platform = str(body.get("platform") or "unknown").strip()[:80]
+    capabilities = body.get("capabilities") if isinstance(body.get("capabilities"), dict) else {}
+    metadata = body.get("metadata") if isinstance(body.get("metadata"), dict) else {}
+    token = secrets.token_urlsafe(32)
+    result = supabase_insert("ima_devices", {
+        "owner_user_id": owner,
+        "device_key_hash": _device_key_hash(token),
+        "device_label": device_label,
+        "platform": platform,
+        "capabilities": capabilities,
+        "metadata": metadata,
+        "status": "offline",
+    })
+    if result.get("status") not in (200, 201):
+        return jsonify({"error": "device_registration_failed"}), 503
+    device = (result.get("data") or [{}])[0]
+    return jsonify({
+        "ok": True,
+        "device": {k: device.get(k) for k in ("id","device_label","platform","capabilities","status","created_at")},
+        "device_key": token,
+        "store_once": True,
+        "security": "The device key is returned once and is never returned by status endpoints."
+    }), 201
+
+@app.get("/ima-api/device/status")
+def device_status():
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    result = supabase_get("ima_devices", {
+        "select": "id,device_label,platform,capabilities,status,created_at,last_seen_at,metadata",
+        "owner_user_id": "eq." + owner,
+        "order": "created_at.desc",
+    })
+    if result.get("status") != 200:
+        return jsonify({"error": "device_status_unavailable"}), 503
+    return jsonify({"devices": result.get("data") or []})
+
+@app.post("/ima-api/device/command")
+def device_command():
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    body = request.get_json(silent=True) or {}
+    device_id = str(body.get("device_id") or "").strip()
+    action = str(body.get("action") or "").strip()
+    payload = body.get("payload") if isinstance(body.get("payload"), dict) else {}
+    if not device_id or action not in DEVICE_ALLOWED_ACTIONS:
+        return jsonify({"error": "unsupported_or_missing_device_action"}), 400
+    device = supabase_get("ima_devices", {
+        "select": "id,owner_user_id,status,capabilities",
+        "id": "eq." + device_id,
+        "owner_user_id": "eq." + owner,
+        "limit": "1",
+    })
+    if device.get("status") != 200 or not device.get("data"):
+        return jsonify({"error": "device_not_found"}), 404
+    if device["data"][0].get("status") == "revoked":
+        return jsonify({"error": "device_revoked"}), 403
+    result = supabase_insert("ima_device_commands", {
+        "owner_user_id": owner,
+        "device_id": device_id,
+        "action": action,
+        "payload": payload,
+        "status": "queued",
+        "expires_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() + 60)),
+    })
+    if result.get("status") not in (200, 201):
+        return jsonify({"error": "device_command_queue_failed"}), 503
+    command = (result.get("data") or [{}])[0]
+    return jsonify({"ok": True, "command_id": command.get("id"), "status": "queued"}), 202
+
+@app.get("/ima-api/device/poll")
+def device_poll():
+    device = _device_auth()
+    if not device:
+        return jsonify({"error": "valid device key required"}), 401
+    _device_touch(device)
+    try:
+        rows = _supabase_rpc("ima_claim_device_command", {"p_device_id": device["id"]})
+    except Exception:
+        app.logger.exception("IMA device poll failed")
+        return jsonify({"error": "device_poll_unavailable"}), 503
+    if not rows:
+        return ("", 204)
+    command = rows[0]
+    return jsonify({
+        "ok": True,
+        "command": {
+            "id": command.get("id"),
+            "action": command.get("action"),
+            "payload": command.get("payload") or {},
+            "expires_at": command.get("expires_at"),
+        }
+    })
+
+@app.post("/ima-api/device/result")
+def device_result():
+    device = _device_auth()
+    if not device:
+        return jsonify({"error": "valid device key required"}), 401
+    body = request.get_json(silent=True) or {}
+    command_id = str(body.get("command_id") or "").strip()
+    ok = bool(body.get("ok"))
+    result = body.get("result") if isinstance(body.get("result"), dict) else {"value": body.get("result")}
+    error = str(body.get("error") or "").strip()[:1000] or None
+    if not command_id:
+        return jsonify({"error": "command_id_required"}), 400
+    updated = supabase_update("ima_device_commands", {
+        "status": "completed" if ok else "failed",
+        "completed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "result": result,
+        "error": error,
+    }, {
+        "id": "eq." + command_id,
+        "device_id": "eq." + str(device["id"]),
+        "status": "claimed",
+    })
+    if updated.get("status") not in (200, 204):
+        return jsonify({"error": "device_result_update_failed"}), 503
+    _device_touch(device)
+    return jsonify({"ok": True, "status": "completed" if ok else "failed"})
+
+@app.post("/ima-api/device/revoke")
+def device_revoke():
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    body = request.get_json(silent=True) or {}
+    device_id = str(body.get("device_id") or "").strip()
+    if not device_id:
+        return jsonify({"error": "device_id_required"}), 400
+    updated = supabase_update("ima_devices", {"status": "revoked"}, {
+        "id": "eq." + device_id,
+        "owner_user_id": "eq." + owner,
+    })
+    if updated.get("status") not in (200, 204):
+        return jsonify({"error": "device_revoke_failed"}), 503
+    return jsonify({"ok": True, "device_id": device_id, "status": "revoked"})
+
 def _cors():
     origin = request.headers.get("Origin", "")
     if origin in PUBLIC_ORIGINS:
