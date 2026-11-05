@@ -57,17 +57,18 @@ const tools = [
 
 export async function registerImaWebMCP() {
   if (!window.isSecureContext) return {ok:false,reason:'insecure_context',message:'WebMCP requires HTTPS.'};
-  if (!('modelContext' in document) || !document.modelContext) return {ok:false,reason:'webmcp_unavailable',message:'This browser does not expose the WebMCP modelContext API.'};
+  const modelContext = document.modelContext || navigator.modelContext;
+  if (!modelContext) return {ok:false,reason:'webmcp_unavailable',message:'Native WebMCP is not available; use IMA browser bridge fallback.'};
   try {
     const registered=[];
-    for (const tool of tools) { await document.modelContext.registerTool(tool); registered.push(tool.name); }
+    for (const tool of tools) { await modelContext.registerTool(tool); registered.push(tool.name); }
     return {ok:true,tools:registered,message:`${registered.length} IMA browser tools registered.`};
   } catch(error){ return {ok:false,reason:'registration_failed',message:String(error?.message||error)}; }
 }
 
 export function useImaWebMCP(enabled = true) {
   useEffect(() => {
-    if (!enabled || !window.isSecureContext || !('modelContext' in document)) return;
+    if (!enabled || !window.isSecureContext || !(document.modelContext || navigator.modelContext)) return;
     const controller = new AbortController();
     let active = true;
     (async () => { try { if (active) await registerImaWebMCP(); } catch {} })();
