@@ -7,7 +7,7 @@ import GlobalPrinciples from './GlobalPrinciples.jsx';
 import { detectLanguage, getLocale } from './i18n.js';
 import { observeIma } from './services/imaLearningBus';
 import { createLiveBrowserSession, stopLiveBrowserSession, getLocalLiveBrowserScreenshot, localNavigate, localTap, localScroll, localType, localKey, localEnroll } from './services/liveBrowserBridge';
-import { useImaWebMCP } from './services/imaWebMCP';
+import { useImaWebMCP, registerImaWebMCP } from './services/imaWebMCP';
 
 const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537&ocid=4777132721';
 const GOOGLE_CAMPAIGN_LOGO_URL='https://imaosglobal.github.io/Ima-kernel/campaign.html?utm_source=ima_logo&utm_medium=internal&utm_campaign=google_ads_24409551537&campaignId=24409551537';
@@ -62,8 +62,10 @@ export default function App(){
  const [shareOpen,setShareOpen]=useState(false);
  const [liveBrowser,setLiveBrowser]=useState(null);
  const [liveBrowserBusy,setLiveBrowserBusy]=useState(false);
+ const [mcpStatus,setMcpStatus]=useState('unknown');
  const [voiceEnabled,setVoiceEnabled]=useState(()=>localStorage.getItem('ima-voice-enabled')!=='off');
  useImaWebMCP(auth.status==='signed_in');
+ useEffect(()=>{if(auth.status!=='signed_in'){setMcpStatus('unknown');return} setMcpStatus(window.isSecureContext&&('modelContext' in document)?'available':'unavailable')},[auth.status]);
 
  useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
   window.addEventListener('beforeinstallprompt',adoptInstallEvent);
@@ -118,7 +120,7 @@ export default function App(){
         </div>
       </details>
       {liveBrowser?.interactiveLiveViewUrl&&<button className="secondary small" onClick={async()=>{await stopLiveBrowserSession(liveBrowser.sessionId).catch(()=>{});setLiveBrowser(null)}}>{lang==='he'?'סגירת חלון':'Close window'}</button>}
-      <button className="primary small" disabled={liveBrowserBusy} onClick={async()=>{setLiveBrowserBusy(true);try{const session=await createLiveBrowserSession();setLiveBrowser(session);observeIma({type:'live_browser_opened',source:'public-chat',outcome:'session_created'})}catch(error){setLiveBrowser({error:error?.message||'live_browser_unavailable'});observeIma({type:'live_browser_opened',source:'public-chat',outcome:'blocked'})}finally{setLiveBrowserBusy(false)}}}>{liveBrowserBusy?(lang==='he'?'פותח…':'Opening…'):(liveBrowser?.interactiveLiveViewUrl?(lang==='he'?'פתיחה מחדש':'Reopen'):(lang==='he'?'פתח חלון עבודה חי':'Open live work window'))}</button>
+      <button className="secondary small" onClick={async()=>{const result=await registerImaWebMCP();setMcpStatus(result.ok?'active':'unavailable')}}>{lang==='he'?'הפעלת WebMCP':'Activate WebMCP'} {mcpStatus==='active'?'✓':''}</button>      <button className="primary small" disabled={liveBrowserBusy} onClick={async()=>{setLiveBrowserBusy(true);try{const session=await createLiveBrowserSession();setLiveBrowser(session);observeIma({type:'live_browser_opened',source:'public-chat',outcome:'session_created'})}catch(error){setLiveBrowser({error:error?.message||'live_browser_unavailable'});observeIma({type:'live_browser_opened',source:'public-chat',outcome:'blocked'})}finally{setLiveBrowserBusy(false)}}}>{liveBrowserBusy?(lang==='he'?'פותח…':'Opening…'):(liveBrowser?.interactiveLiveViewUrl?(lang==='he'?'פתיחה מחדש':'Reopen'):(lang==='he'?'פתח חלון עבודה חי':'Open live work window'))}</button>
     </div>
   </div>
   {liveBrowser?.mode==='local-termux-chrome'?<LocalBrowserPanel lang={lang}/>:liveBrowser?.interactiveLiveViewUrl?<div className="live-browser-frame-wrap"><iframe className="live-browser-frame" src={liveBrowser.interactiveLiveViewUrl} title="IMA live browser collaboration" allow="clipboard-read; clipboard-write; fullscreen" referrerPolicy="no-referrer"/><small>{lang==='he'?'החלון החי זמני; סגירתו משחררת את הסשן.':'The live window is temporary; closing it releases the session.'}</small></div>:liveBrowser?.error?<div className="live-browser-status error">{lang==='he'?'חלון הדפדפן עדיין לא הופעל: ':'Live browser is not activated yet: '}{liveBrowser.error}</div>:<div className="live-browser-status">{lang==='he'?'פתח את החלון כדי להפעיל סשן דפדפן חי.':'Open the window to start a live browser session.'}</div>}
