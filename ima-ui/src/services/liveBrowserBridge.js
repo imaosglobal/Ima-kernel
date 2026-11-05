@@ -19,6 +19,7 @@ export async function getLocalLiveBrowserScreenshot(){
 
 export async function localNavigate(url){return localJson('/navigate',{method:'POST',body:JSON.stringify({url})});}
 export async function localTap(x,y){return localJson('/tap',{method:'POST',body:JSON.stringify({x,y})});}
+export async function localEnroll(){const token=localStorage.getItem('ima-public-session-token');if(!token)throw new Error('IMA session required');return localJson('/enroll',{method:'POST',body:JSON.stringify({authorization:'Bearer '+token})});}
 export async function localScroll(deltaX,deltaY,x=10,y=10){return localJson('/scroll',{method:'POST',body:JSON.stringify({deltaX,deltaY,x,y})});}
 export async function localClick(selector){return localJson('/click',{method:'POST',body:JSON.stringify({selector})});}
 export async function localType(text){return localJson('/type',{method:'POST',body:JSON.stringify({text})});}
