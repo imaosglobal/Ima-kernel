@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "name": "IMA Universal Adapter Registry",
+  "status": "DESIGNED",
+  "rule": "An adapter is not considered LIVE until implementation, reproducible test, deployed surface and end-to-end verification exist.",
+  "transports": [
+    "HTTPS",
+    "WSS",
+    "Streamable HTTP MCP",
+    "stdio MCP",
+    "WebMCP",
+    "Bluetooth LE",
+    "USB",
+    "local IPC",
+    "satellite/IP",
+    "future custom transport"
+  ],
+  "intelligence_providers": {
+    "strategy": "provider-neutral",
+    "adapters": [
+      "MCP",
+      "provider-native-tools",
+      "OpenAI-compatible",
+      "Anthropic-compatible",
+      "Gemini-compatible",
+      "local-model",
+      "future-provider"
+    ]
+  },
+  "device_families": [
+    {
+      "id": "mobile",
+      "examples": [
+        "Android",
+        "iOS"
+      ],
+      "adapters": [
+        "native-agent",
+        "accessibility",
+        "browser",
+        "mcp"
+      ]
+    },
+    {
+      "id": "desktop",
+      "examples": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "adapters": [
+        "desktop-agent",
+        "browser",
+        "accessibility",
+        "mcp"
+      ]
+    },
+    {
+      "id": "wearable",
+      "examples": [
+        "watch",
+        "fitness wearable",
+        "assistive wearable"
+      ],
+      "adapters": [
+        "native-sdk",
+        "bluetooth",
+        "voice",
+        "mcp"
+      ]
+    },
+    {
+      "id": "xr",
+      "examples": [
+        "smart glasses",
+        "AR/VR/MR headset"
+      ],
+      "adapters": [
+        "xr-runtime",
+        "spatial-ui",
+        "voice",
+        "gaze-pointer",
+        "mcp"
+      ]
+    },
+    {
+      "id": "console",
+      "examples": [
+        "game console",
+        "living-room device"
+      ],
+      "adapters": [
+        "platform-sdk",
+        "browser",
+        "remote-control"
+      ]
+    },
+    {
+      "id": "vehicle",
+      "examples": [
+        "car",
+        "truck",
+        "ship",
+        "aircraft"
+      ],
+      "adapters": [
+        "approved-hmi",
+        "vehicle-api",
+        "edge-agent",
+        "mcp"
+      ]
+    },
+    {
+      "id": "robot",
+      "examples": [
+        "home robot",
+        "industrial robot",
+        "research robot"
+      ],
+      "adapters": [
+        "robot-sdk",
+        "fleet-manager",
+        "accessibility",
+        "mcp"
+      ]
+    },
+    {
+      "id": "iot_sensor",
+      "examples": [
+        "sensor",
+        "camera",
+        "environmental device",
+        "smart-home device"
+      ],
+      "adapters": [
+        "matter",
+        "mqtt",
+        "http",
+        "bluetooth",
+        "edge-agent"
+      ]
+    },
+    {
+      "id": "spacecraft",
+      "examples": [
+        "crew vehicle",
+        "station",
+        "lander",
+        "deep-space vehicle"
+      ],
+      "adapters": [
+        "edge-agent",
+        "delay-tolerant-network",
+        "mission-api",
+        "crew-hmi",
+        "fleet-coordination"
+      ]
+    },
+    {
+      "id": "future",
+      "examples": [
+        "new device classes"
+      ],
+      "adapters": [
+        "capability-manifest",
+        "custom-transport",
+        "human-approval"
+      ]
+    }
+  ],
+  "capability_classes": [
+    "observe",
+    "converse",
+    "display",
+    "audio",
+    "input",
+    "accessibility",
+    "navigate",
+    "actuate",
+    "sense",
+    "compute",
+    "store",
+    "sync",
+    "coordinate",
+    "verify"
+  ],
+  "risk_classes": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "network_modes": [
+    "wifi",
+    "cellular",
+    "ethernet",
+    "bluetooth",
+    "mesh",
+    "satellite",
+    "offline",
+    "future"
+  ],
+  "memory_scopes": [
+    "session",
+    "personal",
+    "device",
+    "organization",
+    "fleet",
+    "mission",
+    "public-validated"
+  ],
+  "safety_rules": [
+    "default-deny",
+    "least-privilege",
+    "user-controlled-enrollment",
+    "explicit-high-impact-confirmation",
+    "critical-system-interlock",
+    "prompt-injection-is-untrusted-content",
+    "postcondition-verification",
+    "local-emergency-stop",
+    "network-loss-fails-closed",
+    "no-cross-user-private-memory"
+  ]
+}
