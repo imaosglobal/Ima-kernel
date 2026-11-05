@@ -183,3 +183,35 @@ footer{max-width:1180px}
  .ima-app.logged-in .composer button{min-width:64px}
  .ima-app.logged-in .community-shop .feature-grid{grid-template-columns:1fr}
 }
+
+
+/* Canonical post-login app views: tabs switch views instead of scrolling. */
+.ima-app.logged-in.view-chat #community,
+.ima-app.logged-in.view-chat #shop { display:none !important; }
+.ima-app.logged-in.view-community #chat,
+.ima-app.logged-in.view-community #shop { display:none !important; }
+.ima-app.logged-in.view-shop #chat,
+.ima-app.logged-in.view-shop #community { display:none !important; }
+.ima-app.logged-in.view-community #community,
+.ima-app.logged-in.view-shop #shop { display:block !important; }
+.ima-app.logged-in.view-chat #chat { display:block !important; }
+
+.ima-app.logged-in .topbar nav button { min-width:112px; min-height:48px; font-size:16px; }
+.google-entry { width:320px; min-width:320px; min-height:52px; height:52px; }
+.google-entry > div { width:320px !important; height:52px !important; }
+.account-chip { width:320px; min-width:320px; height:52px; min-height:52px; padding:6px 10px; gap:10px; font-size:15px; }
+.account-photo { width:40px !important; height:40px !important; }
+.account-chip button { min-height:38px; padding:8px 13px; font-size:14px; }
+.google-entry small { position:absolute; margin-top:62px; font-size:12px; color:#8d4e57; }
+.hero-below-image-actions { width:min(100%,320px); }
+.youtube-placeholder { min-height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; background:#fffaf4; }
+.youtube-placeholder .clean-ima-logo { width:min(260px,65%); box-shadow:none; }
+.youtube-placeholder span { color:#766c64; font-size:14px; }
+@media(max-width:850px){
+  .google-entry,.google-entry>div,.account-chip { width:260px; min-width:260px; }
+  .ima-app.logged-in .topbar nav button { min-width:96px; min-height:46px; }
+}
+@media(max-width:520px){
+  .google-entry,.google-entry>div,.account-chip { width:230px; min-width:230px; }
+  .account-chip span { max-width:100px; }
+}
