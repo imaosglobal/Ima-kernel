@@ -70,7 +70,9 @@ export default function App(){
   return()=>{window.removeEventListener('languagechange',languageChanged);window.removeEventListener('beforeinstallprompt',adoptInstallEvent)}
  },[lang,locale.code,locale.dir]);
 
- useEffect(()=>{let alive=true;(async()=>{try{const stored=await getStoredGoogleUser();if(alive&&stored?.sub){setProfile(loadProfile(stored));setAuth({status:'signed_in',user:stored});setActive('chat')}}catch{}})();return()=>{alive=false}},[]);\n\n const loggedIn=auth.status==='signed_in';
+ useEffect(()=>{let alive=true;(async()=>{try{const stored=await getStoredGoogleUser();if(alive&&stored?.sub){setProfile(loadProfile(stored));setAuth({status:'signed_in',user:stored});setActive('chat')}}catch{}})();return()=>{alive=false}},[]);
+
+ const loggedIn=auth.status==='signed_in';
  const go=id=>{observeIma({type:'navigation',source:'public-ui',data:{section:id}});setActive(id);const el=document.getElementById(id);if(el){history.replaceState(null,'',`#${id}`);el.scrollIntoView({behavior:'smooth',block:'start'})}};
  useEffect(()=>{if(loggedIn)document.getElementById('chat')?.scrollIntoView({behavior:'smooth'})},[loggedIn]);
  const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');setBusy(true);try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);}finally{setBusy(false)}};
