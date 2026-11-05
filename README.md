@@ -116,6 +116,18 @@ See [docs/IMA_GLOBAL_LAUNCH_PLAN.md](docs/IMA_GLOBAL_LAUNCH_PLAN.md) and [docs/I
 
 **Continuous evolution contract:** [Universal Conversation & Interaction Memory + Trend-to-Brand + continuous verification](docs/IMA_CONTINUOUS_EVOLUTION_CONTRACT.md). This contract governs the single canonical improvement path; documentation does not substitute for runtime verification.
 
+## Universal Action Core
+
+IMA's execution layer is the **Universal Action Core**: the same human-centered IMA identity can observe authorized interfaces, choose the strongest available integration, act within explicit permissions, verify outcomes, record provenance and learn from verified results. The device bridge, browser bridge, accessibility layer, MCP/plugin distribution and future adapters are implementations of this core—not separate products or separate identities.
+
+**Product name:** IMA — Human-Centered Intelligence  
+**Execution layer:** IMA Universal Action Core  
+**Device integration:** IMA Universal Device Bridge
+
+The core follows: **Observe → Map → Connect → Execute → Verify → Document → Reassess.**
+
+No arbitrary shell, authentication bypass, hidden cross-user access or fabricated verification is part of the public contract.
+
 ### Teach IMA something
 
 Use the GitHub issue template **IMA learning contribution** for a question, correction, research result, technology, test, teaching material, language contribution or real-world observation.
