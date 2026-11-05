@@ -1,26 +1,62 @@
-# IMA Termux Chrome Bridge
+# IMA Universal Device Bridge — Termux/Chrome
 
-Purpose: keep Chrome Android as the user's browser and connect it to IMA through Termux + ADB/CDP.
+This bridge is the Android reference agent for IMA Universal Action Core.
 
-Flow:
-IMA public page (same phone) -> 127.0.0.1:8787 -> IMA bridge -> 127.0.0.1:9222 -> mobilebridge -> ADB -> Chrome Android.
+## Network-independent architecture
 
-One-time setup in Termux:
-1. Android Settings -> Developer options -> Wireless debugging -> Pair device with pairing code.
-2. Install packages: pkg update && pkg install -y git python nodejs android-tools golang
-3. Clone mobilebridge: git clone https://github.com/VulpineOS/mobilebridge.git ~/mobilebridge
-4. Build it: cd ~/mobilebridge && go install ./cmd/mobilebridge
-5. Pair/connect using the IP and ports shown by Android Wireless debugging:
-   adb pair <PAIR-IP:PAIR-PORT>
-   adb connect <CONNECT-IP:CONNECT-PORT>
-   adb devices
-6. Start Chrome CDP proxy: mobilebridge --port 9222
-7. In another Termux session run: python ~/Ima-kernel/tools/termux-ima-bridge/bridge.py
+The production direction is outbound-only:
 
-Expected bridge status: http://127.0.0.1:8787/status
-Tabs: http://127.0.0.1:8787/tabs
-Screenshot: http://127.0.0.1:8787/screenshot
+`Chrome/Termux -> HTTPS polling -> IMA API -> device command queue`
 
-Security: the bridge binds only to 127.0.0.1. Do not expose it publicly without authentication.
+The device does **not** need a fixed Wi-Fi address, inbound port, or the same router. After enrollment, the bridge can reconnect over Wi-Fi or cellular because the device initiates the HTTPS connection.
 
-Why this path: mobilebridge is an open-source Android Chrome CDP bridge designed for real Chrome over ADB, so no replacement browser is required.
+The local CDP path is still used only on the device:
+
+`IMA UI -> 127.0.0.1:8787 -> Chrome CDP -> Chrome Android`
+
+## Current capabilities
+
+- Stable IMA-tab targeting instead of blindly selecting the first Chrome tab.
+- Screenshot capture.
+- URL navigation.
+- DOM click/type/key actions.
+- Coordinate tap and scroll actions.
+- Cloud command polling with exponential backoff.
+- Device key persisted locally with restrictive file permissions.
+- One-click enrollment from the IMA UI at `/enroll`.
+- Fail-closed behavior when the cloud channel is unavailable.
+
+## One-time device enrollment
+
+1. Start the local bridge.
+2. Sign in to IMA with Google.
+3. Open Chat -> LIVE BROWSER.
+4. When the local bridge is detected, press **Make connection persistent / חיבור קבוע** once.
+5. The bridge registers the device through the authenticated IMA API, stores the returned device key locally, and starts the outbound cloud agent.
+
+No device key should be copied into public pages, GitHub, or chat.
+
+## Run
+
+```bash
+python ~/Ima-kernel/tools/termux-ima-bridge/bridge.py
+```
+
+Optional environment variables:
+
+- `IMA_CLOUD_API_BASE` — defaults to `https://ima-915m.onrender.com`
+- `IMA_DEVICE_KEY` — explicit key; normally not needed after enrollment
+- `IMA_DEVICE_STATE_FILE` — persistent key file; defaults to `~/.config/ima/device.json`
+- `IMA_CHROME_TARGET_HINT` — defaults to `imaosglobal.github.io/Ima-kernel`
+- `IMA_CLOUD_POLL_SECONDS` — defaults to 2 seconds
+
+## Security boundary
+
+The bridge is not a public HTTP server. It binds to `127.0.0.1`. The cloud channel is outbound and authenticated with a per-device key. Commands are scoped by the IMA API and should be verified after execution.
+
+The Termux bridge is a reference implementation, not yet the final Android background service. If Android/Termux kills the process, the cloud channel stops until the process is restarted. The production Android agent must provide lifecycle supervision, reconnect, revoke, visible connection state, and an emergency stop.
+
+## Interactive IMA UI
+
+The IMA Chat page contains a LIVE BROWSER panel. It now supports direct click/tap and scrolling on the mirrored Chrome screen, plus navigation and keyboard controls. This is an interactive control surface; it is not a native remote-desktop window embedded in ChatGPT itself.
+
