@@ -58,7 +58,7 @@ with sync_playwright() as p:
         if width <= 850:
             assert nav_metrics["overflowX"] in ("auto", "scroll"), f"Mobile navigation is not horizontally scrollable at {width}px: {nav_metrics}"
         buttons = nav.locator("button")
-        assert buttons.count() == 8, f"Expected 8 navigation controls at {width}px, found {buttons.count()}"
+        assert buttons.count() == 2, f"Expected 2 public navigation controls at {width}px, found {buttons.count()}"
         for index in range(buttons.count()):
             metrics = buttons.nth(index).evaluate("(el) => ({whiteSpace: getComputedStyle(el).whiteSpace, flexShrink: getComputedStyle(el).flexShrink, scrollWidth: el.scrollWidth, clientWidth: el.clientWidth})")
             assert metrics["whiteSpace"] == "nowrap", f"Navigation label {index} wraps at {width}px: {metrics}"
