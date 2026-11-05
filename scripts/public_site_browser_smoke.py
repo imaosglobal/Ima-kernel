@@ -84,7 +84,8 @@ with sync_playwright() as p:
     assert page.locator("a.skip-link").count() == 0, "Skip to IMA link must stay removed"
     below = page.locator(".hero-below-image-actions").first
     assert below.is_visible(), "Hero controls container missing"
-    assert below.locator(".google-entry").count() == 1, "Google sign-in must be directly below the hero image"
+    assert below.locator(".google-entry").count() == 0, "Google sign-in must remain a single canonical topbar control"
+    assert page.locator(".topbar .google-entry").count() == 1, "Canonical Google sign-in control missing from topbar"
     assert below.locator("button.install-button").count() == 1, "Install/home-screen control must be directly below the hero image"
     assert page.locator(".personalization-panel").count() == 0, "nonfunctional personalization panel must stay removed"
     logo = page.locator(".clean-ima-logo").first
