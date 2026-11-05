@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "name": "IMA Universal Device Bridge Safety Policy",
+  "authorization": {
+    "device_owner_required": true,
+    "user_session_required_for_registration_and_commands": true,
+    "device_key_one_time_issue": true,
+    "revocation_supported": true
+  },
+  "transport": {
+    "direction": "device_outbound_only",
+    "protocol": "HTTPS",
+    "network_independent": true,
+    "public_inbound_port_required": false
+  },
+  "actions": {
+    "allowlist_only": true,
+    "arbitrary_shell": false,
+    "authentication_bypass": false,
+    "security_control_bypass": false,
+    "payment_submission_without_confirmation": false
+  },
+  "truth": {
+    "dispatch_is_not_success": true,
+    "verification_required": true,
+    "unknown_remains_unknown": true
+  },
+  "learning": {
+    "loop": "observe->map->connect->execute->verify->document->reassess",
+    "automatic_generalization_requires_evidence": true
+  }
+}
