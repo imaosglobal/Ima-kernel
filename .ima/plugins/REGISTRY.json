@@ -340,6 +340,42 @@
         "source": ".ima/web_intelligence/trend_to_brand.py",
         "tests": "tests/test_trend_to_brand.py"
       }
+    },
+    {
+      "id": "ima_universal_device_bridge",
+      "provider": "IMA",
+      "status": "implemented_not_yet_production_verified",
+      "capabilities": [
+        "owner_scoped_device_identity",
+        "outbound_network_independent_connectivity",
+        "chrome_cdp_control",
+        "android_accessibility_control",
+        "command_verification",
+        "device_revocation",
+        "adaptive_action_routing",
+        "provider_neutral_device_protocol"
+      ],
+      "verification": {
+        "source": "docs/IMA_UNIVERSAL_ACTION_BRIDGE.md; tools/termux-ima-bridge/ima_device_agent.py",
+        "remaining": [
+          "live_end_to_end_registration",
+          "live_command_execution",
+          "android_background_reliability",
+          "device_management_ui",
+          "security_review",
+          "marketplace_provider_review"
+        ]
+      },
+      "commercial": {
+        "packaging": [
+          "plugin",
+          "MCP server",
+          "SDK",
+          "hosted service",
+          "white_label"
+        ],
+        "principle": "preserve founder provenance and existing IMA revenue governance"
+      }
     }
   ],
   "routing": {
@@ -429,7 +465,8 @@
       "github",
       "tinyfish",
       "remote_desktop",
-      "plugin_management"
+      "plugin_management",
+      "ima_universal_device_bridge"
     ],
     "global_change_observatory": [
       "tinyfish",
@@ -446,7 +483,8 @@
       "remote_desktop",
       "tinyfish",
       "github",
-      "ima_capability_factory"
+      "ima_capability_factory",
+      "ima_universal_device_bridge"
     ],
     "world_knowledge": [
       "tinyfish",
@@ -457,7 +495,8 @@
       "ima_mcp_distribution",
       "github",
       "render",
-      "plugin_management"
+      "plugin_management",
+      "ima_universal_device_bridge"
     ],
     "ai_interoperability": [
       "ima_mcp_distribution",
