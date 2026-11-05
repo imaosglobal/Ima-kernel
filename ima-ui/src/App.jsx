@@ -7,6 +7,7 @@ import GlobalPrinciples from './GlobalPrinciples.jsx';
 import { detectLanguage, getLocale } from './i18n.js';
 import { observeIma } from './services/imaLearningBus';
 import { createLiveBrowserSession, stopLiveBrowserSession, getLocalLiveBrowserScreenshot, localNavigate, localType, localKey } from './services/liveBrowserBridge';
+import { useImaWebMCP } from './services/imaWebMCP';
 
 const GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537&ocid=4777132721';
 const GOOGLE_CAMPAIGN_LOGO_URL='https://imaosglobal.github.io/Ima-kernel/campaign.html?utm_source=ima_logo&utm_medium=internal&utm_campaign=google_ads_24409551537&campaignId=24409551537';
@@ -61,6 +62,7 @@ export default function App(){
  const [shareOpen,setShareOpen]=useState(false);
  const [liveBrowser,setLiveBrowser]=useState(null);
  const [liveBrowserBusy,setLiveBrowserBusy]=useState(false);
+ useImaWebMCP(loggedIn);
 
  useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
   window.addEventListener('beforeinstallprompt',adoptInstallEvent);
