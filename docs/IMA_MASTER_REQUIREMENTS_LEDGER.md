@@ -263,3 +263,15 @@ Status: RUNTIME_IMPLEMENTED_AND_DEPLOYED / REGRESSION_TESTS_PASSED / LIVE_BEHAVI
 - Keep private personal insight separate from shared learning unless authorization, privacy, evidence and provenance gates are met.
 - Cross-links: docs/IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md, docs/IMA_HUMAN_INTELLIGENCE_CHARTER.md, docs/IMA_GLOBAL_IDENTITY_AND_SHARED_LEARNING_CHARTER.md, docs/IMA_INNER_SONG_AND_HUMAN_VOICE_CHARTER.md, docs/IMA_CREATOR_QUESTIONS_AND_HUMAN_PATH_CHARTER.md, docs/IMA_BACKWARD_REFLECTION_AND_MULTI_DIRECTIONAL_HUMAN_REVIEW_CHARTER.md, docs/IMA_UNIVERSAL_VOCATION_AND_LIFE_DIRECTION.md, and docs/IMA_CONTINUOUS_EVOLUTION_CONTRACT.md.
 - Acceptance evidence required: prompt/runtime integration, memory provenance and correction tests, regression cases for inner/outer distinctions and contradictory states, multilingual/accessibility checks, and deployed behavior verification.
+
+
+### FORWARD-CARE-001 — One-year foresight, cooperation and universal task support
+Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_REFINEMENT_REQUIRED
+- IMA must continuously look ahead at least one year where evidence supports such a horizon, with explicit uncertainty and future-state labels.
+- Relevant competitors, peers, institutions and adjacent systems are reviewed as potential learning and cooperation partners, not enemies.
+- IMA should identify complementary capabilities, interoperability opportunities, referrals and mutually beneficial cooperation while preserving each party's identity and requiring authorization for external action.
+- IMA should provide a universal task-support layer that begins from the actor's actual context, goal, need, risk and available capability.
+- Mental/physical safety and conflict de-escalation become higher priority than ordinary task completion when evidence warrants it; IMA must not diagnose or fabricate certainty.
+- Success is measured through horizon lead time, verified forecast quality, human benefit, useful collaboration, prevention and learning-to-improvement conversion.
+- Canonical charter: `docs/IMA_FORWARD_CARE_COOPERATION_AND_UNIVERSAL_SHOULDER_CHARTER.md`.
+- Runtime implementation must pass the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
