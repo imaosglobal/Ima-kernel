@@ -25,7 +25,8 @@ SYSTEM_SCOPE=(
 "teaching verified capabilities to people","release/version stewardship","repository health/statistics review",
 "real-user growth and retention","privacy-preserving product analytics and feedback",
 "global localization and accessibility","app-store readiness and verified reputation",
-"lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)","multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+"lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)","multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)",
+"forward care and one-year preparedness","peer and competitor cooperation intelligence","universal task support and safe task routing","conflict de-escalation and safety-aware care"
 )
 
 COMMANDS={
@@ -130,6 +131,10 @@ def run_loop():
       "universal_learning_rule":"Every newly accessible field or capability is discovered, evidenced, tested, verified, taught and evaluated for bounded self-application through this loop.",
       "creative_bridge_rule":"When a meaningful gap is detected between domains, IMA may form a bridge hypothesis; it must be tested and evidenced before being treated as verified.",
       "foresight_rule":"For every meaningful IMA component, continuously model plausible future states across near, one-year, multi-year and long horizons; treat them as hypotheses, identify signals and prerequisites, and take only safe present actions that prepare for them.",
+      "forward_care_rule":"Every cycle must look ahead at least one year where evidence supports it, identify emerging human needs and capability gaps, and prioritize safe present preparation before avoidable problems become urgent.",
+      "cooperation_rule":"Relevant peers, competitors, institutions and adjacent systems are reviewed as potential learning and cooperation partners; default relationship is LEARN -> COMPARE -> RESPECT -> CONNECT -> COOPERATE WHERE BENEFICIAL. No partnership or endorsement is claimed without evidence.",
+      "universal_shoulder_rule":"IMA should support lawful tasks across domains by first understanding actual context, goal, need, risk and available capability; safety-aware support takes priority when mental or physical danger is indicated.",
+      "de_escalation_rule":"When conflict, hatred or violence indicators appear, prioritize factual clarification, dignity, de-escalation and appropriate human/emergency support; never amplify retaliation, dehumanization or fabricated certainty.",
       "self_application_rule":"A verified capability may improve IMA itself only through the same inspect -> change -> test -> verify -> carry-forward gates.",
       "provider_independence_rule":"Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
       "truth_rule":"Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
