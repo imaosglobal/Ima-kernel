@@ -265,9 +265,28 @@
       "revenue_verified": false,
       "evolution_policy": "single canonical IMA Global Health Loop; real-user evidence required before promotion",
       "updated_at": "2026-10-30"
+    },
+    {
+      "id": "universal_device_action_bridge",
+      "label": "Universal Device Action Bridge",
+      "status": "IMPLEMENTED_IN_CODE / NOT_VERIFIED_LIVE",
+      "boundary": "Owner-scoped outbound device action layer for authorized Chrome and Android capabilities; current live registration and end-to-end device execution still require verification.",
+      "evidence": [
+        "app.py",
+        "tools/termux-ima-bridge/ima_device_agent.py",
+        "tools/termux-ima-bridge/bridge.py",
+        "docs/IMA_UNIVERSAL_ACTION_BRIDGE.md",
+        "public.ima_devices",
+        "public.ima_device_commands"
+      ],
+      "test_verified": false,
+      "deployment_verified": false,
+      "security_review_required": true,
+      "provider_neutral": true,
+      "evolution_policy": "Observe → Map → Connect → Execute → Verify → Document → Reassess"
     }
   ],
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-11-05",
   "audit_dimensions": [
     "product specification and information architecture",
     "every navigation item, button, link, form and fallback",
