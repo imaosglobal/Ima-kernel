@@ -86,3 +86,12 @@ After the initial user connection/setup, continue preparing and improving additi
 
 ## GitHub asset note
 The canonical marketing record is stored in this repository. The image binaries themselves are currently stored in HeyGen and referenced above; the available GitHub connector does not expose a verified binary-file upload operation for these generated PNGs, so the images are not falsely marked as uploaded to GitHub.
+
+
+## Public logo destination correction — 2026-11-05
+
+The public IMA logo must not send ordinary visitors to the private Google Ads management console. That destination does not create revenue for IMA.
+
+The public logo now points to the canonical IMA landing page with campaign attribution parameters. The Google Ads console URL remains an administrative reference for the campaign owner.
+
+Revenue remains governed by REVENUE_CONVERSION_TRUTH.md: only a real attributable payment or transaction may be counted as revenue.
