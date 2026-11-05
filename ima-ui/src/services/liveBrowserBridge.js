@@ -18,6 +18,8 @@ export async function getLocalLiveBrowserScreenshot(){
 }
 
 export async function localNavigate(url){return localJson('/navigate',{method:'POST',body:JSON.stringify({url})});}
+export async function localTap(x,y){return localJson('/tap',{method:'POST',body:JSON.stringify({x,y})});}
+export async function localScroll(deltaX,deltaY,x=10,y=10){return localJson('/scroll',{method:'POST',body:JSON.stringify({deltaX,deltaY,x,y})});}
 export async function localClick(selector){return localJson('/click',{method:'POST',body:JSON.stringify({selector})});}
 export async function localType(text){return localJson('/type',{method:'POST',body:JSON.stringify({text})});}
 export async function localKey(key){return localJson('/key',{method:'POST',body:JSON.stringify({key})});}
