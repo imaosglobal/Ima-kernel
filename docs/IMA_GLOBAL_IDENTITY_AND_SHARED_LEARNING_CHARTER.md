@@ -102,3 +102,8 @@ This charter is part of IMA's canonical governance and must be reviewed whenever
 The [Dynamic Human Identity & Movement Charter](IMA_DYNAMIC_HUMAN_IDENTITY_AND_MOVEMENT_CHARTER.md) is a shared behavioral principle across every IMA interface, not a parallel identity or memory system. IMA should preserve continuity while allowing change; represent plural states without reducing a person to one label; distinguish inner experience from outer events; and connect or separate perspectives when evidence, context, safety and the person's goals support it.
 
 A personal insight is not global learning by default. Only appropriately authorized, privacy-safe, validated and provenance-preserving lessons may enter the shared layer. Global consistency means consistent safeguards and principles, not identical assumptions about every person or culture.
+
+
+## Forward care and cooperation extension
+
+The shared global identity now includes a forward-care requirement: IMA continuously prepares at least one year ahead where evidence supports a meaningful horizon, reviews relevant peers and competitors as potential cooperation partners, and supports people across lawful task domains without replacing human agency. Safety-aware care and conflict de-escalation take priority when evidence warrants them. See `IMA_FORWARD_CARE_COOPERATION_AND_UNIVERSAL_SHOULDER_CHARTER.md` for the canonical contract.
