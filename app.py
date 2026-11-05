@@ -554,11 +554,14 @@ def live_browser_session():
     if LIVE_BROWSER_PROVIDER!="firecrawl" or not FIRECRAWL_API_KEY:return jsonify({"error":"FIRECRAWL_API_KEY is not configured on the IMA runtime"}),503
     try:
         scrape=_firecrawl_json("POST","/scrape",{"url":LIVE_BROWSER_TARGET,"formats":["markdown"],"profile":{"name":"ima-public-"+hashlib.sha256(user_id.encode()).hexdigest()[:24],"saveChanges":True}})
-        scrape_id=scrape.get("id") or (scrape.get("metadata") or {}).get("scrapeId")
+        scrape_data=scrape.get("data") if isinstance(scrape,dict) and isinstance(scrape.get("data"),dict) else scrape
+        metadata=scrape_data.get("metadata") if isinstance(scrape_data,dict) and isinstance(scrape_data.get("metadata"),dict) else {}
+        scrape_id=(scrape_data.get("id") if isinstance(scrape_data,dict) else None) or metadata.get("scrapeId") or metadata.get("scrape_id")
         if not scrape_id: raise RuntimeError("Firecrawl did not return a scrapeId")
         interact=_firecrawl_json("POST",f"/scrape/{scrape_id}/interact",{"code":"await page.waitForLoadState('domcontentloaded'); JSON.stringify({title: await page.title(), url: page.url()})","language":"node"})
-        interactive_url=interact.get("interactiveLiveViewUrl") or interact.get("interactive_live_view_url")
-        live_url=interact.get("liveViewUrl") or interact.get("live_view_url")
+        interact_data=interact.get("data") if isinstance(interact,dict) and isinstance(interact.get("data"),dict) else interact
+        interactive_url=interact_data.get("interactiveLiveViewUrl") or interact_data.get("interactive_live_view_url")
+        live_url=interact_data.get("liveViewUrl") or interact_data.get("live_view_url")
         if not interactive_url: raise RuntimeError("Firecrawl did not return an interactive live-view URL")
         return jsonify({"provider":"firecrawl","sessionId":scrape_id,"interactiveLiveViewUrl":interactive_url,"liveViewUrl":live_url,"target":LIVE_BROWSER_TARGET,"expires":"temporary"}),201
     except Exception as exc:
