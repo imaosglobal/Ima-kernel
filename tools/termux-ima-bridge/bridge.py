@@ -10,7 +10,7 @@ except ImportError:
 
 HOST='127.0.0.1'
 PORT=int(os.environ.get('IMA_TERMUX_BRIDGE_PORT','8787'))
-CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:8788').rstrip('/')
+CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:9222').rstrip('/')
 TARGET_HINT=os.environ.get('IMA_CHROME_TARGET_HINT','imaosglobal.github.io/Ima-kernel').strip().lower()
 CLOUD_API=os.environ.get('IMA_CLOUD_API_BASE','https://ima-915m.onrender.com').rstrip('/')
 STATE_FILE=os.path.expanduser(os.environ.get('IMA_DEVICE_STATE_FILE','~/.config/ima/device.json'))
