@@ -3,7 +3,13 @@ import { getSessionToken } from './imaChat';
 const API_BASE=(import.meta.env.VITE_IMA_API_BASE||'https://ima-915m.onrender.com').replace(/\/$/,'');
 const LOCAL='http://127.0.0.1:8787';
 
-async function authHeaders(){const token=await getSessionToken();if(!token)throw new Error('valid Google/IMA session required');return {'Content-Type':'application/json','Authorization':`Bearer ${token}`};}
+async function authHeaders(){
+  let token=null;
+  try { token=await getSessionToken(); } catch {}
+  if (!token) { try { token=await getSessionToken(true); } catch {} }
+  if (!token) throw new Error('Google/IMA session token unavailable; please sign in again');
+  return {'Content-Type':'application/json','Authorization':`Bearer ${token}`};
+}
 
 async function localJson(path,options={}){
  const response=await fetch(LOCAL+path,{...options,headers:{'Content-Type':'application/json',...(options.headers||{})}});
