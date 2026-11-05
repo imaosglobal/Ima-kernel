@@ -103,3 +103,83 @@ footer{max-width:1180px}
 @media(max-width:850px){.life-section{grid-template-columns:1fr;gap:20px;padding:58px 14px 70px}.life-orbit{min-height:330px}.ring-one{width:245px;height:245px}.ring-two{width:320px;height:320px}.life-core{width:150px;height:150px}.life-core span{font-size:42px}.connection-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.life-section{padding-top:45px}.life-orbit{min-height:270px}.ring-one{width:205px;height:205px}.ring-two{width:270px;height:270px}.life-core{width:128px;height:128px}.life-core span{font-size:35px}.life-core b{font-size:18px}.connection-grid{grid-template-columns:1fr}.connection-card{min-height:130px}}
 @media(prefers-reduced-motion:reduce){.orbit-ring{animation:none}}
+
+/* IMA 2026 experience layer: immersive public home + focused post-login app shell. */
+.google-entry{width:300px;min-width:300px;height:40px;min-height:40px;display:flex;align-items:center;justify-content:flex-end;overflow:visible}
+.google-entry>div{width:300px!important;height:40px!important;display:flex;align-items:center;justify-content:flex-end}
+.google-entry iframe{max-width:300px!important}
+.account-chip{width:300px;min-width:300px;height:40px;min-height:40px;padding:4px 8px 4px 10px;justify-content:flex-end;overflow:hidden}
+.account-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:170px}
+.account-chip button{flex:0 0 auto}
+.topbar{box-shadow:0 10px 35px rgba(45,32,25,.04)}
+.hero-copy{position:relative;z-index:2}
+.hero-copy>p:not(.eyebrow){font-size:18px;max-width:560px}
+.clean-ima-logo{transition:transform .35s ease,box-shadow .35s ease}
+.clean-ima-logo:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 38px 100px rgba(55,38,25,.20)}
+.hero-actions .primary{box-shadow:0 12px 28px rgba(157,89,99,.20)}
+.hero-actions .secondary.small{min-height:42px}
+
+/* After login, the website becomes the IMA app instead of a brochure. */
+.ima-app.logged-in .hero,
+.ima-app.logged-in .value-section,
+.ima-app.logged-in .life-section,
+.ima-app.logged-in .welcome-strip,
+.ima-app.logged-in .capabilities-section,
+.ima-app.logged-in .video-section,
+.ima-app.logged-in .support-section,
+.ima-app.logged-in .after-login,
+.ima-app.logged-in .principles,
+.ima-app.logged-in .info-section{display:none}
+.ima-app.logged-in #chat{display:block;max-width:1180px;margin:0 auto;padding:34px 20px 70px;min-height:calc(100vh - 76px)}
+.ima-app.logged-in #chat .section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:none;margin-bottom:16px}
+.ima-app.logged-in #chat .section-head h2{font-size:clamp(2rem,4vw,3.3rem);margin:0}
+.ima-app.logged-in #chat .section-head p{display:none}
+.ima-app.logged-in #chat .eyebrow{display:none}
+.ima-app.logged-in .mode-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.ima-app.logged-in .mode{min-height:88px;padding:15px 17px;border-radius:18px;display:flex;align-items:center;gap:12px}
+.ima-app.logged-in .mode span{margin:0;font-size:20px}
+.ima-app.logged-in .mode small{display:none}
+.ima-app.logged-in .live-browser-panel{display:none}
+.ima-app.logged-in .chat-card{border:0;background:rgba(255,253,249,.78);box-shadow:0 24px 80px rgba(65,45,36,.10);border-radius:30px;padding:18px;min-height:calc(100vh - 300px);display:flex;flex-direction:column}
+.ima-app.logged-in .messages{flex:1;min-height:390px;max-height:none;padding:14px 8px}
+.ima-app.logged-in .message{font-size:16px;max-width:min(760px,84%);padding:14px 18px;border-radius:22px}
+.ima-app.logged-in .composer{margin-top:14px;background:#fff;border:1px solid #e1d7cc;border-radius:22px;padding:6px}
+.ima-app.logged-in .composer input{border:0;background:transparent;outline:none;padding:13px 15px;font-size:16px}
+.ima-app.logged-in .composer button{border-radius:17px;min-width:82px;min-height:48px}
+.ima-app.logged-in .empty-chat{display:grid;place-items:center;flex:1;min-height:300px;font-size:clamp(1.8rem,4vw,3.4rem);font-weight:800;letter-spacing:-.04em;color:#9d5963;text-align:center}
+.ima-app.logged-in .community-shop{max-width:1180px;margin:0 auto;padding:35px 20px 75px}
+.ima-app.logged-in .community-shop .section-head{max-width:none;margin-bottom:18px}
+.ima-app.logged-in .community-shop .section-head p{display:none}
+.ima-app.logged-in .community-shop .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ima-app.logged-in .community-shop article{background:rgba(255,253,249,.82);border:1px solid #e0d5ca;border-radius:24px;padding:24px;min-height:170px;box-shadow:0 16px 50px rgba(65,45,36,.07)}
+.ima-app.logged-in .community-shop article p{color:#766c64;line-height:1.6}
+.ima-app.logged-in footer{display:none}
+.ima-app.logged-in .topbar{box-shadow:0 10px 35px rgba(45,32,25,.06)}
+.ima-app.logged-in .topbar-inner{max-width:1180px}
+.ima-app.logged-in .topbar nav{justify-content:center}
+.ima-app.logged-in .topbar nav button{font-weight:800;padding:10px 18px}
+.ima-app.logged-in .topbar nav button.active{background:#9d5963;color:#fff;box-shadow:0 8px 24px rgba(157,89,99,.18)}
+@media(max-width:850px){
+ .google-entry,.google-entry>div,.account-chip{width:220px;min-width:220px}
+ .account-chip span{max-width:105px}
+ .ima-app.logged-in #chat{padding:22px 14px 50px}
+ .ima-app.logged-in .mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ima-app.logged-in .community-shop{padding:24px 14px 55px}
+ .ima-app.logged-in .community-shop .feature-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ .google-entry,.google-entry>div,.account-chip{width:190px;min-width:190px}
+ .account-chip span{max-width:78px}
+ .ima-app.logged-in .topbar-inner{gap:5px}
+ .ima-app.logged-in .topbar nav{order:3}
+ .ima-app.logged-in .topbar nav button{padding:9px 14px}
+ .ima-app.logged-in #chat .section-head h2{font-size:2rem}
+ .ima-app.logged-in .mode-grid{grid-template-columns:1fr 1fr}
+ .ima-app.logged-in .mode{min-height:76px;padding:12px}
+ .ima-app.logged-in .mode b{font-size:15px}
+ .ima-app.logged-in .chat-card{border-radius:22px;padding:10px;min-height:calc(100vh - 230px)}
+ .ima-app.logged-in .messages{min-height:360px;padding:8px 2px}
+ .ima-app.logged-in .composer{border-radius:18px}
+ .ima-app.logged-in .composer button{min-width:64px}
+ .ima-app.logged-in .community-shop .feature-grid{grid-template-columns:1fr}
+}
