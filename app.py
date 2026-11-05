@@ -529,11 +529,21 @@ def live_browser_session_stop(session_id):
 
 @app.get("/ima-api/runtime")
 def runtime_status():
+    try:
+        from connectors.llm.router import available_providers
+        providers = available_providers()
+    except Exception:
+        providers = {}
     return jsonify({
         "status": "online",
         "service": "IMA public runtime",
-        "version": "chat-v2",
+        "version": "chat-v3-unified",
         "updatedAt": time.time(),
+        "chat": {
+            "live_model_routing": bool(providers),
+            "providers": sorted(providers.keys()),
+            "fallback": "IMA internal knowledge/runtime only",
+        },
         "memory": {
             "mode": "per-user",
             "private_founder_memory_exposed": False,
