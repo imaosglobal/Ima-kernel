@@ -10,7 +10,7 @@ except ImportError:
 
 HOST='127.0.0.1'
 PORT=int(os.environ.get('IMA_TERMUX_BRIDGE_PORT','8787'))
-CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:9222').rstrip('/')
+CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:8788').rstrip('/')
 
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
@@ -35,6 +35,10 @@ def cdp(method, params=None):
 
 def evaluate(expression):
     return cdp('Runtime.evaluate', {'expression':expression,'returnByValue':True,'awaitPromise':True})
+
+class ReusableHTTPServer(ThreadingHTTPServer):
+    allow_reuse_address = True
+    daemon_threads = True
 
 class Handler(BaseHTTPRequestHandler):
     def send_json(self,obj,status=200):
@@ -75,4 +79,4 @@ class Handler(BaseHTTPRequestHandler):
 
 print('IMA bridge listening on http://127.0.0.1:'+str(PORT),flush=True)
 print('Chrome CDP: '+CDP,flush=True)
-ThreadingHTTPServer((HOST,PORT),Handler).serve_forever()
+ReusableHTTPServer((HOST,PORT),Handler).serve_forever()
