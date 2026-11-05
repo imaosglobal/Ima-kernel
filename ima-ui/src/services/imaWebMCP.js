@@ -55,21 +55,18 @@ const tools = [
   }
 ];
 
+export async function registerImaWebMCP() {
+  if (!window.isSecureContext || !('modelContext' in document)) return {ok:false,reason:'webmcp_unavailable'};
+  try { const registered=[]; for (const tool of tools) { await document.modelContext.registerTool(tool); registered.push(tool.name); } return {ok:true,tools:registered}; }
+  catch(error){ return {ok:false,reason:String(error?.message||error)}; }
+}
+
 export function useImaWebMCP(enabled = true) {
   useEffect(() => {
     if (!enabled || !window.isSecureContext || !('modelContext' in document)) return;
     const controller = new AbortController();
     let active = true;
-    (async () => {
-      try {
-        for (const tool of tools) {
-          if (!active) break;
-          await document.modelContext.registerTool(tool, { signal: controller.signal });
-        }
-      } catch {
-        // WebMCP is an evolving browser preview; the normal IMA UI remains the fallback.
-      }
-    })();
+    (async () => { try { if (active) await registerImaWebMCP(); } catch {} })();
     return () => {
       active = false;
       controller.abort();
