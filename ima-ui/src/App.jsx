@@ -75,7 +75,7 @@ export default function App(){
   return()=>{window.removeEventListener('languagechange',languageChanged);window.removeEventListener('beforeinstallprompt',adoptInstallEvent)}
  },[lang,locale.code,locale.dir]);
 
- useEffect(()=>{let alive=true;(async()=>{try{const stored=await getStoredGoogleUser();if(alive&&stored?.sub){setProfile(loadProfile(stored));setAuth({status:'signed_in',user:stored});setActive('chat')}}catch{}})();return()=>{alive=false}},[]);
+ useEffect(()=>{let alive=true;(async()=>{try{const stored=await getStoredGoogleUser();const token=localStorage.getItem('ima-public-session-token')||localStorage.getItem('ima-google-session-token');if(alive&&stored?.sub&&token){setProfile(loadProfile(stored));setAuth({status:'signed_in',user:stored});setActive('chat')}else if(alive&&!token){signOutIma()}}catch{}})();return()=>{alive=false}},[]);
 
  const loggedIn=auth.status==='signed_in';
  const go=id=>{observeIma({type:'navigation',source:'public-ui',data:{section:id}});setActive(id);history.replaceState(null,'',`#${id}`);if(!loggedIn || !['chat','community','shop'].includes(id)){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}};
