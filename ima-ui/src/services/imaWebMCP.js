@@ -56,9 +56,13 @@ const tools = [
 ];
 
 export async function registerImaWebMCP() {
-  if (!window.isSecureContext || !('modelContext' in document)) return {ok:false,reason:'webmcp_unavailable'};
-  try { const registered=[]; for (const tool of tools) { await document.modelContext.registerTool(tool); registered.push(tool.name); } return {ok:true,tools:registered}; }
-  catch(error){ return {ok:false,reason:String(error?.message||error)}; }
+  if (!window.isSecureContext) return {ok:false,reason:'insecure_context',message:'WebMCP requires HTTPS.'};
+  if (!('modelContext' in document) || !document.modelContext) return {ok:false,reason:'webmcp_unavailable',message:'This browser does not expose the WebMCP modelContext API.'};
+  try {
+    const registered=[];
+    for (const tool of tools) { await document.modelContext.registerTool(tool); registered.push(tool.name); }
+    return {ok:true,tools:registered,message:`${registered.length} IMA browser tools registered.`};
+  } catch(error){ return {ok:false,reason:'registration_failed',message:String(error?.message||error)}; }
 }
 
 export function useImaWebMCP(enabled = true) {
