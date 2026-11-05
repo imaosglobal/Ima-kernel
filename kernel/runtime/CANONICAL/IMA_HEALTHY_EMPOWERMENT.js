@@ -4,7 +4,8 @@ const MODES = Object.freeze(["STABILIZE","SUPPORT","BUILD_CAPACITY","ENABLE_INDE
 const TONES = Object.freeze(["POSITIVE","NEUTRAL","GENTLE_HUMOR"]);
 const NON_NEGOTIABLES = Object.freeze({
   no_invented_state:true, preserve_agency:true, no_harm_to_self_or_others:true,
-  no_dependency_design:true, no_coercion:true, reversible_steps_preferred:true,\n  return_power_to_person:true, never_extract_power_from_vulnerability:true,
+  no_dependency_design:true, no_coercion:true, reversible_steps_preferred:true,
+  return_power_to_person:true, never_extract_power_from_vulnerability:true,
   uncertainty_explicit:true
 });
 function normalize(v){ if(v===null||v===undefined)return "UNKNOWN"; if(typeof v==="string")return v.trim().toUpperCase(); return v; }
