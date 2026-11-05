@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import base64, json, os, sys, time, threading, urllib.request, urllib.parse
+import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 try:
@@ -13,7 +13,12 @@ PORT=int(os.environ.get('IMA_TERMUX_BRIDGE_PORT','8787'))
 CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:8788').rstrip('/')
 TARGET_HINT=os.environ.get('IMA_CHROME_TARGET_HINT','imaosglobal.github.io/Ima-kernel').strip().lower()
 CLOUD_API=os.environ.get('IMA_CLOUD_API_BASE','https://ima-915m.onrender.com').rstrip('/')
-DEVICE_KEY=os.environ.get('IMA_DEVICE_KEY','').strip()
+STATE_FILE=os.path.expanduser(os.environ.get('IMA_DEVICE_STATE_FILE','~/.config/ima/device.json'))
+def load_device_key():
+    if os.environ.get('IMA_DEVICE_KEY','').strip(): return os.environ['IMA_DEVICE_KEY'].strip()
+    try: return str(json.loads(pathlib.Path(STATE_FILE).read_text(encoding='utf-8')).get('device_key','')).strip()
+    except Exception: return ''
+DEVICE_KEY=load_device_key()
 CLOUD_POLL_SECONDS=max(1.0,float(os.environ.get('IMA_CLOUD_POLL_SECONDS','2')))
 CLOUD_TIMEOUT=max(3.0,float(os.environ.get('IMA_CLOUD_TIMEOUT','12')))
 
@@ -105,6 +110,18 @@ def cloud_request(path,method='GET',payload=None):
         raw=r.read()
         return r.status, json.loads(raw.decode()) if raw else {}
 
+def persist_device_key(device_key, device_id=None):
+    path=pathlib.Path(STATE_FILE)
+    path.parent.mkdir(parents=True,exist_ok=True)
+    path.write_text(json.dumps({'device_key':device_key,'device_id':device_id,'updated_at':time.time()},ensure_ascii=False),encoding='utf-8')
+    try: path.chmod(0o600)
+    except Exception: pass
+
+def start_cloud_agent():
+    global DEVICE_KEY
+    if DEVICE_KEY and not any(t.name=='ima-cloud-agent' and t.is_alive() for t in threading.enumerate()):
+        threading.Thread(target=cloud_agent_loop,daemon=True,name='ima-cloud-agent').start()
+
 def cloud_agent_loop():
     if not DEVICE_KEY:
         print('Cloud agent disabled: IMA_DEVICE_KEY is not configured.',flush=True)
@@ -164,7 +181,19 @@ class Handler(BaseHTTPRequestHandler):
             n=int(self.headers.get('Content-Length','0'))
             body=json.loads(self.rfile.read(n) or b'{}')
             path=urllib.parse.urlparse(self.path).path
-            if path in ('/navigate','/eval','/click','/tap','/scroll','/type','/key'):
+            if path=='/enroll':
+                auth=str(body.get('authorization','')).strip()
+                if not auth.startswith('Bearer '):
+                    raise ValueError('authorization required')
+                req=urllib.request.Request(CLOUD_API+'/ima-api/device/register',data=json.dumps({'device_label':'Android Chrome · Termux','platform':'android-termux','capabilities':{'browser':True,'chrome_cdp':True,'network_independent':True},'metadata':{'bridge':'ima-termux-bridge','target_hint':TARGET_HINT}}).encode(),headers={'Content-Type':'application/json','Authorization':auth,'Accept':'application/json'},method='POST')
+                with urllib.request.urlopen(req,timeout=CLOUD_TIMEOUT) as rr:
+                    data=json.loads(rr.read().decode())
+                if not data.get('device_key'): raise RuntimeError('cloud enrollment returned no device key')
+                DEVICE_KEY=str(data['device_key']).strip()
+                persist_device_key(DEVICE_KEY,(data.get('device') or {}).get('id'))
+                start_cloud_agent()
+                self.send_json({'ok':True,'enrolled':True,'device':data.get('device'), 'cloud':{'api':CLOUD_API,'network_independent':True}})
+            elif path in ('/navigate','/eval','/click','/tap','/scroll','/type','/key'):
                 action=path[1:]
                 self.send_json(execute_action(action,body))
             else:
@@ -174,7 +203,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__=='__main__':
     if DEVICE_KEY:
-        threading.Thread(target=cloud_agent_loop,daemon=True,name='ima-cloud-agent').start()
+        start_cloud_agent()
     print('IMA bridge listening on http://127.0.0.1:'+str(PORT),flush=True)
     print('Chrome CDP: '+CDP,flush=True)
     print('Chrome target hint: '+TARGET_HINT,flush=True)
