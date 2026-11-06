@@ -8,7 +8,9 @@ const PRINCIPLES=[
  {k:'Clear & familiar',h:'פשוט, מוכר וצפוי',p:'היררכיה ברורה, דפוסי ממשק מוכרים, משוב מיידי ושפה ישירה — בלי להסתיר את הפעולה החשובה.',sources:'Apple · Google Material · Microsoft Fluent'},
  {k:'Safety & resilience',h:'בטוח, ניתן לתיקון',p:'ניטור, בדיקות, גבולות, כשל בטוח, יכולת עקיפה והתאוששות. בעיה נכנסת ללולאת תיקון.',sources:'NIST · OECD · ITU'},
  {k:'Accountability',h:'אחריות ניתנת לבדיקה',p:'לכל יכולת משמעותית יש ראיה, סטטוס, בדיקה חוזרת ודרך לערער או לדווח על בעיה.',sources:'OECD · NIST · ITU'},
- {k:'Continuous learning',h:'משתפרים מהעולם',p:'משוב, בדיקות אמיתיות, מדדים ולקחים מתועדים חוזרים למוצר — בלי להפוך כל משוב אוטומטית לאמת.',sources:'Apple · ITU · modern product practice'}
+ {k:'Continuous learning',h:'משתפרים מהעולם',p:'משוב, בדיקות אמיתיות, מדדים ולקחים מתועדים חוזרים למוצר — בלי להפוך כל משוב אוטומטית לאמת.',sources:'Apple · ITU · modern product practice'},
+ {k:'World Pulse',h:'רואים את השינויים בעולם',p:'אמא מחברת בין סכסוכים, מחאות, אסונות, משברים, תגליות ושינויים חברתיים — תוך הפרדה בין דיווח, ראיה, פרשנות ואי־ודאות.',sources:'IMA Global Change & Humanitarian Intelligence'},
+ {k:'Humanitarian action',h:'מה אנשים צריכים עכשיו?',p:'כאשר מתרחש משבר, אמא ממפה צרכים, אפשרויות לא־אלימות ודרכי עזרה מורשות. היא מסייעת לחבר — לא מחליטה במקום האנשים.',sources:'IMA Peace & Human Dignity Doctrine'}
 ];
 
 export default function GlobalPrinciples(){
