@@ -55,23 +55,23 @@ const tools = [
   }
 ];
 
-export async function registerImaWebMCP() {
+export async function registerImaWebMCP(signal) {
   if (!window.isSecureContext) return {ok:false,reason:'insecure_context',message:'WebMCP requires HTTPS.'};
-  const modelContext = document.modelContext || navigator.modelContext;
+  const modelContext = document.modelContext;
   if (!modelContext) return {ok:false,reason:'webmcp_unavailable',message:'Native WebMCP is not available; use IMA browser bridge fallback.'};
   try {
     const registered=[];
-    for (const tool of tools) { await modelContext.registerTool(tool); registered.push(tool.name); }
+    for (const tool of tools) { await modelContext.registerTool(tool, signal ? { signal } : undefined); registered.push(tool.name); }
     return {ok:true,tools:registered,message:`${registered.length} IMA browser tools registered.`};
   } catch(error){ return {ok:false,reason:'registration_failed',message:String(error?.message||error)}; }
 }
 
 export function useImaWebMCP(enabled = true) {
   useEffect(() => {
-    if (!enabled || !window.isSecureContext || !(document.modelContext || navigator.modelContext)) return;
+    if (!enabled || !window.isSecureContext || !document.modelContext) return;
     const controller = new AbortController();
     let active = true;
-    (async () => { try { if (active) await registerImaWebMCP(); } catch {} })();
+    (async () => { try { if (active) await registerImaWebMCP(controller.signal); } catch {} })();
     return () => {
       active = false;
       controller.abort();
