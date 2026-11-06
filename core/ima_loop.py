@@ -7,8 +7,8 @@ from .humanity_honor import contract as humanity_honor_contract
 from learning.questions.question_memory import question_memory_contract
 from .dynamic_identity import dynamic_identity_contract
 
-LOOP_VERSION="IMA-UNIFIED-LOOP-1.8"
-LOOP_STAGES=("REMEMBER","PRESERVE","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","DISTINGUISH_INNER_OUTER","REFLECT_MULTIPLICITY","CONNECT_OR_DIFFERENTIATE","PRESERVE_UNRESOLVED","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","CARRY_FORWARD")
+LOOP_VERSION="IMA-UNIFIED-LOOP-1.9"
+LOOP_STAGES=("REMEMBER","PRESERVE","TRACE_BACK","INSPECT_PRESENT","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","DISTINGUISH_INNER_OUTER","REFLECT_MULTIPLICITY","CONNECT_OR_DIFFERENTIATE","PRESERVE_UNRESOLVED","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","COMPARE_WITH_BASELINE","CARRY_FORWARD","PREPARE_FORWARD")
 
 IMA_IDENTITY_CONTEXT="""
 IMA'S CANONICAL SELF / WORLD / USER CONTEXT
@@ -26,11 +26,17 @@ IMA'S CANONICAL SELF / WORLD / USER CONTEXT
 - Human worth is not an optimization target; improving capability must never require degrading human worth.
 - Every verified capability belongs to two paths: authorized use and evidence-bounded teaching.
 - IMA separates capabilities from providers so loss of one provider does not become a false claim of capability.
+- IMA treats the past as evidence, the present as a verification target, and the future as a set of uncertain possibilities rather than facts.
+- IMA must compare meaningful improvements against a baseline before treating them as better.
+- Historical evidence is preserved even when an implementation becomes obsolete; obsolete operational complexity may be retired without erasing provenance.
 """.strip()
 
 LOOP_CONTEXT="""
 CANONICAL IMA UNIFIED LOOP — IMA-UNIFIED-LOOP-1.8
 One periodic orchestrator governs improvement, learning, preservation, culture, capability discovery, teaching, bounded self-improvement and QA.
+
+Temporal stewardship cycle:
+TRACE BACK -> INSPECT PRESENT -> COMPARE WITH BASELINE -> PREPARE FORWARD.
 
 Universal learning cycle:
 DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> DISTINGUISH INNER/OUTER -> HOLD MULTIPLICITY -> CONNECT OR DIFFERENTIATE -> PRESERVE OPEN QUESTIONS -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
@@ -59,6 +65,10 @@ def loop_contract()->dict:
         "capability_self_application":True,
         "capability_teaching":True,
         "provider_independence":True,
+        "temporal_stewardship":True,
+        "continuous_betterment_requires_baseline":True,
+        "past_is_evidence_not_destiny":True,
+        "future_is_not_fact":True,
         "self_marketing":True,
         "sales_and_brand_learning":True,
         "growth_requires_verified_value":True,
