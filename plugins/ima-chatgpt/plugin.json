@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ima",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IMA universal human-centered intelligence layer",
   "extensions": {
     "com.openai": {
@@ -11,10 +11,10 @@
         "longDescription": "IMA is a human-centered intelligence layer designed to connect conversation, learning, memory, tools and interoperable AI capabilities while preserving consent, privacy, provenance and truthful capability reporting.",
         "developerName": "Ori Cohen / IMA",
         "category": "Productivity",
-        "websiteURL": "https://ima-server-1ptk.onrender.com/",
-        "supportURL": "https://ima-server-1ptk.onrender.com/support",
-        "privacyPolicyURL": "https://ima-server-1ptk.onrender.com/privacy",
-        "termsOfServiceURL": "https://ima-server-1ptk.onrender.com/terms",
+        "websiteURL": "https://imaosglobal.github.io/Ima-kernel/",
+        "supportURL": "https://imaosglobal.github.io/Ima-kernel/support.html",
+        "privacyPolicyURL": "https://imaosglobal.github.io/Ima-kernel/privacy.html",
+        "termsOfServiceURL": "https://imaosglobal.github.io/Ima-kernel/terms.html",
         "defaultPrompt": [
           "Check IMA's verified public capabilities.",
           "What has IMA learned recently?",
