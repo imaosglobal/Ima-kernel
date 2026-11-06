@@ -284,3 +284,12 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_REFINEMENT_REQUIRED
 - Success is measured through horizon lead time, verified forecast quality, human benefit, useful collaboration, prevention and learning-to-improvement conversion.
 - Canonical charter: `docs/IMA_FORWARD_CARE_COOPERATION_AND_UNIVERSAL_SHOULDER_CHARTER.md`.
 - Runtime implementation must pass the existing PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE gates.
+
+
+## COMMIT-AUDIT-001 — Historical Commit & Capability Reconciliation
+Status: COMPLETED_BASELINE / CONTINUOUS_RECONCILIATION
+- The repository history has been audited and grouped into capability families rather than treated as isolated commits.
+- Repeated or overlapping commits remain preserved as provenance; they are not treated as independent product capabilities.
+- Commit history is not evidence of live deployment. Runtime truth remains implemented -> tested -> deployed -> verified-live.
+- Canonical audit: [IMA Commit History Audit 2026-11-06](IMA_COMMIT_HISTORY_AUDIT_2026-11-06.md).
+- Future commits must reconcile against existing capability families before introducing parallel implementations.
