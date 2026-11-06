@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           grep -Fq "home:'Open IMA now'" ima-ui/src/i18n.js
-          grep -Fq "GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils'" ima-ui/src/App.jsx
+          grep -Fq "GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537&ocid=4777132721'" ima-ui/src/App.jsx
           grep -Fq 'accounts.google.com/gsi/client' ima-ui/index.html
           grep -Eq "CACHE = 'ima-shell-v[0-9]+'" ima-ui/public/sw.js
           echo "IMA_SOURCE_CRITICAL_CONTRACTS=PASS"
