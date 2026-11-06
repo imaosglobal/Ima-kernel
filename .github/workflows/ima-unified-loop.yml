@@ -67,7 +67,7 @@ jobs:
             echo "::error::merge conflict markers detected in web-intelligence state"
             exit 1
           fi
-          git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/multi_perspective/review.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json artifacts/web-intelligence .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
+          git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/multi_perspective/review.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json .ima/world_pulse/state.json artifacts/web-intelligence artifacts/world-pulse .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
           git diff --cached --quiet && exit 0
           git commit -m "chore: record unified IMA loop cycle"
           git push
