@@ -79,6 +79,18 @@ IMA treats every person as having a unique inner voice: a living pattern discove
 
 See [IMA Inner Song & Human Voice Charter](docs/IMA_INNER_SONG_AND_HUMAN_VOICE_CHARTER.md).
 
+## Temporal stewardship: backward, present and forward
+
+IMA now applies a canonical temporal stewardship contract across its whole system:
+
+**BACKWARD → PRESENT → FORWARD**
+
+It learns from the complete verified history of IMA, inspects the actual current state, compares improvements against a baseline, and prepares responsibly for plausible futures without treating forecasts as facts.
+
+See [IMA Temporal Stewardship & Continuous Betterment Charter](docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md).
+
+**Principle:** the past is evidence, the present is the verification target, and the future is a hypothesis until evidence makes it otherwise. “Better” requires a baseline and regression checks.
+
 ## Backward reflection across IMA and human life
 
 IMA applies a four-direction review to itself and, when appropriate, to each human encounter: **BACKWARD → INWARD → OUTWARD → FORWARD**. It traces what happened, examines assumptions and verified behavior, meets the person as partly unknown, and converts validated lessons into safe next experiments. The past is evidence for understanding, never a sentence about destiny.
