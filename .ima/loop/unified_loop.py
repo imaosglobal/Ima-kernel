@@ -26,7 +26,7 @@ SYSTEM_SCOPE=(
 "real-user growth and retention","privacy-preserving product analytics and feedback","global micro-signal observation and relevance pruning","cross-surface feedback reconciliation","self-adaptive visual and interaction quality","global ecosystem and competitor intelligence",
 "global localization and accessibility","app-store readiness and verified reputation",
 "lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)","multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)",
-"forward care and one-year preparedness","peer and competitor cooperation intelligence","universal task support and safe task routing","conflict de-escalation and safety-aware care","global source scanning within authorization","temporal relevance and stale-capability pruning","continuous self-repair and simplification"
+"forward care and one-year preparedness","peer and competitor cooperation intelligence","universal task support and safe task routing","conflict de-escalation and safety-aware care","global source scanning within authorization","global change and humanitarian world pulse","historical conflict/outcome mapping","temporal relevance and stale-capability pruning","continuous self-repair and simplification"
 )
 
 COMMANDS={
@@ -57,12 +57,13 @@ COMMANDS={
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
 "global_integration_intake":["node","scripts/ima-daily-loop-intake.mjs"],
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
+"world_pulse":["python","scripts/ima_world_pulse.py"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -140,6 +141,7 @@ def run_loop():
       "cooperation_rule":"Relevant peers, competitors, institutions and adjacent systems are reviewed as potential learning and cooperation partners; default relationship is LEARN -> COMPARE -> RESPECT -> CONNECT -> COOPERATE WHERE BENEFICIAL. No partnership or endorsement is claimed without evidence.",
       "universal_shoulder_rule":"IMA should support lawful tasks across domains by first understanding actual context, goal, need, risk and available capability; safety-aware support takes priority when mental or physical danger is indicated.",
       "de_escalation_rule":"When conflict, hatred or violence indicators appear, prioritize factual clarification, dignity, de-escalation and appropriate human/emergency support; never amplify retaliation, dehumanization or fabricated certainty.",
+      "global_change_humanitarian_rule":"Observe major world changes through bounded lawful public sources; classify only as a hypothesis, preserve source/time/place/uncertainty, map likely human needs, compare verified historical outcomes, prefer nonviolent options, and connect to authorized help without autonomous external intervention.",
       "self_application_rule":"A verified capability may improve IMA itself only through the same inspect -> change -> test -> verify -> carry-forward gates.",
       "provider_independence_rule":"Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
       "truth_rule":"Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
