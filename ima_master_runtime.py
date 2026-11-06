@@ -7,6 +7,7 @@ import ima_mom
 from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
+from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
 
 try:
     from ima_runtime.reflection_runtime import reflect
@@ -49,7 +50,8 @@ class IMAMaster:
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
-        provider_message = message + response_instruction + opportunity_context
+        world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
+        provider_message = message + response_instruction + opportunity_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
@@ -84,6 +86,7 @@ class IMAMaster:
             "message": message,
             "connections": {
                 "identity": True, "memory": True, "brain": True, "mother": True,
+                "global_change_humanitarian_intelligence": True,
                 "capability_registry": capability_runtime is not None,
                 "capability_runtime": capability_runtime,
                 "learning_governance": learning_governance,
