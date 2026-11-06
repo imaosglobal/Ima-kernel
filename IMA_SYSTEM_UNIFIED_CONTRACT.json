@@ -15,7 +15,8 @@
     "age_assurance": "learning/age_assurance.py",
     "daily_workflow": ".github/workflows/ima-daily-learning-summary.yml",
     "self_evolution": ".ima/evolution/SELF_TIMELINE.json",
-    "leadership": "IMA_LEADERSHIP_CONSTITUTION.md"
+    "leadership": "IMA_LEADERSHIP_CONSTITUTION.md",
+    "epistemic_decision_record": "ima_runtime/epistemic_state.py"
   },
   "truth_states": [
     "ESTABLISHED_FACT",
@@ -123,5 +124,34 @@
     "docs/IMA_CAPABILITY_REGISTRY.json",
     ".ima/plugins/REGISTRY.json",
     "daily verified improvement automation"
-  ]
+  ],
+  "epistemic_decision_record": {
+    "schema": "IMA-EPISTEMIC-DECISION-1.0",
+    "authority": "child component of the canonical reflection runtime; not a parallel authority",
+    "truth_states": [
+      "ESTABLISHED_FACT",
+      "SUPPORTED_FINDING",
+      "OPEN_HYPOTHESIS",
+      "INTERPRETATION",
+      "METAPHOR",
+      "UNKNOWN"
+    ],
+    "fields": [
+      "known",
+      "unknown",
+      "test",
+      "interpretation",
+      "hypothesis",
+      "metaphor",
+      "meaning",
+      "human_choice",
+      "feedback",
+      "learning",
+      "evidence"
+    ],
+    "default_truth_state": "UNKNOWN",
+    "promotion_rule": "Only explicit canonical state, or caller-supplied evidence plus verification, may justify a stronger truth state.",
+    "agency_rule": "Meaning and human choice are recorded separately from empirical truth; IMA does not choose on behalf of the person.",
+    "learning_rule": "Feedback and learning are recorded as process signals, never silently promoted into established fact."
+  }
 }
