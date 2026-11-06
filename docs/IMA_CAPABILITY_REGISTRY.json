@@ -313,9 +313,24 @@
         "terms.html",
         "ima-ui/src/App.jsx"
       ]
+    },
+    {
+      "id": "global_change_humanitarian_intelligence",
+      "label": "Global Change & Humanitarian Intelligence / World Pulse",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_DEPLOYMENT",
+      "boundary": "Provider-neutral recognition and response-planning layer for conflicts, protests, political change, disasters, public-health crises, displacement, resource crises and major scientific/technological/social shifts. It does not claim exhaustive live world coverage, assign guilt, contact authorities, donate, mediate officially or execute external actions.",
+      "evidence": [
+        "core/global_humanitarian_intelligence.py",
+        "tests/test_global_humanitarian_intelligence.py",
+        "docs/IMA_GLOBAL_CHANGE_AND_HUMANITARIAN_INTELLIGENCE.md",
+        "ima_master_runtime.py",
+        "core/human_intelligence.py"
+      ],
+      "human_agency_required": true,
+      "live_world_coverage": false
     }
   ],
-  "updated_at": "2026-11-05",
+  "updated_at": "2026-11-06",
   "audit_dimensions": [
     "product specification and information architecture",
     "every navigation item, button, link, form and fallback",
