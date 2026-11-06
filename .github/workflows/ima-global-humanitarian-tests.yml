@@ -1,0 +1,32 @@
+name: IMA Global Humanitarian Intelligence Tests
+
+on:
+  push:
+    paths:
+      - "core/global_humanitarian_intelligence.py"
+      - "tests/test_global_humanitarian_intelligence.py"
+      - "scripts/ima_world_pulse.py"
+      - ".github/workflows/ima-global-humanitarian-tests.yml"
+  pull_request:
+    paths:
+      - "core/global_humanitarian_intelligence.py"
+      - "tests/test_global_humanitarian_intelligence.py"
+      - "scripts/ima_world_pulse.py"
+      - ".github/workflows/ima-global-humanitarian-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run global humanitarian intelligence regression
+        run: python -m unittest tests/test_global_humanitarian_intelligence.py tests/test_peace_layer.py -v
+      - name: Compile world pulse observer
+        run: python -m py_compile core/global_humanitarian_intelligence.py scripts/ima_world_pulse.py
