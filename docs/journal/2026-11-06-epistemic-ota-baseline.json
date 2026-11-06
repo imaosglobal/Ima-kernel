@@ -1,0 +1,10 @@
+{
+  "type": "OTA_STEWARDSHIP_BASELINE",
+  "baseline_sha": "b92b3685b25f0d77a921a99b6766e04144db7b86",
+  "public_state": "verified from prior OTA cycle",
+  "public_version": "b92b3685b25f0d77a921a99b6766e04144db7b86",
+  "real_browser_smoke": "PASS from prior OTA cycle",
+  "protected_scope": "Current canonical main UI/product/runtime behavior; no older version may be revived.",
+  "planned_change": "Add an evidence-bounded epistemic decision record inside the existing reflection runtime.",
+  "deployment_rule": "No live claim until canonical deployment and public/runtime verification pass."
+}
