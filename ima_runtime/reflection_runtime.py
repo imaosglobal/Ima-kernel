@@ -7,6 +7,7 @@ from typing import Any, Callable, Optional
 
 from .reflection_gap_closure import Conclusion, compare, close_gaps, to_record
 from .development_journal import record as journal_record
+from .epistemic_state import build_epistemic_record
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE_DIR = ROOT / ".ima" / "reflection"
@@ -38,9 +39,15 @@ def reflect(
     )
     comparison = compare(ima, independent)
     comparison = close_gaps(comparison, verifier)
+    epistemic = build_epistemic_record(
+        response,
+        evidence=evidence,
+        context=context,
+    )
     record = {
         "schema": "IMA-REFLECTION-RUNTIME-1.0",
         "comparison": to_record(comparison),
+        "epistemic": epistemic,
     }
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     with STATE_FILE.open("a", encoding="utf-8") as fh:

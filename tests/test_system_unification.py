@@ -29,6 +29,9 @@ class SystemUnificationContractTest(unittest.TestCase):
         self.assertIn("learning/feedback_engine.py",p["learning_core"])
         self.assertTrue(any("One canonical brain/orchestrator" in x for x in c["authority_rules"]))
         self.assertTrue(any("One canonical ZERO" in x for x in c["authority_rules"]))
+        self.assertEqual(c["canonical_authorities"]["epistemic_decision_record"], "ima_runtime/epistemic_state.py")
+        self.assertEqual(c["epistemic_decision_record"]["default_truth_state"], "UNKNOWN")
+        self.assertIn("human_choice", c["epistemic_decision_record"]["fields"])
 
 if __name__ == "__main__":
     unittest.main()
