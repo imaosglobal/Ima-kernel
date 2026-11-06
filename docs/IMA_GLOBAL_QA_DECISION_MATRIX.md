@@ -459,3 +459,63 @@ For every one of these, verify the behavior at the boundary that matters.
 This matrix is now a consolidated operational index of the historical IMA issues recovered from the available prior-chat/archive context. It is intentionally evidence-graded: items with historical evidence are recorded as history; items not currently re-tested remain historical or active-risk entries rather than being falsely promoted to RESOLVED.
 
 The archive should continue to be appended whenever a new IMA task reveals a new failure mode, root cause, regression, or proven solution.
+
+
+## 12. Fresh end-to-end audit — 2026-11-06
+
+This section records the re-check performed after the permanent QA rule was requested. It supersedes older “current state” assumptions where evidence is newer.
+
+### 12.1 Repository and deployment
+
+- Current latest main commit verified: `f1cd1e8eee04fce5e1f6297733a55076ceb18e82`.
+- The canonical QA matrix itself is present on main.
+- Render service `ima-universal-action-core` is configured from `imaosglobal/Ima-kernel`, branch `main`, auto-deploy enabled.
+- Fresh Render deployment `dep-dbmul16tlv9c73c1ehs0` was triggered at 2026-11-06T14:56:04Z after correcting the Action Core bridge target; at the time of this audit it was still **BUILD_IN_PROGRESS**. Therefore no deployment-success claim is made yet.
+- Previous deployment `dep-dbmuj468bjmc73e55u70` for commit `f1cd1e8eee04fce5e1f6297733a55076ceb18e82` was **LIVE** before the environment correction.
+
+### 12.2 Universal Action Core diagnosis
+
+Observed source behavior:
+- `services/ima-action-mcp/server/index.mjs` reads `IMA_DEVICE_BRIDGE_URL` and sends commands to `/ima-api/device/mcp-command`.
+- The canonical IMA runtime already implements `/ima-api/device/mcp-command`, with device-key authentication, allow-listed actions, command queueing and result verification.
+- The canonical Android/Termux bridge is outbound-only and polls `/ima-api/device/poll`, then posts results to `/ima-api/device/result`.
+- The Action Core service previously had no verified `IMA_DEVICE_BRIDGE_URL` configuration. This made the MCP action path fail before reaching the canonical IMA command plane.
+- The missing configuration was corrected to `https://ima-915m.onrender.com`.
+- This is only a **FIXED/DEPLOY-IN-PROGRESS** configuration state. It is **not** yet a verified live-browser success.
+
+### 12.3 ChatGPT MCP boundary
+
+Current evidence:
+- `plugins/ima-chatgpt/mcp.json` points to `https://ima-universal-action-core.onrender.com/mcp`.
+- `plugins/ima-chatgpt/plugin.json` is version `1.0.1`.
+- Plugin Creator metadata for `ima-live-browser` reports scope USER, discoverability PRIVATE, version 0.1.1.
+- Plugin Management reports `ima-live-browser` as **not_installed**.
+- Render logs for Universal Action Core show successful startup but no verified incoming MCP request/tool-call evidence in the audited period.
+- Therefore the current ChatGPT-side state remains **BLOCKED / NOT END-TO-END VERIFIED**. The server being LIVE is not evidence that ChatGPT has mounted it.
+
+### 12.4 Architecture finding
+
+The canonical device architecture is:
+
+`ChatGPT → authenticated MCP → IMA Universal Action Core → IMA API command plane → outbound device bridge → Chrome`.
+
+The remaining security/integration requirement is to authenticate the MCP caller to the user's IMA identity without copying a device key into chat. OpenAI's current MCP guidance requires OAuth 2.1 for authenticated MCP tools that expose user-specific data or write actions. Until that boundary is implemented and verified, the system must not weaken authorization by embedding a device key in tool arguments, public configuration, or chat.
+
+### 12.5 Fresh evidence status
+
+| Layer | Current state | Evidence | Closure |
+|---|---|---|---|
+| Source | VERIFIED | main commit and source inspection | VERIFIED |
+| Action Core build | VERIFIED | Render build previously successful | VERIFIED |
+| Action Core process | VERIFIED | Render logs: listening on port 10000 | VERIFIED |
+| Bridge target config | FIXED | `IMA_DEVICE_BRIDGE_URL=https://ima-915m.onrender.com` set | DEPLOY-IN-PROGRESS |
+| IMA API command plane | VERIFIED IN SOURCE | `/ima-api/device/mcp-command` exists | SOURCE-VERIFIED |
+| Device outbound polling | VERIFIED IN SOURCE | `bridge.py` polls/result-posts | SOURCE-VERIFIED |
+| ChatGPT MCP URL | VERIFIED IN SOURCE | `mcp.json` | SOURCE-VERIFIED |
+| Plugin installation | NOT VERIFIED / CURRENTLY NOT INSTALLED | Plugin Management | BLOCKED |
+| Real MCP initialization | UNKNOWN | no live tool evidence | BLOCKED |
+| Real screenshot from Chrome | UNKNOWN | no live tool evidence | BLOCKED |
+| Real click/type/navigation | UNKNOWN | no live tool evidence | BLOCKED |
+| Full end-to-end Live Browser | UNKNOWN | no complete evidence chain | BLOCKED |
+
+**Permanent rule reinforced:** never call this Live Browser “working” until the actual ChatGPT MCP connection, authorized device connection, real screenshot, real action, and verified result all exist in evidence.
