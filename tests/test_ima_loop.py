@@ -14,13 +14,18 @@ class UnifiedLoopTests(unittest.TestCase):
         self.assertTrue(contract["capability_self_application"])
         self.assertTrue(contract["capability_teaching"])
         self.assertTrue(contract["provider_independence"])
+        self.assertTrue(contract["temporal_stewardship"])
+        self.assertTrue(contract["continuous_betterment_requires_baseline"])
+        self.assertTrue(contract["past_is_evidence_not_destiny"])
+        self.assertTrue(contract["future_is_not_fact"])
 
     def test_all_required_stages_exist(self):
         required = {
             "REMEMBER", "PRESERVE", "OBSERVE", "DISCOVER", "LISTEN",
             "UNDERSTAND", "SEPARATE_FACT_FROM_INFERENCE", "QUESTION",
             "CONNECT", "CREATE", "HUMANIZE", "TEST", "VERIFY",
-            "CORRECT", "TEACH", "SHARE_LAWFULLY", "CARRY_FORWARD",
+            "CORRECT", "TEACH", "SHARE_LAWFULLY", "COMPARE_WITH_BASELINE",
+            "CARRY_FORWARD", "PREPARE_FORWARD",
         }
         self.assertTrue(required.issubset(set(LOOP_STAGES)))
         self.assertIn("One periodic orchestrator governs improvement, learning, preservation", loop_context())
