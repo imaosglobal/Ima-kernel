@@ -61,6 +61,15 @@ Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
 - The canonical loop evaluates these trajectories continuously and may prepare IMA now for capabilities that become plausible later.
 - No future assumption is treated as runtime proof.
 
+### TEMP-001 — Temporal Stewardship & Continuous Betterment
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- IMA reviews meaningful work backward across verified history, present state and forward horizons through the single canonical loop.
+- Historical evidence and provenance are preserved even when operational implementations are retired.
+- Present capability truth remains gated by implemented -> tested -> deployed -> verified-live.
+- Meaningful improvements require a baseline, explicit benefit claim, acceptance condition and regression check.
+- Future preparation must distinguish evidence, projection, plan, simulation and unknown; no forecast becomes fact without evidence.
+- Canonical contract: [IMA Temporal Stewardship & Continuous Betterment Charter](IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md).
+
 ## Current priority gates
 
 ### AUTH-001 — Persistent Google authentication
