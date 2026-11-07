@@ -122,6 +122,16 @@ def start_cloud_agent():
     if DEVICE_KEY and not any(t.name=='ima-cloud-agent' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=cloud_agent_loop,daemon=True,name='ima-cloud-agent').start()
 
+CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','navigate','click','tap','scroll','type','key'})
+
+def execute_cloud_action(action, payload):
+    # Cloud commands are authenticated device commands, but page/DOM content is untrusted.
+    # Keep arbitrary JavaScript evaluation local-only so environmental text cannot turn
+    # into a remote code-execution primitive through the device command plane.
+    if action not in CLOUD_ALLOWED_ACTIONS:
+        raise ValueError('cloud_action_not_allowed')
+    return execute_action(action, payload)
+
 def cloud_agent_loop():
     if not DEVICE_KEY:
         print('Cloud agent disabled: IMA_DEVICE_KEY is not configured.',flush=True)
@@ -135,7 +145,7 @@ def cloud_agent_loop():
                 time.sleep(CLOUD_POLL_SECONDS)
                 continue
             cmd=data['command']
-            result=execute_action(str(cmd.get('action')),cmd.get('payload') or {})
+            result=execute_cloud_action(str(cmd.get('action')),cmd.get('payload') or {})
             cloud_request('/ima-api/device/result','POST',{'command_id':cmd.get('id'),'ok':True,'result':result})
             delay=1.0
         except Exception as e:
