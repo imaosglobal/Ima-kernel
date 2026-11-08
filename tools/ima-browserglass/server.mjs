@@ -100,14 +100,12 @@ async function mintViewerToken() {
   return lastToken;
 }
 
-const gatewayProcess = spawn('pnpm', [
-  'bgls', 'serve',
+const gatewayProcess = spawn('node', [
+  `${BGLS_DIR}/packages/cli/dist/bin.mjs`, 'serve',
   '--listen', `127.0.0.1:${BGLS_PORT}`,
-  '--data-dir', DATA_DIR,
-  '--cors', '*',
 ], {
   cwd: BGLS_DIR,
-  env: { ...process.env, CHROME_BIN },
+  env: { ...process.env, CHROME_BIN, BGLS_DATA_DIR: DATA_DIR },
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 gatewayProcess.stdout.on('data', d => process.stdout.write(`[browserglass] ${d}`));
