@@ -97,7 +97,7 @@ async function mintViewerToken() {
   return lastToken;
 }
 
-const gateway = spawn('pnpm', [
+const gatewayProcess = spawn('pnpm', [
   'bgls', 'serve',
   '--listen', `127.0.0.1:${BGLS_PORT}`,
   '--data-dir', DATA_DIR,
@@ -107,9 +107,9 @@ const gateway = spawn('pnpm', [
   env: { ...process.env, CHROME_BIN },
   stdio: ['ignore', 'pipe', 'pipe'],
 });
-gateway.stdout.on('data', d => process.stdout.write(`[browserglass] ${d}`));
-gateway.stderr.on('data', d => process.stderr.write(`[browserglass] ${d}`));
-gateway.on('exit', code => {
+gatewayProcess.stdout.on('data', d => process.stdout.write(`[browserglass] ${d}`));
+gatewayProcess.stderr.on('data', d => process.stderr.write(`[browserglass] ${d}`));
+gatewayProcess.on('exit', code => {
   if (code !== 0) process.stderr.write(`[browserglass] gateway exited: ${code}\n`);
 });
 
@@ -188,5 +188,5 @@ server.listen(PORT, '0.0.0.0', async () => {
   console.log(`IMA BrowserGlass service listening on :${PORT}`);
 });
 
-process.on('SIGTERM', () => gateway.kill('SIGTERM'));
-process.on('SIGINT', () => gateway.kill('SIGINT'));
+process.on('SIGTERM', () => gatewayProcess.kill('SIGTERM'));
+process.on('SIGINT', () => gatewayProcess.kill('SIGINT'));
