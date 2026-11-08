@@ -105,7 +105,7 @@ const gatewayProcess = spawn('node', [
   '--listen', `127.0.0.1:${BGLS_PORT}`,
 ], {
   cwd: BGLS_DIR,
-  env: { ...process.env, CHROME_BIN, BGLS_DATA_DIR: DATA_DIR },
+  env: { ...process.env, CHROME_BIN, BGLS_CHROME_PATH: CHROME_BIN, BGLS_DATA_DIR: DATA_DIR },
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 gatewayProcess.stdout.on('data', d => process.stdout.write(`[browserglass] ${d}`));
