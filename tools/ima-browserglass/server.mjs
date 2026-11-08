@@ -8,6 +8,8 @@ const BGLS_PORT = Number(process.env.BGLS_INTERNAL_PORT || 7799);
 const BGLS_DIR = process.env.BGLS_HOME || '/opt/browserglass';
 const DATA_DIR = process.env.BGLS_DATA_DIR || '/opt/browserglass/bgls-data';
 const CHROME_BIN = process.env.CHROME_BIN || '/usr/bin/chromium';
+const EMBED_ORIGIN = 'https://imaosglobal.github.io';
+const EMBED_COOKIE = 'ima_browserglass_embed';
 
 let gateway;
 let instanceId = null;
@@ -128,6 +130,13 @@ proxy.on('error', (err, req, res) => {
 
 const server = http.createServer(async (req, res) => {
   try {
+    const cookieHeader = String(req.headers.cookie || '');
+    const hasEmbedCookie = cookieHeader.split(';').some(v => v.trim().startsWith(EMBED_COOKIE + '='));
+    const referer = String(req.headers.referer || '');
+    if (req.url === '/' && referer.startsWith(EMBED_ORIGIN + '/')) {
+      res.setHeader('Set-Cookie', `${EMBED_COOKIE}=1; Path=/; Secure; HttpOnly; SameSite=None; Max-Age=86400`);
+    }
+
     if (req.url === '/healthz') {
       res.writeHead(200, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ ok: true, service: 'ima-browserglass' }));
@@ -135,6 +144,11 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.url === '/api/session') {
+      if (!hasEmbedCookie) {
+        res.writeHead(403, { 'content-type': 'application/json' });
+        res.end(JSON.stringify({ error: 'IMA embed required' }));
+        return;
+      }
       const token = await mintViewerToken();
       const wsProtocol = req.headers['x-forwarded-proto'] === 'https' ? 'wss' : 'ws';
       const host = req.headers.host;
@@ -179,7 +193,9 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.on('upgrade', (req, socket, head) => {
-  if (req.url?.startsWith('/browserglass/')) proxy.ws(req, socket, head);
+  const cookieHeader = String(req.headers.cookie || '');
+  const hasEmbedCookie = cookieHeader.split(';').some(v => v.trim().startsWith(EMBED_COOKIE + '='));
+  if (req.url?.startsWith('/browserglass/') && hasEmbedCookie) proxy.ws(req, socket, head);
   else socket.destroy();
 });
 
