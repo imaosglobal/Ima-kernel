@@ -1,7 +1,8 @@
 import http from 'node:http';
 import { spawn } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
-import { createProxyServer } from 'http-proxy';
+import httpProxy from 'http-proxy';
+const { createProxyServer } = httpProxy;
 
 const PORT = Number(process.env.PORT || 10000);
 const BGLS_PORT = Number(process.env.BGLS_INTERNAL_PORT || 7799);
