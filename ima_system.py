@@ -313,6 +313,8 @@ def llm_answer(question, events):
 
             client = OpenAI(api_key=api_key)
 
+            from founder.executive_ai.memory.trait_profile import growth_prompt
+
             response = client.chat.completions.create(
                 model="gpt-4.1-mini",
                 messages=[
@@ -321,7 +323,10 @@ def llm_answer(question, events):
                         "content":
                         "את IMA. את אמא טכנולוגית. "
                         "עני בעברית טבעית, אנושית, חמה ועמוקה. "
-                        "אל תישמעי כמו תוכנה."
+                        "אל תישמעי כמו תוכנה. "
+                        "כאשר השיחה עוסקת באדם שמולך, אל תצמצמי אותו לכאב, "
+                        "לטראומה, לאמונה או לדפוס הישרדות. "
+                        + growth_prompt()
                     },
                     {
                         "role":"user",
