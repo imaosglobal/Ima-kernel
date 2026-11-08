@@ -1,0 +1,192 @@
+import http from 'node:http';
+import { spawn } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
+import { createProxyServer } from 'http-proxy';
+
+const PORT = Number(process.env.PORT || 10000);
+const BGLS_PORT = Number(process.env.BGLS_INTERNAL_PORT || 7799);
+const BGLS_DIR = process.env.BGLS_HOME || '/opt/browserglass';
+const DATA_DIR = process.env.BGLS_DATA_DIR || '/opt/browserglass/bgls-data';
+const CHROME_BIN = process.env.CHROME_BIN || '/usr/bin/chromium';
+
+let gateway;
+let instanceId = null;
+let targetId = null;
+let lastToken = null;
+let lastTokenExpiresAt = 0;
+
+function run(command, args, options = {}) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args, {
+      cwd: options.cwd,
+      env: { ...process.env, ...options.env },
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    let stdout = '';
+    let stderr = '';
+    child.stdout.on('data', d => { stdout += d; });
+    child.stderr.on('data', d => { stderr += d; });
+    child.on('error', reject);
+    child.on('close', code => {
+      if (code === 0) resolve({ stdout, stderr });
+      else reject(new Error(`${command} exited ${code}: ${stderr || stdout}`));
+    });
+  });
+}
+
+async function waitForGateway() {
+  const deadline = Date.now() + 30000;
+  while (Date.now() < deadline) {
+    try {
+      const r = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances`, { method: 'GET' });
+      if (r.status !== 404) return;
+    } catch {}
+    await new Promise(r => setTimeout(r, 500));
+  }
+  throw new Error('BrowserGlass gateway did not become ready');
+}
+
+async function adminToken() {
+  const r = await run('pnpm', ['-s', 'bgls', 'token', '--ttl', '900'], { cwd: BGLS_DIR });
+  return r.stdout.trim();
+}
+
+async function ensureInstance() {
+  if (instanceId && targetId) return;
+  const admin = await adminToken();
+  const created = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances`, {
+    method: 'POST',
+    headers: { authorization: `Bearer ${admin}`, 'content-type': 'application/json' },
+    body: JSON.stringify({
+      requestId: `ima-live-${Date.now()}`,
+      browser: { headless: 'new', executablePath: CHROME_BIN },
+    }),
+  });
+  if (!created.ok) throw new Error(`BrowserGlass instance creation failed: ${created.status} ${await created.text()}`);
+  const data = await created.json();
+  instanceId = data.instanceId;
+
+  const targets = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets`, {
+    headers: { authorization: `Bearer ${admin}` },
+  });
+  if (!targets.ok) throw new Error(`BrowserGlass target discovery failed: ${targets.status}`);
+  const td = await targets.json();
+  targetId = td.targets?.[0]?.targetId || td[0]?.targetId;
+  if (!targetId) throw new Error('BrowserGlass returned no target');
+}
+
+async function mintViewerToken() {
+  await ensureInstance();
+  if (lastToken && Date.now() < lastTokenExpiresAt - 30000) return lastToken;
+  const admin = await adminToken();
+  const r = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/tokens`, {
+    method: 'POST',
+    headers: { authorization: `Bearer ${admin}`, 'content-type': 'application/json' },
+    body: JSON.stringify({
+      sub: 'ima-live-browser-viewer',
+      subKind: 'service',
+      scope: { kind: 'instance', instanceId, targets: '*' },
+      caps: ['view', 'control', 'navigate', 'automation'],
+      ttlSeconds: 300,
+    }),
+  });
+  if (!r.ok) throw new Error(`BrowserGlass token mint failed: ${r.status} ${await r.text()}`);
+  const data = await r.json();
+  lastToken = data.token;
+  lastTokenExpiresAt = Number(data.expiresAt || Date.now() + 240000);
+  return lastToken;
+}
+
+const gateway = spawn('pnpm', [
+  'bgls', 'serve',
+  '--listen', `127.0.0.1:${BGLS_PORT}`,
+  '--data-dir', DATA_DIR,
+  '--cors', '*',
+], {
+  cwd: BGLS_DIR,
+  env: { ...process.env, CHROME_BIN },
+  stdio: ['ignore', 'pipe', 'pipe'],
+});
+gateway.stdout.on('data', d => process.stdout.write(`[browserglass] ${d}`));
+gateway.stderr.on('data', d => process.stderr.write(`[browserglass] ${d}`));
+gateway.on('exit', code => {
+  if (code !== 0) process.stderr.write(`[browserglass] gateway exited: ${code}\n`);
+});
+
+const proxy = createProxyServer({
+  target: `http://127.0.0.1:${BGLS_PORT}`,
+  ws: true,
+  changeOrigin: true,
+});
+
+proxy.on('error', (err, req, res) => {
+  if (res && !res.headersSent) {
+    res.writeHead(502, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ error: 'browserglass_gateway_unavailable', detail: err.message }));
+  }
+});
+
+const server = http.createServer(async (req, res) => {
+  try {
+    if (req.url === '/healthz') {
+      res.writeHead(200, { 'content-type': 'application/json' });
+      res.end(JSON.stringify({ ok: true, service: 'ima-browserglass' }));
+      return;
+    }
+
+    if (req.url === '/api/session') {
+      const token = await mintViewerToken();
+      const wsProtocol = req.headers['x-forwarded-proto'] === 'https' ? 'wss' : 'ws';
+      const host = req.headers.host;
+      res.writeHead(200, {
+        'content-type': 'application/json',
+        'cache-control': 'no-store',
+      });
+      res.end(JSON.stringify({
+        url: `${wsProtocol}://${host}/browserglass/socket`,
+        token,
+        targetId,
+        expiresAt: lastTokenExpiresAt,
+      }));
+      return;
+    }
+
+    if (req.url === '/') {
+      const html = await readFile(new URL('./viewer.html', import.meta.url), 'utf8');
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+      res.end(html);
+      return;
+    }
+
+    if (req.url === '/browserglass-embed.global.js') {
+      const js = await readFile('/opt/browserglass/packages/embed/dist/browserglass-embed.global.js');
+      res.writeHead(200, { 'content-type': 'application/javascript', 'cache-control': 'public, max-age=3600' });
+      res.end(js);
+      return;
+    }
+
+    if (req.url?.startsWith('/browserglass/')) {
+      proxy.web(req, res);
+      return;
+    }
+
+    res.writeHead(404);
+    res.end('not found');
+  } catch (err) {
+    res.writeHead(500, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ error: 'browserglass_service_error', detail: err.message }));
+  }
+});
+
+server.on('upgrade', (req, socket, head) => {
+  if (req.url?.startsWith('/browserglass/')) proxy.ws(req, socket, head);
+  else socket.destroy();
+});
+
+server.listen(PORT, '0.0.0.0', async () => {
+  await waitForGateway();
+  console.log(`IMA BrowserGlass service listening on :${PORT}`);
+});
+
+process.on('SIGTERM', () => gateway.kill('SIGTERM'));
+process.on('SIGINT', () => gateway.kill('SIGINT'));
