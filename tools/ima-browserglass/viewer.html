@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IMA — Live Browser</title>
+  <style>
+    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif}
+    body{padding:12px}
+    browser-glass{display:block;width:100%;height:min(78vh,720px);min-height:420px;border-radius:14px;overflow:hidden;background:#111}
+    .bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+    button,input{font:inherit;border-radius:8px;padding:8px 10px;border:1px solid #555;background:#15171d;color:#fff}
+    button{cursor:pointer}
+    #status{opacity:.8;font-size:.9rem}
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <strong>IMA — חלון דפדפן חי</strong>
+    <button id="take">קח שליטה</button>
+    <button id="release">החזר שליטה ל־IMA</button>
+    <span id="status">מתחבר…</span>
+  </div>
+  <browser-glass id="pane" fit="contain"></browser-glass>
+  <script src="/browserglass-embed.global.js"></script>
+  <script>
+    const pane = document.getElementById('pane');
+    const status = document.getElementById('status');
+    async function session() {
+      const r = await fetch('/api/session', {cache:'no-store'});
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+    async function boot() {
+      try {
+        const s = await session();
+        pane.setAttribute('url', s.url);
+        pane.setAttribute('token', s.token);
+        pane.setAttribute('target-id', s.targetId);
+        pane.setAttribute('token-endpoint', '/api/session');
+        status.textContent = 'מחובר';
+      } catch (e) {
+        status.textContent = 'שגיאה: ' + e.message;
+      }
+    }
+    pane.onTokenExpired = async () => (await session()).token;
+    document.getElementById('take').onclick = () => pane.takeControl().catch(e => status.textContent = e.message);
+    document.getElementById('release').onclick = () => pane.releaseControl().catch(e => status.textContent = e.message);
+    pane.addEventListener('bgls:connected', () => status.textContent = 'חלון חי מחובר');
+    pane.addEventListener('bgls:disconnected', () => status.textContent = 'החיבור נותק — מנסה להתחבר מחדש');
+    pane.addEventListener('bgls:error', e => status.textContent = 'BrowserGlass: ' + (e.detail?.error || 'error'));
+    boot();
+  </script>
+</body>
+</html>
