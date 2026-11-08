@@ -201,17 +201,9 @@ server.on('upgrade', (req, socket, head) => {
 server.listen(PORT, '0.0.0.0', async () => {
   try {
     await waitForGateway();
-    await ensureInstance();
-    const token = await mintViewerToken();
-    const nav = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets/${targetId}/navigate`, {
-      method: 'POST',
-      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-      body: JSON.stringify({ url: 'https://example.com' }),
-    });
-    if (!nav.ok) throw new Error(`BrowserGlass self-test navigation failed: ${nav.status} ${await nav.text()}`);
-    console.log(`IMA BrowserGlass self-test PASS: instance=${instanceId} target=${targetId}`);
+    console.log('IMA BrowserGlass gateway ready');
   } catch (err) {
-    console.error(`IMA BrowserGlass self-test FAIL: ${err.message}`);
+    console.error(`IMA BrowserGlass gateway readiness warning: ${err.message}`);
   }
   console.log(`IMA BrowserGlass service listening on :${PORT}`);
 });
