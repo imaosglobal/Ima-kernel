@@ -49,6 +49,7 @@ Optional environment variables:
 - `IMA_DEVICE_STATE_FILE` — persistent key file; defaults to `~/.config/ima/device.json`
 - `IMA_CHROME_TARGET_HINT` — defaults to `imaosglobal.github.io/Ima-kernel`
 - `IMA_CLOUD_POLL_SECONDS` — defaults to 2 seconds
+- `IMA_ALLOWED_ORIGINS` — comma-separated browser origins allowed to invoke local actions; defaults to the public IMA origin plus localhost development origins
 
 ## Security boundary
 
