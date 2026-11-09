@@ -10,8 +10,20 @@
       "kind": "python-runtime",
       "contract": "enforced",
       "role": "canonical live orchestration boundary",
-      "depends_on": ["identity_context", "conversation_layer", "brain", "mother", "learning_loop", "unified_loop", "humanitarian_intelligence", "llm_router"],
-      "next": ["cross_component_health_graph", "rollback_recovery_manager"]
+      "depends_on": [
+        "identity_context",
+        "conversation_layer",
+        "brain",
+        "mother",
+        "learning_loop",
+        "unified_loop",
+        "humanitarian_intelligence",
+        "llm_router"
+      ],
+      "next": [
+        "cross_component_health_graph",
+        "rollback_recovery_manager"
+      ]
     },
     {
       "id": "identity_context",
@@ -19,8 +31,12 @@
       "kind": "python-context",
       "contract": "shared",
       "role": "identity, vision, laws and user-scope context",
-      "depends_on": ["continuous_future"],
-      "next": ["provenance_graph"]
+      "depends_on": [
+        "continuous_future"
+      ],
+      "next": [
+        "provenance_graph"
+      ]
     },
     {
       "id": "brain",
@@ -28,8 +44,15 @@
       "kind": "python-runtime",
       "contract": "enforced",
       "role": "memory-aware fallback reasoning and pattern extraction",
-      "depends_on": ["learning_memory", "learning_loop", "historical_inference", "continuous_future"],
-      "next": ["evidence_bounded_reasoning"]
+      "depends_on": [
+        "learning_memory",
+        "learning_loop",
+        "historical_inference",
+        "continuous_future"
+      ],
+      "next": [
+        "evidence_bounded_reasoning"
+      ]
     },
     {
       "id": "mother",
@@ -37,8 +60,13 @@
       "kind": "python-fallback",
       "contract": "enforced",
       "role": "bounded fallback response engine",
-      "depends_on": ["canonical_memory_adapter", "continuous_future"],
-      "next": ["policy_aware_fallbacks"]
+      "depends_on": [
+        "canonical_memory_adapter",
+        "continuous_future"
+      ],
+      "next": [
+        "policy_aware_fallbacks"
+      ]
     },
     {
       "id": "learning_loop",
@@ -46,8 +74,14 @@
       "kind": "python-learning",
       "contract": "shared",
       "role": "learning, gaps, conclusions and teaching artifacts",
-      "depends_on": ["learning_gate", "learning_router", "continuous_future"],
-      "next": ["learning_regression_suite"]
+      "depends_on": [
+        "learning_gate",
+        "learning_router",
+        "continuous_future"
+      ],
+      "next": [
+        "learning_regression_suite"
+      ]
     },
     {
       "id": "unified_loop",
@@ -55,8 +89,15 @@
       "kind": "python-orchestrator",
       "contract": "shared",
       "role": "canonical improvement, verification and carry-forward loop",
-      "depends_on": ["continuous_future", "good_harm", "humanity_honor", "dynamic_identity"],
-      "next": ["single_health_scheduler"]
+      "depends_on": [
+        "continuous_future",
+        "good_harm",
+        "humanity_honor",
+        "dynamic_identity"
+      ],
+      "next": [
+        "single_health_scheduler"
+      ]
     },
     {
       "id": "humanitarian_intelligence",
@@ -64,8 +105,12 @@
       "kind": "python-domain",
       "contract": "shared",
       "role": "evidence-first humanitarian and world-change analysis",
-      "depends_on": ["continuous_future"],
-      "next": ["live_source_verification"]
+      "depends_on": [
+        "continuous_future"
+      ],
+      "next": [
+        "live_source_verification"
+      ]
     },
     {
       "id": "continuous_future",
@@ -73,8 +118,12 @@
       "kind": "python-governance",
       "contract": "root",
       "role": "canonical cross-component policy and enforcement gate",
-      "depends_on": [".ima/policies/CONTINUOUS_FUTURE_POLICY.json"],
-      "next": ["policy_version_migration"]
+      "depends_on": [
+        ".ima/policies/CONTINUOUS_FUTURE_POLICY.json"
+      ],
+      "next": [
+        "policy_version_migration"
+      ]
     },
     {
       "id": "ui",
@@ -82,8 +131,13 @@
       "kind": "web-interface",
       "contract": "interface",
       "role": "human-facing interaction and update surface",
-      "depends_on": ["master_runtime", "updateCoordinator"],
-      "next": ["ui_runtime_conformance"]
+      "depends_on": [
+        "master_runtime",
+        "updateCoordinator"
+      ],
+      "next": [
+        "ui_runtime_conformance"
+      ]
     },
     {
       "id": "ota_update_plane",
@@ -91,8 +145,13 @@
       "kind": "web-maintenance",
       "contract": "interface",
       "role": "continuous web/PWA update coordination",
-      "depends_on": ["version.json", "platform_update_authority"],
-      "next": ["cross_platform_update_adapters"]
+      "depends_on": [
+        "version.json",
+        "platform_update_authority"
+      ],
+      "next": [
+        "cross_platform_update_adapters"
+      ]
     },
     {
       "id": "device_bridge",
@@ -100,9 +159,65 @@
       "kind": "device-interface",
       "contract": "interface",
       "role": "authorized device/browser action bridge",
-      "depends_on": ["platform_authority", "user_authorization"],
-      "next": ["bridge_health_conformance"]
+      "depends_on": [
+        "platform_authority",
+        "user_authorization"
+      ],
+      "next": [
+        "bridge_health_conformance"
+      ]
+    },
+    {
+      "id": "self_stewardship",
+      "path": ".ima/policies/SELF_STEWARDSHIP_POLICY.json",
+      "kind": "governance",
+      "contract": "root",
+      "role": "bounded continuous inspection, testing, improvement and maintenance",
+      "depends_on": [
+        "continuous_future",
+        "human_authority"
+      ],
+      "next": [
+        "automated_conformance_orchestrator"
+      ]
+    },
+    {
+      "id": "store",
+      "path": "ima-ui/src/App.jsx",
+      "kind": "product-surface",
+      "contract": "interface",
+      "role": "authenticated IMA marketplace surface; commerce must use an authorized payment/fulfillment backend",
+      "depends_on": [
+        "authenticated_user",
+        "commerce_backend",
+        "fulfillment_provider"
+      ],
+      "next": [
+        "verified_catalog",
+        "fair_price_monitor",
+        "order_tracking"
+      ]
+    },
+    {
+      "id": "community",
+      "path": "ima-ui/src/App.jsx",
+      "kind": "social-surface",
+      "contract": "interface",
+      "role": "authenticated community surface for interest-based discovery and private/group messaging",
+      "depends_on": [
+        "authenticated_user",
+        "community_backend",
+        "privacy_policy"
+      ],
+      "next": [
+        "interest_graph",
+        "friendships",
+        "private_messaging",
+        "group_messaging",
+        "moderation"
+      ]
     }
   ],
-  "future_rule": "Discover candidates, verify dependencies, implement the smallest safe change, run regression checks, record evidence, and only then hand the capability forward. Never silently create authority over people, devices or institutions."
+  "future_rule": "Discover candidates, verify dependencies, implement the smallest safe change, run regression checks, record evidence, and only then hand the capability forward. Never silently create authority over people, devices or institutions.",
+  "self_stewardship_policy": "IMA-SELF-STEWARDSHIP-001"
 }
