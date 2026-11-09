@@ -127,3 +127,72 @@ body{background:var(--ima-bg);color:var(--ima-ink)}
 @media(max-width:850px){.topbar-inner{grid-template-columns:1fr auto;gap:10px;padding:8px 0}.topbar nav{grid-column:1/-1;grid-row:2;justify-content:stretch;overflow:auto}.topbar nav button{flex:1;white-space:nowrap}.top-actions{grid-column:2}.brand{min-width:0}.brand span small{display:none}.hero{grid-template-columns:1fr!important;padding:52px 0!important;min-height:auto!important;gap:30px!important}.hero-copy{order:1}.hero-avatar{order:2}.hero-actions>*{flex:1 1 auto}.clean-ima-logo{width:min(300px,75vw)!important}.ima-app.logged-in .mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:560px){.topbar-inner,.hero,.simple-section,.info-section,.capabilities-section,.community-shop,.live-browser-panel,.life-section{width:min(100% - 20px,1120px)}.hero h1{font-size:clamp(3.2rem,18vw,5rem)!important}.hero-actions{display:grid!important;grid-template-columns:1fr 1fr}.hero-actions>*{width:100%}.ima-app.logged-in #chat{width:calc(100% - 20px)!important}.ima-app.logged-in .mode-grid{grid-template-columns:1fr 1fr!important}.ima-app.logged-in .chat-card{padding:7px!important;border-radius:18px!important}.ima-app.logged-in .message{max-width:90%!important}.ima-app.logged-in .composer{grid-template-columns:1fr!important}.ima-app.logged-in .composer button{width:100%}.google-entry,.google-entry>div,.account-chip{width:220px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+/* IMA workspace simplification — landing is minimal; authenticated workspace is focused. */
+.ima-app:not(.logged-in) .topbar nav,
+.ima-app:not(.logged-in) .top-actions{display:none!important}
+.ima-app:not(.logged-in) .topbar-inner{grid-template-columns:1fr;justify-items:center;min-height:64px}
+.ima-app:not(.logged-in) .brand{min-width:0}
+.ima-app:not(.logged-in) .hero{min-height:calc(100vh - 64px)!important;padding:40px 0!important;display:grid!important;grid-template-columns:1fr!important;place-items:center!important;gap:24px!important}
+.ima-app:not(.logged-in) .hero-copy{order:2;width:min(420px,100%);text-align:center}
+.ima-app:not(.logged-in) .hero-avatar{order:1;min-height:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.ima-app:not(.logged-in) .clean-ima-logo{width:min(280px,68vw)!important;max-height:280px!important;box-shadow:none!important;background:transparent!important}
+.ima-app:not(.logged-in) .hero-below-image-actions{display:none!important}
+.ima-app:not(.logged-in) .landing-login{display:grid;justify-items:center;gap:8px}
+.ima-app:not(.logged-in) .landing-title{font-size:clamp(2rem,8vw,3rem);font-weight:850;letter-spacing:-.05em}
+.ima-app:not(.logged-in) .landing-subtitle{color:var(--ima-muted);font-size:14px;margin-bottom:8px}
+.ima-app:not(.logged-in) .google-entry{width:min(100%,360px)!important}
+.ima-app:not(.logged-in) .google-entry>div:first-child{background:transparent!important;border:0!important;padding:0!important;margin:0 0 10px!important}
+.ima-app:not(.logged-in) .google-entry>button{display:none!important}
+.ima-app:not(.logged-in) .google-entry small{color:var(--ima-muted)}
+.ima-app:not(.logged-in) > .simple-section,
+.ima-app:not(.logged-in) > .life-section,
+.ima-app:not(.logged-in) > .welcome-strip,
+.ima-app:not(.logged-in) > .live-browser-panel,
+.ima-app:not(.logged-in) > #chat,
+.ima-app:not(.logged-in) > .community-shop,
+.ima-app:not(.logged-in) > .global-principles-section,
+.ima-app:not(.logged-in) > .info-section,
+.ima-app:not(.logged-in) > .capabilities-section,
+.ima-app:not(.logged-in) > .video-section,
+.ima-app:not(.logged-in) > .support-section,
+.ima-app:not(.logged-in) > .after-login{display:none!important}
+.ima-app:not(.logged-in) footer{display:none!important}
+
+.ima-app.logged-in > .hero,
+.ima-app.logged-in > .simple-section,
+.ima-app.logged-in > .life-section,
+.ima-app.logged-in > .welcome-strip,
+.ima-app.logged-in > .global-principles-section,
+.ima-app.logged-in > .info-section,
+.ima-app.logged-in > .capabilities-section,
+.ima-app.logged-in > .video-section,
+.ima-app.logged-in > .support-section,
+.ima-app.logged-in > .after-login{display:none!important}
+.ima-app.logged-in{display:flex;flex-direction:column;min-height:100vh}
+.ima-app.logged-in > .topbar{order:0}
+.ima-app.logged-in > .live-browser-panel{order:2}
+.ima-app.logged-in > #chat{order:1}
+.ima-app.logged-in > #community{order:3}
+.ima-app.logged-in > #shop{order:4}
+.ima-app.logged-in > footer{order:5;margin-top:auto}
+.ima-app.logged-in > .live-browser-panel{width:min(1000px,calc(100% - 20px));padding:18px 0 24px;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.ima-app.logged-in > .live-browser-panel .live-browser-head{display:none}
+.ima-app.logged-in > .live-browser-panel .live-browser-status:not(.error){font-size:12px}
+.ima-app.logged-in > #community,
+.ima-app.logged-in > #shop{width:min(1000px,calc(100% - 20px));padding:28px 0 60px}
+.ima-app.logged-in > #community .section-head,
+.ima-app.logged-in > #shop .section-head{margin-bottom:18px!important}
+.ima-app.logged-in .topbar-inner{width:min(1000px,calc(100% - 20px))}
+.ima-app.logged-in .topbar nav{justify-content:center}
+.ima-app.logged-in .topbar nav button{font-size:14px}
+.ima-app.logged-in .top-actions{display:flex}
+.ima-app.logged-in .google-entry{width:260px!important}
+.ima-app.logged-in .local-browser-workspace{box-shadow:var(--ima-shadow)}
+@media(max-width:560px){
+ .ima-app:not(.logged-in) .hero{padding:24px 10px!important}
+ .ima-app:not(.logged-in) .clean-ima-logo{width:min(230px,62vw)!important}
+ .ima-app.logged-in .topbar-inner{grid-template-columns:auto 1fr}
+ .ima-app.logged-in .topbar nav{grid-column:1/-1}
+ .ima-app.logged-in .top-actions{grid-column:2}
+}
