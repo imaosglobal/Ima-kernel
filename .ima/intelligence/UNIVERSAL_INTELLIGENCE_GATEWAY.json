@@ -1,0 +1,43 @@
+
+{
+  "schema": "IMA-UNIVERSAL-INTELLIGENCE-GATEWAY-1.0",
+  "purpose": "One provider-neutral reasoning boundary through which IMA can use, compare, verify and learn from authorized present and future intelligences without making any provider the identity of IMA.",
+  "identity": {
+    "ima_is_not_a_provider": true,
+    "capability_is_separate_from_provider": true,
+    "provider_neutral": true,
+    "same_ima_contract_across_interfaces": true
+  },
+  "known_provider_families": ["openai","anthropic","gemini","ollama","groq","future_openai_compatible","future_mcp_intelligence","future_local_model","future_device_intelligence","future_human_intelligence"],
+  "connection_states": ["DISCOVERED","AUTHORIZED","HEALTH_CHECKED","LIVE","DEGRADED","DISABLED","RETIRED"],
+  "routing": {
+    "default_mode": "single_best_authorized",
+    "cross_check_mode": "explicit_or_high_impact",
+    "ensemble_mode": "authorized_only",
+    "never_send_private_context_to_unapproved_provider": true,
+    "never_require_one_provider_for_identity_or_memory": true,
+    "provider_failure_must_not_change_ima_identity": true
+  },
+  "selection_factors": ["user_intent","domain","modality","quality","freshness","latency","cost","privacy","availability","accessibility","safety","provenance"],
+  "truth": {
+    "provider_answer_is_evidence_not_truth": true,
+    "disagreement_is_preserved": true,
+    "unknown_is_valid": true,
+    "model_popularity_is_not_validation": true,
+    "cross_provider_agreement_is_not_proof_without_independent_evidence": true
+  },
+  "learning": {
+    "learn_from_outputs_only_with_provenance": true,
+    "record_provider_model_time_prompt_scope_and_result_hash": true,
+    "promote_reusable_learning_only_after_verification": true,
+    "private_conversation_stays_private_by_default": true,
+    "unlearning_supported": true
+  },
+  "future_adapter_contract": {
+    "required": ["id","provider","capabilities","interface","auth","privacy_scope","health_check","status","provenance"],
+    "promotion": "discover -> authorize -> health_check -> capability_test -> benchmark -> route",
+    "retirement": "degrade -> isolate -> preserve provenance -> stop routing"
+  },
+  "interfaces": ["IMA website","IMA app","ChatGPT-compatible interface","MCP","API","CLI","device bridge","future robots/XR/space interfaces"],
+  "human_rule": "IMA coordinates intelligences to increase human understanding and agency; it does not manufacture consensus or replace human judgment."
+}
