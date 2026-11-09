@@ -1,3 +1,5 @@
+[Reading 172 lines from start (total: 172 lines, 0 remaining)]
+
 """Canonical single IMA loop with universal learning and self-application."""
 # first-priority provenance: provenance precedes promotion; cross-domain reconciliation and global user benefit are canonical requirements.
 # human agency and intelligibility are mandatory checks in the same canonical loop.
@@ -56,6 +58,10 @@ COMMANDS={
 "provenance_tests":["python","-m","unittest","discover","-s","tests","-p","test_provenance.py","-v"],
 "human_agency_tests":["python","-m","unittest","discover","-s","tests","-p","test_human_agency_intelligibility.py","-v"],
 "global_integration_intake":["node","scripts/ima-daily-loop-intake.mjs"],
+"global_human_conversation_learning":["python",".ima/conversation/global_human_conversation_learning.py"],
+"global_human_conversation_learning_tests":["python","-m","unittest","discover","-s","tests","-p","test_global_human_conversation_learning.py","-v"],
+"universal_intelligence_gateway":["python",".ima/intelligence/universal_intelligence_gateway.py"],
+"universal_intelligence_gateway_tests":["python","-m","unittest","discover","-s","tests","-p","test_universal_intelligence_gateway.py","-v"],
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
 "world_pulse":["python","scripts/ima_world_pulse.py"],
 }
@@ -63,7 +69,7 @@ COMMANDS={
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -166,3 +172,5 @@ def run_loop():
     return record
 
 if __name__=="__main__": print(json.dumps(run_loop(),ensure_ascii=False,indent=2))
+
+[executed on device: localhost (863839ba-718b-4553-b9ea-247cfb8980b8)]
