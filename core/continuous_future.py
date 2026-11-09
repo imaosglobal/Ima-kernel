@@ -6,12 +6,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POLICY_PATH = ROOT / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"
 
+
 def load_policy() -> dict:
     try:
         data = json.loads(POLICY_PATH.read_text(encoding="utf-8"))
         return data if isinstance(data, dict) else {}
     except Exception:
         return {}
+
 
 def policy_context() -> str:
     p = load_policy()
@@ -25,6 +27,7 @@ def policy_context() -> str:
         "boundary=human/platform/legal authority remains controlling"
     )
 
+
 def component_contract(component: str) -> dict:
     p = load_policy()
     return {
@@ -36,3 +39,16 @@ def component_contract(component: str) -> dict:
         "boundary": p.get("boundary", ""),
         "shared_with": "all IMA components",
     }
+
+
+def enforce_component_contract(component: str) -> dict:
+    """Fail closed when a component cannot prove it is governed by the active policy."""
+    contract = component_contract(component)
+    required = ("policy_id", "principle", "lifecycle", "always_apply", "boundary")
+    missing = [key for key in required if not contract.get(key)]
+    if contract.get("policy_id") != "IMA-CONTINUOUS-FUTURE-001" or missing:
+        raise RuntimeError(
+            f"continuous-future contract unavailable for {component}: "
+            f"missing={','.join(missing) or 'policy_id'}"
+        )
+    return contract
