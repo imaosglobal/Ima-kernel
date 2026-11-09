@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"
 REGISTRY = ROOT / ".ima" / "architecture" / "COMPONENT_REGISTRY.json"
+SELF_STEWARDSHIP = ROOT / ".ima" / "policies" / "SELF_STEWARDSHIP_POLICY.json"
 
 ENFORCED = {
     "ima_master_runtime.py": "ima_master_runtime",
@@ -29,10 +30,16 @@ def main() -> int:
     assert policy["principle"]
     assert policy["lifecycle"]
     assert policy["always_apply"]
-    print("POLICY: PASS")
+    stewardship = json.loads(SELF_STEWARDSHIP.read_text(encoding="utf-8"))
+    assert stewardship["id"] == "IMA-SELF-STEWARDSHIP-001"
+    assert stewardship["status"] == "active"
+    assert stewardship["required_loop"]
+    assert stewardship["boundaries"]
+    print("POLICY: PASS (continuous-future + self-stewardship)")
 
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     assert registry["policy"] == policy["id"]
+    assert registry["self_stewardship_policy"] == stewardship["id"]
     for item in registry["components"]:
         assert (ROOT / item["path"]).exists(), item["path"]
         assert item["role"]
