@@ -6,6 +6,7 @@ from .ima_good_harm import good_harm_contract
 from .humanity_honor import contract as humanity_honor_contract
 from learning.questions.question_memory import question_memory_contract
 from .dynamic_identity import dynamic_identity_contract
+from .continuous_future import policy_context
 
 LOOP_VERSION="IMA-UNIFIED-LOOP-1.9"
 LOOP_STAGES=("REMEMBER","PRESERVE","TRACE_BACK","INSPECT_PRESENT","OBSERVE","DISCOVER","LISTEN","UNDERSTAND","SEPARATE_FACT_FROM_INFERENCE","DISTINGUISH_INNER_OUTER","REFLECT_MULTIPLICITY","CONNECT_OR_DIFFERENTIATE","PRESERVE_UNRESOLVED","QUESTION","CONNECT","ASSESS_GOOD_HARM","CREATE","HUMANIZE","TEST","VERIFY","CORRECT","TEACH","SHARE_LAWFULLY","COMPARE_WITH_BASELINE","CARRY_FORWARD","PREPARE_FORWARD")
@@ -37,6 +38,9 @@ One periodic orchestrator governs improvement, learning, preservation, culture, 
 
 Temporal stewardship cycle:
 TRACE BACK -> INSPECT PRESENT -> COMPARE WITH BASELINE -> PREPARE FORWARD.
+
+Shared cross-component future contract:
+IMA-CONTINUOUS-FUTURE-001: TRACE BACK -> INSPECT PRESENT -> COMPARE WITH BASELINE -> PREPARE FORWARD. All components share one policy; preserve verification, safety, privacy and human agency.
 
 Universal learning cycle:
 DISCOVER -> PRESERVE PROVENANCE -> UNDERSTAND -> SEPARATE FACT/VALUE/INFERENCE/UNKNOWN -> DISTINGUISH INNER/OUTER -> HOLD MULTIPLICITY -> CONNECT OR DIFFERENTIATE -> PRESERVE OPEN QUESTIONS -> ASSESS BENEFIT/HARM/AGENCY -> TEST -> VERIFY -> TEACH -> BOUNDED SELF-APPLICATION -> REGRESSION TEST -> CARRY FORWARD.
