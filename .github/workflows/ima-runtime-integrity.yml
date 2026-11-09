@@ -11,6 +11,7 @@ on:
       - "core/**"
       - "learning/**"
       - ".ima/policies/**"
+      - ".ima/architecture/**"
       - ".github/workflows/ima-runtime-integrity.yml"
   pull_request:
     paths:
@@ -22,6 +23,7 @@ on:
       - "core/**"
       - "learning/**"
       - ".ima/policies/**"
+      - ".ima/architecture/**"
       - ".github/workflows/ima-runtime-integrity.yml"
 
 permissions:
@@ -35,9 +37,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Compile runtime
         run: |
           python -m py_compile ima_master_runtime.py identity_context.py ima_brain.py ima_mom.py conversation_layer.py core/continuous_future.py core/ima_loop.py core/global_humanitarian_intelligence.py learning/learning_loop.py
+
       - name: Verify shared policy
         run: |
           python - <<'PY'
@@ -51,4 +55,50 @@ jobs:
           assert data["lifecycle"]
           assert data["always_apply"]
           print("CONTINUOUS_FUTURE_POLICY_OK")
+          PY
+
+      - name: Verify component registry
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          registry = json.loads(Path(".ima/architecture/COMPONENT_REGISTRY.json").read_text(encoding="utf-8"))
+          assert registry["policy"] == "IMA-CONTINUOUS-FUTURE-001"
+          assert registry["components"]
+          root = Path(".")
+          for item in registry["components"]:
+              path = root / item["path"]
+              assert path.exists(), f"missing component path: {item['id']} -> {item['path']}"
+              assert item.get("role")
+              assert item.get("depends_on") is not None
+              assert item.get("next") is not None
+          print(f"COMPONENT_REGISTRY_OK count={len(registry['components'])}")
+          PY
+
+      - name: Verify runtime enforcement gates
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import ast
+          targets = {
+              "ima_master_runtime.py": "ima_master_runtime",
+              "ima_brain.py": "ima_brain",
+              "ima_mom.py": "ima_mom",
+          }
+          for filename, component in targets.items():
+              tree = ast.parse(Path(filename).read_text(encoding="utf-8"), filename)
+              source = Path(filename).read_text(encoding="utf-8")
+              assert "enforce_component_contract" in source, f"{filename}: missing enforcement import/use"
+              assert component in source, f"{filename}: component id not present"
+              assert any(
+                  isinstance(node, ast.Call)
+                  and isinstance(node.func, ast.Name)
+                  and node.func.id == "enforce_component_contract"
+                  for node in ast.walk(tree)
+              ), f"{filename}: no enforcement call"
+          from core.continuous_future import enforce_component_contract
+          for component in targets.values():
+              contract = enforce_component_contract(component)
+              assert contract["policy_id"] == "IMA-CONTINUOUS-FUTURE-001"
+          print("RUNTIME_ENFORCEMENT_OK")
           PY
