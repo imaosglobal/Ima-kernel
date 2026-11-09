@@ -60,7 +60,12 @@ jobs:
           assert data["principle"]
           assert data["lifecycle"]
           assert data["always_apply"]
-          print("CONTINUOUS_FUTURE_POLICY_OK")
+          s = json.loads(Path(".ima/policies/SELF_STEWARDSHIP_POLICY.json").read_text(encoding="utf-8"))
+          assert s["id"] == "IMA-SELF-STEWARDSHIP-001"
+          assert s["status"] == "active"
+          assert s["required_loop"]
+          assert s["boundaries"]
+          print("CONTINUOUS_FUTURE_AND_SELF_STEWARDSHIP_OK")
           PY
 
       - name: Verify component registry
