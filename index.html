@@ -36,23 +36,7 @@
     <meta name="twitter:title" content="אמא — IMA | Human-centered intelligence" />
     <meta name="twitter:description" content="Use IMA. Question IMA. Teach IMA. Build IMA." />
     <title>אמא — IMA | Human-centered intelligence</title>
-    <meta name="ima-build-version" content="0b36690dcd8dcd23ecc352fb077059baa9d08c17" />
-    <script>
-      (() => {
-        const root = '/Ima-kernel/';
-        const meta = document.querySelector('meta[name="ima-build-version"]');
-        const localVersion = meta?.content || '';
-        fetch(root + 'version.json?ts=' + Date.now(), { cache: 'no-store' })
-          .then(r => r.ok ? r.json() : null)
-          .then(v => {
-            if (v?.version && localVersion && localVersion !== v.version) {
-              const target = root + '?v=' + encodeURIComponent(v.version);
-              if (location.href !== target) location.replace(target);
-            }
-          })
-          .catch(() => {});
-      })();
-    </script>
+    <meta name="ima-build-version" content="cd10db52a7f5cad49416753a788981abb0794ce5" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,7 +49,7 @@
       "potentialAction": {"@type":"SearchAction","target":"https://imaosglobal.github.io/Ima-kernel/#chat","query-input":"required name=search_term_string"}
     }
     </script>
-    <script type="module" crossorigin src="/Ima-kernel/assets/index-CzUI8Ipq.js"></script>
+    <script type="module" crossorigin src="/Ima-kernel/assets/index-BRP8NaJK.js"></script>
     <link rel="stylesheet" crossorigin href="/Ima-kernel/assets/index-Bgeruh7X.css">
   </head>
   <body>
