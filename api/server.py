@@ -142,30 +142,18 @@ class Brain:
 
 
 def create_live_browser_session(user_id):
+    """Free/local-first browser capability handshake; never provisions a paid browser."""
     if not user_id or user_id == "anonymous":
         return {"error":"authentication_required","status":"ERROR"}
-    api_key=os.environ.get("FIRECRAWL_API_KEY")
-    if not api_key:
-        return {"error":"live_browser_not_configured","status":"ERROR"}
-    response=requests.post(
-        "https://api.firecrawl.dev/v1/interact",
-        headers={"Authorization":f"Bearer {api_key}","Content-Type":"application/json"},
-        json={"url":"https://imaosglobal.github.io/Ima-kernel/","prompt":"Open the IMA public site and keep a live browser session available for the authenticated IMA user. Do not sign in or submit forms automatically."},
-        timeout=45,
-    )
-    if response.status_code >= 400:
-        return {"error":"live_browser_provider_error","provider_status":response.status_code,"status":"ERROR"}
-    data=response.json()
-    result=data.get("result") if isinstance(data,dict) else None
-    if isinstance(result,dict):
-        for key in ("interactiveLiveViewUrl","liveViewUrl","sessionUrl"):
-            if result.get(key):
-                return {key:result[key],"scrapeId":data.get("scrapeId"),"status":"OK"}
-    for key in ("interactiveLiveViewUrl","liveViewUrl","sessionUrl"):
-        if isinstance(data,dict) and data.get(key):
-            return {key:data[key],"scrapeId":data.get("scrapeId"),"status":"OK"}
-    return {"error":"live_browser_url_missing","status":"ERROR"}
-
+    return {
+        "status":"WAITING_FOR_LOCAL_BROWSER",
+        "mode":"local-termux-chrome",
+        "provider":"none",
+        "free":True,
+        "requires_user_device_bridge":True,
+        "bridge_url":"http://127.0.0.1:8787",
+        "message":"Open IMA on a device with the free IMA Termux/Chrome bridge running."
+    }
 
 BRAIN=Brain()
 

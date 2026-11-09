@@ -117,9 +117,9 @@ export default function App(){
     </div>
   </div>
   {mcpStatus&&mcpStatus!=='active'&&<div className="live-browser-status">{mcpStatus==='webmcp_unavailable'?(lang==='he'?'WebMCP אינו נתמך בדפדפן הזה. חלון הדפדפן החי של IMA פועל בנפרד.':'WebMCP is not supported by this browser. IMA Live Browser works independently.'):(mcpStatus==='insecure_context'?(lang==='he'?'WebMCP דורש HTTPS.':'WebMCP requires HTTPS.'):(lang==='he'?'WebMCP לא הופעל: '+mcpStatus:'WebMCP was not activated: '+mcpStatus))}</div>}
-  {liveBrowser?.mode==='local-termux-chrome'&&<LocalBrowserPanel lang={lang}/>}
+  {(liveBrowser?.mode==='local-termux-chrome'||liveBrowser?.mode==='local-waiting'||liveBrowser?.status==='WAITING_FOR_LOCAL_BROWSER')&&<LocalBrowserPanel lang={lang}/>}
   {liveBrowser?.interactiveLiveViewUrl&&<div className="live-browser-frame-wrap"><iframe className="live-browser-frame" src={liveBrowser.interactiveLiveViewUrl} title="IMA live browser collaboration" allow="clipboard-read; clipboard-write; fullscreen" referrerPolicy="no-referrer"/><small>{lang==='he'?'החלון החי זמני.':'The live window is temporary.'}</small></div>}
-  {liveBrowser?.error&&<div className="live-browser-status error">{lang==='he'?'חלון הדפדפן עדיין לא הופעל: ':'Live browser is not activated yet: '}{liveBrowser.error}</div>}
+  {liveBrowser?.status==='WAITING_FOR_LOCAL_BROWSER'&&<div className="live-browser-status">{lang==='he'?'החלון החינמי מוכן. יש להפעיל את גשר Chrome/Termux במכשיר כדי לחבר אותו. אין שימוש בספק דפדפן בתשלום.':'The free window is ready. Start the Chrome/Termux bridge on this device to connect it. No paid browser provider is used.'}</div>}{liveBrowser?.error&&<div className="live-browser-status error">{lang==='he'?'חלון הדפדפן עדיין לא הופעל: ':'Live browser is not activated yet: '}{liveBrowser.error}</div>}
   {!liveBrowser&&<div className="live-browser-status">{lang==='he'?'פתח את החלון כדי להפעיל סשן דפדפן חי.':'Open the window to start a live browser session.'}</div>}
 </section>
   </section>

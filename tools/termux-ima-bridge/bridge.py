@@ -97,8 +97,23 @@ def execute_action(action,payload):
     if action=='type':
         return {'ok':True,'result':cdp('Input.insertText',{'text':str(payload.get('text',''))})}
     if action=='key':
-        key=str(payload.get('key',''))
-        evaluate('(()=>{const e=document.activeElement;if(!e)return false;e.dispatchEvent(new KeyboardEvent("keydown",{key:'+json.dumps(key)+',bubbles:true}));e.dispatchEvent(new KeyboardEvent("keyup",{key:'+json.dumps(key)+',bubbles:true}));return true})()')
+        key=str(payload.get('key','')).strip()
+        if not key:
+            raise ValueError('key required')
+        keymap={
+            'Enter':{'key':'Enter','code':'Enter','windowsVirtualKeyCode':13,'nativeVirtualKeyCode':13},
+            'Escape':{'key':'Escape','code':'Escape','windowsVirtualKeyCode':27,'nativeVirtualKeyCode':27},
+            'Tab':{'key':'Tab','code':'Tab','windowsVirtualKeyCode':9,'nativeVirtualKeyCode':9},
+            'Backspace':{'key':'Backspace','code':'Backspace','windowsVirtualKeyCode':8,'nativeVirtualKeyCode':8},
+            'ArrowLeft':{'key':'ArrowLeft','code':'ArrowLeft','windowsVirtualKeyCode':37,'nativeVirtualKeyCode':37},
+            'ArrowRight':{'key':'ArrowRight','code':'ArrowRight','windowsVirtualKeyCode':39,'nativeVirtualKeyCode':39},
+            'ArrowUp':{'key':'ArrowUp','code':'ArrowUp','windowsVirtualKeyCode':38,'nativeVirtualKeyCode':38},
+            'ArrowDown':{'key':'ArrowDown','code':'ArrowDown','windowsVirtualKeyCode':40,'nativeVirtualKeyCode':40},
+            'Space':{'key':' ','code':'Space','windowsVirtualKeyCode':32,'nativeVirtualKeyCode':32},
+        }
+        spec=keymap.get(key,{'key':key,'code':key})
+        cdp('Input.dispatchKeyEvent',{'type':'keyDown',**spec})
+        cdp('Input.dispatchKeyEvent',{'type':'keyUp',**spec})
         return {'ok':True,'key':key}
     raise ValueError('unsupported_action')
 
