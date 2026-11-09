@@ -1,3 +1,4 @@
+
 import time
 import identity_context
 import conversation_layer
@@ -125,6 +126,8 @@ class IMAMaster:
             }
         }
 
+        gateway_answer = None
+
         if "חוקים" in message:
             result["response"] = "\n".join(context.get("laws", []))
         elif "מטרה" in message or "חזון" in message:
@@ -132,14 +135,43 @@ class IMAMaster:
         else:
             try:
                 events = [] if public else ima_brain.load_events()
-                if ask_models is not None:
+
+                # Canonical intelligence boundary: every live interface uses the
+                # same provider-neutral IMA gateway before legacy provider routing.
+                gateway_answer = None
+                try:
+                    import importlib.util
+                    from pathlib import Path
+                    gateway_path = Path(__file__).resolve().parent / ".ima" / "intelligence" / "universal_intelligence_gateway.py"
+                    spec = importlib.util.spec_from_file_location("ima_universal_intelligence_gateway_master", gateway_path)
+                    if spec is not None and spec.loader is not None:
+                        gateway_module = importlib.util.module_from_spec(spec)
+                        spec.loader.exec_module(gateway_module)
+                        gateway_answer = gateway_module.route(
+                            provider_message,
+                            private=not public,
+                            high_impact=False,
+                        )
+                        result["intelligence_gateway"] = gateway_answer
+                except Exception as exc:
+                    result["intelligence_gateway_error"] = repr(exc)
+
+                if gateway_answer and gateway_answer.get("status") == "OK" and gateway_answer.get("response"):
+                    result["response"] = gateway_answer["response"]
+                    result["llm_response"] = {
+                        "provider": gateway_answer.get("provider"),
+                        "truth_state": gateway_answer.get("truth_state"),
+                        "verification_required": gateway_answer.get("verification_required", True),
+                        "gateway": gateway_answer.get("gateway"),
+                    }
+                elif ask_models is not None:
                     try:
                         result["llm"] = ask_models(provider_message)
                     except Exception as exc:
                         result["llm"] = {"status": "error", "error": str(exc)}
 
                 llm_answer = None
-                if ima_llm_answer is not None:
+                if not (gateway_answer and gateway_answer.get("status") == "OK" and gateway_answer.get("response")) and ima_llm_answer is not None:
                     try:
                         candidate = ima_llm_answer(provider_message)
                         if isinstance(candidate, dict):
@@ -196,6 +228,11 @@ class IMAMaster:
                     result["response"] = ima_mom.generate_answer(message, ima_mom.load())
                 except Exception:
                     result["response"] = "אני כאן. אפשר להתחיל מחדש מהשאלה שלך."
+
+        # The canonical gateway result wins over legacy fallback paths so every interface
+        # receives the same IMA answer boundary when an authorized intelligence answered.
+        if gateway_answer and gateway_answer.get("status") == "OK" and gateway_answer.get("response"):
+            result["response"] = gateway_answer["response"]
 
         try:
             if reflect is not None and result.get("response"):
