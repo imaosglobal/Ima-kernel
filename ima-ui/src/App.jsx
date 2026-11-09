@@ -21,7 +21,7 @@ function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';re
 function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
 
 function GoogleLogin({auth,setAuth,locale,setProfile,setActive}){
- const [termsAccepted,setTermsAccepted]=useState(false);
+ const [termsAccepted,setTermsAccepted]=useState(()=>localStorage.getItem('ima-terms-v1')==='accepted');
  const ref=useRef(null);
  useEffect(()=>{let cancelled=false;(async()=>{try{
   const config=await getAuthConfig();
