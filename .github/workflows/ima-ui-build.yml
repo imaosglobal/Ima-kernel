@@ -30,3 +30,7 @@ jobs:
           cache-dependency-path: ima-ui/package-lock.json
       - run: npm ci
       - run: npm run build
+
+      - name: Run UI conformance QA
+        working-directory: .
+        run: python qa/ui_conformance.py
