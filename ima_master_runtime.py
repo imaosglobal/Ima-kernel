@@ -8,7 +8,7 @@ from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
-from core.continuous_future import component_contract, policy_context
+from core.continuous_future import enforce_component_contract, component_contract
 
 try:
     from ima_runtime.reflection_runtime import reflect
@@ -36,6 +36,18 @@ class IMAMaster:
         self.name = "IMA MASTER"
 
     def ask(self, message, user_id="default", public=False, public_memory=None, personalization=None):
+        # Fail closed: every live interaction must be governed by the canonical policy.
+        continuous_future_contract = enforce_component_contract("ima_master_runtime")
+        continuous_future_policy = None
+        try:
+            from pathlib import Path
+            import json
+            policy_path = Path(__file__).resolve().parent / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"
+            if policy_path.exists():
+                continuous_future_policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        except Exception:
+            continuous_future_policy = None
+
         personalization = personalization if isinstance(personalization, dict) else {}
         requested_language = str(personalization.get("language") or "").strip()
         response_instruction = (
@@ -47,17 +59,6 @@ class IMAMaster:
             "מיזם", "מוצר", "שירות", "להרוויח", "הכנסה", "שיווק", "כדאיות",
             "opportunity", "business idea", "investment", "startup", "customer"
         )
-        # IMA-CONTINUOUS-FUTURE-001: one cross-domain lifecycle policy for every live interaction.
-        # The policy is read from the repository so the governing principle is inspectable and updateable.
-        continuous_future_policy = None
-        try:
-            from pathlib import Path
-            import json
-            policy_path = Path(__file__).resolve().parent / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"
-            if policy_path.exists():
-                continuous_future_policy = json.loads(policy_path.read_text(encoding="utf-8"))
-        except Exception:
-            continuous_future_policy = None
 
         continuous_future_context = ""
         if isinstance(continuous_future_policy, dict):
@@ -118,7 +119,7 @@ class IMAMaster:
                 "capability_runtime": capability_runtime,
                 "learning_governance": learning_governance,
                 "continuous_future_policy": continuous_future_policy,
-                "continuous_future_contract": component_contract("ima_master_runtime"),
+                "continuous_future_contract": continuous_future_contract,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
@@ -137,8 +138,6 @@ class IMAMaster:
                     except Exception as exc:
                         result["llm"] = {"status": "error", "error": str(exc)}
 
-                # Each answer source is isolated. A malformed provider payload or
-                # knowledge-graph record must never become the public response.
                 llm_answer = None
                 if ima_llm_answer is not None:
                     try:
@@ -163,7 +162,6 @@ class IMAMaster:
                     try:
                         nodes = search_concept(message)
                         if nodes:
-                            # Normalize provider/graph shapes before answer building.
                             normalized_nodes = nodes if isinstance(nodes, list) else [nodes]
                             safe_nodes = [node for node in normalized_nodes if isinstance(node, (dict, str))]
                             if safe_nodes:
@@ -193,17 +191,12 @@ class IMAMaster:
                     else:
                         result["response"] = ima_mom.generate_answer(message, ima_mom.load())
             except Exception as exc:
-                # Never expose internal exception details to users. Keep them in
-                # server logs/diagnostics and provide a bounded public fallback.
                 result["internal_runtime_error"] = repr(exc)
                 try:
                     result["response"] = ima_mom.generate_answer(message, ima_mom.load())
                 except Exception:
                     result["response"] = "אני כאן. אפשר להתחיל מחדש מהשאלה שלך."
 
-        # Every live response passes through the reflection gate. When no genuinely
-        # independent conclusion is available, the runtime records TRUE_UNKNOWN;
-        # it never treats its first answer as independently verified truth.
         try:
             if reflect is not None and result.get("response"):
                 result["reflection"] = reflect(
@@ -215,7 +208,6 @@ class IMAMaster:
             result["reflection_error"] = str(exc)
 
         if not public:
-            # Private continuity and learning require explicit memory consent.
             consent_status = "UNKNOWN"
             try:
                 import importlib.util
