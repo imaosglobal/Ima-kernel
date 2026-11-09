@@ -8,6 +8,7 @@ from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
+from core.continuous_future import component_contract, policy_context
 
 try:
     from ima_runtime.reflection_runtime import reflect
@@ -117,6 +118,7 @@ class IMAMaster:
                 "capability_runtime": capability_runtime,
                 "learning_governance": learning_governance,
                 "continuous_future_policy": continuous_future_policy,
+                "continuous_future_contract": component_contract("ima_master_runtime"),
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
