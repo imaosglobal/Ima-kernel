@@ -46,7 +46,33 @@ class IMAMaster:
             "מיזם", "מוצר", "שירות", "להרוויח", "הכנסה", "שיווק", "כדאיות",
             "opportunity", "business idea", "investment", "startup", "customer"
         )
-        # IMA-CONTINUOUS-FUTURE-001: one cross-domain lifecycle policy for every live interaction.\n        # The policy is read from the repository so the governing principle is inspectable and updateable.\n        continuous_future_policy = None\n        try:\n            from pathlib import Path\n            import json\n            policy_path = Path(__file__).resolve().parent / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"\n            if policy_path.exists():\n                continuous_future_policy = json.loads(policy_path.read_text(encoding="utf-8"))\n        except Exception:\n            continuous_future_policy = None\n\n        continuous_future_context = ""\n        if isinstance(continuous_future_policy, dict):\n            principle = str(continuous_future_policy.get("principle") or "").strip()\n            rules = continuous_future_policy.get("always_apply") or []\n            lifecycle = continuous_future_policy.get("lifecycle") or []\n            boundary = str(continuous_future_policy.get("boundary") or "").strip()\n            continuous_future_context = (\n                "\\n\\n[IMA continuous-future policy — apply to this interaction and any resulting work.]\\n"\n                + ("Principle: " + principle + "\\n" if principle else "")\n                + ("Always: " + "; ".join(str(x) for x in rules) + "\\n" if rules else "")\n                + ("Lifecycle: " + " → ".join(str(x) for x in lifecycle) + "\\n" if lifecycle else "")\n                + ("Boundary: " + boundary if boundary else "")\n            )\n\n        opportunity_context = (
+        # IMA-CONTINUOUS-FUTURE-001: one cross-domain lifecycle policy for every live interaction.
+        # The policy is read from the repository so the governing principle is inspectable and updateable.
+        continuous_future_policy = None
+        try:
+            from pathlib import Path
+            import json
+            policy_path = Path(__file__).resolve().parent / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"
+            if policy_path.exists():
+                continuous_future_policy = json.loads(policy_path.read_text(encoding="utf-8"))
+        except Exception:
+            continuous_future_policy = None
+
+        continuous_future_context = ""
+        if isinstance(continuous_future_policy, dict):
+            principle = str(continuous_future_policy.get("principle") or "").strip()
+            rules = continuous_future_policy.get("always_apply") or []
+            lifecycle = continuous_future_policy.get("lifecycle") or []
+            boundary = str(continuous_future_policy.get("boundary") or "").strip()
+            continuous_future_context = (
+                "\n\n[IMA continuous-future policy — apply to this interaction and any resulting work.]\n"
+                + ("Principle: " + principle + "\n" if principle else "")
+                + ("Always: " + "; ".join(str(x) for x in rules) + "\n" if rules else "")
+                + ("Lifecycle: " + " → ".join(str(x) for x in lifecycle) + "\n" if lifecycle else "")
+                + ("Boundary: " + boundary if boundary else "")
+            )
+
+        opportunity_context = (
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
@@ -89,7 +115,8 @@ class IMAMaster:
                 "global_change_humanitarian_intelligence": True,
                 "capability_registry": capability_runtime is not None,
                 "capability_runtime": capability_runtime,
-                "learning_governance": learning_governance,\n                "continuous_future_policy": continuous_future_policy,
+                "learning_governance": learning_governance,
+                "continuous_future_policy": continuous_future_policy,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
