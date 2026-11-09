@@ -22,6 +22,8 @@ DEVICE_KEY=load_device_key()
 CLOUD_POLL_SECONDS=max(1.0,float(os.environ.get('IMA_CLOUD_POLL_SECONDS','2')))
 CLOUD_TIMEOUT=max(3.0,float(os.environ.get('IMA_CLOUD_TIMEOUT','12')))
 LOCAL_EVAL_ENABLED=os.environ.get('IMA_ENABLE_LOCAL_EVAL','0').strip().lower() in ('1','true','yes','on')
+ALLOWED_ORIGINS={x.strip().rstrip('/') for x in os.environ.get('IMA_ALLOWED_ORIGINS','https://imaosglobal.github.io,http://localhost:5173,http://127.0.0.1:5173').split(',') if x.strip()}
+ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
 
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
@@ -169,7 +171,10 @@ class Handler(BaseHTTPRequestHandler):
         raw=json.dumps(obj,ensure_ascii=False).encode()
         self.send_response(status)
         self.send_header('Content-Type','application/json; charset=utf-8')
-        self.send_header('Access-Control-Allow-Origin','*')
+        origin=self.headers.get('Origin','').rstrip('/')
+        if origin and origin in ALLOWED_ORIGINS:
+            self.send_header('Access-Control-Allow-Origin',origin)
+            self.send_header('Vary','Origin')
         self.send_header('Access-Control-Allow-Headers','Content-Type, Authorization')
         self.send_header('Access-Control-Allow-Private-Network','true')
         self.send_header('Access-Control-Allow-Methods','GET,POST,OPTIONS')
@@ -192,9 +197,16 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({'ok':False,'error':str(e)},503)
     def do_POST(self):
         try:
+            origin=self.headers.get('Origin','').rstrip('/')
+            path=urllib.parse.urlparse(self.path).path
+            if path in ACTION_PATHS and origin and origin not in ALLOWED_ORIGINS:
+                self.send_json({'ok':False,'error':'origin_not_allowed'},403)
+                return
+            if path in ACTION_PATHS and not origin:
+                self.send_json({'ok':False,'error':'origin_required'},403)
+                return
             n=int(self.headers.get('Content-Length','0'))
             body=json.loads(self.rfile.read(n) or b'{}')
-            path=urllib.parse.urlparse(self.path).path
             if path=='/enroll':
                 auth=str(body.get('authorization','')).strip()
                 if not auth.startswith('Bearer '):
