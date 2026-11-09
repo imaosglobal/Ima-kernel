@@ -1,0 +1,54 @@
+name: IMA Runtime Integrity
+
+on:
+  push:
+    paths:
+      - "ima_master_runtime.py"
+      - "identity_context.py"
+      - "ima_brain.py"
+      - "ima_mom.py"
+      - "conversation_layer.py"
+      - "core/**"
+      - "learning/**"
+      - ".ima/policies/**"
+      - ".github/workflows/ima-runtime-integrity.yml"
+  pull_request:
+    paths:
+      - "ima_master_runtime.py"
+      - "identity_context.py"
+      - "ima_brain.py"
+      - "ima_mom.py"
+      - "conversation_layer.py"
+      - "core/**"
+      - "learning/**"
+      - ".ima/policies/**"
+      - ".github/workflows/ima-runtime-integrity.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile runtime
+        run: |
+          python -m py_compile             ima_master_runtime.py             identity_context.py             ima_brain.py             ima_mom.py             conversation_layer.py             core/continuous_future.py             core/ima_loop.py             core/global_humanitarian_intelligence.py             learning/learning_loop.py
+      - name: Verify shared policy
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path(".ima/policies/CONTINUOUS_FUTURE_POLICY.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          assert data["id"] == "IMA-CONTINUOUS-FUTURE-001"
+          assert data["status"] == "active"
+          assert data["principle"]
+          assert data["lifecycle"]
+          assert data["always_apply"]
+          print("CONTINUOUS_FUTURE_POLICY_OK")
+          PY
