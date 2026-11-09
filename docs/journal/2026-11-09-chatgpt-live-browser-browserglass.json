@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-09",
+  "title": "ChatGPT live browser path via BrowserGlass + MCP Apps",
+  "status": "IMPLEMENTED_DEPLOY_IN_PROGRESS_NOT_E2E_VERIFIED",
+  "facts": [
+    "Reviewed prior IMA live-browser discussions: user requires an interactive browser surface inside ChatGPT, not merely an external IMA page.",
+    "TinyFish and Opera were explicitly excluded as substitutes.",
+    "OpenAI documentation confirms MCP Apps can render interactive UI inside ChatGPT, including inline, fullscreen and picture-in-picture display modes.",
+    "OpenAI documentation currently states custom MCP connections are web-only; mobile custom MCP connections are not supported.",
+    "IMA already contained an MCP App resource ui://ima/live-browser/v1.html and a BrowserGlass service.",
+    "BrowserGlass is an open-source Apache-2.0 project that streams a real Chrome browser into a web page and supports shared human/agent control."
+  ],
+  "implementation": [
+    "IMA MCP widget now embeds the IMA BrowserGlass viewer as its live browser surface.",
+    "MCP widget CSP now explicitly allowlists https://ima-browserglass.onrender.com as a frame/connect domain.",
+    "BrowserGlass viewer now accepts ChatGPT as an authorized embed origin, starts the browser at https://imaosglobal.github.io/, and exposes authenticated HTTPS navigation.",
+    "Existing Termux/Chrome attach-only path remains intact and is not used by the BrowserGlass fallback, so the user's existing Chrome is not restarted or controlled by this new path."
+  ],
+  "verification": [
+    "GitHub main advanced to commit 5c064a307bbe20d6f86961f63bc3bb6cc208a053.",
+    "Render auto-deploys for ima-universal-action-core and ima-browserglass were observed in update_in_progress after the commit.",
+    "GitHub CI status records for the new commit were empty at verification time; CI was not claimed green.",
+    "End-to-end ChatGPT-host rendering is not yet verified in this mobile chat because the current ChatGPT mobile surface does not accept custom MCP connections."
+  ],
+  "next_gate": "Connect the IMA custom MCP on ChatGPT web where supported, invoke ima_live_browser, and verify the live BrowserGlass surface, navigation to IMA, human control, and model/tool coordination."
+}
