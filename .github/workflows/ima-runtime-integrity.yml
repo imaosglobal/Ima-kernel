@@ -10,6 +10,7 @@ on:
       - "conversation_layer.py"
       - "core/**"
       - "learning/**"
+      - "qa/continuous_future_runtime_qa.py"
       - ".ima/policies/**"
       - ".ima/architecture/**"
       - ".github/workflows/ima-runtime-integrity.yml"
@@ -22,6 +23,7 @@ on:
       - "conversation_layer.py"
       - "core/**"
       - "learning/**"
+      - "qa/continuous_future_runtime_qa.py"
       - ".ima/policies/**"
       - ".ima/architecture/**"
       - ".github/workflows/ima-runtime-integrity.yml"
@@ -40,7 +42,11 @@ jobs:
 
       - name: Compile runtime
         run: |
-          python -m py_compile ima_master_runtime.py identity_context.py ima_brain.py ima_mom.py conversation_layer.py core/continuous_future.py core/ima_loop.py core/global_humanitarian_intelligence.py learning/learning_loop.py
+          python -m py_compile ima_master_runtime.py identity_context.py ima_brain.py ima_mom.py conversation_layer.py core/continuous_future.py core/ima_loop.py core/global_humanitarian_intelligence.py learning/learning_loop.py qa/continuous_future_runtime_qa.py
+
+      - name: Run local continuous-future QA
+        run: |
+          python qa/continuous_future_runtime_qa.py
 
       - name: Verify shared policy
         run: |
