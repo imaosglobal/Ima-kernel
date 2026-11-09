@@ -9,8 +9,9 @@ const BGLS_PORT = Number(process.env.BGLS_INTERNAL_PORT || 7799);
 const BGLS_DIR = process.env.BGLS_HOME || '/opt/browserglass';
 const DATA_DIR = process.env.BGLS_DATA_DIR || '/opt/browserglass/bgls-data';
 const CHROME_BIN = process.env.CHROME_BIN || '/usr/bin/chromium';
-const EMBED_ORIGIN = 'https://imaosglobal.github.io';
+const EMBED_ORIGINS = ['https://imaosglobal.github.io','https://chatgpt.com','https://chat.openai.com'];
 const EMBED_COOKIE = 'ima_browserglass_embed';
+const DEFAULT_URL = process.env.IMA_DEFAULT_BROWSER_URL || 'https://imaosglobal.github.io/';
 
 let gateway;
 let instanceId = null;
@@ -76,6 +77,9 @@ async function ensureInstance() {
   const td = await targets.json();
   targetId = td.targets?.[0]?.targetId || td[0]?.targetId;
   if (!targetId) throw new Error('BrowserGlass returned no target');
+  const viewerToken = await mintViewerToken();
+  const nav = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets/${targetId}/navigate`, { method:'POST', headers:{authorization:`Bearer ${viewerToken}`,'content-type':'application/json'}, body:JSON.stringify({url:DEFAULT_URL}) });
+  if (!nav.ok) throw new Error(`BrowserGlass initial navigation failed: ${nav.status}`);
 }
 
 async function mintViewerToken() {
@@ -132,7 +136,9 @@ const server = http.createServer(async (req, res) => {
     const cookieHeader = String(req.headers.cookie || '');
     const hasEmbedCookie = cookieHeader.split(';').some(v => v.trim().startsWith(EMBED_COOKIE + '='));
     const referer = String(req.headers.referer || '');
-    if (req.url === '/' && referer.startsWith(EMBED_ORIGIN + '/')) {
+    const origin = String(req.headers.origin || '');
+    const embedAllowed = EMBED_ORIGINS.some(base => referer.startsWith(base + '/') || origin === base);
+    if (req.url === '/' && embedAllowed) {
       res.setHeader('Set-Cookie', `${EMBED_COOKIE}=1; Path=/; Secure; HttpOnly; SameSite=None; Max-Age=86400`);
     }
 
@@ -140,6 +146,16 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ ok: true, service: 'ima-browserglass' }));
       return;
+    }
+
+    if (req.url === '/api/navigate' && req.method === 'POST') {
+      if (!hasEmbedCookie && !embedAllowed) { res.writeHead(403, {'content-type':'application/json'}); res.end(JSON.stringify({error:'IMA embed required'})); return; }
+      let body=''; for await (const chunk of req) body += chunk;
+      const parsed=JSON.parse(body || '{}'); const url=String(parsed.url || '').trim();
+      if (!/^https:\/\//i.test(url)) { res.writeHead(400, {'content-type':'application/json'}); res.end(JSON.stringify({error:'https_url_required'})); return; }
+      await ensureInstance(); const viewerToken=await mintViewerToken();
+      const r=await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets/${targetId}/navigate`, {method:'POST',headers:{authorization:`Bearer ${viewerToken}`,'content-type':'application/json'},body:JSON.stringify({url})});
+      const out=await r.json().catch(()=>({})); res.writeHead(r.ok?200:r.status, {'content-type':'application/json','cache-control':'no-store'}); res.end(JSON.stringify(out)); return;
     }
 
     if (req.url === '/api/session') {
@@ -160,6 +176,7 @@ const server = http.createServer(async (req, res) => {
         token,
         targetId,
         expiresAt: lastTokenExpiresAt,
+        defaultUrl: DEFAULT_URL,
       }));
       return;
     }
