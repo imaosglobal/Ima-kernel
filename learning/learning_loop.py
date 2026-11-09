@@ -9,6 +9,7 @@ from learning.learning_gap_detector import record as record_learning_gap
 from learning.conclusion_engine import conclude
 from learning.teaching_artifact import create_teaching_artifact
 import time
+from core.continuous_future import component_contract
 
 
 def process_event(event):
@@ -70,5 +71,6 @@ def learn_from_event(event):
         "learning_gap": gap,
         "conclusion": conclusion,
         "teaching_artifact": teaching,
-        "status": "processed"
+        "status": "processed",
+        "continuous_future": component_contract("learning_loop")
     }
