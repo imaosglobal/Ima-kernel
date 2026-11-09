@@ -1,0 +1,32 @@
+name: IMA UI Build
+
+on:
+  push:
+    paths:
+      - "ima-ui/**"
+      - "ima_master_runtime.py"
+      - "connectors/llm/**"
+  pull_request:
+    paths:
+      - "ima-ui/**"
+      - "ima_master_runtime.py"
+      - "connectors/llm/**"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ima-ui
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ima-ui/package-lock.json
+      - run: npm ci
+      - run: npm run build
