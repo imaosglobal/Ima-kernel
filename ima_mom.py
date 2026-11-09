@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json, os, time
+from core.continuous_future import component_contract
 
 MEM_FILE = "founder/data/ima_memory.json"
 
@@ -35,6 +36,7 @@ def save(mem):
 
 
 def generate_answer(q, mem):
+    future_contract = component_contract("ima_mom")
     ql = q.lower()
     qa = mem.setdefault("qa", [])
     if not isinstance(qa, list):
