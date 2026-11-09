@@ -2,7 +2,7 @@ import json, os
 from learning.learning_memory import store_pattern
 from learning.learning_loop import learn_from_event
 from learning.historical_inference import get_conclusions
-from core.continuous_future import component_contract
+from core.continuous_future import enforce_component_contract
 
 LEDGER = ".ima/ledger.jsonl"
 
@@ -47,7 +47,6 @@ def web_search(query):
 # -------------------------
 
 
-
 def extract_patterns(events):
     text=" ".join(
         [
@@ -86,7 +85,7 @@ def extract_patterns(events):
     return patterns
 
 def answer(question, events):
-    future_contract = component_contract("ima_brain")
+    future_contract = enforce_component_contract("ima_brain")
 
     q = question.lower()
 
@@ -127,8 +126,6 @@ def answer(question, events):
         return "כאב הוא אות של מערכת העצבים שמבקש תשומת לב ולא בהכרח סכנה."
 
     return ""
-
-
 
 
 def record_learning_event(event):
