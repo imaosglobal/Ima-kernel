@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from core.continuous_future import component_contract
 
 LEGACY = Path(".ima/legacy/ori_legacy.json")
 
@@ -31,6 +32,7 @@ def build_context(message="", public=False):
             "laws": PUBLIC_LAWS,
             "legacy": "אני אמא — שכבת אינטליגנציה אנושית־מרכזית של IMA. הזיכרון הפרטי של כל משתמש נשמר בנפרד.",
             "message": message,
+            "continuous_future": component_contract("identity_context"),
         }
 
     data = load_legacy()
@@ -39,5 +41,6 @@ def build_context(message="", public=False):
         "vision": data.get("architectural_vision", {}),
         "laws": data.get("personal_laws", []),
         "legacy": data.get("legacy_summary_hebrew", ""),
+        "continuous_future": component_contract("identity_context"),
         "message": message
     }
