@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from typing import Any
+from .continuous_future import component_contract
 
 EVENT_TYPES = (
     "CONFLICT", "PROTEST_OR_UPRISING", "POLITICAL_CHANGE", "DISASTER",
@@ -75,6 +76,9 @@ class HumanitarianPlan:
     verification_rule: str
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+def continuous_future_contract() -> dict[str, Any]:
+    return component_contract("global_humanitarian_intelligence")
 
 def classify_text(text: str) -> str:
     value = str(text or "").casefold()
