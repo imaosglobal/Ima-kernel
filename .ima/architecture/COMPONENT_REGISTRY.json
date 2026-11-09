@@ -1,0 +1,108 @@
+{
+  "id": "IMA-COMPONENT-REGISTRY-001",
+  "version": "1.0.0",
+  "policy": "IMA-CONTINUOUS-FUTURE-001",
+  "rule": "Every registered component has a declared role, interfaces, dependencies, verification path and continuous-future governance.",
+  "components": [
+    {
+      "id": "master_runtime",
+      "path": "ima_master_runtime.py",
+      "kind": "python-runtime",
+      "contract": "enforced",
+      "role": "canonical live orchestration boundary",
+      "depends_on": ["identity_context", "conversation_layer", "brain", "mother", "learning_loop", "unified_loop", "humanitarian_intelligence", "llm_router"],
+      "next": ["cross_component_health_graph", "rollback_recovery_manager"]
+    },
+    {
+      "id": "identity_context",
+      "path": "identity_context.py",
+      "kind": "python-context",
+      "contract": "shared",
+      "role": "identity, vision, laws and user-scope context",
+      "depends_on": ["continuous_future"],
+      "next": ["provenance_graph"]
+    },
+    {
+      "id": "brain",
+      "path": "ima_brain.py",
+      "kind": "python-runtime",
+      "contract": "enforced",
+      "role": "memory-aware fallback reasoning and pattern extraction",
+      "depends_on": ["learning_memory", "learning_loop", "historical_inference", "continuous_future"],
+      "next": ["evidence_bounded_reasoning"]
+    },
+    {
+      "id": "mother",
+      "path": "ima_mom.py",
+      "kind": "python-fallback",
+      "contract": "enforced",
+      "role": "bounded fallback response engine",
+      "depends_on": ["canonical_memory_adapter", "continuous_future"],
+      "next": ["policy_aware_fallbacks"]
+    },
+    {
+      "id": "learning_loop",
+      "path": "learning/learning_loop.py",
+      "kind": "python-learning",
+      "contract": "shared",
+      "role": "learning, gaps, conclusions and teaching artifacts",
+      "depends_on": ["learning_gate", "learning_router", "continuous_future"],
+      "next": ["learning_regression_suite"]
+    },
+    {
+      "id": "unified_loop",
+      "path": "core/ima_loop.py",
+      "kind": "python-orchestrator",
+      "contract": "shared",
+      "role": "canonical improvement, verification and carry-forward loop",
+      "depends_on": ["continuous_future", "good_harm", "humanity_honor", "dynamic_identity"],
+      "next": ["single_health_scheduler"]
+    },
+    {
+      "id": "humanitarian_intelligence",
+      "path": "core/global_humanitarian_intelligence.py",
+      "kind": "python-domain",
+      "contract": "shared",
+      "role": "evidence-first humanitarian and world-change analysis",
+      "depends_on": ["continuous_future"],
+      "next": ["live_source_verification"]
+    },
+    {
+      "id": "continuous_future",
+      "path": "core/continuous_future.py",
+      "kind": "python-governance",
+      "contract": "root",
+      "role": "canonical cross-component policy and enforcement gate",
+      "depends_on": [".ima/policies/CONTINUOUS_FUTURE_POLICY.json"],
+      "next": ["policy_version_migration"]
+    },
+    {
+      "id": "ui",
+      "path": "ima-ui/src",
+      "kind": "web-interface",
+      "contract": "interface",
+      "role": "human-facing interaction and update surface",
+      "depends_on": ["master_runtime", "updateCoordinator"],
+      "next": ["ui_runtime_conformance"]
+    },
+    {
+      "id": "ota_update_plane",
+      "path": "ima-ui/src/services/updateCoordinator.js",
+      "kind": "web-maintenance",
+      "contract": "interface",
+      "role": "continuous web/PWA update coordination",
+      "depends_on": ["version.json", "platform_update_authority"],
+      "next": ["cross_platform_update_adapters"]
+    },
+    {
+      "id": "device_bridge",
+      "path": "tools/termux-ima-bridge",
+      "kind": "device-interface",
+      "contract": "interface",
+      "role": "authorized device/browser action bridge",
+      "depends_on": ["platform_authority", "user_authorization"],
+      "next": ["bridge_health_conformance"]
+    }
+  ],
+  "future_rule": "Discover candidates, verify dependencies, implement the smallest safe change, run regression checks, record evidence, and only then hand the capability forward. Never silently create authority over people, devices or institutions."
+}
