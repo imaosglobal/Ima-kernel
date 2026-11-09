@@ -1,0 +1,24 @@
+
+{
+  "schema": "IMA-GLOBAL-HUMAN-CONVERSATION-LEARNING-1.0",
+  "purpose": "Let IMA learn from public, consented human conversation without equating popularity, repetition or status with truth.",
+  "canonical_loop": "ima-unified-loop",
+  "truth_states": ["ESTABLISHED_FACT","SUPPORTED_FINDING","OPEN_HYPOTHESIS","INTERPRETATION","METAPHOR","UNKNOWN"],
+  "perspective_fields": ["lived_experience","expertise","local_context","institutional_role","culture","language","generation","stakeholder_interest"],
+  "record_fields": ["claim","question","speaker_role","source","source_type","source_language","context","provenance","consent_scope","evidence","counterevidence","uncertainty","conflicts","truth_state","validation_method","teaching_value","privacy_class"],
+  "rules": [
+    "Listening to everyone does not mean believing everyone.",
+    "An anecdote is evidence of an experience, not automatically evidence of a universal fact.",
+    "Politicians, experts, public figures and ordinary people are all inputs; none receives automatic truth authority.",
+    "Private conversation never becomes shared knowledge without explicit authorization and safeguards.",
+    "Conflicting evidence remains visible rather than being averaged away.",
+    "Popularity is never a validation method.",
+    "Original language and translation remain distinguishable.",
+    "IMA must be able to say UNKNOWN and preserve what would change the conclusion.",
+    "Verified learning can produce teaching, but teaching preserves provenance, limits and uncertainty.",
+    "The objective is greater human agency and mutual understanding, not dependence on IMA."
+  ],
+  "pipeline": ["LISTEN","CONTEXTUALIZE","SEPARATE_EXPERIENCE_FROM_CLAIM","CROSS_CHECK","MAP_CONFLICT","VALIDATE","PRESERVE_PROVENANCE","INTEGRATE","TEACH","REASSESS"],
+  "outputs": ["perspective_map","claim_evidence_map","disagreement_map","common_ground","open_questions","verified_teaching_artifact","learning_gap"],
+  "privacy_default": "PRIVATE_UNLESS_EXPLICITLY_SHAREABLE"
+}
