@@ -201,3 +201,10 @@ body{background:var(--ima-bg);color:var(--ima-ink)}
 .ima-chat-header img{width:42px;height:42px;border-radius:12px;object-fit:cover;background:var(--ima-surface-2)}
 .ima-chat-header b{display:block;font-size:15px}
 .ima-chat-header small{display:block;color:var(--ima-muted);font-size:11px;margin-top:2px}
+
+/* Live Browser is intentionally a child of the authenticated chat workspace. */
+.ima-app.logged-in #chat .live-browser-panel{width:100%;padding:16px 0 0;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0!important}
+.ima-app.logged-in #chat .live-browser-panel .live-browser-head{display:flex}
+.ima-app.logged-in #chat .live-browser-panel .live-browser-actions{display:flex}
+.ima-app.logged-in #chat .live-browser-panel .live-browser-status:not(.error){font-size:12px}
+.ima-app:not(.logged-in) #chat .live-browser-panel{display:none!important}
