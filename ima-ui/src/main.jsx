@@ -4,9 +4,11 @@ import App from './App';
 import './index.css';
 import { registerContinuity } from './services/deviceContinuity';
 import { scheduleDeviceHealth } from './services/deviceHealth';
+import { startImaUpdatePlane } from './services/updateCoordinator';
 
 registerContinuity();
 scheduleDeviceHealth();
+startImaUpdatePlane();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
