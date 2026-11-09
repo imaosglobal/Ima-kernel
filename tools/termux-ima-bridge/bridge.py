@@ -21,6 +21,7 @@ def load_device_key():
 DEVICE_KEY=load_device_key()
 CLOUD_POLL_SECONDS=max(1.0,float(os.environ.get('IMA_CLOUD_POLL_SECONDS','2')))
 CLOUD_TIMEOUT=max(3.0,float(os.environ.get('IMA_CLOUD_TIMEOUT','12')))
+LOCAL_EVAL_ENABLED=os.environ.get('IMA_ENABLE_LOCAL_EVAL','0').strip().lower() in ('1','true','yes','on')
 
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
@@ -72,6 +73,8 @@ def execute_action(action,payload):
         evaluate('location.href='+json.dumps(url))
         return {'ok':True,'url':url}
     if action=='eval':
+        if not LOCAL_EVAL_ENABLED:
+            raise ValueError('local_eval_disabled')
         return {'ok':True,'result':evaluate(str(payload.get('expression',''))).get('result')}
     if action=='click':
         selector=str(payload.get('selector','')).strip()
@@ -178,7 +181,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if self.path=='/status':
                 t=target()
-                self.send_json({'ok':True,'bridge':'ima-termux','port':PORT,'cdp':CDP,'cloud':{'enabled':bool(DEVICE_KEY),'api':CLOUD_API,'poll_seconds':CLOUD_POLL_SECONDS},'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}})
+                self.send_json({'ok':True,'bridge':'ima-termux','port':PORT,'cdp':CDP,'cloud':{'enabled':bool(DEVICE_KEY),'api':CLOUD_API,'poll_seconds':CLOUD_POLL_SECONDS},'local_eval_enabled':LOCAL_EVAL_ENABLED,'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}})
             elif self.path=='/tabs':
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
