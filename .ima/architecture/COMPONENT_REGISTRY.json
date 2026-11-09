@@ -1,3 +1,4 @@
+
 {
   "id": "IMA-COMPONENT-REGISTRY-001",
   "version": "1.0.0",
@@ -18,7 +19,8 @@
         "learning_loop",
         "unified_loop",
         "humanitarian_intelligence",
-        "llm_router"
+        "llm_router",
+        "universal_intelligence_gateway"
       ],
       "next": [
         "cross_component_health_graph",
@@ -165,6 +167,70 @@
       ],
       "next": [
         "bridge_health_conformance"
+      ]
+    },
+    {
+      "id": "global_human_conversation_learning",
+      "path": ".ima/conversation/global_human_conversation_learning.py",
+      "kind": "python-learning",
+      "contract": "shared",
+      "role": "consent-aware learning from diverse human conversation and return of verified learning as teaching",
+      "depends_on": [
+        "learning_loop",
+        "unified_loop",
+        "continuous_future"
+      ],
+      "next": [
+        "claim_evidence_graph",
+        "perspective_map",
+        "cross_group_dialogue",
+        "teaching_artifact_feedback"
+      ]
+    },
+    {
+      "id": "provider_registry",
+      "path": ".ima/intelligence/PROVIDER_REGISTRY.json",
+      "kind": "capability-registry",
+      "contract": "shared",
+      "role": "canonical inventory of present and future intelligence providers, capabilities, authorization state and provenance",
+      "depends_on": [
+        "continuous_future"
+      ],
+      "next": [
+        "llm_router",
+        "capability_benchmark_matrix"
+      ]
+    },
+    {
+      "id": "llm_router",
+      "path": "connectors/llm/router.py",
+      "kind": "provider-routing",
+      "contract": "shared",
+      "role": "provider discovery and authorization-aware model routing substrate",
+      "depends_on": [
+        "provider_registry"
+      ],
+      "next": [
+        "universal_intelligence_gateway"
+      ]
+    },
+    {
+      "id": "universal_intelligence_gateway",
+      "path": ".ima/intelligence/universal_intelligence_gateway.py",
+      "kind": "python-orchestration",
+      "contract": "shared",
+      "role": "provider-neutral boundary for present and future authorized intelligences with provenance, privacy and verification gates",
+      "depends_on": [
+        "llm_router",
+        "learning_loop",
+        "global_human_conversation_learning",
+        "human_agency"
+      ],
+      "next": [
+        "cross_model_evaluator",
+        "capability_benchmark_matrix",
+        "federated_learning_gateway",
+        "provider_independent_memory"
       ]
     },
     {

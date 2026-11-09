@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 import sys
 from pathlib import Path
@@ -23,6 +24,20 @@ sys.path.append('..')
 import identity_context
 print('BOOT: before conversation_layer', flush=True)
 import conversation_layer
+
+# Canonical provider-neutral intelligence gateway. It preserves IMA identity while
+# allowing authorized present/future intelligences to answer through one boundary.
+try:
+    from importlib.util import spec_from_file_location, module_from_spec
+    _uig_spec = spec_from_file_location(
+        "ima_universal_intelligence_gateway",
+        str(ROOT / ".ima" / "intelligence" / "universal_intelligence_gateway.py")
+    )
+    _uig_module = module_from_spec(_uig_spec)
+    _uig_spec.loader.exec_module(_uig_module)
+    universal_intelligence_route = _uig_module.route
+except Exception:
+    universal_intelligence_route = None
 
 # Co-Cognition: shared human/IMA reasoning layer.
 try:
@@ -198,6 +213,16 @@ class Handler(BaseHTTPRequestHandler):
         elif self.path=="/supabase/status":
             self.send_json(supabase_status())
 
+        elif self.path=="/intelligence/status":
+            if universal_intelligence_route is not None:
+                try:
+                    module = _uig_module
+                    self.send_json(module.status())
+                except Exception as e:
+                    self.send_json({"gateway":"ERROR","error":str(e)})
+            else:
+                self.send_json({"gateway":"UNAVAILABLE"})
+
         else:
             self.send_json({
                 "product":"IMA",
@@ -233,32 +258,54 @@ class Handler(BaseHTTPRequestHandler):
                         "status": "OK"
                     }
                 else:
-                    try:
-                        answer = ima_master_runtime.ask(question, user_id=self.user_id(), public=True)
+                    # Use the same provider-neutral IMA gateway on the public site.
+                    # It selects only already-authorized providers; it never invents
+                    # a connection and never broadens private data scope implicitly.
+                    gateway_answer = None
+                    if universal_intelligence_route is not None:
+                        try:
+                            gateway_answer = universal_intelligence_route(
+                                question,
+                                private=True,
+                                high_impact=False,
+                            )
+                        except Exception as gateway_error:
+                            print("UNIVERSAL INTELLIGENCE GATEWAY:", gateway_error, flush=True)
 
-                        if isinstance(answer, dict):
-                            response = answer.get("response","")
+                    if gateway_answer and gateway_answer.get("status") == "OK" and gateway_answer.get("response"):
+                        answer = {
+                            "response": gateway_answer["response"],
+                            "status": "OK",
+                            "intelligence_gateway": gateway_answer.get("gateway"),
+                            "provider": gateway_answer.get("provider"),
+                            "truth_state": gateway_answer.get("truth_state"),
+                            "verification_required": gateway_answer.get("verification_required", True),
+                        }
+                    else:
+                        try:
+                            answer = ima_master_runtime.ask(question, user_id=self.user_id(), public=True)
 
-                            if (
-                                not response
-                                or "אין זיכרון" in response
-                                or "עדיין אין" in response
-                            ):
-                                from api.database.memory_store import load_memory
+                            if isinstance(answer, dict):
+                                response = answer.get("response","")
 
-                                memories = load_memory()
+                                if (
+                                    not response
+                                    or "אין זיכרון" in response
+                                    or "עדיין אין" in response
+                                ):
+                                    from api.database.memory_store import load_memory
+                                    memories = load_memory()
+                                    if memories:
+                                        answer["response"] = "\n\n".join(
+                                            x.get("content","")
+                                            for x in memories[-20:]
+                                            if x.get("content")
+                                            and x.get("content","").strip() != question.strip()
+                                            and len(x.get("content","").strip()) > len(question.strip())
+                                        )
 
-                                if memories:
-                                    answer["response"] = "\n\n".join(
-                                        x.get("content","")
-                                        for x in memories[-20:]
-                                        if x.get("content")
-                                        and x.get("content","").strip() != question.strip()
-                                        and len(x.get("content","").strip()) > len(question.strip())
-                                    )
-
-                    except Exception:
-                        answer = product_gateway.ask(question)
+                        except Exception:
+                            answer = product_gateway.ask(question)
 
                 # Co-Cognition happens after the response exists:
                 # human contribution + IMA contribution -> shared insight.

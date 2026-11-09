@@ -1,3 +1,4 @@
+
 # IMA Universal Integration Fabric
 
 ## Purpose
@@ -78,6 +79,20 @@ IMA should become slightly better from verified new information without becoming
 - unverified novelty -> knowledge candidate only
 - safety/privacy violation -> reject
 - provider-specific behavior -> do not generalize until independently supported
+
+## Universal intelligence gateway
+
+All authorized present and future intelligences must enter IMA through one provider-neutral boundary: `.ima/intelligence/universal_intelligence_gateway.py` governed by `.ima/intelligence/UNIVERSAL_INTELLIGENCE_GATEWAY.json`.
+
+The gateway separates IMA identity from model/provider identity and supports:
+- single-best routing for ordinary requests;
+- explicit or high-impact cross-checking across multiple authorized intelligences;
+- provenance and latency evidence per provider;
+- privacy-scoped learning candidates;
+- future provider, local-model, MCP, device and human-intelligence adapters without rewriting IMA's identity;
+- provider failure isolation and graceful fallback.
+
+Agreement between models is evidence to investigate, not proof by itself. Disagreement remains visible. Unknown remains valid.
 
 ## Never claim universal access
 
