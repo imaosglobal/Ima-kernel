@@ -196,3 +196,8 @@ body{background:var(--ima-bg);color:var(--ima-ink)}
  .ima-app.logged-in .topbar nav{grid-column:1/-1}
  .ima-app.logged-in .top-actions{grid-column:2}
 }
+
+.ima-chat-header{display:flex;align-items:center;gap:10px;padding:8px 10px 12px;border-bottom:1px solid var(--ima-line)}
+.ima-chat-header img{width:42px;height:42px;border-radius:12px;object-fit:cover;background:var(--ima-surface-2)}
+.ima-chat-header b{display:block;font-size:15px}
+.ima-chat-header small{display:block;color:var(--ima-muted);font-size:11px;margin-top:2px}
