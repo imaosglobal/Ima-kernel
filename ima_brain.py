@@ -2,6 +2,7 @@ import json, os
 from learning.learning_memory import store_pattern
 from learning.learning_loop import learn_from_event
 from learning.historical_inference import get_conclusions
+from core.continuous_future import component_contract
 
 LEDGER = ".ima/ledger.jsonl"
 
@@ -85,6 +86,7 @@ def extract_patterns(events):
     return patterns
 
 def answer(question, events):
+    future_contract = component_contract("ima_brain")
 
     q = question.lower()
 
