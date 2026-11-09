@@ -46,12 +46,12 @@ class IMAMaster:
             "מיזם", "מוצר", "שירות", "להרוויח", "הכנסה", "שיווק", "כדאיות",
             "opportunity", "business idea", "investment", "startup", "customer"
         )
-        opportunity_context = (
+        # IMA-CONTINUOUS-FUTURE-001: one cross-domain lifecycle policy for every live interaction.\n        # The policy is read from the repository so the governing principle is inspectable and updateable.\n        continuous_future_policy = None\n        try:\n            from pathlib import Path\n            import json\n            policy_path = Path(__file__).resolve().parent / ".ima" / "policies" / "CONTINUOUS_FUTURE_POLICY.json"\n            if policy_path.exists():\n                continuous_future_policy = json.loads(policy_path.read_text(encoding="utf-8"))\n        except Exception:\n            continuous_future_policy = None\n\n        continuous_future_context = ""\n        if isinstance(continuous_future_policy, dict):\n            principle = str(continuous_future_policy.get("principle") or "").strip()\n            rules = continuous_future_policy.get("always_apply") or []\n            lifecycle = continuous_future_policy.get("lifecycle") or []\n            boundary = str(continuous_future_policy.get("boundary") or "").strip()\n            continuous_future_context = (\n                "\\n\\n[IMA continuous-future policy — apply to this interaction and any resulting work.]\\n"\n                + ("Principle: " + principle + "\\n" if principle else "")\n                + ("Always: " + "; ".join(str(x) for x in rules) + "\\n" if rules else "")\n                + ("Lifecycle: " + " → ".join(str(x) for x in lifecycle) + "\\n" if lifecycle else "")\n                + ("Boundary: " + boundary if boundary else "")\n            )\n\n        opportunity_context = (
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
         world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
-        provider_message = message + response_instruction + opportunity_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
+        provider_message = message + response_instruction + opportunity_context + continuous_future_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
@@ -89,7 +89,7 @@ class IMAMaster:
                 "global_change_humanitarian_intelligence": True,
                 "capability_registry": capability_runtime is not None,
                 "capability_runtime": capability_runtime,
-                "learning_governance": learning_governance,
+                "learning_governance": learning_governance,\n                "continuous_future_policy": continuous_future_policy,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
