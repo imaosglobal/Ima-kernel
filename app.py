@@ -6,7 +6,7 @@ from pathlib import Path
 import secrets
 import time
 from collections import defaultdict, deque
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file, send_from_directory
 from ima_ledger import cmd_deposit, cmd_balance
 from billing.api import billing_api
 import public_memory
@@ -1281,13 +1281,26 @@ def growth_status():
     })
 
 
+def _serve_public_asset(path):
+    root = Path(__file__).resolve().parent
+    return send_from_directory(root, path)
+
+@app.get("/Ima-kernel/")
+def public_ima_home():
+    return send_file(Path(__file__).resolve().parent / "index.html")
+
+@app.get("/Ima-kernel/<path:asset_path>")
+def public_ima_asset(asset_path):
+    return _serve_public_asset(asset_path)
+
 @app.route("/", methods=["GET", "POST"])
 def home():
+    if request.method == "GET":
+        return send_file(Path(__file__).resolve().parent / "index.html")
     msg = ""
-    if request.method == "POST":
-        amount = request.form.get("amount")
-        if amount:
-            msg = cmd_deposit(USER, amount)
+    amount = request.form.get("amount")
+    if amount:
+        msg = cmd_deposit(USER, amount)
     bal = cmd_balance(USER)
     return f"<h1>IMA API</h1><p>balance: {bal}</p><p>{msg}</p>"
 
