@@ -1,0 +1,41 @@
+{
+  "id": "affiracle-aliexpress-1111-2026",
+  "source": "Affiracle",
+  "campaign": "AliExpress Network",
+  "status": "active",
+  "verified_from_email": "2026-11-10",
+  "coupon_window": {
+    "start_israel": "2026-11-10T23:00:00+02:00",
+    "end_israel": "2026-11-12T23:00:00+02:00"
+  },
+  "tracking_link": "https://track.affiracle.com/l/QQPocpwVfuYfpR3HLtAnHt",
+  "link_generator": "https://affiracle.com/affiliates/aliexpress",
+  "coupon_banner": "https://affiracle.com/affiliates/banners?kind=coupons",
+  "coupon_storefront": "https://affiracle.com/affiliates/storefront?focus=ae_coupons",
+  "coupons": [
+    {"code":"SUPERIL5","discount_usd":102,"minimum_usd":550},
+    {"code":"SUPERIL6","discount_usd":148,"minimum_usd":800},
+    {"code":"ILAFF02 / AFFIRACLE02","discount_usd":2,"minimum_usd":15},
+    {"code":"AFFIRACLEN01","discount_usd":3,"minimum_usd":18},
+    {"code":"ILAFF05 / AFFIRACLE05","discount_usd":5,"minimum_usd":29},
+    {"code":"ILAFF08 / AFFIRACLE08","discount_usd":8,"minimum_usd":45},
+    {"code":"AFFIRACLEN03","discount_usd":10,"minimum_usd":55},
+    {"code":"ILAFF12 / AFFIRACLE12","discount_usd":12,"minimum_usd":65},
+    {"code":"ILAFF16 / ILAFF16D / AFFIRACLE16","discount_usd":16,"minimum_usd":85},
+    {"code":"AFFIRACLEN04","discount_usd":17,"minimum_usd":90},
+    {"code":"ILAFF20 / AFFIRACLE20","discount_usd":20,"minimum_usd":119},
+    {"code":"AFFIRACLEN05","discount_usd":24,"minimum_usd":139},
+    {"code":"ILAFF37 / ILAFF37D / AFFIRACLE37","discount_usd":37,"minimum_usd":215},
+    {"code":"AFFIRACLEN06","discount_usd":40,"minimum_usd":229},
+    {"code":"AFFIRACLEN07","discount_usd":55,"minimum_usd":315},
+    {"code":"ILAFF60 / ILAFF60D / AFFIRACLE60","discount_usd":60,"minimum_usd":349},
+    {"code":"AFFIRACLEN08","discount_usd":69,"minimum_usd":409},
+    {"code":"IL10","discount_usd":95,"minimum_usd":630}
+  ],
+  "rules": {
+    "affiliate_attribution": "sale_attribution_uses_affiliate_link_not_coupon_code",
+    "paid_promotion": false,
+    "auto_purchase": false,
+    "disclosure_required": true
+  }
+}
