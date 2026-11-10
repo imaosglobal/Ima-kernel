@@ -1,8 +1,11 @@
 {
   "provider": "Meta Muse",
-  "status": "adapter_ready",
+  "status": "adapter_ready_billing_blocked",
   "endpoint": "https://api.meta.ai/v1",
-  "models": ["muse-spark-1.3", "muse-wonder-1.0"],
+  "models": [
+    "muse-spark-1.3",
+    "muse-wonder-1.0"
+  ],
   "auth_env": "MODEL_API_KEY",
   "role": "research_and_agentic_execution",
   "commerce_flow": {
@@ -16,5 +19,12 @@
     "preserve affiliate attribution",
     "disclose affiliate relationship",
     "do not expose credentials to model prompts"
-  ]
+  ],
+  "execution_policy": {
+    "live_api": false,
+    "reason": "Meta returned HTTP 402 billing_not_configured during key verification",
+    "retry_on_402": false,
+    "enable_only_after_explicit_user_billing_authorization": true,
+    "no_card_or_payment_setup_by_ima": true
+  }
 }
