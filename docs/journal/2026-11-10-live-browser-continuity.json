@@ -1,7 +1,7 @@
 {
   "date": "2026-11-10",
   "title": "Interactive live-browser continuity and automatic improvement intake",
-  "status": "IMPLEMENTED_IN_CODE / DEPLOYMENT_AND_E2E_VERIFICATION_PENDING",
+  "status": "IMPLEMENTED_IN_CODE / ACTIVE_DEPLOYMENT_AND_E2E_VERIFICATION_RUNNING",
   "request": {
     "summary": "Ori requested a complete, ordered state list for the interactive browser window and asked that all future improvements requested after successful activation be automatically reconciled into the same canonical place and daily loop.",
     "canonical_requirement": "LIVE-001"
@@ -16,17 +16,21 @@
     "Added scripts/ima_live_browser_health.py to check BrowserGlass health, BrowserGlass root reachability, public IMA reachability, and denial of an unauthenticated /api/session request.",
     "Added live_browser_health to the existing .ima/loop/unified_loop.py rather than creating a second scheduler.",
     "Added a canonical loop rule that future live-browser improvement requests reconcile to LIVE-001 and are not implemented as parallel browser surfaces.",
-    "Preserved the distinction between BrowserGlass remote browser, local Termux/Chrome attach path, and ChatGPT MCP rendering."
+    "Preserved the distinction between BrowserGlass remote browser, local Termux/Chrome attach path, and ChatGPT MCP rendering.",
+    "Immediately fixed the public deployment regression that blocked publication: restored the canonical install-button contract in ima-ui/src/App.jsx.",
+    "Adjusted Firecrawl Live Browser QA so a missing optional Firecrawl credential records UNVERIFIED instead of incorrectly failing the canonical build; no credential or money was added."
   ],
   "evidence": [
     "Canonical main was advanced through commits 0dd91e5c9dd27c8aed3da92c91028728fcae1491 and 41ed6e4d591704ffec08130e0c0eade0d1573cb5.",
     "GitHub Actions runs for the latest main were observed in queued/in-progress/pending states; therefore no green CI or deployment claim is made yet.",
-    "The existing 2026-11-09 journal explicitly records ChatGPT MCP/App end-to-end rendering as not yet verified on mobile."
+    "The existing 2026-11-09 journal explicitly records ChatGPT MCP/App end-to-end rendering as not yet verified on mobile.",
+    "Fix commit 46f0503bc4b6e8527e8c579220bd68c25df349ae.",
+    "After the fix, GitHub Actions started fresh runs for the corrected SHA; Deploy canonical IMA public product is queued, IMA UI Build and Firecrawl Live Browser QA are in progress."
   ],
   "blockers": [
-    "The current ChatGPT mobile surface cannot be used as proof of custom MCP App rendering.",
-    "The authorized Termux/Chrome device bridge was not live/available for this verification pass.",
-    "BrowserGlass deployment and Pages deployment are still running; public runtime verification must occur after they settle."
+    "Current corrected deployment/QA runs have not finished yet.",
+    "ChatGPT embedded MCP rendering remains unverified until the supported ChatGPT Web surface is actually exercised.",
+    "Authorized Termux/Chrome live connection remains unverified in this pass."
   ],
   "unknowns": [
     "Whether the embedded BrowserGlass window actually renders inside supported ChatGPT web MCP Apps.",
@@ -35,9 +39,10 @@
     "Whether Google authentication/session continuity is preserved through the live browser path."
   ],
   "next_target": [
-    "Wait for the current deployment/CI runs to settle, then verify the BrowserGlass public health and the supported ChatGPT web MCP App surface.",
-    "When the authorized device is reachable, verify local Chrome CDP/Termux status and owner-scoped command execution with a harmless read/navigation test.",
-    "For every subsequent user-requested live-browser improvement, map it to LIVE-001, implement in the existing canonical surface, test, deploy and verify-live, then record the evidence in the daily journal."
+    "Let the corrected deployment and browser QA complete, then verify the exact public build SHA and real-browser controls.",
+    "Verify BrowserGlass runtime endpoint and then the supported ChatGPT Web MCP App surface.",
+    "When the authorized device bridge becomes reachable, verify Chrome CDP and owner-scoped harmless navigation/read action.",
+    "Continue routing every later interactive-window improvement request into LIVE-001 and the same canonical loop."
   ],
   "truth_boundary": "Source code, workflow creation, queued deployment and documentation are not proof of a working interactive window. The interactive window is VERIFIED_LIVE only after independent runtime evidence shows the supported surface rendering and responding to authorized control."
 }
