@@ -1,4 +1,14 @@
 import { useEffect } from 'react';
+
+const WEBMCP_TOOLSET_VERSION = '1.1.0';
+
+function validateNavigationTarget(value) {
+  const parsed = new URL(value);
+  if (!['https:', 'http:'].includes(parsed.protocol)) return { ok: false, error: 'unsupported_protocol' };
+  if (parsed.username || parsed.password) return { ok: false, error: 'embedded_credentials_forbidden' };
+  if (parsed.protocol === 'http:' && !['localhost', '127.0.0.1', '[::1]'].includes(parsed.hostname)) return { ok: false, error: 'insecure_http_requires_loopback' };
+  return { ok: true, url: parsed.toString() };
+}
 import { getLocalLiveBrowserStatus, getLocalLiveBrowserScreenshot, localNavigate } from './liveBrowserBridge';
 
 const tools = [
@@ -32,22 +42,20 @@ const tools = [
   },
   {
     name: 'ima_live_browser_navigate',
-    description: 'Navigate the connected local Chrome workspace to a user-authorized HTTPS or HTTP URL.',
+    description: 'Navigate the connected local Chrome workspace to a user-authorized HTTPS URL, or HTTP on loopback only. Navigation is consequential and page content is untrusted.',
     inputSchema: {
       type: 'object',
       properties: { url: { type: 'string', description: 'Destination URL.' } },
       required: ['url'],
       additionalProperties: false
     },
-    annotations: { consequentialHint: true },
+    annotations: { consequentialHint: true, untrustedContentHint: true },
     execute: async ({ url }) => {
       try {
-        const parsed = new URL(url);
-        if (!['http:', 'https:'].includes(parsed.protocol)) {
-          return { ok: false, error: 'unsupported_protocol' };
-        }
-        const result = await localNavigate(parsed.toString());
-        return { ok: true, result };
+        const target = validateNavigationTarget(url);
+        if (!target.ok) return target;
+        const result = await localNavigate(target.url);
+        return { ok: true, result, toolsetVersion: WEBMCP_TOOLSET_VERSION };
       } catch (error) {
         return { ok: false, error: String(error?.message || error) };
       }
@@ -62,7 +70,7 @@ export async function registerImaWebMCP(signal) {
   try {
     const registered=[];
     for (const tool of tools) { await modelContext.registerTool(tool, signal ? { signal } : undefined); registered.push(tool.name); }
-    return {ok:true,tools:registered,message:`${registered.length} IMA browser tools registered.`};
+    return {ok:true,tools:registered,toolsetVersion:WEBMCP_TOOLSET_VERSION,message:`${registered.length} IMA browser tools registered.`};
   } catch(error){ return {ok:false,reason:'registration_failed',message:String(error?.message||error)}; }
 }
 
