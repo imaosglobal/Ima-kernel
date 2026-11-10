@@ -162,6 +162,17 @@ Status: ACTIVE
 - Each future cycle must reconcile historical requests before adding new architecture.
 - Duplicate implementations must be merged, retired or explicitly justified.
 
+
+### LIVE-001 — Interactive Live Browser Continuity Inside the IMA/ChatGPT Surface
+Status: IMPLEMENTED_IN_CODE / DEPLOY_IN_PROGRESS_NOT_E2E_VERIFIED
+- The canonical target is an interactive browser surface that can appear inside a supported ChatGPT MCP App surface, not merely an external IMA page.
+- Current implementation uses IMA BrowserGlass as the remote interactive browser surface and preserves the existing local Termux/Chrome attach path as a separate fallback.
+- BrowserGlass currently supports authenticated HTTPS navigation, human take-over/release controls, and a browser session scoped to the IMA service.
+- The canonical daily loop must continuously verify the browser surface, public endpoint, embed boundary, navigation boundary and deployment evidence; source code alone is never treated as proof that the interactive window is live.
+- Future user requests that improve the live browser after it becomes operational must be reconciled to LIVE-001, deduplicated against existing browser/device work, implemented in the same canonical surface, tested, deployed and verified rather than creating a parallel browser UI.
+- The user remains able to take control. Consequential actions remain subject to the Universal Device Bridge authorization and safety contract.
+- Current gate: ChatGPT mobile cannot itself be treated as evidence of custom MCP App rendering; supported ChatGPT web/custom-MCP verification remains required.
+
 ## Verification vocabulary
 
 PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE
