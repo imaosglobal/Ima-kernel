@@ -18,6 +18,7 @@ class Marketplace:
 MARKETPLACES = (
     Marketplace("PayPal", "payments", "global", "payment", "api_or_account", "https://www.paypal.com/"),
     Marketplace("AliExpress", "commerce", "global", "commission", "partner_program", "https://www.aliexpress.com/"),
+    Marketplace("Affiracle", "affiliate_network", "Israel/global", "commission", "affiliate_link", "https://affiracle.com/"),
     Marketplace("Facebook Marketplace", "commerce", "country-dependent", "sale_margin_or_referral", "seller_or_buyer_handoff", "https://www.facebook.com/marketplace/"),
     Marketplace("eBay", "commerce", "global", "commission", "partner_program", "https://www.ebay.com/"),
     Marketplace("Amazon", "commerce", "country-dependent", "commission", "partner_program", "https://www.amazon.com/"),
@@ -29,9 +30,18 @@ def all_marketplaces():
 
 def route_for(deal: dict) -> list[dict]:
     category = str(deal.get("category", "")).lower()
+    source = str(deal.get("source", "")).lower()
     routes = []
     for m in MARKETPLACES:
-        if m.name == "impact.com" and category in {"services", "b2b", "software", "insurance", "travel", "real_estate"}:
+        if m.name == "Affiracle" and (
+            source == "affiracle"
+            or (source in {"aliexpress", "aliexpress network"} and category in {"general", "equipment", "software", "vehicles", "food"})
+        ):
+            route = m.__dict__.copy()
+            route["campaign"] = "AliExpress Network"
+            route["tracking_link"] = "https://track.affiracle.com/l/QQPocpwVfuYfpR3HLtAnHt"
+            routes.append(route)
+        elif m.name == "impact.com" and category in {"services", "b2b", "software", "insurance", "travel", "real_estate"}:
             routes.append(m.__dict__.copy())
         elif m.name in {"Facebook Marketplace", "eBay"} and category in {"vehicles", "equipment", "food", "services"}:
             routes.append(m.__dict__.copy())
