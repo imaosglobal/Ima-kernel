@@ -89,3 +89,39 @@ Unknown or stale opportunities stay outside the operational list until verified.
 |---|---|---|
 | Innovation Authority — Tnufa (current call) | CLOSED | the published 2026 submission date has passed; do not treat it as an immediately actionable funding route until a new call/date is published |
 | OpenAI Foundation People-First AI Fund 2026 | CLOSED | 2026 application window has ended; retain only as precedent for future calls |
+
+
+## H. GLOBAL DISCOVERY — 2026-11-10
+
+| Route | Status | Potential | Cost before application | Fit / blocker |
+|---|---|---:|---:|---|
+| Sentient Foundation — Open Source AGI Grant Programme | PRIORITY / ROLLING | $42M committed program; grant track has no equity/lockups/claim on work | 0 | strong fit for open, accessible, private, empowering AI; rolling applications; verify exact grant award size during application |
+| Coefficient Giving — Project Tailwind | CONDITIONAL HIGH-VALUE | pre-seed $200k–$2m reported for AI-safety founders | 0 | only if IMA is framed as an AI-safety organization addressing transformative-AI catastrophic risk; current fit is uncertain |
+| IEEE Humanitarian Technologies + UNDP — GenAI for Good Cities | CONDITIONAL | up to $40k | 0 | requires one of three designated city use cases in Pristina, Rivne or Skopje; team must commit to the full program |
+| Rockefeller Foundation + OpenAI Foundation — Cities Deliver | CONDITIONAL HIGH-VALUE | $500k–$2m grants | 0 | global; requires eligible nonprofit/civil-society institution working with a city government |
+| ITU AI for Good Innovation Factory 2026–27 | CANDIDATE / OPEN | $20k per finalist according to current opportunity listing | 0 | strong public-good fit; verify exact eligibility and current application requirements before submission |
+| Open Technology Fund — Internet Freedom Fund | CANDIDATE / ROLLING | funding varies | 0 | relevant only if IMA project scope is framed around internet freedom/censorship/privacy/security; verify current eligibility |
+| UNICEF Venture Fund | CANDIDATE / ROLLING | funding varies | 0 | potentially relevant to child-first IMA, but requires nonprofit/technology/startup eligibility conditions; verify before application |
+| EuroHPC AI Factories — Free Compute Access | COST-REDUCTION ROUTE | compute access rather than cash | 0 application cost reported | useful to reduce IMA operating cost; eligibility/Israeli access must be verified |
+| Google.org AI Opportunity Fund | CANDIDATE / ROLLING | varies | 0 | funding/support route, but eligibility is program-specific; keep only pending current call verification |
+| AWS Cloud Credit for Research | COST-REDUCTION ROUTE | cloud credits | 0 application cost reported | useful for reducing infrastructure spend; research eligibility required |
+| ElevenLabs Impact Program | COST-REDUCTION / SUPPORT | program-specific credits/support | 0 | relevant to IMA voice/accessibility; eligibility and current application status require verification |
+
+### Pruned global routes
+
+- Hacker Initiative 2026: CLOSED on 2026-11-09.
+- UKRI Transformative Sustainable AI: CLOSED 2026-11-10 and requires UK eligible research organization.
+- Global EbA Fund medium grant: not a fit for IMA's current core mission.
+- Lacuna Fund current RFP: restricted to Global South teams/eligible organizational structures; not currently actionable from IMA's present Israeli individual structure.
+- Amazon Research Awards multilingual/contextual AI evaluation: current 2026 deadline has passed.
+
+### Global operating rule
+
+Prefer routes that are:
+1. globally accessible or explicitly Israel-compatible;
+2. zero-cost to apply;
+3. non-dilutive where possible;
+4. compatible with open-source IMA and human agency;
+5. capable of funding an individual founder or an eligible structure without first requiring paid infrastructure.
+
+Do not count grants, investment or credits as revenue until money is actually awarded/received.
