@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/Ima-kernel/:path*", "destination": "/:path*" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+}
