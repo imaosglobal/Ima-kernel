@@ -62,13 +62,14 @@ COMMANDS={
 "universal_intelligence_gateway":["python",".ima/intelligence/universal_intelligence_gateway.py"],
 "universal_intelligence_gateway_tests":["python","-m","unittest","discover","-s","tests","-p","test_universal_intelligence_gateway.py","-v"],
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
+"live_browser_health":["python","scripts/ima_live_browser_health.py"],
 "world_pulse":["python","scripts/ima_world_pulse.py"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","live_browser_health","finance_governance_audit","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -157,6 +158,7 @@ def run_loop():
       "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
       "multi_perspective_rule":"Review meaningful changes through relevant user, customer, executive, operator, technical, accessibility, privacy, finance, distribution, community and future lenses at micro/product/macro/system-of-systems scales and now-to-intergenerational horizons; evidence gates remain mandatory.",
       "global_integration_rule":"Every newly verified external integration is automatically ingested through the canonical daily intake, deduplicated, evidence-checked and carried into the next improvement cycle; no second daily orchestrator is created.",
+      "live_browser_continuity_rule":"LIVE-001 is continuously checked by the canonical loop. BrowserGlass/public endpoint health and security boundaries are tested automatically; ChatGPT embedded rendering, local Termux/Chrome connectivity, authentication and consequential action outcomes remain separately unverified until runtime evidence exists. Future live-browser improvement requests are reconciled to LIVE-001 rather than creating a parallel surface.",
       "global_scan_boundary_rule":"Global discovery means broad lawful discovery within actual tool access, permissions, robots, rate limits, rights and privacy boundaries; never claim exhaustive internet coverage when it was not achieved.",
       "ecosystem_cooperation_rule":"Other intelligences, tools, providers, infrastructure and competitors are evaluated for learning, interoperability and beneficial cooperation. No impersonation, sabotage, manipulation, private-data collection or unsupported partnership claim.",
       "global_user_benefit_rule":"Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.","world_model_rule":"Interactive world models are simulations, not reality. Use them for bounded exploration, education and hypothesis testing; preserve provenance, human control and reversible actions, and require real-world validation for high-impact decisions. Do not claim a live world-model provider integration unless independently verified.",
