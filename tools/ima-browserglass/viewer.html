@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>IMA — Live Browser</title>
   <style>
-    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif}
-    body{padding:8px;box-sizing:border-box}
-    .bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px;min-height:28px}
-    #status{opacity:.8;font-size:.85rem}
-    browser-glass{display:block;width:100%;height:calc(100vh - 58px);min-height:320px;border-radius:12px;overflow:hidden;background:#111}
+    :root{color-scheme:dark}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif;height:100%;overflow:hidden}
+    body{padding:8px;display:flex;flex-direction:column;gap:8px}
+    .bar,.tools{display:flex;gap:7px;align-items:center;flex-wrap:wrap;min-height:30px}
+    .bar strong{font-size:.95rem}
+    #status{opacity:.82;font-size:.82rem}
+    .tools{padding:5px;border:1px solid #30333b;border-radius:10px;background:#11131a}
+    button,input,textarea{font:inherit}
+    button{border:1px solid #3b3f49;background:#1a1d25;color:#fff;border-radius:8px;padding:7px 10px;touch-action:manipulation}
+    button.active{outline:2px solid #fff}
+    .tool-label{font-size:.78rem;opacity:.8}
+    #message{flex:1;min-width:180px;resize:none;height:38px;border:1px solid #3b3f49;border-radius:8px;background:#0c0e14;color:#fff;padding:8px}
+    #send{min-width:62px}
+    #stage{position:relative;flex:1;min-height:0;border-radius:12px;overflow:hidden;background:#111}
+    browser-glass{position:absolute;inset:0;display:block;width:100%;height:100%;background:#111}
+    #ink{position:absolute;inset:0;width:100%;height:100%;touch-action:none;pointer-events:none}
+    #ink.pen{pointer-events:auto;cursor:crosshair}
+    .hint{font-size:.72rem;opacity:.62}
   </style>
 </head>
 <body>
@@ -17,32 +31,129 @@
     <strong>IMA — חלון דפדפן חי</strong>
     <span id="status">מתחבר…</span>
   </div>
-  <browser-glass id="pane" fit="contain"></browser-glass>
+  <div class="tools" aria-label="כלי עבודה">
+    <button id="pen" type="button">עט</button>
+    <button id="rect" type="button">מלבן</button>
+    <button id="arrow" type="button">חץ</button>
+    <button id="erase" type="button">מחק</button>
+    <button id="undo" type="button">בטל</button>
+    <button id="clear" type="button">נקה סימונים</button>
+    <span class="tool-label">עובי</span><input id="width" type="range" min="2" max="16" value="4">
+    <span class="tool-label">צבע</span><input id="color" type="color" value="#ff3b30">
+    <textarea id="message" aria-label="מסר לאמא ולעוזר" placeholder="כתוב כאן מה תרצה שאקבל יחד עם מצב החלון…"></textarea>
+    <button id="send" type="button">שלח</button>
+    <span class="hint">המסר מקבל אישור רק אחרי שהמארח מאשר שקיבל אותו.</span>
+  </div>
+  <div id="stage">
+    <browser-glass id="pane" fit="contain"></browser-glass>
+    <canvas id="ink" aria-label="שכבת סימון"></canvas>
+  </div>
+
   <script src="/browserglass-embed.global.js"></script>
   <script>
-    const pane = document.getElementById('pane');
-    const status = document.getElementById('status');
-    async function session() {
-      const r = await fetch('/api/session', {cache:'no-store', credentials:'same-origin'});
-      if (!r.ok) throw new Error(await r.text());
-      return r.json();
+    const pane=document.getElementById('pane'), status=document.getElementById('status');
+    const canvas=document.getElementById('ink'), ctx=canvas.getContext('2d');
+    const message=document.getElementById('message');
+    let mode=null, drawing=false, start=null, current=null, history=[];
+    const state={sent:0,acked:0};
+
+    function resize(){
+      const r=canvas.getBoundingClientRect(), dpr=Math.max(1,window.devicePixelRatio||1);
+      const old=document.createElement('canvas'); old.width=canvas.width; old.height=canvas.height;
+      if(canvas.width&&canvas.height) old.getContext('2d').drawImage(canvas,0,0);
+      canvas.width=Math.round(r.width*dpr); canvas.height=Math.round(r.height*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      if(old.width&&old.height) ctx.drawImage(old,0,0,old.width/dpr,old.height/dpr);
     }
-    async function boot() {
-      try {
-        const s = await session();
-        pane.setAttribute('url', s.url);
-        pane.setAttribute('token', s.token);
-        pane.setAttribute('target-id', s.targetId);
-        pane.setAttribute('token-endpoint', '/api/session');
-        status.textContent = 'מחובר — סנכרון אוטומטי';
-      } catch (e) {
-        status.textContent = 'ממתין לחיבור המורשה';
+    new ResizeObserver(resize).observe(canvas.parentElement); resize();
+
+    function snapshot(){ history.push(canvas.toDataURL('image/png')); if(history.length>30) history.shift(); }
+    function restore(data){
+      ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);
+      if(!data)return;
+      const img=new Image(); img.onload=()=>ctx.drawImage(img,0,0,canvas.clientWidth,canvas.clientHeight); img.src=data;
+    }
+    function point(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+    function style(){ctx.strokeStyle=document.getElementById('color').value;ctx.lineWidth=+document.getElementById('width').value;ctx.lineCap='round';ctx.lineJoin='round';}
+    function line(a,b){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+    function shape(a,b){
+      style();
+      if(mode==='rect'){ctx.strokeRect(a.x,a.y,b.x-a.x,b.y-a.y);return;}
+      if(mode==='arrow'){
+        line(a,b);const ang=Math.atan2(b.y-a.y,b.x-a.x),len=12;
+        line(b,{x:b.x-len*Math.cos(ang-.55),y:b.y-len*Math.sin(ang-.55)});
+        line(b,{x:b.x-len*Math.cos(ang+.55),y:b.y-len*Math.sin(ang+.55)});
       }
     }
-    pane.onTokenExpired = async () => (await session()).token;
-    pane.addEventListener('bgls:connected', () => status.textContent = 'חלון חי מחובר — סנכרון אוטומטי');
-    pane.addEventListener('bgls:disconnected', () => status.textContent = 'החיבור נותק — מתחבר מחדש');
-    pane.addEventListener('bgls:error', e => status.textContent = 'BrowserGlass: ' + (e.detail?.error || 'error'));
+    canvas.addEventListener('pointerdown',e=>{
+      if(!mode)return; drawing=true;canvas.setPointerCapture(e.pointerId);start=current=point(e);snapshot();style();
+      if(mode==='pen'||mode==='erase'){if(mode==='erase')ctx.globalCompositeOperation='destination-out';else ctx.globalCompositeOperation='source-over';ctx.beginPath();ctx.moveTo(current.x,current.y);}
+    });
+    canvas.addEventListener('pointermove',e=>{
+      if(!drawing)return;const p=point(e);
+      if(mode==='pen'||mode==='erase'){line(current,p);current=p;return;}
+      restore(history[history.length-1]);shape(start,p);current=p;
+    });
+    canvas.addEventListener('pointerup',e=>{if(!drawing)return;drawing=false;ctx.globalCompositeOperation='source-over';canvas.releasePointerCapture(e.pointerId);});
+    function setMode(m){
+      mode=m;document.querySelectorAll('.tools button').forEach(b=>b.classList.remove('active'));
+      const b=document.getElementById(m);if(b)b.classList.add('active');canvas.classList.toggle('pen',!!m);
+    }
+    ['pen','rect','arrow','erase'].forEach(id=>document.getElementById(id).onclick=()=>setMode(mode===id?null:id));
+    document.getElementById('undo').onclick=()=>restore(history.pop()||null);
+    document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
+    window.addEventListener('resize',resize);
+
+    async function session(){
+      const r=await fetch('/api/session',{cache:'no-store',credentials:'same-origin'});
+      if(!r.ok)throw new Error(await r.text()); return r.json();
+    }
+    async function boot(){
+      try{const s=await session();pane.setAttribute('url',s.url);pane.setAttribute('token',s.token);pane.setAttribute('target-id',s.targetId);pane.setAttribute('token-endpoint','/api/session');status.textContent='מחובר — סנכרון אוטומטי';}
+      catch(e){status.textContent='ממתין לחיבור המורשה';}
+    }
+    pane.onTokenExpired=async()=> (await session()).token;
+    pane.addEventListener('bgls:connected',()=>status.textContent='חלון חי מחובר — סנכרון אוטומטי');
+    pane.addEventListener('bgls:disconnected',()=>status.textContent='החיבור נותק — מתחבר מחדש');
+    pane.addEventListener('bgls:error',e=>status.textContent='BrowserGlass: '+(e.detail?.error||'error'));
+
+    function hostCall(method,params){
+      return new Promise((resolve,reject)=>{
+        if(!window.parent||window.parent===window){reject(new Error('NO_MCP_HOST'));return;}
+        const id='ima-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+        const timer=setTimeout(()=>{window.removeEventListener('message',on);reject(new Error('HOST_TIMEOUT'));},8000);
+        function on(e){const d=e.data;if(d?.jsonrpc==='2.0'&&d.id===id){clearTimeout(timer);window.removeEventListener('message',on);d.error?reject(new Error(d.error.message||'HOST_ERROR')):resolve(d.result);}}
+        window.addEventListener('message',on);
+        window.parent.postMessage({jsonrpc:'2.0',id,method,params},'*');
+      });
+    }
+    async function deliver(text,withImage){
+      const payload={text, browser:{url:pane.getAttribute('url')||'', mode, timestamp:new Date().toISOString()}};
+      if(withImage)payload.annotationPng=canvas.toDataURL('image/png');
+      const content=[{type:'text',text:JSON.stringify(payload)}];
+      try{
+        const result=await hostCall('ui/message',{role:'user',content});
+        return {ok:true,result};
+      }catch(e){
+        if(typeof window.openai?.sendFollowUpMessage==='function'){
+          await window.openai.sendFollowUpMessage({prompt:text});
+          return {ok:true,fallback:true};
+        }
+        throw e;
+      }
+    }
+    document.getElementById('send').onclick=async()=>{
+      const text=message.value.trim(); if(!text){message.focus();return;}
+      const btn=document.getElementById('send');btn.disabled=true;state.sent++;
+      status.textContent='שולח ומאמת קבלה…';
+      try{
+        const r=await deliver(text,true);state.acked++;
+        status.textContent='✓ התקבל אצל המארח — '+state.acked+' מסרים מאומתים';
+        message.value='';setTimeout(()=>{if(state.sent===state.acked)status.textContent='חלון חי מחובר — סנכרון אוטומטי';},2200);
+      }catch(e){status.textContent='לא התקבל: '+e.message;}
+      finally{btn.disabled=false;}
+    };
+    message.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter')document.getElementById('send').click();});
     boot();
   </script>
 </body>
