@@ -83,14 +83,32 @@ def route_for(deal: dict) -> list[dict]:
 
 
 def route_intelligence(task: dict) -> list[dict]:
-    """Return eligible model providers without implying credentials are configured."""
+    """Return providers with an explicit billing-safe execution state.
+
+    A Meta 402/billing_not_configured result is treated as a hard stop for
+    live API execution until billing is intentionally enabled. IMA must not
+    retry a paid provider automatically or imply that planning readiness means
+    live availability.
+    """
+    import os
+
     requested = str(task.get("provider", "")).lower()
     providers = []
     for provider in INTELLIGENCE_PROVIDERS:
         if requested and requested not in {provider.name.lower(), "meta", "muse"}:
             continue
         item = provider.__dict__.copy()
-        item["configured"] = bool(__import__("os").environ.get(provider.auth_env))
+        configured = bool(os.environ.get(provider.auth_env))
+        item["configured"] = configured
+        if provider.name == "Meta Muse":
+            item["billing_policy"] = "disabled_until_explicit_billing"
+            item["live_api_allowed"] = False
+            item["status"] = "billing_blocked" if configured else "not_configured"
+            item["retry_on_402"] = False
+            item["fallback_required"] = True
+        else:
+            item["status"] = "ready" if configured else "not_configured"
+            item["live_api_allowed"] = configured
         providers.append(item)
     return providers
 
