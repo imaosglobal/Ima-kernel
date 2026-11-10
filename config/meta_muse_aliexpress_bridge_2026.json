@@ -3,7 +3,7 @@
   "status": "adapter_ready",
   "endpoint": "https://api.meta.ai/v1",
   "models": ["muse-spark-1.3", "muse-wonder-1.0"],
-  "auth_env": "META_MODEL_API_KEY",
+  "auth_env": "MODEL_API_KEY",
   "role": "research_and_agentic_execution",
   "commerce_flow": {
     "source": "AliExpress",
