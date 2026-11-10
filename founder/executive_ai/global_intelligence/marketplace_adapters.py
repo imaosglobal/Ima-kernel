@@ -2,7 +2,7 @@
 
 Adapters describe how an opportunity can be monetized or which intelligence
 provider can execute/reason about it. They do not bypass logins, platform
-rules, consent, or seller/buyer authorization.
+rules, consent, spending controls, or seller/buyer authorization.
 """
 from __future__ import annotations
 from dataclasses import dataclass
@@ -36,6 +36,7 @@ class IntelligenceProvider:
     endpoint: str
     auth_env: str
     models: tuple[str, ...]
+    capabilities: tuple[str, ...] = ()
 
 
 INTELLIGENCE_PROVIDERS = (
@@ -44,7 +45,16 @@ INTELLIGENCE_PROVIDERS = (
         "agentic_model_api",
         "https://api.meta.ai/v1",
         "MODEL_API_KEY",
-        ("muse-spark-1.3", "muse-wonder-1.0"),
+        ("muse-spark-1.3", "muse-wonder-1.0", "muse-ember-1.0"),
+        ("responses", "tool_calling", "structured_output", "search_grounding", "multimodal"),
+    ),
+    IntelligenceProvider(
+        "Meta Muse Spark Open",
+        "open_weight_model",
+        "self_hosted",
+        "",
+        ("muse-spark-open",),
+        ("multimodal", "agentic", "self_hosted"),
     ),
 )
 
@@ -85,10 +95,9 @@ def route_for(deal: dict) -> list[dict]:
 def route_intelligence(task: dict) -> list[dict]:
     """Return providers with an explicit billing-safe execution state.
 
-    A Meta 402/billing_not_configured result is treated as a hard stop for
-    live API execution until billing is intentionally enabled. IMA must not
-    retry a paid provider automatically or imply that planning readiness means
-    live availability.
+    Meta 402/billing_not_configured is a hard stop for live API execution until
+    billing is intentionally enabled. IMA must not retry a paid provider
+    automatically or imply that planning readiness means live availability.
     """
     import os
 
@@ -98,14 +107,19 @@ def route_intelligence(task: dict) -> list[dict]:
         if requested and requested not in {provider.name.lower(), "meta", "muse"}:
             continue
         item = provider.__dict__.copy()
-        configured = bool(os.environ.get(provider.auth_env))
+        configured = bool(os.environ.get(provider.auth_env)) if provider.auth_env else False
         item["configured"] = configured
+
         if provider.name == "Meta Muse":
             item["billing_policy"] = "disabled_until_explicit_billing"
             item["live_api_allowed"] = False
             item["status"] = "billing_blocked" if configured else "not_configured"
             item["retry_on_402"] = False
             item["fallback_required"] = True
+        elif provider.name == "Meta Muse Spark Open":
+            item["live_api_allowed"] = False
+            item["status"] = "documented_only"
+            item["hardware_gate"] = "not_activated_on_current_mobile_environment"
         else:
             item["status"] = "ready" if configured else "not_configured"
             item["live_api_allowed"] = configured
@@ -114,7 +128,7 @@ def route_intelligence(task: dict) -> list[dict]:
 
 
 def ali_express_affiliate_plan(product_query: str) -> dict:
-    """Create a non-purchasing handoff plan: Muse researches, IMA attributes."""
+    """Create a non-purchasing handoff plan: intelligence researches, IMA attributes."""
     route = route_for({"source": "affiracle", "category": "general"})[0]
     return {
         "provider": "Meta Muse",
