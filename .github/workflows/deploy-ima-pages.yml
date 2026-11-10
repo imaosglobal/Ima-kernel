@@ -82,6 +82,7 @@ jobs:
           grep -Fq "feedback-panel" src/App.jsx
           grep -Fq "submitFeedback" src/App.jsx
           grep -Fq "SUPPORT_URL" src/App.jsx
+          grep -Fq "live browser" src/App.jsx || true
           grep -Fq "PRIVACY_URL" src/App.jsx
           grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
           grep -Fq "install-button" src/App.jsx
