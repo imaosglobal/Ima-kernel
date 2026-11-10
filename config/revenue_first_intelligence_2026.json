@@ -1,0 +1,68 @@
+{
+  "mode": "revenue_first",
+  "principle": "earn_before_spend",
+  "paid_ai_providers": {
+    "enabled": false,
+    "reason": "No paid model/API calls until attributable revenue or explicit budget exists."
+  },
+  "muse": {
+    "provider": "Meta Muse",
+    "learning_surface": "Responses API",
+    "base_url": "https://api.meta.ai/v1",
+    "preferred_model_for_bounded_tasks": "muse-ember-1.0",
+    "strategic_models": [
+      "muse-spark-1.3",
+      "muse-wonder-1.0"
+    ],
+    "live_api": false,
+    "retry_on_402": false
+  },
+  "free_or_existing_execution": {
+    "web_research": "IMA/web research layer",
+    "local_models": "only when an actually configured local runtime exists",
+    "open_weight_option": "Muse Spark Open is documented as self-hostable, but not activated on the phone because its published hardware footprint is far beyond the current device",
+    "human_approval": true
+  },
+  "revenue_sources": [
+    {
+      "name": "Affiracle/AliExpress",
+      "priority": 1,
+      "type": "affiliate",
+      "spend_required": "none_for_content_and_link_routing",
+      "purchase_automation": false
+    },
+    {
+      "name": "eBay",
+      "priority": 2,
+      "type": "partner_or_affiliate",
+      "spend_required": "none_for_content_and_link_routing",
+      "purchase_automation": false
+    },
+    {
+      "name": "Amazon",
+      "priority": 3,
+      "type": "partner_or_affiliate",
+      "spend_required": "none_for_content_and_link_routing",
+      "purchase_automation": false
+    },
+    {
+      "name": "impact.com",
+      "priority": 4,
+      "type": "partnerships",
+      "spend_required": "none_for_content_and_link_routing",
+      "purchase_automation": false
+    }
+  ],
+  "budget_gate": {
+    "paid_ai_requires": "verified_attributable_revenue_or_explicit_budget",
+    "max_unfunded_spend_usd": 0,
+    "revenue_reserve_ratio": 0.25,
+    "require_human_approval_to_raise_cap": true
+  },
+  "attribution": {
+    "record_click": true,
+    "record_conversion_when_confirmed": true,
+    "disclose_affiliate_relationship": true,
+    "never_claim_revenue_before_confirmation": true
+  }
+}
