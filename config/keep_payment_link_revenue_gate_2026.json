@@ -1,0 +1,32 @@
+{
+  "provider": "keep",
+  "product": "payment_link",
+  "mode": "revenue_first",
+  "live_charge_enabled": false,
+  "payment_link_configured": false,
+  "google_pay_supported": true,
+  "trial": {
+    "first_month_free": true,
+    "no_commitment": true,
+    "monthly_price_after_trial": "from 39 ILS + VAT",
+    "auto_upgrade": false
+  },
+  "spend_gate": {
+    "verified_revenue_required": true,
+    "explicit_budget_can_override": true,
+    "automatic_card_charge": false
+  },
+  "verification": {
+    "accept_as_revenue_only_after": [
+      "successful_payment_event",
+      "provider_confirmation"
+    ],
+    "pending_is_not_revenue": true,
+    "failed_is_not_revenue": true
+  },
+  "notes": [
+    "Google Pay is offered on Keep payment pages according to current provider documentation.",
+    "Do not publish a payment URL until the user's Keep account and payment link are actually activated.",
+    "Do not enter a paid plan or enable a paid module without explicit approval."
+  ]
+}
