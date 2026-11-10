@@ -1,1 +1,23 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#0b0d12;color:#eef;font:14px system-ui}header{padding:10px;border-bottom:1px solid #30343d}.status{padding:8px 10px;opacity:.8}iframe{display:block;width:100%;height:min(78vh,760px);min-height:460px;border:0;background:#000}</style></head><body><header><strong>IMA — דפדפן חי</strong><div class="status" id="status">מכין חלון Chrome חי…</div></header><iframe id="browser" title="IMA live browser" src="https://ima-browserglass.onrender.com/" allow="clipboard-read; clipboard-write"></iframe><script>const f=document.getElementById("browser"),st=document.getElementById("status");f.addEventListener("load",()=>st.textContent="Chrome חי מחובר — אפשר לפתוח את אתר IMA ולעבוד בו יחד");</script></body></html>
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#0b0d12;color:#eef;font:14px system-ui}header{padding:10px;border-bottom:1px solid #30343d}.status{padding:8px 10px;opacity:.8}iframe{display:block;width:100%;height:min(78vh,760px);min-height:460px;border:0;background:#000}</style></head><body><header><strong>IMA — דפדפן חי</strong><div class="status" id="status">מכין חלון Chrome חי…</div></header><iframe id="browser" title="IMA live browser" src="https://ima-browserglass.onrender.com/" allow="clipboard-read; clipboard-write"></iframe><script>
+const f=document.getElementById("browser"),st=document.getElementById("status");
+f.addEventListener("load",()=>st.textContent="Chrome חי מחובר — אפשר לפתוח את אתר IMA ולעבוד בו יחד");
+
+/* Bridge the nested BrowserGlass frame to the real MCP Apps host.
+   The inner viewer speaks the standard ui/* JSON-RPC messages to its parent.
+   This shell forwards requests to ChatGPT and returns host responses to the viewer. */
+const pending=new Map();
+window.addEventListener("message",e=>{
+  if(e.source!==f.contentWindow || !e.data || e.data.jsonrpc!=="2.0") return;
+  const m=e.data;
+  if(m.method){
+    try{ window.parent.postMessage(m,"*"); }catch(_){}
+    if(m.id!=null) pending.set(m.id,true);
+  }
+});
+window.addEventListener("message",e=>{
+  if(e.source!==window.parent || !e.data || e.data.jsonrpc!=="2.0" || e.data.id==null) return;
+  if(!pending.has(e.data.id)) return;
+  pending.delete(e.data.id);
+  f.contentWindow.postMessage(e.data,"*");
+});
+</script></body></html>
