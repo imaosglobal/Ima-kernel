@@ -77,13 +77,13 @@ async function ensureInstance() {
   const td = await targets.json();
   targetId = td.targets?.[0]?.targetId || td[0]?.targetId;
   if (!targetId) throw new Error('BrowserGlass returned no target');
-  const viewerToken = await mintViewerToken();
+  const viewerToken = await mintViewerToken(false);
   const nav = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets/${targetId}/navigate`, { method:'POST', headers:{authorization:`Bearer ${viewerToken}`,'content-type':'application/json'}, body:JSON.stringify({url:DEFAULT_URL}) });
   if (!nav.ok) throw new Error(`BrowserGlass initial navigation failed: ${nav.status}`);
 }
 
-async function mintViewerToken() {
-  await ensureInstance();
+async function mintViewerToken(ensure = true) {
+  if (ensure) await ensureInstance();
   if (lastToken && Date.now() < lastTokenExpiresAt - 30000) return lastToken;
   const admin = await adminToken();
   const r = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/tokens`, {
