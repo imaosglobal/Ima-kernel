@@ -1,0 +1,19 @@
+{
+  "provider": "sumit",
+  "gateway": "upay",
+  "mode": "revenue_first",
+  "live_charge_enabled": false,
+  "payment_link_configured": false,
+  "api_key_configured": false,
+  "webhook_configured": false,
+  "spend_gate": {
+    "verified_revenue_required": true,
+    "explicit_budget_can_override": true,
+    "automatic_card_charge": false
+  },
+  "verification": {
+    "accept_as_revenue_only_after": ["successful_payment_event", "provider_confirmation"],
+    "pending_is_not_revenue": true,
+    "failed_is_not_revenue": true
+  }
+}
