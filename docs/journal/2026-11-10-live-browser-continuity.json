@@ -1,7 +1,7 @@
 {
   "date": "2026-11-10",
   "title": "Interactive live-browser continuity and automatic improvement intake",
-  "status": "IMPLEMENTED_IN_CODE / ACTIVE_DEPLOYMENT_AND_E2E_VERIFICATION_RUNNING",
+  "status": "ACTIVE_RUNTIME_REPAIR / CHATGPT_EMBED_PENDING",
   "request": {
     "summary": "Ori requested a complete, ordered state list for the interactive browser window and asked that all future improvements requested after successful activation be automatically reconciled into the same canonical place and daily loop.",
     "canonical_requirement": "LIVE-001"
@@ -21,7 +21,8 @@
     "Adjusted Firecrawl Live Browser QA so a missing optional Firecrawl credential records UNVERIFIED instead of incorrectly failing the canonical build; no credential or money was added.",
     "Performed an actual external live-browser runtime probe against https://ima-browserglass.onrender.com/ instead of treating source code as proof.",
     "Found and fixed two concrete runtime blockers: viewer.html was missing from the Docker image, and BrowserGlass instance bootstrap had recursive token acquisition.",
-    "Committed Docker runtime fix 94d62cee19f82f228d31258ef2efc4e072dd3404 and server bootstrap fix 7da0dea7625c351634a30621ecd7d7edb36d9493."
+    "Committed Docker runtime fix 94d62cee19f82f228d31258ef2efc4e072dd3404 and server bootstrap fix 7da0dea7625c351634a30621ecd7d7edb36d9493.",
+    "Implemented initPromise serialization around BrowserGlass instance bootstrap to prevent concurrent instance creation/token acquisition from racing the single-writer BrowserGlass SQLite store."
   ],
   "evidence": [
     "Canonical main was advanced through commits 0dd91e5c9dd27c8aed3da92c91028728fcae1491 and 41ed6e4d591704ffec08130e0c0eade0d1573cb5.",
@@ -29,12 +30,17 @@
     "The existing 2026-11-09 journal explicitly records ChatGPT MCP/App end-to-end rendering as not yet verified on mobile.",
     "Fix commit 46f0503bc4b6e8527e8c579220bd68c25df349ae.",
     "After the fix, GitHub Actions started fresh runs for the corrected SHA; Deploy canonical IMA public product is queued, IMA UI Build and Firecrawl Live Browser QA are in progress.",
-    "Firecrawl live interaction reached the deployed BrowserGlass service and returned the exact runtime error: ENOENT opening /opt/ima-browserglass/viewer.html. This is direct runtime evidence, not a code inference."
+    "Firecrawl live interaction reached the deployed BrowserGlass service and returned the exact runtime error: ENOENT opening /opt/ima-browserglass/viewer.html. This is direct runtime evidence, not a code inference.",
+    "Render service ima-browserglass is configured for automatic deploys from canonical main and the latest deployment for ae826e0459edd245609ed1e3071baaebe41e5386 is currently update_in_progress.",
+    "Render build logs for commit 0dbeb58d76c1f2aa77f82abb51ee935302a71d39 explicitly show viewer.html copied into the runtime image and BrowserGlass gateway ready.",
+    "An actual BrowserGlass viewer probe after that deployment showed the viewer UI loading, but /api/session returned 403 IMA embed required; this is expected for a direct non-ChatGPT-origin probe and confirms the embed boundary is active rather than bypassed.",
+    "A subsequent controlled probe using a simulated ChatGPT Referer/Oriigin timed out while requesting the session; Render logs showed a BrowserGlass SQLite busy-retry error, leading to the instance-bootstrap serialization fix."
   ],
   "blockers": [
-    "Corrected BrowserGlass deployment has not yet been re-probed after the two fixes.",
-    "ChatGPT embedded MCP rendering remains unverified because the supported custom-MCP ChatGPT Web surface has not been exercised in this runtime.",
-    "Authorized Termux/Chrome live connection remains unverified."
+    "Latest Render deployment ae826e0459edd245609ed1e3071baaebe41e5386 remains update_in_progress at last check.",
+    "Firecrawl currently has two concurrent jobs and temporarily rejects a third probe; a fresh post-deploy E2E probe is therefore pending.",
+    "Direct access to BrowserGlass intentionally receives 403 because the embed cookie is only granted for allowed IMA/ChatGPT embed origins; this must be tested through the actual MCP App host.",
+    "ChatGPT Web custom MCP connection/rendering has not been directly exercised in this current chat runtime."
   ],
   "unknowns": [
     "Whether the embedded BrowserGlass window actually renders inside supported ChatGPT web MCP Apps.",
@@ -43,10 +49,10 @@
     "Whether Google authentication/session continuity is preserved through the live browser path."
   ],
   "next_target": [
-    "Wait for Render to rebuild the corrected BrowserGlass service, then perform another real live-browser probe.",
-    "Verify /api/session under an allowed embed origin and verify the BrowserGlass pane reaches the IMA page.",
-    "Then verify the supported ChatGPT Web MCP App rendering path and human control.",
-    "Continue executing rather than merely documenting each subsequent LIVE-001 improvement."
+    "Re-probe immediately when the latest Render update settles, using a single controlled browser session.",
+    "Verify the ChatGPT-origin bootstrap path without weakening the embed boundary.",
+    "Then activate/verify the IMA MCP App on supported ChatGPT Web and confirm the live window renders, connects, and supports harmless human take-over/release.",
+    "Only after those runtime checks mark LIVE-001 VERIFIED_LIVE."
   ],
   "truth_boundary": "Source code, workflow creation, queued deployment and documentation are not proof of a working interactive window. The interactive window is VERIFIED_LIVE only after independent runtime evidence shows the supported surface rendering and responding to authorized control."
 }
