@@ -18,6 +18,7 @@ WORKDIR /opt/ima-browserglass
 COPY tools/ima-browserglass/package.json ./
 RUN npm install --omit=dev
 COPY tools/ima-browserglass/server.mjs ./
+COPY tools/ima-browserglass/viewer.html ./viewer.html
 
 ENV PORT=10000
 ENV BGLS_INTERNAL_PORT=7799
