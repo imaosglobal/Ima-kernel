@@ -18,6 +18,7 @@ let instanceId = null;
 let targetId = null;
 let lastToken = null;
 let lastTokenExpiresAt = 0;
+let initPromise = null;
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -57,6 +58,8 @@ async function adminToken() {
 
 async function ensureInstance() {
   if (instanceId && targetId) return;
+  if (initPromise) return initPromise;
+  initPromise = (async () => {
   const admin = await adminToken();
   const created = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances`, {
     method: 'POST',
@@ -80,6 +83,8 @@ async function ensureInstance() {
   const viewerToken = await mintViewerToken(false);
   const nav = await fetch(`http://127.0.0.1:${BGLS_PORT}/browserglass/v1/instances/${instanceId}/targets/${targetId}/navigate`, { method:'POST', headers:{authorization:`Bearer ${viewerToken}`,'content-type':'application/json'}, body:JSON.stringify({url:DEFAULT_URL}) });
   if (!nav.ok) throw new Error(`BrowserGlass initial navigation failed: ${nav.status}`);
+  })().finally(() => { initPromise = null; });
+  return initPromise;
 }
 
 async function mintViewerToken(ensure = true) {
