@@ -18,19 +18,23 @@
     "Added a canonical loop rule that future live-browser improvement requests reconcile to LIVE-001 and are not implemented as parallel browser surfaces.",
     "Preserved the distinction between BrowserGlass remote browser, local Termux/Chrome attach path, and ChatGPT MCP rendering.",
     "Immediately fixed the public deployment regression that blocked publication: restored the canonical install-button contract in ima-ui/src/App.jsx.",
-    "Adjusted Firecrawl Live Browser QA so a missing optional Firecrawl credential records UNVERIFIED instead of incorrectly failing the canonical build; no credential or money was added."
+    "Adjusted Firecrawl Live Browser QA so a missing optional Firecrawl credential records UNVERIFIED instead of incorrectly failing the canonical build; no credential or money was added.",
+    "Performed an actual external live-browser runtime probe against https://ima-browserglass.onrender.com/ instead of treating source code as proof.",
+    "Found and fixed two concrete runtime blockers: viewer.html was missing from the Docker image, and BrowserGlass instance bootstrap had recursive token acquisition.",
+    "Committed Docker runtime fix 94d62cee19f82f228d31258ef2efc4e072dd3404 and server bootstrap fix 7da0dea7625c351634a30621ecd7d7edb36d9493."
   ],
   "evidence": [
     "Canonical main was advanced through commits 0dd91e5c9dd27c8aed3da92c91028728fcae1491 and 41ed6e4d591704ffec08130e0c0eade0d1573cb5.",
     "GitHub Actions runs for the latest main were observed in queued/in-progress/pending states; therefore no green CI or deployment claim is made yet.",
     "The existing 2026-11-09 journal explicitly records ChatGPT MCP/App end-to-end rendering as not yet verified on mobile.",
     "Fix commit 46f0503bc4b6e8527e8c579220bd68c25df349ae.",
-    "After the fix, GitHub Actions started fresh runs for the corrected SHA; Deploy canonical IMA public product is queued, IMA UI Build and Firecrawl Live Browser QA are in progress."
+    "After the fix, GitHub Actions started fresh runs for the corrected SHA; Deploy canonical IMA public product is queued, IMA UI Build and Firecrawl Live Browser QA are in progress.",
+    "Firecrawl live interaction reached the deployed BrowserGlass service and returned the exact runtime error: ENOENT opening /opt/ima-browserglass/viewer.html. This is direct runtime evidence, not a code inference."
   ],
   "blockers": [
-    "Current corrected deployment/QA runs have not finished yet.",
-    "ChatGPT embedded MCP rendering remains unverified until the supported ChatGPT Web surface is actually exercised.",
-    "Authorized Termux/Chrome live connection remains unverified in this pass."
+    "Corrected BrowserGlass deployment has not yet been re-probed after the two fixes.",
+    "ChatGPT embedded MCP rendering remains unverified because the supported custom-MCP ChatGPT Web surface has not been exercised in this runtime.",
+    "Authorized Termux/Chrome live connection remains unverified."
   ],
   "unknowns": [
     "Whether the embedded BrowserGlass window actually renders inside supported ChatGPT web MCP Apps.",
@@ -39,10 +43,10 @@
     "Whether Google authentication/session continuity is preserved through the live browser path."
   ],
   "next_target": [
-    "Let the corrected deployment and browser QA complete, then verify the exact public build SHA and real-browser controls.",
-    "Verify BrowserGlass runtime endpoint and then the supported ChatGPT Web MCP App surface.",
-    "When the authorized device bridge becomes reachable, verify Chrome CDP and owner-scoped harmless navigation/read action.",
-    "Continue routing every later interactive-window improvement request into LIVE-001 and the same canonical loop."
+    "Wait for Render to rebuild the corrected BrowserGlass service, then perform another real live-browser probe.",
+    "Verify /api/session under an allowed embed origin and verify the BrowserGlass pane reaches the IMA page.",
+    "Then verify the supported ChatGPT Web MCP App rendering path and human control.",
+    "Continue executing rather than merely documenting each subsequent LIVE-001 improvement."
   ],
   "truth_boundary": "Source code, workflow creation, queued deployment and documentation are not proof of a working interactive window. The interactive window is VERIFIED_LIVE only after independent runtime evidence shows the supported surface rendering and responding to authorized control."
 }
