@@ -41,6 +41,29 @@
 5. Any increase of the paid-AI cap requires explicit human approval.
 6. No provider is retried automatically after a billing failure.
 
+
+## F. NEWLY VERIFIED FUNDING ROUTES — 2026-11-10
+
+| Route | Status | Potential | Cost before submission | Blocker / activation |
+|---|---|---:|---:|---|
+| Mozilla Foundation — Human-Scale AI Incubator | PRIORITY APPLICATION | up to $300k for year 1, with possible $200k follow-on (up to $500k total) | 0 | submit Initial Project Proposal in English by 2026-11-20; applicant must provide authentic original content |
+| Israel Innovation Authority — Pre-Seed Startup Fund | HIGH-VALUE CANDIDATE | 60% of qualifying Pre-Seed round, up to ₪2M | 0 application fee identified | requires an Israeli incorporated company, private investor commitment of at least 15% of requested round, and commercial R&D eligibility; not a solo-grant shortcut |
+| Israel Innovation Authority — R&D Lab/Data Voucher | OPEN / DEADLINE IMMINENT | discount voucher for AI R&D infrastructure | 0 application fee identified | deadline 2026-11-11; requires Israeli company and AI product development eligibility |
+| Global AI Founders Cup — Israel | FUTURE APPLICATION | $50k–$250k investment if selected | 0 | Season 1 applications open January 2027; investment is not a grant and terms are subject to due diligence |
+| NLnet Restack | PRIORITY OPEN-SOURCE APPLICATION | €5k–€50k first grant, potentially scalable | 0 | proposal must fit Restack/open-internet scope and open-source conditions; next deadline 2027-01-03 |
+
+### Activation rule for funding applications
+
+IMA may prepare evidence packs, technical descriptions, budgets, links, eligibility checks and draft application materials. It must not submit a legally binding funding application, accept investment terms, form a company, sign agreements, or create financial commitments without the user's explicit human action.
+
+### Immediate priority order
+
+1. Mozilla Human-Scale AI — deadline 2026-11-20.
+2. Innovation Authority Pre-Seed — only if/when an Israeli company and qualifying private investment are in place.
+3. Innovation Authority R&D voucher — verify company eligibility immediately because the deadline is 2026-11-11.
+4. NLnet Restack — prepare technical/open-source proposal for 2027-01-03.
+5. Global AI Founders Cup — prepare application assets for January 2027.
+
 ## E. CONTINUOUS DISCOVERY RULE
 
 Search for additional routes continuously, but promote a route into this registry only when:
