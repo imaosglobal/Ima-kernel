@@ -43,7 +43,7 @@ INTELLIGENCE_PROVIDERS = (
         "Meta Muse",
         "agentic_model_api",
         "https://api.meta.ai/v1",
-        "META_MODEL_API_KEY",
+        "MODEL_API_KEY",
         ("muse-spark-1.3", "muse-wonder-1.0"),
     ),
 )
