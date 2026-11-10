@@ -48,9 +48,9 @@
 |---|---|---:|---:|---|
 | Mozilla Foundation — Human-Scale AI Incubator | PRIORITY APPLICATION | up to $300k for year 1, with possible $200k follow-on (up to $500k total) | 0 | submit Initial Project Proposal in English by 2026-11-20; applicant must provide authentic original content |
 | Israel Innovation Authority — Pre-Seed Startup Fund | HIGH-VALUE CANDIDATE | 60% of qualifying Pre-Seed round, up to ₪2M | 0 application fee identified | requires an Israeli incorporated company, private investor commitment of at least 15% of requested round, and commercial R&D eligibility; not a solo-grant shortcut |
-| Israel Innovation Authority — R&D Lab/Data Voucher | OPEN / DEADLINE IMMINENT | discount voucher for AI R&D infrastructure | 0 application fee identified | deadline 2026-11-11; requires Israeli company and AI product development eligibility |
+| Israel Innovation Authority — R&D Lab/Data Voucher | CONDITIONAL / DEADLINE 2026-11-11 | discount voucher for AI R&D infrastructure | 0 application fee identified | only usable if an eligible Israeli company exists; current recipient eligibility not verified |
 | Global AI Founders Cup — Israel | FUTURE APPLICATION | $50k–$250k investment if selected | 0 | Season 1 applications open January 2027; investment is not a grant and terms are subject to due diligence |
-| NLnet Restack | PRIORITY OPEN-SOURCE APPLICATION | €5k–€50k first grant, potentially scalable | 0 | proposal must fit Restack/open-internet scope and open-source conditions; next deadline 2027-01-03 |
+| NLnet Restack | PRIORITY OPEN-SOURCE APPLICATION | €5k–€50k first grant, potentially scalable | 0 | proposal must fit Restack/open-internet scope and open-source conditions; deadline 2027-01-03 |
 
 ### Activation rule for funding applications
 
@@ -81,3 +81,11 @@ Unknown or stale opportunities stay outside the operational list until verified.
 - GitHub Sponsors: Israel is currently listed as a supported receiving region; personal-account sponsorships have no GitHub fee. citeturn419168search0
 - NLnet: current funding page states €5,000–€50,000 grants, back-to-back calls, and eligibility in principle for individuals and organizations; open-source requirements apply. citeturn419168search1
 - Free AI infrastructure: a current November 2026 survey documents multiple free tiers/credits, but individual provider limits and terms must be rechecked before integration. citeturn419168search2
+
+
+## G. PRUNED / NOT CURRENTLY ACTIONABLE
+
+| Route | Status | Reason |
+|---|---|---|
+| Innovation Authority — Tnufa (current call) | CLOSED | the published 2026 submission date has passed; do not treat it as an immediately actionable funding route until a new call/date is published |
+| OpenAI Foundation People-First AI Fund 2026 | CLOSED | 2026 application window has ended; retain only as precedent for future calls |
