@@ -2,22 +2,22 @@
 const f=document.getElementById("browser"),st=document.getElementById("status");
 f.addEventListener("load",()=>st.textContent="Chrome חי מחובר — אפשר לפתוח את אתר IMA ולעבוד בו יחד");
 
-/* Bridge the nested BrowserGlass frame to the real MCP Apps host.
-   The inner viewer speaks the standard ui/* JSON-RPC messages to its parent.
-   This shell forwards requests to ChatGPT and returns host responses to the viewer. */
+/* Standard MCP Apps bridge for the nested BrowserGlass view.
+   Only the known ChatGPT web hosts are accepted on the outer boundary. */
+const HOST_ORIGINS=new Set(["https://chatgpt.com","https://chat.openai.com"]);
 const pending=new Map();
 window.addEventListener("message",e=>{
-  if(e.source!==f.contentWindow || !e.data || e.data.jsonrpc!=="2.0") return;
+  if(e.source!==f.contentWindow || e.origin!=="https://ima-browserglass.onrender.com" || !e.data || e.data.jsonrpc!=="2.0") return;
   const m=e.data;
   if(m.method){
-    try{ window.parent.postMessage(m,"*"); }catch(_){}
+    if(HOST_ORIGINS.has(window.parent?.location?.origin) || window.parent===window) window.parent.postMessage(m, [...HOST_ORIGINS]);
     if(m.id!=null) pending.set(m.id,true);
   }
 });
 window.addEventListener("message",e=>{
-  if(e.source!==window.parent || !e.data || e.data.jsonrpc!=="2.0" || e.data.id==null) return;
+  if(e.source!==window.parent || !HOST_ORIGINS.has(e.origin) || !e.data || e.data.jsonrpc!=="2.0" || e.data.id==null) return;
   if(!pending.has(e.data.id)) return;
   pending.delete(e.data.id);
-  f.contentWindow.postMessage(e.data,"*");
+  f.contentWindow.postMessage(e.data,"https://ima-browserglass.onrender.com");
 });
 </script></body></html>
