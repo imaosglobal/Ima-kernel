@@ -1,32 +1,63 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IMA Browser Bridge — Free extension</title>
-<meta name="description" content="IMA Browser Bridge is a free, user-controlled browser extension. Paid IMA capabilities stay on IMA, outside the extension store.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IMA BrowserGlass — דפדפן חי</title>
+<meta name="description" content="IMA BrowserGlass — שליטה מקומית ומאושרת בדפדפן Chrome דרך Termux, ללא TinyFish.">
 <style>
-:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#171717;background:#f7f7f5}
-body{margin:0}.wrap{max-width:820px;margin:auto;padding:56px 20px}.card{background:white;border:1px solid #ddd;border-radius:24px;padding:32px;box-shadow:0 12px 40px #0000000a}h1{font-size:clamp(34px,7vw,64px);line-height:1;margin:0 0 18px}p{font-size:18px;line-height:1.6}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}a{display:inline-block;padding:13px 18px;border-radius:12px;text-decoration:none;border:1px solid #bbb;color:inherit}.primary{background:#171717;color:white;border-color:#171717}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:28px}.item{padding:18px;border:1px solid #ddd;border-radius:16px}.small{font-size:13px;opacity:.7}
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#171717;background:#f3f4f6}
+*{box-sizing:border-box}body{margin:0}.wrap{max-width:1100px;margin:auto;padding:18px}.card{background:#fff;border:1px solid #ddd;border-radius:20px;padding:18px;box-shadow:0 10px 35px #0000000b}.top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.badge{padding:7px 10px;border-radius:999px;background:#eee;font-size:13px}.ok{background:#e6f6e8}.bad{background:#fde8e8}.controls{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin:12px 0}.controls input,.composer input{width:100%;padding:12px;border:1px solid #bbb;border-radius:12px;font:inherit}.button{padding:11px 14px;border:1px solid #aaa;border-radius:12px;background:#fff;font:inherit;cursor:pointer}.primary{background:#171717;color:#fff;border-color:#171717}.tabs{display:flex;gap:7px;overflow:auto;padding:8px 0}.tab{min-width:220px;text-align:right}.tab small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.65}.screen{margin-top:12px;background:#111;border-radius:16px;min-height:240px;display:flex;align-items:center;justify-content:center;overflow:hidden}.screen img{display:block;width:100%;height:auto}.empty{color:#ddd;padding:50px;text-align:center}.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.composer{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:10px}.note{font-size:13px;opacity:.72;line-height:1.5}.selected{outline:2px solid #171717}.log{white-space:pre-wrap;font:12px ui-monospace,monospace;background:#f6f6f6;border-radius:12px;padding:10px;margin-top:10px;max-height:140px;overflow:auto}@media(max-width:650px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.actions{grid-template-columns:repeat(2,1fr)}.tab{min-width:180px}}
 </style>
 </head>
 <body>
-<main class="wrap"><div class="card">
-<div class="small">IMA · אמא · Browser Bridge</div>
-<h1>Free extension. IMA grows outside the store.</h1>
-<p>IMA Browser Bridge gives people a small, user-controlled browser tool. The extension stays free; deeper IMA services can be offered on the IMA website, so the extension can remain an acquisition channel rather than the payment boundary.</p>
+<main class="wrap">
+<section class="card">
+<div class="top"><div><b>IMA · BrowserGlass</b><div class="note">חלופה חינמית מהמובייל — ללא TinyFish וללא MCP Apps של ChatGPT.</div></div><span id="status" class="badge">בודק bridge…</span></div>
+<div class="controls"><input id="url" inputmode="url" value="https://imaosglobal.github.io/Ima-kernel/" placeholder="https://…"><button class="button primary" id="go">פתח</button><button class="button" id="refresh">רענן צילום</button></div>
+<div id="tabs" class="tabs"></div>
+<div class="screen"><div id="empty" class="empty">אין עדיין צילום. ודא ש־Termux bridge פועל ובחר לשונית.</div><img id="shot" alt="צילום חי של לשונית Chrome" hidden></div>
 <div class="actions">
-<a class="primary" href="https://github.com/imaosglobal/Ima-kernel/tree/main/ima-chrome-extension" target="_blank" rel="noreferrer">Get the extension source</a>
-<a href="https://imaosglobal.github.io/Ima-kernel/?utm_source=extension_landing&utm_medium=referral&utm_campaign=browser_bridge&utm_content=ima" target="_blank" rel="noreferrer">Open IMA</a>
-<a href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">Inspect the project</a>
+<button class="button" data-key="ArrowUp">↑</button><button class="button" data-key="Enter">Enter</button><button class="button" data-key="Escape">Esc</button><button class="button" data-key="Tab">Tab</button>
 </div>
-<div class="grid">
-<div class="item"><b>Free core</b><p>Read the visible current tab with explicit user action.</p></div>
-<div class="item"><b>Direct relationship</b><p>Extension traffic is attributed to IMA with privacy-preserving campaign parameters.</p></div>
-<div class="item"><b>Paid outside the extension</b><p>When a paid IMA plan is actually available, checkout belongs on IMA rather than inside the extension.</p></div>
-<div class="item"><b>No fake monetization</b><p>No invented customers, revenue, conversions or partnerships are shown as facts.</p></div>
-</div>
-<p class="small">Chrome's public consumer distribution remains subject to Chrome Web Store rules. IMA does not bypass those rules; this page separates distribution from monetization. Chrome requires a one-time developer registration fee before publishing in its Web Store.</p>
-</div></main>
+<div class="composer"><input id="type" placeholder="טקסט לשליחה ללשונית הפעילה"><button class="button primary" id="sendType">הקלד</button></div>
+<div class="composer"><input id="selector" placeholder="CSS selector ללחיצה, למשל button.cta"><button class="button" id="click">לחץ</button></div>
+<p class="note">השליטה פועלת רק מול Chrome המקומי שלך דרך <code>127.0.0.1:8787</code>. היא אינה עוקפת הרשאות של אתרים ואינה שולחת את המכשיר לשירות צד שלישי. Chrome עשוי לבקש הרשאת גישה לרשת המקומית.</p>
+<div id="log" class="log"></div>
+</section>
+</main>
+<script>
+const BRIDGE='http://127.0.0.1:8787';
+let selected='';
+const $=id=>document.getElementById(id);
+function log(x){$('log').textContent=new Date().toLocaleTimeString()+'  '+(typeof x==='string'?x:JSON.stringify(x,null,2))+'\n'+$('log').textContent.slice(0,5000)}
+async function api(path,body){
+ const r=await fetch(BRIDGE+path,{method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:undefined,body:body?JSON.stringify(body):undefined});
+ const j=await r.json(); if(!j.ok) throw new Error(j.error||'bridge_error'); return j;
+}
+async function refreshTabs(){
+ try{
+  const j=await api('/tabs'); const tabs=(j.tabs||[]).filter(t=>t.type==='page');
+  $('tabs').innerHTML='';
+  tabs.forEach(t=>{
+   const b=document.createElement('button'); b.className='button tab'+(t.id===selected?' selected':'');
+   b.innerHTML='<b>'+((t.title||'ללא כותרת').replaceAll('<','&lt;'))+'</b><small>'+((t.url||'').replaceAll('<','&lt;'))+'</small>';
+   b.onclick=()=>{selected=t.id;refreshTabs();refreshShot()}; $('tabs').appendChild(b);
+  });
+  if(!selected && tabs[0]) selected=tabs[0].id;
+  if(selected) await refreshShot();
+ }catch(e){$('status').textContent='Bridge לא זמין';$('status').className='badge bad';log(e.message)}
+}
+async function refreshShot(){
+ if(!selected)return;
+ try{const j=await api('/screenshot',{target_id:selected});$('shot').src='data:image/png;base64,'+j.data;$('shot').hidden=false;$('empty').hidden=true;$('status').textContent='מחובר';$('status').className='badge ok'}catch(e){log(e.message)}
+}
+$('go').onclick=async()=>{try{await api('/navigate',{target_id:selected,url:$('url').value.trim()});setTimeout(refreshTabs,900)}catch(e){log(e.message)}};
+$('refresh').onclick=refreshShot;
+$('sendType').onclick=async()=>{try{await api('/type',{target_id:selected,text:$('type').value});$('type').value='';await refreshShot()}catch(e){log(e.message)}};
+$('click').onclick=async()=>{try{await api('/click',{target_id:selected,selector:$('selector').value.trim()});await refreshShot()}catch(e){log(e.message)}};
+document.querySelectorAll('[data-key]').forEach(b=>b.onclick=async()=>{try{await api('/key',{target_id:selected,key:b.dataset.key});await refreshShot()}catch(e){log(e.message)}});
+refreshTabs();setInterval(refreshShot,2500);
+</script>
 </body>
 </html>
