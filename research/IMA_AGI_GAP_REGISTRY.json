@@ -1,0 +1,33 @@
+{
+  "program": "IMA-AGI-001",
+  "title": "AGI readiness and general intelligence gap program",
+  "canonical_doc": "docs/IMA_AGI_READINESS_AND_GENERAL_INTELLIGENCE_GAP_PROGRAM.md",
+  "claim_policy": "No AGI claim without implementation, testing, deployment, runtime verification, measurement, and independent reproducible evidence.",
+  "priority_order": [
+    "evaluation_harness",
+    "self_model_metacognition",
+    "lifelong_memory",
+    "continual_learning",
+    "long_horizon_agent",
+    "world_state_grounding",
+    "cross_domain_transfer",
+    "causal_counterfactual_reasoning",
+    "scientific_learning_loop",
+    "multimodal_embodiment",
+    "safety_red_team",
+    "external_evaluation"
+  ],
+  "daily_required_checks": [
+    "repository_state",
+    "runtime_state",
+    "research_changes",
+    "benchmark_changes",
+    "strongest_relevant_systems",
+    "highest_value_unblocked_gap",
+    "implementation",
+    "regression_tests",
+    "runtime_verification",
+    "evidence_update",
+    "requirements_ledger_update"
+  ]
+}
