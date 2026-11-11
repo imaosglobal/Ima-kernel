@@ -29,10 +29,14 @@ def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
         return json.loads(r.read().decode())
 
-def target():
+def target(preferred_id=None):
     pages=[x for x in get_json('/json/list') if x.get('type')=='page']
     if not pages:
         raise RuntimeError('No Chrome page target found')
+    if preferred_id:
+        for p in pages:
+            if str(p.get('id','')) == str(preferred_id):
+                return p
     def score(p):
         url=str(p.get('url','')).lower()
         title=str(p.get('title','')).lower()
@@ -43,8 +47,8 @@ def target():
         )
     return sorted(pages,key=score,reverse=True)[0]
 
-def cdp(method, params=None):
-    t=target()
+def cdp(method, params=None, preferred_id=None):
+    t=target(preferred_id)
     ws=websocket.create_connection(t['webSocketDebuggerUrl'], timeout=8, suppress_origin=True)
     try:
         ws.send(json.dumps({'id':1,'method':method,'params':params or {}}))
@@ -57,22 +61,23 @@ def cdp(method, params=None):
     finally:
         ws.close()
 
-def evaluate(expression):
-    return cdp('Runtime.evaluate', {'expression':expression,'returnByValue':True,'awaitPromise':True})
+def evaluate(expression, preferred_id=None):
+    return cdp('Runtime.evaluate', {'expression':expression,'returnByValue':True,'awaitPromise':True}, preferred_id)
 
 def execute_action(action,payload):
+    preferred_id=str(payload.get('target_id','')).strip() or None
     if action=='status':
-        t=target()
+        t=target(preferred_id)
         return {'ok':True,'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}}
     if action=='tabs':
         return {'ok':True,'tabs':get_json('/json/list')}
     if action=='screenshot':
-        return {'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']}
+        return {'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True}, preferred_id)['data']}
     if action=='navigate':
         url=str(payload.get('url','')).strip()
         if not url.startswith(('https://','http://')):
             raise ValueError('url must be http(s)')
-        evaluate('location.href='+json.dumps(url))
+        evaluate('location.href='+json.dumps(url), preferred_id)
         return {'ok':True,'url':url}
     if action=='eval':
         if not LOCAL_EVAL_ENABLED:
@@ -82,20 +87,20 @@ def execute_action(action,payload):
         selector=str(payload.get('selector','')).strip()
         if not selector: raise ValueError('selector required')
         expr='(()=>{const e=document.querySelector('+json.dumps(selector)+');if(!e)return false;e.scrollIntoView({block:"center",inline:"center"});e.click();return true})()'
-        ok=evaluate(expr).get('result',{}).get('value')
+        ok=evaluate(expr, preferred_id).get('result',{}).get('value')
         return {'ok':bool(ok),'clicked':bool(ok)}
     if action=='tap':
         x=float(payload.get('x',0)); y=float(payload.get('y',0))
-        cdp('Input.dispatchMouseEvent',{'type':'mouseMoved','x':x,'y':y})
-        cdp('Input.dispatchMouseEvent',{'type':'mousePressed','x':x,'y':y,'button':'left','clickCount':1})
-        cdp('Input.dispatchMouseEvent',{'type':'mouseReleased','x':x,'y':y,'button':'left','clickCount':1})
+        cdp('Input.dispatchMouseEvent',{'type':'mouseMoved','x':x,'y':y}, preferred_id)
+        cdp('Input.dispatchMouseEvent',{'type':'mousePressed','x':x,'y':y,'button':'left','clickCount':1}, preferred_id)
+        cdp('Input.dispatchMouseEvent',{'type':'mouseReleased','x':x,'y':y,'button':'left','clickCount':1}, preferred_id)
         return {'ok':True,'x':x,'y':y}
     if action=='scroll':
         dx=float(payload.get('deltaX',0)); dy=float(payload.get('deltaY',0))
-        cdp('Input.dispatchMouseEvent',{'type':'mouseWheel','x':float(payload.get('x',10)),'y':float(payload.get('y',10)),'deltaX':dx,'deltaY':dy})
+        cdp('Input.dispatchMouseEvent',{'type':'mouseWheel','x':float(payload.get('x',10)),'y':float(payload.get('y',10)),'deltaX':dx,'deltaY':dy}, preferred_id)
         return {'ok':True,'deltaX':dx,'deltaY':dy}
     if action=='type':
-        return {'ok':True,'result':cdp('Input.insertText',{'text':str(payload.get('text',''))})}
+        return {'ok':True,'result':cdp('Input.insertText',{'text':str(payload.get('text',''))}, preferred_id)}
     if action=='key':
         key=str(payload.get('key','')).strip()
         if not key:
@@ -112,8 +117,8 @@ def execute_action(action,payload):
             'Space':{'key':' ','code':'Space','windowsVirtualKeyCode':32,'nativeVirtualKeyCode':32},
         }
         spec=keymap.get(key,{'key':key,'code':key})
-        cdp('Input.dispatchKeyEvent',{'type':'keyDown',**spec})
-        cdp('Input.dispatchKeyEvent',{'type':'keyUp',**spec})
+        cdp('Input.dispatchKeyEvent',{'type':'keyDown',**spec}, preferred_id)
+        cdp('Input.dispatchKeyEvent',{'type':'keyUp',**spec}, preferred_id)
         return {'ok':True,'key':key}
     raise ValueError('unsupported_action')
 
