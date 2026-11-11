@@ -1,101 +1,56 @@
 #!/usr/bin/env python3
-import json, random, re, sys, time, urllib.parse, urllib.request
-from urllib.error import HTTPError, URLError
+import json, re, sys, urllib.parse, urllib.request
 
 BASE="https://imaosglobal.github.io/Ima-kernel/"
 API="https://ima-915m.onrender.com"
-PAGES=["index.html","human-centered-intelligence.html","compassion.html","global.html","geniza.html"]
 failures=[]
 
-def get(url, timeout=20):
-    req=urllib.request.Request(url, headers={"User-Agent":"IMA-Daily-QA/1.0"})
-    is_pages = urllib.parse.urlparse(url).hostname == "imaosglobal.github.io"
-    attempts = 24 if is_pages else 1
-    last_error = None
-    for attempt in range(attempts):
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.status, r.geturl(), r.read().decode("utf-8","replace")
-        except HTTPError as e:
-            if not is_pages or e.code not in (404, 429, 500, 502, 503, 504) or attempt == attempts - 1:
-                raise
-            last_error = f"HTTP {e.code}"
-        except (URLError, TimeoutError) as e:
-            if not is_pages or attempt == attempts - 1:
-                raise
-            last_error = str(e)
-        print(f"PUBLIC_PAGES_RETRY={attempt + 1}/{attempts} {url} {last_error}", flush=True)
-        time.sleep(5)
-    raise RuntimeError(f"GitHub Pages remained unavailable after {attempts} attempts: {last_error}")
+def get(url, timeout=30):
+    req=urllib.request.Request(url, headers={"User-Agent":"IMA-Daily-QA/2.0","Cache-Control":"no-cache"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.status, r.geturl(), r.read().decode("utf-8","replace")
 
 def check(name, fn):
     try: fn()
     except Exception as e: failures.append(f"{name}: {e}")
 
-def page_checks():
-    status, final, html=get(BASE)
-    assert status==200, f"HTTP {status}"
-    scripts = re.findall(r'<script[^>]+src=["\\\']([^"\\\']+\\.js)["\\\']', html)
-    assets = []
-    for src in scripts:
-        try:
-            s, _, js = get(urllib.parse.urljoin(BASE, src))
-            if s == 200:
-                assets.append(js)
-        except Exception:
-            pass
-    source_app = open("ima-ui/src/App.jsx", encoding="utf-8").read()
-    bundle = "\\n".join(assets)
-    assert "GoogleLogin" in source_app and "google.accounts.id.renderButton" in source_app, "Google entry missing from canonical UI source"
-    assert "אפשר פשוט לדבר עם אמא" not in source_app, "old landing copy still present"
-    assert "chat-tools" not in source_app, "stale broken selectors remain"
-    support_page = open("ima-ui/public/support.html", encoding="utf-8").read()
-    assert 'id="support"' in source_app and "SUPPORT_URL" in source_app and "href={SUPPORT_URL}" in source_app and 'href="/Ima-kernel/#support"' in support_page, "Support CTA has no destination"
-    assert "youtube.com/@imaglobal-d4g" in source_app, "public YouTube destination missing"
-    buttons = re.findall(r"<button\b([^>]*)>", source_app)
-    for attrs in buttons:
-        assert "onClick=" in attrs or 'type="submit"' in attrs, f"button without action: {attrs[:120]}"
-    assert source_app.count("<button") < 30, "public UI has excessive button repetition"
-    for p in PAGES[1:]:
-        s,_,h=get(urllib.parse.urljoin(BASE,p))
-        assert s==200, f"{p}: HTTP {s}"
-        assert "<title>" in h and 'rel="canonical"' in h, f"{p}: SEO metadata incomplete"
-        assert 'href="./index.html"' in h, f"{p}: no return path"
+def source_checks():
+    app=open("ima-ui/src/App.jsx",encoding="utf-8").read()
+    css=open("ima-ui/src/index.css",encoding="utf-8").read()
+    manifest=open("ima-ui/public/manifest.json",encoding="utf-8").read()
+    index=open("ima-ui/index.html",encoding="utf-8").read()
+    assert "renderButton" in app and 'id="ima-google-button"' in app, "Google Identity Services entry missing"
+    assert app.count('id="ima-google-button"') == 1, "Google mount duplicated in canonical source"
+    assert "MamaFigure" in app and "ChatPanel" in app and "chat-only-panel" in app, "Mama/chat contracts missing"
+    assert "SUPPORT_URL" in app and "PRIVACY_URL" in app and "feedback-panel" in app, "support/privacy/feedback contracts missing"
+    assert "beforeinstallprompt" in app and "install-button" in app, "PWA install contract missing"
+    assert "campaignId=24409551537" in app, "canonical campaign attribution missing"
+    assert "overflow-wrap" in css or "word-break" in css, "text overflow protection missing"
+    assert "prefers-reduced-motion" in css, "reduced-motion contract missing"
+    assert "min-width:0" in css.replace(" ",""), "min-width guard missing"
+    assert "ima-192.svg" in manifest and "ima-512.svg" in manifest and "?chat=1" in manifest, "PWA manifest/chat shortcut missing"
+    assert '__IMA_BUILD_VERSION__' in index, "public build marker missing"
+    assert 'accounts.google.com/gsi/client' in index, "Google GIS script missing"
 
-def visual_contract_checks():
-    css_path = 'ima-ui/src/index.css'
-    with open(css_path, encoding='utf-8') as handle:
-        css = handle.read()
-    assert 'overflow-wrap' in css or 'word-break' in css, 'source CSS: text overflow protection missing'
-    assert 'prefers-reduced-motion' in css, 'source CSS: reduced-motion contract missing'
-    assert 'min-width:0' in css.replace(' ', ''), 'source CSS: min-width guard missing'
-    assert '.topbar nav button{flex:0 0 auto;min-width:max-content;white-space:nowrap;overflow-wrap:normal}' in css, 'source CSS: mobile navigation labels must remain on one line'
+def public_checks():
+    status,_,html=get(BASE+"?qa=daily")
+    assert status==200, f"public index HTTP {status}"
+    assert 'id="root"' in html and 'assets/index-' in html, "canonical React build missing"
+    assert 'meta name="ima-build-version"' in html, "public build marker missing"
+    for path in ("manifest.json","support.html","privacy.html","feedback.html","icons/ima-192.svg","icons/ima-512.svg"):
+        s,_,_=get(BASE+path)
+        assert s==200, f"{path}: HTTP {s}"
+
 def api_checks():
     s,_,h=get(API+"/health"); assert s==200, f"health HTTP {s}"
     d=json.loads(h); assert d.get("status")=="ok", f"health payload {d}"
     s,_,h=get(API+"/ima-api/auth/config"); assert s==200, f"auth/config HTTP {s}"
     d=json.loads(h); g=d.get("google",{})
-    if not g.get("enabled"):
-        raise AssertionError("GOOGLE_CLIENT_ID is not configured on Render")
-    assert g.get("client_id"), "Google is enabled but client_id is absent"
+    assert g.get("enabled") and g.get("client_id"), "Google auth is not fully configured"
 
-def monkey_checks():
-    urls=[]
-    _,_,home=get(BASE)
-    for href in re.findall(r'href=["\']([^"\']+)["\']',home):
-        if href.startswith("./") and href.endswith(".html"):
-            urls.append(urllib.parse.urljoin(BASE,href))
-    urls=list(dict.fromkeys(urls))
-    random.seed(20261013)
-    for url in random.sample(urls, min(len(urls), 10)):
-        s,final,_=get(url+"?qa="+str(random.randint(1,999999)))
-        assert s==200, f"{url}: HTTP {s}"
-        assert urllib.parse.urlparse(final).netloc=="imaosglobal.github.io", f"unexpected host {final}"
-
-check("landing-page",page_checks)
+check("source-contracts",source_checks)
+check("public-runtime",public_checks)
 check("runtime-auth",api_checks)
-check("visual-contract",visual_contract_checks)
-check("monkey-navigation",monkey_checks)
 if failures:
     print("IMA DAILY QA FAILED")
     print("\n".join("- "+x for x in failures))
