@@ -79,7 +79,7 @@ export function useImaWebMCP(enabled = true) {
     if (!enabled || !window.isSecureContext || !document.modelContext) return;
     const controller = new AbortController();
     let active = true;
-    (async () => { try { if (active) await registerImaWebMCP(controller.signal); } catch {} })();
+    (async () => { try { if (active) await registerImaWebMCP(controller.signal); } catch { /* registration is optional; fallback remains available */ } })();
     return () => {
       active = false;
       controller.abort();
