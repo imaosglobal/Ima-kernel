@@ -1,77 +1,16 @@
-name: IMA Pages Deploy
+name: Deprecated — canonical public deployment is deploy-ima-pages.yml
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "ima-ui/**"
-      - "qa/ui_conformance.py"
-      - "ima_master_runtime.py"
-      - "connectors/llm/**"
-      - ".github/workflows/ima-pages-deploy.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: ima-pages-deploy
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  build-and-publish:
+  retired:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: ima-ui/package-lock.json
-
-      - name: Build UI
-        working-directory: ima-ui
+      - name: Prevent a second publishing path
         run: |
-          npm ci
-          npm run build
-
-      - name: Stamp release metadata
-        env:
-          RELEASE_SHA: ${{ github.sha }}
-        run: |
-          sed -i "s/__IMA_BUILD_VERSION__/$RELEASE_SHA/g" ima-ui/dist/index.html
-          echo "{\"version\":\"$RELEASE_SHA\"}" > ima-ui/dist/version.json
-          test -f ima-ui/dist/index.html
-          test -f ima-ui/dist/version.json
-          grep -q "$RELEASE_SHA" ima-ui/dist/index.html
-
-      - name: UI conformance QA
-        run: python qa/ui_conformance.py
-
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-          fetch-depth: 1
-
-      - name: Publish verified build to gh-pages
-        env:
-          RELEASE_SHA: ${{ github.sha }}
-        run: |
-          find gh-pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          cp -R ima-ui/dist/. gh-pages/
-          touch gh-pages/.nojekyll
-          cd gh-pages
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No deployment changes."
-            exit 0
-          fi
-          git commit -m "Deploy IMA $RELEASE_SHA"
-          git push origin HEAD:gh-pages
+          echo "::error::This publisher is retired. Use deploy-ima-pages.yml as the single canonical build, deploy, runtime verification and gh-pages mirror."
+          exit 1
