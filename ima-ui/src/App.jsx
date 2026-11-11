@@ -243,7 +243,7 @@ export default function App() {
     } catch { setFeedbackStatus(t.saveFailed); }
   };
 
-  if (chatOnly) return <div className="ima-chat-only"><MamaFigure /><h1>{lang === 'he' ? 'אמא' : 'IMA'}</h1>{user ? <ChatPanel t={t} lang={lang} user={user} chatOnly /> : <div className="chat-login"><p>{t.personalText}</p><GoogleButton user={user} onUser={setUser} t={t}/></div>}<button className="chat-only-back" onClick={()=>location.href=BASE}>{lang === 'he' ? 'חזרה לאתר' : 'Back to IMA'}</button></div>;
+  if (chatOnly) return <div className="ima-chat-only"><MamaFigure /><h1>{lang === 'he' ? 'אמא' : 'IMA'}</h1>{user ? <ChatPanel t={t} lang={lang} user={user} chatOnly /> : <div className="chat-login"><p>{t.personalText}</p><GoogleButton user={user} onUser={setUser} t={t}/>{user&&<button className="cta install-button" onClick={install}>{t.install}</button>}</div>}<button className="chat-only-back" onClick={()=>location.href=BASE}>{lang === 'he' ? 'חזרה לאתר' : 'Back to IMA'}</button></div>;
 
   return <div className="ima-site" dir={lang === 'he' ? 'rtl' : 'ltr'}>
     {notice && <div role="status" className="site-notice">{notice}</div>}
@@ -254,7 +254,7 @@ export default function App() {
     </header>
     <main id="top">
       <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions"><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button>{user&&<button className="ghost install-button" onClick={install}>{t.install}</button>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
+        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions"><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button>{user&&<button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <a className="mama-hero-link" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><MamaFigure /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a>
       </section>
       {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
