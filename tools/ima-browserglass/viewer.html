@@ -127,13 +127,23 @@
         window.parent.postMessage({jsonrpc:'2.0',id,method,params},'*');
       });
     }
+    async function updateModelContext(payload){
+      return hostCall('ui/update-model-context',{
+        content:[{
+          type:'text',
+          text:JSON.stringify({browser:payload.browser,text:payload.text,annotationPresent:!!payload.annotationPng}),
+          annotations:{audience:['assistant']}
+        }]
+      });
+    }
     async function deliver(text,withImage){
       const payload={text, browser:{url:pane.getAttribute('url')||'', mode, timestamp:new Date().toISOString()}};
       if(withImage)payload.annotationPng=canvas.toDataURL('image/png');
       const content=[{type:'text',text:JSON.stringify(payload)}];
       try{
+        const contextResult=await updateModelContext(payload);
         const result=await hostCall('ui/message',{role:'user',content});
-        return {ok:true,result};
+        return {ok:true,result,contextResult};
       }catch(e){
         if(typeof window.openai?.sendFollowUpMessage==='function'){
           await window.openai.sendFollowUpMessage({prompt:text});
