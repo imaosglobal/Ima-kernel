@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   askIma,
   getAuthConfig,
@@ -111,11 +111,15 @@ function GoogleButton({ user, onUser, t }) {
           await new Promise(r => setTimeout(r, 100));
         }
         if (!window.google?.accounts?.id || cancelled) throw new Error('Google unavailable');
+        const bytes = new Uint8Array(24);
+        crypto.getRandomValues(bytes);
+        const nonce = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
         window.google.accounts.id.initialize({
           client_id: config.google.client_id,
+          nonce,
           callback: async response => {
             try {
-              const result = await signInWithGoogleCredential(response.credential);
+              const result = await signInWithGoogleCredential(response.credential, nonce);
               onUser(result.user || null);
             } catch {
               setError('Sign-in could not be completed');
