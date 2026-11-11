@@ -172,6 +172,7 @@ export default function App() {
   const [runtime, setRuntime] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [feedbackStatus, setFeedbackStatus] = useState('');
+  const [notice, setNotice] = useState('');
   const t = copy[lang];
   const dir = lang === 'he' ? 'rtl' : 'ltr';
 
@@ -224,6 +225,7 @@ export default function App() {
 
   return (
     <div className="ima-site" dir={dir}>
+      {notice && <div role="status" className="site-notice">{notice}</div>}
       <header className="site-header">
         <button className="wordmark" onClick={() => scrollTo('top')} aria-label="IMA home">
           <span className="wordmark-mark">א</span>
