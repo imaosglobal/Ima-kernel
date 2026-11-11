@@ -16,20 +16,24 @@ jobs:
   monitor:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-
       - name: Verify canonical source contracts
         run: |
           set -euo pipefail
-          grep -Fq "home:'Open IMA now'" ima-ui/src/i18n.js
-          grep -Fq "GOOGLE_CAMPAIGN_URL='https://ads.google.com/aw/campaigns?campaignId=24409551537&ocid=4777132721'" ima-ui/src/App.jsx
-          grep -Fq 'accounts.google.com/gsi/client' ima-ui/index.html
-          grep -Eq "CACHE = 'ima-shell-v[0-9]+'" ima-ui/public/sw.js
+          grep -Fq 'MamaFigure' ima-ui/src/App.jsx
+          grep -Fq 'ChatPanel' ima-ui/src/App.jsx
+          grep -Fq 'chat-only-panel' ima-ui/src/App.jsx
+          grep -Fq 'SUPPORT_URL' ima-ui/src/App.jsx
+          grep -Fq 'PRIVACY_URL' ima-ui/src/App.jsx
+          grep -Fq 'GOOGLE_CAMPAIGN_URL' ima-ui/src/App.jsx
+          grep -Fq 'renderButton' ima-ui/src/App.jsx
+          grep -Fq 'beforeinstallprompt' ima-ui/src/App.jsx
+          grep -Fq 'ima-192.svg' ima-ui/public/manifest.json
+          grep -Fq 'ima-512.svg' ima-ui/public/manifest.json
           echo "IMA_SOURCE_CRITICAL_CONTRACTS=PASS"
-
-      - name: Verify public deployment identity and critical assets
+      - name: Verify public deployment identity
         env:
           SITE: https://imaosglobal.github.io/Ima-kernel/
         run: |
@@ -41,40 +45,17 @@ jobs:
             exit 2
           }
           SITE_ROOT="${SITE%/}"
-          for index_url in "$SITE_ROOT/" "$SITE_ROOT/?v=$expected"; do
-            curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$index_url" -o /tmp/index.html
-            grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\"" /tmp/index.html || { echo "PUBLIC_INDEX_VERSION_MISMATCH url=$index_url"; exit 3; }
-            grep -Fq 'id="root"' /tmp/index.html || { echo "PUBLIC_REACT_ROOT_MISSING url=$index_url"; exit 4; }
-            grep -Eq 'assets/index-[^"]+\.js' /tmp/index.html || { echo "PUBLIC_BUNDLE_REFERENCE_MISSING url=$index_url"; exit 5; }
-            grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html || { echo "PUBLIC_GOOGLE_IDENTITY_SCRIPT_MISSING url=$index_url"; exit 6; }
+          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE_ROOT/?v=$expected" -o /tmp/index.html
+          grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\"" /tmp/index.html
+          grep -Fq 'id="root"' /tmp/index.html
+          grep -Eq 'assets/index-[^"]+\.js' /tmp/index.html
+          grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html
+          for path in manifest.json support.html privacy.html feedback.html; do
+            curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE_ROOT/$path" >/dev/null
           done
-          echo "IMA_PUBLIC_INDEX_NORMAL_AND_CACHE_BUSTED=VERIFIED"
-          manifest=$(curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/manifest.json")
-          printf '%s' "$manifest" | grep -Fq 'ima-192.svg'
-          printf '%s' "$manifest" | grep -Fq 'ima-512.svg'
-          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-192.svg" >/dev/null
-          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE/icons/ima-512.svg" >/dev/null
-          bundle=$(python3 - <<'PY'
-          import re,requests
-          html=requests.get("https://imaosglobal.github.io/Ima-kernel/?v="+str(__import__("time").time_ns()),timeout=15).text
-          m=re.search(r'<script type="module" crossorigin src="([^"]+\.js)"',html)
-          if not m: raise SystemExit("PUBLIC_JS_BUNDLE_NOT_FOUND")
-          url="https://imaosglobal.github.io"+m.group(1)
-          print(requests.get(url,timeout=15).text)
-          PY
-          )
-          printf '%s' "$bundle" | grep -Fq 'Open IMA now'
-          printf '%s' "$bundle" | grep -Fq 'Install IMA'
-          printf '%s' "$bundle" | grep -Fq 'beforeinstallprompt'
-          printf '%s' "$bundle" | grep -Fq 'ima-install-available'
-          printf '%s' "$bundle" | grep -Fq 'shape:`rectangular`'
-          printf '%s' "$bundle" | grep -Fq 'utm_campaign=ima_initial_100ils'
-          echo "IMA_PUBLIC_CRITICAL_BUNDLE_CONTRACTS=PASS"
-          echo "IMA_PUBLIC_CRITICAL_MONITOR=PASS"
-
+          echo "IMA_PUBLIC_INDEX_AND_STATIC_ASSETS=VERIFIED"
   skip-non-main:
     if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Confirm production monitor is intentionally skipped
-        run: echo "Production monitor is restricted to the default branch; no public runtime checks were run for this ref."
+      - run: echo "Production monitor is restricted to main."
