@@ -1,0 +1,58 @@
+{
+  "standard_id": "IMA-AGI-COMMON",
+  "version": "1.0",
+  "status": "open_proposal",
+  "definition_path": "docs/IMA_AGI_COMMON_DEFINITION_v1.0.md",
+  "claim_policy": {
+    "agi_claim_allowed": false,
+    "required_independent_evidence": true,
+    "required_novel_tasks": true,
+    "required_human_calibration": true,
+    "required_cross_domain": true,
+    "required_longitudinal": true,
+    "required_safety_evaluation": true,
+    "required_external_replication": true
+  },
+  "dimensions": [
+    "novel_skill_acquisition",
+    "generalization_abstraction",
+    "reasoning",
+    "causal_counterfactual_reasoning",
+    "perception_multimodal_grounding",
+    "world_modeling",
+    "long_horizon_planning_replanning",
+    "goal_management",
+    "continual_learning",
+    "memory_consolidation_forgetting",
+    "cross_domain_transfer",
+    "scientific_discovery_hypothesis_testing",
+    "creative_open_ended_problem_solving",
+    "tool_environment_interaction",
+    "metacognition_uncertainty",
+    "self_correction",
+    "social_cultural_understanding",
+    "real_world_consequence_modeling",
+    "distribution_shift_robustness",
+    "safety_controllability_human_agency"
+  ],
+  "implementation_gate": [
+    "DESIGN",
+    "IMPLEMENT",
+    "TEST",
+    "DEPLOY",
+    "RUNTIME_VERIFY",
+    "MEASURE",
+    "DOCUMENT",
+    "REGRESSION_TEST"
+  ],
+  "levels": {
+    "L0": "narrow_ai",
+    "L1": "generalizing_ai",
+    "L2": "broad_agentic_ai",
+    "L3": "human_level_agi",
+    "L4": "robust_agi",
+    "L5": "beyond_human_general_intelligence"
+  },
+  "dynamic_update_rule": "When a stronger broadly accepted scientific definition is supported by independent evidence, update the definition, evaluation suite, gap registry, architecture mapping, and claims policy together; preserve version history.",
+  "last_reviewed": "2026-11-11"
+}
