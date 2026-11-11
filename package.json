@@ -35,6 +35,7 @@
     "ima:empowerment-governance": "node scripts/ima-healthy-empowerment-audit.mjs",
     "ima:betterment-governance": "node scripts/ima-continuous-betterment-audit.mjs",
     "test:relational-power-giving": "node tests/ima_relational_power_giving.test.mjs",
+    "test:dots-bridge": "node tests/ima_dots_bridge.test.mjs",
     "ima:unified-contract": "node tests/ima_unified_system_contract.test.mjs"
   },
   "repository": {
