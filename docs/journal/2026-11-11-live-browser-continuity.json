@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-11",
+  "title": "Daily IMA browser/device/project scan — MCP Apps bridge and model-context hardening",
+  "status": "ACTIVE_RUNTIME_REPAIR / CHATGPT_EMBED_PENDING",
+  "request": {
+    "summary": "Continuously scan canonical IMA state and browser/device-agent ecosystem, avoid duplicate architecture, implement the highest-value safe improvement, verify actual state, and record evidence/blockers/unknowns.",
+    "canonical_requirement": "LIVE-001",
+    "related_requirements": [
+      "AUTH-001",
+      "DEVICE-001",
+      "SELFQA-001",
+      "ULE-001",
+      "FIN-001",
+      "PROV-001"
+    ]
+  },
+  "prior_state": {
+    "latest_journal": "docs/journal/2026-11-10-live-browser-continuity.json",
+    "latest_ledger": "docs/IMA_MASTER_REQUIREMENTS_LEDGER.md",
+    "canonical_gap_ledger": "docs/IMA_MASTER_STATE_AND_GAP_LEDGER.md",
+    "key_gate": "LIVE-001 was IMPLEMENTED_IN_CODE / DEPLOY_IN_PROGRESS_NOT_E2E_VERIFIED; ChatGPT Web custom MCP connection and live rendering were not verified."
+  },
+  "scan": {
+    "repository": "imaosglobal/Ima-kernel main",
+    "render": {
+      "browserglass": "srv-dboaictg1s2s73el7phg",
+      "universalActionCore": "srv-dbm93mrbc2fs738lgto0",
+      "latestObservedBrowserglassDeploy": "76c6f4ccc77070bf04a721afc32d2f629e59f6aa (daily IMA doodle refresh), build_in_progress at observation",
+      "latestObservedPriorBridgeDeploy": "464720384b1e38973820075aa96403a6e8b071c6, canceled because a newer commit superseded it",
+      "universalActionCoreLatestObserved": "07d605d3c4744b81d34bbc1bf99b26f97cf12950 live before today's changes",
+      "requestLogs": "No request logs observed for the Universal Action Core in the queried window; this is consistent with no verified ChatGPT MCP invocation."
+    },
+    "publicRuntime": "Direct web open of the Render endpoints was not available through the current web fetch surface; no live-public success claim made from that path.",
+    "connectedDevice": "No fresh Termux/Chrome device evidence was available through the connected runtime in this run; no device-connected claim made.",
+    "auth": "AUTH-001 remains runtime-configuration-gap; real Google login/session persistence/cross-device continuity not verified.",
+    "revenue": "FIN-001 remains evidence-only governance; no transaction/spend/commitment made or inferred.",
+    "ecosystemResearch": {
+      "mcpApps": "OpenAI documents ui/* JSON-RPC over postMessage as the standard MCP Apps bridge and recommends ui/message for follow-ups and ui/update-model-context for model-visible UI context.",
+      "webmcp": "Chrome documents WebMCP as an early-preview, client-side browser API; it is not a replacement for IMA's backend MCP Apps transport and should not be promoted as production truth yet.",
+      "androidAccessibility": "Android documents AccessibilityService for user-facing accessibility and controlled interaction; it requires system binding and should remain explicit/authorized. This is relevant prior art for future device adapters, not evidence that IMA has a live accessibility agent."
+    }
+  },
+  "changes": [
+    {
+      "path": "tools/ima-browserglass/viewer.html",
+      "commit": "7578e8cc201291056c4002955f85622a633ec41c",
+      "action": "Added standard ui/update-model-context before ui/message so browser URL, user message, timestamp/mode and annotation presence are carried into future model context; retained ui/message as the actual follow-up and kept explicit ACK/error boundary.",
+      "evidence": "GitHub commit exists. Render deployment was superseded/canceled by subsequent canonical commits, so live production behavior is NOT yet verified."
+    },
+    {
+      "path": "services/ima-action-mcp/widget.html",
+      "commits": [
+        "be7f4b3f461ce57b35743fd07fd0495dd65ae911",
+        "464720384b1e38973820075aa96403a6e8b071c6"
+      ],
+      "action": "Hardened the nested MCP Apps bridge: accept BrowserGlass-origin messages only, validate responses from known ChatGPT web origins, and preserve valid postMessage targeting.",
+      "evidence": "Both commits exist. The first was superseded; the second was then superseded by the later canonical doodle-refresh commit in Render's automatic deployment queue. Live behavior is NOT verified."
+    }
+  ],
+  "safety": {
+    "no_auth_bypass": true,
+    "no_private_data_export": true,
+    "no_money_spent": true,
+    "no_binding_commercial_commitment": true,
+    "no_parallel_browser_created": true
+  },
+  "blockers": [
+    "ChatGPT Web custom MCP server connection remains external/account-level and cannot be installed by the available Plugin Management connector; the available management surface exposes uninstall/permissions but no install/connect action.",
+    "Actual ChatGPT MCP App rendering and ui/message acknowledgement remain unverified because the current chat runtime is not itself connected to the custom IMA MCP server.",
+    "Current Render auto-deploy is continuously receiving canonical-main commits; the browser bridge changes were superseded before a stable live deployment could be verified.",
+    "No fresh Termux/Chrome device report was accessible in this run."
+  ],
+  "unknowns": [
+    "Whether the current nested BrowserGlass iframe boundary will be accepted by ChatGPT's MCP Apps sandbox after metadata refresh.",
+    "Whether the ChatGPT host advertises both message and updateModelContext capabilities for this app instance.",
+    "Whether the annotation image itself is visible to the model; this change currently sends annotation presence as model context text rather than falsely claiming pixel-level model visibility.",
+    "Whether Google authentication persists through the eventual live-browser session."
+  ],
+  "next_target": [
+    "Obtain a stable Render deployment containing the bridge changes, then perform the first supported ChatGPT Web MCP invocation and verify request logs plus UI rendering.",
+    "After connection, invoke ima_live_browser status/screenshot and verify an explicit ui/message acknowledgement before reporting receipt.",
+    "Verify annotation-to-model context with a real host response; if image content is supported, upgrade from annotation-presence text to a model-visible image block.",
+    "Reinspect Termux/Chrome bridge and Universal Device Action Bridge when device evidence is available.",
+    "Keep LIVE-001 as the sole canonical live-browser requirement and reconcile all future browser-agent/WebMCP/device-control work into it."
+  ],
+  "truth_boundary": "Source commits and queued deployments prove implementation/deployment intent only. VERIFIED_LIVE requires independent runtime evidence from the supported ChatGPT Web MCP Apps surface and authorized device path."
+}
