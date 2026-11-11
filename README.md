@@ -4,6 +4,18 @@
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning · global cooperation**
 
+### Public product experience
+
+The canonical public experience is now designed around **first use before documentation**: ask a real question, see what is actually verified, then choose personal sign-in or contribution. The public UI is intentionally lighter and faster than the previous documentation-heavy surface.
+
+- [Try IMA](https://imaosglobal.github.io/Ima-kernel/)
+- [What is IMA?](https://imaosglobal.github.io/Ima-kernel/discover.html)
+- [IMA research](https://imaosglobal.github.io/Ima-kernel/research.html)
+- [Global discovery & conversion workstream — Issue #171](https://github.com/imaosglobal/Ima-kernel/issues/171)
+
+This redesign is part of the canonical IMA product; it does not create a second site or second identity.
+
+
 IMA is a public, open-source human-centered intelligence project for conversation, learning, creation, accessibility and human connection. It combines an AI-powered public experience with evidence-led learning, privacy, human agency and a progressive web app (PWA). The public experience is available now; this repository is the canonical place to explore, question, contribute, test and build IMA.
 
 ## Global AGI Common Definition — open collaboration
