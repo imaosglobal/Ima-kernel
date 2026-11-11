@@ -82,14 +82,18 @@ jobs:
           grep -Fq "feedback-panel" src/App.jsx
           grep -Fq "submitFeedback" src/App.jsx
           grep -Fq "SUPPORT_URL" src/App.jsx
-          grep -Fq "live browser" src/App.jsx || true
           grep -Fq "PRIVACY_URL" src/App.jsx
           grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
           grep -Fq "install-button" src/App.jsx
           grep -Fq "renderButton" src/App.jsx
-          test "$(grep -o '<GoogleLogin auth=' src/App.jsx | wc -l)" -eq 1
+          grep -Fq 'id="ima-google-button"' src/App.jsx
+          test "$(grep -o 'id="ima-google-button"' src/App.jsx | wc -l)" -eq 1
+          grep -Fq "MamaFigure" src/App.jsx
+          grep -Fq "ChatPanel" src/App.jsx
+          grep -Fq "chat-only-panel" src/App.jsx
           grep -Fq '<link rel="manifest" href="/Ima-kernel/manifest.json" />' index.html
           grep -Fq "campaignId=24409551537" src/App.jsx
+          grep -Fq "beforeinstallprompt" src/App.jsx
           if grep -Fq 'href="/n"' src/App.jsx index.html support.html privacy.html; then echo "ERROR: broken /n navigation"; exit 1; fi
           if grep -Fq "המשוב התקבל תודה" src/App.jsx; then
             echo "ERROR: legacy feedback acknowledgement detected"
@@ -97,7 +101,7 @@ jobs:
           fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button"; do
+          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button" "MamaFigure" "chat-only-panel"; do
             grep -Fq "$required" "$bundle" || { echo "ERROR: missing bundle contract: $required"; exit 1; }
           done
           if grep -Fq "המשוב התקבל תודה" "$bundle"; then
@@ -106,6 +110,7 @@ jobs:
           fi
           test -f dist/support.html
           test -f dist/privacy.html
+          test -f dist/feedback.html
           test -f dist/version.json
           echo "IMA_PUBLIC_ARTIFACT_CONTRACT=VERIFIED"
 
