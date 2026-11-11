@@ -28,7 +28,8 @@ SYSTEM_SCOPE=(
 "global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery",
 "global localization and accessibility","app-store readiness and verified reputation",
 "lawful growth experiments and partnership discovery","creator-to-commerce and revenue evidence","nonprofit finance, expenses and creator succession governance","long-horizon continuity (daily/monthly/yearly/decadal)","multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)",
-"forward care and one-year preparedness","peer and competitor cooperation intelligence","universal task support and safe task routing","conflict de-escalation and safety-aware care","global source scanning within authorization","global change and humanitarian world pulse","historical conflict/outcome mapping","temporal relevance and stale-capability pruning","continuous self-repair and simplification"
+"forward care and one-year preparedness","peer and competitor cooperation intelligence","universal task support and safe task routing","conflict de-escalation and safety-aware care","global source scanning within authorization","global change and humanitarian world pulse","historical conflict/outcome mapping","temporal relevance and stale-capability pruning","continuous self-repair and simplification",
+"AGI readiness and general intelligence gap closure", "lifelong learning and continual adaptation", "persistent self-model and metacognition", "world-state grounding and causal reasoning", "long-horizon autonomous planning with bounded authorization", "cross-domain transfer and novel-task generalization", "independent AGI evaluation and red-team verification"
 )
 
 COMMANDS={
@@ -66,12 +67,13 @@ COMMANDS={
 "public_reconciliation":["python","scripts/ima_public_reconciliation.py"],
 "live_browser_health":["python","scripts/ima_live_browser_health.py"],
 "world_pulse":["python","scripts/ima_world_pulse.py"],
+"agi_gap_check":["python","scripts/ima_agi_gap_check.py"],
 }
 
 def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(microsecond=0)
 
 def due(now):
-    tasks=["web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","live_browser_health","finance_governance_audit","funding_revenue_intelligence","distribution","capability_contract","growth_cycle","monetization_readiness"]
+    tasks=["agi_gap_check","web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","live_browser_health","finance_governance_audit","funding_revenue_intelligence","distribution","capability_contract","growth_cycle","monetization_readiness"]
     if now.hour%6==0: tasks += ["evolution","engine_discovery"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
@@ -155,6 +157,7 @@ def run_loop():
       "truth_rule":"Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
       "lawful_distribution_rule":"Public sharing is limited to lawful, consent-respecting, non-spam channels and authorized accounts.",
       "user_change_rule":"Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
+"agi_readiness_rule":"Every daily cycle must inspect IMA against the canonical AGI gap program, identify the highest-value unblocked gap, attempt the smallest safe canonical implementation, test and runtime-verify it, and record evidence. Documentation never counts as capability proof. No AGI claim is permitted without independent reproducible evaluation across broad novel tasks plus memory, continual learning, grounding, autonomy and safety evidence.",
       "global_attention_charter":"docs/IMA_GLOBAL_ATTENTION_RELEVANCE_ADAPTATION_AND_BENEVOLENT_GROWTH_CHARTER.md",
       "provenance_rule":"Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
       "cross_domain_reconciliation_rule":"All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
