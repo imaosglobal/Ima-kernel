@@ -3,8 +3,8 @@ import { observeIma } from './imaLearningBus';
 const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
 const GOOGLE_USER_COOKIE='ima-google-user-v1';
 const GOOGLE_TOKEN_COOKIE='ima-google-session-v1';
-function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;}catch{}}
-function getCookie(name){try{const row=document.cookie.split('; ').find(x=>x.startsWith(name+'='));return row?decodeURIComponent(row.slice(name.length+1)):null}catch{return null}}
+function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;}catch{ /* cookie write failure is non-fatal */ }}
+function getCookie(name){try{const row=document.cookie.split('; ').find(x=>x.startsWith(name+'='));return row?decodeURIComponent(row.slice(name.length+1)):null}catch{ return null }}
 function clearCookie(name){try{document.cookie=`${name}=; Max-Age=0; Path=/; SameSite=Lax`;}catch{}}
 
 export async function getSessionToken(forceRefresh = false) {
