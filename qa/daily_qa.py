@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, re, sys, urllib.parse, urllib.request
+import json, re, sys, time, urllib.parse, urllib.request
 
 BASE="https://imaosglobal.github.io/Ima-kernel/"
 API="https://ima-915m.onrender.com"
@@ -33,7 +33,20 @@ def source_checks():
     assert 'accounts.google.com/gsi/client' in index, "Google GIS script missing"
 
 def public_checks():
-    status,_,html=get(BASE+"?qa=daily")
+    PUBLIC_PAGES_RETRY=3
+    last=None
+    for attempt in range(PUBLIC_PAGES_RETRY):
+        try:
+            status,_,html=get(BASE+"?qa=daily")
+            if status==200:
+                break
+            last=f"HTTP {status}"
+        except Exception as e:
+            last=str(e)
+        if attempt < PUBLIC_PAGES_RETRY-1:
+            time.sleep(2)
+    else:
+        raise RuntimeError(f"GitHub Pages retry exhausted: {last}")
     assert status==200, f"public index HTTP {status}"
     assert 'id="root"' in html and 'assets/index-' in html, "canonical React build missing"
     assert 'meta name="ima-build-version"' in html, "public build marker missing"
