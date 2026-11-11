@@ -64,6 +64,9 @@ jobs:
       - name: Cross-domain adaptation evaluation
         run: python .ima/web_intelligence/adaptation_evaluator.py
 
+      - name: Dots bidirectional learning test
+        run: npm run test:dots-bridge
+
       - name: Core and contract tests
         run: npm run ima:verify
 
