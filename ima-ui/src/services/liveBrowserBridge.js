@@ -5,8 +5,8 @@ const LOCAL='http://127.0.0.1:8787';
 
 async function authHeaders(){
   let token=null;
-  try { token=await getSessionToken(); } catch {}
-  if (!token) { try { token=await getSessionToken(true); } catch {} }
+  try { token=await getSessionToken(); } catch { /* retry with forced refresh below */ }
+  if (!token) { try { token=await getSessionToken(true); } catch { /* handled by missing-token error below */ } }
   if (!token) throw new Error('Google/IMA session token unavailable; please sign in again');
   return {'Content-Type':'application/json','Authorization':`Bearer ${token}`};
 }
