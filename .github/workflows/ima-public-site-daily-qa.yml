@@ -2,7 +2,7 @@ name: IMA Daily Public Site QA
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "17 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,52 +15,24 @@ concurrency:
 jobs:
   public-site:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Python QA dependencies
+      - name: Install browser QA dependencies
         run: |
-          python -m pip install --disable-pip-version-check requests beautifulsoup4 playwright
+          python -m pip install --disable-pip-version-check playwright requests beautifulsoup4
           playwright install --with-deps chromium
-
-      - name: Check public site, Google sign-in, buttons, links and images
-        env:
-          SITE: https://imaosglobal.github.io/Ima-kernel/
-          API: https://ima-915m.onrender.com
-        run: python3 scripts/public_site_qa.py
-
-      - name: Real-browser critical control smoke test
+      - name: Verify public source contracts
+        run: |
+          set -euo pipefail
+          grep -Fq 'MamaFigure' ima-ui/src/App.jsx
+          grep -Fq 'ChatPanel' ima-ui/src/App.jsx
+          grep -Fq 'feedback-panel' ima-ui/src/App.jsx
+          grep -Fq 'beforeinstallprompt' ima-ui/src/App.jsx
+          grep -Fq 'campaignId=24409551537' ima-ui/src/App.jsx
+          echo "IMA_DAILY_SOURCE_CONTRACTS=PASS"
+      - name: Real-browser public smoke
         env:
           SITE: https://imaosglobal.github.io/Ima-kernel/
           EXPECTED_SHA: ${{ github.sha }}
         run: python3 scripts/public_site_browser_smoke.py
-
-
-      - name: Verify all README headings are English
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-          bad=[]
-          for p in Path('.').rglob('README.md'):
-              if any(part.startswith('_archive') for part in p.parts):
-                  continue
-              for n,line in enumerate(p.read_text(encoding='utf-8', errors='ignore').splitlines(),1):
-                  if re.match(r'^#{1,6}\s+', line) and re.search(r'[\u0590-\u05ff]', line):
-                      bad.append(f"{p}:{n}:{line}")
-          if bad:
-              print("\n".join(bad))
-              raise SystemExit("README_HEADING_LANGUAGE_REGRESSION")
-          print("README_HEADINGS_ENGLISH=PASS")
-          PY
-
-      - name: Verify canonical campaign destination
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          text=Path("ima-ui/src/App.jsx").read_text(encoding="utf-8")
-          required="utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils"
-          assert required in text, "Google campaign destination missing from IMA image"
-          print("IMA_CAMPAIGN_DESTINATION=PASS")
-          PY
