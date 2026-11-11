@@ -46,10 +46,14 @@ jobs:
           }
           SITE_ROOT="${SITE%/}"
           curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE_ROOT/?v=$expected" -o /tmp/index.html
-          grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\"" /tmp/index.html
-          grep -Fq 'id="root"' /tmp/index.html
-          grep -Eq 'assets/index-[^"]+\.js' /tmp/index.html
-          grep -Fq 'accounts.google.com/gsi/client' /tmp/index.html
+          curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE_ROOT/?v=$expected&cachebust=$(date +%s%N)" -o /tmp/index-cachebust.html
+          for file in /tmp/index.html /tmp/index-cachebust.html; do
+            grep -Fq "<meta name=\"ima-build-version\" content=\"$expected\">" "$file"
+            grep -Fq 'id="root"' "$file"
+            grep -Eq 'assets/index-[^"]+\.js' "$file"
+            grep -Fq 'accounts.google.com/gsi/client' "$file"
+          done
+          echo "IMA_PUBLIC_INDEX_NORMAL_AND_CACHE_BUSTED=VERIFIED"
           for path in manifest.json support.html privacy.html feedback.html; do
             curl -fsSL --retry 2 --connect-timeout 8 --max-time 15 "$SITE_ROOT/$path" >/dev/null
           done
