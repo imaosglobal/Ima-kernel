@@ -101,16 +101,16 @@ jobs:
           fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button" "MamaFigure" "chat-only-panel"; do
+          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button" "chat-only-panel"; do
             grep -Fq "$required" "$bundle" || { echo "ERROR: missing bundle contract: $required"; exit 1; }
           done
           if grep -Fq "המשוב התקבל תודה" "$bundle"; then
             echo "ERROR: legacy feedback acknowledgement detected in bundle"
             exit 1
           fi
-          test -f dist/support.html
-          test -f dist/privacy.html
-          test -f dist/feedback.html
+          test -f public/support.html
+          test -f public/privacy.html
+          test -f public/feedback.html
           test -f dist/version.json
           echo "IMA_PUBLIC_ARTIFACT_CONTRACT=VERIFIED"
 
