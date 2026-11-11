@@ -26,7 +26,7 @@ class GlobalGrowthContractTests(unittest.TestCase):
         self.assertIn("UNKNOWN", state["truth_rule"])
 
     def test_public_feedback_is_present(self):
-        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        html = (ROOT / "ima-ui/src/App.jsx").read_text(encoding="utf-8")
         self.assertIn("feedback-panel", html)
         self.assertNotIn("\\ntrack('page_view'", html)
 
