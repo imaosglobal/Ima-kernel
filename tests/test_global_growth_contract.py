@@ -27,7 +27,7 @@ class GlobalGrowthContractTests(unittest.TestCase):
 
     def test_public_feedback_is_present(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("./feedback.html", html)
+        self.assertIn("feedback-panel", html)
         self.assertNotIn("\\ntrack('page_view'", html)
 
 if __name__ == "__main__":
