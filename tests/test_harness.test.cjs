@@ -44,7 +44,9 @@ assert.ok(canonicalPages.includes("types: [ima-canonical-deploy]"), "canonical P
 assert.ok(canonicalPages.includes('push:\n    branches: ["main"]'), "canonical Pages deploy must run on main updates");
 assert.ok(!canonicalPages.includes("workflow_run:"), "canonical Pages deploy must not duplicate production deploys after unrelated state-writing workflows complete");
 assert.ok(!canonicalPages.includes('"IMA Unified Loop"'), "unified loop must use its single explicit dispatch rather than trigger a duplicate deployment");
-assert.ok(publicBrowserSmoke.includes("for viewport_width in (390, 768, 1280):") && publicBrowserSmoke.includes('metrics["whiteSpace"] == "nowrap"'), "public browser smoke must prevent mobile navigation label wrapping");
+assert.ok(publicBrowserSmoke.includes("for viewport_width in (390, 768, 1280):"), "public browser smoke must cover mobile, tablet and desktop");
+const uiCss = fs.readFileSync("ima-ui/src/index.css", "utf8");
+assert.ok(uiCss.includes("site-header nav button,.language") && uiCss.includes("white-space:nowrap"), "public navigation labels must not wrap on mobile");
 assert.ok(publicDailyQA.includes("EXPECTED_SHA: ${{ github.sha }}"), "scheduled public QA must compare runtime against the current source SHA");
 assert.ok(dailyQA.includes("PUBLIC_PAGES_RETRY="), "push QA must retry transient GitHub Pages deployment responses without suppressing final failure");
 assert.ok(canonicalPages.includes("source_sha: ${{ steps.source.outputs.sha }}"), "canonical Pages artifact must be stamped from the checked-out canonical source SHA");
