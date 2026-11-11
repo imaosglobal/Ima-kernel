@@ -17,6 +17,7 @@ const agencyGate = require("./IMA_HUMAN_AGENCY_GATE");
 const revenueEvidence = require("./IMA_REVENUE_EVIDENCE");
 const healthyEmpowerment = require("./IMA_HEALTHY_EMPOWERMENT");
 const continuousBetterment = require("./IMA_CONTINUOUS_BETTERMENT");
+const dots = require("./IMA_DOTS_BRIDGE");
 
 const runtime = {
     boot() {
@@ -30,6 +31,10 @@ const runtime = {
         state.set("governance", { truth_gate: "CANONICAL", human_agency_gate: "CANONICAL", revenue_evidence: "CANONICAL", healthy_empowerment: "CANONICAL" });
         const empowerment = healthyEmpowerment.selfAssessment({ safety: "UNKNOWN", capacity: "UNKNOWN", energy: "UNKNOWN", overload: "UNKNOWN", agency: "HIGH" });
         state.set("healthy_empowerment", empowerment);
+        dots.register();
+        state.set("dots", dots.status());
+        events.emit("DOTS_READY", dots.card());
+
         const betterment = continuousBetterment.selfAssessment({ evidence: "UNKNOWN", risk: "UNKNOWN", reversibility: "UNKNOWN", human_impact: "UNKNOWN" });
         state.set("continuous_betterment", betterment);
 
@@ -88,6 +93,7 @@ const runtime = {
         build: portableIdentityBuild,
         integrity: portableIdentityIntegrity
       },
+      dots: dots.status(),
       derivation_registry: {
         build: derivationRegistryBuild,
         integrity: derivationRegistryIntegrity
