@@ -1,5 +1,8 @@
+import { createRequire } from "node:module";
 import assert from "node:assert/strict";
-import dots from "../kernel/runtime/CANONICAL/IMA_DOTS_BRIDGE.js";
+
+const require = createRequire(import.meta.url);
+const dots = require("../kernel/runtime/CANONICAL/IMA_DOTS_BRIDGE.js");
 
 assert.equal(dots.DOTS_ID, "ima-dots");
 assert.equal(dots.CONTRACT_VERSION, "1.0.0");
