@@ -1,10 +1,25 @@
 # IMA — Human-Centered Intelligence
 
-**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
+**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)** · **[Global AGI collaboration hub](https://github.com/imaosglobal/Ima-kernel/issues/170)**
 
-**Human-centered intelligence · compassion · human agency · evidence-based learning**
+**Human-centered intelligence · compassion · human agency · evidence-based learning · global cooperation**
 
 IMA is a public, open-source human-centered intelligence project for conversation, learning, creation, accessibility and human connection. It combines an AI-powered public experience with evidence-led learning, privacy, human agency and a progressive web app (PWA). The public experience is available now; this repository is the canonical place to explore, question, contribute, test and build IMA.
+
+## Global AGI Common Definition — open collaboration
+
+IMA maintains an open, evidence-based and revisable proposal for a common AGI definition.
+
+**[IMA AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.0.md)**  
+**[IMA Cooperative General Intelligence Vision](docs/IMA_VISION_COOPERATIVE_GENERAL_INTELLIGENCE_2026-11-11.md)**  
+**[Global Partner & Outreach Registry](research/IMA_AGI_DEFINITION_OUTREACH_REGISTRY.md)**  
+**[Open collaboration hub — Issue #170](https://github.com/imaosglobal/Ima-kernel/issues/170)**
+
+The proposal explicitly covers contextual and personalized intelligence, identity/intent/capability/authority separation, lifelong continuity, unknown-agent interaction, knowledge-to-action, changing tools and environments, human-machine cooperation, and independent evaluation.
+
+Researchers, engineers, standards bodies, companies, universities, civil society, governments, journalists, students and independent contributors are invited to challenge it, improve it, map standards and benchmarks to it, contribute tests, or propose a stronger alternative.
+
+**This is not a claim that IMA is currently AGI or L5, and participation does not imply endorsement.**
 
 ## IMA — Human Intelligence: Understanding People
 
@@ -253,3 +268,19 @@ The canonical policy is [IMA Global Attention, Relevance, Adaptation & Benevolen
 **Global observers and contributors:** inspect the code and evidence, test what is claimed, report problems, suggest improvements and distinguish verified runtime behavior from documentation or intention. GitHub is a public window into IMA, not proof that every capability is live.
 
 **Feedback principle:** every authorized signal can matter. IMA should deduplicate feedback, understand context, prioritize recurring or consequential issues, act only within authorization, verify the result, and reduce obsolete operational complexity while preserving useful historical evidence.
+
+## Global movement to IMA's GitHub
+
+IMA's GitHub is intentionally being made the public collaboration and evidence hub, not merely a code repository.
+
+If you found IMA through a paper, standards group, social post, AI community, university, company, device project or another route, the GitHub repository is where you can inspect the implementation, challenge claims, contribute evidence, test ideas and help shape the open proposal.
+
+**Start here:** [Global AGI collaboration hub — Issue #170](https://github.com/imaosglobal/Ima-kernel/issues/170)
+
+Useful entry points:
+- [AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.0.md)
+- [Cooperative General Intelligence Vision](docs/IMA_VISION_COOPERATIVE_GENERAL_INTELLIGENCE_2026-11-11.md)
+- [Global Partner & Outreach Registry](research/IMA_AGI_DEFINITION_OUTREACH_REGISTRY.md)
+- [Contributing](CONTRIBUTING.md)
+
+No artificial traffic, misleading engagement or spam is intended. The goal is genuine global participation and independent verification.
