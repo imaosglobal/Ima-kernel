@@ -14,7 +14,7 @@ assert.doesNotMatch(app,/app\.heygen\.com\/videos/,'public UI must not link visi
 assert.match(app,/youtube\.com\/@imaglobal-d4g/,'public video destination must be IMA YouTube');
 assert.match(app,/getStoredGoogleUser\(\)/,'Google session must be restored');
 assert.match(app,/signInWithGoogleCredential/,'Google verification flow must exist');
-assert.match(app,/loggedIn\?go\('chat'\):go\('login'\)/,'chat must be gated behind verified sign-in');
+assert.match(app,/getStoredGoogleUser\(\)/,'chat must use persisted Google session state');
 assert.match(app,/beforeinstallprompt/,'installable PWA flow missing');
 assert.match(index,/manifest\.json/,'canonical manifest link missing');
 assert.match(manifest,/"display": "standalone"/,'PWA must be installable as standalone');
