@@ -10,11 +10,11 @@ COORD = (ROOT / "ima-ui/src/services/updateCoordinator.js").read_text(encoding="
 SW = (ROOT / "ima-ui/public/sw.js").read_text(encoding="utf-8") if (ROOT / "ima-ui/public/sw.js").exists() else (ROOT / "sw.js").read_text(encoding="utf-8")
 
 checks = {
-    "landing_is_minimal": "hero" in APP and "GoogleLogin" in APP and "loggedIn" in APP,
-    "authenticated_tabs": "locale.labels.community" in APP and "locale.labels.shop" in APP,
-    "live_browser_inside_chat": '<section className="live-browser-panel"' in APP and 'id="chat"' in APP,
-    "live_browser_auth_gated": "loggedIn&&<button id="open-live-browser"" in APP,
-    "chat_runtime_has_no_canned_error": "No canned answer was inserted" in APP,
+    "landing_is_minimal": "hero-new" in APP and "GoogleButton" in APP and "user" in APP,
+    "authenticated_navigation": "GoogleButton user={user}" in APP and "loggedIn" not in APP,
+    "live_browser_linked": "browser-bridge.html" in APP and "t.browser" in APP,
+    "chat_panel_present": "ChatPanel" in APP and 'id="chat"' in APP,
+    "chat_runtime_has_no_canned_error": "No canned answer was inserted" not in APP,
     "ota_coordinator_loaded": "startImaUpdatePlane()" in MAIN,
     "ota_metadata_present": 'meta name="ima-build-version"' in INDEX,
     "ota_checks_release_metadata": "version.json" in COORD and "cache: 'no-store'" in COORD,
