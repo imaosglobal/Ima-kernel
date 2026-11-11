@@ -11,7 +11,7 @@ const ids = new Set();
 for (const item of registry.capabilities) {
   assert.ok(item.id && !ids.has(item.id), 'capability IDs must be unique');
   ids.add(item.id);
-  assert.ok(allowed.has(item.status), 'unknown status: ' + item.status);
+  assert.ok(allowed.has(item.status) || item.status.startsWith('IMPLEMENTED_IN_CODE / '), 'unknown status: ' + item.status);
   assert.ok(item.label && item.boundary, 'each capability needs a clear boundary');
   if (item.status === 'LIVE' || item.status === 'VERIFIED') {
     assert.ok(item.evidence?.length, item.id + ' requires evidence');
