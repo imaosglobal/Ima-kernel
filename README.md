@@ -22,7 +22,7 @@ IMA is a public, open-source human-centered intelligence project for conversatio
 
 IMA maintains an open, evidence-based and revisable proposal for a common AGI definition.
 
-**[IMA AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.0.md)**  
+**[IMA AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.1.md)**  
 **[IMA Cooperative General Intelligence Vision](docs/IMA_VISION_COOPERATIVE_GENERAL_INTELLIGENCE_2026-11-11.md)**  
 **[Global Partner & Outreach Registry](research/IMA_AGI_DEFINITION_OUTREACH_REGISTRY.md)**  
 **[Open collaboration hub — Issue #170](https://github.com/imaosglobal/Ima-kernel/issues/170)**
@@ -290,7 +290,7 @@ If you found IMA through a paper, standards group, social post, AI community, un
 **Start here:** [Global AGI collaboration hub — Issue #170](https://github.com/imaosglobal/Ima-kernel/issues/170)
 
 Useful entry points:
-- [AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.0.md)
+- [AGI Common Definition v1.1](docs/IMA_AGI_COMMON_DEFINITION_v1.1.md)
 - [Cooperative General Intelligence Vision](docs/IMA_VISION_COOPERATIVE_GENERAL_INTELLIGENCE_2026-11-11.md)
 - [Global Partner & Outreach Registry](research/IMA_AGI_DEFINITION_OUTREACH_REGISTRY.md)
 - [Contributing](CONTRIBUTING.md)
