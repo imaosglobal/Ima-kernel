@@ -17,6 +17,12 @@ const FUNDING_URL = BASE + 'funding.html';
 const PRIVACY_URL = BASE + 'privacy.html';
 const GOOGLE_CAMPAIGN_URL = BASE + '?campaignId=24409551537&utm_source=ima_logo';
 const YOUTUBE_URL = 'https://www.youtube.com/@imaglobal-d4g';
+const PAID_PILOT_URL = 'https://github.com/imaosglobal/Ima-kernel/issues/173';
+const SUPPORTED_LOCALES = [
+  ['he','עברית'],['en','English'],['ar','العربية'],['es','Español'],['fr','Français'],
+  ['pt','Português'],['de','Deutsch'],['ru','Русский'],['hi','हिन्दी'],['zh','中文'],['ja','日本語']
+];
+const RTL_LOCALES = new Set(['he','ar','fa','ur']);
 const CLEAN_LOGO_URL = 'https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
 const copy = {
   he: {
@@ -201,7 +207,12 @@ function ChatPanel({ t, lang, user, onClose, chatOnly = false }) {
 }
 
 export default function App() {
-  const [lang, setLang] = useState(() => localStorage.getItem('ima-site-language') || (navigator.language?.startsWith('he') ? 'he' : 'en'));
+  const [lang, setLang] = useState(() => {
+    const saved = localStorage.getItem('ima-site-language');
+    if (saved) return saved;
+    const detected = String(navigator.language || 'en').split('-')[0].toLowerCase();
+    return SUPPORTED_LOCALES.some(([code]) => code === detected) ? detected : 'en';
+  });
   const [user, setUser] = useState(() => getStoredGoogleUser());
   const [chatOpen, setChatOpen] = useState(() => new URLSearchParams(location.search).get('chat') === '1' || Boolean(getStoredGoogleUser()));
   const [runtime, setRuntime] = useState(null);
@@ -209,13 +220,13 @@ export default function App() {
   const [feedbackStatus, setFeedbackStatus] = useState('');
   const [installEvent, setInstallEvent] = useState(null);
   const [notice, setNotice] = useState('');
-  const t = copy[lang];
+  const t = copy[lang] || copy.en;
   const chatOnly = useMemo(() => new URLSearchParams(location.search).get('chat') === '1', []);
 
   useEffect(() => {
     localStorage.setItem('ima-site-language', lang);
     document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+    document.documentElement.dir = RTL_LOCALES.has(lang) ? 'rtl' : 'ltr';
     document.title = lang === 'he' ? 'אמא — IMA | בינה אנושית' : 'IMA — Human-Centered Intelligence';
     initializeImaAnalytics();
     trackImaEvent('ima_public_redesign_view', { language: lang });
@@ -255,11 +266,11 @@ export default function App() {
     <header className="site-header">
       <button className="wordmark" onClick={() => scrollTo({top:0,behavior:'smooth'})} aria-label="IMA home"><span className="wordmark-mark"><img src={CLEAN_LOGO_URL} alt="IMA — אמא" /></span><span><b>אמא</b><small>IMA</small></span></button>
       <nav aria-label="Main navigation">{t.nav.map((item,i)=><button key={item} onClick={()=>document.getElementById(['chat','how','proof','community'][i])?.scrollIntoView({behavior:'smooth'})}>{item}</button>)}</nav>
-      <div className="header-actions"><button className="language" onClick={()=>setLang(lang==='he'?'en':'he')}>{lang==='he'?'English':'עברית'}</button><GoogleButton user={user} onUser={setUser} t={t}/></div>
+      <div className="header-actions"><select className="language" value={lang} onChange={e=>{setLang(e.target.value);trackImaEvent('ima_language_selected',{language:e.target.value,source:'public-ui'});}} aria-label="Language">{SUPPORTED_LOCALES.map(([code,name])=><option key={code} value={code}>{name}</option>)}</select><GoogleButton user={user} onUser={setUser} t={t}/></div>
     </header>
     <main id="top">
       <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <button className="cta" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
+        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <button className="cta" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <a className="mama-hero-link clean-hero-logo" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a>
       </section>
       {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
