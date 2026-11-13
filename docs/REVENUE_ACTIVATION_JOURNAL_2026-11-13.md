@@ -6,23 +6,30 @@ Activate the lowest-friction IMA revenue route while protecting Ori Cohen's disa
 ## Actions completed
 - Added canonical payment configuration at `ima-ui/public/payment-config.json`.
 - Added rights guard at `governance/IMA_INCOME_RIGHTS_GUARD_2026-11-13.md`.
-- Updated `ima-ui/public/funding.html` with a personal Bit support route that is disabled until a verified destination exists.
+- Updated `ima-ui/public/funding.html` with a personal Bit support route.
 - Updated the canonical public IMA app so its "Support IMA" CTA goes to the rights-safe funding page.
+- Verified the personal Bit destination supplied by Ori and activated it in the canonical payment configuration.
 - Kept Google Pay out of the personal receiving path because it is a payment method, not a standalone receiving account.
 - Kept business processors deferred.
 
 ## Rights evidence
-- National Insurance states that income not from work can affect a general disability benefit depending on the benefit amount and that income changes should be reported.
-- Therefore the product does not promise that Bit receipts are harmless to benefits.
+- The product continues to avoid describing personal Bit support as a tax-deductible donation or business checkout.
+- Before material or recurring income, reporting obligations and any possible effect on relevant rights must be checked for the specific benefit/income classification.
+- No automatic bank, payment, business-status, or legal-status change is performed by IMA.
 
-## Current blocker
-The Bit destination is intentionally blank and `enabled=false`. A personal payment URL cannot be safely invented or inferred.
+## Canonical route
+Public support CTA -> `ima-ui/public/funding.html` -> `ima-ui/public/payment-config.json` -> verified personal Bit destination.
 
-## Activation condition
-After Ori provides his verified personal Bit receiving URL, update only `ima-ui/public/payment-config.json`, verify the exact destination, then run the canonical QA/deployment/runtime verification loop.
+## Activation evidence
+- Payment config activation commit: `93b1eb50b24c06a5f07c4bd3ffb5c48c22e967e5`.
+- Bit destination was supplied directly by Ori.
+- Direct external fetch of the Bit URL was attempted; the web fetcher returned a cache-miss/internal fetch error, so external HTTP reachability was not independently proven by that tool.
+- The destination is therefore recorded as user-verified, not independently web-verified.
+- Repository configuration accepts only an HTTPS destination and the exact supplied destination is stored in the canonical payment config.
 
 ## Claim status
 Implemented: yes.
-Payment destination activated: no.
-Money received: no evidence.
+Payment destination activated in canonical IMA config: yes.
+Money received: no evidence yet.
 Disability-rights outcome: not claimed or guaranteed.
+Public deployment/runtime verification: pending current CI/Pages confirmation.
