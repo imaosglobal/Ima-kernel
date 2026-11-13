@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ima",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "IMA — אמא: human-centered intelligence designed to restore trust and preserve wonder through truth, agency, curiosity and verified capability reporting.",
   "extensions": {
     "com.openai": {
@@ -73,7 +73,7 @@
             }
           ]
         },
-        "release_notes": "IMA 1.0.9 — make Trust & Wonder and Wonder-to-Help executable in the canonical master interaction loop, with practical-help priority, truthful curiosity, agency and regression-gated verification."
+        "release_notes": "IMA 1.0.10 — add CG-001 compound growth as an executable cross-system contract; make validated improvement compound into future capability without sacrificing truth, safety, privacy or agency. Trust & Wonder and Wonder-to-Help remain canonical in the canonical master interaction loop, with practical-help priority, truthful curiosity, agency and regression-gated verification."
       },
       "publication": {
         "release_notes": "IMA 1.0.4 — canonical public MCP Apps surface."
