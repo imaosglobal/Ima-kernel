@@ -34,6 +34,7 @@ action_raw = read("services/ima-action-mcp/server/index.mjs")
 widget_raw = read("services/ima-action-mcp/widget.html")
 browserglass_docker = read("tools/ima-browserglass/Dockerfile")
 device_bridge_raw = read("app.py")
+trust_wonder_raw = read("governance/IMA_TRUST_WONDER_CORE.md")
 
 try:
     plugin = json.loads(plugin_raw)
@@ -53,6 +54,10 @@ except Exception as exc:
     submission = {}
     fail(f"chatgpt-app-submission.json is invalid JSON: {exc}")
 
+if "TW-001" not in trust_wonder_raw:
+    fail("canonical IMA Trust & Wonder contract TW-001 is missing")
+if "get_ima_trust_wonder" not in action_raw:
+    fail("Action Core must expose the canonical Trust & Wonder contract")
 if plugin.get("name") != "ima":
     fail("plugin name must remain 'ima'")
 if not str(plugin.get("version", "")).strip():
