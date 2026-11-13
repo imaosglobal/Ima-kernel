@@ -1,271 +1,137 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import {
-  askIma,
-  archiveChatLearningSignal,
-  getAuthConfig,
-  signInWithGoogleCredential,
-  getStoredGoogleUser,
-  signOutIma,
-  getImaRuntime,
-  submitFeedback
-} from './services/imaChat';
+import React, { useEffect, useRef, useState } from 'react';
+import { askIma, archiveChatLearningSignal, submitFeedback, getImaRuntime, getMemoryConsent, setMemoryConsent, getAuthConfig, signInWithGoogleCredential, getStoredGoogleUser, signOutIma } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
+import capabilityRegistry from '../../docs/IMA_CAPABILITY_REGISTRY.json';
+import { IMA_HEYGEN } from './imaHeyGen.js';
+import GlobalPrinciples from './GlobalPrinciples.jsx';
+import { SUPPORTED, detectLanguage, getLocale } from './i18n.js';
+import { observeIma, recordImaPreference, deriveImaAdaptations } from './services/imaLearningBus';
 
-const BASE = '/Ima-kernel/';
-const SUPPORT_URL = BASE + 'support.html';
-const PRIVACY_URL = BASE + 'privacy.html';
-const GOOGLE_CAMPAIGN_URL = BASE + '?campaignId=24409551537&utm_source=ima_logo';
-const YOUTUBE_URL = 'https://www.youtube.com/@imaglobal-d4g';
-const copy = {
-  he: {
-    nav: ['לדבר', 'איך זה עובד', 'הוכחות', 'קהילה'],
-    heroKicker: 'IMA — אמא · בינה אנושית',
-    heroTitle: 'אמא כאן\nכדי להבין איתך.',
-    heroText: 'לא עוד תפריט של יכולות. שיחה אמיתית, הקשר, בדיקה ולמידה — עם האדם במרכז.',
-    ask: 'לדבר עם אמא',
-    proof: 'לראות מה באמת עובד',
-    prompt: 'מה תרצה לעשות עם אמא?',
-    modes: ['לחשוב', 'ללמוד', 'ליצור', 'לפתור'],
-    modeText: ['להבין רעיון, החלטה או מצב', 'לחקור נושא ולגלות מה חסר', 'לכתוב, לתכנן או ליצור', 'להפוך צורך לצעדים מעשיים'],
-    howKicker: 'איך אמא עובדת',
-    howTitle: 'פחות הבטחות. יותר בדיקה.',
-    cards: [
-      ['01', 'הקשבה', 'מתחילים במה שאתה באמת צריך — לא בתפריט של יכולות.'],
-      ['02', 'הקשר', 'שפה, נגישות, זיכרון והעדפות יכולים להתאים אליך; הסוכנות נשארת שלך.'],
-      ['03', 'אימות', 'אמא מפרידה בין מה שנבדק, מה שנבנה ומה שעדיין לא הוכח.'],
-      ['04', 'למידה', 'אפשר לתקן את אמא. תרומה נכנסת למסלול אימות, לא הופכת אוטומטית לאמת.']
-    ],
-    proofKicker: 'חלון הוכחה',
-    proofTitle: 'מה אמא יכולה עכשיו?',
-    proofText: 'תיעוד אינו הוכחה. כאן מוצגים סימנים שאפשר לבדוק בזמן ריצה.',
-    online: 'Runtime זמין',
-    offline: 'Runtime לא אומת כרגע',
-    communityKicker: 'קהילה גלובלית',
-    communityTitle: 'אמא נבנית עם העולם, לא מעליו.',
-    communityText: 'חוקרים, יוצרים, מפתחים, משפחות וארגונים יכולים לשאול, ללמד, לבדוק ולבנות.',
-    github: 'לפתוח את GitHub',
-    feedback: 'לתת משוב',
-    feedbackPlaceholder: 'מה יעזור לך לחזור לאמא?',
-    send: 'שליחה',
-    signIn: 'כניסה אישית עם Google',
-    signed: 'מחובר',
-    logout: 'יציאה',
-    personal: 'מרחב אישי',
-    personalText: 'לאחר הכניסה אמא יכולה לשמור רציפות בהתאם להרשאות שלך.',
-    install: 'התקנת אמא',
-    chatOnly: 'צ׳ט בלבד',
-    browser: 'דפדפן חי',
-    openChat: 'פתיחת צ׳ט',
-    closeChat: 'סגירת צ׳ט',
-    write: 'כתוב לאמא…',
-    sendChat: 'שליחה',
-    saved: 'המשוב נשמר וקיבל קבלה.',
-    saveFailed: 'לא הצלחתי לאמת את השמירה.',
-    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence'
-  },
-  en: {
-    nav: ['Talk', 'How it works', 'Proof', 'Community'],
-    heroKicker: 'IMA — human-centered intelligence',
-    heroTitle: 'IMA is here\nto understand with you.',
-    heroText: 'Not another menu of capabilities. A real conversation, context, verification and learning — with the person at the center.',
-    ask: 'Talk to IMA',
-    proof: 'See what is real',
-    prompt: 'What would you like to do with IMA?',
-    modes: ['Think', 'Learn', 'Create', 'Solve'],
-    modeText: ['Explore an idea, decision or situation', 'Research a topic and find what is missing', 'Write, plan or create', 'Turn a need into practical steps'],
-    howKicker: 'How IMA works',
-    howTitle: 'Fewer promises. More verification.',
-    cards: [
-      ['01', 'Listen', 'Start with what you actually need — not a menu of capabilities.'],
-      ['02', 'Context', 'Language, accessibility, memory and preferences can adapt; agency remains yours.'],
-      ['03', 'Verify', 'IMA separates what is tested, implemented and still unproven.'],
-      ['04', 'Learn', 'You can correct IMA. Contributions enter validation rather than becoming truth automatically.']
-    ],
-    proofKicker: 'Proof window',
-    proofTitle: 'What can IMA do now?',
-    proofText: 'Documentation is not proof. This surface shows signals that can be checked at runtime.',
-    online: 'Runtime available',
-    offline: 'Runtime not verified now',
-    communityKicker: 'Global community',
-    communityTitle: 'IMA is built with the world, not above it.',
-    communityText: 'Researchers, creators, developers, families and organizations can question, teach, test and build.',
-    github: 'Open GitHub',
-    feedback: 'Give feedback',
-    feedbackPlaceholder: 'What would make you come back to IMA?',
-    send: 'Send',
-    signIn: 'Personal sign-in with Google',
-    signed: 'Signed in',
-    logout: 'Log out',
-    personal: 'Personal space',
-    personalText: 'After sign-in, IMA can preserve continuity according to your permissions.',
-    install: 'Install IMA',
-    chatOnly: 'Chat only',
-    browser: 'Live browser',
-    openChat: 'Open chat',
-    closeChat: 'Close chat',
-    write: 'Write to IMA…',
-    sendChat: 'Send',
-    saved: 'Feedback saved and receipt acknowledged.',
-    saveFailed: 'Could not verify that the feedback was saved.',
-    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence'
-  }
-};
+const GLB_PATH='/Ima-kernel/mother_character.glb';
+const GOOGLE_CAMPAIGN_URL='https://imaosglobal.github.io/Ima-kernel/?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils';
+const GOOGLE_CAMPAIGN_LOGO_URL=GOOGLE_CAMPAIGN_URL+'&utm_content=ima_logo';
+const CLEAN_LOGO_URL='https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
+const SUPPORT_URL='/Ima-kernel/support.html';
+const PRIVACY_URL='/Ima-kernel/privacy.html';
+const GLB_GIT_BLOB_SHA1='217170d2bd67051270be974292dc3b834eefe206';
+const PERSONALIZATION_KEY='ima-unified-personalization-v2';
+const defaults={language:'auto',tone:'balanced',depth:'normal',accessibility:'normal',memoryScope:'personal',interface:'IMA',theme:'system'};
 
-function MamaFigure({ compact = false }) {
-  return <div className={'mama-figure' + (compact ? ' compact' : '')} aria-label="אמא">
-    <div className="mama-halo" />
-    <div className="mama-face"><span>א</span></div>
-    <div className="mama-neck" />
-    <div className="mama-shoulders" />
-    <div className="mama-glow" />
-  </div>;
+function profileStorageKey(user){const id=user?.sub||user?.email||'anonymous';return PERSONALIZATION_KEY+':'+String(id).toLowerCase()}
+function loadProfile(user){try{return {...defaults,...JSON.parse(localStorage.getItem(profileStorageKey(user))||'{}')}}catch{return {...defaults}}}
+function saveProfile(user,profile){localStorage.setItem(profileStorageKey(user),JSON.stringify(profile))}
+function applyChatPersonalization(text,profile){
+ const t=String(text||'').trim().toLowerCase(), next={...profile}; let changed=false;
+ const set=(k,v)=>{if(v&&next[k]!==v){next[k]=v;changed=true}};
+ const l=t.match(/(?:language|שפה)\s*(?:to|ל|=)?\s*(hebrew|עברית|english|אנגלית|arabic|ערבית)/); const lm={hebrew:'he',עברית:'he',english:'en',אנגלית:'en',arabic:'ar',ערבית:'ar'}; if(l)set('language',lm[l[1]]);
+ const tone=t.match(/(?:tone|סגנון)\s*(?:to|ל|=)?\s*(balanced|direct|warm|professional|simple|מאוזן|ישיר|חם|מקצועי|פשוט)/); const tm={balanced:'balanced',direct:'direct',warm:'warm',professional:'professional',simple:'simple',מאוזן:'balanced',ישיר:'direct',חם:'warm',מקצועי:'professional',פשוט:'simple'}; if(tone)set('tone',tm[tone[1]]);
+ const depth=t.match(/(?:depth|עומק)\s*(?:to|ל|=)?\s*(short|normal|deep|קצר|רגיל|עמוק)/); const dm={short:'short',normal:'normal',deep:'deep',קצר:'short',רגיל:'normal',עמוק:'deep'}; if(depth)set('depth',dm[depth[1]]);
+ return {next,changed};
 }
 
-function GoogleButton({ user, onUser, t }) {
-  const [error, setError] = useState('');
-  const [ready, setReady] = useState(false);
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const config = await getAuthConfig();
-        if (!config?.google?.enabled || !config.google.client_id) throw new Error('Google sign-in is not configured');
-        for (let i = 0; i < 40 && !window.google?.accounts?.id && !cancelled; i++) await new Promise(r => setTimeout(r, 100));
-        if (!window.google?.accounts?.id || cancelled) throw new Error('Google unavailable');
-        const bytes = new Uint8Array(24);
-        crypto.getRandomValues(bytes);
-        const nonce = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
-        window.google.accounts.id.initialize({
-          client_id: config.google.client_id,
-          nonce,
-          callback: async response => {
-            try {
-              const result = await signInWithGoogleCredential(response.credential, nonce);
-              onUser(result.user || null);
-              trackImaEvent('ima_public_google_login', { language: document.documentElement.lang });
-            } catch { setError('Sign-in could not be completed'); }
-          },
-          auto_select: false,
-          ux_mode: 'popup'
-        });
-        const node = document.getElementById('ima-google-button');
-        if (node) {
-          node.innerHTML = '';
-          window.google.accounts.id.renderButton(node, {
-            type: 'standard', theme: 'outline', size: 'large', text: 'signin_with', shape: 'pill', width: 240
-          });
-        }
-        if (!cancelled) setReady(true);
-      } catch (e) { if (!cancelled) setError(e?.message || 'Google sign-in unavailable'); }
-    })();
-    return () => { cancelled = true; };
-  }, [onUser]);
-  if (user) return <div className="ima-account"><span className="ima-account-dot">{String(user.name || 'א').slice(0,1)}</span><span>{user.name || user.email || t.signed}</span><button onClick={() => { signOutIma(); onUser(null); }}>{t.logout}</button></div>;
-  return <div className="ima-google"><div id="ima-google-button" aria-label={t.signIn} />{!ready && !error && <span className="tiny-status">{t.signIn}</span>}{error && <span className="tiny-error">{error}</span>}</div>;
+function PersonalizationPanel({profile,setProfile,locale}){
+ const set=(key,value)=>{const next={...profile,[key]:value};setProfile(next);saveProfile(getStoredGoogleUser(),next);recordImaPreference(key,value);if(key==='accessibility')observeIma({type:'accessibility_changed',source:'personalization',data:{value}});if(key==='language'){localStorage.setItem('ima-language-v2',value);window.location.reload()}};
+ return <details className="personalization-panel"><summary>{locale.labels.personalize}</summary><div className="personalization-grid">
+  <label>{locale.labels.language}<select value={profile.language} onChange={e=>set('language',e.target.value)}><option value="auto">Auto</option>{Object.entries(SUPPORTED).map(([code,x])=><option key={code} value={code}>{x.name}</option>)}</select></label>
+  <label>{(locale.labels.tone||'Tone')}<select value={profile.tone} onChange={e=>set('tone',e.target.value)}><option value="balanced">Balanced</option><option value="direct">Direct</option><option value="warm">Warm</option><option value="professional">Professional</option><option value="simple">Simple</option></select></label>
+  <label>{(locale.labels.depth||'Depth')}<select value={profile.depth} onChange={e=>set('depth',e.target.value)}><option value="short">Short</option><option value="normal">Normal</option><option value="deep">Deep</option></select></label>
+  <label>{(locale.labels.accessibility||'Accessibility')}<select value={profile.accessibility} onChange={e=>set('accessibility',e.target.value)}><option value="normal">Standard</option><option value="large">Large text</option><option value="contrast">High contrast</option><option value="reduced-motion">Reduced motion</option></select></label>
+  <label>{(locale.labels.memory||'Memory')}<select value={profile.memoryScope} onChange={e=>set('memoryScope',e.target.value)}><option value="personal">Personal</option><option value="minimal">Minimal</option><option value="none">No memory</option></select></label>
+  <label>Interface<select value={profile.interface} onChange={e=>set('interface',e.target.value)}><option>IMA</option><option>Voice</option><option>Mobile</option><option>Device</option><option>Robot</option></select></label>
+  <label>Theme<select value={profile.theme} onChange={e=>set('theme',e.target.value)}><option>System</option><option>Light</option><option>Dark</option></select></label>
+ </div></details>
 }
 
-function ChatPanel({ t, lang, user, onClose, chatOnly = false }) {
-  const [message, setMessage] = useState('');
-  const [messages, setMessages] = useState([]);
-  const [busy, setBusy] = useState(false);
-  const send = async (text = message) => {
-    const value = String(text || '').trim();
-    if (!value || busy) return;
-    setBusy(true); setMessage('');
-    setMessages(prev => [...prev, { role: 'user', text: value }]);
-    trackImaEvent('ima_first_use_attempt', { language: lang });
-    try {
-      const response = await askIma(value, { language: lang, interface: chatOnly ? 'chat-only' : 'public-redesign', authenticated: Boolean(user) });
-      setMessages(prev => [...prev, { role: 'ima', text: response }]);
-      trackImaEvent('ima_first_useful_answer_candidate', { language: lang });
-      await archiveChatLearningSignal(value, response, { language: lang });
-    } catch {
-      setMessages(prev => [...prev, { role: 'ima', text: lang === 'he' ? 'אני עדיין לא מצליחה לענות דרך החיבור הציבורי הזה. זו תקלה למדוד ולתקן — לא להסתיר.' : 'I cannot answer through the public connection right now. This is a failure to measure and fix, not to hide.' }]);
-      trackImaEvent('ima_public_chat_failed', { language: lang });
-    } finally { setBusy(false); }
-  };
-  return <section className={'chat-panel' + (chatOnly ? ' chat-only-panel' : '')} id="chat">
-    <div className="chat-panel-head">
-      <div className="chat-identity"><MamaFigure compact /><div><b>אמא · IMA</b><small>{user ? t.personal : (lang === 'he' ? 'שיחה ציבורית' : 'Public conversation')}</small></div></div>
-      {!chatOnly && <button className="chat-close" onClick={onClose} aria-label={t.closeChat}>×</button>}
-    </div>
-    <div className="chat-messages" aria-live="polite">
-      {!messages.length && <div className="chat-empty">{lang === 'he' ? 'שאל שאלה אמיתית. אמא תענה דרך החיבור החי של IMA.' : 'Ask a real question. IMA will answer through the live IMA connection.'}</div>}
-      {messages.map((m,i) => <div key={i} className={'chat-bubble '+m.role}>{m.text}</div>)}
-      {busy && <div className="chat-bubble ima muted">IMA…</div>}
-    </div>
-    <div className="chat-composer"><input value={message} onChange={e=>setMessage(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder={t.write} aria-label={t.write}/><button onClick={()=>send()} disabled={busy || !message.trim()}>{t.sendChat}</button></div>
-  </section>;
+function GoogleLogin({auth,setAuth,locale,setProfile,setActive}){
+ const ref=useRef(null);
+ useEffect(()=>{let cancelled=false;(async()=>{try{
+  const config=await getAuthConfig();
+  if(!config?.google?.enabled||!config.google.client_id){if(!cancelled)setAuth(a=>({...a,status:'not_configured',error:'google_not_configured'}));return}
+  for(let i=0;i<30&&!window.google?.accounts?.id&&!cancelled;i++)await new Promise(r=>setTimeout(r,100));
+  if(!window.google?.accounts?.id||!ref.current)throw new Error('Google Sign-In unavailable');
+  ref.current.innerHTML='';
+  const bytes=new Uint8Array(24);crypto.getRandomValues(bytes);
+  const nonce=Array.from(bytes).map(b=>b.toString(16).padStart(2,'0')).join('');
+  window.google.accounts.id.initialize({client_id:config.google.client_id,nonce,callback:async response=>{try{setAuth(a=>({...a,status:'signing_in'}));const result=await signInWithGoogleCredential(response.credential,nonce);observeIma({type:'auth_changed',source:'google',outcome:'signed_in'});const user=result.user||null;setProfile(loadProfile(user));setActive('chat');setAuth({status:'signed_in',user})}catch{setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}},auto_select:false,use_fedcm_for_button:false,ux_mode:'popup'});
+  window.google.accounts.id.renderButton(ref.current,{type:'standard',theme:'outline',size:'large',text:'signin_with',shape:'rectangular',logo_alignment:'left',width:300,locale:getLocale(detectLanguage()).code});
+  if(!cancelled)setAuth(a=>({...a,status:'ready'}))
+ }catch{if(!cancelled)setAuth(a=>({...a,status:'ready',error:'signin_unavailable'}))}})();return()=>{cancelled=true}},[setAuth]);
+ if(auth.status==='signed_in')return <div className="account-chip"><img className="account-photo" src={auth.user?.picture||''} alt="" onError={e=>{e.currentTarget.style.display='none'}}/><span>{auth.user?.name||auth.user?.email||'IMA'}</span><button onClick={async()=>{signOutIma();observeIma({type:'auth_changed',source:'google',outcome:'signed_out'});setProfile(loadProfile(null));setActive('home');setAuth({status:'ready',user:null});window.history.replaceState(null,'',location.pathname+'#home')}}>{locale.labels.logout}</button></div>;
+ return <div className="google-entry"><div ref={ref}/><small>{auth.status==='signing_in'?'…':auth.error==='signin_unavailable'?'Google sign-in could not be completed.':auth.error==='google_not_configured'?'Google sign-in is not configured on the public runtime yet.':' '}</small></div>;
 }
 
-export default function App() {
-  const [lang, setLang] = useState(() => localStorage.getItem('ima-site-language') || (navigator.language?.startsWith('he') ? 'he' : 'en'));
-  const [user, setUser] = useState(() => getStoredGoogleUser());
-  const [chatOpen, setChatOpen] = useState(() => new URLSearchParams(location.search).get('chat') === '1');
-  const [runtime, setRuntime] = useState(null);
-  const [feedback, setFeedback] = useState('');
-  const [feedbackStatus, setFeedbackStatus] = useState('');
-  const [installEvent, setInstallEvent] = useState(null);
-  const [notice, setNotice] = useState('');
-  const t = copy[lang];
-  const chatOnly = useMemo(() => new URLSearchParams(location.search).get('chat') === '1', []);
+function FeedbackPanel(){
+ const [type,setType]=useState('improvement'); const [text,setText]=useState(''); const [status,setStatus]=useState(''); const [busy,setBusy]=useState(false);
+ const send=async()=>{const value=text.trim();if(!value||busy)return;setBusy(true);setStatus('');try{const result=await submitFeedback(type,value,{language:detectLanguage(),source:'public-runtime'});if(!result?.accepted)throw new Error(result?.error||'feedback_failed');setText('');setStatus('המשוב נשמר וקיבל קבלה.')}catch{setStatus('המשוב לא נשמר באופן מאומת. נסה שוב.')}finally{setBusy(false)}};
+ return <div className="feedback-panel"><div className="feedback-controls"><select value={type} onChange={e=>setType(e.target.value)}><option value="useful">Useful</option><option value="not_useful">Not useful</option><option value="problem">Problem</option><option value="improvement">Improvement</option></select><textarea value={text} onChange={e=>setText(e.target.value)} maxLength={4000} placeholder="כתוב/י לאמא מה עבד, מה לא, ומה צריך להשתפר." aria-label="Feedback"/></div><button className="primary" onClick={send} disabled={busy||!text.trim()}>{busy?'שומר…':'שליחת משוב'}</button>{status&&<small role="status">{status}</small>}</div>
+}
 
-  useEffect(() => {
-    localStorage.setItem('ima-site-language', lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-    document.title = lang === 'he' ? 'אמא — IMA | בינה אנושית' : 'IMA — Human-Centered Intelligence';
-    initializeImaAnalytics();
-    trackImaEvent('ima_public_redesign_view', { language: lang });
-  }, [lang]);
+function AvatarScene({state,compact=false}){return <div className={`heygen-avatar-frame ${compact?'compact':''} ${state==='speaking'?'speaking':''}`}><img src={CLEAN_LOGO_URL} alt="IMA avatar" loading={compact?'lazy':'eager'}/>{state==='speaking'&&<span className="heygen-speaking">IMA</span>}</div>}
 
-  useEffect(() => {
-    getImaRuntime().then(setRuntime).catch(() => setRuntime(null));
-    const handler = e => { e.preventDefault(); setInstallEvent(e); };
-    window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler);
-  }, []);
+export default function App(){
+ const [lang,setLang]=useState(detectLanguage());
+ const locale=getLocale(lang);
+ const [auth,setAuth]=useState(()=>{const user=getStoredGoogleUser();return {status:user?'signed_in':'checking',user}});
+ const [profile,setProfile]=useState(loadProfile(getStoredGoogleUser()));
+ const [input,setInput]=useState('');
+ const [messages,setMessages]=useState([]);
+ const [busy,setBusy]=useState(false);
+ const [avatarState,setAvatarState]=useState('idle');
+ const [runtime,setRuntime]=useState(null);
+ const [memory,setMemory]=useState('UNKNOWN');
+ const [active,setActive]=useState(()=>getStoredGoogleUser()?'chat':'home');
+ const [avatarVerified,setAvatarVerified]=useState(false);
+ const [installEvent,setInstallEvent]=useState(()=>typeof window!=='undefined'?(window.__imaBeforeInstall||window.__imaInstallPrompt||null):null);
+ const [shareOpen,setShareOpen]=useState(false);
+ const learning=deriveImaAdaptations();
 
-  const install = async () => {
-    if (!user) { setNotice(lang === 'he' ? 'כדי להתקין את אמא יש להיכנס תחילה עם Google.' : 'Sign in with Google before installing IMA.'); return; }
-    if (!installEvent) { setNotice(lang === 'he' ? 'התקנה אינה זמינה כרגע בדפדפן הזה.' : 'Installation is not available in this browser right now.'); return; }
-    installEvent.prompt();
-    const choice = await installEvent.userChoice;
-    trackImaEvent('ima_pwa_install_choice', { outcome: choice.outcome, language: lang });
-    setInstallEvent(null);
-  };
+ useEffect(()=>{localStorage.setItem('ima-language-v2',lang);document.documentElement.lang=locale.code;document.documentElement.dir=locale.dir;document.title='IMA — אמא';initializeImaAnalytics();trackImaEvent('ima_simplified_interface_opened');getImaRuntime().then(setRuntime).catch(()=>{});getMemoryConsent().then(x=>setMemory(x?.consent?.status||'UNKNOWN')).catch(()=>{});fetch(GLB_PATH,{cache:'no-store'}).then(async r=>{if(!r.ok)throw new Error();const bytes=await r.arrayBuffer(),prefix=new TextEncoder().encode('blob '+bytes.byteLength+'\\0'),payload=new Uint8Array(prefix.length+bytes.byteLength);payload.set(prefix);payload.set(new Uint8Array(bytes),prefix.length);const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-1',payload))).map(b=>b.toString(16).padStart(2,'0')).join('');setAvatarVerified(hash===GLB_GIT_BLOB_SHA1)}).catch(()=>setAvatarVerified(false));
+  const adoptInstallEvent=e=>{if(e){setInstallEvent(e);window.__imaInstallPrompt=e}};
+  window.addEventListener('beforeinstallprompt',adoptInstallEvent);
+  window.addEventListener('ima-install-available',()=>adoptInstallEvent(window.__imaInstallPrompt));
+  const languageChanged=()=>{if(!localStorage.getItem('ima-language-v2')||localStorage.getItem('ima-language-v2')==='auto')setLang(detectLanguage())};
+  window.addEventListener('languagechange',languageChanged);
+  return()=>{window.removeEventListener('languagechange',languageChanged);window.removeEventListener('beforeinstallprompt',adoptInstallEvent)}
+ },[lang,locale.code,locale.dir]);
 
-  const sendFeedback = async () => {
-    if (!feedback.trim()) return;
-    setFeedbackStatus('');
-    try {
-      await submitFeedback('improvement', feedback.trim(), { language: lang, source: 'public-redesign' });
-      setFeedback('');
-      setFeedbackStatus(t.saved);
-      trackImaEvent('ima_feedback_submitted', { language: lang });
-    } catch { setFeedbackStatus(t.saveFailed); }
-  };
+ const loggedIn=auth.status==='signed_in';
+ const go=id=>{observeIma({type:'navigation',source:'public-ui',data:{section:id}});setActive(id);const el=document.getElementById(id);if(el){history.replaceState(null,'',`#${id}`);el.scrollIntoView({behavior:'smooth',block:'start'})}};
+ useEffect(()=>{if(loggedIn)document.getElementById('chat')?.scrollIntoView({behavior:'smooth'})},[loggedIn]);
+ const send=async value=>{if(!loggedIn){go('login');return}const text=(value??input).trim();if(!text||busy)return;setMessages(m=>[...m,{role:'user',text}]);setInput('');const customization=applyChatPersonalization(text,profile);if(customization.changed){setProfile(customization.next);saveProfile(auth.user,customization.next);setMessages(m=>[...m,{role:'ima',text:customization.next.language==='he'?'שיניתי את ההעדפה שלך.':'I updated your preference.'}]);observeIma({type:'personalization_command',source:'chat',data:{keys:Object.keys(customization.next)}});if(customization.next.language&&customization.next.language!==lang) {localStorage.setItem('ima-language-v2',customization.next.language);window.setTimeout(()=>window.location.reload(),50)}return;}setBusy(true);setAvatarState('listening');try{const personalization={...profile,language:lang,device:navigator.userAgent,region:navigator.language};const answer=await askIma(text,personalization);setMessages(m=>[...m,{role:'ima',text:answer}]);void archiveChatLearningSignal(text,answer,personalization);setAvatarState('speaking');if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(answer);u.lang=locale.code==='he'?'he-IL':locale.code;u.rate=.96;u.onend=()=>setAvatarState('idle');u.onerror=()=>setAvatarState('idle');window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}}catch{setMessages(m=>[...m,{role:'ima',text:locale.labels.supportText}]);setAvatarState('idle')}finally{setBusy(false)}};
+ const shareFromDevice=async()=>{try{const url=location.href;if(navigator.share)await navigator.share({title:'IMA — אמא',text:'הכירו את IMA — בינה אנושית לכולם.',url});else{await navigator.clipboard.writeText(url);alert(lang==='he'?'הקישור הועתק.':'Link copied.')}trackImaEvent('ima_share_complete')}catch{observeIma({type:'share_failed',source:'public-ui'})}};
+ const copyShareLink=async()=>{try{await navigator.clipboard.writeText(location.href);alert(lang==='he'?'הקישור הועתק.':'Link copied.');trackImaEvent('ima_share_copy')}catch{observeIma({type:'share_copy_failed',source:'public-ui'})}};
+ const install=async()=>{const e=installEvent||window.__imaInstallPrompt||window.__imaBeforeInstall;if(e){try{e.prompt();await e.userChoice}catch{observeIma({type:'install_failed',source:'pwa'});trackImaEvent('ima_install_prompt_failed')}window.__imaInstallPrompt=null;window.__imaBeforeInstall=null;setInstallEvent(null);return}if(window.matchMedia?.('(display-mode: standalone)').matches)return;alert(locale.labels.install+': פתחו את תפריט הדפדפן ובחרו “התקנה” או “הוספה למסך הבית”.')};
 
-  if (chatOnly) return <div className="ima-chat-only"><MamaFigure /><h1>{lang === 'he' ? 'אמא' : 'IMA'}</h1>{user ? <ChatPanel t={t} lang={lang} user={user} chatOnly /> : <div className="chat-login"><p>{t.personalText}</p><GoogleButton user={user} onUser={setUser} t={t}/>{user&&<button className="cta install-button" onClick={install}>{t.install}</button>}</div>}<button className="chat-only-back" onClick={()=>location.href=BASE}>{lang === 'he' ? 'חזרה לאתר' : 'Back to IMA'}</button></div>;
+ return <>{shareOpen&&<div className="share-overlay" role="dialog" aria-modal="true" aria-label="Share IMA"><div className="share-card"><img src={CLEAN_LOGO_URL} alt="IMA — אמא" className="share-logo"/><h2>{lang==='he'?'שתפו את אמא':'Share IMA'}</h2><p>{lang==='he'?'הכירו את IMA — בינה אנושית לכולם.':'Meet IMA — human-centered intelligence.'}</p><div className="share-actions"><button className="primary" onClick={shareFromDevice}>{lang==='he'?'שיתוף מהמכשיר':'Share from device'}</button><button className="secondary" onClick={copyShareLink}>{lang==='he'?'העתקת קישור':'Copy link'}</button><button className="secondary" onClick={()=>setShareOpen(false)}>{lang==='he'?'סגירה':'Close'}</button></div></div></div>}<main className={`ima-app accessibility-${profile.accessibility}`}><a className="skip-link" href="#chat">Skip to IMA</a>
+  <header className="topbar"><div className="topbar-inner"><a className="brand campaign-ad" href={GOOGLE_CAMPAIGN_LOGO_URL} data-campaign="google-ads" aria-label="IMA campaign" onClick={()=>trackImaEvent('ima_internal_logo_ad_click',{destination:GOOGLE_CAMPAIGN_LOGO_URL})}><img className="brand-mark campaign-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /><span><b>IMA</b><small>אמא · human-centered intelligence · campaign</small></span></a>
+   <nav>{[['home',locale.labels.home],['value',lang==='he'?'הערך':'Value'],['chat',locale.labels.chat],['community',locale.labels.community],['shop',locale.labels.shop],['capabilities',lang==='he'?'יכולות':'Capabilities'],['watch',locale.labels.video],['more',lang==='he'?'עוד':'About']].map(([id,label])=><button key={id} className={active===id?'active':''} onClick={()=>go(id)}>{label}</button>)}</nav>
+   <div className="top-actions">{!window.matchMedia?.('(display-mode: standalone)').matches && <button className="install-button" onClick={install}>{locale.labels.install}</button>}</div>
+  </div></header>
 
-  return <div className="ima-site" dir={lang === 'he' ? 'rtl' : 'ltr'}>
-    {notice && <div role="status" className="site-notice">{notice}</div>}
-    <header className="site-header">
-      <button className="wordmark" onClick={() => scrollTo({top:0,behavior:'smooth'})} aria-label="IMA home"><span className="wordmark-mark">א</span><span><b>אמא</b><small>IMA</small></span></button>
-      <nav aria-label="Main navigation">{t.nav.map((item,i)=><button key={item} onClick={()=>document.getElementById(['chat','how','proof','community'][i])?.scrollIntoView({behavior:'smooth'})}>{item}</button>)}</nav>
-      <div className="header-actions"><button className="language" onClick={()=>setLang(lang==='he'?'en':'he')}>{lang==='he'?'English':'עברית'}</button><GoogleButton user={user} onUser={setUser} t={t}/></div>
-    </header>
-    <main id="top">
-      <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions"><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button>{user&&<><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a></>}<a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a></div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
-        <a className="mama-hero-link" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><MamaFigure /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a>
-      </section>
-      {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
-      <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-      <section className="proof-section" id="proof"><div className="section-intro"><span className="section-label">{t.proofKicker}</span><h2>{t.proofTitle}</h2><p>{t.proofText}</p></div><div className="proof-grid"><article><span className="proof-icon">●</span><b>{runtime?t.online:t.offline}</b><p>{runtime?JSON.stringify(runtime.capabilities||{}).slice(0,220):'IMA runtime'}</p></article><article><span className="proof-icon">01</span><b>{lang==='he'?'מקור פתוח':'Open source'}</b><p>{lang==='he'?'הקוד, הבעיות והדיון הציבורי ניתנים לבדיקה.':'Code, issues and public discussion are inspectable.'}</p></article><article><span className="proof-icon">02</span><b>{lang==='he'?'לא הכול חי':'Not everything is live'}</b><p>{lang==='he'?'יכולות מתוכננות אינן מוצגות כהוכחה.':'Planned capabilities are not presented as proof.'}</p></article></div></section>
-      <section className="community-section" id="community"><div><span className="section-label">{t.communityKicker}</span><h2>{t.communityTitle}</h2><p>{t.communityText}</p><div className="community-actions"><a className="cta" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{t.github}</a><a className="ghost" href="https://github.com/imaosglobal/Ima-kernel/issues/170" target="_blank" rel="noreferrer">{lang==='he'?'הגדרת AGI גלובלית':'Global AGI definition'}</a></div></div><div className="feedback-card" id="feedback-panel"><b>{t.feedback}</b><textarea value={feedback} onChange={e=>setFeedback(e.target.value)} placeholder={t.feedbackPlaceholder} maxLength={4000}/><button className="cta" onClick={sendFeedback} disabled={!feedback.trim()}>{t.send}</button>{feedbackStatus&&<small>{feedbackStatus}</small>}</div></section>
-      <section className="closing"><div className="closing-mark"><MamaFigure compact/></div><h2>Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.</h2><p>{lang==='he'?'אמא לא אמורה להיות מרכז החיים שלך. היא אמורה לעזור לך להתחזק, להבין יותר ולפעול בעצמך.':'IMA is not meant to become the center of your life. It should help you become stronger, understand more and act for yourself.'}</p></section>
-    </main>
-    <footer className="site-footer"><span>{t.footer}</span><span><a href="https://github.com/imaosglobal/Ima-kernel">GitHub</a> · <a href={YOUTUBE_URL}>YouTube</a></span><span id="support"><a href={SUPPORT_URL}>{lang==='he'?'תמיכה':'Support'}</a> · <a href={PRIVACY_URL}>{lang==='he'?'פרטיות':'Privacy'}</a></span><a href={GOOGLE_CAMPAIGN_URL}>{lang==='he'?'לתמוך באמא':'Support IMA'}</a><button onClick={()=>setLang(lang==='he'?'en':'he')}>{lang==='he'?'English':'עברית'}</button></footer>
-  </div>;
+  <section className="hero" id="home"><div className="hero-copy"><span className="eyebrow">IMA · אמא</span><h1>Human-centered.<br/><em>Personal.</em></h1><p>IMA adapts the experience to your language, device, accessibility needs and preferences — while keeping one identity, human agency and evidence at the center.</p><div className="hero-actions"><div className="login-card" id="login">{loggedIn?<><strong>{locale.labels.signed}</strong><span>{locale.labels.loginRequired}</span></>:<><strong>{locale.labels.signin}</strong><span>{locale.labels.noLogin}</span><GoogleLogin auth={auth} setAuth={setAuth} setProfile={setProfile} setActive={setActive} locale={locale}/></>}</div><button className="primary" onClick={()=>loggedIn?go('chat'):go('login')}>{locale.labels.talk}</button><button className="secondary" onClick={()=>go('watch')}>{locale.labels.meet}</button><button className="secondary small" onClick={()=>go('chat')}>{lang==='he'?'לדבר עם אמא':'Talk to IMA'}</button><button className="secondary small" onClick={()=>{setShareOpen(true);observeIma({type:'share_opened',source:'public-ui'});trackImaEvent('ima_share_open')}}>{lang==='he'?'שיתוף':'Share'}</button><a className="primary small" href={GOOGLE_CAMPAIGN_URL} onClick={()=>trackImaEvent('ima_campaign_cta_click',{destination:GOOGLE_CAMPAIGN_URL})}>Open IMA now</a><a className="secondary small" href="https://opencollective.com/ima-human-centered-intelligenc" target="_blank" rel="noreferrer" onClick={()=>trackImaEvent('ima_support_click')}>{lang==='he'?'תמיכה באמא':'Support IMA'}</a></div><div className="trust-row"><span>Private stays private</span><span>Evidence before claims</span><span>Human agency</span></div></div><div className="hero-avatar clean-hero-logo"><a className="avatar-campaign-link" href={GOOGLE_CAMPAIGN_LOGO_URL} aria-label="IMA Google campaign destination" onClick={()=>trackImaEvent('ima_internal_logo_ad_click',{destination:GOOGLE_CAMPAIGN_LOGO_URL})}><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager"/></a></div></section>
+
+  <section className="simple-section value-section" id="value"><div className="section-head"><span className="eyebrow">VALUE FIRST</span><h2>{lang==='he'?'מקבלים ערך כבר מהביקור הראשון':'Value from the first visit'}</h2><p>{lang==='he'?'אמא נועדה לעזור לחשוב, ללמוד, ליצור, לבדוק רעיון ולהפוך שאלה מעורפלת לצעד הבא — עם אמת לפני הכרזה וסוכנות אנושית במרכז.':'IMA helps people think, learn, create, test an idea and turn uncertainty into a next step — with evidence and human agency at the center.'}</p></div><div className="feature-grid"><article><b>{lang==='he'?'חשיבה ולמידה':'Think & Learn'}</b><p>{lang==='he'?'שאלו, בדקו, למדו וחברו נקודות מבט.':'Ask, verify, learn and connect perspectives.'}</p><button className="secondary" onClick={()=>go('chat')}>{locale.labels.chat}</button></article><article><b>{lang==='he'?'יצירה':'Create'}</b><p>{lang==='he'?'כתיבה, רעיונות, מוזיקה ויצירה עם אמא.':'Writing, ideas, music and creative work with IMA.'}</p><button className="secondary" onClick={()=>go('chat')}>{lang==='he'?'להתחיל ליצור':'Start creating'}</button></article><article><b>{lang==='he'?'הזדמנות':'Opportunity'}</b><p>{lang==='he'?'בדיקה חינמית של הזדמנות עסקית לפני התחייבות.':'A free opportunity check before commitment.'}</p><button className="secondary" onClick={()=>go('chat')}>{lang==='he'?'לדבר עם אמא':'Talk to IMA'}</button></article></div></section>
+
+  <section className="welcome-strip"><div><span className="mini-avatar">א</span><div><b>{loggedIn?locale.labels.welcome+(auth.user?.name?', '+auth.user.name.split(' ')[0]:''):locale.labels.signin}</b><small>{loggedIn?locale.labels.loginRequired:locale.labels.noLogin}</small></div></div>{loggedIn?<button className="primary small" onClick={()=>go('chat')}>{locale.labels.start}</button>:<span className="auth-hint">{lang==='he'?'התחברות זמינה רק בכפתור Google הרשמי בראש האתר.':'Sign in only with the official Google button at the top.'}</span>}</section>
+
+  <section className="simple-section" id="chat"><div className="section-head"><span className="eyebrow">{locale.labels.chat}</span><h2>{loggedIn?locale.labels.welcome:locale.labels.signin}</h2><p>{loggedIn?locale.labels.loginRequired:locale.labels.noLogin}</p></div>{loggedIn?<><div className="mode-grid">{[['Think','I want to think with you.'],['Create','I want to create something with you.'],['Learn','I want to learn something.'],['Do','I want to turn an idea into a task.']].map(([label,prompt])=><button className="mode" key={label} onClick={()=>send(prompt)}><span>✦</span><b>{label}</b><small>IMA adapts to you</small></button>)}</div><div className="chat-layout"><div className="chat-card"><div className="messages" aria-live="polite" aria-label="IMA conversation">{messages.map((m,i)=><div key={i} className={'message-row '+m.role}><div className="message">{m.text}</div></div>)}{!messages.length&&<div className="empty-chat">{locale.labels.welcome}</div>}{busy&&<div className="message-row ima"><div className="message typing">IMA…</div></div>}</div><div className="composer"><label className="sr-only" htmlFor="ima-composer">Message IMA</label><input id="ima-composer" value={input} disabled={busy} onChange={e=>setInput(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder={locale.labels.placeholder}/><button type="button" aria-label={locale.labels.send} onClick={()=>send()} disabled={busy}>{locale.labels.send}</button></div></div></div></>:<div className="login-required-card">{locale.labels.noLogin}<span className="auth-hint">{lang==='he'?'השתמש בכפתור Google הרשמי בראש האתר.':'Use the official Google button at the top.'}</span></div>}</section>
+
+  <section className="community-shop" id="community"><div className="section-head"><span className="eyebrow">{locale.labels.community}</span><h2>{locale.labels.community}</h2><p>{locale.labels.communityText}</p></div>{loggedIn?<div className="feature-grid"><article><b>Learn</b><p>Questions, knowledge, languages and shared discoveries.</p><button className="secondary" onClick={()=>go('chat')}>{locale.labels.chat}</button></article><article><b>Share</b><p>Teach IMA through contributions that enter validation rather than becoming truth automatically.</p><a className="secondary" href="https://github.com/imaosglobal/Ima-kernel/issues" target="_blank" rel="noreferrer">{locale.labels.support}</a></article><article><b>Build</b><p>People can test, build and improve the public experience.</p><a className="secondary" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">GitHub</a></article></div>:<div className="login-required-card">{locale.labels.noLogin}<span className="auth-hint">{lang==='he'?'השתמש בכפתור Google הרשמי בראש האתר.':'Use the official Google button at the top.'}</span></div>}</section>
+
+  <section className="community-shop" id="shop"><div className="section-head"><span className="eyebrow">{locale.labels.shop}</span><h2>{locale.labels.shop}</h2><p>{locale.labels.shopText}</p></div>{loggedIn?<div className="feature-grid"><article><b>IMA creations</b><p>Digital creations and future physical products appear here only when actually available.</p></article><article><b>Creator works</b><p>Selected works connected to the IMA ecosystem, with provenance.</p></article><article><b>Future marketplace</b><p>A global, multilingual and accessible storefront.</p></article></div>:<div className="login-required-card">{locale.labels.noLogin}<span className="auth-hint">{lang==='he'?'השתמש בכפתור Google הרשמי בראש האתר.':'Use the official Google button at the top.'}</span></div>}</section>
+
+  <GlobalPrinciples />
+
+  <section className="info-section" id="privacy"><div className="section-head"><span className="eyebrow">{lang==='he'?'פרטיות':'PRIVACY'}</span><h2>{lang==='he'?'פרטיות, זיכרון ושליטה':'Privacy, memory and control'}</h2><p>{lang==='he'?'הזיכרון האישי נשאר בשליטת האדם. שמירת זיכרון דורשת הסכמה; ניתן לייצא או למחוק מידע דרך הממשק כאשר השירות זמין. אמא אינה מציגה תיעוד כראיה ליכולת חיה בלי אימות.':'Personal memory remains under human control. Memory requires consent; export and deletion are available through the interface when the service is available. IMA does not present documentation as proof of a live capability without verification.'}</p></div></section>
+
+  <section className="capabilities-section" id="capabilities"><div className="section-head"><span className="eyebrow">{lang==='he'?'כל אמא':'WHOLE IMA'}</span><h2>{lang==='he'?'מה בנוי בתוך אמא':'What exists inside IMA'}</h2><p>{lang==='he'?'מפת יכולות ציבורית אחת: מה קיים בקוד, מה נבדק ומה עדיין לא אומת בפועל. תיעוד אינו מוצג כהוכחת יכולת חיה.':'One public capability map: what exists in the codebase, what is tested, and what is not yet verified live. Documentation is not presented as proof of a live capability.'}</p></div><div className="capability-grid">{capabilityRegistry.capabilities.map(cap=>{const verified=['VERIFIED','LIVE'].includes(cap.status);const tone=verified?'verified':cap.status==='IMPLEMENTED'||cap.status==='DESIGNED'?'implemented':'unknown';return <article className={'capability-card '+tone} key={cap.id}><div className="capability-top"><b>{cap.label}</b><span>{cap.status}</span></div><p>{cap.boundary||''}</p>{cap.evidence?.length?<small>{cap.evidence.slice(0,2).join(' · ')}</small>:null}</article>})}</div><div className="capability-note">{lang==='he'?'כל פעולה משמעותית נשארת כפופה לאימות, הסכמה, פרטיות וסוכנות אנושית.':'Every consequential capability remains subject to verification, consent, privacy and human agency.'}</div></section>
+
+  <section className="video-section" id="watch"><div className="section-head"><span className="eyebrow">{locale.labels.video}</span><h2>{locale.labels.meet}</h2><p>{locale.labels.youtube}</p></div><div className="video-card"><div className="video-visual"><video className="heygen-intro-video" controls playsInline preload="metadata" poster={CLEAN_LOGO_URL} src={IMA_HEYGEN.videoUrl} aria-label="IMA introduction"/></div><div className="video-copy"><span className="tag">IMA Global · YouTube</span><h3>IMA</h3><p>The public video home belongs on the public IMA YouTube channel — not inside the HeyGen studio.</p><a className="primary" href="https://www.youtube.com/@imaglobal-d4g" target="_blank" rel="noreferrer">{locale.labels.youtube}</a></div></div></section>
+
+  <section className="support-section" id="support"><div><span className="eyebrow">{locale.labels.support}</span><h2>{locale.labels.support}</h2><p>{locale.labels.supportText}</p></div><div className="support-actions"><a className="secondary" href="https://github.com/imaosglobal/Ima-kernel/issues" target="_blank" rel="noreferrer">{locale.labels.support}</a>{!window.matchMedia?.('(display-mode: standalone)').matches && <button className="secondary" onClick={install}>{locale.labels.install}</button>}</div><FeedbackPanel/></section>
+
+  <section className="after-login" id="more"><div className="section-head"><span className="eyebrow">{loggedIn?'Personal space':'IMA'}</span><h2>{loggedIn?locale.labels.welcome:'One IMA, many people.'}</h2><p>{loggedIn?locale.labels.loginRequired:'The same IMA identity adapts to language, culture, age-appropriate presentation, accessibility, device and user preference.'}</p></div><div className="deep-grid"><article><span>01</span><h3>Memory</h3><p>Personal memory is separate and consent-based.</p><button onClick={async()=>{if(!loggedIn)return go('login');const next=memory==='GRANTED'?'DENIED':'GRANTED';const x=await setMemoryConsent(next);setMemory(x?.consent?.status||next)}}>{memory==='GRANTED'?'Turn off memory':'Enable personal memory'}</button></article><article><span>02</span><h3>Verification</h3><p>Capabilities are promoted only with evidence.</p><div className="status-line">{capabilityRegistry.capabilities.filter(x=>['VERIFIED','TESTED','IMPLEMENTED','LIVE'].includes(x.status)).length} evidence-backed project capabilities</div></article><article><span>03</span><h3>Install</h3><p>IMA can be installed as a PWA on supported devices.</p>{!window.matchMedia?.('(display-mode: standalone)').matches && <button onClick={install}>{locale.labels.install}</button>}</article><article><span>04</span><h3>Global</h3><p>One identity across web, mobile, voice, devices and future interfaces.</p></article></div><div className="runtime-note"><span className={runtime?'ok':''}>●</span>{runtime?'IMA public runtime online':'Checking IMA runtime'} · Memory: {memory==='GRANTED'?'on':'off by default'}</div></section>
+
+  <footer><span>IMA — אמא</span><span>by Ori Cohen</span><span><a href={SUPPORT_URL}>{locale.labels.support}</a></span><span><a href={PRIVACY_URL}>{lang==='he'?'פרטיות':'Privacy'}</a></span><span><a href="#more">{lang==='he'?'עוד על אמא':'About IMA'}</a></span><span><a href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{lang==='he'?'GitHub':'GitHub'}</a></span><span><a href="https://www.youtube.com/@imaglobal-d4g" target="_blank" rel="noreferrer">{locale.labels.youtube}</a></span><span>Use IMA · Question IMA · Teach IMA · Build IMA · Test IMA</span></footer>
+ </main></>
 }
