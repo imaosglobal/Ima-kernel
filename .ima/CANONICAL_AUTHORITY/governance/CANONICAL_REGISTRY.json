@@ -16,6 +16,7 @@
   "authority": "IMA_KERNEL",
   "canonical_rule": "Single canonical IMA identity and interaction loop. Historical archives are preserved but are not runtime authorities. New capability enters only through canonical surfaces and verification.",
   "contracts": [
+    "AE-001",
     "TW-001",
     "WH-001",
     "CG-001",
