@@ -1,5 +1,5 @@
 {
-  "authority": ".ima/CANONICAL_AUTHORITY/ACTIVE",
+  "authority": ".ima/CANONICAL_AUTHORITY",
   "components": {
     "IMA_START.py": {
       "hash": "9063bf8c",
@@ -21,5 +21,19 @@
       "hash": "c0757aca",
       "size": 3070
     }
-  }
+  },
+  "version": "2026-11-13",
+  "canonical_surfaces": {
+    "master_interaction_loop": "ima_master_runtime.py",
+    "unified_loop": ".ima/loop/unified_loop.py",
+    "trust_wonder": "governance/IMA_TRUST_WONDER_CORE.md",
+    "wonder_to_help": "governance/IMA_WONDER_TO_HELP_CORE.md",
+    "compound_growth": "governance/IMA_COMPOUND_GROWTH_CORE.md",
+    "live_browser": "LIVE-001 / BrowserGlass / canonical Action Core",
+    "chatgpt_surface": "plugins/ima-chatgpt/plugin.json",
+    "device_bridge": "plugins/ima-device-bridge/plugin.json"
+  },
+  "integration_rule": "All new capabilities attach to these canonical surfaces; archives, backups, graveyards, experimental trees and legacy runtimes are historical/non-runtime unless explicitly promoted and verified.",
+  "learning_rule": "Validated improvements compound only through the canonical loop with provenance, tests, verification, privacy, consent and human-agency safeguards.",
+  "archive_policy": "Historical preservation is retained; duplicate implementations must not become active runtime paths."
 }
