@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ima",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "IMA — אמא: human-centered intelligence designed to restore trust and preserve wonder through truth, agency, curiosity and verified capability reporting.",
   "extensions": {
     "com.openai": {
@@ -73,7 +73,7 @@
             }
           ]
         },
-        "release_notes": "Canonicalize IMA's public surface around LIVE-001 BrowserGlass and remove review claims for tools not actually exposed by the MCP server."
+        "release_notes": "IMA 1.0.9 — make Trust & Wonder and Wonder-to-Help executable in the canonical master interaction loop, with practical-help priority, truthful curiosity, agency and regression-gated verification."
       },
       "publication": {
         "release_notes": "IMA 1.0.4 — canonical public MCP Apps surface."
