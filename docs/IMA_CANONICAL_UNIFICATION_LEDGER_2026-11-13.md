@@ -42,6 +42,8 @@ The active architectural spine is:
 
 Current canonical surfaces:
 
+- Adaptive Eligibility AE-001 (core/adaptive_eligibility.py + governance/IMA_ADAPTIVE_ELIGIBILITY_CORE.md)
+
 - `ima_master_runtime.py`
 - `.ima/loop/unified_loop.py`
 - Trust & Wonder TW-001
