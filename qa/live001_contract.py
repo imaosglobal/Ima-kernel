@@ -35,7 +35,7 @@ widget_raw = read("services/ima-action-mcp/widget.html")
 browserglass_docker = read("tools/ima-browserglass/Dockerfile")
 device_bridge_raw = read("app.py")
 trust_wonder_raw = read("governance/IMA_TRUST_WONDER_CORE.md")
-wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")
+wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")\nwonder_help_runtime = read("core/wonder_to_help.py")\nmaster_runtime_raw = read("ima_master_runtime.py")
 
 try:
     plugin = json.loads(plugin_raw)
@@ -151,4 +151,4 @@ if failures:
     sys.exit(1)
 
 print("LIVE-001 GATE: PASS")
-print("Canonical IMA plugin, MCP endpoint, BrowserGlass, device bridge and review contract are consistent.")
+print("Canonical IMA plugin, MCP endpoint, BrowserGlass, device bridge, Trust & Wonder contracts and executable WH-001 behavior layer are consistent.")
