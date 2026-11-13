@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "provider": "bit",
+  "enabled": false,
+  "purpose": "personal_support_for_ima_development",
+  "payment_url": "",
+  "display_name_he": "תמיכה ב-IMA",
+  "display_name_en": "Support IMA",
+  "rights_guard": {
+    "do_not_activate_without_verified_destination": true,
+    "do_not_describe_as_tax_deductible_donation": true,
+    "do_not_describe_as_business_checkout": true,
+    "record_receipts_for_user": true,
+    "check_benefit_reporting_obligations_before_material_income": true
+  }
+}
