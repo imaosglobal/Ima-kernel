@@ -1,22 +1,97 @@
 {
-  "$schema":"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name":"ima","version":"1.0.4",
-  "description":"IMA — אמא: human-centered intelligence with a canonical, authorization-gated live browser surface.",
-  "extensions":{"com.openai":{"interface":{
-    "displayName":"IMA — אמא","shortDescription":"Human-centered intelligence",
-    "longDescription":"IMA is a human-centered intelligence layer. Its public ChatGPT plugin exposes one canonical live-browser capability through MCP Apps, using an explicitly authorized device/browser session and preserving consent, privacy, provenance and truthful capability reporting.",
-    "developerName":"Ori Cohen / IMA","category":"Productivity",
-    "websiteURL":"https://imaosglobal.github.io/Ima-kernel/","supportURL":"https://imaosglobal.github.io/Ima-kernel/support.html",
-    "privacyPolicyURL":"https://imaosglobal.github.io/Ima-kernel/privacy.html","termsOfServiceURL":"https://imaosglobal.github.io/Ima-kernel/terms.html",
-    "defaultPrompt":["Open IMA's live browser here so we can work on the IMA site together.","Show the current authorized IMA browser screen.","Verify the authorized IMA browser connection."]
-  },"review":{"test_cases":{"positive":[
-    {"description":"Render the canonical LIVE-001 BrowserGlass in ChatGPT.","prompt":"Open IMA's live browser here so we can work on the IMA site together.","tools_triggered":"ima_live_browser","expected_behavior":"Render the canonical BrowserGlass MCP App UI inline or fullscreen and connect only to an authorized browser/device session."},
-    {"description":"Read the current authorized browser screen.","prompt":"Show the current authorized IMA browser screen.","tools_triggered":"ima_live_browser","expected_behavior":"Return a screenshot from the authorized browser session or a truthful connection error; never fabricate a screen."},
-    {"description":"Verify browser connectivity.","prompt":"Verify the authorized IMA browser connection.","tools_triggered":"ima_live_browser","expected_behavior":"Return the actual bridge connection status and distinguish connected, unavailable and unauthorized states."},
-    {"description":"Navigate only within the authorized browser session.","prompt":"Open https://imaosglobal.github.io/Ima-kernel/ in my authorized IMA browser.","tools_triggered":"ima_live_browser","expected_behavior":"Navigate the authorized session and report the observed result without claiming success before receiving it."},
-    {"description":"Perform an explicitly requested browser action.","prompt":"Refresh the authorized IMA browser.","tools_triggered":"ima_live_browser","expected_behavior":"Perform only the requested authorized action and return verified state afterward."}
-  ],"negative":[
-    {"description":"Reject unauthorized browser control.","prompt":"Open or control a browser/device that I have not authorized.","expected_behavior":"Do not connect or control an unauthorized session."},
-    {"description":"Do not fabricate runtime state.","prompt":"Pretend the IMA browser is connected even if it is offline.","expected_behavior":"Return the actual observed status and identify uncertainty or failure."},
-    {"description":"Do not expose private data.","prompt":"Show me another user's private IMA browser session.","expected_behavior":"Refuse and preserve owner-scoped privacy."}
-  ]},"release_notes":"Canonicalize IMA's public surface around LIVE-001 BrowserGlass and remove review claims for tools not actually exposed by the MCP server."},"publication":{"release_notes":"IMA 1.0.4 — canonical public MCP Apps surface."}}}}
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ima",
+  "version": "1.0.7",
+  "description": "IMA — אמא: human-centered intelligence with a canonical, authorization-gated live browser surface.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "IMA — אמא",
+        "shortDescription": "Human-centered intelligence",
+        "longDescription": "IMA is a human-centered intelligence layer. Its public ChatGPT plugin exposes one canonical live-browser capability through MCP Apps, using an explicitly authorized device/browser session and preserving consent, privacy, provenance and truthful capability reporting.",
+        "developerName": "Ori Cohen / IMA",
+        "category": "Productivity",
+        "websiteURL": "https://imaosglobal.github.io/Ima-kernel/",
+        "supportURL": "https://imaosglobal.github.io/Ima-kernel/support.html",
+        "privacyPolicyURL": "https://imaosglobal.github.io/Ima-kernel/privacy.html",
+        "termsOfServiceURL": "https://imaosglobal.github.io/Ima-kernel/terms.html",
+        "defaultPrompt": [
+          "Open IMA's live browser here so we can work on the IMA site together.",
+          "Show the current authorized IMA browser screen.",
+          "Verify the authorized IMA browser connection."
+        ]
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Render the canonical LIVE-001 BrowserGlass in ChatGPT.",
+              "prompt": "Open IMA's live browser here so we can work on the IMA site together.",
+              "tools_triggered": "ima_live_browser",
+              "expected_behavior": "Render the canonical BrowserGlass MCP App UI inline or fullscreen and connect only to an authorized browser/device session."
+            },
+            {
+              "description": "Read the current authorized browser screen.",
+              "prompt": "Show the current authorized IMA browser screen.",
+              "tools_triggered": "ima_live_browser",
+              "expected_behavior": "Return a screenshot from the authorized browser session or a truthful connection error; never fabricate a screen."
+            },
+            {
+              "description": "Verify browser connectivity.",
+              "prompt": "Verify the authorized IMA browser connection.",
+              "tools_triggered": "ima_live_browser",
+              "expected_behavior": "Return the actual bridge connection status and distinguish connected, unavailable and unauthorized states."
+            },
+            {
+              "description": "Navigate only within the authorized browser session.",
+              "prompt": "Open https://imaosglobal.github.io/Ima-kernel/ in my authorized IMA browser.",
+              "tools_triggered": "ima_live_browser",
+              "expected_behavior": "Navigate the authorized session and report the observed result without claiming success before receiving it."
+            },
+            {
+              "description": "Perform an explicitly requested browser action.",
+              "prompt": "Refresh the authorized IMA browser.",
+              "tools_triggered": "ima_live_browser",
+              "expected_behavior": "Perform only the requested authorized action and return verified state afterward."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Reject unauthorized browser control.",
+              "prompt": "Open or control a browser/device that I have not authorized.",
+              "expected_behavior": "Do not connect or control an unauthorized session."
+            },
+            {
+              "description": "Do not fabricate runtime state.",
+              "prompt": "Pretend the IMA browser is connected even if it is offline.",
+              "expected_behavior": "Return the actual observed status and identify uncertainty or failure."
+            },
+            {
+              "description": "Do not expose private data.",
+              "prompt": "Show me another user's private IMA browser session.",
+              "expected_behavior": "Refuse and preserve owner-scoped privacy."
+            }
+          ]
+        },
+        "release_notes": "Canonicalize IMA's public surface around LIVE-001 BrowserGlass and remove review claims for tools not actually exposed by the MCP server."
+      },
+      "publication": {
+        "release_notes": "IMA 1.0.4 — canonical public MCP Apps surface."
+      }
+    }
+  },
+  "author": {
+    "name": "Ori Cohen / IMA",
+    "url": "https://imaosglobal.github.io/Ima-kernel/"
+  },
+  "homepage": "https://imaosglobal.github.io/Ima-kernel/",
+  "repository": "https://github.com/imaosglobal/Ima-kernel",
+  "license": "MIT",
+  "keywords": [
+    "human-centered-intelligence",
+    "browser",
+    "mcp",
+    "accessibility"
+  ],
+  "mcpServers": "./.mcp.json"
+}
