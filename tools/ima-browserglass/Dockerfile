@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV BGLS_HOME=/opt/browserglass
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates curl gnupg dumb-init fonts-liberation \
+  && apt-get install -y --no-install-recommends ca-certificates curl gnupg git dumb-init fonts-liberation \
   && install -d -m 0755 /etc/apt/keyrings \
   && curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg \
   && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list \
