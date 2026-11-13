@@ -202,7 +202,7 @@ function ChatPanel({ t, lang, user, onClose, chatOnly = false }) {
 export default function App() {
   const [lang, setLang] = useState(() => localStorage.getItem('ima-site-language') || (navigator.language?.startsWith('he') ? 'he' : 'en'));
   const [user, setUser] = useState(() => getStoredGoogleUser());
-  const [chatOpen, setChatOpen] = useState(() => new URLSearchParams(location.search).get('chat') === '1');
+  const [chatOpen, setChatOpen] = useState(() => new URLSearchParams(location.search).get('chat') === '1' || Boolean(getStoredGoogleUser()));
   const [runtime, setRuntime] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [feedbackStatus, setFeedbackStatus] = useState('');
@@ -219,10 +219,6 @@ export default function App() {
     initializeImaAnalytics();
     trackImaEvent('ima_public_redesign_view', { language: lang });
   }, [lang]);
-
-  useEffect(() => {
-    if (user) setChatOpen(true);
-  }, [user]);
 
   useEffect(() => {
     getImaRuntime().then(setRuntime).catch(() => setRuntime(null));
