@@ -5,7 +5,11 @@ import conversation_layer
 import ima_brain
 from learning.learning_loop import learn_from_event
 import ima_mom
-try:\n    from core.compound_growth import build_context as build_compound_growth_context, contract as compound_growth_contract_fn\nexcept Exception:\n    build_compound_growth_context = None\n    compound_growth_contract_fn = None\nfrom core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
+try:
+    from core.compound_growth import build_context as build_compound_growth_context, contract as compound_growth_contract_fn
+except Exception:
+    build_compound_growth_context = None
+    compound_growth_contract_fn = None\nfrom core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
@@ -75,7 +79,13 @@ class IMAMaster:
                 + ("Boundary: " + boundary if boundary else "")
             )
 
-        # Canonical Wonder-to-Help behavior is injected into the same master prompt path\n        # used by every public/private text interaction. This is executable behavior,\n        # not a descriptive product claim.\n        compound_growth_context = ""\n        compound_growth_contract = None\n        try:\n            if build_compound_growth_context is not None:\n                compound_growth_context = "\\n\\n" + build_compound_growth_context(message)\n                compound_growth_contract = compound_growth_contract_fn() if compound_growth_contract_fn else None\n        except Exception as exc:\n            compound_growth_contract = {"status": "unavailable", "error": repr(exc)}\n\n        wonder_help_context = ""\n        wonder_help_contract = None\n        try:\n            from core.wonder_to_help import build_context as build_wonder_help_context, contract as wonder_help_contract_fn\n            wonder_help_context = "\\n\\n" + build_wonder_help_context(message)\n            wonder_help_contract = wonder_help_contract_fn()\n        except Exception as exc:\n            # Fail closed to truth: a missing optional behavior layer must never\n            # be hidden as if it were active.\n            wonder_help_contract = {"status": "unavailable", "error": repr(exc)}\n\n        opportunity_context = (
+        # Canonical Wonder-to-Help behavior is injected into the same master prompt path\n        # used by every public/private text interaction. This is executable behavior,\n        # not a descriptive product claim.\n        compound_growth_context = ""
+        compound_growth_contract = None
+        try:\n            if build_compound_growth_context is not None:\n                compound_growth_context = "\n\n" + build_compound_growth_context(message)
+                compound_growth_contract = compound_growth_contract_fn() if compound_growth_contract_fn else None
+        except Exception as exc:\n            compound_growth_contract = {"status": "unavailable", "error": repr(exc)}
+\n        wonder_help_context = ""
+        wonder_help_contract = None\n        try:\n            from core.wonder_to_help import build_context as build_wonder_help_context, contract as wonder_help_contract_fn\n            wonder_help_context = "\\n\\n" + build_wonder_help_context(message)\n            wonder_help_contract = wonder_help_contract_fn()\n        except Exception as exc:\n            # Fail closed to truth: a missing optional behavior layer must never\n            # be hidden as if it were active.\n            wonder_help_contract = {"status": "unavailable", "error": repr(exc)}\n\n        opportunity_context = (
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
