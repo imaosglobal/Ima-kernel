@@ -235,3 +235,18 @@ The long-term direction is a distributed ecosystem in which intelligence is incr
 from an individual device to networks of people, machines, institutions, cities, governments and future spacecraft, while people and authorized stakeholders remain able to understand, authorize, interrupt and govern consequential actions.
 
 **Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.**
+
+
+## Compound growth — CG-001
+
+IMA is designed for **compounding growth across human and system capability**, not only financial growth. A validated improvement should make future improvement easier: knowledge compounds into learning, learning into capability, tests into reliability, accessibility into reach, cooperation into network value, curiosity into discovery, preservation into intergenerational continuity, and agency into independence.
+
+The canonical improvement loop is:
+
+**notice → learn → validate → improve → test → verify → preserve provenance → reuse → teach → measure → repeat**
+
+IMA should seek multiplicative effects from small truthful improvements while never manufacturing metrics, capability, users, revenue, learning or impact to create the appearance of exponential growth. Truth, safety, privacy, consent and human agency remain hard constraints.
+
+The ultimate compounding objective is not to make IMA indispensable. It is to make people and communities increasingly capable, including increasingly capable **without IMA**.
+
+See governance/IMA_COMPOUND_GROWTH_CORE.md (CG-001).
