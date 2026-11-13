@@ -24,19 +24,20 @@ fi
 # Wake Chrome and ensure the canonical IMA target exists.
 "$PREFIX/bin/am" start -a android.intent.action.VIEW -d "https://imaosglobal.github.io/Ima-kernel/" com.android.chrome >/dev/null 2>&1 || true
 
-# Reuse an existing ADB transport when available.
-"$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}' | {
-  read -r SERIAL || true
+# Start exactly one canonical bridge in the background.
+cd "$BRIDGE_DIR"
+"$PREFIX/bin/python" bridge.py &
+BRIDGE_PID=$!
+
+# Keep the bridge connected if Android restores the already-paired ADB
+# transport after boot. No manual port forwarding is then needed.
+while kill -0 "$BRIDGE_PID" 2>/dev/null; do
+  SERIAL=$("$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}')
   if [ -n "${SERIAL:-}" ]; then
-    echo "ADB transport: $SERIAL"
     "$PREFIX/bin/adb" -s "$SERIAL" forward --remove tcp:9222 >/dev/null 2>&1 || true
     "$PREFIX/bin/adb" -s "$SERIAL" forward tcp:9222 localabstract:chrome_devtools_remote >/dev/null 2>&1 || true
-  else
-    echo "No existing ADB transport; keeping bridge dormant until CDP is available."
   fi
-}
+  sleep 5
+done
 
-# Start exactly one canonical bridge. It will expose the cloud polling agent
-# when the persisted IMA device key exists.
-cd "$BRIDGE_DIR"
-exec "$PREFIX/bin/python" bridge.py
+echo "bridge exited; autostart loop ending"
