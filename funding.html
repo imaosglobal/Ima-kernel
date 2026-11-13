@@ -1,72 +1,14 @@
 <!doctype html>
-<html lang="he" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IMA — מימון, תמיכה ופיילוטים</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:28px;line-height:1.65;background:#fff;color:#17202a}
-.card{border:1px solid #ddd;border-radius:16px;padding:18px;margin:14px 0}
-.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid #222;text-decoration:none;background:#17202a;color:#fff}
-.small{opacity:.75;font-size:.92em}.guard{background:#f7f9fb}.disabled{opacity:.55;pointer-events:none}
-</style>
-</head>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="IMA — support, global pilots and ways to help build human-centered intelligence"><title>IMA — Support, Funding & Pilots</title>
+<style>body{font-family:system-ui,sans-serif;max-width:820px;margin:0 auto;padding:28px;line-height:1.65;background:#fff;color:#17202a}.card{border:1px solid #ddd;border-radius:16px;padding:18px;margin:14px 0}.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid #222;text-decoration:none;background:#17202a;color:#fff;margin:4px 0}.small{opacity:.75;font-size:.92em}.rtl{direction:rtl;text-align:right}</style></head>
 <body>
-<h1>IMA — מימון, תמיכה ופיילוטים</h1>
-<p><strong>עקרון IMA: הכנסה אמיתית לפני הוצאה על AI בתשלום.</strong></p>
-
-<div class="card guard">
-<h2>תמיכה אישית ב-IMA — מסלול ראשון</h2>
-<p>בשלב הראשון IMA לא מציגה את אורי כבעל עסק ולא פותחת סליקה עסקית. המסלול המוכן הוא קבלת תמיכה באמצעות Bit אישי, ורק ליעד תשלום שאורי עצמו אימת.</p>
-<div id="bit-payment"><p>אמצעי התשלום עדיין לא הופעל. אין כאן קישור תשלום דמה.</p></div>
-<p class="small">תמיכה אישית אינה מוצגת כתרומה מוכרת במס. לפני הכנסה משמעותית או חוזרת יש לבדוק את חובות הדיווח וההשפעה האפשרית על הזכויות הרלוונטיות.</p>
-</div>
-
-<div class="card">
-<h2>פיילוטים לארגונים</h2>
-<p>פיילוט בתשלום הוא מסלול עתידי נפרד, שייפתח רק במסגרת מתאימה מבחינה משפטית ומיסויית. אין חיוב אוטומטי.</p>
-<p><a class="btn" href="mailto:imaosglobal@gmail.com?subject=IMA%20Paid%20Pilot">בקשת פיילוט</a></p>
-</div>
-
-<div class="card">
-<h2>Google Pay</h2>
-<p>Google Pay אינו חשבון שאליו פשוט נכנס כסף. הוא אמצעי תשלום שמתחבר למסגרת סליקה. לכן הוא לא מופעל כרגע כמסלול אישי.</p>
-</div>
-
-<div class="card">
-<h2>שמירת זכויות</h2>
-<ul>
-<li>אין שינוי אוטומטי במעמד האישי או העסקי.</li>
-<li>אין חיבור אוטומטי לחשבון בנק או לאמצעי תשלום.</li>
-<li>אין הצהרה שהכנסה אינה משפיעה על קצבה.</li>
-<li>לפני הכנסה משמעותית/חוזרת: בדיקת חובת דיווח לפי סוג הקצבה וסוג ההכנסה.</li>
-<li>כל תקבול שיופעל בעתיד יתועד לצורך שקיפות ומעקב.</li>
-</ul>
-<p class="small">זהו מנגנון מוצרי להגנה על זכויות, לא ייעוץ משפטי או מס.</p>
-</div>
-
-<div class="card">
-<h2>מה קורה לאחר תשלום?</h2>
-<ol>
-<li>התשלום מגיע ליעד שאורי אימת.</li>
-<li>נשמרת אסמכתה/רישום של התקבול.</li>
-<li>הכנסה מאומתת נבחנת לפני הוצאה על שירותים בתשלום.</li>
-<li>אין רכישות אוטונומיות.</li>
-</ol>
-</div>
-
-<p><a href="./">חזרה ל־IMA</a></p>
-<script>
-(async()=>{
-  const box=document.getElementById('bit-payment');
-  try{
-    const r=await fetch('./payment-config.json',{cache:'no-store'});
-    const c=await r.json();
-    if(c.enabled && c.provider==='bit' && /^https:\/\//.test(c.payment_url)){
-      box.innerHTML='<a class="btn" href="'+c.payment_url+'" rel="nofollow">תמיכה ב-IMA באמצעות Bit</a>';
-    }
-  }catch{}
-})();
-</script>
-</body>
-</html>
+<h1>IMA — Support, Funding & Pilots</h1><p><strong>Help IMA grow through real use, real contribution and real revenue.</strong></p>
+<div class="card"><h2>Support IMA now</h2><p>The currently verified low-friction support route is personal Bit receiving. It is available for supporters who can use Bit.</p><div id="bit-payment"><p>Loading the verified payment route…</p></div><p class="small">This route is personal support for IMA development. It is not presented as a tax-deductible donation or as business checkout. Before significant or recurring income, applicable reporting obligations and possible effects on relevant rights must be checked.</p></div>
+<div class="card"><h2>Global support and paid pilots</h2><p>If you are outside Israel, represent a company, university, research group, funder, accessibility organization or other institution, contact IMA for an appropriate payment route and a paid pilot proposal.</p><a class="btn" href="mailto:imaosglobal@gmail.com?subject=IMA%20Global%20Support%20or%20Paid%20Pilot">Contact IMA about support or a paid pilot</a><p class="small">No automatic charge is created by this contact link. A paid engagement is only established after the appropriate terms, payment route and legal/tax status are clear.</p></div>
+<div class="card"><h2>What funding can enable</h2><ul><li>Verified IMA infrastructure and reliability</li><li>Accessibility, languages and global distribution</li><li>LIVE-001 / BrowserGlass and authorized device integration</li><li>Human-centered research, preservation and open collaboration</li><li>Security, privacy and independent verification</li></ul></div>
+<div class="card"><h2>Rights and transparency</h2><ul><li>No automatic change to personal or business status.</li><li>No automatic bank, payment or legal-status changes.</li><li>No claim that income cannot affect benefits.</li><li>Material or recurring income must be reviewed for applicable reporting obligations.</li><li>Receipts and verified revenue events should be recorded for transparent tracking.</li></ul><p class="small">This is a product safety and transparency mechanism, not legal or tax advice.</p></div>
+<div class="card rtl" id="he"><h2>עברית</h2><p><strong>תמיכה ב-IMA באמצעות מסלול אמיתי, שקוף ושומר-זכויות.</strong></p><p>המסלול הפעיל כרגע הוא קבלת תמיכה אישית באמצעות Bit ליעד שאורי אימת. לתומכים מחוץ לישראל או לארגונים המעוניינים בפיילוט בתשלום — ניתן לפנות במייל כדי להתאים מסלול תשלום והתקשרות מתאים.</p><a class="btn" href="mailto:imaosglobal@gmail.com?subject=IMA%20-%20%D7%AA%D7%9E%D7%99%D7%9B%D7%94%20%D7%90%D7%95%20%D7%A4%D7%99%D7%99%D7%9C%D7%95%D7%98%20%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D">פנייה לתמיכה או לפיילוט בתשלום</a><p class="small">תמיכה אישית אינה מוצגת כתרומה מוכרת במס. לפני הכנסה משמעותית או חוזרת יש לבדוק חובות דיווח והשפעה אפשרית על הזכויות הרלוונטיות.</p></div>
+<p><a href="./">Back to IMA</a></p>
+<script>(async()=>{const box=document.getElementById('bit-payment');try{const r=await fetch('./payment-config.json',{cache:'no-store'});const c=await r.json();if(c.enabled&&c.provider==='bit'&&/^https:\/\//.test(c.payment_url)){box.innerHTML='<a class="btn" href="'+c.payment_url+'" rel="nofollow">Support IMA via Bit</a>';}}catch{box.innerHTML='<p>Payment route unavailable right now. Please use the global support contact.</p>';}})();</script>
+</body></html>
