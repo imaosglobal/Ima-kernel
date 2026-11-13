@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ima",
-  "version": "1.0.7",
-  "description": "IMA — אמא: human-centered intelligence with a canonical, authorization-gated live browser surface.",
+  "version": "1.0.8",
+  "description": "IMA — אמא: human-centered intelligence designed to restore trust and preserve wonder through truth, agency, curiosity and verified capability reporting.",
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "IMA — אמא",
         "shortDescription": "Human-centered intelligence",
-        "longDescription": "IMA is a human-centered intelligence layer. Its public ChatGPT plugin exposes one canonical live-browser capability through MCP Apps, using an explicitly authorized device/browser session and preserving consent, privacy, provenance and truthful capability reporting.",
+        "longDescription": "IMA is a human-centered intelligence layer. Its canonical experience protects truth, privacy and agency while helping children and adults preserve curiosity and wonder. The public ChatGPT surface exposes the authorization-gated LIVE-001 browser capability through MCP Apps and never claims an unverified action, connection or memory.",
         "developerName": "Ori Cohen / IMA",
         "category": "Productivity",
         "websiteURL": "https://imaosglobal.github.io/Ima-kernel/",
@@ -91,7 +91,12 @@
     "human-centered-intelligence",
     "browser",
     "mcp",
-    "accessibility"
+    "accessibility",
+    "trust",
+    "wonder",
+    "curiosity",
+    "human-agency",
+    "children"
   ],
   "mcpServers": "./.mcp.json"
 }
