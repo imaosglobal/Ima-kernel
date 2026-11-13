@@ -10,6 +10,12 @@ try:
 except Exception:
     build_compound_growth_context = None
     compound_growth_contract_fn = None
+
+try:
+    from core.adaptive_eligibility import build_context as build_adaptive_eligibility_context, contract as adaptive_eligibility_contract_fn
+except Exception:
+    build_adaptive_eligibility_context = None
+    adaptive_eligibility_contract_fn = None
 from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
@@ -85,13 +91,22 @@ class IMAMaster:
         try:\n            if build_compound_growth_context is not None:\n                compound_growth_context = "\n\n" + build_compound_growth_context(message)
                 compound_growth_contract = compound_growth_contract_fn() if compound_growth_contract_fn else None
         except Exception as exc:\n            compound_growth_contract = {"status": "unavailable", "error": repr(exc)}
-\n        wonder_help_context = ""
+\n        adaptive_eligibility_context = ""
+        adaptive_eligibility_contract = None
+        try:
+            if build_adaptive_eligibility_context is not None:
+                adaptive_eligibility_context = "\n\n" + build_adaptive_eligibility_context(message)
+                adaptive_eligibility_contract = adaptive_eligibility_contract_fn() if adaptive_eligibility_contract_fn else None
+        except Exception as exc:
+            adaptive_eligibility_contract = {"status": "unavailable", "error": repr(exc)}
+
+        wonder_help_context = ""
         wonder_help_contract = None\n        try:\n            from core.wonder_to_help import build_context as build_wonder_help_context, contract as wonder_help_contract_fn\n            wonder_help_context = "\\n\\n" + build_wonder_help_context(message)\n            wonder_help_contract = wonder_help_contract_fn()\n        except Exception as exc:\n            # Fail closed to truth: a missing optional behavior layer must never\n            # be hidden as if it were active.\n            wonder_help_contract = {"status": "unavailable", "error": repr(exc)}\n\n        opportunity_context = (
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
         world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
-        provider_message = message + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + wonder_help_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
+        provider_message = message + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
@@ -132,6 +147,7 @@ class IMAMaster:
                 "learning_governance": learning_governance,
                 "continuous_future_policy": continuous_future_policy,
                 "continuous_future_contract": continuous_future_contract,\n                "wonder_to_help_contract": wonder_help_contract,\n                "compound_growth_contract": compound_growth_contract,
+                "adaptive_eligibility_contract": adaptive_eligibility_contract,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
             }
