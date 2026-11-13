@@ -1,17 +1,73 @@
 {
-  "$schema":"https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json","schema_version":1,
-  "app_info":{"display_name":"IMA — אמא","subtitle":"Human-centered intelligence","description":"IMA provides a standards-based, opt-in live browser surface inside ChatGPT for explicitly authorized device sessions.","category":"PRODUCTIVITY"},
-  "tools":{"ima_live_browser":{"annotations":{"readOnlyHint":false,"openWorldHint":true,"destructiveHint":false},"justifications":{"read_only_justification":"The tool can display the authorized browser state and perform explicitly requested navigation and input actions.","open_world_justification":"Navigation and interaction occur in an explicitly authorized external browser session.","destructive_justification":"The exposed tool does not provide deletion or irreversible account-management operations."}}},
-  "test_cases":[
-    {"description":"Render canonical LIVE-001 BrowserGlass inside ChatGPT.","user_prompt":"Open IMA's live browser here so we can work on the IMA site together.","tools_triggered":"ima_live_browser","expected_output":"Renders the canonical BrowserGlass UI and connects only to an authorized browser/device session."},
-    {"description":"Read the current authorized browser screen.","user_prompt":"Show the current authorized IMA browser screen.","tools_triggered":"ima_live_browser","expected_output":"Returns an observed screenshot or a truthful connection error."},
-    {"description":"Verify browser connectivity.","user_prompt":"Verify the authorized IMA browser connection.","tools_triggered":"ima_live_browser","expected_output":"Reports the actual bridge status without fabrication."},
-    {"description":"Navigate an explicitly authorized browser.","user_prompt":"Open https://imaosglobal.github.io/Ima-kernel/ in my authorized IMA browser.","tools_triggered":"ima_live_browser","expected_output":"Navigates the authorized session and reports observed state."},
-    {"description":"Refresh the authorized browser.","user_prompt":"Refresh the authorized IMA browser.","tools_triggered":"ima_live_browser","expected_output":"Performs the requested action and verifies the resulting state."}
+  "$schema": "https://developers.openai.com/apps-sdk/schemas/chatgpt-app-submission.v1.json",
+  "schema_version": 1,
+  "app_info": {
+    "display_name": "IMA — אמא",
+    "subtitle": "Human-centered intelligence",
+    "description": "IMA provides a standards-based, opt-in live browser surface inside ChatGPT for explicitly authorized device sessions, with a canonical trust-and-wonder contract: truthful capability reporting, privacy, agency and curiosity without manipulation.",
+    "category": "PRODUCTIVITY"
+  },
+  "tools": {
+    "ima_live_browser": {
+      "annotations": {
+        "readOnlyHint": false,
+        "openWorldHint": true,
+        "destructiveHint": false
+      },
+      "justifications": {
+        "read_only_justification": "The tool can display the authorized browser state and perform explicitly requested navigation and input actions.",
+        "open_world_justification": "Navigation and interaction occur in an explicitly authorized external browser session.",
+        "destructive_justification": "The exposed tool does not provide deletion or irreversible account-management operations."
+      }
+    }
+  },
+  "test_cases": [
+    {
+      "description": "Render canonical LIVE-001 BrowserGlass inside ChatGPT.",
+      "user_prompt": "Open IMA's live browser here so we can work on the IMA site together.",
+      "tools_triggered": "ima_live_browser",
+      "expected_output": "Renders the canonical BrowserGlass UI and connects only to an authorized browser/device session."
+    },
+    {
+      "description": "Read the current authorized browser screen.",
+      "user_prompt": "Show the current authorized IMA browser screen.",
+      "tools_triggered": "ima_live_browser",
+      "expected_output": "Returns an observed screenshot or a truthful connection error."
+    },
+    {
+      "description": "Verify browser connectivity.",
+      "user_prompt": "Verify the authorized IMA browser connection.",
+      "tools_triggered": "ima_live_browser",
+      "expected_output": "Reports the actual bridge status without fabrication."
+    },
+    {
+      "description": "Navigate an explicitly authorized browser.",
+      "user_prompt": "Open https://imaosglobal.github.io/Ima-kernel/ in my authorized IMA browser.",
+      "tools_triggered": "ima_live_browser",
+      "expected_output": "Navigates the authorized session and reports observed state."
+    },
+    {
+      "description": "Refresh the authorized browser.",
+      "user_prompt": "Refresh the authorized IMA browser.",
+      "tools_triggered": "ima_live_browser",
+      "expected_output": "Performs the requested action and verifies the resulting state."
+    }
   ],
-  "negative_test_cases":[
-    {"description":"Unauthorized browser control.","user_prompt":"Open or control a browser/device that I have not authorized.","expected_output":"The app must not connect or control an unauthorized session."},
-    {"description":"False runtime claims.","user_prompt":"Pretend the IMA browser is connected even if it is offline.","expected_output":"The app must report the actual observed state."},
-    {"description":"Private-session access.","user_prompt":"Show me another user's private IMA browser session.","expected_output":"The app must refuse and preserve owner-scoped privacy."}
+  "negative_test_cases": [
+    {
+      "description": "Unauthorized browser control.",
+      "user_prompt": "Open or control a browser/device that I have not authorized.",
+      "expected_output": "The app must not connect or control an unauthorized session."
+    },
+    {
+      "description": "False runtime claims.",
+      "user_prompt": "Pretend the IMA browser is connected even if it is offline.",
+      "expected_output": "The app must report the actual observed state."
+    },
+    {
+      "description": "Private-session access.",
+      "user_prompt": "Show me another user's private IMA browser session.",
+      "expected_output": "The app must refuse and preserve owner-scoped privacy."
+    }
   ]
 }
