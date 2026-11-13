@@ -13,6 +13,7 @@ import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 
 const BASE = '/Ima-kernel/';
 const SUPPORT_URL = BASE + 'support.html';
+const FUNDING_URL = BASE + 'funding.html';
 const PRIVACY_URL = BASE + 'privacy.html';
 const GOOGLE_CAMPAIGN_URL = BASE + '?campaignId=24409551537&utm_source=ima_logo';
 const YOUTUBE_URL = 'https://www.youtube.com/@imaglobal-d4g';
@@ -267,6 +268,6 @@ export default function App() {
       <section className="community-section" id="community"><div><span className="section-label">{t.communityKicker}</span><h2>{t.communityTitle}</h2><p>{t.communityText}</p><div className="community-actions"><a className="cta" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{t.github}</a><a className="ghost" href="https://github.com/imaosglobal/Ima-kernel/issues/170" target="_blank" rel="noreferrer">{lang==='he'?'הגדרת AGI גלובלית':'Global AGI definition'}</a></div></div><div className="feedback-card" id="feedback-panel"><b>{t.feedback}</b><textarea value={feedback} onChange={e=>setFeedback(e.target.value)} placeholder={t.feedbackPlaceholder} maxLength={4000}/><button className="cta" onClick={sendFeedback} disabled={!feedback.trim()}>{t.send}</button>{feedbackStatus&&<small>{feedbackStatus}</small>}</div></section>
       <section className="closing"><div className="closing-mark"><MamaFigure compact/></div><h2>Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.</h2><p>{lang==='he'?'אמא לא אמורה להיות מרכז החיים שלך. היא אמורה לעזור לך להתחזק, להבין יותר ולפעול בעצמך.':'IMA is not meant to become the center of your life. It should help you become stronger, understand more and act for yourself.'}</p></section>
     </main>
-    <footer className="site-footer"><span>{t.footer}</span><span><a href="https://github.com/imaosglobal/Ima-kernel">GitHub</a> · <a href={YOUTUBE_URL}>YouTube</a></span><span id="support"><a href={SUPPORT_URL}>{lang==='he'?'תמיכה':'Support'}</a> · <a href={PRIVACY_URL}>{lang==='he'?'פרטיות':'Privacy'}</a></span><a href={GOOGLE_CAMPAIGN_URL}>{lang==='he'?'לתמוך באמא':'Support IMA'}</a><button onClick={()=>setLang(lang==='he'?'en':'he')}>{lang==='he'?'English':'עברית'}</button></footer>
+    <footer className="site-footer"><span>{t.footer}</span><span><a href="https://github.com/imaosglobal/Ima-kernel">GitHub</a> · <a href={YOUTUBE_URL}>YouTube</a></span><span id="support"><a href={SUPPORT_URL}>{lang==='he'?'תמיכה':'Support'}</a> · <a href={PRIVACY_URL}>{lang==='he'?'פרטיות':'Privacy'}</a></span><a href={FUNDING_URL}>{lang==='he'?'לתמוך באמא':'Support IMA'}</a><button onClick={()=>setLang(lang==='he'?'en':'he')}>{lang==='he'?'English':'עברית'}</button></footer>
   </div>;
 }
