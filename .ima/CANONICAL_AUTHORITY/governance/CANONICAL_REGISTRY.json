@@ -1,1 +1,24 @@
-{"allowed_components": ["core", "memory", "chat", "agi_evolution", "governance"], "version": "1.0.0", "authority": "IMA_KERNEL"}
+{
+  "allowed_components": [
+    "core",
+    "memory",
+    "chat",
+    "agi_evolution",
+    "governance",
+    "learning",
+    "action",
+    "browser",
+    "accessibility",
+    "preservation",
+    "growth"
+  ],
+  "version": "1.1.0",
+  "authority": "IMA_KERNEL",
+  "canonical_rule": "Single canonical IMA identity and interaction loop. Historical archives are preserved but are not runtime authorities. New capability enters only through canonical surfaces and verification.",
+  "contracts": [
+    "TW-001",
+    "WH-001",
+    "CG-001",
+    "LIVE-001"
+  ]
+}
