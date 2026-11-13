@@ -37,6 +37,8 @@ device_bridge_raw = read("app.py")
 trust_wonder_raw = read("governance/IMA_TRUST_WONDER_CORE.md")
 wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")
 wonder_help_runtime = read("core/wonder_to_help.py")
+compound_growth_raw = read("governance/IMA_COMPOUND_GROWTH_CORE.md")
+compound_growth_runtime = read("core/compound_growth.py")
 master_runtime_raw = read("ima_master_runtime.py")
 
 try:
@@ -178,3 +180,8 @@ if failures:
 
 print("LIVE-001 GATE: PASS")
 print("Canonical IMA plugin, MCP endpoint, BrowserGlass, device bridge, Trust & Wonder contracts and executable WH-001 behavior layer are consistent.")
+
+assert "CG-001" in compound_growth_raw
+assert "COMPOUND-GROWTH" in compound_growth_runtime
+assert "notice → learn → validate → improve → test → verify" in compound_growth_raw
+assert "truth_safety_privacy_or_agency" in compound_growth_runtime
