@@ -23,6 +23,10 @@ Enable a low-friction first-revenue path for IMA without falsely presenting Ori 
 
 ## Current state
 
-`enabled=false` until a verified personal Bit receiving link is supplied and the destination is confirmed.
+enabled=true for the personal Bit route after Ori supplied the exact receiving link. The route is still governed by AE-001 adaptive eligibility and this rights guard: activation does not establish business status, tax treatment or benefit safety.
+
+## Adaptive eligibility
+
+AE-001 must be applied before each consequential revenue route: identify the actual conditions, verify what can be verified, adapt the route when possible, and keep unknown legal/benefits/tax conditions explicitly unknown.
 
 This is a product/governance guard, not legal or tax advice. Benefit and reporting rules must be checked against the user's exact benefit and circumstances before meaningful recurring income begins.
