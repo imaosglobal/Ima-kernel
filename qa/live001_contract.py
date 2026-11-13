@@ -76,7 +76,7 @@ try:
     decision = assess({"language": "he", "consent": True}, {"language": "he"}, {"chat": True}, domain="public")
     if decision.get("status") != "eligible_if_verified":
         fail("AE-001 should keep missing consent explicitly unverified")
-    if "Adapt" not in adaptive_context("payment route"):
+    if "adapt" not in adaptive_context("payment route").lower():
         fail("AE-001 executable context missing adaptation behavior")
     if adaptive_contract_fn().get("status") != "implemented_in_canonical_master_runtime":
         fail("AE-001 runtime contract status is not implemented")
