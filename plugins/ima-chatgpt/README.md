@@ -4,11 +4,11 @@
 This package is the portable distribution layer for IMA. The canonical intelligence remains in IMA's core repositories; this package exposes a standards-based MCP gateway to compatible hosts.
 
 ## Current endpoint
-- MCP: https://ima-server-1ptk.onrender.com/mcp
-- Website: https://ima-server-1ptk.onrender.com/
-- Support: https://ima-server-1ptk.onrender.com/support
-- Privacy: https://ima-server-1ptk.onrender.com/privacy
-- Terms: https://ima-server-1ptk.onrender.com/terms
+- MCP: https://ima-universal-action-core.onrender.com/mcp
+- Website: https://ima-universal-action-core.onrender.com/
+- Support: https://imaosglobal.github.io/Ima-kernel/support.html
+- Privacy: https://imaosglobal.github.io/Ima-kernel/privacy.html
+- Terms: https://imaosglobal.github.io/Ima-kernel/terms.html
 
 ## Truth state
 - Package: PREPARED
