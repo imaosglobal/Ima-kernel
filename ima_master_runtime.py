@@ -9,7 +9,8 @@ try:
     from core.compound_growth import build_context as build_compound_growth_context, contract as compound_growth_contract_fn
 except Exception:
     build_compound_growth_context = None
-    compound_growth_contract_fn = None\nfrom core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
+    compound_growth_contract_fn = None
+from core.ima_loop import IMA_IDENTITY_CONTEXT, loop_context
 from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
