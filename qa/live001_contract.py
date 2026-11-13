@@ -35,6 +35,7 @@ widget_raw = read("services/ima-action-mcp/widget.html")
 browserglass_docker = read("tools/ima-browserglass/Dockerfile")
 device_bridge_raw = read("app.py")
 trust_wonder_raw = read("governance/IMA_TRUST_WONDER_CORE.md")
+wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")
 
 try:
     plugin = json.loads(plugin_raw)
@@ -58,6 +59,10 @@ if "TW-001" not in trust_wonder_raw:
     fail("canonical IMA Trust & Wonder contract TW-001 is missing")
 if "get_ima_trust_wonder" not in action_raw:
     fail("Action Core must expose the canonical Trust & Wonder contract")
+if "WH-001" not in wonder_help_raw:
+    fail("canonical IMA Wonder-to-Help contract WH-001 is missing")
+if "get_ima_wonder_to_help" not in action_raw:
+    fail("Action Core must expose the canonical Wonder-to-Help contract")
 if plugin.get("name") != "ima":
     fail("plugin name must remain 'ima'")
 if not str(plugin.get("version", "")).strip():
