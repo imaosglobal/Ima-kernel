@@ -1,6 +1,6 @@
 # IMA — Human-Centered Intelligence
 
-**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)** · **[Global AGI collaboration hub](https://github.com/imaosglobal/Ima-kernel/issues/170)**
+**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[Support / Fund IMA](https://imaosglobal.github.io/Ima-kernel/funding.html)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)** · **[Global AGI collaboration hub](https://github.com/imaosglobal/Ima-kernel/issues/170)**
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning · global cooperation**
 
@@ -225,7 +225,7 @@ IMA is open to independent contributors worldwide.
 
 You can contribute code, research, tests, documentation, languages, accessibility, 3D, memory, preservation, security, integrations and experiments.
 
-## Contact IMA by email
+## Support IMA and paid pilots\n\n**[Support / funding](https://imaosglobal.github.io/Ima-kernel/funding.html)** is the canonical funding entry point. Bit is the currently verified personal support route; global supporters and organizations can contact IMA for an appropriate payment route and paid-pilot proposal. No automatic charge is created, and funding does not grant access to private memory or credentials.\n\n## Contact IMA by email
 
 **Email IMA:** [imaosglobal@gmail.com](mailto:imaosglobal@gmail.com)
 
