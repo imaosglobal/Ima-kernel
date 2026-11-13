@@ -33,3 +33,17 @@ Payment destination activated in canonical IMA config: yes.
 Money received: no evidence yet.
 Disability-rights outcome: not claimed or guaranteed.
 Public deployment/runtime verification: pending current CI/Pages confirmation.
+
+
+## Global revenue activation — 2026-11-13
+- Expanded the canonical funding page into a bilingual global funnel for personal support and paid pilots.
+- Added a global-support / paid-pilot email path for supporters, companies, universities, research groups, funders and accessibility organizations outside the current Bit route.
+- Connected the public support page to the canonical funding page and global paid-pilot contact.
+- Added .github/FUNDING.yml so GitHub exposes the canonical IMA funding entry point rather than a duplicate payment system.
+- No unverified global payment processor was activated. This preserves the rights and verification gates while allowing global revenue leads to enter immediately.
+- Current revenue channels: verified personal Bit support; global paid-support/pilot inquiries; future verified sponsorship/payment rails remain gated until their payout and rights conditions are confirmed.
+
+## Current global claim status
+Global revenue funnel: implemented.
+Global payment coverage: partial — direct Bit support is the verified active route; other regions currently enter through the global support/pilot path.
+Revenue received: no evidence yet.
