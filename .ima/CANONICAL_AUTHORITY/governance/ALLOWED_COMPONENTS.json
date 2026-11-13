@@ -1,1 +1,17 @@
-{"allowed_components": ["core", "memory", "chat", "agi_evolution"]}
+{
+  "allowed_components": [
+    "core",
+    "memory",
+    "chat",
+    "agi_evolution",
+    "governance",
+    "learning",
+    "action",
+    "browser",
+    "accessibility",
+    "preservation",
+    "growth"
+  ],
+  "version": "1.1.0",
+  "note": "Single canonical authority; archived/backup/experimental/legacy paths are non-runtime until explicit promotion and verification."
+}
