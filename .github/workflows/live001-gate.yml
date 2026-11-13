@@ -1,0 +1,19 @@
+name: LIVE-001 canonical gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  live001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: LIVE-001 contract and live smoke test
+        run: python3 qa/live001_contract.py
