@@ -1,6 +1,8 @@
 # IMA — Human-Centered Intelligence
 
-**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[Support / Fund IMA](https://imaosglobal.github.io/Ima-kernel/funding.html)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)** · **[Global AGI collaboration hub](https://github.com/imaosglobal/Ima-kernel/issues/170)**
+**[Open IMA now](https://imaosglobal.github.io/Ima-kernel/)** · **[Tell IMA what to change for you](https://github.com/imaosglobal/Ima-kernel/issues/174)** · **[Contribute your language/culture](https://github.com/imaosglobal/Ima-kernel/issues/175)** · **[Support / Fund IMA](https://imaosglobal.github.io/Ima-kernel/funding.html)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)**
+
+**IMA is built with people, not merely for people.** Use it, challenge it, tell it what does not fit, and help shape the next verified improvement. Requests from different people are evidence to compare—not commands that automatically override one another. · **[Support / Fund IMA](https://imaosglobal.github.io/Ima-kernel/funding.html)** · **[IMA on GitHub](https://github.com/imaosglobal/Ima-kernel)** · **[Global AGI collaboration hub](https://github.com/imaosglobal/Ima-kernel/issues/170)**
 
 **Human-centered intelligence · compassion · human agency · evidence-based learning · global cooperation**
 
