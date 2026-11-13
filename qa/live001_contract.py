@@ -185,3 +185,9 @@ assert "CG-001" in compound_growth_raw
 assert "COMPOUND-GROWTH" in compound_growth_runtime
 assert "notice → learn → validate → improve → test → verify" in compound_growth_raw
 assert "truth_safety_privacy_or_agency" in compound_growth_runtime
+
+assert "<<<<<<<" not in read(".ima/loop/UNIFIED_LOOP_STATE.json")
+assert "=======" not in read(".ima/loop/UNIFIED_LOOP_STATE.json")
+assert ">>>>>>>" not in read(".ima/loop/UNIFIED_LOOP_STATE.json")
+assert "CG-001" in read("docs/IMA_CANONICAL_UNIFICATION_LEDGER_2026-11-13.md")
+assert "Single canonical spine" in read("docs/IMA_CANONICAL_UNIFICATION_LEDGER_2026-11-13.md")
