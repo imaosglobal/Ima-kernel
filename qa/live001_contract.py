@@ -35,7 +35,9 @@ widget_raw = read("services/ima-action-mcp/widget.html")
 browserglass_docker = read("tools/ima-browserglass/Dockerfile")
 device_bridge_raw = read("app.py")
 trust_wonder_raw = read("governance/IMA_TRUST_WONDER_CORE.md")
-wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")\nwonder_help_runtime = read("core/wonder_to_help.py")\nmaster_runtime_raw = read("ima_master_runtime.py")
+wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")
+wonder_help_runtime = read("core/wonder_to_help.py")
+master_runtime_raw = read("ima_master_runtime.py")
 
 try:
     plugin = json.loads(plugin_raw)
