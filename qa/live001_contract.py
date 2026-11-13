@@ -63,6 +63,30 @@ if "WH-001" not in wonder_help_raw:
     fail("canonical IMA Wonder-to-Help contract WH-001 is missing")
 if "get_ima_wonder_to_help" not in action_raw:
     fail("Action Core must expose the canonical Wonder-to-Help contract")
+if "VERSION = \"WH-001-runtime-v1.0\"" not in wonder_help_runtime:
+    fail("executable WH-001 runtime layer is missing")
+if "build_wonder_help_context" not in master_runtime_raw or "wonder_help_context" not in master_runtime_raw:
+    fail("canonical master runtime must execute the WH-001 behavior layer")
+if "wonder_to_help_contract" not in master_runtime_raw:
+    fail("master runtime must expose WH-001 runtime state for verification")
+
+# Execute the behavior layer itself, not only static string checks.
+try:
+    sys.path.insert(0, str(ROOT))
+    from core.wonder_to_help import assess_mode, build_context, contract as wonder_help_contract_fn
+    if assess_mode("יש לי מצב חירום עכשיו") != "survival":
+        fail("WH-001 mode detection regression: survival")
+    if assess_mode("אני רוצה לכתוב שיר") != "creation":
+        fail("WH-001 mode detection regression: creation")
+    runtime_context = build_context("אני לא מבין מה קורה")
+    for required in ("Practical help is mandatory", "Never fabricate facts", "Preserve user agency"):
+        if required not in runtime_context:
+            fail(f"WH-001 executable context missing: {required}")
+    if wonder_help_contract_fn().get("status") != "implemented_in_canonical_master_runtime":
+        fail("WH-001 runtime contract status is not implemented")
+except Exception as exc:
+    fail(f"WH-001 executable runtime test failed: {exc}")
+
 if plugin.get("name") != "ima":
     fail("plugin name must remain 'ima'")
 if not str(plugin.get("version", "")).strip():
