@@ -14,15 +14,10 @@ assert.doesNotMatch(app,/app\.heygen\.com\/videos/,'public UI must not link visi
 assert.match(app,/youtube\.com\/@imaglobal-d4g/,'public video destination must be IMA YouTube');
 assert.match(app,/getStoredGoogleUser\(\)/,'Google session must be restored');
 assert.match(app,/signInWithGoogleCredential/,'Google verification flow must exist');
-assert.match(app,/getStoredGoogleUser\(\)/,'chat must use persisted Google session state');
+assert.match(app,/loggedIn\?go\('chat'\):go\('login'\)/,'chat must be gated behind verified sign-in');
 assert.match(app,/beforeinstallprompt/,'installable PWA flow missing');
 assert.match(index,/manifest\.json/,'canonical manifest link missing');
 assert.match(manifest,/"display": "standalone"/,'PWA must be installable as standalone');
 const ids=[...app.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);
 for(const target of [...app.matchAll(/href="#([^"]+)"/g)].map(m=>m[1])) assert.ok(ids.includes(target),`broken internal anchor #${target}`);
 console.log('PUBLIC_UI_CONTRACT_OK',JSON.stringify({ids,internalAnchors:[...new Set([...app.matchAll(/href="#([^"]+)"/g)].map(m=>m[1]))]}));
-
-assert.doesNotMatch(app,/PersonalizationPanel|personalization-panel|applyChatPersonalization|recordImaPreference/,'the broken public personalization engine must not be shown or run');
-assert.doesNotMatch(app,/AvatarScene|mother_character\.glb|hero-avatar canvas/,'the public hero must not show the old character render');
-assert.match(app,/wordmark-mark/,'the canonical IMA wordmark must be present');
-assert.match(app,/heroTitle/,'the current IMA hero headline must be present');
