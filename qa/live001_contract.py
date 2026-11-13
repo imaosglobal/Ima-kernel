@@ -39,6 +39,8 @@ wonder_help_raw = read("governance/IMA_WONDER_TO_HELP_CORE.md")
 wonder_help_runtime = read("core/wonder_to_help.py")
 compound_growth_raw = read("governance/IMA_COMPOUND_GROWTH_CORE.md")
 compound_growth_runtime = read("core/compound_growth.py")
+adaptive_eligibility_raw = read("governance/IMA_ADAPTIVE_ELIGIBILITY_CORE.md")
+adaptive_eligibility_runtime = read("core/adaptive_eligibility.py")
 master_runtime_raw = read("ima_master_runtime.py")
 
 try:
@@ -58,6 +60,28 @@ try:
 except Exception as exc:
     submission = {}
     fail(f"chatgpt-app-submission.json is invalid JSON: {exc}")
+
+if "AE-001" not in adaptive_eligibility_raw:
+    fail("canonical IMA Adaptive Eligibility contract AE-001 is missing")
+if 'VERSION = "AE-001-runtime-v1.0"' not in adaptive_eligibility_runtime:
+    fail("executable AE-001 runtime layer is missing")
+if "build_adaptive_eligibility_context" not in master_runtime_raw or "adaptive_eligibility_context" not in master_runtime_raw:
+    fail("canonical master runtime must execute the AE-001 behavior layer")
+if "adaptive_eligibility_contract" not in master_runtime_raw:
+    fail("master runtime must expose AE-001 runtime state for verification")
+
+# Execute the adaptive layer itself.
+try:
+    from core.adaptive_eligibility import assess, build_context as adaptive_context, contract as adaptive_contract_fn
+    decision = assess({"language": "he", "consent": True}, {"language": "he"}, {"chat": True}, domain="public")
+    if decision.get("status") != "eligible_if_verified":
+        fail("AE-001 should keep missing consent explicitly unverified")
+    if "Adapt" not in adaptive_context("payment route"):
+        fail("AE-001 executable context missing adaptation behavior")
+    if adaptive_contract_fn().get("status") != "implemented_in_canonical_master_runtime":
+        fail("AE-001 runtime contract status is not implemented")
+except Exception as exc:
+    fail(f"AE-001 executable runtime test failed: {exc}")
 
 if "TW-001" not in trust_wonder_raw:
     fail("canonical IMA Trust & Wonder contract TW-001 is missing")
@@ -181,6 +205,8 @@ if failures:
 print("LIVE-001 GATE: PASS")
 print("Canonical IMA plugin, MCP endpoint, BrowserGlass, device bridge, Trust & Wonder contracts and executable WH-001 behavior layer are consistent.")
 
+assert "AE-001" in adaptive_eligibility_raw
+assert "AE-001-runtime-v1.0" in adaptive_eligibility_runtime
 assert "CG-001" in compound_growth_raw
 assert "COMPOUND-GROWTH" in compound_growth_runtime
 assert "notice → learn → validate → improve → test → verify" in compound_growth_raw
