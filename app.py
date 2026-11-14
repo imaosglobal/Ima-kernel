@@ -869,8 +869,12 @@ def chat():
     if not isinstance(message, str) or not message.strip():
         return jsonify({"error": "message is required"}), 400
 
-    if not user_id or not user_id.startswith("public:google:"):
-        return jsonify({"error": "verified Google sign-in required"}), 401
+    # A valid IMA session is enough to start public chat. Google remains the
+    # identity/continuity path, but basic conversation must not be gated behind login.
+    # The session itself is signed by the server; private memory remains separately
+    # consent-gated below.
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
 
     if not _rate_ok(request.remote_addr or "unknown"):
         return jsonify({"error": "rate limit exceeded; try again shortly"}), 429
