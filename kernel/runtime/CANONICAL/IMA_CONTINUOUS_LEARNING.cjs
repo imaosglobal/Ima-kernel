@@ -39,6 +39,30 @@ const DOMAINS = Object.freeze([
 
 const DEFAULT_LESSONS = Object.freeze([
   {
+    id: "lesson-agency-not-dependency",
+    domain: "AGENCY",
+    pattern: "A successful human-centered system should increase the person's capability and freedom to act, not make itself permanently necessary.",
+    action: "Measure whether IMA returns capability to the user, including whether the user can become less dependent on IMA.",
+    evidence: "IMA canonical product principle",
+    source: "https://github.com/imaosglobal/Ima-kernel"
+  },
+  {
+    id: "lesson-truth-before-claim",
+    domain: "TRUST",
+    pattern: "Claims about capability, success, verification, or deployment must follow evidence rather than precede it.",
+    action: "Make every important IMA claim traceable to a source, timestamp, reproducible check, or explicit unknown.",
+    evidence: "IMA Truth Gate",
+    source: "https://github.com/imaosglobal/Ima-kernel"
+  },
+  {
+    id: "lesson-wonder-as-action",
+    domain: "USEFULNESS",
+    pattern: "Wonder is valuable when it produces better questions, learning, experiments, and human possibility rather than passive spectacle.",
+    action: "Treat curiosity and awe as inputs to exploration, not as substitutes for evidence or action.",
+    evidence: "IMA canonical product direction",
+    source: "https://github.com/imaosglobal/Ima-kernel"
+  },
+  {
     id: "lesson-human-agency",
     domain: "AGENCY",
     pattern: "AI systems scale more sustainably when people retain purpose, control, collaboration, and meaningful choice.",
