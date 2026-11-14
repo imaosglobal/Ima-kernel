@@ -18,6 +18,7 @@ const revenueEvidence = require("./IMA_REVENUE_EVIDENCE");
 const healthyEmpowerment = require("./IMA_HEALTHY_EMPOWERMENT");
 const continuousBetterment = require("./IMA_CONTINUOUS_BETTERMENT");
 const dots = require("./IMA_DOTS_BRIDGE");
+const continuousLearning = require("./IMA_CONTINUOUS_LEARNING");
 
 const runtime = {
     boot() {
@@ -31,6 +32,8 @@ const runtime = {
         state.set("governance", { truth_gate: "CANONICAL", human_agency_gate: "CANONICAL", revenue_evidence: "CANONICAL", healthy_empowerment: "CANONICAL" });
         const empowerment = healthyEmpowerment.selfAssessment({ safety: "UNKNOWN", capacity: "UNKNOWN", energy: "UNKNOWN", overload: "UNKNOWN", agency: "HIGH" });
         state.set("healthy_empowerment", empowerment);
+        continuousLearning.seed();
+        state.set("continuous_learning", continuousLearning.status());
         dots.register();
         state.set("dots", dots.status());
         events.emit("DOTS_READY", dots.card());
@@ -53,6 +56,8 @@ const runtime = {
       const portableIdentityIntegrity = portableIdentity.verify();
       const derivationRegistryBuild = derivationRegistry.build();
       const derivationRegistryIntegrity = derivationRegistry.verify();
+      const learningStatus = continuousLearning.status();
+      events.emit("CONTINUOUS_LEARNING_READY", learningStatus);
 
       events.emit("CONTINUITY_READY", continuity.status());
       events.emit("PRESERVATION_REGISTRY_READY", preservationStatus);
@@ -94,6 +99,7 @@ const runtime = {
         integrity: portableIdentityIntegrity
       },
       dots: dots.status(),
+      continuous_learning: learningStatus,
       derivation_registry: {
         build: derivationRegistryBuild,
         integrity: derivationRegistryIntegrity
