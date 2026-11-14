@@ -50,10 +50,11 @@ export async function askIma(message, personalization = {}) {
     method: 'POST',
     body: JSON.stringify({ message, personalization }),
   });
-  if (!data.response) throw new Error('IMA returned no response');
+  const response = data.response || data.answer?.response;
+  if (!response) throw new Error(data.error || 'IMA returned no response');
   trackImaEvent('ima_chat_completed');
   observeIma({ type: 'chat_completed', source: 'chat', outcome: 'response_received', data: { response_present: true } });
-  return data.response;
+  return response;
 }
 
 export async function submitFeedback(sentiment, text, metadata = {}) {
