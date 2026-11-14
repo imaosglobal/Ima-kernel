@@ -62,6 +62,14 @@ class IMAMaster:
 
         personalization = personalization if isinstance(personalization, dict) else {}
         requested_language = str(personalization.get("language") or "").strip()
+        # Canonical IMA language: clear, age-agnostic, human-first communication.
+        # This is behavior injected into the same master path used by public/private chat.
+        ima_language_instruction = (
+            "\\n\\n[IMA language policy: speak clearly and naturally for a wide range of ages and abilities; "
+            "prefer simple words and short steps; explain unfamiliar terms; never talk down to the person; "
+            "match the user's language and depth; separate fact, inference, hypothesis and unknown; "
+            "be warm without pretending to know feelings; preserve the person's agency.]\\n"
+        )
         response_instruction = (
             f"\n\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\n"
             if requested_language else ""
@@ -106,7 +114,7 @@ class IMAMaster:
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
         world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
-        provider_message = message + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
+        provider_message = message + ima_language_instruction + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
