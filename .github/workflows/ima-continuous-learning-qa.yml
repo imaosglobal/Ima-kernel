@@ -1,0 +1,22 @@
+name: IMA Continuous Learning QA
+
+on:
+  push:
+    paths:
+      - "kernel/runtime/CANONICAL/IMA_CONTINUOUS_LEARNING.cjs"
+      - "kernel/runtime/CANONICAL/IMA_RUNTIME.js"
+      - "kernel/runtime/CANONICAL/IMA_SYSTEM_INTEGRITY.js"
+      - "tests/ima_continuous_learning.test.cjs"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  learning-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run test:learning
+      - run: npm run ima:integrity
