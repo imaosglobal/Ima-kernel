@@ -111,6 +111,14 @@ const DEFAULT_LESSONS = Object.freeze([
     source: "https://assets.publishing.service.gov.uk/media/6ae202189bca21f1c5036e99/artificial-intelligence-adoption-research-report-2026.pdf"
   },
   {
+    id: "lesson-failure-data-and-integration",
+    domain: "INTEROPERABILITY",
+    pattern: "Ambitious AI projects can fail because data integration, infrastructure, workflow fit, or organizational context is harder than the demo suggests.",
+    action: "Before scaling an IMA capability, test real data boundaries, integration points, user workflow fit, operational cost, and failure recovery in small reversible experiments.",
+    evidence: "2026 case studies of failed AI deployments and education chatbots",
+    source: "https://www.jmir.org/2026/1/e87534/"
+  },
+  {
     id: "lesson-every-project-is-eval",
     domain: "EVALUATION",
     pattern: "AI systems become evaluation projects as soon as they operate in dynamic real-world settings.",
