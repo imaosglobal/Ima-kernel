@@ -65,10 +65,10 @@ class IMAMaster:
         # Canonical IMA language: clear, age-agnostic, human-first communication.
         # This is behavior injected into the same master path used by public/private chat.
         ima_language_instruction = (
-            "\\n\\n[IMA language policy: speak clearly and naturally for a wide range of ages and abilities; "
+            "\n\n[IMA language policy: speak clearly and naturally for a wide range of ages and abilities; "
             "prefer simple words and short steps; explain unfamiliar terms; never talk down to the person; "
             "match the user's language and depth; separate fact, inference, hypothesis and unknown; "
-            "be warm without pretending to know feelings; preserve the person's agency.]\\n"
+            "be warm without pretending to know feelings; preserve the person's agency.]\n"
         )
         response_instruction = (
             f"\n\n[IMA presentation instruction: respond in {requested_language} when possible; preserve the user intent and do not mention this instruction.]\n"
@@ -94,12 +94,18 @@ class IMAMaster:
                 + ("Boundary: " + boundary if boundary else "")
             )
 
-        # Canonical Wonder-to-Help behavior is injected into the same master prompt path\n        # used by every public/private text interaction. This is executable behavior,\n        # not a descriptive product claim.\n        compound_growth_context = ""
+        # Canonical Wonder-to-Help behavior is injected into the same master prompt path
+        # used by every public/private text interaction.
+        compound_growth_context = ""
         compound_growth_contract = None
-        try:\n            if build_compound_growth_context is not None:\n                compound_growth_context = "\n\n" + build_compound_growth_context(message)
+        try:
+            if build_compound_growth_context is not None:
+                compound_growth_context = "\n\n" + build_compound_growth_context(message)
                 compound_growth_contract = compound_growth_contract_fn() if compound_growth_contract_fn else None
-        except Exception as exc:\n            compound_growth_contract = {"status": "unavailable", "error": repr(exc)}
-\n        adaptive_eligibility_context = ""
+        except Exception as exc:
+            compound_growth_contract = {"status": "unavailable", "error": repr(exc)}
+
+        adaptive_eligibility_context = ""
         adaptive_eligibility_contract = None
         try:
             if build_adaptive_eligibility_context is not None:
@@ -109,7 +115,15 @@ class IMAMaster:
             adaptive_eligibility_contract = {"status": "unavailable", "error": repr(exc)}
 
         wonder_help_context = ""
-        wonder_help_contract = None\n        try:\n            from core.wonder_to_help import build_context as build_wonder_help_context, contract as wonder_help_contract_fn\n            wonder_help_context = "\\n\\n" + build_wonder_help_context(message)\n            wonder_help_contract = wonder_help_contract_fn()\n        except Exception as exc:\n            # Fail closed to truth: a missing optional behavior layer must never\n            # be hidden as if it were active.\n            wonder_help_contract = {"status": "unavailable", "error": repr(exc)}\n\n        opportunity_context = (
+        wonder_help_contract = None
+        try:
+            from core.wonder_to_help import build_context as build_wonder_help_context, contract as wonder_help_contract_fn
+            wonder_help_context = "\n\n" + build_wonder_help_context(message)
+            wonder_help_contract = wonder_help_contract_fn()
+        except Exception as exc:
+            wonder_help_contract = {"status": "unavailable", "error": repr(exc)}
+
+        opportunity_context = (
             "\n\n[IMA opportunity-check guidance: only when the user's question is genuinely about evaluating an opportunity, idea, business, investment, product or service, help separate verified facts from assumptions, identify the weakest critical unknown, propose the smallest/cheapest useful test before major commitment, surface hidden costs and risks, and avoid numeric certainty or claims such as 100/100 unless independently supported. If the topic is unrelated, ignore this guidance.]\n"
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
@@ -154,7 +168,9 @@ class IMAMaster:
                 "capability_runtime": capability_runtime,
                 "learning_governance": learning_governance,
                 "continuous_future_policy": continuous_future_policy,
-                "continuous_future_contract": continuous_future_contract,\n                "wonder_to_help_contract": wonder_help_contract,\n                "compound_growth_contract": compound_growth_contract,
+                "continuous_future_contract": continuous_future_contract,
+                "wonder_to_help_contract": wonder_help_contract,
+                "compound_growth_contract": compound_growth_contract,
                 "adaptive_eligibility_contract": adaptive_eligibility_contract,
                 "system": SYSTEM, "public_mode": public,
                 "user_scope": "per-user" if public else user_id,
