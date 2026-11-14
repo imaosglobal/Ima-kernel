@@ -9,7 +9,9 @@ export async function askIMA(message){
     body:JSON.stringify({message})
   });
 
-  return await r.json();
+  const data = await r.json();
+  if (!r.ok) throw new Error(data.error || `IMA HTTP ${r.status}`);
+  return data;
 }
 
 export async function getHealth(){
