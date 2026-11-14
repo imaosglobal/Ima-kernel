@@ -18,7 +18,7 @@ const revenueEvidence = require("./IMA_REVENUE_EVIDENCE");
 const healthyEmpowerment = require("./IMA_HEALTHY_EMPOWERMENT");
 const continuousBetterment = require("./IMA_CONTINUOUS_BETTERMENT");
 const dots = require("./IMA_DOTS_BRIDGE");
-const continuousLearning = require("./IMA_CONTINUOUS_LEARNING");
+const continuousLearning = require("./IMA_CONTINUOUS_LEARNING.cjs");
 
 const runtime = {
     boot() {
