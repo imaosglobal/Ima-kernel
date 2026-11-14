@@ -16,7 +16,8 @@ const required = [
   "gateway/IMA_MODEL_GATEWAY.js",
   "gateway/IMA_TOOL_GATEWAY.js",
   "gateway/IMA_AGENT_GATEWAY.js",
-  "orchestration/IMA_ACTION_ENGINE.js"
+  "orchestration/IMA_ACTION_ENGINE.js",
+  "IMA_CONTINUOUS_LEARNING.js"
 ];
 
 const missing = required.filter(file =>
