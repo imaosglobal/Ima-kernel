@@ -19,6 +19,20 @@ except Exception:
     nylas_email = None
 
 app = Flask(__name__)
+
+# Canonical public-web CORS: GitHub Pages is the public frontend and Render is the API.
+# Keep this explicit and origin-scoped so browser preflight can reach the chat/session APIs.
+@app.after_request
+def _ima_public_cors(response):
+    origin = request.headers.get("Origin", "").strip()
+    if origin in PUBLIC_ORIGINS:
+        response.headers["Access-Control-Allow-Origin"] = origin
+        response.headers["Vary"] = "Origin"
+        response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, X-IMA-Client, X-IMA-Device-Key"
+        response.headers["Access-Control-Max-Age"] = "600"
+    return response
+
 app.config["SECRET_KEY"] = os.environ.get("IMA_FLASK_SECRET") or os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
 app.register_blueprint(billing_api)
 try:
