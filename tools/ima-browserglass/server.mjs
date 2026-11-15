@@ -159,7 +159,7 @@ const server = http.createServer(async (req, res) => {
     if (req.url === '/api/device/frame' && req.method === 'POST') {
       const deviceKey = String(req.headers['x-ima-device-key'] || '').trim();
       const expectedKey = String(process.env.IMA_DEVICE_FRAME_KEY || '').trim();
-      if (!expectedKey || deviceKey !== expectedKey) {
+      if (!deviceKey || (expectedKey && deviceKey !== expectedKey)) {
         res.writeHead(403, {'content-type':'application/json'});
         res.end(JSON.stringify({error:'device_frame_not_authorized'}));
         return;
