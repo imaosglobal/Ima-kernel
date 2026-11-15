@@ -27,9 +27,11 @@ async function request(path, options = {}, retry = true) {
   const token = await getSessionToken(retry === false);
   const response = await fetch(url, {
     ...options,
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
+      'X-IMA-Client': 'public-web-chat-v2',
       ...(options.headers || {}),
     },
   });
