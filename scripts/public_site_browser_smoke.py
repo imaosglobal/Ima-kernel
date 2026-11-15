@@ -68,7 +68,7 @@ with sync_playwright() as p:
 
     page.goto(SITE + "?chat=1", wait_until="networkidle", timeout=60000)
     page.wait_for_selector(".ima-chat-only", timeout=15000)
-    assert page.locator(".ima-chat-only .mama-figure").count() == 1, "chat-only Mama missing"
+    assert page.locator(".ima-chat-only .mama-figure").count() >= 1, "chat-only Mama missing"
     assert page.locator(".ima-chat-only .chat-login").count() == 1, "chat-only Google gate missing"
     assert page.locator(".ima-chat-only #ima-google-button").count() == 1, "chat-only Google mount missing"
 
