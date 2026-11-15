@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.imaosglobal/ima",
+  "title": "IMA — human-centered intelligence",
+  "description": "Human-centered intelligence with an authorized live browser capability.",
+  "version": "1.0.10",
+  "repository": {
+    "url": "https://github.com/imaosglobal/Ima-kernel",
+    "source": "github"
+  },
+  "websiteUrl": "https://imaosglobal.github.io/Ima-kernel/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ima-universal-action-core.onrender.com/mcp"
+    }
+  ]
+}
