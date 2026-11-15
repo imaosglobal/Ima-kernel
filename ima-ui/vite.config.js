@@ -16,7 +16,7 @@ function imaOtaManifestPlugin() {
     generateBundle() {
       const version = process.env.GITHUB_SHA || process.env.IMA_BUILD_VERSION || 'dev'
       const gradle = fs.readFileSync(path.resolve(process.cwd(), '../android/app/build.gradle'), 'utf8')
-      const versionName = gradle.match(/versionName\s+['\"]([^'\"]+)['\"]/)?.[1] || 'unknown'
+      const versionName = gradle.match(/versionName\s+['"]([^'"]+)['"]/)?.[1] || 'unknown'
       const versionCode = Number(gradle.match(/versionCode\s+(\d+)/)?.[1] || 0)
       const manifest = {
         schemaVersion: 1,
