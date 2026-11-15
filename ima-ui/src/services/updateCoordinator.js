@@ -1,5 +1,5 @@
 const ROOT = '/Ima-kernel/';
-const VERSION_URL = ROOT + 'version.json';
+const VERSION_URL = ROOT + 'ota/manifest.json';
 
 function currentVersion() {
   return document.querySelector('meta[name="ima-build-version"]')?.content || '';
@@ -25,7 +25,7 @@ export async function checkForImaUpdate() {
     });
     if (!response.ok) return { updated: false, checked: false };
     const payload = await response.json();
-    return { updated: reloadToVersion(payload?.version), checked: true, version: payload?.version || '' };
+    return { updated: reloadToVersion(payload?.webVersion), checked: true, version: payload?.webVersion || '' };
   } catch {
     return { updated: false, checked: false };
   }
