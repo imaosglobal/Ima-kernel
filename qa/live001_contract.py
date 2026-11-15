@@ -28,7 +28,7 @@ def read(rel: str) -> str:
 
 # Canonical package.
 plugin_raw = read("plugins/ima-chatgpt/plugin.json")
-mcp_raw = read("plugins/ima-chatgpt/.mcp.json")
+mcp_raw = read("plugins/ima-chatgpt/mcp.json")
 submission_raw = read("plugins/ima-chatgpt/chatgpt-app-submission.json")
 action_raw = read("services/ima-action-mcp/server/index.mjs")
 widget_raw = read("services/ima-action-mcp/widget.html")
@@ -72,6 +72,7 @@ if "adaptive_eligibility_contract" not in master_runtime_raw:
 
 # Execute the adaptive layer itself.
 try:
+    sys.path.insert(0, str(ROOT))
     from core.adaptive_eligibility import assess, build_context as adaptive_context, contract as adaptive_contract_fn
     decision = assess({"language": "he", "consent": True}, {"language": "he"}, {"chat": True}, domain="public")
     if decision.get("status") != "eligible_if_verified":
@@ -100,7 +101,6 @@ if "wonder_to_help_contract" not in master_runtime_raw:
 
 # Execute the behavior layer itself, not only static string checks.
 try:
-    sys.path.insert(0, str(ROOT))
     from core.wonder_to_help import assess_mode, build_context, contract as wonder_help_contract_fn
     if assess_mode("יש לי מצב חירום עכשיו") != "survival":
         fail("WH-001 mode detection regression: survival")
@@ -122,7 +122,7 @@ if not str(plugin.get("version", "")).strip():
 if plugin.get("mcpServers") != "./.mcp.json":
     fail("plugin must reference the canonical .mcp.json")
 
-server = mcp.get("mcpServers", {}).get("ima_live_browser", {})
+server = mcp.get("mcpServers", {}).get("ima", {})
 endpoint = server.get("url")
 if endpoint != "https://ima-universal-action-core.onrender.com/mcp":
     fail(f"canonical MCP endpoint drifted: {endpoint!r}")
