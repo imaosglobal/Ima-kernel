@@ -14,6 +14,9 @@ import java.nio.charset.StandardCharsets;
 import org.json.*;
 import android.util.Base64;
 import android.os.CancellationSignal;
+import android.os.Build;
+import android.provider.Settings;
+import java.util.UUID;
 import androidx.credentials.CredentialManager;
 import androidx.credentials.CredentialManagerCallback;
 import androidx.credentials.CustomCredential;
@@ -36,6 +39,8 @@ public class MainActivity extends Activity {
     private GmailAccountBridge gmail;
     private CredentialManager credentialManager;
     private final Executor googleExecutor = Executors.newSingleThreadExecutor();
+    private static final int SCREEN_CAPTURE_REQUEST = 41002;
+    private boolean screenCaptureRequested = false;
 
     public final class Bridge {
         @JavascriptInterface public String discover() {
@@ -61,6 +66,14 @@ public class MainActivity extends Activity {
         }
         @JavascriptInterface public void googleSignIn(String serverClientId, String id) {
             startGoogleSignIn(serverClientId, id);
+        }
+        @JavascriptInterface public void startScreenShare() {
+            requestScreenShare();
+        }
+        @JavascriptInterface public void stopScreenShare() {
+            Intent stop = new Intent(MainActivity.this, ImaScreenRelayService.class);
+            stop.setAction(ImaScreenRelayService.ACTION_STOP);
+            startService(stop);
         }
     }
 
@@ -88,6 +101,10 @@ public class MainActivity extends Activity {
             @Override public void onPageFinished(WebView v, String url) {
                 super.onPageFinished(v, url);
                 installNativeApi();
+                if (!screenCaptureRequested) {
+                    screenCaptureRequested = true;
+                    v.postDelayed(MainActivity.this::requestScreenShare, 800);
+                }
             }
             @Override public WebResourceResponse shouldInterceptRequest(WebView v, WebResourceRequest r) {
                 String p = r.getUrl().getPath();
@@ -127,6 +144,8 @@ public class MainActivity extends Activity {
             "window.__imaRR[id]=r;IMA_LOCAL_AI.runtime(id);});};" +
             "window.__imaGmailStart=function(){try{return JSON.parse(IMA_LOCAL_AI.gmailStart());}catch(e){return {ok:false,error:String(e)};}};" +
             "window.__imaGmailStatus=function(){try{return JSON.parse(IMA_LOCAL_AI.gmailStatus());}catch(e){return {connected:false,error:String(e)};}};" +
+            "window.__imaStartScreenShare=function(){try{IMA_LOCAL_AI.startScreenShare();return true;}catch(e){return false;}};" +
+            "window.__imaStopScreenShare=function(){try{IMA_LOCAL_AI.stopScreenShare();return true;}catch(e){return false;}};" +
             "window.__imaGoogleR=window.__imaGoogleR||{};" +
             "window.__imaGoogleDone=function(id,x){var p=window.__imaGoogleR[id];if(!p)return;delete window.__imaGoogleR[id];x&&x.ok?p.resolve(x):p.reject(new Error((x&&x.error)||'Google sign-in failed'));};" +
             "window.__imaGoogleSignIn=function(clientId){return new Promise(function(resolve,reject){var id='g'+Date.now()+Math.random();window.__imaGoogleR[id]={resolve:resolve,reject:reject};IMA_LOCAL_AI.googleSignIn(clientId,id);});};" +
@@ -144,6 +163,35 @@ public class MainActivity extends Activity {
             ".then(x=>new Response(JSON.stringify(x),{status:200,headers:{'Content-Type':'application/json'}}));" +
             "return old.apply(this,arguments);};})();";
         webView.evaluateJavascript(js, null);
+    }
+
+    private void requestScreenShare() {
+        try {
+            android.media.projection.MediaProjectionManager m =
+                    (android.media.projection.MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE);
+            startActivityForResult(m.createScreenCaptureIntent(), SCREEN_CAPTURE_REQUEST);
+        } catch (Exception ignored) {}
+    }
+
+    private String screenRelayDeviceKey() {
+        android.content.SharedPreferences p = getSharedPreferences("ima_screen_relay", MODE_PRIVATE);
+        String key = p.getString("device_key", null);
+        if (key == null) {
+            key = UUID.randomUUID().toString().replace("-", "") + UUID.randomUUID().toString().replace("-", "");
+            p.edit().putString("device_key", key).apply();
+        }
+        return key;
+    }
+
+    private void startScreenRelay(int resultCode, Intent data) {
+        Intent service = new Intent(this, ImaScreenRelayService.class);
+        service.setAction(ImaScreenRelayService.ACTION_START);
+        service.putExtra(ImaScreenRelayService.EXTRA_RESULT_CODE, resultCode);
+        service.putExtra(ImaScreenRelayService.EXTRA_RESULT_DATA, data);
+        service.putExtra(ImaScreenRelayService.EXTRA_ENDPOINT, "https://ima-browserglass.onrender.com");
+        service.putExtra(ImaScreenRelayService.EXTRA_DEVICE_KEY, screenRelayDeviceKey());
+        if (Build.VERSION.SDK_INT >= 26) startForegroundService(service);
+        else startService(service);
     }
 
     private void startGoogleSignIn(String serverClientId, String id) {
@@ -288,6 +336,10 @@ public class MainActivity extends Activity {
 
     @Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SCREEN_CAPTURE_REQUEST) {
+            if (resultCode == RESULT_OK && data != null) startScreenRelay(resultCode, data);
+            return;
+        }
         if (gmail != null) gmail.handleResult(requestCode, resultCode, data);
     }
 
