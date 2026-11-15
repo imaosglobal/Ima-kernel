@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-15",
+  "title": "IMA canonical daily super-task — verified convergence and deployment repair",
+  "status": "ACTIVE / VERIFIED_DEPLOYMENT_WITH_LIVE_CHAT_AND_CHATGPT_RENDERING_UNVERIFIED",
+  "canonical_main": "39892ed3ca9a1e73d7614358fd0e3329145c126a",
+  "previous_verified_frontend": "64a322432daf676b9423794ab7b67022ab6b14d4",
+  "changes": [
+    {
+      "commit": "064f3e403ee25ee09be769f698f180d82d6f6e98",
+      "area": "Pages deployment",
+      "result": "fixed canonical Pages regression gate: SOURCE_SHA is passed to the gate and static-page checks remain under ima-ui/public"
+    },
+    {
+      "commit": "39892ed3ca9a1e73d7614358fd0e3329145c126a",
+      "area": "QA",
+      "result": "removed unnecessary regex escaping in ima-ui/vite.config.js; canonical Render deployment is live"
+    },
+    {
+      "evidence": "GitHub Actions build-and-publish completed success; gh-pages version.json now equals 39892ed3ca9a1e73d7614358fd0e3329145c126a"
+    },
+    {
+      "evidence": "public gh-pages bundle assets/index-DyNh1oMF.js contains canonical-live-v3, /ima-api/chat, no-store, truthful chat-failure boundary, and no legacy canned response marker"
+    }
+  ],
+  "daily_difference": {
+    "backward": "Previous public artifact was 64a322432daf676b9423794ab7b67022ab6b14d4; canonical main had advanced beyond it while Pages was stale.",
+    "present": "Canonical Pages artifact is now mirrored to 39892ed3ca9a1e73d7614358fd0e3329145c126a; backend Render service is live on the same commit.",
+    "forward": "Next highest-value action is runtime proof of an actual public POST /ima-api/chat and then supported ChatGPT MCP Apps rendering/ACK for LIVE-001."
+  },
+  "capability_state": {
+    "chat_transport": "implemented_and_deployed; public bundle evidence verified; actual user/browser request not observed in Render logs during this run",
+    "live_browser_mcp": "implemented_and_deployed; canonical MCP server exposes ui://ima/live-browser/v1.html and ima_live_browser; ChatGPT rendering/ACK is not independently verified",
+    "android_device_screen": "implemented in canonical LIVE-001 chain; no fresh authorized device-frame evidence in this run",
+    "google_auth": "implemented; no fresh end-to-end login/session persistence verification in this run"
+  },
+  "research": {
+    "findings": [
+      "NIST AI Agent Standards Initiative continues to treat interoperability, agent security, identity and authorization as major standards/research pillars.",
+      "IETF draft-ietf-wimse-aims-01 (2026-11-02) proposes an AI Identity Management System using WIMSE/OAuth concepts; it is an active Internet-Draft, not consensus.",
+      "OpenAI documents MCP Apps as the shared UI standard: ui:// resources, ui/* JSON-RPC over postMessage, with optional ChatGPT extensions; this directly supports the canonical LIVE-001 architecture.",
+      "ARC-AGI-3 emphasizes interactive agentic intelligence and human learning efficiency, but remains a benchmark rather than a complete AGI definition."
+    ],
+    "decision": "No change to IMA AGI v1.1. Current evidence strengthens identity/authorization/interoperability and interactive-agent evaluation dimensions but does not establish a stronger broadly accepted AGI consensus."
+  },
+  "safety": {
+    "money_spent": false,
+    "parallel_live_system_created": false,
+    "auth_bypass": false,
+    "autonomous_external_action": false
+  },
+  "blockers": [
+    "Actual public chat runtime request evidence remains absent until a real browser/user message reaches the canonical backend.",
+    "ChatGPT account-level MCP connection and actual MCP Apps rendering/ACK remain external-host/runtime evidence gaps."
+  ]
+}
