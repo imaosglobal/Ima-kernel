@@ -9,6 +9,7 @@ import android.media.*;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.os.*;
+import android.util.Log;
 import android.view.Surface;
 import java.io.*;
 import java.net.*;
@@ -24,6 +25,7 @@ public class ImaScreenRelayService extends Service {
     public static final String EXTRA_ENDPOINT = "endpoint";
     public static final String EXTRA_DEVICE_KEY = "device_key";
 
+    private static final String TAG = "ImaScreenRelay";
     private static final String CHANNEL = "ima_screen_relay";
     private static final int NOTIFICATION_ID = 41001;
     private static final int MAX_FPS = 4;
@@ -39,6 +41,9 @@ public class ImaScreenRelayService extends Service {
     private String deviceKey;
     private String deviceId;
     private MediaProjection.Callback projectionCallback;
+    private long uploadCount;
+    private long uploadSuccessCount;
+    private long uploadFailureCount;
 
     @Override public void onCreate() {
         super.onCreate();
@@ -50,11 +55,13 @@ public class ImaScreenRelayService extends Service {
                     .putString("device_id", deviceId).apply();
         }
         createNotificationChannel();
+        Log.i(TAG, "created deviceId=" + deviceId);
     }
 
     @Override public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent == null) return START_NOT_STICKY;
         if (ACTION_STOP.equals(intent.getAction())) {
+            Log.i(TAG, "SCREEN_RELAY_STOP");
             stopCapture();
             stopSelf();
             return START_NOT_STICKY;
@@ -69,10 +76,14 @@ public class ImaScreenRelayService extends Service {
         if (endpoint == null || !endpoint.startsWith("https://") ||
                 deviceKey == null || deviceKey.trim().isEmpty() ||
                 resultData == null || resultCode != Activity.RESULT_OK) {
+            Log.e(TAG, "invalid start parameters endpoint=" + endpoint +
+                    " hasKey=" + (deviceKey != null && !deviceKey.trim().isEmpty()) +
+                    " hasData=" + (resultData != null) + " resultCode=" + resultCode);
             stopSelf();
             return START_NOT_STICKY;
         }
 
+        Log.i(TAG, "SCREEN_RELAY_START endpoint=" + endpoint);
         startAsForeground();
         startCapture(resultCode, resultData);
         return START_NOT_STICKY;
@@ -109,6 +120,7 @@ public class ImaScreenRelayService extends Service {
 
             projectionCallback = new MediaProjection.Callback() {
                 @Override public void onStop() {
+                    Log.w(TAG, "MediaProjection stopped");
                     running = false;
                     releaseCaptureResources(false);
                     stopSelf();
@@ -121,8 +133,7 @@ public class ImaScreenRelayService extends Service {
             int height = metrics.height;
             int density = metrics.densityDpi;
 
-            reader = ImageReader.newInstance(width, height,
-                    PixelFormat.RGBA_8888, 2);
+            reader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
             surface = reader.getSurface();
             display = projection.createVirtualDisplay(
                     "IMA-LIVE-001", width, height, density,
@@ -130,9 +141,12 @@ public class ImaScreenRelayService extends Service {
                     surface, null, null);
 
             running = true;
+            uploadCount = uploadSuccessCount = uploadFailureCount = 0;
             worker = Executors.newSingleThreadExecutor();
             worker.execute(this::relayLoop);
+            Log.i(TAG, "capture started " + width + "x" + height + " @" + MAX_FPS + "fps");
         } catch (Exception e) {
+            Log.e(TAG, "capture start failed", e);
             stopCapture();
             stopSelf();
         }
@@ -149,7 +163,8 @@ public class ImaScreenRelayService extends Service {
                     byte[] jpeg = encodeJpeg(image);
                     if (jpeg != null) upload(jpeg);
                 }
-            } catch (Throwable ignored) {
+            } catch (Throwable e) {
+                Log.e(TAG, "frame loop error", e);
             } finally {
                 if (image != null) image.close();
             }
@@ -158,6 +173,8 @@ public class ImaScreenRelayService extends Service {
                 try { Thread.sleep(wait); } catch (InterruptedException e) { break; }
             }
         }
+        Log.i(TAG, "relay loop stopped uploads=" + uploadCount +
+                " success=" + uploadSuccessCount + " failures=" + uploadFailureCount);
     }
 
     private byte[] encodeJpeg(Image image) {
@@ -186,6 +203,7 @@ public class ImaScreenRelayService extends Service {
     }
 
     private void upload(byte[] jpeg) {
+        uploadCount++;
         HttpURLConnection c = null;
         try {
             URL url = new URL(endpoint + "/api/device/frame");
@@ -200,8 +218,22 @@ public class ImaScreenRelayService extends Service {
             c.setRequestProperty("X-IMA-Device-Key", deviceKey);
             c.setRequestProperty("X-IMA-Device-Serial", deviceId);
             try (OutputStream out = c.getOutputStream()) { out.write(jpeg); }
-            c.getResponseCode();
-        } catch (Exception ignored) {
+            int code = c.getResponseCode();
+            if (code >= 200 && code < 300) {
+                uploadSuccessCount++;
+                if (uploadSuccessCount == 1 || uploadSuccessCount % 20 == 0) {
+                    Log.i(TAG, "device/frame upload OK code=" + code +
+                            " bytes=" + jpeg.length + " success=" + uploadSuccessCount);
+                }
+            } else {
+                uploadFailureCount++;
+                Log.e(TAG, "device/frame upload FAILED code=" + code +
+                        " bytes=" + jpeg.length + " failures=" + uploadFailureCount);
+            }
+        } catch (Exception e) {
+            uploadFailureCount++;
+            Log.e(TAG, "device/frame upload ERROR " + e.getClass().getSimpleName() +
+                    ": " + e.getMessage());
         } finally {
             if (c != null) c.disconnect();
         }
@@ -239,6 +271,8 @@ public class ImaScreenRelayService extends Service {
     @Override public void onDestroy() {
         stopCapture();
         stopForeground(true);
+        Log.i(TAG, "destroyed uploads=" + uploadCount +
+                " success=" + uploadSuccessCount + " failures=" + uploadFailureCount);
         super.onDestroy();
     }
 
