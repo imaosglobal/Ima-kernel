@@ -25,6 +25,12 @@ export async function getLocalLiveBrowserScreenshot(){
  return localJson('/screenshot');
 }
 
+export async function getLocalDeviceScreen(){
+ const response=await fetch(LOCAL+'/device-screen',{cache:'no-store'});
+ if(!response.ok)throw new Error(`local device screen HTTP ${response.status}`);
+ return {blob:await response.blob(),mime:response.headers.get('content-type')||'image/png',serial:response.headers.get('X-IMA-Device-Serial')||null};
+}
+
 export async function localNavigate(url){return localJson('/navigate',{method:'POST',body:JSON.stringify({url})});}
 export async function localTap(x,y){return localJson('/tap',{method:'POST',body:JSON.stringify({x,y})});}
 export async function localEnroll(){const token=localStorage.getItem('ima-public-session-token');if(!token)throw new Error('IMA session required');return localJson('/enroll',{method:'POST',body:JSON.stringify({authorization:'Bearer '+token})});}
