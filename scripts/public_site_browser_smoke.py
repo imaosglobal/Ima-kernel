@@ -58,7 +58,7 @@ with sync_playwright() as p:
     page.locator(".chat-composer button").click()
     page.locator(".chat-bubble.ima").last.wait_for(state="visible", timeout=60000)
     answer = page.locator(".chat-bubble.ima").last.inner_text().strip()
-    assert answer and "IMA" not in answer[:3] or answer, "IMA did not return a real answer"
+    assert answer and "אני עדיין לא מצליחה לענות דרך החיבור הציבורי הזה" not in answer, f"IMA returned transport fallback instead of live answer: {answer}"
     page.locator(".chat-close").click()
     assert page.locator(".chat-collapsed").count() == 1, "chat did not collapse back to Mama"
 
