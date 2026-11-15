@@ -42,6 +42,15 @@ with sync_playwright() as p:
     assert google.inner_html().strip(), "official Google Identity Services button did not render"
     assert page.locator("iframe[src*='accounts.google.com']").count() <= 1, "duplicate Google GIS iframe detected"
 
+    api_probe = page.evaluate("""async () => {
+        const r = await fetch('https://ima-915m.onrender.com/ima-api/session', {
+            cache: 'no-store',
+            headers: { 'X-IMA-Transport': 'canonical-live-v3' }
+        });
+        const body = await r.json().catch(() => ({}));
+        return { status: r.status, token: Boolean(body.token), error: body.error || null };
+    }""")
+    assert api_probe["status"] == 200 and api_probe["token"], f"canonical IMA session probe failed: {api_probe}"
     page.locator(".chat-collapsed button").click()
     page.locator(".chat-panel").wait_for()
     composer = page.locator(".chat-composer input")
