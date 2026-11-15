@@ -38,6 +38,7 @@ public class ImaScreenRelayService extends Service {
     private String endpoint;
     private String deviceKey;
     private String deviceId;
+    private MediaProjection.Callback projectionCallback;
 
     @Override public void onCreate() {
         super.onCreate();
@@ -106,9 +107,14 @@ public class ImaScreenRelayService extends Service {
             projection = manager.getMediaProjection(resultCode, data);
             if (projection == null) throw new IllegalStateException("MediaProjection unavailable");
 
-            projection.registerCallback(new MediaProjection.Callback() {
-                @Override public void onStop() { stopCapture(); stopSelf(); }
-            }, new Handler(Looper.getMainLooper()));
+            projectionCallback = new MediaProjection.Callback() {
+                @Override public void onStop() {
+                    running = false;
+                    releaseCaptureResources(false);
+                    stopSelf();
+                }
+            };
+            projection.registerCallback(projectionCallback, new Handler(Looper.getMainLooper()));
 
             DisplayMetricsCompat metrics = DisplayMetricsCompat.get(this);
             int width = metrics.width;
@@ -203,13 +209,22 @@ public class ImaScreenRelayService extends Service {
 
     private void stopCapture() {
         running = false;
+        releaseCaptureResources(true);
+    }
+
+    private void releaseCaptureResources(boolean stopProjection) {
         if (worker != null) { worker.shutdownNow(); worker = null; }
         if (display != null) { display.release(); display = null; }
         if (surface != null) { surface.release(); surface = null; }
         if (reader != null) { reader.close(); reader = null; }
         if (projection != null) {
-            try { projection.unregisterCallback(new MediaProjection.Callback() {}); } catch (Exception ignored) {}
-            projection.stop();
+            if (projectionCallback != null) {
+                try { projection.unregisterCallback(projectionCallback); } catch (Exception ignored) {}
+                projectionCallback = null;
+            }
+            if (stopProjection) {
+                try { projection.stop(); } catch (Exception ignored) {}
+            }
             projection = null;
         }
     }
