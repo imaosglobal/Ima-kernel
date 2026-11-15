@@ -76,6 +76,8 @@ jobs:
 
       - name: Regression gate — critical public contracts
         working-directory: ima-ui
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
         run: |
           set -euo pipefail
           grep -Fq "המשוב נשמר וקיבל קבלה." src/App.jsx
