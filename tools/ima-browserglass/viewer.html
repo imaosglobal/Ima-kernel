@@ -105,7 +105,7 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=false, deviceTimer=null;
+    let deviceMode=false, deviceTimer=null, lastDeviceFrameAt=0;
     async function refreshDevice(){
       try{
         const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
@@ -116,7 +116,10 @@
         const old=img.src; img.src=url; img.hidden=false;
         if(old && old.startsWith('blob:')) URL.revokeObjectURL(old);
         pane.style.display='none';
-        status.textContent='מסך Android — חי';
+        const frameAt=Number(r.headers.get('x-ima-frame-at')||0);
+        lastDeviceFrameAt=frameAt;
+        const age=frameAt ? Math.max(0,Date.now()-frameAt) : 0;
+        status.textContent='מסך Android — חי · '+Math.round(age/1000)+'s';
       }catch(e){
         status.textContent='ממתין למסך Android';
       }
@@ -125,7 +128,7 @@
       deviceMode=true; document.getElementById('deviceScreen').hidden=false;
       await refreshDevice();
       if(deviceTimer)clearInterval(deviceTimer);
-      deviceTimer=setInterval(refreshDevice,1500);
+      deviceTimer=setInterval(refreshDevice,250);
     };
 
     async function session(){
