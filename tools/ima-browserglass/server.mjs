@@ -19,6 +19,9 @@ let targetId = null;
 let lastToken = null;
 let lastTokenExpiresAt = 0;
 let initPromise = null;
+let latestDeviceFrame = null;
+let latestDeviceFrameAt = 0;
+let latestDeviceSerial = null;
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -151,6 +154,49 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ ok: true, service: 'ima-browserglass' }));
       return;
+    }
+
+    if (req.url === '/api/device/frame' && req.method === 'POST') {
+      const deviceKey = String(req.headers['x-ima-device-key'] || '').trim();
+      const expectedKey = String(process.env.IMA_DEVICE_FRAME_KEY || '').trim();
+      if (!expectedKey || deviceKey !== expectedKey) {
+        res.writeHead(403, {'content-type':'application/json'});
+        res.end(JSON.stringify({error:'device_frame_not_authorized'}));
+        return;
+      }
+      const chunks=[]; for await (const chunk of req) chunks.push(chunk);
+      const body=Buffer.concat(chunks);
+      if (!body.length || body.length > 8*1024*1024) {
+        res.writeHead(400, {'content-type':'application/json'});
+        res.end(JSON.stringify({error:'invalid_frame'}));
+        return;
+      }
+      latestDeviceFrame=body;
+      latestDeviceFrameAt=Date.now();
+      latestDeviceSerial=String(req.headers['x-ima-device-serial'] || '');
+      res.writeHead(204, {'cache-control':'no-store'}); res.end(); return;
+    }
+
+    if (req.url === '/api/device/screen' && req.method === 'GET') {
+      if (!hasEmbedCookie && !embedAllowed) {
+        res.writeHead(403, {'content-type':'application/json'});
+        res.end(JSON.stringify({error:'IMA embed required'}));
+        return;
+      }
+      if (!latestDeviceFrame) {
+        res.writeHead(404, {'content-type':'application/json'});
+        res.end(JSON.stringify({error:'device_frame_unavailable'}));
+        return;
+      }
+      res.writeHead(200, {
+        'content-type':'image/png',
+        'cache-control':'no-store, no-cache, must-revalidate',
+        'pragma':'no-cache',
+        'x-ima-device-serial':latestDeviceSerial || '',
+        'x-ima-frame-at':String(latestDeviceFrameAt),
+        'content-length':String(latestDeviceFrame.length),
+      });
+      res.end(latestDeviceFrame); return;
     }
 
     if (req.url === '/api/navigate' && req.method === 'POST') {
