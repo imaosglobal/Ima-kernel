@@ -107,14 +107,26 @@ public class MainActivity extends Activity {
                 }
             }
             @Override public WebResourceResponse shouldInterceptRequest(WebView v, WebResourceRequest r) {
+                String host = r.getUrl().getHost();
                 String p = r.getUrl().getPath();
-                if (p == null || !p.startsWith("/Ima-kernel/")) return super.shouldInterceptRequest(v, r);
-                String asset = "ima-ui/" + p.substring("/Ima-kernel/".length());
+                if (!"ima.local".equals(host) || p == null) return super.shouldInterceptRequest(v, r);
+                String relative = p.startsWith("/") ? p.substring(1) : p;
+                String asset = "ima-ui/" + relative;
                 try {
                     String type = asset.endsWith(".js") ? "application/javascript" :
-                            asset.endsWith(".glb") ? "model/gltf-binary" : "application/octet-stream";
-                    return new WebResourceResponse(type, "UTF-8", getAssets().open(asset));
-                } catch (Exception e) { return super.shouldInterceptRequest(v, r); }
+                            asset.endsWith(".css") ? "text/css" :
+                            asset.endsWith(".html") ? "text/html" :
+                            asset.endsWith(".json") ? "application/json" :
+                            asset.endsWith(".svg") ? "image/svg+xml" :
+                            asset.endsWith(".png") ? "image/png" :
+                            asset.endsWith(".jpg") || asset.endsWith(".jpeg") ? "image/jpeg" :
+                            asset.endsWith(".glb") ? "model/gltf-binary" :
+                            "application/octet-stream";
+                    return new WebResourceResponse(type, null, getAssets().open(asset));
+                } catch (Exception e) {
+                    return new WebResourceResponse("text/plain", "UTF-8",
+                            new java.io.ByteArrayInputStream(("IMA asset load failed: " + asset).getBytes(StandardCharsets.UTF_8)));
+                }
             }
         });
         setContentView(webView);
@@ -127,8 +139,8 @@ public class MainActivity extends Activity {
             byte[] data = readAll(in);
             String html = new String(data, StandardCharsets.UTF_8)
                     .replace("/Ima-kernel/", "./");
-            webView.loadDataWithBaseURL("file:///android_asset/ima-ui/",
-                    html, "text/html", "UTF-8", null);
+            webView.loadDataWithBaseURL("https://ima.local/",
+                    html, "text/html", "UTF-8", "https://ima.local/");
         } catch (Exception e) {
             webView.loadData("<h1>IMA</h1><p>UI load failed: " +
                     esc(e.toString()) + "</p>", "text/html", "UTF-8");
