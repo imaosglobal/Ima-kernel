@@ -159,6 +159,17 @@ for fragment in required_action_fragments:
 if "https://ima-browserglass.onrender.com/" not in widget_raw:
     fail("BrowserGlass widget must use the canonical BrowserGlass service")
 
+# Full Android device-screen channel must remain part of LIVE-001, not browser-only.
+termux_bridge_raw = read("tools/termux-ima-bridge/bridge.py")
+termux_start_raw = read("tools/termux-ima-bridge/start-ima-bridge.sh")
+browser_bridge_ui_raw = read("ima-ui/public/browser-bridge.html")
+if "device_screen" not in termux_bridge_raw or "/device-screen" not in termux_bridge_raw:
+    fail("LIVE-001 full Android device-screen channel is missing from the Termux bridge")
+if "ADB_MDNS_AUTO_CONNECT" not in termux_start_raw:
+    fail("LIVE-001 Android bridge must auto-discover the paired ADB transport")
+if "deviceScreen" not in browser_bridge_ui_raw or "/device-screen" not in browser_bridge_ui_raw:
+    fail("LIVE-001 browser bridge UI must expose the full Android device screen")
+
 if "BGLS_CHROME_PATH=/usr/bin/google-chrome-stable" not in browserglass_docker:
     fail("BrowserGlass must pin a deterministic Chrome binary")
 if "git clone --depth 1 https://github.com/psmux/browserglass.git" not in browserglass_docker:
