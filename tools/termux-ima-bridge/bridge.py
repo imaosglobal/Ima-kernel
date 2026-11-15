@@ -13,6 +13,7 @@ PORT=int(os.environ.get('IMA_TERMUX_BRIDGE_PORT','8787'))
 CDP=os.environ.get('IMA_CHROME_CDP','http://127.0.0.1:9222').rstrip('/')
 TARGET_HINT=os.environ.get('IMA_CHROME_TARGET_HINT','imaosglobal.github.io/Ima-kernel').strip().lower()
 CLOUD_API=os.environ.get('IMA_CLOUD_API_BASE','https://ima-915m.onrender.com').rstrip('/')
+BROWSERGLASS_API=os.environ.get('IMA_BROWSERGLASS_API','https://ima-browserglass.onrender.com').rstrip('/')
 STATE_FILE=os.path.expanduser(os.environ.get('IMA_DEVICE_STATE_FILE','~/.config/ima/device.json'))
 def load_device_key():
     if os.environ.get('IMA_DEVICE_KEY','').strip(): return os.environ['IMA_DEVICE_KEY'].strip()
@@ -21,6 +22,7 @@ def load_device_key():
 DEVICE_KEY=load_device_key()
 CLOUD_POLL_SECONDS=max(1.0,float(os.environ.get('IMA_CLOUD_POLL_SECONDS','2')))
 CLOUD_TIMEOUT=max(3.0,float(os.environ.get('IMA_CLOUD_TIMEOUT','12')))
+FRAME_UPLOAD_SECONDS=max(1.0,float(os.environ.get('IMA_FRAME_UPLOAD_SECONDS','2')))
 LOCAL_EVAL_ENABLED=os.environ.get('IMA_ENABLE_LOCAL_EVAL','0').strip().lower() in ('1','true','yes','on')
 ALLOWED_ORIGINS={x.strip().rstrip('/') for x in os.environ.get('IMA_ALLOWED_ORIGINS','https://imaosglobal.github.io,http://localhost:5173,http://127.0.0.1:5173').split(',') if x.strip()}
 ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
@@ -162,6 +164,40 @@ def cloud_request(path,method='GET',payload=None):
         raw=r.read()
         return r.status, json.loads(raw.decode()) if raw else {}
 
+def upload_device_frame():
+    if not DEVICE_KEY:
+        return
+    serial,raw=device_screenshot_png()
+    req=urllib.request.Request(
+        BROWSERGLASS_API+'/api/device/frame',
+        data=raw,
+        headers={
+            'Content-Type':'image/png',
+            'Cache-Control':'no-store',
+            'X-IMA-Device-Key':DEVICE_KEY,
+            'X-IMA-Device-Serial':serial,
+        },
+        method='POST',
+    )
+    with urllib.request.urlopen(req,timeout=CLOUD_TIMEOUT) as r:
+        if r.status not in (200,201,202,204):
+            raise RuntimeError('device frame relay HTTP '+str(r.status))
+
+def device_frame_relay_loop():
+    if not DEVICE_KEY:
+        print('Device frame relay disabled: IMA_DEVICE_KEY is not configured.',flush=True)
+        return
+    delay=1.0
+    while True:
+        try:
+            upload_device_frame()
+            delay=1.0
+            time.sleep(FRAME_UPLOAD_SECONDS)
+        except Exception as e:
+            print('Device frame relay:',str(e),flush=True)
+            time.sleep(min(delay,30.0))
+            delay=min(delay*2,30.0)
+
 def persist_device_key(device_key, device_id=None):
     path=pathlib.Path(STATE_FILE)
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -173,6 +209,8 @@ def start_cloud_agent():
     global DEVICE_KEY
     if DEVICE_KEY and not any(t.name=='ima-cloud-agent' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=cloud_agent_loop,daemon=True,name='ima-cloud-agent').start()
+    if DEVICE_KEY and not any(t.name=='ima-device-frame-relay' and t.is_alive() for t in threading.enumerate()):
+        threading.Thread(target=device_frame_relay_loop,daemon=True,name='ima-device-frame-relay').start()
 
 CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key'})
 
@@ -261,7 +299,7 @@ class Handler(BaseHTTPRequestHandler):
                 auth=str(body.get('authorization','')).strip()
                 if not auth.startswith('Bearer '):
                     raise ValueError('authorization required')
-                req=urllib.request.Request(CLOUD_API+'/ima-api/device/register',data=json.dumps({'device_label':'Android Chrome · Termux','platform':'android-termux','capabilities':{'browser':True,'chrome_cdp':True,'network_independent':True},'metadata':{'bridge':'ima-termux-bridge','target_hint':TARGET_HINT}}).encode(),headers={'Content-Type':'application/json','Authorization':auth,'Accept':'application/json'},method='POST')
+                req=urllib.request.Request(CLOUD_API+'/ima-api/device/register',data=json.dumps({'device_label':'Android Chrome · Termux','platform':'android-termux','capabilities':{'browser':True,'chrome_cdp':True,'network_independent':True,'internet_screen_relay':True},'metadata':{'bridge':'ima-termux-bridge','target_hint':TARGET_HINT}}).encode(),headers={'Content-Type':'application/json','Authorization':auth,'Accept':'application/json'},method='POST')
                 with urllib.request.urlopen(req,timeout=CLOUD_TIMEOUT) as rr:
                     data=json.loads(rr.read().decode())
                 if not data.get('device_key'): raise RuntimeError('cloud enrollment returned no device key')
@@ -281,7 +319,7 @@ if __name__=='__main__':
     if DEVICE_KEY:
         start_cloud_agent()
     print('IMA bridge listening on http://127.0.0.1:'+str(PORT),flush=True)
-    print('IMA full Android screen channel: /device-screen and action=device_screen',flush=True)
+    print('IMA full Android screen channel: /device-screen, cloud relay and action=device_screen',flush=True)
     print('Chrome CDP: '+CDP,flush=True)
     print('Chrome target hint: '+TARGET_HINT,flush=True)
     ReusableHTTPServer((HOST,PORT),Handler).serve_forever()
