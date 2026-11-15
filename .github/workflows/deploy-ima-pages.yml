@@ -114,7 +114,7 @@ jobs:
           test -f dist/version.json
           test -f dist/ota/manifest.json
           python3 - <<'PY'
-          import json
+          import json, os
           from pathlib import Path
           expected = os.environ["SOURCE_SHA"]
           manifest = json.loads(Path("dist/ota/manifest.json").read_text(encoding="utf-8"))
