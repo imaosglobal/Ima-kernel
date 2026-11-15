@@ -220,7 +220,7 @@ assert "AE-001" in adaptive_eligibility_raw
 assert "AE-001-runtime-v1.0" in adaptive_eligibility_runtime
 assert "CG-001" in compound_growth_raw
 assert "COMPOUND-GROWTH" in compound_growth_runtime
-assert "notice → learn → validate → improve → test → verify" in compound_growth_raw
+assert "notice → capture lesson → validate → improve → test → verify" in compound_growth_raw
 assert "truth_safety_privacy_or_agency" in compound_growth_runtime
 
 assert "<<<<<<<" not in read(".ima/loop/UNIFIED_LOOP_STATE.json")
