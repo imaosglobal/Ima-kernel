@@ -2,7 +2,8 @@ const CACHE = 'ima-shell-v10';
 const SHELL = [
   '/Ima-kernel/',
   '/Ima-kernel/index.html',
-  '/Ima-kernel/manifest.json'
+  '/Ima-kernel/manifest.json',
+  '/Ima-kernel/ota/manifest.json'
 ];
 
 self.addEventListener('install', event => {
@@ -33,7 +34,7 @@ self.addEventListener('fetch', event => {
   // Never let the service worker pin release metadata or the HTML shell.
   const isReleaseControl = url.pathname === '/Ima-kernel/' ||
     url.pathname === '/Ima-kernel/index.html' ||
-    url.pathname === '/Ima-kernel/version.json';
+    url.pathname === '/Ima-kernel/ota/manifest.json';
 
   event.respondWith(
     fetch(event.request, { cache: 'no-store' })
