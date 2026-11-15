@@ -29,7 +29,7 @@ def _ima_public_cors(response):
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
-        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, X-IMA-Client, X-IMA-Device-Key"
+        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, X-IMA-Client, X-IMA-Device-Key, X-IMA-Transport"
         response.headers["Access-Control-Max-Age"] = "600"
     return response
 
@@ -416,7 +416,7 @@ def _cors():
         return {
             "Access-Control-Allow-Origin": origin,
             "Vary": "Origin",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, X-IMA-Client, X-IMA-Device-Key, X-IMA-Transport",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         }
     if origin == "null" and request.path == "/ima-api/auth/config":
