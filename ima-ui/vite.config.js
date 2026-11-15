@@ -5,6 +5,26 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 
+
+function imaOtaManifestPlugin() {
+  return {
+    name: 'ima-ota-manifest',
+    generateBundle() {
+      const version = process.env.GITHUB_SHA || process.env.IMA_BUILD_VERSION || 'dev'
+      const manifest = {
+        schemaVersion: 1,
+        channel: 'stable',
+        webVersion: version,
+        webUrl: 'https://imaosglobal.github.io/Ima-kernel/',
+        native: { package: 'com.ima.core', versionName: '1.1.0', versionCode: 3, updateMode: 'play-or-managed-release' },
+        source: 'Ima-kernel',
+        generatedAt: new Date().toISOString()
+      }
+      this.emitFile({ type: 'asset', fileName: 'ota/manifest.json', source: JSON.stringify(manifest, null, 2) })
+    }
+  }
+}
+
 function imaRuntimePlugin() {
   return {
     name: 'ima-runtime-state',
@@ -66,6 +86,6 @@ function imaRuntimePlugin() {
 
 export default defineConfig({
   base: '/Ima-kernel/',
-  plugins: [react(), imaRuntimePlugin()],
+  plugins: [react(), imaOtaManifestPlugin(), imaRuntimePlugin()],
   server: { proxy: { '/ima-api': { target: 'http://127.0.0.1:8081', changeOrigin: true, rewrite: path => path.replace(/^\/ima-api/, '') } } }
 })
