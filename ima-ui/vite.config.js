@@ -9,6 +9,10 @@ import { spawnSync } from 'node:child_process'
 function imaOtaManifestPlugin() {
   return {
     name: 'ima-ota-manifest',
+    transformIndexHtml(html) {
+      const version = process.env.GITHUB_SHA || process.env.IMA_BUILD_VERSION || 'dev'
+      return html.replaceAll('__IMA_BUILD_VERSION__', version)
+    },
     generateBundle() {
       const version = process.env.GITHUB_SHA || process.env.IMA_BUILD_VERSION || 'dev'
       const manifest = {
