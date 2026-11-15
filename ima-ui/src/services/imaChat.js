@@ -1,6 +1,8 @@
 import { trackImaEvent } from './analytics';
 import { observeIma } from './imaLearningBus';
-const API_BASE = (import.meta.env.VITE_IMA_API_BASE || 'https://ima-915m.onrender.com').replace(/\/$/, '');
+const CANONICAL_API_BASE = 'https://ima-915m.onrender.com';
+const API_BASE = CANONICAL_API_BASE;
+const CHAT_TRANSPORT = 'canonical-live-v3';
 const GOOGLE_USER_COOKIE='ima-google-user-v1';
 const GOOGLE_TOKEN_COOKIE='ima-google-session-v1';
 function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;}catch{ /* cookie write failure is non-fatal */ }}
@@ -15,7 +17,7 @@ export async function getSessionToken(forceRefresh = false) {
   const cached = localStorage.getItem(key);
   if (cached && !forceRefresh) return cached;
   if (forceRefresh) localStorage.removeItem(key);
-  const response = await fetch((API_BASE || '') + '/ima-api/session', { cache: 'no-store' });
+  const response = await fetch(CANONICAL_API_BASE + '/ima-api/session', { cache: 'no-store', headers: { 'X-IMA-Transport': CHAT_TRANSPORT } });
   const data = await response.json().catch(() => ({}));
   if (!response.ok || !data.token) throw new Error('IMA session unavailable');
   localStorage.setItem(key, data.token);
@@ -32,6 +34,7 @@ async function request(path, options = {}, retry = true) {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
       'X-IMA-Client': 'public-web-chat-v2',
+      'X-IMA-Transport': CHAT_TRANSPORT,
       ...(options.headers || {}),
     },
   });
@@ -133,14 +136,14 @@ export async function deleteMemory() {
 
 
 export async function getAuthConfig() {
-  const response = await fetch((API_BASE || '') + '/ima-api/auth/config', { cache: 'no-store' });
+  const response = await fetch(CANONICAL_API_BASE + '/ima-api/auth/config', { cache: 'no-store' });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(data.error || 'IMA auth config unavailable');
   return data;
 }
 
 export async function signInWithGoogleCredential(credential, nonce) {
-  const response = await fetch((API_BASE || '') + '/ima-api/auth/google', {
+  const response = await fetch(CANONICAL_API_BASE + '/ima-api/auth/google', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ credential, nonce }),
