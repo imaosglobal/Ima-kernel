@@ -112,6 +112,18 @@ jobs:
           test -f public/privacy.html
           test -f public/feedback.html
           test -f dist/version.json
+          test -f dist/ota/manifest.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          expected = os.environ["SOURCE_SHA"]
+          manifest = json.loads(Path("dist/ota/manifest.json").read_text(encoding="utf-8"))
+          if manifest.get("webVersion") != expected:
+              raise SystemExit(f"OTA manifest mismatch: {manifest.get('webVersion')} != {expected}")
+          if manifest.get("native", {}).get("package") != "com.ima.core":
+              raise SystemExit("OTA native package mismatch")
+          print("IMA_OTA_MANIFEST=VERIFIED")
+          PY
           echo "IMA_PUBLIC_ARTIFACT_CONTRACT=VERIFIED"
 
       - name: Configure GitHub Pages
@@ -165,6 +177,14 @@ jobs:
               time.sleep(5)
           else:
               raise SystemExit(f"PUBLIC_VERSION_VERIFY_FAILED: {last}")
+
+          status, ota = get("/ota/manifest.json")
+          if status != 200:
+              raise SystemExit(f"PUBLIC_OTA_MANIFEST_FAILED: status={status}")
+          ota_data = json.loads(ota)
+          if ota_data.get("webVersion") != expected:
+              raise SystemExit(f"PUBLIC_OTA_MANIFEST_MISMATCH: {ota_data}")
+          print("IMA_PUBLIC_OTA=VERIFIED")
 
           for path in ("/support.html", "/privacy.html"):
               status, _ = get(path)
