@@ -105,7 +105,7 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=false, deviceTimer=null, lastDeviceFrameAt=0;
+    let deviceMode=new URLSearchParams(location.search).get('device')==='1', deviceTimer=null, lastDeviceFrameAt=0;
     async function refreshDevice(){
       try{
         const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
@@ -124,11 +124,14 @@
         status.textContent='ממתין למסך Android';
       }
     }
-    document.getElementById('device').onclick=async()=>{
+    async function startDeviceMode(){
       deviceMode=true; document.getElementById('deviceScreen').hidden=false;
       await refreshDevice();
       if(deviceTimer)clearInterval(deviceTimer);
       deviceTimer=setInterval(refreshDevice,250);
+    }
+    document.getElementById('device').onclick=async()=>{
+      await startDeviceMode();
     };
 
     async function session(){
@@ -192,6 +195,7 @@
     };
     message.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter')document.getElementById('send').click();});
     boot();
+    if(deviceMode) startDeviceMode();
   </script>
 </body>
 </html>
