@@ -73,6 +73,9 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void startScreenShare() {
             requestScreenShare();
         }
+        @JavascriptInterface public String otaStatus() {
+            return ota == null ? "{\"ok\":false,\"error\":\"ota_unavailable\"}" : ota.statusJson();
+        }
         @JavascriptInterface public void stopScreenShare() {
             Intent stop = new Intent(MainActivity.this, ImaScreenRelayService.class);
             stop.setAction(ImaScreenRelayService.ACTION_STOP);
@@ -183,6 +186,7 @@ public class MainActivity extends Activity {
             "window.__imaGmailStatus=function(){try{return JSON.parse(IMA_LOCAL_AI.gmailStatus());}catch(e){return {connected:false,error:String(e)};}};" +
             "window.__imaStartScreenShare=function(){try{IMA_LOCAL_AI.startScreenShare();return true;}catch(e){return false;}};" +
             "window.__imaStopScreenShare=function(){try{IMA_LOCAL_AI.stopScreenShare();return true;}catch(e){return false;}};" +
+            "window.__imaOtaStatus=function(){try{return JSON.parse(IMA_LOCAL_AI.otaStatus());}catch(e){return {ok:false,error:String(e)};};};" +
             "window.__imaGoogleR=window.__imaGoogleR||{};" +
             "window.__imaGoogleDone=function(id,x){var p=window.__imaGoogleR[id];if(!p)return;delete window.__imaGoogleR[id];x&&x.ok?p.resolve(x):p.reject(new Error((x&&x.error)||'Google sign-in failed'));};" +
             "window.__imaGoogleSignIn=function(clientId){return new Promise(function(resolve,reject){var id='g'+Date.now()+Math.random();window.__imaGoogleR[id]={resolve:resolve,reject:reject};IMA_LOCAL_AI.googleSignIn(clientId,id);});};" +
