@@ -298,3 +298,12 @@ Useful entry points:
 - [Contributing](CONTRIBUTING.md)
 
 No artificial traffic, misleading engagement or spam is intended. The goal is genuine global participation and independent verification.
+
+## Go-to-market & distribution
+IMA's distribution path: DISCOVER → TRY → VALUE → RETURN → TEACH/CORRECT → SHARE → CONTRIBUTE → PILOT.
+- Use IMA: https://imaosglobal.github.io/Ima-kernel/
+- Build with IMA: https://github.com/imaosglobal/Ima-kernel
+- Teach/correct IMA: https://github.com/imaosglobal/Ima-kernel/issues/174
+- Contribute language/culture: https://github.com/imaosglobal/Ima-kernel/issues/175
+- Launch system: docs/IMA_GO_TO_MARKET_DISTRIBUTION_2026-11-15.md
+Distribution is free-first and evidence-led. No artificial traffic, paid manipulation, spam, or unverified capability claims.
