@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib
+import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 try:
@@ -24,6 +24,30 @@ CLOUD_TIMEOUT=max(3.0,float(os.environ.get('IMA_CLOUD_TIMEOUT','12')))
 LOCAL_EVAL_ENABLED=os.environ.get('IMA_ENABLE_LOCAL_EVAL','0').strip().lower() in ('1','true','yes','on')
 ALLOWED_ORIGINS={x.strip().rstrip('/') for x in os.environ.get('IMA_ALLOWED_ORIGINS','https://imaosglobal.github.io,http://localhost:5173,http://127.0.0.1:5173').split(',') if x.strip()}
 ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
+ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
+ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
+
+def device_serial():
+    if ADB_SERIAL:
+        return ADB_SERIAL
+    env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
+    try:
+        subprocess.run([ADB_BIN,'start-server'],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=5)
+        out=subprocess.run([ADB_BIN,'devices'],env=env,capture_output=True,text=True,timeout=5).stdout
+        for line in out.splitlines()[1:]:
+            parts=line.split()
+            if len(parts)>=2 and parts[1]=='device': return parts[0]
+    except Exception:
+        pass
+    return ''
+
+def device_screenshot_png():
+    serial=device_serial()
+    if not serial: raise RuntimeError('Android device ADB transport unavailable')
+    proc=subprocess.run([ADB_BIN,'-s',serial,'exec-out','screencap','-p'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=8)
+    if proc.returncode or not proc.stdout.startswith(b'\\x89PNG'):
+        raise RuntimeError('Android screen capture unavailable: '+(proc.stderr.decode(errors='replace').strip() or 'no PNG returned'))
+    return serial,proc.stdout
 
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
@@ -73,6 +97,9 @@ def execute_action(action,payload):
         return {'ok':True,'tabs':get_json('/json/list')}
     if action=='screenshot':
         return {'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True}, preferred_id)['data']}
+    if action=='device_screen':
+        serial,raw=device_screenshot_png()
+        return {'ok':True,'mime':'image/png','data':base64.b64encode(raw).decode('ascii'),'source':'android-device-screen','serial':serial}
     if action=='navigate':
         url=str(payload.get('url','')).strip()
         if not url.startswith(('https://','http://')):
@@ -147,7 +174,7 @@ def start_cloud_agent():
     if DEVICE_KEY and not any(t.name=='ima-cloud-agent' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=cloud_agent_loop,daemon=True,name='ima-cloud-agent').start()
 
-CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','navigate','click','tap','scroll','type','key'})
+CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key'})
 
 def execute_cloud_action(action, payload):
     # Cloud commands are authenticated device commands, but page/DOM content is untrusted.
@@ -211,6 +238,9 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
                 self.send_json({'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']})
+            elif self.path=='/device-screen':
+                serial,raw=device_screenshot_png()
+                self.send_response(200); self.send_header('Content-Type','image/png'); self.send_header('Cache-Control','no-store'); self.send_header('X-IMA-Device-Serial',serial); self.send_header('Content-Length',str(len(raw))); self.end_headers(); self.wfile.write(raw)
             else:
                 self.send_json({'ok':False,'error':'not_found'},404)
         except Exception as e:
@@ -251,6 +281,7 @@ if __name__=='__main__':
     if DEVICE_KEY:
         start_cloud_agent()
     print('IMA bridge listening on http://127.0.0.1:'+str(PORT),flush=True)
+    print('IMA full Android screen channel: /device-screen and action=device_screen',flush=True)
     print('Chrome CDP: '+CDP,flush=True)
     print('Chrome target hint: '+TARGET_HINT,flush=True)
     ReusableHTTPServer((HOST,PORT),Handler).serve_forever()
