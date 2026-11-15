@@ -22,6 +22,7 @@ let initPromise = null;
 let latestDeviceFrame = null;
 let latestDeviceFrameAt = 0;
 let latestDeviceSerial = null;
+let latestDeviceContentType = 'image/png';
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -174,6 +175,7 @@ const server = http.createServer(async (req, res) => {
       latestDeviceFrame=body;
       latestDeviceFrameAt=Date.now();
       latestDeviceSerial=String(req.headers['x-ima-device-serial'] || '');
+      latestDeviceContentType=String(req.headers['content-type'] || 'image/png').split(';')[0] || 'image/png';
       res.writeHead(204, {'cache-control':'no-store'}); res.end(); return;
     }
 
@@ -189,7 +191,7 @@ const server = http.createServer(async (req, res) => {
         return;
       }
       res.writeHead(200, {
-        'content-type':'image/png',
+        'content-type':latestDeviceContentType,
         'cache-control':'no-store, no-cache, must-revalidate',
         'pragma':'no-cache',
         'x-ima-device-serial':latestDeviceSerial || '',
