@@ -14,6 +14,7 @@ echo "=== $(date -Is) IMA bridge autostart ==="
 export PATH="$PREFIX/bin:$PATH"
 export IMA_CHROME_CDP="http://127.0.0.1:9222"
 export IMA_CHROME_TARGET_HINT="imaosglobal.github.io/Ima-kernel"
+export ADB_MDNS_AUTO_CONNECT="adb-tls-connect"
 
 # Do not create a duplicate bridge.
 if pgrep -f "$BRIDGE_DIR/bridge.py" >/dev/null 2>&1; then
@@ -32,6 +33,7 @@ BRIDGE_PID=$!
 # Keep the bridge connected if Android restores the already-paired ADB
 # transport after boot. No manual port forwarding is then needed.
 while kill -0 "$BRIDGE_PID" 2>/dev/null; do
+  "$PREFIX/bin/adb" start-server >/dev/null 2>&1 || true
   SERIAL=$("$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}')
   if [ -n "${SERIAL:-}" ]; then
     "$PREFIX/bin/adb" -s "$SERIAL" forward --remove tcp:9222 >/dev/null 2>&1 || true
