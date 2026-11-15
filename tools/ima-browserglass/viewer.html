@@ -37,7 +37,7 @@
     <button id="arrow" type="button">חץ</button>
     <button id="erase" type="button">מחק</button>
     <button id="undo" type="button">בטל</button>
-    <button id="clear" type="button">נקה סימונים</button>
+    <button id="clear" type="button">נקה סימונים</button><button id="device" type="button">מסך Android</button>
     <span class="tool-label">עובי</span><input id="width" type="range" min="2" max="16" value="4">
     <span class="tool-label">צבע</span><input id="color" type="color" value="#ff3b30">
     <textarea id="message" aria-label="מסר לאמא ולעוזר" placeholder="כתוב כאן מה תרצה שאקבל יחד עם מצב החלון…"></textarea>
@@ -46,6 +46,7 @@
   </div>
   <div id="stage">
     <browser-glass id="pane" fit="contain"></browser-glass>
+    <img id="deviceScreen" alt="מסך Android חי" hidden style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000">
     <canvas id="ink" aria-label="שכבת סימון"></canvas>
   </div>
 
@@ -103,6 +104,29 @@
     document.getElementById('undo').onclick=()=>restore(history.pop()||null);
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
+
+    let deviceMode=false, deviceTimer=null;
+    async function refreshDevice(){
+      try{
+        const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
+        if(!r.ok) throw new Error('device screen '+r.status);
+        const blob=await r.blob();
+        const url=URL.createObjectURL(blob);
+        const img=document.getElementById('deviceScreen');
+        const old=img.src; img.src=url; img.hidden=false;
+        if(old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+        pane.style.display='none';
+        status.textContent='מסך Android — חי';
+      }catch(e){
+        status.textContent='ממתין למסך Android';
+      }
+    }
+    document.getElementById('device').onclick=async()=>{
+      deviceMode=true; document.getElementById('deviceScreen').hidden=false;
+      await refreshDevice();
+      if(deviceTimer)clearInterval(deviceTimer);
+      deviceTimer=setInterval(refreshDevice,1500);
+    };
 
     async function session(){
       const r=await fetch('/api/session',{cache:'no-store',credentials:'same-origin'});
