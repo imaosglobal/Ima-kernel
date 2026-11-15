@@ -15,12 +15,15 @@ function imaOtaManifestPlugin() {
     },
     generateBundle() {
       const version = process.env.GITHUB_SHA || process.env.IMA_BUILD_VERSION || 'dev'
+      const gradle = fs.readFileSync(path.resolve(process.cwd(), '../android/app/build.gradle'), 'utf8')
+      const versionName = gradle.match(/versionName\s+['\"]([^'\"]+)['\"]/)?.[1] || 'unknown'
+      const versionCode = Number(gradle.match(/versionCode\s+(\d+)/)?.[1] || 0)
       const manifest = {
         schemaVersion: 1,
         channel: 'stable',
         webVersion: version,
         webUrl: 'https://imaosglobal.github.io/Ima-kernel/',
-        native: { package: 'com.ima.core', versionName: '1.1.0', versionCode: 3, updateMode: 'play-or-managed-release' },
+        native: { package: 'com.ima.core', versionName, versionCode, updateMode: 'play-or-managed-release' },
         source: 'Ima-kernel',
         generatedAt: new Date().toISOString()
       }
