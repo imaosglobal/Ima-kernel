@@ -41,6 +41,9 @@ public class MainActivity extends Activity {
     private final Executor googleExecutor = Executors.newSingleThreadExecutor();
     private static final int SCREEN_CAPTURE_REQUEST = 41002;
     private boolean screenCaptureRequested = false;
+    private boolean remoteUiAttempted = false;
+    private boolean bundledUiLoaded = false;
+    private static final String REMOTE_IMA_UI = "https://imaosglobal.github.io/Ima-kernel/";
 
     public final class Bridge {
         @JavascriptInterface public String discover() {
@@ -106,6 +109,18 @@ public class MainActivity extends Activity {
                     v.postDelayed(MainActivity.this::requestScreenShare, 800);
                 }
             }
+            @Override public void onReceivedError(WebView v, WebResourceRequest r, android.webkit.WebResourceError error) {
+                super.onReceivedError(v, r, error);
+                if (r.isForMainFrame() && remoteUiAttempted && !bundledUiLoaded) {
+                    loadBundledIma();
+                }
+            }
+            @Override public void onReceivedHttpError(WebView v, WebResourceRequest r, android.webkit.WebResourceResponse errorResponse) {
+                super.onReceivedHttpError(v, r, errorResponse);
+                if (r.isForMainFrame() && remoteUiAttempted && !bundledUiLoaded && errorResponse.getStatusCode() >= 400) {
+                    loadBundledIma();
+                }
+            }
             @Override public WebResourceResponse shouldInterceptRequest(WebView v, WebResourceRequest r) {
                 String host = r.getUrl().getHost();
                 String p = r.getUrl().getPath();
@@ -130,10 +145,20 @@ public class MainActivity extends Activity {
             }
         });
         setContentView(webView);
-        loadBundledIma();
+        loadRemoteIma();
+    }
+
+    private void loadRemoteIma() {
+        remoteUiAttempted = true;
+        try {
+            webView.loadUrl(REMOTE_IMA_UI + "?runtime=android&v=" + System.currentTimeMillis());
+        } catch (Exception e) {
+            loadBundledIma();
+        }
     }
 
     private void loadBundledIma() {
+        bundledUiLoaded = true;
         try {
             InputStream in = getAssets().open("ima-ui/index.html");
             byte[] data = readAll(in);
