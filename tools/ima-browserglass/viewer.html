@@ -143,9 +143,9 @@
       catch(e){status.textContent='ממתין לחיבור המורשה';}
     }
     pane.onTokenExpired=async()=> (await session()).token;
-    pane.addEventListener('bgls:connected',()=>status.textContent='חלון חי מחובר — סנכרון אוטומטי');
-    pane.addEventListener('bgls:disconnected',()=>status.textContent='החיבור נותק — מתחבר מחדש');
-    pane.addEventListener('bgls:error',e=>status.textContent='BrowserGlass: '+(e.detail?.error||'error'));
+    pane.addEventListener('bgls:connected',()=>{status.textContent='חלון חי מחובר — סנכרון אוטומטי';window.parent.postMessage({type:'ima-live-status',text:'חלון חי מחובר — סנכרון אוטומטי'},'*');});
+    pane.addEventListener('bgls:disconnected',()=>{status.textContent='החיבור נותק — מתחבר מחדש';window.parent.postMessage({type:'ima-live-status',text:'החיבור נותק — מתחבר מחדש'},'*');});
+    pane.addEventListener('bgls:error',e=>{const t='BrowserGlass: '+(e.detail?.error||'error');status.textContent=t;window.parent.postMessage({type:'ima-live-status',text:t},'*');});
 
     function hostCall(method,params){
       return new Promise((resolve,reject)=>{
