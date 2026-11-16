@@ -36,7 +36,7 @@ function HolographicRings() {
   );
 }
 
-export default function IMA3DCompanion({ mode = 'hero', lang = 'en', onOpenChat, label }) {
+export default function IMA3DCompanion({ mode = 'hero', lang = 'en', onOpenChat, label, interactive = true }) {
   const compact = mode === 'floating' || mode === 'compact';
   const standalone = mode === 'standalone';
   const text = label || (lang === 'he' ? 'אמא — לפתיחת צ׳ט' : 'IMA — open chat');
