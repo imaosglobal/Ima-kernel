@@ -1,0 +1,136 @@
+{
+  "schema": "ima.character.adaptation/v1",
+  "status": "prepared-not-active",
+  "identity": {
+    "name": "IMA",
+    "hebrewName": "אמא",
+    "provenance": "IMA — אמא, by Ori Cohen",
+    "singleCanonicalIdentity": true
+  },
+  "presentationTiers": [
+    {
+      "id": "T0",
+      "mode": "semantic-2d",
+      "targets": [
+        "legacy",
+        "accessibility",
+        "low-power"
+      ]
+    },
+    {
+      "id": "T1",
+      "mode": "light-3d",
+      "targets": [
+        "mobile",
+        "tablet",
+        "desktop"
+      ]
+    },
+    {
+      "id": "T2",
+      "mode": "web-3d",
+      "targets": [
+        "modern-web"
+      ]
+    },
+    {
+      "id": "T3",
+      "mode": "ar",
+      "targets": [
+        "ar-mobile",
+        "supported-glasses"
+      ]
+    },
+    {
+      "id": "T4",
+      "mode": "immersive-xr",
+      "targets": [
+        "vr",
+        "mr",
+        "xr-headsets",
+        "xr-glasses"
+      ]
+    },
+    {
+      "id": "T5",
+      "mode": "native-high-fidelity",
+      "targets": [
+        "native-spatial",
+        "virtual-production",
+        "offline-render"
+      ]
+    }
+  ],
+  "portableAssets": {
+    "realtime": [
+      "glb",
+      "gltf"
+    ],
+    "sceneInterchange": [
+      "usd",
+      "usdz"
+    ],
+    "preserve": [
+      "skeleton",
+      "materials",
+      "animationClips",
+      "landmarks",
+      "provenance",
+      "version"
+    ]
+  },
+  "inputAdapters": [
+    "touch",
+    "pointer",
+    "keyboard",
+    "controller",
+    "voice",
+    "gaze",
+    "hand",
+    "spatial"
+  ],
+  "semanticActions": [
+    "focus",
+    "select",
+    "openConversation",
+    "speak",
+    "type",
+    "navigate",
+    "cancel",
+    "back",
+    "help"
+  ],
+  "capabilityNegotiation": {
+    "required": [
+      "display",
+      "graphics",
+      "input",
+      "accessibility",
+      "permissions"
+    ],
+    "optional": [
+      "xr",
+      "ar",
+      "depth",
+      "handTracking",
+      "spatialAnchors",
+      "webgpu"
+    ],
+    "rule": "detect-then-verify-then-activate"
+  },
+  "fallback": {
+    "alwaysAvailable": true,
+    "neverDependOnSpatialRendering": true
+  },
+  "activationGate": {
+    "dependsOn": "LIVE-001",
+    "requiredEvidence": [
+      "mcp-handshake",
+      "widget-render",
+      "browserglass-connected",
+      "fresh-android-frame",
+      "authorized-action-roundtrip",
+      "visual-refresh"
+    ]
+  }
+}
