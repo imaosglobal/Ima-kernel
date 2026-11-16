@@ -9,7 +9,7 @@ const BGLS_PORT = Number(process.env.BGLS_INTERNAL_PORT || 7799);
 const BGLS_DIR = process.env.BGLS_HOME || '/opt/browserglass';
 const DATA_DIR = process.env.BGLS_DATA_DIR || '/opt/browserglass/bgls-data';
 const CHROME_BIN = process.env.CHROME_BIN || '/usr/bin/chromium';
-const EMBED_ORIGINS = ['https://imaosglobal.github.io','https://chatgpt.com','https://chat.openai.com'];
+const EMBED_ORIGINS = ['https://imaosglobal.github.io','https://ima-universal-action-core.onrender.com','https://chatgpt.com','https://chat.openai.com'];
 const EMBED_COOKIE = 'ima_browserglass_embed';
 const DEFAULT_URL = process.env.IMA_DEFAULT_BROWSER_URL || 'https://imaosglobal.github.io/';
 
