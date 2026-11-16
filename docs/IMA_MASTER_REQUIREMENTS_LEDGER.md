@@ -306,6 +306,17 @@ Status: COMPLETED_BASELINE / CONTINUOUS_RECONCILIATION
 - Future commits must reconcile against existing capability families before introducing parallel implementations.
 
 
+### COMMIT-AUDIT-002 — Historical Git-to-Product Reconciliation & Convergence
+Status: ACTIVE / CONTINUOUS RECONCILIATION
+- IMA must continuously inspect the real Git history, not only the latest plan or conversation, and reconcile historical work into canonical capability families.
+- Each meaningful historical family is classified as: RETAINED_CANONICAL, SUPERSEDED_HISTORICAL, DUPLICATE_CONSOLIDATION_REQUIRED, DOCUMENTATION_ONLY, TESTED_PENDING_LIVE, CONFIGURATION_BLOCKED, or RETIRED.
+- Commit count is provenance, not capability count; repeated attempts, fixes, docs, tests and deployments for one capability must converge on one canonical runtime path.
+- The audit must compare Git history -> current tree -> requirements ledger -> tests -> deployment -> runtime evidence -> real user value.
+- Improvements must prefer reuse, consolidation and repair over new parallel architecture. Historical commits are never rewritten merely for cleanliness.
+- The product goal is not to accumulate plans: IMA must progressively become a usable public product with real users, measurable value, lawful global distribution, accessible onboarding, reliable core interaction and evidence-backed retention.
+- Global reach is a target. Real worldwide usage must be measured from verified telemetry and public evidence, never inferred from code, repository activity or plans.
+- Canonical audit: `docs/IMA_COMMIT_HISTORY_AUDIT_2026-11-16.md`.
+
 ### UNIV-001 — Universal Need-to-Value Execution
 Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - IMA treats real human needs across everyday and advanced domains as candidates for one canonical need-to-value loop.
