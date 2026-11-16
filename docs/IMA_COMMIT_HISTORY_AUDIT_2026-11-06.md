@@ -158,3 +158,31 @@ The next reconciliation pass should compare the historical capability families a
 - retired.
 
 This audit is itself historical evidence. It does not claim live deployment merely because the document was committed.
+
+
+## 2026-11-16 continuation — Git history must drive product convergence
+
+A fresh inspection of the repository's latest 100 commits shows that the earlier audit remains directionally correct, but the volume of work has increased substantially. The latest history contains approximately 30 LIVE-001/browser-device commits, multiple chat/QA/feature families, ecosystem opportunity work, character adaptation, self-ecosystem modeling, and universal need-to-value execution.
+
+Representative current convergence signals:
+- 6725d3aa binds device/browser tools to the canonical widget output template.
+- 9072cc08 adds universal host capability gates.
+- c33b782a defines the universal host/device contract.
+- 03119be94 restores the stable public UI while preserving the failed 3D attempt as provenance.
+- 4d1d1c25 and 6c10e4aa define and register the universal need-to-value path.
+- Earlier chat, QA, growth, learning, ecosystem and device work remains part of the same product lineage rather than separate products.
+
+### New operating conclusion
+The next stage is Git-to-product convergence: inspect historical work, identify what is actually implemented, testable, deployed and live, remove or consolidate duplicate paths, repair the highest-value gaps, and only then add new capability. The repository should increasingly behave like one product rather than a collection of plans and experiments.
+
+### Product outcome gate
+For each capability family, the reconciliation pass must answer:
+1. What was actually built?
+2. Where is the one canonical implementation?
+3. Is it tested?
+4. Is it deployed?
+5. Can a real user use it now?
+6. Is there observed evidence of value or usage?
+7. What is the smallest safe change that moves it to the next verified state?
+
+The target is not more commits. The target is a reliable, accessible, globally distributable IMA product that real people can use and benefit from. Global adoption remains a target until independently verified evidence exists.
