@@ -1,11 +1,31 @@
 {
-  "schema": "ima.character.adaptation/v1",
+  "schema": "ima.character.adaptation/v1.1",
   "status": "prepared-not-active",
   "identity": {
     "name": "IMA",
     "hebrewName": "אמא",
     "provenance": "IMA — אמא, by Ori Cohen",
     "singleCanonicalIdentity": true
+  },
+  "hostAdapters": {
+    "chatgptMobileScreenShare": {
+      "mode": "host-view",
+      "controlAuthority": "separate",
+      "runtimeDetect": true
+    },
+    "chatgptMcpAppsWeb": {
+      "mode": "interactive-widget",
+      "resource": "ui://",
+      "runtimeDetect": true
+    },
+    "imaWebPwa": {
+      "mode": "interactive-web",
+      "runtimeDetect": true
+    },
+    "futureHosts": {
+      "mode": "capability-negotiation",
+      "runtimeDetect": true
+    }
   },
   "presentationTiers": [
     {
@@ -106,7 +126,8 @@
       "graphics",
       "input",
       "accessibility",
-      "permissions"
+      "permissions",
+      "host"
     ],
     "optional": [
       "xr",
@@ -114,9 +135,22 @@
       "depth",
       "handTracking",
       "spatialAnchors",
-      "webgpu"
+      "webgpu",
+      "screenShare"
     ],
     "rule": "detect-then-verify-then-activate"
+  },
+  "screenSharing": {
+    "viewDoesNotImplyControl": true,
+    "controlRequiresSeparateAuthorization": true,
+    "actionLoop": [
+      "view",
+      "identify",
+      "authorize",
+      "act",
+      "observe",
+      "refresh"
+    ]
   },
   "fallback": {
     "alwaysAvailable": true,
