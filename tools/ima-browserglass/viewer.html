@@ -37,7 +37,7 @@
     <button id="arrow" type="button">חץ</button>
     <button id="erase" type="button">מחק</button>
     <button id="undo" type="button">בטל</button>
-    <button id="clear" type="button">נקה סימונים</button><button id="device" type="button">מסך Android</button>
+    <button id="clear" type="button">נקה סימונים</button><button id="device" type="button">מסך Android</button><button id="deviceBack" type="button">חזרה</button><button id="deviceHome" type="button">בית</button>
     <span class="tool-label">עובי</span><input id="width" type="range" min="2" max="16" value="4">
     <span class="tool-label">צבע</span><input id="color" type="color" value="#ff3b30">
     <textarea id="message" aria-label="מסר לאמא ולעוזר" placeholder="כתוב כאן מה תרצה שאקבל יחד עם מצב החלון…"></textarea>
@@ -124,15 +124,43 @@
         status.textContent='ממתין למסך Android';
       }
     }
+    async function callDeviceTool(action, args={}){
+      try{
+        if(window.openai?.callTool) return await window.openai.callTool('ima_device_action',{action,...args});
+        return await hostCall('tools/call',{name:'ima_device_action',arguments:{action,...args}});
+      }catch(e){ status.textContent='פעולת מכשיר נכשלה: '+e.message; throw e; }
+    }
+    function devicePoint(e){
+      const img=document.getElementById('deviceScreen'); const r=img.getBoundingClientRect();
+      const nw=img.naturalWidth||r.width, nh=img.naturalHeight||r.height;
+      const scale=Math.min(r.width/nw,r.height/nh); const w=nw*scale, h=nh*scale;
+      const ox=r.left+(r.width-w)/2, oy=r.top+(r.height-h)/2;
+      return {x:Math.max(0,Math.min(nw,(e.clientX-ox)/scale)),y:Math.max(0,Math.min(nh,(e.clientY-oy)/scale))};
+    }
+    let deviceGesture=null;
+    document.getElementById('deviceScreen').addEventListener('pointerdown',e=>{
+      if(!deviceMode)return; deviceGesture={p:devicePoint(e),t:Date.now()}; e.currentTarget.setPointerCapture?.(e.pointerId);
+    });
+    document.getElementById('deviceScreen').addEventListener('pointerup',async e=>{
+      if(!deviceMode||!deviceGesture)return; const end=devicePoint(e), start=deviceGesture.p, duration=Math.max(100,Math.min(3000,Date.now()-deviceGesture.t)); deviceGesture=null;
+      const dx=end.x-start.x,dy=end.y-start.y;
+      try{
+        if(Math.hypot(dx,dy)>24) await callDeviceTool('android_swipe',{x1:start.x,y1:start.y,x2:end.x,y2:end.y,duration_ms:duration});
+        else await callDeviceTool('android_tap',{x:end.x,y:end.y});
+        setTimeout(refreshDevice,180);
+      }catch{}
+    });
+    async function deviceCommand(action,args={}){try{await callDeviceTool(action,args);setTimeout(refreshDevice,180);}catch{}}
+    
     async function startDeviceMode(){
       deviceMode=true; document.getElementById('deviceScreen').hidden=false;
       await refreshDevice();
       if(deviceTimer)clearInterval(deviceTimer);
       deviceTimer=setInterval(refreshDevice,250);
     }
-    document.getElementById('device').onclick=async()=>{
-      await startDeviceMode();
-    };
+    document.getElementById('device').onclick=async()=>{ await startDeviceMode(); };
+    document.getElementById('deviceBack').onclick=()=>deviceCommand('android_back');
+    document.getElementById('deviceHome').onclick=()=>deviceCommand('android_home');
 
     async function session(){
       const r=await fetch('/api/session',{cache:'no-store',credentials:'same-origin'});
