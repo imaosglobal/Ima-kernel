@@ -304,3 +304,13 @@ Status: COMPLETED_BASELINE / CONTINUOUS_RECONCILIATION
 - Commit history is not evidence of live deployment. Runtime truth remains implemented -> tested -> deployed -> verified-live.
 - Canonical audit: [IMA Commit History Audit 2026-11-06](IMA_COMMIT_HISTORY_AUDIT_2026-11-06.md).
 - Future commits must reconcile against existing capability families before introducing parallel implementations.
+
+
+### UNIV-001 — Universal Need-to-Value Execution
+Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
+- IMA treats real human needs across everyday and advanced domains as candidates for one canonical need-to-value loop.
+- Canonical path: NEED -> CONTEXT -> DISCOVER -> RESEARCH -> OPTIONS -> VALUE HYPOTHESIS -> DESIGN -> BUILD -> TEST -> VERIFY -> PACKAGE -> DISTRIBUTE -> MARKET -> MEASURE -> LEARN -> IMPROVE.
+- Creation, development, testing, distribution and marketing reuse the existing IMA identity, domain graph, self-application, QA, growth and lawful-distribution capabilities; no parallel system is created.
+- External publication, paid promotion, spending, outreach, account changes and consequential commitments remain authorization-gated.
+- Universal reach is a target, never an unverified claim. Actual outcomes require evidence.
+- Canonical contract: docs/IMA_UNIVERSAL_NEED_TO_VALUE_EXECUTION_CONTRACT_v1.0.md.
