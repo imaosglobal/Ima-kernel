@@ -117,3 +117,44 @@ body{background:#f7f1e8!important;color:#2b2421!important}
 .mama-shoulders{background:linear-gradient(160deg,#7b5960,#49383b)!important}
 .mama-halo{background:radial-gradient(circle,#fffdf9 0 22%,#ebe1d8 48%,transparent 70%)!important}
 @media(max-width:850px){.mama-hero-link{min-height:380px!important}}
+
+/* IMA 3D HOLOGRAPHIC EXPERIENCE — canonical companion surface */
+.ima-3d-companion{
+  position:relative;
+  display:block;
+  border:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  color:inherit;
+  overflow:hidden;
+  isolation:isolate;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.ima-3d-companion:focus-visible{outline:3px solid #8f4f5a;outline-offset:5px;border-radius:28px}
+.ima-3d-aura{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.96) 0 18%,rgba(211,167,176,.30) 35%,rgba(148,111,160,.14) 52%,transparent 72%);filter:blur(2px);animation:ima-holo-breathe 5s ease-in-out infinite;z-index:-1}
+.ima-3d-canvas{display:block;width:100%;height:100%;min-height:100%;position:relative}
+.ima-3d-canvas canvas{display:block;width:100%!important;height:100%!important}
+.ima-3d-hero{width:min(520px,90vw);height:520px;border-radius:42px}
+.ima-3d-hero:after{content:"";position:absolute;inset:12%;border:1px solid rgba(157,89,99,.22);border-radius:50%;box-shadow:0 0 80px rgba(157,89,99,.12),inset 0 0 50px rgba(255,255,255,.35);pointer-events:none}
+.ima-3d-floating{position:fixed;right:22px;bottom:22px;width:96px;height:96px;z-index:80;border-radius:50%;filter:drop-shadow(0 18px 38px rgba(65,38,42,.25));transition:transform .2s ease}
+[dir="rtl"] .ima-3d-floating{right:auto;left:22px}
+.ima-3d-floating:hover{transform:scale(1.07) translateY(-2px)}
+.ima-3d-compact{width:48px;height:48px;flex:0 0 48px;border-radius:14px;overflow:hidden}
+.ima-3d-standalone{width:min(620px,92vw);height:min(620px,58vh);margin:0 auto;border-radius:48px}
+.ima-3d-caption{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:8px;align-items:center;white-space:nowrap;padding:9px 13px;border:1px solid rgba(224,213,202,.9);background:rgba(255,253,249,.86);backdrop-filter:blur(12px);border-radius:999px;color:#433832;font-weight:850;font-size:13px;z-index:3}
+.ima-3d-caption small{font-weight:650;color:#8a7e75}
+.ima-3d-loading,.ima-3d-fallback{font:800 13px system-ui,sans-serif;color:#9d5963}
+.ima-companion-only{min-height:100vh;display:grid;place-items:center;align-content:center;gap:10px;padding:24px;background:radial-gradient(circle at 50% 30%,#f2dce0 0,transparent 28rem),linear-gradient(180deg,#fbf7f0,#f0e7dc);color:#2b2421;text-align:center}
+.ima-companion-only h1{font-size:clamp(3rem,9vw,6rem);line-height:.9;letter-spacing:-.06em;margin:0}
+.ima-companion-only p{margin:0 0 12px;color:#766c64}
+.wordmark-mark{display:grid!important;place-items:center!important;background:transparent!important;overflow:visible!important}
+.wordmark-mark .ima-3d-companion{width:38px;height:38px}
+.chat-identity .ima-3d-companion{width:48px;height:48px}
+.chat-collapsed .ima-3d-companion{width:52px;height:52px}
+@keyframes ima-holo-breathe{0%,100%{transform:scale(.96);opacity:.72}50%{transform:scale(1.04);opacity:1}}
+@media(max-width:900px){.ima-3d-hero{width:min(440px,88vw);height:430px}.ima-3d-floating{width:84px;height:84px;right:14px;bottom:14px}[dir="rtl"] .ima-3d-floating{right:auto;left:14px}}
+@media(max-width:600px){.ima-3d-hero{height:340px;border-radius:30px}.ima-3d-floating{width:72px;height:72px}.ima-3d-caption{font-size:11px;bottom:8px}.ima-3d-standalone{height:44vh;border-radius:30px}}
+@media(prefers-reduced-motion:reduce){.ima-3d-aura{animation:none}.ima-3d-floating{transition:none}}
+@media(prefers-reduced-data:reduce){.ima-3d-floating{display:none}}
