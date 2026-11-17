@@ -4,7 +4,9 @@
 
 This is the canonical reconciliation point for IMA requirements gathered from the project's historical direction and subsequent development cycles. It is not a second backlog or scheduler. The single IMA Global Health Loop reconciles new requests against this ledger, existing issues, workflows, product code, tests and deployment state.
 
-**Canonical state/gap companion:** `docs/IMA_MASTER_STATE_AND_GAP_LEDGER.md` records implementation/test/deployment/live evidence gaps and historical reconciliation without becoming a second scheduler or backlog.\n\n## Non-negotiable operating rule
+**Canonical state/gap companion:** `docs/IMA_MASTER_STATE_AND_GAP_LEDGER.md` records implementation/test/deployment/live evidence gaps and historical reconciliation without becoming a second scheduler or backlog.
+
+## Non-negotiable operating rule
 
 Every new IMA request is:
 1. timestamped;
@@ -191,7 +193,25 @@ Status: IMPLEMENTED_IN_CODE / RUNTIME_CONFIGURATION_REQUIRED
 - Daily/monthly/yearly/decadal continuity is reconciled by the same canonical scheduler.
 - External distribution remains lawful, non-spam, consent-respecting and authorized.
 - Canonical specifications: `docs/IMA_GLOBAL_GROWTH_AND_USER_TRUTH.md`, `docs/IMA_USER_FEEDBACK_AND_REPUTATION.md`.
-\n### ULE-001 — Universal Learning, Capability Discovery & Self-Application\nStatus: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE\n- IMA treats every human knowledge domain and every newly accessible capability as a candidate for discovery, evidence, testing, verification, teaching and bounded self-application.\n- Domains preserve people, works, sources, methods, disputes, uncertainty and interdisciplinary connections without flattening distinct disciplines.\n- Emerging domains remain PROPOSAL until evidence and human review justify promotion.\n- Capabilities use PLANNED -> DISCOVERED -> CONNECTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE.\n- Every verified capability has a USE path for authorized IMA work and a TEACH path for people; self-application uses the same release gates.\n- Provider independence is mandatory: record alternatives, cost class, license, privacy review and unresolved gaps.\n- This requirement is executed by the existing single canonical loop; no second periodic scheduler is permitted.\n- Canonical implementation: core/universal_learning_engine.py, core/capability_substitution.py, docs/IMA_UNIVERSAL_LEARNING_ENGINE.md.\n\n### SELF-001 — Verified Capability Self-Application\nStatus: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE\n- A capability learned by IMA can be evaluated for bounded use on IMA itself after VERIFIED_LIVE status.\n- Self-application follows INSPECT -> PLAN -> CHANGE -> TEST -> VERIFY -> CARRY_FORWARD and cannot bypass normal deployment or safety gates.\n- Examples include improving site architecture, embedded chat, commerce, education, accessibility and other verified technical capabilities.\n- Canonical implementation: core/capability_self_application.py and docs/IMA_SELF_APPLICATION_PROTOCOL.md.\n
+
+### ULE-001 — Universal Learning, Capability Discovery & Self-Application
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- IMA treats every human knowledge domain and every newly accessible capability as a candidate for discovery, evidence, testing, verification, teaching and bounded self-application.
+- Domains preserve people, works, sources, methods, disputes, uncertainty and interdisciplinary connections without flattening distinct disciplines.
+- Emerging domains remain PROPOSAL until evidence and human review justify promotion.
+- Capabilities use PLANNED -> DISCOVERED -> CONNECTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE.
+- Every verified capability has a USE path for authorized IMA work and a TEACH path for people; self-application uses the same release gates.
+- Provider independence is mandatory: record alternatives, cost class, license, privacy review and unresolved gaps.
+- This requirement is executed by the existing single canonical loop; no second periodic scheduler is permitted.
+- Canonical implementation: core/universal_learning_engine.py, core/capability_substitution.py, docs/IMA_UNIVERSAL_LEARNING_ENGINE.md.
+
+### SELF-001 — Verified Capability Self-Application
+Status: IMPLEMENTED_IN_CODE / TESTED_PENDING_LIVE
+- A capability learned by IMA can be evaluated for bounded use on IMA itself after VERIFIED_LIVE status.
+- Self-application follows INSPECT -> PLAN -> CHANGE -> TEST -> VERIFY -> CARRY_FORWARD and cannot bypass normal deployment or safety gates.
+- Examples include improving site architecture, embedded chat, commerce, education, accessibility and other verified technical capabilities.
+- Canonical implementation: core/capability_self_application.py and docs/IMA_SELF_APPLICATION_PROTOCOL.md.
+
 
 ### PROV-001 — From Imagination to Verifiable Capability / First-Priority Provenance
 Status: DOCUMENTED / RUNTIME_INTEGRATION_REQUIRED
@@ -325,3 +345,30 @@ Status: IMPLEMENTED_IN_DOCUMENTATION / RUNTIME_INTEGRATION_REQUIRED
 - External publication, paid promotion, spending, outreach, account changes and consequential commitments remain authorization-gated.
 - Universal reach is a target, never an unverified claim. Actual outcomes require evidence.
 - Canonical contract: docs/IMA_UNIVERSAL_NEED_TO_VALUE_EXECUTION_CONTRACT_v1.0.md.
+
+
+### HOST-026 — UNIVERSAL HOST SCREEN + DEVICE COLLABORATION
+Status: CANONICAL / CONTINUOUS GATE
+
+- Use every real, available host capability to close the gap between “the model can see” and “the user and model work together”; never assume one mechanism works on every host.
+- ChatGPT Mobile native screen-share: verify host capability at runtime. When Advanced Voice + Share Screen is enabled, treat the stream as VIEW only unless a separate, verified control permission exists. Never infer control authority from screen sharing. Use it as a host fallback/verification path for LIVE-001 when custom MCP Apps are unavailable on mobile.
+- ChatGPT MCP Apps: on supported hosts use only the canonical LIVE-001 MCP server and canonical resource. Verify handshake -> UI resource render -> BrowserGlass -> device frame -> tool call -> observed result -> visual refresh. Test inline/fullscreen/PiP when supported by the host.
+- IMA Web/PWA: preserve the same semantic action contract, identity, state, authorization and provenance. Do not create a separate screen-sharing system; every surface is an adapter to LIVE-001.
+- Android capture/control: prefer authorized system APIs such as MediaProjection for capture and the existing canonical bridge for control. scrcpy/ADB/open-source tools are references or diagnostics unless integrated and verified in the canonical path. Capture requires user consent; control requires separate authorization.
+- Live transport: evaluate WebRTC/LiveKit or another open transport only when it resolves a real LIVE-001 blocker. No new dependency/service merely because it exists. Any adopted transport must pass latency, reconnect, mobile-network, battery, privacy, authorization and observed-ACK tests.
+- Cross-chat continuity: capabilities must be represented in canonical contracts/state rather than conversation memory. Do not claim retroactive injection of a custom widget into every existing ChatGPT thread. Reusable IMA-side capability is the canonical target whenever the host exposes the required surface.
+- Daily gate: separately grade HOST_VIEW_AVAILABLE / HOST_WIDGET_AVAILABLE / IMA_RENDER_AVAILABLE / DEVICE_VIEW_AVAILABLE / DEVICE_CONTROL_AVAILABLE / END_TO_END_VERIFIED. Never promote one gate into another. Prefer the free, least-complex, reversible and authorized action that raises the next gate.
+
+### GIT-TO-PRODUCT-027 — GIT-TO-PRODUCT CONVERGENCE
+Status: CANONICAL / CONTINUOUS RECONCILIATION
+
+- Every run begins with the real Git history and current tree, not only the latest plans. Group commits by capability family and compare each family with the Master Requirements Ledger, code, tests, deployments and runtime evidence.
+- Each capability family is classified independently as RETAINED_CANONICAL / SUPERSEDED_HISTORICAL / DUPLICATE_CONSOLIDATION_REQUIRED / DOCUMENTATION_ONLY / TESTED_PENDING_LIVE / CONFIGURATION_BLOCKED / RETIRED.
+- Commits are not products. Feature/fix/docs/test/deploy sequences for one capability are one capability history.
+- Inspect first for existing-but-unconnected, broken, duplicated, undeployed or unverified work. Prefer repair, consolidation and activation of existing work over new systems.
+- For every high-value gap use INSPECT -> RECONCILE -> IMPLEMENT/REPAIR -> TEST -> DEPLOY -> RUNTIME VERIFY -> MEASURE -> DOCUMENT -> REGRESSION. No success claim without appropriate evidence.
+- Product truth is measured by working onboarding, chat, authentication, accessibility/languages, device/browser continuity, distribution, real analytics, feedback, reliability, security/privacy and public usability. Plans alone are not outcomes.
+- Measure the transition from Git activity to user value: usable-now capability, real users, returning users, feedback, retention, distribution reach and other verified metrics. Missing data is UNKNOWN, not zero.
+- IMA targets real global use. Do not claim worldwide use without independent measurable evidence. Each run identifies the largest verified blocker between the current product and one additional real user and addresses it when safe, reversible and authorized.
+- All improvements remain inside the canonical IMA system. No parallel site, loop, browser, chat, identity, analytics or product path is created to bypass a blocker.
+- Preserve provenance. Never rewrite/delete historical commits merely to clean history; convergence happens at capability/runtime level while historical evidence remains recoverable.
