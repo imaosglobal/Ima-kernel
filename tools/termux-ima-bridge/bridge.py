@@ -30,17 +30,28 @@ ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
 ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
 
 def device_serial():
-    if ADB_SERIAL:
-        return ADB_SERIAL
     env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
+    preferred=ADB_SERIAL
     try:
-        subprocess.run([ADB_BIN,'start-server'],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=5)
+        subprocess.run([ADB_BIN,'start-server'],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=8)
+    except Exception:
+        pass
+    try:
         out=subprocess.run([ADB_BIN,'devices'],env=env,capture_output=True,text=True,timeout=5).stdout
         for line in out.splitlines()[1:]:
             parts=line.split()
             if len(parts)>=2 and parts[1]=='device': return parts[0]
     except Exception:
         pass
+    if preferred:
+        try:
+            subprocess.run([ADB_BIN,'connect',preferred],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=8)
+            out=subprocess.run([ADB_BIN,'devices'],env=env,capture_output=True,text=True,timeout=5).stdout
+            for line in out.splitlines()[1:]:
+                parts=line.split()
+                if len(parts)>=2 and parts[1]=='device' and parts[0]==preferred: return preferred
+        except Exception:
+            pass
     return ''
 
 def device_screenshot_png():
