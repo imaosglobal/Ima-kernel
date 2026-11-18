@@ -385,3 +385,42 @@ Status: IMPLEMENTED_IN_CODE / DEPLOYED_PENDING_RUNTIME
 - The canonical GitHub Actions workflow runs the single unified loop on its schedule and persists evidence/state back into the repository; this is not a second scheduler.
 - Missing telemetry is UNKNOWN, not zero. Claims of users, revenue, adoption, reach or success require independently inspectable evidence.
 - Historical work remains preserved as provenance; obsolete operational paths may be retired or superseded without deleting their history.
+
+## AUTONOMY-002 — IMA Cross-Domain Stewardship
+
+**Status:** ACTIVE / CANONICAL  
+**Effective:** 2026-11-18
+
+IMA is treated as one continuously evolving product and ecosystem. The canonical improvement loop is responsible for learning, teaching, integrating, testing, and improving across every domain already present in IMA and across future domains required for its real-world success.
+
+### Scope
+- Web and application engineering, architecture, UX/UI, accessibility, performance, reliability, security and privacy.
+- Product management: discovery, requirements, prioritization, roadmaps, experimentation, lifecycle management, quality and user value.
+- QA: automated tests, runtime verification, regression prevention, device/browser coverage, observability and incident learning.
+- Service and support: onboarding, help, feedback, issue resolution, documentation, trust, retention and user agency.
+- Marketing, growth, distribution, sales and communications: truthful positioning, discoverability, SEO, localization, content, conversion, retention and measurable reach.
+- Finance and commercial systems: pricing, unit economics, cost controls, monetization, financial evidence and sustainability. No spending or financial commitment without the required authorization.
+- Public relations and global relations: public-facing clarity, responsible outreach, reputation, partnerships and institutional readiness. No external outreach or representation without required authorization.
+- Globalization: translation, localization, RTL/LTR, language quality, cultural adaptation, accessibility and region-specific product readiness.
+- Research and learning: continuously study authoritative current sources, standards, successful products, failures, user evidence, technology, markets and relevant disciplines; convert useful findings into verified IMA improvements.
+- Future development: identify capability gaps and emerging opportunities across the product, ecosystem and long-term mission.
+
+### Operating model
+Observe → Research → Diagnose → Prioritize → Design → Implement → Test → Deploy → Runtime Verify → Measure → Learn → Document → Feed Forward.
+
+Cross-domain changes must be evaluated for their effects on the rest of IMA so that product, engineering, UX, growth, support, finance, trust and distribution develop in synergy rather than as isolated projects.
+
+### Canonical constraints
+- Git and the canonical IMA architecture remain the source of truth.
+- Reuse, repair, revive and consolidate existing capabilities before creating parallel systems.
+- Preserve provenance and historical evidence.
+- No claim of success without inspectable evidence and, where applicable, runtime verification.
+- Missing telemetry is **UNKNOWN**, not zero.
+- Human agency remains with the user; IMA does not silently take autonomous external actions that require authorization.
+- External spending, purchases, account creation, publication, outreach, legal/financial commitments and other permission-bound actions remain gated by the necessary authorization.
+- Safe, reversible, internally authorized engineering and maintenance work should proceed without repeatedly asking the user to approve each step.
+- All new learning that materially changes product behavior must be captured in the canonical requirements/evolution record and tested before being treated as established capability.
+- The goal is not merely more code or activity: the goal is a useful, trustworthy, accessible product that real people can discover, use, return to and benefit from.
+
+This requirement supersedes fragmented interpretations of IMA's domain ownership: the canonical IMA loop owns the coordination of all existing and future domains as one system.
+
