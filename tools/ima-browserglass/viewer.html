@@ -105,7 +105,7 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=new URLSearchParams(location.search).get('device')==='1', deviceTimer=null, lastDeviceFrameAt=0;
+    let deviceMode=new URLSearchParams(location.search).get('device')!=='0', deviceTimer=null, lastDeviceFrameAt=0;
     async function refreshDevice(){
       try{
         const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
@@ -174,8 +174,9 @@
       if(!r.ok)throw new Error(await r.text()); return r.json();
     }
     async function boot(){
-      try{const s=await session();pane.setAttribute('url',s.url);pane.setAttribute('token',s.token);pane.setAttribute('target-id',s.targetId);pane.setAttribute('token-endpoint','/api/session');status.textContent='מחובר — סנכרון אוטומטי';}
-      catch(e){status.textContent='ממתין לחיבור המורשה';}
+      try{const s=await session();pane.setAttribute('url',s.url);pane.setAttribute('token',s.token);pane.setAttribute('target-id',s.targetId);pane.setAttribute('token-endpoint','/api/session');status.textContent='LIVE-001 — מחובר';}
+      catch(e){status.textContent='LIVE-001 — ממתין לחיבור המורשה';}
+      if(deviceMode) startDeviceMode();
     }
     pane.onTokenExpired=async()=> (await session()).token;
     pane.addEventListener('bgls:connected',()=>{status.textContent='חלון חי מחובר — סנכרון אוטומטי';window.parent.postMessage({type:'ima-live-status',text:'חלון חי מחובר — סנכרון אוטומטי'},'*');});
