@@ -355,7 +355,7 @@ class Handler(BaseHTTPRequestHandler):
                 if serial:
                     try:
                         p=subprocess.run([ADB_BIN,'-s',serial,'shell','uiautomator','dump','/dev/tty'],capture_output=True,text=True,timeout=12)
-                        out=p.stdout.strip()
+                        out=(p.stdout.strip()+"\n"+p.stderr.strip()).strip()
                     except Exception as exc: out='error: '+str(exc)
                 self.send_json({'serial':serial,'ui':out})
             elif self.path=='/open-chrome-devtools-settings':
