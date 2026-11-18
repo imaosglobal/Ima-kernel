@@ -1,28 +1,13 @@
 {
   "authority": ".ima/CANONICAL_AUTHORITY",
   "components": {
-    "IMA_START.py": {
-      "hash": "9063bf8c",
-      "size": 2582
-    },
-    "ima_system.py": {
-      "hash": "f411a745",
-      "size": 26182
-    },
-    "ima_runtime.py": {
-      "hash": "18b15c15",
-      "size": 2029
-    },
-    "ima_daemon.py": {
-      "hash": "5728fa03",
-      "size": 1752
-    },
-    "ima.py": {
-      "hash": "c0757aca",
-      "size": 3070
-    }
+    "IMA_START.py": {"hash": "9063bf8c", "size": 2582},
+    "ima_system.py": {"hash": "f411a745", "size": 26182},
+    "ima_runtime.py": {"hash": "18b15c15", "size": 2029},
+    "ima_daemon.py": {"hash": "5728fa03", "size": 1752},
+    "ima.py": {"hash": "c0757aca", "size": 3070}
   },
-  "version": "2026-11-13",
+  "version": "2026-11-18",
   "canonical_surfaces": {
     "master_interaction_loop": "ima_master_runtime.py",
     "unified_loop": ".ima/loop/unified_loop.py",
@@ -31,9 +16,17 @@
     "compound_growth": "governance/IMA_COMPOUND_GROWTH_CORE.md",
     "live_browser": "LIVE-001 / BrowserGlass / canonical Action Core",
     "chatgpt_surface": "plugins/ima-chatgpt/plugin.json",
-    "device_bridge": "plugins/ima-device-bridge/plugin.json"
+    "device_bridge": "plugins/ima-device-bridge/plugin.json",
+    "live_runtime": "LIVE-001 ↔ Desktop Commander Remote ↔ Termux services ↔ Android Chrome/CDP",
+    "live_health": "LIVE-001 /live001/status via canonical Termux bridge",
+    "boot_persistence": "~/.termux/boot/desktop-commander.sh + Termux service supervision",
+    "network_transport": "cloud-mediated canonical transport; no home-Wi-Fi dependency",
+    "ai_council": "Connected AI surfaces exchange validated feedback through IMA canonical learning/provenance loop"
   },
   "integration_rule": "All new capabilities attach to these canonical surfaces; archives, backups, graveyards, experimental trees and legacy runtimes are historical/non-runtime unless explicitly promoted and verified.",
   "learning_rule": "Validated improvements compound only through the canonical loop with provenance, tests, verification, privacy, consent and human-agency safeguards.",
+  "ai_learning_rule": "Feedback from every connected AI is evidence, not automatic truth: IMA records source, claim, test/verification status and conflicts before promoting a change; connected AIs receive the resulting validated feedback through the same canonical loop.",
+  "network_rule": "LIVE-001 uses the cloud-mediated canonical transport and must not require the user's home Wi-Fi or a fixed local network.",
+  "boot_rule": "Android boot starts the canonical IMA live stack through Termux:Boot; Termux services supervise recovery without creating parallel implementations.",
   "archive_policy": "Historical preservation is retained; duplicate implementations must not become active runtime paths."
 }
