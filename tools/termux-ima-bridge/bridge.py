@@ -293,12 +293,18 @@ class Handler(BaseHTTPRequestHandler):
                 serial=device_serial()
                 cdp_ok=False
                 cdp_error=''
+                mdns=''
                 try:
                     pages=get_json('/json/list')
                     cdp_ok=bool([x for x in pages if x.get('type')=='page'])
                 except Exception as exc:
                     cdp_error=str(exc)
-                self.send_json({'ok':bool(serial and cdp_ok),'serial':serial,'adb':bool(serial),'cdp':cdp_ok,'cdp_error':cdp_error,'port':PORT})
+                try:
+                    env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
+                    mdns=subprocess.run([ADB_BIN,'mdns','services'],env=env,capture_output=True,text=True,timeout=8).stdout
+                except Exception as exc:
+                    mdns='mdns_error: '+str(exc)
+                self.send_json({'ok':bool(serial and cdp_ok),'serial':serial,'adb':bool(serial),'cdp':cdp_ok,'cdp_error':cdp_error,'mdns':mdns,'configured_serial':ADB_SERIAL,'port':PORT})
             elif self.path=='/device-screen':
                 serial,raw=device_screenshot_png()
                 self.send_response(200); self.send_header('Content-Type','image/png'); self.send_header('Cache-Control','no-store'); self.send_header('X-IMA-Device-Serial',serial); self.send_header('Content-Length',str(len(raw))); self.end_headers(); self.wfile.write(raw)
