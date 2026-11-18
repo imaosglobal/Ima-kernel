@@ -289,6 +289,16 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
                 self.send_json({'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']})
+            elif self.path=='/device-health':
+                serial=device_serial()
+                cdp_ok=False
+                cdp_error=''
+                try:
+                    pages=get_json('/json/list')
+                    cdp_ok=bool([x for x in pages if x.get('type')=='page'])
+                except Exception as exc:
+                    cdp_error=str(exc)
+                self.send_json({'ok':bool(serial and cdp_ok),'serial':serial,'adb':bool(serial),'cdp':cdp_ok,'cdp_error':cdp_error,'port':PORT})
             elif self.path=='/device-screen':
                 serial,raw=device_screenshot_png()
                 self.send_response(200); self.send_header('Content-Type','image/png'); self.send_header('Cache-Control','no-store'); self.send_header('X-IMA-Device-Serial',serial); self.send_header('Content-Length',str(len(raw))); self.end_headers(); self.wfile.write(raw)
