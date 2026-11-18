@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess
+import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 try:
