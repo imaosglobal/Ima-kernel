@@ -353,7 +353,7 @@ class Handler(BaseHTTPRequestHandler):
                 serial=device_serial(); result={}
                 if serial:
                     env=dict(os.environ)
-                    for label,args in [('wake',['shell','input','keyevent','KEYCODE_WAKEUP']),('unlock',['shell','input','swipe','540','2100','540','700','400'])]:
+                    for label,args in [('wake',['shell','input','keyevent','KEYCODE_WAKEUP']),('dismiss',['shell','wm','dismiss-keyguard']),('unlock',['shell','input','swipe','540','2100','540','700','400'])]:
                         try:
                             p=subprocess.run([ADB_BIN,'-s',serial,*args],env=env,capture_output=True,text=True,timeout=8)
                             result[label]={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
