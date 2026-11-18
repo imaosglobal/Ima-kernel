@@ -36,6 +36,12 @@ These states are independent. A higher state cannot be inferred from a lower sta
 
 The capability lives in the canonical IMA backend/contract rather than a conversation-specific implementation. Therefore every ChatGPT conversation can reuse it **when that host exposes the required MCP/host capability**. Existing ChatGPT threads cannot be retroactively injected with a custom widget by IMA.
 
+## TeamViewer adapter (external handoff)
+
+TeamViewer may be used as an external remote-control transport when the user has TeamViewer installed and authorized. LIVE-001 may open a TeamViewer connection by TeamViewer ID, but TeamViewer remains a separate security boundary: the TeamViewer session itself is not exposed to the IMA/ChatGPT MCP host merely because the app is installed. The IMA viewer must not claim that ChatGPT can see or control a TeamViewer session unless a separate, verified TeamViewer/API/SDK integration provides that capability.
+
+Official TeamViewer documentation confirms Android remote control through QuickSupport/Host and TeamViewer Remote Control, while the Mobile SDK/REACH integrations require TeamViewer-specific licensing/integration prerequisites. citeturn216539search0turn910847search0turn910847search4
+
 ## Device rule
 
 Android capture and control remain separate:
