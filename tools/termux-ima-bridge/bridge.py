@@ -349,6 +349,17 @@ class Handler(BaseHTTPRequestHandler):
                         pass
                     probes.append({'port':port,'open':ok})
                 self.send_json({'local_ip':local_ip,'probes':probes})
+            elif self.path=='/chrome-health':
+                serial=device_serial()
+                out={}
+                if serial:
+                    env=dict(os.environ)
+                    for name,args in [('chrome_pid',['shell','pidof','com.android.chrome']),('devtools_socket',['shell','sh','-c','cat /proc/net/unix | grep -E "chrome_devtools_remote|webview_devtools_remote" | tail -20'])]:
+                        try:
+                            p=subprocess.run([ADB_BIN,'-s',serial,'*PLACEHOLDER*'] if False else [ADB_BIN,'-s',serial,*args],env=env,capture_output=True,text=True,timeout=8)
+                            out[name]=p.stdout.strip(); out[name+'_error']=p.stderr.strip()
+                        except Exception as exc: out[name+'_error']=str(exc)
+                self.send_json({'serial':serial,**out})
             elif self.path=='/device-health':
                 serial=device_serial()
                 cdp_ok=False
