@@ -289,6 +289,26 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
                 self.send_json({'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']})
+            elif self.path=='/scan-adb':
+                local_ip=''
+                try:
+                    s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM); s.connect(('8.8.8.8',80)); local_ip=s.getsockname()[0]; s.close()
+                except Exception:
+                    pass
+                found=[]
+                if local_ip:
+                    from concurrent.futures import ThreadPoolExecutor, as_completed
+                    def probe(port):
+                        try:
+                            q=socket.create_connection((local_ip,port),timeout=0.08); q.close(); return port
+                        except Exception: return None
+                    with ThreadPoolExecutor(max_workers=200) as ex:
+                        futures=[ex.submit(probe,p) for p in range(30000,50001)]
+                        for fut in as_completed(futures):
+                            p=fut.result()
+                            if p is not None: found.append(p)
+                            if len(found)>=20: break
+                self.send_json({'local_ip':local_ip,'open_ports':sorted(found)})
             elif self.path=='/local-network-health':
                 local_ip=''
                 try:
