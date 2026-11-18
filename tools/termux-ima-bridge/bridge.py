@@ -40,7 +40,12 @@ def device_serial():
         out=subprocess.run([ADB_BIN,'devices'],env=env,capture_output=True,text=True,timeout=5).stdout
         for line in out.splitlines()[1:]:
             parts=line.split()
-            if len(parts)>=2 and parts[1]=='device': return parts[0]
+            if len(parts)>=2 and parts[1]=='device':
+                try:
+                    subprocess.run([ADB_BIN,'-s',parts[0],'forward','tcp:9222','localabstract:chrome_devtools_remote'],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=8)
+                except Exception:
+                    pass
+                return parts[0]
     except Exception:
         pass
     if preferred:
