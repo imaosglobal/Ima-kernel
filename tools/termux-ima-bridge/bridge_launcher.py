@@ -16,6 +16,11 @@ def _send(handler,obj,status=200):
 def _context():
     return mcp.context_package()
 
+def _live001_status():
+    tools=mcp.tools_list()
+    live=next((t for t in tools if t.get("name")=="ima_live_browser"),None)
+    return {"ok":bool(live),"canonical":True,"id":"LIVE-001","tool":"ima_live_browser","available":bool(live),"protocol":mcp.protocol_version,"session_established":bool(mcp.session_id)}
+
 def _parse_call(text):
     match=re.search(r'IMA_CALL\s*:\s*(\{.*?\})',text or "",re.S)
     if not match:
@@ -38,6 +43,11 @@ def do_GET(self):
             return _send(self,{"ok":True,"mcp":_context()})
         except Exception as e:
             return _send(self,{"ok":False,"error":str(e)},503)
+    if path=="/live001/status":
+        try:
+            return _send(self,_live001_status())
+        except Exception as e:
+            return _send(self,{"ok":False,"canonical":True,"id":"LIVE-001","error":str(e)},503)
     if path=="/mcp/tools":
         try:
             return _send(self,{"ok":True,"tools":mcp.tools_list(),"protocol":mcp.protocol_version,"session":bool(mcp.session_id)})
