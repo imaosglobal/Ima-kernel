@@ -207,6 +207,30 @@ function ChatPanel({ t, lang, user, onClose, chatOnly = false }) {
   </section>;
 }
 
+function CanonicalConnectorPanel({ lang, runtime }) {
+  const he = lang === 'he';
+  const rows = [
+    ['TeamViewer', 'teamviewer', he ? 'מוכן לחיבור · דורש הרשאת TeamViewer' : 'Ready · TeamViewer authorization required'],
+    ['LIVE-001', 'live', runtime ? (he ? 'Runtime אומת' : 'Runtime verified') : (he ? 'ממתין לאימות runtime' : 'Runtime verification pending')],
+    ['Universal Device Bridge', 'live', he ? 'המשטח הקנוני' : 'Canonical device surface'],
+    ['חיבורים עתידיים', 'auto', he ? 'נכנסים לאותו מסלול אוטומטית' : 'Automatically enter the same canonical path']
+  ];
+  return <section className="canonical-connectors" aria-label={he ? 'מרכז חיבורים קנוני' : 'Canonical connector control room'}>
+    <div className="canonical-connectors-head">
+      <div><span className="section-label">{he ? 'LIVE-001 · מרכז בקרה' : 'LIVE-001 · Control room'}</span>
+      <h2>{he ? 'כך החיבורים נכנסים לאמא' : 'How integrations enter IMA'}</h2>
+      <p>{he ? 'לא נבנית מערכת מקבילה. כל חיבור חדש עובר דרך אותו מסלול, נבדק, ורק אז מופעל.' : 'No parallel system is created. Every integration uses the same path, is verified, and only then activated.'}</p></div>
+      <div className="canonical-flow"><span>Provider</span><i>→</i><span>IMA Bridge</span><i>→</i><strong>LIVE-001</strong></div>
+    </div>
+    <div className="canonical-connector-grid">{rows.map(([name,state,detail]) => <article key={name}>
+      <div className="connector-top"><b>{name}</b><span className={'connector-dot '+state} /></div>
+      <p>{detail}</p>
+      <small>{he ? 'authorization → health check → verification' : 'authorization → health check → verification'}</small>
+    </article>)}</div>
+    <div className="canonical-proof"><span>✓</span><b>{he ? 'כלל ההוצאה:' : 'Budget rule:'}</b> {he ? 'אין רכישה או מנוי ללא אישור מפורש. אם שירות נכשל — מחפשים חלופה חינמית מותרת במקום לבנות מערכת נוספת.' : 'No purchase or subscription without explicit approval. If a service fails, seek a permitted free alternative instead of creating another system.'}</div>
+  </section>;
+}
+
 export default function App() {
   const [lang, setLang] = useState(() => {
     const saved = localStorage.getItem('ima-site-language');
@@ -274,7 +298,7 @@ export default function App() {
         <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <div className="mama-hero-link clean-hero-logo"><a href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /></a><div className="hero-login-below"><GoogleButton user={user} onUser={setUser} t={t}/></div></div>
       </section>
-      {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
+      {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}{user && <CanonicalConnectorPanel lang={lang} runtime={runtime} />}
       <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
       <section className="proof-section" id="proof"><div className="section-intro"><span className="section-label">{t.proofKicker}</span><h2>{t.proofTitle}</h2><p>{t.proofText}</p></div><div className="proof-grid"><article><span className="proof-icon">●</span><b>{runtime?t.online:t.offline}</b><p>{runtime?JSON.stringify(runtime.capabilities||{}).slice(0,220):'IMA runtime'}</p></article><article><span className="proof-icon">01</span><b>{lang==='he'?'מקור פתוח':'Open source'}</b><p>{lang==='he'?'הקוד, הבעיות והדיון הציבורי ניתנים לבדיקה.':'Code, issues and public discussion are inspectable.'}</p></article><article><span className="proof-icon">02</span><b>{lang==='he'?'לא הכול חי':'Not everything is live'}</b><p>{lang==='he'?'יכולות מתוכננות אינן מוצגות כהוכחה.':'Planned capabilities are not presented as proof.'}</p></article></div></section>
       <section className="community-section" id="community"><div><span className="section-label">{t.communityKicker}</span><h2>{t.communityTitle}</h2><p>{t.communityText}</p><div className="community-actions"><a className="cta" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{t.github}</a><a className="ghost" href="https://github.com/imaosglobal/Ima-kernel/issues/170" target="_blank" rel="noreferrer">{lang==='he'?'הגדרת AGI גלובלית':'Global AGI definition'}</a></div></div><div className="feedback-card" id="feedback-panel"><b>{t.feedback}</b><textarea value={feedback} onChange={e=>setFeedback(e.target.value)} placeholder={t.feedbackPlaceholder} maxLength={4000}/><button className="cta" onClick={sendFeedback} disabled={!feedback.trim()}>{t.send}</button>{feedbackStatus&&<small>{feedbackStatus}</small>}</div></section>
