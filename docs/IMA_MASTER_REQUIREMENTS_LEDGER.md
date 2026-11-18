@@ -372,3 +372,16 @@ Status: CANONICAL / CONTINUOUS RECONCILIATION
 - IMA targets real global use. Do not claim worldwide use without independent measurable evidence. Each run identifies the largest verified blocker between the current product and one additional real user and addresses it when safe, reversible and authorized.
 - All improvements remain inside the canonical IMA system. No parallel site, loop, browser, chat, identity, analytics or product path is created to bypass a blocker.
 - Preserve provenance. Never rewrite/delete historical commits merely to clean history; convergence happens at capability/runtime level while historical evidence remains recoverable.
+
+
+### AUTONOMY-001 — Continuous Canonical Self-Evolution
+Status: IMPLEMENTED_IN_CODE / DEPLOYED_PENDING_RUNTIME
+- IMA continuously inspects its canonical repository, loop state, product surfaces, tests, deployments, runtime evidence, authorized feedback and permitted external research for defects, stale capabilities, duplication, emerging opportunities and user-value gaps.
+- The canonical improvement cycle is Observe → Diagnose → Plan → Change → Test → Deploy → Runtime Verify → Measure → Learn → Carry Forward.
+- Existing capabilities are repaired, revived, consolidated or upgraded before parallel systems are created.
+- Verified capabilities may be self-applied to IMA itself only through the same gates; generated documentation or proposed code is never treated as proof of capability.
+- Product, engineering, UX, accessibility, security/privacy, research, distribution, marketing, sales, growth and value creation are capability domains of the same IMA system.
+- Self-modification is bounded by provenance, tests, deployment gates, runtime verification, human agency, authorization and recovery evidence. No autonomous action may bypass an external permission boundary.
+- The canonical GitHub Actions workflow runs the single unified loop on its schedule and persists evidence/state back into the repository; this is not a second scheduler.
+- Missing telemetry is UNKNOWN, not zero. Claims of users, revenue, adoption, reach or success require independently inspectable evidence.
+- Historical work remains preserved as provenance; obsolete operational paths may be retired or superseded without deleting their history.
