@@ -289,6 +289,22 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
                 self.send_json({'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']})
+            elif self.path=='/try-local-adb':
+                local_ip=''
+                try:
+                    s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM); s.connect(('8.8.8.8',80)); local_ip=s.getsockname()[0]; s.close()
+                except Exception:
+                    pass
+                attempts=[]
+                for port in (44867,46689,36369,5555):
+                    if not local_ip: break
+                    try:
+                        p=subprocess.run([ADB_BIN,'connect',f'{local_ip}:{port}'],capture_output=True,text=True,timeout=5)
+                        attempts.append({'target':f'{local_ip}:{port}','output':p.stdout.strip(),'error':p.stderr.strip()})
+                    except Exception as exc:
+                        attempts.append({'target':f'{local_ip}:{port}','error':str(exc)})
+                serial=device_serial()
+                self.send_json({'local_ip':local_ip,'attempts':attempts,'serial':serial})
             elif self.path=='/scan-adb':
                 local_ip=''
                 try:
