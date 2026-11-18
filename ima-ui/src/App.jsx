@@ -120,12 +120,13 @@ const copy = {
 };
 
 function MamaFigure({ compact = false }) {
-  return <div className={'mama-figure' + (compact ? ' compact' : '')} aria-label="אמא">
-    <div className="mama-halo" />
+  return <div className={'mama-figure' + (compact ? ' compact' : '')} aria-label="אמא — אור שאינו מועם">
+    <div className="mama-halo" aria-hidden="true" />
+    <div className="mama-light-field" aria-hidden="true" />
     <div className="mama-face"><span>א</span></div>
     <div className="mama-neck" />
     <div className="mama-shoulders" />
-    <div className="mama-glow" />
+    <div className="mama-glow" aria-hidden="true" />
   </div>;
 }
 

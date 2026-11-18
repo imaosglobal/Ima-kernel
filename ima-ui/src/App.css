@@ -208,3 +208,30 @@ body{background:var(--ima-bg);color:var(--ima-ink)}
 .ima-app.logged-in #chat .live-browser-panel .live-browser-actions{display:flex}
 .ima-app.logged-in #chat .live-browser-panel .live-browser-status:not(.error){font-size:12px}
 .ima-app:not(.logged-in) #chat .live-browser-panel{display:none!important}
+
+/* STAR-LIGHT / IMA: אמא זורחת בלי לעמעם את עצמה. אור יציב, רך ונגיש. */
+.mama-figure{isolation:isolate!important;filter:none!important}
+.mama-figure .mama-light-field{
+  position:absolute;inset:-22%;z-index:-1;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.98) 0 10%,rgba(255,242,214,.72) 18%,rgba(255,221,166,.34) 36%,rgba(255,205,145,.14) 54%,transparent 72%);
+  opacity:.92;transform:scale(1);animation:ima-star-breathe 5.2s ease-in-out infinite;
+}
+.mama-figure .mama-halo{
+  box-shadow:0 0 18px rgba(255,244,214,.92),0 0 42px rgba(255,211,151,.56),0 0 92px rgba(255,196,122,.28)!important;
+  animation:ima-star-halo 5.2s ease-in-out infinite;
+}
+.mama-figure .mama-face{
+  position:relative;
+  box-shadow:0 0 0 1px rgba(255,255,255,.55),0 0 24px rgba(255,238,198,.62),0 0 58px rgba(255,205,145,.34)!important;
+}
+.mama-figure .mama-face span{text-shadow:0 0 8px rgba(255,255,255,.95),0 0 20px rgba(255,219,161,.72)}
+.mama-figure .mama-glow{opacity:1!important;filter:blur(2px) drop-shadow(0 0 24px rgba(255,220,170,.6))}
+.clean-ima-logo{
+  filter:drop-shadow(0 0 10px rgba(255,247,224,.72)) drop-shadow(0 14px 34px rgba(255,202,137,.28)) drop-shadow(0 26px 54px rgba(255,184,115,.16))!important;
+}
+.clean-hero-logo>a:hover .clean-ima-logo{
+  filter:drop-shadow(0 0 16px rgba(255,247,224,.88)) drop-shadow(0 18px 42px rgba(255,202,137,.38)) drop-shadow(0 30px 62px rgba(255,184,115,.22))!important;
+}
+@keyframes ima-star-breathe{0%,100%{opacity:.82;transform:scale(.98)}50%{opacity:1;transform:scale(1.025)}}
+@keyframes ima-star-halo{0%,100%{opacity:.88}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.mama-figure .mama-light-field,.mama-figure .mama-halo{animation:none!important}}
