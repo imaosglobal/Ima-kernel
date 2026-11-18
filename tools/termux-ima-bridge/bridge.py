@@ -349,6 +349,16 @@ class Handler(BaseHTTPRequestHandler):
                         pass
                     probes.append({'port':port,'open':ok})
                 self.send_json({'local_ip':local_ip,'probes':probes})
+            elif self.path=='/open-chrome-devtools-settings':
+                serial=device_serial()
+                result={}
+                if serial:
+                    env=dict(os.environ)
+                    try:
+                        p=subprocess.run([ADB_BIN,'-s',serial,'shell','am','start','-a','android.intent.action.VIEW','-d','chrome://settings/developerTools'],env=env,capture_output=True,text=True,timeout=10)
+                        result['start']={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
+                    except Exception as exc: result['start']={'error':str(exc)}
+                self.send_json({'serial':serial,**result})
             elif self.path=='/refresh-chrome':
                 serial=device_serial()
                 result={}
