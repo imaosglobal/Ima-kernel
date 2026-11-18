@@ -289,6 +289,25 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json({'ok':True,'tabs':get_json('/json/list')})
             elif self.path=='/screenshot':
                 self.send_json({'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True})['data']})
+            elif self.path=='/local-network-health':
+                local_ip=''
+                try:
+                    s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+                    s.connect(('8.8.8.8',80))
+                    local_ip=s.getsockname()[0]
+                    s.close()
+                except Exception as exc:
+                    local_ip='error: '+str(exc)
+                probes=[]
+                for port in (36369,5555,5037):
+                    ok=False
+                    try:
+                        q=socket.create_connection((local_ip,port),timeout=0.5)
+                        q.close(); ok=True
+                    except Exception:
+                        pass
+                    probes.append({'port':port,'open':ok})
+                self.send_json({'local_ip':local_ip,'probes':probes})
             elif self.path=='/device-health':
                 serial=device_serial()
                 cdp_ok=False
