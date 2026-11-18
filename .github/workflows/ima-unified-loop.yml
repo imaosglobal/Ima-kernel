@@ -1,6 +1,8 @@
 name: IMA Unified Loop
 
 on:
+  schedule:
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -46,7 +48,7 @@ jobs:
           scales=['micro','product','macro','system_of_systems']
           horizons=['now','near_term','one_year','multi_year','intergenerational']
           record={'schema':'IMA-MULTI-PERSPECTIVE-1.0','timestamp':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),'lenses':lenses,'scales':scales,'horizons':horizons,'single_scheduler':True,'truth_rule':'Source code and documentation are not runtime proof.'}
-          p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+          p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print('IMA_MULTI_PERSPECTIVE=PASS')
           PY
       - name: Run the single canonical IMA loop
