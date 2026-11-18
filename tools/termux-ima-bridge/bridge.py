@@ -355,7 +355,7 @@ class Handler(BaseHTTPRequestHandler):
                 if serial:
                     env=dict(os.environ)
                     try:
-                        p=subprocess.run([ADB_BIN,'-s',serial,'shell','am','start','-a','android.intent.action.VIEW','-d','chrome://settings/developerTools'],env=env,capture_output=True,text=True,timeout=10)
+                        p=subprocess.run([ADB_BIN,'-s',serial,'shell','am','start','-n','com.android.chrome/com.google.android.apps.chrome.Main','-d','chrome://settings/developerTools'],env=env,capture_output=True,text=True,timeout=10)
                         result['start']={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
                     except Exception as exc: result['start']={'error':str(exc)}
                 self.send_json({'serial':serial,**result})
