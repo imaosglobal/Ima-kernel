@@ -271,7 +271,20 @@ export default function App() {
     <main id="top">
       <section className="hero-new">
         <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta hero-primary" onClick={()=>{trackImaEvent('ima_hero_start',{language:lang});setChatOpen(true)}}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta hero-primary" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a></>}</div><div className="hero-proof-row"><span>● {lang==='he'?'שיחה אמיתית':'Real conversation'}</span><span>◌ {lang==='he'?'אימות לפני הכרזה':'Verification before claims'}</span><span>↗ {lang==='he'?'הסוכנות נשארת שלך':'Your agency stays yours'}</span></div></div>
-        <div className="hero-visual" aria-label="IMA"><div className="hero-orbit orbit-one"/><div className="hero-orbit orbit-two"/><a className="mama-hero-link clean-hero-logo" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a><div className="hero-floating-card"><b>{lang==='he'?'לא רק לענות. לעזור להבין.':'More than answers. Better understanding.'}</b><small>{lang==='he'?'אמא לומדת דרך בדיקה, משוב ושימוש אמיתי.':'IMA improves through verification, feedback and real use.'}</small></div></div>
+        <div className="hero-visual" aria-label="IMA intelligence interface">
+          <div className="intelligence-stage">
+            <div className="intelligence-grid" />
+            <div className="intelligence-ring ring-a" />
+            <div className="intelligence-ring ring-b" />
+            <div className="intelligence-ring ring-c" />
+            <div className="intelligence-core"><span>א</span><i /></div>
+            <div className="signal signal-a"><b>01</b><span>{lang==='he'?'הקשבה':'LISTEN'}</span></div>
+            <div className="signal signal-b"><b>02</b><span>{lang==='he'?'אימות':'VERIFY'}</span></div>
+            <div className="signal signal-c"><b>03</b><span>{lang==='he'?'למידה':'LEARN'}</span></div>
+            <div className="signal signal-d"><b>04</b><span>{lang==='he'?'פעולה':'ACT'}</span></div>
+            <div className="intelligence-caption">{lang==='he'?'מערכת שנבנית מתוך שיחה, הקשר ואימות.':'A system shaped by conversation, context and verification.'}</div>
+          </div>
+        </div>
       </section>
       {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
       <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
