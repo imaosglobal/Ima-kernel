@@ -28,8 +28,8 @@ const copy = {
   he: {
     nav: ['לדבר', 'איך זה עובד', 'הוכחות', 'קהילה'],
     heroKicker: 'IMA — אמא · בינה אנושית',
-    heroTitle: 'אמא כאן\nכדי להבין איתך.',
-    heroText: 'לא עוד תפריט של יכולות. שיחה אמיתית, הקשר, בדיקה ולמידה — עם האדם במרכז.',
+    heroTitle: 'בינה שמתחילה\nממך.',
+    heroText: 'שיחה חכמה, הקשר, יצירה ולמידה — במקום אחד. אמא נבנית כדי לעזור לך להבין יותר, לבדוק טוב יותר ולפעול בעצמך.',
     ask: 'לדבר עם אמא',
     proof: 'לראות מה באמת עובד',
     prompt: 'מה תרצה לעשות עם אמא?',
@@ -74,8 +74,8 @@ const copy = {
   en: {
     nav: ['Talk', 'How it works', 'Proof', 'Community'],
     heroKicker: 'IMA — human-centered intelligence',
-    heroTitle: 'IMA is here\nto understand with you.',
-    heroText: 'Not another menu of capabilities. A real conversation, context, verification and learning — with the person at the center.',
+    heroTitle: 'Intelligence that\nstarts with you.',
+    heroText: 'Conversation, context, creation and learning in one place — designed to help you understand more, verify better and act for yourself.',
     ask: 'Talk to IMA',
     proof: 'See what is real',
     prompt: 'What would you like to do with IMA?',
@@ -270,8 +270,8 @@ export default function App() {
     </header>
     <main id="top">
       <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
-        <a className="mama-hero-link clean-hero-logo" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a>
+        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta hero-primary" onClick={()=>{trackImaEvent('ima_hero_start',{language:lang});setChatOpen(true)}}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta hero-primary" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a></>}</div><div className="hero-proof-row"><span>● {lang==='he'?'שיחה אמיתית':'Real conversation'}</span><span>◌ {lang==='he'?'אימות לפני הכרזה':'Verification before claims'}</span><span>↗ {lang==='he'?'הסוכנות נשארת שלך':'Your agency stays yours'}</span></div></div>
+        <div className="hero-visual" aria-label="IMA"><div className="hero-orbit orbit-one"/><div className="hero-orbit orbit-two"/><a className="mama-hero-link clean-hero-logo" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /><span>{lang==='he'?'להבין · לבדוק · ללמוד':'Understand · Verify · Learn'}</span></a><div className="hero-floating-card"><b>{lang==='he'?'לא רק לענות. לעזור להבין.':'More than answers. Better understanding.'}</b><small>{lang==='he'?'אמא לומדת דרך בדיקה, משוב ושימוש אמיתי.':'IMA improves through verification, feedback and real use.'}</small></div></div>
       </section>
       {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}
       <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
