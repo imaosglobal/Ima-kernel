@@ -349,6 +349,21 @@ class Handler(BaseHTTPRequestHandler):
                         pass
                     probes.append({'port':port,'open':ok})
                 self.send_json({'local_ip':local_ip,'probes':probes})
+            elif self.path=='/refresh-chrome':
+                serial=device_serial()
+                result={}
+                if serial:
+                    env=dict(os.environ)
+                    for label,args in [('stop',['shell','am','force-stop','com.android.chrome']),('start',['shell','monkey','-p','com.android.chrome','-c','android.intent.category.LAUNCHER','1'])]:
+                        try:
+                            p=subprocess.run([ADB_BIN,'-s',serial,*args],env=env,capture_output=True,text=True,timeout=10)
+                            result[label]={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
+                        except Exception as exc: result[label]={'error':str(exc)}
+                    try:
+                        p=subprocess.run([ADB_BIN,'-s',serial,'forward','tcp:9222','localabstract:chrome_devtools_remote'],env=env,capture_output=True,text=True,timeout=8)
+                        result['forward']={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
+                    except Exception as exc: result['forward']={'error':str(exc)}
+                self.send_json({'serial':serial,**result})
             elif self.path=='/chrome-health':
                 serial=device_serial()
                 out={}
