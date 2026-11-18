@@ -37,7 +37,7 @@
     <button id="arrow" type="button">חץ</button>
     <button id="erase" type="button">מחק</button>
     <button id="undo" type="button">בטל</button>
-    <button id="clear" type="button">נקה סימונים</button><button id="device" type="button">מסך Android</button><button id="deviceBack" type="button">חזרה</button><button id="deviceHome" type="button">בית</button>
+    <button id="clear" type="button">נקה סימונים</button><button id="device" type="button">מסך Android</button><button id="deviceBack" type="button">חזרה</button><button id="deviceHome" type="button">בית</button><button id="teamviewer" type="button">TeamViewer</button><input id="teamviewerId" inputmode="numeric" autocomplete="off" placeholder="TeamViewer ID" aria-label="TeamViewer ID" style="width:150px">
     <span class="tool-label">עובי</span><input id="width" type="range" min="2" max="16" value="4">
     <span class="tool-label">צבע</span><input id="color" type="color" value="#ff3b30">
     <textarea id="message" aria-label="מסר לאמא ולעוזר" placeholder="כתוב כאן מה תרצה שאקבל יחד עם מצב החלון…"></textarea>
@@ -160,6 +160,13 @@
     }
     document.getElementById('device').onclick=async()=>{ await startDeviceMode(); };
     document.getElementById('deviceBack').onclick=()=>deviceCommand('android_back');
+    document.getElementById('teamviewer').onclick=()=>{
+      const id=document.getElementById('teamviewerId').value.trim().replace(/\\s+/g,'');
+      if(!/^\\d{6,12}$/.test(id)){status.textContent='הזן TeamViewer ID תקין';document.getElementById('teamviewerId').focus();return;}
+      const url='https://start.teamviewer.com/'+encodeURIComponent(id);
+      window.open(url,'_blank','noopener,noreferrer');
+      status.textContent='TeamViewer נפתח — האישור והשליטה נשארים ב-TeamViewer';
+    };
     document.getElementById('deviceHome').onclick=()=>deviceCommand('android_home');
 
     async function session(){
