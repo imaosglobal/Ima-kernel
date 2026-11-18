@@ -349,6 +349,16 @@ class Handler(BaseHTTPRequestHandler):
                         pass
                     probes.append({'port':port,'open':ok})
                 self.send_json({'local_ip':local_ip,'probes':probes})
+            elif self.path=='/wake-unlock':
+                serial=device_serial(); result={}
+                if serial:
+                    env=dict(os.environ)
+                    for label,args in [('wake',['shell','input','keyevent','KEYCODE_WAKEUP']),('unlock',['shell','input','swipe','540','2100','540','700','400'])]:
+                        try:
+                            p=subprocess.run([ADB_BIN,'-s',serial,*args],env=env,capture_output=True,text=True,timeout=8)
+                            result[label]={'out':p.stdout.strip(),'err':p.stderr.strip(),'code':p.returncode}
+                        except Exception as exc: result[label]={'error':str(exc)}
+                self.send_json({'serial':serial,**result})
             elif self.path=='/ui-dump':
                 serial=device_serial()
                 out=''
