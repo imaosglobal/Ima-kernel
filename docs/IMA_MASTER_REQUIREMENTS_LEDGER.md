@@ -175,6 +175,30 @@ Status: IMPLEMENTED_IN_CODE / DEPLOY_IN_PROGRESS_NOT_E2E_VERIFIED
 - The user remains able to take control. Consequential actions remain subject to the Universal Device Bridge authorization and safety contract.
 - Current gate: ChatGPT mobile cannot itself be treated as evidence of custom MCP App rendering; supported ChatGPT web/custom-MCP verification remains required.
 
+
+### INTEROP-001 — Universal AI / Model Interoperability
+Status: IMPLEMENTED_IN_CODE / CONFORMANCE_PENDING
+
+- IMA remains provider-neutral: ChatGPT, Gemini and other current/future AI systems are interfaces/adapters, not canonical owners of IMA identity, memory or truth.
+- The canonical path is **AI provider/model -> adapter/protocol layer -> IMA interoperability boundary -> canonical IMA state -> Universal Action Core**.
+- Every real provider/protocol adapter must expose capability discovery, authorization requirements, health, request validation, execution boundary, normalized response, provenance, audit and revocation, with conformance tests.
+- MCP is one supported interoperability protocol, not the definition of IMA itself.
+- Existing ChatGPT MCP configuration is evidence of an integration configuration only; it is not proof that Gemini or another provider has completed a live handshake.
+- A provider becomes VERIFIED_LIVE only after an actual client performs a reproducible connection, capability discovery and authorized test action, with inspectable evidence.
+- No provider-specific duplicate IMA core, memory store, browser system or scheduler may be created to satisfy this requirement.
+- Gemini is the first external conformance target because it tests whether the provider-neutral boundary works beyond the current ChatGPT integration; Gemini-specific implementation must reuse the same canonical boundary.
+- Current gap: this repository does not yet contain a named universal conformance harness, and this environment cannot perform a Gemini-side authenticated/live MCP client handshake. Therefore Gemini conformance remains unverified.
+- Acceptance gates:
+  1. provider-independent protocol contract exists;
+  2. automated conformance harness exists;
+  3. capability discovery passes;
+  4. authorization boundary passes;
+  5. normalized response/provenance passes;
+  6. negative unauthorized-action tests pass;
+  7. at least one independent external provider/client completes a real handshake and authorized smoke test;
+  8. evidence is recorded before status changes to VERIFIED_LIVE.
+- Canonical implementation target: `tests/interop/` and `scripts/mcp_conformance.py`; no parallel runtime is created.
+
 ## Verification vocabulary
 
 PLANNED -> IMPLEMENTED -> TESTED -> DEPLOYED -> VERIFIED_LIVE
