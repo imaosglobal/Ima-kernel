@@ -123,9 +123,11 @@ export function detectImaLocale({ user, language } = {}){
 
 export function getSocialProtectionContext({ user, language } = {}){
   const detected = detectImaLocale({ user, language });
-  const source = COUNTRY_SOURCES[detected.country] || {name:detected.country, languages:[detected.language], portal:null, insurance:null};
-  const preferred = source.languages.includes(detected.language) ? detected.language : detected.language;
-  return { ...detected, countryName:source.name, languages:source.languages, portal:source.portal, insurance:source.insurance, preferredLanguage:preferred, domains:SOCIAL_PROTECTION_DOMAINS };
+  const source = COUNTRY_SOURCES[detected.country] || {name:null,languages:[detected.language],portal:null,insurance:null};
+  let localizedCountryName = source.name;
+  try { localizedCountryName = new Intl.DisplayNames([detected.language], { type:'region' }).of(detected.country) || source.name || detected.country; } catch {}
+  const preferred = source.languages.includes(detected.language) ? detected.language : (source.languages[0] || detected.language);
+  return { ...detected, countryName:localizedCountryName || detected.country, languages:source.languages, portal:source.portal, insurance:source.insurance, preferredLanguage:preferred, sourceConfigured:Boolean(source.portal || source.insurance), domains:SOCIAL_PROTECTION_DOMAINS };
 }
 
 export function buildSocialProtectionTasks(context){
