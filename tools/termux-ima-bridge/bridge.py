@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket
+import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 try:
@@ -28,6 +28,8 @@ ALLOWED_ORIGINS={x.strip().rstrip('/') for x in os.environ.get('IMA_ALLOWED_ORIG
 ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
 ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
 ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
+DOWNLOADS=pathlib.Path(os.path.expanduser(os.environ.get('IMA_ANDROID_DOWNLOADS','~/storage/downloads')))
+NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
 
 def device_serial():
     env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
@@ -69,6 +71,44 @@ def device_screenshot_png():
         raise RuntimeError('Android screen capture unavailable: '+(proc.stderr.decode(errors='replace').strip() or 'no PNG returned'))
     return serial,proc.stdout
 
+def native_android_command(action,payload=None,timeout=25):
+    native=NATIVE_ANDROID_ACTIONS.get(action)
+    if not native:
+        raise ValueError('unsupported_native_android_action')
+    DOWNLOADS.mkdir(parents=True,exist_ok=True)
+    command_path=DOWNLOADS/'ima_remote_command.json'
+    result_path=DOWNLOADS/'ima_remote_result.json'
+    screen_path=DOWNLOADS/'ima_remote_screen.png'
+    command_id=str(uuid.uuid4())
+    result_path.unlink(missing_ok=True)
+    command_path.unlink(missing_ok=True)
+    command={'id':command_id,'session':True,'action':native,**(payload or {})}
+    command_path.write_text(json.dumps(command,ensure_ascii=False),encoding='utf-8')
+    deadline=time.time()+timeout
+    while time.time()<deadline:
+        if result_path.exists():
+            try:
+                data=json.loads(result_path.read_text(encoding='utf-8'))
+                if str(data.get('id','')) not in ('',command_id):
+                    time.sleep(0.1)
+                    continue
+                result_path.unlink(missing_ok=True)
+                command_path.unlink(missing_ok=True)
+                if not data.get('ok'):
+                    raise RuntimeError(data.get('error') or data.get('message') or 'native_android_action_failed')
+                if native=='screenshot':
+                    if not screen_path.exists():
+                        raise RuntimeError('native_screenshot_file_missing')
+                    raw=screen_path.read_bytes()
+                    screen_path.unlink(missing_ok=True)
+                    data.update({'mime':'image/png','data':base64.b64encode(raw).decode('ascii'),'source':'android-accessibility','transport':'outbound-https'})
+                return data
+            except (OSError,ValueError):
+                pass
+        time.sleep(0.25)
+    command_path.unlink(missing_ok=True)
+    raise TimeoutError('native Android transport timed out; accessibility service is not online')
+
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
         return json.loads(r.read().decode())
@@ -109,6 +149,8 @@ def evaluate(expression, preferred_id=None):
     return cdp('Runtime.evaluate', {'expression':expression,'returnByValue':True,'awaitPromise':True}, preferred_id)
 
 def execute_action(action,payload):
+    if action in NATIVE_ANDROID_ACTIONS:
+        return native_android_command(action,payload)
     preferred_id=str(payload.get('target_id','')).strip() or None
     if action=='status':
         t=target(preferred_id)
@@ -230,7 +272,7 @@ def start_cloud_agent():
     if DEVICE_KEY and not any(t.name=='ima-device-frame-relay' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=device_frame_relay_loop,daemon=True,name='ima-device-frame-relay').start()
 
-CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key'})
+CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key',*NATIVE_ANDROID_ACTIONS.keys()})
 
 def execute_cloud_action(action, payload):
     # Cloud commands are authenticated device commands, but page/DOM content is untrusted.
