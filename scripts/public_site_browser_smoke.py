@@ -29,7 +29,7 @@ with sync_playwright() as p:
         page.wait_for_timeout(250)
         nav = page.locator(".site-header nav")
         assert nav.is_visible(), f"navigation hidden at {width}px"
-        assert nav.locator("button").count() == 4, f"expected 4 nav controls at {width}px"
+        assert nav.locator("button").count() == 5, f"expected 5 nav controls at {width}px"
     page.set_viewport_size({"width": 390, "height": 844})
 
     assert page.locator(".mama-figure").count() >= 1, "Mama figure missing"
