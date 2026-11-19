@@ -373,7 +373,7 @@ export default function App() {
     initializeImaAnalytics();
     trackImaEvent('ima_public_redesign_view', { language: lang, campaign: marketCampaign || 'organic', use_case: marketUseCase || 'none' });
     recordMarketEvent('landing_view', { language: lang, campaign: marketCampaign || 'organic', use_case: marketUseCase || 'none' });
-  }, [lang]);
+  }, [lang, marketCampaign, marketUseCase]);
 
   useEffect(() => {
     getImaRuntime().then(setRuntime).catch(() => setRuntime(null));
