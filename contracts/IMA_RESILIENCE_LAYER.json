@@ -1,0 +1,54 @@
+{
+  "id": "IMA-RESILIENCE-001",
+  "version": "1.0.0",
+  "purpose": "Operational human resilience layer connecting needs, resources, official services, community capacity and verified action paths.",
+  "principles": [
+    "Need before content",
+    "Official source before speculation",
+    "Human agency remains central",
+    "No external action without approval",
+    "Evidence, timestamp and uncertainty are first-class",
+    "Use canonical IMA connectors; never create parallel systems"
+  ],
+  "phases": [
+    "NORMAL",
+    "STRESS",
+    "CRISIS",
+    "GLOBAL_EMERGENCY"
+  ],
+  "domains": [
+    "emergency",
+    "food",
+    "housing",
+    "income",
+    "health",
+    "care",
+    "education",
+    "work_transition",
+    "accessibility",
+    "legal",
+    "documents",
+    "transport",
+    "utilities",
+    "community",
+    "disaster_preparedness"
+  ],
+  "currentImplementation": [
+    "public UI",
+    "local action task plan",
+    "official-service routing",
+    "IMA-generated action-path preparation"
+  ],
+  "futureConnectors": [
+    "government APIs",
+    "benefits eligibility",
+    "verified aid providers",
+    "municipal services",
+    "health systems",
+    "payment/disbursement providers",
+    "community mutual-aid capacity",
+    "crisis maps",
+    "device and notification bridges"
+  ],
+  "safety": "Emergency routing must never claim live availability unless a live source is verified."
+}
