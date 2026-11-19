@@ -184,10 +184,9 @@ function GoogleButton({ user, onUser, t }) {
 }
 
 function ChatPanel({ t, lang, user, onClose, chatOnly = false, initialMessage = '' }) {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(initialMessage || '');
   const [messages, setMessages] = useState([]);
   const [busy, setBusy] = useState(false);
-  useEffect(() => { if (initialMessage) setMessage(initialMessage); }, [initialMessage]);
   const send = async (text = message) => {
     const value = String(text || '').trim();
     if (!value || busy) return;
