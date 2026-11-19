@@ -116,7 +116,7 @@ export function detectImaLocale({ user, language } = {}){
   try { region = new Intl.Locale(locale).region || ''; } catch {}
   const lang = normalizeLanguage(locale);
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-  const country = region && COUNTRY_SOURCES[region] ? region : (TIMEZONE_COUNTRIES[timezone] || LANGUAGE_TO_COUNTRY[lang] || 'US');
+  const country = /^[A-Z]{2}$/.test(region) ? region : (TIMEZONE_COUNTRIES[timezone] || LANGUAGE_TO_COUNTRY[lang] || 'US');
   const preferredLanguage = lang || normalizeLanguage(user?.language) || COUNTRY_SOURCES[country]?.languages?.[0] || 'en';
   return { country, language: preferredLanguage, timezone, source: region ? 'device-locale' : (TIMEZONE_COUNTRIES[timezone] ? 'device-timezone' : 'language-fallback') };
 }
