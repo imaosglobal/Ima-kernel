@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+// RESILIENCE-001: operational action surface is part of the canonical IMA workspace.
 import {
   askIma,
   archiveChatLearningSignal,
