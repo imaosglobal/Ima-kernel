@@ -105,7 +105,7 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=new URLSearchParams(location.search).get('device')!=='0', deviceTimer=null, lastDeviceFrameAt=0;
+    let deviceMode=new URLSearchParams(location.search).get('device')!=='0', deviceTimer=null, lastDeviceFrameAt=0, deviceFrameReady=false;
     async function refreshDevice(){
       try{
         const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
@@ -115,13 +115,17 @@
         const img=document.getElementById('deviceScreen');
         const old=img.src; img.src=url; img.hidden=false;
         if(old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+        deviceFrameReady=true;
         pane.style.display='none';
         const frameAt=Number(r.headers.get('x-ima-frame-at')||0);
         lastDeviceFrameAt=frameAt;
         const age=frameAt ? Math.max(0,Date.now()-frameAt) : 0;
         status.textContent='מסך Android — חי · '+Math.round(age/1000)+'s';
       }catch(e){
-        status.textContent='ממתין למסך Android';
+        deviceFrameReady=false;
+        document.getElementById('deviceScreen').hidden=true;
+        pane.style.display='block';
+        status.textContent='LIVE-001 — ממתין למסך Android';
       }
     }
     async function callDeviceTool(action, args={}){
@@ -139,10 +143,10 @@
     }
     let deviceGesture=null;
     document.getElementById('deviceScreen').addEventListener('pointerdown',e=>{
-      if(!deviceMode)return; deviceGesture={p:devicePoint(e),t:Date.now()}; e.currentTarget.setPointerCapture?.(e.pointerId);
+      if(!deviceMode||!deviceFrameReady)return; deviceGesture={p:devicePoint(e),t:Date.now()}; e.currentTarget.setPointerCapture?.(e.pointerId);
     });
     document.getElementById('deviceScreen').addEventListener('pointerup',async e=>{
-      if(!deviceMode||!deviceGesture)return; const end=devicePoint(e), start=deviceGesture.p, duration=Math.max(100,Math.min(3000,Date.now()-deviceGesture.t)); deviceGesture=null;
+      if(!deviceMode||!deviceFrameReady||!deviceGesture)return; const end=devicePoint(e), start=deviceGesture.p, duration=Math.max(100,Math.min(3000,Date.now()-deviceGesture.t)); deviceGesture=null;
       const dx=end.x-start.x,dy=end.y-start.y;
       try{
         if(Math.hypot(dx,dy)>24) await callDeviceTool('android_swipe',{x1:start.x,y1:start.y,x2:end.x,y2:end.y,duration_ms:duration});
