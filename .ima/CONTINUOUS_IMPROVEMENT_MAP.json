@@ -1,0 +1,21 @@
+{
+  "id": "IMA-CONTINUOUS-IMPROVEMENT-001",
+  "version": "1.0.0",
+  "status": "active",
+  "purpose": "One canonical improvement loop that continuously reconciles existing IMA capabilities, user needs, evidence, gaps, research, verification and safe upgrades without creating parallel systems.",
+  "dimensions": ["current_need","time_horizon","life_stage_or_generation","geography","language","device_capability","evidence_state","accessibility","privacy","security","human_agency","maintainability"],
+  "existing_domain_families": ["identity_and_human_intelligence","conversation_and_chat","memory_and_continuity","knowledge_and_research","learning_and_evaluation","resilience_and_social_protection","health_and_care","education_and_lifelong_learning","work_income_and_economy","accessibility_and_inclusion","family_children_and_intergenerational","culture_language_and_history","creativity_music_and_media","community_and_global_cooperation","justice_rights_and_civic_services","environment_disaster_and_infrastructure","devices_browser_and_live_001","provider_neutral_intelligence","security_privacy_and_consent","governance_and_provenance","creator_and_digital_preservation","commerce_funding_and_sustainability","future_and_temporal_stewardship"],
+  "lifecycle": ["inventory","trace_existing_work","inspect_present","identify_gap","research_evidence","classify_fact_hypothesis_unknown","reuse_or_extend","implement_minimally","test","verify_deployment","measure_against_baseline","record_provenance","teach_forward"],
+  "rules": [
+    "Never create a parallel authority when an existing canonical capability can be extended.",
+    "Never claim live capability from documentation alone.",
+    "Never treat country, language, age, device or provider detection as proof of eligibility, identity or authorization.",
+    "Research missing information before filling a gap; never fabricate sources.",
+    "Prefer official or primary sources for high-impact routing.",
+    "Keep private human memory user-scoped and consent-gated.",
+    "External action remains subject to authorization and platform/legal limits.",
+    "Every material improvement must preserve a traceable baseline and acceptance condition.",
+    "A capability may be less central as the human becomes more capable; reduced dependency is a success condition.",
+    "New generations, providers, devices and domains extend this same map rather than fork IMA."
+  ]
+}
