@@ -1,0 +1,33 @@
+{
+  "id":"IMA-CANONICAL-DOMAIN-AUDIT-001",
+  "version":"1.0.0",
+  "status":"active",
+  "purpose":"Maintain one inspectable inventory of IMA domain families, their current canonical anchors, evidence state and next improvement target.",
+  "evidence_states":["DOCUMENTED","IMPLEMENTED","TESTED","DEPLOYED","VERIFIED_LIVE","UNKNOWN"],
+  "domains":[
+    {"id":"identity_and_human_intelligence","anchor":"IMA_IDENTITY.md","state":"DOCUMENTED","next":"Reconcile identity claims with live UI and runtime verification."},
+    {"id":"conversation_and_chat","anchor":"ima_master_runtime.py","state":"IMPLEMENTED","next":"Verify authenticated/public routing and real answers on deployed surfaces."},
+    {"id":"memory_and_continuity","anchor":".ima/memory/universal_interaction_memory.py","state":"IMPLEMENTED","next":"Verify consent boundaries, deletion and cross-interface continuity."},
+    {"id":"knowledge_and_research","anchor":"learning/knowledge_graph_retrieval.py","state":"IMPLEMENTED","next":"Strengthen source provenance and current-information retrieval."},
+    {"id":"learning_and_evaluation","anchor":"learning/learning_loop.py","state":"IMPLEMENTED","next":"Verify learning gates and prevent unverified promotion."},
+    {"id":"resilience_and_social_protection","anchor":"contracts/IMA_RESILIENCE_LAYER.json","state":"IMPLEMENTED","next":"Expand and verify official sources country-by-country."},
+    {"id":"health_and_care","anchor":"contracts/IMA_RESILIENCE_LAYER.json","state":"DOCUMENTED","next":"Build verified routing without implying diagnosis or eligibility."},
+    {"id":"education_and_lifelong_learning","anchor":"learning/learning_loop.py","state":"IMPLEMENTED","next":"Map actual user flows and evidence-backed learning resources."},
+    {"id":"work_income_and_economy","anchor":"ima_master_runtime.py","state":"IMPLEMENTED","next":"Connect opportunity evaluation to verified services and measurable outcomes."},
+    {"id":"accessibility_and_inclusion","anchor":"IMA_IDENTITY.md","state":"DOCUMENTED","next":"Verify keyboard, screen-reader, language, contrast and device behavior."},
+    {"id":"family_children_and_intergenerational","anchor":"README.md","state":"DOCUMENTED","next":"Verify age-appropriate safeguards and intergenerational privacy boundaries."},
+    {"id":"culture_language_and_history","anchor":"README.md","state":"DOCUMENTED","next":"Expand verified language/cultural resources without flattening differences."},
+    {"id":"creativity_music_and_media","anchor":"README.md","state":"DOCUMENTED","next":"Reconcile existing creator/video/music capabilities and live publication verification."},
+    {"id":"community_and_global_cooperation","anchor":"core/global_humanitarian_intelligence.py","state":"IMPLEMENTED","next":"Add verified current-world sources and local capacity routing."},
+    {"id":"justice_rights_and_civic_services","anchor":"contracts/IMA_RESILIENCE_LAYER.json","state":"IMPLEMENTED","next":"Expand official rights/civic-service routing by country."},
+    {"id":"environment_disaster_and_infrastructure","anchor":"contracts/IMA_RESILIENCE_LAYER.json","state":"IMPLEMENTED","next":"Add verified hazard/infrastructure feeds before claiming live status."},
+    {"id":"devices_browser_and_live_001","anchor":"tools/termux-ima-bridge/README.md","state":"IMPLEMENTED","next":"Complete LIVE-001 screen surface and end-to-end runtime verification."},
+    {"id":"provider_neutral_intelligence","anchor":".ima/intelligence/universal_intelligence_gateway.py","state":"IMPLEMENTED","next":"Verify each provider/host independently; never infer connection from registry discovery."},
+    {"id":"security_privacy_and_consent","anchor":"identity_context.py","state":"IMPLEMENTED","next":"Run regression checks across every data path."},
+    {"id":"governance_and_provenance","anchor":"docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md","state":"IMPLEMENTED","next":"Require evidence-state transitions for every material release."},
+    {"id":"creator_and_digital_preservation","anchor":"README.md","state":"DOCUMENTED","next":"Verify provenance, consent and publication state of creator assets."},
+    {"id":"commerce_funding_and_sustainability","anchor":"README.md","state":"DOCUMENTED","next":"Verify actual payment/funding routes and prohibit unsupported revenue claims."},
+    {"id":"future_and_temporal_stewardship","anchor":"docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md","state":"IMPLEMENTED","next":"Use the same loop for every new domain and generation."}
+  ],
+  "priority_order":["live_001","conversation_and_chat","memory_and_continuity","security_privacy_and_consent","resilience_and_social_protection","provider_neutral_intelligence","accessibility_and_inclusion","health_and_care","justice_rights_and_civic_services","education_and_lifelong_learning","work_income_and_economy","community_and_global_cooperation","environment_disaster_and_infrastructure","family_children_and_intergenerational","culture_language_and_history","creativity_music_and_media","creator_and_digital_preservation","commerce_funding_and_sustainability","future_and_temporal_stewardship"]
+}
