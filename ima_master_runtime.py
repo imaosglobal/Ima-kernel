@@ -25,6 +25,10 @@ from learning.knowledge_answer_builder import build_answer
 from learning.knowledge_graph_retrieval import search_concept
 from core.global_humanitarian_intelligence import compose_world_pulse_instruction, should_enter_world_pulse
 from core.continuous_future import enforce_component_contract, component_contract
+try:
+    from core.ima_continuous_improvement import build_context as build_continuous_improvement_context
+except Exception:
+    build_continuous_improvement_context = None
 
 try:
     from ima_runtime.reflection_runtime import reflect
@@ -132,13 +136,20 @@ class IMAMaster:
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
         world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
+        continuous_improvement_context = ""
+        try:
+            if build_continuous_improvement_context is not None:
+                continuous_improvement_context = "\n\n" + build_continuous_improvement_context(message)
+        except Exception:
+            continuous_improvement_context = ""
+
         canonical_context = ""
         try:
             if build_canonical_context is not None:
                 canonical_context = "\n\n" + build_canonical_context(message, requested_language)
         except Exception:
             canonical_context = ""
-        provider_message = message + ima_language_instruction + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + canonical_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
+        provider_message = message + ima_language_instruction + response_instruction + opportunity_context + continuous_future_context + continuous_improvement_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + canonical_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
