@@ -12,6 +12,7 @@ import {
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { RESILIENCE_CATEGORIES, RESILIENCE_PHASES, getResiliencePlan, saveResiliencePlan, loadResiliencePlan } from './services/resilience';
+import { getSocialProtectionContext, buildSocialProtectionTasks, saveSocialProtectionContext } from './services/socialProtection';
 
 const BASE = '/Ima-kernel/';
 const SUPPORT_URL = BASE + 'support.html';
@@ -21,8 +22,7 @@ const GOOGLE_CAMPAIGN_URL = BASE + '?campaignId=24409551537&utm_source=ima_logo'
 const YOUTUBE_URL = 'https://www.youtube.com/@imaglobal-d4g';
 const PAID_PILOT_URL = 'https://github.com/imaosglobal/Ima-kernel/issues/173';
 const SUPPORTED_LOCALES = [
-  ['he','עברית'],['en','English'],['ar','العربية'],['es','Español'],['fr','Français'],
-  ['pt','Português'],['de','Deutsch'],['ru','Русский'],['hi','हिन्दी'],['zh','中文'],['ja','日本語']
+  ['he','עברית'],['en','English'],['ar','العربية'],['fa','فارسی'],['ur','اردو'],['es','Español'],['fr','Français'],['pt','Português'],['de','Deutsch'],['it','Italiano'],['nl','Nederlands'],['pl','Polski'],['cs','Čeština'],['sk','Slovenčina'],['hu','Magyar'],['ro','Română'],['bg','Български'],['el','Ελληνικά'],['hr','Hrvatski'],['sl','Slovenščina'],['et','Eesti'],['lv','Latviešu'],['lt','Lietuvių'],['is','Íslenska'],['sv','Svenska'],['no','Norsk'],['da','Dansk'],['fi','Suomi'],['tr','Türkçe'],['uk','Українська'],['ru','Русский'],['hi','हिन्दी'],['bn','বাংলা'],['zh','中文'],['ja','日本語'],['ko','한국어'],['th','ไทย'],['vi','Tiếng Việt'],['id','Bahasa Indonesia'],['ms','Bahasa Melayu'],['fil','Filipino'],['sw','Kiswahili']
 ];
 const RTL_LOCALES = new Set(['he','ar','fa','ur']);
 const CLEAN_LOGO_URL = 'https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
@@ -244,6 +244,7 @@ function CanonicalConnectorPanel({ lang, runtime }) {
 
 function ResilienceCenter({ lang, user, onOpenChat }) {
   const he = lang === 'he';
+  const socialProtection = useMemo(() => getSocialProtectionContext({ user, language: lang }), [user, lang]);
   const [phase, setPhase] = useState(() => localStorage.getItem('ima-resilience-phase') || 'NORMAL');
   const [need, setNeed] = useState(() => localStorage.getItem('ima-resilience-need') || RESILIENCE_CATEGORIES[0].id);
   const [tasks, setTasks] = useState(() => loadResiliencePlan());
@@ -256,7 +257,10 @@ function ResilienceCenter({ lang, user, onOpenChat }) {
   }, [phase, need]);
 
   const selected = RESILIENCE_CATEGORIES.find(x => x.id === need) || RESILIENCE_CATEGORIES[0];
-  const plan = getResiliencePlan({ phase, need, lang });
+  const basePlan = getResiliencePlan({ phase, need, lang });
+  const plan = need === 'income' ? [...buildSocialProtectionTasks(socialProtection), ...basePlan.filter(x => x.id !== 'btl-unemployment')].slice(0,7) : basePlan;
+
+  useEffect(() => { if (need === 'income') saveSocialProtectionContext(socialProtection); }, [need, socialProtection]);
 
   const addTask = (task) => {
     const next = [...tasks.filter(x => x.id !== task.id), { ...task, addedAt: new Date().toISOString() }];
@@ -293,9 +297,9 @@ function ResilienceCenter({ lang, user, onOpenChat }) {
       <div>
         <span className="section-label">{he ? 'שכבת חוסן אנושית' : 'Human resilience layer'}</span>
         <h2>{he ? 'כשצריך עזרה — עוברים ממידע לפעולה.' : 'When help is needed, move from information to action.'}</h2>
-        <p>{he ? 'אמא מרכזת צורך → משאב → צעד → אימות. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.' : 'IMA connects need → resource → action → verification. In emergencies it points first to official services; in everyday crises it turns a need into an action path.'}</p>
+        <p>{he ? 'אמא מרכזת צורך → משאב → צעד → אימות. בביטוח לאומי וזכויות היא מזהה אוטומטית את שפת המכשיר והמדינה ככל שניתן, ומפנה למקור הרשמי המתאים.' : 'IMA connects need → resource → action → verification. For social insurance and benefits it automatically uses the device language and country when available, then routes to the appropriate official source.'}</p>
       </div>
-      <div className="resilience-emergency-note"><b>{he ? 'חירום' : 'Emergency'}</b><span>{he ? '100 משטרה · 101 מד״א · 102 כבאות · 104 פיקוד העורף' : '100 police · 101 ambulance · 102 fire · 104 Home Front Command'}</span></div>
+      <div className="resilience-emergency-note"><b>{need === 'income' ? (he ? 'מדינה ושפה שזוהו' : 'Detected country & language') : (he ? 'חירום' : 'Emergency')}</b><span>{need === 'income' ? `${socialProtection.countryName} · ${socialProtection.language} · ${socialProtection.source}` : (he ? 'שירותי החירום המקומיים' : 'Local emergency services')}</span></div>
     </div>
 
     <div className="resilience-controls">
