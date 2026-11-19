@@ -1,6 +1,6 @@
 {
   "id": "IMA-RESILIENCE-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "purpose": "Operational human resilience layer connecting needs, resources, official services, community capacity and verified action paths.",
   "principles": [
     "Need before content",
@@ -31,13 +31,25 @@
     "transport",
     "utilities",
     "community",
-    "disaster_preparedness"
+    "disaster_preparedness",
+    "social_protection",
+    "benefits",
+    "pensions",
+    "contributions",
+    "minimum_income",
+    "family_benefits",
+    "maternity_parental",
+    "work_injury"
   ],
   "currentImplementation": [
     "public UI",
     "local action task plan",
     "official-service routing",
-    "IMA-generated action-path preparation"
+    "IMA-generated action-path preparation",
+    "country-aware social protection registry",
+    "device language and locale detection",
+    "timezone fallback when country is absent",
+    "official-source routing with explicit unknown-source state"
   ],
   "futureConnectors": [
     "government APIs",
@@ -50,5 +62,45 @@
     "crisis maps",
     "device and notification bridges"
   ],
-  "safety": "Emergency routing must never claim live availability unless a live source is verified."
+  "safety": "Emergency routing must never claim live availability unless a live source is verified.",
+  "automationPolicy": {
+    "language_precedence": [
+      "explicit IMA language selection",
+      "device locale",
+      "Google-account locale when available",
+      "safe language fallback"
+    ],
+    "country_precedence": [
+      "device locale region",
+      "device timezone fallback",
+      "Google-account country only when explicitly exposed and authorized",
+      "optional location only when needed and permission is granted"
+    ],
+    "privacy": "Do not request precise location when locale/timezone are sufficient. Never expose coordinates to the UI or store them in the resilience plan.",
+    "eligibility": "Country detection never implies eligibility. IMA must ask for or verify the legal/benefit facts required by the relevant authority.",
+    "source_rule": "Only configured or verified official sources may be presented as official. Unknown country/source must be labeled unknown rather than guessed."
+  },
+  "socialProtection": {
+    "id": "SOCIAL-PROTECTION-001",
+    "coverage": "Global country-aware routing with shared benefit domains and localized labels.",
+    "domains": [
+      "unemployment",
+      "disability",
+      "old_age",
+      "survivors",
+      "sickness",
+      "maternity",
+      "parental",
+      "children_family",
+      "work_injury",
+      "contributions",
+      "housing",
+      "food",
+      "minimum_income",
+      "care",
+      "employment_services",
+      "crisis_assistance"
+    ],
+    "fallback": "Use country/language detection for every country even when a verified official portal has not yet been configured; never fabricate a government URL."
+  }
 }
