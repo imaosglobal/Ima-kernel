@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / ".ima" / "intelligence" / "PROVIDER_REGISTRY.json"
 LEDGER = ROOT / ".ima" / "intelligence" / "INTELLIGENCE_EVIDENCE.jsonl"
 LEARNING_CANDIDATES = ROOT / ".ima" / "conversation" / "intelligence_learning_candidates.jsonl"
-PROVIDER_ENV = {"openai":"OPENAI_API_KEY","anthropic":"ANTHROPIC_API_KEY","gemini":"GEMINI_API_KEY","groq":"GROQ_API_KEY"}
+PROVIDER_ENV = {"openai":"OPENAI_API_KEY","anthropic":"ANTHROPIC_API_KEY","gemini":"GEMINI_API_KEY","groq":"GROQ_API_KEY","xai":"XAI_API_KEY"}
 
 def _now(): return time.time()
 def _hash(value: Any) -> str:
@@ -51,6 +51,9 @@ def _ask(provider,prompt):
     if provider=="ollama":
         from connectors.llm import ollama
         return ollama.ask(prompt)
+    if provider=="xai":
+        from connectors.llm import xai
+        return xai.ask(prompt)
     if provider=="groq":
         from connectors.llm import groq
         return groq.ask(prompt)
