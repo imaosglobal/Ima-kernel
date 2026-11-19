@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "rule": "One IMA system, one canonical authority per domain, many verified interfaces.",
+  "organization": [
+    "current_need",
+    "time_horizon",
+    "life_stage_or_generation",
+    "geography",
+    "language",
+    "device_capability",
+    "evidence_state"
+  ],
+  "domains": [
+    {
+      "id": "identity",
+      "path": "IMA_IDENTITY.md",
+      "summary": "IMA identity, mission and human-centered principles.",
+      "keywords": [
+        "ima",
+        "אמא",
+        "identity",
+        "who"
+      ]
+    },
+    {
+      "id": "resilience",
+      "path": "contracts/IMA_RESILIENCE_LAYER.json",
+      "summary": "Operational resilience: need → official resource → action → verification → continuation.",
+      "keywords": [
+        "crisis",
+        "emergency",
+        "disaster",
+        "income",
+        "food",
+        "housing",
+        "unemployment",
+        "social",
+        "ביטוח",
+        "חירום",
+        "אסון"
+      ]
+    },
+    {
+      "id": "social-protection",
+      "path": "ima-ui/src/services/socialProtection.js",
+      "summary": "Country-aware social insurance, benefits and official-source routing.",
+      "keywords": [
+        "insurance",
+        "benefit",
+        "pension",
+        "disability",
+        "unemployment",
+        "welfare",
+        "ביטוח",
+        "קצבה",
+        "פנסיה",
+        "נכות",
+        "אבטלה"
+      ]
+    },
+    {
+      "id": "live-001",
+      "path": "tools/termux-ima-bridge/README.md",
+      "summary": "Canonical LIVE-001 device/browser interaction surface and security boundary.",
+      "keywords": [
+        "browser",
+        "device",
+        "chrome",
+        "termux",
+        "live",
+        "מסך",
+        "דפדפן",
+        "מכשיר"
+      ]
+    },
+    {
+      "id": "intelligence-gateway",
+      "path": ".ima/intelligence/universal_intelligence_gateway.py",
+      "summary": "Provider-neutral boundary for authorized intelligences; truthful provider state and provenance.",
+      "keywords": [
+        "chatgpt",
+        "openai",
+        "claude",
+        "anthropic",
+        "gemini",
+        "grok",
+        "groq",
+        "provider",
+        "model",
+        "בינה"
+      ]
+    },
+    {
+      "id": "memory",
+      "path": "conversation_layer.py",
+      "summary": "Canonical per-user interaction memory with consent gate; no parallel memory authority.",
+      "keywords": [
+        "memory",
+        "remember",
+        "history",
+        "זיכרון",
+        "זכור",
+        "היסטוריה"
+      ]
+    },
+    {
+      "id": "future",
+      "path": ".ima/policies/CONTINUOUS_FUTURE_POLICY.json",
+      "summary": "Continuous-future lifecycle for discovering gaps, improving and verifying the same system.",
+      "keywords": [
+        "future",
+        "always",
+        "update",
+        "improve",
+        "דור",
+        "עתיד",
+        "שדרוג"
+      ]
+    },
+    {
+      "id": "agency",
+      "path": "identity_context.py",
+      "summary": "Truth, privacy, consent and human agency laws.",
+      "keywords": [
+        "privacy",
+        "consent",
+        "agency",
+        "truth",
+        "פרטיות",
+        "הסכמה",
+        "אמת",
+        "שליטה"
+      ]
+    }
+  ],
+  "generation_rule": "When a need changes or a new generation/device/provider appears, extend the canonical index and relevant contract rather than creating a parallel system."
+}
