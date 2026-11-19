@@ -2,62 +2,60 @@
 
 This bridge is the Android reference agent for IMA Universal Action Core.
 
-## Network-independent architecture
+## Canonical network-independent architecture
 
-The production direction is outbound-only:
+The production transport is outbound-only:
 
-`Chrome/Termux -> HTTPS polling -> IMA API -> device command queue`
+`Termux/Android agent -> HTTPS -> IMA API -> authenticated device command queue`
 
-The device does **not** need a fixed Wi-Fi address, inbound port, or the same router. After enrollment, the bridge can reconnect over Wi-Fi or cellular because the device initiates the HTTPS connection.
+The device does **not** require a fixed Wi-Fi address, inbound port, the same router, or a Wireless Debugging IP/port.
 
-The local CDP path is still used only on the device:
+The canonical LIVE-001 surface remains:
 
-`IMA UI -> 127.0.0.1:8787 -> Chrome CDP -> Chrome Android`
+`IMA UI -> LIVE-001 -> authenticated IMA device channel -> Android/Chrome`
 
-## Current capabilities
+ADB/Wireless Debugging is **not the production transport**. Any ADB support in `bridge.py` is legacy/local fallback and must never be presented as a required pairing step.
 
-- Stable IMA-tab targeting instead of blindly selecting the first Chrome tab.
-- Screenshot capture.
-- URL navigation.
-- DOM click/type/key actions.
-- Coordinate tap and scroll actions.
-- Cloud command polling with exponential backoff.
-- Device key persisted locally with restrictive file permissions.
-- One-click enrollment from the IMA UI at `/enroll`.
-- Fail-closed behavior when the cloud channel is unavailable.
+## Current verified architecture
 
-## One-time device enrollment
+- LIVE-001 remains the single canonical live-browser surface.
+- The Termux launcher is `bridge_launcher.py`; do not run `bridge.py` separately when the launcher is active.
+- The cloud agent uses an authenticated per-device key and outbound HTTPS polling.
+- The device key is persisted locally with restrictive permissions.
+- Enrollment is performed through the authenticated IMA UI/API.
+- The bridge is intended to reconnect over Wi-Fi or cellular without a fixed device IP.
 
-1. Start the local bridge.
-2. Sign in to IMA with Google.
-3. Open Chat -> LIVE BROWSER.
-4. When the local bridge is detected, press **Make connection persistent / חיבור קבוע** once.
-5. The bridge registers the device through the authenticated IMA API, stores the returned device key locally, and starts the outbound cloud agent.
+## Important implementation boundary
+
+The current repository still contains ADB/CDP code for local Chrome/device operations. That code is retained as a compatibility fallback; it is **not** proof that a native Android screen/input transport is available without an Android-side transport provider.
+
+Therefore the system must report the native transport as unavailable rather than silently falling back to Wireless Debugging.
 
 No device key should be copied into public pages, GitHub, or chat.
 
 ## Run
 
 ```bash
-python ~/Ima-kernel/tools/termux-ima-bridge/bridge.py
+python ~/Ima-kernel/tools/termux-ima-bridge/bridge_launcher.py
 ```
 
-Optional environment variables:
+Do **not** start `bridge.py` separately if `bridge_launcher.py` is already running.
+
+## Optional environment variables
 
 - `IMA_CLOUD_API_BASE` — defaults to `https://ima-915m.onrender.com`
 - `IMA_DEVICE_KEY` — explicit key; normally not needed after enrollment
 - `IMA_DEVICE_STATE_FILE` — persistent key file; defaults to `~/.config/ima/device.json`
 - `IMA_CHROME_TARGET_HINT` — defaults to `imaosglobal.github.io/Ima-kernel`
 - `IMA_CLOUD_POLL_SECONDS` — defaults to 2 seconds
-- `IMA_ALLOWED_ORIGINS` — comma-separated browser origins allowed to invoke local actions; defaults to the public IMA origin plus localhost development origins
+- `IMA_ALLOWED_ORIGINS` — comma-separated browser origins allowed to invoke local actions
 
 ## Security boundary
 
-The bridge is not a public HTTP server. It binds to `127.0.0.1`. The cloud channel is outbound and authenticated with a per-device key. Commands are scoped by the IMA API and should be verified after execution.
+The bridge binds locally to `127.0.0.1`. The cloud channel is outbound and authenticated with a per-device key. Commands are scoped by the IMA API and should be verified after execution.
 
-The Termux bridge is a reference implementation, not yet the final Android background service. If Android/Termux kills the process, the cloud channel stops until the process is restarted. The production Android agent must provide lifecycle supervision, reconnect, revoke, visible connection state, and an emergency stop.
+The native Android transport still requires a supported Android-side provider for screen capture and input. The system must not claim LIVE-001 device control is connected until that transport is runtime-verified.
 
 ## Interactive IMA UI
 
-The IMA Chat page contains a LIVE BROWSER panel. It now supports direct click/tap and scrolling on the mirrored Chrome screen, plus navigation and keyboard controls. This is an interactive control surface; it is not a native remote-desktop window embedded in ChatGPT itself.
-
+The IMA Chat page contains the canonical LIVE-001 panel. It is not a second browser system and all future improvements must attach to LIVE-001.
