@@ -1,0 +1,27 @@
+{
+  "id": "IMA-MARKET-ENTRY-001",
+  "version": "1.0.0",
+  "status": "active",
+  "purpose": "Turn IMA from a capability-rich project into a measurable public product without creating a parallel system.",
+  "funnel": ["discovery","landing","job_selection","authentication","first_use","useful_answer","repeat_use","feedback","referral","sustainable_revenue"],
+  "market_promise": "Give IMA a real human need; IMA helps clarify, verify, create or route to the next useful action while preserving human agency.",
+  "entry_jobs": ["think","learn","create","solve"],
+  "rules": [
+    "No fabricated user, traffic, retention or revenue claims.",
+    "A campaign is successful only when measured beyond a page view.",
+    "The public promise must describe an observable user job, not AGI or future capability.",
+    "Authentication remains the gateway to personal chat and continuity.",
+    "Referral links preserve the same canonical IMA experience; no duplicate product surfaces.",
+    "Free entry should prove value before asking for payment.",
+    "Paid offers are experiments until payment and retention evidence exist.",
+    "Every market improvement must feed the canonical continuous-improvement loop."
+  ],
+  "initial_channels": ["organic_search","direct_share","community","creator_network","targeted_campaigns","paid_pilot"],
+  "success_conditions": {
+    "activation": "A new visitor selects a real job, signs in and reaches a useful answer.",
+    "retention": "A user returns and starts another meaningful job.",
+    "referral": "A user intentionally shares a job-specific IMA link.",
+    "revenue": "A user or organization pays for a validated offer with measured value."
+  },
+  "next_measurement": "Verify deployed analytics ingestion and compare landing -> first-use -> useful-answer -> return rates before scaling spend."
+}
