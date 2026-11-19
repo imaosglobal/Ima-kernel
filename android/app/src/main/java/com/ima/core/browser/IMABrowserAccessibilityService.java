@@ -7,6 +7,7 @@ import android.graphics.ColorSpace;
 import android.graphics.Path;
 import android.hardware.HardwareBuffer;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.MediaStore;
@@ -69,7 +70,9 @@ public class IMABrowserAccessibilityService extends AccessibilityService {
             else if ("home".equals(action)) result(c, performGlobalAction(GLOBAL_ACTION_HOME), "home");
             else if ("recents".equals(action)) result(c, performGlobalAction(GLOBAL_ACTION_RECENTS), "recents");
             else if ("read_text".equals(action)) result(c, true, readVisibleText());
-            else if ("status".equals(action)) result(c, true, "IMA_REMOTE_ACCESSIBILITY_ONLINE");
+            else if ("text".equals(action)) {
+                result(c, setFocusedText(c.optString("text", "")), "text");
+            } else if ("status".equals(action)) result(c, true, "IMA_REMOTE_ACCESSIBILITY_ONLINE");
             else result(c, false, "UNKNOWN_ACTION");
             if (!"screenshot".equals(action)) deleteDownload("ima_remote_command.json");
         } catch (Exception ignored) {}
@@ -106,6 +109,34 @@ public class IMABrowserAccessibilityService extends AccessibilityService {
                 deleteDownload("ima_remote_command.json");
             }
         });
+    }
+
+    private boolean setFocusedText(String text) {
+        AccessibilityNodeInfo root = getRootInActiveWindow();
+        if (root == null) return false;
+        AccessibilityNodeInfo node = root.findFocus(AccessibilityNodeInfo.FOCUS_INPUT);
+        if (node == null) node = findEditable(root);
+        if (node == null) return false;
+        Bundle args = new Bundle();
+        args.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, text);
+        boolean ok = node.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, args);
+        node.recycle();
+        return ok;
+    }
+
+    private AccessibilityNodeInfo findEditable(AccessibilityNodeInfo node) {
+        if (node == null) return null;
+        if (node.isEditable()) return node;
+        for (int i = 0; i < node.getChildCount(); i++) {
+            AccessibilityNodeInfo child = node.getChild(i);
+            AccessibilityNodeInfo found = findEditable(child);
+            if (found != null) {
+                if (found != child) child.recycle();
+                return found;
+            }
+            if (child != null) child.recycle();
+        }
+        return null;
     }
 
     private void tap(double x, double y) {
