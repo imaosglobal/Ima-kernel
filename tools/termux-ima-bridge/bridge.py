@@ -30,6 +30,7 @@ ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
 ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
 DOWNLOADS=pathlib.Path(os.path.expanduser(os.environ.get('IMA_ANDROID_DOWNLOADS','~/storage/downloads')))
 NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
+NATIVE_LOCK=threading.Lock()
 
 def device_serial():
     env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
@@ -72,6 +73,13 @@ def device_screenshot_png():
     return serial,proc.stdout
 
 def native_android_command(action,payload=None,timeout=25):
+    native=NATIVE_ANDROID_ACTIONS.get(action)
+    if not native:
+        raise ValueError('unsupported_native_android_action')
+    with NATIVE_LOCK:
+        return _native_android_command_locked(action,payload,timeout)
+
+def _native_android_command_locked(action,payload=None,timeout=25):
     native=NATIVE_ANDROID_ACTIONS.get(action)
     if not native:
         raise ValueError('unsupported_native_android_action')
@@ -227,7 +235,13 @@ def cloud_request(path,method='GET',payload=None):
 def upload_device_frame():
     if not DEVICE_KEY:
         return
-    serial,raw=device_screenshot_png()
+    result=native_android_command('android_screenshot',{},timeout=12)
+    raw=base64.b64decode(result['data'])
+    device_id=''
+    try:
+        device_id=str(json.loads(pathlib.Path(STATE_FILE).read_text(encoding='utf-8')).get('device_id','')).strip()
+    except Exception:
+        pass
     req=urllib.request.Request(
         BROWSERGLASS_API+'/api/device/frame',
         data=raw,
@@ -235,7 +249,7 @@ def upload_device_frame():
             'Content-Type':'image/png',
             'Cache-Control':'no-store',
             'X-IMA-Device-Key':DEVICE_KEY,
-            'X-IMA-Device-Serial':serial,
+            'X-IMA-Device-Serial':device_id or 'android-accessibility',
         },
         method='POST',
     )
