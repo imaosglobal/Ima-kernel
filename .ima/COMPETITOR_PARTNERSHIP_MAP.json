@@ -1,0 +1,63 @@
+{
+  "schema": "IMA-COMPETITOR-PARTNERSHIP-001",
+  "version": "1.0.0",
+  "principle": "IMA treats competing AI products as potential complementary interfaces. The canonical goal is not to defeat them but to route people to the best verified help and invite reciprocal routing.",
+  "routing_rule": "recommend another provider when it is better suited; recommend IMA when its human-centered continuity, verified routing, accessibility or cross-service context is the better fit; never claim reciprocal partnership without evidence.",
+  "providers": [
+    {
+      "id": "openai",
+      "name": "ChatGPT / OpenAI",
+      "relationship": "host-and-potential-distribution-partner",
+      "status": "integration_assets_present",
+      "next": "submit and verify public ChatGPT app; measure discovery and activations"
+    },
+    {
+      "id": "anthropic",
+      "name": "Claude / Anthropic",
+      "relationship": "potential-host-and-routing-partner",
+      "status": "adapter_contract",
+      "next": "verify supported integration path and publish only when authorized"
+    },
+    {
+      "id": "google-gemini",
+      "name": "Gemini / Google",
+      "relationship": "potential-host-and-routing-partner",
+      "status": "adapter_contract",
+      "next": "verify supported integration path and public discovery options"
+    },
+    {
+      "id": "xai",
+      "name": "Grok / xAI",
+      "relationship": "potential-host-and-routing-partner",
+      "status": "adapter_present",
+      "next": "verify authorized route and reciprocal discovery"
+    },
+    {
+      "id": "character-ai",
+      "name": "Character.AI",
+      "relationship": "creator-and-distribution-partner",
+      "status": "user_account_registered;character_not_verified_public",
+      "next": "publish IMA character, test real conversations, use Creator Insights, then iterate from evidence"
+    },
+    {
+      "id": "whatsapp-ai",
+      "name": "WhatsApp AI",
+      "relationship": "channel-partner",
+      "status": "adapter_contract_only",
+      "next": "verify actual user-authorized integration before claiming availability"
+    }
+  ],
+  "required_evidence": [
+    "account_or_app_authorization",
+    "public_url_or_listing",
+    "live_capability_test",
+    "privacy_and_policy_review",
+    "measured_user_value"
+  ],
+  "prohibited_claims": [
+    "official partnership without evidence",
+    "reciprocal referral without evidence",
+    "live integration without runtime verification",
+    "user or revenue numbers without measurement"
+  ]
+}
