@@ -21,7 +21,7 @@ checks = {
     "manifest_present": "manifest.json" in INDEX,
     "build_metadata_present": 'meta name="ima-build-version"' in INDEX,
     "service_worker_update_enabled": "registration.update()" in MAIN and "SKIP_WAITING" in MAIN,
-    "release_metadata_coordinator": "version.json" in COORD and "cache: 'no-store'" in COORD,
+    "release_metadata_coordinator": ("version.json" in COORD or "ota/manifest.json" in COORD) and "cache: 'no-store'" in COORD,
 }
 
 failed = [name for name, ok in checks.items() if not ok]
