@@ -1,14 +1,148 @@
-
 {
-  "schema":"IMA-PROVIDER-REGISTRY-1.0",
-  "providers":[
-    {"id":"openai","provider":"OpenAI","capabilities":["text_generation","vision","image","future_tool_use"],"interface":"native_api","auth":{"env":"OPENAI_API_KEY"},"privacy_scope":"explicitly_authorized_only","status":"DISCOVERED","provenance":"IMA provider registry; runtime authorization must be checked"},
-    {"id":"anthropic","provider":"Anthropic","capabilities":["text_generation","vision","tool_use"],"interface":"native_api","auth":{"env":"ANTHROPIC_API_KEY"},"privacy_scope":"explicitly_authorized_only","status":"DISCOVERED","provenance":"IMA provider registry; runtime authorization must be checked"},
-    {"id":"gemini","provider":"Google Gemini","capabilities":["text_generation","vision","audio","video","tools"],"interface":"native_api","auth":{"env":"GEMINI_API_KEY"},"privacy_scope":"explicitly_authorized_only","status":"DISCOVERED","provenance":"IMA provider registry; runtime authorization must be checked"},
-    {"id":"ollama","provider":"Ollama/local","capabilities":["text_generation","local_private_inference"],"interface":"localhost","auth":{"mode":"local"},"privacy_scope":"local_only","status":"DISCOVERED","provenance":"IMA local-runtime candidate"},
-    {"id":"groq","provider":"Groq","capabilities":["text_generation","future_low_latency"],"interface":"native_api","auth":{"env":"GROQ_API_KEY"},"privacy_scope":"explicitly_authorized_only","status":"DISCOVERED","provenance":"IMA provider registry; runtime authorization must be checked"},
-    {"id":"future_provider","provider":"Future provider/model","capabilities":["provider_defined"],"interface":"adapter_contract","auth":{"mode":"provider_defined"},"privacy_scope":"explicitly_authorized_only","status":"DISCOVERED","provenance":"Future adapter contract"}
+  "schema": "IMA-PROVIDER-REGISTRY-1.0",
+  "providers": [
+    {
+      "id": "openai",
+      "provider": "OpenAI",
+      "capabilities": [
+        "text_generation",
+        "vision",
+        "image",
+        "future_tool_use"
+      ],
+      "interface": "native_api",
+      "auth": {
+        "env": "OPENAI_API_KEY"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider registry; runtime authorization must be checked"
+    },
+    {
+      "id": "anthropic",
+      "provider": "Anthropic",
+      "capabilities": [
+        "text_generation",
+        "vision",
+        "tool_use"
+      ],
+      "interface": "native_api",
+      "auth": {
+        "env": "ANTHROPIC_API_KEY"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider registry; runtime authorization must be checked"
+    },
+    {
+      "id": "gemini",
+      "provider": "Google Gemini",
+      "capabilities": [
+        "text_generation",
+        "vision",
+        "audio",
+        "video",
+        "tools"
+      ],
+      "interface": "native_api",
+      "auth": {
+        "env": "GEMINI_API_KEY"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider registry; runtime authorization must be checked"
+    },
+    {
+      "id": "ollama",
+      "provider": "Ollama/local",
+      "capabilities": [
+        "text_generation",
+        "local_private_inference"
+      ],
+      "interface": "localhost",
+      "auth": {
+        "mode": "local"
+      },
+      "privacy_scope": "local_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA local-runtime candidate"
+    },
+    {
+      "id": "groq",
+      "provider": "Groq",
+      "capabilities": [
+        "text_generation",
+        "future_low_latency"
+      ],
+      "interface": "native_api",
+      "auth": {
+        "env": "GROQ_API_KEY"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider registry; runtime authorization must be checked"
+    },
+    {
+      "id": "future_provider",
+      "provider": "Future provider/model",
+      "capabilities": [
+        "provider_defined"
+      ],
+      "interface": "adapter_contract",
+      "auth": {
+        "mode": "provider_defined"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "Future adapter contract"
+    },
+    {
+      "id": "xai",
+      "provider": "xAI / Grok",
+      "capabilities": [
+        "text_generation",
+        "vision",
+        "future_tool_use"
+      ],
+      "interface": "native_api",
+      "auth": {
+        "env": "XAI_API_KEY"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider registry; runtime authorization must be checked"
+    },
+    {
+      "id": "whatsapp_ai",
+      "provider": "WhatsApp AI / channel adapter",
+      "capabilities": [
+        "conversation_channel",
+        "future_action_bridge"
+      ],
+      "interface": "host_adapter",
+      "auth": {
+        "mode": "provider_defined"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA provider-neutral host adapter contract; no direct connection claimed until verified"
+    },
+    {
+      "id": "generic_chat_host",
+      "provider": "Any future compatible chat host",
+      "capabilities": [
+        "conversation_channel",
+        "mcp_or_api_adapter"
+      ],
+      "interface": "adapter_contract",
+      "auth": {
+        "mode": "provider_defined"
+      },
+      "privacy_scope": "explicitly_authorized_only",
+      "status": "DISCOVERED",
+      "provenance": "IMA universal distribution contract"
+    }
   ],
-  "promotion_rule":"discovered -> authorized -> health_checked -> capability_test -> benchmarked -> routable",
-  "retirement_rule":"degraded -> isolated -> provenance_preserved -> no_new_routing"
+  "promotion_rule": "discovered -> authorized -> health_checked -> capability_test -> benchmarked -> routable",
+  "retirement_rule": "degraded -> isolated -> provenance_preserved -> no_new_routing"
 }
