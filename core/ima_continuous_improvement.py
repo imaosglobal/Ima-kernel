@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+AUDIT_PATH = ROOT / ".ima" / "CANONICAL_DOMAIN_AUDIT.json"
 CONTRACT_PATH = ROOT / ".ima" / "CONTINUOUS_IMPROVEMENT_MAP.json"
 
 def load_contract() -> dict:
@@ -37,3 +38,18 @@ def status() -> dict:
         "domain_family_count": len(contract.get("existing_domain_families", [])),
         "lifecycle": contract.get("lifecycle", []),
     }
+
+
+def domain_audit() -> dict:
+    try:
+        data = json.loads(AUDIT_PATH.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            return {}
+        domains = data.get("domains", [])
+        counts = {}
+        for item in domains:
+            state = item.get("state", "UNKNOWN")
+            counts[state] = counts.get(state, 0) + 1
+        return {"id": data.get("id"), "version": data.get("version"), "domain_count": len(domains), "evidence_counts": counts, "priority_order": data.get("priority_order", [])}
+    except Exception:
+        return {}
