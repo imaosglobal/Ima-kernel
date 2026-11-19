@@ -6,6 +6,10 @@ import ima_brain
 from learning.learning_loop import learn_from_event
 import ima_mom
 try:
+    from core.ima_canonical_context import build_context as build_canonical_context
+except Exception:
+    build_canonical_context = None
+try:
     from core.compound_growth import build_context as build_compound_growth_context, contract as compound_growth_contract_fn
 except Exception:
     build_compound_growth_context = None
@@ -128,7 +132,13 @@ class IMAMaster:
             if any(term in message.casefold() for term in opportunity_terms) else ""
         )
         world_pulse_context = compose_world_pulse_instruction() if should_enter_world_pulse(message) else ""
-        provider_message = message + ima_language_instruction + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
+        canonical_context = ""
+        try:
+            if build_canonical_context is not None:
+                canonical_context = "\n\n" + build_canonical_context(message, requested_language)
+        except Exception:
+            canonical_context = ""
+        provider_message = message + ima_language_instruction + response_instruction + opportunity_context + continuous_future_context + compound_growth_context + adaptive_eligibility_context + wonder_help_context + canonical_context + ("\n\n" + world_pulse_context if world_pulse_context else "")
         context = identity_context.build_context(message, public=public)
         context["ima_runtime_identity"] = IMA_IDENTITY_CONTEXT
         context["ima_unified_loop"] = loop_context()
