@@ -72,10 +72,7 @@ const copy = {
     saveFailed: 'לא הצלחתי לאמת את השמירה.',
     footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence',
     resilienceKicker: 'שכבת חוסן אנושית',
-    resilienceTitle: 'כשצריך עזרה — עוברים מפעולה למידע.',
-    resilienceText: 'אמא מרכזת צרכים, משאבים וצעדים מעשיים. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.',
-    resilienceNeed: 'מה קורה עכשיו?', resiliencePhase: 'מצב', resiliencePrepare: 'הכנת מסלול פעולה', resilienceOpen: 'פתיחת שירות', resilienceAdd: 'הוסף למשימות שלי', resilienceDone: 'בוצע', resiliencePrepared: 'מסלול הפעולה הוכן', resilienceEmpty: 'עדיין אין משימות. בחר צורך והתחל.', resilienceSaved: 'המשימה נשמרה במרחב הזה.', resilienceDisclaimer: 'אמא אינה מחליפה שירותי חירום או רשות מוסמכת. פעולה חיצונית מתבצעת רק לאחר אישורך.', resilienceEmergency: 'אם יש סכנה מיידית: פנה עכשיו לשירותי החירום המקומיים.',
-    resilienceTitle: 'כשצריך עזרה — עוברים מפעולה למידע.',
+    resilienceTitle: 'כשצריך עזרה — עוברים ממידע לפעולה.',
     resilienceText: 'אמא מרכזת צרכים, משאבים וצעדים מעשיים. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.',
     resilienceNeed: 'מה קורה עכשיו?', resiliencePhase: 'מצב', resiliencePrepare: 'הכנת מסלול פעולה', resilienceOpen: 'פתיחת שירות', resilienceAdd: 'הוסף למשימות שלי', resilienceDone: 'בוצע', resiliencePrepared: 'מסלול הפעולה הוכן', resilienceEmpty: 'עדיין אין משימות. בחר צורך והתחל.', resilienceSaved: 'המשימה נשמרה במרחב הזה.', resilienceDisclaimer: 'אמא אינה מחליפה שירותי חירום או רשות מוסמכת. פעולה חיצונית מתבצעת רק לאחר אישורך.', resilienceEmergency: 'אם יש סכנה מיידית: פנה עכשיו לשירותי החירום המקומיים.'
   },
