@@ -10,6 +10,7 @@ import {
   submitFeedback
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
+import { RESILIENCE_CATEGORIES, RESILIENCE_PHASES, getResiliencePlan, saveResiliencePlan, loadResiliencePlan } from './services/resilience';
 
 const BASE = '/Ima-kernel/';
 const SUPPORT_URL = BASE + 'support.html';
@@ -26,7 +27,7 @@ const RTL_LOCALES = new Set(['he','ar','fa','ur']);
 const CLEAN_LOGO_URL = 'https://dynamic.heygen.ai/image/f057cd08143342f2994f85d847572fa8/original.png';
 const copy = {
   he: {
-    nav: ['לדבר', 'איך זה עובד', 'הוכחות', 'קהילה'],
+    nav: ['לדבר', 'איך זה עובד', 'הוכחות', 'חוסן', 'קהילה'],
     heroKicker: 'IMA — אמא · בינה אנושית',
     heroTitle: 'אמא כאן\nכדי להבין איתך.',
     heroText: 'לא עוד תפריט של יכולות. שיחה אמיתית, הקשר, בדיקה ולמידה — עם האדם במרכז.',
@@ -69,10 +70,17 @@ const copy = {
     sendChat: 'שליחה',
     saved: 'המשוב נשמר וקיבל קבלה.',
     saveFailed: 'לא הצלחתי לאמת את השמירה.',
-    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence'
+    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence',
+    resilienceKicker: 'שכבת חוסן אנושית',
+    resilienceTitle: 'כשצריך עזרה — עוברים מפעולה למידע.',
+    resilienceText: 'אמא מרכזת צרכים, משאבים וצעדים מעשיים. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.',
+    resilienceNeed: 'מה קורה עכשיו?', resiliencePhase: 'מצב', resiliencePrepare: 'הכנת מסלול פעולה', resilienceOpen: 'פתיחת שירות', resilienceAdd: 'הוסף למשימות שלי', resilienceDone: 'בוצע', resiliencePrepared: 'מסלול הפעולה הוכן', resilienceEmpty: 'עדיין אין משימות. בחר צורך והתחל.', resilienceSaved: 'המשימה נשמרה במרחב הזה.', resilienceDisclaimer: 'אמא אינה מחליפה שירותי חירום או רשות מוסמכת. פעולה חיצונית מתבצעת רק לאחר אישורך.', resilienceEmergency: 'אם יש סכנה מיידית: פנה עכשיו לשירותי החירום המקומיים.',
+    resilienceTitle: 'כשצריך עזרה — עוברים מפעולה למידע.',
+    resilienceText: 'אמא מרכזת צרכים, משאבים וצעדים מעשיים. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.',
+    resilienceNeed: 'מה קורה עכשיו?', resiliencePhase: 'מצב', resiliencePrepare: 'הכנת מסלול פעולה', resilienceOpen: 'פתיחת שירות', resilienceAdd: 'הוסף למשימות שלי', resilienceDone: 'בוצע', resiliencePrepared: 'מסלול הפעולה הוכן', resilienceEmpty: 'עדיין אין משימות. בחר צורך והתחל.', resilienceSaved: 'המשימה נשמרה במרחב הזה.', resilienceDisclaimer: 'אמא אינה מחליפה שירותי חירום או רשות מוסמכת. פעולה חיצונית מתבצעת רק לאחר אישורך.', resilienceEmergency: 'אם יש סכנה מיידית: פנה עכשיו לשירותי החירום המקומיים.'
   },
   en: {
-    nav: ['Talk', 'How it works', 'Proof', 'Community'],
+    nav: ['Talk', 'How it works', 'Proof', 'Resilience', 'Community'],
     heroKicker: 'IMA — human-centered intelligence',
     heroTitle: 'IMA is here\nto understand with you.',
     heroText: 'Not another menu of capabilities. A real conversation, context, verification and learning — with the person at the center.',
@@ -115,7 +123,11 @@ const copy = {
     sendChat: 'Send',
     saved: 'Feedback saved and receipt acknowledged.',
     saveFailed: 'Could not verify that the feedback was saved.',
-    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence'
+    footer: 'IMA — אמא, by Ori Cohen · Human-centered intelligence',
+    resilienceKicker: 'Human resilience layer',
+    resilienceTitle: 'When help is needed, move from information to action.',
+    resilienceText: 'IMA connects needs, resources and practical next steps. In emergencies it points first to official services; in everyday crises it turns a need into an action path.',
+    resilienceNeed: 'What is happening?', resiliencePhase: 'Mode', resiliencePrepare: 'Prepare action path', resilienceOpen: 'Open service', resilienceAdd: 'Add to my tasks', resilienceDone: 'Done', resiliencePrepared: 'Action path prepared', resilienceEmpty: 'No tasks yet. Choose a need to begin.', resilienceSaved: 'Task saved in this space.', resilienceDisclaimer: 'IMA does not replace emergency services or authorized institutions. External actions happen only with your approval.', resilienceEmergency: 'If there is immediate danger: contact your local emergency services now.'
   }
 };
 
@@ -173,10 +185,11 @@ function GoogleButton({ user, onUser, t }) {
   return <div className="ima-google"><div id="ima-google-button" aria-label={t.signIn} />{!ready && !error && <span className="tiny-status">{t.signIn}</span>}{error && <span className="tiny-error">{error}</span>}</div>;
 }
 
-function ChatPanel({ t, lang, user, onClose, chatOnly = false }) {
+function ChatPanel({ t, lang, user, onClose, chatOnly = false, initialMessage = '' }) {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [busy, setBusy] = useState(false);
+  useEffect(() => { if (initialMessage) setMessage(initialMessage); }, [initialMessage]);
   const send = async (text = message) => {
     const value = String(text || '').trim();
     if (!value || busy) return;
@@ -231,6 +244,101 @@ function CanonicalConnectorPanel({ lang, runtime }) {
   </section>;
 }
 
+
+function ResilienceCenter({ lang, user, onOpenChat }) {
+  const he = lang === 'he';
+  const [phase, setPhase] = useState(() => localStorage.getItem('ima-resilience-phase') || 'NORMAL');
+  const [need, setNeed] = useState(() => localStorage.getItem('ima-resilience-need') || RESILIENCE_CATEGORIES[0].id);
+  const [tasks, setTasks] = useState(() => loadResiliencePlan());
+  const [prepared, setPrepared] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('ima-resilience-phase', phase);
+    localStorage.setItem('ima-resilience-need', need);
+  }, [phase, need]);
+
+  const selected = RESILIENCE_CATEGORIES.find(x => x.id === need) || RESILIENCE_CATEGORIES[0];
+  const plan = getResiliencePlan({ phase, need, lang });
+
+  const addTask = (task) => {
+    const next = [...tasks.filter(x => x.id !== task.id), { ...task, addedAt: new Date().toISOString() }];
+    setTasks(next);
+    saveResiliencePlan(next);
+    trackImaEvent('ima_resilience_task_added', { task: task.id, phase, need, language: lang });
+  };
+
+  const toggleTask = (id) => {
+    const next = tasks.map(x => x.id === id ? { ...x, done: !x.done } : x);
+    setTasks(next);
+    saveResiliencePlan(next);
+  };
+
+  const prepareWithIma = async () => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const prompt = he
+        ? \`אני צריך מסלול פעולה מעשי בנושא "\${selected.he}" במצב "\${phase}". בנה לי עד 7 צעדים, לפי סדר עדיפות. הפרד בין מה שאפשר לעשות עכשיו, מה דורש גורם רשמי, ומה לא ידוע. אל תבצע פעולה חיצונית.\`
+        : \`I need a practical action path for "\${selected.en}" in mode "\${phase}". Give me up to 7 prioritized steps. Separate what can be done now, what requires an official provider, and what is unknown. Do not take external action.\`;
+      const answer = await askIma(prompt, { language: lang, interface: 'resilience-layer', authenticated: Boolean(user) });
+      setPrepared(answer);
+      trackImaEvent('ima_resilience_plan_prepared', { phase, need, language: lang });
+    } catch {
+      setPrepared(he ? 'לא הצלחתי להכין את המסלול כרגע. פתח את השירות הרשמי למטה ופעל ישירות.' : 'I could not prepare the path right now. Open the official service below and act directly.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return <section className="resilience-center" id="resilience" aria-label={he ? 'שכבת חוסן אנושית' : 'Human resilience layer'}>
+    <div className="resilience-head">
+      <div>
+        <span className="section-label">{he ? 'שכבת חוסן אנושית' : 'Human resilience layer'}</span>
+        <h2>{he ? 'כשצריך עזרה — עוברים ממידע לפעולה.' : 'When help is needed, move from information to action.'}</h2>
+        <p>{he ? 'אמא מרכזת צורך → משאב → צעד → אימות. בחירום היא מפנה קודם לגורם הרשמי; בשגרה היא עוזרת להפוך צורך למסלול פעולה.' : 'IMA connects need → resource → action → verification. In emergencies it points first to official services; in everyday crises it turns a need into an action path.'}</p>
+      </div>
+      <div className="resilience-emergency-note"><b>{he ? 'חירום' : 'Emergency'}</b><span>{he ? '100 משטרה · 101 מד״א · 102 כבאות · 104 פיקוד העורף' : '100 police · 101 ambulance · 102 fire · 104 Home Front Command'}</span></div>
+    </div>
+
+    <div className="resilience-controls">
+      <label><span>{he ? 'מה קורה עכשיו?' : 'What is happening?'}</span>
+        <select value={need} onChange={e => setNeed(e.target.value)}>{RESILIENCE_CATEGORIES.map(x => <option key={x.id} value={x.id}>{he ? x.he : x.en}</option>)}</select>
+      </label>
+      <label><span>{he ? 'מצב' : 'Mode'}</span>
+        <select value={phase} onChange={e => setPhase(e.target.value)}>{RESILIENCE_PHASES.map(x => <option key={x.id} value={x.id}>{he ? x.he : x.en}</option>)}</select>
+      </label>
+      <button className="cta" onClick={prepareWithIma} disabled={busy}>{busy ? 'IMA…' : (he ? 'הכנת מסלול פעולה' : 'Prepare action path')}</button>
+    </div>
+
+    <div className="resilience-grid">
+      {plan.map(task => <article className="resilience-card" key={task.id}>
+        <div className="resilience-card-top"><span>{task.priority}</span><b>{he ? task.heTitle : task.enTitle}</b></div>
+        <p>{he ? task.heText : task.enText}</p>
+        <div className="resilience-card-actions">
+          {task.url && <a className="ghost" href={task.url} target="_blank" rel="noreferrer" onClick={() => trackImaEvent('ima_resilience_official_service_opened',{task:task.id,language:lang})}>{he ? 'פתיחת שירות רשמי' : 'Open official service'}</a>}
+          <button className="ghost" onClick={() => addTask(task)}>{he ? 'הוסף למשימות שלי' : 'Add to my tasks'}</button>
+        </div>
+      </article>)}
+    </div>
+
+    {tasks.length > 0 && <div className="resilience-tasks">
+      <div className="resilience-tasks-head"><b>{he ? 'המשימות שלי' : 'My tasks'}</b><span>{tasks.filter(x=>!x.done).length} {he ? 'פתוחות' : 'open'}</span></div>
+      {tasks.map(task => <label key={task.id} className={'resilience-task '+(task.done?'done':'')}>
+        <input type="checkbox" checked={Boolean(task.done)} onChange={()=>toggleTask(task.id)}/>
+        <span>{he ? task.heTitle : task.enTitle}</span>
+      </label>)}
+    </div>}
+
+    {prepared && <div className="resilience-prepared">
+      <div className="resilience-prepared-head"><b>{he ? 'מסלול הפעולה שהוכן עם אמא' : 'Action path prepared with IMA'}</b><button className="ghost" onClick={()=>onOpenChat(prepared)}>{he ? 'להמשיך בצ׳ט' : 'Continue in chat'}</button></div>
+      <div>{prepared}</div>
+    </div>}
+
+    <p className="resilience-disclaimer">{he ? 'אמא אינה מחליפה שירותי חירום או רשות מוסמכת. פעולה חיצונית מתבצעת רק לאחר אישורך.' : 'IMA does not replace emergency services or authorized institutions. External actions happen only with your approval.'}</p>
+  </section>;
+}
+
 export default function App() {
   const [lang, setLang] = useState(() => {
     const saved = localStorage.getItem('ima-site-language');
@@ -245,6 +353,7 @@ export default function App() {
   const [feedbackStatus, setFeedbackStatus] = useState('');
   const [installEvent, setInstallEvent] = useState(null);
   const [notice, setNotice] = useState('');
+  const [resiliencePrompt, setResiliencePrompt] = useState('');
   const t = copy[lang] || copy.en;
   const chatOnly = useMemo(() => new URLSearchParams(location.search).get('chat') === '1', []);
 
@@ -290,7 +399,7 @@ export default function App() {
     {notice && <div role="status" className="site-notice">{notice}</div>}
     <header className="site-header">
       <button className="wordmark" onClick={() => scrollTo({top:0,behavior:'smooth'})} aria-label="IMA home"><span className="wordmark-mark"><img src={CLEAN_LOGO_URL} alt="IMA — אמא" /></span><span><b>אמא</b><small>IMA</small></span></button>
-      <nav aria-label="Main navigation">{t.nav.map((item,i)=><button key={item} onClick={()=>document.getElementById(['chat','how','proof','community'][i])?.scrollIntoView({behavior:'smooth'})}>{item}</button>)}</nav>
+      <nav aria-label="Main navigation">{t.nav.map((item,i)=><button key={item} onClick={()=>document.getElementById(['chat','how','proof','resilience','community'][i])?.scrollIntoView({behavior:'smooth'})}>{item}</button>)}</nav>
       <div className="header-actions"><select className="language" value={lang} onChange={e=>{setLang(e.target.value);trackImaEvent('ima_language_selected',{language:e.target.value,source:'public-ui'});}} aria-label="Language">{SUPPORTED_LOCALES.map(([code,name])=><option key={code} value={code}>{name}</option>)}</select><GoogleButton user={user} onUser={setUser} t={t}/></div>
     </header>
     <main id="top">
@@ -298,7 +407,8 @@ export default function App() {
         <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <div className="mama-hero-link clean-hero-logo"><a href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /></a></div>
       </section>
-      {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>setChatOpen(false)} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}{user && <CanonicalConnectorPanel lang={lang} runtime={runtime} />}
+      {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>{setChatOpen(false);setResiliencePrompt('')}} initialMessage={resiliencePrompt} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}{user && <CanonicalConnectorPanel lang={lang} runtime={runtime} />}
+      {user && <ResilienceCenter lang={lang} user={user} onOpenChat={(prompt)=>{ setResiliencePrompt(prompt); setChatOpen(true); }} />}
       <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
       <section className="proof-section" id="proof"><div className="section-intro"><span className="section-label">{t.proofKicker}</span><h2>{t.proofTitle}</h2><p>{t.proofText}</p></div><div className="proof-grid"><article><span className="proof-icon">●</span><b>{runtime?t.online:t.offline}</b><p>{runtime?JSON.stringify(runtime.capabilities||{}).slice(0,220):'IMA runtime'}</p></article><article><span className="proof-icon">01</span><b>{lang==='he'?'מקור פתוח':'Open source'}</b><p>{lang==='he'?'הקוד, הבעיות והדיון הציבורי ניתנים לבדיקה.':'Code, issues and public discussion are inspectable.'}</p></article><article><span className="proof-icon">02</span><b>{lang==='he'?'לא הכול חי':'Not everything is live'}</b><p>{lang==='he'?'יכולות מתוכננות אינן מוצגות כהוכחה.':'Planned capabilities are not presented as proof.'}</p></article></div></section>
       <section className="community-section" id="community"><div><span className="section-label">{t.communityKicker}</span><h2>{t.communityTitle}</h2><p>{t.communityText}</p><div className="community-actions"><a className="cta" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{t.github}</a><a className="ghost" href="https://github.com/imaosglobal/Ima-kernel/issues/170" target="_blank" rel="noreferrer">{lang==='he'?'הגדרת AGI גלובלית':'Global AGI definition'}</a></div></div><div className="feedback-card" id="feedback-panel"><b>{t.feedback}</b><textarea value={feedback} onChange={e=>setFeedback(e.target.value)} placeholder={t.feedbackPlaceholder} maxLength={4000}/><button className="cta" onClick={sendFeedback} disabled={!feedback.trim()}>{t.send}</button>{feedbackStatus&&<small>{feedbackStatus}</small>}</div></section>
