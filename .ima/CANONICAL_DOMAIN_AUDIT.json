@@ -124,7 +124,7 @@
       "id": "provider_neutral_intelligence",
       "anchor": ".ima/intelligence/universal_intelligence_gateway.py",
       "state": "IMPLEMENTED",
-      "next": "Verify each provider/host independently; never infer connection from registry discovery."
+      "next": "Verify each provider independently and run the synergy loop: route users to the best fit, learn only from authorized/public evidence, improve IMA, and verify reciprocal discovery before claiming partnership."
     },
     {
       "id": "security_privacy_and_consent",
