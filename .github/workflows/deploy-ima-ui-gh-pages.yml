@@ -1,0 +1,40 @@
+name: Deploy IMA public product to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ima-ui/**'
+      - '.github/workflows/deploy-ima-ui-gh-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ima-public-pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ima-ui
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ima-ui/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - name: Publish canonical IMA UI
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./ima-ui/dist
+          keep_files: true
+          commit_message: 'deploy: publish canonical IMA public product'
