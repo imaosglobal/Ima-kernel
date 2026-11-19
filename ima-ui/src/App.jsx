@@ -276,8 +276,8 @@ function ResilienceCenter({ lang, user, onOpenChat }) {
     setBusy(true);
     try {
       const prompt = he
-        ? \`אני צריך מסלול פעולה מעשי בנושא "\${selected.he}" במצב "\${phase}". בנה לי עד 7 צעדים, לפי סדר עדיפות. הפרד בין מה שאפשר לעשות עכשיו, מה דורש גורם רשמי, ומה לא ידוע. אל תבצע פעולה חיצונית.\`
-        : \`I need a practical action path for "\${selected.en}" in mode "\${phase}". Give me up to 7 prioritized steps. Separate what can be done now, what requires an official provider, and what is unknown. Do not take external action.\`;
+        ? `אני צריך מסלול פעולה מעשי בנושא "${selected.he}" במצב "${phase}". בנה לי עד 7 צעדים, לפי סדר עדיפות. הפרד בין מה שאפשר לעשות עכשיו, מה דורש גורם רשמי, ומה לא ידוע. אל תבצע פעולה חיצונית.`
+        : `I need a practical action path for "${selected.en}" in mode "${phase}". Give me up to 7 prioritized steps. Separate what can be done now, what requires an official provider, and what is unknown. Do not take external action.`;
       const answer = await askIma(prompt, { language: lang, interface: 'resilience-layer', authenticated: Boolean(user) });
       setPrepared(answer);
       trackImaEvent('ima_resilience_plan_prepared', { phase, need, language: lang });
