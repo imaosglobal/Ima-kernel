@@ -13,6 +13,7 @@ import {
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { RESILIENCE_CATEGORIES, RESILIENCE_PHASES, getResiliencePlan, saveResiliencePlan, loadResiliencePlan } from './services/resilience';
 import { getSocialProtectionContext, buildSocialProtectionTasks, saveSocialProtectionContext } from './services/socialProtection';
+import { MARKET_USE_CASES, getMarketCampaign, buildShareUrl, recordMarketEvent } from './services/marketEntry';
 
 const BASE = '/Ima-kernel/';
 const SUPPORT_URL = BASE + 'support.html';
@@ -20,6 +21,8 @@ const FUNDING_URL = BASE + 'funding.html';
 const PRIVACY_URL = BASE + 'privacy.html';
 const GOOGLE_CAMPAIGN_URL = BASE + '?campaignId=24409551537&utm_source=ima_logo';
 const YOUTUBE_URL = 'https://www.youtube.com/@imaglobal-d4g';
+const MARKET_URL = BASE;
+
 const PAID_PILOT_URL = 'https://github.com/imaosglobal/Ima-kernel/issues/173';
 const SUPPORTED_LOCALES = [
   ['he','עברית'],['en','English'],['ar','العربية'],['fa','فارسی'],['ur','اردو'],['es','Español'],['fr','Français'],['pt','Português'],['de','Deutsch'],['it','Italiano'],['nl','Nederlands'],['pl','Polski'],['cs','Čeština'],['sk','Slovenčina'],['hu','Magyar'],['ro','Română'],['bg','Български'],['el','Ελληνικά'],['hr','Hrvatski'],['sl','Slovenščina'],['et','Eesti'],['lv','Latviešu'],['lt','Lietuvių'],['is','Íslenska'],['sv','Svenska'],['no','Norsk'],['da','Dansk'],['fi','Suomi'],['tr','Türkçe'],['uk','Українська'],['ru','Русский'],['hi','हिन्दी'],['bn','বাংলা'],['zh','中文'],['ja','日本語'],['ko','한국어'],['th','ไทย'],['vi','Tiếng Việt'],['id','Bahasa Indonesia'],['ms','Bahasa Melayu'],['fil','Filipino'],['sw','Kiswahili']
@@ -355,6 +358,9 @@ export default function App() {
   const [feedbackStatus, setFeedbackStatus] = useState('');
   const [installEvent, setInstallEvent] = useState(null);
   const [notice, setNotice] = useState('');
+  const [marketUseCase, setMarketUseCase] = useState(() => new URLSearchParams(location.search).get('use') || '');
+  const [marketCampaign, setMarketCampaign] = useState(() => getMarketCampaign(location.search));
+  const [shareStatus, setShareStatus] = useState('');
   const [resiliencePrompt, setResiliencePrompt] = useState('');
   const t = copy[lang] || copy.en;
   const chatOnly = useMemo(() => new URLSearchParams(location.search).get('chat') === '1', []);
@@ -365,7 +371,8 @@ export default function App() {
     document.documentElement.dir = RTL_LOCALES.has(lang) ? 'rtl' : 'ltr';
     document.title = lang === 'he' ? 'אמא — IMA | בינה אנושית' : 'IMA — Human-Centered Intelligence';
     initializeImaAnalytics();
-    trackImaEvent('ima_public_redesign_view', { language: lang });
+    trackImaEvent('ima_public_redesign_view', { language: lang, campaign: marketCampaign || 'organic', use_case: marketUseCase || 'none' });
+    recordMarketEvent('landing_view', { language: lang, campaign: marketCampaign || 'organic', use_case: marketUseCase || 'none' });
   }, [lang]);
 
   useEffect(() => {
@@ -382,6 +389,28 @@ export default function App() {
     const choice = await installEvent.userChoice;
     trackImaEvent('ima_pwa_install_choice', { outcome: choice.outcome, language: lang });
     setInstallEvent(null);
+  };
+
+  const chooseMarketUseCase = (id) => {
+    setMarketUseCase(id);
+    recordMarketEvent('use_case_selected', { use_case: id, language: lang, campaign: marketCampaign || 'organic' });
+    trackImaEvent('ima_market_use_case_selected', { use_case: id, language: lang, campaign: marketCampaign || 'organic' });
+    const el = document.querySelector('.ima-google');
+    if (!user) el?.scrollIntoView({behavior:'smooth', block:'center'});
+    else setChatOpen(true);
+  };
+
+  const shareIma = async () => {
+    const url = buildShareUrl(MARKET_URL, { use: marketUseCase || 'think', ref: user?.email ? 'user' : 'share', campaign: marketCampaign || 'share' });
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: lang === 'he' ? 'אמא — בינה אנושית' : 'IMA — Human-centered intelligence', text: lang === 'he' ? 'נסה את אמא למשימה אמיתית.' : 'Try IMA for a real task.', url });
+      } else {
+        await navigator.clipboard.writeText(url);
+      }
+      setShareStatus(lang === 'he' ? 'קישור שיתוף מוכן.' : 'Share link ready.');
+      recordMarketEvent('share_completed', { use_case: marketUseCase || 'think', language: lang });
+    } catch {}
   };
 
   const sendFeedback = async () => {
@@ -406,11 +435,17 @@ export default function App() {
     </header>
     <main id="top">
       <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>{if(user)setChatOpen(true);else setNotice(lang==='he'?'יש להיכנס עם Google כדי לפתוח את הצ׳ט האישי של אמא.':'Sign in with Google to open IMA personal chat.');}}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
+        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions"><button className="ghost" onClick={()=>document.getElementById('start')?.scrollIntoView({behavior:'smooth'})}>{lang==='he'?'מה אפשר לעשות עם אמא?':'What can I do with IMA?'}</button>{!user ? <><button className="cta" onClick={()=>{if(user)setChatOpen(true);else setNotice(lang==='he'?'יש להיכנס עם Google כדי לפתוח את הצ׳ט האישי של אמא.':'Sign in with Google to open IMA personal chat.');}}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <div className="mama-hero-link clean-hero-logo"><a href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /></a></div>
       </section>
       {user && (chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>{setChatOpen(false);setResiliencePrompt('')}} initialMessage={resiliencePrompt} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>)}{user && <CanonicalConnectorPanel lang={lang} runtime={runtime} />}
       {user && <ResilienceCenter lang={lang} user={user} onOpenChat={(prompt)=>{ setResiliencePrompt(prompt); setChatOpen(true); }} />}
+      <section className="market-entry-section" id="start">
+        <div className="section-intro"><span className="section-label">{lang==='he'?'התחלה מהירה':'Start here'}</span><h2>{lang==='he'?'אל תנסו את אמא. תנו לה משימה.':'Don’t try IMA. Give it a job.'}</h2><p>{lang==='he'?'בחרו צורך אמיתי. אמא תוביל לשיחה, לבדיקה או לצעד הבא — ולא לרשימת פיצ׳רים.':'Choose a real need. IMA leads to a conversation, verification or next step — not a feature list.'}</p></div>
+        <div className="market-use-grid">{MARKET_USE_CASES.map(item=><button key={item.id} className={'market-use-card'+(marketUseCase===item.id?' selected':'')} onClick={()=>chooseMarketUseCase(item.id)}><span>{lang==='he'?item.heLabel:item.enLabel}</span><small>{lang==='he'?item.heText:item.enText}</small></button>)}</div>
+        <div className="market-entry-actions"><button className="cta" onClick={()=>{if(marketUseCase) chooseMarketUseCase(marketUseCase); else document.getElementById('start')?.scrollIntoView({behavior:'smooth'});}}>{lang==='he'?'להתחיל עכשיו':'Start now'}</button><button className="ghost" onClick={shareIma}>{lang==='he'?'להזמין אדם נוסף':'Invite someone'}</button>{shareStatus&&<small>{shareStatus}</small>}</div>
+        {marketUseCase && <div className="market-intent"><b>{lang==='he'?'המשימה שנבחרה:':'Selected job:'}</b> {(()=>{const x=MARKET_USE_CASES.find(v=>v.id===marketUseCase);return lang==='he'?x?.heLabel:x?.enLabel;})()}</div>}
+      </section>
       <section className="section-new" id="how"><div className="section-intro"><span className="section-label">{t.howKicker}</span><h2>{t.howTitle}</h2></div><div className="principle-grid">{t.cards.map(([n,title,text])=><article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
       <section className="proof-section" id="proof"><div className="section-intro"><span className="section-label">{t.proofKicker}</span><h2>{t.proofTitle}</h2><p>{t.proofText}</p></div><div className="proof-grid"><article><span className="proof-icon">●</span><b>{runtime?t.online:t.offline}</b><p>{runtime?JSON.stringify(runtime.capabilities||{}).slice(0,220):'IMA runtime'}</p></article><article><span className="proof-icon">01</span><b>{lang==='he'?'מקור פתוח':'Open source'}</b><p>{lang==='he'?'הקוד, הבעיות והדיון הציבורי ניתנים לבדיקה.':'Code, issues and public discussion are inspectable.'}</p></article><article><span className="proof-icon">02</span><b>{lang==='he'?'לא הכול חי':'Not everything is live'}</b><p>{lang==='he'?'יכולות מתוכננות אינן מוצגות כהוכחה.':'Planned capabilities are not presented as proof.'}</p></article></div></section>
       <section className="community-section" id="community"><div><span className="section-label">{t.communityKicker}</span><h2>{t.communityTitle}</h2><p>{t.communityText}</p><div className="community-actions"><a className="cta" href="https://github.com/imaosglobal/Ima-kernel" target="_blank" rel="noreferrer">{t.github}</a><a className="ghost" href="https://github.com/imaosglobal/Ima-kernel/issues/170" target="_blank" rel="noreferrer">{lang==='he'?'הגדרת AGI גלובלית':'Global AGI definition'}</a></div></div><div className="feedback-card" id="feedback-panel"><b>{t.feedback}</b><textarea value={feedback} onChange={e=>setFeedback(e.target.value)} placeholder={t.feedbackPlaceholder} maxLength={4000}/><button className="cta" onClick={sendFeedback} disabled={!feedback.trim()}>{t.send}</button>{feedbackStatus&&<small>{feedbackStatus}</small>}</div></section>
