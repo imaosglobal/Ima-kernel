@@ -184,6 +184,7 @@ function GoogleButton({ user, onUser, t }) {
 }
 
 function ChatPanel({ t, lang, user, onClose, chatOnly = false, initialMessage = '' }) {
+  const socialProtection = useMemo(() => getSocialProtectionContext({ user, language: lang }), [user, lang]);
   const [message, setMessage] = useState(initialMessage || '');
   const [messages, setMessages] = useState([]);
   const [busy, setBusy] = useState(false);
@@ -194,7 +195,7 @@ function ChatPanel({ t, lang, user, onClose, chatOnly = false, initialMessage = 
     setMessages(prev => [...prev, { role: 'user', text: value }]);
     trackImaEvent('ima_first_use_attempt', { language: lang });
     try {
-      const response = await askIma(value, { language: lang, interface: chatOnly ? 'chat-only' : 'public-redesign', authenticated: Boolean(user) });
+      const response = await askIma(value, { language: lang, interface: chatOnly ? 'chat-only' : 'public-redesign', authenticated: Boolean(user), country: socialProtection.country, timezone: socialProtection.timezone, device_locale: navigator.language || lang, social_protection_source: socialProtection.sourceConfigured ? 'verified-registry' : 'country-detected-unverified-source' });
       setMessages(prev => [...prev, { role: 'ima', text: response }]);
       trackImaEvent('ima_first_useful_answer_candidate', { language: lang });
       await archiveChatLearningSignal(value, response, { language: lang });
@@ -348,7 +349,7 @@ export default function App() {
     return SUPPORTED_LOCALES.some(([code]) => code === detected) ? detected : 'en';
   });
   const [user, setUser] = useState(() => getStoredGoogleUser());
-  const [chatOpen, setChatOpen] = useState(() => new URLSearchParams(location.search).get('chat') === '1' || Boolean(getStoredGoogleUser()));
+  const [chatOpen, setChatOpen] = useState(() => Boolean(getStoredGoogleUser()));
   const [runtime, setRuntime] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [feedbackStatus, setFeedbackStatus] = useState('');
@@ -394,7 +395,7 @@ export default function App() {
     } catch { setFeedbackStatus(t.saveFailed); }
   };
 
-  if (chatOnly) return <div className="ima-chat-only"><MamaFigure /><h1>{lang === 'he' ? 'אמא' : 'IMA'}</h1><ChatPanel t={t} lang={lang} user={user} chatOnly />{!user && <div className="chat-login"><p>{t.personalText}</p><GoogleButton user={user} onUser={setUser} t={t}/></div>}{user&&<button className="cta install-button" onClick={install}>{t.install}</button>}<button className="chat-only-back" onClick={()=>location.href=BASE}>{lang === 'he' ? 'חזרה לאתר' : 'Back to IMA'}</button></div>;
+  if (chatOnly) return <div className="ima-chat-only"><MamaFigure /><h1>{lang === 'he' ? 'אמא' : 'IMA'}</h1>{user ? <ChatPanel t={t} lang={lang} user={user} chatOnly /> : <div className="chat-login"><p>{t.personalText}</p><GoogleButton user={user} onUser={setUser} t={t}/></div>}{user&&<button className="cta install-button" onClick={install}>{t.install}</button>}<button className="chat-only-back" onClick={()=>location.href=BASE}>{lang === 'he' ? 'חזרה לאתר' : 'Back to IMA'}</button></div>;
 
   return <div className="ima-site" dir={lang === 'he' ? 'rtl' : 'ltr'}>
     {notice && <div role="status" className="site-notice">{notice}</div>}
@@ -405,7 +406,7 @@ export default function App() {
     </header>
     <main id="top">
       <section className="hero-new">
-        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
+        <div className="hero-new-copy"><span className="kicker">{t.heroKicker}</span><h1>{t.heroTitle.split('\n').map((x,i)=><React.Fragment key={x}>{i>0&&<br/>}{x}</React.Fragment>)}</h1><p>{t.heroText}</p><div className="hero-new-actions">{!user ? <><button className="cta" onClick={()=>{if(user)setChatOpen(true);else setNotice(lang==='he'?'יש להיכנס עם Google כדי לפתוח את הצ׳ט האישי של אמא.':'Sign in with Google to open IMA personal chat.');}}>{t.ask}</button><button className="ghost" onClick={()=>document.querySelector('.ima-google')?.scrollIntoView({behavior:'smooth',block:'center'})}>{t.signIn}</button></> : <><button className="cta" onClick={()=>setChatOpen(true)}>{t.ask}</button><button className="ghost" onClick={()=>document.getElementById('proof')?.scrollIntoView({behavior:'smooth'})}>{t.proof}</button><button className="ghost install-button" onClick={install}>{t.install}</button><a className="ghost" href={BASE+'?chat=1'}>{t.chatOnly}</a><a className="ghost" href={BASE+'browser-bridge.html'}>{t.browser}</a><a className="ghost" href={PAID_PILOT_URL} target="_blank" rel="noreferrer">{lang==='he'?'פיילוט בתשלום':'Paid pilot'}</a></>}</div><div className="principle-row"><span>✓ {lang==='he'?'אמת לפני הכרזה':'Truth before claims'}</span><span>✓ {lang==='he'?'אישי נשאר אישי':'Personal stays personal'}</span><span>✓ {lang==='he'?'אדם נשאר בעל הסוכנות':'Human agency stays central'}</span></div></div>
         <div className="mama-hero-link clean-hero-logo"><a href={GOOGLE_CAMPAIGN_URL} aria-label="IMA public campaign"><img className="clean-ima-logo" src={CLEAN_LOGO_URL} alt="IMA — אמא" loading="eager" /></a></div>
       </section>
       {chatOpen ? <ChatPanel t={t} lang={lang} user={user} onClose={()=>{setChatOpen(false);setResiliencePrompt('')}} initialMessage={resiliencePrompt} /> : <section className="chat-collapsed" aria-label={t.openChat}><button onClick={()=>setChatOpen(true)}><MamaFigure compact /><span><b>{lang==='he'?'אמא כאן':'IMA is here'}</b><small>{t.openChat}</small></span></button></section>}{user && <CanonicalConnectorPanel lang={lang} runtime={runtime} />}
