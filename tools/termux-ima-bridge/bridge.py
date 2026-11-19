@@ -286,7 +286,7 @@ def start_cloud_agent():
     if DEVICE_KEY and not any(t.name=='ima-device-frame-relay' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=device_frame_relay_loop,daemon=True,name='ima-device-frame-relay').start()
 
-CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key',*NATIVE_ANDROID_ACTIONS.keys()})
+CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key','android_screenshot','android_navigate','android_tap','android_swipe','android_text','android_key','android_back','android_home','android_read_text','android_status'})
 
 def execute_cloud_action(action, payload):
     # Cloud commands are authenticated device commands, but page/DOM content is untrusted.
