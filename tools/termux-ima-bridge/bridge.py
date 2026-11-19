@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from queue import Queue, Empty
 
 try:
     import websocket
@@ -31,6 +32,10 @@ ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
 DOWNLOADS=pathlib.Path(os.path.expanduser(os.environ.get('IMA_ANDROID_DOWNLOADS','~/storage/downloads')))
 NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_navigate':'navigate','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_key':'key','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
 NATIVE_LOCK=threading.Lock()
+NATIVE_COMMANDS=Queue()
+NATIVE_RESULTS={}
+NATIVE_PROVIDER={'online':False,'package':'','version':'','last_seen':0.0}
+NATIVE_PROVIDER_LOCK=threading.Lock()
 
 def device_serial():
     env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
@@ -83,38 +88,22 @@ def _native_android_command_locked(action,payload=None,timeout=25):
     native=NATIVE_ANDROID_ACTIONS.get(action)
     if not native:
         raise ValueError('unsupported_native_android_action')
-    DOWNLOADS.mkdir(parents=True,exist_ok=True)
-    command_path=DOWNLOADS/'ima_remote_command.json'
-    result_path=DOWNLOADS/'ima_remote_result.json'
-    screen_path=DOWNLOADS/'ima_remote_screen.png'
+    with NATIVE_PROVIDER_LOCK:
+        online=bool(NATIVE_PROVIDER.get('online'))
+        last=float(NATIVE_PROVIDER.get('last_seen') or 0)
+    if not online or time.time()-last>8:
+        raise RuntimeError('native Android transport unavailable: Accessibility provider is offline')
     command_id=str(uuid.uuid4())
-    result_path.unlink(missing_ok=True)
-    command_path.unlink(missing_ok=True)
-    command={'id':command_id,'session':True,'action':native,**(payload or {})}
-    command_path.write_text(json.dumps(command,ensure_ascii=False),encoding='utf-8')
+    NATIVE_COMMANDS.put({'id':command_id,'action':native,**(payload or {})})
     deadline=time.time()+timeout
     while time.time()<deadline:
-        if result_path.exists():
-            try:
-                data=json.loads(result_path.read_text(encoding='utf-8'))
-                if str(data.get('id','')) not in ('',command_id):
-                    time.sleep(0.1)
-                    continue
-                result_path.unlink(missing_ok=True)
-                command_path.unlink(missing_ok=True)
-                if not data.get('ok'):
-                    raise RuntimeError(data.get('error') or data.get('message') or 'native_android_action_failed')
-                if native=='screenshot':
-                    if not screen_path.exists():
-                        raise RuntimeError('native_screenshot_file_missing')
-                    raw=screen_path.read_bytes()
-                    screen_path.unlink(missing_ok=True)
-                    data.update({'mime':'image/png','data':base64.b64encode(raw).decode('ascii'),'source':'android-accessibility','transport':'outbound-https'})
-                return data
-            except (OSError,ValueError):
-                pass
-        time.sleep(0.25)
-    command_path.unlink(missing_ok=True)
+        with NATIVE_PROVIDER_LOCK:
+            result=NATIVE_RESULTS.pop(command_id,None)
+        if result is not None:
+            if not result.get('ok'):
+                raise RuntimeError(result.get('error') or result.get('message') or 'native_android_action_failed')
+            return result
+        time.sleep(0.1)
     raise TimeoutError('native Android transport timed out; accessibility service is not online')
 
 def get_json(path):
@@ -337,10 +326,51 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Methods','GET,POST,OPTIONS')
         self.end_headers()
         self.wfile.write(raw)
+
+    def read_json_body(self):
+        n=int(self.headers.get('Content-Length','0'))
+        return json.loads(self.rfile.read(n) or b'{}')
+
+    def do_native_get(self,path):
+        if path=='/native/poll':
+            try:
+                cmd=NATIVE_COMMANDS.get_nowait()
+            except Empty:
+                return self.send_json({'ok':True,'command':None},204)
+            with NATIVE_PROVIDER_LOCK:
+                NATIVE_PROVIDER['last_seen']=time.time()
+            return self.send_json({'ok':True,'command':cmd})
+        if path=='/native/status':
+            with NATIVE_PROVIDER_LOCK: provider=dict(NATIVE_PROVIDER)
+            provider['online']=bool(provider.get('online') and time.time()-float(provider.get('last_seen') or 0)<8)
+            return self.send_json({'ok':True,'provider':provider,'transport':'native-android-loopback','adb_required':False})
+        return None
+
+    def do_native_post(self,path):
+        if path=='/native/register':
+            body=self.read_json_body()
+            with NATIVE_PROVIDER_LOCK:
+                NATIVE_PROVIDER.update({'online':True,'package':str(body.get('package','')),'version':str(body.get('version','')),'last_seen':time.time()})
+            return self.send_json({'ok':True,'transport':'native-android-loopback','provider':dict(NATIVE_PROVIDER)})
+        if path=='/native/heartbeat':
+            with NATIVE_PROVIDER_LOCK:
+                NATIVE_PROVIDER['online']=True; NATIVE_PROVIDER['last_seen']=time.time()
+            return self.send_json({'ok':True})
+        if path=='/native/result':
+            body=self.read_json_body()
+            cid=str(body.get('id',''))
+            if not cid: return self.send_json({'ok':False,'error':'id required'},400)
+            with NATIVE_PROVIDER_LOCK:
+                NATIVE_RESULTS[cid]=body
+                NATIVE_PROVIDER['online']=True; NATIVE_PROVIDER['last_seen']=time.time()
+            return self.send_json({'ok':True})
+        return None
     def do_OPTIONS(self):
         self.send_json({'ok':True})
     def do_GET(self):
         try:
+            native=self.do_native_get(self.path.split('?',1)[0])
+            if native is not None: return native
             if self.path=='/status':
                 t=target()
                 self.send_json({'ok':True,'bridge':'ima-termux','port':PORT,'cdp':CDP,'cloud':{'enabled':bool(DEVICE_KEY),'api':CLOUD_API,'poll_seconds':CLOUD_POLL_SECONDS},'local_eval_enabled':LOCAL_EVAL_ENABLED,'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}})
@@ -478,6 +508,8 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({'ok':False,'error':str(e)},503)
     def do_POST(self):
         try:
+            native=self.do_native_post(self.path.split('?',1)[0])
+            if native is not None: return native
             origin=self.headers.get('Origin','').rstrip('/')
             path=urllib.parse.urlparse(self.path).path
             if path in ACTION_PATHS and origin and origin not in ALLOWED_ORIGINS:
