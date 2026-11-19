@@ -13,4 +13,4 @@ IMA now treats market entry as a product loop, not an advertising event:
 
 The first market promise is intentionally narrower than the full IMA vision: **give IMA a real human need and let it help with the next useful step.**
 
-Current market evidence shows a large and increasingly competitive AI-assistant/companion market, so IMA should compete on a distinct human-centered workflow rather than generic chatbot breadth. citeturn816999search1turn816999search3
+Current market evidence shows a large and increasingly competitive AI-assistant/companion market, so IMA should compete on a distinct human-centered workflow rather than generic chatbot breadth.
