@@ -29,7 +29,7 @@ ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
 ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
 ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
 DOWNLOADS=pathlib.Path(os.path.expanduser(os.environ.get('IMA_ANDROID_DOWNLOADS','~/storage/downloads')))
-NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
+NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_navigate':'navigate','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_key':'key','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
 NATIVE_LOCK=threading.Lock()
 
 def device_serial():
