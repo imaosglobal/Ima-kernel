@@ -60,5 +60,5 @@ export function loadResiliencePlan(){
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
 }
 export function saveResiliencePlan(tasks){
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks.slice(-30))); } catch {}
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks.slice(-30))); return true; } catch { return false; }
 }
