@@ -1,0 +1,27 @@
+name: IMA Native Android Provider
+on:
+  push:
+    paths:
+      - 'android/ima-native-provider/**'
+      - '.github/workflows/ima-native-provider.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build APK
+        working-directory: android/ima-native-provider
+        run: gradle :app:assembleDebug
+      - name: Verify APK
+        run: test -s android/ima-native-provider/app/build/outputs/apk/debug/app-debug.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ima-native-provider-debug-apk
+          path: android/ima-native-provider/app/build/outputs/apk/debug/app-debug.apk
