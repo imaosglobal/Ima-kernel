@@ -258,7 +258,7 @@ function ResilienceCenter({ lang, user, onOpenChat }) {
 
   const selected = RESILIENCE_CATEGORIES.find(x => x.id === need) || RESILIENCE_CATEGORIES[0];
   const basePlan = getResiliencePlan({ phase, need, lang });
-  const plan = need === 'income' ? [...buildSocialProtectionTasks(socialProtection), ...basePlan.filter(x => x.id !== 'btl-unemployment')].slice(0,7) : basePlan;
+  const plan = need === 'income' ? [...buildSocialProtectionTasks(socialProtection), ...basePlan.filter(x => x.id !== 'btl-unemployment')].slice(0,8) : basePlan;
 
   useEffect(() => { if (need === 'income') saveSocialProtectionContext(socialProtection); }, [need, socialProtection]);
 
