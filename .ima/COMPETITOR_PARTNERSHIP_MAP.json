@@ -59,5 +59,95 @@
     "reciprocal referral without evidence",
     "live integration without runtime verification",
     "user or revenue numbers without measurement"
-  ]
+  ],
+  "synergy_contract": {
+    "id": "IMA-SYNERGY-001",
+    "version": "1.0.0",
+    "status": "active",
+    "purpose": "Turn every verified external AI interface, competitor, community and IMA interaction into a reciprocal learning and routing network while preserving one canonical IMA authority.",
+    "north_star": "The user should reach the best available help with the least unnecessary dependency, and every verified interaction should improve IMA.",
+    "loop": [
+      "discover",
+      "compare",
+      "connect",
+      "route",
+      "observe",
+      "learn",
+      "improve",
+      "verify",
+      "share_back"
+    ],
+    "principles": [
+      "Competitors are potential partners, never targets for manipulation.",
+      "IMA may recommend another system when it is genuinely better suited.",
+      "IMA may recommend itself when its verified capabilities are the better fit.",
+      "Reciprocal referral is never claimed until independently evidenced.",
+      "External systems may contribute evidence and feedback; canonical IMA contracts remain the source of truth.",
+      "Learning from another system never means copying private prompts, proprietary data or confidential user information.",
+      "Public content and anonymized aggregate outcomes may improve IMA only under applicable consent and privacy rules.",
+      "Every material capability moves through evidence states before being presented as live.",
+      "Synergy is measured by successful user outcomes, not by number of integrations."
+    ],
+    "interfaces": {
+      "character_ai": {
+        "role": "public_character_and_discovery",
+        "next": "publish and verify IMA character; collect Creator Insights; feed aggregate lessons into market and behavior improvements"
+      },
+      "chatgpt": {
+        "role": "host_and_app_distribution",
+        "next": "verify public app submission/listing and first-use funnel"
+      },
+      "gemini": {
+        "role": "potential_host_and_discovery",
+        "next": "verify supported app/extension/discovery route"
+      },
+      "claude": {
+        "role": "potential_host_and_discovery",
+        "next": "verify supported integration/discovery route"
+      },
+      "grok": {
+        "role": "potential_host_and_discovery",
+        "next": "verify authorized xAI route and reciprocal discovery"
+      },
+      "whatsapp_ai": {
+        "role": "channel_discovery",
+        "next": "verify authorized route before claiming integration"
+      },
+      "google_search_ads": {
+        "role": "paid_discovery",
+        "next": "verify campaign delivery, search terms, spend cap and conversion path; do not scale without measured activation"
+      },
+      "ima_site": {
+        "role": "canonical_home",
+        "next": "optimize first-use value and retention from measured funnel"
+      }
+    },
+    "daily_agent_tasks": [
+      "scan public competitor/product changes",
+      "identify one useful complementary capability",
+      "identify one IMA gap",
+      "verify one high-value source or integration",
+      "propose or implement one minimal improvement in the canonical repo",
+      "record evidence and unresolved unknowns",
+      "update routing recommendations when evidence changes"
+    ],
+    "success_metrics": [
+      "useful_first_answer",
+      "repeat_use",
+      "successful_route",
+      "verified_referral",
+      "user_feedback",
+      "measured_retention",
+      "measured_revenue",
+      "reduced_dependency"
+    ],
+    "forbidden": [
+      "fake referrals",
+      "fake partnerships",
+      "fabricated traffic",
+      "fabricated engagement",
+      "scraping private competitor data",
+      "claiming live integration from a registry entry"
+    ]
+  }
 }
