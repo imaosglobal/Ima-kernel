@@ -1,0 +1,97 @@
+{
+  "schema": "IMA-CHANNEL-SYNERGY-001",
+  "version": "1.0.0",
+  "status": "active",
+  "principle": "IMA is one canonical human-centered intelligence service presented through authorized channels; channels are interfaces, not separate IMA systems.",
+  "identity": {
+    "name": "IMA — אמא",
+    "tagline": "בינה אנושית שעוזרת לך למצוא את הצעד הבא"
+  },
+  "channels": [
+    {
+      "id": "ima_site",
+      "type": "canonical_home",
+      "status": "live_target",
+      "role": "canonical continuity and first-use"
+    },
+    {
+      "id": "chatgpt",
+      "type": "ai_host",
+      "status": "integration_assets_present",
+      "role": "host/app discovery"
+    },
+    {
+      "id": "character_ai",
+      "type": "ai_host",
+      "status": "character_not_verified_public",
+      "role": "public character and discovery"
+    },
+    {
+      "id": "telegram_bot",
+      "type": "messaging",
+      "status": "adapter_ready_activation_required",
+      "role": "personal agent and community entry"
+    },
+    {
+      "id": "whatsapp_ai",
+      "type": "messaging",
+      "status": "adapter_contract_only",
+      "role": "personal-agent route pending authorized integration"
+    },
+    {
+      "id": "google_ads",
+      "type": "paid_discovery",
+      "status": "measurement_required",
+      "role": "controlled acquisition"
+    },
+    {
+      "id": "social_channels",
+      "type": "distribution",
+      "status": "available_via_authorized_connectors",
+      "role": "public education and discovery"
+    },
+    {
+      "id": "communities",
+      "type": "community",
+      "status": "policy_limited",
+      "role": "answer-first participation; no spam or mass unsolicited posting"
+    }
+  ],
+  "routing": {
+    "rule": "Route each user to the best verified help, including another AI, service, professional or IMA itself.",
+    "reciprocal_referrals": "Only record or claim reciprocal referral after evidence of an actual referral.",
+    "privacy": "Never import private group/member data or competitor secrets; use public content or explicit authorization only."
+  },
+  "activation_requirements": [
+    "Telegram bot token owned/authorized by IMA operator",
+    "Webhook URL deployed on canonical IMA backend",
+    "Live send/receive test",
+    "Privacy and abuse controls verified",
+    "Public bot link recorded"
+  ],
+  "community_policy": {
+    "allowed": [
+      "public educational posts",
+      "answering relevant questions",
+      "community-approved self-introduction",
+      "links when contextually relevant"
+    ],
+    "forbidden": [
+      "mass unsolicited posting",
+      "automated joining of groups",
+      "repetitive promotional replies",
+      "pretending to be a human or official partner",
+      "scraping private member data"
+    ]
+  },
+  "metrics": [
+    "first_use",
+    "useful_answer",
+    "return_use",
+    "successful_route",
+    "referral",
+    "community_response",
+    "feedback",
+    "retention"
+  ]
+}
