@@ -54,8 +54,9 @@ Do **not** start `bridge.py` separately if `bridge_launcher.py` is already runni
 
 The bridge binds locally to `127.0.0.1`. The cloud channel is outbound and authenticated with a per-device key. Commands are scoped by the IMA API and should be verified after execution.
 
-The native Android transport still requires a supported Android-side provider for screen capture and input. The system must not claim LIVE-001 device control is connected until that transport is runtime-verified.
+The native Android transport is implemented by `android/ima-native-provider`: an Android AccessibilityService polls the local Termux bridge over loopback (`127.0.0.1:8787`) and provides screen capture/input without ADB, Wireless Debugging, a fixed Wi-Fi address, or an inbound network port. LIVE-001 must still report the provider as unavailable until the Android service is installed, enabled, and runtime-verified.
 
 ## Interactive IMA UI
 
 The IMA Chat page contains the canonical LIVE-001 panel. It is not a second browser system and all future improvements must attach to LIVE-001.
+\n## Native provider\n\nBuild artifact: `ima-native-provider-debug-apk`. After installation, Android requires the user to enable IMA under Accessibility. This is the only required Android authorization; the device transport itself remains local loopback + outbound HTTPS.\n
