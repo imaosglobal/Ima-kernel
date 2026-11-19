@@ -8,6 +8,8 @@ import android.graphics.Path;
 import android.hardware.HardwareBuffer;
 import android.os.Build;
 import android.os.Bundle;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.MediaStore;
@@ -62,7 +64,9 @@ public class IMABrowserAccessibilityService extends AccessibilityService {
             }
             String action = c.optString("action", "");
             if ("screenshot".equals(action)) takeScreen(c.optString("id", ""));
-            else if ("tap".equals(action)) {
+            else if ("navigate".equals(action)) {
+                result(c, navigate(c.optString("url", "")), "navigate");
+            } else if ("tap".equals(action)) {
                 tap(c.optDouble("x"), c.optDouble("y"));
                 result(c, true, "tap_dispatched");
             } else if ("swipe".equals(action)) swipe(c);
@@ -72,6 +76,8 @@ public class IMABrowserAccessibilityService extends AccessibilityService {
             else if ("read_text".equals(action)) result(c, true, readVisibleText());
             else if ("text".equals(action)) {
                 result(c, setFocusedText(c.optString("text", "")), "text");
+            } else if ("key".equals(action)) {
+                result(c, handleKey(c.optString("key", "")), "key");
             } else if ("status".equals(action)) result(c, true, "IMA_REMOTE_ACCESSIBILITY_ONLINE");
             else result(c, false, "UNKNOWN_ACTION");
             if (!"screenshot".equals(action)) deleteDownload("ima_remote_command.json");
@@ -109,6 +115,48 @@ public class IMABrowserAccessibilityService extends AccessibilityService {
                 deleteDownload("ima_remote_command.json");
             }
         });
+    }
+
+    private boolean navigate(String url) {
+        if (url == null || !(url.startsWith("https://") || url.startsWith("http://"))) return false;
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean handleKey(String key) {
+        if ("Escape".equals(key)) return performGlobalAction(GLOBAL_ACTION_BACK);
+        if ("Backspace".equals(key)) {
+            AccessibilityNodeInfo root = getRootInActiveWindow();
+            if (root == null) return false;
+            AccessibilityNodeInfo node = root.findFocus(AccessibilityNodeInfo.FOCUS_INPUT);
+            if (node == null) node = findEditable(root);
+            if (node == null) return false;
+            CharSequence current = node.getText();
+            if (current == null || current.length() == 0) { node.recycle(); return true; }
+            Bundle args = new Bundle();
+            args.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,
+                    current.subSequence(0, current.length() - 1));
+            boolean ok = node.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, args);
+            node.recycle();
+            return ok;
+        }
+        if ("Enter".equals(key)) {
+            AccessibilityNodeInfo root = getRootInActiveWindow();
+            if (root == null) return false;
+            AccessibilityNodeInfo node = root.findFocus(AccessibilityNodeInfo.FOCUS_INPUT);
+            if (node == null) node = findEditable(root);
+            if (node == null) return false;
+            boolean ok = node.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+            node.recycle();
+            return ok;
+        }
+        return false;
     }
 
     private boolean setFocusedText(String text) {
