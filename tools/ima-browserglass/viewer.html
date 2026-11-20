@@ -128,7 +128,7 @@
     }
     function startDeviceStream(){
       stopDeviceStream();
-      const url='/api/device/stream?ts='+Date.now();
+      const url='/api/device/stream?embed=chatgpt&ts='+Date.now();
       deviceStream=new EventSource(url);
       deviceStream.onmessage=()=>{};
       deviceStream.onopen=()=>{status.textContent='מסך Android — חיבור חי';};
@@ -136,7 +136,7 @@
       const original=EventSource.prototype; // keep connection semantics explicit; binary stream is handled below.
       deviceStream.close();
       deviceStream=null;
-      fetch(url,{cache:'no-store',credentials:'same-origin'}).then(async r=>{
+      fetch(url,{cache:'no-store',credentials:'same-origin',headers:{'Cache-Control':'no-cache'}}).then(async r=>{
         if(!r.ok)throw new Error('device stream '+r.status);
         status.textContent='מסך Android — חיבור חי';
         const reader=r.body.getReader();
