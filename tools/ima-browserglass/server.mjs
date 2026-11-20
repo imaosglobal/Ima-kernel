@@ -272,7 +272,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    if (req.url === '/') {
+    if (urlObj.pathname === '/') {
       const html = await readFile(new URL('./viewer.html', import.meta.url), 'utf8');
       res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
       res.end(html);
