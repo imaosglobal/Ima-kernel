@@ -147,8 +147,13 @@ const server = http.createServer(async (req, res) => {
     const hasEmbedCookie = cookieHeader.split(';').some(v => v.trim().startsWith(EMBED_COOKIE + '='));
     const referer = String(req.headers.referer || '');
     const origin = String(req.headers.origin || '');
-    const embedAllowed = EMBED_ORIGINS.some(base => referer.startsWith(base + '/') || origin === base);
-    if (req.url === '/' && embedAllowed) {
+    const fetchDest = String(req.headers['sec-fetch-dest'] || '');
+    const fetchSite = String(req.headers['sec-fetch-site'] || '');
+    const urlObj = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`);
+    const explicitEmbed = urlObj.searchParams.get('embed') === 'chatgpt';
+    const embedAllowed = EMBED_ORIGINS.some(base => referer.startsWith(base + '/') || origin === base)
+      || (explicitEmbed && fetchDest === 'iframe' && (fetchSite === 'cross-site' || fetchSite === 'same-site'));
+    if (urlObj.pathname === '/' && embedAllowed) {
       res.setHeader('Set-Cookie', `${EMBED_COOKIE}=1; Path=/; Secure; HttpOnly; SameSite=None; Max-Age=86400`);
     }
 
