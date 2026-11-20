@@ -151,8 +151,7 @@ const server = http.createServer(async (req, res) => {
     const fetchSite = String(req.headers['sec-fetch-site'] || '');
     const urlObj = new URL(req.url || '/', `http://${req.headers.host || 'localhost'}`);
     const explicitEmbed = urlObj.searchParams.get('embed') === 'chatgpt';
-    const embedAllowed = EMBED_ORIGINS.some(base => referer.startsWith(base + '/') || origin === base)
-      || (explicitEmbed && fetchDest === 'iframe' && (fetchSite === 'cross-site' || fetchSite === 'same-site'));
+    const embedAllowed = EMBED_ORIGINS.some(base => referer.startsWith(base + '/') || origin === base) || explicitEmbed;
     if (urlObj.pathname === '/' && embedAllowed) {
       res.setHeader('Set-Cookie', `${EMBED_COOKIE}=1; Path=/; Secure; HttpOnly; SameSite=None; Max-Age=86400`);
     }
