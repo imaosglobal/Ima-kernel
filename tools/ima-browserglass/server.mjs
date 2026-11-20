@@ -23,6 +23,7 @@ let latestDeviceFrame = null;
 let latestDeviceFrameAt = 0;
 let latestDeviceSerial = null;
 let latestDeviceContentType = 'image/png';
+const deviceStreamClients = new Set();
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -176,7 +177,40 @@ const server = http.createServer(async (req, res) => {
       latestDeviceFrameAt=Date.now();
       latestDeviceSerial=String(req.headers['x-ima-device-serial'] || '');
       latestDeviceContentType=String(req.headers['content-type'] || 'image/png').split(';')[0] || 'image/png';
+      const frame = latestDeviceFrame;
+      for (const client of deviceStreamClients) {
+        try {
+          client.write(`--ima-frame\r\nContent-Type: ${latestDeviceContentType}\r\nContent-Length: ${frame.length}\r\nX-IMA-Device-Serial: ${latestDeviceSerial || ''}\r\nX-IMA-Frame-At: ${latestDeviceFrameAt}\r\n\r\n`);
+          client.write(frame);
+          client.write('\r\n');
+        } catch { deviceStreamClients.delete(client); }
+      }
       res.writeHead(204, {'cache-control':'no-store'}); res.end(); return;
+    }
+
+    if (req.url?.startsWith('/api/device/stream') && req.method === 'GET') {
+      if (!hasEmbedCookie && !embedAllowed) {
+        res.writeHead(403, {'content-type':'application/json'});
+        res.end(JSON.stringify({error:'IMA embed required'}));
+        return;
+      }
+      res.writeHead(200, {
+        'content-type':'multipart/x-mixed-replace; boundary=ima-frame',
+        'cache-control':'no-store, no-cache, must-revalidate',
+        'pragma':'no-cache',
+        'connection':'keep-alive',
+        'x-accel-buffering':'no',
+      });
+      deviceStreamClients.add(res);
+      req.on('close', () => deviceStreamClients.delete(res));
+      if (latestDeviceFrame) {
+        try {
+          res.write(`--ima-frame\r\nContent-Type: ${latestDeviceContentType}\r\nContent-Length: ${latestDeviceFrame.length}\r\nX-IMA-Device-Serial: ${latestDeviceSerial || ''}\r\nX-IMA-Frame-At: ${latestDeviceFrameAt}\r\n\r\n`);
+          res.write(latestDeviceFrame);
+          res.write('\r\n');
+        } catch { deviceStreamClients.delete(res); }
+      }
+      return;
     }
 
     if (req.url === '/api/device/screen' && req.method === 'GET') {

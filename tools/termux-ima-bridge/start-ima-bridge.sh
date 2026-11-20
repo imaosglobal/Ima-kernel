@@ -11,20 +11,23 @@ echo "=== $(date -Is) IMA bridge autostart ==="
 export PATH="$PREFIX/bin:$PATH"
 export IMA_CHROME_CDP="http://127.0.0.1:9222"
 export IMA_CHROME_TARGET_HINT="imaosglobal.github.io/Ima-kernel"
+export ADB_MDNS_AUTO_CONNECT="adb-tls-connect"
 export IMA_MCP_URL="https://ima-universal-action-core.onrender.com/mcp"
-export IMA_ANDROID_DOWNLOADS="$HOME_DIR/storage/downloads"
-
-# Keep one canonical bridge process; the launcher extends bridge.py with MCP relay endpoints.
 if pgrep -f "$BRIDGE_DIR/bridge_launcher.py" >/dev/null 2>&1 || pgrep -f "$BRIDGE_DIR/bridge.py" >/dev/null 2>&1; then
   echo "bridge already running"
   exit 0
 fi
-
 "$PREFIX/bin/am" start -a android.intent.action.VIEW -d "https://imaosglobal.github.io/Ima-kernel/" com.android.chrome >/dev/null 2>&1 || true
-
 cd "$BRIDGE_DIR"
 "$PREFIX/bin/python" bridge_launcher.py &
 BRIDGE_PID=$!
-
-wait "$BRIDGE_PID"
+while kill -0 "$BRIDGE_PID" 2>/dev/null; do
+  "$PREFIX/bin/adb" start-server >/dev/null 2>&1 || true
+  SERIAL=$("$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}')
+  if [ -n "${SERIAL:-}" ]; then
+    "$PREFIX/bin/adb" -s "$SERIAL" forward --remove tcp:9222 >/dev/null 2>&1 || true
+    "$PREFIX/bin/adb" -s "$SERIAL" forward tcp:9222 localabstract:chrome_devtools_remote >/dev/null 2>&1 || true
+  fi
+  sleep 5
+done
 echo "bridge exited; autostart loop ending"

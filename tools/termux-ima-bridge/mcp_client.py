@@ -5,8 +5,7 @@ import json, os, uuid, urllib.request, urllib.error
 MCP_URL=os.environ.get("IMA_MCP_URL","https://ima-universal-action-core.onrender.com/mcp").rstrip("/")
 MCP_PROTOCOL=os.environ.get("IMA_MCP_PROTOCOL_VERSION","2025-06-18")
 
-class MCPError(RuntimeError):
-    pass
+class MCPError(RuntimeError): pass
 
 class IMA_MCPClient:
     def __init__(self,url=MCP_URL):
@@ -25,8 +24,7 @@ class IMA_MCPClient:
             with urllib.request.urlopen(req,timeout=20) as r:
                 raw=r.read().decode("utf-8","replace")
                 sid=r.headers.get("Mcp-Session-Id") or r.headers.get("mcp-session-id")
-                if sid:
-                    self.session_id=sid
+                if sid: self.session_id=sid
                 return r.status,raw
         except urllib.error.HTTPError as e:
             raise MCPError(f"MCP HTTP {e.code}: {e.read().decode('utf-8','replace')[:1000]}")
@@ -34,17 +32,13 @@ class IMA_MCPClient:
     @staticmethod
     def _parse(raw):
         raw=raw.strip()
-        if not raw:
-            return {}
-        try:
-            return json.loads(raw)
+        if not raw: return {}
+        try: return json.loads(raw)
         except json.JSONDecodeError:
             data=[x[5:] for x in raw.splitlines() if x.startswith("data:")]
             if data:
-                try:
-                    return json.loads("\n".join(data))
-                except json.JSONDecodeError:
-                    pass
+                try: return json.loads("\n".join(data))
+                except json.JSONDecodeError: pass
         raise MCPError("MCP response was not JSON/JSON-SSE")
 
     def initialize(self):
@@ -53,11 +47,9 @@ class IMA_MCPClient:
             "params":{"protocolVersion":self.protocol_version,"capabilities":{},
                       "clientInfo":{"name":"ima-termux-bridge","version":"1.0.0"}}
         },False)
-        if status<200 or status>=300:
-            raise MCPError(f"initialize HTTP {status}")
+        if status<200 or status>=300: raise MCPError(f"initialize HTTP {status}")
         msg=self._parse(raw)
-        if "error" in msg:
-            raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
+        if "error" in msg: raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
         result=msg.get("result") or {}
         self.protocol_version=result.get("protocolVersion",self.protocol_version)
         self.server_info=result.get("serverInfo") or {}
@@ -66,26 +58,18 @@ class IMA_MCPClient:
         return result
 
     def tools_list(self):
-        if not self.session_id:
-            self.initialize()
+        if not self.session_id: self.initialize()
         status,raw=self._post({"jsonrpc":"2.0","id":str(uuid.uuid4()),"method":"tools/list","params":{}})
-        if status<200 or status>=300:
-            raise MCPError(f"tools/list HTTP {status}")
         msg=self._parse(raw)
-        if "error" in msg:
-            raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
+        if "error" in msg: raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
         return (msg.get("result") or {}).get("tools") or []
 
     def tools_call(self,name,args=None):
-        if not self.session_id:
-            self.initialize()
+        if not self.session_id: self.initialize()
         status,raw=self._post({"jsonrpc":"2.0","id":str(uuid.uuid4()),"method":"tools/call",
                                "params":{"name":name,"arguments":args or {}}})
-        if status<200 or status>=300:
-            raise MCPError(f"tools/call HTTP {status}")
         msg=self._parse(raw)
-        if "error" in msg:
-            raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
+        if "error" in msg: raise MCPError(json.dumps(msg["error"],ensure_ascii=False))
         return msg.get("result") or {}
 
     def context_package(self):

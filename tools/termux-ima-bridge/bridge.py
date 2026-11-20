@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket, uuid
+import base64, json, os, sys, time, threading, urllib.request, urllib.parse, pathlib, subprocess, socket
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from queue import Queue, Empty
 
 try:
     import websocket
@@ -29,13 +28,6 @@ ALLOWED_ORIGINS={x.strip().rstrip('/') for x in os.environ.get('IMA_ALLOWED_ORIG
 ACTION_PATHS={'/navigate','/eval','/click','/tap','/scroll','/type','/key'}
 ADB_BIN=os.environ.get('IMA_ADB_BIN','/data/data/com.termux/files/usr/bin/adb')
 ADB_SERIAL=os.environ.get('IMA_ADB_SERIAL','').strip()
-DOWNLOADS=pathlib.Path(os.path.expanduser(os.environ.get('IMA_ANDROID_DOWNLOADS','~/storage/downloads')))
-NATIVE_ANDROID_ACTIONS={'android_screenshot':'screenshot','android_navigate':'navigate','android_tap':'tap','android_swipe':'swipe','android_text':'text','android_key':'key','android_back':'back','android_home':'home','android_read_text':'read_text','android_status':'status'}
-NATIVE_LOCK=threading.Lock()
-NATIVE_COMMANDS=Queue()
-NATIVE_RESULTS={}
-NATIVE_PROVIDER={'online':False,'package':'','version':'','last_seen':0.0}
-NATIVE_PROVIDER_LOCK=threading.Lock()
 
 def device_serial():
     env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
@@ -73,38 +65,9 @@ def device_screenshot_png():
     serial=device_serial()
     if not serial: raise RuntimeError('Android device ADB transport unavailable')
     proc=subprocess.run([ADB_BIN,'-s',serial,'exec-out','screencap','-p'],stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=8)
-    if proc.returncode or not proc.stdout.startswith(b'\\x89PNG'):
+    if proc.returncode or not proc.stdout.startswith(b'\x89PNG'):
         raise RuntimeError('Android screen capture unavailable: '+(proc.stderr.decode(errors='replace').strip() or 'no PNG returned'))
     return serial,proc.stdout
-
-def native_android_command(action,payload=None,timeout=25):
-    native=NATIVE_ANDROID_ACTIONS.get(action)
-    if not native:
-        raise ValueError('unsupported_native_android_action')
-    with NATIVE_LOCK:
-        return _native_android_command_locked(action,payload,timeout)
-
-def _native_android_command_locked(action,payload=None,timeout=25):
-    native=NATIVE_ANDROID_ACTIONS.get(action)
-    if not native:
-        raise ValueError('unsupported_native_android_action')
-    with NATIVE_PROVIDER_LOCK:
-        online=bool(NATIVE_PROVIDER.get('online'))
-        last=float(NATIVE_PROVIDER.get('last_seen') or 0)
-    if not online or time.time()-last>8:
-        raise RuntimeError('native Android transport unavailable: Accessibility provider is offline')
-    command_id=str(uuid.uuid4())
-    NATIVE_COMMANDS.put({'id':command_id,'action':native,**(payload or {})})
-    deadline=time.time()+timeout
-    while time.time()<deadline:
-        with NATIVE_PROVIDER_LOCK:
-            result=NATIVE_RESULTS.pop(command_id,None)
-        if result is not None:
-            if not result.get('ok'):
-                raise RuntimeError(result.get('error') or result.get('message') or 'native_android_action_failed')
-            return result
-        time.sleep(0.1)
-    raise TimeoutError('native Android transport timed out; accessibility service is not online')
 
 def get_json(path):
     with urllib.request.urlopen(CDP+path, timeout=5) as r:
@@ -146,17 +109,17 @@ def evaluate(expression, preferred_id=None):
     return cdp('Runtime.evaluate', {'expression':expression,'returnByValue':True,'awaitPromise':True}, preferred_id)
 
 def execute_action(action,payload):
-    if action in NATIVE_ANDROID_ACTIONS:
-        return native_android_command(action,payload)
     preferred_id=str(payload.get('target_id','')).strip() or None
     if action=='status':
-        return {'ok':True,'transport':'outbound-native-android','cloud_enabled':bool(DEVICE_KEY),'local_bridge':True,'adb_required':False}
+        t=target(preferred_id)
+        return {'ok':True,'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}}
     if action=='tabs':
         return {'ok':True,'tabs':get_json('/json/list')}
     if action=='screenshot':
         return {'ok':True,'mime':'image/png','data':cdp('Page.captureScreenshot',{'format':'png','fromSurface':True}, preferred_id)['data']}
     if action=='device_screen':
-        return native_android_command('android_screenshot')
+        serial,raw=device_screenshot_png()
+        return {'ok':True,'mime':'image/png','data':base64.b64encode(raw).decode('ascii'),'source':'android-device-screen','serial':serial}
     if action=='navigate':
         url=str(payload.get('url','')).strip()
         if not url.startswith(('https://','http://')):
@@ -222,13 +185,7 @@ def cloud_request(path,method='GET',payload=None):
 def upload_device_frame():
     if not DEVICE_KEY:
         return
-    result=native_android_command('android_screenshot',{},timeout=12)
-    raw=base64.b64decode(result['data'])
-    device_id=''
-    try:
-        device_id=str(json.loads(pathlib.Path(STATE_FILE).read_text(encoding='utf-8')).get('device_id','')).strip()
-    except Exception:
-        pass
+    serial,raw=device_screenshot_png()
     req=urllib.request.Request(
         BROWSERGLASS_API+'/api/device/frame',
         data=raw,
@@ -236,7 +193,7 @@ def upload_device_frame():
             'Content-Type':'image/png',
             'Cache-Control':'no-store',
             'X-IMA-Device-Key':DEVICE_KEY,
-            'X-IMA-Device-Serial':device_id or 'android-accessibility',
+            'X-IMA-Device-Serial':serial,
         },
         method='POST',
     )
@@ -273,7 +230,7 @@ def start_cloud_agent():
     if DEVICE_KEY and not any(t.name=='ima-device-frame-relay' and t.is_alive() for t in threading.enumerate()):
         threading.Thread(target=device_frame_relay_loop,daemon=True,name='ima-device-frame-relay').start()
 
-CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key','android_screenshot','android_navigate','android_tap','android_swipe','android_text','android_key','android_back','android_home','android_read_text','android_status'})
+CLOUD_ALLOWED_ACTIONS = frozenset({'status','tabs','screenshot','device_screen','navigate','click','tap','scroll','type','key'})
 
 def execute_cloud_action(action, payload):
     # Cloud commands are authenticated device commands, but page/DOM content is untrusted.
@@ -326,51 +283,10 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Methods','GET,POST,OPTIONS')
         self.end_headers()
         self.wfile.write(raw)
-
-    def read_json_body(self):
-        n=int(self.headers.get('Content-Length','0'))
-        return json.loads(self.rfile.read(n) or b'{}')
-
-    def do_native_get(self,path):
-        if path=='/native/poll':
-            try:
-                cmd=NATIVE_COMMANDS.get_nowait()
-            except Empty:
-                return self.send_json({'ok':True,'command':None},204)
-            with NATIVE_PROVIDER_LOCK:
-                NATIVE_PROVIDER['last_seen']=time.time()
-            return self.send_json({'ok':True,'command':cmd})
-        if path=='/native/status':
-            with NATIVE_PROVIDER_LOCK: provider=dict(NATIVE_PROVIDER)
-            provider['online']=bool(provider.get('online') and time.time()-float(provider.get('last_seen') or 0)<8)
-            return self.send_json({'ok':True,'provider':provider,'transport':'native-android-loopback','adb_required':False})
-        return None
-
-    def do_native_post(self,path):
-        if path=='/native/register':
-            body=self.read_json_body()
-            with NATIVE_PROVIDER_LOCK:
-                NATIVE_PROVIDER.update({'online':True,'package':str(body.get('package','')),'version':str(body.get('version','')),'last_seen':time.time()})
-            return self.send_json({'ok':True,'transport':'native-android-loopback','provider':dict(NATIVE_PROVIDER)})
-        if path=='/native/heartbeat':
-            with NATIVE_PROVIDER_LOCK:
-                NATIVE_PROVIDER['online']=True; NATIVE_PROVIDER['last_seen']=time.time()
-            return self.send_json({'ok':True})
-        if path=='/native/result':
-            body=self.read_json_body()
-            cid=str(body.get('id',''))
-            if not cid: return self.send_json({'ok':False,'error':'id required'},400)
-            with NATIVE_PROVIDER_LOCK:
-                NATIVE_RESULTS[cid]=body
-                NATIVE_PROVIDER['online']=True; NATIVE_PROVIDER['last_seen']=time.time()
-            return self.send_json({'ok':True})
-        return None
     def do_OPTIONS(self):
         self.send_json({'ok':True})
     def do_GET(self):
         try:
-            native=self.do_native_get(self.path.split('?',1)[0])
-            if native is not None: return native
             if self.path=='/status':
                 t=target()
                 self.send_json({'ok':True,'bridge':'ima-termux','port':PORT,'cdp':CDP,'cloud':{'enabled':bool(DEVICE_KEY),'api':CLOUD_API,'poll_seconds':CLOUD_POLL_SECONDS},'local_eval_enabled':LOCAL_EVAL_ENABLED,'target':{'id':t.get('id'),'title':t.get('title'),'url':t.get('url')}})
@@ -490,26 +406,30 @@ class Handler(BaseHTTPRequestHandler):
                         except Exception as exc: out[name+'_error']=str(exc)
                 self.send_json({'serial':serial,**out})
             elif self.path=='/device-health':
-                native_ok=False
-                native_error=''
+                serial=device_serial()
+                cdp_ok=False
+                cdp_error=''
+                mdns=''
                 try:
-                    native_android_command('android_status',{},timeout=4)
-                    native_ok=True
+                    pages=get_json('/json/list')
+                    cdp_ok=bool([x for x in pages if x.get('type')=='page'])
                 except Exception as exc:
-                    native_error=str(exc)
-                self.send_json({'ok':native_ok,'transport':'outbound-native-android','accessibility_service':native_ok,'adb_required':False,'error':native_error,'port':PORT})
+                    cdp_error=str(exc)
+                try:
+                    env=dict(os.environ); env['ADB_MDNS_AUTO_CONNECT']='adb-tls-connect'
+                    mdns=subprocess.run([ADB_BIN,'mdns','services'],env=env,capture_output=True,text=True,timeout=8).stdout
+                except Exception as exc:
+                    mdns='mdns_error: '+str(exc)
+                self.send_json({'ok':bool(serial and cdp_ok),'serial':serial,'adb':bool(serial),'cdp':cdp_ok,'cdp_error':cdp_error,'mdns':mdns,'configured_serial':ADB_SERIAL,'port':PORT})
             elif self.path=='/device-screen':
-                result=native_android_command('android_screenshot',{},timeout=12)
-                raw=base64.b64decode(result['data'])
-                self.send_response(200); self.send_header('Content-Type','image/png'); self.send_header('Cache-Control','no-store'); self.send_header('X-IMA-Device-Serial',str(result.get('device_id','android-accessibility'))); self.send_header('Content-Length',str(len(raw))); self.end_headers(); self.wfile.write(raw)
+                serial,raw=device_screenshot_png()
+                self.send_response(200); self.send_header('Content-Type','image/png'); self.send_header('Cache-Control','no-store'); self.send_header('X-IMA-Device-Serial',serial); self.send_header('Content-Length',str(len(raw))); self.end_headers(); self.wfile.write(raw)
             else:
                 self.send_json({'ok':False,'error':'not_found'},404)
         except Exception as e:
             self.send_json({'ok':False,'error':str(e)},503)
     def do_POST(self):
         try:
-            native=self.do_native_post(self.path.split('?',1)[0])
-            if native is not None: return native
             origin=self.headers.get('Origin','').rstrip('/')
             path=urllib.parse.urlparse(self.path).path
             if path in ACTION_PATHS and origin and origin not in ALLOWED_ORIGINS:

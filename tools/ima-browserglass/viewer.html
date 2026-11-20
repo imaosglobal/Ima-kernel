@@ -105,29 +105,42 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=new URLSearchParams(location.search).get('device')!=='0', deviceTimer=null, lastDeviceFrameAt=0, deviceFrameReady=false;
-    async function refreshDevice(){
-      try{
-        const r=await fetch('/api/device/screen?ts='+Date.now(),{cache:'no-store',credentials:'same-origin'});
-        if(!r.ok) throw new Error('device screen '+r.status);
-        const blob=await r.blob();
-        const url=URL.createObjectURL(blob);
-        const img=document.getElementById('deviceScreen');
-        const old=img.src; img.src=url; img.hidden=false;
-        if(old && old.startsWith('blob:')) URL.revokeObjectURL(old);
-        deviceFrameReady=true;
-        pane.style.display='none';
-        const frameAt=Number(r.headers.get('x-ima-frame-at')||0);
-        lastDeviceFrameAt=frameAt;
-        const age=frameAt ? Math.max(0,Date.now()-frameAt) : 0;
-        status.textContent='מסך Android — חי · '+Math.round(age/1000)+'s';
-      }catch(e){
-        deviceFrameReady=false;
-        document.getElementById('deviceScreen').hidden=true;
-        pane.style.display='block';
-        status.textContent='LIVE-001 — ממתין למסך Android';
+    let deviceMode=new URLSearchParams(location.search).get('device')==='1', deviceTimer=null, lastDeviceFrameAt=0;
+    let deviceStream=null, deviceStreamBuffer=new Uint8Array(0);
+    function stopDeviceStream(){ if(deviceStream){deviceStream.close();deviceStream=null;} deviceStreamBuffer=new Uint8Array(0); }
+    function consumeDeviceStream(){
+      const marker=new TextEncoder().encode('\r\n\r\n');
+      while(true){
+        let headerEnd=-1; for(let i=0;i<=deviceStreamBuffer.length-marker.length;i++){let ok=true;for(let j=0;j<marker.length;j++)if(deviceStreamBuffer[i+j]!==marker[j]){ok=false;break;}if(ok){headerEnd=i;break;}}
+        if(headerEnd<0)return;
+        const header=new TextDecoder().decode(deviceStreamBuffer.slice(0,headerEnd));
+        const m=header.match(/Content-Length:\s*(\d+)/i); if(!m){deviceStreamBuffer=deviceStreamBuffer.slice(headerEnd+4);continue;}
+        const len=Number(m[1]), bodyStart=headerEnd+4; if(deviceStreamBuffer.length<bodyStart+len+2)return;
+        const body=deviceStreamBuffer.slice(bodyStart,bodyStart+len); deviceStreamBuffer=deviceStreamBuffer.slice(bodyStart+len+2);
+        const url=URL.createObjectURL(new Blob([body],{type:(header.match(/Content-Type:\s*([^\r\n]+)/i)||[])[1]||'image/png'}));
+        const img=document.getElementById('deviceScreen'), old=img.src; img.src=url; img.hidden=false; if(old&&old.startsWith('blob:'))URL.revokeObjectURL(old); pane.style.display='none';
+        const frameAt=Number((header.match(/X-IMA-Frame-At:\s*(\d+)/i)||[])[1]||0); lastDeviceFrameAt=frameAt;
+        const age=frameAt?Math.max(0,Date.now()-frameAt):0; status.textContent='מסך Android — חי · '+Math.round(age/1000)+'s';
       }
     }
+    function startDeviceStream(){
+      stopDeviceStream();
+      const url='/api/device/stream?ts='+Date.now();
+      deviceStream=new EventSource(url);
+      deviceStream.onmessage=()=>{};
+      deviceStream.onopen=()=>{status.textContent='מסך Android — חיבור חי';};
+      deviceStream.onerror=()=>{status.textContent='מחדש חיבור למסך Android…';stopDeviceStream();setTimeout(()=>{if(deviceMode)startDeviceStream();},1000);};
+      const original=EventSource.prototype; // keep connection semantics explicit; binary stream is handled below.
+      deviceStream.close();
+      deviceStream=null;
+      fetch(url,{cache:'no-store',credentials:'same-origin'}).then(async r=>{
+        if(!r.ok)throw new Error('device stream '+r.status);
+        status.textContent='מסך Android — חיבור חי';
+        const reader=r.body.getReader();
+        while(deviceMode){ const {done,value}=await reader.read(); if(done)break; const next=new Uint8Array(deviceStreamBuffer.length+value.length); next.set(deviceStreamBuffer); next.set(value,deviceStreamBuffer.length); deviceStreamBuffer=next; consumeDeviceStream(); }
+      }).catch(()=>{ if(deviceMode){status.textContent='מחדש חיבור למסך Android…';setTimeout(()=>{if(deviceMode)startDeviceStream();},1000);} });
+    }
+    async function refreshDevice(){ if(!deviceMode) return; startDeviceStream(); }
     async function callDeviceTool(action, args={}){
       try{
         if(window.openai?.callTool) return await window.openai.callTool('ima_device_action',{action,...args});
@@ -143,10 +156,10 @@
     }
     let deviceGesture=null;
     document.getElementById('deviceScreen').addEventListener('pointerdown',e=>{
-      if(!deviceMode||!deviceFrameReady)return; deviceGesture={p:devicePoint(e),t:Date.now()}; e.currentTarget.setPointerCapture?.(e.pointerId);
+      if(!deviceMode)return; deviceGesture={p:devicePoint(e),t:Date.now()}; e.currentTarget.setPointerCapture?.(e.pointerId);
     });
     document.getElementById('deviceScreen').addEventListener('pointerup',async e=>{
-      if(!deviceMode||!deviceFrameReady||!deviceGesture)return; const end=devicePoint(e), start=deviceGesture.p, duration=Math.max(100,Math.min(3000,Date.now()-deviceGesture.t)); deviceGesture=null;
+      if(!deviceMode||!deviceGesture)return; const end=devicePoint(e), start=deviceGesture.p, duration=Math.max(100,Math.min(3000,Date.now()-deviceGesture.t)); deviceGesture=null;
       const dx=end.x-start.x,dy=end.y-start.y;
       try{
         if(Math.hypot(dx,dy)>24) await callDeviceTool('android_swipe',{x1:start.x,y1:start.y,x2:end.x,y2:end.y,duration_ms:duration});
@@ -160,7 +173,8 @@
       deviceMode=true; document.getElementById('deviceScreen').hidden=false;
       await refreshDevice();
       if(deviceTimer)clearInterval(deviceTimer);
-      deviceTimer=setInterval(refreshDevice,250);
+      deviceTimer=null;
+      startDeviceStream();
     }
     document.getElementById('device').onclick=async()=>{ await startDeviceMode(); };
     document.getElementById('deviceBack').onclick=()=>deviceCommand('android_back');
@@ -178,9 +192,8 @@
       if(!r.ok)throw new Error(await r.text()); return r.json();
     }
     async function boot(){
-      try{const s=await session();pane.setAttribute('url',s.url);pane.setAttribute('token',s.token);pane.setAttribute('target-id',s.targetId);pane.setAttribute('token-endpoint','/api/session');status.textContent='LIVE-001 — מחובר';}
-      catch(e){status.textContent='LIVE-001 — ממתין לחיבור המורשה';}
-      if(deviceMode) startDeviceMode();
+      try{const s=await session();pane.setAttribute('url',s.url);pane.setAttribute('token',s.token);pane.setAttribute('target-id',s.targetId);pane.setAttribute('token-endpoint','/api/session');status.textContent='מחובר — סנכרון אוטומטי';}
+      catch(e){status.textContent='ממתין לחיבור המורשה';}
     }
     pane.onTokenExpired=async()=> (await session()).token;
     pane.addEventListener('bgls:connected',()=>{status.textContent='חלון חי מחובר — סנכרון אוטומטי';window.parent.postMessage({type:'ima-live-status',text:'חלון חי מחובר — סנכרון אוטומטי'},'*');});

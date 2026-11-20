@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/python
-import json, re, os, sys
+import json, re, os, sys, pathlib
 sys.path.insert(0, os.path.dirname(__file__))
 import bridge
-from mcp_client import IMA_MCPClient
+from mcp_client import IMA_MCPClient, MCPError
 
 mcp=IMA_MCPClient()
 
@@ -19,10 +19,19 @@ def _context():
 def _live001_status():
     tools=mcp.tools_list()
     live=next((t for t in tools if t.get("name")=="ima_live_browser"),None)
-    return {"ok":bool(live),"canonical":True,"id":"LIVE-001","tool":"ima_live_browser","available":bool(live),"protocol":mcp.protocol_version,"session_established":bool(mcp.session_id)}
+    return {
+        "ok": bool(live),
+        "canonical": True,
+        "id": "LIVE-001",
+        "tool": "ima_live_browser",
+        "available": bool(live),
+        "protocol": mcp.protocol_version,
+        "session_established": bool(mcp.session_id),
+    }
 
 def _parse_call(text):
-    match=re.search(r'IMA_CALL\s*:\s*(\{.*?\})',text or "",re.S)
+    pattern=r'IMA_CALL\s*:\s*(\{.*?\})'
+    match=re.search(pattern,text or "",re.S)
     if not match:
         return None
     try:
@@ -40,7 +49,8 @@ def do_GET(self):
     path=self.path.split("?",1)[0]
     if path=="/mcp/status":
         try:
-            return _send(self,{"ok":True,"mcp":_context()})
+            ctx=_context()
+            return _send(self,{"ok":True,"mcp":ctx})
         except Exception as e:
             return _send(self,{"ok":False,"error":str(e)},503)
     if path=="/live001/status":
@@ -49,10 +59,8 @@ def do_GET(self):
         except Exception as e:
             return _send(self,{"ok":False,"canonical":True,"id":"LIVE-001","error":str(e)},503)
     if path=="/mcp/tools":
-        try:
-            return _send(self,{"ok":True,"tools":mcp.tools_list(),"protocol":mcp.protocol_version,"session":bool(mcp.session_id)})
-        except Exception as e:
-            return _send(self,{"ok":False,"error":str(e)},503)
+        try: return _send(self,{"ok":True,"tools":mcp.tools_list(),"protocol":mcp.protocol_version,"session":bool(mcp.session_id)})
+        except Exception as e: return _send(self,{"ok":False,"error":str(e)},503)
     return _original_get(self)
 
 def do_POST(self):
@@ -61,27 +69,21 @@ def do_POST(self):
         try:
             body=_json_body(self)
             name=str(body.get("tool","")).strip()
-            if not name:
-                raise ValueError("tool required")
+            if not name: raise ValueError("tool required")
             result=mcp.tools_call(name,body.get("args") or body.get("arguments") or {})
             return _send(self,{"ok":True,"tool":name,"result":result,"protocol":mcp.protocol_version})
-        except Exception as e:
-            return _send(self,{"ok":False,"error":str(e)},503)
+        except Exception as e: return _send(self,{"ok":False,"error":str(e)},503)
     if path=="/mcp/context":
-        try:
-            return _send(self,{"ok":True,"context":_context()})
-        except Exception as e:
-            return _send(self,{"ok":False,"error":str(e)},503)
+        try: return _send(self,{"ok":True,"context":_context()})
+        except Exception as e: return _send(self,{"ok":False,"error":str(e)},503)
     if path=="/mcp/parse":
         try:
             body=_json_body(self)
             call=_parse_call(str(body.get("text","")))
-            if not call:
-                return _send(self,{"ok":False,"error":"IMA_CALL not found"},400)
+            if not call: return _send(self,{"ok":False,"error":"IMA_CALL not found"},400)
             result=mcp.tools_call(call["tool"],call["args"])
             return _send(self,{"ok":True,"parsed":call,"result":result})
-        except Exception as e:
-            return _send(self,{"ok":False,"error":str(e)},503)
+        except Exception as e: return _send(self,{"ok":False,"error":str(e)},503)
     return _original_post(self)
 
 bridge.Handler.do_GET=do_GET
