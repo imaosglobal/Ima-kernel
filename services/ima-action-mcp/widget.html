@@ -1,20 +1,15 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;background:#0b0d12;color:#eef;font:14px system-ui}header{padding:10px;border-bottom:1px solid #30343d}.status{padding:8px 10px;opacity:.8}iframe{display:block;width:100%;height:min(78vh,760px);min-height:460px;border:0;background:#000}</style></head><body><header><strong>IMA — דפדפן חי</strong><div class="status" id="status">מכין חלון Chrome חי…</div></header><iframe id="browser" title="IMA live browser" src="https://ima-browserglass.onrender.com/?embed=chatgpt" allow="clipboard-read; clipboard-write"></iframe><script>
-const f=document.getElementById("browser"),st=document.getElementById("status");
-f.addEventListener("load",()=>st.textContent="חלון נטען — מאמת חיבור…");
-const HOST_ORIGINS=new Set(["https://chatgpt.com","https://chat.openai.com"]);
-const pending=new Map();
-window.addEventListener("message",e=>{
-  if(e.source!==f.contentWindow || e.origin!=="https://ima-browserglass.onrender.com" || !e.data || e.data.jsonrpc!=="2.0") return;
-  const m=e.data;
-  if(m.method){
-    window.parent.postMessage(m,"*");
-    if(m.id!=null) pending.set(m.id,true);
-  }
-});
-window.addEventListener("message",e=>{
-  if(e.source!==window.parent || !HOST_ORIGINS.has(e.origin) || !e.data || e.data.jsonrpc!=="2.0" || e.data.id==null) return;
-  if(!pending.has(e.data.id)) return;
-  pending.delete(e.data.id);
-  f.contentWindow.postMessage(e.data,"https://ima-browserglass.onrender.com");
-});
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+:root{color-scheme:dark}body{margin:0;background:#0b0d12;color:#eef;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}header{padding:10px 12px;border-bottom:1px solid #30343d;display:flex;align-items:center;justify-content:space-between;gap:10px}.title{font-weight:700}.status{opacity:.78;font-size:12px;margin-top:3px}.mode{border:1px solid #3b414c;border-radius:9px;background:#171a21;color:#fff;padding:7px 10px;cursor:pointer}main{padding:8px}.hint{padding:8px 10px;color:#cfd4df;font-size:12px;line-height:1.45}.browser{width:100%;height:min(76vh,820px);min-height:500px;border:1px solid #30343d;border-radius:14px;background:#000;overflow:hidden}
+@media(max-width:700px){.browser{height:calc(100vh - 125px);min-height:420px}.mode{font-size:12px}}
+</style></head><body>
+<header><div><div class="title">IMA — מסך המכשיר החי</div><div class="status" id="status">מתחבר למסך המכשיר בתוך ChatGPT…</div></div><button class="mode" id="pip">השאר בשיחה</button></header>
+<main><div class="hint">זהו מסך המכשיר שלך בתוך שיחת ChatGPT. אפשר לגעת במסך, להחליק, לחזור, לעבור לבית, לכתוב ולסמן תקלה. כדי לדווח לי: סמן → כתוב מה קרה → ״דווח לי״.</div><iframe class="browser" id="browser" title="IMA מסך מכשיר חי" src="https://ima-browserglass.onrender.com/?embed=chatgpt&device=1" allow="clipboard-read; clipboard-write"></iframe></main>
+<script>
+const f=document.getElementById('browser'),st=document.getElementById('status'),pip=document.getElementById('pip');
+f.addEventListener('load',()=>{st.textContent='✓ מסך המכשיר מחובר בתוך השיחה';requestPip();});
+async function requestPip(){try{if(window.openai?.requestDisplayMode){await window.openai.requestDisplayMode({mode:'pip'});pip.textContent='מסך צף בתוך השיחה';}}catch(e){}}
+pip.onclick=async()=>{try{if(window.openai?.requestDisplayMode){await window.openai.requestDisplayMode({mode:'pip'});pip.textContent='מסך צף בתוך השיחה';}}catch(e){}}
+const HOST_ORIGINS=new Set(['https://chatgpt.com','https://chat.openai.com']);const pending=new Map();
+window.addEventListener('message',e=>{if(e.source!==f.contentWindow||e.origin!=='https://ima-browserglass.onrender.com'||!e.data||e.data.jsonrpc!=='2.0')return;const m=e.data;if(m.method){window.parent.postMessage(m,'*');if(m.id!=null)pending.set(m.id,true);}});
+window.addEventListener('message',e=>{if(e.source!==window.parent||!HOST_ORIGINS.has(e.origin)||!e.data||e.data.jsonrpc!=='2.0'||e.data.id==null)return;if(!pending.has(e.data.id))return;pending.delete(e.data.id);f.contentWindow.postMessage(e.data,'https://ima-browserglass.onrender.com');});
 </script></body></html>
