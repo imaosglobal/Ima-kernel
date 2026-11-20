@@ -1,6 +1,6 @@
 import http from 'node:http';
 import { spawn } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
 import httpProxy from 'http-proxy';
 const { createProxyServer } = httpProxy;
 
@@ -24,6 +24,34 @@ let latestDeviceFrameAt = 0;
 let latestDeviceSerial = null;
 let latestDeviceContentType = 'image/png';
 const deviceStreamClients = new Set();
+const DEVICE_FRAME_FILE = `${DATA_DIR}/ima-device-latest.png`;
+const DEVICE_META_FILE = `${DATA_DIR}/ima-device-latest.json`;
+
+async function restoreLatestDeviceFrame() {
+  try {
+    await mkdir(DATA_DIR, { recursive: true });
+    const [frame, meta] = await Promise.all([readFile(DEVICE_FRAME_FILE), readFile(DEVICE_META_FILE, 'utf8')]);
+    if (frame.length) {
+      const m = JSON.parse(meta);
+      latestDeviceFrame = frame;
+      latestDeviceFrameAt = Number(m.at || 0);
+      latestDeviceSerial = String(m.serial || '');
+      latestDeviceContentType = String(m.contentType || 'image/png');
+    }
+  } catch {}
+}
+
+async function persistLatestDeviceFrame(frame, meta) {
+  try {
+    await mkdir(DATA_DIR, { recursive: true });
+    const tmpFrame = `${DEVICE_FRAME_FILE}.tmp`;
+    const tmpMeta = `${DEVICE_META_FILE}.tmp`;
+    await writeFile(tmpFrame, frame);
+    await writeFile(tmpMeta, JSON.stringify(meta));
+    await rename(tmpFrame, DEVICE_FRAME_FILE);
+    await rename(tmpMeta, DEVICE_META_FILE);
+  } catch {}
+}
 
 function run(command, args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -182,6 +210,7 @@ const server = http.createServer(async (req, res) => {
       latestDeviceSerial=String(req.headers['x-ima-device-serial'] || '');
       latestDeviceContentType=String(req.headers['content-type'] || 'image/png').split(';')[0] || 'image/png';
       const frame = latestDeviceFrame;
+      void persistLatestDeviceFrame(frame, { at: latestDeviceFrameAt, serial: latestDeviceSerial, contentType: latestDeviceContentType });
       for (const client of deviceStreamClients) {
         try {
           client.write(`--ima-frame\r\nContent-Type: ${latestDeviceContentType}\r\nContent-Length: ${frame.length}\r\nX-IMA-Device-Serial: ${latestDeviceSerial || ''}\r\nX-IMA-Frame-At: ${latestDeviceFrameAt}\r\n\r\n`);
@@ -306,14 +335,16 @@ server.on('upgrade', (req, socket, head) => {
   else socket.destroy();
 });
 
-server.listen(PORT, '0.0.0.0', async () => {
-  try {
-    await waitForGateway();
-    console.log('IMA BrowserGlass gateway ready');
-  } catch (err) {
-    console.error(`IMA BrowserGlass gateway readiness warning: ${err.message}`);
-  }
-  console.log(`IMA BrowserGlass service listening on :${PORT}`);
+restoreLatestDeviceFrame().finally(() => {
+  server.listen(PORT, '0.0.0.0', async () => {
+    try {
+      await waitForGateway();
+      console.log('IMA BrowserGlass gateway ready');
+    } catch (err) {
+      console.error(`IMA BrowserGlass gateway readiness warning: ${err.message}`);
+    }
+    console.log(`IMA BrowserGlass service listening on :${PORT}`);
+  });
 });
 
 process.on('SIGTERM', () => gatewayProcess.kill('SIGTERM'));
