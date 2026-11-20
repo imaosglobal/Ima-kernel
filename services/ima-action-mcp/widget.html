@@ -1,15 +1,62 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
-:root{color-scheme:dark}body{margin:0;background:#0b0d12;color:#eef;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}header{padding:10px 12px;border-bottom:1px solid #30343d;display:flex;align-items:center;justify-content:space-between;gap:10px}.title{font-weight:700}.status{opacity:.78;font-size:12px;margin-top:3px}.mode{border:1px solid #3b414c;border-radius:9px;background:#171a21;color:#fff;padding:7px 10px;cursor:pointer}main{padding:8px}.hint{padding:8px 10px;color:#cfd4df;font-size:12px;line-height:1.45}.browser{width:100%;height:min(76vh,820px);min-height:500px;border:1px solid #30343d;border-radius:14px;background:#000;overflow:hidden}
-@media(max-width:700px){.browser{height:calc(100vh - 125px);min-height:420px}.mode{font-size:12px}}
-</style></head><body>
-<header><div><div class="title">IMA — מסך המכשיר החי</div><div class="status" id="status">מתחבר למסך המכשיר בתוך ChatGPT…</div></div><button class="mode" id="pip">השאר בשיחה</button></header>
-<main><div class="hint">זהו מסך המכשיר שלך בתוך שיחת ChatGPT. אפשר לגעת במסך, להחליק, לחזור, לעבור לבית, לכתוב ולסמן תקלה. כדי לדווח לי: סמן → כתוב מה קרה → ״דווח לי״.</div><iframe class="browser" id="browser" title="IMA מסך מכשיר חי" src="https://ima-browserglass.onrender.com/?embed=chatgpt&device=1" allow="clipboard-read; clipboard-write"></iframe></main>
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0d12;color:#eef;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}
+body{display:flex;flex-direction:column}
+header{height:42px;flex:0 0 42px;padding:0 10px;border-bottom:1px solid #292e37;display:flex;align-items:center;justify-content:space-between}
+.title{font-weight:700;font-size:13px}.status{font-size:11px;opacity:.7;margin-inline-start:8px}
+.actions{display:flex;gap:6px}
+button{border:1px solid #343a45;border-radius:8px;background:#15181f;color:#fff;padding:5px 8px;font:inherit;cursor:pointer}
+main{flex:1;min-height:0;padding:6px}
+.browser{display:block;width:100%;height:100%;border:0;border-radius:10px;background:#000}
+@media(max-width:700px){header{height:38px;flex-basis:38px}.status{display:none}button{padding:4px 7px}}
+</style>
+</head>
+<body>
+<header>
+  <div><span class="title">IMA — מסך חי</span><span class="status" id="status">מתחבר…</span></div>
+  <div class="actions"><button id="pip" type="button">צף</button></div>
+</header>
+<main>
+  <iframe class="browser" id="browser" title="IMA מסך מכשיר חי"
+    src="https://ima-browserglass.onrender.com/?embed=chatgpt&device=1"
+    allow="clipboard-read; clipboard-write"></iframe>
+</main>
 <script>
 const f=document.getElementById('browser'),st=document.getElementById('status'),pip=document.getElementById('pip');
-f.addEventListener('load',()=>{st.textContent='✓ מסך המכשיר מחובר בתוך השיחה';requestPip();});
-async function requestPip(){try{if(window.openai?.requestDisplayMode){await window.openai.requestDisplayMode({mode:'pip'});pip.textContent='מסך צף בתוך השיחה';}}catch(e){}}
-pip.onclick=async()=>{try{if(window.openai?.requestDisplayMode){await window.openai.requestDisplayMode({mode:'pip'});pip.textContent='מסך צף בתוך השיחה';}}catch(e){}}
-const HOST_ORIGINS=new Set(['https://chatgpt.com','https://chat.openai.com']);const pending=new Map();
-window.addEventListener('message',e=>{if(e.source!==f.contentWindow||e.origin!=='https://ima-browserglass.onrender.com'||!e.data||e.data.jsonrpc!=='2.0')return;const m=e.data;if(m.method){window.parent.postMessage(m,'*');if(m.id!=null)pending.set(m.id,true);}});
-window.addEventListener('message',e=>{if(e.source!==window.parent||!HOST_ORIGINS.has(e.origin)||!e.data||e.data.jsonrpc!=='2.0'||e.data.id==null)return;if(!pending.has(e.data.id))return;pending.delete(e.data.id);f.contentWindow.postMessage(e.data,'https://ima-browserglass.onrender.com');});
-</script></body></html>
+f.addEventListener('load',()=>{st.textContent='מחובר';});
+async function setPip(){
+  try{
+    if(window.openai?.requestDisplayMode){
+      await window.openai.requestDisplayMode({mode:'pip'});
+      pip.textContent='בתוך השיחה';
+    }
+  }catch{}
+}
+pip.addEventListener('click',setPip);
+
+const HOST_ORIGINS=new Set(['https://chatgpt.com','https://chat.openai.com']);
+const BROWSER_ORIGIN='https://ima-browserglass.onrender.com';
+const pending=new Set();
+
+window.addEventListener('message',e=>{
+  if(e.source!==f.contentWindow||e.origin!==BROWSER_ORIGIN||!e.data||e.data.jsonrpc!=='2.0')return;
+  if(e.data.method){
+    window.parent.postMessage(e.data,'*');
+    if(e.data.id!=null)pending.add(e.data.id);
+  }
+});
+
+window.addEventListener('message',e=>{
+  if(e.source!==window.parent||!HOST_ORIGINS.has(e.origin)||!e.data||e.data.jsonrpc!=='2.0'||e.data.id==null)return;
+  if(!pending.has(e.data.id))return;
+  pending.delete(e.data.id);
+  f.contentWindow.postMessage(e.data,BROWSER_ORIGIN);
+});
+</script>
+</body>
+</html>
