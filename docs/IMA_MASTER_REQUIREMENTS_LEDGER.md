@@ -448,3 +448,17 @@ Cross-domain changes must be evaluated for their effects on the rest of IMA so t
 
 This requirement supersedes fragmented interpretations of IMA's domain ownership: the canonical IMA loop owns the coordination of all existing and future domains as one system.
 
+### DAILY-MUTUAL-028 — DAILY MUTUAL IMPROVEMENT: IMA + CHATGPT + TOGETHER
+Status: CANONICAL / CONTINUOUS DAILY GATE
+
+- Each canonical run evaluates what IMA can actually do today for users: understand, research, organize information, inspect authorized data, support decisions, invoke authorized tools, improve accessibility, save time, create lawful economic value, preserve provenance and learn from feedback.
+- Each run identifies the highest-value blocker and executes a safe, reversible, authorized repair when possible.
+- Each run checks the capabilities and real connections available in the current ChatGPT host. New or useful capabilities are connected through the canonical IMA interface rather than a parallel system. Availability is verified, not assumed.
+- Each run identifies at least one potentially valuable IMA <-> ChatGPT synergy and, when a safe authorized path exists, executes it: research -> action -> evidence -> learning -> product improvement -> users -> feedback -> improvement.
+- User-specific capabilities must preserve strict identity, authorization, data and personal-record separation. Sensitive actions require the appropriate authorization.
+- Daily economic-value review distinguishes cash, credits, investment, potential revenue, funding, partnership, grant and hypothesis. No profit guarantee and no trading, spending or financial commitment without explicit authorization.
+- Self-QA must test previous claims against inspectable evidence and correct any claim/reality gap.
+- Successful improvement must increase human capability and agency rather than create unnecessary dependence on IMA or ChatGPT.
+- Daily output records only: (1) IMA improvement, (2) ChatGPT <-> IMA capability improvement, (3) what was accomplished together, (4) what was actually proven, (5) UNKNOWN/BLOCKED items, and (6) highest-value next action.
+- Activity without a measurable capability or evidence change is not counted as improvement.
+
