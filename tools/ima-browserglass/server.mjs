@@ -183,8 +183,8 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.url === '/healthz') {
-      res.writeHead(200, { 'content-type': 'application/json' });
-      res.end(JSON.stringify({ ok: true, service: 'ima-browserglass' }));
+      res.writeHead(200, { 'content-type': 'application/json', 'cache-control': 'no-store' });
+      res.end(JSON.stringify({ ok: true, service: 'ima-browserglass', deviceFrame: { present: !!latestDeviceFrame, ageMs: latestDeviceFrameAt ? Math.max(0, Date.now() - latestDeviceFrameAt) : null, serial: latestDeviceSerial || null, bytes: latestDeviceFrame?.length || 0, dataDir: DATA_DIR } }));
       return;
     }
 
