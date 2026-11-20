@@ -268,7 +268,7 @@
       const btn=document.getElementById('send');btn.disabled=true;state.sent++;
       status.textContent='שולח ומאמת קבלה…';
       try{
-        const r=await deliver(text,true);state.acked++;
+        const reportEvent=await hostCall('tools/call',{name:'ima_report',arguments:{text,browser:{url:pane.getAttribute('url')||'',mode,timestamp:new Date().toISOString()},source:'LIVE-001',hasImage:true}});\n        const r=await deliver(text,true);state.acked++;
         status.textContent='✓ התקבל אצל המארח — '+state.acked+' מסרים מאומתים';
         message.value='';setTimeout(()=>{if(state.sent===state.acked)status.textContent='חלון חי מחובר — סנכרון אוטומטי';},2200);
       }catch(e){status.textContent='לא התקבל: '+e.message;}
