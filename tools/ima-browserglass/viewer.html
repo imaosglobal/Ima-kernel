@@ -181,13 +181,8 @@
     }
     document.getElementById('device').onclick=async()=>{ await startDeviceMode(); };
     document.getElementById('deviceBack').onclick=()=>deviceCommand('android_back');
-    document.getElementById('teamviewer').onclick=()=>{
-      const id=document.getElementById('teamviewerId').value.trim().replace(/\\s+/g,'');
-      if(!/^\\d{6,12}$/.test(id)){status.textContent='הזן TeamViewer ID תקין';document.getElementById('teamviewerId').focus();return;}
-      const url='https://start.teamviewer.com/'+encodeURIComponent(id);
-      window.open(url,'_blank','noopener,noreferrer');
-      status.textContent='TeamViewer נפתח — האישור והשליטה נשארים ב-TeamViewer';
-    };
+    // TeamViewer controls were removed from this canonical LIVE-001 surface.
+    // Keep device controls independent so a missing optional integration cannot stop the main runtime.
     document.getElementById('deviceHome').onclick=()=>deviceCommand('android_home');
 
     async function session(){
