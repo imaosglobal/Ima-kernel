@@ -42,15 +42,13 @@ async function restoreLatestDeviceFrame() {
 }
 
 async function persistLatestDeviceFrame(frame, meta) {
-  try {
-    await mkdir(DATA_DIR, { recursive: true });
-    const tmpFrame = `${DEVICE_FRAME_FILE}.tmp`;
-    const tmpMeta = `${DEVICE_META_FILE}.tmp`;
-    await writeFile(tmpFrame, frame);
-    await writeFile(tmpMeta, JSON.stringify(meta));
-    await rename(tmpFrame, DEVICE_FRAME_FILE);
-    await rename(tmpMeta, DEVICE_META_FILE);
-  } catch {}
+  await mkdir(DATA_DIR, { recursive: true });
+  const tmpFrame = `${DEVICE_FRAME_FILE}.tmp`;
+  const tmpMeta = `${DEVICE_META_FILE}.tmp`;
+  await writeFile(tmpFrame, frame);
+  await writeFile(tmpMeta, JSON.stringify(meta));
+  await rename(tmpFrame, DEVICE_FRAME_FILE);
+  await rename(tmpMeta, DEVICE_META_FILE);
 }
 
 function run(command, args, options = {}) {
@@ -210,7 +208,7 @@ const server = http.createServer(async (req, res) => {
       latestDeviceSerial=String(req.headers['x-ima-device-serial'] || '');
       latestDeviceContentType=String(req.headers['content-type'] || 'image/png').split(';')[0] || 'image/png';
       const frame = latestDeviceFrame;
-      void persistLatestDeviceFrame(frame, { at: latestDeviceFrameAt, serial: latestDeviceSerial, contentType: latestDeviceContentType });
+      try { await persistLatestDeviceFrame(frame, { at: latestDeviceFrameAt, serial: latestDeviceSerial, contentType: latestDeviceContentType }); } catch (e) { console.error('[live001] frame persistence failed:', e?.message || e); }
       for (const client of deviceStreamClients) {
         try {
           client.write(`--ima-frame\r\nContent-Type: ${latestDeviceContentType}\r\nContent-Length: ${frame.length}\r\nX-IMA-Device-Serial: ${latestDeviceSerial || ''}\r\nX-IMA-Frame-At: ${latestDeviceFrameAt}\r\n\r\n`);
