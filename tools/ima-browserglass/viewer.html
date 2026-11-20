@@ -12,7 +12,7 @@
     .bar,.tools{display:flex;gap:7px;align-items:center;flex-wrap:wrap;min-height:30px}
     .bar strong{font-size:.95rem}
     #status{opacity:.82;font-size:.82rem}
-    .tools{padding:8px;border:1px solid #30333b;border-radius:12px;background:#11131a;display:grid;grid-template-columns:repeat(4,minmax(0,auto)) 1fr auto;gap:7px;align-items:center}
+    .tools{padding:6px;border:1px solid #30333b;border-radius:10px;background:#11131a;display:grid;grid-template-columns:auto auto 1fr auto;gap:6px;align-items:center}.tools .group:nth-child(2),.tools .group:nth-child(3),.hint{display:none}.tools #message{min-width:0;width:100%;height:36px}.tools #report{min-width:88px}
     button,input,textarea{font:inherit}
     button{border:1px solid #3b3f49;background:#1a1d25;color:#fff;border-radius:9px;padding:8px 11px;touch-action:manipulation;cursor:pointer}
     button:hover{background:#222631}
@@ -36,7 +36,7 @@
     <span id="status">מתחבר…</span>
   </div>
   <div class="tools" aria-label="כלי עבודה">
-    <div class="group"><button id="device" type="button" title="הצג את מסך Android המחובר">מסך המכשיר</button><button id="deviceBack" type="button" title="חזרה למסך הקודם">חזרה</button><button id="deviceHome" type="button" title="מעבר למסך הבית">בית</button></div>
+    <div class="group"><button id="deviceBack" type="button" title="חזרה למסך הקודם">חזרה</button><button id="deviceHome" type="button" title="מעבר למסך הבית">בית</button></div>
     <div class="group"><button id="pen" type="button" title="כתוב או צייר עם האצבע">כתוב</button><button id="rect" type="button" title="סמן אזור">סמן אזור</button><button id="arrow" type="button" title="הוסף חץ">חץ</button><button id="erase" type="button" title="מחק סימון">מחק</button></div>
     <div class="group"><button id="undo" type="button" title="בטל את הסימון האחרון">בטל</button><button id="clear" type="button" title="הסר את כל הסימונים">נקה</button><span class="tool-label">עובי</span><input id="width" aria-label="עובי עט" type="range" min="2" max="16" value="4"><input id="color" aria-label="צבע עט" type="color" value="#ff3b30"></div>
     <textarea id="message" aria-label="דיווח ל-ChatGPT" placeholder="מה הבעיה? כתוב כאן בקצרה…"></textarea>
@@ -105,7 +105,7 @@
     document.getElementById('clear').onclick=()=>{snapshot();ctx.clearRect(0,0,canvas.clientWidth,canvas.clientHeight);};
     window.addEventListener('resize',resize);
 
-    let deviceMode=new URLSearchParams(location.search).get('device')==='1', deviceTimer=null, lastDeviceFrameAt=0;
+    let deviceMode=new URLSearchParams(location.search).get('device')==='1', deviceTimer=null, lastDeviceFrameAt=0; if(deviceMode){pane.style.display='none';document.getElementById('deviceScreen').hidden=false;}
     let deviceStream=null, deviceStreamBuffer=new Uint8Array(0), lastFrameSignature='';
     function stopDeviceStream(){ if(deviceStream){deviceStream.close();deviceStream=null;} deviceStreamBuffer=new Uint8Array(0); }
     function consumeDeviceStream(){
@@ -179,7 +179,7 @@
       deviceTimer=null;
       startDeviceStream();
     }
-    document.getElementById('device').onclick=async()=>{ await startDeviceMode(); };
+    const deviceButton=document.getElementById('device'); if(deviceButton)deviceButton.onclick=async()=>{ await startDeviceMode(); };
     document.getElementById('deviceBack').onclick=()=>deviceCommand('android_back');
     // TeamViewer controls were removed from this canonical LIVE-001 surface.
     // Keep device controls independent so a missing optional integration cannot stop the main runtime.
