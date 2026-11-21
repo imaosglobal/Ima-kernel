@@ -39,6 +39,8 @@ jobs:
           python -m unittest tests/test_external_capability_discovery.py -v
           python scripts/daily_external_capability_scan.py
           python scripts/discover_new_industry_domains.py
+      - name: Daily GitHub achievement growth scan
+        run: python scripts/daily_github_achievement_scan.py
       - name: Daily go-to-market readiness regression
         run: python -m unittest tests/test_market_participation_engine.py -v
       - name: Rebuild chronological self-evolution timeline
