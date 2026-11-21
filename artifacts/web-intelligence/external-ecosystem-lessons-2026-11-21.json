@@ -1,0 +1,21 @@
+{
+  "date":"2026-11-21",
+  "principle":"IMA learns from both similar and fundamentally different systems; lessons are adapted, never blindly copied.",
+  "similar_systems":[
+    {"source":"Perplexity Comet","lesson":"agentic browser research and multi-tab task execution","adaptation":"strengthen LIVE-001 browser grounding while preserving explicit approval"},
+    {"source":"Letta","lesson":"persistent agents with memory and skills","adaptation":"strengthen IMA memory provenance and user-controlled lifecycle without creating a second memory authority"},
+    {"source":"Lindy","lesson":"triggered work across email/calendar/meetings with approvals","adaptation":"connect future IMA action contracts to user-approved workflows"},
+    {"source":"Gemini Enterprise","lesson":"multi-step workflow automation plus governance","adaptation":"apply governance and observability before expanding IMA automation"},
+    {"source":"Microsoft Copilot","lesson":"deep integration with existing work context and permissions","adaptation":"design permission-scoped connectors rather than broad account access"}
+  ],
+  "fundamentally_different_systems":[
+    {"source":"Apple ecosystem","lesson":"device-level continuity, accessibility and privacy architecture","adaptation":"treat device continuity and accessibility as first-class IMA layers"},
+    {"source":"n8n","lesson":"composable workflows and self-hosted automation","adaptation":"reuse composability concept under IMA's single canonical runtime"},
+    {"source":"UiPath","lesson":"enterprise automation, observability and process governance","adaptation":"extend IMA auditability without adopting enterprise-style autonomous execution"},
+    {"source":"NVIDIA robotics ecosystem","lesson":"embodied AI and hardware/software co-design","adaptation":"keep future device/robot/space interfaces behind the same permission and safety contracts"},
+    {"source":"accessibility/assistive technology ecosystem","lesson":"interaction should remain usable when conventional UI fails","adaptation":"make accessibility-tree and multimodal fallback a core IMA capability"}
+  ],
+  "not_promoted":{
+    "reason":"Product-specific features, pricing, branding, proprietary implementations and claims without reproducible evidence are not imported as capabilities."
+  }
+}
