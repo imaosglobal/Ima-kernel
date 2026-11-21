@@ -370,6 +370,21 @@
       "source_provenance": "imaosglobal/Ima-server",
       "test_verified": false,
       "deployment_verified": false
+    },
+    {
+      "id": "safe_deployment_health_contract",
+      "label": "Safe deployment health contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Deterministic deployment-health checks migrated from the legacy self-deploy repository; no package installation, Docker mutation, process killing, secret loading or autonomous deployment is performed.",
+      "evidence": [
+        "deployment/health_contract.py",
+        "tests/test_health_contract.py",
+        "imaosglobal/Ima-self-deploy/check_ima.sh",
+        "imaosglobal/Ima-self-deploy/deploy.sh"
+      ],
+      "source_provenance": "imaosglobal/Ima-self-deploy",
+      "test_verified": false,
+      "deployment_verified": false
     }
   ],
   "updated_at": "2026-11-21",
