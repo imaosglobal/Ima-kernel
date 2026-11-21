@@ -328,9 +328,23 @@
       ],
       "human_agency_required": true,
       "live_world_coverage": false
+    },
+    {
+      "id": "evidence_only_permanent_quality_guard",
+      "label": "Evidence-only permanent quality guard",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Migrated from the legacy evolving-home quality system as a deterministic observation-to-finding layer. It does not mutate UI, attach handlers, reload pages, run background timers or perform autonomous fixes.",
+      "evidence": [
+        "learning/permanent_quality_guard.py",
+        "tests/test_permanent_quality_guard.py",
+        "imaosglobal/ima-os-evolving-home/PERMANENT_QUALITY_SYSTEM.md"
+      ],
+      "source_provenance": "imaosglobal/ima-os-evolving-home",
+      "test_verified": false,
+      "deployment_verified": false
     }
   ],
-  "updated_at": "2026-11-06",
+  "updated_at": "2026-11-21",
   "audit_dimensions": [
     "product specification and information architecture",
     "every navigation item, button, link, form and fallback",
