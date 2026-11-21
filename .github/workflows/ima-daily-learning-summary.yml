@@ -1,8 +1,9 @@
 name: IMA Daily Learning Summary
 
 on:
+  schedule:
+    - cron: "0 3 * * *"
   workflow_dispatch:
-      timezone: "Asia/Jerusalem"
 
 permissions:
   contents: write
@@ -33,6 +34,10 @@ jobs:
           python -m unittest discover -s tests -p "test_child_safety_core_adapter.py" -v
           python -m unittest tests/test_energy_internal_discovery.py -v
           python -m unittest tests/test_system_unification.py -v
+      - name: Daily external capability discovery contract
+        run: |
+          python -m unittest tests/test_external_capability_discovery.py -v
+          python scripts/daily_external_capability_scan.py
       - name: Rebuild chronological self-evolution timeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,7 +48,7 @@ jobs:
         run: python .ima/web_intelligence/daily_summary.py
       - name: Persist daily summary and journal
         run: |
-          git add .ima/evolution/SELF_TIMELINE.json docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json artifacts/web-intelligence/energy-internal-discovery.json
+          git add .ima/evolution/SELF_TIMELINE.json docs/IMA_SELF_EVOLUTION_TIMELINE.md .ima/journal/daily/ artifacts/web-intelligence/daily-summary.json artifacts/web-intelligence/energy-internal-discovery.json artifacts/web-intelligence/daily-external-capability-scan.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "IMA Daily Learning Steward"
           git config user.email "actions@users.noreply.github.com"
