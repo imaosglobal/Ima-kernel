@@ -10,3 +10,6 @@ assert.ok(path.status().records>before);
 const privateResult=path.teachBack({privacy_classification:"PRIVATE"});
 assert.strictEqual(privateResult.ok,false);
 console.log("PATH_PR_INTEGRATION_OK",JSON.stringify(result));
+const snapshot=path.ingestRuntimeSnapshot({health:{healthy:true},learning:{ready:true}});
+assert.ok(snapshot.id);
+console.log("PATH_RUNTIME_SNAPSHOT_OK",snapshot.id);
