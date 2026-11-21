@@ -18,6 +18,7 @@ MODULES = [
     "meta_orchestrator",
     "repository_capability_federation",
     "legacy_capability_adapters",
+    "permanent_quality_guard",
 ]
 
 
