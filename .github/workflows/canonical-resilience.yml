@@ -8,6 +8,8 @@ on:
       - "core/resilience-runtime.js"
       - "tests/resilience_runtime.test.cjs"
       - "package.json"
+      - "kernel/runtime/CANONICAL/IMA_INNOVATION_LOOP.js"
+      - "tests/ima_innovation_loop.test.cjs"
   pull_request:
     paths:
       - "core/GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL.json"
@@ -25,3 +27,5 @@ jobs:
           node-version: 22
       - name: Run canonical resilience test
         run: npm run test:resilience
+      - name: Run canonical innovation test
+        run: npm run test:innovation
