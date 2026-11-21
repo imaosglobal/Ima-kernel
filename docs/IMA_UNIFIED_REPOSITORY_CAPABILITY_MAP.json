@@ -284,6 +284,21 @@
         "tests/test_industry_capability_patterns.py"
       ],
       "conflict_check": "Taxonomy and lessons are evidence-bounded; no second runtime authority, memory authority, feedback authority or LIVE-001 browser runtime."
+    },
+    {
+      "source": "external-industry-ecosystem-scan",
+      "capability": "cross-industry transferable pattern adaptation",
+      "canonical": "learning/industry_pattern_adapter.py",
+      "source_evidence": [
+        "learning/industry_capability_patterns.py",
+        "docs/IMA_INDUSTRY_WIDE_DISCOVERY_CONTRACT.md"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/industry_pattern_adapter.py",
+        "tests/test_industry_pattern_adapter.py"
+      ],
+      "conflict_check": "Adapter produces canonical candidates only; consequential patterns remain approval-gated."
     }
   ],
   "exclusions": [
