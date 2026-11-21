@@ -47,6 +47,22 @@ def search_github(query: str, limit: int = 5) -> list[dict]:
     return data.get("items", [])
 
 
+def search_gdelt(query: str, limit: int = 10) -> list[dict]:
+    params = urllib.parse.urlencode({
+        "query": query,
+        "mode": "artlist",
+        "format": "json",
+        "maxrecords": limit,
+        "sort": "datedesc",
+    })
+    req = urllib.request.Request(
+        "https://api.gdeltproject.org/api/v2/doc/doc?" + params,
+        headers={"User-Agent": "IMA-Daily-Industry-Capability-Scanner"},
+    )
+    with urllib.request.urlopen(req, timeout=20) as response:
+        data = json.load(response)
+    return data.get("articles", [])
+
 def build_group_query(domains: list[str]) -> str:
     terms = [d.replace("_", " ") for d in domains]
     return "(" + " OR ".join(f'"{t}"' for t in terms) + ") AI agent OR automation OR software OR workflow"
@@ -55,8 +71,10 @@ def build_group_query(domains: list[str]) -> str:
 def main() -> None:
     generated_at = datetime.now(timezone.utc).isoformat()
     candidates = []
+    web_candidates = []
     errors = []
     group_results = {}
+    web_group_results = {}
 
     for group, domains in INDUSTRY_GROUPS.items():
         try:
@@ -75,6 +93,24 @@ def main() -> None:
             errors.append({"group": group, "error": str(exc)})
             group_results[group] = 0
 
+        try:
+            web_items = search_gdelt(build_group_query(domains), limit=10)
+            web_group_results[group] = len(web_items)
+            for item in web_items:
+                web_candidates.append({
+                    "source": "gdelt_web",
+                    "name": item.get("title", ""),
+                    "evidence_url": item.get("url", ""),
+                    "capability": group,
+                    "description": item.get("seendate", "") or "",
+                    "topics": [],
+                })
+        except Exception as exc:
+            errors.append({"source": "gdelt_web", "group": group, "error": str(exc)})
+            web_group_results[group] = 0
+
+    candidates.extend(web_candidates)
+
     # Explicitly record taxonomy coverage so newly added sectors are visible in
     # the next daily review instead of silently disappearing.
     taxonomy_path = Path("artifacts/web-intelligence/industry-capability-taxonomy-2026-11-21.json")
@@ -90,10 +126,11 @@ def main() -> None:
 
     payload = {
         "generated_at": generated_at,
-        "source_scope": ["github"],
+        "source_scope": ["github", "gdelt_web"],
         "industry_group_count": len(INDUSTRY_GROUPS),
         "industry_domain_count": len(INDUSTRY_DOMAINS),
         "group_results": group_results,
+        "web_group_results": web_group_results,
         "candidate_count": len(candidates),
         "candidates": normalize_candidates(candidates),
         "errors": errors,
