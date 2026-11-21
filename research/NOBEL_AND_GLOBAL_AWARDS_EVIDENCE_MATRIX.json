@@ -148,6 +148,7 @@
     "Current-year award windows and eligibility must be rechecked immediately before each submission."
   ],
   "next_actions": [
+    "Integrate a canonical global resilience and crisis-communications layer covering individual, founder, executive, family, organization, product and public-reputation crises.",
     "Create one canonical impact-evidence ledger connected to IMA QA/provenance.",
     "Publish independently reviewable IMA research outputs.",
     "Define measurable peace, agency, accessibility and education outcomes.",
@@ -155,5 +156,13 @@
     "Maintain a rolling award registry with official eligibility, deadline, nominator and evidence requirements.",
     "Prepare submission packets but stop at human/legal/nomination boundaries.",
     "After every submission, store receipt/status/evidence and never infer nomination or award from submission alone."
+  ],
+  "related_systems": [
+    "FUNDING-001",
+    "#181",
+    "AWARDS-001",
+    "#182",
+    "MINIMUM_HUMAN_ACTION_POLICY",
+    "LIVE-001"
   ]
 }
