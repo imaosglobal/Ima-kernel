@@ -1,0 +1,24 @@
+{
+  "schema_version":"1.0",
+  "canonical":true,
+  "name":"IMA_AGENT_CAPABILITY_REGISTRY",
+  "purpose":"Connect specialist agents/providers to IMA while keeping IMA as the policy, identity, authorization and audit layer.",
+  "capabilities":[
+    {"id":"browser_agent","class":"browser_navigation_and_form_filling","delegable":true,"human_boundary":"provider/site policy"},
+    {"id":"document_agent","class":"document_collection_and_extraction","delegable":true,"human_boundary":"NONE unless source requires human presence"},
+    {"id":"identity_provider","class":"identity_verification_orchestration","delegable":true,"human_boundary":"IDENTITY when user presence/liveness/consent is required"},
+    {"id":"kyc_aml_provider","class":"kyc_aml_screening_orchestration","delegable":true,"human_boundary":"ACCOUNTABLE_DECISION when regulated approval is required"},
+    {"id":"esign_provider","class":"e_signature_orchestration","delegable":true,"human_boundary":"SIGNATURE"},
+    {"id":"payment_provider","class":"payment_and_banking_authorization_orchestration","delegable":true,"human_boundary":"BANKING"},
+    {"id":"scheduling_agent","class":"scheduling_and_live_handoff","delegable":true,"human_boundary":"LIVE_INTERACTION"},
+    {"id":"submission_agent","class":"submission_and_status_monitoring","delegable":true,"human_boundary":"provider/site policy"},
+    {"id":"audit_agent","class":"result_verification_and_audit","delegable":true,"human_boundary":"NONE"}
+  ],
+  "delegation_rules":[
+    "IMA may call a specialist provider only when the capability is available and both provider authorization and user/task authorization are present.",
+    "Delegation never transfers legal identity, signature authority, banking authority, or accountable decision authority.",
+    "Provider-side human checks are surfaced to the user at the exact step required.",
+    "IMA resumes from a verified checkpoint after completion whenever the provider exposes a reliable completion signal.",
+    "Credentials and sensitive evidence remain scoped to the minimum task and are not exposed to unrelated agents."
+  ]
+}
