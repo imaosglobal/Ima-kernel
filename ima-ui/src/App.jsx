@@ -158,6 +158,7 @@ export default function App(){
   const [lang,setLang]=useState(()=>{const saved=localStorage.getItem('ima-site-language');if(saved)return saved;const d=String(navigator.language||'en').split('-')[0].toLowerCase();return SUPPORTED_LOCALES.some(([c])=>c===d)?d:'en'});
   const [user,setUser]=useState(()=>getStoredGoogleUser());
   const [chatOpen,setChatOpen]=useState(false);
+  const [storeOpen,setStoreOpen]=useState(false);
   const [feedback,setFeedback]=useState('');
   const [feedbackStatus,setFeedbackStatus]=useState('');
   const [installEvent,setInstallEvent]=useState(null);
@@ -165,6 +166,7 @@ export default function App(){
   const [shareStatus,setShareStatus]=useState('');
   const [chatOnly]=useState(()=>new URLSearchParams(location.search).get('chat')==='1');
   const t=COPY[lang]||COPY.en;
+  useEffect(()=>{ if(user) setChatOpen(true); },[user]);
   const campaign=useMemo(()=>getMarketCampaign(location.search),[]);
   
   useEffect(()=>{
@@ -215,8 +217,8 @@ export default function App(){
   return <div className="ima-site">
     {notice&&<div className="site-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="close">×</button></div>}
     <header className="site-header">
-      <a className="brand" href={GOOGLE_CAMPAIGN_URL} aria-label="IMA — אמא"><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/><span><b>אמא</b><small>IMA</small></span></a>
-      <nav><button onClick={openChat}>{t.chat}</button><a href="#how">{t.how}</a></nav>
+      <a className="brand" href={BASE} aria-label="IMA — אמא"><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/><span><b>אמא</b><small>IMA</small></span></a>
+      <nav><button onClick={openChat}>{t.chat}</button>{user&&<button onClick={()=>{setStoreOpen(true);setChatOpen(false)}}>חנות</button>}<a href="#how">{t.how}</a></nav>
       <div className="header-right"><select value={lang} onChange={e=>setLang(e.target.value)} aria-label="Language">{SUPPORTED_LOCALES.map(([c,n])=><option key={c} value={c}>{n}</option>)}</select><div id="login"><GoogleButton user={user} onUser={u=>{setUser(u);if(u)setChatOpen(true)}} t={t}/></div></div>
     </header>
 
@@ -230,12 +232,20 @@ export default function App(){
           <div className="hero-proof"><span>✓ {t.trust}</span><span>✓ {t.trustText.split(' · ')[0]}</span></div>
         </div>
         <div className="hero-visual">
-          <a href={GOOGLE_CAMPAIGN_URL} className="hero-mother" aria-label="IMA public campaign"><div className="hero-ring"/><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/></a>
+          <button type="button" className="hero-mother" onClick={openChat} aria-label="פתח שיחה עם אמא"><div className="hero-ring"/><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/></button>
           <span className="tap-hint">{lang==='he'?'לחצו על אמא כדי להתחיל':'Tap IMA to begin'}</span>
         </div>
       </section>
 
       {user&&chatOpen&&<ChatPanel lang={lang} user={user} onClose={()=>setChatOpen(false)}/>}
+      {user&&storeOpen&&<section className="store-panel" aria-label="IMA Store" id="store">
+        <div className="store-head"><div><span className="eyebrow">IMA Store</span><h2>הכלים והחיבורים של אמא</h2><p>מוצרים, חוויות וחיבורים שאפשר להוסיף לאמא בלי לפצל את המערכת.</p></div><button className="icon-button" onClick={()=>setStoreOpen(false)} aria-label="סגירה">×</button></div>
+        <div className="store-grid">
+          <article><span>01</span><h3>IMA לכל מכשיר</h3><p>המשיכו עם אותה אמא בין הטלפון, הדפדפן והמכשירים המחוברים.</p><button className="secondary" onClick={()=>{setStoreOpen(false);openChat()}}>לדבר עם אמא</button></article>
+          <article><span>02</span><h3>כלים וחוויות</h3><p>יכולות חדשות יתווספו כאן רק לאחר בדיקה, תמחור וחיבור אמיתי.</p><button className="secondary" disabled>בקרוב</button></article>
+          <article><span>03</span><h3>תמיכה באמא</h3><p>אפשר לתמוך בהתפתחות הפרויקט ובפתיחת יכולות חדשות.</p><a className="secondary store-link" href="https://opencollective.com/ima-human-centered-intelligenc" target="_blank" rel="noreferrer">תמיכה בפרויקט</a></article>
+        </div>
+      </section>}
       {user&&!chatOpen&&<button className="chat-bar" onClick={openChat}><MamaFigure compact/><span><b>{t.publicChat}</b><small>{lang==='he'?'המשך שיחה':'Continue your conversation'}</small></span><strong>→</strong></button>}
 
       <section className="jobs" aria-labelledby="jobs-title">
