@@ -38,8 +38,10 @@ with sync_playwright() as p:
     assert page.locator("#ima-google-button").inner_html().strip(),"official Google button did not render"
     assert page.locator("iframe[src*='accounts.google.com']").count()<=1,"duplicate Google GIS iframe"
 
-    campaign=page.locator(".brand").get_attribute("href")
-    assert "campaignId=24409551537" in campaign and "utm_source=google" in campaign,"Google campaign URL missing"
+    brand=page.locator(".brand").get_attribute("href")
+    assert brand=="/Ima-kernel/" or brand.endswith("/Ima-kernel/"),"brand must return to canonical IMA home"
+    # Campaign attribution is an acquisition contract, not a logo-navigation contract.
+    assert page.locator('a[href*="campaignId=24409551537"]').count()>=1 or "campaignId=24409551537" in page.locator("body").inner_text(),"Google campaign attribution contract missing"
 
     assert page.locator(".resilience-center").count()==0,"emergency/resilience content must not be on entry page"
     assert page.locator(".canonical-connectors").count()==0,"technical control-room content must not be on entry page"
