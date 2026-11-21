@@ -88,3 +88,40 @@ footer div{display:flex;align-items:center;gap:14px;flex-wrap:wrap}footer a,foot
 @media(max-width:900px){.site-header{padding:0 14px;gap:10px}.site-header nav{display:none}.header-right{margin-inline-start:auto}.hero{grid-template-columns:1fr;padding-top:50px}.hero-copy{max-width:none}.hero-visual{min-height:360px;order:-1}.hero h1{font-size:clamp(54px,15vw,88px)}.job-grid{grid-template-columns:1fr 1fr}.how-grid{grid-template-columns:1fr}.feedback{grid-template-columns:1fr;gap:20px}.brand{min-width:auto}.brand span{display:none}}
 @media(max-width:600px){.site-header{height:64px}.header-right select{max-width:92px}.hero{padding:38px 14px 60px;gap:10px}.hero-visual{min-height:290px}.hero-mother{width:290px}.tap-hint{margin-top:-42px}.hero-actions{display:grid}.hero-actions button{width:100%}.jobs,.how,.feedback{padding:52px 14px 64px}.job-grid{grid-template-columns:1fr}.job-card{min-height:140px}.chat-panel{margin-inline:14px}.chat-bar{width:calc(100% - 28px);margin-inline:14px}.chat-composer{grid-template-columns:1fr}.chat-composer button{min-height:48px}.feedback{padding-inline:14px}footer{padding-inline:14px;display:block}footer div{margin-top:14px}.account span:not(.account-avatar){display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ima-site *{transition:none!important;animation:none!important}}
+
+
+/* IMA 2026-11-21 visual correction: remove decorative campaign rings, restore warm readable typography, make the figure a real interaction surface. */
+body{background:#f6f0e8!important;color:#352b28!important}
+.ima-site{background:linear-gradient(180deg,#fbf7f1 0%,#f5ede3 100%)!important;color:#352b28!important}
+.site-header{background:rgba(251,247,241,.94)!important;color:#352b28!important}
+.site-header nav button,.site-header nav a,.account button{color:#675c55!important}
+.hero h1,.hero h2,.jobs h2,.how h2,.feedback h2{color:#352b28!important}
+.hero p,.how p,.feedback p{color:#71665f!important}
+.hero-mother{position:relative;border:0!important;padding:0!important;background:transparent!important;display:grid!important;place-items:center!important;cursor:pointer;min-height:440px}
+.hero-mother .hero-ring{display:none!important}
+.hero-mother img{width:min(420px,78vw)!important;height:auto!important;max-height:420px!important;object-fit:contain!important;border-radius:0!important;filter:drop-shadow(0 24px 40px rgba(93,65,48,.18));transition:transform .25s ease,filter .25s ease!important}
+.hero-mother:hover img{transform:translateY(-7px) scale(1.025)!important;filter:drop-shadow(0 30px 48px rgba(93,65,48,.23))}
+.tap-hint{color:#8a786d!important;font-weight:800}
+.primary{background:#9d5963!important;border-color:#9d5963!important;color:#fff!important}
+.secondary{background:#fffaf5!important;border-color:#d8c9bc!important;color:#493d37!important}
+.job-card{background:#fffaf5!important;border-color:#e1d5ca!important;color:#493d37!important}
+.job-card small{color:#7b6f67!important}
+.chat-panel{background:#fffaf5!important;color:#352b28!important;border-color:#e1d5ca!important}
+.chat-head{border-bottom:1px solid #eadfd6}
+.chat-empty{color:#8a7d75!important}
+.bubble.user{background:#eadfd5!important;color:#493d37!important}
+.bubble.ima{background:#ead0d4!important;color:#493d37!important}
+.chat-composer{background:#f0e7de!important}
+.chat-composer input{color:#493d37!important}
+.chat-composer button{background:#9d5963!important;color:#fff!important}
+.store-panel{max-width:1180px;margin:0 auto 70px;padding:30px 20px;background:#fffaf5;border:1px solid #e1d5ca;border-radius:30px;box-shadow:0 24px 70px rgba(75,51,40,.10)}
+.store-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:25px}
+.store-head h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.04em;margin:8px 0}
+.store-head p{color:#786c64;margin:0}
+.store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.store-grid article{background:#f7efe7;border:1px solid #e2d6ca;border-radius:22px;padding:24px;min-height:260px;display:flex;flex-direction:column}
+.store-grid article>span{font-size:11px;color:#9d5963;font-weight:900}
+.store-grid h3{font-size:22px;margin:38px 0 10px}
+.store-grid p{color:#766a62;line-height:1.65;flex:1}
+.store-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:50px}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:38px}.hero-visual{order:-1}.hero-mother{min-height:300px}.hero-mother img{width:min(320px,82vw)!important}.store-grid{grid-template-columns:1fr}.store-panel{margin-inline:14px;padding:20px}.store-head{gap:10px}}
