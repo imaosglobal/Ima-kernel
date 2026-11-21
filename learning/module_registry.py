@@ -17,6 +17,7 @@ MODULES = [
     "system_introspection",
     "meta_orchestrator",
     "repository_capability_federation",
+    "legacy_capability_adapters",
 ]
 
 
