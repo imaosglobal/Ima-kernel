@@ -27,6 +27,10 @@ MODULES = [
     "external_ecosystem_patterns",
     "industry_capability_patterns",
     "industry_pattern_adapter",
+    "collaboration_value_engine",
+    "ip_provenance_vault",
+    "ima_personality_system",
+    "universal_device_interoperability",
 ]
 
 
