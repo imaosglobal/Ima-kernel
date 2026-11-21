@@ -342,6 +342,34 @@
       "source_provenance": "imaosglobal/ima-os-evolving-home",
       "test_verified": false,
       "deployment_verified": false
+    },
+    {
+      "id": "evidence_bounded_self_improvement_signals",
+      "label": "Evidence-bounded self-improvement signals",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Observes supplied metrics and feedback and emits improvement candidates; it never self-modifies code, deploys, changes user state or executes external actions.",
+      "evidence": [
+        "learning/self_improvement_signals.py",
+        "tests/test_self_improvement_signals.py",
+        "imaosglobal/ima-os-evolving-home/SELF_IMPROVEMENT_ENGINE.md"
+      ],
+      "source_provenance": "imaosglobal/ima-os-evolving-home",
+      "test_verified": false,
+      "deployment_verified": false
+    },
+    {
+      "id": "canonical_public_mcp_contract_adapter",
+      "label": "Canonical public MCP status/distribution contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Read-only public metadata adapter. It does not expose private memory/secrets or perform external connections.",
+      "evidence": [
+        "runtime/mcp_public_status_adapter.py",
+        "tests/test_mcp_public_status_adapter.py",
+        "imaosglobal/Ima-server/mcp.js"
+      ],
+      "source_provenance": "imaosglobal/Ima-server",
+      "test_verified": false,
+      "deployment_verified": false
     }
   ],
   "updated_at": "2026-11-21",
