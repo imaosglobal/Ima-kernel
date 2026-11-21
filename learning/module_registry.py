@@ -31,6 +31,7 @@ MODULES = [
     "ip_provenance_vault",
     "ima_personality_system",
     "universal_device_interoperability",
+    "market_participation_engine",
 ]
 
 
