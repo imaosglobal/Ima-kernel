@@ -32,6 +32,7 @@ MODULES = [
     "ima_personality_system",
     "universal_device_interoperability",
     "market_participation_engine",
+    "github_achievement_growth",
 ]
 
 
