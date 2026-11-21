@@ -32,3 +32,5 @@ jobs:
         run: npm run test:innovation
       - name: Run canonical Path Intelligence test
         run: npm run test:path-intelligence
+      - name: Run canonical Path Intelligence runtime integration test
+        run: npm run test:path-intelligence-runtime
