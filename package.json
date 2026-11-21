@@ -41,7 +41,8 @@
     "test:resilience": "node tests/resilience_runtime.test.cjs",
     "test:innovation": "node tests/ima_innovation_loop.test.cjs",
     "test:path-intelligence": "node tests/path_intelligence.test.cjs",
-    "test:path-intelligence-runtime": "node tests/path_intelligence_runtime.test.cjs"
+    "test:path-intelligence-runtime": "node tests/path_intelligence_runtime.test.cjs",
+    "test:path-pr-integration": "node tests/path_pr_integration.test.cjs"
   },
   "repository": {
     "type": "git",
