@@ -24,6 +24,7 @@ MODULES = [
     "human_approval_contract",
     "memory_provenance_contract",
     "agent_security_regression",
+    "external_ecosystem_patterns",
 ]
 
 
