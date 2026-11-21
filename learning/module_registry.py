@@ -19,6 +19,7 @@ MODULES = [
     "repository_capability_federation",
     "legacy_capability_adapters",
     "permanent_quality_guard",
+    "self_improvement_signals",
 ]
 
 
