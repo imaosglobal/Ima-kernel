@@ -26,16 +26,29 @@ function ingestCapabilityMap(registry){
     goal:"Connect verified IMA capabilities and their provenance into one reusable path-intelligence surface.",
     current_state:"CANONICAL_MAIN",
     blocker:proposed.length?{type:"PROPOSED_WORK",count:proposed.length}:null,
-    verified_options:merged.map(p=>`PR #${p.number}:${p.class}`),
+    verified_options:merged.map(p=>"PR #"+p.number+":"+p.class),
     path:["PR provenance","capability classification","runtime/path evidence","teach-back only after verification"],
-    evidence:[`merged_pr_count:${merged.length}`,`open_unmerged_count:${proposed.length}`,`closed_unmerged_count:${closedUnmerged.length}`],
+    evidence:["merged_pr_count:"+merged.length,"open_unmerged_count:"+proposed.length,"closed_unmerged_count:"+closedUnmerged.length],
     outcome:"SCANNED_AND_MAPPED",
     provenance:"core/PR_PATH_INTEGRATION_REGISTRY.json",
     privacy_classification:"PUBLIC",
     reuse_scope:"CANONICAL_CAPABILITY_PROVENANCE",
     confidence:"VERIFIED_FROM_GITHUB_STATE"
   });
-  return {record_id:record.id,merged:merged.length,proposed:proposed.length,closed_unmerged:closedUnmerged.length};
+  const capability_records=prs.map(p=>ingest({
+    goal:"Preserve and reuse the engineering path represented by PR #"+p.number+" ("+p.class+").",
+    current_state:p.status,
+    blocker:p.status==="OPEN_UNMERGED"?{type:"UNMERGED_PR",number:p.number}:null,
+    verified_options:p.status==="MERGED"?["PR #"+p.number+" is present on canonical main"]:[],
+    path:["identify PR provenance","classify implementation state",p.status==="MERGED"?"use only verified main-branch capability":"keep as proposal/evidence only","measure outcome before transferable adoption"],
+    evidence:["pr_number:"+p.number,"status:"+p.status,"class:"+p.class],
+    outcome:p.status==="MERGED"?"MERGED_CAPABILITY_REGISTERED":"NOT_LIVE",
+    provenance:"core/PR_PATH_INTEGRATION_REGISTRY.json",
+    privacy_classification:"PUBLIC",
+    reuse_scope:p.status==="MERGED"?"CANONICAL_CAPABILITY_PROVENANCE":"PROPOSAL_ONLY",
+    confidence:"VERIFIED_FROM_GITHUB_STATE"
+  }));
+  return {record_id:record.id,merged:merged.length,proposed:proposed.length,closed_unmerged:closedUnmerged.length,capability_records:capability_records.length};
 }
 function status(){return {canonical:true,records:state.records.length,lessons:state.lessons.length,max:MAX,transfer_rule:"PRIVATE_EXPERIENCE -> VERIFIED_ABSTRACT_PRINCIPLE -> REUSABLE_PATTERN -> INDEPENDENTLY_TESTED_PATH"};}
 module.exports={ingest,ingestSignal,ingestCapabilityMap,ingestRuntimeSnapshot,teachBack,status,state};
