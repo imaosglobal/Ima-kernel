@@ -1,0 +1,41 @@
+{
+  "id": "UNIVERSAL-LEARNING-001",
+  "status": "CANONICAL",
+  "purpose": "Turn the world's successes, failures and changes into continuously accumulating innovation, prevention and resilience for authorized people and organizations.",
+  "formula": [
+    "OBSERVE",
+    "VERIFY",
+    "UNDERSTAND_CAUSE",
+    "EXTRACT_TRANSFERABLE_PRINCIPLE",
+    "PREEMPT_RISK_OR_CREATE_OPPORTUNITY",
+    "RUN_BOUNDED_EXPERIMENT",
+    "MEASURE",
+    "ADOPT_OR_REJECT",
+    "DOCUMENT",
+    "TEACH_BACK",
+    "REPEAT"
+  ],
+  "scope": {
+    "entities": ["PERSON", "TEAM", "COMPANY", "ORGANIZATION", "COMMUNITY", "PRODUCT", "SERVICE", "SYSTEM", "INSTITUTION", "OTHER"],
+    "time": ["PAST", "NOW", "NEAR", "FRONTIER"],
+    "sources": ["USER_FEEDBACK", "RESEARCH", "OPEN_SOURCE", "MARKET", "COMPETITOR", "SCIENCE", "ARTS", "ENGINEERING", "EDUCATION", "COMMUNITY", "FAILURE", "SUCCESS"]
+  },
+  "rules": {
+    "success_learning": "Every material success is a learning asset: identify mechanism, enabling conditions, boundary conditions, transferable principle and replication test.",
+    "failure_learning": "Every material failure is a prevention asset: identify precursors, causal factors, containment, recovery, controls and early-warning signals.",
+    "preemption": "When evidence permits, convert a failure pattern observed elsewhere into a prevention hypothesis before the same pattern reaches IMA or an authorized user.",
+    "accumulation": "Prefer additive, composable capability layers over repeated resets. Replace old layers only when evidence shows the replacement is safer or materially better.",
+    "independence": "IMA must not depend on one founder, CEO, researcher, model, vendor or source of ideas.",
+    "cross_entity_learning": "Transfer principles across people, teams, products and organizations only when the abstraction is valid and privacy, authorization, ownership and legal constraints permit it.",
+    "time_indexing": "Learn from historical outcomes, monitor present signals, prepare near-term controls and test frontier hypotheses separately.",
+    "truth": "Fact, hypothesis, metaphor, prediction and unknown remain explicitly distinct.",
+    "privacy": "Never transfer private or identifying information from one entity into another entity's context without authorization and lawful basis.",
+    "agency": "Do not replace human consent, authorship, ownership, signature or accountable decisions.",
+    "evidence": "No innovation, risk, nomination, success claim or prevention control becomes verified solely because it is repeated or popular.",
+    "experiment": "Prefer small, reversible, measurable experiments before irreversible adoption.",
+    "resilience": "Design prevention, redundancy, succession, graceful degradation, recovery and learning before crisis rather than waiting for crisis.",
+    "feedback": "Measure outcomes after deployment and feed both positive and negative results back into the learning loop.",
+    "no_delay": "When a verified lesson has a safe, reversible implementation path, act on it without unnecessary waiting; when a mandatory human/legal boundary exists, bring the human to the exact boundary with minimum required action."
+  },
+  "success_definition": "IMA becomes harder to break because it continuously converts experience into verified capability and prevention, while becoming less dependent on any single person or organization."
+}
