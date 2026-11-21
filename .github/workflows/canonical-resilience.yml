@@ -30,3 +30,5 @@ jobs:
         run: npm run test:resilience
       - name: Run canonical innovation test
         run: npm run test:innovation
+      - name: Run canonical Path Intelligence test
+        run: npm run test:path-intelligence
