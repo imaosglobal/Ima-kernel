@@ -1,17 +1,32 @@
 "use strict";
 
 /**
- * IMA Innovation Loop
- * Canonical extension of Continuous Betterment.
- * Learns from authorized human input, research, real-world outcomes,
- * external ecosystems and failures/successes without copying private data
- * or treating novelty as truth.
+ * IMA Innovation + Resilience Learning Loop
+ * Canonical extension of Continuous Learning / Betterment.
+ *
+ * Core formula:
+ * success + failure + change signals
+ * -> understand cause -> extract transferable principle
+ * -> preempt risk / generate opportunity
+ * -> bounded experiment -> evidence
+ * -> capability -> deployment -> measurement -> learning.
+ *
+ * Applies across people, teams, organizations, products, communities and
+ * other authorized entities, across past/present/future time horizons.
+ * It must not depend on one founder, leader, researcher, model or source.
  */
 const SOURCES=Object.freeze([
   "USER_FEEDBACK","RESEARCH","OPEN_SOURCE","MARKET","COMPETITOR",
   "SCIENCE","ARTS","ENGINEERING","EDUCATION","COMMUNITY","FAILURE","SUCCESS"
 ]);
-const HORIZONS=Object.freeze(["NOW","NEAR","FRONTIER"]);
+const HORIZONS=Object.freeze(["PAST","NOW","NEAR","FRONTIER"]);
+const ENTITY_TYPES=Object.freeze([
+  "PERSON","TEAM","COMPANY","ORGANIZATION","COMMUNITY","PRODUCT",
+  "SERVICE","SYSTEM","INSTITUTION","OTHER"
+]);
+const LEARNING_MODES=Object.freeze([
+  "PREVENT","ADAPT","INNOVATE","RECOVER","SCALE","REPLICATE","RETIRE"
+]);
 
 function norm(v){return typeof v==="string"?v.trim().toUpperCase():v??"UNKNOWN";}
 
@@ -19,13 +34,23 @@ function collectSignals(inputs=[]){
   return (Array.isArray(inputs)?inputs:[]).map((x,i)=>({
     id:x.id||`signal-${i+1}`,
     source:SOURCES.includes(norm(x.source))?norm(x.source):"RESEARCH",
-    horizon:HORIZONS.includes(norm(x.horizon))?norm(x.horizon):"NEAR",
+    horizon:HORIZONS.includes(norm(x.horizon))?norm(x.horizon):"NOW",
+    entity_type:ENTITY_TYPES.includes(norm(x.entity_type))?norm(x.entity_type):"OTHER",
+    entity_id:x.entity_id||null,
     claim:x.claim||"",
+    outcome:x.outcome||null,
+    cause:x.cause||null,
     evidence:x.evidence||null,
     provenance:x.provenance||null,
     privacy_safe:x.privacy_safe!==false,
     authorized:x.authorized!==false
   })).filter(x=>x.privacy_safe&&x.authorized&&x.claim);
+}
+
+function extractPrinciple(signal){
+  if(signal.cause) return `Transfer the evidenced causal lesson: ${signal.cause}`;
+  if(signal.outcome) return `Study the mechanism behind the observed outcome: ${signal.outcome}`;
+  return "Identify the smallest transferable principle before copying the observed result.";
 }
 
 function generateCandidates(signals=[]){
@@ -34,12 +59,17 @@ function generateCandidates(signals=[]){
     id:`innovation-${i+1}`,
     source:s.source,
     horizon:s.horizon,
+    entity_type:s.entity_type,
+    entity_id:s.entity_id,
     hypothesis:s.claim,
+    transferable_principle:extractPrinciple(s),
+    outcome:s.outcome,
     evidence:s.evidence,
     provenance:s.provenance,
     novelty_score:s.horizon==="FRONTIER"?3:s.horizon==="NEAR"?2:1,
-    impact_score:s.source==="SUCCESS"||s.source==="USER_FEEDBACK"?3:2,
+    impact_score:s.source==="SUCCESS"||s.source==="USER_FEEDBACK"||s.source==="FAILURE"?3:2,
     readiness:s.evidence?"EVIDENCE_AVAILABLE":"EVIDENCE_GAP",
+    learning_mode:s.source==="FAILURE"?"PREVENT":s.source==="SUCCESS"?"REPLICATE":"INNOVATE",
     next_step:s.evidence
       ?"Run a bounded, reversible experiment and measure outcome."
       :"Seek independent evidence before treating this as a product direction."
@@ -52,18 +82,48 @@ function prioritize(candidates=[]){
   );
 }
 
-function innovationPlan(signals=[]){
+function buildUniversalLearningPlan(signals=[]){
   const candidates=prioritize(generateCandidates(signals));
   return {
-    principle:"IMA must continuously learn from humanity and the world without becoming dependent on any single person.",
-    source_coverage:SOURCES,
+    principle:"IMA continuously learns from humanity and the world; no single person, organization, model or source is a permanent bottleneck.",
+    formula:[
+      "OBSERVE",
+      "VERIFY",
+      "UNDERSTAND_CAUSE",
+      "EXTRACT_PRINCIPLE",
+      "PREEMPT_OR_CREATE",
+      "EXPERIMENT",
+      "MEASURE",
+      "ADOPT_OR_REJECT",
+      "DOCUMENT",
+      "TEACH_BACK",
+      "REPEAT"
+    ],
+    coverage:{
+      entities:ENTITY_TYPES,
+      horizons:HORIZONS,
+      sources:SOURCES
+    },
     candidates,
+    preemption_rule:"Every material failure pattern should generate a prevention hypothesis before it becomes an IMA failure, when evidence permits.",
+    success_rule:"Every material success should be analyzed for mechanism, transferable principle, boundary conditions and replication potential—not merely recorded as a win.",
+    crisis_rule:"When an external person or organization enters a crisis, learn the preventable causes and controls without exploiting private information or importing unverified claims.",
+    accumulation_rule:"New capability should build on prior verified capabilities; retire or replace only when evidence shows the old layer is inferior or unsafe.",
     experiment_rule:"Prefer small, reversible, measurable experiments before irreversible adoption.",
-    truth_rule:"Novelty is a hypothesis until independently evidenced.",
-    human_agency_rule:"Do not replace human authorship, consent, ownership or accountable decisions.",
-    privacy_rule:"Private user data is never generalized into another user's context without authorization.",
-    continuity_rule:"Every valuable capability must have documentation, tests, provenance and more than one maintainer/path where feasible."
+    truth_rule:"Observation, hypothesis, metaphor and verified fact remain explicitly distinct.",
+    privacy_rule:"Private data is never generalized into another person's or organization's context without authorization and lawful basis.",
+    agency_rule:"Do not replace human authorship, consent, ownership or accountable decisions.",
+    resilience_rule:"Design for graceful degradation, succession, redundancy, recovery and learning before crisis.",
+    continuity_rule:"Every valuable capability should have documentation, tests, provenance and more than one maintainer/path where feasible."
   };
 }
 
-module.exports={SOURCES,HORIZONS,collectSignals,generateCandidates,prioritize,innovationPlan};
+function innovationPlan(signals=[]){
+  return buildUniversalLearningPlan(signals);
+}
+
+module.exports={
+  SOURCES,HORIZONS,ENTITY_TYPES,LEARNING_MODES,
+  collectSignals,extractPrinciple,generateCandidates,prioritize,
+  buildUniversalLearningPlan,innovationPlan
+};
