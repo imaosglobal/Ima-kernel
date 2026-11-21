@@ -1,0 +1,46 @@
+{
+  "schema_version":"1.0",
+  "canonical":true,
+  "name":"NOBEL_READINESS_AND_NOMINATION_STRATEGY",
+  "truth_status":"STRATEGY_NOT_NOMINATION",
+  "principle":"Do not market IMA or Ori as Nobel nominees unless a valid nomination is actually made by an eligible nominator and the relevant institution confirms it only when disclosure is permitted.",
+  "scope":{
+    "nobel_categories":["Physics","Chemistry","Physiology or Medicine","Literature","Peace"],
+    "economic_sciences":"Separate prize administered with the Nobel prizes; not one of Alfred Nobel's original five categories.",
+    "not_nobel_categories":["Mathematics","Computer Science","Engineering","Psychology","other fields without a Nobel category"]
+  },
+  "strategy":{
+    "primary_goal":"Create independently verifiable, world-level contributions whose significance could plausibly meet Nobel-level standards.",
+    "secondary_goal":"Build nomination-ready evidence and legitimate relationships with eligible nominators without lobbying for or fabricating nominations.",
+    "tracks":{
+      "peace":{"candidate_form":"person_or_organization","ima_fit":"high-potential long-term track","evidence":"measurable conflict prevention, peacebuilding, human agency, cross-border impact"},
+      "literature":{"candidate_form":"person","ima_fit":"Ori and published literary work only","evidence":"outstanding literary body of work with independent critical recognition"},
+      "physics":{"candidate_form":"person_or_small_group","ima_fit":"research-dependent","evidence":"major validated discovery/invention in physics"},
+      "chemistry":{"candidate_form":"person_or_small_group","ima_fit":"research-dependent","evidence":"major validated chemical discovery/improvement"},
+      "medicine":{"candidate_form":"person_or_small_group","ima_fit":"research-dependent","evidence":"major validated life-science/medical discovery of paradigm-level importance"},
+      "economic_sciences":{"candidate_form":"person_or_small_group","ima_fit":"research-dependent","evidence":"major validated contribution to economic sciences"}
+    }
+  },
+  "execution":{
+    "research":"Continuously map IMA work to Nobel criteria and identify missing scientific, literary and peace-impact evidence.",
+    "evidence":"Maintain reproducible papers, datasets, deployments, independent evaluations, citations, real-world outcomes and provenance.",
+    "independence":"Seek independent experts, institutions and replication; never manufacture endorsements.",
+    "nomination":"Identify only legitimate eligible nominators for each category and prepare nomination-ready evidence; no self-nomination.",
+    "timeline":"Reassess annually before nomination deadlines; do not claim nomination unless actually submitted by an eligible nominator."
+  },
+  "hard_rules":[
+    "No self-nomination.",
+    "No fabricated Nobel affiliation, nomination, endorsement or finalist status.",
+    "No payment or quid-pro-quo for a nomination.",
+    "Do not pressure eligible nominators.",
+    "Do not misrepresent an AI system as a human laureate candidate.",
+    "A Nobel-level aspiration is not evidence of Nobel-level achievement."
+  ],
+  "next_actions":[
+    "Build a Nobel Evidence Matrix for IMA and Ori.",
+    "Create independent-impact metrics for peace, human agency and global benefit.",
+    "Publish high-quality technical/research outputs with reproducibility.",
+    "Map current IMA capabilities to the strongest legitimate Nobel track(s).",
+    "Identify gaps and prioritize work that creates real-world, independently verifiable impact."
+  ]
+}
