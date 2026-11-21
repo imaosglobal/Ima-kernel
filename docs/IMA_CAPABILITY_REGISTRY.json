@@ -429,6 +429,20 @@
         "tests/test_agent_security_regression.py"
       ],
       "source_provenance": "Open agent security benchmark/red-team patterns"
+    },
+    {
+      "id": "permanent_industry_wide_discovery",
+      "label": "Permanent cross-industry capability discovery and adaptation",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Daily industry-agnostic discovery across software, hardware, services, physical trades, creative fields, science, finance, public services and frontier domains; discovery does not itself prove live capability.",
+      "evidence": [
+        "learning/industry_capability_patterns.py",
+        "scripts/daily_external_capability_scan.py",
+        "docs/IMA_INDUSTRY_WIDE_DISCOVERY_CONTRACT.md",
+        "tests/test_industry_capability_patterns.py"
+      ],
+      "source_provenance": "Cross-industry ecosystem research",
+      "conflict_policy": "No duplicate brain, memory, feedback authority or LIVE-001 runtime; consequential actions remain explicitly approved."
     }
   ],
   "updated_at": "2026-11-21",
