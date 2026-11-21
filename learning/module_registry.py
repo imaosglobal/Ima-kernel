@@ -16,6 +16,7 @@ MODULES = [
     "safety_gate",
     "system_introspection",
     "meta_orchestrator",
+    "repository_capability_federation",
 ]
 
 
