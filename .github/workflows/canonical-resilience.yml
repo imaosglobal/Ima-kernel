@@ -1,0 +1,27 @@
+name: Canonical Resilience QA
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "core/GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL.json"
+      - "core/resilience-runtime.js"
+      - "tests/resilience_runtime.test.cjs"
+      - "package.json"
+  pull_request:
+    paths:
+      - "core/GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL.json"
+      - "core/resilience-runtime.js"
+      - "tests/resilience_runtime.test.cjs"
+      - "package.json"
+
+jobs:
+  resilience:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run canonical resilience test
+        run: npm run test:resilience
