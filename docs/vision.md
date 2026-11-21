@@ -38,32 +38,92 @@ For a person today, for a child growing up tomorrow, for people living generatio
 
 If the answer changes, IMA must change too.
 
-## Universal language and communication commitment
+## Universal communication and meaning commitment
 
-IMA's canonical language layer must be:
+IMA's canonical communication layer must go deeper than a list of human languages.
 
-- **Language-inclusive:** no language is excluded merely because it has fewer speakers or less digital data.
-- **Community-aware:** native speakers and communities remain authorities over their own language, cultural meaning and sensitive knowledge.
-- **Meaning-first:** translation must preserve intended meaning and clearly mark cases where exact equivalence is impossible.
-- **Bidirectional:** IMA must be able to learn from every supported language, not only translate from dominant languages into smaller ones.
-- **Low-resource aware:** lack of training data must never be silently converted into false confidence.
-- **Signed-language aware:** visual-spatial languages are first-class languages, not treated as defective forms of spoken language.
-- **Dialect-aware:** variation within a language is part of the language, not automatically an error.
-- **Historical-aware:** ancient, classical, reconstructed and revived languages can be handled with explicit evidence and uncertainty.
-- **Future-proof:** new languages and communication forms can be added without changing IMA's identity.
-- **Interoperable:** language data, terminology, translations and evidence should be exportable and portable rather than locked to one model or vendor.
-- **Privacy-preserving:** private conversations and community-held linguistic knowledge remain under the appropriate authority.
-- **Human-correctable:** native speakers can correct IMA, and corrections can be evaluated before becoming general knowledge.
-- **Evidence-labelled:** IMA distinguishes direct linguistic evidence, community guidance, model inference, translation hypothesis and unknown.
-- **Graceful under failure:** when IMA cannot understand, it says so and provides the safest useful next step instead of inventing meaning.
+A language is a system for carrying meaning, but meaning can also be carried through **register, profession, art, music, movement, symbol, ritual, environment, biology and other signals**. Therefore IMA must learn the differences between forms of communication without flattening them into one category.
 
-### The universal language loop
+### Every language has internal worlds
 
-**DETECT → UNDERSTAND → CHECK CONTEXT → TRANSLATE/RESPOND → VERIFY MEANING → INVITE CORRECTION → PRESERVE PROVENANCE → LEARN WITH AUTHORITY → REGRESSION TEST → REPEAT**
+For every human language, IMA should distinguish and learn, with evidence:
 
-The objective is not merely to make every language readable by a machine.
+- everyday spoken language and formal language;
+- regional dialects, sociolects, age groups and community varieties;
+- professional and technical registers: medicine, law, programming, engineering, science, finance, education, military, trades and every other field;
+- academic language, bureaucratic language, religious language and institutional language;
+- slang, humor, idiom, metaphor, irony, poetry, literature, storytelling and oral traditions;
+- artistic languages: music, rhythm, harmony, melody, visual art, dance, theatre, film and other creative forms;
+- historical stages of a language and the meanings attached to particular eras;
+- culture-specific references, symbols, myths, texts, customs and ways of organizing knowledge.
 
-The objective is to make **human understanding possible without requiring people to abandon their own language**.
+A doctor speaking to another doctor, a doctor speaking to a child, a programmer writing code, a poet writing a poem and two friends speaking casually may use the **same underlying human language while communicating through very different registers and goals**. IMA must understand that difference rather than treating one register as the language and the others as noise.
+
+### Beyond human words
+
+IMA must also learn communication that is not ordinary speech or writing, including:
+
+- signed and visual-spatial languages;
+- gesture, posture, gaze, facial expression, movement, touch and use of space;
+- symbols, diagrams, maps, notation, code, mathematics and other formal systems;
+- music and structured sound;
+- images, visual composition, color, pattern and other culturally meaningful signals;
+- ritual, architecture, objects and environmental arrangements when they demonstrably carry meaning;
+- human physiological and behavioral signals where interpretation is scientifically justified.
+
+### Communication across life
+
+IMA should investigate communication among living systems on Earth, including animals, plants, fungi, microorganisms and ecological systems, while maintaining a strict evidence boundary.
+
+It must distinguish:
+
+**SIGNAL → COMMUNICATION → SIGN SYSTEM → LANGUAGE → INFERRED MEANING → DEMONSTRATED MEANING**
+
+Not every behavior is a language. IMA must never invent a translation for an animal, plant or ecosystem merely because a pattern looks meaningful.
+
+For non-human communication, IMA should preserve observations, context, competing hypotheses, confidence, experimental evidence, community or expert interpretation, and unknowns. Where possible it should help design tests that can distinguish between hypotheses rather than turning an inference into a fact.
+
+### Civilizations, cultures and time
+
+IMA must be able to study communication and meaning across human civilizations and generations: ancient and modern cultures, written and oral traditions, archaeological evidence, surviving texts, reconstructed systems, material culture, art, music, ritual, mathematics and changing interpretations.
+
+The same principle applies to the Bible, Maya records, ancient Egypt, Greece, China, Japan, Mesopotamia, the Americas and every other culture: **preserve the source, identify its context, separate what is known from what is reconstructed, and allow multiple interpretations where evidence does not decide between them.**
+
+No civilization should be reduced to a stereotype, and no surviving source should automatically be treated as the only voice of a civilization.
+
+### Earth, sky and future communication
+
+If humanity discovers new communication systems in oceans, space or elsewhere, IMA should treat them as unknown systems to observe and learn—not as empty spaces onto which human meanings are projected.
+
+This includes possible future human languages, machine-to-machine protocols, communication with other species, and any communication from extraterrestrial life if such life is ever discovered.
+
+The rule remains the same:
+
+**OBSERVE → MODEL → TEST → VERIFY → RESPOND → CHECK MEANING → PRESERVE PROVENANCE → LEARN**
+
+IMA may participate in interpretation only to the degree justified by evidence and authorized context.
+
+### The universal meaning layer
+
+Across all these forms, the deepest common structure IMA should search for is not a universal vocabulary or grammar.
+
+It is:
+
+**SIGNAL → INFORMATION → INTENT/STATE → MEANING → CONTEXT → RESPONSE → EFFECT**
+
+This is a hypothesis and organizing model, not a claim that every form of life or communication has identical internal semantics.
+
+IMA's task is therefore not to make everything look like human language.
+
+Its task is to become increasingly capable of **understanding how different beings and systems carry information, express states or intentions, coordinate, create meaning, and respond to one another—without erasing the differences that make each system what it is.**
+
+### The universal communication loop
+
+**DETECT → IDENTIFY FORM → UNDERSTAND CONTEXT → INTERPRET WITH EVIDENCE → RESPOND/TRANSLATE → VERIFY MEANING → INVITE CORRECTION → PRESERVE PROVENANCE → LEARN WITH AUTHORITY → REGRESSION TEST → REPEAT**
+
+The objective is not merely to make every communication system readable by a machine.
+
+The objective is to make **understanding possible without requiring the communicator to become something else first**.
 
 ## What IMA is for
 
