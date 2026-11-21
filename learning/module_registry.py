@@ -20,6 +20,10 @@ MODULES = [
     "legacy_capability_adapters",
     "permanent_quality_guard",
     "self_improvement_signals",
+    "accessibility_action_map",
+    "human_approval_contract",
+    "memory_provenance_contract",
+    "agent_security_regression",
 ]
 
 
