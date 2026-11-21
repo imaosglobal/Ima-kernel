@@ -26,6 +26,7 @@ MODULES = [
     "agent_security_regression",
     "external_ecosystem_patterns",
     "industry_capability_patterns",
+    "industry_pattern_adapter",
 ]
 
 
