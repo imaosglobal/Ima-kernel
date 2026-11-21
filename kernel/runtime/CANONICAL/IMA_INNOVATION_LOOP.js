@@ -156,8 +156,40 @@ function innovationPlan(signals=[]){
   return buildUniversalLearningPlan(signals);
 }
 
+function buildPathRecord(input={}){
+  const x=input||{};
+  const required=(v)=>Array.isArray(v)?v.filter(Boolean):[];
+  return {
+    type:"PATH_RECORD", version:"1.0",
+    goal:x.goal||"", current_state:x.current_state||"UNKNOWN",
+    blocker:x.blocker||null, prerequisites:required(x.prerequisites),
+    constraints:required(x.constraints), decision_points:required(x.decision_points),
+    verified_options:required(x.verified_options), path:required(x.path),
+    minimum_required_human_action:x.minimum_required_human_action||null,
+    human_boundary:x.human_boundary||null, execution:required(x.execution),
+    evidence:required(x.evidence), outcome:x.outcome||null,
+    failure_modes:required(x.failure_modes), recovery_branches:required(x.recovery_branches),
+    accessibility:required(x.accessibility), cost_time_effort:x.cost_time_effort||null,
+    privacy_classification:x.privacy_classification||"PRIVATE",
+    reuse_scope:x.reuse_scope||"AUTHORIZED_ABSTRACT_LESSONS_ONLY",
+    confidence:x.confidence??"UNKNOWN", last_verification:x.last_verification||null,
+    provenance:x.provenance||null,
+    transfer_rule:"PRIVATE_EXPERIENCE -> VERIFIED_ABSTRACT_PRINCIPLE -> REUSABLE_PATTERN -> INDEPENDENTLY_TESTED_PATH",
+    agency_rule:"Remove unnecessary friction without removing the person's authority over decisions that belong to them."
+  };
+}
+function pathFromSignals(signals=[]){
+  return collectSignals(signals).map((s,i)=>buildPathRecord({
+    goal:s.claim, current_state:s.horizon, blocker:s.cause,
+    path:[extractPrinciple(s)], evidence:s.evidence?[s.evidence]:[],
+    outcome:s.outcome, provenance:s.provenance,
+    privacy_classification:"ABSTRACTED",
+    confidence:s.evidence?"EVIDENCE_AVAILABLE":"UNKNOWN"
+  })).map((p,i)=>Object.assign(p,{id:"path-"+(i+1)}));
+}
+
 module.exports={
   SOURCES,HORIZONS,ENTITY_TYPES,LEARNING_MODES,COMPASSION_STEPS,
   collectSignals,extractPrinciple,generateCandidates,prioritize,
-  buildUniversalLearningPlan,innovationPlan
+  buildUniversalLearningPlan,innovationPlan,buildPathRecord,pathFromSignals
 };
