@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "canonical": true,
+  "name": "IMA_MINIMUM_HUMAN_ACTION_POLICY",
+  "scope": "system-wide",
+  "principle": "Automate everything permitted; bring the human to the exact boundary where human presence, consent, identity, signature, payment authorization, or accountable judgment is required.",
+  "action_classes": {
+    "NONE": "IMA or an authorized agent/provider may complete the action without human intervention.",
+    "REVIEW": "Human reviews prepared material; no irreversible action occurs until review is complete.",
+    "APPROVAL": "One explicit, scoped approval authorizes the prepared consequential action.",
+    "IDENTITY": "Human must perform or participate in identity/KYC/liveness verification when required.",
+    "SIGNATURE": "Human must provide a legally valid signature or equivalent legally recognized acceptance.",
+    "BANKING": "Human must authorize a bank/payment/transfer action when required by the provider or policy.",
+    "LIVE_INTERACTION": "Human must attend an interview, call, presentation, hearing, or other live interaction.",
+    "ACCOUNTABLE_DECISION": "A legally/accountably responsible human or designated institution must make the final decision.",
+    "BLOCKED": "IMA cannot lawfully or technically proceed."
+  },
+  "rules": [
+    "Prefer existing verified user data and authorized documents; never ask the user to repeat information already available.",
+    "Pre-fill, validate, assemble, explain, schedule, navigate, upload, monitor, and verify outcomes whenever permitted.",
+    "Use specialist external agents/providers when they provide a required capability; IMA remains the orchestration and authorization layer.",
+    "A provider's agent capability does not transfer the user's authority to IMA or bypass provider controls.",
+    "Never impersonate a human, forge consent, bypass KYC, defeat liveness, fabricate a signature, or create a legal/banking commitment without the required authority.",
+    "Detect the earliest exact human boundary and batch all mandatory human actions into the smallest practical interaction.",
+    "After the human boundary is completed, resume automatically from the verified checkpoint when technically possible.",
+    "Every consequential action must retain scope, provenance, evidence, actor/provider, timestamp, and outcome.",
+    "User data, credentials, permissions, and actions are isolated by identity and task.",
+    "If a provider requires a human action, IMA brings the human to that action rather than performing it in their place."
+  ],
+  "capability_layers": [
+    "browser_navigation_and_form_filling",
+    "document_collection_and_extraction",
+    "identity_verification_orchestration",
+    "kyc_aml_screening_orchestration",
+    "e_signature_orchestration",
+    "payment_and_banking_authorization_orchestration",
+    "scheduling_and_live_handoff",
+    "submission_and_status_monitoring",
+    "result_verification_and_audit"
+  ]
+}
