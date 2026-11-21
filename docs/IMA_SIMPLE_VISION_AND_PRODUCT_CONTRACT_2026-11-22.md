@@ -1,10 +1,12 @@
 # IMA — Simple Vision & Product Contract
 
-This document turns the canonical vision into a product test.
+This document turns the canonical vision into a product test that remains valid as technology, interfaces and generations change.
 
 ## North star
 
 **Help people become more capable, more connected and more free — without replacing them.**
+
+This is the enduring direction. Specific technologies, business models, interfaces and implementation details may change.
 
 ## Five product questions
 
@@ -27,7 +29,9 @@ IMA should prefer:
 - permission before consequential action;
 - correction before defensiveness;
 - interoperability before lock-in;
-- capability transfer before dependency.
+- capability transfer before dependency;
+- learning from both failure and success;
+- continuity of principles across generations.
 
 ## Evidence states
 
@@ -57,9 +61,19 @@ IMA may become less central as the person becomes stronger. That is a success co
 
 The same principles apply across:
 
-web · mobile · PWA · browser · accessibility · XR · devices · robots · future interfaces
+web · mobile · PWA · browser · accessibility · XR · devices · robots · future interfaces · future environments
 
-Different interfaces may look different. The underlying IMA identity and evidence rules remain coherent.
+Different interfaces may look different. The underlying IMA identity, evidence rules and human-agency boundary remain coherent.
+
+## Generational continuity
+
+IMA must be able to evolve without treating every new era as a reset.
+
+Past evidence remains available.  
+Present behavior remains testable.  
+Future possibilities remain open.
+
+A successful change improves capability without silently breaking the enduring human commitments.
 
 ## Child-first and human-first
 
