@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "canonical": true,
+  "name": "NOBEL_AND_GLOBAL_AWARDS_EVIDENCE_MATRIX",
+  "truth_status": "READINESS_PROGRAM_NOT_NOMINATION",
+  "objective": "Build independently verifiable evidence and real-world impact for IMA and Ori across Nobel and major international awards without fabricating nominations, eligibility, endorsements or outcomes.",
+  "updated": "2026-11-21",
+  "tracks": [
+    {
+      "id": "NOBEL_PEACE",
+      "candidate": "IMA organization or Ori where contribution is attributable",
+      "status": "BUILD_EVIDENCE",
+      "proof_needed": [
+        "measurable peacebuilding/conflict-prevention outcomes",
+        "independent validation",
+        "international reach",
+        "documented human-agency benefit"
+      ],
+      "hard_boundary": "No self-nomination; valid nomination only by eligible nominator; nomination is not an award."
+    },
+    {
+      "id": "NOBEL_LITERATURE",
+      "candidate": "Ori Cohen",
+      "status": "BUILD_EVIDENCE",
+      "proof_needed": [
+        "substantial published literary body",
+        "independent critical recognition",
+        "lasting literary significance"
+      ],
+      "hard_boundary": "No self-nomination."
+    },
+    {
+      "id": "NOBEL_PHYSICS",
+      "candidate": "Ori/qualified research collaborators only if genuine discovery emerges",
+      "status": "GAP",
+      "proof_needed": [
+        "major validated physics discovery/invention",
+        "independent replication",
+        "peer-reviewed evidence"
+      ]
+    },
+    {
+      "id": "NOBEL_CHEMISTRY",
+      "candidate": "qualified researchers only if genuine discovery emerges",
+      "status": "GAP",
+      "proof_needed": [
+        "major validated chemical discovery/improvement",
+        "independent replication",
+        "peer-reviewed evidence"
+      ]
+    },
+    {
+      "id": "NOBEL_MEDICINE",
+      "candidate": "qualified researchers only if genuine discovery emerges",
+      "status": "GAP",
+      "proof_needed": [
+        "major validated life-science/medical discovery",
+        "clinical/scientific validation",
+        "independent replication"
+      ]
+    },
+    {
+      "id": "NOBEL_ECONOMIC_SCIENCES",
+      "candidate": "Ori/qualified researchers only if genuine contribution emerges",
+      "status": "GAP",
+      "proof_needed": [
+        "major validated contribution to economic sciences",
+        "peer-reviewed research",
+        "independent scholarly impact"
+      ]
+    },
+    {
+      "id": "UNESCO_AI_EDUCATION",
+      "candidate": "IMA/project entity",
+      "status": "TARGET_NEXT_CYCLE",
+      "proof_needed": [
+        "operational project >= required period",
+        "evidence of concrete activities",
+        "AI-enabled critical thinking/creativity/education impact",
+        "eligible nominating body"
+      ],
+      "hard_boundary": "Candidate does not self-nominate where the call requires nomination."
+    },
+    {
+      "id": "UNESCO_COMMUNICATION_INFORMATION",
+      "candidate": "IMA/Ori/project",
+      "status": "TARGET",
+      "proof_needed": [
+        "documentary heritage/accessibility/digital empowerment or freedom-of-expression impact as applicable",
+        "independent recognition"
+      ]
+    },
+    {
+      "id": "ITU_AI_FOR_GOOD",
+      "candidate": "IMA/project or eligible organization",
+      "status": "TARGET_2027",
+      "proof_needed": [
+        "working AI solution",
+        "measured impact",
+        "innovation",
+        "scalability",
+        "responsible and sustainable use"
+      ],
+      "hard_boundary": "Verify final 2027 rules before submission."
+    },
+    {
+      "id": "PEACETECH",
+      "candidate": "IMA/project or Ori if eligible",
+      "status": "TARGET_NEXT_ELIGIBLE_CYCLE",
+      "proof_needed": [
+        "established project",
+        "proven peace impact",
+        "technology applied to peacebuilding"
+      ],
+      "hard_boundary": "Do not apply as a new-project-only proposal where rules exclude it."
+    },
+    {
+      "id": "LAUREL_AI_PRIZE",
+      "candidate": "IMA/Ori as permitted by category",
+      "status": "TARGET_NEXT_CYCLE",
+      "proof_needed": [
+        "technical rigor",
+        "impact",
+        "stewardship",
+        "two independent letters of standing",
+        "category fit"
+      ],
+      "hard_boundary": "No self-nomination; verify institutional legitimacy/rules each cycle."
+    }
+  ],
+  "evidence_layers": [
+    "reproducible technical artifacts",
+    "peer-reviewed/public research",
+    "independent evaluations",
+    "real-world user outcomes",
+    "peace/human-agency impact metrics",
+    "accessibility and inclusion metrics",
+    "global adoption and cross-cultural evidence",
+    "citations and independent references",
+    "provenance and version history",
+    "letters/references from independent qualified experts",
+    "award-specific nomination evidence"
+  ],
+  "blockers": [
+    "Current IMA evidence base is not yet sufficient to claim Nobel-level achievement.",
+    "Some awards require an eligible nominator rather than self-application.",
+    "Scientific Nobel tracks require genuine field-specific discoveries; IMA branding alone cannot qualify.",
+    "Current-year award windows and eligibility must be rechecked immediately before each submission."
+  ],
+  "next_actions": [
+    "Create one canonical impact-evidence ledger connected to IMA QA/provenance.",
+    "Publish independently reviewable IMA research outputs.",
+    "Define measurable peace, agency, accessibility and education outcomes.",
+    "Build an Ori literary bibliography and independent critical evidence archive.",
+    "Maintain a rolling award registry with official eligibility, deadline, nominator and evidence requirements.",
+    "Prepare submission packets but stop at human/legal/nomination boundaries.",
+    "After every submission, store receipt/status/evidence and never infer nomination or award from submission alone."
+  ]
+}
