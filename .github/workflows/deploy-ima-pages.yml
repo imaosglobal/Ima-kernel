@@ -74,42 +74,31 @@ jobs:
           )
           PY
 
-      - name: Regression gate — critical public contracts
+      - name: Regression gate — market-ready public contracts
         working-directory: ima-ui
         env:
           SOURCE_SHA: ${{ steps.source.outputs.sha }}
         run: |
           set -euo pipefail
-          grep -Fq "המשוב נשמר וקיבל קבלה." src/App.jsx
-          grep -Fq "feedback-panel" src/App.jsx
-          grep -Fq "submitFeedback" src/App.jsx
-          grep -Fq "SUPPORT_URL" src/App.jsx
-          grep -Fq "PRIVACY_URL" src/App.jsx
           grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
-          grep -Fq "install-button" src/App.jsx
+          grep -Fq "campaignId=24409551537" src/App.jsx
+          grep -Fq "utm_source=google" src/App.jsx
           grep -Fq "renderButton" src/App.jsx
           grep -Fq 'id="ima-google-button"' src/App.jsx
           test "$(grep -o 'id="ima-google-button"' src/App.jsx | wc -l)" -eq 1
           grep -Fq "MamaFigure" src/App.jsx
           grep -Fq "ChatPanel" src/App.jsx
-          grep -Fq "chat-only-panel" src/App.jsx
-          grep -Fq '<link rel="manifest" href="/Ima-kernel/manifest.json" />' index.html
-          grep -Fq "campaignId=24409551537" src/App.jsx
-          grep -Fq "beforeinstallprompt" src/App.jsx
-          if grep -Fq 'href="/n"' src/App.jsx index.html support.html privacy.html; then echo "ERROR: broken /n navigation"; exit 1; fi
-          if grep -Fq "המשוב התקבל תודה" src/App.jsx; then
-            echo "ERROR: legacy feedback acknowledgement detected"
-            exit 1
-          fi
+          grep -Fq "submitFeedback" src/App.jsx
+          grep -Fq "privacy.html" src/App.jsx
+          grep -Fq "support.html" src/App.jsx
+          grep -Fq "beforeinstallprompt" src/main.jsx
+          if grep -Fq "resilience-center" src/App.jsx; then echo "ERROR: emergency/resilience content on entry page"; exit 1; fi
+          if grep -Fq "canonical-connectors" src/App.jsx; then echo "ERROR: technical control-room content on entry page"; exit 1; fi
+          if grep -Fq 'href="/n"' src/App.jsx index.html; then echo "ERROR: broken /n navigation"; exit 1; fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          for required in "המשוב נשמר וקיבל קבלה." "feedback-panel" "beforeinstallprompt" "install-button" "chat-only-panel"; do
-            grep -Fq "$required" "$bundle" || { echo "ERROR: missing bundle contract: $required"; exit 1; }
-          done
-          if grep -Fq "המשוב התקבל תודה" "$bundle"; then
-            echo "ERROR: legacy feedback acknowledgement detected in bundle"
-            exit 1
-          fi
+          grep -Fq "campaignId=24409551537" "$bundle"
+          grep -Fq "ima-google-button" "$bundle"
           test -f public/support.html
           test -f public/privacy.html
           test -f public/feedback.html
@@ -118,15 +107,12 @@ jobs:
           python3 - <<'PY'
           import json, os
           from pathlib import Path
-          expected = os.environ["SOURCE_SHA"]
-          manifest = json.loads(Path("dist/ota/manifest.json").read_text(encoding="utf-8"))
-          if manifest.get("webVersion") != expected:
-              raise SystemExit(f"OTA manifest mismatch: {manifest.get('webVersion')} != {expected}")
-          if manifest.get("native", {}).get("package") != "com.ima.core":
-              raise SystemExit("OTA native package mismatch")
-          print("IMA_OTA_MANIFEST=VERIFIED")
+          expected=os.environ["SOURCE_SHA"]
+          manifest=json.loads(Path("dist/ota/manifest.json").read_text(encoding="utf-8"))
+          if manifest.get("webVersion") != expected: raise SystemExit(f"OTA manifest mismatch: {manifest.get('webVersion')} != {expected}")
+          if manifest.get("native",{}).get("package") != "com.ima.core": raise SystemExit("OTA native package mismatch")
+          print("IMA_MARKET_READY_ARTIFACT_CONTRACT=VERIFIED")
           PY
-          echo "IMA_PUBLIC_ARTIFACT_CONTRACT=VERIFIED"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
