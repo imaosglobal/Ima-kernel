@@ -1,11 +1,4 @@
-"""Permanent industry-wide external capability discovery.
-
-The scan is discovery-only. It searches broad industry clusters through public
-GitHub repository metadata, normalizes results into IMA's evidence-bounded ledger,
-and records taxonomy coverage. It never copies code, secrets or executes an
-external project. Safe reusable contracts are implemented separately in the
-canonical kernel.
-"""
+"""Permanent industry-wide external capability discovery."""
 
 import json
 import os
@@ -15,8 +8,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from learning.external_capability_discovery import normalize_candidates
-from learning.industry_capability_patterns import INDUSTRY_DOMAINS
-
+from learning.industry_capability_patterns import (
+    INDUSTRY_DOMAINS,
+    normalize_candidates as normalize_industry_candidates,
+)
 
 INDUSTRY_GROUPS = {
     "creative_3d": ["3d_games", "game_engines", "virtual_worlds", "simulation", "graphics", "design", "web_design", "architecture", "home_design"],
@@ -32,7 +27,6 @@ INDUSTRY_GROUPS = {
     "business_operations": ["logistics", "supply_chain", "professional_services", "hr_recruiting", "productivity", "project_management"],
 }
 
-
 def search_github(query: str, limit: int = 5) -> list[dict]:
     params = urllib.parse.urlencode({"q": query, "sort": "updated", "order": "desc", "per_page": limit})
     req = urllib.request.Request(
@@ -43,9 +37,7 @@ def search_github(query: str, limit: int = 5) -> list[dict]:
     if token:
         req.add_header("Authorization", "Bearer " + token)
     with urllib.request.urlopen(req, timeout=20) as response:
-        data = json.load(response)
-    return data.get("items", [])
-
+        return json.load(response).get("items", [])
 
 def search_gdelt(query: str, limit: int = 10) -> list[dict]:
     params = urllib.parse.urlencode({
@@ -60,18 +52,15 @@ def search_gdelt(query: str, limit: int = 10) -> list[dict]:
         headers={"User-Agent": "IMA-Daily-Industry-Capability-Scanner"},
     )
     with urllib.request.urlopen(req, timeout=20) as response:
-        data = json.load(response)
-    return data.get("articles", [])
+        return json.load(response).get("articles", [])
 
 def build_group_query(domains: list[str]) -> str:
     terms = [d.replace("_", " ") for d in domains]
-    return "(" + " OR ".join(f'"{t}"' for t in terms) + ") AI agent OR automation OR software OR workflow"
-
+    return "(" + " OR ".join(f'"{t}"' for t in terms) + ") AI OR automation OR workflow OR software"
 
 def main() -> None:
     generated_at = datetime.now(timezone.utc).isoformat()
     candidates = []
-    web_candidates = []
     errors = []
     group_results = {}
     web_group_results = {}
@@ -90,14 +79,14 @@ def main() -> None:
                     "topics": item.get("topics", []) or [],
                 })
         except Exception as exc:
-            errors.append({"group": group, "error": str(exc)})
+            errors.append({"source": "github", "group": group, "error": str(exc)})
             group_results[group] = 0
 
         try:
             web_items = search_gdelt(build_group_query(domains), limit=10)
             web_group_results[group] = len(web_items)
             for item in web_items:
-                web_candidates.append({
+                candidates.append({
                     "source": "gdelt_web",
                     "name": item.get("title", ""),
                     "evidence_url": item.get("url", ""),
@@ -109,20 +98,26 @@ def main() -> None:
             errors.append({"source": "gdelt_web", "group": group, "error": str(exc)})
             web_group_results[group] = 0
 
-    candidates.extend(web_candidates)
+    industry_review = []
+    for item in candidates:
+        for domain in INDUSTRY_GROUPS.get(item.get("capability", ""), []):
+            industry_review.append({
+                "domain": domain,
+                "source": item.get("source", ""),
+                "lesson": item.get("description", "") or item.get("name", ""),
+                "canonical_target": "canonical IMA learning/orchestration layer",
+                "conflict_check": "deduplicate against canonical brain, memory, feedback, LIVE-001, security and approval contracts",
+            })
 
-    # Explicitly record taxonomy coverage so newly added sectors are visible in
-    # the next daily review instead of silently disappearing.
     taxonomy_path = Path("artifacts/web-intelligence/industry-capability-taxonomy-2026-11-21.json")
     taxonomy_path.parent.mkdir(parents=True, exist_ok=True)
-    taxonomy = {
+    taxonomy_path.write_text(json.dumps({
         "generated_at": generated_at,
         "domain_count": len(INDUSTRY_DOMAINS),
         "domains": INDUSTRY_DOMAINS,
         "groups": INDUSTRY_GROUPS,
         "new_domain_policy": "If a discovered sector is absent, append it as REVIEW_REQUIRED before promotion.",
-    }
-    taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     payload = {
         "generated_at": generated_at,
@@ -133,6 +128,7 @@ def main() -> None:
         "web_group_results": web_group_results,
         "candidate_count": len(candidates),
         "candidates": normalize_candidates(candidates),
+        "industry_review_candidates": normalize_industry_candidates(industry_review),
         "errors": errors,
         "promotion_rule": "Candidates require canonical conflict/evidence/security review before integration.",
         "implementation_rule": "Safe generic patterns should be implemented immediately as canonical contracts; provider-specific integrations remain verification-gated.",
@@ -140,7 +136,6 @@ def main() -> None:
     path = Path("artifacts/web-intelligence/daily-external-capability-scan.json")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
 
 if __name__ == "__main__":
     main()
