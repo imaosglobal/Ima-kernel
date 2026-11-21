@@ -38,5 +38,7 @@ jobs:
           npm run build
       - name: Unified system contract
         run: npm run ima:unified-contract
+      - name: Path Intelligence PR integration
+        run: npm run test:path-pr-integration
       - name: Production truth
         run: node -e "const r=require('./kernel/runtime/CANONICAL/IMA_PRODUCTION_GATE').verify(); console.log(JSON.stringify(r,null,2)); if(!r.production_policy_gate) process.exit(1)"
