@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-21",
+  "canonical_repository": "imaosglobal/Ima-kernel",
+  "rule": "All discovered IMA capabilities are federated into the canonical kernel; source repositories remain provenance/evidence sources, not parallel brains.",
+  "repositories": [
+    {
+      "name": "imaosglobal/Ima",
+      "role": "legacy/core prototype",
+      "integration": "provenance-import",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-server",
+      "role": "MCP/distribution server",
+      "integration": "canonical-mcp-adapter",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-production",
+      "role": "empty repository",
+      "integration": "none",
+      "status": "EMPTY"
+    },
+    {
+      "name": "imaosglobal/ima-os-evolving-home",
+      "role": "large evolving product/mobile/QA system",
+      "integration": "capability-migration",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-cloud",
+      "role": "empty repository",
+      "integration": "none",
+      "status": "EMPTY"
+    },
+    {
+      "name": "imaosglobal/Ima-self-deploy",
+      "role": "deployment/health automation",
+      "integration": "deployment-provenance",
+      "status": "MAPPED_WITH_SECRET_EXCLUSION"
+    },
+    {
+      "name": "imaosglobal/Ima-3d-mom",
+      "role": "3D/world/user/action/feedback prototype",
+      "integration": "canonical-adapter",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Imamvp",
+      "role": "early multi-agent MVP",
+      "integration": "provenance-import",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-all-in-one",
+      "role": "early all-in-one prototype",
+      "integration": "provenance-import",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-core",
+      "role": "early core marker",
+      "integration": "provenance-import",
+      "status": "MAPPED"
+    },
+    {
+      "name": "imaosglobal/Ima-kernel",
+      "role": "canonical runtime/product",
+      "integration": "canonical",
+      "status": "AUTHORITATIVE"
+    },
+    {
+      "name": "imaosglobal/ima-core-experience",
+      "role": "private product experience foundation",
+      "integration": "capability-migration",
+      "status": "MAPPED"
+    }
+  ],
+  "capability_mappings": [
+    {
+      "source": "Ima-3d-mom",
+      "capability": "decision/action dispatch",
+      "canonical": "kernel/runtime + action/consent gates",
+      "source_evidence": [
+        "kernel/brain_core.js",
+        "kernel/action_dispatcher.js"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima-3d-mom",
+      "capability": "user-scoped memory prototype",
+      "canonical": "canonical memory subsystem",
+      "source_evidence": [
+        "kernel/user_engine.js"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima-3d-mom",
+      "capability": "feedback endpoint prototype",
+      "canonical": "learning/feedback_engine.py + unified feedback",
+      "source_evidence": [
+        "feedback_api.js"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima-server",
+      "capability": "MCP public status/learning/distribution tools",
+      "canonical": "canonical MCP/App distribution layer",
+      "source_evidence": [
+        "mcp.js",
+        "distribution/openai/SUBMISSION_READINESS.json"
+      ],
+      "live_status": "BLOCKED_BY_HOST_ENTITLEMENT"
+    },
+    {
+      "source": "ima-os-evolving-home",
+      "capability": "background QA/validation/recovery concepts",
+      "canonical": "canonical QA/governance workflows",
+      "source_evidence": [
+        "PERMANENT_QUALITY_SYSTEM.md",
+        "DEPLOYMENT_STATUS.md"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "ima-os-evolving-home",
+      "capability": "self-improvement/feedback concepts",
+      "canonical": "learning/meta_orchestrator.py + learning/feedback_engine.py",
+      "source_evidence": [
+        "SELF_IMPROVEMENT_ENGINE.md"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "ima-os-evolving-home",
+      "capability": "Android/mobile product",
+      "canonical": "LIVE-001 device bridge + Android provider",
+      "source_evidence": [
+        "android/"
+      ],
+      "live_status": "NOT_VERIFIED_LIVE"
+    },
+    {
+      "source": "ima-core-experience",
+      "capability": "persistent product experience, identity, memory, goals, permissions, integrations",
+      "canonical": "ima-ui + canonical runtime contracts",
+      "source_evidence": [
+        "README.md",
+        "drizzle/migrations/"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima-self-deploy",
+      "capability": "deployment automation and health checks",
+      "canonical": ".github/workflows + canonical deployment pipeline",
+      "source_evidence": [
+        "deploy.sh",
+        "check_ima.sh",
+        "deploy_ima_hf.sh"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Imamvp",
+      "capability": "agent-role decomposition",
+      "canonical": "canonical orchestration/module registry",
+      "source_evidence": [
+        "agents/",
+        "ima_mvp.py"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima-all-in-one",
+      "capability": "early unified runtime concept",
+      "canonical": "canonical kernel",
+      "source_evidence": [
+        "ima_all_in_one.js"
+      ],
+      "live_status": "NOT_VERIFIED"
+    },
+    {
+      "source": "Ima",
+      "capability": "early global core/server prototype",
+      "canonical": "canonical kernel + distribution layer",
+      "source_evidence": [
+        "server.js",
+        "ima_core_universe_Ori.json"
+      ],
+      "live_status": "NOT_VERIFIED"
+    }
+  ],
+  "exclusions": [
+    "No .env, credentials, tokens, API keys or private secrets are copied into the canonical repository.",
+    "react and pytorch repositories are treated as unrelated upstream/vendor mirrors unless a future audit proves IMA-specific modifications.",
+    "Empty repositories remain empty; they do not become fake capabilities.",
+    "Source claims such as 'production ready' are not promoted to live capability without canonical evidence."
+  ]
+}
