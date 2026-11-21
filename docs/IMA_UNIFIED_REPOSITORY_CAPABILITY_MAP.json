@@ -269,6 +269,21 @@
         "tests/test_agent_security_regression.py"
       ],
       "conflict_check": "Deterministic checks only; no autonomous remediation or duplicate safety gate."
+    },
+    {
+      "source": "external-industry-ecosystem-scan",
+      "capability": "permanent industry-wide discovery and transferable pattern extraction",
+      "canonical": "learning/industry_capability_patterns.py + daily external capability scan",
+      "source_evidence": [
+        "docs/IMA_INDUSTRY_WIDE_DISCOVERY_CONTRACT.md",
+        "scripts/daily_external_capability_scan.py"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/industry_capability_patterns.py",
+        "tests/test_industry_capability_patterns.py"
+      ],
+      "conflict_check": "Taxonomy and lessons are evidence-bounded; no second runtime authority, memory authority, feedback authority or LIVE-001 browser runtime."
     }
   ],
   "exclusions": [
