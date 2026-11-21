@@ -66,6 +66,21 @@ const runtime = {
       const derivationRegistryBuild = derivationRegistry.build();
       const derivationRegistryIntegrity = derivationRegistry.verify();
       const learningStatus = continuousLearning.status();
+      const runtimePathSnapshot = pathIntelligence.ingestRuntimeSnapshot({
+        health,
+        relational_care: relationalCare.contract(),
+        continuous_learning: learningStatus,
+        path_intelligence: pathIntelligence.status(),
+        pr_path_integration: state.get("pr_path_integration"),
+        preservation: preservationStatus,
+        preservation_integrity: preservationIntegrity,
+        content_addressing: contentAddressIntegrity,
+        portable_identity: portableIdentityIntegrity,
+        derivation_registry: derivationRegistryIntegrity,
+        dots: dots.status()
+      });
+      state.set("path_runtime_snapshot", runtimePathSnapshot.id);
+      events.emit("PATH_RUNTIME_SNAPSHOT", runtimePathSnapshot.id);
       events.emit("CONTINUOUS_LEARNING_READY", learningStatus);
 
       events.emit("CONTINUITY_READY", continuity.status());
