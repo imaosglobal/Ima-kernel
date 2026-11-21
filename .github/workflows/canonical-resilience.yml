@@ -11,6 +11,10 @@ on:
       - "kernel/runtime/CANONICAL/IMA_INNOVATION_LOOP.js"
       - "tests/ima_innovation_loop.test.cjs"
       - "core/UNIVERSAL_LEARNING_AND_PREEMPTION_PROTOCOL.json"
+      - "core/PR_PATH_INTEGRATION_REGISTRY.json"
+      - "kernel/runtime/CANONICAL/IMA_PATH_INTELLIGENCE.js"
+      - "kernel/runtime/CANONICAL/IMA_RUNTIME.js"
+      - "tests/path_pr_integration.test.cjs"
   pull_request:
     paths:
       - "core/GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL.json"
@@ -34,3 +38,5 @@ jobs:
         run: npm run test:path-intelligence
       - name: Run canonical Path Intelligence runtime integration test
         run: npm run test:path-intelligence-runtime
+      - name: Run canonical PR provenance integration test
+        run: npm run test:path-pr-integration
