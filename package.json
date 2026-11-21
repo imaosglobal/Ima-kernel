@@ -39,7 +39,8 @@
     "ima:unified-contract": "node tests/ima_unified_system_contract.test.mjs",
     "test:learning": "node tests/ima_continuous_learning.test.cjs",
     "test:resilience": "node tests/resilience_runtime.test.cjs",
-    "test:innovation": "node tests/ima_innovation_loop.test.cjs"
+    "test:innovation": "node tests/ima_innovation_loop.test.cjs",
+    "test:path-intelligence": "node tests/path_intelligence.test.cjs"
   },
   "repository": {
     "type": "git",
