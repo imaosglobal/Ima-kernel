@@ -496,6 +496,20 @@
         "docs/IMA_PRODUCT_IDENTITY_AND_UNIVERSAL_DEVICE_VISION.md"
       ],
       "boundary": "Device adapters connect to the canonical runtime; no device becomes a second brain or memory authority."
+    },
+    {
+      "id": "market_participation_engine",
+      "label": "Canonical go-to-market and market participation engine",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "evidence": [
+        "learning/market_participation_engine.py",
+        "tests/test_market_participation_engine.py",
+        "docs/IMA_GO_TO_MARKET_2026-11-21.md",
+        "docs/IMA_MARKET_OFFER_CATALOG.json",
+        "ima-ui/public/launch.html"
+      ],
+      "boundary": "Prepares and structures market offers, pilots, partnerships and distribution paths. External communications, binding commitments, purchases, spending and legal agreements remain authorization-gated.",
+      "market_status": "MARKET_READY_PENDING_VALIDATION"
     }
   ],
   "updated_at": "2026-11-21",
