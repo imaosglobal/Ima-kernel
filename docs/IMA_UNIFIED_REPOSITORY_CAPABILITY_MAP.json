@@ -213,6 +213,62 @@
       ],
       "live_status": "PROVENANCE_ONLY",
       "audit_note": "Audited source implementation; capability is historical/prototype or unsafe duplicate authority and was not promoted as a separate runtime."
+    },
+    {
+      "source": "external-source-scan",
+      "capability": "accessibility-tree action grounding",
+      "canonical": "learning/accessibility_action_map.py",
+      "source_evidence": [
+        "Vercel agent-browser ecosystem: accessibility-tree snapshots with stable refs"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/accessibility_action_map.py",
+        "tests/test_accessibility_action_map.py"
+      ],
+      "conflict_check": "No duplicate execution authority; observation-to-candidate only."
+    },
+    {
+      "source": "external-source-scan",
+      "capability": "human approval workflow",
+      "canonical": "learning/human_approval_contract.py",
+      "source_evidence": [
+        "Microsoft Magentic-UI human-in-the-loop approval workflows"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/human_approval_contract.py",
+        "tests/test_human_approval_contract.py"
+      ],
+      "conflict_check": "Aligns with existing explicit-confirmation rule; centralizes contract without adding autonomous action."
+    },
+    {
+      "source": "external-source-scan",
+      "capability": "memory provenance/correction/withdrawal",
+      "canonical": "learning/memory_provenance_contract.py",
+      "source_evidence": [
+        "GBrain memory boundaries and provenance patterns"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/memory_provenance_contract.py",
+        "tests/test_memory_provenance_contract.py"
+      ],
+      "conflict_check": "Adds lifecycle metadata without creating a second memory authority."
+    },
+    {
+      "source": "external-source-scan",
+      "capability": "agent security regression checks",
+      "canonical": "learning/agent_security_regression.py",
+      "source_evidence": [
+        "Open agent-security benchmark and red-team patterns"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/agent_security_regression.py",
+        "tests/test_agent_security_regression.py"
+      ],
+      "conflict_check": "Deterministic checks only; no autonomous remediation or duplicate safety gate."
     }
   ],
   "exclusions": [
