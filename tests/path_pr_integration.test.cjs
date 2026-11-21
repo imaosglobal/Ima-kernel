@@ -1,0 +1,12 @@
+const assert=require("assert");
+const path=require("../kernel/runtime/CANONICAL/IMA_PATH_INTELLIGENCE");
+const registry=require("../core/PR_PATH_INTEGRATION_REGISTRY.json");
+const before=path.status().records;
+const result=path.ingestCapabilityMap(registry);
+assert.strictEqual(result.merged, registry.pull_requests.filter(p=>p.status==="MERGED").length);
+assert.strictEqual(result.proposed, registry.pull_requests.filter(p=>p.status==="OPEN_UNMERGED").length);
+assert.strictEqual(result.closed_unmerged, registry.pull_requests.filter(p=>p.status==="CLOSED_UNMERGED").length);
+assert.ok(path.status().records>before);
+const privateResult=path.teachBack({privacy_classification:"PRIVATE"});
+assert.strictEqual(privateResult.ok,false);
+console.log("PATH_PR_INTEGRATION_OK",JSON.stringify(result));
