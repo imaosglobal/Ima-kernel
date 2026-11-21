@@ -455,6 +455,47 @@
         "docs/IMA_INDUSTRY_WIDE_DISCOVERY_CONTRACT.md"
       ],
       "conflict_policy": "Uses the canonical orchestration, memory, feedback, security and approval contracts; no parallel runtime."
+    },
+    {
+      "id": "global_collaboration_value_engine",
+      "label": "Global collaboration and reciprocal value engine",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "evidence": [
+        "learning/collaboration_value_engine.py",
+        "tests/test_collaboration_ip_personality_device.py",
+        "docs/IMA_GLOBAL_COLLABORATION_AND_VALUE_CONTRACT.md"
+      ],
+      "boundary": "Automatic discovery and qualification; external communication and binding commitments remain authorization-gated."
+    },
+    {
+      "id": "global_ip_provenance_stewardship",
+      "label": "Global IP provenance and stewardship contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "evidence": [
+        "learning/ip_provenance_vault.py",
+        "docs/IMA_GLOBAL_IP_STEWARDSHIP_CONTRACT.md"
+      ],
+      "boundary": "Records provenance and rights status; does not claim legal ownership or replace counsel."
+    },
+    {
+      "id": "canonical_ima_personality",
+      "label": "Canonical IMA personality and product identity",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "evidence": [
+        "learning/ima_personality_system.py",
+        "docs/IMA_PRODUCT_IDENTITY_AND_UNIVERSAL_DEVICE_VISION.md"
+      ],
+      "boundary": "Defines consistent language, visual and behavioral identity without overriding truth/privacy/agency."
+    },
+    {
+      "id": "universal_device_interoperability_contract",
+      "label": "Universal device interoperability contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "evidence": [
+        "learning/universal_device_interoperability.py",
+        "docs/IMA_PRODUCT_IDENTITY_AND_UNIVERSAL_DEVICE_VISION.md"
+      ],
+      "boundary": "Device adapters connect to the canonical runtime; no device becomes a second brain or memory authority."
     }
   ],
   "updated_at": "2026-11-21",
