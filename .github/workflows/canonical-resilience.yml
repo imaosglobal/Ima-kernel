@@ -10,6 +10,7 @@ on:
       - "package.json"
       - "kernel/runtime/CANONICAL/IMA_INNOVATION_LOOP.js"
       - "tests/ima_innovation_loop.test.cjs"
+      - "core/UNIVERSAL_LEARNING_AND_PREEMPTION_PROTOCOL.json"
   pull_request:
     paths:
       - "core/GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL.json"
