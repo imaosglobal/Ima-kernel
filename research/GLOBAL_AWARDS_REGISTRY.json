@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "canonical": true,
+  "name": "GLOBAL_AWARDS_REGISTRY",
+  "updated": "2026-11-21",
+  "purpose": "Canonical registry of high-value award tracks relevant to IMA/Ori. This is a curated strategic registry, not a claim to contain every award worldwide.",
+  "verified_sources": [
+    {
+      "award": "Nobel Peace Prize",
+      "source": "https://www.nobelpeaceprize.org/nobel-peace-prize/nomination/",
+      "current_fact": "Living persons and active organizations/institutions can be candidates; valid nominations must arrive by January 31; nomination is not an endorsement."
+    },
+    {
+      "award": "Nobel Physics/Chemistry",
+      "source": "https://www.kva.se/en/prizes/nobel-prizes/the-nomination-and-decision-process-nobel/",
+      "current_fact": "Invitation-based nomination process; self-nomination/spontaneous proposals are not permitted."
+    },
+    {
+      "award": "UNESCO Prizes",
+      "source": "https://www.unesco.org/en/prizes",
+      "current_fact": "UNESCO administers international prizes spanning education, science, social/human sciences, culture, communication and information."
+    },
+    {
+      "award": "ITU AI for Good Impact Awards",
+      "source": "https://aiforgood.itu.int/ai-for-good-impact-awards/",
+      "current_fact": "2027 edition announced; categories include AI for People, Planet and Prosperity; measurable impact and responsible AI are central criteria."
+    },
+    {
+      "award": "Kluz Prize for PeaceTech",
+      "source": "https://www.kluzprize.org/faq/",
+      "current_fact": "Worldwide individuals and organizations can be eligible for established projects with proven peace impact; 2026 cycle is closed."
+    },
+    {
+      "award": "Laurel AI Prize",
+      "source": "https://www.laurelawards.org/",
+      "current_fact": "International AI prize with nomination-based process, independent letters and evidence of impact, rigor and stewardship; inaugural cycle information is published by organizer."
+    }
+  ],
+  "rule": "Only verified current official rules may be used for an actual application. No claim of nomination, finalist status, endorsement or award without direct evidence."
+}
