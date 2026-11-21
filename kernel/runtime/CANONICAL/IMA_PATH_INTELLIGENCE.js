@@ -13,7 +13,7 @@ function ingest(input){
   return record;
 }
 function ingestSignal(signal){ return innovation.pathFromSignals([signal])[0] ? ingest(innovation.pathFromSignals([signal])[0]) : null; }
-function teachBack(record){
+function ingestRuntimeSnapshot(snapshot){\n  const s=snapshot||{};\n  const evidence=Object.keys(s).map(k=>({module:k,status:s[k]}));\n  return ingest({\n    goal:"Traverse the current canonical IMA runtime safely and preserve the verified path/evidence for the next iteration.",\n    current_state:"RUNTIME_SNAPSHOT",\n    path:["boot canonical runtime","collect subsystem status","verify evidence","preserve reusable lesson","measure next outcome"],\n    evidence:evidence,\n    outcome:"RUNTIME_SNAPSHOT_CAPTURED",\n    provenance:"kernel/runtime/CANONICAL/IMA_RUNTIME.js",\n    privacy_classification:"SYSTEM_METADATA",\n    reuse_scope:"CANONICAL_SYSTEM_LEARNING",\n    confidence:"RUNTIME_OBSERVED"\n  });\n}\nfunction teachBack(record){
   if(!record || record.privacy_classification==="PRIVATE") return {ok:false,reason:"private_path_not_transferable"};
   return {ok:true,pattern:record.path,guardrails:{privacy:record.reuse_scope,human_boundary:record.human_boundary,agency:record.agency_rule},evidence:record.evidence,confidence:record.confidence};
 }
@@ -38,4 +38,4 @@ function ingestCapabilityMap(registry){
   return {record_id:record.id,merged:merged.length,proposed:proposed.length,closed_unmerged:closedUnmerged.length};
 }
 function status(){return {canonical:true,records:state.records.length,lessons:state.lessons.length,max:MAX,transfer_rule:"PRIVATE_EXPERIENCE -> VERIFIED_ABSTRACT_PRINCIPLE -> REUSABLE_PATTERN -> INDEPENDENTLY_TESTED_PATH"};}
-module.exports={ingest,ingestSignal,ingestCapabilityMap,teachBack,status,state};
+module.exports={ingest,ingestSignal,ingestCapabilityMap,ingestRuntimeSnapshot,teachBack,status,state};
