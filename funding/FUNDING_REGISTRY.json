@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "canonical": true,
+  "purpose": "IMA funding coordination and resource-matching layer",
+  "last_verified": "2026-11-21",
+  "rules": {
+    "truth_before_claim": true,
+    "eligibility_requires_evidence": true,
+    "funding_types_separate": ["CASH_GRANT","CREDIT","EQUITY_INVESTMENT","PRIZE","PILOT_REVENUE","IN_KIND"],
+    "no_spend_or_contract_without_explicit_authorization": true,
+    "human_boundary_required_for": ["KYC","identity_verification","legal_signature","banking_authorization","binding_contract","platform_required_consent"],
+    "cross_user_data_leakage_forbidden": true
+  },
+  "programs": [
+    {
+      "id": "IIA-PRESEED-2026",
+      "provider": "Israel Innovation Authority",
+      "type": "CASH_GRANT",
+      "geography": "Israel",
+      "status": "POTENTIALLY_RELEVANT_UNKNOWN_ELIGIBILITY",
+      "verified_facts": {
+        "next_submission_date": "2026-11-30",
+        "authority_participation": "up to NIS 2,000,000 / 60% of investment round",
+        "max_round": "NIS 6,000,000",
+        "rd_share": "at least 75%",
+        "investor_commitment": "at least 15%"
+      },
+      "source": "https://innovationisrael.org.il/programs/preseed/"
+    },
+    {
+      "id": "IIA-SEED-2026",
+      "provider": "Israel Innovation Authority",
+      "type": "CASH_GRANT",
+      "geography": "Israel",
+      "status": "POTENTIALLY_RELEVANT_UNKNOWN_ELIGIBILITY",
+      "verified_facts": {
+        "next_submission_date": "2026-12-10",
+        "authority_participation": "up to NIS 6,000,000",
+        "max_round": "up to NIS 30,000,000",
+        "rd_share": "at least 66.67%",
+        "investor_commitment": "at least 15%"
+      },
+      "source": "https://innovationisrael.org.il/programs/seed/"
+    },
+    {
+      "id": "GITHUB-SPONSORS",
+      "provider": "GitHub",
+      "type": "PILOT_REVENUE",
+      "geography": "Global",
+      "status": "SUBMITTED_UNVERIFIED_APPROVAL",
+      "verified_facts": {
+        "profile": "submitted for review",
+        "receipts": "not verified"
+      },
+      "source": "https://github.com/sponsors"
+    },
+    {
+      "id": "AWS-ACTIVATE",
+      "provider": "AWS",
+      "type": "CREDIT",
+      "geography": "Global",
+      "status": "OPEN_PROGRAM",
+      "verified_facts": {
+        "credits": "up to $200,000",
+        "founders_tier": "$1,000; select startups may qualify for up to $5,000 over time",
+        "portfolio_tier": "up to $200,000 for provider-backed startups",
+        "founders_basics": "self-funded, functioning company website, founded within 10 years"
+      },
+      "source": "https://aws.amazon.com/startups/"
+    },
+    {
+      "id": "GOOGLE-STARTUP-CLOUD",
+      "provider": "Google Cloud",
+      "type": "CREDIT",
+      "geography": "Global",
+      "status": "OPEN_PROGRAM_VERIFY_TIER",
+      "verified_facts": {
+        "start": "$2,000",
+        "scale": "up to $200,000",
+        "scale_ai": "up to $350,000",
+        "constraint": "tier eligibility depends on verifiable funding/stage and other requirements"
+      },
+      "source": "https://cloud.google.com/startup/faq"
+    },
+    {
+      "id": "MICROSOFT-STARTUPS",
+      "provider": "Microsoft",
+      "type": "CREDIT",
+      "geography": "Global",
+      "status": "OPEN_PROGRAM_VERIFY_ELIGIBILITY",
+      "verified_facts": {
+        "credits": "up to $150,000 over time",
+        "additional_value": "enterprise GTM and Marketplace/co-sell support"
+      },
+      "source": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview"
+    },
+    {
+      "id": "NVIDIA-INCEPTION",
+      "provider": "NVIDIA",
+      "type": "IN_KIND",
+      "geography": "Global",
+      "status": "OPEN_PROGRAM",
+      "verified_facts": {
+        "fee": "free",
+        "equity_requirement": "none",
+        "benefits": ["developer tools","training","preferred pricing","partner offers","cloud credits","investor ecosystem access"],
+        "basic_criteria": ["official incorporation","working website","less than 10 years old","at least one founder/developer and clear technology use case"]
+      },
+      "source": "https://www.nvidia.com/en-us/startups/"
+    },
+    {
+      "id": "EIC-ACCELERATOR-2026",
+      "provider": "European Innovation Council",
+      "type": "CASH_GRANT",
+      "geography": "EU/eligible applicants",
+      "status": "OPEN_PROGRAM_VERIFY_EIC_ELIGIBILITY",
+      "verified_facts": {
+        "grant_component": "below EUR 2.5M",
+        "investment_component": "EUR 1M-EUR 10M",
+        "technology_stage": "TRL 6-8"
+      },
+      "source": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en"
+    },
+    {
+      "id": "HORIZON-BRIDGING-2027",
+      "provider": "European Commission / Horizon Europe",
+      "type": "CASH_GRANT",
+      "geography": "EU/eligible consortia",
+      "status": "OPEN",
+      "verified_facts": {
+        "deadline": "2027-02-16",
+        "topics": [
+          "EU AI Media Platform - modular multilingual public-interest infrastructure",
+          "large-scale AI-driven digital platforms",
+          "EU Frontier AI Initiative"
+        ]
+      },
+      "source": "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-digital-bridging-actions-2027_en"
+    }
+  ]
+}
