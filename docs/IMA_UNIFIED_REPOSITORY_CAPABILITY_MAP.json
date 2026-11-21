@@ -109,31 +109,43 @@
     {
       "source": "Ima-server",
       "capability": "MCP public status/learning/distribution tools",
-      "canonical": "canonical MCP/App distribution layer",
+      "canonical": "runtime/mcp_public_status_adapter.py + canonical MCP/App distribution layer",
       "source_evidence": [
         "mcp.js",
         "distribution/openai/SUBMISSION_READINESS.json"
       ],
-      "live_status": "BLOCKED_BY_HOST_ENTITLEMENT"
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI / HOST_BLOCKED",
+      "migration_evidence": [
+        "runtime/mcp_public_status_adapter.py",
+        "tests/test_mcp_public_status_adapter.py"
+      ]
     },
     {
       "source": "ima-os-evolving-home",
       "capability": "background QA/validation/recovery concepts",
-      "canonical": "canonical QA/governance workflows",
+      "canonical": "learning/permanent_quality_guard.py + canonical QA/governance workflows",
       "source_evidence": [
         "PERMANENT_QUALITY_SYSTEM.md",
         "DEPLOYMENT_STATUS.md"
       ],
-      "live_status": "NOT_VERIFIED"
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/permanent_quality_guard.py",
+        "tests/test_permanent_quality_guard.py"
+      ]
     },
     {
       "source": "ima-os-evolving-home",
       "capability": "self-improvement/feedback concepts",
-      "canonical": "learning/meta_orchestrator.py + learning/feedback_engine.py",
+      "canonical": "learning/self_improvement_signals.py + learning/feedback_engine.py",
       "source_evidence": [
         "SELF_IMPROVEMENT_ENGINE.md"
       ],
-      "live_status": "NOT_VERIFIED"
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "learning/self_improvement_signals.py",
+        "tests/test_self_improvement_signals.py"
+      ]
     },
     {
       "source": "ima-os-evolving-home",
@@ -157,13 +169,17 @@
     {
       "source": "Ima-self-deploy",
       "capability": "deployment automation and health checks",
-      "canonical": ".github/workflows + canonical deployment pipeline",
+      "canonical": "deployment/health_contract.py + canonical deployment pipeline",
       "source_evidence": [
         "deploy.sh",
         "check_ima.sh",
         "deploy_ima_hf.sh"
       ],
-      "live_status": "NOT_VERIFIED"
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "migration_evidence": [
+        "deployment/health_contract.py",
+        "tests/test_health_contract.py"
+      ]
     },
     {
       "source": "Imamvp",
