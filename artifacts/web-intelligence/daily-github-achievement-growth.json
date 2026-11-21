@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "system": "IMA",
+  "mode": "evidence_bounded",
+  "opportunities": [
+    {
+      "name": "Pull Shark",
+      "priority": 1,
+      "status": "READY",
+      "path": "merge substantive reviewed PRs after QA"
+    },
+    {
+      "name": "Galaxy Brain",
+      "priority": 2,
+      "status": "OPPORTUNITY",
+      "path": "answer real Discussions questions; community acceptance required"
+    },
+    {
+      "name": "Pair Extraordinaire",
+      "priority": 3,
+      "status": "OPPORTUNITY",
+      "path": "real collaborator + substantive merged PR"
+    },
+    {
+      "name": "Starstruck",
+      "priority": 4,
+      "status": "OPPORTUNITY",
+      "path": "independent users star IMA because it is useful"
+    },
+    {
+      "name": "Quickdraw",
+      "priority": 5,
+      "status": "OPPORTUNISTIC_ONLY",
+      "path": "only genuine rapid issue/PR resolution"
+    },
+    {
+      "name": "YOLO",
+      "priority": 6,
+      "status": "HUMAN_POLICY_REQUIRED",
+      "path": "never bypass required review for a badge"
+    },
+    {
+      "name": "Public Sponsor",
+      "priority": 7,
+      "status": "HUMAN_AND_PAYMENT_REQUIRED",
+      "path": "legitimate sponsorship only"
+    }
+  ],
+  "verified_current_achievements": "The connected GitHub tooling does not expose the account achievement panel as machine-readable evidence; no new badge is claimed here.",
+  "principle": "Earn through real value; never manufacture engagement."
+}
