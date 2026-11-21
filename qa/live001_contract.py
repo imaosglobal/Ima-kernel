@@ -148,7 +148,7 @@ for key in ("readOnlyHint", "openWorldHint", "destructiveHint"):
 # Canonical server/tool/UI invariants.
 required_action_fragments = [
     "registerTool('ima_live_browser'",
-    "ui://ima/live-browser/v1.html",
+    "ui://ima/live-browser/v2.html",
     "registerAppResource",
     "authorizedSessionRequired",
 ]
