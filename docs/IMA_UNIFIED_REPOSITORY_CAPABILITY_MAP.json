@@ -299,6 +299,46 @@
         "tests/test_industry_pattern_adapter.py"
       ],
       "conflict_check": "Adapter produces canonical candidates only; consequential patterns remain approval-gated."
+    },
+    {
+      "source": "IMA product evolution",
+      "capability": "global collaboration and reciprocal value",
+      "canonical": "learning/collaboration_value_engine.py",
+      "source_evidence": [
+        "229e315c4003b41cbc6abaf99af0959389745ce5"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "conflict_check": "canonical runtime, memory, feedback and LIVE-001 remain singular"
+    },
+    {
+      "source": "IMA product evolution",
+      "capability": "global IP provenance stewardship",
+      "canonical": "learning/ip_provenance_vault.py",
+      "source_evidence": [
+        "675887766037eaa20653d46bc654bda4cfd84170"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "conflict_check": "canonical runtime, memory, feedback and LIVE-001 remain singular"
+    },
+    {
+      "source": "IMA product evolution",
+      "capability": "canonical IMA personality",
+      "canonical": "learning/ima_personality_system.py",
+      "source_evidence": [
+        "1304f5d875ec3018ec82d49b2e83c63a8d778a8c"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "conflict_check": "canonical runtime, memory, feedback and LIVE-001 remain singular"
+    },
+    {
+      "source": "IMA product evolution",
+      "capability": "universal device interoperability",
+      "canonical": "learning/universal_device_interoperability.py",
+      "source_evidence": [
+        "9b3f26ee62e5d95afb88f4705adc5034bc109fc5"
+      ],
+      "live_status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "conflict_check": "canonical runtime, memory, feedback and LIVE-001 remain singular"
     }
   ],
   "exclusions": [
