@@ -4,8 +4,32 @@
   "name": "GLOBAL_RESILIENCE_AND_CRISIS_PROTOCOL",
   "updated": "2026-11-21",
   "purpose": "Make IMA a resilience layer for people, founders, executives, organizations and communities: detect risk early, preserve truth and agency, contain harm, coordinate recovery, protect continuity and rebuild trust.",
-  "scope": ["personal crisis","health or availability crisis","reputation crisis","leadership transition","legal or regulatory crisis","cyber or data incident","financial distress","product or safety failure","relationship or family crisis","media or social crisis","organizational continuity","public misinformation"],
-  "principles": ["truth before narrative","privacy before publicity","human agency","do no harm","facts, hypotheses and unknowns separated","single source of truth","least necessary disclosure","rapid containment before persuasion","recovery measured by real repair, not sentiment alone","never impersonate, fabricate, suppress lawful criticism, or obstruct authorities"],
+  "scope": [
+    "personal crisis",
+    "health or availability crisis",
+    "reputation crisis",
+    "leadership transition",
+    "legal or regulatory crisis",
+    "cyber or data incident",
+    "financial distress",
+    "product or safety failure",
+    "relationship or family crisis",
+    "media or social crisis",
+    "organizational continuity",
+    "public misinformation"
+  ],
+  "principles": [
+    "truth before narrative",
+    "privacy before publicity",
+    "human agency",
+    "do no harm",
+    "facts, hypotheses and unknowns separated",
+    "single source of truth",
+    "least necessary disclosure",
+    "rapid containment before persuasion",
+    "recovery measured by real repair, not sentiment alone",
+    "never impersonate, fabricate, suppress lawful criticism, or obstruct authorities"
+  ],
   "lifecycle": [
     "PREVENT: maintain risk register, role backups, access recovery, succession map, contact tree, evidence vault, media/account inventory, dependency map and scenario exercises.",
     "DETECT: monitor authorized public signals, user-reported events, security alerts, operational failures and reputation anomalies; classify severity and confidence.",
@@ -16,11 +40,82 @@
     "LEARN: post-incident review; update controls; exercise at least annually and refresh critical contacts/roles at least every six months."
   ],
   "minimum_human_action": "IMA automates research, evidence collection, drafting, monitoring, coordination and status tracking where authorized. It stops for identity, consent, signature, legal representation, banking, medical decisions, employment decisions, or other accountable human decisions and brings the human to the exact required boundary.",
-  "personal_resilience": ["private crisis plan","trusted-contact tree","digital account recovery map","financial runway and emergency-resource map","healthcare/legal contact directory","reputation baseline and pre-authorized communication preferences","succession/delegation plan","protected archive of identity, work and creative legacy"],
-  "organizational_resilience": ["emergency succession and delegation","alternate spokesperson roster","stakeholder map","crisis newsroom or public-status page","pre-drafted fact-based holding statements","media inquiry and rumor log","business continuity and disaster recovery map","critical supplier/dependency inventory","cyber incident evidence preservation","post-crisis remediation tracker"],
-  "communication_framework": ["what happened and what is verified","what is not yet known","who is affected and what is being done for them","what action is being taken now","what happens next and when the next update arrives","what evidence supports the statement"],
-  "red_lines": ["no fabricated story","no astroturfing or fake endorsements","no harassment of critics or journalists","no deletion of evidence to improve reputation","no disclosure of private information without authorization","no autonomous public accusation","no pretending sentiment monitoring equals truth","no promise of immunity from consequences"],
-  "metrics": ["time-to-detection","time-to-human-review","time-to-first-verified-update","time-to-containment","service continuity","affected-person support completion","correction latency","stakeholder trust/recovery indicators","recurrence rate","independent audit or verification"],
+  "personal_resilience": [
+    "private crisis plan",
+    "trusted-contact tree",
+    "digital account recovery map",
+    "financial runway and emergency-resource map",
+    "healthcare/legal contact directory",
+    "reputation baseline and pre-authorized communication preferences",
+    "succession/delegation plan",
+    "protected archive of identity, work and creative legacy"
+  ],
+  "organizational_resilience": [
+    "emergency succession and delegation",
+    "alternate spokesperson roster",
+    "stakeholder map",
+    "crisis newsroom or public-status page",
+    "pre-drafted fact-based holding statements",
+    "media inquiry and rumor log",
+    "business continuity and disaster recovery map",
+    "critical supplier/dependency inventory",
+    "cyber incident evidence preservation",
+    "post-crisis remediation tracker"
+  ],
+  "communication_framework": [
+    "what happened and what is verified",
+    "what is not yet known",
+    "who is affected and what is being done for them",
+    "what action is being taken now",
+    "what happens next and when the next update arrives",
+    "what evidence supports the statement"
+  ],
+  "red_lines": [
+    "no fabricated story",
+    "no astroturfing or fake endorsements",
+    "no harassment of critics or journalists",
+    "no deletion of evidence to improve reputation",
+    "no disclosure of private information without authorization",
+    "no autonomous public accusation",
+    "no pretending sentiment monitoring equals truth",
+    "no promise of immunity from consequences"
+  ],
+  "metrics": [
+    "time-to-detection",
+    "time-to-human-review",
+    "time-to-first-verified-update",
+    "time-to-containment",
+    "service continuity",
+    "affected-person support completion",
+    "correction latency",
+    "stakeholder trust/recovery indicators",
+    "recurrence rate",
+    "independent audit or verification"
+  ],
   "evidence_standard": "Every crisis event gets timestamped provenance, source, confidence, decision owner, action, result and unresolved unknowns.",
-  "success_definition": "A person or organization emerges safer, more capable and more resilient, with real harms addressed and trust rebuilt where justified—not merely with better publicity."
+  "success_definition": "A person or organization emerges safer, more capable and more resilient, with real harms addressed and trust rebuilt where justified—not merely with better publicity.",
+  "runtime_binding": {
+    "runtime": "core/resilience-runtime.js",
+    "test": "tests/resilience_runtime.test.cjs",
+    "npm_script": "test:resilience",
+    "canonical_flow": [
+      "RISK_REGISTER",
+      "EARLY_WARNING",
+      "CRISIS_CLASSIFICATION",
+      "RESPONSE_OWNER",
+      "COMMUNICATION",
+      "RECOVERY",
+      "INDEPENDENT_VERIFICATION",
+      "LEARNING"
+    ],
+    "rule": "This runtime extends this protocol; it does not create a parallel crisis system."
+  },
+  "control_requirements": {
+    "single_source_of_truth": true,
+    "timestamped_evidence": true,
+    "unknowns_must_remain_visible": true,
+    "human_boundary_before_irreversible_action": true,
+    "no_public_action_without_authorization": true,
+    "cross_user_data_isolation": true
+  }
 }
