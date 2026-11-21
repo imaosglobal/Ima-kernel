@@ -385,6 +385,50 @@
       "source_provenance": "imaosglobal/Ima-self-deploy",
       "test_verified": false,
       "deployment_verified": false
+    },
+    {
+      "id": "accessibility_tree_action_mapping",
+      "label": "Accessibility-tree action mapping",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Maps observed accessibility nodes to stable action candidates; never executes device/browser actions by itself.",
+      "evidence": [
+        "learning/accessibility_action_map.py",
+        "tests/test_accessibility_action_map.py"
+      ],
+      "source_provenance": "Vercel agent-browser ecosystem / accessibility-first browser automation"
+    },
+    {
+      "id": "canonical_human_approval_contract",
+      "label": "Canonical human approval contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Blocks consequential actions unless explicit user confirmation is present; non-consequential observations remain allowed.",
+      "evidence": [
+        "learning/human_approval_contract.py",
+        "tests/test_human_approval_contract.py"
+      ],
+      "source_provenance": "Microsoft Magentic-UI / human-in-the-loop agent workflows"
+    },
+    {
+      "id": "memory_provenance_correction_withdrawal",
+      "label": "Memory provenance, correction and withdrawal",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Requires source and bounded confidence and represents corrections/withdrawals explicitly rather than silently rewriting history.",
+      "evidence": [
+        "learning/memory_provenance_contract.py",
+        "tests/test_memory_provenance_contract.py"
+      ],
+      "source_provenance": "GBrain memory-boundary/provenance patterns"
+    },
+    {
+      "id": "agent_security_regression_contract",
+      "label": "Agent security regression contract",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Deterministic checks for authorization, secret-boundary leakage and memory provenance; no autonomous blocking or remediation.",
+      "evidence": [
+        "learning/agent_security_regression.py",
+        "tests/test_agent_security_regression.py"
+      ],
+      "source_provenance": "Open agent security benchmark/red-team patterns"
     }
   ],
   "updated_at": "2026-11-21",
@@ -404,6 +448,10 @@
     "content accuracy and source provenance",
     "performance, resilience, continuity and error recovery",
     "growth, distribution and legitimate sustainability",
-    "daily learning, regression and evidence journal"
+    "daily learning, regression and evidence journal",
+    "accessibility-tree action grounding and stable UI references",
+    "human approval and consequential-action authorization",
+    "memory provenance, correction and withdrawal",
+    "agent security regression and prompt-injection resilience"
   ]
 }
