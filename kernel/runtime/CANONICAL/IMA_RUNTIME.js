@@ -21,6 +21,7 @@ const dots = require("./IMA_DOTS_BRIDGE");
 const continuousLearning = require("./IMA_CONTINUOUS_LEARNING.cjs");
 const innovationLoop = require("./IMA_INNOVATION_LOOP.js");
 const pathIntelligence = require("./IMA_PATH_INTELLIGENCE");
+const prPathRegistry = require("../../../core/PR_PATH_INTEGRATION_REGISTRY.json");
 
 const runtime = {
     boot() {
@@ -35,8 +36,12 @@ const runtime = {
         const empowerment = healthyEmpowerment.selfAssessment({ safety: "UNKNOWN", capacity: "UNKNOWN", energy: "UNKNOWN", overload: "UNKNOWN", agency: "HIGH" });
         state.set("healthy_empowerment", empowerment);
         continuousLearning.seed();
-        state.set("path_intelligence", pathIntelligence.status());
-        events.emit("PATH_INTELLIGENCE_READY", pathIntelligence.status());
+        const pathStatus = pathIntelligence.status();
+        const prIntegration = pathIntelligence.ingestCapabilityMap(prPathRegistry);
+        state.set("path_intelligence", pathStatus);
+        state.set("pr_path_integration", prIntegration);
+        events.emit("PATH_INTELLIGENCE_READY", pathStatus);
+        events.emit("PR_PATH_INTEGRATION_READY", prIntegration);
         state.set("continuous_learning", continuousLearning.status());
         dots.register();
         state.set("dots", dots.status());
@@ -105,6 +110,7 @@ const runtime = {
       dots: dots.status(),
       continuous_learning: learningStatus,
       path_intelligence: pathIntelligence.status(),
+      pr_path_integration: state.get("pr_path_integration"),
       derivation_registry: {
         build: derivationRegistryBuild,
         integrity: derivationRegistryIntegrity
