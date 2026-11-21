@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.0.0",
+  "status":"MARKET_READY_PENDING_VALIDATION",
+  "offers":[
+    {"id":"ima-human-centered-intelligence-pilot","audience":["individuals","families","creators","accessibility users"],"value":"Human-centered assistance for real tasks with consent, privacy and user agency.","proof_gate":["task completion","repeat usage","user value","privacy correctness","stability"]},
+    {"id":"ima-device-integration-pilot","audience":["device makers","robotics","automotive","smart-home"],"value":"Portable IMA interaction and intelligence layer through canonical device adapters.","proof_gate":["adapter reliability","permissions","latency","continuity","recovery"]},
+    {"id":"ima-accessibility-intelligence-pilot","audience":["accessibility teams","education","care","public services"],"value":"Accessible intelligence interaction grounded in stable semantics and human approval.","proof_gate":["task success","assistive-tech compatibility","safety","feedback"]},
+    {"id":"ima-knowledge-and-growth-partnership","audience":["technology companies","research groups","creators","startups"],"value":"Reciprocal capability learning, benchmarking, integration and provenance-aware collaboration.","proof_gate":["reciprocal value","lawful terms","integration evidence","attribution"]}
+  ]
+}
