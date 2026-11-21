@@ -443,6 +443,18 @@
       ],
       "source_provenance": "Cross-industry ecosystem research",
       "conflict_policy": "No duplicate brain, memory, feedback authority or LIVE-001 runtime; consequential actions remain explicitly approved."
+    },
+    {
+      "id": "cross_industry_pattern_adapter",
+      "label": "Cross-industry transferable pattern adapter",
+      "status": "IMPLEMENTED_IN_CODE / TESTED_PENDING_CI",
+      "boundary": "Immediately converts safe industry lessons into canonical workflow candidates; it does not execute external actions or copy proprietary implementations.",
+      "evidence": [
+        "learning/industry_pattern_adapter.py",
+        "tests/test_industry_pattern_adapter.py",
+        "docs/IMA_INDUSTRY_WIDE_DISCOVERY_CONTRACT.md"
+      ],
+      "conflict_policy": "Uses the canonical orchestration, memory, feedback, security and approval contracts; no parallel runtime."
     }
   ],
   "updated_at": "2026-11-21",
