@@ -534,14 +534,13 @@ def chat_options():
 @app.route("/ima-api/chat", methods=["POST"])
 def chat():
     """Canonical public chat endpoint: IMA always answers from the IMA master runtime."""
-    user_id = _session_user_id()
-    if not user_id:
-        return jsonify({"error": "valid Google/IMA session required"}), 401
-
     payload = request.get_json(silent=True) or {}
     message = str(payload.get("message") or "").strip()
+    user_id = _session_user_id()
     personalization = payload.get("personalization") if isinstance(payload.get("personalization"), dict) else {}
 
+    if not user_id:
+        return jsonify({"error": "valid IMA session required"}), 401
     if not message:
         return jsonify({"error": "message_required"}), 400
     if len(message) > 12000:
@@ -551,19 +550,64 @@ def chat():
 
     try:
         from ima_master_runtime import ask
+        universal = _universal_memory()
+        consent = universal.get_consent(user_id)
+        memory = public_memory.recall(user_id, message) if consent.get("status") == "GRANTED" else []
+
         result = ask(
             message,
             user_id=user_id,
             public=True,
+            public_memory=memory,
             personalization=personalization,
         )
         response = str(result.get("response") or "").strip()
         if not response:
             raise RuntimeError("IMA master runtime returned no response")
 
+        from learning.age_assurance import verify_age_attestation
+        from learning.child_safety_engine import enforce_response
+        age_signal = verify_age_attestation(payload.get("age_attestation"), user_id)
+        age_band = age_signal["age_band"] if age_signal.get("verified") else "unknown"
+        language = "he" if any("\u0590" <= char <= "\u05FF" for char in message) else "en"
+        safety = enforce_response(
+            age_band=age_band,
+            user_message=message,
+            assistant_response=response,
+            language=language,
+        )
+        response = safety["response"].strip()
+        if not response:
+            raise RuntimeError("IMA safety layer returned no response")
+
+        if consent.get("status") == "GRANTED":
+            public_memory.append(user_id, message, response)
+            try:
+                universal.capture(
+                    user_id=user_id,
+                    source="ima-api/chat",
+                    content=message,
+                    consent="GRANTED",
+                    language=language,
+                    interface="public-web-chat",
+                    outcome=response,
+                    verification="first-pass-safety-screen",
+                    temporal_class="PRESENT",
+                    authorized_learning=False,
+                    status="VERIFIED",
+                )
+            except ValueError as exc:
+                app.logger.warning("Universal memory capture skipped: %s", exc)
+            except Exception:
+                app.logger.exception("Universal memory capture failed")
+
         return jsonify({
             "response": response,
             "answer": {"response": response},
+            "provider": result.get("provider") or result.get("llm_response", {}).get("provider"),
+            "runtime": result.get("connections", {}),
+            "memory": {"scope": "user", "hits": len(memory)},
+            "verified": True,
             "ima": {
                 "status": "answered",
                 "source": "IMA Intelligence Core",
@@ -574,10 +618,22 @@ def chat():
                 "personalization": personalization,
                 "always_answer_policy": True,
             },
+            "safety": {
+                "screened": True,
+                "policy_version": safety.get("policy_version"),
+                "age_band": safety.get("age_band", "unknown"),
+                "protective_mode": safety.get("protective_mode", True),
+                "age_assurance": {
+                    "verified": bool(age_signal.get("verified")),
+                    "status": age_signal.get("status", "unknown"),
+                    "age_band": age_band,
+                },
+                "risk_codes": safety.get("risk_codes", []),
+                "response_action": safety.get("response_action"),
+                "limitations": safety.get("limitations"),
+            },
         })
-    except Exception as exc:
-        # IMA must not expose a provider/system failure as the user-facing answer.
-        # Return a deterministic IMA answer that honestly states the unknown state.
+    except Exception:
         app.logger.exception("IMA public chat runtime failed")
         fallback = (
             "אני לא יודעת עדיין את התשובה לשאלה הזו. "
@@ -1021,100 +1077,6 @@ def age_assurance_status():
         "exact_birth_date_collected": False,
     })
 
-
-@app.post("/ima-api/chat")
-def chat():
-    payload = request.get_json(silent=True) or {}
-    message = payload.get("message")
-    user_id = _session_user_id()
-
-    if not isinstance(message, str) or not message.strip():
-        return jsonify({"error": "message is required"}), 400
-
-    # A valid IMA session is enough to start public chat. Google remains the
-    # identity/continuity path, but basic conversation must not be gated behind login.
-    # The session itself is signed by the server; private memory remains separately
-    # consent-gated below.
-    if not user_id:
-        return jsonify({"error": "valid IMA session required"}), 401
-
-    if not _rate_ok(request.remote_addr or "unknown"):
-        return jsonify({"error": "rate limit exceeded; try again shortly"}), 429
-
-    try:
-        from ima_master_runtime import ask
-        universal = _universal_memory()
-        consent = universal.get_consent(user_id)
-        memory = public_memory.recall(user_id, message) if consent.get("status") == "GRANTED" else []
-        personalization = payload.get("personalization") if isinstance(payload.get("personalization"), dict) else {}
-        result = ask(message.strip(), user_id=user_id, public=True, public_memory=memory, personalization=personalization)
-        response = str(result.get("response") or "").strip()
-        if not response:
-            raise RuntimeError("IMA returned no response")
-
-        # Accept only a short-lived signed attestation from the configured trusted
-        # issuer, bound to this authenticated session. Never trust a raw client age.
-        from learning.age_assurance import verify_age_attestation
-        from learning.child_safety_engine import enforce_response
-        age_signal = verify_age_attestation(payload.get("age_attestation"), user_id)
-        age_band = age_signal["age_band"] if age_signal.get("verified") else "unknown"
-        language = "he" if any("\\u0590" <= char <= "\\u05FF" for char in message) else "en"
-        safety = enforce_response(
-            age_band=age_band,
-            user_message=message.strip(),
-            assistant_response=response,
-            language=language,
-        )
-        response = safety["response"].strip()
-        if not response:
-            raise RuntimeError("IMA safety layer returned no response")
-
-        # Store only the final response after the first-pass safety screen.
-        if consent.get("status") == "GRANTED":
-            public_memory.append(user_id, message.strip(), response)
-        try:
-            if consent.get("status") == "GRANTED":
-                universal.capture(
-                    user_id=user_id,
-                    source="ima-api/chat",
-                    content=message.strip(),
-                    consent="GRANTED",
-                    language=language,
-                    interface="public-web-chat",
-                    outcome=response,
-                    verification="first-pass-safety-screen",
-                    temporal_class="PRESENT",
-                    authorized_learning=False,
-                    status="VERIFIED",
-                )
-        except ValueError as exc:
-            app.logger.warning("Universal memory capture skipped: %s", exc)
-        except Exception:
-            app.logger.exception("Universal memory capture failed")
-        return jsonify({
-            "response": response,
-            "provider": result.get("provider", "IMA MASTER"),
-            "runtime": result.get("connections", {}),
-            "memory": {"scope": "user", "hits": len(memory)},
-            "verified": True,
-            "safety": {
-                "screened": True,
-                "policy_version": safety.get("policy_version"),
-                "age_band": safety.get("age_band", "unknown"),
-                "protective_mode": safety.get("protective_mode", True),
-                "age_assurance": {
-                    "verified": bool(age_signal.get("verified")),
-                    "status": age_signal.get("status", "unknown"),
-                    "age_band": age_band,
-                },
-                "risk_codes": safety.get("risk_codes", []),
-                "response_action": safety.get("response_action"),
-                "limitations": safety.get("limitations"),
-            },
-        })
-    except Exception as exc:
-        app.logger.exception("IMA chat failure")
-        return jsonify({"error": "IMA runtime error"}), 500
 
 @app.get("/ima-api/capabilities/gaps")
 def capability_gaps():
