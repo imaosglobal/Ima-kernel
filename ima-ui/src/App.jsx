@@ -7,7 +7,8 @@ import {
   getStoredGoogleUser,
   signOutIma,
   submitFeedback,
-  getLiveTimeline
+  getLiveTimeline,
+  recordLiveWindowEvent
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { recordMarketEvent, getMarketCampaign, buildShareUrl } from './services/marketEntry';
@@ -161,10 +162,11 @@ function LiveWindow({lang,user,onClose}){
   const [drag,setDrag]=useState(null);
   const he=lang==='he';
   useEffect(()=>{localStorage.setItem('ima-live-window-pos',JSON.stringify(pos))},[pos]);
+  useEffect(()=>{recordLiveWindowEvent('window_opened',{payload:{mode,route:location.pathname}}).catch(()=>{}); return ()=>{recordLiveWindowEvent('window_closed',{payload:{mode}}).catch(()=>{})}},[]);
   const beginDrag=e=>{if(mode!=='floating')return;setDrag({sx:e.clientX,sy:e.clientY,px:pos.x,py:pos.y});e.currentTarget.setPointerCapture?.(e.pointerId)};
   const moveDrag=e=>{if(!drag)return;setPos(p=>({...p,x:Math.max(0,drag.px+e.clientX-drag.sx),y:Math.max(0,drag.py+e.clientY-drag.sy)}))};
-  const endDrag=()=>setDrag(null);
-  const setWindowMode=m=>{setMode(m);if(m==='mini')setPos(p=>({...p,w:220,h:88}));if(m==='floating')setPos(p=>({...p,w:Math.max(360,p.w),h:Math.max(360,p.h)}))};
+  const endDrag=()=>{if(drag){recordLiveWindowEvent('window_moved',{payload:{x:pos.x,y:pos.y}}).catch(()=>{})}setDrag(null)};
+  const setWindowMode=m=>{const previous=mode;setMode(m);if(m==='mini')setPos(p=>({...p,w:220,h:88}));if(m==='floating')setPos(p=>({...p,w:Math.max(360,p.w),h:Math.max(360,p.h)}));recordLiveWindowEvent(m==='mini'?'window_minimized':'window_mode_changed',{payload:{from:previous,to:m}}).catch(()=>{})};
   const style=mode==='floating'?{left:pos.x,top:pos.y,width:pos.w,height:pos.h}:mode==='mini'?{right:18,bottom:18,width:220,height:88}:mode==='split'?{left:'2vw',right:'52vw',top:'10vh',height:'80vh'}:{left:0,right:0,top:0,bottom:0};
   return <section className={'ima-live-window mode-'+mode} style={style} aria-label={he?'חלון אמא האינטראקטיבי':'IMA Interactive Window'}>
     <header className="ima-live-window-head" onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
@@ -173,7 +175,7 @@ function LiveWindow({lang,user,onClose}){
         <button onClick={()=>setWindowMode('mini')} aria-label={he?'מזעור':'Minimize'}>−</button>
         <button onClick={()=>setWindowMode(mode==='split'?'floating':'split')} aria-label={he?'מסך מפוצל':'Split'}>◫</button>
         <button onClick={()=>setWindowMode(mode==='fullscreen'?'floating':'fullscreen')} aria-label={he?'מסך מלא':'Fullscreen'}>□</button>
-        <button onClick={()=>{try{window.open(location.pathname+'?live-window=1','IMA-LIVE-001','popup,width=520,height=700')}catch{}}} aria-label={he?'חלון נפרד':'Detach'}>↗</button>
+        <button onClick={()=>{try{window.open(location.pathname+'?live-window=1','IMA-LIVE-001','popup,width=520,height=700');recordLiveWindowEvent('window_detached',{payload:{target:'popup'}}).catch(()=>{})}catch{}}} aria-label={he?'חלון נפרד':'Detach'}>↗</button>
         <button onClick={onClose} aria-label={he?'סגירה':'Close'}>×</button>
       </div>
     </header>
