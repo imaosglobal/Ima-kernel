@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "canonical": true,
+  "name": "IMA_IMPACT_WINDOW_IP_TRACK",
+  "updated": "2026-11-22",
+  "status": "PRIVATE_WORKSTREAM_EVIDENCE_NOT_PATENT",
+  "attribution": {
+    "inventor_candidate": "Ori Cohen",
+    "rule": "retain only where supported by invention records and applicable law; professional review required"
+  },
+  "scope": [
+    "PIIW",
+    "Impact Window",
+    "LIVE-001",
+    "per-user timeline",
+    "cross-device intelligence",
+    "capability negotiation",
+    "runtime verification",
+    "accessibility",
+    "MCP",
+    "A2A",
+    "agent action verification"
+  ],
+  "lifecycle": [
+    "invention_disclosure",
+    "prior_art_search",
+    "novelty_matrix",
+    "claim_candidates",
+    "evidence_chronology",
+    "professional_review",
+    "filing",
+    "prosecution",
+    "grant",
+    "licensing",
+    "revenue"
+  ],
+  "truth_rules": [
+    "Do not call an invention disclosure a patent application.",
+    "Do not call a patent application a patent grant.",
+    "Do not claim novelty or freedom-to-operate without professional legal analysis.",
+    "Do not expose enabling details publicly merely for reputation before an IP strategy review."
+  ],
+  "current_prior_art": [
+    {
+      "reference": "US20260195524A1",
+      "topic": "AI agents automating multimodal interface task workflows",
+      "date": "2026-07-09",
+      "relevance": "HIGH"
+    },
+    {
+      "reference": "US19/546,167",
+      "topic": "AI agents configuring/automating multimodal interface workflows",
+      "date": "2026-02-20",
+      "relevance": "HIGH"
+    },
+    {
+      "reference": "US20260291940",
+      "topic": "participant-scope-aware access control and persistent AI agents with cross-platform continuity",
+      "date": "2026-09-24",
+      "relevance": "HIGH"
+    },
+    {
+      "reference": "arXiv:2608.24898",
+      "topic": "MCP-driven accessibility tree standardization for AI screen-reader agents",
+      "date": "2026-07-13",
+      "relevance": "HIGH"
+    },
+    {
+      "reference": "IETF draft Agentic AI Use Cases",
+      "topic": "MCP+A2A, provenance, consent, edge/cloud and policy controls",
+      "date": "2026-03",
+      "relevance": "MEDIUM-HIGH"
+    }
+  ],
+  "novelty_hypotheses": [
+    "A user-scoped interactive intelligence window whose canonical timeline binds request→authorization→observation→action→result→verification→learning across host capabilities.",
+    "Capability negotiation plus runtime verification preventing the system from claiming native above-all-app control until the host proves the capability.",
+    "A privacy-minimized, per-user continuity layer that can move across devices/hosts while preserving authorization scope and verified state.",
+    "Impact Window as an agency-preserving surface: action is bounded by explicit authorization, result verification and learning rather than autonomous persistence."
+  ],
+  "novelty_status": "HYPOTHESIS_REQUIRES_CLAIM_CHART_AND_PROFESSIONAL_PRIOR_ART_REVIEW",
+  "implementation": {
+    "canonical_system": "LIVE-001",
+    "required_flow": [
+      "request",
+      "authorization",
+      "observation",
+      "action",
+      "result",
+      "verification",
+      "learning"
+    ],
+    "host_rule": "capability negotiation → runtime verification → use only verified capabilities",
+    "no_parallel_window": true,
+    "no_parallel_timeline": true
+  },
+  "commercialization": [
+    "paid pilots",
+    "accessibility deployments",
+    "enterprise/organization licensing",
+    "platform integrations",
+    "research partnerships",
+    "grant funding",
+    "non-dilutive credits where eligible"
+  ],
+  "low_cost_ip_routes": [
+    "professional patent clinic/pro-bono IP assistance",
+    "university IP clinics",
+    "innovation authority/grant programs that permit IP/legal support",
+    "accelerator legal clinics",
+    "licensed patent professional review before filing"
+  ],
+  "blockers": [
+    "No professional claim-chart/FTO opinion yet.",
+    "Publicly available prior art is not exhaustive.",
+    "Inventorship/ownership must be verified from actual contribution and agreements.",
+    "A patent filing/grant and commercialization are distinct events."
+  ],
+  "next_high_value_action": "Build a dated claim chart for the four novelty hypotheses against the identified prior art, then route the narrowed invention disclosure to professional patent review before public technical disclosure."
+}
