@@ -6,7 +6,8 @@ import {
   signInWithGoogleCredential,
   getStoredGoogleUser,
   signOutIma,
-  submitFeedback
+  submitFeedback,
+  getLiveTimeline
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { recordMarketEvent, getMarketCampaign, buildShareUrl } from './services/marketEntry';
@@ -154,11 +155,33 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage=''}) {
   </section>;
 }
 
+function ImpactTimeline({lang,onClose}){
+  const [events,setEvents]=useState([]);
+  const [busy,setBusy]=useState(true);
+  const [error,setError]=useState('');
+  const he=lang==='he';
+  const load=async()=>{try{setBusy(true);const data=await getLiveTimeline(false);setEvents(Array.isArray(data?.events)?data.events:[]);setError('')}catch(e){setError(e?.message||'timeline unavailable')}finally{setBusy(false)}};
+  useEffect(()=>{load();const id=setInterval(load,5000);return()=>clearInterval(id)},[]);
+  const label=e=>({action_requested:he?'פעולה אושרה ונשלחה':'Action authorized and sent',action_verified:he?'הפעולה אומתה':'Action verified',action_failed:he?'הפעולה נכשלה':'Action failed',device_registered:he?'מכשיר חובר':'Device connected'}[e.event_type]||e.event_type);
+  return <section className="store-panel" aria-label={he?'חלון ההשפעה':'Impact Window'} id="impact-window" style={{marginTop:16}}>
+    <div className="store-head"><div><span className="eyebrow">LIVE-001</span><h2>{he?'חלון ההשפעה':'Impact Window'}</h2><p>{he?'ציר זמן אישי ומאומת של מה שהחלון האינטראקטיבי עשה, ראה ואימת.':'A personal, auditable timeline of what the interactive window did, observed and verified.'}</p></div><button className="icon-button" onClick={onClose} aria-label={he?'סגירה':'Close'}>×</button></div>
+    {busy&&!events.length?<p>{he?'טוען…':'Loading…'}</p>:null}
+    {error?<p role="status">{he?'לא ניתן לטעון כרגע את ציר הזמן.':'Timeline unavailable right now.'}</p>:null}
+    {!error&&!events.length&&!busy?<p>{he?'עדיין אין פעולות בחלון הזה.':'No window actions recorded yet.'}</p>:null}
+    <div style={{display:'grid',gap:10}}>{events.map(e=><article key={e.id} style={{border:'1px solid currentColor',borderRadius:14,padding:12,opacity:.9}}>
+      <div style={{display:'flex',justifyContent:'space-between',gap:12}}><strong>{label(e)}</strong><small>{new Date(e.occurred_at).toLocaleString(lang||undefined)}</small></div>
+      <div style={{marginTop:4}}>{e.action||e.phase} · {e.status}</div>
+      {e.provenance?.verified!==undefined?<small>{e.provenance.verified? (he?'✓ אומת':'✓ verified') : (he?'לא אומת':'not verified')}</small>:null}
+    </article>)}</div>
+  </section>;
+}
+
 export default function App(){
   const [lang,setLang]=useState(()=>{const saved=localStorage.getItem('ima-site-language');if(saved)return saved;const d=String(navigator.language||'en').split('-')[0].toLowerCase();return SUPPORTED_LOCALES.some(([c])=>c===d)?d:'en'});
   const [user,setUser]=useState(()=>getStoredGoogleUser());
   const [chatOpen,setChatOpen]=useState(false);
   const [storeOpen,setStoreOpen]=useState(false);
+  const [timelineOpen,setTimelineOpen]=useState(false);
   const [feedback,setFeedback]=useState('');
   const [feedbackStatus,setFeedbackStatus]=useState('');
   const [installEvent,setInstallEvent]=useState(null);
@@ -238,6 +261,7 @@ export default function App(){
       </section>
 
       {user&&chatOpen&&<ChatPanel lang={lang} user={user} onClose={()=>setChatOpen(false)}/>}
+      {user&&timelineOpen&&<ImpactTimeline lang={lang} onClose={()=>setTimelineOpen(false)}/>}
       {user&&storeOpen&&<section className="store-panel" aria-label="IMA Store" id="store">
         <div className="store-head"><div><span className="eyebrow">IMA Store</span><h2>הכלים והחיבורים של אמא</h2><p>מוצרים, חוויות וחיבורים שאפשר להוסיף לאמא בלי לפצל את המערכת.</p></div><button className="icon-button" onClick={()=>setStoreOpen(false)} aria-label="סגירה">×</button></div>
         <div className="store-grid">
