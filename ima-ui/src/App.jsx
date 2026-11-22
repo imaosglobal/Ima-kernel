@@ -125,7 +125,7 @@ function GoogleButton({user,onUser,t}) {
   return <div className="google-wrap"><div id="ima-google-button" aria-label={t.login}/>{error&&<small>{error}</small>}</div>;
 }
 
-function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMode=false}) {
+export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMode=false}) {
   const t=COPY[lang]||COPY.en;
   const he=lang==='he';
   const [message,setMessage]=useState(initialMessage);
