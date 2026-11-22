@@ -126,3 +126,17 @@ body{background:#f6f0e8!important;color:#352b28!important}
 .store-grid p{color:#766a62;line-height:1.65;flex:1}
 .store-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:50px}
 @media(max-width:700px){.immediate-items{grid-template-columns:1fr}.immediate-items button{min-height:auto}.hero{grid-template-columns:1fr;padding-top:38px}.hero-visual{order:-1}.hero-mother{min-height:300px}.hero-mother img{width:min(320px,82vw)!important}.store-grid{grid-template-columns:1fr}.store-panel{margin-inline:14px;padding:20px}.store-head{gap:10px}}
+
+/* IMA experiential understanding: clarity, agency and responsiveness without stating the principle. */
+.hero-copy{animation:ima-arrive .55s ease-out both}
+.hero-visual{animation:ima-arrive .7s .05s ease-out both}
+.hero-mother:focus-visible{outline:3px solid #9d5963;outline-offset:12px;border-radius:50%}
+.hero-mother:active img{transform:scale(.985)!important}
+.hero-actions .primary{min-width:170px;box-shadow:0 12px 28px rgba(157,89,99,.16)}
+.hero-actions .primary:focus-visible{box-shadow:0 0 0 5px rgba(157,89,99,.18),0 12px 28px rgba(157,89,99,.16)}
+.job-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.job-card:hover,.job-card:focus-visible{border-color:#c9b5a8}
+.chat-panel{scroll-margin-top:90px}
+.chat-composer input:focus{border-color:#9d5963;box-shadow:0 0 0 4px rgba(157,89,99,.10)}
+@keyframes ima-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-copy,.hero-visual{animation:none!important}.job-card{transition:none!important}}
