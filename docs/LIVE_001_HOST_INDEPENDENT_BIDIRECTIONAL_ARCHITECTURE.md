@@ -74,3 +74,23 @@ LIVE-001 is complete only when at least one host can perform the full verified l
 request → consent → MCP/tool call → BrowserGlass → authorized Android/Chrome action → observed result → result returned to IMA → provenance/QA record.
 
 ChatGPT hosting is an additional host capability, not a prerequisite for IMA itself.
+
+
+## Multi-intelligence federation
+
+LIVE-001 is not limited to ChatGPT.
+
+IMA should act as a canonical interoperability layer for any legitimately connected intelligence, model, agent, assistant, or host that exposes a supported interface. The direction is intentionally bidirectional:
+
+- IMA → connected intelligence: send an authorized request/context/tool/resource.
+- Connected intelligence → IMA: return an answer, capability, tool result, event, or evidence.
+- IMA → another connected intelligence: route only when authorized and useful.
+- Results → IMA: normalize provenance, permissions, uncertainty, source and verification state before reuse.
+- IMA → user: present the result without implying that one intelligence is another or that a result is verified when it is not.
+
+This creates a federation rather than a dependency: ChatGPT is one possible host/intelligence; other compatible systems can participate through the same canonical contract.
+
+No intelligence receives another user's private data by default. Identity, authorization, consent, data scope and provenance remain explicit at every hop. Cross-intelligence routing must be auditable and must not silently expand permissions.
+
+The economic objective is lawful value creation through interoperability, accessibility, user productivity, distribution, services and future commercial integrations. Revenue is never claimed until actually measured.
+
