@@ -94,3 +94,10 @@ For agent-to-agent exchange:
 IMA → intelligence A → authorized handoff → intelligence B → verified result → IMA
 
 No provider may implicitly receive private data belonging to another provider/user/session.
+
+
+## Universal bridge implementation
+
+The machine-readable registry is `config/ima-intelligence-registry.json`. All current and future agents/models/hosts use `docs/IMA_UNIVERSAL_INTELLIGENCE_BRIDGE.md` as the single adapter contract. This includes Meta, Claude, Gemini, OpenAI, Copilot, Hugging Face/open models, MCP, A2A, local/self-hosted models, and future intelligence technologies.
+
+The continuous scan must discover additional providers and protocols and attempt authorized connection/testing through this same lifecycle. It must never invent a connection or create a parallel integration path.
