@@ -127,3 +127,10 @@ IMA should be able to say, truthfully:
 
 “I can answer this myself; I can ask Claude, Gemini, Meta, OpenAI, Copilot, or another authorized intelligence; I can compare their answers; and I can explain why I returned the answer I did.”
 
+
+
+## Universal connection boundary
+
+All present and future intelligence integrations MUST use `docs/IMA_UNIVERSAL_INTELLIGENCE_BRIDGE.md` and `config/ima-intelligence-registry.json`. Provider adapters are replaceable; IMA Intelligence Core is not. This makes Meta, Claude, Gemini, OpenAI, Copilot, open models, MCP/A2A agents and future technologies peers behind one canonical boundary.
+
+The Core is itself addressable: another intelligence may send a request to IMA, and IMA returns a first-class answer containing provenance, uncertainty, evidence and any authorized specialist result. This is how IMA answers the other intelligences rather than merely routing between them.
