@@ -30,7 +30,7 @@ def _ima_public_cors(response):
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
-        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, X-IMA-Client, X-IMA-Device-Key, X-IMA-Transport"
+        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, X-IMA-Client, X-IMA-Device-Key, X-IMA-Transport, X-IMA-Live-Session"
         response.headers["Access-Control-Max-Age"] = "600"
     return response
 
@@ -302,6 +302,43 @@ def live_timeline():
         "events": result.get("data") or [],
     })
 
+
+
+@app.post("/ima-api/live/timeline/event")
+def live_timeline_event():
+    """Append an authenticated, privacy-sanitized LIVE-001 window event."""
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    body = request.get_json(silent=True) or {}
+    event_type = str(body.get("event_type") or "").strip()
+    if not event_type:
+        return jsonify({"error": "event_type_required"}), 400
+    allowed = {
+        "window_opened", "window_closed", "window_mode_changed", "window_moved",
+        "window_resized", "window_minimized", "window_restored", "window_detached",
+        "window_context_changed", "window_action_requested", "window_action_verified",
+        "window_action_failed", "window_permission_changed", "window_paused",
+    }
+    if event_type not in allowed:
+        return jsonify({"error": "unsupported_live_window_event"}), 400
+    result = _record_live_event(
+        owner,
+        session_id=_live_session_id(),
+        event_type=event_type,
+        phase=str(body.get("phase") or "observe"),
+        status=str(body.get("status") or "recorded"),
+        action=str(body.get("action") or "")[:120] or None,
+        device_id=body.get("device_id"),
+        command_id=body.get("command_id"),
+        payload=body.get("payload") if isinstance(body.get("payload"), dict) else {},
+        result=body.get("result") if isinstance(body.get("result"), dict) else {},
+        provenance={"source": "LIVE-001 interactive window", "user_scope": "owner", "client_event": True},
+        verified_at=body.get("verified_at"),
+    )
+    if not result.get("recorded"):
+        return jsonify({"ok": False, "error": "live_timeline_archive_failed", "status": result.get("status")}), 503
+    return jsonify({"ok": True, "event_id": result.get("id"), "occurred_at": result.get("occurred_at")}), 201
 
 @app.post("/ima-api/device/command")
 def device_command():
