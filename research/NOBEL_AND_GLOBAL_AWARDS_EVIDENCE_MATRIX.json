@@ -4,7 +4,7 @@
   "name": "NOBEL_AND_GLOBAL_AWARDS_EVIDENCE_MATRIX",
   "truth_status": "READINESS_PROGRAM_NOT_NOMINATION",
   "objective": "Build independently verifiable evidence and real-world impact for IMA and Ori across Nobel and major international awards without fabricating nominations, eligibility, endorsements or outcomes.",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "tracks": [
     {
       "id": "NOBEL_PEACE",
@@ -148,6 +148,7 @@
     "Current-year award windows and eligibility must be rechecked immediately before each submission."
   ],
   "next_actions": [
+    "Maintain the canonical Impact Window/PIIW IP evidence track and protect novelty before public enabling disclosure.",
     "Integrate a canonical global resilience and crisis-communications layer covering individual, founder, executive, family, organization, product and public-reputation crises.",
     "Create one canonical impact-evidence ledger connected to IMA QA/provenance.",
     "Publish independently reviewable IMA research outputs.",
@@ -163,6 +164,8 @@
     "AWARDS-001",
     "#182",
     "MINIMUM_HUMAN_ACTION_POLICY",
-    "LIVE-001"
+    "LIVE-001",
+    "IP-001",
+    "research/IMA_IMPACT_WINDOW_IP_TRACK.json"
   ]
 }
