@@ -24,6 +24,8 @@ const COPY = {
     label:'IMA — אמא · בינה אנושית',
     title:'מה תרצה לעשות?',
     subtitle:'אמא מתחילה ממשימה אמיתית — לחשוב, ללמוד, ליצור, להבין או לפתור.',
+    immediateTitle:'אתה מובן. אתה חופשי. אפשר לעשות משהו עכשיו.',
+    immediateItems:[['מובן','אמא מתחילה מהכוונה שלך, לא ממדריך.'],['חופשי','היא עוזרת בלי לקחת ממך את הבחירה.'],['עכשיו','אפשר לעבור מיד מרעיון לצעד מעשי.'],],
     cta:'לדבר עם אמא',
     login:'כניסה עם Google',
     how:'איך זה עובד',
@@ -54,6 +56,8 @@ const COPY = {
     label:'IMA — human-centered intelligence',
     title:'What do you want to do?',
     subtitle:'Start with a real task — think, learn, create, understand or solve.',
+    immediateTitle:'You are understood. You are free. You can do something now.',
+    immediateItems:[['Understood','IMA starts with your intent, not a manual.'],['Free','It helps without taking your choice away.'],['Now','Move from an idea to a practical next step.'],],
     cta:'Talk to IMA',
     login:'Sign in with Google',
     how:'How it works',
@@ -228,6 +232,10 @@ export default function App(){
           <span className="eyebrow">{t.label}</span>
           <h1>{t.title}</h1>
           <p>{t.subtitle}</p>
+          <div className="immediate-understanding" aria-label={t.immediateTitle}>
+            <strong>{t.immediateTitle}</strong>
+            <div className="immediate-items">{t.immediateItems.map(([title,text])=><button key={title} type="button" onClick={openChat}><b>{title}</b><span>{text}</span></button>)}</div>
+          </div>
           <div className="hero-actions"><button className="primary" onClick={openChat}>{t.cta}</button><button className="secondary" onClick={()=>document.getElementById('how')?.scrollIntoView({behavior:'smooth'})}>{t.how}</button></div>
           <div className="hero-proof"><span>✓ {t.trust}</span><span>✓ {t.trustText.split(' · ')[0]}</span></div>
         </div>
