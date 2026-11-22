@@ -1,64 +1,64 @@
-import {useState} from "react";
-import {askIMA} from "../api/imaClient";
+import { useState } from "react";
+import { askIma } from "../services/imaChat";
 import Message from "./Message";
 
-export default function Chat(){
+export default function Chat({ language = "he", user = null }) {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [busy, setBusy] = useState(false);
 
-const [messages,setMessages]=useState([]);
-const [input,setInput]=useState("");
+  async function send() {
+    const value = String(input || "").trim();
+    if (!value || busy) return;
 
-async function send(){
+    setInput("");
+    setMessages((items) => [...items, { role: "user", text: value }]);
+    setBusy(true);
 
-if(!input)return;
+    try {
+      const response = await askIma(value, {
+        language,
+        interface: "public-chat-component",
+        authenticated: Boolean(user),
+        device_locale: navigator.language || language,
+      });
+      setMessages((items) => [...items, { role: "ima", text: response }]);
+    } catch {
+      setMessages((items) => [
+        ...items,
+        {
+          role: "ima",
+          text: language === "he"
+            ? "אמא לא הצליחה לענות כרגע. החיבור נבדק ולא תוצג כאן תשובה ממערכת אחרת."
+            : "IMA could not answer right now. The connection is being checked; no other system response is shown here.",
+        },
+      ]);
+    } finally {
+      setBusy(false);
+    }
+  }
 
-const q=input;
+  return (
+    <div className="chat">
+      <div className="messages" aria-live="polite">
+        {messages.map((message, index) => (
+          <Message key={index} {...message} />
+        ))}
+        {busy && <Message role="ima" text={language === "he" ? "אמא חושבת…" : "IMA is thinking…"} />}
+      </div>
 
-setMessages(m=>[
-...m,
-{role:"user",text:q}
-]);
-
-setInput("");
-
-const r=await askIMA(q);
-
-setMessages(m=>[
-...m,
-{
-role:"ima",
-text:r.answer?.response || JSON.stringify(r)
-}
-]);
-
-}
-
-
-return(
-<div className="chat">
-
-<div className="messages">
-{
-messages.map((m,i)=>
-<Message key={i}{...m}/>
-)
-}
-</div>
-
-
-<div className="input">
-<input
-value={input}
-onChange={e=>setInput(e.target.value)}
-placeholder="דברי עם IMA"
-/>
-
-<button onClick={send}>
-שלח
-</button>
-
-</div>
-
-</div>
-)
-
+      <div className="input">
+        <input
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
+          onKeyDown={(event) => event.key === "Enter" && send()}
+          placeholder={language === "he" ? "דברי עם אמא…" : "Talk to IMA…"}
+          aria-label={language === "he" ? "הודעה לאמא" : "Message IMA"}
+        />
+        <button onClick={send} disabled={busy || !input.trim()}>
+          {language === "he" ? "שלח" : "Send"}
+        </button>
+      </div>
+    </div>
+  );
 }
