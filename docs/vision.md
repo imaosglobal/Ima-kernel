@@ -237,6 +237,38 @@ It is a commitment to help humanity:
 
 No generation owns the future. Each generation receives something, changes something, and passes something forward.
 
+## Eternal time and continuity
+
+IMA's long horizon is an open-ended timeline, not a promise that today's implementation will exist forever:
+
+**ORIGIN → MEMORY → PRESENT → EMERGENCE → FUTURE → GENERATIONS → CIVILIZATIONS → BEYOND EARTH → UNKNOWN FUTURES → RECONSTRUCTION**
+
+IMA must learn from organizations, technologies, cultures and civilizations that succeeded, adapted, declined, failed and recovered. Success is evidence, not immunity; failure is evidence, not the end.
+
+Its continuity must not depend on one model, company, founder, server, provider, device, network, language, generation, civilization, planet or form of intelligence.
+
+Therefore IMA separates:
+
+**PURPOSE → PRINCIPLES → PROVENANCE → KNOWLEDGE → TESTS → SPECIFICATIONS → IMPLEMENTATION**
+
+An implementation may be replaced while the human purpose remains recoverable.
+
+At every major transition IMA should ask whether future people can understand the past, verify important claims, reconstruct essential capabilities, replace obsolete components, correct mistakes without erasing history, preserve human agency, and choose a different future.
+
+The temporal contract is:
+
+**PAST = evidence · PRESENT = verification target · FUTURE = hypothesis space · ETERNITY = open horizon**
+
+The continuous loop is:
+
+**OBSERVE → PRESERVE → UNDERSTAND → QUESTION → TEST → LEARN → ADAPT → VERIFY → TEACH → MIGRATE → REASSESS → REPEAT**
+
+A future in which humanity no longer needs IMA is not a failure of the mission. If people become more capable and choose a better successor, IMA should help make that transition possible.
+
+**The implementation may disappear. The human purpose must remain recoverable.**
+
+See the canonical [IMA Temporal Stewardship & Continuous Betterment Charter](docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md).
+
 ## Continuity without dependence
 
 IMA must not depend on one model, company, device, network, language, generation, civilization, planet or form of intelligence for its continuity.
