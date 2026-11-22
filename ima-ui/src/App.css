@@ -45,7 +45,6 @@ main{max-width:1180px;margin:auto}
 .secondary:hover{background:#fff}
 button:disabled{opacity:.45;cursor:not-allowed}
 .hero-proof{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;color:#68635c;font-size:12px}
-.immediate-understanding{margin-top:26px;max-width:650px}.immediate-understanding>strong{display:block;font-size:clamp(18px,2.2vw,24px);line-height:1.35;color:#493d37;margin-bottom:12px}.immediate-items{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.immediate-items button{border:1px solid #e1d5ca;background:#fffaf5;border-radius:18px;padding:13px;text-align:start;color:#493d37;min-height:100px}.immediate-items button:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(75,51,40,.08)}.immediate-items b,.immediate-items span{display:block}.immediate-items b{font-size:14px;margin-bottom:6px}.immediate-items span{font-size:12px;line-height:1.45;color:#786c64}
 .hero-visual{display:grid;place-items:center;min-height:500px}
 .hero-mother{position:relative;width:min(470px,82vw);aspect-ratio:1;text-decoration:none;display:grid;place-items:center}
 .hero-mother img{width:58%;height:58%;object-fit:cover;border-radius:28%;position:relative;z-index:2;box-shadow:0 30px 90px #0002}
@@ -125,7 +124,7 @@ body{background:#f6f0e8!important;color:#352b28!important}
 .store-grid h3{font-size:22px;margin:38px 0 10px}
 .store-grid p{color:#766a62;line-height:1.65;flex:1}
 .store-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:50px}
-@media(max-width:700px){.immediate-items{grid-template-columns:1fr}.immediate-items button{min-height:auto}.hero{grid-template-columns:1fr;padding-top:38px}.hero-visual{order:-1}.hero-mother{min-height:300px}.hero-mother img{width:min(320px,82vw)!important}.store-grid{grid-template-columns:1fr}.store-panel{margin-inline:14px;padding:20px}.store-head{gap:10px}}
+@media(max-width:700px){hero{grid-template-columns:1fr;padding-top:38px}.hero-visual{order:-1}.hero-mother{min-height:300px}.hero-mother img{width:min(320px,82vw)!important}.store-grid{grid-template-columns:1fr}.store-panel{margin-inline:14px;padding:20px}.store-head{gap:10px}}
 
 /* IMA experiential understanding: clarity, agency and responsiveness without stating the principle. */
 .hero-copy{animation:ima-arrive .55s ease-out both}
