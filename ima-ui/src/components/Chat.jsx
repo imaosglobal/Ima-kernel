@@ -29,8 +29,8 @@ export default function Chat({ language = "he", user = null }) {
         {
           role: "ima",
           text: language === "he"
-            ? "אמא לא הצליחה לענות כרגע. החיבור נבדק ולא תוצג כאן תשובה ממערכת אחרת."
-            : "IMA could not answer right now. The connection is being checked; no other system response is shown here.",
+            ? "אני לא יודעת עדיין את התשובה לשאלה הזו. אין לי כרגע מספיק מידע מאומת כדי לענות עליה בוודאות, ואני לא אמציא תשובה."
+            : "I don't know the answer yet. I don't have enough verified information to answer with confidence, and I won't invent one.",
         },
       ]);
     } finally {
