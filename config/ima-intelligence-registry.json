@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "updated": "2026-11-22",
+  "principle": "IMA is a first-class intelligence and provider-neutral interoperability layer.",
+  "lifecycle": [
+    "DISCOVERED",
+    "ELIGIBLE",
+    "ADAPTER-READY",
+    "AUTHORIZED",
+    "CONNECTED",
+    "RUNTIME-VERIFIED",
+    "MONITORED"
+  ],
+  "providers": [
+    {
+      "id": "openai-chatgpt",
+      "family": "OpenAI",
+      "interfaces": [
+        "MCP",
+        "MCP Apps",
+        "Responses",
+        "Agents"
+      ],
+      "status": "ELIGIBLE-BUT-ACCOUNT-BLOCKED"
+    },
+    {
+      "id": "openai-api",
+      "family": "OpenAI",
+      "interfaces": [
+        "Responses",
+        "Agents",
+        "Remote MCP"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "anthropic-claude",
+      "family": "Anthropic",
+      "interfaces": [
+        "Claude API",
+        "Remote MCP"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "google-gemini",
+      "family": "Google",
+      "interfaces": [
+        "Gemini API",
+        "Remote MCP"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "meta-model-api",
+      "family": "Meta",
+      "interfaces": [
+        "Meta Model API",
+        "MCP"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "microsoft-copilot",
+      "family": "Microsoft",
+      "interfaces": [
+        "Copilot Studio",
+        "MCP",
+        "A2A"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "huggingface-open-models",
+      "family": "Hugging Face",
+      "interfaces": [
+        "Hub",
+        "Spaces",
+        "local/open-weight"
+      ],
+      "status": "DISCOVERED"
+    },
+    {
+      "id": "local-openai-compatible",
+      "family": "Local/Self-hosted",
+      "interfaces": [
+        "OpenAI-compatible",
+        "MCP"
+      ],
+      "status": "FUTURE-READY"
+    },
+    {
+      "id": "mcp-hosts",
+      "family": "Protocol",
+      "interfaces": [
+        "MCP",
+        "MCP Apps"
+      ],
+      "status": "FUTURE-READY"
+    },
+    {
+      "id": "a2a-agents",
+      "family": "Protocol",
+      "interfaces": [
+        "A2A"
+      ],
+      "status": "FUTURE-READY"
+    },
+    {
+      "id": "future-intelligence",
+      "family": "Future",
+      "interfaces": [
+        "adapter contract"
+      ],
+      "status": "FUTURE-READY"
+    }
+  ]
+}
