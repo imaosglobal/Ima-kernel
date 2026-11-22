@@ -450,7 +450,7 @@ def chat_options():
 
 @app.route("/ima-api/chat", methods=["POST"])
 def chat():
-    """Canonical public chat endpoint: IMA Intelligence Core answers the user."""
+    """Canonical public chat endpoint: IMA always answers from the IMA master runtime."""
     user_id = _session_user_id()
     if not user_id:
         return jsonify({"error": "valid Google/IMA session required"}), 401
@@ -467,16 +467,16 @@ def chat():
         return jsonify({"error": "chat_rate_limit_exceeded"}), 429
 
     try:
-        from connectors.llm.ima_pipeline import ask
-
-        result = ask(message)
+        from ima_master_runtime import ask
+        result = ask(
+            message,
+            user_id=user_id,
+            public=True,
+            personalization=personalization,
+        )
         response = str(result.get("response") or "").strip()
-        if result.get("status") != "ok" or not response:
-            return jsonify({
-                "error": "ima_intelligence_unavailable",
-                "answer": {"response": ""},
-                "ima": {"status": "unavailable", "source": "IMA Intelligence Core"},
-            }), 503
+        if not response:
+            raise RuntimeError("IMA master runtime returned no response")
 
         return jsonify({
             "response": response,
@@ -484,21 +484,35 @@ def chat():
             "ima": {
                 "status": "answered",
                 "source": "IMA Intelligence Core",
-                "provider": result.get("provider"),
-                "model": result.get("model"),
-                "attempted_providers": result.get("attempted_providers", 1),
+                "runtime": "IMA MASTER",
+                "provider": result.get("provider") or result.get("llm_response", {}).get("provider"),
+                "model": result.get("model") or result.get("llm_response", {}).get("model"),
+                "connections": result.get("connections", {}),
                 "personalization": personalization,
+                "always_answer_policy": True,
             },
         })
-    except Exception:
-        app.logger.exception("IMA public chat failed")
+    except Exception as exc:
+        # IMA must not expose a provider/system failure as the user-facing answer.
+        # Return a deterministic IMA answer that honestly states the unknown state.
+        app.logger.exception("IMA public chat runtime failed")
+        fallback = (
+            "אני לא יודעת עדיין את התשובה לשאלה הזו. "
+            "אין לי כרגע מספיק מידע מאומת כדי לענות עליה בוודאות, "
+            "ואני לא אמציא תשובה. אם תיתן לי עוד הקשר, אוכל לנסות לענות מתוך מה שיש לי."
+        )
         return jsonify({
-            "error": "ima_intelligence_unavailable",
-            "answer": {"response": ""},
-            "ima": {"status": "error", "source": "IMA Intelligence Core"},
-        }), 503
-
-
+            "response": fallback,
+            "answer": {"response": fallback},
+            "ima": {
+                "status": "answered_with_unknown",
+                "source": "IMA Intelligence Core",
+                "runtime": "IMA MASTER",
+                "always_answer_policy": True,
+                "uncertainty": "unknown",
+                "internal_error": True,
+            },
+        })
 @app.get("/ima-api/auth/config")
 def auth_config():
     return jsonify({
