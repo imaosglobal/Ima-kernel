@@ -8,7 +8,8 @@ import {
   signOutIma,
   submitFeedback,
   getLiveTimeline,
-  recordLiveWindowEvent
+  recordLiveWindowEvent,
+  recordLiveChatEvent
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { recordMarketEvent, getMarketCampaign, buildShareUrl } from './services/marketEntry';
@@ -132,21 +133,24 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMod
   const [listening,setListening]=useState(false);
   const [busy,setBusy]=useState(false);
   useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch{}},[messages]);
-  useEffect(()=>{const onStorage=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',onStorage);return()=>window.removeEventListener('storage',onStorage)},[]);
+  useEffect(()=>{const sync=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',sync);window.addEventListener('ima-chat-updated',sync);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('ima-chat-updated',sync)}},[]);
   const startVoice=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){return;}const r=new SR();r.lang=lang==='he'?'he-IL':(navigator.language||'en-US');r.interimResults=false;r.continuous=false;setListening(true);r.onresult=e=>{const text=String(e.results?.[0]?.[0]?.transcript||'').trim();if(text){setMessage(text);send(text)}};r.onerror=()=>setListening(false);r.onend=()=>setListening(false);r.start()};
   const send=async(text=message)=>{
     const value=String(text||'').trim();
     if(!value||busy)return;
     setBusy(true);setMessage('');
-    setMessages(m=>[...m,{role:'user',text:value}]);
+    setMessages(m=>{const next=[...m,{role:'user',text:value}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
+    recordLiveChatEvent('window_chat_message',{phase:'request',status:'recorded',action:'ask_ima',payload:{interface:windowMode?'live-window':'public-home',message_length:value.length}}).catch(()=>{});
     trackImaEvent('ima_first_use_attempt',{language:lang});
     try{
       const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null});
-      setMessages(m=>[...m,{role:'ima',text:response}]);
+      setMessages(m=>{const next=[...m,{role:'ima',text:response}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
+      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{});
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
       await archiveChatLearningSignal(value,response,{language:lang});
     }catch{
-      setMessages(m=>[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}]);
+      setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
+      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'failed',action:'answer_unverified'}).catch(()=>{});
       trackImaEvent('ima_public_chat_failed',{language:lang});
     }finally{setBusy(false)}
   };
