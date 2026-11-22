@@ -3,6 +3,14 @@ import { observeIma } from './imaLearningBus';
 const CANONICAL_API_BASE = 'https://ima-915m.onrender.com';
 const API_BASE = CANONICAL_API_BASE;
 const CHAT_TRANSPORT = 'canonical-live-v3';
+const LIVE_SESSION_KEY = 'ima-live-001-session-v1';
+function getLiveSessionId(){
+  try{
+    let id=sessionStorage.getItem(LIVE_SESSION_KEY);
+    if(!id){id=(crypto.randomUUID?crypto.randomUUID():String(Date.now())+'-'+Math.random().toString(36).slice(2));sessionStorage.setItem(LIVE_SESSION_KEY,id);}
+    return id;
+  }catch{return null}
+}
 const GOOGLE_USER_COOKIE='ima-google-user-v1';
 const GOOGLE_TOKEN_COOKIE='ima-google-session-v1';
 function setCookie(name,value,maxAge=31536000){try{document.cookie=`${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;}catch{ /* cookie write failure is non-fatal */ }}
@@ -35,6 +43,7 @@ async function request(path, options = {}, retry = true) {
       'Authorization': `Bearer ${token}`,
       'X-IMA-Client': 'public-web-chat-v2',
       'X-IMA-Transport': CHAT_TRANSPORT,
+      ...(getLiveSessionId()?{'X-IMA-Live-Session':getLiveSessionId()}:{}),
       ...(options.headers || {}),
     },
   });
@@ -178,3 +187,12 @@ export function signOutIma() {
   clearCookie(GOOGLE_TOKEN_COOKIE);
   clearCookie(GOOGLE_USER_COOKIE);
 }
+
+
+export async function getLiveTimeline(sessionOnly = false) {
+  const sid = sessionOnly ? getLiveSessionId() : null;
+  const query = sid ? '?session_id=' + encodeURIComponent(sid) : '';
+  return request('/ima-api/live/timeline' + query, { cache: 'no-store' });
+}
+
+export function getLiveSessionId(){ return getLiveSessionId(); }
