@@ -196,3 +196,19 @@ export async function getLiveTimeline(sessionOnly = false) {
 }
 
 export function getLiveSessionId(){ return _getLiveSessionId(); }
+export async function recordLiveWindowEvent(event_type, details = {}) {
+  return request('/ima-api/live/timeline/event', {
+    method: 'POST',
+    body: JSON.stringify({
+      event_type,
+      phase: details.phase || 'observe',
+      status: details.status || 'recorded',
+      action: details.action || null,
+      payload: details.payload || {},
+      result: details.result || {},
+      device_id: details.device_id || null,
+      command_id: details.command_id || null,
+      verified_at: details.verified_at || null,
+    }),
+  });
+}
