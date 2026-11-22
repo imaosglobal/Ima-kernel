@@ -196,6 +196,10 @@ export async function getLiveTimeline(sessionOnly = false) {
 }
 
 export function getLiveSessionId(){ return _getLiveSessionId(); }
+export async function recordLiveChatEvent(event_type, details = {}) {
+  return recordLiveWindowEvent(event_type, details);
+}
+
 export async function recordLiveWindowEvent(event_type, details = {}) {
   return request('/ima-api/live/timeline/event', {
     method: 'POST',
