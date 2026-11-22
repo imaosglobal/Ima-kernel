@@ -155,6 +155,37 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage=''}) {
   </section>;
 }
 
+function LiveWindow({lang,user,onClose}){
+  const [mode,setMode]=useState('floating');
+  const [pos,setPos]=useState(()=>{try{return JSON.parse(localStorage.getItem('ima-live-window-pos'))||{x:24,y:110,w:420,h:560}}catch{return{x:24,y:110,w:420,h:560}}});
+  const [drag,setDrag]=useState(null);
+  const he=lang==='he';
+  useEffect(()=>{localStorage.setItem('ima-live-window-pos',JSON.stringify(pos))},[pos]);
+  const beginDrag=e=>{if(mode!=='floating')return;setDrag({sx:e.clientX,sy:e.clientY,px:pos.x,py:pos.y});e.currentTarget.setPointerCapture?.(e.pointerId)};
+  const moveDrag=e=>{if(!drag)return;setPos(p=>({...p,x:Math.max(0,drag.px+e.clientX-drag.sx),y:Math.max(0,drag.py+e.clientY-drag.sy)}))};
+  const endDrag=()=>setDrag(null);
+  const setWindowMode=m=>{setMode(m);if(m==='mini')setPos(p=>({...p,w:220,h:88}));if(m==='floating')setPos(p=>({...p,w:Math.max(360,p.w),h:Math.max(360,p.h)}))};
+  const style=mode==='floating'?{left:pos.x,top:pos.y,width:pos.w,height:pos.h}:mode==='mini'?{right:18,bottom:18,width:220,height:88}:mode==='split'?{left:'2vw',right:'52vw',top:'10vh',height:'80vh'}:{left:0,right:0,top:0,bottom:0};
+  return <section className={'ima-live-window mode-'+mode} style={style} aria-label={he?'חלון אמא האינטראקטיבי':'IMA Interactive Window'}>
+    <header className="ima-live-window-head" onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
+      <div><b>IMA · {he?'חלון ההשפעה':'Impact Window'}</b><small>{he?'עוזרת בכל מה שנמצא סביבך':'Assist across what you are doing'}</small></div>
+      <div className="ima-live-window-actions">
+        <button onClick={()=>setWindowMode('mini')} aria-label={he?'מזעור':'Minimize'}>−</button>
+        <button onClick={()=>setWindowMode(mode==='split'?'floating':'split')} aria-label={he?'מסך מפוצל':'Split'}>◫</button>
+        <button onClick={()=>setWindowMode(mode==='fullscreen'?'floating':'fullscreen')} aria-label={he?'מסך מלא':'Fullscreen'}>□</button>
+        <button onClick={()=>{try{window.open(location.pathname+'?live-window=1','IMA-LIVE-001','popup,width=520,height=700')}catch{}}} aria-label={he?'חלון נפרד':'Detach'}>↗</button>
+        <button onClick={onClose} aria-label={he?'סגירה':'Close'}>×</button>
+      </div>
+    </header>
+    {mode!=='mini'&&<div className="ima-live-window-body">
+      <div className="ima-live-context"><span>{he?'מצב':'Mode'}: {mode}</span><span>{he?'מחובר למשתמש':'User-scoped'}: {user?.name||user?.email||'IMA'}</span></div>
+      <ChatPanel lang={lang} user={user} chatOnly/>
+      <div className="ima-live-capabilities"><b>{he?'יכולות החלון':'Window capabilities'}</b><span>{he?'הזזה':'Move'}</span><span>{he?'שינוי גודל':'Resize'}</span><span>{he?'מסך מפוצל':'Split view'}</span><span>{he?'מזעור':'Minimize'}</span><span>{he?'חלון נפרד':'Detached window'}</span><span>{he?'מוכנות למכשיר':'Device-ready'}</span></div>
+    </div>}
+    {mode==='floating'&&<div className="ima-live-resize" onPointerDown={e=>{e.stopPropagation();const sx=e.clientX,sy=e.clientY,sw=pos.w,sh=pos.h;const move=x=>setPos(p=>({...p,w:Math.max(320,sw+x.clientX-sx),h:Math.max(320,sh+x.clientY-sy)}));const up=()=>{window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up)};window.addEventListener('pointermove',move);window.addEventListener('pointerup',up)}} aria-label={he?'שינוי גודל':'Resize'} />}
+  </section>;
+}
+
 function ImpactTimeline({lang,onClose}){
   const [events,setEvents]=useState([]);
   const [busy,setBusy]=useState(true);
@@ -182,12 +213,14 @@ export default function App(){
   const [chatOpen,setChatOpen]=useState(false);
   const [storeOpen,setStoreOpen]=useState(false);
   const [timelineOpen,setTimelineOpen]=useState(false);
+  const [liveWindowOpen,setLiveWindowOpen]=useState(false);
   const [feedback,setFeedback]=useState('');
   const [feedbackStatus,setFeedbackStatus]=useState('');
   const [installEvent,setInstallEvent]=useState(null);
   const [notice,setNotice]=useState('');
   const [shareStatus,setShareStatus]=useState('');
   const [chatOnly]=useState(()=>new URLSearchParams(location.search).get('chat')==='1');
+  const [liveWindowRoute]=useState(()=>new URLSearchParams(location.search).get('live-window')==='1');
   const t=COPY[lang]||COPY.en;
   useEffect(()=>{ if(user) setChatOpen(true); },[user]);
   const campaign=useMemo(()=>getMarketCampaign(location.search),[]);
@@ -235,13 +268,15 @@ export default function App(){
     catch{setFeedbackStatus(t.failed)}
   };
 
+  if(liveWindowRoute&&user)return <div className="live-window-route"><LiveWindow lang={lang} user={user} onClose={()=>window.close()}/></div>;
+
   if(chatOnly)return <div className="chat-only-page"><MamaFigure/><h1>אמא</h1>{user?<ChatPanel lang={lang} user={user} chatOnly/>:<div className="chat-login"><p>{t.needLogin}</p><GoogleButton user={user} onUser={setUser} t={t}/></div>}<a href={BASE}>{lang==='he'?'חזרה לאתר':'Back to IMA'}</a></div>;
 
   return <div className="ima-site">
     {notice&&<div className="site-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="close">×</button></div>}
     <header className="site-header">
       <a className="brand" href={BASE} aria-label="IMA — אמא"><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/><span><b>אמא</b><small>IMA</small></span></a>
-      <nav><button onClick={openChat}>{t.chat}</button>{user&&<button onClick={()=>{setTimelineOpen(true);setStoreOpen(false);setChatOpen(false)}}>{lang==='he'?'חלון ההשפעה':'Impact Window'}</button>}{user&&<button onClick={()=>{setStoreOpen(true);setChatOpen(false);setTimelineOpen(false)}}>חנות</button>}<a href="#how">{t.how}</a></nav>
+      <nav><button onClick={openChat}>{t.chat}</button>{user&&<button onClick={()=>setLiveWindowOpen(true)}>{lang==='he'?'חלון אמא':'IMA Window'}</button>{user&&<button onClick={()=>{setTimelineOpen(true);setStoreOpen(false);setChatOpen(false)}}>{lang==='he'?'חלון ההשפעה':'Impact Window'}</button>}{user&&<button onClick={()=>{setStoreOpen(true);setChatOpen(false);setTimelineOpen(false)}}>חנות</button>}<a href="#how">{t.how}</a></nav>
       <div className="header-right"><select value={lang} onChange={e=>setLang(e.target.value)} aria-label="Language">{SUPPORTED_LOCALES.map(([c,n])=><option key={c} value={c}>{n}</option>)}</select><div id="login"><GoogleButton user={user} onUser={u=>{setUser(u);if(u)setChatOpen(true)}} t={t}/></div></div>
     </header>
 
@@ -261,6 +296,7 @@ export default function App(){
       </section>
 
       {user&&chatOpen&&<ChatPanel lang={lang} user={user} onClose={()=>setChatOpen(false)}/>}
+      {user&&liveWindowOpen&&<LiveWindow lang={lang} user={user} onClose={()=>setLiveWindowOpen(false)}/>}
       {user&&timelineOpen&&<ImpactTimeline lang={lang} onClose={()=>setTimelineOpen(false)}/>}
       {user&&storeOpen&&<section className="store-panel" aria-label="IMA Store" id="store">
         <div className="store-head"><div><span className="eyebrow">IMA Store</span><h2>הכלים והחיבורים של אמא</h2><p>מוצרים, חוויות וחיבורים שאפשר להוסיף לאמא בלי לפצל את המערכת.</p></div><button className="icon-button" onClick={()=>setStoreOpen(false)} aria-label="סגירה">×</button></div>
