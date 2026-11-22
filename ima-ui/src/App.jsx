@@ -127,7 +127,8 @@ function GoogleButton({user,onUser,t}) {
 
 function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMode=false}) {
   const t=COPY[lang]||COPY.en;
-  const [message,setMessage]=useState(initialMessage);
+  const he=lang==='he';
+  const [message,setMessage=useState(initialMessage);
   const CHAT_HISTORY_KEY='ima-canonical-chat-v1';
   const [messages,setMessages]=useState(()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);return raw?JSON.parse(raw):[]}catch{return[]}});
   const [listening,setListening]=useState(false);
