@@ -133,6 +133,10 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMod
   const [messages,setMessages]=useState(()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);return raw?JSON.parse(raw):[]}catch{return[]}});
   const [listening,setListening]=useState(false);
   const [busy,setBusy]=useState(false);
+  const [speaking,setSpeaking]=useState(false);
+  const [mamaAction,setMamaAction]=useState('idle');
+  const speak=(text)=>{if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(text||''));u.lang=lang==='he'?'he-IL':(navigator.language||'en-US');u.onstart=()=>setSpeaking(true);u.onend=()=>setSpeaking(false);u.onerror=()=>setSpeaking(false);window.speechSynthesis.speak(u)};
+  const detectAction=(text)=>{const v=String(text||'').toLowerCase();if(/רקד|ריקוד|dance/.test(v))return 'dance';if(/מחא|מחיאות|clap/.test(v))return 'clap';if(/נפנפ|שלום|wave/.test(v))return 'wave';if(/קפצ|קפיצה|jump/.test(v))return 'jump';return 'idle'};
   useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch{}},[messages]);
   useEffect(()=>{const sync=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',sync);window.addEventListener('ima-chat-updated',sync);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('ima-chat-updated',sync)}},[]);
   const startVoice=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){return;}const r=new SR();r.lang=lang==='he'?'he-IL':(navigator.language||'en-US');r.interimResults=false;r.continuous=false;setListening(true);r.onresult=e=>{const text=String(e.results?.[0]?.[0]?.transcript||'').trim();if(text){setMessage(text);send(text)}};r.onerror=()=>setListening(false);r.onend=()=>setListening(false);r.start()};
@@ -145,12 +149,13 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMod
     trackImaEvent('ima_first_use_attempt',{language:lang});
     try{
       const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null,conversation:messages.slice(-20)});
-      setMessages(m=>{const next=[...m,{role:'ima',text:response}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
+      const action=detectAction(value); setMamaAction(action); if(action!=='idle') recordLiveWindowEvent('window_action_requested',{phase:'act',status:'authorized',action,payload:{source:'user-chat'}}).catch(()=>{}); speak(response);
+      setMessages(m=>{const next=[...m,{role:'ima',text:response,action}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
       recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{});
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
       await archiveChatLearningSignal(value,response,{language:lang});
     }catch{
-      setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
+      setMamaAction('idle'); setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
       recordLiveChatEvent('window_chat_response',{phase:'verify',status:'failed',action:'answer_unverified'}).catch(()=>{});
       trackImaEvent('ima_public_chat_failed',{language:lang});
     }finally{setBusy(false)}
@@ -159,8 +164,8 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMod
     <header className="chat-head"><div className="chat-id"><MamaFigure compact/><div><b>אמא · IMA</b><small>{user?t.personal:t.publicChat}</small></div></div>{!chatOnly&&<button className="icon-button" onClick={onClose} aria-label={t.close}>×</button>}</header>
     <div className="chat-messages" aria-live="polite">
       {!messages.length&&<div className="chat-empty">{lang==='he'?'שאל את אמא משהו אמיתי.':'Ask IMA something real.'}</div>}
-      {messages.map((m,i)=><div key={i} className={'bubble '+m.role}>{m.text}</div>)}
-      {busy&&<div className="bubble ima muted">IMA…</div>}
+      {messages.map((m,i)=><div key={i} className={'bubble-row '+m.role}><div className={'mama-response-figure '+(m.action||'idle')+(speaking&&m.role==='ima'&&i===messages.length-1?' speaking':'')}><MamaFigure compact/></div><div className={'bubble '+m.role}>{m.text}{m.role==='ima'&&<button className="mama-speak-button" onClick={()=>speak(m.text)} aria-label={he?'השמעי את תשובת אמא':'Speak IMA answer'}>{speaking&&i===messages.length-1?'◼':'▶'}</button>}</div></div>)}
+      {busy&&<div className="bubble-row ima"><div className={'mama-response-figure '+mamaAction}><MamaFigure compact/></div><div className="bubble ima muted">IMA…</div></div>}
     </div>
     <div className="chat-composer"><button className={'ima-voice-button'+(listening?' listening':'')} onClick={startVoice} disabled={busy||listening||!(window.SpeechRecognition||window.webkitSpeechRecognition)} aria-label={he?'דיבור לאמא':'Speak to IMA'} title={he?(listening?'מקשיבה…':'דבר לאמא'):(listening?'Listening…':'Speak to IMA')}><img src={CLEAN_LOGO_URL} alt="" aria-hidden="true"/></button><input value={message} onChange={e=>setMessage(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder={t.write} aria-label={t.write}/><button className="ima-send-button" onClick={()=>send()} disabled={busy||!message.trim()}>{busy?'…':t.send}</button></div>
   </section>;
