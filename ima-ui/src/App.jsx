@@ -124,11 +124,16 @@ function GoogleButton({user,onUser,t}) {
   return <div className="google-wrap"><div id="ima-google-button" aria-label={t.login}/>{error&&<small>{error}</small>}</div>;
 }
 
-function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage=''}) {
+function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMode=false}) {
   const t=COPY[lang]||COPY.en;
   const [message,setMessage]=useState(initialMessage);
-  const [messages,setMessages]=useState([]);
+  const CHAT_HISTORY_KEY='ima-canonical-chat-v1';
+  const [messages,setMessages]=useState(()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);return raw?JSON.parse(raw):[]}catch{return[]}});
+  const [listening,setListening]=useState(false);
   const [busy,setBusy]=useState(false);
+  useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch{}},[messages]);
+  useEffect(()=>{const onStorage=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',onStorage);return()=>window.removeEventListener('storage',onStorage)},[]);
+  const startVoice=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){return;}const r=new SR();r.lang=lang==='he'?'he-IL':(navigator.language||'en-US');r.interimResults=false;r.continuous=false;setListening(true);r.onresult=e=>{const text=String(e.results?.[0]?.[0]?.transcript||'').trim();if(text){setMessage(text);send(text)}};r.onerror=()=>setListening(false);r.onend=()=>setListening(false);r.start()};
   const send=async(text=message)=>{
     const value=String(text||'').trim();
     if(!value||busy)return;
@@ -136,12 +141,12 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage=''}) {
     setMessages(m=>[...m,{role:'user',text:value}]);
     trackImaEvent('ima_first_use_attempt',{language:lang});
     try{
-      const response=await askIma(value,{language:lang,interface:'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang});
+      const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null});
       setMessages(m=>[...m,{role:'ima',text:response}]);
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
       await archiveChatLearningSignal(value,response,{language:lang});
     }catch{
-      setMessages(m=>[...m,{role:'ima',text:lang==='he'?'החיבור לאמא לא הצליח כרגע. זו תקלה שצריך למדוד ולתקן.':'The connection to IMA failed right now. This is a failure to measure and fix.'}]);
+      setMessages(m=>[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}]);
       trackImaEvent('ima_public_chat_failed',{language:lang});
     }finally{setBusy(false)}
   };
@@ -152,7 +157,7 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage=''}) {
       {messages.map((m,i)=><div key={i} className={'bubble '+m.role}>{m.text}</div>)}
       {busy&&<div className="bubble ima muted">IMA…</div>}
     </div>
-    <div className="chat-composer"><input value={message} onChange={e=>setMessage(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder={t.write} aria-label={t.write}/><button onClick={()=>send()} disabled={busy||!message.trim()}>{t.send}</button></div>
+    <div className="chat-composer"><button className={'ima-voice-button'+(listening?' listening':'')} onClick={startVoice} disabled={busy||listening||!(window.SpeechRecognition||window.webkitSpeechRecognition)} aria-label={he?'דיבור לאמא':'Speak to IMA'} title={he?(listening?'מקשיבה…':'דבר לאמא'):(listening?'Listening…':'Speak to IMA')}><img src={CLEAN_LOGO_URL} alt="" aria-hidden="true"/></button><input value={message} onChange={e=>setMessage(e.target.value)} onKeyDown={e=>e.key==='Enter'&&send()} placeholder={t.write} aria-label={t.write}/><button className="ima-send-button" onClick={()=>send()} disabled={busy||!message.trim()}>{busy?'…':t.send}</button></div>
   </section>;
 }
 
@@ -181,7 +186,7 @@ function LiveWindow({lang,user,onClose}){
     </header>
     {mode!=='mini'&&<div className="ima-live-window-body">
       <div className="ima-live-context"><span>{he?'מצב':'Mode'}: {mode}</span><span>{he?'מחובר למשתמש':'User-scoped'}: {user?.name||user?.email||'IMA'}</span></div>
-      <ChatPanel lang={lang} user={user} chatOnly/>
+      <ChatPanel lang={lang} user={user} chatOnly windowMode/>
       <div className="ima-live-capabilities"><b>{he?'יכולות החלון':'Window capabilities'}</b><span>{he?'הזזה':'Move'}</span><span>{he?'שינוי גודל':'Resize'}</span><span>{he?'מסך מפוצל':'Split view'}</span><span>{he?'מזעור':'Minimize'}</span><span>{he?'חלון נפרד':'Detached window'}</span><span>{he?'מוכנות למכשיר':'Device-ready'}</span></div>
     </div>}
     {mode==='floating'&&<div className="ima-live-resize" onPointerDown={e=>{e.stopPropagation();const sx=e.clientX,sy=e.clientY,sw=pos.w,sh=pos.h;const move=x=>setPos(p=>({...p,w:Math.max(320,sw+x.clientX-sx),h:Math.max(320,sh+x.clientY-sy)}));const up=()=>{window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up)};window.addEventListener('pointermove',move);window.addEventListener('pointerup',up)}} aria-label={he?'שינוי גודל':'Resize'} />}
