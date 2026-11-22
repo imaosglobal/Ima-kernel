@@ -4,7 +4,7 @@ const CANONICAL_API_BASE = 'https://ima-915m.onrender.com';
 const API_BASE = CANONICAL_API_BASE;
 const CHAT_TRANSPORT = 'canonical-live-v3';
 const LIVE_SESSION_KEY = 'ima-live-001-session-v1';
-function getLiveSessionId(){
+function _getLiveSessionId(){
   try{
     let id=sessionStorage.getItem(LIVE_SESSION_KEY);
     if(!id){id=(crypto.randomUUID?crypto.randomUUID():String(Date.now())+'-'+Math.random().toString(36).slice(2));sessionStorage.setItem(LIVE_SESSION_KEY,id);}
@@ -190,9 +190,9 @@ export function signOutIma() {
 
 
 export async function getLiveTimeline(sessionOnly = false) {
-  const sid = sessionOnly ? getLiveSessionId() : null;
+  const sid = sessionOnly ? _getLiveSessionId() : null;
   const query = sid ? '?session_id=' + encodeURIComponent(sid) : '';
   return request('/ima-api/live/timeline' + query, { cache: 'no-store' });
 }
 
-export function getLiveSessionId(){ return getLiveSessionId(); }
+export function getLiveSessionId(){ return _getLiveSessionId(); }
