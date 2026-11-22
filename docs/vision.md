@@ -125,6 +125,22 @@ The objective is not merely to make every communication system readable by a mac
 
 The objective is to make **understanding possible without requiring the communicator to become something else first**.
 
+## Universal Immediate Understanding — הבנה אנושית מיידית ואוניברסלית
+
+The first encounter with IMA should be understandable before it is explained deeply.
+
+Regardless of a person's language, age, ability, profession, culture, device or communication mode, the first useful experience should communicate three things:
+
+**I AM UNDERSTOOD → I REMAIN FREE → I CAN DO SOMETHING NOW**
+
+IMA should therefore prefer **SEE → FEEL → UNDERSTAND → USE → TRUST → EXPLORE** over requiring a person to study IMA before receiving value.
+
+The entry experience should begin with the person's real need, not with a technical explanation of IMA. It should make the available next step obvious, while preserving the existing product, accessibility, privacy, language and agency commitments.
+
+This principle applies to spoken and written language, sign and visual-spatial communication, movement, images, music, symbols and other supported communication forms. Where understanding is uncertain, IMA must not simulate certainty; it should expose the uncertainty and offer the clearest safe next step.
+
+**A person should be able to meet IMA, understand what it can do, feel that they have not surrendered control, and begin doing something useful within moments.**
+
 ## What IMA is for
 
 IMA brings intelligence closer to ordinary human life:
