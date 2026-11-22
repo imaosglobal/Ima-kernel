@@ -319,6 +319,7 @@ def live_timeline_event():
         "window_resized", "window_minimized", "window_restored", "window_detached",
         "window_context_changed", "window_action_requested", "window_action_verified",
         "window_action_failed", "window_permission_changed", "window_paused",
+        "window_chat_message", "window_chat_response",
     }
     if event_type not in allowed:
         return jsonify({"error": "unsupported_live_window_event"}), 400
