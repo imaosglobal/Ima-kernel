@@ -448,6 +448,57 @@ def add_cors(response):
 def chat_options():
     return ("", 204)
 
+@app.route("/ima-api/chat", methods=["POST"])
+def chat():
+    """Canonical public chat endpoint: IMA Intelligence Core answers the user."""
+    user_id = _session_user_id()
+    if not user_id:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    message = str(payload.get("message") or "").strip()
+    personalization = payload.get("personalization") if isinstance(payload.get("personalization"), dict) else {}
+
+    if not message:
+        return jsonify({"error": "message_required"}), 400
+    if len(message) > 12000:
+        return jsonify({"error": "message_too_long"}), 413
+    if not _rate_ok("chat:" + user_id):
+        return jsonify({"error": "chat_rate_limit_exceeded"}), 429
+
+    try:
+        from connectors.llm.ima_pipeline import ask
+
+        result = ask(message)
+        response = str(result.get("response") or "").strip()
+        if result.get("status") != "ok" or not response:
+            return jsonify({
+                "error": "ima_intelligence_unavailable",
+                "answer": {"response": ""},
+                "ima": {"status": "unavailable", "source": "IMA Intelligence Core"},
+            }), 503
+
+        return jsonify({
+            "response": response,
+            "answer": {"response": response},
+            "ima": {
+                "status": "answered",
+                "source": "IMA Intelligence Core",
+                "provider": result.get("provider"),
+                "model": result.get("model"),
+                "attempted_providers": result.get("attempted_providers", 1),
+                "personalization": personalization,
+            },
+        })
+    except Exception:
+        app.logger.exception("IMA public chat failed")
+        return jsonify({
+            "error": "ima_intelligence_unavailable",
+            "answer": {"response": ""},
+            "ima": {"status": "error", "source": "IMA Intelligence Core"},
+        }), 503
+
+
 @app.get("/ima-api/auth/config")
 def auth_config():
     return jsonify({
