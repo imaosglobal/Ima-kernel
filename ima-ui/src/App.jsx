@@ -143,7 +143,7 @@ function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',windowMod
     recordLiveChatEvent('window_chat_message',{phase:'request',status:'recorded',action:'ask_ima',payload:{interface:windowMode?'live-window':'public-home',message_length:value.length}}).catch(()=>{});
     trackImaEvent('ima_first_use_attempt',{language:lang});
     try{
-      const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null});
+      const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null,conversation:messages.slice(-20)});
       setMessages(m=>{const next=[...m,{role:'ima',text:response}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
       recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{});
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
