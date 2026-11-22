@@ -135,3 +135,22 @@ body{background:#f7f1e8!important;color:#2b2421!important}
 .ima-voice-button:hover{background:#ead0d3}.ima-voice-button.listening{outline:2px solid #9d5963;outline-offset:1px}.ima-voice-button:disabled{opacity:.55;cursor:not-allowed}
 .ima-live-window .ima-send-button{min-width:62px;height:40px;padding:0 12px;border-radius:12px;font-weight:800}
 @media(max-width:600px){.ima-live-window .chat-only-panel .chat-composer{grid-template-columns:40px minmax(0,1fr) 52px;margin:0 6px 6px}.ima-live-window .ima-send-button{min-width:52px;padding:0 8px}.ima-voice-button{width:38px;height:38px}}
+
+
+/* LIVE-001 embodied IMA response */
+.bubble-row{display:flex;align-items:flex-end;gap:8px;margin:8px 0}
+.bubble-row.user{justify-content:flex-end}
+.bubble-row.ima{justify-content:flex-start;direction:inherit}
+.mama-response-figure{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:end}
+.mama-response-figure .mama-figure{transform:scale(.88);transform-origin:bottom center}
+.mama-response-figure.dance .mama-figure{animation:ima-dance .65s ease-in-out infinite alternate}
+.mama-response-figure.clap .mama-figure{animation:ima-clap .38s ease-in-out infinite alternate}
+.mama-response-figure.wave .mama-figure{animation:ima-wave .55s ease-in-out infinite alternate}
+.mama-response-figure.jump .mama-figure{animation:ima-jump .55s ease-in-out infinite}
+.mama-response-figure.speaking .mama-figure{animation:ima-speak .3s ease-in-out infinite alternate}
+.mama-speak-button{border:0;background:transparent;margin-inline-start:7px;cursor:pointer;opacity:.7;font-size:.85em}
+@keyframes ima-dance{from{transform:translateY(0) rotate(-6deg)}to{transform:translateY(-5px) rotate(7deg)}}
+@keyframes ima-clap{from{transform:scale(.88)}to{transform:scale(.96)}}
+@keyframes ima-wave{from{transform:rotate(-8deg)}to{transform:rotate(12deg)}}
+@keyframes ima-jump{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes ima-speak{from{transform:scale(.88)}to{transform:scale(.94)}}
