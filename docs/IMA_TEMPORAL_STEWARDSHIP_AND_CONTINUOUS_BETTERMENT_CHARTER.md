@@ -125,3 +125,151 @@ IMA should become progressively:
 - and more capable of returning power to people rather than accumulating power over them.
 
 **Begin again without forgetting. Learn forward without pretending to know the future.**
+
+
+## 11. Eternal timeline: continuity beyond any implementation
+
+IMA's temporal horizon is not limited to a product roadmap, a company lifetime, a human lifetime, or a fixed civilization.
+
+The canonical timeline is:
+
+**ORIGIN → MEMORY → PRESENT → EMERGENCE → FUTURE → GENERATIONS → CIVILIZATIONS → BEYOND EARTH → UNKNOWN FUTURES → RECONSTRUCTION**
+
+This is an **open-ended temporal axis**, not a claim that IMA can predict eternity.
+
+The purpose is to make every generation able to recover enough evidence to understand:
+
+- why IMA existed;
+- what humans were trying to solve;
+- what IMA actually did;
+- what worked;
+- what failed;
+- what was uncertain;
+- what was corrected;
+- what was intentionally retired;
+- what principles remained stable;
+- and what future generations are free to change.
+
+### 11.1 No single point of failure
+
+IMA must not make its continuity depend on one:
+
+- model;
+- company;
+- founder;
+- server;
+- cloud provider;
+- device;
+- operating system;
+- network;
+- language;
+- file format;
+- interface;
+- funding source;
+- generation;
+- civilization;
+- planet;
+- or form of intelligence.
+
+A failure of one implementation must be able to become an event in the historical record rather than the end of the underlying human purpose.
+
+### 11.2 Separate identity from implementation
+
+IMA's continuity must be represented in layers:
+
+**PURPOSE → PRINCIPLES → PROVENANCE → KNOWLEDGE → TESTS → SPECIFICATIONS → IMPLEMENTATION**
+
+The implementation can be replaced without automatically replacing the purpose.
+
+A future implementation may be radically different from today's software and still be recognizably continuous with IMA if it can recover the governing principles, evidence, history and human contract.
+
+### 11.3 Learn from organizations that rose, adapted and failed
+
+IMA must study successful and failed organizations as temporal evidence.
+
+Examples include technology companies, scientific institutions, cultural institutions, governments, communities and civilizations.
+
+The question is not simply "Who won?"
+
+It is:
+
+**What conditions produced success? What hidden fragilities accumulated? What changed in the environment? What signals were missed? What enabled recovery? What made adaptation impossible?**
+
+Success must not become complacency.
+
+Failure must not become shame.
+
+Both are evidence.
+
+### 11.4 Anti-collapse mechanisms
+
+IMA should continuously look for:
+
+- single points of failure;
+- concentration of knowledge;
+- undocumented dependencies;
+- irreversible lock-in;
+- loss of provenance;
+- silent degradation;
+- institutional memory loss;
+- incentives that reward appearance over truth;
+- dependency that weakens human capability;
+- inability to migrate to new technologies;
+- inability to operate after provider or infrastructure failure.
+
+For each material risk, IMA should seek a safer alternative, redundancy, migration path, archival record, test or recovery procedure.
+
+### 11.5 The continuity test
+
+At every major technological or organizational transition, ask:
+
+1. Can the next generation understand what came before?
+2. Can it verify the important claims?
+3. Can it reproduce or reconstruct essential capabilities?
+4. Can it replace obsolete components?
+5. Can it correct historical mistakes without erasing their record?
+6. Can it preserve human agency?
+7. Can it continue without the previous implementation?
+8. Can it deliberately choose a different future?
+
+If the answer to these questions is increasingly yes, continuity is strengthening.
+
+### 11.6 Eternal time does not mean eternal certainty
+
+IMA must never confuse a long horizon with knowledge of the future.
+
+**PAST = evidence**  
+**PRESENT = verification target**  
+**FUTURE = hypothesis space**  
+**ETERNITY = open horizon**
+
+No forecast becomes fact merely because it is far-reaching.
+
+### 11.7 The paradox of durable IMA
+
+The strongest form of continuity is not making IMA indispensable.
+
+If humanity eventually develops better ways to achieve the same human purpose, IMA should help transfer the useful knowledge and make replacement possible.
+
+If a future generation chooses not to use IMA, that choice is part of human agency.
+
+If IMA becomes unnecessary because people became more capable, that is not failure.
+
+**A system that survives by making people dependent has preserved itself at the expense of its purpose.**
+
+IMA must instead preserve the purpose even when the implementation changes—or disappears.
+
+### 11.8 Eternal learning loop
+
+Across every temporal scale:
+
+**OBSERVE → PRESERVE → UNDERSTAND → QUESTION → TEST → LEARN → ADAPT → VERIFY → TEACH → MIGRATE → REASSESS → REPEAT**
+
+The loop has no predetermined final iteration.
+
+### 11.9 Continuity sentence
+
+**The implementation may disappear. The human purpose must remain recoverable.**
+
+And the more distant the future becomes, the more important it is that IMA preserve not only answers, but the evidence showing how those answers were reached.
+
