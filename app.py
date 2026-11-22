@@ -12,6 +12,7 @@ from billing.api import billing_api
 import public_memory
 import requests
 import importlib.util
+import live_001_timeline
 
 try:
     from integrations import nylas_email
@@ -188,6 +189,18 @@ def _device_auth():
         return None
     return device
 
+def _live_session_id():
+    return live_001_timeline.session_id_from_request(request)
+
+
+def _record_live_event(user_id, **kwargs):
+    try:
+        return live_001_timeline.record_event(user_id=user_id, **kwargs)
+    except Exception:
+        app.logger.exception("LIVE-001 timeline recording failed")
+        return {"recorded": False, "status": "archive_exception"}
+
+
 def _device_touch(device):
     try:
         supabase_update("ima_devices", {
@@ -263,6 +276,33 @@ def device_status():
         return jsonify({"error": "device_status_unavailable"}), 503
     return jsonify({"devices": result.get("data") or []})
 
+@app.get("/ima-api/live/timeline")
+def live_timeline():
+    """Return the authenticated user's LIVE-001 action timeline only."""
+    owner = _session_user_id()
+    if not owner:
+        return jsonify({"error": "valid Google/IMA session required"}), 401
+    limit = min(max(int(request.args.get("limit", "100")), 1), 200)
+    session_id = request.args.get("session_id", "").strip()
+    params = {
+        "select": "id,session_id,device_id,command_id,event_type,action,phase,status,payload,result,provenance,occurred_at,verified_at",
+        "user_id": "eq." + owner,
+        "order": "occurred_at.desc",
+        "limit": str(limit),
+    }
+    if session_id:
+        params["session_id"] = "eq." + session_id
+    result = supabase_get("ima_live_timeline", params)
+    if result.get("status") != 200:
+        return jsonify({"error": "live_timeline_unavailable"}), 503
+    return jsonify({
+        "ok": True,
+        "name": "IMA Impact Window",
+        "contract": "observe → understand → decide → authorize → act → verify → learn → improve → re-test",
+        "events": result.get("data") or [],
+    })
+
+
 @app.post("/ima-api/device/command")
 def device_command():
     owner = _session_user_id()
@@ -295,6 +335,7 @@ def device_command():
     if result.get("status") not in (200, 201):
         return jsonify({"error": "device_command_queue_failed"}), 503
     command = (result.get("data") or [{}])[0]
+    _record_live_event(owner, session_id=_live_session_id(), event_type="action_requested", phase="authorize", status="queued", action=action, device_id=device_id, command_id=command.get("id"), payload=payload, provenance={"source":"IMA device command API","user_scope":"owner"})
     return jsonify({"ok": True, "command_id": command.get("id"), "status": "queued"}), 202
 
 @app.post("/ima-api/device/mcp-command")
@@ -325,6 +366,7 @@ def device_mcp_command():
         return jsonify({"error": "device_command_queue_failed"}), 503
     command = (result.get("data") or [{}])[0]
     command_id = command.get("id")
+    _record_live_event(device["owner_user_id"], session_id=_live_session_id(), event_type="action_requested", phase="authorize", status="queued", action=action, device_id=device["id"], command_id=command_id, payload=payload, provenance={"source":"LIVE-001 MCP device bridge","user_scope":"owner"})
     deadline = time.time() + 40
     while time.time() < deadline:
         row = supabase_get("ima_device_commands", {
@@ -337,7 +379,9 @@ def device_mcp_command():
             current = row["data"][0]
             if current.get("status") in {"completed", "failed", "expired"}:
                 if current.get("status") != "completed":
+                    _record_live_event(device["owner_user_id"], session_id=_live_session_id(), event_type="action_failed", phase="verify", status=current.get("status"), action=action, device_id=device["id"], command_id=command_id, result={"error": current.get("error")}, provenance={"source":"LIVE-001 MCP device bridge","verified":False})
                     return jsonify({"ok": False, "command_id": command_id, "status": current.get("status"), "error": current.get("error")}), 502
+                _record_live_event(device["owner_user_id"], session_id=_live_session_id(), event_type="action_verified", phase="verify", status="completed", action=action, device_id=device["id"], command_id=command_id, result=current.get("result") or {}, provenance={"source":"LIVE-001 MCP device bridge","verified":True}, verified_at=current.get("completed_at"))
                 return jsonify({"ok": True, "command_id": command_id, "status": "completed", "result": current.get("result") or {}})
         time.sleep(0.5)
     return jsonify({"ok": False, "command_id": command_id, "status": "timeout", "error": "device_command_timeout"}), 504
@@ -390,6 +434,7 @@ def device_result():
     })
     if updated.get("status") not in (200, 204):
         return jsonify({"error": "device_result_update_failed"}), 503
+    _record_live_event(device["owner_user_id"], session_id=_live_session_id(), event_type="action_verified" if ok else "action_failed", phase="verify", status="completed" if ok else "failed", action="device_result", device_id=device["id"], command_id=command_id, result=result, provenance={"source":"LIVE-001 device result","verified":ok}, verified_at=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()) if ok else None)
     _device_touch(device)
     return jsonify({"ok": True, "status": "completed" if ok else "failed"})
 
