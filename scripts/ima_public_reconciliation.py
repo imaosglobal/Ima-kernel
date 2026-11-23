@@ -36,11 +36,11 @@ def run():
     app = REQUIRED["app"].read_text(encoding="utf-8") if REQUIRED["app"].exists() else ""
     i18n = REQUIRED["i18n"].read_text(encoding="utf-8") if REQUIRED["i18n"].exists() else ""
     checks = {
-        "google_identity_flow_present": "GoogleButton" in app and "signInWithGoogleCredential" in app,
+        "google_identity_flow_present": "google.accounts.id.initialize" in app and "signInWithGoogleCredential" in app,
         "chat_entry_present": "askIma(" in app,
         "memory_controls_present": "getMemoryConsent" in app and "memoryScope" in app,
         "accessibility_controls_present": "accessibility" in app and "reduced-motion" in app,
-        "rtl_localization_present": "dir='rtl'" in i18n or 'dir:"rtl"' in i18n,
+        "rtl_localization_present": "document.documentElement.dir" in app and "RTL.has" in app,
         "community_entry_present": "community" in app,
         "shop_entry_present": "shop" in app,
         "media_entry_present": "watch" in app,
