@@ -80,25 +80,20 @@ jobs:
           SOURCE_SHA: ${{ steps.source.outputs.sha }}
         run: |
           set -euo pipefail
-          grep -Fq "GOOGLE_CAMPAIGN_URL" src/App.jsx
-          grep -Fq "campaignId=24409551537" src/App.jsx
-          grep -Fq "utm_source=google" src/App.jsx
-          grep -Fq "renderButton" src/App.jsx
-          grep -Fq 'id="ima-google-button"' src/App.jsx
-          test "$(grep -o 'id="ima-google-button"' src/App.jsx | wc -l)" -eq 1
-          grep -Fq "MamaFigure" src/App.jsx
-          grep -Fq "ChatPanel" src/App.jsx
-          grep -Fq "submitFeedback" src/App.jsx
-          grep -Fq "privacy.html" src/App.jsx
-          grep -Fq "support.html" src/App.jsx
-          grep -Fq "beforeinstallprompt" src/main.jsx
-          if grep -Fq "resilience-center" src/App.jsx; then echo "ERROR: emergency/resilience content on entry page"; exit 1; fi
-          if grep -Fq "canonical-connectors" src/App.jsx; then echo "ERROR: technical control-room content on entry page"; exit 1; fi
-          if grep -Fq 'href="/n"' src/App.jsx index.html; then echo "ERROR: broken /n navigation"; exit 1; fi
+          grep -Fq "getAuthConfig" src/PublicApp.jsx
+          grep -Fq "signInWithGoogleCredential" src/PublicApp.jsx
+          grep -Fq "renderButton" src/PublicApp.jsx
+          grep -Fq 'id="google-login"' src/PublicApp.jsx
+          test "$(grep -o 'id="google-login"' src/PublicApp.jsx | wc -l)" -eq 1
+          grep -Fq "askIma" src/PublicApp.jsx
+          grep -Fq "submitFeedback" src/PublicApp.jsx
+          grep -Fq "canonical-public" src/PublicApp.jsx
+          if grep -Fq "resilience-center" src/PublicApp.jsx; then echo "ERROR: internal resilience content on public entry"; exit 1; fi
+          if grep -Fq "canonical-connectors" src/PublicApp.jsx; then echo "ERROR: internal connector content on public entry"; exit 1; fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          grep -Fq "campaignId=24409551537" "$bundle"
-          grep -Fq "ima-google-button" "$bundle"
+          grep -Fq "signInWithGoogleCredential" "$bundle"
+          grep -Fq "google-login" "$bundle"
           test -f public/support.html
           test -f public/privacy.html
           test -f public/feedback.html
