@@ -1,3 +1,4 @@
+import './PublicApp.css';
 import React,{useEffect,useState} from 'react';
 import {askIma,submitFeedback} from './services/imaChat';
 
