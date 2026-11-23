@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "canonical": true,
   "name": "IMA_IMPACT_WINDOW_IP_TRACK",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "status": "PRIVATE_WORKSTREAM_EVIDENCE_NOT_PATENT",
   "attribution": {
     "inventor_candidate": "Ori Cohen",
@@ -60,6 +60,18 @@
       "relevance": "HIGH"
     },
     {
+      "reference": "WO2020226619A1 / US11360738B2",
+      "topic": "agent UI rendered as an overlay with application-specific authorization policy",
+      "date": "2020-11-12 / 2022-06-07",
+      "relevance": "HIGH"
+    },
+    {
+      "reference": "US20250358255A1",
+      "topic": "AI-agent action states, authorization controls and event/training visualization in an electronic communications interface",
+      "date": "2025-10-30",
+      "relevance": "HIGH"
+    },
+    {
       "reference": "arXiv:2608.24898",
       "topic": "MCP-driven accessibility tree standardization for AI screen-reader agents",
       "date": "2026-07-13",
@@ -79,6 +91,54 @@
     "Impact Window as an agency-preserving surface: action is bounded by explicit authorization, result verification and learning rather than autonomous persistence."
   ],
   "novelty_status": "HYPOTHESIS_REQUIRES_CLAIM_CHART_AND_PROFESSIONAL_PRIOR_ART_REVIEW",
+  "claim_chart_status": "INITIAL_SCREENING_ONLY",
+  "claim_chart": [
+    {
+      "hypothesis": "H1 timeline",
+      "overlap": [
+        "US20260195524A1",
+        "US20250358255A1"
+      ],
+      "potential_differentiator": "end-to-end user-scoped lifecycle explicitly closing with verification→learning across host capabilities",
+      "status": "UNPROVEN"
+    },
+    {
+      "hypothesis": "H2 capability negotiation/runtime verification",
+      "overlap": [
+        "US20260195524A1",
+        "WO2020226619A1 / US11360738B2"
+      ],
+      "potential_differentiator": "runtime capability proof as a prerequisite to capability claims, not merely UI authorization/presentation",
+      "status": "UNPROVEN"
+    },
+    {
+      "hypothesis": "H3 cross-device continuity",
+      "overlap": [
+        "US20260291940"
+      ],
+      "potential_differentiator": "continuity tied to verified per-user authorization state and action/result evidence",
+      "status": "UNPROVEN"
+    },
+    {
+      "hypothesis": "H4 agency-preserving impact window",
+      "overlap": [
+        "US20250358255A1",
+        "WO2020226619A1 / US11360738B2"
+      ],
+      "potential_differentiator": "explicit human-agency measurement and learning loop as a system objective",
+      "status": "UNPROVEN"
+    }
+  ],
+  "evidence_chronology": [
+    {
+      "date": "2026-11-22",
+      "event": "Canonical PIIW IP workstream recorded in GitHub and private Notion dossier."
+    },
+    {
+      "date": "2026-11-23",
+      "event": "Fresh prior-art screening added overlay authorization, agent action-control visualization, and capability/continuity overlap references."
+    }
+  ],
   "implementation": {
     "canonical_system": "LIVE-001",
     "required_flow": [
@@ -116,5 +176,5 @@
     "Inventorship/ownership must be verified from actual contribution and agreements.",
     "A patent filing/grant and commercialization are distinct events."
   ],
-  "next_high_value_action": "Build a dated claim chart for the four novelty hypotheses against the identified prior art, then route the narrowed invention disclosure to professional patent review before public technical disclosure."
+  "next_high_value_action": "Expand the initial claim chart with jurisdiction/date/status checks for each reference, then route the narrowed invention disclosure to professional patent review before public technical disclosure."
 }
