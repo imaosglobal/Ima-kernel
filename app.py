@@ -1238,7 +1238,7 @@ def analytics_event():
         "page_view", "chat_started", "chat_completed", "share_clicked",
         "feedback_opened", "feedback_submitted", "install_prompt",
         "pwa_installed", "rating_prompt_shown", "rating_clicked",
-        "language_changed", "onboarding_completed",
+        "language_changed", "onboarding_completed", "visit", "google_signin_completed",
     }
     if event not in allowed:
         return jsonify({"error": "unsupported event"}), 400
