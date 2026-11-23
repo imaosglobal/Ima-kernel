@@ -1,10 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-23T11:05:35+00:00",
+  "generated_at": "2026-11-23T11:16:25+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
-    "git_commits": 2,
+    "git_commits": 1,
     "development_journal": 250,
     "daily_summaries": 5
   },
@@ -2019,38 +2019,31 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "commit": "45036929fd737c06b8bd41025af8f25117f3567e",
-      "timestamp": "2026-11-23T11:03:14Z",
-      "event": "commit",
-      "summary": "chore: record unified IMA loop cycle [skip ci]",
-      "source": "git"
-    },
-    {
-      "timestamp": "2026-11-23T11:05:33+00:00",
+      "timestamp": "2026-11-23T11:16:23+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-23T11:05:34+00:00",
+      "timestamp": "2026-11-23T11:16:24+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-23T11:05:35+00:00",
+      "timestamp": "2026-11-23T11:16:25+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "acfeddc1d32b79adfbc897858f1f2b61ee3ccbfe",
-      "timestamp": "2026-11-23T12:58:11+02:00",
+      "commit": "1981b1161e4504049e64e1c73b75653c68355827",
+      "timestamp": "2026-11-23T13:16:05+02:00",
       "event": "commit",
-      "summary": "test: align public feedback contract with canonical public app",
+      "summary": "fix: align Pages gate with canonical PublicApp",
       "source": "git"
     }
   ]
