@@ -33,6 +33,7 @@ MODULES = [
     "universal_device_interoperability",
     "market_participation_engine",
     "github_achievement_growth",
+    "intelligence_interoperability_registry",
 ]
 
 
