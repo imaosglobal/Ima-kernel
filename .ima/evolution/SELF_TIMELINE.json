@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-23T10:58:28+00:00",
+  "generated_at": "2026-11-23T11:05:35+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-23T10:58:26+00:00",
+      "commit": "45036929fd737c06b8bd41025af8f25117f3567e",
+      "timestamp": "2026-11-23T11:03:14Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-23T11:05:33+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-23T10:58:27+00:00",
+      "timestamp": "2026-11-23T11:05:34+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-23T10:58:27+00:00",
+      "timestamp": "2026-11-23T11:05:35+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "2d165e3fcc6cb6e709d50c01f7a7ab1aa79f55f1",
-      "timestamp": "2026-11-23T12:58:10+02:00",
-      "event": "commit",
-      "summary": "fix: align public reconciliation checks with canonical public app",
-      "source": "git"
     },
     {
       "commit": "acfeddc1d32b79adfbc897858f1f2b61ee3ccbfe",

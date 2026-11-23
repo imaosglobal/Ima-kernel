@@ -1,6 +1,6 @@
 {
   "schema": "IMA-WORLD-PULSE-1.0",
-  "timestamp": "2026-11-23T11:03:12Z",
+  "timestamp": "2026-11-23T11:10:17Z",
   "status": "OBSERVED_WITH_PUBLIC_SOURCES",
   "coverage": "BOUNDED_NOT_EXHAUSTIVE",
   "items": [],
@@ -8,12 +8,12 @@
     {
       "source": "GDELT",
       "kind": "CONFLICT",
-      "error": "ReadTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "PROTEST_OR_UPRISING",
-      "error": "ReadTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
@@ -28,7 +28,7 @@
     {
       "source": "GDELT",
       "kind": "PUBLIC_HEALTH",
-      "error": "ReadTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
@@ -38,7 +38,7 @@
     {
       "source": "GDELT",
       "kind": "POLITICAL_CHANGE",
-      "error": "HTTPError"
+      "error": "JSONDecodeError"
     },
     {
       "source": "GDELT",
