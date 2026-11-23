@@ -37,6 +37,7 @@ COMMANDS={
 "scientific_open_research":["python","scripts/scientific_open_research_health.py"],
 "scientific_open_research_tests":["python","-m","unittest","discover","-s","tests","-p","test_scientific_open_research_health.py","-v"],
 "evolution":["python",".ima/evolution/EVOLUTION_CONTROLLER.py"],
+"self_improvement":["python",".ima/evolution/self_improvement_controller.py"],
 "daily_summary":["python",".ima/web_intelligence/daily_summary.py"],
 "community_frontier":["python","-c","from learning.learning_gap_detector import detect; from learning.conclusion_engine import conclude; from learning.teaching_artifact import create_teaching_artifact; print('IMA_LEARNING_SYSTEM=PASS')"],
 "product_qa":["python","qa/daily_qa.py"],
@@ -74,7 +75,7 @@ def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(micros
 
 def due(now):
     tasks=["agi_gap_check","web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","live_browser_health","finance_governance_audit","funding_revenue_intelligence","distribution","capability_contract","growth_cycle","monetization_readiness"]
-    if now.hour%6==0: tasks += ["evolution","engine_discovery"]
+    if now.hour%6==0: tasks += ["evolution","engine_discovery","self_improvement"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
     if now.hour==4: tasks += ["capability_radar"]
