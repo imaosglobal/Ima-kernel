@@ -1,6 +1,10 @@
 name: IMA Unified Loop
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.ima/**'
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
