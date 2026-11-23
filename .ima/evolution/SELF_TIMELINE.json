@@ -1,15 +1,11 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-<<<<<<< Updated upstream
-  "generated_at": "2026-11-03T14:30:18+00:00",
-=======
-  "generated_at": "2026-11-03T14:30:43+00:00",
->>>>>>> Stashed changes
+  "generated_at": "2026-11-23T10:58:28+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
-    "git_commits": 1,
-    "development_journal": 203,
+    "git_commits": 2,
+    "development_journal": 250,
     "daily_summaries": 5
   },
   "archive_inventory": {
@@ -861,26 +857,39 @@
       "source": "ima_runtime.worldview_expansion"
     },
     {
-<<<<<<< Updated upstream
-      "timestamp": "2026-11-03T14:30:17+00:00",
-=======
       "timestamp": "2026-11-03T14:30:42+00:00",
->>>>>>> Stashed changes
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-<<<<<<< Updated upstream
-      "timestamp": "2026-11-03T14:30:17+00:00",
-=======
       "timestamp": "2026-11-03T14:30:42+00:00",
->>>>>>> Stashed changes
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "timestamp": "2026-11-03T14:30:43+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "test",
+      "status": "VERIFIED",
+      "source": "ima_runtime.worldview_expansion"
+    },
+    {
+      "timestamp": "2026-11-03T14:30:43+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "IMA worldview expansion self-test",
+      "status": "VERIFIED",
+      "source": "ima_runtime.worldview_expansion"
+    },
+    {
+      "timestamp": "2026-11-03T14:30:43+00:00",
+      "event": "WORLDVIEW_EXPANSION",
+      "summary": "test",
+      "status": "GAPS_RECORDED",
+      "source": "ima_runtime.worldview_expansion"
     },
     {
       "timestamp": "2026-11-03T15:53:11+02:00",
@@ -1723,17 +1732,325 @@
       "source": "ima-unified-loop"
     },
     {
-<<<<<<< Updated upstream
-      "commit": "a42e0cc57b6e842481b45069c045e863dd6417c7",
-      "timestamp": "2026-11-03T16:30:02+02:00",
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task web_intelligence completed with FAIL",
+      "status": "FAILED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task scientific_open_research_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task foresight_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task culture_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task human_intelligence_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task unified_loop_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task universal_learning_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task self_application_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task creative_bridge_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task human_agency_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task world_model_tests completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task world_model_availability completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task global_integration_intake completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task public_reconciliation completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task finance_governance_audit completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task distribution completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task capability_contract completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task growth_cycle completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_task",
+      "summary": "Canonical IMA loop task monetization_readiness completed with PASS",
+      "status": "EXECUTED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-03T16:30:43+02:00",
+      "event": "canonical_loop_cycle",
+      "summary": "Canonical whole-IMA cycle completed; task-level evidence recorded.",
+      "status": "GAPS_RECORDED",
+      "source": "ima-unified-loop"
+    },
+    {
+      "timestamp": "2026-11-05T07:04:23+00:00",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA reconciliation: repository, deployment, connected systems, recent project signals, and known gaps reviewed.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run"
+    },
+    {
+      "timestamp": "2026-11-05T09:10:41+02:00",
+      "event": "ima_browser_and_project_scan",
+      "summary": "Daily scan of canonical IMA repository/public site and browser-agent/live-browser/WebMCP ecosystem; actionable gaps recorded without claiming unverified deployment or runtime success.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA browser and project scan"
+    },
+    {
+      "timestamp": "2026-11-06T07:12:22Z",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA reconciliation completed; current repository, deployment, connected-system, security and health signals reconciled with explicit verification boundaries.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run"
+    },
+    {
+      "timestamp": "2026-11-06T07:48:00Z",
+      "event": "webmcp_lifecycle_hardening",
+      "summary": "Aligned the existing IMA WebMCP registration with the current Chrome WebMCP API lifecycle: use document.modelContext only and pass an AbortSignal so registered tools can be unregistered when the React surface unmounts.",
+      "status": "EXECUTED",
+      "source": "IMA daily stewardship; Chrome for Developers WebMCP documentation"
+    },
+    {
+      "timestamp": "2026-11-07T07:37:00Z",
+      "event": "device_command_plane_safety_hardening",
+      "summary": "Hardened the Termux/Chrome Universal Device Bridge so arbitrary JavaScript evaluation is local-only and cannot be invoked through the authenticated cloud device command plane.",
+      "status": "EXECUTED",
+      "source": "IMA daily browser/device scan; Chrome WebMCP and MCP security research; canonical IMA bridge code"
+    },
+    {
+      "timestamp": "2026-11-07T07:38:46Z",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA reconciliation completed; latest repository changes, CI, connected-system signals and known verification gaps were reconciled.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run"
+    },
+    {
+      "timestamp": "2026-11-08T07:04:41Z",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA reconciliation completed across accessible GitHub, Gmail, Supabase, Render, Vercel, Linear and Notion signals; no consequential mutation performed.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run"
+    },
+    {
+      "timestamp": "2026-11-08T07:44:00Z",
+      "event": "daily_browser_device_security_scan",
+      "summary": "Added a standard-library-only regression test and CI workflow that lock the Universal Device Bridge cloud-command boundary against arbitrary JavaScript evaluation; reconciled current GitHub state and browser-agent security research without claiming device or public runtime connectivity.",
+      "status": "EXECUTED_GAPS_RECORDED",
+      "source": "IMA daily browser/device scan; canonical GitHub state; Chrome WebMCP documentation; 2026 Android GUI-agent security research"
+    },
+    {
+      "timestamp": "2026-11-08T18:37:05+02:00",
+      "event": "canonical_ota_reconciliation_public_ahead_of_main",
+      "summary": "Daily OTA stewardship verified the canonical main baseline and public runtime. The public IMA Pages runtime is healthy and currently serves a newer descendant than main, so no deployment, rollback, or product overwrite was performed.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA daily OTA product steward; GitHub canonical repository; Firecrawl live public runtime"
+    },
+    {
+      "timestamp": "2026-11-09T07:04:43Z",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA reconciliation completed against the current repository head and accessible connected-system signals; new BrowserGlass work and two failing public-monitor workflows were recorded without claiming live success.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run"
+    },
+    {
+      "timestamp": "2026-11-09T14:00:00+02:00",
+      "event": "canonical_free_local_live_browser_rearchitecture",
+      "summary": "Implemented the safe free/local-first IMA interactive browser path after comparing the existing IMA BrowserGlass/Termux design with the TinyFish session model. Removed the paid Firecrawl dependency from the basic session handshake, kept the user-owned Chrome/Termux bridge as the free execution layer, and improved native key dispatch.",
+      "status": "IMPLEMENTED_NOT_YET_E2E_VERIFIED",
+      "source": "IMA canonical synchronization run; current user requirement; GitHub canonical repository; TinyFish public architecture documentation"
+    },
+    {
+      "timestamp": "2026-11-09T20:42:12+02:00",
+      "event": "daily_ota_product_steward_run_3",
+      "summary": "Verified the current main baseline and public runtime relationship; public runtime is an older ancestor of main, but the current main deployment pipeline has no observed workflow run, so no deployment or rollback was performed.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA daily OTA product steward; canonical GitHub repository; Firecrawl live public version check"
+    },
+    {
+      "timestamp": "2026-11-10T09:40:54+02:00",
+      "event": "canonical_sync_reconciliation",
+      "summary": "Daily canonical IMA synchronization completed. Current main, canonical protocols, recent journal state, connected project inventories, Gmail IMA signals, and current OpenAI app/MCP UI capabilities were checked. No deployment or destructive mutation was performed because current deployment and browser end-to-end evidence remain incomplete.",
+      "status": "GAPS_RECORDED",
+      "source": "IMA canonical synchronization run; GitHub; Gmail; Supabase; Notion; OpenAI official documentation"
+    },
+    {
+      "timestamp": "2026-11-10T16:00:00+02:00",
+      "event": "canonical_sync_vercel_reauthorization_verified",
+      "summary": "User approved the Vercel team authorization. Vercel scope is now accessible and deployment evidence was inspected.",
+      "status": "VERIFIED_SCOPE_ACCESS",
+      "source": "User authorization plus Vercel connector"
+    },
+    {
+      "timestamp": "2026-11-10T16:20:00+02:00",
+      "event": "canonical_vercel_frontend_api_runtime_repair",
+      "summary": "Fixed the Vercel IMA deployment so the canonical Flask API also serves the repository's public IMA UI and static assets; removed Vercel SSO protection from the new public project and verified the production build path.",
+      "status": "DEPLOYMENT_BUILDING_RUNTIME_PENDING",
+      "source": "IMA canonical synchronization run; user-authorized deployment repair; GitHub; Vercel"
+    },
+    {
+      "timestamp": "2026-11-10T16:30:00+02:00",
+      "event": "canonical_surface_duplication_repaired",
+      "summary": "Corrected the mistaken Vercel duplicate: the canonical public IMA surface remains the GitHub Pages project site from the Ima-kernel repository; reverted the temporary app.py UI-serving change that was only added for the duplicate Vercel deployment.",
+      "status": "CORRECTED_DELETION_PENDING_USER_ACTION",
+      "source": "IMA canonical synchronization run; user-authorized correction"
+    },
+    {
+      "timestamp": "2026-11-10T16:35:00+02:00",
+      "event": "canonical_site_mirrored_into_existing_vercel_surface",
+      "summary": "The canonical IMA site was added to the existing Vercel project 'ima' without creating another project; the deployment pulls the canonical gh-pages branch of Ima-kernel.",
+      "status": "VERIFIED_READY",
+      "source": "IMA canonical synchronization run; user-authorized deployment"
+    },
+    {
+      "timestamp": "2026-11-11T13:02:12Z",
+      "event": "daily_super_task_definition_and_live_browser_review_4",
+      "summary": "Daily canonical IMA review completed. Current v1.1 definition was found under a misleading v1.0 filename; versioned artifacts were corrected without discarding history. Current ecosystem evidence was rechecked. LIVE-001 MCP Apps support is now platform-capable in principle, but IMA's actual ChatGPT rendering and authorized BrowserGlass end-to-end path remain runtime-unverified.",
+      "status": "EXECUTED_WITH_GAPS",
+      "source": "IMA canonical daily super-task; GitHub repository; OpenAI Developers; NIST; MCP; Linux Foundation A2A; METR; ARC Prize; mailbox"
+    },
+    {
+      "timestamp": "2026-11-12T13:22:08Z",
+      "event": "daily_super_task_definition_live_browser_review_5",
+      "summary": "Daily canonical IMA review: refreshed AGI/agent interoperability evidence, found and corrected stale README links to the canonical v1.1 definition, and confirmed the principal LIVE-001 blocker is host/plan eligibility rather than missing IMA code. Current ChatGPT MCP Apps platform support is documented, but this Free-plan conversation cannot runtime-render the custom MCP App.",
+      "status": "EXECUTED_WITH_GAPS",
+      "source": "IMA canonical daily super-task; GitHub; official OpenAI documentation/support email; NIST; ARC Prize; METR; MCP ecosystem"
+    },
+    {
+      "timestamp": "2026-11-13T13:47:50Z",
+      "event": "daily_ima_stewardship_run_6",
+      "summary": "Completed canonical daily AGI/vision, ecosystem, LIVE-001, repository, outreach and evidence review. Current external evidence strengthens IMA v1.1 but does not justify replacing it. OpenAI support confirms LIVE-001 rendering is blocked in the current Free-plan/surface context; official OpenAI documentation independently confirms custom MCP connections/full MCP support require eligible web workspaces, while Pro has limited read/fetch connectivity. FG-TIDA Secretariat invited IMA to submit the contribution to the first FG-TIDA meeting; the original outreach contained a stale v1.0 link, so a correction was prepared but could not be sent because the connected mailbox allowance was exhausted.",
+      "status": "GAPS_RECORDED",
+      "source": "development.jsonl"
+    },
+    {
+      "timestamp": "2026-11-13T18:26:00+02:00",
+      "event": "canonical_daily_visual_regression_restoration",
+      "summary": "Restored the canonical IMA public visual language toward the previously verified warm visual baseline without creating a parallel site or deployment path. Preserved the current application logic, Google session flow, chat, feedback, capability map, accessibility and LIVE-001 surface while replacing the incorrect public hero/wordmark presentation with the clean IMA logo asset and restoring warm cream/rose styling.",
+      "status": "DEPLOYED_RUNTIME_VERIFIED",
+      "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
+    },
+    {
+      "timestamp": "2026-11-23T10:58:26+00:00",
+      "event": "TEST",
+      "summary": "journal test",
+      "status": "VERIFIED",
+      "source": "unit-test"
+    },
+    {
+      "timestamp": "2026-11-23T10:58:27+00:00",
+      "event": "REFLECTION",
+      "summary": "תשובת IMA בטוחה",
+      "status": "VERIFIED",
+      "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "timestamp": "2026-11-23T10:58:27+00:00",
+      "event": "REFLECTION",
+      "summary": "A claim without evidence",
+      "status": "VERIFIED",
+      "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "commit": "2d165e3fcc6cb6e709d50c01f7a7ab1aa79f55f1",
+      "timestamp": "2026-11-23T12:58:10+02:00",
       "event": "commit",
-      "summary": "enforce one official Google sign-in control across IMA",
-=======
-      "commit": "fecf281a25b2b569d42ce6d6de1683a8f2ddf1eb",
-      "timestamp": "2026-11-03T16:30:17+02:00",
+      "summary": "fix: align public reconciliation checks with canonical public app",
+      "source": "git"
+    },
+    {
+      "commit": "acfeddc1d32b79adfbc897858f1f2b61ee3ccbfe",
+      "timestamp": "2026-11-23T12:58:11+02:00",
       "event": "commit",
-      "summary": "restore public feedback.html page",
->>>>>>> Stashed changes
+      "summary": "test: align public feedback contract with canonical public app",
       "source": "git"
     }
   ]

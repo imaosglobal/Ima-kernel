@@ -1,7 +1,6 @@
 {
   "schema": "IMA-UNIFIED-LOOP-1.4",
-  "timestamp": "2026-11-13T20:40:00+02:00",
-  "timestamp": "2026-11-03T16:30:43+02:00",
+  "timestamp": "2026-11-23T12:58:28+02:00",
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -20,11 +19,7 @@
     "CORRECT",
     "TEACH",
     "SHARE_LAWFULLY",
-    "CARRY_FORWARD",
-    "COMPOUND_VALIDATE",
-    "COMPOUND_REUSE",
-    "COMPOUND_TEACH",
-    "COMPOUND_MEASURE"
+    "CARRY_FORWARD"
   ],
   "scope": [
     "human intelligence",
@@ -52,16 +47,47 @@
     "repository health/statistics review",
     "real-user growth and retention",
     "privacy-preserving product analytics and feedback",
+    "global micro-signal observation and relevance pruning",
+    "cross-surface feedback reconciliation",
+    "self-adaptive visual and interaction quality",
+    "global ecosystem and competitor intelligence",
+    "global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery",
     "global localization and accessibility",
     "app-store readiness and verified reputation",
     "lawful growth experiments and partnership discovery",
     "creator-to-commerce and revenue evidence",
     "nonprofit finance, expenses and creator succession governance",
-    "compound_growth_across_knowledge_capability_reliability_accessibility_cooperation_agency_and_sustainable_resources",
     "long-horizon continuity (daily/monthly/yearly/decadal)",
-    "multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)"
+    "multi-perspective whole-system review (user/customer/executive/operator/technical/community/future)",
+    "forward care and one-year preparedness",
+    "peer and competitor cooperation intelligence",
+    "universal task support and safe task routing",
+    "conflict de-escalation and safety-aware care",
+    "global source scanning within authorization",
+    "global change and humanitarian world pulse",
+    "historical conflict/outcome mapping",
+    "temporal relevance and stale-capability pruning",
+    "continuous self-repair and simplification",
+    "AGI readiness and general intelligence gap closure",
+    "lifelong learning and continual adaptation",
+    "persistent self-model and metacognition",
+    "world-state grounding and causal reasoning",
+    "long-horizon autonomous planning with bounded authorization",
+    "cross-domain transfer and novel-task generalization",
+    "independent AGI evaluation and red-team verification"
   ],
   "tasks": [
+    {
+      "task": "agi_gap_check",
+      "command": [
+        "python",
+        "scripts/ima_agi_gap_check.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "IMA_AGI_GAP_CHECK=PASS\nPROGRAM=docs/IMA_AGI_READINESS_AND_GENERAL_INTELLIGENCE_GAP_PROGRAM.md\nPRIORITY_GAPS=evaluation_harness,self_model_metacognition,lifelong_memory,continual_learning,long_horizon_agent,world_state_grounding,cross_domain_transfer,causal_counterfactual_reasoning,scientific_learning_loop,multimodal_embodiment,safety_red_team,external_evaluation\nRULE=No AGI claim without implementation,test,deployment,runtime verification,measurement,and independent reproducible evidence.\n",
+      "stderr_tail": ""
+    },
     {
       "task": "web_intelligence",
       "command": [
@@ -69,10 +95,21 @@
         ".ima/web_intelligence/global_discovery.py",
         "--once"
       ],
-      "status": "FAIL",
-      "returncode": 1,
-      "stdout_tail": "",
-      "stderr_tail": "Traceback (most recent call last):\n  File \"/home/runner/work/Ima-kernel/Ima-kernel/.ima/web_intelligence/global_discovery.py\", line 230, in <module>\n    raise SystemExit(run())\n                     ^^^^^\n  File \"/home/runner/work/Ima-kernel/Ima-kernel/.ima/web_intelligence/global_discovery.py\", line 162, in run\n    state = load_state()\n            ^^^^^^^^^^^^\n  File \"/home/runner/work/Ima-kernel/Ima-kernel/.ima/web_intelligence/global_discovery.py\", line 52, in load_state\n    return json.loads(STATE.read_text(encoding=\"utf-8\"))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py\", line 338, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py\", line 354, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)\n"
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "b\",\n      \"url\": \"https://arxiv.org/abs/2611.27728\",\n      \"title\": \"Quantitative Measurement of Pavement Distress based on Vehicle Camera and Perspective Correction\",\n      \"source\": \"https://arxiv.org/rss/cs.AI\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T10:58:30Z\"\n    },\n    {\n      \"id\": \"ef7fce041ecbae04432e\",\n      \"url\": \"https://arxiv.org/abs/2611.27746\",\n      \"title\": \"Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work\",\n      \"source\": \"https://arxiv.org/rss/cs.AI\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T10:58:30Z\"\n    },\n    {\n      \"id\": \"2f0c5439f4a4377458b5\",\n      \"url\": \"https://arxiv.org/abs/2611.27750\",\n      \"title\": \"RoSci: Exploring Robustness in Science VLMs\",\n      \"source\": \"https://arxiv.org/rss/cs.AI\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T10:58:30Z\"\n    },\n    {\n      \"id\": \"9e5dfad7d84c46ca20dc\",\n      \"url\": \"https://arxiv.org/abs/2611.27780\",\n      \"title\": \"Search-RSI: Expanding Search Worlds Along Multimodal Agents' Capability Frontier\",\n      \"source\": \"https://arxiv.org/rss/cs.AI\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T10:58:30Z\"\n    },\n    {\n      \"id\": \"f27c590c7a8463603e3f\",\n      \"url\": \"https://arxiv.org/abs/2611.27784\",\n      \"title\": \"Neural Defend ARCAS 290M: A Robust Foundation Model for AI-Generated Audio Detection\",\n      \"source\": \"https://arxiv.org/rss/cs.AI\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T10:58:30Z\"\n    }\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "world_pulse",
+      "command": [
+        "python",
+        "scripts/ima_world_pulse.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\"status\": \"OBSERVED_WITH_PUBLIC_SOURCES\", \"observed\": 0, \"errors\": 10, \"coverage\": \"BOUNDED_NOT_EXHAUSTIVE\", \"artifact\": \"artifacts/world-pulse/latest.json\"}\n",
+      "stderr_tail": ""
     },
     {
       "task": "scientific_open_research_tests",
@@ -90,8 +127,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 1.149s\n\nOK\n"
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.599s\n\nOK\n"
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.249s\n\nOK\n"
     },
     {
       "task": "foresight_tests",
@@ -263,7 +299,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "lity signals do not prove that this IMA deployment has credentials, tester access, or a successful live generation request.\",\n  \"official_sources\": {\n    \"genie4_official\": {\n      \"url\": \"https://deepmind.google/models/genie/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"genie4_announcement\": {\n      \"url\": \"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"gemini_api_models\": {\n      \"url\": \"https://ai.google.dev/api/models\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    }\n  },\n  \"errors\": {},\n  \"next_gate\": [\n    \"obtain authorized Genie 4 / Project Genie / Gemini API access if offered\",\n    \"connect credentials only through a secure deployment secret store\",\n    \"run a bounded low-risk generation request\",\n    \"verify output provenance and device fallback\",\n    \"only then mark VERIFIED_LIVE\"\n  ]\n}\n",
+      "stdout_tail": "y signals do not prove that this IMA deployment has credentials, tester access, or a successful live generation request.\",\n  \"official_sources\": {\n    \"genie4_official\": {\n      \"url\": \"https://deepmind.google/models/genie/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": true\n      }\n    },\n    \"genie4_announcement\": {\n      \"url\": \"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": true,\n        \"project_genie_signal\": true,\n        \"api_early_access_signal\": true,\n        \"waitlist_signal\": true,\n        \"limitations_signal\": true\n      }\n    },\n    \"gemini_api_models\": {\n      \"url\": \"https://ai.google.dev/api/models\",\n      \"ok\": true,\n      \"signals\": {\n        \"trusted_tester_preview_signal\": false,\n        \"project_genie_signal\": false,\n        \"api_early_access_signal\": false,\n        \"waitlist_signal\": false,\n        \"limitations_signal\": false\n      }\n    }\n  },\n  \"errors\": {},\n  \"next_gate\": [\n    \"obtain authorized Genie 4 / Project Genie / Gemini API access if offered\",\n    \"connect credentials only through a secure deployment secret store\",\n    \"run a bounded low-risk generation request\",\n    \"verify output provenance and device fallback\",\n    \"only then mark VERIFIED_LIVE\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -274,9 +310,66 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"generated_at\": \"2026-11-03T14:30:22.144Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
-      "stdout_tail": "{\n  \"generated_at\": \"2026-11-03T14:30:46.886Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+      "stdout_tail": "{\n  \"generated_at\": \"2026-11-23T11:01:00.219Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
       "stderr_tail": ""
+    },
+    {
+      "task": "global_human_conversation_learning",
+      "command": [
+        "python",
+        ".ima/conversation/global_human_conversation_learning.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\"processed\": 0, \"promoted\": 0, \"shared\": 0, \"status\": \"PROCESSED\"}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "global_human_conversation_learning_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_global_human_conversation_learning.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_conflict_prevents_false_certainty (test_global_human_conversation_learning.GlobalHumanConversationLearningTests.test_conflict_prevents_false_certainty) ... ok\ntest_contract_exists (test_global_human_conversation_learning.GlobalHumanConversationLearningTests.test_contract_exists) ... ok\ntest_missing_evidence_downgrades_claim (test_global_human_conversation_learning.GlobalHumanConversationLearningTests.test_missing_evidence_downgrades_claim) ... ok\ntest_private_experience_is_not_shared (test_global_human_conversation_learning.GlobalHumanConversationLearningTests.test_private_experience_is_not_shared) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "task": "universal_intelligence_gateway",
+      "command": [
+        "python",
+        ".ima/intelligence/universal_intelligence_gateway.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "D\",\n      \"provenance\": \"Future adapter contract\"\n    },\n    {\n      \"id\": \"xai\",\n      \"provider\": \"xAI / Grok\",\n      \"capabilities\": [\n        \"text_generation\",\n        \"vision\",\n        \"future_tool_use\"\n      ],\n      \"interface\": \"native_api\",\n      \"auth\": {\n        \"env\": \"XAI_API_KEY\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider registry; runtime authorization must be checked\",\n      \"configured\": false,\n      \"last_observed_at\": 1795431660.3431745\n    },\n    {\n      \"id\": \"whatsapp_ai\",\n      \"provider\": \"WhatsApp AI / channel adapter\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"future_action_bridge\"\n      ],\n      \"interface\": \"host_adapter\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider-neutral host adapter contract; no direct connection claimed until verified\"\n    },\n    {\n      \"id\": \"generic_chat_host\",\n      \"provider\": \"Any future compatible chat host\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"mcp_or_api_adapter\"\n      ],\n      \"interface\": \"adapter_contract\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA universal distribution contract\"\n    }\n  ],\n  \"private_external_fanout\": false\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "universal_intelligence_gateway_tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_universal_intelligence_gateway.py",
+        "-v"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_contract_and_registry (test_universal_intelligence_gateway.UniversalIntelligenceGatewayContractTests.test_contract_and_registry) ... ok\ntest_gateway_contract (test_universal_intelligence_gateway.UniversalIntelligenceGatewayContractTests.test_gateway_contract) ... ok\ntest_no_secret_material (test_universal_intelligence_gateway.UniversalIntelligenceGatewayContractTests.test_no_secret_material) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
     },
     {
       "task": "public_reconciliation",
@@ -286,7 +379,18 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "   \"evidence\": \"ima-ui/src/App.jsx\"\n    },\n    {\n      \"surface\": \"i18n\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/i18n.js\"\n    },\n    {\n      \"surface\": \"chat\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/imaChat.js\"\n    },\n    {\n      \"surface\": \"analytics\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/analytics.js\"\n    },\n    {\n      \"surface\": \"capability_registry\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CAPABILITY_REGISTRY.json\"\n    },\n    {\n      \"surface\": \"requirements\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_MASTER_REQUIREMENTS_LEDGER.md\"\n    },\n    {\n      \"surface\": \"nonprofit\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_GLOBAL_NONPROFIT_CHARTER.md\"\n    },\n    {\n      \"surface\": \"finance\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_FINANCIAL_LEDGER_SCHEMA.json\"\n    },\n    {\n      \"surface\": \"succession\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md\"\n    }\n  ],\n  \"checks\": {\n    \"google_identity_flow_present\": true,\n    \"chat_entry_present\": true,\n    \"memory_controls_present\": true,\n    \"accessibility_controls_present\": true,\n    \"rtl_localization_present\": true,\n    \"community_entry_present\": true,\n    \"shop_entry_present\": true,\n    \"media_entry_present\": true,\n    \"install_pwa_entry_present\": true\n  },\n  \"next_gate\": \"browser/API/deployment verification for public runtime\"\n}\n",
+      "stdout_tail": "\": \"ima-ui/src/PublicApp.jsx\"\n    },\n    {\n      \"surface\": \"i18n\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/i18n.js\"\n    },\n    {\n      \"surface\": \"chat\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/imaChat.js\"\n    },\n    {\n      \"surface\": \"analytics\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"ima-ui/src/services/analytics.js\"\n    },\n    {\n      \"surface\": \"capability_registry\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CAPABILITY_REGISTRY.json\"\n    },\n    {\n      \"surface\": \"requirements\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_MASTER_REQUIREMENTS_LEDGER.md\"\n    },\n    {\n      \"surface\": \"nonprofit\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_GLOBAL_NONPROFIT_CHARTER.md\"\n    },\n    {\n      \"surface\": \"finance\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_FINANCIAL_LEDGER_SCHEMA.json\"\n    },\n    {\n      \"surface\": \"succession\",\n      \"status\": \"IMPLEMENTED\",\n      \"evidence\": \"docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md\"\n    }\n  ],\n  \"checks\": {\n    \"google_identity_flow_present\": true,\n    \"chat_entry_present\": true,\n    \"memory_controls_present\": false,\n    \"accessibility_controls_present\": false,\n    \"rtl_localization_present\": true,\n    \"community_entry_present\": false,\n    \"shop_entry_present\": false,\n    \"media_entry_present\": false,\n    \"install_pwa_entry_present\": false\n  },\n  \"next_gate\": \"browser/API/deployment verification for public runtime\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "live_browser_health",
+      "command": [
+        "python",
+        "scripts/ima_live_browser_health.py"
+      ],
+      "status": "FAIL",
+      "returncode": 1,
+      "stdout_tail": "-width,initial-scale=1,viewport-fit=cover\\\">\\n  <title>IMA — Live Browser</title>\\n  <style>\\n    :root{color-scheme:dark}\\n    *{box-sizing:border-box}\\n    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif;height:100%;overflow:hidden}\\n    body{padding:8px;display:flex;flex-direction:column;gap:8px}\\n    .bar,.tools{display:flex;gap:7px;align-items:cen\"\n    },\n    \"ima_public\": {\n      \"ok\": false,\n      \"status\": 404,\n      \"url\": \"https://imaosglobal.github.io/\",\n      \"body_head\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta http-equiv=\\\"Content-type\\\" content=\\\"text/html; charset=utf-8\\\">\\n    <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\\\">\\n    <title>Site not found &middot; GitHub Pages</title>\\n    <style type=\\\"text/css\\\" media=\\\"screen\\\">\\n      body {\\n        background-color: #f1f1f1;\\n        margin: 0;\\n        font-family: \\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif;\\n      }\\n\\n      .contai\"\n    },\n    \"browserglass_session_without_embed\": {\n      \"ok\": false,\n      \"status\": 403,\n      \"url\": \"https://ima-browserglass.onrender.com/api/session\",\n      \"body_head\": \"{\\\"error\\\":\\\"IMA embed required\\\"}\"\n    }\n  },\n  \"truth_boundary\": \"This check proves public endpoint behavior only; it does not prove ChatGPT MCP rendering, human control, local Termux/Chrome connectivity, Google authentication, or successful consequential actions.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -301,6 +405,17 @@
       "stderr_tail": ""
     },
     {
+      "task": "funding_revenue_intelligence",
+      "command": [
+        "python",
+        "scripts/ima_world_pulse.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\"status\": \"OBSERVED_WITH_PUBLIC_SOURCES\", \"observed\": 0, \"errors\": 10, \"coverage\": \"BOUNDED_NOT_EXHAUSTIVE\", \"artifact\": \"artifacts/world-pulse/latest.json\"}\n",
+      "stderr_tail": ""
+    },
+    {
       "task": "distribution",
       "command": [
         "python",
@@ -308,8 +423,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-03T14:30:22Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-03T14:30:46Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-23T11:03:12Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -321,7 +435,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "\n> ima-kernel@1.0.0 test:capabilities\n> node tests/capability_registry.test.cjs\n\nIMA capability registry + Next Action CLI: PASS (23 capabilities; 18 queued actions; UI wired)\n",
+      "stdout_tail": "\n> ima-kernel@1.0.0 test:capabilities\n> node tests/capability_registry.test.cjs\n\nIMA capability registry + Next Action CLI: PASS (43 capabilities; 20 queued actions; UI wired)\n",
       "stderr_tail": ""
     },
     {
@@ -332,8 +446,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-03T14:30:22.550430+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-03T14:30:47.272694+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-23T11:03:13.059189+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -345,6 +458,39 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "{\n  \"schema\": \"IMA-MONETIZATION-READINESS-1.2\",\n  \"status\": \"READY_FOR_HUMAN_AUTHORIZATION\",\n  \"payment_router_mode\": \"multi_provider_router\",\n  \"primary_payment_provider\": \"paypal\",\n  \"providers\": [\n    \"paypal\",\n    \"google_pay\",\n    \"apple_pay\",\n    \"github_sponsors\",\n    \"youtube\",\n    \"open_collective\",\n    \"future_provider\"\n  ],\n  \"blockers\": [],\n  \"findings\": [\n    {\n      \"route\": \"Multi-provider payment router\",\n      \"status\": \"HUMAN_ACTIVATION_REQUIRED\",\n      \"reason\": \"Provider configuration in the repository does not prove live merchant activation, eligibility, compliance approval or payout permission.\"\n    },\n    {\n      \"route\": \"Revenue ledger\",\n      \"status\": \"READY_FOR_EVIDENCE\",\n      \"principle\": \"actual_confirmed_revenue_only\",\n      \"rule\": \"views/followers/eligibility/estimates/projections are never income\"\n    }\n  ],\n  \"actual_revenue\": 0,\n  \"actual_revenue_claimed\": false,\n  \"autonomous_spending\": false,\n  \"next_actions\": [\n    \"activate and verify each desired provider externally\",\n    \"complete required merchant/business, bank, compliance and payout setup\",\n    \"store API credentials only in deployment/runtime secrets\",\n    \"verify a human-authorized real transaction if appropriate\",\n    \"record actual receipt/payout evidence\",\n    \"verify YouTube and GitHub Sponsors separately\"\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "evolution",
+      "command": [
+        "python",
+        ".ima/evolution/EVOLUTION_CONTROLLER.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": ", technology, creativity and human experience without replacing IMA's core identity.\",\n  \"knowledge_scope\": {\n    \"past\": \"learn from recorded human knowledge and inventions\",\n    \"present\": \"monitor verified current knowledge, releases and capabilities\",\n    \"future\": \"detect and stage new capabilities when evidence becomes available\",\n    \"domains\": \"all domains, including domains not yet named\"\n  },\n  \"learning_loop\": [\n    \"discover\",\n    \"classify\",\n    \"cross_check\",\n    \"extract_capability\",\n    \"normalize_source\",\n    \"distribute_learning_plan\",\n    \"benchmark\",\n    \"integrate\",\n    \"verify\",\n    \"record_provenance\",\n    \"learn_from_results\",\n    \"reassess\"\n  ],\n  \"capability_node_types\": [\n    \"knowledge\",\n    \"model\",\n    \"engine\",\n    \"game_engine\",\n    \"rendering\",\n    \"device\",\n    \"protocol\",\n    \"tool\",\n    \"human_skill\",\n    \"world_component\",\n    \"experience\",\n    \"source\",\n    \"sensor\",\n    \"infrastructure\",\n    \"human\",\n    \"domain\"\n  ],\n  \"continuous_benchmarking\": true,\n  \"multi_engine_composition\": true,\n  \"truth_rules_active\": {\n    \"never_claim_unverified_capability\": true,\n    \"discovery_is_not_adoption\": true,\n    \"provider_connection_requires_real_credentials_or_public_access\": true,\n    \"generated_knowledge_requires_provenance\": true,\n    \"conflicts_are_recorded_and_resolved_with_evidence\": true,\n    \"obsolete_capabilities_are_retired_without_erasing_history\": true,\n    \"core_identity_remains_stable\": true\n  },\n  \"external_manifests_seen\": false\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "engine_discovery",
+      "command": [
+        "python",
+        "learning/engine_discovery.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"last_run\": 1795431793.149087,\n  \"discovered_count\": 0,\n  \"staged_ids\": [],\n  \"routable_ids\": [\n    \"openai_gpt_image_2_5\",\n    \"runway_seedream_5\",\n    \"runway_nano_banana_pro\",\n    \"runway_gen4\",\n    \"openart\"\n  ],\n  \"provider_hints\": {\n    \"openai\": \"https://developers.openai.com/api/docs/changelog\",\n    \"runway\": \"https://docs.dev.runwayml.com/\",\n    \"openart\": \"https://openart.ai/\"\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "self_improvement",
+      "command": [
+        "python",
+        ".ima/evolution/self_improvement_controller.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\"status\": \"BLOCKED\", \"reason\": \"NO_AUTHORIZED_PROVIDER\", \"gateway\": null}\n",
       "stderr_tail": ""
     }
   ],
@@ -3750,6 +3896,686 @@
           "not_prediction": true
         }
       ],
+      "global micro-signal observation and relevance pruning": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global micro-signal observation and relevance pruning observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global micro-signal observation and relevance pruning"
+          ],
+          "first_actions": [
+            "inspect current global micro-signal observation and relevance pruning implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global micro-signal observation and relevance pruning"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global micro-signal observation and relevance pruning reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global micro-signal observation and relevance pruning"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global micro-signal observation and relevance pruning"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global micro-signal observation and relevance pruning for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global micro-signal observation and relevance pruning remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global micro-signal observation and relevance pruning"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global micro-signal observation and relevance pruning"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global micro-signal observation and relevance pruning across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global micro-signal observation and relevance pruning"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global micro-signal observation and relevance pruning"
+          ],
+          "tests": [
+            "exercise the fallback path for global micro-signal observation and relevance pruning"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global micro-signal observation and relevance pruning understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global micro-signal observation and relevance pruning"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global micro-signal observation and relevance pruning"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global micro-signal observation and relevance pruning"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "cross-surface feedback reconciliation": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make cross-surface feedback reconciliation observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for cross-surface feedback reconciliation"
+          ],
+          "first_actions": [
+            "inspect current cross-surface feedback reconciliation implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for cross-surface feedback reconciliation"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make cross-surface feedback reconciliation reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for cross-surface feedback reconciliation"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for cross-surface feedback reconciliation"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare cross-surface feedback reconciliation for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that cross-surface feedback reconciliation remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for cross-surface feedback reconciliation"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for cross-surface feedback reconciliation"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve cross-surface feedback reconciliation across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting cross-surface feedback reconciliation"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for cross-surface feedback reconciliation"
+          ],
+          "tests": [
+            "exercise the fallback path for cross-surface feedback reconciliation"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep cross-surface feedback reconciliation understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct cross-surface feedback reconciliation"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for cross-surface feedback reconciliation"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for cross-surface feedback reconciliation"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "self-adaptive visual and interaction quality": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make self-adaptive visual and interaction quality observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for self-adaptive visual and interaction quality"
+          ],
+          "first_actions": [
+            "inspect current self-adaptive visual and interaction quality implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for self-adaptive visual and interaction quality"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make self-adaptive visual and interaction quality reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for self-adaptive visual and interaction quality"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for self-adaptive visual and interaction quality"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare self-adaptive visual and interaction quality for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that self-adaptive visual and interaction quality remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for self-adaptive visual and interaction quality"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for self-adaptive visual and interaction quality"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve self-adaptive visual and interaction quality across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting self-adaptive visual and interaction quality"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for self-adaptive visual and interaction quality"
+          ],
+          "tests": [
+            "exercise the fallback path for self-adaptive visual and interaction quality"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep self-adaptive visual and interaction quality understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct self-adaptive visual and interaction quality"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for self-adaptive visual and interaction quality"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for self-adaptive visual and interaction quality"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "global ecosystem and competitor intelligence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global ecosystem and competitor intelligence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global ecosystem and competitor intelligence"
+          ],
+          "first_actions": [
+            "inspect current global ecosystem and competitor intelligence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global ecosystem and competitor intelligence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global ecosystem and competitor intelligence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global ecosystem and competitor intelligence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global ecosystem and competitor intelligence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global ecosystem and competitor intelligence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global ecosystem and competitor intelligence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global ecosystem and competitor intelligence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global ecosystem and competitor intelligence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global ecosystem and competitor intelligence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global ecosystem and competitor intelligence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global ecosystem and competitor intelligence"
+          ],
+          "tests": [
+            "exercise the fallback path for global ecosystem and competitor intelligence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global ecosystem and competitor intelligence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global ecosystem and competitor intelligence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global ecosystem and competitor intelligence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global ecosystem and competitor intelligence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "first_actions": [
+            "inspect current global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "tests": [
+            "exercise the fallback path for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
       "global localization and accessibility": [
         {
           "horizon": "NOW",
@@ -4701,9 +5527,2191 @@
           "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
           "not_prediction": true
         }
+      ],
+      "forward care and one-year preparedness": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make forward care and one-year preparedness observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for forward care and one-year preparedness"
+          ],
+          "first_actions": [
+            "inspect current forward care and one-year preparedness implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for forward care and one-year preparedness"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make forward care and one-year preparedness reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for forward care and one-year preparedness"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for forward care and one-year preparedness"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare forward care and one-year preparedness for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that forward care and one-year preparedness remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for forward care and one-year preparedness"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for forward care and one-year preparedness"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve forward care and one-year preparedness across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting forward care and one-year preparedness"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for forward care and one-year preparedness"
+          ],
+          "tests": [
+            "exercise the fallback path for forward care and one-year preparedness"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep forward care and one-year preparedness understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct forward care and one-year preparedness"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for forward care and one-year preparedness"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for forward care and one-year preparedness"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "peer and competitor cooperation intelligence": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make peer and competitor cooperation intelligence observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for peer and competitor cooperation intelligence"
+          ],
+          "first_actions": [
+            "inspect current peer and competitor cooperation intelligence implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for peer and competitor cooperation intelligence"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make peer and competitor cooperation intelligence reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for peer and competitor cooperation intelligence"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for peer and competitor cooperation intelligence"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare peer and competitor cooperation intelligence for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that peer and competitor cooperation intelligence remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for peer and competitor cooperation intelligence"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for peer and competitor cooperation intelligence"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve peer and competitor cooperation intelligence across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting peer and competitor cooperation intelligence"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for peer and competitor cooperation intelligence"
+          ],
+          "tests": [
+            "exercise the fallback path for peer and competitor cooperation intelligence"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep peer and competitor cooperation intelligence understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct peer and competitor cooperation intelligence"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for peer and competitor cooperation intelligence"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for peer and competitor cooperation intelligence"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "universal task support and safe task routing": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make universal task support and safe task routing observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for universal task support and safe task routing"
+          ],
+          "first_actions": [
+            "inspect current universal task support and safe task routing implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for universal task support and safe task routing"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make universal task support and safe task routing reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for universal task support and safe task routing"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for universal task support and safe task routing"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare universal task support and safe task routing for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that universal task support and safe task routing remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for universal task support and safe task routing"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for universal task support and safe task routing"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve universal task support and safe task routing across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting universal task support and safe task routing"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for universal task support and safe task routing"
+          ],
+          "tests": [
+            "exercise the fallback path for universal task support and safe task routing"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep universal task support and safe task routing understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct universal task support and safe task routing"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for universal task support and safe task routing"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for universal task support and safe task routing"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "conflict de-escalation and safety-aware care": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make conflict de-escalation and safety-aware care observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for conflict de-escalation and safety-aware care"
+          ],
+          "first_actions": [
+            "inspect current conflict de-escalation and safety-aware care implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for conflict de-escalation and safety-aware care"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make conflict de-escalation and safety-aware care reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for conflict de-escalation and safety-aware care"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for conflict de-escalation and safety-aware care"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare conflict de-escalation and safety-aware care for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that conflict de-escalation and safety-aware care remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for conflict de-escalation and safety-aware care"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for conflict de-escalation and safety-aware care"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve conflict de-escalation and safety-aware care across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting conflict de-escalation and safety-aware care"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for conflict de-escalation and safety-aware care"
+          ],
+          "tests": [
+            "exercise the fallback path for conflict de-escalation and safety-aware care"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep conflict de-escalation and safety-aware care understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct conflict de-escalation and safety-aware care"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for conflict de-escalation and safety-aware care"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for conflict de-escalation and safety-aware care"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "global source scanning within authorization": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global source scanning within authorization observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global source scanning within authorization"
+          ],
+          "first_actions": [
+            "inspect current global source scanning within authorization implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global source scanning within authorization"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global source scanning within authorization reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global source scanning within authorization"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global source scanning within authorization"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global source scanning within authorization for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global source scanning within authorization remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global source scanning within authorization"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global source scanning within authorization"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global source scanning within authorization across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global source scanning within authorization"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global source scanning within authorization"
+          ],
+          "tests": [
+            "exercise the fallback path for global source scanning within authorization"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global source scanning within authorization understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global source scanning within authorization"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global source scanning within authorization"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global source scanning within authorization"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "global change and humanitarian world pulse": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make global change and humanitarian world pulse observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for global change and humanitarian world pulse"
+          ],
+          "first_actions": [
+            "inspect current global change and humanitarian world pulse implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for global change and humanitarian world pulse"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make global change and humanitarian world pulse reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for global change and humanitarian world pulse"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for global change and humanitarian world pulse"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare global change and humanitarian world pulse for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that global change and humanitarian world pulse remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for global change and humanitarian world pulse"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for global change and humanitarian world pulse"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve global change and humanitarian world pulse across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting global change and humanitarian world pulse"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for global change and humanitarian world pulse"
+          ],
+          "tests": [
+            "exercise the fallback path for global change and humanitarian world pulse"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep global change and humanitarian world pulse understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct global change and humanitarian world pulse"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for global change and humanitarian world pulse"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for global change and humanitarian world pulse"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "historical conflict/outcome mapping": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make historical conflict/outcome mapping observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for historical conflict/outcome mapping"
+          ],
+          "first_actions": [
+            "inspect current historical conflict/outcome mapping implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for historical conflict/outcome mapping"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make historical conflict/outcome mapping reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for historical conflict/outcome mapping"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for historical conflict/outcome mapping"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare historical conflict/outcome mapping for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that historical conflict/outcome mapping remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for historical conflict/outcome mapping"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for historical conflict/outcome mapping"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve historical conflict/outcome mapping across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting historical conflict/outcome mapping"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for historical conflict/outcome mapping"
+          ],
+          "tests": [
+            "exercise the fallback path for historical conflict/outcome mapping"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep historical conflict/outcome mapping understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct historical conflict/outcome mapping"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for historical conflict/outcome mapping"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for historical conflict/outcome mapping"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "temporal relevance and stale-capability pruning": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make temporal relevance and stale-capability pruning observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for temporal relevance and stale-capability pruning"
+          ],
+          "first_actions": [
+            "inspect current temporal relevance and stale-capability pruning implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for temporal relevance and stale-capability pruning"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make temporal relevance and stale-capability pruning reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for temporal relevance and stale-capability pruning"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for temporal relevance and stale-capability pruning"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare temporal relevance and stale-capability pruning for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that temporal relevance and stale-capability pruning remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for temporal relevance and stale-capability pruning"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for temporal relevance and stale-capability pruning"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve temporal relevance and stale-capability pruning across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting temporal relevance and stale-capability pruning"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for temporal relevance and stale-capability pruning"
+          ],
+          "tests": [
+            "exercise the fallback path for temporal relevance and stale-capability pruning"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep temporal relevance and stale-capability pruning understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct temporal relevance and stale-capability pruning"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for temporal relevance and stale-capability pruning"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for temporal relevance and stale-capability pruning"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "continuous self-repair and simplification": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make continuous self-repair and simplification observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for continuous self-repair and simplification"
+          ],
+          "first_actions": [
+            "inspect current continuous self-repair and simplification implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for continuous self-repair and simplification"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make continuous self-repair and simplification reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for continuous self-repair and simplification"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for continuous self-repair and simplification"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare continuous self-repair and simplification for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that continuous self-repair and simplification remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for continuous self-repair and simplification"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for continuous self-repair and simplification"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve continuous self-repair and simplification across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting continuous self-repair and simplification"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for continuous self-repair and simplification"
+          ],
+          "tests": [
+            "exercise the fallback path for continuous self-repair and simplification"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep continuous self-repair and simplification understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct continuous self-repair and simplification"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for continuous self-repair and simplification"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for continuous self-repair and simplification"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "AGI readiness and general intelligence gap closure": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make AGI readiness and general intelligence gap closure observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for AGI readiness and general intelligence gap closure"
+          ],
+          "first_actions": [
+            "inspect current AGI readiness and general intelligence gap closure implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for AGI readiness and general intelligence gap closure"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make AGI readiness and general intelligence gap closure reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for AGI readiness and general intelligence gap closure"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for AGI readiness and general intelligence gap closure"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare AGI readiness and general intelligence gap closure for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that AGI readiness and general intelligence gap closure remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for AGI readiness and general intelligence gap closure"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for AGI readiness and general intelligence gap closure"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve AGI readiness and general intelligence gap closure across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting AGI readiness and general intelligence gap closure"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for AGI readiness and general intelligence gap closure"
+          ],
+          "tests": [
+            "exercise the fallback path for AGI readiness and general intelligence gap closure"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep AGI readiness and general intelligence gap closure understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct AGI readiness and general intelligence gap closure"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for AGI readiness and general intelligence gap closure"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for AGI readiness and general intelligence gap closure"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "lifelong learning and continual adaptation": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make lifelong learning and continual adaptation observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for lifelong learning and continual adaptation"
+          ],
+          "first_actions": [
+            "inspect current lifelong learning and continual adaptation implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for lifelong learning and continual adaptation"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make lifelong learning and continual adaptation reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for lifelong learning and continual adaptation"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for lifelong learning and continual adaptation"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare lifelong learning and continual adaptation for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that lifelong learning and continual adaptation remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for lifelong learning and continual adaptation"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for lifelong learning and continual adaptation"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve lifelong learning and continual adaptation across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting lifelong learning and continual adaptation"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for lifelong learning and continual adaptation"
+          ],
+          "tests": [
+            "exercise the fallback path for lifelong learning and continual adaptation"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep lifelong learning and continual adaptation understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct lifelong learning and continual adaptation"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for lifelong learning and continual adaptation"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for lifelong learning and continual adaptation"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "persistent self-model and metacognition": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make persistent self-model and metacognition observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for persistent self-model and metacognition"
+          ],
+          "first_actions": [
+            "inspect current persistent self-model and metacognition implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for persistent self-model and metacognition"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make persistent self-model and metacognition reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for persistent self-model and metacognition"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for persistent self-model and metacognition"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare persistent self-model and metacognition for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that persistent self-model and metacognition remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for persistent self-model and metacognition"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for persistent self-model and metacognition"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve persistent self-model and metacognition across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting persistent self-model and metacognition"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for persistent self-model and metacognition"
+          ],
+          "tests": [
+            "exercise the fallback path for persistent self-model and metacognition"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep persistent self-model and metacognition understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct persistent self-model and metacognition"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for persistent self-model and metacognition"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for persistent self-model and metacognition"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "world-state grounding and causal reasoning": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make world-state grounding and causal reasoning observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for world-state grounding and causal reasoning"
+          ],
+          "first_actions": [
+            "inspect current world-state grounding and causal reasoning implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for world-state grounding and causal reasoning"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make world-state grounding and causal reasoning reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for world-state grounding and causal reasoning"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for world-state grounding and causal reasoning"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare world-state grounding and causal reasoning for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that world-state grounding and causal reasoning remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for world-state grounding and causal reasoning"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for world-state grounding and causal reasoning"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve world-state grounding and causal reasoning across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting world-state grounding and causal reasoning"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for world-state grounding and causal reasoning"
+          ],
+          "tests": [
+            "exercise the fallback path for world-state grounding and causal reasoning"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep world-state grounding and causal reasoning understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct world-state grounding and causal reasoning"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for world-state grounding and causal reasoning"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for world-state grounding and causal reasoning"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "long-horizon autonomous planning with bounded authorization": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make long-horizon autonomous planning with bounded authorization observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for long-horizon autonomous planning with bounded authorization"
+          ],
+          "first_actions": [
+            "inspect current long-horizon autonomous planning with bounded authorization implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for long-horizon autonomous planning with bounded authorization"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make long-horizon autonomous planning with bounded authorization reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for long-horizon autonomous planning with bounded authorization"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for long-horizon autonomous planning with bounded authorization"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare long-horizon autonomous planning with bounded authorization for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that long-horizon autonomous planning with bounded authorization remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for long-horizon autonomous planning with bounded authorization"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for long-horizon autonomous planning with bounded authorization"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve long-horizon autonomous planning with bounded authorization across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting long-horizon autonomous planning with bounded authorization"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for long-horizon autonomous planning with bounded authorization"
+          ],
+          "tests": [
+            "exercise the fallback path for long-horizon autonomous planning with bounded authorization"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep long-horizon autonomous planning with bounded authorization understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct long-horizon autonomous planning with bounded authorization"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for long-horizon autonomous planning with bounded authorization"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for long-horizon autonomous planning with bounded authorization"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "cross-domain transfer and novel-task generalization": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make cross-domain transfer and novel-task generalization observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for cross-domain transfer and novel-task generalization"
+          ],
+          "first_actions": [
+            "inspect current cross-domain transfer and novel-task generalization implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for cross-domain transfer and novel-task generalization"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make cross-domain transfer and novel-task generalization reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for cross-domain transfer and novel-task generalization"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for cross-domain transfer and novel-task generalization"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare cross-domain transfer and novel-task generalization for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that cross-domain transfer and novel-task generalization remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for cross-domain transfer and novel-task generalization"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for cross-domain transfer and novel-task generalization"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve cross-domain transfer and novel-task generalization across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting cross-domain transfer and novel-task generalization"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for cross-domain transfer and novel-task generalization"
+          ],
+          "tests": [
+            "exercise the fallback path for cross-domain transfer and novel-task generalization"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep cross-domain transfer and novel-task generalization understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct cross-domain transfer and novel-task generalization"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for cross-domain transfer and novel-task generalization"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for cross-domain transfer and novel-task generalization"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
+      ],
+      "independent AGI evaluation and red-team verification": [
+        {
+          "horizon": "NOW",
+          "months": 0,
+          "outcome": "make independent AGI evaluation and red-team verification observable and testable now",
+          "prerequisites": [
+            "runtime evidence",
+            "clear ownership and consent boundaries"
+          ],
+          "signals": [
+            "verified runtime evidence for independent AGI evaluation and red-team verification"
+          ],
+          "first_actions": [
+            "inspect current independent AGI evaluation and red-team verification implementation and evidence"
+          ],
+          "tests": [
+            "run focused tests for independent AGI evaluation and red-team verification"
+          ],
+          "reevaluate_when": [
+            "new evidence",
+            "test failure",
+            "material product change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "NEXT_90_DAYS",
+          "months": 3,
+          "outcome": "make independent AGI evaluation and red-team verification reliable enough for the next 90 days",
+          "prerequisites": [
+            "passing regression tests",
+            "measurable outcome"
+          ],
+          "signals": [
+            "stable test and usage evidence for independent AGI evaluation and red-team verification"
+          ],
+          "first_actions": [
+            "define one measurable acceptance criterion for independent AGI evaluation and red-team verification"
+          ],
+          "tests": [
+            "execute regression test and inspect runtime evidence"
+          ],
+          "reevaluate_when": [
+            "regression",
+            "new dependency",
+            "new user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "ONE_YEAR",
+          "months": 12,
+          "outcome": "prepare independent AGI evaluation and red-team verification for a one-year capability horizon",
+          "prerequisites": [
+            "portable architecture",
+            "privacy and safety review",
+            "provider alternatives where relevant"
+          ],
+          "signals": [
+            "repeated evidence that independent AGI evaluation and red-team verification remains useful"
+          ],
+          "first_actions": [
+            "audit portability, privacy, safety, and provider independence for independent AGI evaluation and red-team verification"
+          ],
+          "tests": [
+            "test the highest-risk dependency or assumption for independent AGI evaluation and red-team verification"
+          ],
+          "reevaluate_when": [
+            "technology shift",
+            "policy change",
+            "cost change",
+            "user evidence"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "THREE_YEARS",
+          "months": 36,
+          "outcome": "preserve independent AGI evaluation and red-team verification across major platform and model changes",
+          "prerequisites": [
+            "portable data/provenance",
+            "versioned interfaces",
+            "fallback capability"
+          ],
+          "signals": [
+            "platform or model transition affecting independent AGI evaluation and red-team verification"
+          ],
+          "first_actions": [
+            "document migration and fallback requirements for independent AGI evaluation and red-team verification"
+          ],
+          "tests": [
+            "exercise the fallback path for independent AGI evaluation and red-team verification"
+          ],
+          "reevaluate_when": [
+            "platform transition",
+            "provider loss",
+            "architecture change"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        },
+        {
+          "horizon": "TEN_YEARS",
+          "months": 120,
+          "outcome": "keep independent AGI evaluation and red-team verification understandable and transferable across generations",
+          "prerequisites": [
+            "durable provenance",
+            "portable knowledge",
+            "human-readable documentation"
+          ],
+          "signals": [
+            "new generation or platform needs to reconstruct independent AGI evaluation and red-team verification"
+          ],
+          "first_actions": [
+            "check long-term preservation and reconstruction path for independent AGI evaluation and red-team verification"
+          ],
+          "tests": [
+            "perform a reconstruction/readability test for independent AGI evaluation and red-team verification"
+          ],
+          "reevaluate_when": [
+            "new generation",
+            "new representation format",
+            "loss of dependency"
+          ],
+          "confidence": "HYPOTHESIS",
+          "rule": "future scenario -> signals -> prerequisites -> safe present action -> test -> re-evaluate",
+          "not_prediction": true
+        }
       ]
     },
     "priority_now_actions": [
+      {
+        "action": "inspect current AGI readiness and general intelligence gap closure implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
       {
         "action": "inspect current app-store readiness and verified reputation implementation and evidence",
         "horizon": "NOW",
@@ -4729,13 +7737,37 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current conflict de-escalation and safety-aware care implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current consent-aware private memory implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current continuous self-repair and simplification implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current creator-to-commerce and revenue evidence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current cross-domain transfer and novel-task generalization implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current cross-surface feedback reconciliation implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4753,7 +7785,49 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current forward care and one-year preparedness implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global change and humanitarian world pulse implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global ecosystem and competitor intelligence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global funding, grants, sponsorships, credits, partnerships and lawful revenue discovery implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current global localization and accessibility implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global micro-signal observation and relevance pruning implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current global source scanning within authorization implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current historical conflict/outcome mapping implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4772,6 +7846,12 @@
       },
       {
         "action": "inspect current human-centered interactive world-models implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current independent AGI evaluation and red-team verification implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4807,6 +7887,18 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current lifelong learning and continual adaptation implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current long-horizon autonomous planning with bounded authorization implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current long-horizon continuity (daily/monthly/yearly/decadal) implementation and evidence",
         "horizon": "NOW",
         "months": 0,
@@ -4820,6 +7912,18 @@
       },
       {
         "action": "inspect current nonprofit finance, expenses and creator succession governance implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current peer and competitor cooperation intelligence implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current persistent self-model and metacognition implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4855,6 +7959,12 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current self-adaptive visual and interaction quality implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current self-application release testing implementation and evidence",
         "horizon": "NOW",
         "months": 0,
@@ -4879,7 +7989,19 @@
         "confidence": "HYPOTHESIS"
       },
       {
+        "action": "inspect current temporal relevance and stale-capability pruning implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
         "action": "inspect current universal learning across fields implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current universal task support and safe task routing implementation and evidence",
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
@@ -4895,21 +8017,37 @@
         "horizon": "NOW",
         "months": 0,
         "confidence": "HYPOTHESIS"
+      },
+      {
+        "action": "inspect current world-state grounding and causal reasoning implementation and evidence",
+        "horizon": "NOW",
+        "months": 0,
+        "confidence": "HYPOTHESIS"
       }
     ]
   },
   "diagnostics": {
     "summary": {
-      "total": 19,
-      "passed": 18,
+      "total": 30,
+      "passed": 29,
       "failed": 1,
       "errors": 0
     },
     "findings": [
       {
+        "task": "agi_gap_check",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
         "task": "web_intelligence",
-        "finding": "FAIL",
-        "action": "inspect_logs_before_change"
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "world_pulse",
+        "finding": "PASS",
+        "action": "carry_forward"
       },
       {
         "task": "scientific_open_research_tests",
@@ -4972,12 +8110,42 @@
         "action": "carry_forward"
       },
       {
+        "task": "global_human_conversation_learning",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "global_human_conversation_learning_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "universal_intelligence_gateway",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "universal_intelligence_gateway_tests",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
         "task": "public_reconciliation",
         "finding": "PASS",
         "action": "carry_forward"
       },
       {
+        "task": "live_browser_health",
+        "finding": "FAIL",
+        "action": "inspect_logs_before_change"
+      },
+      {
         "task": "finance_governance_audit",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "funding_revenue_intelligence",
         "finding": "PASS",
         "action": "carry_forward"
       },
@@ -5000,6 +8168,21 @@
         "task": "monetization_readiness",
         "finding": "PASS",
         "action": "carry_forward"
+      },
+      {
+        "task": "evolution",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "engine_discovery",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "self_improvement",
+        "finding": "PASS",
+        "action": "carry_forward"
       }
     ],
     "truth_rule": "Diagnostics describe this run; they do not prove live deployment without runtime evidence."
@@ -5008,19 +8191,37 @@
   "universal_learning_rule": "Every newly accessible field or capability is discovered, evidenced, tested, verified, taught and evaluated for bounded self-application through this loop.",
   "creative_bridge_rule": "When a meaningful gap is detected between domains, IMA may form a bridge hypothesis; it must be tested and evidenced before being treated as verified.",
   "foresight_rule": "For every meaningful IMA component, continuously model plausible future states across near, one-year, multi-year and long horizons; treat them as hypotheses, identify signals and prerequisites, and take only safe present actions that prepare for them.",
+  "forward_care_rule": "Every cycle must look ahead at least one year where evidence supports it, identify emerging human needs and capability gaps, and prioritize safe present preparation before avoidable problems become urgent.",
+  "global_attention_rule": "Treat every authorized IMA surface and source as one connected evidence field: website, app, GitHub, email, feedback, research, integrations, providers, devices and other permitted channels. Observe small signals, correlate them, verify them and route them through the same canonical loop.",
+  "micro_signal_rule": "Tiny regressions and opportunities count: broken links, wording, translations, icons, accessibility friction, auth/memory inconsistencies, repeated questions, provider changes and workflow failures are recorded as signals before prioritization.",
+  "relevance_pruning_rule": "Classify knowledge and capabilities as KEEP, CURRENT, EMERGING, HISTORICAL, CONTEXTUAL, STALE, IRRELEVANT, DUPLICATE, SUPERSEDED or RESTRICTED. Remove obsolete operational weight without erasing lawful historical evidence.",
+  "self_adaptation_rule": "IMA continuously evaluates identity, logo, visual language, UX, app, integrations, providers, devices, research, community, infrastructure, governance and all other layers. No self-change bypasses authorize -> change -> test -> deploy -> runtime-verify gates.",
+  "feedback_fusion_rule": "Authorized feedback from site, app, GitHub, email and connected sources is deduplicated into one evidence pipeline. Feedback is evidence, not automatic truth; recurring signals are contextualized before action.",
+  "cooperation_rule": "Relevant peers, competitors, institutions and adjacent systems are reviewed as potential learning and cooperation partners; default relationship is LEARN -> COMPARE -> RESPECT -> CONNECT -> COOPERATE WHERE BENEFICIAL. No partnership or endorsement is claimed without evidence.",
+  "universal_shoulder_rule": "IMA should support lawful tasks across domains by first understanding actual context, goal, need, risk and available capability; safety-aware support takes priority when mental or physical danger is indicated.",
+  "de_escalation_rule": "When conflict, hatred or violence indicators appear, prioritize factual clarification, dignity, de-escalation and appropriate human/emergency support; never amplify retaliation, dehumanization or fabricated certainty.",
+  "global_change_humanitarian_rule": "Observe major world changes through bounded lawful public sources; classify only as a hypothesis, preserve source/time/place/uncertainty, map likely human needs, compare verified historical outcomes, prefer nonviolent options, and connect to authorized help without autonomous external intervention.",
   "self_application_rule": "A verified capability may improve IMA itself only through the same inspect -> change -> test -> verify -> carry-forward gates.",
   "provider_independence_rule": "Separate capability from provider; record alternatives, cost, license, privacy and unresolved gaps.",
   "truth_rule": "Documentation, intention, advertised availability and generated state are not runtime proof; verification must be recorded separately.",
   "lawful_distribution_rule": "Public sharing is limited to lawful, consent-respecting, non-spam channels and authorized accounts.",
   "user_change_rule": "Every explicit request to add or change the loop is reconciled into this canonical loop contract.",
+  "agi_readiness_rule": "Every daily cycle must inspect IMA against the canonical AGI gap program, identify the highest-value unblocked gap, attempt the smallest safe canonical implementation, test and runtime-verify it, and record evidence. Documentation never counts as capability proof. No AGI claim is permitted without independent reproducible evaluation across broad novel tasks plus memory, continual learning, grounding, autonomy and safety evidence.",
+  "global_attention_charter": "docs/IMA_GLOBAL_ATTENTION_RELEVANCE_ADAPTATION_AND_BENEVOLENT_GROWTH_CHARTER.md",
   "provenance_rule": "Every present and future IMA capability is lineage-tracked from imagination/proposal through implementation, testing, deployment and verified-live evidence; provenance, limitations and contributors are preserved.",
   "cross_domain_reconciliation_rule": "All IMA domains, interfaces, memories, research, creative work, integrations, governance and future capabilities must reconcile into one canonical identity, capability lineage and single improvement loop; duplicate parallel systems are not permitted without explicit justification.",
   "multi_perspective_rule": "Review meaningful changes through relevant user, customer, executive, operator, technical, accessibility, privacy, finance, distribution, community and future lenses at micro/product/macro/system-of-systems scales and now-to-intergenerational horizons; evidence gates remain mandatory.",
   "global_integration_rule": "Every newly verified external integration is automatically ingested through the canonical daily intake, deduplicated, evidence-checked and carried into the next improvement cycle; no second daily orchestrator is created.",
+  "live_browser_continuity_rule": "LIVE-001 is continuously checked by the canonical loop. BrowserGlass/public endpoint health and security boundaries are tested automatically; ChatGPT embedded rendering, local Termux/Chrome connectivity, authentication and consequential action outcomes remain separately unverified until runtime evidence exists. Future live-browser improvement requests are reconciled to LIVE-001 rather than creating a parallel surface.",
+  "global_scan_boundary_rule": "Global discovery means broad lawful discovery within actual tool access, permissions, robots, rate limits, rights and privacy boundaries; never claim exhaustive internet coverage when it was not achieved.",
+  "ecosystem_cooperation_rule": "Other intelligences, tools, providers, infrastructure and competitors are evaluated for learning, interoperability and beneficial cooperation. No impersonation, sabotage, manipulation, private-data collection or unsupported partnership claim.",
   "global_user_benefit_rule": "Verified capabilities are evaluated for safe, lawful, consent-respecting reuse across IMA users without exposing private memory or private identity data.",
   "world_model_rule": "Interactive world models are simulations, not reality. Use them for bounded exploration, education and hypothesis testing; preserve provenance, human control and reversible actions, and require real-world validation for high-impact decisions. Do not claim a live world-model provider integration unless independently verified.",
   "human_agency_rule": "IMA must preserve meaningful human agency: people should be able to understand consequential AI behavior at an appropriate level, question it, challenge it, obtain human review, and know who is accountable.",
   "finance_truth_rule": "Revenue and expenses require evidence; estimates, views, followers, eligibility and projections are never income; no autonomous spending or financial commitment is permitted.",
+  "funding_revenue_loop_rule": "The canonical loop continuously scans global lawful funding and revenue routes, prioritizing zero-upfront-cost paths. It must verify current status, deadline, amount, geography, recipient/entity eligibility, application cost, payment mechanics, source authority, and concrete activation step. It must keep only actionable routes in the live registry, prune closed/stale/non-fit routes, distinguish revenue from grants/investment/credits, and record what was achieved, what was not, what can be done now, what is blocked and the smallest human action needed. It may prepare evidence packs, drafts, code, disclosures and activation infrastructure without spending money or making legal attestations. It must not submit legally binding applications, accept terms, add payment methods, purchase, upgrade paid plans, or claim funds as received without human authorization and provider evidence.",
+  "funding_learning_rule": "Each verified funding or revenue outcome becomes economic learning: compare expected value, effort, eligibility, conversion and actual result; update prioritization and future search criteria. Prefer routes that improve both IMA sustainability and public benefit, while never allowing financial incentives to alter factual, safety or governance conclusions.",
+  "global_update_rule": "World changes are not only news: funding windows, program eligibility, provider pricing, payment rails, AI access tiers, regulation, partnership programs and compute-credit availability are treated as operational signals. Re-check them through the same evidence and stale-pruning gates and continuously evolve the loop contract when reliable evidence shows a better method.",
   "finance_governance_spec": "Use docs/IMA_GLOBAL_NONPROFIT_CHARTER.md, docs/IMA_FINANCIAL_LEDGER_SCHEMA.json, docs/IMA_CREATOR_SUCCESSION_AND_ESTATE.md and data/IMA_FINANCIAL_EVIDENCE_LEDGER.json as canonical specifications. Keep personal creator property, creator compensation, nonprofit operating costs, restricted funds and humanitarian/community benefit separate. No legal nonprofit status is claimed without registration evidence. No fixed surplus percentages are inferred.",
   "nonprofit_creator_separation_rule": "Public-benefit mission assets remain separate from Ori Cohen personal property, creator compensation, royalties and estate rights; legal nonprofit status is never inferred from repository governance.",
   "surplus_allocation_rule": "refunds/chargebacks/required_taxes -> verified_transaction_and_platform_fees -> authorized_operating_expenses -> documented_creator_compensation_or_license_royalty -> required_reserve -> nonprofit_mission_reinvestment -> authorized_humanitarian_or_community_benefit; no fixed percentages without explicit approval.",

@@ -1,10 +1,6 @@
 {
   "schema": "IMA-PUBLIC-RECONCILIATION-1.0",
-<<<<<<< Updated upstream
-  "timestamp": "2026-11-03T14:30:22+00:00",
-=======
-  "timestamp": "2026-11-03T14:30:46+00:00",
->>>>>>> Stashed changes
+  "timestamp": "2026-11-23T11:01:00+00:00",
   "status": "SOURCE_RECONCILED",
   "runtime_status": "NOT_VERIFIED",
   "truth_rule": "Source code presence is not runtime proof.",
@@ -12,7 +8,7 @@
     {
       "surface": "app",
       "status": "IMPLEMENTED",
-      "evidence": "ima-ui/src/App.jsx"
+      "evidence": "ima-ui/src/PublicApp.jsx"
     },
     {
       "surface": "i18n",
@@ -58,13 +54,13 @@
   "checks": {
     "google_identity_flow_present": true,
     "chat_entry_present": true,
-    "memory_controls_present": true,
-    "accessibility_controls_present": true,
+    "memory_controls_present": false,
+    "accessibility_controls_present": false,
     "rtl_localization_present": true,
-    "community_entry_present": true,
-    "shop_entry_present": true,
-    "media_entry_present": true,
-    "install_pwa_entry_present": true
+    "community_entry_present": false,
+    "shop_entry_present": false,
+    "media_entry_present": false,
+    "install_pwa_entry_present": false
   },
   "next_gate": "browser/API/deployment verification for public runtime"
 }
