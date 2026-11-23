@@ -6,10 +6,12 @@ import './App.css';
 import { registerContinuity } from './services/deviceContinuity';
 import { scheduleDeviceHealth } from './services/deviceHealth';
 import { startImaUpdatePlane } from './services/updateCoordinator';
+import { initializeImaAnalytics } from './services/analytics';
 
 registerContinuity();
 scheduleDeviceHealth();
 startImaUpdatePlane();
+initializeImaAnalytics();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
