@@ -8,7 +8,6 @@ and keeps or reverts the change. No provider credentials are stored in the repos
 from __future__ import annotations
 import json, os, subprocess, tempfile
 from pathlib import Path
-from . import __init__ if False else None
 ROOT=Path(__file__).resolve().parents[2]
 STATE=ROOT/".ima/evolution/SELF_APPLICATION_STATE.json"
 GATEWAY=ROOT/".ima/intelligence/universal_intelligence_gateway.py"
