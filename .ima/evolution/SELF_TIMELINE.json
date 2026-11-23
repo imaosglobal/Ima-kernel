@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-23T11:26:35+00:00",
+  "generated_at": "2026-11-23T13:22:21+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "commit": "059e56690375eff79b3e1d1849cf2b084b30a9e3",
-      "timestamp": "2026-11-23T11:20:47Z",
-      "event": "commit",
-      "summary": "chore: record unified IMA loop cycle [skip ci]",
-      "source": "git"
-    },
-    {
-      "timestamp": "2026-11-23T11:26:33+00:00",
+      "timestamp": "2026-11-23T13:22:19+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-23T11:26:34+00:00",
+      "timestamp": "2026-11-23T13:22:20+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-23T11:26:34+00:00",
+      "timestamp": "2026-11-23T13:22:20+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "commit": "89f7b5ea74a5b74949b18fff9d7c0a9933327d7c",
+      "timestamp": "2026-11-23T15:22:06+02:00",
+      "event": "commit",
+      "summary": "IP: refresh PIIW prior-art and claim-screening evidence",
+      "source": "git"
     }
   ]
 }
