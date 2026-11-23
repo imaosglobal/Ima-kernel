@@ -75,7 +75,8 @@ def now_local(): return datetime.now(timezone.utc).astimezone(TZ).replace(micros
 
 def due(now):
     tasks=["agi_gap_check","web_intelligence","world_pulse","scientific_open_research_tests","foresight_tests","culture_tests","human_intelligence_tests","unified_loop_tests","universal_learning_tests","self_application_tests","creative_bridge_tests","human_agency_tests","world_model_tests","world_model_availability","global_integration_intake","global_human_conversation_learning","global_human_conversation_learning_tests","universal_intelligence_gateway","universal_intelligence_gateway_tests","public_reconciliation","live_browser_health","finance_governance_audit","funding_revenue_intelligence","distribution","capability_contract","growth_cycle","monetization_readiness"]
-    if now.hour%6==0: tasks += ["evolution","engine_discovery","self_improvement"]
+    if now.hour%6==0: tasks += ["evolution","engine_discovery"]
+    tasks += ["self_improvement"]
     if now.hour==2: tasks += ["scientific_open_research"]
     if now.hour==3: tasks += ["community_frontier","product_qa"]
     if now.hour==4: tasks += ["capability_radar"]
