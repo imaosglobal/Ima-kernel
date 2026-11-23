@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-23T11:16:25+00:00",
+  "generated_at": "2026-11-23T11:26:35+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-23T11:16:23+00:00",
+      "commit": "059e56690375eff79b3e1d1849cf2b084b30a9e3",
+      "timestamp": "2026-11-23T11:20:47Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-23T11:26:33+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-23T11:16:24+00:00",
+      "timestamp": "2026-11-23T11:26:34+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-23T11:16:25+00:00",
+      "timestamp": "2026-11-23T11:26:34+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "1981b1161e4504049e64e1c73b75653c68355827",
-      "timestamp": "2026-11-23T13:16:05+02:00",
-      "event": "commit",
-      "summary": "fix: align Pages gate with canonical PublicApp",
-      "source": "git"
     }
   ]
 }
