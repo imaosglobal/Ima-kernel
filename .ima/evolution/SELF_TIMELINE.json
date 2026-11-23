@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-23T17:45:25+00:00",
+  "generated_at": "2026-11-23T22:58:48+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-23T17:45:23+00:00",
+      "commit": "e650a0215324c605893b908f71f5f9a4a5f8631c",
+      "timestamp": "2026-11-23T17:49:49Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-23T22:58:47+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-23T17:45:24+00:00",
+      "timestamp": "2026-11-23T22:58:48+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-23T17:45:24+00:00",
+      "timestamp": "2026-11-23T22:58:48+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "71226383f7a267236403e727422503322f06a822",
-      "timestamp": "2026-11-23T19:45:05+02:00",
-      "event": "commit",
-      "summary": "Update funding, credits, partnerships and public-market scan 2026-11-23",
-      "source": "git"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema": "IMA-UNIFIED-LOOP-1.4",
-  "timestamp": "2026-11-23T19:45:25+02:00",
+  "timestamp": "2026-11-24T00:58:49+02:00",
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -97,7 +97,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "34Z\"\n    },\n    {\n      \"id\": \"8d83fbfc47ac58f7eccf\",\n      \"url\": \"https://ladybird.org/posts/alpha/\",\n      \"title\": \"Ladybird Is Now in Alpha\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T17:45:34Z\"\n    },\n    {\n      \"id\": \"5646e3e6baf90fc7dea2\",\n      \"url\": \"https://www.reddit.com/r/GamingLeaksAndRumours/comments/1y3jzqe/cyberleek_posted_the_gta_6_xbox_build_executable/\",\n      \"title\": \"GTA 6 Xbox executable released early by cyberleek\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T17:45:34Z\"\n    },\n    {\n      \"id\": \"ab296f664d7ebf6624e8\",\n      \"url\": \"https://boland.dev/snet/\",\n      \"title\": \"Building a wireless network adapter for the Super Nintendo\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T17:45:34Z\"\n    },\n    {\n      \"id\": \"cf5164636ad3b77e7fd6\",\n      \"url\": \"https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html\",\n      \"title\": \"Nvidia Reinstates Jensen Huang as CEO\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T17:45:34Z\"\n    },\n    {\n      \"id\": \"d497cc342864454896e0\",\n      \"url\": \"https://github.com/mikuta0407/win4wine\",\n      \"title\": \"Win4wine – Run Windows Shell as the Linux Desktop on Wine\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T17:45:34Z\"\n    }\n  ]\n}\n",
+      "stdout_tail": "  \"observed_at\": \"2026-11-23T22:58:50Z\"\n    },\n    {\n      \"id\": \"53510b5370cd80960ab8\",\n      \"url\": \"https://twitter.com/ylecun/status/2124550037912920090\",\n      \"title\": \"Dario is hyping the dangers so OSS models are illegal and he stays in control\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T22:58:50Z\"\n    },\n    {\n      \"id\": \"8d83fbfc47ac58f7eccf\",\n      \"url\": \"https://ladybird.org/posts/alpha/\",\n      \"title\": \"Ladybird is now in alpha\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T22:58:50Z\"\n    },\n    {\n      \"id\": \"9f183e9f9f75c876517d\",\n      \"url\": \"https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF\",\n      \"title\": \"NariQ: BF16-level Qwen3.8-27B in a 10 GB file\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T22:58:50Z\"\n    },\n    {\n      \"id\": \"74d816fb25305bd550db\",\n      \"url\": \"https://hermitcrm.io/\",\n      \"title\": \"Show HN: Hermit CRM – Free open-source CRM for solopreneurs\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T22:58:50Z\"\n    },\n    {\n      \"id\": \"f1db7ce98881d8901597\",\n      \"url\": \"https://z.ai/blog/glm-5.4\",\n      \"title\": \"GLM-5.4: Toward generalized coding with our first loop transformer\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-23T22:58:50Z\"\n    }\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -127,7 +127,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.295s\n\nOK\n"
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.326s\n\nOK\n"
     },
     {
       "task": "foresight_tests",
@@ -217,7 +217,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_capability_requires_verified_state (test_universal_learning_engine.UniversalLearningEngineTests.test_capability_requires_verified_state) ... ok\ntest_domains_connect_both_ways (test_universal_learning_engine.UniversalLearningEngineTests.test_domains_connect_both_ways) ... ok\ntest_emerging_field_is_only_a_proposal (test_universal_learning_engine.UniversalLearningEngineTests.test_emerging_field_is_only_a_proposal) ... ok\ntest_evidence_and_unknowns_are_preserved (test_universal_learning_engine.UniversalLearningEngineTests.test_evidence_and_unknowns_are_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+      "stderr_tail": "test_capability_requires_verified_state (test_universal_learning_engine.UniversalLearningEngineTests.test_capability_requires_verified_state) ... ok\ntest_domains_connect_both_ways (test_universal_learning_engine.UniversalLearningEngineTests.test_domains_connect_both_ways) ... ok\ntest_emerging_field_is_only_a_proposal (test_universal_learning_engine.UniversalLearningEngineTests.test_emerging_field_is_only_a_proposal) ... ok\ntest_evidence_and_unknowns_are_preserved (test_universal_learning_engine.UniversalLearningEngineTests.test_evidence_and_unknowns_are_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
     },
     {
       "task": "self_application_tests",
@@ -310,7 +310,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"generated_at\": \"2026-11-23T17:47:54.317Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+      "stdout_tail": "{\n  \"generated_at\": \"2026-11-23T23:01:41.731Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
       "stderr_tail": ""
     },
     {
@@ -350,7 +350,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "D\",\n      \"provenance\": \"Future adapter contract\"\n    },\n    {\n      \"id\": \"xai\",\n      \"provider\": \"xAI / Grok\",\n      \"capabilities\": [\n        \"text_generation\",\n        \"vision\",\n        \"future_tool_use\"\n      ],\n      \"interface\": \"native_api\",\n      \"auth\": {\n        \"env\": \"XAI_API_KEY\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider registry; runtime authorization must be checked\",\n      \"configured\": false,\n      \"last_observed_at\": 1795456074.4525688\n    },\n    {\n      \"id\": \"whatsapp_ai\",\n      \"provider\": \"WhatsApp AI / channel adapter\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"future_action_bridge\"\n      ],\n      \"interface\": \"host_adapter\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider-neutral host adapter contract; no direct connection claimed until verified\"\n    },\n    {\n      \"id\": \"generic_chat_host\",\n      \"provider\": \"Any future compatible chat host\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"mcp_or_api_adapter\"\n      ],\n      \"interface\": \"adapter_contract\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA universal distribution contract\"\n    }\n  ],\n  \"private_external_fanout\": false\n}\n",
+      "stdout_tail": "ED\",\n      \"provenance\": \"Future adapter contract\"\n    },\n    {\n      \"id\": \"xai\",\n      \"provider\": \"xAI / Grok\",\n      \"capabilities\": [\n        \"text_generation\",\n        \"vision\",\n        \"future_tool_use\"\n      ],\n      \"interface\": \"native_api\",\n      \"auth\": {\n        \"env\": \"XAI_API_KEY\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider registry; runtime authorization must be checked\",\n      \"configured\": false,\n      \"last_observed_at\": 1795474901.846511\n    },\n    {\n      \"id\": \"whatsapp_ai\",\n      \"provider\": \"WhatsApp AI / channel adapter\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"future_action_bridge\"\n      ],\n      \"interface\": \"host_adapter\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA provider-neutral host adapter contract; no direct connection claimed until verified\"\n    },\n    {\n      \"id\": \"generic_chat_host\",\n      \"provider\": \"Any future compatible chat host\",\n      \"capabilities\": [\n        \"conversation_channel\",\n        \"mcp_or_api_adapter\"\n      ],\n      \"interface\": \"adapter_contract\",\n      \"auth\": {\n        \"mode\": \"provider_defined\"\n      },\n      \"privacy_scope\": \"explicitly_authorized_only\",\n      \"status\": \"DISCOVERED\",\n      \"provenance\": \"IMA universal distribution contract\"\n    }\n  ],\n  \"private_external_fanout\": false\n}\n",
       "stderr_tail": ""
     },
     {
@@ -390,7 +390,7 @@
       ],
       "status": "FAIL",
       "returncode": 1,
-      "stdout_tail": "-width,initial-scale=1,viewport-fit=cover\\\">\\n  <title>IMA — Live Browser</title>\\n  <style>\\n    :root{color-scheme:dark}\\n    *{box-sizing:border-box}\\n    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif;height:100%;overflow:hidden}\\n    body{padding:8px;display:flex;flex-direction:column;gap:8px}\\n    .bar,.tools{display:flex;gap:7px;align-items:cen\"\n    },\n    \"ima_public\": {\n      \"ok\": false,\n      \"status\": 404,\n      \"url\": \"https://imaosglobal.github.io/\",\n      \"body_head\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta http-equiv=\\\"Content-type\\\" content=\\\"text/html; charset=utf-8\\\">\\n    <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\\\">\\n    <title>Site not found &middot; GitHub Pages</title>\\n    <style type=\\\"text/css\\\" media=\\\"screen\\\">\\n      body {\\n        background-color: #f1f1f1;\\n        margin: 0;\\n        font-family: \\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif;\\n      }\\n\\n      .contai\"\n    },\n    \"browserglass_session_without_embed\": {\n      \"ok\": false,\n      \"status\": 403,\n      \"url\": \"https://ima-browserglass.onrender.com/api/session\",\n      \"body_head\": \"{\\\"error\\\":\\\"IMA embed required\\\"}\"\n    }\n  },\n  \"truth_boundary\": \"This check proves public endpoint behavior only; it does not prove ChatGPT MCP rendering, human control, local Termux/Chrome connectivity, Google authentication, or successful consequential actions.\"\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LIVE-BROWSER-HEALTH-1.0\",\n  \"timestamp\": \"2026-11-23T23:02:14+00:00\",\n  \"status\": \"FAIL\",\n  \"checks\": {\n    \"browserglass_health\": {\n      \"ok\": false,\n      \"error\": \"TimeoutError('The read operation timed out')\"\n    },\n    \"browserglass_root\": {\n      \"ok\": false,\n      \"error\": \"TimeoutError('The read operation timed out')\"\n    },\n    \"ima_public\": {\n      \"ok\": false,\n      \"status\": 404,\n      \"url\": \"https://imaosglobal.github.io/\",\n      \"body_head\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta http-equiv=\\\"Content-type\\\" content=\\\"text/html; charset=utf-8\\\">\\n    <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\\\">\\n    <title>Site not found &middot; GitHub Pages</title>\\n    <style type=\\\"text/css\\\" media=\\\"screen\\\">\\n      body {\\n        background-color: #f1f1f1;\\n        margin: 0;\\n        font-family: \\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif;\\n      }\\n\\n      .contai\"\n    },\n    \"browserglass_session_without_embed\": {\n      \"ok\": false,\n      \"status\": 403,\n      \"url\": \"https://ima-browserglass.onrender.com/api/session\",\n      \"body_head\": \"{\\\"error\\\":\\\"IMA embed required\\\"}\"\n    }\n  },\n  \"truth_boundary\": \"This check proves public endpoint behavior only; it does not prove ChatGPT MCP rendering, human control, local Termux/Chrome connectivity, Google authentication, or successful consequential actions.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -423,7 +423,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-23T17:49:47Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-23T23:04:09Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -446,7 +446,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-23T17:49:47.461637+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-23T23:04:10.154565+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -458,6 +458,28 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "{\n  \"schema\": \"IMA-MONETIZATION-READINESS-1.2\",\n  \"status\": \"READY_FOR_HUMAN_AUTHORIZATION\",\n  \"payment_router_mode\": \"multi_provider_router\",\n  \"primary_payment_provider\": \"paypal\",\n  \"providers\": [\n    \"paypal\",\n    \"google_pay\",\n    \"apple_pay\",\n    \"github_sponsors\",\n    \"youtube\",\n    \"open_collective\",\n    \"future_provider\"\n  ],\n  \"blockers\": [],\n  \"findings\": [\n    {\n      \"route\": \"Multi-provider payment router\",\n      \"status\": \"HUMAN_ACTIVATION_REQUIRED\",\n      \"reason\": \"Provider configuration in the repository does not prove live merchant activation, eligibility, compliance approval or payout permission.\"\n    },\n    {\n      \"route\": \"Revenue ledger\",\n      \"status\": \"READY_FOR_EVIDENCE\",\n      \"principle\": \"actual_confirmed_revenue_only\",\n      \"rule\": \"views/followers/eligibility/estimates/projections are never income\"\n    }\n  ],\n  \"actual_revenue\": 0,\n  \"actual_revenue_claimed\": false,\n  \"autonomous_spending\": false,\n  \"next_actions\": [\n    \"activate and verify each desired provider externally\",\n    \"complete required merchant/business, bank, compliance and payout setup\",\n    \"store API credentials only in deployment/runtime secrets\",\n    \"verify a human-authorized real transaction if appropriate\",\n    \"record actual receipt/payout evidence\",\n    \"verify YouTube and GitHub Sponsors separately\"\n  ]\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "evolution",
+      "command": [
+        "python",
+        ".ima/evolution/EVOLUTION_CONTROLLER.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": ", technology, creativity and human experience without replacing IMA's core identity.\",\n  \"knowledge_scope\": {\n    \"past\": \"learn from recorded human knowledge and inventions\",\n    \"present\": \"monitor verified current knowledge, releases and capabilities\",\n    \"future\": \"detect and stage new capabilities when evidence becomes available\",\n    \"domains\": \"all domains, including domains not yet named\"\n  },\n  \"learning_loop\": [\n    \"discover\",\n    \"classify\",\n    \"cross_check\",\n    \"extract_capability\",\n    \"normalize_source\",\n    \"distribute_learning_plan\",\n    \"benchmark\",\n    \"integrate\",\n    \"verify\",\n    \"record_provenance\",\n    \"learn_from_results\",\n    \"reassess\"\n  ],\n  \"capability_node_types\": [\n    \"knowledge\",\n    \"model\",\n    \"engine\",\n    \"game_engine\",\n    \"rendering\",\n    \"device\",\n    \"protocol\",\n    \"tool\",\n    \"human_skill\",\n    \"world_component\",\n    \"experience\",\n    \"source\",\n    \"sensor\",\n    \"infrastructure\",\n    \"human\",\n    \"domain\"\n  ],\n  \"continuous_benchmarking\": true,\n  \"multi_engine_composition\": true,\n  \"truth_rules_active\": {\n    \"never_claim_unverified_capability\": true,\n    \"discovery_is_not_adoption\": true,\n    \"provider_connection_requires_real_credentials_or_public_access\": true,\n    \"generated_knowledge_requires_provenance\": true,\n    \"conflicts_are_recorded_and_resolved_with_evidence\": true,\n    \"obsolete_capabilities_are_retired_without_erasing_history\": true,\n    \"core_identity_remains_stable\": true\n  },\n  \"external_manifests_seen\": false\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "task": "engine_discovery",
+      "command": [
+        "python",
+        "learning/engine_discovery.py"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"last_run\": 1795475050.2293572,\n  \"discovered_count\": 0,\n  \"staged_ids\": [],\n  \"routable_ids\": [\n    \"openai_gpt_image_2_5\",\n    \"runway_seedream_5\",\n    \"runway_nano_banana_pro\",\n    \"runway_gen4\",\n    \"openart\"\n  ],\n  \"provider_hints\": {\n    \"openai\": \"https://developers.openai.com/api/docs/changelog\",\n    \"runway\": \"https://docs.dev.runwayml.com/\",\n    \"openart\": \"https://openart.ai/\"\n  }\n}\n",
       "stderr_tail": ""
     },
     {
@@ -8006,8 +8028,8 @@
   },
   "diagnostics": {
     "summary": {
-      "total": 28,
-      "passed": 27,
+      "total": 30,
+      "passed": 29,
       "failed": 1,
       "errors": 0
     },
@@ -8144,6 +8166,16 @@
       },
       {
         "task": "monetization_readiness",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "evolution",
+        "finding": "PASS",
+        "action": "carry_forward"
+      },
+      {
+        "task": "engine_discovery",
         "finding": "PASS",
         "action": "carry_forward"
       },
