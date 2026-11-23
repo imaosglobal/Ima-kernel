@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0.0",
+  "product": "IMA",
+  "name": "Canonical IMA Intelligence Registry",
+  "updated_at": "2026-11-23",
+  "lifecycle": [
+    "DISCOVERED",
+    "ELIGIBLE",
+    "ADAPTER-READY",
+    "AUTHORIZED",
+    "CONNECTED",
+    "RUNTIME-VERIFIED",
+    "MONITORED"
+  ],
+  "policy": {
+    "connected_requires": [
+      "authorized_credentials_or_explicit_host_permission",
+      "successful_connection_evidence"
+    ],
+    "runtime_verified_requires": [
+      "successful_live_request_or_interaction",
+      "captured_result_evidence",
+      "boundary_check"
+    ],
+    "monitored_requires": [
+      "runtime_verified",
+      "repeatable_health_check"
+    ],
+    "unknown_defaults_to": "DISCOVERED",
+    "no_silent_cross_provider_sharing": true,
+    "minimum_necessary_context": true,
+    "provenance_required": true,
+    "consequential_actions_require_explicit_user_confirmation": true,
+    "mediation": "All intelligence-to-intelligence communication is mediated by IMA and requires explicit authorization; no direct A↔B path is canonical."
+  },
+  "canonical_core": {
+    "role": "IMA is an intelligence itself, not merely a router.",
+    "operations": [
+      "answer_directly",
+      "ask_one_or_more_intelligences",
+      "compare_and_synthesize",
+      "surface_disagreement_and_uncertainty",
+      "answer_other_intelligences"
+    ],
+    "canonical_runtime": "imaosglobal/Ima-kernel",
+    "live_surface": "LIVE-001 / BrowserGlass / Device Bridge"
+  },
+  "candidates": [
+    {
+      "id": "openai-chatgpt-api",
+      "provider": "OpenAI",
+      "intelligence": "ChatGPT / OpenAI API",
+      "protocols": [
+        "MCP"
+      ],
+      "status": "ELIGIBLE",
+      "evidence": [
+        "OpenAI Help Center custom MCP connections"
+      ],
+      "official_evidence": [
+        "https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt"
+      ],
+      "authorization": "Business/Enterprise/Edu web for full MCP; Pro read/fetch; Free no custom MCP; mobile no custom MCP connection",
+      "free_low_cost_path": "No documented Free-plan custom MCP connection path",
+      "ima_path": "Existing LIVE-001 request; current account blocked by plan/surface entitlement",
+      "blocker": "Free Android ChatGPT cannot connect custom MCP servers; no documented Free beta/test path",
+      "next_gate": "AUTHORIZED_ACCOUNT_OR_SUPPORTED_OPENAI_HOST_SURFACE",
+      "evidence_date": "2026-11-23"
+    },
+    {
+      "id": "anthropic-claude-api",
+      "provider": "Anthropic",
+      "intelligence": "Claude API / managed agents",
+      "protocols": [
+        "MCP"
+      ],
+      "status": "ADAPTER-READY",
+      "evidence": [
+        "Anthropic official MCP connector documentation"
+      ],
+      "official_evidence": [
+        "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector"
+      ],
+      "authorization": "API credentials plus remote public HTTP MCP server; tool calls only through current connector",
+      "free_low_cost_path": "Not verified in this run",
+      "ima_path": "Canonical MCP adapter can target remote HTTPS MCP endpoint; no credential connected",
+      "blocker": "No authorized Anthropic credential in IMA runtime",
+      "next_gate": "AUTHORIZED_ANTHROPIC_CREDENTIAL_THEN_BOUNDED_LIVE_TEST",
+      "evidence_date": "2026-11-23"
+    },
+    {
+      "id": "google-gemini-api",
+      "provider": "Google",
+      "intelligence": "Gemini API / Gemini Enterprise Agent Platform",
+      "protocols": [
+        "MCP",
+        "function-calling",
+        "A2A ecosystem"
+      ],
+      "status": "ADAPTER-READY",
+      "evidence": [
+        "Google official Gemini remote MCP credential documentation",
+        "Google Cloud official remote MCP documentation",
+        "Google official A2A announcement"
+      ],
+      "official_evidence": [
+        "https://ai.google.dev/gemini-api/docs/agent-credentials",
+        "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/use-agent-platform-mcp",
+        "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+      ],
+      "authorization": "API/project credentials; remote MCP may use stored credentials; enterprise agent platform uses IAM/OAuth depending on service",
+      "free_low_cost_path": "Gemini Developer API has a Free tier for eligible models/usage; exact model availability changes and must be rechecked before connection",
+      "ima_path": "Canonical remote MCP adapter path; no Google credential connected",
+      "blocker": "No authorized Google credential in IMA runtime",
+      "next_gate": "AUTHORIZED_GOOGLE_CREDENTIAL_THEN_BOUNDED_LIVE_TEST",
+      "evidence_date": "2026-11-23"
+    },
+    {
+      "id": "microsoft-copilot",
+      "provider": "Microsoft",
+      "intelligence": "Copilot Studio / agent ecosystem",
+      "protocols": [
+        "MCP",
+        "A2A ecosystem"
+      ],
+      "status": "ADAPTER-READY",
+      "evidence": [
+        "Microsoft official Copilot Studio MCP documentation"
+      ],
+      "official_evidence": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp"
+      ],
+      "authorization": "Microsoft account, tenant/environment and connector permissions as applicable",
+      "free_low_cost_path": "Not verified in this run",
+      "ima_path": "MCP-compatible host/provider candidate; no tenant credential or runtime authorization connected",
+      "blocker": "No authorized Microsoft tenant/connection available to IMA",
+      "next_gate": "AUTHORIZED_MICROSOFT_TENANT_THEN_BOUNDED_LIVE_TEST",
+      "evidence_date": "2026-11-23"
+    },
+    {
+      "id": "meta-llama",
+      "provider": "Meta",
+      "intelligence": "Meta AI / Llama family",
+      "protocols": [
+        "tool-calling ecosystem"
+      ],
+      "status": "ELIGIBLE",
+      "evidence": [
+        "Meta official Llama/Meta AI documentation confirms Meta AI and openly released Llama models; interoperability protocol support for a specific Meta-hosted MCP/A2A surface was not established in this run"
+      ],
+      "official_evidence": [
+        "https://ai.meta.com/blog/meta-llama-3-meta-ai-responsibility/"
+      ],
+      "authorization": "Depends on selected Meta-hosted or self-hosted surface",
+      "free_low_cost_path": "Llama models are available for developer use; exact current hosting/API route and terms must be verified per selected model",
+      "ima_path": "Self-hosted/local Llama adapter is technically plausible; no selected authorized endpoint is connected",
+      "blocker": "No verified official Meta-hosted MCP/A2A endpoint selected for IMA in this run",
+      "next_gate": "SELECT_OFFICIAL_META_ENDPOINT_THEN_ADAPTER_AND_LIVE_TEST",
+      "evidence_date": "2026-11-23"
+    },
+    {
+      "id": "future-provider-host",
+      "provider": "Future providers",
+      "intelligence": "New AI model/provider/host/agent runtime",
+      "protocols": [
+        "MCP",
+        "A2A",
+        "future open interoperability protocols"
+      ],
+      "status": "DISCOVERED",
+      "evidence": [
+        "Canonical continuous discovery policy"
+      ],
+      "official_evidence": [],
+      "authorization": "Provider-specific",
+      "free_low_cost_path": "Provider-specific",
+      "ima_path": "Registry-first discovery; no capability promotion without official evidence",
+      "blocker": "Candidate not yet identified",
+      "next_gate": "OFFICIAL_EVIDENCE_AND_PROTOCOL_CAPABILITY_CHECK",
+      "evidence_date": "2026-11-23"
+    }
+  ],
+  "openai_support": {
+    "cases": [
+      "20595626",
+      "19768893"
+    ],
+    "thread_id": "1a1cb3f7418ba60f",
+    "last_support_reply_utc": "2026-11-22T12:01:53Z",
+    "current_result": "No account-level enablement, beta enrollment, roadmap commitment, or product tracking reference was provided. OpenAI states custom MCP connections are not supported on Free and setup is limited to eligible plans on web; no additional troubleshooting or subscription purchase is needed.",
+    "canonical_blocker": "Free Android + no custom MCP connection entitlement",
+    "action": "Keep existing cases linked/open; do not purchase a plan or create a parallel browser system."
+  },
+  "evidence_sources": {
+    "openai_custom_mcp": "https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt",
+    "anthropic_mcp_connector": "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector",
+    "google_mcp_credentials": "https://ai.google.dev/gemini-api/docs/agent-credentials",
+    "google_remote_mcp": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/use-agent-platform-mcp",
+    "google_a2a": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
+    "microsoft_copilot_mcp": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp",
+    "meta_llama": "https://ai.meta.com/blog/meta-llama-3-meta-ai-responsibility/"
+  }
+}
