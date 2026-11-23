@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'ima-analytics-anonymous-id';
-const API_URL = (import.meta.env.VITE_IMA_ANALYTICS_URL || '').replace(/\/$/, '');
+const API_URL = (import.meta.env.VITE_IMA_ANALYTICS_URL || 'https://ima-915m.onrender.com/ima-api/analytics').replace(/\/$/, '');
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || '';
 
 function anonymousId() {
@@ -40,10 +40,8 @@ export function trackImaEvent(name, properties = {}) {
 
   if (API_URL) {
     try {
-      navigator.sendBeacon?.(
-        `${API_URL}/events`,
-        new Blob([JSON.stringify(payload)], { type: 'application/json' })
-      );
+      const token = localStorage.getItem('ima-public-session-token') || '';
+      fetch(API_URL, {method:'POST',keepalive:true,headers:{'Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})},body:JSON.stringify({event:name.replace(/^ima_/,'').slice(0,64),properties:{...properties,language:payload.language,timezone:Intl.DateTimeFormat().resolvedOptions().timeZone||'unknown',locale:navigator.language||'unknown',path:payload.path}})}).catch(()=>{});
     } catch (error) { void error; }
   }
 
