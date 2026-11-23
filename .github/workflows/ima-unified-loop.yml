@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   unified:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message || '', '[skip ci]')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -57,7 +57,7 @@ jobs:
           PY
       - name: Run the single canonical IMA loop
         run: python .ima/loop/unified_loop.py
-      - name: Persist canonical loop state
+      - name: Persist canonical loop state and validated self-improvement
         run: |
           git config user.name "IMA Unified Loop"
           git config user.email "actions@users.noreply.github.com"
@@ -72,14 +72,42 @@ jobs:
             exit 1
           fi
           git add -A .ima/loop/UNIFIED_LOOP_STATE.json .ima/public_reconciliation/state.json .ima/multi_perspective/review.json .ima/distribution/prepared_queue.json .ima/growth/GLOBAL_GROWTH_STATE.json .ima/web_intelligence/state.json .ima/world_pulse/state.json artifacts/web-intelligence artifacts/world-pulse .ima/evolution .ima/journal/daily docs/IMA_SELF_EVOLUTION_TIMELINE.md
+          if [ "$(python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('.ima/evolution/SELF_APPLICATION_STATE.json')
+          try:
+              s=json.loads(p.read_text())
+              print('1' if s.get('status')=='APPLIED_AND_TESTED' else '0')
+          except Exception:
+              print('0')
+          PY
+          )" = "1" ]; then
+            git add -A ima-ui scripts tests learning connectors docs
+          fi
           git diff --cached --quiet && exit 0
-          git commit -m "chore: record unified IMA loop cycle"
+          git commit -m "chore: record unified IMA loop cycle [skip ci]"
           git push
-      - name: Trigger canonical Pages deployment
+      - name: Verify public runtime and trigger canonical Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+          echo "Checking canonical public origin..."
+          for i in $(seq 1 12); do
+            if curl -fsSL --max-time 15 https://imaosglobal.github.io/ | grep -qiE 'IMA|אמא'; then
+              echo "IMA_PUBLIC_ORIGIN=REACHABLE"
+              break
+            fi
+            if [ "$i" = "12" ]; then echo "::error::IMA public origin did not become reachable"; exit 1; fi
+            sleep 10
+          done
+          echo "Checking canonical IMA API auth/runtime endpoints..."
+          curl -fsSL --max-time 20 https://ima-915m.onrender.com/ima-api/auth/config >/tmp/ima-auth.json
+          python -m json.tool /tmp/ima-auth.json >/dev/null
+          curl -fsSL --max-time 20 https://ima-915m.onrender.com/ima-api/runtime >/tmp/ima-runtime.json
+          python -m json.tool /tmp/ima-runtime.json >/dev/null
+          echo "IMA_RUNTIME_ENDPOINTS=REACHABLE"
           gh api --method POST "repos/${GITHUB_REPOSITORY}/dispatches" -f event_type=ima-canonical-deploy
           echo "IMA_CANONICAL_DEPLOY_DISPATCH=REQUESTED"
       - name: Report loop failure
