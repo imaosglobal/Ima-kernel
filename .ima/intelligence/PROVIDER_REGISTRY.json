@@ -1,148 +1,161 @@
 {
-  "schema": "IMA-PROVIDER-REGISTRY-1.0",
+  "schema": "IMA-PROVIDER-REGISTRY-2.0",
+  "purpose": "Canonical provider-neutral intelligence interoperability registry for IMA.",
+  "truth_rule": "DISCOVERED is not CONNECTED. CONNECTED and RUNTIME-VERIFIED require actual implementation and runtime evidence.",
+  "lifecycle": [
+    "DISCOVERED",
+    "ELIGIBLE",
+    "ADAPTER-READY",
+    "AUTHORIZED",
+    "CONNECTED",
+    "RUNTIME-VERIFIED",
+    "MONITORED"
+  ],
+  "promotion_requirements": {
+    "ELIGIBLE": ["official_evidence", "protocol_or_capability_match", "authorization_path_known"],
+    "ADAPTER-READY": ["adapter_implementation_exists", "reproducible_test_exists"],
+    "AUTHORIZED": ["explicit_credentials_or_permission_evidence"],
+    "CONNECTED": ["real_connection_evidence"],
+    "RUNTIME-VERIFIED": ["successful_live_runtime_request", "observed_result", "provenance_recorded"],
+    "MONITORED": ["recurring_health_or_capability_check"]
+  },
+  "policy": {
+    "provider_neutral": true,
+    "single_canonical_registry": true,
+    "no_parallel_live_browser_system": true,
+    "minimum_necessary_context": true,
+    "explicit_user_authorization_for_cross_provider_sharing": true,
+    "no_silent_cross_provider_sharing": true,
+    "provenance_required": true,
+    "private_by_default": true,
+    "auto_connect_external_provider": false,
+    "never_store_provider_secrets": true,
+    "consequential_actions_require_explicit_confirmation": true,
+    "a_to_b_must_be_ima_mediated": true,
+    "ima_can_answer_directly": true,
+    "ima_can_query_multiple_intelligences": true,
+    "ima_can_compare_synthesize_and_disagree": true,
+    "ima_can_answer_other_intelligences": true
+  },
+  "protocols": {
+    "MCP": {
+      "status": "DISCOVERED",
+      "official_evidence": "https://modelcontextprotocol.io/",
+      "role": "model/agent to tools, resources and context"
+    },
+    "A2A": {
+      "status": "DISCOVERED",
+      "official_evidence": "https://a2a-protocol.org/",
+      "role": "agent-to-agent interoperability",
+      "ima_rule": "A2A traffic is mediated by IMA when used by IMA; no direct provider-to-provider sharing without explicit authorization."
+    }
+  },
   "providers": [
     {
       "id": "openai",
-      "provider": "OpenAI",
-      "capabilities": [
-        "text_generation",
-        "vision",
-        "image",
-        "future_tool_use"
-      ],
-      "interface": "native_api",
-      "auth": {
-        "env": "OPENAI_API_KEY"
-      },
-      "privacy_scope": "explicitly_authorized_only",
+      "provider": "OpenAI / ChatGPT / OpenAI API",
       "status": "DISCOVERED",
-      "provenance": "IMA provider registry; runtime authorization must be checked"
+      "capabilities": ["text_generation", "vision", "image", "tool_use", "MCP"],
+      "interfaces": ["OpenAI API", "ChatGPT Apps/MCP"],
+      "auth": ["API key", "account/workspace authorization"],
+      "official_evidence": ["https://platform.openai.com/docs", "https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt"],
+      "current_constraint": "ChatGPT custom MCP connections/full MCP are documented for Business and Enterprise/Edu on web; mobile custom MCP is not supported; Pro can connect custom MCP with read/fetch permissions.",
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     },
     {
       "id": "anthropic",
-      "provider": "Anthropic",
-      "capabilities": [
-        "text_generation",
-        "vision",
-        "tool_use"
-      ],
-      "interface": "native_api",
-      "auth": {
-        "env": "ANTHROPIC_API_KEY"
-      },
-      "privacy_scope": "explicitly_authorized_only",
+      "provider": "Anthropic / Claude",
       "status": "DISCOVERED",
-      "provenance": "IMA provider registry; runtime authorization must be checked"
+      "capabilities": ["text_generation", "vision", "tool_use", "MCP", "agents"],
+      "interfaces": ["Anthropic API", "Claude", "Claude Code", "MCP"],
+      "auth": ["API key", "product/account authorization"],
+      "official_evidence": ["https://docs.anthropic.com/", "https://docs.anthropic.com/en/docs/claude-code/mcp"],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     },
     {
-      "id": "gemini",
-      "provider": "Google Gemini",
-      "capabilities": [
-        "text_generation",
-        "vision",
-        "audio",
-        "video",
-        "tools"
-      ],
-      "interface": "native_api",
-      "auth": {
-        "env": "GEMINI_API_KEY"
-      },
-      "privacy_scope": "explicitly_authorized_only",
+      "id": "google_gemini",
+      "provider": "Google / Gemini",
       "status": "DISCOVERED",
-      "provenance": "IMA provider registry; runtime authorization must be checked"
+      "capabilities": ["text_generation", "vision", "audio", "video", "tools", "MCP", "agent_interoperability"],
+      "interfaces": ["Gemini API", "Google MCP endpoints", "A2A ecosystem"],
+      "auth": ["Google Cloud/OAuth", "API credentials"],
+      "official_evidence": ["https://ai.google.dev/", "https://developers.google.com/notebook/docs/mcp"],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     },
     {
-      "id": "ollama",
-      "provider": "Ollama/local",
-      "capabilities": [
-        "text_generation",
-        "local_private_inference"
-      ],
-      "interface": "localhost",
-      "auth": {
-        "mode": "local"
-      },
-      "privacy_scope": "local_only",
+      "id": "microsoft_copilot",
+      "provider": "Microsoft / Copilot / Copilot Studio",
       "status": "DISCOVERED",
-      "provenance": "IMA local-runtime candidate"
+      "capabilities": ["agents", "MCP", "agent_tools", "agent_interoperability"],
+      "interfaces": ["Copilot Studio MCP", "MCP-compatible clients", "A2A channel"],
+      "auth": ["Microsoft work account", "Copilot Studio entitlement", "environment permissions"],
+      "official_evidence": ["https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure"],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     },
     {
-      "id": "groq",
-      "provider": "Groq",
-      "capabilities": [
-        "text_generation",
-        "future_low_latency"
-      ],
-      "interface": "native_api",
-      "auth": {
-        "env": "GROQ_API_KEY"
-      },
-      "privacy_scope": "explicitly_authorized_only",
+      "id": "meta",
+      "provider": "Meta / Meta Model API / Llama",
       "status": "DISCOVERED",
-      "provenance": "IMA provider registry; runtime authorization must be checked"
+      "capabilities": ["open_models", "multimodal", "agentic_workflows", "MCP"],
+      "interfaces": ["Meta Model API", "Meta MCP servers", "Llama ecosystem"],
+      "auth": ["Meta developer access", "provider-specific credentials"],
+      "official_evidence": ["https://developers.facebook.com/docs"],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
+    },
+    {
+      "id": "ollama_local",
+      "provider": "Ollama / local models",
+      "status": "DISCOVERED",
+      "capabilities": ["local_inference", "private_inference"],
+      "interfaces": ["localhost API", "local model runtime"],
+      "auth": ["local runtime access"],
+      "official_evidence": ["https://ollama.com/"],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     },
     {
       "id": "future_provider",
-      "provider": "Future provider/model",
-      "capabilities": [
-        "provider_defined"
-      ],
-      "interface": "adapter_contract",
-      "auth": {
-        "mode": "provider_defined"
-      },
-      "privacy_scope": "explicitly_authorized_only",
+      "provider": "Future provider/model/host",
       "status": "DISCOVERED",
-      "provenance": "Future adapter contract"
-    },
-    {
-      "id": "xai",
-      "provider": "xAI / Grok",
-      "capabilities": [
-        "text_generation",
-        "vision",
-        "future_tool_use"
-      ],
-      "interface": "native_api",
-      "auth": {
-        "env": "XAI_API_KEY"
-      },
-      "privacy_scope": "explicitly_authorized_only",
-      "status": "DISCOVERED",
-      "provenance": "IMA provider registry; runtime authorization must be checked"
-    },
-    {
-      "id": "whatsapp_ai",
-      "provider": "WhatsApp AI / channel adapter",
-      "capabilities": [
-        "conversation_channel",
-        "future_action_bridge"
-      ],
-      "interface": "host_adapter",
-      "auth": {
-        "mode": "provider_defined"
-      },
-      "privacy_scope": "explicitly_authorized_only",
-      "status": "DISCOVERED",
-      "provenance": "IMA provider-neutral host adapter contract; no direct connection claimed until verified"
-    },
-    {
-      "id": "generic_chat_host",
-      "provider": "Any future compatible chat host",
-      "capabilities": [
-        "conversation_channel",
-        "mcp_or_api_adapter"
-      ],
-      "interface": "adapter_contract",
-      "auth": {
-        "mode": "provider_defined"
-      },
-      "privacy_scope": "explicitly_authorized_only",
-      "status": "DISCOVERED",
-      "provenance": "IMA universal distribution contract"
+      "capabilities": ["provider_defined"],
+      "interfaces": ["adapter_contract"],
+      "auth": ["provider_defined"],
+      "official_evidence": [],
+      "ima_status": "DISCOVERED",
+      "runtime_verified": false
     }
   ],
-  "promotion_rule": "discovered -> authorized -> health_checked -> capability_test -> benchmarked -> routable",
-  "retirement_rule": "degraded -> isolated -> provenance_preserved -> no_new_routing"
+  "device_and_host_families": [
+    "Android",
+    "iOS",
+    "Windows",
+    "macOS",
+    "Linux",
+    "browser",
+    "wearable",
+    "XR",
+    "vehicle",
+    "robot",
+    "IoT",
+    "spacecraft",
+    "future device classes"
+  ],
+  "transport_candidates": [
+    "HTTPS",
+    "WSS",
+    "Streamable HTTP MCP",
+    "stdio MCP",
+    "WebMCP",
+    "A2A",
+    "Bluetooth LE",
+    "USB",
+    "local IPC",
+    "satellite/IP",
+    "future custom transport"
+  ]
 }
