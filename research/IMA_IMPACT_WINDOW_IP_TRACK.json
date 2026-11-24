@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "canonical": true,
   "name": "IMA_IMPACT_WINDOW_IP_TRACK",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "status": "PRIVATE_WORKSTREAM_EVIDENCE_NOT_PATENT",
   "attribution": {
     "inventor_candidate": "Ori Cohen",
@@ -174,7 +174,29 @@
     "No professional claim-chart/FTO opinion yet.",
     "Publicly available prior art is not exhaustive.",
     "Inventorship/ownership must be verified from actual contribution and agreements.",
-    "A patent filing/grant and commercialization are distinct events."
+    "A patent filing/grant and commercialization are distinct events.",
+    "Current standards landscape materially overlaps generic capability negotiation, authorization, provenance, agent coordination and auditing; these cannot be treated as novel without claim-level differentiation."
   ],
-  "next_high_value_action": "Expand the initial claim chart with jurisdiction/date/status checks for each reference, then route the narrowed invention disclosure to professional patent review before public technical disclosure."
+  "next_high_value_action": "Expand the initial claim chart with jurisdiction/date/status checks for each reference, then route the narrowed invention disclosure to professional patent review before public technical disclosure.",
+  "standards_scan_2026_11_24": [
+    {
+      "reference": "IETF draft-jeong-nmrg-agentic-ai-framework-02",
+      "date": "2026-11",
+      "relevance": "HIGH",
+      "finding": "User/Cloud/Edge/Worker agent architecture uses A2A and MCP; authentication, authorization and auditing are explicit concerns."
+    },
+    {
+      "reference": "IETF draft-scrm-aiproto-usecases-02",
+      "date": "2026-03",
+      "relevance": "HIGH",
+      "finding": "Capability advertisement, budget negotiation, task handoffs, consent, data minimization and provenance/observability are described for hybrid agent systems."
+    },
+    {
+      "reference": "MCP 2026-07-28 release/roadmap",
+      "date": "2026-07-28 onward",
+      "relevance": "HIGH",
+      "finding": "MCP moved toward stateless lifecycle and hardened authorization; Tasks became an extension and identity/authorization are active roadmap areas."
+    }
+  ],
+  "novelty_implication_2026_11_24": "Current standards evidence further reduces the scope of any novelty claim around generic agent interoperability, capability negotiation, authorization, provenance or cross-agent coordination. The potentially differentiating focus remains the complete user-scoped verified lifecycle and agency measurement, subject to professional claim analysis."
 }
