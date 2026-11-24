@@ -7,27 +7,37 @@ BRIDGE_DIR="$ROOT/tools/termux-ima-bridge"
 LOG="$HOME_DIR/.config/ima/bridge-autostart.log"
 mkdir -p "$(dirname "$LOG")"
 exec >>"$LOG" 2>&1
-echo "=== $(date -Is) IMA bridge autostart ==="
+echo "=== $(date -Is) IMA bridge supervisor ==="
 export PATH="$PREFIX/bin:$PATH"
 export IMA_CHROME_CDP="http://127.0.0.1:9222"
 export IMA_CHROME_TARGET_HINT="imaosglobal.github.io/Ima-kernel"
 export ADB_MDNS_AUTO_CONNECT="adb-tls-connect"
 export IMA_MCP_URL="https://ima-universal-action-core.onrender.com/mcp"
+
 if pgrep -f "$BRIDGE_DIR/bridge_launcher.py" >/dev/null 2>&1 || pgrep -f "$BRIDGE_DIR/bridge.py" >/dev/null 2>&1; then
-  echo "bridge already running"
+  echo "bridge already running; no duplicate started"
   exit 0
 fi
-"$PREFIX/bin/am" start -a android.intent.action.VIEW -d "https://imaosglobal.github.io/Ima-kernel/" com.android.chrome >/dev/null 2>&1 || true
+
 cd "$BRIDGE_DIR"
-"$PREFIX/bin/python" bridge_launcher.py &
-BRIDGE_PID=$!
-while kill -0 "$BRIDGE_PID" 2>/dev/null; do
-  "$PREFIX/bin/adb" start-server >/dev/null 2>&1 || true
-  SERIAL=$("$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}')
-  if [ -n "${SERIAL:-}" ]; then
-    "$PREFIX/bin/adb" -s "$SERIAL" forward --remove tcp:9222 >/dev/null 2>&1 || true
-    "$PREFIX/bin/adb" -s "$SERIAL" forward tcp:9222 localabstract:chrome_devtools_remote >/dev/null 2>&1 || true
-  fi
-  sleep 5
+
+while true; do
+  echo "--- starting canonical bridge $(date -Is) ---"
+  "$PREFIX/bin/am" start -a android.intent.action.VIEW -d "https://imaosglobal.github.io/Ima-kernel/" com.android.chrome >/dev/null 2>&1 || true
+
+  "$PREFIX/bin/python" bridge_launcher.py &
+  BRIDGE_PID=$!
+
+  while kill -0 "$BRIDGE_PID" 2>/dev/null; do
+    "$PREFIX/bin/adb" start-server >/dev/null 2>&1 || true
+    SERIAL=$("$PREFIX/bin/adb" devices 2>/dev/null | awk 'NR>1 && $2=="device" {print $1; exit}')
+    if [ -n "${SERIAL:-}" ]; then
+      "$PREFIX/bin/adb" -s "$SERIAL" forward --remove tcp:9222 >/dev/null 2>&1 || true
+      "$PREFIX/bin/adb" -s "$SERIAL" forward tcp:9222 localabstract:chrome_devtools_remote >/dev/null 2>&1 || true
+    fi
+    sleep 5
+  done
+
+  echo "bridge exited; restarting canonical bridge after 3s"
+  sleep 3
 done
-echo "bridge exited; autostart loop ending"
