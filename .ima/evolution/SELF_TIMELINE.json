@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-24T14:54:35+00:00",
+  "generated_at": "2026-11-24T17:37:48+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,31 +2019,31 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-24T14:54:33+00:00",
+      "timestamp": "2026-11-24T17:37:45+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-24T14:54:35+00:00",
+      "timestamp": "2026-11-24T17:37:47+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-24T14:54:35+00:00",
+      "timestamp": "2026-11-24T17:37:47+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "c2c24ff443619e1d3af390b5d03c093df666bbcc",
-      "timestamp": "2026-11-24T16:54:17+02:00",
+      "commit": "f0f205bef12d5ae067571ca2432646c4abb33758",
+      "timestamp": "2026-11-24T19:32:52+02:00",
       "event": "commit",
-      "summary": "feat: add universal professional task support contract",
+      "summary": "LIVE-001: keep canonical Termux bridge supervised after bridge exit",
       "source": "git"
     }
   ]
