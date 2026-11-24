@@ -1,157 +1,1077 @@
 {
-  "last_run": "2026-11-24T06:45:35Z",
+  "last_run": "2026-11-24T13:54:31Z",
   "latest_commoncrawl": "CC-MAIN-2026-47",
   "recent_changed_items": [
     {
-      "id": "7f18a13cc3e389eaf0f2",
+      "id": "a659db74de57d17ab12e",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 November 24 – Galaxies Battle in the NGC 7771 Group",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-24-galaxies-battle-in-the-ngc-7771-group/"
+    },
+    {
+      "id": "6a3939f0455e10d899e7",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Eruption Extends Iwo Jima’s Beach",
+      "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach/"
+    },
+    {
+      "id": "0ea66ddcc209eef858db",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Anthropic Breaks Below $83 IPO Price in Premarket Trading",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading"
+    },
+    {
+      "id": "923c0e4c62bee1845095",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "LLM agents work for their parent companies, not for you",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/"
+    },
+    {
+      "id": "49d8e71992a79ea5c8ce",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Who in Washington owns and trades Nvidia stock",
+      "url": "https://www.kadoa.com/congress/insights/trump-nvidia"
+    },
+    {
+      "id": "a70a9c7319b606ad3562",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Investigation of Polymarket Insider Trading on the Reinstatement of Jensen Huang",
+      "url": "https://deucalionn.vercel.app/polymarket-delit-initie-jensen-huang-nvidia/"
+    },
+    {
+      "id": "f16a181dce037b21e629",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Worshipping at the Altar of Brendan Gregg",
+      "url": "https://fzakaria.com/2026/11/12/worshipping-at-the-altar-of-brendan-gregg"
+    },
+    {
+      "id": "65021d061c67359619d3",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Just a Few Bugs",
+      "url": "https://www.justafewbugs.xyz/"
+    },
+    {
+      "id": "cab0f78658991c0774cc",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Jevons Paradox in AI: Cheaper Tokens Won't Pay for Capex",
+      "url": "https://philippdubach.com/posts/cheaper-ai-tokens-wont-pay-for-capex/"
+    },
+    {
+      "id": "4a9bfe0bdd26dd3cc3ab",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Quad9 pulled their DNS service from France",
+      "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/"
+    },
+    {
+      "id": "a9c56d12d300d5c6460c",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "2035 Came Early",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early"
+    },
+    {
+      "id": "ab674d6c1d5c5f45e7e7",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "AMD EPYC Zen 6 vs. Zen 1 Performance: 12.1x Geo Mean in Less Than 10 Years",
+      "url": "https://www.phoronix.com/review/amd-epyc-9006-7601"
+    },
+    {
+      "id": "cfa038367e1960cc4d0d",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Drone Maps of Salvage Yards",
+      "url": "https://salvageyarddrone.wordpress.com/"
+    },
+    {
+      "id": "95070b66c5b897c1f908",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Making a dumb TV just smart enough",
+      "url": "https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough/"
+    },
+    {
+      "id": "db72536323fcd509bd5a",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Declare is a UI language for you and your AI",
+      "url": "https://davidtemkin.github.io/declarelang/"
+    },
+    {
+      "id": "af1f033152e1c4c24a58",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription"
+    },
+    {
+      "id": "0290cd3e97744559e088",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "GTA 6 Recomp (Leonida) banned from GitHub while lead dev was in school",
+      "url": "https://github.com/ItsNotRexed/Leonida/issues"
+    },
+    {
+      "id": "4b96978daecc4817be0b",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/"
+    },
+    {
+      "id": "53510b5370cd80960ab8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
+      "url": "https://twitter.com/ylecun/status/2124550037912920090"
+    },
+    {
+      "id": "aee01686a2b872696d9a",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
-      "title": "W3C opens Technical Architecture Group (TAG) election",
-      "url": "https://www.w3.org/news/2026/w3c-opens-technical-architecture-group-tag-election/"
+      "title": "First Public Working Draft: Filter Effects Module Level 2",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-filter-effects-module-level-2/"
     },
     {
-      "id": "089bf24f70886d0f6b07",
+      "id": "6143553ba4efb8aa7663",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
-      "source": "https://feeds.feedburner.com/TechCrunch/",
-      "title": "REA: The Open-Source AI Tool That Can Reverse Engineer Almost Anything (2026 Guide)",
-      "url": "https://techncruncher.blogspot.com/2026/11/rea-open-source-ai-tool-that-can.html"
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Pointer-driven Animations Module Level 1",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-pointer-driven-animations-module-level-1/"
     },
     {
-      "id": "3c7fe062395f68679b3c",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-22",
-      "source": "OpenAlex",
-      "title": "Phenolic compounds from Bergenia purpurascens and their protective effects on ARPE-19 cells",
-      "url": "https://doi.org/10.25135/rnp.2610.4034"
+      "id": "b323e64961c2e562997c",
+      "kind": "commoncrawl",
+      "observed_at": "20261118104506",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/",
+      "url": "https://commoncrawl.org/"
     },
     {
-      "id": "1053b82b9da456ef793f",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-18",
-      "source": "OpenAlex",
-      "title": "A survey of macroeconomic nowcasting applications",
-      "url": "https://doi.org/10.52903/wp2026374"
+      "id": "809964c177391d331927",
+      "kind": "commoncrawl",
+      "observed_at": "20261116012336",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.commoncrawl.org/",
+      "url": "https://www.commoncrawl.org/"
     },
     {
-      "id": "7698b54f4db21db7869d",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-16",
-      "source": "OpenAlex",
-      "title": "GC×GC–MS analysis of volatile components extracted by spinning cone column from Forsythia suspensa and its antimicrobial assessment",
-      "url": "https://doi.org/10.25135/rnp.2609.4018"
+      "id": "c6224259b052592f0e72",
+      "kind": "commoncrawl",
+      "observed_at": "20261115061035",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/ai-agent",
+      "url": "https://commoncrawl.org/ai-agent"
     },
     {
-      "id": "3f3809a1a558e51b51e0",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-09",
-      "source": "OpenAlex",
-      "title": "Aromatic polyketides from the marine-derived fungus Aspergillus unguis PM03: α-glucosidase inhibitory activity, structure-activity relationship, molecular docking and ADMET evaluation",
-      "url": "https://doi.org/10.25135/rnp.2609.4014"
+      "id": "edcedfadab6d0abbbc63",
+      "kind": "commoncrawl",
+      "observed_at": "20261115061334",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog",
+      "url": "https://commoncrawl.org/blog"
     },
     {
-      "id": "59e20403db4e16f891a1",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-09",
-      "source": "OpenAlex",
-      "title": "A New 6-deoxy-talopyranoside derivative with antibacterial and radical-scavenging activities from Streptomyces sp. HDSJ4",
-      "url": "https://doi.org/10.25135/rnp.2610.4040"
+      "id": "6cfee671dcd6b72246b9",
+      "kind": "commoncrawl",
+      "observed_at": "20261115065923",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/13th-web-as-corpus-workshop-emnlp-2026",
+      "url": "https://commoncrawl.org/blog/13th-web-as-corpus-workshop-emnlp-2026"
     },
     {
-      "id": "988be499bdeac923a568",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-07",
-      "source": "OpenAlex",
-      "title": "Analysis of blood components and the mechanism of anti-pharyngitis and gut microbiota regulation in Ardisia crenata and its relatives",
-      "url": "https://doi.org/10.25135/rnp.2607.3975"
+      "id": "548b2a377de14722f559",
+      "kind": "commoncrawl",
+      "observed_at": "20261115060805",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/2012-crawl-data-now-available",
+      "url": "https://commoncrawl.org/blog/2012-crawl-data-now-available"
     },
     {
-      "id": "df92d49ccf7b881ccc93",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-01",
-      "source": "OpenAlex",
-      "title": "Die Macht des Psychotechnischen: Band II Zur Rekonfiguration und Synchronisierung psychischer Tätigkeiten",
-      "url": "https://doi.org/10.12907/978-3-593-45892-2"
+      "id": "d2c3b4036d494be4a5df",
+      "kind": "commoncrawl",
+      "observed_at": "20261115065449",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/5-good-reads-in-big-open-data-feb-13-2015",
+      "url": "https://commoncrawl.org/blog/5-good-reads-in-big-open-data-feb-13-2015"
     },
     {
-      "id": "db5bae53b403e39b2b65",
-      "kind": "scientific_api",
-      "observed_at": "2027-11-01",
-      "source": "OpenAlex",
-      "title": "Rotatiridoid, a rare iridoid from Phlomoides rotata (Benth. ex Hook.f.) Mathiesen and its anti-inflammatory activity",
-      "url": "https://doi.org/10.25135/rnp.2609.4028"
+      "id": "4d601f941b898d71b39c",
+      "kind": "commoncrawl",
+      "observed_at": "20261116202825",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/",
+      "url": "https://www.w3.org/"
     },
     {
-      "id": "2a8682adc14f4b2e088a",
-      "kind": "scientific_api",
-      "observed_at": "2027-10-26",
-      "source": "OpenAlex",
-      "title": "Asperpolyols A and B, two novel hydroxy polyunsaturated fatty acids, isolated from the marine-derived fungus Aspergillus versicolor M7",
-      "url": "https://doi.org/10.25135/rnp.2609.4019"
+      "id": "0929f6f28d730a1a67e3",
+      "kind": "commoncrawl",
+      "observed_at": "20261116173422",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1998/10/WD-rdf-syntax-19981008/",
+      "url": "https://www.w3.org/1998/10/WD-rdf-syntax-19981008/"
     },
     {
-      "id": "ed8dd814e0d2357b454c",
-      "kind": "scientific_api",
-      "observed_at": "2027-10-26",
-      "source": "OpenAlex",
-      "title": "Phenolic profile and biological activities of ultrasound-assisted aqueous-ethanolic extracts of Tamarix hispida Willd",
-      "url": "https://doi.org/10.25135/rnp.2608.4005"
+      "id": "7b33574fc49c4b5ab546",
+      "kind": "commoncrawl",
+      "observed_at": "20261108063530",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/06/WD-SVG-19990706/fonts.html",
+      "url": "https://www.w3.org/1999/07/06/WD-SVG-19990706/fonts.html"
     },
     {
-      "id": "61c560cb0c0c918451ab",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 43067942",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43067942/"
+      "id": "3069bb1c21439be37a8a",
+      "kind": "commoncrawl",
+      "observed_at": "20261118213139",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/dms.html",
+      "url": "https://www.w3.org/1999/07/dms.html"
     },
     {
-      "id": "6654cce3b776b76f5cbe",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 43061281",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43061281/"
+      "id": "081b8d46830819ed08d5",
+      "kind": "commoncrawl",
+      "observed_at": "20261119063829",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "url": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/"
     },
     {
-      "id": "49e698baa7e157ae1f7c",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 43065563",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43065563/"
+      "id": "e5a59e9552d07b30bdf1",
+      "kind": "commoncrawl",
+      "observed_at": "20261118090319",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/08/WD-SVG-19990812/fonts.html",
+      "url": "https://www.w3.org/1999/08/WD-SVG-19990812/fonts.html"
     },
     {
-      "id": "4aedb3fa5826d380d7c5",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 43054184",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/43054184/"
+      "id": "ea381c54f6891370ebc3",
+      "kind": "commoncrawl",
+      "observed_at": "20261113151725",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/09/SVG-access/",
+      "url": "https://www.w3.org/1999/09/SVG-access/"
     },
     {
-      "id": "5b61a759cd14a0a6237c",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 42920311",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42920311/"
+      "id": "662858c0dcf981a89474",
+      "kind": "commoncrawl",
+      "observed_at": "20261112101720",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/xhtml/?ref=iq.opengenus.org",
+      "url": "https://www.w3.org/1999/xhtml/?ref=iq.opengenus.org"
     },
     {
-      "id": "1e37d1fe64d9d46d2b20",
-      "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
-      "source": "PubMed",
-      "title": "PubMed PMID 42855827",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855827/"
+      "id": "a4542308b610d8a95ee6",
+      "kind": "commoncrawl",
+      "observed_at": "20261117223812",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/XMLSchema-instance",
+      "url": "https://www.w3.org/1999/XMLSchema-instance"
+    },
+    {
+      "id": "6905b730eaff2dce06ea",
+      "kind": "commoncrawl",
+      "observed_at": "20261107013356",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/02/collaboration/annotation/AmayaDocs/Annotation.html",
+      "url": "https://www.w3.org/2000/02/collaboration/annotation/AmayaDocs/Annotation.html"
+    },
+    {
+      "id": "e0ae06dddf43b7212a42",
+      "kind": "commoncrawl",
+      "observed_at": "20261115025451",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/02/xmldsig",
+      "url": "https://www.w3.org/2000/02/xmldsig"
+    },
+    {
+      "id": "5bcb8660c4a309095511",
+      "kind": "commoncrawl",
+      "observed_at": "20261113141435",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/04/25-wcag-draft.html",
+      "url": "https://www.w3.org/2000/04/25-wcag-draft.html"
+    },
+    {
+      "id": "ab4e2cbb28b05a57c7be",
+      "kind": "commoncrawl",
+      "observed_at": "20261118001039",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl",
+      "url": "https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl"
+    },
+    {
+      "id": "637ae2b4b4b6fccffdc8",
+      "kind": "commoncrawl",
+      "observed_at": "20261116203341",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/09/Papers/Overview.html",
+      "url": "https://www.w3.org/2000/09/Papers/Overview.html"
+    },
+    {
+      "id": "5aa68fcbfb91a7877aca",
+      "kind": "commoncrawl",
+      "observed_at": "20261116043228",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/09/tmr493/notes",
+      "url": "https://www.w3.org/2000/09/tmr493/notes"
+    },
+    {
+      "id": "16eb4b3ae47896b5c4ad",
+      "kind": "commoncrawl",
+      "observed_at": "20261108042358",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-containers-syntax-vs-schema/test005.rdf",
+      "url": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-containers-syntax-vs-schema/test005.rdf"
+    },
+    {
+      "id": "016c8af75f7590000f2d",
+      "kind": "commoncrawl",
+      "observed_at": "20261117203025",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-ns-prefix-confusion/README",
+      "url": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-ns-prefix-confusion/README"
+    },
+    {
+      "id": "28bacb8b68411b9d1690",
+      "kind": "commoncrawl",
+      "observed_at": "20261117204649",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/",
+      "url": "https://arxiv.org/"
+    },
+    {
+      "id": "07cc965423ae989ca81a",
+      "kind": "commoncrawl",
+      "observed_at": "20261107182418",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=alphasec.io",
+      "url": "https://arxiv.org/?ref=alphasec.io"
+    },
+    {
+      "id": "02f79605636f94bcfb8b",
+      "kind": "commoncrawl",
+      "observed_at": "20261111075559",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=gonitsora.com",
+      "url": "https://arxiv.org/?ref=gonitsora.com"
+    },
+    {
+      "id": "f1d2c6fbcc5a06232500",
+      "kind": "commoncrawl",
+      "observed_at": "20261109092423",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=runtimewire",
+      "url": "https://arxiv.org/?ref=runtimewire"
+    },
+    {
+      "id": "ed17b4c457d69abb831d",
+      "kind": "commoncrawl",
+      "observed_at": "20261115092413",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=techtech.club",
+      "url": "https://arxiv.org/?ref=techtech.club"
+    },
+    {
+      "id": "8e167f15108da8f2c183",
+      "kind": "commoncrawl",
+      "observed_at": "20261109122434",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?utm_source=gemini",
+      "url": "https://arxiv.org/?utm_source=gemini"
+    },
+    {
+      "id": "90a7ba1d49c334340942",
+      "kind": "commoncrawl",
+      "observed_at": "20261108154212",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0001-5898-1911.html",
+      "url": "https://arxiv.org/a/0000-0001-5898-1911.html"
+    },
+    {
+      "id": "78f8eaebc428211f96ee",
+      "kind": "commoncrawl",
+      "observed_at": "20261106124239",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-2728-6091.html",
+      "url": "https://arxiv.org/a/0000-0002-2728-6091.html"
+    },
+    {
+      "id": "b47bd3b87e2da805619f",
+      "kind": "commoncrawl",
+      "observed_at": "20261110132109",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-3727-0894.html",
+      "url": "https://arxiv.org/a/0000-0002-3727-0894.html"
+    },
+    {
+      "id": "374f19e25be51f29ab8c",
+      "kind": "commoncrawl",
+      "observed_at": "20261117192820",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-5270-5550.html",
+      "url": "https://arxiv.org/a/0000-0002-5270-5550.html"
+    },
+    {
+      "id": "ab9ab67174fa930ede15",
+      "kind": "commoncrawl",
+      "observed_at": "20261113052540",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-6070-0784.html",
+      "url": "https://arxiv.org/a/0000-0002-6070-0784.html"
+    },
+    {
+      "id": "1997523e55d7286fab6f",
+      "kind": "commoncrawl",
+      "observed_at": "20261115141503",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-9188-9890.html",
+      "url": "https://arxiv.org/a/0000-0002-9188-9890.html"
+    },
+    {
+      "id": "cc0b8d4e6a20b302911a",
+      "kind": "commoncrawl",
+      "observed_at": "20261108134422",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0003-1709-1220.html",
+      "url": "https://arxiv.org/a/0000-0003-1709-1220.html"
+    },
+    {
+      "id": "60e6ed826fe37bda5233",
+      "kind": "commoncrawl",
+      "observed_at": "20261109070432",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0009-0009-6096-3523.html",
+      "url": "https://arxiv.org/a/0009-0009-6096-3523.html"
+    },
+    {
+      "id": "0ddce14552f105a87923",
+      "kind": "commoncrawl",
+      "observed_at": "20261109040302",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/akhlaghi_m_1.html",
+      "url": "https://arxiv.org/a/akhlaghi_m_1.html"
+    },
+    {
+      "id": "b9f437df0b27c30c732c",
+      "kind": "commoncrawl",
+      "observed_at": "20261115035708",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/anderson_a_3.html",
+      "url": "https://arxiv.org/a/anderson_a_3.html"
+    },
+    {
+      "id": "35e180593e6504facf3e",
+      "kind": "commoncrawl",
+      "observed_at": "20261117132101",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/apollaro_t_1.html",
+      "url": "https://arxiv.org/a/apollaro_t_1.html"
+    },
+    {
+      "id": "54b1e4ba9f8ccab66cd9",
+      "kind": "commoncrawl",
+      "observed_at": "20261112005249",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/aulbach_m_1.html",
+      "url": "https://arxiv.org/a/aulbach_m_1.html"
     }
   ],
   "recent_items": [
     {
+      "id": "a659db74de57d17ab12e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 November 24 – Galaxies Battle in the NGC 7771 Group",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-24-galaxies-battle-in-the-ngc-7771-group/"
+    },
+    {
+      "id": "6a3939f0455e10d899e7",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Eruption Extends Iwo Jima’s Beach",
+      "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach/"
+    },
+    {
+      "id": "375278fb60b058521bb5",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Awards Contract for NOAA’s Near Earth Orbit Network Program",
+      "url": "https://www.nasa.gov/news-release/nasa-awards-contract-for-noaas-near-earth-orbit-network-program/"
+    },
+    {
+      "id": "83eb224748ee20b5be49",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Studying Cancer Cells in Microgravity",
+      "url": "https://www.nasa.gov/image-article/studying-cancer-cells-in-microgravity/"
+    },
+    {
+      "id": "d51f18212afb6771b701",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA Seeks Partners to Design First Nuclear Reactor for the Moon",
+      "url": "https://www.nasa.gov/directorates/rtmd/nasa-seeks-partners-to-design-first-nuclear-reactor-for-the-moon/"
+    },
+    {
+      "id": "d106cf16aff669eb8d15",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA+ Documentary Captures Europa Clipper’s Journey Into Deep Space",
+      "url": "https://www.nasa.gov/missions/europa-clipper/nasa-documentary-captures-europa-clippers-journey-into-deep-space/"
+    },
+    {
+      "id": "a6fe0a714d7fca1a35c1",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "NASA’s Webb Shows How Supernova Dust Chronicles Star Evolution",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-shows-how-supernova-dust-chronicles-star-evolution/"
+    },
+    {
+      "id": "f2140fee950f7a18f5d8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "APOD: 2026 November 23 – The Emergence of Dark Nebula Lynds 1251",
+      "url": "https://science.nasa.gov/image-article/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251/"
+    },
+    {
+      "id": "032b17500d4009fe9ff8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "Laser Focus at the Top of the World",
+      "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world/"
+    },
+    {
+      "id": "c7c3f2d60795dbcaa986",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "title": "65 Years of Human Spaceflight at NASA Johnson",
+      "url": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/"
+    },
+    {
+      "id": "71a4e8c3880a5ab561c1",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Studying Cancer Cells in Microgravity",
+      "url": "https://www.nasa.gov/image-detail/jsc2026e426880/"
+    },
+    {
+      "id": "4db649c9170bbe46a746",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Curiosity Mars Rover Collects Samples",
+      "url": "https://www.nasa.gov/image-detail/pia26804/"
+    },
+    {
+      "id": "978dfe91bccd9efa7125",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Lake Pelku",
+      "url": "https://www.nasa.gov/image-detail/iss075e0267074/"
+    },
+    {
+      "id": "cdec69ddf5001e5ac6fd",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Empire State Building Goes Gold for Voyager",
+      "url": "https://www.nasa.gov/image-detail/nasas-voyager-1-spacecraft-light-day/"
+    },
+    {
+      "id": "ea9b751d341ce0917f01",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Space Selfie",
+      "url": "https://www.nasa.gov/image-detail/iss075e0253155/"
+    },
+    {
+      "id": "a61bb8010c6766f9b428",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Thunderbirds in Formation",
+      "url": "https://www.nasa.gov/image-detail/11072026-ksc-max-power-airdotshow-2orig/"
+    },
+    {
+      "id": "ad862468ad19bd653d88",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Outbursts from a Massive Star",
+      "url": "https://www.nasa.gov/image-detail/a-giant-star-in-a-distant-galaxy-has-been-mysteriously-erupting-for-at-least-15-years-new-data-from-nasas-chandra-explains-what-is-causing-these-huge-outbursts/"
+    },
+    {
+      "id": "99558553ff39da783292",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Heart in the Sky at NASA Kennedy",
+      "url": "https://www.nasa.gov/image-detail/55640210122-dae9d5e6b9-o/"
+    },
+    {
+      "id": "29479d01e25eeac2765e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "CHAPEA Crew Leaves a Mark",
+      "url": "https://www.nasa.gov/image-detail/photos-from-chapea-mission-2-arranged-around-boot-print/"
+    },
+    {
+      "id": "32fd783e61c1ff299a2f",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Astronauts Across Generations Share the Stage",
+      "url": "https://www.nasa.gov/image-detail/20261106-artemiscelebrationgala-sl1-4202/"
+    },
+    {
+      "id": "4b0f73dc86552b117283",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "M30's Sparkling Stars",
+      "url": "https://www.nasa.gov/image-detail/hubble-m30-potm2610a/"
+    },
+    {
+      "id": "a0fa126d9de0df919c0e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Midwestern City Lights",
+      "url": "https://www.nasa.gov/image-detail/iss075e0227352/"
+    },
+    {
+      "id": "f40a7c305a81f2f129ae",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Hubble Reveals Cosmic Mystery",
+      "url": "https://www.nasa.gov/image-detail/full-res-for-display-1-3/"
+    },
+    {
+      "id": "ebb2e99af90e077a8773",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Astronaut and Earth",
+      "url": "https://www.nasa.gov/image-detail/iss075e0253663/"
+    },
+    {
+      "id": "7d6143a468086b175782",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's CHAPEA Crew \"Returns\" to Earth",
+      "url": "https://www.nasa.gov/image-detail/chapea-mission-2-crew-poses-outdoors-after-exiting-habitat/"
+    },
+    {
+      "id": "94dcca4ef3140fe35024",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's James Webb Space Telescope Captures Eerie Cat's Head",
+      "url": "https://www.nasa.gov/image-detail/full-res-for-display-6/"
+    },
+    {
+      "id": "7e0b800edd5c6a4316f5",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Hubble Marks Way for Roman Space Telescope",
+      "url": "https://www.nasa.gov/image-detail/55606049603-e8822462fe-o/"
+    },
+    {
+      "id": "5cd9d84243c19fcc5608",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Webb Sees Turbulent Star Nursery",
+      "url": "https://www.nasa.gov/image-detail/stars-brewing-in-a-nebulous-cauldron/"
+    },
+    {
+      "id": "ce7b813a77b367898516",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Neo Surveyor Sunshade",
+      "url": "https://www.nasa.gov/image-detail/1-pia26715-bae-sunshade-inspection-2/"
+    },
+    {
+      "id": "330c3aa5ed1dcd01f5c6",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's X-59 Aircraft and Test Pilot",
+      "url": "https://www.nasa.gov/image-detail/mike-lippert-x-59-lbfd-flight-39-3/"
+    },
+    {
+      "id": "de244be0edcd188cbf50",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "RS-25 Engine Tests at NASA Stennis",
+      "url": "https://www.nasa.gov/image-detail/ssc-20261021-s00947horig/"
+    },
+    {
+      "id": "ce241b2aa45748119198",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Spiral's Edge",
+      "url": "https://www.nasa.gov/image-detail/hubble-ngc1827-1-flat-final/"
+    },
+    {
+      "id": "5f2f4f2c1f3a97720d33",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Science on the Space Station with NASA Astronaut Jessica Watkins",
+      "url": "https://www.nasa.gov/image-detail/iss075e0190239/"
+    },
+    {
+      "id": "13d50abcf6e5e74ddab8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Webb Captures Stellar Jets",
+      "url": "https://www.nasa.gov/image-detail/55572978759-545472774e-o/"
+    },
+    {
+      "id": "b6ff55ed379865848e89",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Martian Dawn",
+      "url": "https://www.nasa.gov/image-detail/1-pia26728-fig-a-curiosity-captures-dawn-breaking-on-wind-carved-cliffs-2/"
+    },
+    {
+      "id": "bc9559da5a172fba9bd9",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis II Heat Shield After Splashdown",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1320/"
+    },
+    {
+      "id": "d5313957a56567b0816b",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Chandra Finds Possible Origin of 'Treble Clef' Waves",
+      "url": "https://www.nasa.gov/image-detail/shape-3601-3601/"
+    },
+    {
+      "id": "6f4a1fa6b15ab56d1baa",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA’s SpaceX CRS-35 Launch Jellyfish",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crs-35-launch/"
+    },
+    {
+      "id": "5f66990b2ef05a98f55f",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Transporter-18 SmallSats Encapsulation",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1315/"
+    },
+    {
+      "id": "8a328104e8db0a06aebb",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Cosmic House of Mirrors",
+      "url": "https://www.nasa.gov/image-detail/galaxies-in-a-cosmic-house-of-mirrors/"
+    },
+    {
+      "id": "4cf8b354f2993f2805ce",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Crew-12 Returns to Earth",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-12-splashdown-2/"
+    },
+    {
+      "id": "9646943c9e0872c56c39",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis II Crew Moon Photo Annotations",
+      "url": "https://www.nasa.gov/image-detail/fd07_impact-flashes/"
+    },
+    {
+      "id": "6682b8c560d18b989ba8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Astronomers Solve Cosmic Cold Case with NASA Hubble Data",
+      "url": "https://www.nasa.gov/image-detail/stsci-01m3cbk3t6srkp4q7wv9cgfgw9/"
+    },
+    {
+      "id": "9598ef10e2e425e75053",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Christina Koch at Eagles vs. Rams",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-lincoln-financial-field/"
+    },
+    {
+      "id": "1e98197ec7f8529efba1",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's DAVINCI Probe Can Stand the Heat",
+      "url": "https://www.nasa.gov/image-detail/davinci-heat-test-1/"
+    },
+    {
+      "id": "125f77fa8d831dc9a62e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA’s SpaceX Crew-13 Launches",
+      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-13-launch-3/"
+    },
+    {
+      "id": "e2054d47a388fb1399bd",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Star Trails",
+      "url": "https://www.nasa.gov/image-detail/iss075e0144232/"
+    },
+    {
+      "id": "ec875e5336cf5c9478bc",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Crew-13 Rocket and Spacecraft at Launch Pad",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1312/"
+    },
+    {
+      "id": "d0da49b9877b10338c7f",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Space Station View of Earth at Night",
+      "url": "https://www.nasa.gov/image-detail/gmt251_08_43_jessica-meir_northern-aurora-cupola-14mm/"
+    },
+    {
+      "id": "7d503f9c07efece57008",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Hubble Spots Chaotic Secret in Galaxy",
+      "url": "https://www.nasa.gov/image-detail/a-galaxy-spinning-out-of-sync/"
+    },
+    {
+      "id": "f767f53fd643fda4cc2c",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Practicing for Safe Landings on the Moon and Beyond",
+      "url": "https://www.nasa.gov/image-detail/nasa-navigation-experiment-shows-promise-for-landing-on-other-planets/"
+    },
+    {
+      "id": "0aaf7eacf87f7a022f07",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Hubble Telescope Reaches Milestone, Looks for Elusive Supernova",
+      "url": "https://www.nasa.gov/image-detail/stsci-h-p26023a-m-2000x1207/"
+    },
+    {
+      "id": "2dadf5eefd515726fb06",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Chandra Finds Unusual Objects in Pinwheel Galaxy",
+      "url": "https://www.nasa.gov/image-detail/m101-lg/"
+    },
+    {
+      "id": "f4bbb787683ffd7c2030",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Astronaut Reid Wiseman Attends Ravens vs. Saints Game",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-mt-bank-stadium/"
+    },
+    {
+      "id": "8afe013f95efd1b4bb3e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "COSI Telescope Comes Together",
+      "url": "https://www.nasa.gov/image-detail/cosi-2026july-01/"
+    },
+    {
+      "id": "dfb9bae9a4555b7fe5b5",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Unveils Enterprise, the First Space Shuttle",
+      "url": "https://www.nasa.gov/image-detail/the-shuttle-enterprise-with-star-trek-cast/"
+    },
+    {
+      "id": "4956d2164f092914b97e",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Indonesia's Anak Krakatau",
+      "url": "https://www.nasa.gov/image-detail/krakatau-oli-20260905-lrg/"
+    },
+    {
+      "id": "5abd5224c3734a52bdab",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis III Crew Visits NASA Kennedy's Vehicle Assembly Building",
+      "url": "https://www.nasa.gov/image-detail/afs-8-101-1307/"
+    },
+    {
+      "id": "97975be217a1bd5d435d",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA Kicks Off Inspiration Tour with Steelers vs. Falcons Game",
+      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-acrisure-stadium/"
+    },
+    {
+      "id": "5e339f35a58b7a5c7f42",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Chandra Spots Galactic Gem",
+      "url": "https://www.nasa.gov/image-detail/galaxies-iizw096/"
+    },
+    {
+      "id": "dfa5bbd94cb2828c685a",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Dust and Water in Sagittarius A*",
+      "url": "https://www.nasa.gov/image-detail/55459350878-2e1468b664-o/"
+    },
+    {
+      "id": "cd5067090d89008e1ca3",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis II Crew at NASA Marshall",
+      "url": "https://www.nasa.gov/image-detail/msfc-09012026-artemis-ii-crew-visit-at-msfc-1orig/"
+    },
+    {
+      "id": "ceba6e5b39be7203aa59",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Superbubble in the Large Magellanic Cloud",
+      "url": "https://www.nasa.gov/image-detail/hubble-n44-wfc3-large/"
+    },
+    {
+      "id": "30c42c6803fd3cc30165",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Lunar Occultation of Venus",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202606170001/"
+    },
+    {
+      "id": "0a18376084f98451b293",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Igniting Roman's Journey",
+      "url": "https://www.nasa.gov/image-detail/amf-nhq202608300037/"
+    },
+    {
+      "id": "f9221d65b75640a90e0d",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "August Lunar Eclipse Rises Over Louisiana",
+      "url": "https://www.nasa.gov/image-detail/amf-maf_20260827_lunareclipse_01/"
+    },
+    {
+      "id": "037a64919b394f0e47b0",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Artemis III RS-25 Engine Processing: #3 Lift",
+      "url": "https://www.nasa.gov/image-detail/amf-ksc-20260825-ph-rcr01_0045/"
+    },
+    {
+      "id": "900f895587f072f2c3f8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Nancy Grace Roman Space Telescope Launches",
+      "url": "https://www.nasa.gov/image-detail/nancy-grace-roman-space-telescope-launch-2/"
+    },
+    {
+      "id": "8e1ccfd9653936aa4151",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
+      "url": "https://www.nasa.gov/image-detail/20260828-120552-jk1-3999-2/"
+    },
+    {
+      "id": "8d46a442fd5a36ce42aa",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:08Z",
+      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+      "title": "Civil Servants Sworn in at NASA Ames",
+      "url": "https://www.nasa.gov/image-detail/nasa-civil-servant-swearing-in-ceremony/"
+    },
+    {
       "id": "5f364a8612fd0351861d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "The best things in open source are built together",
       "url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/"
@@ -159,7 +1079,7 @@
     {
       "id": "de1a299348ffc0d19122",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Maintainers don’t need more AI bug reports. They need fixes.",
       "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/"
@@ -167,7 +1087,7 @@
     {
       "id": "2f1c65ad4b7ec3807ad9",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Building the Agent Host Protocol for sessions that continue across devices",
       "url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/"
@@ -175,7 +1095,7 @@
     {
       "id": "7c512829bf524dd8cb09",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "GitHub availability report: October 2026",
       "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/"
@@ -183,7 +1103,7 @@
     {
       "id": "8bc9138e516754eb5478",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Build once, run on any agent: A practical guide to agent skills",
       "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/"
@@ -191,7 +1111,7 @@
     {
       "id": "2c15f23ac7aa344ce6cd",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Git security vulnerabilities announced",
       "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/"
@@ -199,7 +1119,7 @@
     {
       "id": "aff32afb63af01e7ea9a",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Beyond code generation: A developer’s guide to agentic engineering",
       "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
@@ -207,7 +1127,7 @@
     {
       "id": "51dc1d2f6b3bd6dfbc4a",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Inside GitHub’s new Git storage architecture",
       "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
@@ -215,7 +1135,7 @@
     {
       "id": "1558c78d072630b6166d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Accessibility statements now have a home on GitHub",
       "url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/"
@@ -223,15 +1143,191 @@
     {
       "id": "410a92595886a074fe4f",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:44:49Z",
+      "observed_at": "2026-11-24T13:54:08Z",
       "source": "https://github.blog/feed/",
       "title": "Arnis turns any place on Earth into a Minecraft world",
       "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/"
     },
     {
+      "id": "0ea66ddcc209eef858db",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Anthropic Breaks Below $83 IPO Price in Premarket Trading",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading"
+    },
+    {
+      "id": "923c0e4c62bee1845095",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "LLM agents work for their parent companies, not for you",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/"
+    },
+    {
+      "id": "49d8e71992a79ea5c8ce",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Who in Washington owns and trades Nvidia stock",
+      "url": "https://www.kadoa.com/congress/insights/trump-nvidia"
+    },
+    {
+      "id": "a70a9c7319b606ad3562",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Investigation of Polymarket Insider Trading on the Reinstatement of Jensen Huang",
+      "url": "https://deucalionn.vercel.app/polymarket-delit-initie-jensen-huang-nvidia/"
+    },
+    {
+      "id": "f16a181dce037b21e629",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Worshipping at the Altar of Brendan Gregg",
+      "url": "https://fzakaria.com/2026/11/12/worshipping-at-the-altar-of-brendan-gregg"
+    },
+    {
+      "id": "65021d061c67359619d3",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Just a Few Bugs",
+      "url": "https://www.justafewbugs.xyz/"
+    },
+    {
+      "id": "cab0f78658991c0774cc",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Jevons Paradox in AI: Cheaper Tokens Won't Pay for Capex",
+      "url": "https://philippdubach.com/posts/cheaper-ai-tokens-wont-pay-for-capex/"
+    },
+    {
+      "id": "4a9bfe0bdd26dd3cc3ab",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Quad9 pulled their DNS service from France",
+      "url": "https://quad9.net/news/blog/quad9-service-deactivation-in-france/"
+    },
+    {
+      "id": "a9c56d12d300d5c6460c",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "2035 Came Early",
+      "url": "https://fzakaria.com/2026/11/23/2035-came-early"
+    },
+    {
+      "id": "ab674d6c1d5c5f45e7e7",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "AMD EPYC Zen 6 vs. Zen 1 Performance: 12.1x Geo Mean in Less Than 10 Years",
+      "url": "https://www.phoronix.com/review/amd-epyc-9006-7601"
+    },
+    {
+      "id": "cfa038367e1960cc4d0d",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Drone Maps of Salvage Yards",
+      "url": "https://salvageyarddrone.wordpress.com/"
+    },
+    {
+      "id": "95070b66c5b897c1f908",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Making a dumb TV just smart enough",
+      "url": "https://qsantos.fr/2026/11/19/making-a-dumb-tv-just-smart-enough/"
+    },
+    {
+      "id": "db72536323fcd509bd5a",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Declare is a UI language for you and your AI",
+      "url": "https://davidtemkin.github.io/declarelang/"
+    },
+    {
+      "id": "af1f033152e1c4c24a58",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "New York Bans Subscription and Post-Purchase Fees on Cars",
+      "url": "https://www.governor.ny.gov/news/money-your-pockets-governor-hochul-signs-bill-restricting-exploitative-vehicle-subscription"
+    },
+    {
+      "id": "0290cd3e97744559e088",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "GTA 6 Recomp (Leonida) banned from GitHub while lead dev was in school",
+      "url": "https://github.com/ItsNotRexed/Leonida/issues"
+    },
+    {
+      "id": "4b96978daecc4817be0b",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/"
+    },
+    {
+      "id": "d1f862679a7f04dfe54b",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
+      "url": "https://www.bored.com/"
+    },
+    {
+      "id": "0386d86e596acc2db46f",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "GPUI is getting its own repository",
+      "url": "https://github.com/zed-industries/gpui"
+    },
+    {
+      "id": "d059f193e627ed60e8ce",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
+      "url": "https://arm.jonpalmisc.com/"
+    },
+    {
+      "id": "53510b5370cd80960ab8",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://hnrss.org/frontpage",
+      "title": "\"Dario is hyping the dangers so OSS models are illegal and he stays in control\"",
+      "url": "https://twitter.com/ylecun/status/2124550037912920090"
+    },
+    {
+      "id": "aee01686a2b872696d9a",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Filter Effects Module Level 2",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-filter-effects-module-level-2/"
+    },
+    {
+      "id": "6143553ba4efb8aa7663",
+      "kind": "feed",
+      "observed_at": "2026-11-24T13:54:11Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Pointer-driven Animations Module Level 1",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-pointer-driven-animations-module-level-1/"
+    },
+    {
       "id": "7f18a13cc3e389eaf0f2",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C opens Technical Architecture Group (TAG) election",
       "url": "https://www.w3.org/news/2026/w3c-opens-technical-architecture-group-tag-election/"
@@ -239,7 +1335,7 @@
     {
       "id": "11a49ab621a411f0cc0b",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C and the State of the Web in the AI Era",
       "url": "https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/"
@@ -247,7 +1343,7 @@
     {
       "id": "70b0e3e7f12c10cd9ed9",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Animation Triggers",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-animation-triggers/"
@@ -255,7 +1351,7 @@
     {
       "id": "37ab1fbdd16439247835",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Draft Notes: Verifiable Credential Threat Models",
       "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/"
@@ -263,7 +1359,7 @@
     {
       "id": "bcd7083976c76ae8688f",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C issues press release about developing Verifiable Credential Barcodes",
       "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/"
@@ -271,7 +1367,7 @@
     {
       "id": "81a3389421f4bb56bc3d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Updated Candidate Recommendation: Scalable Vector Graphics (SVG) 2",
       "url": "https://www.w3.org/news/2026/updated-candidate-recommendation-scalable-vector-graphics-svg-2/"
@@ -279,7 +1375,7 @@
     {
       "id": "0f94c1b2cc9695104e0d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Consortium Members elect Board of Directors",
       "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/"
@@ -287,7 +1383,7 @@
     {
       "id": "e74888c663f492eea866",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C Workshop Report: The Future of ODRL",
       "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/"
@@ -295,7 +1391,7 @@
     {
       "id": "7ea510935dfd2aa76b5a",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Bitstring Status List v1.1",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/"
@@ -303,7 +1399,7 @@
     {
       "id": "cb68915a226f5b31c5c4",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
       "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/"
@@ -311,7 +1407,7 @@
     {
       "id": "f1b5f492edd59d79af68",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
       "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/"
@@ -319,7 +1415,7 @@
     {
       "id": "c8dc3e9414ec28a368ac",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/"
@@ -327,7 +1423,7 @@
     {
       "id": "6e4168f82218e48b2b73",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/"
@@ -335,7 +1431,7 @@
     {
       "id": "9b67edb55892cc147b16",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C opens 2026 community survey",
       "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/"
@@ -343,7 +1439,7 @@
     {
       "id": "359b504aecb4a8066979",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
       "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/"
@@ -351,7 +1447,7 @@
     {
       "id": "0c06abcb0d06332e5331",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
       "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/"
@@ -359,7 +1455,7 @@
     {
       "id": "e9046d10c5a45a4be7b5",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "First Public Working Draft: The Profiles Vocabulary",
       "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/"
@@ -367,7 +1463,7 @@
     {
       "id": "1cb4dab4f76ed824568d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
       "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/"
@@ -375,7 +1471,7 @@
     {
       "id": "073f9b4d7b387c99f07e",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Updated W3C Recommendation: ARIA in HTML",
       "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/"
@@ -383,7 +1479,7 @@
     {
       "id": "e2b8edcef39b94c3378e",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
       "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/"
@@ -391,7 +1487,7 @@
     {
       "id": "53199f615af74997230d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
       "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/"
@@ -399,7 +1495,7 @@
     {
       "id": "41a209d76f100b1bd5d4",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "W3C Invites Implementations of WebTransport",
       "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/"
@@ -407,31 +1503,15 @@
     {
       "id": "dbdb0820dcbaa5243b7d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
+      "observed_at": "2026-11-24T13:54:11Z",
       "source": "https://www.w3.org/News/news.rss",
       "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
       "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/"
     },
     {
-      "id": "1edd9d31a5fe545fe7fb",
-      "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
-      "source": "https://www.w3.org/News/news.rss",
-      "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
-      "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/"
-    },
-    {
-      "id": "1abec9d47a1273181fad",
-      "kind": "feed",
-      "observed_at": "2026-11-24T06:45:01Z",
-      "source": "https://www.w3.org/News/news.rss",
-      "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
-      "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/"
-    },
-    {
       "id": "089bf24f70886d0f6b07",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "REA: The Open-Source AI Tool That Can Reverse Engineer Almost Anything (2026 Guide)",
       "url": "https://techncruncher.blogspot.com/2026/11/rea-open-source-ai-tool-that-can.html"
@@ -439,7 +1519,7 @@
     {
       "id": "24dd95896911d8bd0b6d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
       "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html"
@@ -447,7 +1527,7 @@
     {
       "id": "5c7b8bdb9c001de23cea",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
       "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html"
@@ -455,7 +1535,7 @@
     {
       "id": "8df3484f72ce4634a7e5",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
       "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html"
@@ -463,7 +1543,7 @@
     {
       "id": "129cee30a618dbacbfe9",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
       "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html"
@@ -471,7 +1551,7 @@
     {
       "id": "d3499e02aaa3943b73aa",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 AI Content Generator & Writer Tools in 2022",
       "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html"
@@ -479,7 +1559,7 @@
     {
       "id": "c9b0ba2832f5c52645f2",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
       "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html"
@@ -487,7 +1567,7 @@
     {
       "id": "1104ec0ee393a7f4f909",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
       "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html"
@@ -495,7 +1575,7 @@
     {
       "id": "572a341c954c548987ad",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About Affiliate Marketing",
       "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html"
@@ -503,7 +1583,7 @@
     {
       "id": "f63aedf5e35cee9cf2ff",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "What is Blockchain: Everything You Need to Know (2022)",
       "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html"
@@ -511,7 +1591,7 @@
     {
       "id": "eb3490aa3ebca0f4ef67",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
       "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html"
@@ -519,7 +1599,7 @@
     {
       "id": "5aebe77748d66a1bef9a",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
       "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html"
@@ -527,7 +1607,7 @@
     {
       "id": "469fe5a61b36c036d58c",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
       "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html"
@@ -535,7 +1615,7 @@
     {
       "id": "65763140459cf23fdedd",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
       "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html"
@@ -543,7 +1623,7 @@
     {
       "id": "f102a512d0bf0eec1887",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Canva Review 2022: Details, Pricing & Features",
       "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html"
@@ -551,7 +1631,7 @@
     {
       "id": "4ae8efd7a9964cf3d437",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 7 Best Wordpress Plugin Of All Time",
       "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html"
@@ -559,7 +1639,7 @@
     {
       "id": "c4ecc08e3dcd225bd13c",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
       "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html"
@@ -567,7 +1647,7 @@
     {
       "id": "44ca195f5b7c621a996e",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
       "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html"
@@ -575,7 +1655,7 @@
     {
       "id": "54b9d850727b6cdbe5ce",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
       "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html"
@@ -583,7 +1663,7 @@
     {
       "id": "fe934b9f69954d98e9d8",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Most Frequently Asked Questions About Email Marketing",
       "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html"
@@ -591,7 +1671,7 @@
     {
       "id": "6cb428459606b5a9549d",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "7 Free Websites Every Content Creator Needs to Know",
       "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html"
@@ -599,7 +1679,7 @@
     {
       "id": "60e9a0a09a7e88daa6f4",
       "kind": "feed",
-      "observed_at": "2026-11-24T06:45:02Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "https://feeds.feedburner.com/TechCrunch/",
       "title": "Top 9 Free AI Tools That Make Your Life Easier",
       "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html"
@@ -767,7 +1847,7 @@
     {
       "id": "61c560cb0c0c918451ab",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 43067942",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43067942/"
@@ -775,7 +1855,7 @@
     {
       "id": "6654cce3b776b76f5cbe",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 43061281",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43061281/"
@@ -783,7 +1863,7 @@
     {
       "id": "44da8f64393f458442ad",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42862709",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42862709/"
@@ -791,7 +1871,7 @@
     {
       "id": "5c4216759b09fc16dea9",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42888301",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42888301/"
@@ -799,7 +1879,7 @@
     {
       "id": "ba55c736d0e06f9d2972",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42897078",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42897078/"
@@ -807,7 +1887,7 @@
     {
       "id": "49e698baa7e157ae1f7c",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 43065563",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43065563/"
@@ -815,7 +1895,7 @@
     {
       "id": "4aedb3fa5826d380d7c5",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 43054184",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43054184/"
@@ -823,7 +1903,7 @@
     {
       "id": "5b61a759cd14a0a6237c",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42920311",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42920311/"
@@ -831,7 +1911,7 @@
     {
       "id": "2380adac72da2dd72795",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42872102",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42872102/"
@@ -839,10 +1919,346 @@
     {
       "id": "1e37d1fe64d9d46d2b20",
       "kind": "scientific_api",
-      "observed_at": "2026-11-24T06:45:09Z",
+      "observed_at": "2026-11-24T13:54:12Z",
       "source": "PubMed",
       "title": "PubMed PMID 42855827",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42855827/"
+    },
+    {
+      "id": "b323e64961c2e562997c",
+      "kind": "commoncrawl",
+      "observed_at": "20261118104506",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/",
+      "url": "https://commoncrawl.org/"
+    },
+    {
+      "id": "809964c177391d331927",
+      "kind": "commoncrawl",
+      "observed_at": "20261116012336",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.commoncrawl.org/",
+      "url": "https://www.commoncrawl.org/"
+    },
+    {
+      "id": "c6224259b052592f0e72",
+      "kind": "commoncrawl",
+      "observed_at": "20261115061035",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/ai-agent",
+      "url": "https://commoncrawl.org/ai-agent"
+    },
+    {
+      "id": "edcedfadab6d0abbbc63",
+      "kind": "commoncrawl",
+      "observed_at": "20261115061334",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog",
+      "url": "https://commoncrawl.org/blog"
+    },
+    {
+      "id": "6cfee671dcd6b72246b9",
+      "kind": "commoncrawl",
+      "observed_at": "20261115065923",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/13th-web-as-corpus-workshop-emnlp-2026",
+      "url": "https://commoncrawl.org/blog/13th-web-as-corpus-workshop-emnlp-2026"
+    },
+    {
+      "id": "548b2a377de14722f559",
+      "kind": "commoncrawl",
+      "observed_at": "20261115060805",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/2012-crawl-data-now-available",
+      "url": "https://commoncrawl.org/blog/2012-crawl-data-now-available"
+    },
+    {
+      "id": "d2c3b4036d494be4a5df",
+      "kind": "commoncrawl",
+      "observed_at": "20261115065449",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://commoncrawl.org/blog/5-good-reads-in-big-open-data-feb-13-2015",
+      "url": "https://commoncrawl.org/blog/5-good-reads-in-big-open-data-feb-13-2015"
+    },
+    {
+      "id": "4d601f941b898d71b39c",
+      "kind": "commoncrawl",
+      "observed_at": "20261116202825",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/",
+      "url": "https://www.w3.org/"
+    },
+    {
+      "id": "0929f6f28d730a1a67e3",
+      "kind": "commoncrawl",
+      "observed_at": "20261116173422",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1998/10/WD-rdf-syntax-19981008/",
+      "url": "https://www.w3.org/1998/10/WD-rdf-syntax-19981008/"
+    },
+    {
+      "id": "7b33574fc49c4b5ab546",
+      "kind": "commoncrawl",
+      "observed_at": "20261108063530",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/06/WD-SVG-19990706/fonts.html",
+      "url": "https://www.w3.org/1999/07/06/WD-SVG-19990706/fonts.html"
+    },
+    {
+      "id": "3069bb1c21439be37a8a",
+      "kind": "commoncrawl",
+      "observed_at": "20261118213139",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/dms.html",
+      "url": "https://www.w3.org/1999/07/dms.html"
+    },
+    {
+      "id": "081b8d46830819ed08d5",
+      "kind": "commoncrawl",
+      "observed_at": "20261119063829",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/",
+      "url": "https://www.w3.org/1999/07/NOTE-CCPP-19990727/"
+    },
+    {
+      "id": "e5a59e9552d07b30bdf1",
+      "kind": "commoncrawl",
+      "observed_at": "20261118090319",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/08/WD-SVG-19990812/fonts.html",
+      "url": "https://www.w3.org/1999/08/WD-SVG-19990812/fonts.html"
+    },
+    {
+      "id": "ea381c54f6891370ebc3",
+      "kind": "commoncrawl",
+      "observed_at": "20261113151725",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/09/SVG-access/",
+      "url": "https://www.w3.org/1999/09/SVG-access/"
+    },
+    {
+      "id": "662858c0dcf981a89474",
+      "kind": "commoncrawl",
+      "observed_at": "20261112101720",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/xhtml/?ref=iq.opengenus.org",
+      "url": "https://www.w3.org/1999/xhtml/?ref=iq.opengenus.org"
+    },
+    {
+      "id": "a4542308b610d8a95ee6",
+      "kind": "commoncrawl",
+      "observed_at": "20261117223812",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/1999/XMLSchema-instance",
+      "url": "https://www.w3.org/1999/XMLSchema-instance"
+    },
+    {
+      "id": "6905b730eaff2dce06ea",
+      "kind": "commoncrawl",
+      "observed_at": "20261107013356",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/02/collaboration/annotation/AmayaDocs/Annotation.html",
+      "url": "https://www.w3.org/2000/02/collaboration/annotation/AmayaDocs/Annotation.html"
+    },
+    {
+      "id": "e0ae06dddf43b7212a42",
+      "kind": "commoncrawl",
+      "observed_at": "20261115025451",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/02/xmldsig",
+      "url": "https://www.w3.org/2000/02/xmldsig"
+    },
+    {
+      "id": "5bcb8660c4a309095511",
+      "kind": "commoncrawl",
+      "observed_at": "20261113141435",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/04/25-wcag-draft.html",
+      "url": "https://www.w3.org/2000/04/25-wcag-draft.html"
+    },
+    {
+      "id": "ab4e2cbb28b05a57c7be",
+      "kind": "commoncrawl",
+      "observed_at": "20261118001039",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl",
+      "url": "https://www.w3.org/2000/04/schema_hack/dtd2xsd.pl"
+    },
+    {
+      "id": "637ae2b4b4b6fccffdc8",
+      "kind": "commoncrawl",
+      "observed_at": "20261116203341",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/09/Papers/Overview.html",
+      "url": "https://www.w3.org/2000/09/Papers/Overview.html"
+    },
+    {
+      "id": "5aa68fcbfb91a7877aca",
+      "kind": "commoncrawl",
+      "observed_at": "20261116043228",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/09/tmr493/notes",
+      "url": "https://www.w3.org/2000/09/tmr493/notes"
+    },
+    {
+      "id": "16eb4b3ae47896b5c4ad",
+      "kind": "commoncrawl",
+      "observed_at": "20261108042358",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-containers-syntax-vs-schema/test005.rdf",
+      "url": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-containers-syntax-vs-schema/test005.rdf"
+    },
+    {
+      "id": "016c8af75f7590000f2d",
+      "kind": "commoncrawl",
+      "observed_at": "20261117203025",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-ns-prefix-confusion/README",
+      "url": "https://www.w3.org/2000/10/rdf-tests/rdfcore/rdf-ns-prefix-confusion/README"
+    },
+    {
+      "id": "28bacb8b68411b9d1690",
+      "kind": "commoncrawl",
+      "observed_at": "20261117204649",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/",
+      "url": "https://arxiv.org/"
+    },
+    {
+      "id": "07cc965423ae989ca81a",
+      "kind": "commoncrawl",
+      "observed_at": "20261107182418",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=alphasec.io",
+      "url": "https://arxiv.org/?ref=alphasec.io"
+    },
+    {
+      "id": "02f79605636f94bcfb8b",
+      "kind": "commoncrawl",
+      "observed_at": "20261111075559",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=gonitsora.com",
+      "url": "https://arxiv.org/?ref=gonitsora.com"
+    },
+    {
+      "id": "f1d2c6fbcc5a06232500",
+      "kind": "commoncrawl",
+      "observed_at": "20261109092423",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=runtimewire",
+      "url": "https://arxiv.org/?ref=runtimewire"
+    },
+    {
+      "id": "ed17b4c457d69abb831d",
+      "kind": "commoncrawl",
+      "observed_at": "20261115092413",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?ref=techtech.club",
+      "url": "https://arxiv.org/?ref=techtech.club"
+    },
+    {
+      "id": "8e167f15108da8f2c183",
+      "kind": "commoncrawl",
+      "observed_at": "20261109122434",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/?utm_source=gemini",
+      "url": "https://arxiv.org/?utm_source=gemini"
+    },
+    {
+      "id": "90a7ba1d49c334340942",
+      "kind": "commoncrawl",
+      "observed_at": "20261108154212",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0001-5898-1911.html",
+      "url": "https://arxiv.org/a/0000-0001-5898-1911.html"
+    },
+    {
+      "id": "78f8eaebc428211f96ee",
+      "kind": "commoncrawl",
+      "observed_at": "20261106124239",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-2728-6091.html",
+      "url": "https://arxiv.org/a/0000-0002-2728-6091.html"
+    },
+    {
+      "id": "b47bd3b87e2da805619f",
+      "kind": "commoncrawl",
+      "observed_at": "20261110132109",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-3727-0894.html",
+      "url": "https://arxiv.org/a/0000-0002-3727-0894.html"
+    },
+    {
+      "id": "374f19e25be51f29ab8c",
+      "kind": "commoncrawl",
+      "observed_at": "20261117192820",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-5270-5550.html",
+      "url": "https://arxiv.org/a/0000-0002-5270-5550.html"
+    },
+    {
+      "id": "ab9ab67174fa930ede15",
+      "kind": "commoncrawl",
+      "observed_at": "20261113052540",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-6070-0784.html",
+      "url": "https://arxiv.org/a/0000-0002-6070-0784.html"
+    },
+    {
+      "id": "1997523e55d7286fab6f",
+      "kind": "commoncrawl",
+      "observed_at": "20261115141503",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0002-9188-9890.html",
+      "url": "https://arxiv.org/a/0000-0002-9188-9890.html"
+    },
+    {
+      "id": "cc0b8d4e6a20b302911a",
+      "kind": "commoncrawl",
+      "observed_at": "20261108134422",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0000-0003-1709-1220.html",
+      "url": "https://arxiv.org/a/0000-0003-1709-1220.html"
+    },
+    {
+      "id": "60e6ed826fe37bda5233",
+      "kind": "commoncrawl",
+      "observed_at": "20261109070432",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/0009-0009-6096-3523.html",
+      "url": "https://arxiv.org/a/0009-0009-6096-3523.html"
+    },
+    {
+      "id": "0ddce14552f105a87923",
+      "kind": "commoncrawl",
+      "observed_at": "20261109040302",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/akhlaghi_m_1.html",
+      "url": "https://arxiv.org/a/akhlaghi_m_1.html"
+    },
+    {
+      "id": "b9f437df0b27c30c732c",
+      "kind": "commoncrawl",
+      "observed_at": "20261115035708",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/anderson_a_3.html",
+      "url": "https://arxiv.org/a/anderson_a_3.html"
+    },
+    {
+      "id": "35e180593e6504facf3e",
+      "kind": "commoncrawl",
+      "observed_at": "20261117132101",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/apollaro_t_1.html",
+      "url": "https://arxiv.org/a/apollaro_t_1.html"
+    },
+    {
+      "id": "54b1e4ba9f8ccab66cd9",
+      "kind": "commoncrawl",
+      "observed_at": "20261112005249",
+      "source": "Common Crawl CC-MAIN-2026-47",
+      "title": "https://arxiv.org/a/aulbach_m_1.html",
+      "url": "https://arxiv.org/a/aulbach_m_1.html"
     }
   ],
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
@@ -911,6 +2327,10 @@
       "fingerprint": "f6f7442fa1899b51e4a8",
       "last_seen": "2026-10-11T05:38:34Z"
     },
+    "016c8af75f7590000f2d": {
+      "fingerprint": "824339dbe179d1c01ac5",
+      "last_seen": "20261117203025"
+    },
     "019e455bef452d8daa4d": {
       "fingerprint": "dcec2d0d42e0d1bccac2",
       "last_seen": "2026-10-09T02:05:05Z"
@@ -935,6 +2355,10 @@
       "fingerprint": "d9c1f6b90dfedec31bc4",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "0290cd3e97744559e088": {
+      "fingerprint": "5450db4adc2f6b54a61e",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "02d863a83c9e8dedb5b4": {
       "fingerprint": "6b100187b1c7e0d5803e",
       "last_seen": "2026-10-10T01:43:39Z"
@@ -951,6 +2375,10 @@
       "fingerprint": "cc94d3078ebdcccd29cd",
       "last_seen": "2026-10-16T07:05:10Z"
     },
+    "02f79605636f94bcfb8b": {
+      "fingerprint": "68063a93f63662d86a3c",
+      "last_seen": "20261111075559"
+    },
     "030a3658eea5003a4d2b": {
       "fingerprint": "d4b00d1a4103ca095ca0",
       "last_seen": "2026-10-09T02:05:05Z"
@@ -961,7 +2389,7 @@
     },
     "032b17500d4009fe9ff8": {
       "fingerprint": "5fc8678ed04f09b2a858",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "032ea216940aec50fb72": {
       "fingerprint": "dc1d5ceb711129e7057f",
@@ -1005,11 +2433,11 @@
     },
     "037a64919b394f0e47b0": {
       "fingerprint": "be86e63e8127954f28e6",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "0386d86e596acc2db46f": {
       "fingerprint": "d87487803e4547eb1c23",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "038e61403220fc9c18cb": {
       "fingerprint": "f420f240fc1a5ee2ba3a",
@@ -1181,7 +2609,7 @@
     },
     "073f9b4d7b387c99f07e": {
       "fingerprint": "5617e0870f02e2aa545f",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "073fd7234bdb561db068": {
       "fingerprint": "d470a6f4ce1014762e66",
@@ -1206,6 +2634,10 @@
     "07baf4e9f50d11b02f5b": {
       "fingerprint": "11858247994de31d3f33",
       "last_seen": "2026-10-16T01:15:52Z"
+    },
+    "07cc965423ae989ca81a": {
+      "fingerprint": "7016261216c5fb0670e9",
+      "last_seen": "20261107182418"
     },
     "07cd96b9ae629b27eb7c": {
       "fingerprint": "f8cda92d0cc4745ea7b8",
@@ -1244,8 +2676,8 @@
       "last_seen": "2026-10-06T00:46:01Z"
     },
     "081b8d46830819ed08d5": {
-      "fingerprint": "ed06d7e1a52b8e51b586",
-      "last_seen": "20260908184622"
+      "fingerprint": "cb548e92ba2fa8aaa435",
+      "last_seen": "20261119063829"
     },
     "082378c60bc906a638b4": {
       "fingerprint": "a9fbaf40b6ac0e01f3fc",
@@ -1261,7 +2693,7 @@
     },
     "089bf24f70886d0f6b07": {
       "fingerprint": "4175aa8d98a8edb0d478",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "08d6ee7f7a96b8a9fbcb": {
       "fingerprint": "d757dca9ad2a1016133e",
@@ -1270,6 +2702,10 @@
     "09171290a0e7a14f7fad": {
       "fingerprint": "671817c2774fb99c02aa",
       "last_seen": "2026-10-16T07:05:10Z"
+    },
+    "0929f6f28d730a1a67e3": {
+      "fingerprint": "c9f4c4d4edc0ccb84f07",
+      "last_seen": "20261116173422"
     },
     "092cecf5f8b4aa1a991a": {
       "fingerprint": "f4df9e127b5a87fb29d1",
@@ -1317,7 +2753,7 @@
     },
     "0a18376084f98451b293": {
       "fingerprint": "7ba704295ea52add47ab",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "0a22d3e7b9165398b664": {
       "fingerprint": "dfc159d83cc04755f0e5",
@@ -1361,7 +2797,7 @@
     },
     "0aaf7eacf87f7a022f07": {
       "fingerprint": "5728c738c335ca73e84a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "0aef09d1b57a8f56cd60": {
       "fingerprint": "d85c9fc4e9644bf92f63",
@@ -1417,7 +2853,7 @@
     },
     "0c06abcb0d06332e5331": {
       "fingerprint": "c1fe748e34820ea74371",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "0c22ba88d1257169379c": {
       "fingerprint": "630b026710705cfe5ce8",
@@ -1535,6 +2971,10 @@
       "fingerprint": "7a6a5e9dc915c7aba987",
       "last_seen": "2026-11-03T13:53:12Z"
     },
+    "0ddce14552f105a87923": {
+      "fingerprint": "e3e2253f949c0a5da003",
+      "last_seen": "20261109040302"
+    },
     "0e0776f86cfc7f192853": {
       "fingerprint": "c71dc61db36836810f29",
       "last_seen": "2026-10-16T23:31:34Z"
@@ -1571,6 +3011,10 @@
       "fingerprint": "b9a5d86f55c0023c9ce0",
       "last_seen": "2026-10-16T01:15:52Z"
     },
+    "0ea66ddcc209eef858db": {
+      "fingerprint": "fda42238d9f7746dd28a",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "0ed82d6d4259c6df733b": {
       "fingerprint": "bcdb10521ac82b576d6d",
       "last_seen": "2026-10-09T07:20:00Z"
@@ -1601,7 +3045,7 @@
     },
     "0f94c1b2cc9695104e0d": {
       "fingerprint": "b4808d5e5a6e8cb7dc46",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "0fba5cf814a38af5d7ba": {
       "fingerprint": "9bceb215e76cbf71eaf5",
@@ -1673,7 +3117,7 @@
     },
     "1104ec0ee393a7f4f909": {
       "fingerprint": "a50e60bb94caa61da2a7",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "113a70303c759bf19449": {
       "fingerprint": "3aff5f8cce90027ad8d3",
@@ -1701,7 +3145,7 @@
     },
     "11a49ab621a411f0cc0b": {
       "fingerprint": "4ec13cf0bb0d4d569606",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "11e9fbd537239b184312": {
       "fingerprint": "8f049afbc7c1e55073cc",
@@ -1737,7 +3181,7 @@
     },
     "125f77fa8d831dc9a62e": {
       "fingerprint": "4636e401453d491c26ae",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "1263ce4e09302da828b2": {
       "fingerprint": "a15ce3620db45a2d8aef",
@@ -1757,7 +3201,7 @@
     },
     "129cee30a618dbacbfe9": {
       "fingerprint": "e19f89cf9bff597ac035",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "12a4904af7aa0825c402": {
       "fingerprint": "8f15fe0c3b97d8402904",
@@ -1821,7 +3265,7 @@
     },
     "13d50abcf6e5e74ddab8": {
       "fingerprint": "02d24a456f0bde9221e8",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "13dd6fe9a9252ccd9f9a": {
       "fingerprint": "82c86bd48eac0ad6118b",
@@ -1901,7 +3345,7 @@
     },
     "1558c78d072630b6166d": {
       "fingerprint": "0771c4e8067959e42b1c",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "155c7b54b4cbd80e144f": {
       "fingerprint": "1b581c9bd1b2870feca5",
@@ -2007,6 +3451,10 @@
       "fingerprint": "7063ab1ff4771e86f4b9",
       "last_seen": "2026-11-03T13:53:12Z"
     },
+    "16eb4b3ae47896b5c4ad": {
+      "fingerprint": "d137d527768e5260be32",
+      "last_seen": "20261108042358"
+    },
     "16fba149e97bb8d441f4": {
       "fingerprint": "c4d7cd9cd4a631f23f93",
       "last_seen": "2026-10-06T00:46:00Z"
@@ -2106,6 +3554,10 @@
     "1992c310d7b6f26d2e56": {
       "fingerprint": "c0d2bcdf942767f13551",
       "last_seen": "2026-10-08T16:25:23Z"
+    },
+    "1997523e55d7286fab6f": {
+      "fingerprint": "5590780036154a94ca30",
+      "last_seen": "20261115141503"
     },
     "19a69be69f4d18541a59": {
       "fingerprint": "2b9a76857a4ca51064fd",
@@ -2285,7 +3737,7 @@
     },
     "1cb4dab4f76ed824568d": {
       "fingerprint": "d1a7b6fafcc299e88891",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "1cf5e4d9799d0912d04b": {
       "fingerprint": "37ab5af96723a7ab4cca",
@@ -2345,7 +3797,7 @@
     },
     "1e37d1fe64d9d46d2b20": {
       "fingerprint": "0402f5a810913e2f02bb",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "1e639a39b70545ab5111": {
       "fingerprint": "9f8c5261dfba0d978d73",
@@ -2361,7 +3813,7 @@
     },
     "1e98197ec7f8529efba1": {
       "fingerprint": "30fa1a307100cd7f62a7",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "1ea363bf86c49418652d": {
       "fingerprint": "762f9fac22f991225795",
@@ -2601,7 +4053,7 @@
     },
     "2380adac72da2dd72795": {
       "fingerprint": "b46e2b85b23f50e59f06",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "23c36dde8c598e39e4c4": {
       "fingerprint": "d01b3cfbee1849a42a4e",
@@ -2661,7 +4113,7 @@
     },
     "24dd95896911d8bd0b6d": {
       "fingerprint": "bbb0223d0ac5211236dc",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "24df2cd937c5237b6ead": {
       "fingerprint": "863dd11d0741b9f4520c",
@@ -2852,8 +4304,8 @@
       "last_seen": "2026-11-03T13:31:56Z"
     },
     "28bacb8b68411b9d1690": {
-      "fingerprint": "b0dbafe7746608afbcb6",
-      "last_seen": "20260913044913"
+      "fingerprint": "9778feadd89709d9f5ce",
+      "last_seen": "20261117204649"
     },
     "28bdfb16541c673931d5": {
       "fingerprint": "ebf7cb6d2774b8fd140a",
@@ -2897,7 +4349,7 @@
     },
     "29479d01e25eeac2765e": {
       "fingerprint": "05540d6b01fe62a2dfdc",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "294861f2e2a5d6ea5554": {
       "fingerprint": "74e0a1e9642f47e8ac83",
@@ -3053,7 +4505,7 @@
     },
     "2c15f23ac7aa344ce6cd": {
       "fingerprint": "fdea0587eaab35612449",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "2c3273c65cd93db4e171": {
       "fingerprint": "7327914cdb1b24ffd192",
@@ -3125,7 +4577,7 @@
     },
     "2dadf5eefd515726fb06": {
       "fingerprint": "70d21303c46a3a92cdf4",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "2db012a87aeaa54a587e": {
       "fingerprint": "4830238d2cff00d8c19b",
@@ -3185,7 +4637,7 @@
     },
     "2f1c65ad4b7ec3807ad9": {
       "fingerprint": "5fd01fececf61d7b99e5",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "2f246ab8ad92798d7987": {
       "fingerprint": "136a4f4803e9e5eab714",
@@ -3259,6 +4711,10 @@
       "fingerprint": "80127fdcc9cd4c573e76",
       "last_seen": "2026-10-16T01:15:52Z"
     },
+    "3069bb1c21439be37a8a": {
+      "fingerprint": "e9e2fb80c372bf782e2e",
+      "last_seen": "20261118213139"
+    },
     "308a2c9d337c0bc83ac4": {
       "fingerprint": "e953d0eae3286148cdd9",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -3281,7 +4737,7 @@
     },
     "30c42c6803fd3cc30165": {
       "fingerprint": "05344fe25b981c49b72a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "30c47d0aa77ce6bf1414": {
       "fingerprint": "556a599d8354a951ae37",
@@ -3373,7 +4829,7 @@
     },
     "32fd783e61c1ff299a2f": {
       "fingerprint": "7b0ac7948ef6074cc749",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "33016bc84be2df6155b4": {
       "fingerprint": "2e1671fc9765d4271c58",
@@ -3381,7 +4837,7 @@
     },
     "330c3aa5ed1dcd01f5c6": {
       "fingerprint": "f41038e56660b99f13d8",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "331d126b4c07e261a786": {
       "fingerprint": "4ea168f6a7dd7d8eb610",
@@ -3485,11 +4941,15 @@
     },
     "359b504aecb4a8066979": {
       "fingerprint": "103019b45cc5e0c9cdfa",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "35c6f6677253a25e1297": {
       "fingerprint": "4699b37ab54f00877026",
       "last_seen": "2026-10-06T00:46:01Z"
+    },
+    "35e180593e6504facf3e": {
+      "fingerprint": "0e70d04cb6b8188cc354",
+      "last_seen": "20261117132101"
     },
     "364267b012f4ea40b25a": {
       "fingerprint": "27d0f9407ca5c747b488",
@@ -3535,9 +4995,13 @@
       "fingerprint": "8e893de34d605ccbf5f3",
       "last_seen": "2026-10-14T01:50:52Z"
     },
+    "374f19e25be51f29ab8c": {
+      "fingerprint": "4241f85d110aca69b6a9",
+      "last_seen": "20261117192820"
+    },
     "375278fb60b058521bb5": {
       "fingerprint": "6094b8c98b18471aeb27",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "37573463175da7483c49": {
       "fingerprint": "cc7fff68a8993192fa1c",
@@ -3557,7 +5021,7 @@
     },
     "37ab1fbdd16439247835": {
       "fingerprint": "626e4fa88ce503e91b73",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "37b876e9b7396fe713d4": {
       "fingerprint": "3dce99b4e96e7cf8e578",
@@ -4029,7 +5493,7 @@
     },
     "410a92595886a074fe4f": {
       "fingerprint": "a4d2a4a00129912597c8",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "410ae70aa0cfae08c7d0": {
       "fingerprint": "ffae90b37518998ee8c7",
@@ -4057,7 +5521,7 @@
     },
     "41a209d76f100b1bd5d4": {
       "fingerprint": "761c2d885194709340d7",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "41be3fc9b0e2c0e72998": {
       "fingerprint": "82d883ab95b2177d8619",
@@ -4197,11 +5661,11 @@
     },
     "44ca195f5b7c621a996e": {
       "fingerprint": "39d7b57174a6dff70e27",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "44da8f64393f458442ad": {
       "fingerprint": "92a57fec16c4190847b9",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "44dbcee82122f9c0d18b": {
       "fingerprint": "b6a2b6af7d9f80961379",
@@ -4277,7 +5741,7 @@
     },
     "469fe5a61b36c036d58c": {
       "fingerprint": "aa6c78bb067aec267e9c",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "46a47c0772812524944b": {
       "fingerprint": "91f3bb1b91d23b5e5ae1",
@@ -4405,7 +5869,7 @@
     },
     "4956d2164f092914b97e": {
       "fingerprint": "920d4f4597b8910c74b6",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "495ef8f95d4544b83154": {
       "fingerprint": "adce1fe8492906d125b5",
@@ -4418,6 +5882,10 @@
     "49a6da8b14df86d03f53": {
       "fingerprint": "a7cd01a3da03e1cff261",
       "last_seen": "2026-10-16T23:31:34Z"
+    },
+    "49d8e71992a79ea5c8ce": {
+      "fingerprint": "f3581b5ffd65fedaabd6",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "49dfd8f6ca5283a1711f": {
       "fingerprint": "bd7dc44a7cb86654a5c3",
@@ -4433,7 +5901,7 @@
     },
     "49e698baa7e157ae1f7c": {
       "fingerprint": "4fb99c89ccd347b089a6",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "49ea926c111e41bb66ed": {
       "fingerprint": "51d78adc948d049a7bd0",
@@ -4463,17 +5931,21 @@
       "fingerprint": "9cc649fe7329293791ab",
       "last_seen": "2026-10-09T16:08:15Z"
     },
+    "4a9bfe0bdd26dd3cc3ab": {
+      "fingerprint": "1813d90aa79e0bcf5d54",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "4ae8efd7a9964cf3d437": {
       "fingerprint": "bf8a29b99e53c5a5aa26",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "4aedb3fa5826d380d7c5": {
       "fingerprint": "7470cd996e0527549200",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "4b0f73dc86552b117283": {
       "fingerprint": "e30efa8d14135d7078aa",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "4b152a91481f82f2f36d": {
       "fingerprint": "f8017d5c6dd6eebf9f40",
@@ -4514,6 +5986,10 @@
     "4b90cc8dfa84bed0052d": {
       "fingerprint": "65d526cbdbf88a8d75d8",
       "last_seen": "2026-11-03T13:53:12Z"
+    },
+    "4b96978daecc4817be0b": {
+      "fingerprint": "6e8ead8b9aa6a918260f",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "4ba30d9b0c538cac08cc": {
       "fingerprint": "fc8011e29de81313ee17",
@@ -4569,7 +6045,7 @@
     },
     "4cf8b354f2993f2805ce": {
       "fingerprint": "335086e36b016d1dbcde",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "4d3819acd38d892ded93": {
       "fingerprint": "a91109b9df8a2b96f03c",
@@ -4580,8 +6056,8 @@
       "last_seen": "2026-10-10T01:43:39Z"
     },
     "4d601f941b898d71b39c": {
-      "fingerprint": "6c1ba1d25596bd181f74",
-      "last_seen": "20260916193228"
+      "fingerprint": "56c91830607b742add47",
+      "last_seen": "20261116202825"
     },
     "4d611d68a5a28f312281": {
       "fingerprint": "87253405679d3a1eac0e",
@@ -4609,7 +6085,7 @@
     },
     "4db649c9170bbe46a746": {
       "fingerprint": "367466ce8e6d8aef32f1",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "4dc309c2f9cfbf220cd0": {
       "fingerprint": "6b69172e21a01c12b106",
@@ -4849,7 +6325,7 @@
     },
     "51dc1d2f6b3bd6dfbc4a": {
       "fingerprint": "6bb928aa8d045a464336",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "51f04c477c6b6a601f13": {
       "fingerprint": "099ad916dce28bf3a135",
@@ -4909,7 +6385,7 @@
     },
     "53199f615af74997230d": {
       "fingerprint": "2d8410548d71f046723e",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "532776e2c33a4d7779e2": {
       "fingerprint": "d8e9aef54c3f20866bca",
@@ -4936,8 +6412,8 @@
       "last_seen": "2026-11-03T13:53:12Z"
     },
     "53510b5370cd80960ab8": {
-      "fingerprint": "5b8ab71701b151a8f9c3",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "fingerprint": "d960fae93a1f10a12486",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "5358dbd27ddb83f6edb0": {
       "fingerprint": "3fee466efc4ee3d673bc",
@@ -5003,6 +6479,10 @@
       "fingerprint": "7a6ff665f4e281e387e6",
       "last_seen": "2026-11-23T22:58:50Z"
     },
+    "548b2a377de14722f559": {
+      "fingerprint": "b8330be40d91c7282fcf",
+      "last_seen": "20261115060805"
+    },
     "5495b0a1faa723b57d37": {
       "fingerprint": "a405e6e09ae45afb7e4d",
       "last_seen": "2026-10-14T01:50:53Z"
@@ -5015,9 +6495,13 @@
       "fingerprint": "35d471e88454f523a77e",
       "last_seen": "2026-10-09T02:05:05Z"
     },
+    "54b1e4ba9f8ccab66cd9": {
+      "fingerprint": "39078e4df281993051ec",
+      "last_seen": "20261112005249"
+    },
     "54b9d850727b6cdbe5ce": {
       "fingerprint": "5961765d8cd3e0f7aab4",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "54c2f1c30dac12050d8d": {
       "fingerprint": "ed3010ccef8a9f35e431",
@@ -5121,7 +6605,7 @@
     },
     "572a341c954c548987ad": {
       "fingerprint": "041206e50d7b5a981931",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "5740c3feedb65e91e6d9": {
       "fingerprint": "c3993cf5f7dbea7665fe",
@@ -5343,13 +6827,17 @@
       "fingerprint": "0db4eff3bb99b941664d",
       "last_seen": "2026-10-11T18:01:30Z"
     },
+    "5aa68fcbfb91a7877aca": {
+      "fingerprint": "2aa9ea71bb4665ac7958",
+      "last_seen": "20261116043228"
+    },
     "5aabf5dd567184263b6b": {
       "fingerprint": "1b5c137069cf5b13bd96",
       "last_seen": "2026-11-03T13:53:12Z"
     },
     "5abd5224c3734a52bdab": {
       "fingerprint": "531749ad515f5375d789",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5ae4faf3113d696a9c9e": {
       "fingerprint": "969a47479094e9882821",
@@ -5361,7 +6849,7 @@
     },
     "5aebe77748d66a1bef9a": {
       "fingerprint": "6edb70e83e5b836d3241",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "5aed1ec194f0f73d84ee": {
       "fingerprint": "55ec6e452146d1bb361f",
@@ -5381,7 +6869,7 @@
     },
     "5b61a759cd14a0a6237c": {
       "fingerprint": "a441ae6a0aa013acf2d8",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "5bb1c16aff1d31b387ca": {
       "fingerprint": "ca88c25e98ee708bf236",
@@ -5390,6 +6878,10 @@
     "5bb267b0dcdbe36185ce": {
       "fingerprint": "8e6b4fe4697fff7644ad",
       "last_seen": "2026-10-16T01:15:52Z"
+    },
+    "5bcb8660c4a309095511": {
+      "fingerprint": "6a90db14d4f9f69bce5e",
+      "last_seen": "20261113141435"
     },
     "5bcca924e1ff951f819e": {
       "fingerprint": "a04f876416055d5f3fa8",
@@ -5413,7 +6905,7 @@
     },
     "5c4216759b09fc16dea9": {
       "fingerprint": "b02929ba6a657dae5151",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "5c49da1eb7e5efefc3dc": {
       "fingerprint": "e1a2308527fdad1afed9",
@@ -5433,7 +6925,7 @@
     },
     "5c7b8bdb9c001de23cea": {
       "fingerprint": "fb79e40eccffe5ae3873",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "5c99956c98c41594b2a3": {
       "fingerprint": "39b6e05a3ebf19d5c7ef",
@@ -5453,7 +6945,7 @@
     },
     "5cd9d84243c19fcc5608": {
       "fingerprint": "94fa77bc9cb872bb48ae",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5ce2e34c87cbe660bcc4": {
       "fingerprint": "9ec50135cb6f3e1629df",
@@ -5533,7 +7025,7 @@
     },
     "5e339f35a58b7a5c7f42": {
       "fingerprint": "19fe466bba44ed976b52",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5e3be5a6851a682517a3": {
       "fingerprint": "f831b10fe27e87f4046d",
@@ -5593,11 +7085,11 @@
     },
     "5f2f4f2c1f3a97720d33": {
       "fingerprint": "12fff29876d24a94c35a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5f364a8612fd0351861d": {
       "fingerprint": "f38ba54983704edf6803",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5f4b5712c158faa06521": {
       "fingerprint": "a600018db14153389a49",
@@ -5609,7 +7101,7 @@
     },
     "5f66990b2ef05a98f55f": {
       "fingerprint": "f855fdb5f50dbba28126",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "5f6f9d93a18ad3f0a7e6": {
       "fingerprint": "f9f51f8713c07c28d08c",
@@ -5667,9 +7159,13 @@
       "fingerprint": "b1ff43cf5fe0b17b3e5e",
       "last_seen": "2026-10-14T07:30:43Z"
     },
+    "60e6ed826fe37bda5233": {
+      "fingerprint": "731bb55aa3b9df51d2d3",
+      "last_seen": "20261109070432"
+    },
     "60e9a0a09a7e88daa6f4": {
       "fingerprint": "f1ed042be514de75c24a",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "6102b8ee6b1f9802a25c": {
       "fingerprint": "4abb17e986a151102823",
@@ -5682,6 +7178,10 @@
     "6131fe24f35c48188114": {
       "fingerprint": "9981dd5db35d52803299",
       "last_seen": "2026-11-03T13:53:12Z"
+    },
+    "6143553ba4efb8aa7663": {
+      "fingerprint": "360ea56f81feb234fe3a",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "615f5bd6a724c327fa31": {
       "fingerprint": "ab124cb109b363dd32ee",
@@ -5717,7 +7217,7 @@
     },
     "61c560cb0c0c918451ab": {
       "fingerprint": "a370a88969ea32dfa967",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "61d8127e693f0b0f3ba7": {
       "fingerprint": "671036cdddf858e2c371",
@@ -5778,6 +7278,10 @@
     "636de132ba428ce7a242": {
       "fingerprint": "eb5f78bbea2d24a10c05",
       "last_seen": "2026-10-15T18:14:00Z"
+    },
+    "637ae2b4b4b6fccffdc8": {
+      "fingerprint": "40ecdda8a6222b008610",
+      "last_seen": "20261116203341"
     },
     "638008a21f5d0344d2eb": {
       "fingerprint": "76dfafcd4cc9f2d7c170",
@@ -5843,6 +7347,10 @@
       "fingerprint": "6e95f1687ace189bb227",
       "last_seen": "2026-11-03T13:53:12Z"
     },
+    "65021d061c67359619d3": {
+      "fingerprint": "8ef6bec9e02ee1d7906f",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "650a47eae09204f12b6e": {
       "fingerprint": "92fa4cdd56879848a48a",
       "last_seen": "2026-10-08T16:25:23Z"
@@ -5869,7 +7377,7 @@
     },
     "65763140459cf23fdedd": {
       "fingerprint": "e5850e344e568509ec64",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "658ce2f5726b56703b5d": {
       "fingerprint": "3ffbd85491b5b2af8041",
@@ -5891,6 +7399,10 @@
       "fingerprint": "11af526c529437a048d6",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "662858c0dcf981a89474": {
+      "fingerprint": "fcf704b0211325087e89",
+      "last_seen": "20261112101720"
+    },
     "6634553258bdb057c7f0": {
       "fingerprint": "713536183efec5600d0f",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -5901,7 +7413,7 @@
     },
     "6654cce3b776b76f5cbe": {
       "fingerprint": "f300c3307c1c5a66f634",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "66773d58f9ea6be3f6f4": {
       "fingerprint": "87c2536559d5538f4118",
@@ -5909,7 +7421,7 @@
     },
     "6682b8c560d18b989ba8": {
       "fingerprint": "31f19c0c1d0c0042a7f4",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "668a9e048b9e72134c88": {
       "fingerprint": "be0b7b731e89db4c95e1",
@@ -6031,6 +7543,10 @@
       "fingerprint": "91efd8b4251622a5f3b2",
       "last_seen": "2026-11-23T22:58:50Z"
     },
+    "6905b730eaff2dce06ea": {
+      "fingerprint": "5cf2fedbf196ca1c6f5f",
+      "last_seen": "20261107013356"
+    },
     "69163a32d29002c32034": {
       "fingerprint": "832375c7d1daf4f03eab",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -6086,6 +7602,10 @@
     "6a337996fce9b648126c": {
       "fingerprint": "d71b293272029d28b98d",
       "last_seen": "2026-10-07T15:31:01Z"
+    },
+    "6a3939f0455e10d899e7": {
+      "fingerprint": "7586da07eb43e42d7a74",
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "6a78f6efee3a21f22375": {
       "fingerprint": "5d8f5d3e934461391e3a",
@@ -6193,7 +7713,7 @@
     },
     "6cb428459606b5a9549d": {
       "fingerprint": "f5730f3fb67387ccb48a",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "6cbb376bdb40e04b479e": {
       "fingerprint": "d403883bdea4f55b5f44",
@@ -6210,6 +7730,10 @@
     "6cf898438821690692a9": {
       "fingerprint": "411777bcc6b3ea6a849e",
       "last_seen": "2026-10-07T07:10:55Z"
+    },
+    "6cfee671dcd6b72246b9": {
+      "fingerprint": "40dee17fe178a6db1ac7",
+      "last_seen": "20261115065923"
     },
     "6d2ccd890a1e9daec2ad": {
       "fingerprint": "633e3de27b61839f845b",
@@ -6265,7 +7789,7 @@
     },
     "6e4168f82218e48b2b73": {
       "fingerprint": "61bd6d98642efc83fb89",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "6ea16c172c83caf06b58": {
       "fingerprint": "70d30224b2166a0f48cf",
@@ -6305,7 +7829,7 @@
     },
     "6f4a1fa6b15ab56d1baa": {
       "fingerprint": "9e629220ce220c89389f",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "6f51f60e30b138d8626c": {
       "fingerprint": "5ea6506e8bd4381e3758",
@@ -6389,7 +7913,7 @@
     },
     "70b0e3e7f12c10cd9ed9": {
       "fingerprint": "6e4efff51e7eb265098a",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "70f182dccc3f27a58292": {
       "fingerprint": "ba955d2b47979797f195",
@@ -6441,7 +7965,7 @@
     },
     "71a4e8c3880a5ab561c1": {
       "fingerprint": "8f59afe8d2eb9a2cb134",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "71add0372f7c6b39de64": {
       "fingerprint": "2a28ba055adc89428fa0",
@@ -6815,6 +8339,10 @@
       "fingerprint": "d97755f5687b8cdb9919",
       "last_seen": "2026-10-16T07:05:10Z"
     },
+    "78f8eaebc428211f96ee": {
+      "fingerprint": "380ec5b6632c9ee7349f",
+      "last_seen": "20261106124239"
+    },
     "79014dd89c495e695d50": {
       "fingerprint": "f2e5736b1f906a9089f6",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -6935,6 +8463,10 @@
       "fingerprint": "574774e08e64a547227a",
       "last_seen": "2026-11-23T22:58:50Z"
     },
+    "7b33574fc49c4b5ab546": {
+      "fingerprint": "68361158a18450e8f986",
+      "last_seen": "20261108063530"
+    },
     "7b350c4dafe600daf645": {
       "fingerprint": "268552e94796cc5276f9",
       "last_seen": "2026-10-09T02:05:05Z"
@@ -6961,7 +8493,7 @@
     },
     "7c512829bf524dd8cb09": {
       "fingerprint": "6362d7a7223f08840c0f",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "7c634e27ef1a7d33a66c": {
       "fingerprint": "c7550674957888e4acfd",
@@ -7005,11 +8537,11 @@
     },
     "7d503f9c07efece57008": {
       "fingerprint": "31c0eac5529d3cb8d0e1",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "7d6143a468086b175782": {
       "fingerprint": "9cf3f66bd9c6518db655",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "7d8a27cb5a0f32bb76fa": {
       "fingerprint": "783a997f26aa5e9fd786",
@@ -7049,7 +8581,7 @@
     },
     "7e0b800edd5c6a4316f5": {
       "fingerprint": "c939ba67b8db9bcab1af",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "7e19ad194ea5585e1e73": {
       "fingerprint": "590c5ab8b013b0f06489",
@@ -7105,7 +8637,7 @@
     },
     "7ea510935dfd2aa76b5a": {
       "fingerprint": "86ed56ee03fd22b63f65",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "7ed0d9888ce5e464ab06": {
       "fingerprint": "cd24dc30e76e58494fbb",
@@ -7121,7 +8653,7 @@
     },
     "7f18a13cc3e389eaf0f2": {
       "fingerprint": "c7354ad24f7119ab690a",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "7f2ca3055fb81d8fdf46": {
       "fingerprint": "b478ef4599d61f10c784",
@@ -7220,8 +8752,8 @@
       "last_seen": "2026-11-03T13:53:12Z"
     },
     "809964c177391d331927": {
-      "fingerprint": "ecb6f82bfd7a63dd8076",
-      "last_seen": "20260910165852"
+      "fingerprint": "9333d180d661a8b9880c",
+      "last_seen": "20261116012336"
     },
     "809cc06d80fad07e88fb": {
       "fingerprint": "b521a0f174a007284415",
@@ -7261,7 +8793,7 @@
     },
     "81a3389421f4bb56bc3d": {
       "fingerprint": "fad2b46fff0d7527d6ea",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "81dee08a5762829049d7": {
       "fingerprint": "0ae31f5748f35df9f91e",
@@ -7357,7 +8889,7 @@
     },
     "83eb224748ee20b5be49": {
       "fingerprint": "21e4ec5f039e132109f5",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "83f7a8ccbdc00e261951": {
       "fingerprint": "d45a0c09f674b2f1e58d",
@@ -7653,7 +9185,7 @@
     },
     "8a328104e8db0a06aebb": {
       "fingerprint": "b74cc8e62e17a688c256",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "8a3d9c31a7be2b116559": {
       "fingerprint": "a3ef8cd5a510e8f03a33",
@@ -7689,7 +9221,7 @@
     },
     "8afe013f95efd1b4bb3e": {
       "fingerprint": "1a3a1c9b0d089924c43a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "8b01562a542974d19da4": {
       "fingerprint": "196de358618bd185e115",
@@ -7713,7 +9245,7 @@
     },
     "8bc9138e516754eb5478": {
       "fingerprint": "f690ba198353d029564e",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "8c1854f784a023ca0465": {
       "fingerprint": "e9ffe34698a26a2736cf",
@@ -7769,7 +9301,7 @@
     },
     "8d46a442fd5a36ce42aa": {
       "fingerprint": "b6ccb5ee106152ae432a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "8d73e889992fe5dfadf4": {
       "fingerprint": "36a8f00ef10975efa14b",
@@ -7805,15 +9337,19 @@
     },
     "8df3484f72ce4634a7e5": {
       "fingerprint": "eaf10a20de62aa9b1bcb",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "8df6df601655f17ef834": {
       "fingerprint": "ad2045244b4334c4f8b6",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "8e167f15108da8f2c183": {
+      "fingerprint": "292d1b8518541015e51c",
+      "last_seen": "20261109122434"
+    },
     "8e1ccfd9653936aa4151": {
       "fingerprint": "3c629d9894c75c680fc5",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "8e1f74cce2e987050223": {
       "fingerprint": "7889a6ece5961e815c78",
@@ -7881,7 +9417,7 @@
     },
     "900f895587f072f2c3f8": {
       "fingerprint": "1b56dabc4600f21bd74b",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "902a2dfd566a09331dd0": {
       "fingerprint": "a06e6e81a921095eb83c",
@@ -7910,6 +9446,10 @@
     "90a1ae7f383f8daf15f9": {
       "fingerprint": "4459f947381c55ee50be",
       "last_seen": "2026-10-11T18:01:30Z"
+    },
+    "90a7ba1d49c334340942": {
+      "fingerprint": "1fff9f8089d94ed88622",
+      "last_seen": "20261108154212"
     },
     "90af90b972375528e604": {
       "fingerprint": "5317baf4d76bed774604",
@@ -7998,6 +9538,10 @@
     "921aede24621fdae1e28": {
       "fingerprint": "22d90331020f9dc62ef0",
       "last_seen": "2026-11-03T13:53:12Z"
+    },
+    "923c0e4c62bee1845095": {
+      "fingerprint": "9d9bee09fcd330c0b04d",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "924f5133cd84119949f5": {
       "fingerprint": "6963d7e080476b77b291",
@@ -8129,7 +9673,7 @@
     },
     "94dcca4ef3140fe35024": {
       "fingerprint": "4fada9ab101bfcee7258",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "94f07ba05cddef93cf2a": {
       "fingerprint": "9891f6f658de80943bf3",
@@ -8138,6 +9682,10 @@
     "94f1e8b7a567a9a1979e": {
       "fingerprint": "3d4cc3cfb138ceea3af3",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "95070b66c5b897c1f908": {
+      "fingerprint": "74465e87f3bc7e2d8570",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "951d658a61563820530a": {
       "fingerprint": "5f3bd486516efaa6b1e0",
@@ -8173,7 +9721,7 @@
     },
     "9598ef10e2e425e75053": {
       "fingerprint": "255d2831cc81b0d16e30",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "959e6a0f97dc3ecda83d": {
       "fingerprint": "1959131ae75b3e1b7e93",
@@ -8217,7 +9765,7 @@
     },
     "9646943c9e0872c56c39": {
       "fingerprint": "8c1d3353b03e92a6f06f",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "966a0eedda0dcdcf8f38": {
       "fingerprint": "cea5e3058e4a67071827",
@@ -8285,7 +9833,7 @@
     },
     "978dfe91bccd9efa7125": {
       "fingerprint": "73e492d4f2675da2bd0a",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "97921d544d8bf7b07dc1": {
       "fingerprint": "ad3aa15083a5de7c8244",
@@ -8293,7 +9841,7 @@
     },
     "97975be217a1bd5d435d": {
       "fingerprint": "22d7ffca4d9688103850",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "97aa05f1d051eb672c9b": {
       "fingerprint": "d2f9619c3bae2201292e",
@@ -8397,7 +9945,7 @@
     },
     "99558553ff39da783292": {
       "fingerprint": "d90b8a17167b3e892b22",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "996025c543b8b99d7b42": {
       "fingerprint": "0fd8fa01f8525b32bd1d",
@@ -8505,7 +10053,7 @@
     },
     "9b67edb55892cc147b16": {
       "fingerprint": "0157ed03a6dbbf6e9cd5",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "9b6e321b40569f538b1f": {
       "fingerprint": "7a83adf2bf621ebb4fe5",
@@ -8813,7 +10361,7 @@
     },
     "a0fa126d9de0df919c0e": {
       "fingerprint": "2852f43d1a1200d4a596",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "a0ffb217219d15dfee9b": {
       "fingerprint": "1915b0ad0b1ad583254d",
@@ -8987,6 +10535,10 @@
       "fingerprint": "cadd67e290b2d084a834",
       "last_seen": "2026-10-13T09:20:08Z"
     },
+    "a4542308b610d8a95ee6": {
+      "fingerprint": "12fe86d89e35be61f817",
+      "last_seen": "20261117223812"
+    },
     "a458a7a32accc47148a4": {
       "fingerprint": "2a7b7a26bbdf3f33fea9",
       "last_seen": "2026-10-14T01:50:53Z"
@@ -9081,7 +10633,7 @@
     },
     "a61bb8010c6766f9b428": {
       "fingerprint": "65726aceab6b2cebf95f",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "a62191562ccbcd3cb631": {
       "fingerprint": "8bfef3a8b1457235faaa",
@@ -9090,6 +10642,10 @@
     "a6250952bd65a37daef4": {
       "fingerprint": "5b53c9d601d041ed4db8",
       "last_seen": "2026-10-13T09:20:08Z"
+    },
+    "a659db74de57d17ab12e": {
+      "fingerprint": "f87dc2baea819119e949",
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "a6962e8f79a8342ba8f0": {
       "fingerprint": "e0e7025e752cea974155",
@@ -9113,11 +10669,15 @@
     },
     "a6fe0a714d7fca1a35c1": {
       "fingerprint": "566427ba76ee5c933848",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "a706979044b95fdb3dfe": {
       "fingerprint": "d1fbdeb8888c2a833525",
       "last_seen": "2026-10-14T01:50:53Z"
+    },
+    "a70a9c7319b606ad3562": {
+      "fingerprint": "a0493fc3216500aa3ea6",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "a7100dc6c0045ce89bfd": {
       "fingerprint": "59663bad042f698e6da4",
@@ -9275,6 +10835,10 @@
       "fingerprint": "aca9f3e0d03ee06dbf03",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "a9c56d12d300d5c6460c": {
+      "fingerprint": "990ae0055c820a8d77e5",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "a9cb66950a7e4f92e136": {
       "fingerprint": "d671268366e6a43b19be",
       "last_seen": "2026-10-14T01:50:53Z"
@@ -9351,13 +10915,25 @@
       "fingerprint": "9b6f2d351c4f73683df0",
       "last_seen": "2026-10-05T08:54:11Z"
     },
+    "ab4e2cbb28b05a57c7be": {
+      "fingerprint": "bd987bacb51e9ad73502",
+      "last_seen": "20261118001039"
+    },
     "ab6344262b2f63a94007": {
       "fingerprint": "61d8b1a012c6ecee0205",
       "last_seen": "2026-10-09T02:05:05Z"
     },
+    "ab674d6c1d5c5f45e7e7": {
+      "fingerprint": "b169ed5ecc7759a26a80",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "ab91ee9162f42d3508ec": {
       "fingerprint": "4fe3fa579982b7b96938",
       "last_seen": "2026-10-13T01:17:53Z"
+    },
+    "ab9ab67174fa930ede15": {
+      "fingerprint": "28bf4c922f61ab9df8f1",
+      "last_seen": "20261113052540"
     },
     "abbc1e5e92269e8e60be": {
       "fingerprint": "a01e03ebc67f214e95a5",
@@ -9425,7 +11001,7 @@
     },
     "ad862468ad19bd653d88": {
       "fingerprint": "c3db906b04817c6ad3cf",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ad90f0c89b677504769c": {
       "fingerprint": "fd13c20456bcce0c81e4",
@@ -9511,6 +11087,10 @@
       "fingerprint": "20176c1f0434735c0487",
       "last_seen": "2026-11-23T22:58:50Z"
     },
+    "aee01686a2b872696d9a": {
+      "fingerprint": "9792ba40b04cfcc14452",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "aee37d3c9276547a1bf0": {
       "fingerprint": "b6de07b6609e31de7472",
       "last_seen": "2026-10-17T13:27:24Z"
@@ -9522,6 +11102,10 @@
     "af06ca58864460721461": {
       "fingerprint": "bff23ee11a8417d5a3eb",
       "last_seen": "2026-10-09T02:05:05Z"
+    },
+    "af1f033152e1c4c24a58": {
+      "fingerprint": "56d71b9218f2fe83356a",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "af2223437f43b2989674": {
       "fingerprint": "4f4c39d4a38115228a25",
@@ -9577,7 +11161,7 @@
     },
     "aff32afb63af01e7ea9a": {
       "fingerprint": "1a5d66b865b5a137bf89",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "aff938afa23326fcd093": {
       "fingerprint": "60e46f770102ab1bc70d",
@@ -9760,8 +11344,8 @@
       "last_seen": "2026-11-03T13:53:12Z"
     },
     "b323e64961c2e562997c": {
-      "fingerprint": "f3af076e4f33c93d7a2c",
-      "last_seen": "20260916150747"
+      "fingerprint": "c8dd93a884e7e68e19fa",
+      "last_seen": "20261118104506"
     },
     "b33be95aa941c5e43a20": {
       "fingerprint": "35fbff0dd38e775441bc",
@@ -9826,6 +11410,10 @@
     "b460b0054f4fb7c29f6d": {
       "fingerprint": "979b41ca941c0ca216a2",
       "last_seen": "2026-10-06T20:14:44Z"
+    },
+    "b47bd3b87e2da805619f": {
+      "fingerprint": "fa5b336ecdc7bb65322e",
+      "last_seen": "20261110132109"
     },
     "b4c2ec0eba053b449135": {
       "fingerprint": "87c3f733da07790197ea",
@@ -9937,7 +11525,7 @@
     },
     "b6ff55ed379865848e89": {
       "fingerprint": "4f924af14f95db70bc2d",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "b7016d2db526680cf664": {
       "fingerprint": "eebde8dc0dc8b797831d",
@@ -10099,6 +11687,10 @@
       "fingerprint": "f9bfb55002699b16e33d",
       "last_seen": "2026-10-10T08:25:24Z"
     },
+    "b9f437df0b27c30c732c": {
+      "fingerprint": "4d935ee4ef16f7668da5",
+      "last_seen": "20261115035708"
+    },
     "ba0f9462ae5fc6597b1a": {
       "fingerprint": "794b5407a0b0f3a71b91",
       "last_seen": "2026-10-14T01:50:53Z"
@@ -10121,7 +11713,7 @@
     },
     "ba55c736d0e06f9d2972": {
       "fingerprint": "c11e927a9504153628f6",
-      "last_seen": "2026-11-24T06:45:09Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "ba63583808d70cbbc5e9": {
       "fingerprint": "8ad6c95ea4c68bce8376",
@@ -10277,7 +11869,7 @@
     },
     "bc9559da5a172fba9bd9": {
       "fingerprint": "f07eb6d75d013fbc4a78",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "bc959359770d8271cdd1": {
       "fingerprint": "0b9055c38813e9edece6",
@@ -10293,7 +11885,7 @@
     },
     "bcd7083976c76ae8688f": {
       "fingerprint": "5bfbe60eabdc0806d677",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "bce449da7a2298faee9e": {
       "fingerprint": "3c53456b8efdd361d2a3",
@@ -10665,7 +12257,7 @@
     },
     "c4ecc08e3dcd225bd13c": {
       "fingerprint": "7b0b0a262e9c4ed3b3c5",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "c4eeefc4e76f2fa44d0e": {
       "fingerprint": "7b913c7c942e7d3d094d",
@@ -10731,6 +12323,10 @@
       "fingerprint": "5ef656b8f55e38d3e0f6",
       "last_seen": "2026-10-14T01:50:53Z"
     },
+    "c6224259b052592f0e72": {
+      "fingerprint": "3ec63ed36fc20bcd8b58",
+      "last_seen": "20261115061035"
+    },
     "c646cf1eb340f1465e82": {
       "fingerprint": "30269d2cff69f7a5d2f9",
       "last_seen": "2026-11-03T13:53:12Z"
@@ -10785,7 +12381,7 @@
     },
     "c7c3f2d60795dbcaa986": {
       "fingerprint": "b5e630a09e19d0e96a13",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "c7d13170317e1b487841": {
       "fingerprint": "ddadc71df743ee2aa7ac",
@@ -10833,7 +12429,7 @@
     },
     "c8dc3e9414ec28a368ac": {
       "fingerprint": "4606a9e0ec143a4a7374",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "c8e0e052f43e99364836": {
       "fingerprint": "9a206a4627f0df1be790",
@@ -10881,7 +12477,7 @@
     },
     "c9b0ba2832f5c52645f2": {
       "fingerprint": "507fb3a2a4ad48a0026c",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "c9d380c0b10dcf2109ca": {
       "fingerprint": "409800a8cc5c0a6e76cc",
@@ -10931,6 +12527,10 @@
       "fingerprint": "00fadb0c85783143f3f2",
       "last_seen": "2026-10-15T18:14:00Z"
     },
+    "cab0f78658991c0774cc": {
+      "fingerprint": "d1470dda30ed4b312a5a",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "cab5b70ebb8360e9de92": {
       "fingerprint": "e25dff26f8ddf489ddb8",
       "last_seen": "2026-11-03T13:53:12Z"
@@ -10969,7 +12569,7 @@
     },
     "cb68915a226f5b31c5c4": {
       "fingerprint": "926ada9b136d341f42ad",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "cb6af5990e3391b545bb": {
       "fingerprint": "ba88d46c98eb6874d4a2",
@@ -11002,6 +12602,10 @@
     "cc0447ff969467cbe527": {
       "fingerprint": "01a509a543cf979cc5d5",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "cc0b8d4e6a20b302911a": {
+      "fingerprint": "0d2c86ad5a9946f2646c",
+      "last_seen": "20261108134422"
     },
     "cc1a16027e56c7b4aecd": {
       "fingerprint": "bb56a47e146be266dd45",
@@ -11065,7 +12669,7 @@
     },
     "cd5067090d89008e1ca3": {
       "fingerprint": "a195a3abebe8456b7582",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "cdb1d51fae0431106fed": {
       "fingerprint": "72aaf65b47daf6397ce5",
@@ -11081,11 +12685,11 @@
     },
     "cdec69ddf5001e5ac6fd": {
       "fingerprint": "443dd37dd65e0acadfaf",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ce241b2aa45748119198": {
       "fingerprint": "8af5edbc899a5e1ae368",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ce353e1749242a2c3b8b": {
       "fingerprint": "0e37009ecf06420d0e10",
@@ -11109,7 +12713,7 @@
     },
     "ce7b813a77b367898516": {
       "fingerprint": "a0718437d819165645b7",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ce7d68cc7819c7557461": {
       "fingerprint": "18fc61b43bd3cfbcec04",
@@ -11125,7 +12729,7 @@
     },
     "ceba6e5b39be7203aa59": {
       "fingerprint": "de41980ac23570b9ec33",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "cec5c090e54e4b454aed": {
       "fingerprint": "d156ffa7ad325f8ba96f",
@@ -11170,6 +12774,10 @@
     "cf863ac59d0e469b8a96": {
       "fingerprint": "12758e49cd71b1b2ec0a",
       "last_seen": "2026-10-07T18:33:09Z"
+    },
+    "cfa038367e1960cc4d0d": {
+      "fingerprint": "f8a4a7358d9554fb5440",
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "cfa12f85fd0d4abee3a2": {
       "fingerprint": "3bb4e24ae2a382f0c726",
@@ -11221,7 +12829,7 @@
     },
     "d059f193e627ed60e8ce": {
       "fingerprint": "5ed04c647ec162c9329c",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "d06293d7618dd8ab3407": {
       "fingerprint": "b332dca5a91a857f509b",
@@ -11249,7 +12857,7 @@
     },
     "d0da49b9877b10338c7f": {
       "fingerprint": "e9a485a549cd58019a6f",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "d0e0116b4debe500915f": {
       "fingerprint": "66ddbb5051146d1fadc3",
@@ -11257,7 +12865,7 @@
     },
     "d106cf16aff669eb8d15": {
       "fingerprint": "a1d6e353a65ec04ee642",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "d110f7ade597d52f61d9": {
       "fingerprint": "f61d5df25f7d1a0e3764",
@@ -11301,7 +12909,7 @@
     },
     "d1f862679a7f04dfe54b": {
       "fingerprint": "8c2b12d0e91dfe5ff913",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "d20bb21bfca9c7c3fc0e": {
       "fingerprint": "31814fa005656d1fcf0d",
@@ -11342,6 +12950,10 @@
     "d2c0fb4efec878f78c3d": {
       "fingerprint": "5c9cd416f0f73c5bb7b1",
       "last_seen": "2026-10-18T00:56:14Z"
+    },
+    "d2c3b4036d494be4a5df": {
+      "fingerprint": "a8ef29ca3ece0dbc4bf9",
+      "last_seen": "20261115065449"
     },
     "d2d9271bc18ca0e03fdf": {
       "fingerprint": "020e62b7ba2039d12491",
@@ -11389,7 +13001,7 @@
     },
     "d3499e02aaa3943b73aa": {
       "fingerprint": "e6a6544c7768c9a0e0c3",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "d35068acfba8ae295688": {
       "fingerprint": "3fba7fd4c2d4e8fcda19",
@@ -11493,7 +13105,7 @@
     },
     "d51f18212afb6771b701": {
       "fingerprint": "688a06f22623ccffd69b",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "d52bc94754e9b5ba9002": {
       "fingerprint": "811c3fe94b5ea0ea9c63",
@@ -11501,7 +13113,7 @@
     },
     "d5313957a56567b0816b": {
       "fingerprint": "e08ceeb96c71b830ea74",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "d5409be0019a40c924a6": {
       "fingerprint": "f81b27d96c17dac6be27",
@@ -11767,13 +13379,17 @@
       "fingerprint": "e17461d6fe441191ec95",
       "last_seen": "2027-11-01"
     },
+    "db72536323fcd509bd5a": {
+      "fingerprint": "ffeb7805a65f1c196a56",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "dbbec36cc7dd966c30fc": {
       "fingerprint": "716f27db087133f22f1c",
       "last_seen": "2026-10-08T16:25:23Z"
     },
     "dbdb0820dcbaa5243b7d": {
       "fingerprint": "3efcd7376ca1091d5ca1",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "dbe0940f362ad9d87e6b": {
       "fingerprint": "0115907abcc89e1fc1c2",
@@ -11905,11 +13521,11 @@
     },
     "de1a299348ffc0d19122": {
       "fingerprint": "67cf60cf6a6b43b8c01b",
-      "last_seen": "2026-11-24T06:44:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "de244be0edcd188cbf50": {
       "fingerprint": "6aefd70223837ee5d263",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "de2c74460bc4e60489bc": {
       "fingerprint": "dcc8c3da0985dc18851a",
@@ -11993,11 +13609,11 @@
     },
     "dfa5bbd94cb2828c685a": {
       "fingerprint": "59a0203a409c4c0d06f7",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "dfb9bae9a4555b7fe5b5": {
       "fingerprint": "47068cf6f513655d85c4",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "dfe0f52f5c1532a2a347": {
       "fingerprint": "eda448ae4c3436b9ee73",
@@ -12046,6 +13662,10 @@
     "e0a55c78aacbd7b02100": {
       "fingerprint": "c4f4fedb5ef755ccb467",
       "last_seen": "2026-10-16T07:05:10Z"
+    },
+    "e0ae06dddf43b7212a42": {
+      "fingerprint": "10b246d3fd70bd3e56f4",
+      "last_seen": "20261115025451"
     },
     "e0b8f653c7e1b610e122": {
       "fingerprint": "e0128df3e5a7695bed0e",
@@ -12109,7 +13729,7 @@
     },
     "e2054d47a388fb1399bd": {
       "fingerprint": "98f21ad51378a42c4da5",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "e20622db362ba46d33fa": {
       "fingerprint": "bc2466245014c4e10ec9",
@@ -12153,7 +13773,7 @@
     },
     "e2b8edcef39b94c3378e": {
       "fingerprint": "c0bd81ea028c42207c2f",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "e2c790e05f6035f40844": {
       "fingerprint": "c838b295b0d94c178e15",
@@ -12275,6 +13895,10 @@
       "fingerprint": "4fc11dbee3becf735c73",
       "last_seen": "2026-10-09T02:05:05Z"
     },
+    "e5a59e9552d07b30bdf1": {
+      "fingerprint": "abe3ce2df84ad35edccf",
+      "last_seen": "20261118090319"
+    },
     "e5b4df0964644beb8122": {
       "fingerprint": "b90f7cf10e0e1a707f2e",
       "last_seen": "2026-10-16T17:22:06Z"
@@ -12377,7 +14001,7 @@
     },
     "e74888c663f492eea866": {
       "fingerprint": "108ee9605268dadb7495",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "e758fe86bc5ef61b667b": {
       "fingerprint": "43dc669957d8d389521d",
@@ -12473,7 +14097,7 @@
     },
     "e9046d10c5a45a4be7b5": {
       "fingerprint": "627a719f8c8a5c3f70b5",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "e9312f63a8158d5bdccc": {
       "fingerprint": "75628f199027cd9e198e",
@@ -12527,6 +14151,10 @@
       "fingerprint": "9b586d7e9ec526b7b027",
       "last_seen": "2026-10-16T23:31:34Z"
     },
+    "ea381c54f6891370ebc3": {
+      "fingerprint": "962e51b571c67be218ec",
+      "last_seen": "20261113151725"
+    },
     "ea48c1cf5a2bc13ea408": {
       "fingerprint": "43f84fa63bc76b8447d1",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -12545,7 +14173,7 @@
     },
     "ea9b751d341ce0917f01": {
       "fingerprint": "ec6560d61c3bbac15bea",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ea9ecc5119c8cf4ddfb8": {
       "fingerprint": "820d0185ab8c542aa8ca",
@@ -12581,7 +14209,7 @@
     },
     "eb3490aa3ebca0f4ef67": {
       "fingerprint": "e1ba8142ac73ffabd032",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "eb419b8759bf810541fe": {
       "fingerprint": "0a4f645d04f8af4e3a2a",
@@ -12621,7 +14249,7 @@
     },
     "ebb2e99af90e077a8773": {
       "fingerprint": "3fb2e5654ca43c3cf8c2",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ebc78b5cf1317c72a850": {
       "fingerprint": "c372b2f054bace40445a",
@@ -12673,7 +14301,7 @@
     },
     "ec875e5336cf5c9478bc": {
       "fingerprint": "52837d5ff2f6027c3214",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "ecc44b539b9524e1821f": {
       "fingerprint": "6821c5b3296bed8befcc",
@@ -12682,6 +14310,10 @@
     "ed0fcc5d16599bd6eded": {
       "fingerprint": "eb2391022a13a18716dc",
       "last_seen": "2026-10-15T18:14:00Z"
+    },
+    "ed17b4c457d69abb831d": {
+      "fingerprint": "530eb08d32e4ab9815a8",
+      "last_seen": "20261115092413"
     },
     "ed5197d10f48dfb1b2f2": {
       "fingerprint": "494b53c77c6d5f24b386",
@@ -12718,6 +14350,10 @@
     "edb9767c82e8492e6d20": {
       "fingerprint": "8638511bfb58233e44a9",
       "last_seen": "2026-10-16T01:15:52Z"
+    },
+    "edcedfadab6d0abbbc63": {
+      "fingerprint": "5c525ab33aaa2f31ceca",
+      "last_seen": "20261115061334"
     },
     "eddb5dcff2f30874ab89": {
       "fingerprint": "45a830e51da2093472de",
@@ -12897,7 +14533,7 @@
     },
     "f102a512d0bf0eec1887": {
       "fingerprint": "5595b22c8d0c031c20ce",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "f102b133982c85cf2d9c": {
       "fingerprint": "fb74414faa6cdcdf6883",
@@ -12935,17 +14571,25 @@
       "fingerprint": "0cb0282094fe60826678",
       "last_seen": "2026-10-16T01:15:52Z"
     },
+    "f16a181dce037b21e629": {
+      "fingerprint": "acaf2cfe4d4d3f40ee24",
+      "last_seen": "2026-11-24T13:54:11Z"
+    },
     "f191dc66b7412fc56043": {
       "fingerprint": "47a8b16e485b79c99bca",
       "last_seen": "2026-10-06T00:46:01Z"
     },
     "f1b5f492edd59d79af68": {
       "fingerprint": "d81cb0e2914cbc9e3021",
-      "last_seen": "2026-11-24T06:45:01Z"
+      "last_seen": "2026-11-24T13:54:11Z"
     },
     "f1ca33eec38ba72127a9": {
       "fingerprint": "4991478b9904c0986a69",
       "last_seen": "2026-10-18T20:11:13Z"
+    },
+    "f1d2c6fbcc5a06232500": {
+      "fingerprint": "80a22a7728018187af42",
+      "last_seen": "20261109092423"
     },
     "f1db7ce98881d8901597": {
       "fingerprint": "af793df12e7810d86afe",
@@ -12957,7 +14601,7 @@
     },
     "f2140fee950f7a18f5d8": {
       "fingerprint": "d18623458686b9235a22",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "f2158f75999b17423f7f": {
       "fingerprint": "41a6ef2194a09cfc6df3",
@@ -13065,7 +14709,7 @@
     },
     "f40a7c305a81f2f129ae": {
       "fingerprint": "13a7d9ca14e38ce9467e",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "f40c7bc1df50fb0921c4": {
       "fingerprint": "1e5aced2d9b194d32bea",
@@ -13097,7 +14741,7 @@
     },
     "f4bbb787683ffd7c2030": {
       "fingerprint": "0c8d96128d479cb6e5df",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "f4feab91784ddc5daa12": {
       "fingerprint": "ad88fa8a8120319b9829",
@@ -13165,7 +14809,7 @@
     },
     "f63aedf5e35cee9cf2ff": {
       "fingerprint": "ef07a851d0e4ec847bbc",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "f64938f8e3a3b9f7a04a": {
       "fingerprint": "33991a07accb1460219a",
@@ -13225,7 +14869,7 @@
     },
     "f767f53fd643fda4cc2c": {
       "fingerprint": "03385242ac528caa8025",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "f78ace8bd89a7c6894ee": {
       "fingerprint": "1d39a556e4676e9cb274",
@@ -13305,7 +14949,7 @@
     },
     "f9221d65b75640a90e0d": {
       "fingerprint": "440a4517cd10d6275a81",
-      "last_seen": "2026-11-23T22:58:49Z"
+      "last_seen": "2026-11-24T13:54:08Z"
     },
     "f95f84502414aa128e01": {
       "fingerprint": "986ebbde756d54206644",
@@ -13573,7 +15217,7 @@
     },
     "fe934b9f69954d98e9d8": {
       "fingerprint": "2d3212886421eb2f0ef0",
-      "last_seen": "2026-11-24T06:45:02Z"
+      "last_seen": "2026-11-24T13:54:12Z"
     },
     "fea189a64b1dbe19737c": {
       "fingerprint": "e28a4369e4655b813fa0",

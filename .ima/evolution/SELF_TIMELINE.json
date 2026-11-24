@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-24T06:44:47+00:00",
+  "generated_at": "2026-11-24T13:54:07+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "commit": "fbf2e623a9a0c7e398159f0cf4452a205b2f8ad4",
-      "timestamp": "2026-11-23T23:04:11Z",
-      "event": "commit",
-      "summary": "chore: record unified IMA loop cycle [skip ci]",
-      "source": "git"
-    },
-    {
-      "timestamp": "2026-11-24T06:44:43+00:00",
+      "timestamp": "2026-11-24T13:54:05+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-24T06:44:44+00:00",
+      "timestamp": "2026-11-24T13:54:07+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-24T06:44:45+00:00",
+      "timestamp": "2026-11-24T13:54:07+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
+    },
+    {
+      "commit": "ac0ce7ccd6732b3e26c753e604ca5b8055feda99",
+      "timestamp": "2026-11-24T15:53:46+02:00",
+      "event": "commit",
+      "summary": "research: refresh PIIW IP track with current agentic standards scan",
+      "source": "git"
     }
   ]
 }
