@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-24T17:37:48+00:00",
+  "generated_at": "2026-11-24T18:26:18+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-24T17:37:45+00:00",
+      "commit": "3e42ac1f632776ae5eae21bc4339e9c566333046",
+      "timestamp": "2026-11-24T17:42:10Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-24T18:26:16+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-24T17:37:47+00:00",
+      "timestamp": "2026-11-24T18:26:17+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-24T17:37:47+00:00",
+      "timestamp": "2026-11-24T18:26:17+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "f0f205bef12d5ae067571ca2432646c4abb33758",
-      "timestamp": "2026-11-24T19:32:52+02:00",
-      "event": "commit",
-      "summary": "LIVE-001: keep canonical Termux bridge supervised after bridge exit",
-      "source": "git"
     }
   ]
 }
