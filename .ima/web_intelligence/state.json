@@ -1,709 +1,157 @@
 {
-  "last_run": "2026-11-23T22:59:35Z",
+  "last_run": "2026-11-24T06:45:35Z",
   "latest_commoncrawl": "CC-MAIN-2026-47",
   "recent_changed_items": [
     {
-      "id": "375278fb60b058521bb5",
+      "id": "7f18a13cc3e389eaf0f2",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA Awards Contract for NOAA’s Near Earth Orbit Network Program",
-      "url": "https://www.nasa.gov/news-release/nasa-awards-contract-for-noaas-near-earth-orbit-network-program/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C opens Technical Architecture Group (TAG) election",
+      "url": "https://www.w3.org/news/2026/w3c-opens-technical-architecture-group-tag-election/"
     },
     {
-      "id": "83eb224748ee20b5be49",
+      "id": "089bf24f70886d0f6b07",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "Studying Cancer Cells in Microgravity",
-      "url": "https://www.nasa.gov/image-article/studying-cancer-cells-in-microgravity/"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "REA: The Open-Source AI Tool That Can Reverse Engineer Almost Anything (2026 Guide)",
+      "url": "https://techncruncher.blogspot.com/2026/11/rea-open-source-ai-tool-that-can.html"
     },
     {
-      "id": "d51f18212afb6771b701",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA Seeks Partners to Design First Nuclear Reactor for the Moon",
-      "url": "https://www.nasa.gov/directorates/rtmd/nasa-seeks-partners-to-design-first-nuclear-reactor-for-the-moon/"
+      "id": "3c7fe062395f68679b3c",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-22",
+      "source": "OpenAlex",
+      "title": "Phenolic compounds from Bergenia purpurascens and their protective effects on ARPE-19 cells",
+      "url": "https://doi.org/10.25135/rnp.2610.4034"
     },
     {
-      "id": "94b026a476c55f11fec2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "VP != VNP over Every Field [pdf]",
-      "url": "https://github.com/anthropics/formal-math/blob/11b6c7e3c927df2658f513b6b68ea7f8929c62c5/vp-vnp/paper.pdf"
+      "id": "1053b82b9da456ef793f",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-18",
+      "source": "OpenAlex",
+      "title": "A survey of macroeconomic nowcasting applications",
+      "url": "https://doi.org/10.52903/wp2026374"
     },
     {
-      "id": "e68c6b8d3ebd450015cc",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "VP ≠ VNP over Every Field",
-      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp"
+      "id": "7698b54f4db21db7869d",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-16",
+      "source": "OpenAlex",
+      "title": "GC×GC–MS analysis of volatile components extracted by spinning cone column from Forsythia suspensa and its antimicrobial assessment",
+      "url": "https://doi.org/10.25135/rnp.2609.4018"
     },
     {
-      "id": "d1f862679a7f04dfe54b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
-      "url": "https://www.bored.com/"
+      "id": "3f3809a1a558e51b51e0",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-09",
+      "source": "OpenAlex",
+      "title": "Aromatic polyketides from the marine-derived fungus Aspergillus unguis PM03: α-glucosidase inhibitory activity, structure-activity relationship, molecular docking and ADMET evaluation",
+      "url": "https://doi.org/10.25135/rnp.2609.4014"
     },
     {
-      "id": "8ca3bd8f647bd5a0cb7d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "The horse made the state",
-      "url": "https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist"
+      "id": "59e20403db4e16f891a1",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-09",
+      "source": "OpenAlex",
+      "title": "A New 6-deoxy-talopyranoside derivative with antibacterial and radical-scavenging activities from Streptomyces sp. HDSJ4",
+      "url": "https://doi.org/10.25135/rnp.2610.4040"
     },
     {
-      "id": "0386d86e596acc2db46f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "GPUI is getting its own repository",
-      "url": "https://github.com/zed-industries/gpui"
+      "id": "988be499bdeac923a568",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-07",
+      "source": "OpenAlex",
+      "title": "Analysis of blood components and the mechanism of anti-pharyngitis and gut microbiota regulation in Ardisia crenata and its relatives",
+      "url": "https://doi.org/10.25135/rnp.2607.3975"
     },
     {
-      "id": "d059f193e627ed60e8ce",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
-      "url": "https://arm.jonpalmisc.com/"
+      "id": "df92d49ccf7b881ccc93",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-01",
+      "source": "OpenAlex",
+      "title": "Die Macht des Psychotechnischen: Band II Zur Rekonfiguration und Synchronisierung psychischer Tätigkeiten",
+      "url": "https://doi.org/10.12907/978-3-593-45892-2"
     },
     {
-      "id": "6851a6a04065867c8b56",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Apple removed my open-source app from EU App Stores after 9 years",
-      "url": "https://github.com/glushchenko/fsnotes/discussions/2056"
+      "id": "db5bae53b403e39b2b65",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-01",
+      "source": "OpenAlex",
+      "title": "Rotatiridoid, a rare iridoid from Phlomoides rotata (Benth. ex Hook.f.) Mathiesen and its anti-inflammatory activity",
+      "url": "https://doi.org/10.25135/rnp.2609.4028"
     },
     {
-      "id": "86e9f5c95662b124f9f3",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "How should an LLM see a computer?",
-      "url": "https://www.greptile.com/blog/trex-computer-use"
+      "id": "2a8682adc14f4b2e088a",
+      "kind": "scientific_api",
+      "observed_at": "2027-10-26",
+      "source": "OpenAlex",
+      "title": "Asperpolyols A and B, two novel hydroxy polyunsaturated fatty acids, isolated from the marine-derived fungus Aspergillus versicolor M7",
+      "url": "https://doi.org/10.25135/rnp.2609.4019"
     },
     {
-      "id": "5d4fbf8ddc9ca1d0bc5d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Kagi Mail (public beta)",
-      "url": "https://blog.kagi.com/kagi-mail-public-beta"
+      "id": "ed8dd814e0d2357b454c",
+      "kind": "scientific_api",
+      "observed_at": "2027-10-26",
+      "source": "OpenAlex",
+      "title": "Phenolic profile and biological activities of ultrasound-assisted aqueous-ethanolic extracts of Tamarix hispida Willd",
+      "url": "https://doi.org/10.25135/rnp.2608.4005"
     },
     {
-      "id": "53510b5370cd80960ab8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
-      "url": "https://twitter.com/ylecun/status/2124550037912920090"
+      "id": "61c560cb0c0c918451ab",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43067942",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43067942/"
     },
     {
-      "id": "8d83fbfc47ac58f7eccf",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Ladybird is now in alpha",
-      "url": "https://ladybird.org/posts/alpha/"
+      "id": "6654cce3b776b76f5cbe",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43061281",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061281/"
     },
     {
-      "id": "9f183e9f9f75c876517d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
-      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF"
+      "id": "49e698baa7e157ae1f7c",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43065563",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43065563/"
     },
     {
-      "id": "74d816fb25305bd550db",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Show HN: Hermit CRM – Free open-source CRM for solopreneurs",
-      "url": "https://hermitcrm.io/"
+      "id": "4aedb3fa5826d380d7c5",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43054184",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43054184/"
     },
     {
-      "id": "f1db7ce98881d8901597",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
-      "url": "https://z.ai/blog/glm-5.4"
+      "id": "5b61a759cd14a0a6237c",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42920311",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42920311/"
+    },
+    {
+      "id": "1e37d1fe64d9d46d2b20",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42855827",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855827/"
     }
   ],
   "recent_items": [
     {
-      "id": "375278fb60b058521bb5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA Awards Contract for NOAA’s Near Earth Orbit Network Program",
-      "url": "https://www.nasa.gov/news-release/nasa-awards-contract-for-noaas-near-earth-orbit-network-program/"
-    },
-    {
-      "id": "83eb224748ee20b5be49",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "Studying Cancer Cells in Microgravity",
-      "url": "https://www.nasa.gov/image-article/studying-cancer-cells-in-microgravity/"
-    },
-    {
-      "id": "d51f18212afb6771b701",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA Seeks Partners to Design First Nuclear Reactor for the Moon",
-      "url": "https://www.nasa.gov/directorates/rtmd/nasa-seeks-partners-to-design-first-nuclear-reactor-for-the-moon/"
-    },
-    {
-      "id": "d106cf16aff669eb8d15",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA+ Documentary Captures Europa Clipper’s Journey Into Deep Space",
-      "url": "https://www.nasa.gov/missions/europa-clipper/nasa-documentary-captures-europa-clippers-journey-into-deep-space/"
-    },
-    {
-      "id": "a6fe0a714d7fca1a35c1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "NASA’s Webb Shows How Supernova Dust Chronicles Star Evolution",
-      "url": "https://science.nasa.gov/missions/webb/nasas-webb-shows-how-supernova-dust-chronicles-star-evolution/"
-    },
-    {
-      "id": "f2140fee950f7a18f5d8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "APOD: 2026 November 23 – The Emergence of Dark Nebula Lynds 1251",
-      "url": "https://science.nasa.gov/image-article/apod-2026-november-23-the-emergence-of-dark-nebula-lynds-1251/"
-    },
-    {
-      "id": "032b17500d4009fe9ff8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "Laser Focus at the Top of the World",
-      "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world/"
-    },
-    {
-      "id": "c7c3f2d60795dbcaa986",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "65 Years of Human Spaceflight at NASA Johnson",
-      "url": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/"
-    },
-    {
-      "id": "7a7e6ef9a0f22aff65c8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "APOD: 2026 November 22 – Swirls and Colors on Jupiter from Juno",
-      "url": "https://science.nasa.gov/image-article/apod-2026-november-22-swirls-and-colors-on-jupiter-from-juno/"
-    },
-    {
-      "id": "72ea12fa87f5a40d150d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
-      "title": "APOD: 2026 November 21 – Voyager’s Neptune",
-      "url": "https://science.nasa.gov/image-article/apod-2026-november-21-voyagers-neptune/"
-    },
-    {
-      "id": "71a4e8c3880a5ab561c1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Studying Cancer Cells in Microgravity",
-      "url": "https://www.nasa.gov/image-detail/jsc2026e426880/"
-    },
-    {
-      "id": "4db649c9170bbe46a746",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Curiosity Mars Rover Collects Samples",
-      "url": "https://www.nasa.gov/image-detail/pia26804/"
-    },
-    {
-      "id": "978dfe91bccd9efa7125",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Lake Pelku",
-      "url": "https://www.nasa.gov/image-detail/iss075e0267074/"
-    },
-    {
-      "id": "cdec69ddf5001e5ac6fd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Empire State Building Goes Gold for Voyager",
-      "url": "https://www.nasa.gov/image-detail/nasas-voyager-1-spacecraft-light-day/"
-    },
-    {
-      "id": "ea9b751d341ce0917f01",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Space Selfie",
-      "url": "https://www.nasa.gov/image-detail/iss075e0253155/"
-    },
-    {
-      "id": "a61bb8010c6766f9b428",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Thunderbirds in Formation",
-      "url": "https://www.nasa.gov/image-detail/11072026-ksc-max-power-airdotshow-2orig/"
-    },
-    {
-      "id": "ad862468ad19bd653d88",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Outbursts from a Massive Star",
-      "url": "https://www.nasa.gov/image-detail/a-giant-star-in-a-distant-galaxy-has-been-mysteriously-erupting-for-at-least-15-years-new-data-from-nasas-chandra-explains-what-is-causing-these-huge-outbursts/"
-    },
-    {
-      "id": "99558553ff39da783292",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Heart in the Sky at NASA Kennedy",
-      "url": "https://www.nasa.gov/image-detail/55640210122-dae9d5e6b9-o/"
-    },
-    {
-      "id": "29479d01e25eeac2765e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "CHAPEA Crew Leaves a Mark",
-      "url": "https://www.nasa.gov/image-detail/photos-from-chapea-mission-2-arranged-around-boot-print/"
-    },
-    {
-      "id": "32fd783e61c1ff299a2f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Astronauts Across Generations Share the Stage",
-      "url": "https://www.nasa.gov/image-detail/20261106-artemiscelebrationgala-sl1-4202/"
-    },
-    {
-      "id": "4b0f73dc86552b117283",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "M30's Sparkling Stars",
-      "url": "https://www.nasa.gov/image-detail/hubble-m30-potm2610a/"
-    },
-    {
-      "id": "a0fa126d9de0df919c0e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Midwestern City Lights",
-      "url": "https://www.nasa.gov/image-detail/iss075e0227352/"
-    },
-    {
-      "id": "f40a7c305a81f2f129ae",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Hubble Reveals Cosmic Mystery",
-      "url": "https://www.nasa.gov/image-detail/full-res-for-display-1-3/"
-    },
-    {
-      "id": "ebb2e99af90e077a8773",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Astronaut and Earth",
-      "url": "https://www.nasa.gov/image-detail/iss075e0253663/"
-    },
-    {
-      "id": "7d6143a468086b175782",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's CHAPEA Crew \"Returns\" to Earth",
-      "url": "https://www.nasa.gov/image-detail/chapea-mission-2-crew-poses-outdoors-after-exiting-habitat/"
-    },
-    {
-      "id": "94dcca4ef3140fe35024",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's James Webb Space Telescope Captures Eerie Cat's Head",
-      "url": "https://www.nasa.gov/image-detail/full-res-for-display-6/"
-    },
-    {
-      "id": "7e0b800edd5c6a4316f5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Hubble Marks Way for Roman Space Telescope",
-      "url": "https://www.nasa.gov/image-detail/55606049603-e8822462fe-o/"
-    },
-    {
-      "id": "5cd9d84243c19fcc5608",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Webb Sees Turbulent Star Nursery",
-      "url": "https://www.nasa.gov/image-detail/stars-brewing-in-a-nebulous-cauldron/"
-    },
-    {
-      "id": "ce7b813a77b367898516",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Neo Surveyor Sunshade",
-      "url": "https://www.nasa.gov/image-detail/1-pia26715-bae-sunshade-inspection-2/"
-    },
-    {
-      "id": "330c3aa5ed1dcd01f5c6",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's X-59 Aircraft and Test Pilot",
-      "url": "https://www.nasa.gov/image-detail/mike-lippert-x-59-lbfd-flight-39-3/"
-    },
-    {
-      "id": "de244be0edcd188cbf50",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "RS-25 Engine Tests at NASA Stennis",
-      "url": "https://www.nasa.gov/image-detail/ssc-20261021-s00947horig/"
-    },
-    {
-      "id": "ce241b2aa45748119198",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Spiral's Edge",
-      "url": "https://www.nasa.gov/image-detail/hubble-ngc1827-1-flat-final/"
-    },
-    {
-      "id": "5f2f4f2c1f3a97720d33",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Science on the Space Station with NASA Astronaut Jessica Watkins",
-      "url": "https://www.nasa.gov/image-detail/iss075e0190239/"
-    },
-    {
-      "id": "13d50abcf6e5e74ddab8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Webb Captures Stellar Jets",
-      "url": "https://www.nasa.gov/image-detail/55572978759-545472774e-o/"
-    },
-    {
-      "id": "b6ff55ed379865848e89",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Martian Dawn",
-      "url": "https://www.nasa.gov/image-detail/1-pia26728-fig-a-curiosity-captures-dawn-breaking-on-wind-carved-cliffs-2/"
-    },
-    {
-      "id": "bc9559da5a172fba9bd9",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Artemis II Heat Shield After Splashdown",
-      "url": "https://www.nasa.gov/image-detail/afs-8-101-1320/"
-    },
-    {
-      "id": "d5313957a56567b0816b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Chandra Finds Possible Origin of 'Treble Clef' Waves",
-      "url": "https://www.nasa.gov/image-detail/shape-3601-3601/"
-    },
-    {
-      "id": "6f4a1fa6b15ab56d1baa",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA’s SpaceX CRS-35 Launch Jellyfish",
-      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crs-35-launch/"
-    },
-    {
-      "id": "5f66990b2ef05a98f55f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Transporter-18 SmallSats Encapsulation",
-      "url": "https://www.nasa.gov/image-detail/afs-8-101-1315/"
-    },
-    {
-      "id": "8a328104e8db0a06aebb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Cosmic House of Mirrors",
-      "url": "https://www.nasa.gov/image-detail/galaxies-in-a-cosmic-house-of-mirrors/"
-    },
-    {
-      "id": "4cf8b354f2993f2805ce",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Crew-12 Returns to Earth",
-      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-12-splashdown-2/"
-    },
-    {
-      "id": "9646943c9e0872c56c39",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Artemis II Crew Moon Photo Annotations",
-      "url": "https://www.nasa.gov/image-detail/fd07_impact-flashes/"
-    },
-    {
-      "id": "6682b8c560d18b989ba8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Astronomers Solve Cosmic Cold Case with NASA Hubble Data",
-      "url": "https://www.nasa.gov/image-detail/stsci-01m3cbk3t6srkp4q7wv9cgfgw9/"
-    },
-    {
-      "id": "9598ef10e2e425e75053",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA Astronaut Christina Koch at Eagles vs. Rams",
-      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-lincoln-financial-field/"
-    },
-    {
-      "id": "1e98197ec7f8529efba1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's DAVINCI Probe Can Stand the Heat",
-      "url": "https://www.nasa.gov/image-detail/davinci-heat-test-1/"
-    },
-    {
-      "id": "125f77fa8d831dc9a62e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA’s SpaceX Crew-13 Launches",
-      "url": "https://www.nasa.gov/image-detail/nasas-spacex-crew-13-launch-3/"
-    },
-    {
-      "id": "e2054d47a388fb1399bd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Star Trails",
-      "url": "https://www.nasa.gov/image-detail/iss075e0144232/"
-    },
-    {
-      "id": "ec875e5336cf5c9478bc",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Crew-13 Rocket and Spacecraft at Launch Pad",
-      "url": "https://www.nasa.gov/image-detail/afs-8-101-1312/"
-    },
-    {
-      "id": "d0da49b9877b10338c7f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Space Station View of Earth at Night",
-      "url": "https://www.nasa.gov/image-detail/gmt251_08_43_jessica-meir_northern-aurora-cupola-14mm/"
-    },
-    {
-      "id": "7d503f9c07efece57008",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Hubble Spots Chaotic Secret in Galaxy",
-      "url": "https://www.nasa.gov/image-detail/a-galaxy-spinning-out-of-sync/"
-    },
-    {
-      "id": "f767f53fd643fda4cc2c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Practicing for Safe Landings on the Moon and Beyond",
-      "url": "https://www.nasa.gov/image-detail/nasa-navigation-experiment-shows-promise-for-landing-on-other-planets/"
-    },
-    {
-      "id": "0aaf7eacf87f7a022f07",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Hubble Telescope Reaches Milestone, Looks for Elusive Supernova",
-      "url": "https://www.nasa.gov/image-detail/stsci-h-p26023a-m-2000x1207/"
-    },
-    {
-      "id": "2dadf5eefd515726fb06",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Chandra Finds Unusual Objects in Pinwheel Galaxy",
-      "url": "https://www.nasa.gov/image-detail/m101-lg/"
-    },
-    {
-      "id": "f4bbb787683ffd7c2030",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA Astronaut Reid Wiseman Attends Ravens vs. Saints Game",
-      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-mt-bank-stadium/"
-    },
-    {
-      "id": "8afe013f95efd1b4bb3e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "COSI Telescope Comes Together",
-      "url": "https://www.nasa.gov/image-detail/cosi-2026july-01/"
-    },
-    {
-      "id": "dfb9bae9a4555b7fe5b5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA Unveils Enterprise, the First Space Shuttle",
-      "url": "https://www.nasa.gov/image-detail/the-shuttle-enterprise-with-star-trek-cast/"
-    },
-    {
-      "id": "4956d2164f092914b97e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Indonesia's Anak Krakatau",
-      "url": "https://www.nasa.gov/image-detail/krakatau-oli-20260905-lrg/"
-    },
-    {
-      "id": "5abd5224c3734a52bdab",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Artemis III Crew Visits NASA Kennedy's Vehicle Assembly Building",
-      "url": "https://www.nasa.gov/image-detail/afs-8-101-1307/"
-    },
-    {
-      "id": "97975be217a1bd5d435d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA Kicks Off Inspiration Tour with Steelers vs. Falcons Game",
-      "url": "https://www.nasa.gov/image-detail/nasas-inspiration-tour-at-acrisure-stadium/"
-    },
-    {
-      "id": "5e339f35a58b7a5c7f42",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Chandra Spots Galactic Gem",
-      "url": "https://www.nasa.gov/image-detail/galaxies-iizw096/"
-    },
-    {
-      "id": "dfa5bbd94cb2828c685a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Dust and Water in Sagittarius A*",
-      "url": "https://www.nasa.gov/image-detail/55459350878-2e1468b664-o/"
-    },
-    {
-      "id": "cd5067090d89008e1ca3",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Artemis II Crew at NASA Marshall",
-      "url": "https://www.nasa.gov/image-detail/msfc-09012026-artemis-ii-crew-visit-at-msfc-1orig/"
-    },
-    {
-      "id": "ceba6e5b39be7203aa59",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Superbubble in the Large Magellanic Cloud",
-      "url": "https://www.nasa.gov/image-detail/hubble-n44-wfc3-large/"
-    },
-    {
-      "id": "30c42c6803fd3cc30165",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Lunar Occultation of Venus",
-      "url": "https://www.nasa.gov/image-detail/amf-nhq202606170001/"
-    },
-    {
-      "id": "0a18376084f98451b293",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Igniting Roman's Journey",
-      "url": "https://www.nasa.gov/image-detail/amf-nhq202608300037/"
-    },
-    {
-      "id": "f9221d65b75640a90e0d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "August Lunar Eclipse Rises Over Louisiana",
-      "url": "https://www.nasa.gov/image-detail/amf-maf_20260827_lunareclipse_01/"
-    },
-    {
-      "id": "037a64919b394f0e47b0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Artemis III RS-25 Engine Processing: #3 Lift",
-      "url": "https://www.nasa.gov/image-detail/amf-ksc-20260825-ph-rcr01_0045/"
-    },
-    {
-      "id": "900f895587f072f2c3f8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Nancy Grace Roman Space Telescope Launches",
-      "url": "https://www.nasa.gov/image-detail/nancy-grace-roman-space-telescope-launch-2/"
-    },
-    {
-      "id": "8e1ccfd9653936aa4151",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "NASA's Artemis II Crew Receives Congressional Space Medal of Honor",
-      "url": "https://www.nasa.gov/image-detail/20260828-120552-jk1-3999-2/"
-    },
-    {
-      "id": "8d46a442fd5a36ce42aa",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:49Z",
-      "source": "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
-      "title": "Civil Servants Sworn in at NASA Ames",
-      "url": "https://www.nasa.gov/image-detail/nasa-civil-servant-swearing-in-ceremony/"
-    },
-    {
       "id": "5f364a8612fd0351861d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "The best things in open source are built together",
       "url": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/"
@@ -711,7 +159,7 @@
     {
       "id": "de1a299348ffc0d19122",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Maintainers don’t need more AI bug reports. They need fixes.",
       "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/"
@@ -719,7 +167,7 @@
     {
       "id": "2f1c65ad4b7ec3807ad9",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Building the Agent Host Protocol for sessions that continue across devices",
       "url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/"
@@ -727,7 +175,7 @@
     {
       "id": "7c512829bf524dd8cb09",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "GitHub availability report: October 2026",
       "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/"
@@ -735,7 +183,7 @@
     {
       "id": "8bc9138e516754eb5478",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Build once, run on any agent: A practical guide to agent skills",
       "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/"
@@ -743,7 +191,7 @@
     {
       "id": "2c15f23ac7aa344ce6cd",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Git security vulnerabilities announced",
       "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/"
@@ -751,7 +199,7 @@
     {
       "id": "aff32afb63af01e7ea9a",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Beyond code generation: A developer’s guide to agentic engineering",
       "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
@@ -759,7 +207,7 @@
     {
       "id": "51dc1d2f6b3bd6dfbc4a",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Inside GitHub’s new Git storage architecture",
       "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/"
@@ -767,7 +215,7 @@
     {
       "id": "1558c78d072630b6166d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Accessibility statements now have a home on GitHub",
       "url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/"
@@ -775,1770 +223,626 @@
     {
       "id": "410a92595886a074fe4f",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
+      "observed_at": "2026-11-24T06:44:49Z",
       "source": "https://github.blog/feed/",
       "title": "Arnis turns any place on Earth into a Minecraft world",
       "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/"
     },
     {
-      "id": "94b026a476c55f11fec2",
+      "id": "7f18a13cc3e389eaf0f2",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "VP != VNP over Every Field [pdf]",
-      "url": "https://github.com/anthropics/formal-math/blob/11b6c7e3c927df2658f513b6b68ea7f8929c62c5/vp-vnp/paper.pdf"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C opens Technical Architecture Group (TAG) election",
+      "url": "https://www.w3.org/news/2026/w3c-opens-technical-architecture-group-tag-election/"
     },
     {
-      "id": "e68c6b8d3ebd450015cc",
+      "id": "11a49ab621a411f0cc0b",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "VP ≠ VNP over Every Field",
-      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C and the State of the Web in the AI Era",
+      "url": "https://www.w3.org/news/2026/w3c-and-the-state-of-the-web-in-the-ai-era/"
     },
     {
-      "id": "d1f862679a7f04dfe54b",
+      "id": "70b0e3e7f12c10cd9ed9",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Bored.com: Fun, interesting and cool websites to explore when bored",
-      "url": "https://www.bored.com/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Animation Triggers",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-animation-triggers/"
     },
     {
-      "id": "8ca3bd8f647bd5a0cb7d",
+      "id": "37ab1fbdd16439247835",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "The horse made the state",
-      "url": "https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Draft Notes: Verifiable Credential Threat Models",
+      "url": "https://www.w3.org/news/2026/first-draft-notes-verifiable-credential-threat-models/"
     },
     {
-      "id": "0386d86e596acc2db46f",
+      "id": "bcd7083976c76ae8688f",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "GPUI is getting its own repository",
-      "url": "https://github.com/zed-industries/gpui"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C issues press release about developing Verifiable Credential Barcodes",
+      "url": "https://www.w3.org/news/2026/w3c-issues-press-release-about-developing-verifiable-credential-barcodes/"
     },
     {
-      "id": "d059f193e627ed60e8ce",
+      "id": "81a3389421f4bb56bc3d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Per Arm's request, this site will be discontinued on 4 December 2026 :(",
-      "url": "https://arm.jonpalmisc.com/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Updated Candidate Recommendation: Scalable Vector Graphics (SVG) 2",
+      "url": "https://www.w3.org/news/2026/updated-candidate-recommendation-scalable-vector-graphics-svg-2/"
     },
     {
-      "id": "6851a6a04065867c8b56",
+      "id": "0f94c1b2cc9695104e0d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Apple removed my open-source app from EU App Stores after 9 years",
-      "url": "https://github.com/glushchenko/fsnotes/discussions/2056"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Consortium Members elect Board of Directors",
+      "url": "https://www.w3.org/news/2026/consortium-members-elect-board-of-directors/"
     },
     {
-      "id": "86e9f5c95662b124f9f3",
+      "id": "e74888c663f492eea866",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "How should an LLM see a computer?",
-      "url": "https://www.greptile.com/blog/trex-computer-use"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C Workshop Report: The Future of ODRL",
+      "url": "https://www.w3.org/news/2026/w3c-workshop-report-the-future-of-odrl/"
     },
     {
-      "id": "5d4fbf8ddc9ca1d0bc5d",
+      "id": "7ea510935dfd2aa76b5a",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Kagi Mail (public beta)",
-      "url": "https://blog.kagi.com/kagi-mail-public-beta"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Bitstring Status List v1.1",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-bitstring-status-list-v1-1/"
     },
     {
-      "id": "53510b5370cd80960ab8",
+      "id": "cb68915a226f5b31c5c4",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Dario is hyping the dangers so OSS models are illegal and he stays in control",
-      "url": "https://twitter.com/ylecun/status/2124550037912920090"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Verifiable Credentials Data Model Threat Model v2.1",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-data-model-threat-model-v2-1/"
     },
     {
-      "id": "15a068344f26eb17f56e",
+      "id": "f1b5f492edd59d79af68",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "EasyPost (YC S13) Is Hiring",
-      "url": "https://www.easypost.com/careers/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Authorized Translations of WCAG 2.2 and 2.1 in French updated",
+      "url": "https://www.w3.org/news/2026/authorized-translations-of-wcag-2-2-and-2-1-in-french-updated/"
     },
     {
-      "id": "8d83fbfc47ac58f7eccf",
+      "id": "c8dc3e9414ec28a368ac",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Ladybird is now in alpha",
-      "url": "https://ladybird.org/posts/alpha/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: SHACL 1.2 Inference Rules",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-shacl-1-2-inference-rules/"
     },
     {
-      "id": "ab296f664d7ebf6624e8",
+      "id": "6e4168f82218e48b2b73",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Building a wireless network adapter for the Super Nintendo",
-      "url": "https://boland.dev/snet/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: Web Authentication: An API for accessing Public Key Credentials Level 4",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-web-authentication-an-api-for-accessing-public-key-credentials-level-4/"
     },
     {
-      "id": "cf5164636ad3b77e7fd6",
+      "id": "9b67edb55892cc147b16",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Nvidia Reinstates Jensen Huang as CEO",
-      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C opens 2026 community survey",
+      "url": "https://www.w3.org/news/2026/w3c-opens-2026-community-wide-survey/"
     },
     {
-      "id": "9f183e9f9f75c876517d",
+      "id": "359b504aecb4a8066979",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "NariQ: BF16-level Qwen3.8-27B in a 10 GB file",
-      "url": "https://huggingface.co/nari-labs/Qwen3.8-27B-NariQ-GGUF"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Web Authentication: An API for accessing Public Key Credentials Level 3 is now a W3C Recommendation",
+      "url": "https://www.w3.org/news/2026/web-authentication-an-api-for-accessing-public-key-credentials-level-3-is-now-a-w3c-recommendation/"
     },
     {
-      "id": "d497cc342864454896e0",
+      "id": "0c06abcb0d06332e5331",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Win4wine – Run Windows Shell as the Linux Desktop on Wine",
-      "url": "https://github.com/mikuta0407/win4wine"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Patent Advisory Group recommends continuing work on Open Screen Application Protocol",
+      "url": "https://www.w3.org/news/2026/patent-advisory-group-recommends-continuing-work-on-open-screen-application-protocol/"
     },
     {
-      "id": "de0f31745cc5ebed762a",
+      "id": "e9046d10c5a45a4be7b5",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "The next circle of security hell",
-      "url": "https://blogs.gentoo.org/mgorny/2026/10/27/the-next-circle-of-security-hell/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "First Public Working Draft: The Profiles Vocabulary",
+      "url": "https://www.w3.org/news/2026/first-public-working-draft-the-profiles-vocabulary/"
     },
     {
-      "id": "20d4c8c8afcf099b6cbb",
+      "id": "1cb4dab4f76ed824568d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Nospeaker ─ Make your MacBook's trackpad talk using its haptic motor",
-      "url": "https://github.com/os6/nospeaker"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Web Sustainability Guidelines (WSG) Impact Ratings",
+      "url": "https://www.w3.org/news/2026/group-note-draft-web-sustainability-guidelines-wsg-impact-ratings/"
     },
     {
-      "id": "74d816fb25305bd550db",
+      "id": "073f9b4d7b387c99f07e",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "Show HN: Hermit CRM – Free open-source CRM for solopreneurs",
-      "url": "https://hermitcrm.io/"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Updated W3C Recommendation: ARIA in HTML",
+      "url": "https://www.w3.org/news/2026/updated-w3c-recommendation-aria-in-html/"
     },
     {
-      "id": "f1db7ce98881d8901597",
+      "id": "e2b8edcef39b94c3378e",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://hnrss.org/frontpage",
-      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
-      "url": "https://z.ai/blog/glm-5.4"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C invites implementations of Decentralized Identifier Resolution (DID Resolution) v1",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-decentralized-identifier-resolution-did-resolution-v1/"
     },
     {
-      "id": "cd02a86f341630ad0633",
+      "id": "53199f615af74997230d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
-      "url": "https://arxiv.org/abs/2611.26663"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note: Further Aligning W3C's Program of Technical Work with Human Rights",
+      "url": "https://www.w3.org/news/2026/group-note-further-aligning-w3cs-program-of-technical-work-with-human-rights/"
     },
     {
-      "id": "585cc50ff286833bca5a",
+      "id": "41a209d76f100b1bd5d4",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
-      "url": "https://arxiv.org/abs/2611.26717"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "W3C Invites Implementations of WebTransport",
+      "url": "https://www.w3.org/news/2026/w3c-invites-implementations-of-webtransport/"
     },
     {
-      "id": "2ffd747d4cc71821fc6c",
+      "id": "dbdb0820dcbaa5243b7d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TOUMAII: A 4.5M-Pair Tool-Calling Preference Dataset and Its Source-Agnostic Generator",
-      "url": "https://arxiv.org/abs/2611.26722"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: Verifiable Credentials Overview v1.1",
+      "url": "https://www.w3.org/news/2026/group-note-draft-verifiable-credentials-overview-v1-1/"
     },
     {
-      "id": "461a81e08dcc750a00d6",
+      "id": "1edd9d31a5fe545fe7fb",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ChatAtom: A Multi-Agent LLM System for Molecular Dynamics Simulation and Visualization",
-      "url": "https://arxiv.org/abs/2611.26782"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note Draft: EPUB Accessibility 1.2 Explainer",
+      "url": "https://www.w3.org/news/2026/group-note-draft-epub-accessibility-1-2-explainer/"
     },
     {
-      "id": "ba63b857128142332f9c",
+      "id": "1abec9d47a1273181fad",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Final Answers: Interpretable Tumor Immune Microenvironment Reasoning from H&E and mIF",
-      "url": "https://arxiv.org/abs/2611.26794"
+      "observed_at": "2026-11-24T06:45:01Z",
+      "source": "https://www.w3.org/News/news.rss",
+      "title": "Group Note: WCAG Evaluation Methodology (WCAG-EM) 2.0",
+      "url": "https://www.w3.org/news/2026/group-note-wcag-evaluation-methodology-wcag-em-2-0/"
     },
     {
-      "id": "9e7d1b0c4460f6f1c2d4",
+      "id": "089bf24f70886d0f6b07",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Memorization and Generalization in Generative Models: A Perspective From Energy-based Modeling and Associative Memory",
-      "url": "https://arxiv.org/abs/2611.26797"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "REA: The Open-Source AI Tool That Can Reverse Engineer Almost Anything (2026 Guide)",
+      "url": "https://techncruncher.blogspot.com/2026/11/rea-open-source-ai-tool-that-can.html"
     },
     {
-      "id": "03465724b88b0cc08e0a",
+      "id": "24dd95896911d8bd0b6d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Demographic Discrimination: Benchmarking Normative-Descriptive Calibration in LLMs",
-      "url": "https://arxiv.org/abs/2611.26870"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "How I Get Free Traffic from ChatGPT in 2025 (AIO vs SEO)",
+      "url": "https://techncruncher.blogspot.com/2025/12/how-i-get-free-traffic-from-chatgpt-in.html"
     },
     {
-      "id": "d255db050aaeae048408",
+      "id": "5c7b8bdb9c001de23cea",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Towards Robust Partial-Edit Deepfake Localization: An edit and Generator Conditioned Analysis",
-      "url": "https://arxiv.org/abs/2611.26903"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
+      "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html"
     },
     {
-      "id": "7afd1e283c6656dc3072",
+      "id": "8df3484f72ce4634a7e5",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Budget-Aware Predict-and-Verify Theorem Proving with Heterogeneous LLM Solvers",
-      "url": "https://arxiv.org/abs/2611.26906"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "LimeWire AI Studio Review 2023: Details, Pricing & Features",
+      "url": "https://techncruncher.blogspot.com/2023/12/limewire-ai-studio-review-2023-details.html"
     },
     {
-      "id": "9727016a4ca8e93e9549",
+      "id": "129cee30a618dbacbfe9",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AstronautBench: Measuring Agent Self-Improvement Across Episodes Through Knowledge, Evidence, and Progress",
-      "url": "https://arxiv.org/abs/2611.26910"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+      "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html"
     },
     {
-      "id": "dae9992927e484967efc",
+      "id": "d3499e02aaa3943b73aa",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Self-Evolving Beyond Human-Crafted Experience for EDA Scripting",
-      "url": "https://arxiv.org/abs/2611.26912"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 AI Content Generator & Writer Tools in 2022",
+      "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html"
     },
     {
-      "id": "14beffb876731c8edd29",
+      "id": "c9b0ba2832f5c52645f2",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Self-similar Organization of Information in Language",
-      "url": "https://arxiv.org/abs/2611.26935"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Beginner Guide to CJ Affiliate (Commission Junction) in 2022",
+      "url": "https://techncruncher.blogspot.com/2022/09/cj-affiliate-ultimate-guide-to.html"
     },
     {
-      "id": "8c1854f784a023ca0465",
+      "id": "1104ec0ee393a7f4f909",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CodeReviewBench: An Automated Benchmark for Evaluating the Software Factory",
-      "url": "https://arxiv.org/abs/2611.26942"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+      "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html"
     },
     {
-      "id": "7674d7520cee7340b84a",
+      "id": "572a341c954c548987ad",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Keep the Process, Change the Supplier: Runtime Governance for Tool-Using AI Agents",
-      "url": "https://arxiv.org/abs/2611.26966"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About Affiliate Marketing",
+      "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "b3dd5830b7fd0237d641",
+      "id": "f63aedf5e35cee9cf2ff",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Right Numbers, Wrong Story: When LLMs Narrate Financial Changes Beyond Their Inputs",
-      "url": "https://arxiv.org/abs/2611.26968"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "What is Blockchain: Everything You Need to Know (2022)",
+      "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html"
     },
     {
-      "id": "14dcac9f333a385ddc7d",
+      "id": "eb3490aa3ebca0f4ef67",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Run One, Get Two: Near-Free Streaming Safety Checks for Local LLMs",
-      "url": "https://arxiv.org/abs/2611.26975"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html"
     },
     {
-      "id": "14a959238623f243b1be",
+      "id": "5aebe77748d66a1bef9a",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MixFold: Sub-4-Bit Mixed-Precision LLM Inference via Output-Channel Grouping on Mobile NPUs",
-      "url": "https://arxiv.org/abs/2611.26976"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
+      "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html"
     },
     {
-      "id": "902a2dfd566a09331dd0",
+      "id": "469fe5a61b36c036d58c",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Letter-of-Credit Requirements to Executable Specifications: Evaluating Verification Accuracy and Completeness",
-      "url": "https://arxiv.org/abs/2611.26988"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Ahrefs vs SEMrush: Which SEO Tool Should You Use?",
+      "url": "https://techncruncher.blogspot.com/2022/03/ahrefs-vs-semrush-which-seo-tool-should.html"
     },
     {
-      "id": "91a05cc21f3ef9b6732b",
+      "id": "65763140459cf23fdedd",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Reward Integrity in Adversarial Reinforcement Learning for LLM Guardrail Red-Teaming",
-      "url": "https://arxiv.org/abs/2611.26998"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 10 Best PLR(Private Label Rights) Websites | Which One You Should Join in 2022?",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-10-best-plrprivate-label-rights.html"
     },
     {
-      "id": "d024ff698ac69c50b49f",
+      "id": "f102a512d0bf0eec1887",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Scalable Evaluation of Medical AI using Evidence-based Practice Recommendations",
-      "url": "https://arxiv.org/abs/2611.27007"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Canva Review 2022: Details, Pricing & Features",
+      "url": "https://techncruncher.blogspot.com/2022/02/canva-review-2022-details-pricing.html"
     },
     {
-      "id": "35097f0c3fa5dc44c090",
+      "id": "4ae8efd7a9964cf3d437",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Many Plans at Once: Diverse Top-Quality Planning in Continuous Time",
-      "url": "https://arxiv.org/abs/2611.27012"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 7 Best Wordpress Plugin Of All Time",
+      "url": "https://techncruncher.blogspot.com/2022/02/top-7-best-wordpress-plugin-of-all-time.html"
     },
     {
-      "id": "fcc3caa65c7619f93f64",
+      "id": "c4ecc08e3dcd225bd13c",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Same Facts, Different Decision: Fact-Invariant Manipulation and Provenance-Based Defense in Typed Decision Models",
-      "url": "https://arxiv.org/abs/2611.27016"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Ginger VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+      "url": "https://techncruncher.blogspot.com/2022/02/ginger-vs-grammarly-which-grammar.html"
     },
     {
-      "id": "912a4a9d7d93142037c4",
+      "id": "44ca195f5b7c621a996e",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Integral Multipliers and Arithmetic Obstructions for Two-Hidden-Layer ReLU Maxima",
-      "url": "https://arxiv.org/abs/2611.27018"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About NFTs(Non-Fungible Tokens)",
+      "url": "https://techncruncher.blogspot.com/2022/02/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "4047c6e2125e3587275a",
+      "id": "54b9d850727b6cdbe5ce",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Disentangling Verbalized Evaluation Awareness and Refusal through Neuron-Level Intervention",
-      "url": "https://arxiv.org/abs/2611.27032"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "10 Best Chrome Extensions That Are Perfect for Everyone",
+      "url": "https://techncruncher.blogspot.com/2022/01/10-best-chrome-extensions-that-are.html"
     },
     {
-      "id": "3710083a68f2cce5af6f",
+      "id": "fe934b9f69954d98e9d8",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Actions Speak Louder than Words: Stateful Privacy Sniffing of LLM Agents via Behavioral Covert Channels in Web Interactions",
-      "url": "https://arxiv.org/abs/2611.27046"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Most Frequently Asked Questions About Email Marketing",
+      "url": "https://techncruncher.blogspot.com/2022/01/most-frequently-asked-questions-about.html"
     },
     {
-      "id": "0e28a904d1414b09bb90",
+      "id": "6cb428459606b5a9549d",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Continuous Relaxation of Quantization-Aware Training",
-      "url": "https://arxiv.org/abs/2611.27056"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "7 Free Websites Every Content Creator Needs to Know",
+      "url": "https://techncruncher.blogspot.com/2022/01/7-free-websites-every-content-creator.html"
     },
     {
-      "id": "b2bcfcb184e5d5f5c764",
+      "id": "60e9a0a09a7e88daa6f4",
       "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Dynamic Token Merging for Efficient Vision-Language Models",
-      "url": "https://arxiv.org/abs/2611.27064"
+      "observed_at": "2026-11-24T06:45:02Z",
+      "source": "https://feeds.feedburner.com/TechCrunch/",
+      "title": "Top 9 Free AI Tools That Make Your Life Easier",
+      "url": "https://techncruncher.blogspot.com/2022/01/top-9-free-ai-tools-that-make-your-life.html"
     },
     {
-      "id": "0f525672fc51aba072c3",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Decision Models Are General-Purpose Process Reward Models",
-      "url": "https://arxiv.org/abs/2611.27068"
-    },
-    {
-      "id": "8762f2953cbd8c85b06c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Writing Weights or Training Them? Spatial Reasoning through Weight-Space Programming and Low-Rank Adaptation",
-      "url": "https://arxiv.org/abs/2611.27089"
-    },
-    {
-      "id": "d95460d7c4e585aa10a7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Reasoning in Two Dimensions: Quantifying Chain-of-Thought Faithfulness and Efficiency",
-      "url": "https://arxiv.org/abs/2611.27100"
-    },
-    {
-      "id": "b6b5f90ee0597f7f4595",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems?",
-      "url": "https://arxiv.org/abs/2611.27116"
-    },
-    {
-      "id": "5e769584a5310adcbbe7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Portable Active Recovery under Timed and Position-Dependent Visual Outages",
-      "url": "https://arxiv.org/abs/2611.27121"
-    },
-    {
-      "id": "2f38fb0d4970cac145c9",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Students Fail to Learn from Teachers: Learning Dynamics of On-Policy Distillation",
-      "url": "https://arxiv.org/abs/2611.27125"
-    },
-    {
-      "id": "0dc04413cef3cd66f81c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MAPES: Multi-Value Alignment Pipeline via Expert Specialization",
-      "url": "https://arxiv.org/abs/2611.27133"
-    },
-    {
-      "id": "413135b2b55fdc2b174b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Double counting in LLM evidence fusion: exact posteriors separate rule compliance from posterior gain",
-      "url": "https://arxiv.org/abs/2611.27138"
-    },
-    {
-      "id": "b16c292f70e1a089cb2a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Where Structure Enters a World Model: From Predictive Fit to Physical Rollout",
-      "url": "https://arxiv.org/abs/2611.27149"
-    },
-    {
-      "id": "873c4235fbad50082020",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Acting to Learning: Experience Selection toward Continually Learning Agents",
-      "url": "https://arxiv.org/abs/2611.27159"
-    },
-    {
-      "id": "06cf0b3156b2863bcd44",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning Adaptive Defense Strategies: Fine-Tuned LLMs for Network Security Games under Network Mobility",
-      "url": "https://arxiv.org/abs/2611.27180"
-    },
-    {
-      "id": "98bfded9321f646280ad",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "What Does Matching a Human Intervention Effect Establish? Benchmark Checks for LLM Simulations",
-      "url": "https://arxiv.org/abs/2611.27186"
-    },
-    {
-      "id": "646e371f61cd3a930452",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EDAGoat: An EDA-Aware Agent for Project-Level GPU Optimization",
-      "url": "https://arxiv.org/abs/2611.27196"
-    },
-    {
-      "id": "a350ba064f5e0b021ebd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Bel: Step-Level Policy Improvement of Visual Agents Without Training",
-      "url": "https://arxiv.org/abs/2611.27222"
-    },
-    {
-      "id": "c303da0828d23622097c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LiDAR Signals for Robot Locomotion: Spherical Range Images Enable Robust Sim-to-Real Transfer",
-      "url": "https://arxiv.org/abs/2611.27223"
-    },
-    {
-      "id": "2ba4b14f1055862a858a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "No Perfect Guardrail & No Perfect Guard: On the Decidability of Output Policies for Large Language Models",
-      "url": "https://arxiv.org/abs/2611.27260"
-    },
-    {
-      "id": "54d6031773e653399639",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DermKG: A Concept-Centric Knowledge Graph for Interpretable Skin Disease Diagnosis from Dermatological Morphology",
-      "url": "https://arxiv.org/abs/2611.27283"
-    },
-    {
-      "id": "d7ecf6185decf8b6cf2e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Belief-State Management Meets Rubric Rewards for Agentic Forecasting",
-      "url": "https://arxiv.org/abs/2611.27286"
-    },
-    {
-      "id": "b0659ab90bc8448c9792",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "HookEvo: A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes",
-      "url": "https://arxiv.org/abs/2611.27294"
-    },
-    {
-      "id": "d25867a4752d7150dd7b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "$\\gamma$-Scape: An Agent-Centric World for Mobile Embodied Intelligence",
-      "url": "https://arxiv.org/abs/2611.27306"
-    },
-    {
-      "id": "1267b5f33ef014620d84",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "H-MSAE: Hierarchical Sparse Concept Coverage for Efficient and Diverse Instruction Data Selection",
-      "url": "https://arxiv.org/abs/2611.27329"
-    },
-    {
-      "id": "2f41aae6e6a160b6afc5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GGDriver: Glance at What Is Shared, Gaze at What Differs for Perception-Free Planning",
-      "url": "https://arxiv.org/abs/2611.27330"
-    },
-    {
-      "id": "40fdbed87f62388a74f2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EcomWriteBench: A Real-World Benchmark for E-commerce Writing Tasks",
-      "url": "https://arxiv.org/abs/2611.27349"
-    },
-    {
-      "id": "50800d6eeeef77c6f414",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GRACE: Controlled Evidence Interventions for Diagnosing and Improving Knowledge Integration in GraphRAG",
-      "url": "https://arxiv.org/abs/2611.27350"
-    },
-    {
-      "id": "705d2cfdd626a4343580",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "WePM: Hierarchical Conflict Reconciliation for Unified MLLMs",
-      "url": "https://arxiv.org/abs/2611.27365"
-    },
-    {
-      "id": "6ee8884c133e48bde0a7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AMARIS: Merging Generalist and Specialist LLMs via Adaptive Subspace Inheritance",
-      "url": "https://arxiv.org/abs/2611.27369"
-    },
-    {
-      "id": "c7d13170317e1b487841",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ReActWAM: Action-Consistent Caching for Efficient World-Action Models",
-      "url": "https://arxiv.org/abs/2611.27372"
-    },
-    {
-      "id": "15b087f5b1f1f66712ad",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Evidence sufficiency assessment enables cost-effective review allocation in on-premise clinical AI agents",
-      "url": "https://arxiv.org/abs/2611.27390"
-    },
-    {
-      "id": "71633c5646b41e33c12d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Linear Decodability: Understanding and Improving Instruction Following in World Action Models",
-      "url": "https://arxiv.org/abs/2611.27401"
-    },
-    {
-      "id": "18ecee84331dfef8f42e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Jagged Robustness: Uneven Safety Transfer and Emerging Vulnerabilities under LLM Quantization",
-      "url": "https://arxiv.org/abs/2611.27424"
-    },
-    {
-      "id": "eba6823affd3674f9731",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Supervaluationism about vagueness and indeterminacy: A judgment-aggregation perspective",
-      "url": "https://arxiv.org/abs/2611.27463"
-    },
-    {
-      "id": "3ac28b5e1e07e93e69fd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "From Manufacturing Event Logs to Simulation: Enabling SMEs with Agentic AI for SimPy Simulation Generation",
-      "url": "https://arxiv.org/abs/2611.27483"
-    },
-    {
-      "id": "9a88bb00c283b6a858f2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Efficient Natural Language to Temporal Logic Translation for Real-Time Physical AI",
-      "url": "https://arxiv.org/abs/2611.27489"
-    },
-    {
-      "id": "d52bc94754e9b5ba9002",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Trained on Harm, Still Refusing: A Training-Time Defense for Code Generation",
-      "url": "https://arxiv.org/abs/2611.27495"
-    },
-    {
-      "id": "20c9b660e6b0f590389b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Altair-Nidhogg: Which Model-Merging Theories Hold for a One-Pass Decision Encoder? Soups, Task Arithmetic, TIES and DARE Against Joint Training and Prediction Ensembling",
-      "url": "https://arxiv.org/abs/2611.27550"
-    },
-    {
-      "id": "c0d9c291d997803e3b28",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Vega-Fafnir: Is Greedy Decoding the Same Decoding? Where Rounding Noise in Speculative Verification Comes From and What Removing It Costs",
-      "url": "https://arxiv.org/abs/2611.27554"
-    },
-    {
-      "id": "b6bce44c5b8e11f94ae4",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can Language Models See the Circuit in Pixelated RFIC Passives?",
-      "url": "https://arxiv.org/abs/2611.27559"
-    },
-    {
-      "id": "f51ccd7bfd08708997fc",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Benchmarks' Last Exam",
-      "url": "https://arxiv.org/abs/2611.27622"
-    },
-    {
-      "id": "8590d2e16d638310e22f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning Inside Types: Epistemic Typestates for Safe Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.27631"
-    },
-    {
-      "id": "5116bbfd0c44afd596eb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning in Symbiosis: Heterogeneous Federated Learning with ANNs and SNNs",
-      "url": "https://arxiv.org/abs/2611.27686"
-    },
-    {
-      "id": "aa1d2649cb81fdac4412",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Comparative Performance of Machine Learning Architectures for Fault Detection and Diagnosis in Chemical Processes",
-      "url": "https://arxiv.org/abs/2611.27696"
-    },
-    {
-      "id": "390fdcde6a0ef874ff15",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Spatiotemporal Graph Neural Networks for Fault Detection and Structural Learning in Chemical Processes: Use Case on the Tennessee Eastman Process",
-      "url": "https://arxiv.org/abs/2611.27698"
-    },
-    {
-      "id": "4f27de3f62ef0be3b083",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Abstract What Varies, Reuse Longer Patterns: Efficient Offline Chain-of-Thought Compression",
-      "url": "https://arxiv.org/abs/2611.27710"
-    },
-    {
-      "id": "7867d51c2284f6e06069",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Are Images Needed in Multimodal Machine Translation? Text-Only Routing for On-Demand Visual Context",
-      "url": "https://arxiv.org/abs/2611.27712"
-    },
-    {
-      "id": "6f6fdfffb42b84be71f8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MetaRigor: From Agentic Automation to Verifiable End-to-End Meta-Analysis Through Scientific Decision Boundaries",
-      "url": "https://arxiv.org/abs/2611.27713"
-    },
-    {
-      "id": "156bd14f53e4b2eca2b1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Recoverable Symbols, Unstable Execution: Auditing Internal Pathways and Decision Identity in Visual State Tracking",
-      "url": "https://arxiv.org/abs/2611.27715"
-    },
-    {
-      "id": "a02c4217cd8475692143",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Average-Depth Variable Execution via Request-Local Token Routing",
-      "url": "https://arxiv.org/abs/2611.27738"
-    },
-    {
-      "id": "68fe0043b220925783d4",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can Vision-Language Models Synthesize Executable Game-Playing Programs?",
-      "url": "https://arxiv.org/abs/2611.27741"
-    },
-    {
-      "id": "7a4e094a6751d352d365",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "QuASAR: Toward an LLM-Assisted Framework for Screening, Prototyping, and Assessing Quantum-Advantage Opportunities in Scientific Computing",
-      "url": "https://arxiv.org/abs/2611.27778"
-    },
-    {
-      "id": "4388e48626232062caf7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Benchmark Protocol and Fairness Analysis Towards Open-Set EEG Seizure Type Classification",
-      "url": "https://arxiv.org/abs/2611.27783"
-    },
-    {
-      "id": "cc99765ea6399784f5d3",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ChildAI-Gov: An Evidence-Linked AI System for Assessing EdTech Policies Against Children's Digital Rights",
-      "url": "https://arxiv.org/abs/2611.27799"
-    },
-    {
-      "id": "a39a0fd1b50a4d11d715",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SLP-Bench: Evaluating and Improving Acoustic Claims of Reasoning Audio Language Models on Clinical Speech",
-      "url": "https://arxiv.org/abs/2611.27810"
-    },
-    {
-      "id": "7dbac78e931b57d13076",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Auditable Financial Knowledge Graphs: Schema-Driven Construction and Intrinsic Quality Evaluation",
-      "url": "https://arxiv.org/abs/2611.27835"
-    },
-    {
-      "id": "6e2944a9102c55377dc0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Self-Critique: Epistemic Convergence Control for Multi-Agent Research Verification",
-      "url": "https://arxiv.org/abs/2611.27839"
-    },
-    {
-      "id": "17de8e63438109924a7f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.27865"
-    },
-    {
-      "id": "6b66543df0c728251750",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Integrating Generative Artificial Intelligence with Learning Style Models: Opportunities, Challenges, and Future Directions",
-      "url": "https://arxiv.org/abs/2611.27868"
-    },
-    {
-      "id": "5ebd29d2a325602decdd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Speculative Decoding Is Less Speculative Than You Think",
-      "url": "https://arxiv.org/abs/2611.27891"
-    },
-    {
-      "id": "bdab3b8e5aabc16409f7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Dual-Tier Sentiment Framework: Scalable Multimodal UX Attribution in Web Search",
-      "url": "https://arxiv.org/abs/2611.27899"
-    },
-    {
-      "id": "006e5b4d87f0d23dc492",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Functional Depth Is Learned: Isolating the Computation That Layers Produce Only Together",
-      "url": "https://arxiv.org/abs/2611.27911"
-    },
-    {
-      "id": "bcb48b868b83484369e0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "BioEmu2: Scalable Emulation of Biomolecular Dynamics",
-      "url": "https://arxiv.org/abs/2611.27924"
-    },
-    {
-      "id": "615f5bd6a724c327fa31",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.26504"
-    },
-    {
-      "id": "c1d2b7b3a4d9ea4f642d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "VerifiQuant: Governance-by-Execution for Financial LLM Workflows",
-      "url": "https://arxiv.org/abs/2611.26649"
-    },
-    {
-      "id": "536600d8d1fed139a36d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Computing Weighted Set Covers with Heterogeneous Stochastic Oracles: Deadline-Constrained Token Complexity",
-      "url": "https://arxiv.org/abs/2611.26656"
-    },
-    {
-      "id": "e86b0f581b1a2890c7f4",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "On the loss landscape of the linear neural network: beyond critical points",
-      "url": "https://arxiv.org/abs/2611.26671"
-    },
-    {
-      "id": "fea189a64b1dbe19737c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Model the Annotation, Not the Noise: Semantic Annotation-Channel Prompt Learning against Noisy Labels",
-      "url": "https://arxiv.org/abs/2611.26702"
-    },
-    {
-      "id": "87bd782aaa0c71bf69e4",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "INCISE: Training-Free In-Context Segmentation of Surgical Videos",
-      "url": "https://arxiv.org/abs/2611.26734"
-    },
-    {
-      "id": "d473da174492680f533c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MomentMem: Memorizing Key Moments for Robot Manipulation",
-      "url": "https://arxiv.org/abs/2611.26745"
-    },
-    {
-      "id": "926e26dc5cb08537ef9d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Depth-Linked Residual Tokens for Multimodal Retrieval and Generation",
-      "url": "https://arxiv.org/abs/2611.26752"
-    },
-    {
-      "id": "d4600f6480347153bf51",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Self-verifiable LLM-driven science and why it needs human researchers",
-      "url": "https://arxiv.org/abs/2611.26754"
-    },
-    {
-      "id": "28bdfb16541c673931d5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Windchime: an Audiovisual Installation with Audio-Language Model implementations",
-      "url": "https://arxiv.org/abs/2611.26759"
-    },
-    {
-      "id": "26ec14834b5f7422e44f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "What Helps Language-Model Agents Review Violent Video? A Controlled Comparison with a Human Evidence Reference",
-      "url": "https://arxiv.org/abs/2611.26776"
-    },
-    {
-      "id": "a01b73a4accaf20d8da1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MedicalRSI: Medical Recursive Self-Improving Agents via Clinical Model-Harness Co-Evolution",
-      "url": "https://arxiv.org/abs/2611.26806"
-    },
-    {
-      "id": "e0329f2020f2d2c3397f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Search From the Start: Search-Native Pretraining for Language Models",
-      "url": "https://arxiv.org/abs/2611.26809"
-    },
-    {
-      "id": "54884a326c33bf0566cb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Realistic Robustness Evaluation of Tabular Data Driven Models",
-      "url": "https://arxiv.org/abs/2611.26818"
-    },
-    {
-      "id": "13e18699cfae8a9e27fd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Rethinking Full-Weight LoRA with Domain and Task Adapter Scaling for Question Answering over Portuguese Well Drilling Reports",
-      "url": "https://arxiv.org/abs/2611.26833"
-    },
-    {
-      "id": "c3fb0d1801a99eda73d0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Non-Expanding Gated Continued Fraction Architecture for Feedforward Layers in Language Models",
-      "url": "https://arxiv.org/abs/2611.26835"
-    },
-    {
-      "id": "d8007a3c9fac7f39fe7b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Scoliosis5K: Multimodal Gait Analysis via Clip-Conditioned RGB-Silhouette Fusion",
-      "url": "https://arxiv.org/abs/2611.26849"
+      "id": "3c7fe062395f68679b3c",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-22",
+      "source": "OpenAlex",
+      "title": "Phenolic compounds from Bergenia purpurascens and their protective effects on ARPE-19 cells",
+      "url": "https://doi.org/10.25135/rnp.2610.4034"
     },
     {
-      "id": "daaf5c1afa1b15c06b4e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LoCo-WAM: Test-Time Training as Long Context for World-Action Models",
-      "url": "https://arxiv.org/abs/2611.26853"
-    },
-    {
-      "id": "cc73e99ca280bc033e24",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Coherent Moment Propagation: Epistemic Uncertainty for Pre-trained Robot Policies",
-      "url": "https://arxiv.org/abs/2611.26855"
-    },
-    {
-      "id": "aed2f53e7f2a99422907",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Your Judge Inherits Your Prompt: In-Context Label Bias in an LLM-as-Judge Is Directional, Not Symmetric",
-      "url": "https://arxiv.org/abs/2611.26881"
-    },
-    {
-      "id": "0c8d722e556afb7efa24",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ProbeAgent: Principled Diagnosis of Agent Failures in Verifiable Environments",
-      "url": "https://arxiv.org/abs/2611.26897"
-    },
-    {
-      "id": "c2849a2e0a0c5eaf3954",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Modeling Attributional Style at Scale: A Dataset and Analysis for Psychological Attribution Assessment and Reframing",
-      "url": "https://arxiv.org/abs/2611.26900"
-    },
-    {
-      "id": "2bfa3b6ffeb3c98e1d49",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Perceive Once, Escalate on Demand: Handing Off Visual KV Memory from Small to Large VLMs",
-      "url": "https://arxiv.org/abs/2611.26902"
-    },
-    {
-      "id": "55f01e536367cb4534a1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "AI-Assisted Decision Support for Formula 1 Pit-Stop Strategy: Deep Reinforcement Learning and Mathematical Programming",
-      "url": "https://arxiv.org/abs/2611.26909"
-    },
-    {
-      "id": "80658ab453c827bcf044",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ERA: Embed, Route, Adapt for Cold-Start Cross-Model Latent Retrieval",
-      "url": "https://arxiv.org/abs/2611.26919"
-    },
-    {
-      "id": "27d1c52586bcdadd18ef",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Partially canonical axes in large language model representations",
-      "url": "https://arxiv.org/abs/2611.26920"
-    },
-    {
-      "id": "24dffb26f3a7681b3dca",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Tokenize Moments, Not Frames: Tokenizer-Aware Budget Allocation for Training-Free Video LLM Acceleration",
-      "url": "https://arxiv.org/abs/2611.26933"
-    },
-    {
-      "id": "42efe2800b3ae66b3e2d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "SecretAgent: A Multi-Agent Framework for Privacy Protection against Vision Language Models",
-      "url": "https://arxiv.org/abs/2611.26936"
-    },
-    {
-      "id": "e5dfe86b0ea06a18d23c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "MG-EDA: Maturity-Gated Skew-Normal Estimation of Distribution Algorithms",
-      "url": "https://arxiv.org/abs/2611.26938"
-    },
-    {
-      "id": "41be3fc9b0e2c0e72998",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CENTRY: A Probabilistic Latent-State Model for Continual AI Risk Estimation, Monitoring, and Regulation",
-      "url": "https://arxiv.org/abs/2611.26940"
-    },
-    {
-      "id": "b10f96cd7f05068756f2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Tracking and Limiting Unsupported Claim Propagation in Multi-Agent LLM Systems: A Provenance-Aware Framework",
-      "url": "https://arxiv.org/abs/2611.26957"
-    },
-    {
-      "id": "9525109868228c18fa3b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Beyond Prompt Heuristics: Assessing Child Safety Alignment in LLMs",
-      "url": "https://arxiv.org/abs/2611.26965"
-    },
-    {
-      "id": "4797da1411124b6c2460",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "When Perception Collides with Priors: Diagnosing Modal Polarization in Video Understanding Models",
-      "url": "https://arxiv.org/abs/2611.26972"
-    },
-    {
-      "id": "f538fc954244211dbf80",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Contexture: Runtime Context Eviction for High-Throughput Agent Serving",
-      "url": "https://arxiv.org/abs/2611.26980"
-    },
-    {
-      "id": "d01f1eacdeb1fa9f0e9c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Privacy Protection in Self-Evolving Personal Agents: Persistent Memory and Cross-Carrier Transfer",
-      "url": "https://arxiv.org/abs/2611.26983"
-    },
-    {
-      "id": "a93de79137ce702f056f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "JevRisk: Zero-Shot Financial Risk Assessment with a Language Decision Model",
-      "url": "https://arxiv.org/abs/2611.26999"
-    },
-    {
-      "id": "ee4c4c4423e2ed233561",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models",
-      "url": "https://arxiv.org/abs/2611.27011"
-    },
-    {
-      "id": "3cc683235e413b58b8cf",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Ruby: State-of-the-Art Potency Prediction across Discovery Regimes Using Learned Structural Representations",
-      "url": "https://arxiv.org/abs/2611.27015"
-    },
-    {
-      "id": "5ed6f187d3e0163497bf",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Hypergraph Structural Entropy-Enhanced Hierarchy-Aware Semi-Supervised Graph Classification",
-      "url": "https://arxiv.org/abs/2611.27043"
-    },
-    {
-      "id": "8800f4f15c45a540d5d9",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning 3D MRI Representations with Generative Adversarial Networks",
-      "url": "https://arxiv.org/abs/2611.27057"
-    },
-    {
-      "id": "7db09bc01bf31f9d191b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PACE: Policy Augmentation and Compensation With Explicit Disturbance Estimation for Robust Locomotion",
-      "url": "https://arxiv.org/abs/2611.27061"
-    },
-    {
-      "id": "bc2b45612c210261f5c0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Weight-space programming and mechanistic interpretability for model editing in particle physics",
-      "url": "https://arxiv.org/abs/2611.27079"
-    },
-    {
-      "id": "67c6a89170edcc135c72",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Fooling the Mind Twice: Human Detection of Audiovisual Deepfakes Under Repeated Exposure and Corrective Feedback",
-      "url": "https://arxiv.org/abs/2611.27080"
-    },
-    {
-      "id": "e82edb1b72eb95b421c0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes",
-      "url": "https://arxiv.org/abs/2611.27090"
-    },
-    {
-      "id": "5836d36b0cc28e565f54",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Separating Automation Gains from Agent Contributions in AI-Assisted Model Validation",
-      "url": "https://arxiv.org/abs/2611.27094"
-    },
-    {
-      "id": "3d66cad9e7609427897f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Epistemic Guard: Out-of-Process MCP Receipt Proxying, Post-Turn Prose Supervision, and Provenance-Gated Memory for Tool-Using Autonomous Agents",
-      "url": "https://arxiv.org/abs/2611.27095"
-    },
-    {
-      "id": "b2b60b62f5b707d3862a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "One state, many questions: Opsis gives a frontier model typed eyes for pathology",
-      "url": "https://arxiv.org/abs/2611.27102"
-    },
-    {
-      "id": "ddd6be7acae8a31604b9",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Schema-Validated LLM Workflows: A Benchmark Protocol and Comparative Evaluation Across Six Python Implementations",
-      "url": "https://arxiv.org/abs/2611.27106"
-    },
-    {
-      "id": "7285a218e33ec9b31eeb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Do Senior Agents Do Their Job? Measuring Role Integrity in How LLM Agents Use Subordinate Material",
-      "url": "https://arxiv.org/abs/2611.27139"
-    },
-    {
-      "id": "5553e04e6fc129919a16",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "How Does SAM-3 Adapt? Capacity, Update Geometry, and Domain Transfer",
-      "url": "https://arxiv.org/abs/2611.27142"
-    },
-    {
-      "id": "002aae09fc6b963886e7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Structure Over Scale: Rethinking Adaptation for Reinforcement Learning with Verifiable Rewards",
-      "url": "https://arxiv.org/abs/2611.27148"
-    },
-    {
-      "id": "a6962e8f79a8342ba8f0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Co-Evolving Behavioral Agents and Detectors for Adaptive Information Operations",
-      "url": "https://arxiv.org/abs/2611.27156"
-    },
-    {
-      "id": "f6fe98104dcae71372b7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Felid: A Flexible and Efficient Design for Transformer Fine-Tuning over Encrypted Data",
-      "url": "https://arxiv.org/abs/2611.27175"
-    },
-    {
-      "id": "7e72f335fd07d78c6d6f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "GEG-SAM: Gaze Exploration-Guided Segment Anything Model for Weakly Supervised Polyp Segmentation",
-      "url": "https://arxiv.org/abs/2611.27183"
-    },
-    {
-      "id": "b5111dc2cef1cde98c00",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Frugal AI Framework for India: Responsible and Right-sized AI",
-      "url": "https://arxiv.org/abs/2611.27189"
-    },
-    {
-      "id": "9e3b6ee0fcb15eaabca7",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "DepthMSA: Combinatorial Training and Budget-Aware Depth Allocation for Multimodal Sentiment Analysis",
-      "url": "https://arxiv.org/abs/2611.27198"
+      "id": "1053b82b9da456ef793f",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-18",
+      "source": "OpenAlex",
+      "title": "A survey of macroeconomic nowcasting applications",
+      "url": "https://doi.org/10.52903/wp2026374"
     },
     {
-      "id": "faa384ee94f822c027dd",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "LingSante-Pulse: Unified Physiological Pretraining through Random-Feature Prediction and Cross-Modal Alignment",
-      "url": "https://arxiv.org/abs/2611.27206"
-    },
-    {
-      "id": "6899a196df5e3bffe669",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Parameter-Efficient Adaptation of Qwen3-VL for Handwritten Mathematical Expression Recognition",
-      "url": "https://arxiv.org/abs/2611.27208"
-    },
-    {
-      "id": "7e28c534f085e109674a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Explicit Style Extraction for Personalized Long-Form Text Generation",
-      "url": "https://arxiv.org/abs/2611.27211"
-    },
-    {
-      "id": "bba0ee40eecd6240d4f6",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EAF-TTS: Rethinking Codec-Latent Coordinates for Flow TTS",
-      "url": "https://arxiv.org/abs/2611.27214"
-    },
-    {
-      "id": "80374b78a7b476072632",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neural Defend Ranks #1 in Global Audio Deepfake Detection Benchmark - ARCAS on the Podonos Independent Leaderboard",
-      "url": "https://arxiv.org/abs/2611.27215"
-    },
-    {
-      "id": "df4811993c7b853f873c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
-      "url": "https://arxiv.org/abs/2611.27216"
-    },
-    {
-      "id": "63daef5318ba9a4b451f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "NavTTT: Adaptive Parametric Memory via Hierarchical Test-Time Training for Vision-and-Language Navigation",
-      "url": "https://arxiv.org/abs/2611.27219"
-    },
-    {
-      "id": "b8d121c1d87b6364ccc5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "CreditFilter: Calibrated Token Weights over the Within-Response Entropy Rank for RLVR",
-      "url": "https://arxiv.org/abs/2611.27227"
-    },
-    {
-      "id": "6b1aae926f145f9c5526",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Proactive Defense Benchmark against Deepfake Generation",
-      "url": "https://arxiv.org/abs/2611.27253"
-    },
-    {
-      "id": "e387d9ad52c6f20cda04",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EAGLE: Entity-Aware Grounding with Layered Evidence for High-Resolution Image Understanding",
-      "url": "https://arxiv.org/abs/2611.27264"
-    },
-    {
-      "id": "9b1600b6903a9dc2c461",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Preserving Pretrained CFG Structure in RL for Diffusion Models with Conditional Contrast Regularization",
-      "url": "https://arxiv.org/abs/2611.27288"
-    },
-    {
-      "id": "7cfc25d1a361b0d218b1",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "EgoLAM: Learning Latent Actions from Hand and Head Motion",
-      "url": "https://arxiv.org/abs/2611.27290"
-    },
-    {
-      "id": "ede404bbe901f17291a8",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Can Reasoning and Image Description Enhance Yes/No Visual Mathematical Understanding?",
-      "url": "https://arxiv.org/abs/2611.27302"
-    },
-    {
-      "id": "ca28709c88acc6598ad5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "A Framework for AI-Ready Data in Earth and Environmental Science",
-      "url": "https://arxiv.org/abs/2611.27313"
-    },
-    {
-      "id": "f2337069a1e7bf91e4ef",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Do Language Models Know Which Words Steer Their Reasoning?",
-      "url": "https://arxiv.org/abs/2611.27317"
-    },
-    {
-      "id": "d24f611f2839a1d8be63",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Reasoning in Fewer Tokens: Concept-Normalized Multilingual Scratchpads and Reversible Model-Adaptive Reasoning Codes",
-      "url": "https://arxiv.org/abs/2611.27326"
-    },
-    {
-      "id": "ea9808e577b3872c439c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Unimodal Shortcuts and Joint Scene-Intent Dependence in Vision-Language Safety Representations",
-      "url": "https://arxiv.org/abs/2611.27339"
-    },
-    {
-      "id": "18bc6d76b9f8b67db38b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning Interaction Dynamics via Motion-Region Guidance for Robotic Video World Models",
-      "url": "https://arxiv.org/abs/2611.27344"
-    },
-    {
-      "id": "316baafa9caa9fef976b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PAVE: A Harness for Geometrically Consistent Road Network Modeling with Vision-Language Models",
-      "url": "https://arxiv.org/abs/2611.27352"
-    },
-    {
-      "id": "9e2a3883dd77f7b5b00b",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "WaXup: Weight Averaging of Experts as Data Augmentation for Robust Introspection",
-      "url": "https://arxiv.org/abs/2611.27353"
-    },
-    {
-      "id": "f10ecf79b393468eb48a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Testing for Coordination Failures in Cooperative Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.27368"
-    },
-    {
-      "id": "5c03b53324903781413a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "VMSA: Video Memory Skill Agent for Long Video Understanding",
-      "url": "https://arxiv.org/abs/2611.27381"
-    },
-    {
-      "id": "05829b9f611c3eb27745",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PanoUAV-Track: Full-Spherical UAV Visual Tracking in the Wild",
-      "url": "https://arxiv.org/abs/2611.27383"
-    },
-    {
-      "id": "d4ff69c3b973608c7df6",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Taking Apart and Putting Together: Tracking Objects Through Physical Transformations",
-      "url": "https://arxiv.org/abs/2611.27398"
-    },
-    {
-      "id": "ef1011f94e3641fa975c",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Detecting Word-Substitution Poisoning of a RAG Knowledge Base with Relative Entropy and Runtime Verification",
-      "url": "https://arxiv.org/abs/2611.27410"
-    },
-    {
-      "id": "3cc22e6e931eabfd204f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ADEPT: Adaptive Monocular Depth Estimation via Model-In-The-Loop Photometric Tuning with Capture Risk Prediction",
-      "url": "https://arxiv.org/abs/2611.27423"
-    },
-    {
-      "id": "e83e3f33e3f554d7a55a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming",
-      "url": "https://arxiv.org/abs/2611.27425"
-    },
-    {
-      "id": "a3d653952de332ab2767",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Cleave: Severing Guardrails and Auditing Spectral Coupling in Open-Weight LLMs",
-      "url": "https://arxiv.org/abs/2611.27426"
-    },
-    {
-      "id": "f107a16eb0aedad1f559",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neurodegenerative Differential Diagnosis with Knowledge-enhanced Structural Reasoning",
-      "url": "https://arxiv.org/abs/2611.27427"
-    },
-    {
-      "id": "31fdc2b7d4df0e566ff0",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "No Audio, No Transcripts, No Problem: LLM-based ASR Adaptation Using Only Domain Documents",
-      "url": "https://arxiv.org/abs/2611.27434"
+      "id": "7698b54f4db21db7869d",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-16",
+      "source": "OpenAlex",
+      "title": "GC×GC–MS analysis of volatile components extracted by spinning cone column from Forsythia suspensa and its antimicrobial assessment",
+      "url": "https://doi.org/10.25135/rnp.2609.4018"
     },
     {
-      "id": "fa0fb41603c356e4fa47",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "THRIFTY: Cost-Constrained Reasoning-Data Synthesis for Small Language Models",
-      "url": "https://arxiv.org/abs/2611.27436"
+      "id": "3f3809a1a558e51b51e0",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-09",
+      "source": "OpenAlex",
+      "title": "Aromatic polyketides from the marine-derived fungus Aspergillus unguis PM03: α-glucosidase inhibitory activity, structure-activity relationship, molecular docking and ADMET evaluation",
+      "url": "https://doi.org/10.25135/rnp.2609.4014"
     },
     {
-      "id": "3e093615280f3bb1e9d2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning When to Ask: Advisor-Aware Post-Training for SLM Agents",
-      "url": "https://arxiv.org/abs/2611.27443"
+      "id": "59e20403db4e16f891a1",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-09",
+      "source": "OpenAlex",
+      "title": "A New 6-deoxy-talopyranoside derivative with antibacterial and radical-scavenging activities from Streptomyces sp. HDSJ4",
+      "url": "https://doi.org/10.25135/rnp.2610.4040"
     },
     {
-      "id": "f44b76c11ea673a37958",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Mechanism Parity for Simulation-Based Validation of Autonomous-Driving Perception",
-      "url": "https://arxiv.org/abs/2611.27447"
+      "id": "988be499bdeac923a568",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-07",
+      "source": "OpenAlex",
+      "title": "Analysis of blood components and the mechanism of anti-pharyngitis and gut microbiota regulation in Ardisia crenata and its relatives",
+      "url": "https://doi.org/10.25135/rnp.2607.3975"
     },
     {
-      "id": "11a23d78c6ed8ecb72ab",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "On the Challenges of Using LLMs in High-Risk AI Recruitment: Guiding Questions for Legal Conformity with the AI Act",
-      "url": "https://arxiv.org/abs/2611.27462"
+      "id": "df92d49ccf7b881ccc93",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-01",
+      "source": "OpenAlex",
+      "title": "Die Macht des Psychotechnischen: Band II Zur Rekonfiguration und Synchronisierung psychischer Tätigkeiten",
+      "url": "https://doi.org/10.12907/978-3-593-45892-2"
     },
     {
-      "id": "0092f063cf64ecd669fc",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Cecilia: Towards Layout-Inclusive Optical Music Recognition",
-      "url": "https://arxiv.org/abs/2611.27465"
+      "id": "db5bae53b403e39b2b65",
+      "kind": "scientific_api",
+      "observed_at": "2027-11-01",
+      "source": "OpenAlex",
+      "title": "Rotatiridoid, a rare iridoid from Phlomoides rotata (Benth. ex Hook.f.) Mathiesen and its anti-inflammatory activity",
+      "url": "https://doi.org/10.25135/rnp.2609.4028"
     },
     {
-      "id": "cea6cf33e5352ca78caa",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "ROSWORLD: When Digital Task Competence Meets Physical Execution",
-      "url": "https://arxiv.org/abs/2611.27467"
+      "id": "2a8682adc14f4b2e088a",
+      "kind": "scientific_api",
+      "observed_at": "2027-10-26",
+      "source": "OpenAlex",
+      "title": "Asperpolyols A and B, two novel hydroxy polyunsaturated fatty acids, isolated from the marine-derived fungus Aspergillus versicolor M7",
+      "url": "https://doi.org/10.25135/rnp.2609.4019"
     },
     {
-      "id": "967c7caa33397786aa17",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Alignment without Transfer: Tokenization Impacts Cross-lingual Representations during Multilingual Language Model Pretraining",
-      "url": "https://arxiv.org/abs/2611.27491"
+      "id": "ed8dd814e0d2357b454c",
+      "kind": "scientific_api",
+      "observed_at": "2027-10-26",
+      "source": "OpenAlex",
+      "title": "Phenolic profile and biological activities of ultrasound-assisted aqueous-ethanolic extracts of Tamarix hispida Willd",
+      "url": "https://doi.org/10.25135/rnp.2608.4005"
     },
     {
-      "id": "c01149b9250d93f88b1d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Learning Unknown Oscillators From Bandit Feedback",
-      "url": "https://arxiv.org/abs/2611.27492"
+      "id": "e6e249ef4ad809a3a93a",
+      "kind": "scientific_api",
+      "observed_at": "2121-2-1",
+      "source": "Crossref",
+      "title": "The Role of Attachment Styles and Spiritual Intelligence in Predicting Women’s Emotional Divorce",
+      "url": "https://doi.org/10.32598/jccnc.7.1.350.1"
     },
     {
-      "id": "2203b5550ed066a5deca",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Turnout: Adaptive Attention Switching for Efficient Reasoning",
-      "url": "https://arxiv.org/abs/2611.27500"
+      "id": "67f3a66e69379bd8d8db",
+      "kind": "scientific_api",
+      "observed_at": "2077-7",
+      "source": "Crossref",
+      "title": "We Cannot Cede Control of Weapons to Artificial Intelligence",
+      "url": "https://doi.org/10.1038/scientificamerican072077-axs4kzsdvehyqhomb7gkv"
     },
     {
-      "id": "e06b3830ea454cb6c95e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "The Assistant Persona Differs Across Languages in Activation Space",
-      "url": "https://arxiv.org/abs/2611.27504"
+      "id": "87cfe5f7d3573ddb620d",
+      "kind": "scientific_api",
+      "observed_at": "2035-5-18",
+      "source": "Crossref",
+      "title": "Title Pending 94702",
+      "url": "https://doi.org/10.21825/ewopinpractice.94702"
     },
     {
-      "id": "5a0cbce9b9f3ede4b4af",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Self-Supervised Continuous-Time Depth Learning and Ego-Motion Estimation from Asynchronous Events",
-      "url": "https://arxiv.org/abs/2611.27509"
+      "id": "930b0a65246e5494b932",
+      "kind": "scientific_api",
+      "observed_at": "2035-5-18",
+      "source": "Crossref",
+      "title": "Title Pending 94703",
+      "url": "https://doi.org/10.21825/ewopinpractice.94703"
     },
     {
-      "id": "42cf695983702db8c312",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PhiJEPA: Denoising Latent Predictions for Visual Representation Learning",
-      "url": "https://arxiv.org/abs/2611.27516"
+      "id": "123d2de833c95d5476ce",
+      "kind": "scientific_api",
+      "observed_at": "2030-10-20",
+      "source": "Crossref",
+      "title": "Evolution and Applications of Artificial Intelligence in SAIs",
+      "url": "https://doi.org/10.56251/yxek7242"
     },
     {
-      "id": "21aa5c7b801f417baddf",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PaMuk-Bench: A Parallel Multilingual Multitask Benchmark for Vision-Language Tasks",
-      "url": "https://arxiv.org/abs/2611.27521"
+      "id": "fb6a18b368ac915fc475",
+      "kind": "scientific_api",
+      "observed_at": "2028",
+      "source": "Crossref",
+      "title": "Different optimal controllers for cable driven continuum robot based on artificial circulation system algorithms",
+      "url": "https://doi.org/10.1504/ijaac.2028.10079258"
     },
     {
-      "id": "23456c26208703508285",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Fix Where It Fails: Root-Cause-Guided Agentic Harness Optimization for Scene Graph Generation",
-      "url": "https://arxiv.org/abs/2611.27529"
+      "id": "cb755c61310d72d21ebb",
+      "kind": "scientific_api",
+      "observed_at": "2028",
+      "source": "Crossref",
+      "title": "A method for enhancing learning with artificial intelligence",
+      "url": "https://doi.org/10.1504/ijil.2028.10079618"
     },
     {
-      "id": "038e61403220fc9c18cb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "On the Limits of Observability for Evaluating Coverage in Machine Unlearning",
-      "url": "https://arxiv.org/abs/2611.27543"
+      "id": "4f9853feb5994958333e",
+      "kind": "scientific_api",
+      "observed_at": "2028",
+      "source": "Crossref",
+      "title": "A comparative study of college students perceptions of self-efficacy and social intelligence: an exploratory factor analytical study",
+      "url": "https://doi.org/10.1504/ijams.2028.10078118"
     },
     {
-      "id": "145c4682c22b351889b2",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Bringing AI Assistance to the Beznau Nuclear Power Plant: A Hierarchical System of LLM Agents for Reactor Monitoring",
-      "url": "https://arxiv.org/abs/2611.27556"
+      "id": "96bbcc35621a5ae05fe7",
+      "kind": "scientific_api",
+      "observed_at": "2028",
+      "source": "Crossref",
+      "title": "Interdisciplinary approach to problematic features of the use of artificial intelligence among university students",
+      "url": "https://doi.org/10.1504/ijil.2028.10080246"
     },
     {
-      "id": "f7c814ba44d42222b9da",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Unlocking Heterogeneous Accelerator Flexibility in AI Data Centers: Sizing and Workload Allocation",
-      "url": "https://arxiv.org/abs/2611.27576"
+      "id": "73d992fc5dcff801edf2",
+      "kind": "scientific_api",
+      "observed_at": "2028",
+      "source": "Crossref",
+      "title": "Trends and topics in arts education and artificial intelligence: a systematic review using a human-in-the-loop model",
+      "url": "https://doi.org/10.1504/ijart.2028.155022"
     },
     {
-      "id": "a53940d541c739f0d24a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "PromptTTSD: Controllable Text to Spoken Dialogue Synthesis with Open-Ended Text Descriptions",
-      "url": "https://arxiv.org/abs/2611.27601"
+      "id": "61c560cb0c0c918451ab",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43067942",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43067942/"
     },
     {
-      "id": "264d1f47a08ee87bbbd9",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Potential emergence in LLM agents: a statistical physics perspective",
-      "url": "https://arxiv.org/abs/2611.27618"
+      "id": "6654cce3b776b76f5cbe",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43061281",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061281/"
     },
     {
-      "id": "3045f765621b56fbc04d",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Hy-MT3: More Accurate, Robust and Practical Multilingual Translation Models in the Wild",
-      "url": "https://arxiv.org/abs/2611.27673"
+      "id": "44da8f64393f458442ad",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42862709",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42862709/"
     },
     {
-      "id": "8879ae0e381f80aceb6e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation",
-      "url": "https://arxiv.org/abs/2611.27689"
+      "id": "5c4216759b09fc16dea9",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42888301",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42888301/"
     },
     {
-      "id": "21f0cec1cef69a4d798a",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Decision Models for Multilingual Emotion Classification: A Comparative Study Against LLMs and Encoders",
-      "url": "https://arxiv.org/abs/2611.27721"
+      "id": "ba55c736d0e06f9d2972",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42897078",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42897078/"
     },
     {
-      "id": "7717c3075f517ff1a5cb",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Quantitative Measurement of Pavement Distress based on Vehicle Camera and Perspective Correction",
-      "url": "https://arxiv.org/abs/2611.27728"
+      "id": "49e698baa7e157ae1f7c",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43065563",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43065563/"
     },
     {
-      "id": "ef7fce041ecbae04432e",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work",
-      "url": "https://arxiv.org/abs/2611.27746"
+      "id": "4aedb3fa5826d380d7c5",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 43054184",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43054184/"
     },
     {
-      "id": "2f0c5439f4a4377458b5",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "RoSci: Exploring Robustness in Science VLMs",
-      "url": "https://arxiv.org/abs/2611.27750"
+      "id": "5b61a759cd14a0a6237c",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42920311",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42920311/"
     },
     {
-      "id": "9e5dfad7d84c46ca20dc",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Search-RSI: Expanding Search Worlds Along Multimodal Agents' Capability Frontier",
-      "url": "https://arxiv.org/abs/2611.27780"
+      "id": "2380adac72da2dd72795",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42872102",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42872102/"
     },
     {
-      "id": "f27c590c7a8463603e3f",
-      "kind": "feed",
-      "observed_at": "2026-11-23T22:58:50Z",
-      "source": "https://arxiv.org/rss/cs.AI",
-      "title": "Neural Defend ARCAS 290M: A Robust Foundation Model for AI-Generated Audio Detection",
-      "url": "https://arxiv.org/abs/2611.27784"
+      "id": "1e37d1fe64d9d46d2b20",
+      "kind": "scientific_api",
+      "observed_at": "2026-11-24T06:45:09Z",
+      "source": "PubMed",
+      "title": "PubMed PMID 42855827",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855827/"
     }
   ],
   "schema": "IMA-WEB-INTELLIGENCE-1.0",
@@ -2877,7 +1181,7 @@
     },
     "073f9b4d7b387c99f07e": {
       "fingerprint": "5617e0870f02e2aa545f",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "073fd7234bdb561db068": {
       "fingerprint": "d470a6f4ce1014762e66",
@@ -2954,6 +1258,10 @@
     "086e03e9fa5e593fefcb": {
       "fingerprint": "c38d63532ea947aee90a",
       "last_seen": "2026-11-03T13:53:12Z"
+    },
+    "089bf24f70886d0f6b07": {
+      "fingerprint": "4175aa8d98a8edb0d478",
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "08d6ee7f7a96b8a9fbcb": {
       "fingerprint": "d757dca9ad2a1016133e",
@@ -3109,7 +1417,7 @@
     },
     "0c06abcb0d06332e5331": {
       "fingerprint": "c1fe748e34820ea74371",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "0c22ba88d1257169379c": {
       "fingerprint": "630b026710705cfe5ce8",
@@ -3293,7 +1601,7 @@
     },
     "0f94c1b2cc9695104e0d": {
       "fingerprint": "b4808d5e5a6e8cb7dc46",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "0fba5cf814a38af5d7ba": {
       "fingerprint": "9bceb215e76cbf71eaf5",
@@ -3318,6 +1626,10 @@
     "104b76501c0fad13e2e7": {
       "fingerprint": "8875f88bd42e41523630",
       "last_seen": "2026-10-10T01:43:39Z"
+    },
+    "1053b82b9da456ef793f": {
+      "fingerprint": "51caf9e0982f1ca6226f",
+      "last_seen": "2027-11-18"
     },
     "108a19e8b9338f19653f": {
       "fingerprint": "ba254b1d5a0aa219810d",
@@ -3361,7 +1673,7 @@
     },
     "1104ec0ee393a7f4f909": {
       "fingerprint": "a50e60bb94caa61da2a7",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "113a70303c759bf19449": {
       "fingerprint": "3aff5f8cce90027ad8d3",
@@ -3389,7 +1701,7 @@
     },
     "11a49ab621a411f0cc0b": {
       "fingerprint": "4ec13cf0bb0d4d569606",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "11e9fbd537239b184312": {
       "fingerprint": "8f049afbc7c1e55073cc",
@@ -3445,7 +1757,7 @@
     },
     "129cee30a618dbacbfe9": {
       "fingerprint": "e19f89cf9bff597ac035",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "12a4904af7aa0825c402": {
       "fingerprint": "8f15fe0c3b97d8402904",
@@ -3589,7 +1901,7 @@
     },
     "1558c78d072630b6166d": {
       "fingerprint": "0771c4e8067959e42b1c",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "155c7b54b4cbd80e144f": {
       "fingerprint": "1b581c9bd1b2870feca5",
@@ -3877,7 +2189,7 @@
     },
     "1abec9d47a1273181fad": {
       "fingerprint": "ee6e815e521b5f42b3b0",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "1ac7358c03db31cd63e8": {
       "fingerprint": "21541f8aa3848e16355c",
@@ -3973,7 +2285,7 @@
     },
     "1cb4dab4f76ed824568d": {
       "fingerprint": "d1a7b6fafcc299e88891",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "1cf5e4d9799d0912d04b": {
       "fingerprint": "37ab5af96723a7ab4cca",
@@ -4031,6 +2343,10 @@
       "fingerprint": "5cfeed4b8e1b7c98151a",
       "last_seen": "2026-11-03T13:31:56Z"
     },
+    "1e37d1fe64d9d46d2b20": {
+      "fingerprint": "0402f5a810913e2f02bb",
+      "last_seen": "2026-11-24T06:45:09Z"
+    },
     "1e639a39b70545ab5111": {
       "fingerprint": "9f8c5261dfba0d978d73",
       "last_seen": "2026-11-03T13:53:12Z"
@@ -4061,7 +2377,7 @@
     },
     "1edd9d31a5fe545fe7fb": {
       "fingerprint": "277682851d1fe310a3f6",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "1ef243007176e85cc8c6": {
       "fingerprint": "1108cf5295ec1bbcb775",
@@ -4285,7 +2601,7 @@
     },
     "2380adac72da2dd72795": {
       "fingerprint": "b46e2b85b23f50e59f06",
-      "last_seen": "2026-11-03T00:34:52Z"
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "23c36dde8c598e39e4c4": {
       "fingerprint": "d01b3cfbee1849a42a4e",
@@ -4345,7 +2661,7 @@
     },
     "24dd95896911d8bd0b6d": {
       "fingerprint": "bbb0223d0ac5211236dc",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "24df2cd937c5237b6ead": {
       "fingerprint": "863dd11d0741b9f4520c",
@@ -4631,6 +2947,10 @@
       "fingerprint": "f1456bcc8c787cc265e3",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "2a8682adc14f4b2e088a": {
+      "fingerprint": "472ba28020e11ecc02a3",
+      "last_seen": "2027-10-26"
+    },
     "2a914bb65f0078acdf05": {
       "fingerprint": "0108649669fc00ad1321",
       "last_seen": "2026-10-15T18:14:00Z"
@@ -4733,7 +3053,7 @@
     },
     "2c15f23ac7aa344ce6cd": {
       "fingerprint": "fdea0587eaab35612449",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "2c3273c65cd93db4e171": {
       "fingerprint": "7327914cdb1b24ffd192",
@@ -4865,7 +3185,7 @@
     },
     "2f1c65ad4b7ec3807ad9": {
       "fingerprint": "5fd01fececf61d7b99e5",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "2f246ab8ad92798d7987": {
       "fingerprint": "136a4f4803e9e5eab714",
@@ -5165,7 +3485,7 @@
     },
     "359b504aecb4a8066979": {
       "fingerprint": "103019b45cc5e0c9cdfa",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "35c6f6677253a25e1297": {
       "fingerprint": "4699b37ab54f00877026",
@@ -5237,7 +3557,7 @@
     },
     "37ab1fbdd16439247835": {
       "fingerprint": "626e4fa88ce503e91b73",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "37b876e9b7396fe713d4": {
       "fingerprint": "3dce99b4e96e7cf8e578",
@@ -5463,6 +3783,10 @@
       "fingerprint": "61791ce2bc8fc1d2940f",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "3c7fe062395f68679b3c": {
+      "fingerprint": "be39f35f1c4c2f1caac5",
+      "last_seen": "2027-11-22"
+    },
     "3c8f65e7825cd7d36827": {
       "fingerprint": "448b18f58acdb1f8a4bb",
       "last_seen": "2026-10-06T00:46:01Z"
@@ -5607,6 +3931,10 @@
       "fingerprint": "3eb3da087bdcbff68798",
       "last_seen": "2026-10-07T07:10:55Z"
     },
+    "3f3809a1a558e51b51e0": {
+      "fingerprint": "5f73e3ff0a83e033c263",
+      "last_seen": "2027-11-09"
+    },
     "3f4db404ce565096e8bf": {
       "fingerprint": "b2335bbbcf770ac1d33a",
       "last_seen": "2026-10-16T01:15:52Z"
@@ -5701,7 +4029,7 @@
     },
     "410a92595886a074fe4f": {
       "fingerprint": "a4d2a4a00129912597c8",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "410ae70aa0cfae08c7d0": {
       "fingerprint": "ffae90b37518998ee8c7",
@@ -5729,7 +4057,7 @@
     },
     "41a209d76f100b1bd5d4": {
       "fingerprint": "761c2d885194709340d7",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "41be3fc9b0e2c0e72998": {
       "fingerprint": "82d883ab95b2177d8619",
@@ -5869,11 +4197,11 @@
     },
     "44ca195f5b7c621a996e": {
       "fingerprint": "39d7b57174a6dff70e27",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "44da8f64393f458442ad": {
       "fingerprint": "92a57fec16c4190847b9",
-      "last_seen": "2026-11-03T00:34:52Z"
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "44dbcee82122f9c0d18b": {
       "fingerprint": "b6a2b6af7d9f80961379",
@@ -5949,7 +4277,7 @@
     },
     "469fe5a61b36c036d58c": {
       "fingerprint": "aa6c78bb067aec267e9c",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "46a47c0772812524944b": {
       "fingerprint": "91f3bb1b91d23b5e5ae1",
@@ -6103,6 +4431,10 @@
       "fingerprint": "88166d68285992798cff",
       "last_seen": "2026-10-16T23:31:34Z"
     },
+    "49e698baa7e157ae1f7c": {
+      "fingerprint": "4fb99c89ccd347b089a6",
+      "last_seen": "2026-11-24T06:45:09Z"
+    },
     "49ea926c111e41bb66ed": {
       "fingerprint": "51d78adc948d049a7bd0",
       "last_seen": "2026-10-14T01:50:52Z"
@@ -6133,7 +4465,11 @@
     },
     "4ae8efd7a9964cf3d437": {
       "fingerprint": "bf8a29b99e53c5a5aa26",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
+    },
+    "4aedb3fa5826d380d7c5": {
+      "fingerprint": "7470cd996e0527549200",
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "4b0f73dc86552b117283": {
       "fingerprint": "e30efa8d14135d7078aa",
@@ -6513,7 +4849,7 @@
     },
     "51dc1d2f6b3bd6dfbc4a": {
       "fingerprint": "6bb928aa8d045a464336",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "51f04c477c6b6a601f13": {
       "fingerprint": "099ad916dce28bf3a135",
@@ -6573,7 +4909,7 @@
     },
     "53199f615af74997230d": {
       "fingerprint": "2d8410548d71f046723e",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "532776e2c33a4d7779e2": {
       "fingerprint": "d8e9aef54c3f20866bca",
@@ -6681,7 +5017,7 @@
     },
     "54b9d850727b6cdbe5ce": {
       "fingerprint": "5961765d8cd3e0f7aab4",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "54c2f1c30dac12050d8d": {
       "fingerprint": "ed3010ccef8a9f35e431",
@@ -6785,7 +5121,7 @@
     },
     "572a341c954c548987ad": {
       "fingerprint": "041206e50d7b5a981931",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "5740c3feedb65e91e6d9": {
       "fingerprint": "c3993cf5f7dbea7665fe",
@@ -6963,6 +5299,10 @@
       "fingerprint": "4d47c80eec3d91adeb38",
       "last_seen": "2026-10-10T23:30:07Z"
     },
+    "59e20403db4e16f891a1": {
+      "fingerprint": "ed756a941bc0d6c1de50",
+      "last_seen": "2027-11-09"
+    },
     "59f86990fe7d8c549723": {
       "fingerprint": "f3d70edf0e4a5322df62",
       "last_seen": "2026-11-03T13:31:56Z"
@@ -7021,7 +5361,7 @@
     },
     "5aebe77748d66a1bef9a": {
       "fingerprint": "6edb70e83e5b836d3241",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "5aed1ec194f0f73d84ee": {
       "fingerprint": "55ec6e452146d1bb361f",
@@ -7038,6 +5378,10 @@
     "5b4825a7ce8705525103": {
       "fingerprint": "8462d6c1dd6513f7485f",
       "last_seen": "2026-10-14T01:50:53Z"
+    },
+    "5b61a759cd14a0a6237c": {
+      "fingerprint": "a441ae6a0aa013acf2d8",
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "5bb1c16aff1d31b387ca": {
       "fingerprint": "ca88c25e98ee708bf236",
@@ -7069,7 +5413,7 @@
     },
     "5c4216759b09fc16dea9": {
       "fingerprint": "b02929ba6a657dae5151",
-      "last_seen": "2026-11-03T00:34:52Z"
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "5c49da1eb7e5efefc3dc": {
       "fingerprint": "e1a2308527fdad1afed9",
@@ -7089,7 +5433,7 @@
     },
     "5c7b8bdb9c001de23cea": {
       "fingerprint": "fb79e40eccffe5ae3873",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "5c99956c98c41594b2a3": {
       "fingerprint": "39b6e05a3ebf19d5c7ef",
@@ -7253,7 +5597,7 @@
     },
     "5f364a8612fd0351861d": {
       "fingerprint": "f38ba54983704edf6803",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "5f4b5712c158faa06521": {
       "fingerprint": "a600018db14153389a49",
@@ -7325,7 +5669,7 @@
     },
     "60e9a0a09a7e88daa6f4": {
       "fingerprint": "f1ed042be514de75c24a",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "6102b8ee6b1f9802a25c": {
       "fingerprint": "4abb17e986a151102823",
@@ -7370,6 +5714,10 @@
     "61b1035a00b15cc0e9b1": {
       "fingerprint": "0ae5890abbc1b1b40d34",
       "last_seen": "2026-10-14T18:32:30Z"
+    },
+    "61c560cb0c0c918451ab": {
+      "fingerprint": "a370a88969ea32dfa967",
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "61d8127e693f0b0f3ba7": {
       "fingerprint": "671036cdddf858e2c371",
@@ -7521,7 +5869,7 @@
     },
     "65763140459cf23fdedd": {
       "fingerprint": "e5850e344e568509ec64",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "658ce2f5726b56703b5d": {
       "fingerprint": "3ffbd85491b5b2af8041",
@@ -7550,6 +5898,10 @@
     "663ab8cc55c03e343d7b": {
       "fingerprint": "a2b7c057c7b18c2ff884",
       "last_seen": "2026-10-14T01:50:53Z"
+    },
+    "6654cce3b776b76f5cbe": {
+      "fingerprint": "f300c3307c1c5a66f634",
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "66773d58f9ea6be3f6f4": {
       "fingerprint": "87c2536559d5538f4118",
@@ -7841,7 +6193,7 @@
     },
     "6cb428459606b5a9549d": {
       "fingerprint": "f5730f3fb67387ccb48a",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "6cbb376bdb40e04b479e": {
       "fingerprint": "d403883bdea4f55b5f44",
@@ -7913,7 +6265,7 @@
     },
     "6e4168f82218e48b2b73": {
       "fingerprint": "61bd6d98642efc83fb89",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "6ea16c172c83caf06b58": {
       "fingerprint": "70d30224b2166a0f48cf",
@@ -8037,7 +6389,7 @@
     },
     "70b0e3e7f12c10cd9ed9": {
       "fingerprint": "6e4efff51e7eb265098a",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "70f182dccc3f27a58292": {
       "fingerprint": "ba955d2b47979797f195",
@@ -8314,6 +6666,10 @@
     "7674d7520cee7340b84a": {
       "fingerprint": "8afb2aad41e302ef6cf0",
       "last_seen": "2026-11-23T22:58:50Z"
+    },
+    "7698b54f4db21db7869d": {
+      "fingerprint": "bf666ae086af3b0beb22",
+      "last_seen": "2027-11-16"
     },
     "769cfa66df9799335c21": {
       "fingerprint": "9f3d9fb933a2218b5fd1",
@@ -8605,7 +6961,7 @@
     },
     "7c512829bf524dd8cb09": {
       "fingerprint": "6362d7a7223f08840c0f",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "7c634e27ef1a7d33a66c": {
       "fingerprint": "c7550674957888e4acfd",
@@ -8749,7 +7105,7 @@
     },
     "7ea510935dfd2aa76b5a": {
       "fingerprint": "86ed56ee03fd22b63f65",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "7ed0d9888ce5e464ab06": {
       "fingerprint": "cd24dc30e76e58494fbb",
@@ -8762,6 +7118,10 @@
     "7f10d5d20ad90fb795cd": {
       "fingerprint": "38116b106d70836579d9",
       "last_seen": "2026-10-09T02:05:05Z"
+    },
+    "7f18a13cc3e389eaf0f2": {
+      "fingerprint": "c7354ad24f7119ab690a",
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "7f2ca3055fb81d8fdf46": {
       "fingerprint": "b478ef4599d61f10c784",
@@ -8901,7 +7261,7 @@
     },
     "81a3389421f4bb56bc3d": {
       "fingerprint": "fad2b46fff0d7527d6ea",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "81dee08a5762829049d7": {
       "fingerprint": "0ae31f5748f35df9f91e",
@@ -9353,7 +7713,7 @@
     },
     "8bc9138e516754eb5478": {
       "fingerprint": "f690ba198353d029564e",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "8c1854f784a023ca0465": {
       "fingerprint": "e9ffe34698a26a2736cf",
@@ -9445,7 +7805,7 @@
     },
     "8df3484f72ce4634a7e5": {
       "fingerprint": "eaf10a20de62aa9b1bcb",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "8df6df601655f17ef834": {
       "fingerprint": "ad2045244b4334c4f8b6",
@@ -9995,6 +8355,10 @@
       "fingerprint": "f548d9ea29afa3a91629",
       "last_seen": "2026-10-06T00:46:01Z"
     },
+    "988be499bdeac923a568": {
+      "fingerprint": "8905260f2d59ec9fe4b5",
+      "last_seen": "2027-11-07"
+    },
     "98bfded9321f646280ad": {
       "fingerprint": "74674b541286602675c8",
       "last_seen": "2026-11-23T22:58:50Z"
@@ -10141,7 +8505,7 @@
     },
     "9b67edb55892cc147b16": {
       "fingerprint": "0157ed03a6dbbf6e9cd5",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "9b6e321b40569f538b1f": {
       "fingerprint": "7a83adf2bf621ebb4fe5",
@@ -11213,7 +9577,7 @@
     },
     "aff32afb63af01e7ea9a": {
       "fingerprint": "1a5d66b865b5a137bf89",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "aff938afa23326fcd093": {
       "fingerprint": "60e46f770102ab1bc70d",
@@ -11757,7 +10121,7 @@
     },
     "ba55c736d0e06f9d2972": {
       "fingerprint": "c11e927a9504153628f6",
-      "last_seen": "2026-11-03T00:34:52Z"
+      "last_seen": "2026-11-24T06:45:09Z"
     },
     "ba63583808d70cbbc5e9": {
       "fingerprint": "8ad6c95ea4c68bce8376",
@@ -11929,7 +10293,7 @@
     },
     "bcd7083976c76ae8688f": {
       "fingerprint": "5bfbe60eabdc0806d677",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "bce449da7a2298faee9e": {
       "fingerprint": "3c53456b8efdd361d2a3",
@@ -12301,7 +10665,7 @@
     },
     "c4ecc08e3dcd225bd13c": {
       "fingerprint": "7b0b0a262e9c4ed3b3c5",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "c4eeefc4e76f2fa44d0e": {
       "fingerprint": "7b913c7c942e7d3d094d",
@@ -12469,7 +10833,7 @@
     },
     "c8dc3e9414ec28a368ac": {
       "fingerprint": "4606a9e0ec143a4a7374",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "c8e0e052f43e99364836": {
       "fingerprint": "9a206a4627f0df1be790",
@@ -12517,7 +10881,7 @@
     },
     "c9b0ba2832f5c52645f2": {
       "fingerprint": "507fb3a2a4ad48a0026c",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "c9d380c0b10dcf2109ca": {
       "fingerprint": "409800a8cc5c0a6e76cc",
@@ -12605,7 +10969,7 @@
     },
     "cb68915a226f5b31c5c4": {
       "fingerprint": "926ada9b136d341f42ad",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "cb6af5990e3391b545bb": {
       "fingerprint": "ba88d46c98eb6874d4a2",
@@ -13025,7 +11389,7 @@
     },
     "d3499e02aaa3943b73aa": {
       "fingerprint": "e6a6544c7768c9a0e0c3",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "d35068acfba8ae295688": {
       "fingerprint": "3fba7fd4c2d4e8fcda19",
@@ -13399,13 +11763,17 @@
       "fingerprint": "969444db767579017976",
       "last_seen": "2026-10-10T01:43:39Z"
     },
+    "db5bae53b403e39b2b65": {
+      "fingerprint": "e17461d6fe441191ec95",
+      "last_seen": "2027-11-01"
+    },
     "dbbec36cc7dd966c30fc": {
       "fingerprint": "716f27db087133f22f1c",
       "last_seen": "2026-10-08T16:25:23Z"
     },
     "dbdb0820dcbaa5243b7d": {
       "fingerprint": "3efcd7376ca1091d5ca1",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "dbe0940f362ad9d87e6b": {
       "fingerprint": "0115907abcc89e1fc1c2",
@@ -13537,7 +11905,7 @@
     },
     "de1a299348ffc0d19122": {
       "fingerprint": "67cf60cf6a6b43b8c01b",
-      "last_seen": "2026-11-23T22:58:50Z"
+      "last_seen": "2026-11-24T06:44:49Z"
     },
     "de244be0edcd188cbf50": {
       "fingerprint": "6aefd70223837ee5d263",
@@ -13610,6 +11978,10 @@
     "df666781764305770d66": {
       "fingerprint": "31cb5f1df4d8b61e31ac",
       "last_seen": "2026-10-09T02:05:05Z"
+    },
+    "df92d49ccf7b881ccc93": {
+      "fingerprint": "066d4706b307d57beef7",
+      "last_seen": "2027-11-01"
     },
     "df9e3636d5e4a064b210": {
       "fingerprint": "a14db3fb968015b57680",
@@ -13781,7 +12153,7 @@
     },
     "e2b8edcef39b94c3378e": {
       "fingerprint": "c0bd81ea028c42207c2f",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "e2c790e05f6035f40844": {
       "fingerprint": "c838b295b0d94c178e15",
@@ -14005,7 +12377,7 @@
     },
     "e74888c663f492eea866": {
       "fingerprint": "108ee9605268dadb7495",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "e758fe86bc5ef61b667b": {
       "fingerprint": "43dc669957d8d389521d",
@@ -14101,7 +12473,7 @@
     },
     "e9046d10c5a45a4be7b5": {
       "fingerprint": "627a719f8c8a5c3f70b5",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "e9312f63a8158d5bdccc": {
       "fingerprint": "75628f199027cd9e198e",
@@ -14209,7 +12581,7 @@
     },
     "eb3490aa3ebca0f4ef67": {
       "fingerprint": "e1ba8142ac73ffabd032",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "eb419b8759bf810541fe": {
       "fingerprint": "0a4f645d04f8af4e3a2a",
@@ -14326,6 +12698,10 @@
     "ed8dc6ad1a2c7c7b7bdf": {
       "fingerprint": "f55700f35412d541f231",
       "last_seen": "2026-10-05T08:54:11Z"
+    },
+    "ed8dd814e0d2357b454c": {
+      "fingerprint": "e54fe252108dda04eb60",
+      "last_seen": "2027-10-26"
     },
     "ed95669239a29b242238": {
       "fingerprint": "6f08d8b06ceb7ee2fe66",
@@ -14521,7 +12897,7 @@
     },
     "f102a512d0bf0eec1887": {
       "fingerprint": "5595b22c8d0c031c20ce",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "f102b133982c85cf2d9c": {
       "fingerprint": "fb74414faa6cdcdf6883",
@@ -14565,7 +12941,7 @@
     },
     "f1b5f492edd59d79af68": {
       "fingerprint": "d81cb0e2914cbc9e3021",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:01Z"
     },
     "f1ca33eec38ba72127a9": {
       "fingerprint": "4991478b9904c0986a69",
@@ -14789,7 +13165,7 @@
     },
     "f63aedf5e35cee9cf2ff": {
       "fingerprint": "ef07a851d0e4ec847bbc",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "f64938f8e3a3b9f7a04a": {
       "fingerprint": "33991a07accb1460219a",
@@ -15197,7 +13573,7 @@
     },
     "fe934b9f69954d98e9d8": {
       "fingerprint": "2d3212886421eb2f0ef0",
-      "last_seen": "2026-11-03T00:34:48Z"
+      "last_seen": "2026-11-24T06:45:02Z"
     },
     "fea189a64b1dbe19737c": {
       "fingerprint": "e28a4369e4655b813fa0",
