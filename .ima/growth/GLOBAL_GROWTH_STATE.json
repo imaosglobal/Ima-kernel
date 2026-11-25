@@ -52,5 +52,13 @@
     "ko",
     "zh"
   ],
-  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews."
+  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.",
+  "global_breakthrough_goal": {
+    "active": true,
+    "north_star": "Become a globally recognizable human-centered intelligence experience chosen for both capability and experience.",
+    "current_phase": "CORE_BREAKTHROUGH",
+    "next_gate": "new_user_understands_value_and_can_reach_useful_or_enjoyable_outcome_quickly",
+    "decision_rule": "Fix the highest-leverage verified adoption blocker before adding lower-value features.",
+    "evidence_rule": "UNKNOWN until measured; no synthetic popularity."
+  }
 }
