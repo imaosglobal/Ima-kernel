@@ -13,7 +13,7 @@ import {
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { recordMarketEvent, getMarketCampaign, buildShareUrl } from './services/marketEntry';
-import { beginImaMission, completeImaMission } from './services/imaExperienceEngine';
+import { beginImaMission, beginImaExperience, completeImaMission } from './services/imaExperienceEngine';
 
 const BASE = '/Ima-kernel/';
 const GOOGLE_CAMPAIGN_URL = BASE + '?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils&campaignId=24409551537';
@@ -52,7 +52,8 @@ const COPY = {
     install:'התקנה',
     installUnavailable:'התקנה אינה זמינה כרגע בדפדפן הזה.',
     needLogin:'היכנס עם Google כדי לפתוח את הצ׳ט האישי של אמא.',
-    closing:'Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.'
+    closing:'Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.',
+    experiences:[['discover','לגלות','גלה משהו מפתיע'],['create','ליצור','צור משהו יחד'],['play','לשחק','בוא נשחק'],['story','סיפור','בוא ניכנס לסיפור'],['music','מוזיקה','ניצור או נגלה מוזיקה'],['explore','לחקור','בוא נחקור עולם או רעיון']]
   },
   en: {
     label:'IMA — human-centered intelligence',
@@ -82,7 +83,8 @@ const COPY = {
     install:'Install',
     installUnavailable:'Installation is not available in this browser right now.',
     needLogin:'Sign in with Google to open IMA personal chat.',
-    closing:'Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.'
+    closing:'Use IMA. Question IMA. Teach IMA. Build IMA. Test IMA.',
+    experiences:[['discover','Discover','Discover something surprising'],['create','Create','Create something together'],['play','Play','Let’s play'],['story','Story','Step into a story'],['music','Music','Make or discover music'],['explore','Explore','Explore a world or idea']]
   }
 };
 
@@ -141,6 +143,7 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
   useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch{}},[messages]);
   useEffect(()=>{const sync=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',sync);window.addEventListener('ima-chat-updated',sync);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('ima-chat-updated',sync)}},[]);
   const startVoice=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){return;}const r=new SR();r.lang=lang==='he'?'he-IL':(navigator.language||'en-US');r.interimResults=false;r.continuous=false;setListening(true);r.onresult=e=>{const text=String(e.results?.[0]?.[0]?.transcript||'').trim();if(text){setMessage(text);send(text)}};r.onerror=()=>setListening(false);r.onend=()=>setListening(false);r.start()};
+  const startExperience=(type,prompt)=>{ beginImaExperience(prompt,type); send(prompt); };
   const send=async(text=message)=>{
     const value=String(text||'').trim();
     if(!value||busy)return;
@@ -166,7 +169,7 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
   return <section className={'chat-panel'+(chatOnly?' chat-only-panel':'')} id="chat">
     <header className="chat-head"><div className="chat-id"><MamaFigure compact/><div><b>אמא · IMA</b><small>{user?t.personal:t.publicChat}</small></div></div>{!chatOnly&&<button className="icon-button" onClick={onClose} aria-label={t.close}>×</button>}</header>
     <div className="chat-messages" aria-live="polite">
-      {!messages.length&&<div className="chat-empty">{lang==='he'?'שאל את אמא משהו אמיתי.':'Ask IMA something real.'}</div>}
+      {!messages.length&&<div className="chat-empty"><div>{lang==='he'?'שאל את אמא משהו אמיתי — או בחר חוויה.':'Ask IMA something real — or choose an experience.'}</div><div className="experience-choices">{t.experiences.map(([type,label,prompt])=><button key={type} type="button" onClick={()=>startExperience(type,prompt)}>{label}</button>)}</div></div>}
       {messages.map((m,i)=><div key={i} className={'bubble-row '+m.role}><div className={'mama-response-figure '+(m.action||'idle')+(speaking&&m.role==='ima'&&i===messages.length-1?' speaking':'')}><MamaFigure compact/></div><div className={'bubble '+m.role}>{m.text}{m.role==='ima'&&<button className="mama-speak-button" onClick={()=>speak(m.text)} aria-label={he?'השמעי את תשובת אמא':'Speak IMA answer'}>{speaking&&i===messages.length-1?'◼':'▶'}</button>}</div></div>)}
       {busy&&<div className="bubble-row ima"><div className={'mama-response-figure '+mamaAction}><MamaFigure compact/></div><div className="bubble ima muted">IMA…</div></div>}
     </div>
