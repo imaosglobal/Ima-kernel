@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-25T16:23:10+00:00",
+  "generated_at": "2026-11-25T20:45:58+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-25T16:23:09+00:00",
+      "commit": "1293107a63e7382a89f70c01026155b86317d192",
+      "timestamp": "2026-11-25T16:27:50Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-25T20:45:56+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-25T16:23:10+00:00",
+      "timestamp": "2026-11-25T20:45:57+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-25T16:23:10+00:00",
+      "timestamp": "2026-11-25T20:45:58+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "6103e07a279e4d44814429b105589413dabea468",
-      "timestamp": "2026-11-25T18:20:35+02:00",
-      "event": "commit",
-      "summary": "Add ageism and future low-aging-death scenario to IMA longevity map",
-      "source": "git"
     }
   ]
 }
