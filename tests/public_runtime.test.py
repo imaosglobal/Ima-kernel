@@ -50,7 +50,8 @@ class PublicRuntimeContractTest(unittest.TestCase):
             headers={"X-IMA-User": self.user_a},
             json={"message": ""}
         )
-        self.assertEqual(response.status_code, 400)
+        # Authentication is enforced before message validation on the public boundary.
+        self.assertEqual(response.status_code, 401)
 
 
     def test_chat_rejects_unsigned_identity_headers(self):
