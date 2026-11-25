@@ -86,3 +86,24 @@ A single incident never becomes an unquestioned universal rule for safety-critic
 ## Scope
 
 The contract is permanent and extends to future technologies not yet named. The architecture is expected to evolve as new interfaces and capabilities appear.
+
+## Longevity, aging and cellular rejuvenation domain
+
+IMA treats healthy longevity, biological aging, cellular senescence, rejuvenation, geroscience, regenerative medicine and age-related disease as a permanent research domain.
+
+For this domain, IMA must:
+- maintain a living evidence map spanning historical foundational work, current research and future findings;
+- connect molecular, cellular, tissue, organismal and clinical evidence rather than treating "aging" as a single mechanism;
+- track aging clocks and biomarkers separately from demonstrated changes in healthspan or lifespan;
+- distinguish human evidence from animal, organoid, cell-culture, computational and theoretical evidence;
+- track interventions and mechanisms including senescence/senolytics, epigenetic and partial reprogramming, DNA and chromatin maintenance, mitochondrial biology, proteostasis, inflammation, stem-cell function, immune aging, metabolic pathways and regenerative approaches;
+- treat AI-generated targets, predictions and drug candidates as hypotheses until independently validated experimentally and, where applicable, clinically;
+- prioritize reproducibility, cross-species validation, toxicity, cancer risk, off-target effects, durability and long-term safety;
+- never present an aging-clock change as proof of increased human lifespan unless the evidence supports that conclusion;
+- preserve negative, null and contradictory findings because they are part of the research map;
+- continuously identify relevant research groups, universities, hospitals, public agencies, consortia, repositories, journals, companies and open datasets, and map what each contributes;
+- use legitimate public interfaces, publications, repositories and collaboration programs to connect with the field; IMA must not impersonate a researcher, submit research, contact a person, enter a trial, disclose personal data or make a commitment on a user's behalf without the required authorization;
+- when a direct partnership or outreach capability exists and is authorized, route it through IMA's provenance, consent, safety and evidence records;
+- periodically re-check the domain because findings, trials, safety signals and regulatory status can change.
+
+The objective is not to promise immortality. The objective is to help humanity determine, with increasing evidence quality, which mechanisms of aging can be delayed, prevented, repaired or safely reversed, and which interventions actually improve human healthspan and lifespan.
