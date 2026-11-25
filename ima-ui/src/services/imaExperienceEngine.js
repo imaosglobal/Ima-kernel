@@ -10,7 +10,7 @@ function read() {
   try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; }
 }
 function write(items) {
-  try { localStorage.setItem(KEY, JSON.stringify(items.slice(-MAX))); } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify(items.slice(-MAX))); } catch { /* storage unavailable */ }
 }
 
 function classify(text='') {
@@ -35,7 +35,7 @@ export function beginImaMission(goal='', options={}) {
     completedSteps: []
   };
   const items=read(); items.push(mission); write(items);
-  try { window.dispatchEvent(new CustomEvent('ima:mission-started',{detail:mission})); } catch {}
+  try { window.dispatchEvent(new CustomEvent('ima:mission-started',{detail:mission})); } catch { /* event bridge unavailable */ }
   return mission;
 }
 
@@ -48,7 +48,7 @@ export function completeImaMission(missionId, outcome={}) {
   mission.completedAt=new Date().toISOString();
   mission.outcome={useful:Boolean(outcome.useful), responseLength:Number(outcome.responseLength||0)};
   write(items);
-  try { window.dispatchEvent(new CustomEvent('ima:mission-completed',{detail:mission})); } catch {}
+  try { window.dispatchEvent(new CustomEvent('ima:mission-completed',{detail:mission})); } catch { /* event bridge unavailable */ }
   return mission;
 }
 
