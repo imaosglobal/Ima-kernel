@@ -1,6 +1,6 @@
 {
   "schema": "IMA-WORLD-PULSE-1.0",
-  "timestamp": "2026-11-24T18:31:48Z",
+  "timestamp": "2026-11-25T02:55:08Z",
   "status": "OBSERVED_WITH_PUBLIC_SOURCES",
   "coverage": "BOUNDED_NOT_EXHAUSTIVE",
   "items": [],
@@ -8,47 +8,47 @@
     {
       "source": "GDELT",
       "kind": "CONFLICT",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "PROTEST_OR_UPRISING",
-      "error": "ReadTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "DISASTER",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "HUMANITARIAN_DISPLACEMENT",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "PUBLIC_HEALTH",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "RESOURCE_CRISIS",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "POLITICAL_CHANGE",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "TECHNOLOGICAL_SHIFT",
-      "error": "ConnectTimeout"
+      "error": "HTTPError"
     },
     {
       "source": "GDELT",
       "kind": "SCIENTIFIC_SHIFT",
-      "error": "JSONDecodeError"
+      "error": "HTTPError"
     },
     {
       "source": "ReliefWeb",
