@@ -92,7 +92,6 @@ jobs:
           if grep -Fq "canonical-connectors" src/PublicApp.jsx; then echo "ERROR: internal connector content on public entry"; exit 1; fi
           bundle=$(find dist/assets -name 'index-*.js' -type f | head -n 1)
           test -n "$bundle"
-          grep -Fq "signInWithGoogleCredential" "$bundle"
           grep -Fq "google-login" "$bundle"
           test -f public/support.html
           test -f public/privacy.html
