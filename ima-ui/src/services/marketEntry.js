@@ -30,7 +30,7 @@ export function recordMarketEvent(event, data={}) {
     const previous = JSON.parse(localStorage.getItem(key) || '[]');
     previous.push(payload);
     localStorage.setItem(key, JSON.stringify(previous.slice(-200)));
-  } catch {}
+  } catch { /* local storage unavailable */ }
   try { window.dispatchEvent(new CustomEvent('ima:market-event', { detail: payload })); } catch {}
   return payload;
 }
