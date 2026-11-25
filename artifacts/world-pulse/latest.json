@@ -1,6 +1,6 @@
 {
   "schema": "IMA-WORLD-PULSE-1.0",
-  "timestamp": "2026-11-25T14:26:59Z",
+  "timestamp": "2026-11-25T16:03:10Z",
   "status": "OBSERVED_WITH_PUBLIC_SOURCES",
   "coverage": "BOUNDED_NOT_EXHAUSTIVE",
   "items": [],
@@ -8,7 +8,7 @@
     {
       "source": "GDELT",
       "kind": "CONFLICT",
-      "error": "JSONDecodeError"
+      "error": "ReadTimeout"
     },
     {
       "source": "GDELT",
@@ -28,7 +28,7 @@
     {
       "source": "GDELT",
       "kind": "PUBLIC_HEALTH",
-      "error": "HTTPError"
+      "error": "JSONDecodeError"
     },
     {
       "source": "GDELT",
@@ -48,7 +48,7 @@
     {
       "source": "GDELT",
       "kind": "SCIENTIFIC_SHIFT",
-      "error": "HTTPError"
+      "error": "ReadTimeout"
     },
     {
       "source": "ReliefWeb",
