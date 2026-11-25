@@ -52,5 +52,35 @@
     "ko",
     "zh"
   ],
-  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews."
+  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.",
+  "experience_strategy": {
+    "active": true,
+    "name": "GTA-inspired humane living-world loop",
+    "playbook": ".ima/growth/GTA_INSPIRED_GROWTH_PLAYBOOK.json",
+    "runtime": "ima-ui/src/services/imaExperienceEngine.js",
+    "behavior": [
+      "missionize_real_goals",
+      "deliver_first_value_fast",
+      "preserve_authorized_progress",
+      "offer_optional_next_step",
+      "learn_from_outcomes",
+      "continuous_verified_updates",
+      "voluntary_social_sharing",
+      "monetize_only_after_verified_value"
+    ],
+    "guardrails": [
+      "human_agency_first",
+      "privacy_first",
+      "truth_before_claims",
+      "no_dark_patterns",
+      "no_addictive_retention",
+      "no_fake_social_proof"
+    ],
+    "evidence_basis": [
+      "Take-Two FY2026 results",
+      "Take-Two FY2026 10-K",
+      "Rockstar GTA V announcement",
+      "historical Take-Two GTA V business description"
+    ]
+  }
 }
