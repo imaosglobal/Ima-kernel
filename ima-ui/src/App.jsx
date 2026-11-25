@@ -299,7 +299,7 @@ export default function App(){
     {notice&&<div className="site-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="close">×</button></div>}
     <header className="site-header">
       <a className="brand" href={BASE} aria-label="IMA — אמא"><img src={CLEAN_LOGO_URL} alt="IMA — אמא"/><span><b>אמא</b><small>IMA</small></span></a>
-      <nav><button onClick={openChat}>{t.chat}</button>{user&&<button onClick={()=>setLiveWindowOpen(true)}>{lang==='he'?'חלון אמא':'IMA Window'}</button>{user&&<button onClick={()=>{setTimelineOpen(true);setStoreOpen(false);setChatOpen(false)}}>{lang==='he'?'חלון ההשפעה':'Impact Window'}</button>}{user&&<button onClick={()=>{setStoreOpen(true);setChatOpen(false);setTimelineOpen(false)}}>חנות</button>}<a href="#how">{t.how}</a></nav>
+      <nav><button onClick={openChat}>{t.chat}</button>{user&&<button onClick={()=>setLiveWindowOpen(true)}>{lang==='he'?'חלון אמא':'IMA Window'}</button>}{user&&<button onClick={()=>{setTimelineOpen(true);setStoreOpen(false);setChatOpen(false)}}>{lang==='he'?'חלון ההשפעה':'Impact Window'}</button>}{user&&<button onClick={()=>{setStoreOpen(true);setChatOpen(false);setTimelineOpen(false)}}>חנות</button>}<a href="#how">{t.how}</a></nav>
       <div className="header-right"><select value={lang} onChange={e=>setLang(e.target.value)} aria-label="Language">{SUPPORTED_LOCALES.map(([c,n])=><option key={c} value={c}>{n}</option>)}</select><div id="login"><GoogleButton user={user} onUser={u=>{setUser(u);if(u)setChatOpen(true)}} t={t}/></div></div>
     </header>
 
