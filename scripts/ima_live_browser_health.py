@@ -15,7 +15,9 @@ from datetime import datetime, timezone
 CHECKS = {
     "browserglass_health": "https://ima-browserglass.onrender.com/healthz",
     "browserglass_root": "https://ima-browserglass.onrender.com/",
-    "ima_public": "https://imaosglobal.github.io/",
+    # Canonical public IMA site currently served by the existing repository.
+    # Do not require a separate imaosglobal.github.io repository.
+    "ima_public": "https://imaosglobal.github.io/Ima-kernel/",
 }
 
 def get(url: str, timeout: int = 15):
