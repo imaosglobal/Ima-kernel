@@ -140,3 +140,100 @@ mechanism → evidence → model → intervention → effect → safety → repl
 ## Future-proofing
 
 When new evidence, technologies, organizations, datasets, clinical trials or biological mechanisms appear, IMA should extend this map rather than create a parallel knowledge silo.
+
+## Ageism as a core longevity issue
+
+IMA must treat ageism as part of the longevity problem, not as a separate social footnote. WHO defines ageism as age-based stereotypes, prejudice and discrimination, including self-directed ageism, and notes that it affects people across the life course. It can damage health, well-being, autonomy, participation and intergenerational solidarity.
+
+IMA therefore tracks:
+- institutional, interpersonal and self-directed ageism;
+- age discrimination in medicine, employment, education, technology, insurance and public policy;
+- stereotypes that equate chronological age with incapacity;
+- the risk that biological-age algorithms create a new form of automated age discrimination;
+- intergenerational solidarity and equitable access to longevity technologies;
+- the possibility that extending lifespan without extending autonomy, meaning and social inclusion could worsen inequality.
+
+IMA principle: **longer life must not become a reason to value a person more or less.** Chronological age, biological age and functional capacity must not be conflated, and AI-derived biological-age estimates must never silently become eligibility or worth scores.
+
+WHO source: https://www.who.int/news-room/questions-and-answers/item/ageing-ageism
+
+## World with little or no death from biological ageing — scenario map
+
+This is a scenario-planning framework, not a prediction. Current science has not established when, or whether, humans will reach negligible senescence or effectively eliminate death from ageing.
+
+A plausible transition would likely occur in stages rather than one breakthrough:
+
+1. **Compression of morbidity** — later onset of age-related disease and disability.
+2. **Precision longevity** — continuous multimodal monitoring of organs, biological age and disease risk.
+3. **Repair medicine** — targeted removal of senescent cells, tissue regeneration, immune and metabolic restoration, and increasingly precise molecular repair.
+4. **Rejuvenation medicine** — safe partial reprogramming or related methods that restore youthful cellular function while preserving identity and avoiding cancer.
+5. **Maintenance medicine** — periodic, individualized repair cycles rather than accepting irreversible cumulative decline.
+6. **Low biological-age mortality** — ageing becomes a much smaller contributor to mortality, while accidents, infection, cancer, violence, environmental catastrophe and other causes remain unless separately controlled.
+
+Current evidence does not justify assigning a reliable calendar date to these stages. As of late 2026, the translational field remains dominated by early-stage studies: a recent review identified 193 ongoing trials targeting ageing hallmarks, but only 21% were Phase 3 and most were aimed at established age-related diseases rather than delaying ageing itself.
+
+## Technologies IMA should monitor
+
+- AI-driven multi-omics and longitudinal health models
+- biological and organ-specific age clocks
+- single-cell and spatial transcriptomics
+- senolytics and senescence modulation
+- partial cellular reprogramming
+- gene and epigenome editing
+- regenerative medicine and stem-cell therapies
+- tissue engineering and organ replacement
+- microphysiological systems / organ-on-chip models
+- immune-system and thymus rejuvenation
+- mitochondrial and proteostasis interventions
+- precision drug discovery and AI-designed therapeutics
+- continuous wearable and minimally invasive biomarkers
+- medical robotics and assistive robotics
+- brain health, neuroregeneration and dementia prevention
+- secure personal health data infrastructure
+- future technologies that emerge after these categories
+
+## What humans might become in such a world
+
+IMA must not assume that longer biological life automatically means a better human life. The central human questions would shift:
+
+**Body:** If repair becomes routine, a person's chronological age may become a weaker indicator of physical capacity. People may remain physically capable for much longer, but accidents, disease and individual variation will remain relevant.
+
+**Mind:** Longer life could provide more learning, creativity, relationships and psychological development. It could also create new challenges: very long grief histories, identity changes, boredom, unresolved trauma, memory management, changing relationships and the need to repeatedly redefine purpose.
+
+**Identity:** A person living for centuries might experience multiple careers, identities, communities and value systems without becoming a different person in any simple sense. IMA should help preserve continuity without freezing a person into an old version of themselves.
+
+**Relationships:** Generational boundaries could become less clear. Parents, children and grandchildren might coexist for much longer. Power could accumulate across extremely long lifetimes unless institutions deliberately create renewal and fair access.
+
+**Society:** Retirement, inheritance, education, marriage, parenthood, housing, employment, political representation and leadership could all require redesign.
+
+**Meaning:** If death from ageing becomes rare, mortality would not disappear. The meaning of finite time might change, and people may need new cultural frameworks for choosing goals when there is no assumed biological deadline.
+
+**Inequality:** If rejuvenation is expensive, longevity could initially become a major source of inequality. IMA should therefore treat access, affordability, safety and anti-ageism as part of the technology problem itself.
+
+## IMA's role in that transition
+
+IMA should not become the authority that decides who deserves a longer life. Its role is to increase human capability and agency:
+
+- translate complex longevity research into understandable evidence;
+- maintain a living map of what is known and unknown;
+- compare interventions and evidence without hype;
+- help researchers discover connections across disciplines;
+- help individuals understand their options without replacing clinicians;
+- detect emerging safety signals and contradictions;
+- preserve personal and family knowledge across long lives, with consent;
+- support intergenerational learning rather than replacing human relationships;
+- help societies reason through policy, ethics and distribution before technologies arrive;
+- keep humans in control of consequential decisions;
+- remain useful even if users become increasingly capable, so that dependence on IMA decreases rather than increases.
+
+## IMA's temporal role
+
+IMA should operate across three horizons simultaneously:
+
+**Now:** improve healthy ageing, reduce preventable disease, combat ageism and help people navigate current evidence.
+
+**Transition:** connect emerging research, clinical translation, safety evidence, regulation and public understanding as rejuvenation technologies mature.
+
+**Later:** help people and institutions live through a world in which biological ageing may become increasingly manageable, while preserving agency, dignity, equality, meaning and human relationships.
+
+The target is not "immortality" as a slogan. The target is a scientifically grounded transition from **accepting biological ageing as inevitable** toward **measuring, preventing, repairing and—where safely possible—reversing its damaging components**, while continuously asking what kind of human world that technology creates.
