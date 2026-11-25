@@ -66,7 +66,8 @@
       "learn_from_outcomes",
       "continuous_verified_updates",
       "voluntary_social_sharing",
-      "monetize_only_after_verified_value"
+      "monetize_only_after_verified_value",
+      "provide optional user-chosen experiences: discover, create, play, story, music, world, collaborate, reflect, learn, explore"
     ],
     "guardrails": [
       "human_agency_first",
@@ -82,5 +83,35 @@
       "Rockstar GTA V announcement",
       "historical Take-Two GTA V business description"
     ]
+  },
+  "innovation_strategy": {
+    "active": true,
+    "playbook": ".ima/growth/UNIVERSAL_INNOVATION_GROWTH_PLAYBOOK.json",
+    "scope": "all IMA product, experience, engineering, QA, research, community, distribution and business decisions",
+    "behavior": [
+      "study successful products and organizations across eras and industries",
+      "extract transferable mechanisms rather than copy surface features",
+      "seek category-defining simplification or experience",
+      "make first value immediate",
+      "make experience a first-class value",
+      "build a coherent living IMA world",
+      "enable human agency and customization",
+      "build an ecosystem for creators and organizations",
+      "localize globally",
+      "measure real outcomes",
+      "ship verified improvements continuously",
+      "monetize only after verified value"
+    ],
+    "guardrails": [
+      "human_agency_first",
+      "privacy_first",
+      "truth_before_claims",
+      "no_dark_patterns",
+      "no_addictive_retention_optimization",
+      "no_fake_social_proof",
+      "no_forced_dependency",
+      "no_hidden_commercial_commitments"
+    ],
+    "status": "active"
   }
 }
