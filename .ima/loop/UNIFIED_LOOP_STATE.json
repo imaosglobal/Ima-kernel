@@ -1,6 +1,6 @@
 {
   "schema": "IMA-UNIFIED-LOOP-1.4",
-  "timestamp": "2026-11-25T16:08:18+02:00",
+  "timestamp": "2026-11-25T16:23:05+02:00",
   "timezone": "Asia/Jerusalem",
   "stages": [
     "REMEMBER",
@@ -97,7 +97,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "INTELLIGENCE-1.0\",\n  \"status\": \"completed\",\n  \"timestamp\": \"2026-11-25T14:09:05Z\",\n  \"sources\": 16,\n  \"discovered\": 177,\n  \"changed\": 1,\n  \"errors\": [\n    {\n      \"source\": \"https://www.commoncrawl.org/\",\n      \"error\": \"ParseError\"\n    },\n    {\n      \"source\": \"https://www.mozilla.org/en-US/firefox/notes/feed/\",\n      \"error\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://www.python.org/events/python-events/rss/\",\n      \"error\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://api.semanticscholar.org/graph/v1/paper/search?query=artificial%20intelligence&limit=10&fields=title,url,year\",\n      \"error\": \"HTTPError\"\n    }\n  ],\n  \"latest_commoncrawl\": \"CC-MAIN-2026-47\",\n  \"policy\": {\n    \"public_sources_only\": true,\n    \"scientific_open_sources\": [\n      \"OpenAlex\",\n      \"Semantic Scholar\",\n      \"Crossref\",\n      \"PubMed\",\n      \"arXiv\"\n    ],\n    \"robots_and_provider_terms_respected\": true,\n    \"dynamic_authenticated_pages_deferred\": true,\n    \"learning_rule\": \"discovery is input; IMA changes only after verification and tests\",\n    \"commoncrawl_cdx_polite_rate\": \"single-threaded with delay\"\n  },\n  \"items\": [\n    {\n      \"id\": \"dc9f384d01243eb3cbe3\",\n      \"url\": \"https://github.com/google-research/google-research/tree/master/cogentic_research_papers\",\n      \"title\": \"Google Releases Cogentic Papers on Integer Factorization, Discrete Logs and More\",\n      \"source\": \"https://hnrss.org/frontpage\",\n      \"kind\": \"feed\",\n      \"observed_at\": \"2026-11-25T14:08:22Z\"\n    }\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-WEB-INTELLIGENCE-1.0\",\n  \"status\": \"completed\",\n  \"timestamp\": \"2026-11-25T14:23:21Z\",\n  \"sources\": 16,\n  \"discovered\": 177,\n  \"changed\": 0,\n  \"errors\": [\n    {\n      \"source\": \"https://www.commoncrawl.org/\",\n      \"error\": \"ParseError\"\n    },\n    {\n      \"source\": \"https://www.mozilla.org/en-US/firefox/notes/feed/\",\n      \"error\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://www.python.org/events/python-events/rss/\",\n      \"error\": \"HTTPError\"\n    },\n    {\n      \"source\": \"https://api.semanticscholar.org/graph/v1/paper/search?query=artificial%20intelligence&limit=10&fields=title,url,year\",\n      \"error\": \"HTTPError\"\n    }\n  ],\n  \"latest_commoncrawl\": \"CC-MAIN-2026-47\",\n  \"policy\": {\n    \"public_sources_only\": true,\n    \"scientific_open_sources\": [\n      \"OpenAlex\",\n      \"Semantic Scholar\",\n      \"Crossref\",\n      \"PubMed\",\n      \"arXiv\"\n    ],\n    \"robots_and_provider_terms_respected\": true,\n    \"dynamic_authenticated_pages_deferred\": true,\n    \"learning_rule\": \"discovery is input; IMA changes only after verification and tests\",\n    \"commoncrawl_cdx_polite_rate\": \"single-threaded with delay\"\n  },\n  \"items\": []\n}\n",
       "stderr_tail": ""
     },
     {
@@ -127,7 +127,7 @@
       "status": "PASS",
       "returncode": 0,
       "stdout_tail": "",
-      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.833s\n\nOK\n"
+      "stderr_tail": "test_has_only_free_public_sources (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_has_only_free_public_sources) ... ok\ntest_truth_boundary_is_explicit (test_scientific_open_research_health.ScientificOpenResearchHealthTests.test_truth_boundary_is_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 1.076s\n\nOK\n"
     },
     {
       "task": "foresight_tests",
@@ -310,7 +310,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"generated_at\": \"2026-11-25T14:11:01.240Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
+      "stdout_tail": "{\n  \"generated_at\": \"2026-11-25T14:25:11.824Z\",\n  \"canonical_loop\": \"IMA Global Health Loop — לולאת התפתחות מאוחדת\",\n  \"integration_targets\": 31,\n  \"authorized_or_connected_records\": 0,\n  \"next_cycle_inputs\": [\n    \"new_verified_integrations\",\n    \"new_verified_capabilities\",\n    \"new_verified_revenue_evidence\",\n    \"new_verified_safety_or_governance_changes\",\n    \"new_verified_research_and_learning\"\n  ],\n  \"second_daily_orchestrator\": false\n}\n",
       "stderr_tail": ""
     },
     {
@@ -350,7 +350,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "        \"provider_defined\"\n      ],\n      \"interfaces\": [\n        \"adapter_contract\"\n      ],\n      \"auth\": [\n        \"provider_defined\"\n      ],\n      \"official_evidence\": [],\n      \"ima_status\": \"DISCOVERED\",\n      \"runtime_verified\": false\n    },\n    {\n      \"id\": \"gemini\",\n      \"provider\": \"gemini\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"GEMINI_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795615861.3393357\n    },\n    {\n      \"id\": \"groq\",\n      \"provider\": \"groq\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"GROQ_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795615861.3393366\n    },\n    {\n      \"id\": \"xai\",\n      \"provider\": \"xai\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"XAI_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795615861.3393376\n    }\n  ],\n  \"private_external_fanout\": false\n}\n",
+      "stdout_tail": "        \"provider_defined\"\n      ],\n      \"interfaces\": [\n        \"adapter_contract\"\n      ],\n      \"auth\": [\n        \"provider_defined\"\n      ],\n      \"official_evidence\": [],\n      \"ima_status\": \"DISCOVERED\",\n      \"runtime_verified\": false\n    },\n    {\n      \"id\": \"gemini\",\n      \"provider\": \"gemini\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"GEMINI_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795616711.9321802\n    },\n    {\n      \"id\": \"groq\",\n      \"provider\": \"groq\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"GROQ_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795616711.9321816\n    },\n    {\n      \"id\": \"xai\",\n      \"provider\": \"xai\",\n      \"interface\": \"native_api\",\n      \"capabilities\": [\n        \"text_generation\"\n      ],\n      \"auth\": {\n        \"env\": \"XAI_API_KEY\"\n      },\n      \"privacy_scope\": \"provider_terms\",\n      \"provenance\": \"IMA built-in provider adapter\",\n      \"status\": \"DISCOVERED\",\n      \"configured\": false,\n      \"last_observed_at\": 1795616711.9321828\n    }\n  ],\n  \"private_external_fanout\": false\n}\n",
       "stderr_tail": ""
     },
     {
@@ -388,9 +388,9 @@
         "python",
         "scripts/ima_live_browser_health.py"
       ],
-      "status": "FAIL",
-      "returncode": 1,
-      "stdout_tail": "-width,initial-scale=1,viewport-fit=cover\\\">\\n  <title>IMA — Live Browser</title>\\n  <style>\\n    :root{color-scheme:dark}\\n    *{box-sizing:border-box}\\n    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif;height:100%;overflow:hidden}\\n    body{padding:8px;display:flex;flex-direction:column;gap:8px}\\n    .bar,.tools{display:flex;gap:7px;align-items:cen\"\n    },\n    \"ima_public\": {\n      \"ok\": false,\n      \"status\": 404,\n      \"url\": \"https://imaosglobal.github.io/\",\n      \"body_head\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta http-equiv=\\\"Content-type\\\" content=\\\"text/html; charset=utf-8\\\">\\n    <meta http-equiv=\\\"Content-Security-Policy\\\" content=\\\"default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'\\\">\\n    <title>Site not found &middot; GitHub Pages</title>\\n    <style type=\\\"text/css\\\" media=\\\"screen\\\">\\n      body {\\n        background-color: #f1f1f1;\\n        margin: 0;\\n        font-family: \\\"Helvetica Neue\\\", Helvetica, Arial, sans-serif;\\n      }\\n\\n      .contai\"\n    },\n    \"browserglass_session_without_embed\": {\n      \"ok\": false,\n      \"status\": 403,\n      \"url\": \"https://ima-browserglass.onrender.com/api/session\",\n      \"body_head\": \"{\\\"error\\\":\\\"IMA embed required\\\"}\"\n    }\n  },\n  \"truth_boundary\": \"This check proves public endpoint behavior only; it does not prove ChatGPT MCP rendering, human control, local Termux/Chrome connectivity, Google authentication, or successful consequential actions.\"\n}\n",
+      "status": "PASS",
+      "returncode": 0,
+      "stdout_tail": "initial-scale=1,viewport-fit=cover\\\">\\n  <title>IMA — Live Browser</title>\\n  <style>\\n    :root{color-scheme:dark}\\n    *{box-sizing:border-box}\\n    html,body{margin:0;background:#08090d;color:#fff;font-family:system-ui,sans-serif;height:100%;overflow:hidden}\\n    body{padding:8px;display:flex;flex-direction:column;gap:8px}\\n    .bar,.tools{display:flex;gap:7px;align-items:cen\"\n    },\n    \"ima_public\": {\n      \"ok\": true,\n      \"status\": 200,\n      \"url\": \"https://imaosglobal.github.io/Ima-kernel/\",\n      \"body_head\": \"<!DOCTYPE html>\\n<html lang=\\\"he\\\" dir=\\\"rtl\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\" />\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\" />\\n  <title>אמא — IMA | בינה אנושית</title>\\n  <meta name=\\\"description\\\" content=\\\"אמא — IMA: בינה אנושית ממוקדת אדם. תנו לה משימה אמיתית: לחשוב, ללמוד, ליצור או לפתור, עם אמת לפני הכרזה, פרטיות וסוכנות אנושית.\\\" />\\n  <meta name=\\\"keywords\\\" content=\\\"IMA, אמא, human-centered intelligence, בינה אנושית, AI assistant, learning, creation, accessibility, privacy\"\n    },\n    \"browserglass_session_without_embed\": {\n      \"ok\": false,\n      \"status\": 403,\n      \"url\": \"https://ima-browserglass.onrender.com/api/session\",\n      \"body_head\": \"{\\\"error\\\":\\\"IMA embed required\\\"}\"\n    }\n  },\n  \"truth_boundary\": \"This check proves public endpoint behavior only; it does not prove ChatGPT MCP rendering, human control, local Termux/Chrome connectivity, Google authentication, or successful consequential actions.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -423,7 +423,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-25T14:12:50Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-LAWFUL-DISTRIBUTION-1.0\",\n  \"content_id\": \"b38453732a30bb887c3a\",\n  \"prepared_at\": \"2026-11-25T14:26:59Z\",\n  \"content\": {\n    \"canonical_message\": \"One humanity. Many cultures. Shared memory. Shared future.\",\n    \"hebrew_message\": \"אנושות אחת. תרבויות רבות. זיכרון משותף. עתיד משותף.\",\n    \"link\": \"https://imaosglobal.github.io/Ima-kernel/culture-of-the-heart.html\",\n    \"purpose\": \"Introduce IMA and the Culture of the Heart without replacing existing cultures.\"\n  },\n  \"channels\": [\n    {\n      \"name\": \"public_website\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"github\",\n      \"status\": \"PUBLISHED_IN_REPOSITORY\"\n    },\n    {\n      \"name\": \"authorized_social\",\n      \"status\": \"READY_PENDING_AUTHORIZED_CONNECTION\"\n    },\n    {\n      \"name\": \"press_and_community\",\n      \"status\": \"READY_PENDING_AUTHORIZED_OUTREACH\"\n    },\n    {\n      \"name\": \"education_and_events\",\n      \"status\": \"READY\"\n    }\n  ],\n  \"rules\": [\n    \"lawful\",\n    \"consent_respecting\",\n    \"non_spam\",\n    \"no_impersonation\",\n    \"source_attribution\"\n  ]\n}\n",
       "stderr_tail": ""
     },
     {
@@ -446,7 +446,7 @@
       ],
       "status": "PASS",
       "returncode": 0,
-      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-25T14:12:51.152508+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
+      "stdout_tail": "{\n  \"schema\": \"IMA-GLOBAL-GROWTH-1.0\",\n  \"timestamp\": \"2026-11-25T14:26:59.820150+00:00\",\n  \"principle\": \"real_users_only\",\n  \"funnel\": [\n    \"DISCOVER\",\n    \"VISIT\",\n    \"START\",\n    \"RETURN\",\n    \"VALUE\",\n    \"FEEDBACK\",\n    \"IMPROVE\",\n    \"SHARE\",\n    \"RETURN\"\n  ],\n  \"analytics\": {\n    \"posthog_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    },\n    \"posthog_host_configured\": {\n      \"available\": false,\n      \"source\": \"runtime environment\"\n    }\n  },\n  \"distribution\": {\n    \"website\": true,\n    \"pwa\": true,\n    \"android_project\": true,\n    \"store_listing_verified\": false,\n    \"external_social_authorization\": false\n  },\n  \"self_marketing\": {\n    \"spec_present\": true,\n    \"global_growth_spec_present\": true,\n    \"truth_rule\": \"marketing claims require evidence; attention is not verified value\"\n  },\n  \"feedback\": {\n    \"api_contract\": true,\n    \"public_feedback_page\": true\n  },\n  \"localization_target\": [\n    \"he\",\n    \"en\",\n    \"ar\",\n    \"es\",\n    \"fr\",\n    \"pt\",\n    \"de\",\n    \"hi\",\n    \"ja\",\n    \"ko\",\n    \"zh\"\n  ],\n  \"truth_rule\": \"Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.\"\n}\n",
       "stderr_tail": ""
     },
     {
@@ -8007,8 +8007,8 @@
   "diagnostics": {
     "summary": {
       "total": 28,
-      "passed": 27,
-      "failed": 1,
+      "passed": 28,
+      "failed": 0,
       "errors": 0
     },
     "findings": [
@@ -8114,8 +8114,8 @@
       },
       {
         "task": "live_browser_health",
-        "finding": "FAIL",
-        "action": "inspect_logs_before_change"
+        "finding": "PASS",
+        "action": "carry_forward"
       },
       {
         "task": "finance_governance_audit",

@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-25T14:08:18+00:00",
+  "generated_at": "2026-11-25T14:23:04+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,31 +2019,31 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-25T14:08:16+00:00",
+      "timestamp": "2026-11-25T14:23:02+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-25T14:08:17+00:00",
+      "timestamp": "2026-11-25T14:23:03+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-25T14:08:17+00:00",
+      "timestamp": "2026-11-25T14:23:03+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "commit": "8f1ed00a432a4e1806e48afba130854c2cb62d0e",
-      "timestamp": "2026-11-25T16:04:04+02:00",
+      "commit": "996dc1463c6b87c71fb47f8ed56e5528094cdd13",
+      "timestamp": "2026-11-25T16:22:48+02:00",
       "event": "commit",
-      "summary": "Align public runtime test with authentication-first boundary",
+      "summary": "fix: validate existing canonical IMA Pages URL",
       "source": "git"
     }
   ]
