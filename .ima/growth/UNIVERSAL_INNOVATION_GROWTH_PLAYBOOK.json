@@ -45,6 +45,28 @@
       ]
     },
     {
+      "name": "Google / Alphabet / Android / Search / YouTube",
+      "lessons": [
+        "Start with an extremely clear universal job: find information, navigate, communicate, watch, learn or get something done.",
+        "Make the core service broadly accessible and remove adoption friction; low-friction access can accelerate global reach when paired with a sustainable business model.",
+        "Build an ecosystem rather than a single product: Search, Android, Chrome, Maps, Gmail, YouTube, Cloud, developer tools and AI reinforce one another.",
+        "Use open or partner-friendly platforms where appropriate so hardware makers, developers, publishers and organizations can expand reach and utility.",
+        "Treat distribution as part of the product: devices, browsers, defaults, app stores, APIs, developer programs and partnerships all matter.",
+        "Continuously improve the core while expanding into adjacent capabilities; global scale comes from repeated useful improvements, not one launch.",
+        "Use AI as an interface layer that makes existing products more useful rather than forcing users to learn a new category every time.",
+        "Build infrastructure and standards that let others participate while maintaining compatibility and quality."
+      ],
+      "ima_equivalent": [
+        "IMA must have one immediately understandable universal job: help a person understand, create, decide, learn, solve or experience something meaningful.",
+        "Keep the first useful interaction low-friction and make the basic human-capability layer broadly accessible.",
+        "Unify chat, creation, experiences, memory, tools, browser/device capabilities, community and professional workflows behind one IMA identity.",
+        "Provide open interfaces so creators, professionals, organizations and developers can extend IMA without fragmenting the core experience.",
+        "Build distribution into IMA itself: installability, shareable outcomes, web discoverability, localization, accessibility, device integration and trusted partnerships.",
+        "Use the IMA layer to make existing digital and physical environments more useful instead of requiring users to abandon everything they already use.",
+        "Make compatibility, portability and user control first-class so IMA can become a layer across products rather than another silo."
+      ]
+    },
+    {
       "name": "Platform winners",
       "lessons": [
         "Solve the two-sided or multi-sided ecosystem problem: users need value and creators need users.",
@@ -72,6 +94,60 @@
         "Run one loop across product, engineering, QA, research, community, distribution, accessibility, partnerships and economics.",
         "Prefer evidence over vanity metrics.",
         "Continuously search for category-defining simplifications and experiences."
+      ]
+    },
+    {
+      "name": "Amazon / Marketplace / AWS",
+      "lessons": [
+        "Remove friction from a recurring job and make the experience increasingly dependable.",
+        "Build infrastructure that can serve consumers and other businesses.",
+        "Let third parties create supply, services and innovation on top of the platform.",
+        "Use operational excellence as an invisible product advantage."
+      ],
+      "ima_equivalent": [
+        "Make IMA dependable for recurring real-world work, not only impressive demos.",
+        "Expose professional infrastructure and tools for organizations and developers.",
+        "Let verified providers and creators contribute capabilities while IMA protects trust, quality and agency.",
+        "Make reliability, latency, interoperability and operational support part of the product."
+      ]
+    },
+    {
+      "name": "Microsoft / Windows / Office / Azure",
+      "lessons": [
+        "Become useful inside workflows people already depend on.",
+        "Win organizations through compatibility, administration, collaboration and developer ecosystems.",
+        "Turn software into infrastructure that other businesses build around."
+      ],
+      "ima_equivalent": [
+        "IMA must fit into existing work rather than demand a complete workflow replacement.",
+        "Build professional-grade administration, collaboration, security, accessibility and interoperability.",
+        "Make IMA usable as a capability layer for teams, schools, businesses, researchers and public-interest organizations."
+      ]
+    },
+    {
+      "name": "YouTube / Meta / TikTok / Roblox / creator platforms",
+      "lessons": [
+        "Users can become producers, teachers, entertainers and cultural participants rather than only consumers.",
+        "Creation and distribution can reinforce each other when sharing is voluntary and useful.",
+        "A platform becomes culturally important when people make things there that have value beyond the platform."
+      ],
+      "ima_equivalent": [
+        "Make users contributors to the IMA world: lessons, tools, stories, music, research, workflows, experiences and discoveries.",
+        "Make outputs portable and shareable so IMA can spread through useful human work rather than advertising alone.",
+        "Measure contribution quality and user benefit, not attention captured."
+      ]
+    },
+    {
+      "name": "Future / emerging products",
+      "lessons": [
+        "Do not assume today's interface is the final interface.",
+        "Agentic, multimodal, spatial, wearable, robotic and ambient computing can move intelligence from an app into the environment.",
+        "The winning layer may be the one that coordinates many existing capabilities while keeping the human in control."
+      ],
+      "ima_equivalent": [
+        "Design IMA as an interface-independent human-centered layer across screen, voice, browser, wearable, vehicle, robot, AR/VR and future devices.",
+        "Preserve identity, consent, memory, accessibility and agency across modalities.",
+        "Continuously scan emerging products and technologies for mechanisms that reduce friction or increase human possibility."
       ]
     }
   ],
@@ -174,5 +250,54 @@
       "Treat reliability, accessibility, localization, trust and onboarding as growth features.",
       "Continuously benchmark successful and failed products without copying their surface design."
     ]
+  },
+  "future_learning_protocol": {
+    "active": true,
+    "scope": "all industries, successful and failed products, current and emerging technologies",
+    "cadence": "continuous",
+    "required_questions": [
+      "What human need did it make dramatically easier?",
+      "What was the breakthrough interaction or business mechanism?",
+      "How did it distribute globally?",
+      "How did users, creators, partners and organizations reinforce one another?",
+      "What made it trustworthy, memorable or culturally meaningful?",
+      "What failure mode eventually appeared?",
+      "What is the humane IMA equivalent?",
+      "What can be tested in IMA now with evidence?"
+    ],
+    "source_families": [
+      "consumer technology",
+      "AI and developer platforms",
+      "games and entertainment",
+      "search and media",
+      "social and creator platforms",
+      "commerce and marketplaces",
+      "enterprise software",
+      "finance and payments",
+      "healthcare",
+      "education",
+      "transportation",
+      "science",
+      "hardware",
+      "robotics",
+      "spatial computing",
+      "public-interest infrastructure",
+      "failed products and organizational failures"
+    ]
+  },
+  "global_participation_strategy": {
+    "current_reality": "IMA is currently an early prototype primarily exercised by its founder on one device. Global participation is not yet demonstrated.",
+    "principle": "Do not pretend the prototype is already global. Build the bridge from one-person proof to public product.",
+    "ladder": [
+      "FOUNDER_PROOF: make one complete core journey excellent and measurable",
+      "PUBLIC_WEB: make the canonical web experience reliable and understandable without founder assistance",
+      "FIRST_EXTERNAL_USERS: invite a small real cohort and observe actual outcomes",
+      "REPEATABLE_ONBOARDING: remove founder-only setup and support requirements",
+      "GLOBAL_CORE: ship reliable localization, accessibility, identity, privacy and device compatibility",
+      "ECOSYSTEM: allow external creators, professionals, organizations and developers to contribute verified value",
+      "CULTURAL_SCALE: enable voluntary sharing and useful public artifacts",
+      "SUSTAINABLE_SCALE: monetize verified value and reinvest in reliability, reach and human benefit"
+    ],
+    "hard_gate": "No phase is considered complete without evidence from real external users."
   }
 }
