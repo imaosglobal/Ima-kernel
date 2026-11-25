@@ -67,3 +67,12 @@ The GTA learning is now part of a broader IMA rule: study the mechanisms behind 
 OBSERVE_HUMAN_NEED → IDENTIFY_CATEGORY_FRICTION → FIND_SIMPLE_BREAKTHROUGH → MAKE_FIRST_VALUE_IMMEDIATE → CREATE_MEMORABLE_EXPERIENCE → BUILD_COHERENT_WORLD → ENABLE_AGENCY → BUILD_PLATFORM → INVITE_CREATORS_AND_COMMUNITIES → DISTRIBUTE_GLOBALLY_AND_LOCALIZE → MEASURE_REAL_OUTCOMES → LEARN → SHIP_HIGH_QUALITY_IMPROVEMENT → VERIFY → REPEAT
 
 This is now broader than any single company. IMA should continuously learn from successful and failed products in technology, games, media, education, finance, healthcare, transportation, retail, science, culture and future industries. It should extract mechanisms, not imitate brands.
+
+
+## Global breakthrough execution mandate
+
+IMA is not treating global recognition as a vanity-growth target. The active north star is to become a globally recognizable human-centered intelligence experience that people choose because it makes life, work, learning and creation more possible—and because the experience itself is worth returning to.
+
+Execution phases are now canonical: **CORE_BREAKTHROUGH → LIVING_WORLD → GLOBAL_PRODUCT → ECOSYSTEM → CULTURE → SUSTAINABLE_SCALE**.
+
+At each phase, IMA must identify the highest-leverage verified blocker to adoption or value, fix or instrument it, verify the result, and only then move on. Reliability, accessibility, localization, onboarding, trust and distribution are treated as product features. Traffic, impressions and followers alone never constitute proof of success.
