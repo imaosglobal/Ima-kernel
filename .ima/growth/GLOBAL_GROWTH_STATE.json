@@ -1,6 +1,6 @@
 {
   "schema": "IMA-GLOBAL-GROWTH-1.0",
-  "timestamp": "2026-11-25T11:54:18.204127+00:00",
+  "timestamp": "2026-11-25T13:09:24.978364+00:00",
   "principle": "real_users_only",
   "funnel": [
     "DISCOVER",
@@ -52,66 +52,5 @@
     "ko",
     "zh"
   ],
-  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.",
-  "experience_strategy": {
-    "active": true,
-    "name": "GTA-inspired humane living-world loop",
-    "playbook": ".ima/growth/GTA_INSPIRED_GROWTH_PLAYBOOK.json",
-    "runtime": "ima-ui/src/services/imaExperienceEngine.js",
-    "behavior": [
-      "missionize_real_goals",
-      "deliver_first_value_fast",
-      "preserve_authorized_progress",
-      "offer_optional_next_step",
-      "learn_from_outcomes",
-      "continuous_verified_updates",
-      "voluntary_social_sharing",
-      "monetize_only_after_verified_value",
-      "provide optional user-chosen experiences: discover, create, play, story, music, world, collaborate, reflect, learn, explore"
-    ],
-    "guardrails": [
-      "human_agency_first",
-      "privacy_first",
-      "truth_before_claims",
-      "no_dark_patterns",
-      "no_addictive_retention",
-      "no_fake_social_proof"
-    ],
-    "evidence_basis": [
-      "Take-Two FY2026 results",
-      "Take-Two FY2026 10-K",
-      "Rockstar GTA V announcement",
-      "historical Take-Two GTA V business description"
-    ]
-  },
-  "innovation_strategy": {
-    "active": true,
-    "playbook": ".ima/growth/UNIVERSAL_INNOVATION_GROWTH_PLAYBOOK.json",
-    "scope": "all IMA product, experience, engineering, QA, research, community, distribution and business decisions",
-    "behavior": [
-      "study successful products and organizations across eras and industries",
-      "extract transferable mechanisms rather than copy surface features",
-      "seek category-defining simplification or experience",
-      "make first value immediate",
-      "make experience a first-class value",
-      "build a coherent living IMA world",
-      "enable human agency and customization",
-      "build an ecosystem for creators and organizations",
-      "localize globally",
-      "measure real outcomes",
-      "ship verified improvements continuously",
-      "monetize only after verified value"
-    ],
-    "guardrails": [
-      "human_agency_first",
-      "privacy_first",
-      "truth_before_claims",
-      "no_dark_patterns",
-      "no_addictive_retention_optimization",
-      "no_fake_social_proof",
-      "no_forced_dependency",
-      "no_hidden_commercial_commitments"
-    ],
-    "status": "active"
-  }
+  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews."
 }
