@@ -1,6 +1,6 @@
 {
   "schema": "IMA-GLOBAL-GROWTH-1.0",
-  "timestamp": "2026-11-25T13:09:24.978364+00:00",
+  "timestamp": "2026-11-25T14:12:51.152508+00:00",
   "principle": "real_users_only",
   "funnel": [
     "DISCOVER",
@@ -28,20 +28,7 @@
     "pwa": true,
     "android_project": true,
     "store_listing_verified": false,
-    "external_social_authorization": false,
-    "current_reality": "Founder-led prototype; external global participation is not yet verified.",
-    "launch_ladder": [
-      "FOUNDER_PROOF",
-      "PUBLIC_WEB",
-      "FIRST_EXTERNAL_USERS",
-      "REPEATABLE_ONBOARDING",
-      "GLOBAL_CORE",
-      "ECOSYSTEM",
-      "CULTURAL_SCALE",
-      "SUSTAINABLE_SCALE"
-    ],
-    "next_gate": "PUBLIC_WEB",
-    "external_users_verified": false
+    "external_social_authorization": false
   },
   "self_marketing": {
     "spec_present": true,
@@ -65,21 +52,5 @@
     "ko",
     "zh"
   ],
-  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews.",
-  "global_breakthrough_goal": {
-    "active": true,
-    "north_star": "Become a globally recognizable human-centered intelligence experience chosen for both capability and experience.",
-    "current_phase": "CORE_BREAKTHROUGH",
-    "next_gate": "public_web_core_journey_reliable_without_founder_assistance",
-    "decision_rule": "Fix the highest-leverage verified adoption blocker before adding lower-value features.",
-    "evidence_rule": "UNKNOWN until measured; no synthetic popularity.",
-    "immediate_priority": "Turn IMA from founder-only prototype into a reliable public web product, then verify first external users before scaling distribution."
-  },
-  "innovation_learning": {
-    "active": true,
-    "scope": "global successful, failed and emerging products across industries",
-    "cadence": "continuous",
-    "google_added": true,
-    "future_aware": true
-  }
+  "truth_rule": "Unknown metrics remain UNKNOWN; no synthetic users, ratings or reviews."
 }
