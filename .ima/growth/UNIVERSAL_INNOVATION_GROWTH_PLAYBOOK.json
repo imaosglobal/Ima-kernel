@@ -119,5 +119,60 @@
     "privacy_and_agency",
     "revenue_after_verified_value",
     "category_differentiation"
-  ]
+  ],
+  "global_breakthrough_goal": {
+    "active": true,
+    "north_star": "Make IMA a globally recognizable human-centered intelligence experience that people choose because it makes life, work, learning and creation more possible—and because the experience itself is worth returning to.",
+    "execution_mode": "continuous_closed_loop",
+    "priority_order": [
+      "category_defining_core_experience",
+      "reliable_first_value",
+      "coherent_world_and_identity",
+      "global_distribution_and_localization",
+      "creator_and_organization_ecosystem",
+      "community_and_culture",
+      "sustainable_value_aligned_economics"
+    ],
+    "phases": [
+      {
+        "phase": 1,
+        "name": "CORE_BREAKTHROUGH",
+        "exit": "A new user can understand IMA and reach a useful or enjoyable outcome quickly."
+      },
+      {
+        "phase": 2,
+        "name": "LIVING_WORLD",
+        "exit": "Practical help and optional experiences feel like one coherent IMA world."
+      },
+      {
+        "phase": 3,
+        "name": "GLOBAL_PRODUCT",
+        "exit": "Core journeys work reliably across priority languages, devices and accessibility needs."
+      },
+      {
+        "phase": 4,
+        "name": "ECOSYSTEM",
+        "exit": "External creators, professionals, organizations and developers can create verified value through IMA."
+      },
+      {
+        "phase": 5,
+        "name": "CULTURE",
+        "exit": "Users voluntarily create, share and teach things that make IMA culturally useful and recognizable."
+      },
+      {
+        "phase": 6,
+        "name": "SUSTAINABLE_SCALE",
+        "exit": "Revenue grows from demonstrated value without compromising human agency or trust."
+      }
+    ],
+    "operating_requirements": [
+      "Every release must improve a measured user outcome or remove a major category friction.",
+      "Every week identify the highest-leverage gap preventing global adoption and ship or instrument the smallest credible fix.",
+      "Every major product decision must be evaluated against the universal innovation loop.",
+      "Do not declare global success from traffic, impressions, followers or synthetic signals.",
+      "When evidence is missing, mark UNKNOWN and create the measurement needed.",
+      "Treat reliability, accessibility, localization, trust and onboarding as growth features.",
+      "Continuously benchmark successful and failed products without copying their surface design."
+    ]
+  }
 }
