@@ -1,8 +1,9 @@
-// IMA EXPERIENCE ENGINE — GTA-inspired lessons translated into humane product behavior.
-// This is a product-loop adapter, not a gamification or addiction engine.
-// The person owns the goal, progress, memory and decision to continue.
+// IMA EXPERIENCE ENGINE — universal product lessons translated into humane product behavior.
+// Mission + experience are first-class modes. This is not an addiction/retention engine.
+// The person owns the goal, experience, progress, memory and decision to continue.
 
-const KEY = 'ima-experience-missions-v1';
+const KEY = 'ima-experience-missions-v2';
+const EXPERIENCE_TYPES = ['discover','create','play','story','music','world','collaborate','reflect','learn','explore'];
 const MAX = 50;
 
 function read() {
@@ -21,9 +22,11 @@ function classify(text='') {
   return 'explore';
 }
 
-export function beginImaMission(goal='') {
+export function beginImaMission(goal='', options={}) {
   const mission = {
     id: 'mission-' + Date.now() + '-' + Math.random().toString(36).slice(2,8),
+    mode: options.mode || 'mission',
+    experienceType: options.experienceType || null,
     type: classify(goal),
     goal: String(goal).slice(0, 500),
     startedAt: new Date().toISOString(),
@@ -49,4 +52,10 @@ export function completeImaMission(missionId, outcome={}) {
   return mission;
 }
 
+export function beginImaExperience(intent='', experienceType='explore') {
+  const type = EXPERIENCE_TYPES.includes(experienceType) ? experienceType : 'explore';
+  return beginImaMission(intent, { mode:'experience', experienceType:type });
+}
+
 export function getImaMissions() { return read(); }
+export function getImaExperienceTypes() { return [...EXPERIENCE_TYPES]; }
