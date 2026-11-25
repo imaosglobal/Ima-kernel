@@ -13,6 +13,7 @@ import {
 } from './services/imaChat';
 import { initializeImaAnalytics, trackImaEvent } from './services/analytics';
 import { recordMarketEvent, getMarketCampaign, buildShareUrl } from './services/marketEntry';
+import { beginImaMission, completeImaMission } from './services/imaExperienceEngine';
 
 const BASE = '/Ima-kernel/';
 const GOOGLE_CAMPAIGN_URL = BASE + '?utm_source=google&utm_medium=cpc&utm_campaign=ima_initial_100ils&campaignId=24409551537';
@@ -144,6 +145,7 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
     const value=String(text||'').trim();
     if(!value||busy)return;
     setBusy(true);setMessage('');
+    const mission=beginImaMission(value);
     setMessages(m=>{const next=[...m,{role:'user',text:value}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
     recordLiveChatEvent('window_chat_message',{phase:'request',status:'recorded',action:'ask_ima',payload:{interface:windowMode?'live-window':'public-home',message_length:value.length}}).catch(()=>{});
     trackImaEvent('ima_first_use_attempt',{language:lang});
@@ -153,6 +155,7 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
       setMessages(m=>{const next=[...m,{role:'ima',text:response,action}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
       recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{});
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
+      completeImaMission(mission.id,{useful:Boolean(String(response||'').trim()),responseLength:String(response||'').length});
       await archiveChatLearningSignal(value,response,{language:lang});
     }catch{
       setMamaAction('idle'); setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
