@@ -1,0 +1,20 @@
+{
+  "schema": "IMA-GROWTH-LEARNING-PLAYBOOK-1.0",
+  "name": "GTA-inspired product growth learning",
+  "source": "Grand Theft Auto franchise / Rockstar / Take-Two public evidence",
+  "scope": "Product strategy only. IMA does not copy violent themes, dark patterns, or exploitative monetization.",
+  "verified_lessons": [
+    {"id":"world","lesson":"A coherent, memorable world increases perceived value and gives people reasons to explore.","ima_action":"Treat IMA as one coherent living world: useful public knowledge, tools, creation, community, memory and device continuity should feel connected rather than unrelated features."},
+    {"id":"agency","lesson":"Freedom and flexibility create ownership of the experience.","ima_action":"Let the person choose the goal, path, depth and stopping point. IMA proposes missions; the person remains in control."},
+    {"id":"missions","lesson":"Large systems become approachable when complex goals are broken into concrete activities.","ima_action":"Convert real user goals into small, visible missions with a clear next step, progress, outcome and optional continuation."},
+    {"id":"persistence","lesson":"A persistent online layer can turn a one-time product into a long-lived experience.","ima_action":"Give IMA authorized continuity: saved progress, memory controls, reusable work, community contribution and cross-device continuation. Never create dependency or hidden retention pressure."},
+    {"id":"cadence","lesson":"Ongoing content can reactivate an established audience.","ima_action":"Ship small, high-quality verified improvements and useful new experiences continuously; prefer quality and coherence over feature volume."},
+    {"id":"social","lesson":"Shared experiences amplify discovery and give products cultural life.","ima_action":"Build voluntary community, collaboration, remixing and sharing around useful outcomes. No fake engagement, spam, forced social mechanics or fabricated popularity."},
+    {"id":"identity","lesson":"Persistent identity and progression make participation meaningful.","ima_action":"Use human-owned progress: projects, skills, contributions, learning history and creations. Never sell or exploit private memory."},
+    {"id":"economics","lesson":"Long-lived engagement can support recurring consumer spending.","ima_action":"Monetize durable value only after value is demonstrated: voluntary support, useful digital products, professional services, organizational pilots and transparent memberships. No pay-to-belong, dark patterns, fake scarcity or monetization of private memory."},
+    {"id":"quality","lesson":"A small number of highly polished experiences can outperform a large volume of mediocre features.","ima_action":"Prioritize the best end-to-end user journeys and runtime reliability before adding more surface area."}
+  ],
+  "operating_loop":["DISCOVER_REAL_NEED","FRAME_AS_MISSION","MAKE_FIRST_STEP_OBVIOUS","DELIVER_USEFUL_OUTCOME","SAVE_AUTHORIZED_PROGRESS","OFFER_OPTIONAL_NEXT_MISSION","ENABLE_VOLUNTARY_SHARE_OR_COLLABORATION","MEASURE_REAL_VALUE","IMPROVE","VERIFY","REPEAT"],
+  "guardrails":["human_agency_first","privacy_first","truth_before_claims","no_fake_users_or_social_proof","no_dark_patterns","no_addictive_retention_design","no_paywall_on_basic_human_agency","no_autonomous_commercial_commitments","no_violent_theme_copying","monetization_must_follow_verified_value"],
+  "success_metrics":["time_to_first_useful_outcome","mission_completion_rate","return_after_value","authorized_progress_reuse","voluntary_share_rate","collaboration_rate","retention_with_satisfaction","support_or_purchase_after_verified_value","error_rate","privacy_and_agency_incidents"]
+}
