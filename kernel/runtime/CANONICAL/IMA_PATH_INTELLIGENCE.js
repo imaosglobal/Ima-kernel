@@ -13,7 +13,22 @@ function ingest(input){
   return record;
 }
 function ingestSignal(signal){ return innovation.pathFromSignals([signal])[0] ? ingest(innovation.pathFromSignals([signal])[0]) : null; }
-function ingestRuntimeSnapshot(snapshot){\n  const s=snapshot||{};\n  const evidence=Object.keys(s).map(k=>({module:k,status:s[k]}));\n  return ingest({\n    goal:"Traverse the current canonical IMA runtime safely and preserve the verified path/evidence for the next iteration.",\n    current_state:"RUNTIME_SNAPSHOT",\n    path:["boot canonical runtime","collect subsystem status","verify evidence","preserve reusable lesson","measure next outcome"],\n    evidence:evidence,\n    outcome:"RUNTIME_SNAPSHOT_CAPTURED",\n    provenance:"kernel/runtime/CANONICAL/IMA_RUNTIME.js",\n    privacy_classification:"SYSTEM_METADATA",\n    reuse_scope:"CANONICAL_SYSTEM_LEARNING",\n    confidence:"RUNTIME_OBSERVED"\n  });\n}\nfunction teachBack(record){
+function ingestRuntimeSnapshot(snapshot){
+    const s=snapshot||{};
+    const evidence=Object.keys(s).map(k=>({module:k,status:s[k]}));
+    return ingest({
+    goal:"Traverse the current canonical IMA runtime safely and preserve the verified path/evidence for the next iteration.",
+    current_state:"RUNTIME_SNAPSHOT",
+    path:["boot canonical runtime","collect subsystem status","verify evidence","preserve reusable lesson","measure next outcome"],
+    evidence:evidence,
+    outcome:"RUNTIME_SNAPSHOT_CAPTURED",
+    provenance:"kernel/runtime/CANONICAL/IMA_RUNTIME.js",
+    privacy_classification:"SYSTEM_METADATA",
+    reuse_scope:"CANONICAL_SYSTEM_LEARNING",
+    confidence:"RUNTIME_OBSERVED"
+  });
+}
+function teachBack(record){
   if(!record || record.privacy_classification==="PRIVATE") return {ok:false,reason:"private_path_not_transferable"};
   return {ok:true,pattern:record.path,guardrails:{privacy:record.reuse_scope,human_boundary:record.human_boundary,agency:record.agency_rule},evidence:record.evidence,confidence:record.confidence};
 }
