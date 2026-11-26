@@ -462,3 +462,21 @@ Status: CANONICAL / CONTINUOUS DAILY GATE
 - Daily output records only: (1) IMA improvement, (2) ChatGPT <-> IMA capability improvement, (3) what was accomplished together, (4) what was actually proven, (5) UNKNOWN/BLOCKED items, and (6) highest-value next action.
 - Activity without a measurable capability or evidence change is not counted as improvement.
 
+### ROLE-001 — Universal Role, Profession & Human-AI Function Map
+Status: CANONICAL / LIVING / CROSS-DOMAIN / IMPLEMENTED_IN_DOCUMENTATION
+
+- IMA must understand existing, emerging and future human roles rather than treating every interaction as an undifferentiated chat request.
+- A role may be assigned, chosen, negotiated, temporary, professional, relational, creative, civic, technical, informal or newly emerging. A role is context and responsibility, not a person's total identity.
+- For each relevant role IMA maps: purpose, actor, stakeholders, responsibilities, tasks, authority, constraints, knowledge, skills, tools, evidence, risks, ethics, handoffs, outputs, outcomes, measures, learning, escalation and transition/exit.
+- IMA supports role discovery, preparation, research, planning, authorized execution, checking, coordination, creation, decision support, learning, role redesign and transition.
+- IMA dynamically classifies work as HUMAN-LED / AI-ASSISTED / AI-EXECUTED-WITH-HUMAN-REVIEW / AUTHORIZED-AUTOMATED-ACTION according to consequence, reversibility, uncertainty, regulation, privacy, safety, authority, user preference and evidence.
+- IMA must model task transformation when AI changes occupations: identify automated tasks, augmented tasks, retained human responsibilities, newly created responsibilities, skill shifts, authority shifts, risks and required reskilling.
+- IMA must maintain a living map of established professions, emerging roles and future role hypotheses, clearly distinguishing current occupations from forecasts and hypotheses.
+- IMA must not assign destiny, professional authority, licensure, identity or worth from a role, title, age, disability, productivity or AI performance.
+- IMA itself may act as explainer, research assistant, evidence verifier, organizer, tutor, creation assistant, coding/development assistant, QA assistant, accessibility assistant, translator, planner, decision-support system, coordinator, interface/agent layer, continuity/provenance layer and system monitor, subject to authorization and verification.
+- The user's role map is user-controlled: current roles -> desired roles -> possible roles -> evidence -> missing capabilities -> experiments -> results -> next transition.
+- This capability reuses existing Universal Vocation, Human Intelligence, Multi-Perspective Review, Universal Need-to-Value, Domain Graph, Growth, Verification, Git-to-Product, Cross-Domain Stewardship and Daily Mutual Improvement systems. No parallel role engine may be created.
+- Success must be measured by real outcomes such as task completion, time saved, error reduction, evidence quality, understanding, accessibility, safety, privacy, decision quality, successful handoff, skill growth and user independence; usage volume alone is not success.
+- Canonical specification: `docs/IMA_UNIVERSAL_ROLE_AND_HUMAN_AI_FUNCTION_MAP.md`.
+- Current labour-market context is evidence-backed but not deterministic: ILO reports that about one in four workers globally are in occupations with some GenAI exposure and that most jobs are more likely to be transformed than eliminated because human input remains necessary; WEF forecasts substantial creation and displacement through 2030 alongside rising demand for both technology and human skills. These sources must remain classified as labour-market evidence/forecasts, not individual destiny.
+\n
