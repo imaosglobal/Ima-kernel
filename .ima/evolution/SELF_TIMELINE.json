@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-26T17:35:30+00:00",
+  "generated_at": "2026-11-26T17:41:55+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-26T17:35:30+00:00",
+      "commit": "e918f9f571474cbbde4916a9daa76fb39cbdccc3",
+      "timestamp": "2026-11-26T17:39:49Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-26T17:41:54+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-26T17:35:30+00:00",
+      "timestamp": "2026-11-26T17:41:55+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-26T17:35:30+00:00",
+      "timestamp": "2026-11-26T17:41:55+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "25a94491f78052a63cddde70fb3fe42d06f9b9fe",
-      "timestamp": "2026-11-26T19:34:00+02:00",
-      "event": "commit",
-      "summary": "LIVE-001: add canonical ChatGPT BrowserGlass widget",
-      "source": "git"
     },
     {
       "commit": "24de41d1ef4b8b80c4e80cfa98b78687dad87edc",
