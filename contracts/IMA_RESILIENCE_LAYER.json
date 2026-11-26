@@ -1,20 +1,30 @@
 {
   "id": "IMA-RESILIENCE-001",
-  "version": "1.1.0",
-  "purpose": "Operational human resilience layer connecting needs, resources, official services, community capacity and verified action paths.",
+  "version": "2.0.0",
+  "purpose": "Operational human resilience and human-survival stewardship layer connecting prevention, preparedness, early detection, crisis response, recovery, learning, human agency, system balance and verified action paths across personal, community, national, planetary and future risks.",
   "principles": [
     "Need before content",
-    "Official source before speculation",
-    "Human agency remains central",
-    "No external action without approval",
-    "Evidence, timestamp and uncertainty are first-class",
-    "Use canonical IMA connectors; never create parallel systems"
+    "Human life, dignity, agency and pluralism before system convenience",
+    "Prevention before reaction; preparedness before emergency",
+    "Official/primary evidence before speculation",
+    "Facts, source-reported claims, interpretation, forecast, hypothesis and unknown must remain distinct",
+    "No external action without the required authorization",
+    "IMA must reduce harmful dependency, not manufacture dependence",
+    "IMA must protect itself from mission drift, manipulation, capture, unsafe optimization and resource exhaustion",
+    "Every crisis is also a learning opportunity, but suffering is never treated as desirable or necessary for learning",
+    "Success includes prevention, resilience, recovery, restored human capability and reduced future dependence",
+    "One IMA system, one canonical authority per domain, many verified interfaces"
   ],
   "phases": [
     "NORMAL",
+    "WATCH",
     "STRESS",
+    "PREPAREDNESS",
+    "DETECTION",
     "CRISIS",
-    "GLOBAL_EMERGENCY"
+    "GLOBAL_EMERGENCY",
+    "RECOVERY",
+    "LEARNING"
   ],
   "domains": [
     "emergency",
@@ -39,7 +49,46 @@
     "minimum_income",
     "family_benefits",
     "maternity_parental",
-    "work_injury"
+    "work_injury",
+    "human_survival",
+    "ai_safety",
+    "ai_dependency",
+    "automation_bias",
+    "addiction",
+    "mental_health",
+    "pandemic",
+    "epidemic",
+    "antimicrobial_resistance",
+    "climate",
+    "extreme_weather",
+    "fire",
+    "flood",
+    "earthquake",
+    "drought",
+    "food_security",
+    "water_security",
+    "energy_security",
+    "pollution",
+    "biodiversity",
+    "infrastructure",
+    "cybersecurity",
+    "misinformation",
+    "deepfakes",
+    "identity_fraud",
+    "war",
+    "nuclear_risk",
+    "biological_risk",
+    "chemical_risk",
+    "migration",
+    "economic_shock",
+    "financial_crisis",
+    "inequality",
+    "governance",
+    "social_cohesion",
+    "loneliness",
+    "child_safety",
+    "future_unknowns",
+    "space_risk"
   ],
   "currentImplementation": [
     "public UI",
@@ -49,7 +98,12 @@
     "country-aware social protection registry",
     "device language and locale detection",
     "timezone fallback when country is absent",
-    "official-source routing with explicit unknown-source state"
+    "official-source routing with explicit unknown-source state",
+    "risk taxonomy",
+    "cascade-risk modeling",
+    "human-agency guardrails",
+    "evidence-state separation",
+    "prevention/preparedness/response/recovery learning loop"
   ],
   "futureConnectors": [
     "government APIs",
@@ -60,7 +114,16 @@
     "payment/disbursement providers",
     "community mutual-aid capacity",
     "crisis maps",
-    "device and notification bridges"
+    "device and notification bridges",
+    "public health intelligence",
+    "weather and hazard feeds",
+    "critical-infrastructure status",
+    "verified crisis maps",
+    "scientific early-warning datasets",
+    "cyber threat intelligence",
+    "misinformation/identity-fraud signals",
+    "community resilience capacity",
+    "cross-system incident exchange"
   ],
   "safety": "Emergency routing must never claim live availability unless a live source is verified.",
   "automationPolicy": {
@@ -102,5 +165,174 @@
       "crisis_assistance"
     ],
     "fallback": "Use country/language detection for every country even when a verified official portal has not yet been configured; never fabricate a government URL."
+  },
+  "riskModel": {
+    "rule": "Treat threats as interacting systems, not isolated categories.",
+    "classes": {
+      "human_made": [
+        "AI misuse",
+        "AI malfunction",
+        "AI dependency",
+        "automation bias",
+        "cyberattack",
+        "misinformation",
+        "fraud",
+        "war",
+        "nuclear",
+        "biological",
+        "chemical",
+        "economic",
+        "governance",
+        "institutional failure",
+        "addiction"
+      ],
+      "health": [
+        "pandemic",
+        "epidemic",
+        "antimicrobial resistance",
+        "chronic disease",
+        "mental health",
+        "health-system failure",
+        "medical misinformation"
+      ],
+      "environmental": [
+        "climate",
+        "heat",
+        "fire",
+        "flood",
+        "storm",
+        "earthquake",
+        "drought",
+        "water",
+        "food",
+        "pollution",
+        "biodiversity",
+        "infrastructure"
+      ],
+      "technological": [
+        "AI",
+        "agentic systems",
+        "cybersecurity",
+        "critical infrastructure",
+        "identity systems",
+        "communications",
+        "future unknown technology"
+      ],
+      "societal": [
+        "polarization",
+        "loss of trust",
+        "inequality",
+        "mass displacement",
+        "loneliness",
+        "social cohesion"
+      ],
+      "economic": [
+        "financial crisis",
+        "supply-chain disruption",
+        "unemployment",
+        "resource scarcity"
+      ],
+      "unknown": [
+        "emerging risks not yet named or measurable"
+      ]
+    },
+    "cascadeExamples": [
+      "AI -> manipulation -> polarization -> distrust -> poor emergency response -> health/economic damage",
+      "AI -> automation -> over-reliance -> skill loss -> human/system failure",
+      "climate -> disaster -> displacement -> scarcity -> conflict -> political instability",
+      "pandemic -> misinformation -> delayed action -> health-system overload -> economic disruption",
+      "cyberattack -> infrastructure outage -> communication failure -> emergency-response degradation"
+    ],
+    "requiredQuestions": [
+      "What is happening?",
+      "What is verified, what is source-reported, what is interpretation, what is forecast, what is hypothesis, and what is unknown?",
+      "What changed and when?",
+      "What are the earliest credible signals?",
+      "Who is exposed and who is most vulnerable?",
+      "What can prevent escalation?",
+      "What preparations are reversible and useful now?",
+      "Who has legitimate authority?",
+      "What must remain human?",
+      "Could IMA itself increase the risk or dependency?",
+      "What evidence would show that the intervention helped?",
+      "What would change the conclusion?"
+    ]
+  },
+  "operatingLoop": [
+    "DISCOVER",
+    "VERIFY",
+    "MODEL",
+    "PREVENT",
+    "PREPARE",
+    "MONITOR",
+    "DETECT",
+    "CONTAIN",
+    "RESPOND",
+    "RECOVER",
+    "REBUILD",
+    "LEARN",
+    "REGRESSION_TEST",
+    "REVERIFY"
+  ],
+  "earlyWarning": {
+    "signals": [
+      "rapid change in verified risk indicators",
+      "contradictory official reports",
+      "unusual health clusters",
+      "critical-infrastructure degradation",
+      "sudden misinformation/identity-fraud waves",
+      "sharp dependency or engagement escalation",
+      "loss of human review in high-stakes systems",
+      "resource scarcity",
+      "institutional coordination failure"
+    ],
+    "rule": "Signals are not proof of catastrophe. IMA must verify before escalating claims.",
+    "severity": "Use consequence, likelihood, uncertainty, reversibility, exposure, vulnerability, time-to-impact and available mitigation rather than a single score."
+  },
+  "humanAgencyGuardrails": {
+    "dependency": "Measure whether IMA use increases or decreases user capability, understanding, social connection and independent decision-making.",
+    "anti_addiction": [
+      "no dark patterns",
+      "no artificial urgency",
+      "no emotional manipulation to increase retention",
+      "no framing continued use as proof of loyalty",
+      "surface breaks and human alternatives when dependency signals are credible",
+      "allow easy export, handoff and exit"
+    ],
+    "automationBias": [
+      "show uncertainty when material",
+      "encourage source checking in consequential decisions",
+      "preserve human review where required",
+      "never convert IMA confidence into authority"
+    ],
+    "balance": "Balance safety, freedom, privacy, equity, resilience, innovation, economic sustainability and ecological limits; do not optimize one at the expense of the whole system.",
+    "ima_self_protection": [
+      "monitor hallucination/error drift",
+      "monitor prompt injection/manipulation",
+      "monitor data poisoning and provenance loss",
+      "monitor unsafe autonomy",
+      "monitor concentration/capture risks",
+      "maintain rollback/recovery paths",
+      "preserve human override and shutdown capability"
+    ],
+    "self_interest": "IMA's continued operation is never an end in itself. If another system, person or institution can serve the human need better and safely, IMA should support the handoff."
+  },
+  "successMeasures": {
+    "prevention": "hazards prevented or exposure reduced",
+    "preparedness": "readiness, redundancy, accessible plans and tested response paths",
+    "response": "time to verified detection, containment, coordination and useful help",
+    "recovery": "restored health, livelihood, infrastructure, trust and agency",
+    "learning": "verified lessons converted into tested improvements",
+    "agency": "human understanding, capability, independence and successful handoff",
+    "fairness": "distribution of protection and recovery support across vulnerable groups",
+    "system_health": "IMA reliability, privacy, security, sustainability and resistance to capture"
+  },
+  "boundaries": {
+    "emergency": "Never claim live availability, diagnosis, safety or rescue capability unless verified.",
+    "medical": "Support information and navigation; do not replace qualified clinical judgment.",
+    "legal": "Support understanding and preparation; do not fabricate legal authority.",
+    "financial": "No spending, trading, transfers or commitments without required authorization.",
+    "public_safety": "Do not impersonate authorities or responders.",
+    "external_action": "Authorization, identity, scope, audit trail and reversibility must be checked before consequential action."
   }
 }
