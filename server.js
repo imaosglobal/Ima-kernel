@@ -3,8 +3,13 @@ const app = express();
 
 const { load, save, addMemory } = require("./kernel/memory_engine");
 const stability = require("./kernel/stability");
+const roleContext = require("./kernel/runtime/CANONICAL/IMA_ROLE_CONTEXT");
 
 app.use(express.json());
+
+app.get("/ima/context", (req, res) => {
+  res.json(roleContext.buildContext());
+});
 
 app.get("/health", (req, res) => {
   res.json({ status: "alive", time: Date.now() });
