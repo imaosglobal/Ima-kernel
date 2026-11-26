@@ -1,10 +1,10 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-26T17:41:55+00:00",
+  "generated_at": "2026-11-26T22:39:58+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
-    "git_commits": 2,
+    "git_commits": 1,
     "development_journal": 250,
     "daily_summaries": 5
   },
@@ -2019,39 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "commit": "e918f9f571474cbbde4916a9daa76fb39cbdccc3",
-      "timestamp": "2026-11-26T17:39:49Z",
+      "commit": "792c09fea8cb294a5a6ee86c3c2914f0fad620da",
+      "timestamp": "2026-11-26T17:46:10Z",
       "event": "commit",
       "summary": "chore: record unified IMA loop cycle [skip ci]",
       "source": "git"
     },
     {
-      "timestamp": "2026-11-26T17:41:54+00:00",
+      "timestamp": "2026-11-26T22:39:57+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-26T17:41:55+00:00",
+      "timestamp": "2026-11-26T22:39:58+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-26T17:41:55+00:00",
+      "timestamp": "2026-11-26T22:39:58+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "24de41d1ef4b8b80c4e80cfa98b78687dad87edc",
-      "timestamp": "2026-11-26T19:35:21+02:00",
-      "event": "commit",
-      "summary": "Fix IMA ChatGPT MCP manifest path",
-      "source": "git"
     }
   ]
 }
