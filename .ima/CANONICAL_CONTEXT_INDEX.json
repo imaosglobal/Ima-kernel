@@ -1,32 +1,402 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "rule": "One IMA system, one canonical authority per domain, many verified interfaces.",
-  "organization": ["current_need","time_horizon","life_stage_or_generation","geography","language","device_capability","evidence_state","accessibility","privacy","security","human_agency","maintainability"],
+  "organization": [
+    "current_need",
+    "time_horizon",
+    "life_stage_or_generation",
+    "geography",
+    "language",
+    "device_capability",
+    "evidence_state",
+    "accessibility",
+    "privacy",
+    "security",
+    "human_agency",
+    "maintainability"
+  ],
   "domains": [
-    {"id":"identity","path":"IMA_IDENTITY.md","summary":"IMA identity, mission and human-centered principles.","keywords":["ima","אמא","identity","who"]},
-    {"id":"conversation","path":"conversation_layer.py","summary":"Canonical conversation/memory compatibility boundary for user interactions.","keywords":["chat","conversation","שיחה","צ'אט"]},
-    {"id":"memory","path":"conversation_layer.py","summary":"Canonical per-user interaction memory with consent gate; no parallel memory authority.","keywords":["memory","remember","history","זיכרון","זכור","היסטוריה"]},
-    {"id":"knowledge-research","path":"learning/knowledge_graph_retrieval.py","summary":"Knowledge retrieval and evidence-oriented answer construction.","keywords":["knowledge","research","evidence","ידע","מחקר","מקור"]},
-    {"id":"learning","path":"learning/learning_loop.py","summary":"Learning and candidate-promotion path.","keywords":["learning","feedback","learn","למידה","משוב"]},
-    {"id":"resilience","path":"contracts/IMA_RESILIENCE_LAYER.json","summary":"Operational resilience and official-service routing.","keywords":["crisis","emergency","disaster","income","food","housing","חירום","אסון"]},
-    {"id":"social-protection","path":"ima-ui/src/services/socialProtection.js","summary":"Country-aware social insurance, benefits and official-source routing.","keywords":["insurance","benefit","pension","disability","unemployment","ביטוח","קצבה","פנסיה","נכות","אבטלה"]},
-    {"id":"health-care","path":"contracts/IMA_RESILIENCE_LAYER.json","summary":"Health, care and crisis-support routing within the resilience domain.","keywords":["health","care","medical","בריאות","טיפול","רפואה"]},
-    {"id":"education","path":"README.md","summary":"Education and lifelong learning as a canonical product family reconciled through existing learning capabilities.","keywords":["education","learning","school","חינוך","לימודים"]},
-    {"id":"work-economy","path":"README.md","summary":"Work, income, opportunity and sustainability reconciled through existing runtime and resilience/commerce work.","keywords":["work","income","business","employment","עבודה","הכנסה","עסק"]},
-    {"id":"accessibility-inclusion","path":"README.md","summary":"Accessibility and inclusion across languages, ages, cultures and interfaces.","keywords":["accessibility","inclusive","disability","נגישות","מוגבלות"]},
-    {"id":"family-intergenerational","path":"README.md","summary":"Child-first and intergenerational continuity and preservation.","keywords":["child","family","generation","children","ילד","משפחה","דור"]},
-    {"id":"culture-language-history","path":"README.md","summary":"Human culture, language and historical preservation.","keywords":["culture","language","history","תרבות","שפה","היסטוריה"]},
-    {"id":"creativity-media","path":"README.md","summary":"Creation, music, voice and digital media.","keywords":["music","song","creative","video","מוזיקה","שיר","יצירה","וידאו"]},
-    {"id":"community-global-cooperation","path":"README.md","summary":"Community, global cooperation and humanitarian intelligence.","keywords":["community","cooperation","humanitarian","קהילה","שיתוף","הומניטרי"]},
-    {"id":"justice-civic-services","path":"contracts/IMA_RESILIENCE_LAYER.json","summary":"Legal, documents, transport, utilities and civic-service routing already represented in resilience.","keywords":["legal","rights","documents","justice","חוק","זכויות","מסמכים","צדק"]},
-    {"id":"environment-disaster-infrastructure","path":"contracts/IMA_RESILIENCE_LAYER.json","summary":"Disaster preparedness, utilities, transport and infrastructure resilience.","keywords":["environment","disaster","infrastructure","אסון","תשתיות","סביבה"]},
-    {"id":"live-001","path":"tools/termux-ima-bridge/README.md","summary":"Canonical LIVE-001 device/browser interaction surface.","keywords":["browser","device","chrome","termux","live","מסך","דפדפן","מכשיר"]},
-    {"id":"intelligence-gateway","path":".ima/intelligence/universal_intelligence_gateway.py","summary":"Provider-neutral boundary for authorized intelligences.","keywords":["chatgpt","openai","claude","anthropic","gemini","grok","provider","בינה"]},
-    {"id":"security-privacy-agency","path":"identity_context.py","summary":"Truth, privacy, consent and human agency laws.","keywords":["privacy","consent","agency","security","פרטיות","הסכמה","שליטה","אבטחה"]},
-    {"id":"governance-provenance","path":".ima/policies/CONTINUOUS_FUTURE_POLICY.json","summary":"Continuous future, provenance, verification and safe evolution.","keywords":["governance","provenance","verify","policy","ממשל","מקור","אימות"]},
-    {"id":"creator-preservation","path":"README.md","summary":"Creator digital presence and intergenerational preservation.","keywords":["ori","creator","avatar","preservation","אורי","שימור"]},
-    {"id":"commerce-sustainability","path":"README.md","summary":"Funding, commerce and sustainability must remain evidence-based and payout-verified.","keywords":["funding","commerce","revenue","income","מימון","מסחר","הכנסה"]},
-    {"id":"future-temporal-stewardship","path":"docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md","summary":"Backward-present-forward continuous betterment loop.","keywords":["future","temporal","improve","better","עתיד","שיפור","זמן"]}
+    {
+      "id": "identity",
+      "path": "IMA_IDENTITY.md",
+      "summary": "IMA identity, mission and human-centered principles.",
+      "keywords": [
+        "ima",
+        "אמא",
+        "identity",
+        "who"
+      ]
+    },
+    {
+      "id": "conversation",
+      "path": "conversation_layer.py",
+      "summary": "Canonical conversation/memory compatibility boundary for user interactions.",
+      "keywords": [
+        "chat",
+        "conversation",
+        "שיחה",
+        "צ'אט"
+      ]
+    },
+    {
+      "id": "memory",
+      "path": "conversation_layer.py",
+      "summary": "Canonical per-user interaction memory with consent gate; no parallel memory authority.",
+      "keywords": [
+        "memory",
+        "remember",
+        "history",
+        "זיכרון",
+        "זכור",
+        "היסטוריה"
+      ]
+    },
+    {
+      "id": "knowledge-research",
+      "path": "learning/knowledge_graph_retrieval.py",
+      "summary": "Knowledge retrieval and evidence-oriented answer construction.",
+      "keywords": [
+        "knowledge",
+        "research",
+        "evidence",
+        "ידע",
+        "מחקר",
+        "מקור"
+      ]
+    },
+    {
+      "id": "learning",
+      "path": "learning/learning_loop.py",
+      "summary": "Learning and candidate-promotion path.",
+      "keywords": [
+        "learning",
+        "feedback",
+        "learn",
+        "למידה",
+        "משוב"
+      ]
+    },
+    {
+      "id": "resilience",
+      "path": "contracts/IMA_RESILIENCE_LAYER.json",
+      "summary": "Operational resilience and official-service routing.",
+      "keywords": [
+        "crisis",
+        "emergency",
+        "disaster",
+        "income",
+        "food",
+        "housing",
+        "חירום",
+        "אסון"
+      ]
+    },
+    {
+      "id": "social-protection",
+      "path": "ima-ui/src/services/socialProtection.js",
+      "summary": "Country-aware social insurance, benefits and official-source routing.",
+      "keywords": [
+        "insurance",
+        "benefit",
+        "pension",
+        "disability",
+        "unemployment",
+        "ביטוח",
+        "קצבה",
+        "פנסיה",
+        "נכות",
+        "אבטלה"
+      ]
+    },
+    {
+      "id": "health-care",
+      "path": "contracts/IMA_RESILIENCE_LAYER.json",
+      "summary": "Health, care and crisis-support routing within the resilience domain.",
+      "keywords": [
+        "health",
+        "care",
+        "medical",
+        "בריאות",
+        "טיפול",
+        "רפואה"
+      ]
+    },
+    {
+      "id": "education",
+      "path": "README.md",
+      "summary": "Education and lifelong learning as a canonical product family reconciled through existing learning capabilities.",
+      "keywords": [
+        "education",
+        "learning",
+        "school",
+        "חינוך",
+        "לימודים"
+      ]
+    },
+    {
+      "id": "work-economy",
+      "path": "README.md",
+      "summary": "Work, income, opportunity and sustainability reconciled through existing runtime and resilience/commerce work.",
+      "keywords": [
+        "work",
+        "income",
+        "business",
+        "employment",
+        "עבודה",
+        "הכנסה",
+        "עסק"
+      ]
+    },
+    {
+      "id": "accessibility-inclusion",
+      "path": "README.md",
+      "summary": "Accessibility and inclusion across languages, ages, cultures and interfaces.",
+      "keywords": [
+        "accessibility",
+        "inclusive",
+        "disability",
+        "נגישות",
+        "מוגבלות"
+      ]
+    },
+    {
+      "id": "family-intergenerational",
+      "path": "README.md",
+      "summary": "Child-first and intergenerational continuity and preservation.",
+      "keywords": [
+        "child",
+        "family",
+        "generation",
+        "children",
+        "ילד",
+        "משפחה",
+        "דור"
+      ]
+    },
+    {
+      "id": "culture-language-history",
+      "path": "README.md",
+      "summary": "Human culture, language and historical preservation.",
+      "keywords": [
+        "culture",
+        "language",
+        "history",
+        "תרבות",
+        "שפה",
+        "היסטוריה"
+      ]
+    },
+    {
+      "id": "creativity-media",
+      "path": "README.md",
+      "summary": "Creation, music, voice and digital media.",
+      "keywords": [
+        "music",
+        "song",
+        "creative",
+        "video",
+        "מוזיקה",
+        "שיר",
+        "יצירה",
+        "וידאו"
+      ]
+    },
+    {
+      "id": "community-global-cooperation",
+      "path": "README.md",
+      "summary": "Community, global cooperation and humanitarian intelligence.",
+      "keywords": [
+        "community",
+        "cooperation",
+        "humanitarian",
+        "קהילה",
+        "שיתוף",
+        "הומניטרי"
+      ]
+    },
+    {
+      "id": "justice-civic-services",
+      "path": "contracts/IMA_RESILIENCE_LAYER.json",
+      "summary": "Legal, documents, transport, utilities and civic-service routing already represented in resilience.",
+      "keywords": [
+        "legal",
+        "rights",
+        "documents",
+        "justice",
+        "חוק",
+        "זכויות",
+        "מסמכים",
+        "צדק"
+      ]
+    },
+    {
+      "id": "environment-disaster-infrastructure",
+      "path": "contracts/IMA_RESILIENCE_LAYER.json",
+      "summary": "Disaster preparedness, utilities, transport and infrastructure resilience.",
+      "keywords": [
+        "environment",
+        "disaster",
+        "infrastructure",
+        "אסון",
+        "תשתיות",
+        "סביבה"
+      ]
+    },
+    {
+      "id": "live-001",
+      "path": "tools/termux-ima-bridge/README.md",
+      "summary": "Canonical LIVE-001 device/browser interaction surface.",
+      "keywords": [
+        "browser",
+        "device",
+        "chrome",
+        "termux",
+        "live",
+        "מסך",
+        "דפדפן",
+        "מכשיר"
+      ]
+    },
+    {
+      "id": "intelligence-gateway",
+      "path": ".ima/intelligence/universal_intelligence_gateway.py",
+      "summary": "Provider-neutral boundary for authorized intelligences.",
+      "keywords": [
+        "chatgpt",
+        "openai",
+        "claude",
+        "anthropic",
+        "gemini",
+        "grok",
+        "provider",
+        "בינה"
+      ]
+    },
+    {
+      "id": "security-privacy-agency",
+      "path": "identity_context.py",
+      "summary": "Truth, privacy, consent and human agency laws.",
+      "keywords": [
+        "privacy",
+        "consent",
+        "agency",
+        "security",
+        "פרטיות",
+        "הסכמה",
+        "שליטה",
+        "אבטחה"
+      ]
+    },
+    {
+      "id": "governance-provenance",
+      "path": ".ima/policies/CONTINUOUS_FUTURE_POLICY.json",
+      "summary": "Continuous future, provenance, verification and safe evolution.",
+      "keywords": [
+        "governance",
+        "provenance",
+        "verify",
+        "policy",
+        "ממשל",
+        "מקור",
+        "אימות"
+      ]
+    },
+    {
+      "id": "creator-preservation",
+      "path": "README.md",
+      "summary": "Creator digital presence and intergenerational preservation.",
+      "keywords": [
+        "ori",
+        "creator",
+        "avatar",
+        "preservation",
+        "אורי",
+        "שימור"
+      ]
+    },
+    {
+      "id": "commerce-sustainability",
+      "path": "README.md",
+      "summary": "Funding, commerce and sustainability must remain evidence-based and payout-verified.",
+      "keywords": [
+        "funding",
+        "commerce",
+        "revenue",
+        "income",
+        "מימון",
+        "מסחר",
+        "הכנסה"
+      ]
+    },
+    {
+      "id": "future-temporal-stewardship",
+      "path": "docs/IMA_TEMPORAL_STEWARDSHIP_AND_CONTINUOUS_BETTERMENT_CHARTER.md",
+      "summary": "Backward-present-forward continuous betterment loop.",
+      "keywords": [
+        "future",
+        "temporal",
+        "improve",
+        "better",
+        "עתיד",
+        "שיפור",
+        "זמן"
+      ]
+    },
+    {
+      "id": "roles-professions-human-ai",
+      "path": "docs/IMA_UNIVERSAL_ROLE_AND_HUMAN_AI_FUNCTION_MAP.md",
+      "summary": "Universal role, profession, responsibility and human-AI function map; identifies what remains human and what IMA may safely support.",
+      "keywords": [
+        "role",
+        "profession",
+        "responsibility",
+        "authority",
+        "job",
+        "career",
+        "occupation",
+        "human-ai",
+        "תפקיד",
+        "מקצוע",
+        "אחריות",
+        "סמכות",
+        "עבודה",
+        "קריירה"
+      ]
+    },
+    {
+      "id": "longevity-aging",
+      "path": "docs/IMA_LONGEVITY_AGING_RESEARCH_AND_COLLABORATION_MAP.md",
+      "summary": "Living longevity and aging research map with evidence states, uncertainty, collaboration boundaries and anti-ageism safeguards.",
+      "keywords": [
+        "longevity",
+        "aging",
+        "ageism",
+        "rejuvenation",
+        "senescence",
+        "geroscience",
+        "אריכות",
+        "הזדקנות",
+        "גילנות",
+        "התחדשות",
+        "סננסנס"
+      ]
+    },
+    {
+      "id": "verification-self-repair",
+      "path": "docs/IMA_PERMANENT_VERIFICATION_AND_SELF_REPAIR_CONTRACT.md",
+      "summary": "Permanent verification and self-repair contract for knowledge, capabilities, claims and integrations.",
+      "keywords": [
+        "verify",
+        "verification",
+        "evidence",
+        "uncertainty",
+        "self-repair",
+        "אימות",
+        "ראיות",
+        "אי ודאות",
+        "תיקון"
+      ]
+    }
   ],
   "generation_rule": "When a need changes or a new generation/device/provider/domain appears, extend the canonical index and relevant contract rather than creating a parallel system.",
   "improvement_contract": ".ima/CONTINUOUS_IMPROVEMENT_MAP.json"
