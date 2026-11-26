@@ -1,6 +1,6 @@
 {
   "schema": "IMA-WORLD-PULSE-1.0",
-  "timestamp": "2026-11-26T13:23:23Z",
+  "timestamp": "2026-11-26T17:22:36Z",
   "status": "OBSERVED_WITH_PUBLIC_SOURCES",
   "coverage": "BOUNDED_NOT_EXHAUSTIVE",
   "items": [],
@@ -23,7 +23,7 @@
     {
       "source": "GDELT",
       "kind": "HUMANITARIAN_DISPLACEMENT",
-      "error": "HTTPError"
+      "error": "JSONDecodeError"
     },
     {
       "source": "GDELT",
@@ -38,7 +38,7 @@
     {
       "source": "GDELT",
       "kind": "POLITICAL_CHANGE",
-      "error": "HTTPError"
+      "error": "JSONDecodeError"
     },
     {
       "source": "GDELT",
