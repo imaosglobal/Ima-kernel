@@ -36,7 +36,7 @@ def build_context(message="", language=""):
         if not terms or any(t in msg for t in terms):
             selected.append(item)
     # These are mandatory cross-cutting sources for every live IMA conversation.
-    mandatory_ids = {"roles-professions-human-ai", "verification-self-repair"}
+    mandatory_ids = {"roles-professions-human-ai", "verification-self-repair", "human-survival-resilience"}
     for item in domains:
         if item.get("id") in mandatory_ids and item not in selected:
             selected.append(item)
