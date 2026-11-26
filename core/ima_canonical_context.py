@@ -35,10 +35,15 @@ def build_context(message="", language=""):
         terms = [str(x).casefold() for x in item.get("keywords", [])]
         if not terms or any(t in msg for t in terms):
             selected.append(item)
+    # These are mandatory cross-cutting sources for every live IMA conversation.
+    mandatory_ids = {"roles-professions-human-ai", "verification-self-repair"}
+    for item in domains:
+        if item.get("id") in mandatory_ids and item not in selected:
+            selected.append(item)
     if not selected:
         selected = domains[:6]
     rows=[]
-    for item in selected[:10]:
+    for item in selected[:12]:
         summary = str(item.get("summary","")).strip()
         path = str(item.get("path","")).strip()
         excerpt = _read(path, 900) if path else ""
