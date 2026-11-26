@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMA LIVE-001</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,-apple-system,sans-serif}
+body{margin:0;background:transparent}
+.shell{border:1px solid rgba(128,128,128,.35);border-radius:16px;overflow:hidden;background:Canvas;color:CanvasText}
+.bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid rgba(128,128,128,.25)}
+.dot{width:9px;height:9px;border-radius:50%;background:#888}.dot.ok{background:#2e9d63}.dot.bad{background:#c94b4b}
+.title{font-weight:650;flex:1}.status{font-size:12px;opacity:.72}
+button,input{font:inherit}button{border:1px solid rgba(128,128,128,.35);background:transparent;border-radius:9px;padding:6px 9px;cursor:pointer}
+.url{display:flex;gap:7px;padding:9px;border-bottom:1px solid rgba(128,128,128,.2)}
+.url input{flex:1;min-width:0;border:1px solid rgba(128,128,128,.35);border-radius:9px;padding:7px 9px;background:transparent;color:inherit}
+.screen{min-height:360px;display:grid;place-items:center;background:#111}
+.screen img{display:block;width:100%;height:auto;max-height:65vh;object-fit:contain}
+.empty{padding:48px 18px;text-align:center;opacity:.7}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <span id="dot" class="dot"></span><span class="title">IMA — LIVE-001</span>
+    <span id="status" class="status">ממתין לחיבור מאומת</span>
+    <button id="refresh">רענן</button>
+  </div>
+  <form id="nav" class="url">
+    <input id="url" type="url" placeholder="כתובת אתר" aria-label="כתובת אתר">
+    <button type="submit">פתח</button>
+  </form>
+  <div id="screen" class="screen"><div class="empty">החלון הקנוני של IMA יוצג כאן לאחר שהחיבור המאומת יחזיר מצב חי.</div></div>
+</div>
+<script>
+const openai=window.openai;
+const $=id=>document.getElementById(id);
+function show(data){
+  const s=data?.status||data?.connection||data?.state;
+  const ok=data?.connected===true||data?.available===true||s==="connected";
+  $("dot").className="dot "+(ok?"ok":"bad");
+  $("status").textContent=ok?"מחובר":"לא מחובר / לא מאומת";
+  const shot=data?.screenshot||data?.image||data?.screen;
+  if(shot){
+    const src=typeof shot==="string"?shot:shot.data||shot.url;
+    if(src){$("screen").innerHTML='<img alt="מצב דפדפן מאומת" src="'+src.replace(/"/g,"&quot;")+'">';}
+  }
+}
+async function call(args){
+  if(!openai?.callTool){$("status").textContent="סביבת ChatGPT אינה מספקת את כלי ה־MCP";return;}
+  try{const r=await openai.callTool("ima_live_browser",args||{});show(r?.structuredContent||r); }catch(e){$("status").textContent="שגיאה בחיבור";$("dot").className="dot bad";}
+}
+$("refresh").onclick=()=>call({action:"refresh"});
+$("nav").onsubmit=e=>{e.preventDefault();const u=$("url").value.trim();if(u)call({action:"navigate",url:u});};
+if(openai?.toolOutput)show(openai.toolOutput);
+else call({action:"status"});
+</script>
+</body>
+</html>
