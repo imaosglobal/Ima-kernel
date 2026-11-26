@@ -22,12 +22,14 @@ const continuousLearning = require("./IMA_CONTINUOUS_LEARNING.cjs");
 const innovationLoop = require("./IMA_INNOVATION_LOOP.js");
 const pathIntelligence = require("./IMA_PATH_INTELLIGENCE");
 const prPathRegistry = require("../../../core/PR_PATH_INTEGRATION_REGISTRY.json");
+const roleContext = require("./IMA_ROLE_CONTEXT");
 
 const runtime = {
     boot() {
         const health = heal.check();
 
         state.set("status", health.healthy ? "ONLINE" : "DEGRADED");
+        state.set("role_context", roleContext.status());
         state.set("runtime", "CANONICAL");
         state.set("last_boot", Date.now());
         state.set("health", health);
@@ -49,6 +51,8 @@ const runtime = {
 
         const betterment = continuousBetterment.selfAssessment({ evidence: "UNKNOWN", risk: "UNKNOWN", reversibility: "UNKNOWN", human_impact: "UNKNOWN" });
         state.set("continuous_betterment", betterment);
+
+        events.emit("ROLE_CONTEXT_READY", roleContext.status());
 
         events.emit("BOOT", {
             status: state.get("status"),
