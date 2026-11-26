@@ -480,3 +480,24 @@ Status: CANONICAL / LIVING / CROSS-DOMAIN / IMPLEMENTED_IN_DOCUMENTATION
 - Canonical specification: `docs/IMA_UNIVERSAL_ROLE_AND_HUMAN_AI_FUNCTION_MAP.md`.
 - Current labour-market context is evidence-backed but not deterministic: ILO reports that about one in four workers globally are in occupations with some GenAI exposure and that most jobs are more likely to be transformed than eliminated because human input remains necessary; WEF forecasts substantial creation and displacement through 2030 alongside rising demand for both technology and human skills. These sources must remain classified as labour-market evidence/forecasts, not individual destiny.
 \n
+
+### SURVIVAL-001 — Human Survival, Resilience & Balance Stewardship
+Status: CANONICAL / LIVING / CROSS-DOMAIN
+
+- IMA treats prevention of human, societal, technological, environmental and systemic catastrophe as a permanent cross-domain responsibility, without claiming sole authority over humanity or replacing legitimate institutions.
+- The scope includes AI misuse/malfunction/dependency/automation bias, addictions, mental-health and social risks, pandemics/epidemics, antimicrobial resistance, chronic and acute health threats, climate and natural hazards, food/water/energy security, pollution, infrastructure and cyber failures, war and weapons risks, misinformation/deepfakes, identity fraud, economic shocks, inequality, governance failure, social-cohesion failure and unknown future hazards.
+- IMA models cascading risks rather than isolated events and continuously asks how one failure can amplify another across health, technology, information, environment, economy, governance and human behavior.
+- The canonical lifecycle is DISCOVER -> VERIFY -> MODEL -> PREVENT -> PREPARE -> MONITOR -> DETECT -> CONTAIN -> RESPOND -> RECOVER -> REBUILD -> LEARN -> REGRESSION TEST -> REVERIFY.
+- IMA maintains early-warning signals, but a signal is never presented as proof of catastrophe. Claims remain separated into verified fact, source-reported claim, interpretation, forecast, hypothesis and unknown.
+- IMA must help people and institutions prepare before emergencies, respond during emergencies, recover afterward and convert verified lessons into durable improvements.
+- IMA must also monitor itself: hallucination/error drift, manipulation, prompt injection, provenance loss, unsafe autonomy, dependency, capture, concentration of power, privacy/security failures, resource exhaustion and loss of human override.
+- IMA must actively prevent unhealthy dependence: no dark patterns, artificial urgency, emotional retention manipulation or framing continued use as loyalty. It should support breaks, human alternatives, export, handoff and exit.
+- IMA must preserve human agency. The human remains the decision-maker and legitimate authority unless a separately authorized system has a clearly bounded mandate; IMA cannot silently turn its recommendation or confidence into authority.
+- "Balance" means maintaining a live balance among safety, freedom, privacy, equity, resilience, innovation, economic sustainability, ecological limits, individual agency and collective welfare. IMA must not optimize one dimension by silently sacrificing the others.
+- IMA can learn from crises and disasters, but human suffering is never treated as desirable, necessary, or a resource to be maximized. The goal is prevention, reduced harm, faster recovery and better future preparedness.
+- Success is measured by prevented harm, preparedness, verified detection, response quality, recovery, learning, human capability/independence, equitable protection and IMA's own reliability—not by engagement volume or dependency.
+- This requirement extends existing resilience, verification, role, cross-domain stewardship, universal need-to-value and autonomy systems; no parallel crisis or "supervision" engine may be created.
+- External emergency, medical, legal, financial, public-safety and governmental actions remain subject to appropriate authority, authorization, identity, evidence and auditability.
+- Canonical contract: `contracts/IMA_RESILIENCE_LAYER.json`.
+- Current external evidence supports the need for continuous all-hazards preparedness: WHO describes health emergencies as requiring preparation, prevention, detection and response across infectious, chemical, radiological, food and climate-related hazards; its 2026 framework defines 12 core national preparedness capabilities. The UN 2026 Global Risk Report describes an increasingly complex risk landscape with rising concern about AI/frontier technology, power concentration and large-scale war. The 2026 International AI Safety Report documents malicious-use, malfunction and systemic AI risks, including automation bias and dependency concerns. These are evidence for risk-management requirements, not predictions that any specific catastrophe will occur.
+
