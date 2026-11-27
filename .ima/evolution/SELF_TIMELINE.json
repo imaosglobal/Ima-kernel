@@ -1,6 +1,6 @@
 {
   "schema": "IMA-SELF-TIMELINE-1.0",
-  "generated_at": "2026-11-27T14:28:50+00:00",
+  "generated_at": "2026-11-27T23:02:58+00:00",
   "principle": "remember without becoming trapped by memory; preserve history while continuously reassessing it",
   "sources": {
     "conversation_history_seed": 8,
@@ -2019,32 +2019,32 @@
       "source": "IMA canonical daily super-task; user-authorized visual restoration; GitHub Actions deployment evidence"
     },
     {
-      "timestamp": "2026-11-27T14:28:48+00:00",
+      "commit": "08aa6a856c374f92154bd2caa3fb9a710e16a78b",
+      "timestamp": "2026-11-27T14:34:06Z",
+      "event": "commit",
+      "summary": "chore: record unified IMA loop cycle [skip ci]",
+      "source": "git"
+    },
+    {
+      "timestamp": "2026-11-27T23:02:57+00:00",
       "event": "TEST",
       "summary": "journal test",
       "status": "VERIFIED",
       "source": "unit-test"
     },
     {
-      "timestamp": "2026-11-27T14:28:50+00:00",
+      "timestamp": "2026-11-27T23:02:58+00:00",
       "event": "REFLECTION",
       "summary": "תשובת IMA בטוחה",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
     },
     {
-      "timestamp": "2026-11-27T14:28:50+00:00",
+      "timestamp": "2026-11-27T23:02:58+00:00",
       "event": "REFLECTION",
       "summary": "A claim without evidence",
       "status": "VERIFIED",
       "source": "ima_runtime.reflection_runtime"
-    },
-    {
-      "commit": "ec49091b7001a8a8799fb72eba60c752dcfae230",
-      "timestamp": "2026-11-27T16:02:02+02:00",
-      "event": "commit",
-      "summary": "Add canonical IMA daily super-task section 30",
-      "source": "git"
     }
   ]
 }
