@@ -28,7 +28,7 @@ def read(rel: str) -> str:
 
 # Canonical package.
 plugin_raw = read("plugins/ima-chatgpt/plugin.json")
-mcp_raw = read("plugins/ima-chatgpt/mcp.json")
+mcp_raw = read("plugins/ima-chatgpt/.mcp.json")
 submission_raw = read("plugins/ima-chatgpt/chatgpt-app-submission.json")
 action_raw = read("services/ima-action-mcp/server/index.mjs")
 widget_raw = read("services/ima-action-mcp/widget.html")
@@ -199,13 +199,22 @@ if os.environ.get("IMA_SKIP_LIVE_SMOKE") != "1":
         "https://ima-universal-action-core.onrender.com/health",
         "https://ima-browserglass.onrender.com/healthz",
     ):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "IMA-LIVE-001-CI/1.0"})
-            with urllib.request.urlopen(req, timeout=20) as response:
-                if response.status != 200:
-                    fail(f"live health check failed: {url} -> HTTP {response.status}")
-        except Exception as exc:
-            fail(f"live health check failed: {url} -> {exc}")
+        last_error = None
+        for attempt, timeout in enumerate((20, 30, 45), start=1):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "IMA-LIVE-001-CI/1.0"})
+                with urllib.request.urlopen(req, timeout=timeout) as response:
+                    if response.status == 200:
+                        last_error = None
+                        break
+                    last_error = f"HTTP {response.status}"
+            except Exception as exc:
+                last_error = str(exc)
+            if attempt < 3:
+                import time
+                time.sleep(2 * attempt)
+        if last_error:
+            fail(f"live health check failed after retries: {url} -> {last_error}")
 
 if failures:
     print("LIVE-001 GATE: FAIL")

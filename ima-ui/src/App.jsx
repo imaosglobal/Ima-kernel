@@ -140,8 +140,8 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
   const [mamaAction,setMamaAction]=useState('idle');
   const speak=(text)=>{if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(text||''));u.lang=lang==='he'?'he-IL':(navigator.language||'en-US');u.onstart=()=>setSpeaking(true);u.onend=()=>setSpeaking(false);u.onerror=()=>setSpeaking(false);window.speechSynthesis.speak(u)};
   const detectAction=(text)=>{const v=String(text||'').toLowerCase();if(/רקד|ריקוד|dance/.test(v))return 'dance';if(/מחא|מחיאות|clap/.test(v))return 'clap';if(/נפנפ|שלום|wave/.test(v))return 'wave';if(/קפצ|קפיצה|jump/.test(v))return 'jump';return 'idle'};
-  useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch{}},[messages]);
-  useEffect(()=>{const sync=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch{}};window.addEventListener('storage',sync);window.addEventListener('ima-chat-updated',sync);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('ima-chat-updated',sync)}},[]);
+  useEffect(()=>{try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(messages))}catch { /* intentionally ignored */ }},[messages]);
+  useEffect(()=>{const sync=()=>{try{const raw=sessionStorage.getItem(CHAT_HISTORY_KEY);if(raw)setMessages(JSON.parse(raw))}catch { /* intentionally ignored */ }};window.addEventListener('storage',sync);window.addEventListener('ima-chat-updated',sync);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('ima-chat-updated',sync)}},[]);
   const startVoice=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){return;}const r=new SR();r.lang=lang==='he'?'he-IL':(navigator.language||'en-US');r.interimResults=false;r.continuous=false;setListening(true);r.onresult=e=>{const text=String(e.results?.[0]?.[0]?.transcript||'').trim();if(text){setMessage(text);send(text)}};r.onerror=()=>setListening(false);r.onend=()=>setListening(false);r.start()};
   const startExperience=(type,prompt)=>{ beginImaExperience(prompt,type); send(prompt); };
   const send=async(text=message)=>{
@@ -149,20 +149,20 @@ export function ChatPanel({lang,user,onClose,chatOnly=false,initialMessage='',wi
     if(!value||busy)return;
     setBusy(true);setMessage('');
     const mission=beginImaMission(value);
-    setMessages(m=>{const next=[...m,{role:'user',text:value}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
-    recordLiveChatEvent('window_chat_message',{phase:'request',status:'recorded',action:'ask_ima',payload:{interface:windowMode?'live-window':'public-home',message_length:value.length}}).catch(()=>{});
+    setMessages(m=>{const next=[...m,{role:'user',text:value}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch { /* intentionally ignored */ };return next});
+    recordLiveChatEvent('window_chat_message',{phase:'request',status:'recorded',action:'ask_ima',payload:{interface:windowMode?'live-window':'public-home',message_length:value.length}}).catch(()=>{ /* intentionally ignored */ });
     trackImaEvent('ima_first_use_attempt',{language:lang});
     try{
       const response=await askIma(value,{language:lang,interface:windowMode?'live-window':'public-home',authenticated:Boolean(user),device_locale:navigator.language||lang,live_session_id:sessionStorage.getItem('ima-live-001-session-v1')||null,conversation:messages.slice(-20)});
-      const action=detectAction(value); setMamaAction(action); if(action!=='idle') recordLiveWindowEvent('window_action_requested',{phase:'act',status:'authorized',action,payload:{source:'user-chat'}}).catch(()=>{}); speak(response);
-      setMessages(m=>{const next=[...m,{role:'ima',text:response,action}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
-      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{});
+      const action=detectAction(value); setMamaAction(action); if(action!=='idle') recordLiveWindowEvent('window_action_requested',{phase:'act',status:'authorized',action,payload:{source:'user-chat'}}).catch(()=>{ /* intentionally ignored */ }); speak(response);
+      setMessages(m=>{const next=[...m,{role:'ima',text:response,action}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch { /* intentionally ignored */ };return next});
+      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'verified',action:'answer_received',result:{response_present:true}}).catch(()=>{ /* intentionally ignored */ });
       trackImaEvent('ima_first_useful_answer_candidate',{language:lang});
       completeImaMission(mission.id,{useful:Boolean(String(response||'').trim()),responseLength:String(response||'').length});
       await archiveChatLearningSignal(value,response,{language:lang});
     }catch{
-      setMamaAction('idle'); setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch{};return next});
-      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'failed',action:'answer_unverified'}).catch(()=>{});
+      setMamaAction('idle'); setMessages(m=>{const next=[...m,{role:'ima',text:lang==='he'?'אמא לא קיבלה כרגע תשובה מאומתת. אני לא אמציא תשובה; נסה שוב או תן עוד הקשר.':'IMA does not have a verified answer right now. I will not invent one; try again or add context.'}];try{sessionStorage.setItem(CHAT_HISTORY_KEY,JSON.stringify(next));window.dispatchEvent(new Event('ima-chat-updated'))}catch { /* intentionally ignored */ };return next});
+      recordLiveChatEvent('window_chat_response',{phase:'verify',status:'failed',action:'answer_unverified'}).catch(()=>{ /* intentionally ignored */ });
       trackImaEvent('ima_public_chat_failed',{language:lang});
     }finally{setBusy(false)}
   };
@@ -183,11 +183,11 @@ function LiveWindow({lang,user,onClose}){
   const [drag,setDrag]=useState(null);
   const he=lang==='he';
   useEffect(()=>{localStorage.setItem('ima-live-window-pos',JSON.stringify(pos))},[pos]);
-  useEffect(()=>{recordLiveWindowEvent('window_opened',{payload:{mode,route:location.pathname}}).catch(()=>{}); return ()=>{recordLiveWindowEvent('window_closed',{payload:{mode}}).catch(()=>{})}},[]);
+  useEffect(()=>{recordLiveWindowEvent('window_opened',{payload:{mode,route:location.pathname}}).catch(()=>{ /* intentionally ignored */ }); return ()=>{recordLiveWindowEvent('window_closed',{payload:{mode}}).catch(()=>{ /* intentionally ignored */ })}},[mode]);
   const beginDrag=e=>{if(mode!=='floating')return;setDrag({sx:e.clientX,sy:e.clientY,px:pos.x,py:pos.y});e.currentTarget.setPointerCapture?.(e.pointerId)};
   const moveDrag=e=>{if(!drag)return;setPos(p=>({...p,x:Math.max(0,drag.px+e.clientX-drag.sx),y:Math.max(0,drag.py+e.clientY-drag.sy)}))};
-  const endDrag=()=>{if(drag){recordLiveWindowEvent('window_moved',{payload:{x:pos.x,y:pos.y}}).catch(()=>{})}setDrag(null)};
-  const setWindowMode=m=>{const previous=mode;setMode(m);if(m==='mini')setPos(p=>({...p,w:220,h:88}));if(m==='floating')setPos(p=>({...p,w:Math.max(360,p.w),h:Math.max(360,p.h)}));recordLiveWindowEvent(m==='mini'?'window_minimized':'window_mode_changed',{payload:{from:previous,to:m}}).catch(()=>{})};
+  const endDrag=()=>{if(drag){recordLiveWindowEvent('window_moved',{payload:{x:pos.x,y:pos.y}}).catch(()=>{ /* intentionally ignored */ })}setDrag(null)};
+  const setWindowMode=m=>{const previous=mode;setMode(m);if(m==='mini')setPos(p=>({...p,w:220,h:88}));if(m==='floating')setPos(p=>({...p,w:Math.max(360,p.w),h:Math.max(360,p.h)}));recordLiveWindowEvent(m==='mini'?'window_minimized':'window_mode_changed',{payload:{from:previous,to:m}}).catch(()=>{ /* intentionally ignored */ })};
   const style=mode==='floating'?{left:pos.x,top:pos.y,width:pos.w,height:pos.h}:mode==='mini'?{right:18,bottom:18,width:220,height:88}:mode==='split'?{left:'2vw',right:'52vw',top:'10vh',height:'80vh'}:{left:0,right:0,top:0,bottom:0};
   return <section className={'ima-live-window mode-'+mode} style={style} aria-label={he?'חלון אמא האינטראקטיבי':'IMA Interactive Window'}>
     <header className="ima-live-window-head" onPointerDown={beginDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
@@ -196,7 +196,7 @@ function LiveWindow({lang,user,onClose}){
         <button onClick={()=>setWindowMode('mini')} aria-label={he?'מזעור':'Minimize'}>−</button>
         <button onClick={()=>setWindowMode(mode==='split'?'floating':'split')} aria-label={he?'מסך מפוצל':'Split'}>◫</button>
         <button onClick={()=>setWindowMode(mode==='fullscreen'?'floating':'fullscreen')} aria-label={he?'מסך מלא':'Fullscreen'}>□</button>
-        <button onClick={()=>{try{window.open(location.pathname+'?live-window=1','IMA-LIVE-001','popup,width=520,height=700');recordLiveWindowEvent('window_detached',{payload:{target:'popup'}}).catch(()=>{})}catch{}}} aria-label={he?'חלון נפרד':'Detach'}>↗</button>
+        <button onClick={()=>{try{window.open(location.pathname+'?live-window=1','IMA-LIVE-001','popup,width=520,height=700');recordLiveWindowEvent('window_detached',{payload:{target:'popup'}}).catch(()=>{ /* intentionally ignored */ })}catch { /* intentionally ignored */ }}} aria-label={he?'חלון נפרד':'Detach'}>↗</button>
         <button onClick={onClose} aria-label={he?'סגירה':'Close'}>×</button>
       </div>
     </header>
@@ -215,7 +215,7 @@ function ImpactTimeline({lang,onClose}){
   const [error,setError]=useState('');
   const he=lang==='he';
   const load=async()=>{try{setBusy(true);const data=await getLiveTimeline(false);setEvents(Array.isArray(data?.events)?data.events:[]);setError('')}catch(e){setError(e?.message||'timeline unavailable')}finally{setBusy(false)}};
-  useEffect(()=>{load();const id=setInterval(load,5000);return()=>clearInterval(id)},[]);
+  useEffect(()=>{const initial=setTimeout(()=>load(),0);const id=setInterval(load,5000);return()=>{clearTimeout(initial);clearInterval(id)}},[]);
   const label=e=>({action_requested:he?'פעולה אושרה ונשלחה':'Action authorized and sent',action_verified:he?'הפעולה אומתה':'Action verified',action_failed:he?'הפעולה נכשלה':'Action failed',device_registered:he?'מכשיר חובר':'Device connected'}[e.event_type]||e.event_type);
   return <section className="store-panel" aria-label={he?'חלון ההשפעה':'Impact Window'} id="impact-window" style={{marginTop:16}}>
     <div className="store-head"><div><span className="eyebrow">LIVE-001</span><h2>{he?'חלון ההשפעה':'Impact Window'}</h2><p>{he?'ציר זמן אישי ומאומת של מה שהחלון האינטראקטיבי עשה, ראה ואימת.':'A personal, auditable timeline of what the interactive window did, observed and verified.'}</p></div><button className="icon-button" onClick={onClose} aria-label={he?'סגירה':'Close'}>×</button></div>
@@ -245,7 +245,7 @@ export default function App(){
   const [chatOnly]=useState(()=>new URLSearchParams(location.search).get('chat')==='1');
   const [liveWindowRoute]=useState(()=>new URLSearchParams(location.search).get('live-window')==='1');
   const t=COPY[lang]||COPY.en;
-  useEffect(()=>{ if(user) setChatOpen(true); },[user]);
+  useEffect(()=>{ if(!user)return; const id=setTimeout(()=>setChatOpen(true),0); return()=>clearTimeout(id); },[user]);
   const campaign=useMemo(()=>getMarketCampaign(location.search),[]);
   
   useEffect(()=>{
@@ -282,7 +282,7 @@ export default function App(){
       else await navigator.clipboard.writeText(url);
       setShareStatus(lang==='he'?'קישור השיתוף מוכן.':'Share link ready.');
       trackImaEvent('ima_share_completed',{language:lang});
-    }catch{}
+    }catch { /* intentionally ignored */ }
   };
   const sendFeedback=async()=>{
     if(!feedback.trim())return;
