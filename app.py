@@ -34,7 +34,7 @@ def _ima_public_cors(response):
         response.headers["Access-Control-Max-Age"] = "600"
     return response
 
-app.config["SECRET_KEY"] = os.environ.get("IMA_FLASK_SECRET") or os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
+app.config["SECRET_KEY"] = os.environ.get("IMA_FLASK_SECRET", "").strip() or os.environ.get("IMA_SESSION_SECRET", "").strip()
 app.register_blueprint(billing_api)
 try:
     from api.auth.google_oauth import google_auth
@@ -56,7 +56,9 @@ NYLAS_WEBHOOK_EVENTS = deque(maxlen=500)
 NYLAS_WEBHOOK_SECRET = os.environ.get("NYLAS_WEBHOOK_SECRET", "").strip()
 NYLAS_WEBHOOK_SETUP_TOKEN = os.environ.get("NYLAS_WEBHOOK_SETUP_TOKEN", "").strip()
 NYLAS_WEBHOOK_URL = os.environ.get("NYLAS_WEBHOOK_URL", "https://ima-915m.onrender.com/ima-api/webhooks/nylas")
-SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET") or secrets.token_hex(32)
+SESSION_SECRET = os.environ.get("IMA_SESSION_SECRET", "").strip()
+if not SESSION_SECRET:
+    raise RuntimeError("IMA_SESSION_SECRET must be configured; refusing to start with a per-process session secret")
 LIVE_BROWSER_PROVIDER = os.environ.get("IMA_LIVE_BROWSER_PROVIDER", "firecrawl").strip().lower()
 FIRECRAWL_API_KEY = os.environ.get("FIRECRAWL_API_KEY", "").strip()
 FIRECRAWL_BASE_URL = os.environ.get("FIRECRAWL_BASE_URL", "https://api.firecrawl.dev/v2").strip().rstrip("/")
