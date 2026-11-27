@@ -28,7 +28,7 @@ def read(rel: str) -> str:
 
 # Canonical package.
 plugin_raw = read("plugins/ima-chatgpt/plugin.json")
-mcp_raw = read("plugins/ima-chatgpt/mcp.json")
+mcp_raw = read("plugins/ima-chatgpt/.mcp.json")
 submission_raw = read("plugins/ima-chatgpt/chatgpt-app-submission.json")
 action_raw = read("services/ima-action-mcp/server/index.mjs")
 widget_raw = read("services/ima-action-mcp/widget.html")
