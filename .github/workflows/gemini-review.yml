@@ -1,0 +1,39 @@
+name: Gemini - IMA Team Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  gemini-review:
+    if: >
+      github.event_name == 'pull_request' ||
+      contains(github.event.comment.body, '@gemini-ima')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout IMA
+        uses: actions/checkout@v4
+
+      - name: Gemini review
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        with:
+          prompt: |
+            Review this IMA repository change as an independent team member.
+            Read IMA_TEAM.md, AGENTS.md, GOVERNANCE.md and IMA_IDENTITY.md when present.
+            Do not modify files.
+            Report:
+            1. What the change is trying to accomplish.
+            2. Evidence that it actually accomplishes it.
+            3. Bugs, regressions, security/privacy risks.
+            4. Whether the change respects IMA's identity and user agency.
+            5. Concrete tests that should pass.
+            Give a clear verdict: APPROVE, REQUEST_CHANGES, or NEEDS_EVIDENCE.
