@@ -125,7 +125,7 @@ export function getSocialProtectionContext({ user, language } = {}){
   const detected = detectImaLocale({ user, language });
   const source = COUNTRY_SOURCES[detected.country] || {name:null,languages:[detected.language],portal:null,insurance:null};
   let localizedCountryName = source.name;
-  try { localizedCountryName = new Intl.DisplayNames([detected.language], { type:'region' }).of(detected.country) || source.name || detected.country; } catch {}
+  try { localizedCountryName = new Intl.DisplayNames([detected.language], { type:'region' }).of(detected.country) || source.name || detected.country; } catch { /* intentionally ignored */ }
   const preferred = source.languages.includes(detected.language) ? detected.language : (source.languages[0] || detected.language);
   return { ...detected, countryName:localizedCountryName || detected.country, languages:source.languages, portal:source.portal, insurance:source.insurance, preferredLanguage:preferred, sourceConfigured:Boolean(source.portal || source.insurance), domains:SOCIAL_PROTECTION_DOMAINS };
 }
